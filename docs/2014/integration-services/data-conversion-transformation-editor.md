@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73360a385cfe4c9f44dd2be5296c7d2144b3439d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad50b2ecf95daa7abb4c9aaef420b4dbfd14c8e7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129805"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376144"
 ---
 # <a name="data-conversion-transformation-editor"></a>Editor de transformación Conversión de datos
   Use el cuadro de diálogo **Editor de transformación Conversión de datos** para seleccionar las columnas que desea convertir, seleccione el tipo de datos al que desea convertir la columna y establezca los atributos de conversión.  
@@ -38,10 +38,10 @@ ms.locfileid: "48129805"
  Seleccione las columnas que desea convertir en la lista de columnas de entrada disponibles. Su selección se refleja en las selecciones de las anteriores casillas.  
   
  **Alias de salida**  
- Escriba un alias para cada columna nueva. El valor predeterminado es `Copy of` seguido del nombre de columna de entrada; sin embargo, puede elegir cualquier nombre único y descriptivo.  
+ Escriba un alias para cada columna nueva. El valor predeterminado es `Copy of` seguido del nombre de la columna de entrada; no obstante, puede elegir un nombre descriptivo exclusivo.  
   
  **Tipo de datos**  
- Seleccione en la lista un tipo de datos disponible. Para más información, consulte [Integration Services Data Types](data-flow/integration-services-data-types.md).  
+ Seleccione en la lista un tipo de datos disponible. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).  
   
  **Longitud**  
  Establezca la longitud de la columna para los datos de cadena.  
@@ -59,7 +59,7 @@ ms.locfileid: "48129805"
  Especifique cómo controlar los errores de nivel de fila con el cuadro de diálogo [Configurar la salida de errores](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Conversión de datos en un tipo de datos diferente con la transformación Conversión de datos](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Convertir datos en un tipo de datos diferente mediante la transformación Conversión de datos](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   
   

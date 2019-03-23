@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.parameter.f1
 ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76a48abe8ab2fe8481b2944ed6b3c77258b4c855
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c6391e739f4a7f2556ad75acf377a2e68db8151
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075623"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382491"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
   El cuadro de diálogo **Parametrizar** permite asociar un parámetro nuevo o existente con una propiedad de una tarea. Abra el cuadro de diálogo haciendo clic con el botón secundario en una tarea o en la pestaña Flujo de control en el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] y haciendo clic en **Parametrizar**. La siguiente lista describe los elementos de la interfaz de usuario en el cuadro de diálogo. Para más información sobre los parámetros, vea [Parámetros de Integration Services &#40;SSIS&#41;](integration-services-ssis-package-and-project-parameters.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "48075623"
  **Crear nuevo parámetro**  
  Seleccione esta opción para crear un nuevo parámetro que desee asociar con la propiedad de tarea.  
   
- **Nombre**  
+ **Name**  
  Especifique el nombre del parámetro que desea crear.  
   
  **Descripción**  

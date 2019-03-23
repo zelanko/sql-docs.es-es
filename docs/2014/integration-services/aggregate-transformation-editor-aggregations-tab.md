@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aaf14095eab05110845178f4115fc87ea19947a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db633e9afa480d03b31cf02a84db2813b1e30516
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224465"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378045"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor de transformación Agregado (pestaña Agregaciones)
   Use la pestaña **Agregaciones** del cuadro de diálogo **Editor de transformación Agregado** para especificar las columnas que desea agregar y las propiedades de agregación. Puede aplicar diversas agregaciones. Esta transformación no genera una salida de errores.  
@@ -85,7 +85,7 @@ ms.locfileid: "48224465"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|No especificado|El `CountDistinctScale` no se utiliza la propiedad.|  
+|No especificado|No se utiliza la propiedad `CountDistinctScale`.|  
 |Baja|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
 |Media|La agregación podrá escribir aproximadamente 5 000 000 valores DISTINCT.|  
 |Alta|La agregación podrá escribir más de 25.000.000 valores DISTINCT.|  
@@ -94,8 +94,8 @@ ms.locfileid: "48224465"
  Opcionalmente, puede especificar el número exacto de valores DISTINCT que podrá escribir la agregación. Si ambos `CountDistinctScale` y **CountDistinctKeys** se especifican, **CountDistinctKeys** tiene prioridad.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformación de agregado &#40;ficha Opciones avanzadas&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de transformación Agregado &#40;pestaña Avanzadas&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
  [Incorporación de valores en un conjunto de datos con la transformación Agregado](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f22b5d71aa2d6d4ac63fe597e9da6b9dfb0a15c0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f32462ef33af50a08cd933ed5c1a04c4efaa17de
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202194"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377323"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Conectar con una base de datos de origen de Oracle
   Use la página Oracle Source para proporcionar la información necesaria para conectarse a la base de datos de origen de Oracle. La instancia CDC leerá los registros Rehacer de la base de datos de Oracle a la que está conectado.  
@@ -34,9 +34,9 @@ ms.locfileid: "53202194"
  **Autenticación de minería de registros de Oracle**  
  Para especificar las credenciales del usuario de la base de datos de Oracle que tiene autorización para realizar minería de registros, seleccione una de las opciones siguientes:  
   
--   **Autenticación de Windows**: Seleccione esta opción para usar las credenciales de dominio de Windows actuales. Solo puede usar esta opción si la base de datos de Oracle está configurada para usar la autenticación de Windows.  
+-   **Autenticación de Windows**: seleccione esta opción para usar las credenciales del dominio de Windows actual. Solo puede usar esta opción si la base de datos de Oracle está configurada para usar la autenticación de Windows.  
   
--   **Autenticación de Oracle**: Si selecciona esta opción, debe escribir el **nombre de usuario** y **contraseña** para el usuario se conecta a la base de datos de Oracle.  
+-   **Autenticación de Oracle**: si selecciona esta opción, debe escribir el **Nombre de usuario** y la **Contraseña** para el usuario en la base de datos de Oracle a la que se está conectando.  
   
 > [!NOTE]
 >  Un usuario debe tener concedidos los privilegios siguientes en la base de datos de Oracle para poder ser un usuario de minería de registros.  

@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f3f982eeee9abc016575b8acd068b8ef2e7450f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 76c3c915224af50fce1265f733082054e0eeaa98
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408182"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386633"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Implementación de paquetes en el servidor de Integration Services
   En la versión actual de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], puede implementar los proyectos en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . El servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite administrar paquetes, ejecutar paquetes y configurar valores de tiempo de ejecución para paquetes usando entornos.  
@@ -30,7 +30,7 @@ ms.locfileid: "52408182"
   
 1.  Crear un catálogo de SSISDB, si aún no lo ha hecho. Para obtener más información, vea [Crear el catálogo de SSIS](catalog/ssis-catalog.md).  
   
-2.  Convierta el proyecto al modelo de implementación de proyectos ejecutando el **Asistente para conversión de proyectos de Integration Services** . Para obtener más información, vea las instrucciones siguientes: [Para convertir un proyecto en el modelo de implementación del proyecto](#convert)  
+2.  Convierta el proyecto al modelo de implementación de proyectos ejecutando el **Asistente para conversión de proyectos de Integration Services** . Para más información, vea las instrucciones siguientes: [Para convertir un proyecto al modelo de implementación de proyectos](#convert)  
   
     -   Si creó el proyecto en [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)], de forma predeterminada el proyecto utiliza el modelo de implementación de proyectos.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "52408182"
   
      Para obtener más información sobre la actualización de paquetes, vea [Actualizar paquetes de Integration Services](install-windows/upgrade-integration-services-packages.md) y [Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Implemente el proyecto en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para obtener más información, vea las instrucciones siguientes: [Para implementar un proyecto en el servidor de Integration Services](#deploy).  
+3.  Implemente el proyecto en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para más información, vea las instrucciones siguientes: [Para implementar un proyecto en el servidor de Integration Services](#deploy).  
   
 4.  (Opcional) Crear un entorno para el proyecto implementado. Para obtener más información, vea [Crear y asignar un entorno de servidor](../../2014/integration-services/create-and-map-a-server-environment.md).  
   

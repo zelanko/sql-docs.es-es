@@ -11,15 +11,15 @@ helpviewer_keywords:
 - discontinued functionality [Integration Services]
 - Integration Services, backward compatibility
 ms.assetid: 5ee40ceb-37b9-47a9-b90d-ce1de74b10f7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 41f7c9f60cc902bac8ac31de5c76142aac86e142
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1179ba9642a46e7142494dcefc876f074a4b7476
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082325"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382173"
 ---
 # <a name="discontinued-integration-services-functionality-in-sql-server-2014"></a>Funcionalidad de Integration Services no incluida en SQL Server 2014
   Este tema se describe [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] características que ya no están disponibles en la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

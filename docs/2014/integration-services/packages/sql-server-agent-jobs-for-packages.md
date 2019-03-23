@@ -12,15 +12,15 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe378671c1cb9b93ae8262869742c0b01a6d9cac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369937"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383906"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabajos del Agente SQL Server para paquetes
   Puede automatizar y programar la ejecución de paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede programar paquetes que se implementan en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y se almacena en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos.  
@@ -54,14 +54,14 @@ ms.locfileid: "53369937"
   
  Para más información, vea [Programar un paquete mediante el Agente SQL Server](../schedule-a-package-by-using-sql-server-agent.md).  
   
- Para ver un vídeo que muestra cómo usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente para ejecutar un paquete, vea la página principal del vídeo [Cómo: Automatizar la ejecución del paquete mediante el Agente SQL Server (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771), en MSDN Library.  
+ Para ver un vídeo que muestra cómo usar el agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un paquete, vea la página principal del vídeo [ Cómo automatizar la ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771) en MSDN Library.  
   
 ##  <a name="trouble"></a> Solucionar problemas  
  Es posible que un paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pueda iniciar un paquete aunque el paquete se ejecute correctamente en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y desde la línea de comandos. Hay algunos motivos frecuentes para este problema y varias soluciones recomendadas. Para obtener más información, vea los recursos siguientes.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, [Un paquete SSIS no se ejecuta al llamarlo desde un paso de trabajo del Agente SQL Server](https://support.microsoft.com/kb/918760)  
   
--   Vídeo, [solución de problemas: La ejecución con el Agente SQL Server (vídeo de SQL Server) del paquete](https://go.microsoft.com/fwlink/?LinkId=141772), en MSDN Library.  
+-   Vídeo [Solucionar problemas de ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772) en MSDN Library.  
   
  Una vez que un paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicia un paquete, se puede producir un error en la ejecución del paquete o el paquete se puede ejecutar correctamente pero con resultados inesperados. Puede usar las herramientas siguientes para solucionar estos problemas.  
   
@@ -95,9 +95,9 @@ ms.locfileid: "53369937"
   
 -   Artículo de Knowledge Base, [Un paquete SSIS no se ejecuta al llamarlo desde un paso de trabajo del Agente SQL Server](https://support.microsoft.com/kb/918760), en el sitio web de [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
   
--   Vídeo, [solución de problemas: La ejecución con el Agente SQL Server (vídeo de SQL Server) del paquete](https://go.microsoft.com/fwlink/?LinkId=141772), en la biblioteca MSDN  
+-   Vídeo [Solucionar problemas de ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772) en MSDN Library  
   
--   Vídeo, [Cómo: Automatizar la ejecución del paquete mediante el Agente SQL Server (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771), en la biblioteca MSDN  
+-   Vídeo [ Cómo automatizar la ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771) en MSDN Library  
   
 -   Artículo técnico relativo a la [comprobación de trabajos del Agente SQL Server mediante Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675), en mssqltips.com  
   

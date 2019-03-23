@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0cd620197e78c70f4d351d3dcb69dc5cf4459296
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e09e41535ad878a3f20ae74df07ace7bda6fa7e4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116985"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384122"
 ---
 # <a name="query-builder"></a>Generador de consultas
   Utilice el cuadro de diálogo **Generador de consultas** para crear una consulta para su uso en la tarea Ejecutar SQL, el origen de OLE DB y el destino de OLE DB, y la transformación de búsqueda.  
@@ -75,7 +75,7 @@ ms.locfileid: "48116985"
  [Tarea Ejecutar SQL](control-flow/execute-sql-task.md)   
  [Origen de OLE DB](data-flow/ole-db-source.md)   
  [Destino de OLE DB](data-flow/ole-db-destination.md)   
- [Transformación búsqueda](data-flow/transformations/lookup-transformation.md)   
+ [Transformación Búsqueda](data-flow/transformations/lookup-transformation.md)   
  [Servicios de integración &#40;SSIS&#41; consultas](integration-services-ssis-queries.md)   
  [MERGE en paquetes de Integration Services](control-flow/merge-in-integration-services-packages.md)  
   

@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0824811762ff693a55fa67750be5a654f27ea5e7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375557"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385413"
 ---
 # <a name="lesson-2-creating-the-deployment-bundle"></a>Lección 2: Crear el paquete de implementación
-  En [lección 1: Preparar la creación del paquete de implementación](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), que ha creado el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proyecto denominado Deployment Tutorial, agregó paquetes y archivos auxiliares al proyecto y ha implementado configuraciones en paquetes.  
+  En la [Lección 1: Preparar la creación del paquete de implementación](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), que ha creado el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proyecto denominado Deployment Tutorial, agregó paquetes y archivos auxiliares al proyecto y ha implementado configuraciones en paquetes.  
   
  En esta lección, creará el paquete de implementación, que es una carpeta que contiene los elementos que necesita para instalar paquetes en otro equipo. El paquete de implementación incluirá un manifiesto de implementación, copias de los paquetes y copias de los archivos auxiliares del proyecto Deployment Tutorial. El manifiesto de implementación enumera los paquetes, varios archivos y configuraciones en el paquete de implementación.  
   

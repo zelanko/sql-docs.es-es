@@ -19,15 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 000207f277cd0c54428cdc81b16027b7efa3aa3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f464d49680e3563f44768e9d8ad29d947a8b24
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129635"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380193"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Referencia de la interfaz de usuario del Asistente para la instalación de paquetes
   Use el **Asistente para la instalación de paquetes** para implementar un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , incluidos los paquetes y los distintos archivos que contienen, así como las dependencias del paquete.  
@@ -152,7 +152,7 @@ ms.locfileid: "48129635"
  Para seleccionar la carpeta en el cuadro de diálogo **Paquete SSIS** , haga clic en el botón para examinar (…). Sin embargo, el cuadro de diálogo no proporciona medios para seleccionar la carpeta predeterminada. Si desea utilizar la carpeta predeterminada, tiene que escribir "/" en el cuadro de texto.  
   
 > [!NOTE]  
->  Si no escribe una ruta de acceso del paquete válida, aparece el mensaje de error siguiente: "Uno o más argumentos no son válidos."  
+>  Si no escribe una ruta de acceso del paquete válida, aparece el mensaje de error siguiente: "Uno o más argumentos no son válidos".  
   
  **Basar el cifrado en el almacenamiento del servidor**  
  Seleccione estas características de seguridad del [!INCLUDE[ssDE](../includes/ssde-md.md)] para contribuir a proteger los paquetes.  

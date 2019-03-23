@@ -10,15 +10,15 @@ helpviewer_keywords:
 - NULL function
 - null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 379706092613ae7fa3f53fccb493bf756d656b01
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f4a796b0ab746468ffef3cab5b3480e73b4cf637
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823299"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384493"
 ---
 # <a name="null-ssis-expression"></a>NULL (expresión de SSIS)
   Devuelve un valor NULL asociado al tipo de datos solicitado.  
@@ -48,7 +48,7 @@ NULL(typespec)
 |DT_WSTR|*charcount*|(DT_WSTR,20) convierte 20 caracteres al tipo de datos DT_WSTR.|  
 |DT_BYTES|*bytecount*|(DT_BYTES,50) convierte 50 bytes al tipo de datos DT_BYTES.|  
 |DT_DECIMAL|*escala*|(DT_DECIMAL,2) convierte un valor numérico al tipo de datos DT_DECIMAL con una escala de 2.|  
-|DT_NUMERIC|*precisión*<br /><br /> *escala*|(DT_NUMERIC,10,3) convierte un valor numérico al tipo de datos DT_NUMERIC con una precisión de 10 decimales y una escala de 3.|  
+|DT_NUMERIC|*precisión*<br /><br /> *scale*|(DT_NUMERIC,10,3) convierte un valor numérico al tipo de datos DT_NUMERIC con una precisión de 10 decimales y una escala de 3.|  
 |DT_TEXT|*codepage*|(DT_TEXT,1252) convierte un valor al tipo de datos DT_TEXT con la página de códigos 1252.|  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  

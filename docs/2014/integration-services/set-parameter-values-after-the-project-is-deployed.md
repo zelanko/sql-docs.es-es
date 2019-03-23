@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: c9dcca4d-f1a0-45ec-b078-f4d372589baf
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5cb12795b0aba94da115916b2b09dc0c2675e8ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f5e7248868a368ee0ea956b46b63c9c8d024393b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151812"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379933"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>Establecer valores de parámetro después de la implementación del proyecto
   El Asistente para la implementación permite establecer valores de parámetro predeterminados del servidor al implementar el proyecto en el catálogo. Después de que el proyecto esté en el catálogo, puede utilizar el Explorador de objetos de SQL Server Management Studio (SSMS) o Transact-SQL para establecer valores predeterminados del servidor.  
@@ -29,7 +29,7 @@ ms.locfileid: "48151812"
   
 3.  Abra la página de parámetros haciendo clic en **Parámetros** debajo de **Seleccionar una página**.  
   
-4.  Seleccione el parámetro deseado en la lista **Parámetros** . Nota: la columna **Contenedor** ayuda a distinguir los parámetros del proyecto de los parámetros del paquete.  
+4.  Seleccione el parámetro deseado en la lista **Parámetros** . Nota: El **contenedor** columna ayuda a distinguir los parámetros del proyecto del paquete.  
   
 5.  En la columna de **Valor** , especifique el valor del parámetro predeterminado del servidor deseado.  
   

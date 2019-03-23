@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b17a415b2ba28237453ac94f12f8706f6b4d7d20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edcb36cc38ea1ca89ded11dd0ef4dadd3116c6a2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212607"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379036"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>Editor de destino de procesamiento de particiones (página Asignaciones)
   Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de procesamiento de particiones** para asignar columnas de entrada a columnas de partición.  
@@ -44,8 +44,8 @@ ms.locfileid: "48212607"
  Muestra las columnas de destino disponibles, independientemente de si están asignadas o no.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de destino de procesamiento de particiones &#40;página Administrador de conexiones&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
- [Editor de destino de procesamiento de particiones &#40;página Opciones avanzadas&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [Editor de destino de procesamiento de particiones &#40;página Avanzadas&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

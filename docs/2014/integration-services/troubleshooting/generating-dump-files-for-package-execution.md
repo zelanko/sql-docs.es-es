@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 00b75a698a372466dfe46d8997c730bb77ac2d1b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8022532dcb038b7c9a5839acb0541337ac3d5001
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799187"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379223"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generar archivos de volcado para la ejecución de paquetes
   En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede crear archivos de volcado de depuración que proporcionen información sobre la ejecución de un paquete. La información de estos archivos puede ayudarle a solucionar los problemas de ejecución del paquete.  
@@ -50,7 +50,7 @@ ms.locfileid: "52799187"
 |-------------------------|-----------------|-------------|  
 |Entorno|Versión del sistema operativo, datos de uso de la memoria, identificador de proceso y nombre de imagen de proceso. La información del entorno se encuentra al principio del archivo .tmp.|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memoria: 58% en uso. Física: Paginación de 845 M / 2044M: 2404M / 4095M (dispon/total)|  
 |Ruta de acceso y versión de la biblioteca de vínculos dinámicos (DLL)|Ruta de acceso y número de versión de cada DLL que el sistema carga durante el procesamiento de un paquete.|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Módulo cargado: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Módulo cargado: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
-|Mensajes recientes|Mensajes recientes emitidos por el sistema. Incluye la fecha y hora, el tipo, la descripción y el identificador de subproceso de cada mensaje.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E: 3]         Marca de tiempo: 13-09-2007 13:50:32.786 (szTimeStamp)<br /><br /> [E: 3]         Id. de subproceso: 2368 (ThreadID)<br /><br /> [E: 3]         Nombre de evento: OnError (EventName)<br /><br /> [E: 3]         Nombre de origen:                (SourceName)<br /><br /> [E: 3]         Id. de origen:                        (SourceID)<br /><br /> [E: 3]         Id. de ejecución:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E: 3]         Descripción: Falta el componente, no está registrado, no puede actualizarse o faltan interfaces necesarias. La información de contacto para este componente es "".|  
+|Mensajes recientes|Mensajes recientes emitidos por el sistema. Incluye la fecha y hora, el tipo, la descripción y el identificador de subproceso de cada mensaje.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E: 3]         Marca de tiempo: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E: 3]         Id. de subproceso: 2368 (ThreadID)<br /><br /> [E: 3]         Nombre de evento: OnError (EventName)<br /><br /> [E: 3]         Nombre de origen:                (SourceName)<br /><br /> [E: 3]         Id. de origen:                        (SourceID)<br /><br /> [E: 3]         Id. de ejecución:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E: 3]         Descripción: Falta el componente, no está registrado, no puede actualizarse o faltan interfaces necesarias. La información de contacto para este componente es "".|  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [Ejecutar paquete (cuadro de diálogo)](../execute-package-dialog-box.md)  

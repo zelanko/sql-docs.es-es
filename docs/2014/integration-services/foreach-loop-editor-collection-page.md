@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb93cd75ea407576b8b466defa48171e4d94a1ac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c855cdfbcf622465390e433312d75343242aee50
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361397"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380273"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Editor de bucles Foreach (página Colección)
   Use la página **Colección** del cuadro de diálogo **Editor de bucles Foreach** para especificar el tipo de enumerador y configurarlo.  
@@ -73,7 +73,7 @@ ms.locfileid: "53361397"
 >   
 >  Cuando se especifica una extensión de nombre de archivo, el enumerador también devuelve archivos que tienen la misma extensión con caracteres adicionales anexados. (Este comportamiento es el mismo que el del comando **dir** en el sistema operativo, que también compara nombres de archivo con formato 8.3 para mantener la compatibilidad con versiones anteriores). Este comportamiento del enumerador podría producir resultados inesperados. Por ejemplo, suponga que desea enumerar solo archivos de Excel 2003 y especifica "* .xls". Sin embargo, el enumerador también devolverá archivos de Excel 2007 porque esos archivos tienen la extensión, ".xlsx".  
 >   
->  Puede usar una expresión para especificar los archivos que quiera incluir en una colección. Para ello, expanda **Expresiones** en la página **Colección**, seleccione la propiedad **FileSpec** y, después, haga clic en el botón de puntos suspensivos (…) para agregar la expresión de propiedad. Para obtener más información acerca de seleccionan dinámicamente archivos concretos, vea [SSIS establecer dinámicamente la máscara de archivo: Especificación de archivo](https://go.microsoft.com/fwlink/?LinkId=238154)  
+>  Puede usar una expresión para especificar los archivos que quiera incluir en una colección. Para ello, expanda **Expresiones** en la página **Colección**, seleccione la propiedad **FileSpec** y, después, haga clic en el botón de puntos suspensivos (…) para agregar la expresión de propiedad. Para obtener más información acerca de seleccionan dinámicamente archivos concretos, vea [SSIS establecer dinámicamente la máscara de archivo: FileSpec](https://go.microsoft.com/fwlink/?LinkId=238154)  
   
  **Completo**  
  Seleccione esta opción si desea recuperar la ruta completa de los nombres de archivo. Si se especifican caracteres comodín en la opción Archivos, las rutas completas devueltas coinciden con el filtro.  

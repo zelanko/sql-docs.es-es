@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Schema Restrictions dialog box
 ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64a0f3143941bd0d4389efc1f3f132cc6653bdbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cb955fe2779681f33cb1c4a7fc365b5249b5f39
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178395"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383275"
 ---
 # <a name="schema-restrictions-dialog-box"></a>Restricciones de esquema, cuadro de diálogo
   Utilice el cuadro de diálogo **Restricciones de esquema** para establecer las restricciones de esquema que se van a aplicar a Foreach ADO.NET Schema Rowset Enumerator.  
@@ -32,7 +32,7 @@ ms.locfileid: "48178395"
  **Variable**  
  Utilice una variable para definir restricciones. Seleccione una variable de la lista o haga clic en **Nueva variable** para crear una nueva.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
+ **Temas relacionados:** [Servicios de integración &#40;SSIS&#41; Variables](integration-services-ssis-variables.md) , [agregar Variable](../../2014/integration-services/add-variable.md)  
   
  **Texto**  
  Proporciona el texto para definir restricciones.  

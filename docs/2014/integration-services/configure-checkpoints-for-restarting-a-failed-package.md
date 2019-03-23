@@ -12,15 +12,15 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9204220c7ea32c59f75785ad0b50fa050a47840f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 220440313f0a06efb4ad55156a41fee18c61ab62
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123405"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376683"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurar puntos de comprobación para reiniciar un paquete con error
   Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se configuran para que se reinicien desde un punto de error, en lugar de volver a ejecutar todo el paquete, estableciendo las propiedades que afectan a los puntos de comprobación.  
@@ -46,7 +46,7 @@ ms.locfileid: "48123405"
         > [!IMPORTANT]  
         >  Si el archivo de punto de comprobación no está disponible se produce un error.  
   
-    -   Seleccione `IfExists` para reiniciar el paquete solo si el archivo de punto de comprobación está disponible.  
+    -   Seleccione `IfExists` para reiniciar el paquete solo si está disponible el archivo de punto de comprobación.  
   
 8.  Configure las tareas y contenedores desde los cuales puede reiniciarse el paquete.  
   
@@ -55,6 +55,6 @@ ms.locfileid: "48123405"
     -   Establezca la propiedad FailPackageOnFailure en `True` para cada tarea y contenedor seleccionados.  
   
 ## <a name="see-also"></a>Vea también  
- [Reiniciar paquetes mediante el uso de puntos de comprobación](packages/restart-packages-by-using-checkpoints.md)  
+ [Reiniciar paquetes de usando puntos de comprobación](packages/restart-packages-by-using-checkpoints.md)  
   
   

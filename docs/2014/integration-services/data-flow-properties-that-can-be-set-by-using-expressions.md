@@ -17,22 +17,22 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d561840bfe2c10d7b269bb952b934d22dd957d32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135205"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378603"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propiedades de flujo de datos que se pueden establecer utilizando expresiones
   Los valores de ciertas propiedades de objetos de flujo de datos se pueden especificar utilizando expresiones de propiedades disponibles en el contenedor de tareas Flujo de Datos.  
   
  Para obtener información sobre el uso de expresiones de propiedades, vea [Usar expresiones de propiedad en paquetes](expressions/use-property-expressions-in-packages.md).  
   
- Puede utilizar las expresiones de propiedades para personalizar las configuraciones de cada instancia implementada de un paquete. También puede usar expresiones de propiedades para especificar restricciones en tiempo de ejecución para un paquete mediante la opción **/set** con la utilidad de símbolo del sistema **dtexec** . Por ejemplo, puede restringir la `MaximumThreads` utilizado por la transformación Ordenar, o la `MaxMemoryUsage` de las transformaciones agrupación aproximada y búsqueda aproximada. Si no presentan restricciones, estas transformaciones pueden almacenar en memoria caché grandes cantidades de datos en memoria.  
+ Puede utilizar las expresiones de propiedades para personalizar las configuraciones de cada instancia implementada de un paquete. También puede usar expresiones de propiedades para especificar restricciones en tiempo de ejecución para un paquete mediante la opción **/set** con la utilidad de símbolo del sistema **dtexec** . Por ejemplo, puede restringir el `MaximumThreads` utilizado por la transformación Ordenación o bien el `MaxMemoryUsage` de las transformaciones Fuzzy Grouping y Fuzzy Lookup. Si no presentan restricciones, estas transformaciones pueden almacenar en memoria caché grandes cantidades de datos en memoria.  
   
  Para especificar una expresión de propiedades para una de las propiedades de los objetos de flujo de datos mencionados en este tema, muestre la ventana **Propiedades** para la tarea Flujo de Datos seleccionando la tarea Flujo de Datos en la superficie **Flujo de control** del diseñador o seleccionando la pestaña **Flujo de datos** del diseñador sin seleccionar ningún componente o ruta de acceso individual. Seleccione la propiedad **Expresiones** y haga clic en los puntos suspensivos (…) para mostrar el cuadro de diálogo **Editor de expresiones de propiedad** . Despliegue la lista **Propiedad** para seleccionar una propiedad y, después, escriba una expresión en el cuadro de texto **Expresión** o haga clic en los puntos suspensivos (…) para mostrar el cuadro de diálogo **Generador de expresiones** .  
   

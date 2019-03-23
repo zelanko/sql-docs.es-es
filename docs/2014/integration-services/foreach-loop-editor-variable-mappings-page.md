@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.mapping.f1
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3fc54d5b287cd71ba303d34693e815c07b9cc3b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f2d95909e76c6b5c3665926783fb42ff247d1ba9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068085"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386703"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Editor de bucles Foreach (página Asignaciones de variables)
   Use la página **Asignaciones de variables** del cuadro de diálogo **Editor de bucles Foreach** para asignar variables al valor de la colección. El valor de la variable se actualiza con los valores de la colección en cada iteración del bucle.  
@@ -34,7 +34,7 @@ ms.locfileid: "48068085"
 > [!NOTE]  
 >  Una vez asignada una variable, se agregará automáticamente una nueva fila a la lista **Variable**.  
   
- **Temas relacionados**: [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
+ **Temas relacionados**: [Servicios de integración &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [agregar Variable](../../2014/integration-services/add-variable.md)  
   
  **Index**  
  Si utiliza el enumerador de elementos para Foreach, especifique el índice de la columna en el valor de la colección para asignarlo a la variable. Si utiliza otros tipos de enumeradores, el índice será de solo lectura.  
@@ -42,16 +42,16 @@ ms.locfileid: "48068085"
 > [!NOTE]  
 >  El índice se basa en 0.  
   
- **Temas relacionados**: [bucle a través de los archivos de Excel y las tablas mediante el uso de un contenedor de bucles Foreach](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ **Temas relacionados**: [Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles ForEach](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
  **Eliminar**  
  Seleccione una variable y haga clic en **Eliminar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de bucles foreach &#40;página General&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor de bucles foreach &#40;página de la colección&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Página expresiones](expressions/expressions-page.md)   
+ [Página Expresiones](expressions/expressions-page.md)   
  [Contenedor de bucles For](control-flow/for-loop-container.md)  
   
   

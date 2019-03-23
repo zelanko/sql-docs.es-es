@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Unpivot Transformation Editor
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5b2476969d41acbff7496c14b43e0aa7089eb78e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bb4a435d88ea867c2152d71afb87cdd731f452e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119334"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383883"
 ---
 # <a name="unpivot-transformation-editor"></a>Editor de transformación Anulación de dinamización
   Use el cuadro de diálogo **Editor de transformación Anulación de dinamización** para seleccionar las columnas que se van a dinamizar en filas y especificar la columna de datos y la nueva columna de salida del valor dinámico.  
@@ -34,7 +34,7 @@ ms.locfileid: "48119334"
  **Columnas de entrada disponibles**  
  Especifique las columnas que deben pasar a ser filas mediante las casillas.  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre de la columna de entrada disponible.  
   
  **Paso a través**  
@@ -63,7 +63,7 @@ ms.locfileid: "48119334"
  En el escenario Anulación de dinamización descrito en [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md), el Nombre de la columna del valor de clave dinámica es **Product** y designa la nueva columna **Product** en la que se anula la dinamización de las columnas **Ham**, **Soda**, **Milk**, **Beer**y **Chips** .  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Transformación dinámica](data-flow/transformations/pivot-transformation.md)  
   
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 66c285e24c2a981464c93001c1df41f164e60b1e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353801"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386553"
 ---
 # <a name="lookup-transformation"></a>Transformación de búsqueda
   La transformación Búsqueda realiza búsquedas mediante la combinación de datos de columnas de entrada con columnas de un conjunto de datos de referencia. La búsqueda se utiliza para tener acceso a información adicional en una tabla relacionada que está basada en valores de columnas comunes.  
@@ -129,7 +129,7 @@ ms.locfileid: "53353801"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Vídeo, [Cómo: Implementar una transformación Búsqueda en modo de caché completa](https://go.microsoft.com/fwlink/?LinkId=131031), en msdn.microsoft.com  
+-   Vídeo [ Implementar una transformación Búsqueda en modo de caché completa](https://go.microsoft.com/fwlink/?LinkId=131031), en msdn.microsoft.com  
   
 -   Entrada de blog, [Prácticas recomendadas para utilizar los modos de caché de la transformación Búsqueda](https://go.microsoft.com/fwlink/?LinkId=146623)(en inglés), en blogs.msdn.com  
   

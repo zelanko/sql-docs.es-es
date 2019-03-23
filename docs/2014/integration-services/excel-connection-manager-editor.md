@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Connection Manager Editor
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 403fe52b67756a32a4229df83fdf9fa56a0bb8a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 22ea5f2f087949718e5dbfc8702756e008ee721e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069495"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392923"
 ---
 # <a name="excel-connection-manager-editor"></a>Editor de Administrador de conexiones con Excel
   Utilice el cuadro de diálogo **Editor del administrador de conexiones con Excel** para agregar una conexión a un archivo de libro de [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] existente o nuevo.  
@@ -54,7 +54,7 @@ ms.locfileid: "48069495"
  Especifique si la primera fila de datos de la hoja seleccionada contiene nombres de columna. El valor predeterminado de esta opción es **True**.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles ForEach](control-flow/foreach-loop-container.md)  
   
   

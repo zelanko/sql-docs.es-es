@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 503e73900510285556d3c1743c9ae26a44a18129
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 92055ceb4226406fe26d7ce23491c81606f292c5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356502"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389913"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>Paso 3: Probar los paquetes implementados
   En esta tarea probará los paquetes que ha implementado en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

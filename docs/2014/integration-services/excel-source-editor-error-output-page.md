@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43218f87bb8a19fc35b3191603e9324e94145a64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a8dd63e2e3d75c1d56c7c930fe5dfc53cf67228
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106415"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386243"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Editor de origen de Excel (página Salida de error)
   Utilice la página **Salida de error** del cuadro de diálogo **Editor de origen de Excel** para seleccionar opciones de control de errores y establecer las propiedades en las columnas de salida de errores.  
@@ -52,10 +52,10 @@ ms.locfileid: "48106415"
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de origen de Excel &#40;página Administrador de conexiones&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
- [Editor de origen de Excel &#40;página columnas&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [Administrador de conexiones de Excel](connection-manager/excel-connection-manager.md)   
+ [Editor de origen de Excel &#40;página Columnas&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Administrador de conexiones con Excel](connection-manager/excel-connection-manager.md)   
  [Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles ForEach](control-flow/foreach-loop-container.md)  
   
   

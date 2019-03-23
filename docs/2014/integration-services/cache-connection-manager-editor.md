@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b9ede014f68d06f84132664ee3f4e1413f715e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af7696c1d5194af721b6ff803736193db0285b8b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130835"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385053"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor del administrador de conexiones de caché
   El administrador de conexiones de caché lee un conjunto de datos de referencia a partir de la transformación de caché o de un archivo caché (.caw) y puede guardar los datos en un archivo caché. Los datos siempre se almacenan en memoria.  
@@ -50,7 +50,7 @@ ms.locfileid: "48130835"
  Indicar si se ha de utilizar un archivo caché.  
   
 > [!NOTE]  
->  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para obtener más información, vea [Acceso a los archivos usados por los paquetes](../../2014/integration-services/access-to-files-used-by-packages.md).  
+>  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para más información, vea [Acceso a los archivos usados por los paquetes](../../2014/integration-services/access-to-files-used-by-packages.md).  
   
  Si configura el administrador de conexiones de caché para utilizar un archivo caché, el administrador de conexiones realizará una de las siguientes acciones:  
   
@@ -88,18 +88,18 @@ ms.locfileid: "48130835"
  Especifica el tipo de datos de la columna.  
   
  `Length`  
- Especifica el tipo de datos de la columna. Si es aplicable al tipo de datos, puede actualizar `Length`.  
+ Especifica el tipo de datos de la columna. Si procede en el caso del tipo de datos, puede actualizar la `Length`.  
   
  `Precision`  
- Especifica la precisión para cierto tipo de datos de columna. La precisión es el número de dígitos de un número. Si es aplicable al tipo de datos, puede actualizar `Precision`.  
+ Especifica la precisión para cierto tipo de datos de columna. La precisión es el número de dígitos de un número. Si procede en el caso del tipo de datos, puede actualizar la `Precision`.  
   
  `Scale`  
- Especifica la escala para cierto tipo de datos de columna. La escala es el número de dígitos situados a la derecha de la coma decimal de un número. Si es aplicable al tipo de datos, puede actualizar `Scale`.  
+ Especifica la escala para cierto tipo de datos de columna. La escala es el número de dígitos situados a la derecha de la coma decimal de un número. Si procede en el caso del tipo de datos, puede actualizar la `Scale`.  
   
  `Code Page`  
- Especifica la página de códigos para el tipo de columna. Si es aplicable al tipo de datos, puede actualizar `Code Page`.  
+ Especifica la página de códigos para el tipo de columna. Si procede en el caso del tipo de datos, puede actualizar la `Code Page`.  
   
 ## <a name="see-also"></a>Vea también  
- [Transformación Búsqueda](data-flow/transformations/lookup-transformation.md)  
+ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

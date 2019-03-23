@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ca9e4b8dd9c00904b09645e4d0c45673fbb6020f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811637"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387433"
 ---
 # <a name="define-a-state-variable"></a>Definir una variable de estado
   Este procedimiento describe cómo definir una variable de paquete donde se almacena el estado CDC.  

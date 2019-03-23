@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 93850e7c9a69fa033fc2c72d313555a4b684e2ef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8afb1169749bc80177fcab89402479c66fe423d9
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767517"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385475"
 ---
 # <a name="delete-packages"></a>Eliminar paquetes
   En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], puede eliminar paquetes guardados en el sistema de archivos. Si elimina un paquete, se elimina de forma permanente y no puede restaurarse en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

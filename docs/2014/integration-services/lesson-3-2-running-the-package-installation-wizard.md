@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d1af58b00b41b741ea0540a2fa29503dc33badcf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351806"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385543"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>Paso 2: Ejecutar el Asistente para la instalación de paquetes
   En esta tarea, ejecutará el Asistente para la instalación de paquetes para implementar los paquetes del proyecto Deployment Tutorial en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Solamente los paquetes se pueden instalar en la tabla sysssispackages de la base de datos msdb de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , los archivos compatibles que incluya el paquete de implementación se implementarán en el sistema de archivos.  

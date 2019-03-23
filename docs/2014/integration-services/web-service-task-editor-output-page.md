@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ce05c73dadd133bafcea0f9bd505868b9dd0dc65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4cfeac28676dc8134c7eedf1e4b27901e0f053dc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542647"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377933"
 ---
 # <a name="web-service-task-editor-output-page"></a>Editor de la tarea Servicio web (página Salida)
   Use la página **Salida** del cuadro de diálogo **Editor de la tarea Servicio web** para indicar dónde desea almacenar el resultado devuelto por el método web.  

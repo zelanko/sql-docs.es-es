@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7807d702a09fabce5c1aba6c6782e7379d540b8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b587a81fbafd583e82a8f4af98f4b58077807d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125035"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387373"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Editor de destino de Excel (página Salida de error)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de Excel** para especificar opciones para el control de errores.  
@@ -52,9 +52,9 @@ ms.locfileid: "48125035"
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor de destino de Excel &#40;página Administrador de conexiones&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Editor de destino de Excel &#40;página asignaciones&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
- [Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles ForEach](control-flow/foreach-loop-container.md)  
+ [Editor de destino de Excel &#40;página Asignaciones&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach](control-flow/foreach-loop-container.md)  
   
   

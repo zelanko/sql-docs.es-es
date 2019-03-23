@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e8be4778dc8ca28372132e3ca9447d5804454195
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356347"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381203"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>Paso 1: Generar la utilidad de implementación
   En esta tarea, configurará y generará una utilidad de implementación para el proyecto Deployment Tutorial.  
@@ -56,7 +56,7 @@ ms.locfileid: "53356347"
   
      Generación completa -- 0 errores, 0 advertencias  
   
-     === La compilación: 0 correctos, 0 incorrectos, 1 actualizados, 0 omitidos ===  
+     ========== Build: 0 correctos, 0 incorrectos, 1 actualizados, 0 omitidos ===  
   
 5.  En el menú **Archivo** , haga clic en **Salir**. Si se le pregunta si quiere guardar los cambios en los elementos de Deployment Tutorial, haga clic en **Sí**.  
   

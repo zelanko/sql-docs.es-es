@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c25e36d44b4b088bb2874039d4c292d76759da73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 65d762ffb798d6ec3826a41ff06c73c2011543ab
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172985"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384496"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Editor de origen de OLE DB (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de origen de OLE DB** para seleccionar el administrador de conexiones OLE DB para el origen. Esta página también permite seleccionar una tabla o vista de la base de datos.  
@@ -97,9 +97,9 @@ ms.locfileid: "48172985"
  Seleccione la variable que contiene el texto de la consulta SQL.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de origen de OLE DB &#40;página columnas&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
- [Editor de origen de OLE DB &#40;página de salida de Error&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de origen de OLE DB &#40;página Columnas&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [Editor de origen de OLE DB &#40;página Salida de error&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
  [Extraer datos mediante el origen de OLE DB](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md)  
   

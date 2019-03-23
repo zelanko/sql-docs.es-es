@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.connection.f1
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 77e31f4857d056da79fb65b6f6261a1d92f016e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 553603a6f8164dd2388a551d085413cd3c253b4c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052455"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380153"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Editor de orígenes de ADO NET (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de orígenes de ADO NET** para seleccionar el administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)] para el origen. Esta página también permite seleccionar una tabla o vista de la base de datos.  
@@ -71,8 +71,8 @@ ms.locfileid: "48052455"
  Use el cuadro de diálogo **Abrir** para buscar el archivo que contiene el texto de la consulta SQL.  
   
 ## <a name="see-also"></a>Vea también  
- [Editor de origen de ADO NET &#40;página columnas&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
- [Editor de origen de ADO NET &#40;página de salida de Error&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
+ [Editor de orígenes de ADO NET &#40;página Columnas&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+ [Editor de orígenes de ADO NET &#40;página Salida de error&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Administrador de conexiones ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

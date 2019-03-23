@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 4c305b7d-a231-4d03-a09f-8e2d6564fa76
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d7fe7077d77bfaad6333405c82a0ce353160840
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07fa6e1b9523026af31138efc6f0e71ee0895936
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195825"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386803"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Editor de transformación Extracción de términos (pestaña Extracción de términos)
   Use la pestaña **Extracción de términos** del cuadro de diálogo **Editor de transformación Extracción de términos** para especificar la columna de texto que contiene el texto que se extraerá.  
@@ -41,9 +41,9 @@ ms.locfileid: "48195825"
  Use el cuadro de diálogo [Configurar la salida de errores](../../2014/integration-services/configure-error-output.md) para especificar las opciones de control de errores para las filas que provocan errores.  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de mensajes y Error de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor de transformación extracción de términos &#40;pestaña exclusión&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
- [Editor de transformación extracción de términos &#40;ficha Opciones avanzadas&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
+ [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor de transformación Extracción de términos &#40;pestaña Exclusión&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
+ [Editor de transformación Extracción de términos &#40;pestaña Avanzadas&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   
  [Transformación Búsqueda de términos](data-flow/transformations/lookup-transformation.md)  
   
   

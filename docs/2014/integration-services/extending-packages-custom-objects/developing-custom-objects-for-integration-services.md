@@ -10,15 +10,15 @@ helpviewer_keywords:
 - custom user interface [Integration Services]
 - custom objects [Integration Services]
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cabe3abc2a6ce962a101f8dd2910bd37125f9eea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: aa5f333b050d817d68c8769d7e53a9455581a3ef
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353180"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385583"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Desarrollar objetos personalizados para Integration Services
   Cuando los objetos de flujo de datos y flujo de control que se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no cumplen completamente los requisitos, puede desarrollar muchos tipos de objetos personalizados, entre los que se incluyen:  

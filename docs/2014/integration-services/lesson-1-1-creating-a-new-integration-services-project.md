@@ -1,5 +1,5 @@
 ---
-title: 'Paso 1: Crear una nueva integración Services proyecto | Microsoft Docs'
+title: 'Paso 1: Creación de un proyecto de Integration Services | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eff00a91c6fff1caee5e5fc41dd6d59f8635f78f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2513a698fc073c751613e8e387d41ddb3e0fe9e4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377417"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386144"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>Paso 1: Crear un nuevo proyecto de Integration Services
   El primer paso al crear un paquete en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es crear un proyecto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . En este proyecto, se incluyen las plantillas de los objetos (orígenes de datos, vistas de orígenes de datos y paquetes) que se usan en una solución de transformación de datos.  
@@ -46,6 +46,6 @@ ms.locfileid: "53377417"
 7.  En la barra de herramientas del **Explorador de soluciones** , haga clic con el botón derecho en **Package.dtsx**, haga clic en **Cambiar nombre**y cambie el nombre del paquete predeterminado por **Lesson 1.dtsx**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 2: Agregar y configurar un administrador de conexiones de archivos planos](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+ [Paso 2: Adición y configuración de un administrador de conexiones de archivos planos](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
   

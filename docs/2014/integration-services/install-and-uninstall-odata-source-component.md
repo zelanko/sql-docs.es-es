@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 86aa25f148c44343a57e0e55831663155d288830
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 34a71ed768c49436a4dba4ecf225bdd009132866
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374447"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385269"
 ---
 # <a name="install-and-uninstall-odata-source-component"></a>Instalar y desinstalar el Componente de origen OData
   Este tema proporciona instrucciones para instalar o quitar el Componente de origen OData en el equipo.  

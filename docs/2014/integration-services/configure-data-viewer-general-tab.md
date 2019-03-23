@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98194dfc8ac2bfcfecc1d60e14f8bacd17c45113
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc1fc6573b977a0f959aef51c960182904f660d0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144475"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385911"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Configurar visor de datos (pestaña General)
   Un visor de datos muestra los datos como si se moviera por la ruta que conecta dos componentes de flujo de datos durante la ejecución de un paquete.  
@@ -28,7 +28,7 @@ ms.locfileid: "48144475"
  Utilice la pestaña **General** del cuadro de diálogo **Configurar visor de datos** para asignar un nombre al visor de datos y especificar el tipo de gráfico en el que se van a mostrar los datos.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Proporcione un nombre único para el visor de datos.  
   
  **Tipo**  

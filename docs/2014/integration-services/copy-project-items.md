@@ -15,15 +15,15 @@ helpviewer_keywords:
 - copying packages
 - data source views [Integration Services], copying
 ms.assetid: 1606c54d-20f9-49f3-a4ef-caad83a772aa
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c0fd93e83df6bfc9978f828889ad409559243c8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4185751f0aded344577acb6206f259debdb37642
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049795"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374124"
 ---
 # <a name="copy-project-items"></a>Copiar los elementos de proyectos
   En este tema se describe cómo copiar objetos dentro de un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o entre proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . También puede copiar objetos entre los otros tipos de proyectos de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para copiar entre proyectos, el proyecto debe formar parte de la misma solución de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Para obtener más información, vea [Proyectos de Integration Services &#40;SSIS&#41;](integration-services-ssis-projects-and-solutions.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "48049795"
      Los elementos se copian automáticamente en la carpeta correcta. Si copia elementos en el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que no son paquetes, estos elementos se copian a la carpeta **Varios** .  
   
 ## <a name="see-also"></a>Vea también  
- [Servicios de integración &#40;SSIS&#41; paquetes](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Paquetes de Integration Services &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Copiar objetos de paquete](../../2014/integration-services/copy-package-objects.md)  
   
   

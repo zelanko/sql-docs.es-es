@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 850b24bf5b6be3fcac43549cd9f85f71a685f733
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 293624979236d8507d53d86668554041eed76c37
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207965"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380253"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>Configurar visor de datos (pestaña Cuadrícula)
   Utilice la pestaña **Cuadrícula** del cuadro de diálogo **Configurar visor de datos** para especificar las columnas que desea mostrar. Un gráfico de cuadrícula muestra registros de datos como filas de una cuadrícula. El gráfico solo refleja el contenido de un búfer.  

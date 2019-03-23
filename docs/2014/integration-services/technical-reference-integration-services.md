@@ -11,15 +11,15 @@ helpviewer_keywords:
 - technical reference [Integration Services]
 - Integration Services, technical reference
 ms.assetid: 69fe35ef-58df-4138-b0a5-9b1fb8c862d7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af1d6f752692c2bd8b5996761f63d5f562c182f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7134ae3080a4130a626ff79eb3c2df54745be4d7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212545"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374649"
 ---
 # <a name="technical-reference-integration-services"></a>Referencia técnica (Integration Services)
   Encontrará la documentación de referencia de programación de herramientas, lenguajes y admenistración de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "48212545"
  ![Icono carpeta de archivos pequeños](media/filefolder-small.gif "archivo pequeño icono de carpeta") **referencia de Transact-SQL**  
  [Views &#40;Integration Services Catalog&#41;](/sql/integration-services/system-views/views-integration-services-catalog) (Vistas [catálogo de Integration Services])  
   
- [Stored Procedures &#40;Integration Services Catalog&#41;](/sql/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog) (Procedimientos almacenados [catálogo de Integration Services])  
+ [Procedimientos almacenados &#40;catálogo de Integration Services&#41;](/sql/integration-services/system-stored-procedures/stored-procedures-integration-services-catalog)  
   
  [Funciones &#40;catálogo de Integration Services&#41;](performance/performance-counters.md)  
   

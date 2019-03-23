@@ -3,7 +3,7 @@ title: Notas de la versión
 titleSuffix: Azure Data Studio
 description: Notas de la versión de Data Studio Azure
 ms.custom: seodec18
-ms.date: 03/06/2019
+ms.date: 03/22/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,27 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161632"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381593"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión para Azure Data Studio
 
 **[Descargue e instale la versión más reciente.](download.md)**
+
+## <a name="march-2019-hotfix"></a>Marzo de 2019 (revisión)
+
+22 de marzo de 2019 &nbsp;  /  &nbsp; versión: 1.5.2 &nbsp;  /  &nbsp; versión de revisión
+
+&nbsp;
+
+| Cambiar | Detalles |
+| :----- | :------ |
+| Se ha corregido algunos problemas detectados en 1.5.1. | Consulte [versión de revisión de marzo en GitHub](https://github.com/Microsoft/azuredatastudio/milestone/28).<br/> <br/>&bull; &nbsp; Se corrigió un problema donde usuario no pudo cerrar el Bloc de notas abierto desde la tarea "Abrir Bloc de notas" en el panel <br/>&bull; &nbsp; Se corrigió el problema donde Notebook JSON tiene extra} después de guardar <br/>&bull; &nbsp; Se corrigió un problema donde las cuadrículas de Bloc de notas no se responden a los cambios de tema <br/>&bull; &nbsp; Se corrigió un problema donde se mostró la ruta de acceso de cuaderno completa en el encabezado de pestaña. Ahora se muestra solo el nombre de archivo. |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>Marzo de 2019
 

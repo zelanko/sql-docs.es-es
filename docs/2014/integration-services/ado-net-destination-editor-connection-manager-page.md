@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.connection.f1
 ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cdb70467f5844c2d2dba623c340209f495002cdd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 611436db1ea4a69a5c33c7bc2c3c9e92f2a350a3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357263"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382303"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>Editor de destinos de ADO NET (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destinos de ADO NET** para seleccionar la conexión [!INCLUDE[vstecado](../includes/vstecado-md.md)] del destino. Esta página también permite seleccionar una tabla o vista de la base de datos.  

@@ -1,5 +1,5 @@
 ---
-title: 'Paso 2: Agregar y configurar el contenedor de bucles Foreach | Microsoft Docs'
+title: 'Paso 2: Adición y configuración del contenedor de bucles Foreach | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2aa42ac9ab25c9765aac2afa10abdd50f2df4cb7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360123"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378863"
 ---
 # <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Paso 2: Agregar y configurar el contenedor de bucles Foreach
   En esta tarea, agregará la capacidad de buscar en una carpeta de archivos planos y aplicará la misma transformación de flujo de datos utilizada en la lección 1 a cada uno de dichos archivos planos. Para ello, agregará y configurará un contenedor de bucles Foreach para el flujo de control.  
@@ -24,7 +24,7 @@ ms.locfileid: "53360123"
   
  Actualmente, el administrador de conexiones de archivos planos de la lección 1 se conecta a un único archivo plano específico. Para conectarse de forma iterativa a cada uno de los archivos planos de la carpeta, deberá configurar el contenedor de bucles Foreach y el administrador de conexiones de archivos planos de este modo:  
   
--   **Contenedor de bucles foreach:** Se asignará el valor enumerado del contenedor a una variable de paquete definida por el usuario. El contenedor utilizará esta variable definida por el usuario para modificar de forma dinámica la propiedad `ConnectionString` del administrador de conexiones de archivos planos y conectar de forma iterativa cada uno de los archivos planos de la carpeta.  
+-   **Contenedor de bucles Foreach:** asignará el valor enumerado del contenedor a una variable de paquete definida por el usuario. El contenedor utilizará esta variable definida por el usuario para modificar de forma dinámica la propiedad `ConnectionString` del administrador de conexiones de archivos planos y conectar de forma iterativa cada uno de los archivos planos de la carpeta.  
   
 -   **Administrador de conexiones de archivos planos:** Modificará el Administrador de conexiones que se creó en la lección 1 mediante el uso de una variable definida por el usuario para rellenar el Administrador de conexiones `ConnectionString` propiedad.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "53360123"
 -   Arrastre el **Extract Sample Currency Data** tarea de flujo de datos en el contenedor de bucles Foreach que ahora se denomina `Foreach File in Folder`.  
   
 ## <a name="next-lesson-task"></a>Tarea de la siguiente lección  
- [Paso 3: Modificar el Administrador de conexiones de archivos planos](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+ [Paso 3: Modificación del Administrador de conexiones de archivos planos](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Configurar un contenedor de bucles Foreach](control-flow/foreach-loop-container.md)   

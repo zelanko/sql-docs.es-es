@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dts.designer.toolbox.F1
 - sql12.dts.designer.toolboxfavorites.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dec02ad946483f74b25a3b1ae514a20e1abc4523
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ed3b13619fa8206e9b4fa2054294c520f05ed890
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372017"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381853"
 ---
 # <a name="ssis-toolbox"></a>Cuadro de herramientas de SSIS
   Todos los componentes instalados en el equipo local, incluidos los componentes de terceros generados para SQL Server 2008 y 2008 R2, aparecen ahora automáticamente en el nuevo **Cuadro de herramientas de SSIS**. Al instalar componentes adicionales, haga clic con el botón derecho en el cuadro de herramientas y, después, haga clic en **Actualizar cuadro de herramientas** para agregar los componentes.  
@@ -31,7 +31,7 @@ ms.locfileid: "53372017"
   
  En el **Cuadro de herramientas de SSIS**, los componentes de flujo de control y flujo de datos están organizados en categorías.  Puede expandir y contraer las categorías para ver y puede cambiar la organización de componentes de acuerdo con sus preferencias.  Para restaurar la organización predeterminada, haga clic con el botón derecho dentro del cuadro de herramientas y, después, haga clic en **Restaurar valores predeterminados del cuadro de herramientas**.  
   
- Las categorías **Favoritos** y **Común** aparecen en el cuadro de herramientas al seleccionar las pestañas **Flujo de control**, **Flujo de datos**y **Controladores de eventos** . La categoría **Otras tareas** aparece en el cuadro de herramientas al seleccionar las pestañas **Flujo de control** o **Controladores de eventos** . Las categorías Otras transformaciones, **Otros orígenes**y **Otros destinos** aparecen en el cuadro de herramientas al seleccionar la pestaña **Flujo de datos** .  
+ Las categorías **Favoritos** y **Común** aparecen en el cuadro de herramientas al seleccionar las pestañas **Flujo de control**, **Flujo de datos**y **Controladores de eventos** . La categoría **Otras tareas** aparece en el cuadro de herramientas al seleccionar las pestañas **Flujo de control** o **Controladores de eventos** . Las categorías **Otras transformaciones**, **Otros orígenes**y **Otros destinos** aparecen en el cuadro de herramientas al seleccionar la pestaña **Flujo de datos** .  
   
  Cuando se crea un proyecto de SSIS o se abre un proyecto existente, el **Cuadro de herramientas de SSIS** se muestra automáticamente. También puede abrir el cuadro de herramientas haciendo clic en el botón Cuadro de herramientas situado en la esquina superior derecha de la superficie de diseño del paquete.  
   

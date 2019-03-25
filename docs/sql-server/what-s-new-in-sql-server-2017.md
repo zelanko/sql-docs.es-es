@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a8e2aabc262eae4f25bf1cc5056955b58b874d0
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 3d2881dfbb1e8b764c28e0ee9e5cd35ab6ba2087
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579365"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306053"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Novedades de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ SQL Server Analysis Services 2017 presenta muchas mejoras para los modelos tabul
 - Editor DAX para SSDT. (CTP 2.0)
 - Sugerencias de codificación, una característica avanzada para optimizar la actualización de datos de modelos tabulares en memoria de gran tamaño. (CTP 1.3)
 - Compatibilidad con el **nivel de compatibilidad 1400** para modelos tabulares. Para crear proyectos de modelos tabulares con el nivel de compatibilidad 1400 o actualizar proyectos existentes a dicho nivel, descargue e instale [SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939). (CTP 1.1)
-- Una experiencia **Get Data** moderna para los modelos tabulares en el nivel de compatibilidad 1400. Consulte el [blog del equipo de Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-2017-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
+- Una experiencia **Get Data** moderna para los modelos tabulares en el nivel de compatibilidad 1400. Consulte el [blog del equipo de Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/). (CTP 1.1)
 - Propiedad **Ocultar miembros** para ocultar los miembros en blanco de jerarquías desiguales. (CTP 1.1)
 - Nueva acción **Filas de detalles** del usuario final para **mostrar detalles** de la información agregada. Funciones [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) y **DETAILROWS** para crear expresiones de Filas de detalles. (CTP 1.1)
 - Operador DAX **IN** para especificar varios valores. (CTP 1.1)

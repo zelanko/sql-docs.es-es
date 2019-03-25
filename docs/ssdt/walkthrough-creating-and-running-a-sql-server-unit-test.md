@@ -11,12 +11,12 @@ ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8eb48a0c3147b61eb57b6a8035765ed73850efa
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: fde8f649921ebd1410b8b19d8f4883502e56f640
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143595"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305963"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Tutorial: Crear y ejecutar una prueba unitaria de SQL Server
 En este tutorial, se crea una prueba unitaria de SQL Server que comprueba el comportamiento de varios procedimientos almacenados. Las pruebas unitarias de SQL Server se crean para ayudar a identificar los defectos del código que podrían producir un comportamiento incorrecto de la aplicación. Las pruebas unitarias de SQL Server y las pruebas de aplicación se pueden ejecutar como parte de un conjunto de pruebas automatizado.  
@@ -968,7 +968,7 @@ Para crear y comprobar una prueba negativa, debe realizar las siguientes tareas:
     Especifique que se espera ver una excepción concreta. Opcionalmente, puede especificar un número de error concreto. Si no agrega este atributo, la prueba unitaria generará un error y aparecerá un mensaje en la ventana Resultados de pruebas  
   
     > [!IMPORTANT]  
-    > Actualmente, Visual Studio 2012 no admite el atributo ExpectedSqlException. Para obtener información sobre cómo solucionar este problema, vea [No se puede ejecutar la prueba unitaria de base de datos "Error esperado"](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
+    > Actualmente, Visual Studio 2012 no admite el atributo ExpectedSqlException. Para obtener información sobre cómo solucionar este problema, vea [No se puede ejecutar la prueba unitaria de base de datos "Error esperado"](https://social.msdn.microsoft.com/Forums/en-US/e74e06ad-e3c9-4cb0-97ad-a6f235a52345/unable-to-run-quotexpected-failurequot-database-unit-test).  
   
 3.  En el menú Archivo, haga clic en Guardar SqlServerUnitTests1.cs.  
   

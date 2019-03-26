@@ -11,15 +11,15 @@ helpviewer_keywords:
 - exponential functions
 - EXP function
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf95ffb46ec323f314360d9a23690f10eb9383de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6374e8b33c678f418ee456021ef739bde5ac22d9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658699"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271734"
 ---
 # <a name="exp-ssis-expression"></a>EXP (expresión de SSIS)
   Devuelve el exponente de la base e de una expresión numérica. La función EXP complementa la acción de la función LN; también se suele llamar antilogaritmo.  
@@ -39,7 +39,7 @@ EXP(numeric_expression)
  DT_R8  
   
 ## <a name="remarks"></a>Notas  
- La expresión numérica se convierte al tipo de datos DT_R8 antes de que se calcule el exponente. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ La expresión numérica se convierte al tipo de datos DT_R8 antes de que se calcule el exponente. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  El resultado devuelto es siempre un número positivo.  
   
@@ -64,7 +64,7 @@ EXP(0)
   
  Devuelve 1.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [LOG &#40;expresión de SSIS&#41;](../../integration-services/expressions/log-ssis-expression.md)   
  [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

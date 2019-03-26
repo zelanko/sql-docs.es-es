@@ -11,15 +11,15 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1c3c17729abb291de48e7f9626ed13dd8f51383a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70d7ba9d1828813c71cf88baab9709c10338c82d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639163"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271282"
 ---
 # <a name="connect-components-in-a-data-flow"></a>Conectar componentes de un flujo de datos
   Este procedimiento describe cómo conectar la salida de los componentes de un flujo de datos con otros componentes dentro del mismo flujo de datos.  
@@ -50,7 +50,7 @@ El flujo de datos de un paquete se genera en la superficie de diseño de la pest
   
 6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Agregar o eliminar un componente en un flujo de datos](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)   
  [Depurar el flujo de datos](../../integration-services/troubleshooting/debugging-data-flow.md) [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   

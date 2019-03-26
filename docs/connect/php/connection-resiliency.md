@@ -9,17 +9,17 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 6afbf85f5e141736ac4a78dc381205228bd5ddaa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527102"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305923"
 ---
 # <a name="idle-connection-resiliency"></a>Resistencia de conexión inactiva
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Resistencia de conexión](https://msdn.microsoft.com/library/dn632678.aspx) es el principio que una conexión inactiva interrumpida hacerse, dentro de determinadas restricciones. Si se produce un error en una conexión a Microsoft SQL Server, la resistencia de conexión permite al cliente intentará automáticamente restablecer la conexión. Resistencia de conexión es una propiedad del origen de datos; solo SQL Server 2014 y versiones posterior y Azure SQL Database compatible con la resistencia de conexión.
+[Resistencia de conexión](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) es el principio que una conexión inactiva interrumpida hacerse, dentro de determinadas restricciones. Si se produce un error en una conexión a Microsoft SQL Server, la resistencia de conexión permite al cliente intentará automáticamente restablecer la conexión. Resistencia de conexión es una propiedad del origen de datos; solo SQL Server 2014 y versiones posterior y Azure SQL Database compatible con la resistencia de conexión.
 
 Resistencia de la conexión se implementa con dos palabras clave de conexión que se pueden agregar a cadenas de conexión: **ConnectRetryCount** y **ConnectRetryInterval**.
 
@@ -130,5 +130,5 @@ Statement 2 successful.
 16 rows in result set.
 ```
 
-## <a name="see-also"></a>Ver también
-[Resistencia de conexión en el controlador Windows ODBC](https://docs.microsoft.com/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)
+## <a name="see-also"></a>Consulte también
+[Resistencia de conexión en el controlador Windows ODBC](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)

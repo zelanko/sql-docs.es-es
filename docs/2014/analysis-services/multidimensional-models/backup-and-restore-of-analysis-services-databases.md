@@ -1,7 +1,7 @@
 ---
 title: Copia de seguridad y restauración de bases de datos de Analysis Services | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 03/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -22,12 +22,12 @@ ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48fafd92104745ac438c212847e9b2976e84db6d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a74de18847236ca36677678da130aca87c128262
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352691"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434476"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye copias de seguridad y restauración para poder recuperar una base de datos y sus objetos de un momento determinado. Copias de seguridad y restauración también es una técnica válida para migrar bases de datos a servidores actualizados, mover bases de datos entre servidores o implementar una base de datos en un servidor de producción. Para la recuperación de datos, si aún no tiene un plan de copias de seguridad y los datos son importantes, debe diseñar e implementar un plan lo antes posible.  
@@ -36,7 +36,7 @@ ms.locfileid: "53352691"
   
  Para realizar una copia de seguridad completa que incluya los datos de origen, debe hacer una copia de seguridad de la base de datos que contiene los datos de detalle. Concretamente, si usa el almacenamiento de base de datos ROLAP o DirectQuery, los datos detallados se almacenan en una base de datos relacional de SQL Server que es distinta de la base de datos de Analysis Services. De lo contrario, si todos los objetos son tabulares o multidimensionales, la copia de seguridad de Analysis Services incluirá los metadatos y los datos de origen.  
   
- Una ventaja evidente de las copias de seguridad automáticas es que la instantánea de los datos siempre estará tan actualizada como determina la frecuencia de la copia de seguridad automática. Las programaciones automatizadas garantizan que no se olvida efectuar copias de seguridad. También puede automatizarse la restauración de una base de datos; ésta puede ser una buena forma de hacer replicaciones de los datos, pero no debe olvidar realizar la copia de seguridad del archivo de clave de cifrado en la instancia donde se hace la replicación. La característica de sincronización se ocupa de la replicación de las bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pero solo para los datos obsoletos. Todas las características aquí mencionadas pueden implementarse a través de la interfaz de usuario, por medio de comandos XML/A o mediante programación que se ejecuta a través de AMO. Para obtener más información acerca de las estrategias de copia de seguridad, vea el tema acerca de las [estrategias de copia de seguridad con SQL Server 2005 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81888).  
+ Una ventaja evidente de las copias de seguridad automáticas es que la instantánea de los datos siempre estará tan actualizada como determina la frecuencia de la copia de seguridad automática. Las programaciones automatizadas garantizan que no se olvida efectuar copias de seguridad. También puede automatizarse la restauración de una base de datos; ésta puede ser una buena forma de hacer replicaciones de los datos, pero no debe olvidar realizar la copia de seguridad del archivo de clave de cifrado en la instancia donde se hace la replicación. La característica de sincronización se ocupa de la replicación de las bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , pero solo para los datos obsoletos. Todas las características aquí mencionadas pueden implementarse a través de la interfaz de usuario, por medio de comandos XML/A o mediante programación que se ejecuta a través de AMO.  
   
  En este tema se incluyen las secciones siguientes:  
   

@@ -11,12 +11,12 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d948e4a790933e6f703232e3f642241395bbb410
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: e120762a84929ed58d163efb26faa6f28eb50dc3
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736986"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306133"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Conectarse a una base de datos de SQL Azure
 
@@ -33,7 +33,7 @@ En este artículo se tratan los problemas de uso de [!INCLUDE[jdbcNoVersion](../
 ## <a name="details"></a>Detalles
 
 Cuando se conecta a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], debe conectarse a la base de datos maestra para llamar a **SQLServerDatabaseMetaData.getCatalogs**.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] no es compatible con la devolución de todo el conjunto de catálogos de una base de datos de usuario. **SQLServerDatabaseMetaData.getCatalogs** utilice la vista sys.databases para obtener los catálogos. Consulte la discusión de permisos de [sys.databases (base de datos de SQL Azure)](https://go.microsoft.com/fwlink/?LinkId=217396) comprender **SQLServerDatabaseMetaData.getCatalogs** comportamiento en un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] no es compatible con la devolución de todo el conjunto de catálogos de una base de datos de usuario. **SQLServerDatabaseMetaData.getCatalogs** utilice la vista sys.databases para obtener los catálogos. Consulte la discusión de permisos de [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) comprender **SQLServerDatabaseMetaData.getCatalogs** comportamiento en un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
 ## <a name="connections-dropped"></a>Conexiones eliminadas
 

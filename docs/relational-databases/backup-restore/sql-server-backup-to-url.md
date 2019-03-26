@@ -1,7 +1,7 @@
 ---
 title: Copia de seguridad en URL de SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 11/17/2017
+ms.date: 03/25/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -11,15 +11,15 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8c609178c8bcb31bfba669b989ef12f2b21d6efb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: ef47b518c5c2d1595458d652b1fcde7065400b79
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327804"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434516"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Este tema presenta los conceptos, los requisitos y los componentes necesarios para utilizar el servicio de almacenamiento de blobs de Microsoft Azure como destino de copia de seguridad. La funcionalidad de copia de seguridad y restauración es igual o similar que la que usa DISK o TAPE, con algunas diferencias. En este tema se incluyen esas diferencias y algunos ejemplos de código.  
   

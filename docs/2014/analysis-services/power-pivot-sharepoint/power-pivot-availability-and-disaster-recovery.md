@@ -1,7 +1,7 @@
 ---
 title: Disponibilidad de PowerPivot y recuperación ante desastres (SQL Server 2014) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 03/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -11,12 +11,12 @@ ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ca6fb72455683ee3c98d1911d75840e5f7dcaf3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8f64fa8d79f3f44a1f7c62dfe13c931509408d42
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352638"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434496"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Disponibilidad y recuperación ante desastres de PowerPivot (SQL Server 2014)
   Los planes de disponibilidad y de recuperación ante desastres de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dependen principalmente del diseño de la granja de servidores de SharePoint, el tiempo de inactividad aceptable para los diferentes componentes, y las herramientas y las prácticas recomendadas que se implementan para la disponibilidad de SharePoint. En este tema se resumen las tecnologías y se incluyen diagramas de topología de ejemplo que hay que tener en cuenta al planear la disponibilidad y la recuperación ante desastres para una implementación de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
@@ -99,8 +99,6 @@ ms.locfileid: "53352638"
 -   [Compatibilidad de alta disponibilidad y opciones de recuperación ante desastres para bases de datos de SharePoint (SharePoint 2013)](https://technet.microsoft.com/library/jj841106.aspx)  
   
 -   [Planeación de la recuperación ante desastres (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628971\(v=office.14\).aspx)  
-  
--   [Notas del producto de copia de seguridad y recuperación en nube de SQL Server](https://www.microsoft.com/server-cloud/solutions/cloud-backup-recovery.aspx?WT.srch=1&WT.mc_ID=SEM_BING_USEvergreenSearch_Unassigned&CR_CC=Unassigned#fbid=RjU2Nbzu2dT)  
   
 -   [Herramienta Copia de seguridad de Microsoft® SQL Server Backup en Microsoft Windows® Azure®](https://www.microsoft.com/download/details.aspx?id=40740)  
   

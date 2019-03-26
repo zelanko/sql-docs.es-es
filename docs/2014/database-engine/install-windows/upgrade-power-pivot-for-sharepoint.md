@@ -1,7 +1,7 @@
 ---
 title: Actualizar PowerPivot para SharePoint | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 03/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
@@ -10,12 +10,12 @@ ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7e1459462b057dee39502805cc7746d7e0afa618
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366127"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434506"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Actualizar PowerPivot para SharePoint
   En este tema se resumen los pasos necesarios para actualizar una implementación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Los pasos específicos dependen de la versión de SharePoint que está ejecutando el entorno e incluyen el complemento PowerPivot para SharePoint (**spPowerPivot.msi**).  
@@ -74,7 +74,7 @@ ms.locfileid: "53366127"
   
 2.  Reinicie el servidor.  
   
-3.  Ejecute el complemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint (**spPowerPivot.msi**) en todos los servidores de la granja de SharePoint 2013 para instalar los proveedores de datos. La excepción está en los servidores donde se ejecutó el Asistente para la instalación de SQL Server, que también actualiza los proveedores de datos. Para obtener más información, consulte [descargar Microsoft SQL Server 2014 PowerPivot para Microsoft SharePoint 2013,](https://www.microsoft.com/download/details.aspx?id=40737) y [instalar o desinstalar PowerPivot para SharePoint Add-in &#40;SharePoint 2013&#41; ](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  Ejecute el complemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint (**spPowerPivot.msi**) en todos los servidores de la granja de SharePoint 2013 para instalar los proveedores de datos. La excepción está en los servidores donde se ejecutó el Asistente para la instalación de SQL Server, que también actualiza los proveedores de datos. Para obtener más información, consulte [instalar o desinstalar PowerPivot para SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 4.  **Ejecute la herramienta de configuración de PowerPivot para SharePoint 2013** en uno de los servidores de aplicaciones de SharePoint para configurar la granja de servidores de SharePoint con los archivos de solución actualizados que el complemento instaló. No puede usar Administración central de SharePoint para este paso. Para obtener más información, vea:  
   
@@ -103,7 +103,7 @@ ms.locfileid: "53366127"
         > [!IMPORTANT]  
         >  La primera acción, **Actualizar solución de granja**, siempre se debe procesar primero. Registra los cmdlets de PowerShell que se utilizan para configurar el servidor. Si obtiene un error en esta acción, no debe continuar. En su lugar, utilice la información proporcionada por el error para diagnosticar y resolver el problema antes de procesar acciones adicionales en la lista de tareas.  
   
-    7.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **ejecutar**, aparece la advertencia siguiente recordándole que las acciones se procesan en modo por lotes: "**Todos los valores de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?**".  
+    7.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la advertencia siguiente, para recordarle que las acciones se procesan en modo por lotes: "**Todos los parámetros de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?**".  
   
     8.  Haga clic en **Sí** para continuar.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "53366127"
         > [!IMPORTANT]  
         >  La primera acción, **Actualizar solución de granja**, siempre se debe procesar primero. Registra los cmdlets de PowerShell que se utilizan para configurar el servidor. Si obtiene un error en esta acción, no debe continuar. En su lugar, utilice la información proporcionada por el error para diagnosticar y resolver el problema antes de procesar acciones adicionales en la lista de tareas.  
   
-    8.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **ejecutar**, aparece la advertencia siguiente recordándole que las acciones se procesan en modo por lotes: "Todos los valores de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?".  
+    8.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la advertencia siguiente, para recordarle que las acciones se procesan en modo por lotes: "Todos los parámetros de configuración que se indican como válidos en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?".  
   
     9. Haga clic en **Sí** para continuar.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "53366127"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  Revise las implementaciones existentes para la siguiente información: **Tipo** es retracción o implementación, **archivo** es powerpivotwebapp.wsp o powerpivotfarm.wsp.  
+    2.  Revise las implementaciones existentes para la siguiente información: **Tipo**es Retracción o Implementación, **Archivo** es powerpivotwebapp.wsp o powerpivotfarm.wsp.  
   
     3.  Las implementaciones o las retracciones relacionadas con soluciones de PowerPivot, copie el valor GUID para **JobId** y, a continuación, péguelo en el siguiente comando (use los comandos marcar, copiar y pegar en el menú de edición del Shell para copiar el GUID):  
   

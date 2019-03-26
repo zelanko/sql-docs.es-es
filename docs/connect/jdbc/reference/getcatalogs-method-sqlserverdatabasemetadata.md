@@ -16,12 +16,12 @@ ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2792bd3a13be5ceb4ee8965065f6c6619f389d22
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a7ad65c0563598b06b88d2d3f744ade4f37a8fc8
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601236"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305953"
 ---
 # <a name="getcatalogs-method-sqlserverdatabasemetadata"></a>Método getCatalogs (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public java.sql.ResultSet getCatalogs()
  El método getCatalogs especifica este método getCatalogs en la interfaz java.sql.DatabaseMetaData.  
   
 > [!NOTE]  
->  En SQL Azure, debe conectarse a la base de datos maestra para llamar a **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure no es compatible con la devolución de todo el conjunto de catálogos de una base de datos de usuario. **SQLServerDatabaseMetaData.getCatalogs** usa la vista sys.databases para obtener los catálogos. Consulte la discusión de permisos de [sys.databases (base de datos de SQL Azure)](https://go.microsoft.com/fwlink/?LinkId=217396) comprender **SQLServerDatabaseMetaData.getCatalogs** comportamiento en SQL Azure.  
+>  En SQL Azure, debe conectarse a la base de datos maestra para llamar a **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure no es compatible con la devolución de todo el conjunto de catálogos de una base de datos de usuario. **SQLServerDatabaseMetaData.getCatalogs** usa la vista sys.databases para obtener los catálogos. Consulte la discusión de permisos de [sys.database_usage (base de datos de SQL Azure)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) comprender **SQLServerDatabaseMetaData.getCatalogs** comportamiento en SQL Azure.  
   
  El conjunto de resultados devuelto por el método getCatalogs contendrá la siguiente información:  
   
@@ -79,7 +79,7 @@ public static void executeGetCatalogs(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

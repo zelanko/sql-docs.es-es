@@ -13,12 +13,12 @@ ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e9905a251ae9ebe858cc3a100de357011826b6a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d688f3e23d0ecb9ecd00364c783b90e770ef4205
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606005"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306153"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Recursos de soporte para los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,13 +47,13 @@ Para obtener soporte de colegas, visite los [foros de IIS](https://forums.iis.ne
 ## <a name="php-support-resources"></a>Recursos de soporte de PHP  
 [Documentación de PHP para Windows](https://windows.php.net/)  
   
-Para obtener la información más reciente sobre PHP, visite [ https://www.php.net/ ](https://www.php.net).  
+Para obtener la información más reciente sobre PHP, visite [ http://www.php.net/ ](http://www.php.net).  
   
-Para obtener documentación de PHP, visite [ https://www.php.net/docs.php ](https://www.php.net/docs.php).  
+Para obtener documentación de PHP, visite [ http://www.php.net/docs.php ](http://www.php.net/docs.php).  
   
 ## <a name="microsoft-customer-support"></a>Soporte al cliente de Microsoft  
 Para preguntas de soporte técnico en relación con el [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], puede ponerse en contacto con [Microsoft Support](https://support.microsoft.com/contactus/), o pida en el [página de Github del proyecto](https://github.com/Microsoft/msphpsql/issues).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Información general de los controladores de Microsoft para PHP para SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
   

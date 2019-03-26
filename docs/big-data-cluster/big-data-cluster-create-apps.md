@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 83dc07ed6336c637aaf17fdcfc1075854fe542b7
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222068"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434436"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Cómo implementar una aplicación en clúster de macrodatos de 2019 de SQL Server (versión preliminar)
 
@@ -137,6 +137,9 @@ Para probar esto, copie las líneas de código anteriores en dos archivos en el 
 ```bash
 mssqlctl app create --spec ./addpy
 ```
+
+> [!NOTE]
+> El `spec.yaml` archivo especifica tanto un `poolsize` y un número de `replicas`. El número de `replicas` especifica el número de copias del servicio debe implementarse. El `poolsize` especifica el número de grupos que desea crear para cada réplica. Esta configuración tiene un impacto en la cantidad de solicitudes que puede controlar la implementación en paralelo. El número máximo de solicitudes en un momento dado es igual a `replicas` veces `poolsize`, es decir Si tiene 5 réplicas y 2 grupos por réplica de la implementación puede controlar 10 solicitudes en paralelo. Consulte la siguiente imagen para una representación gráfica de `replicas` y `poolsize`: ![TamañoDeGrupo y réplicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
 Puede comprobar si la aplicación se implementa mediante el comando de lista:
 

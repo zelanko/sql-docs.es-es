@@ -14,15 +14,15 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 488043cb3ffb4288d8f3b240d4dd78a7c08f6b83
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 374e977eafce0dcb679997e85655302aa7de0b4d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641162"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271011"
 ---
 # <a name="performance-counters"></a>Performance Counters
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala un conjunto de contadores de rendimiento que pueden usarse para supervisar el rendimiento del motor de flujo de datos. Por ejemplo, puede observar el contador "Búferes puestos en cola" para determinar si se están escribiendo búferes de datos en el disco temporalmente mientras se ejecuta un paquete. Este intercambio reduce el rendimiento e indica que el equipo no tiene memoria suficiente.  
@@ -117,5 +117,5 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     > [!NOTE]  
     >  Debe iniciar el servicio Registros y alertas de rendimiento con una cuenta local o de dominio que sea miembro del grupo Administradores.  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Ejecución de proyectos y paquetes](../packages/run-integration-services-ssis-packages.md) [Eventos registrados por un paquete de Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  

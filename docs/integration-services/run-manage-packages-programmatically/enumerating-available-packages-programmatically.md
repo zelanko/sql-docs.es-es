@@ -12,15 +12,15 @@ helpviewer_keywords:
 - existence testing [Integration Services]
 - enumerating packages [Integration Services]
 ms.assetid: 254ec7ee-d3ff-4361-8995-46e9b9c4dc95
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a9ee4631e7fbc03d31078230d78458df5eef722
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad1532d5f3cca914ad169eb9dec95a16960a7344
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700313"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271606"
 ---
 # <a name="enumerating-available-packages-programmatically"></a>Enumerar los paquetes disponibles mediante programación
   <a name="top"></a> Cuando trabaja mediante programación con paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede determinar si existe un paquete o una carpeta individual o enumerar los paquetes guardados que están disponible para cargarse y ejecutarse. La clase <xref:Microsoft.SqlServer.Dts.Runtime.Application> del espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> proporciona diferentes métodos para satisfacer estos requisitos.    
@@ -239,7 +239,7 @@ namespace EnumeratePackagesSql_CS
     
  [Volver al principio](#top)    
    
-## <a name="see-also"></a>Ver también    
+## <a name="see-also"></a>Consulte también    
  [Administración de paquetes &#40;servicio SSIS&#41;](../../integration-services/service/package-management-ssis-service.md)    
     
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - packages [Integration Services], managing
 - custom enumerators [Integration Services]
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9b8b29d4a2050420cee4796f8f7dd588b474d74d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 712f4c25af85db5c4ec7f5df52680e83aad06398
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650013"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290011"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Administrar paquetes y carpetas mediante programación
 <a name="top"></a> Cuando trabaja con paquetes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante programación, puede que quiera determinar si existe un paquete o carpeta individual, o administrar las carpetas en las que se almacenan los paquetes. La clase <xref:Microsoft.SqlServer.Dts.Runtime.Application> del espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> proporciona diferentes métodos para satisfacer estos requisitos.    
@@ -85,7 +85,7 @@ ms.locfileid: "47650013"
     
  [Volver al principio](#top)    
     
-## <a name="see-also"></a>Ver también    
+## <a name="see-also"></a>Consulte también    
  [Administración de paquetes &#40;servicio SSIS&#41;](../../integration-services/service/package-management-ssis-service.md)     
  [Enumerar los paquetes disponibles mediante programación](../../integration-services/run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)    
     

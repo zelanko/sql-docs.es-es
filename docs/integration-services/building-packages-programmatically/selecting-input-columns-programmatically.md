@@ -20,14 +20,14 @@ helpviewer_keywords:
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: douglaslMS
-ms.author: douglasl
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f277acbaa9713e5fcb0906551ba902fba05a390b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d16caca028889b5b9fa6f122c3590208b5c5a793
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788613"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282889"
 ---
 # <a name="selecting-input-columns-programmatically"></a>Seleccionar mediante programación las columnas de entrada
   Después de haber conectado los componentes mediante programación, seleccione las columnas de los componentes de nivel superior que transformará en componentes de nivel inferior o por los que pasará a los componentes de nivel inferior. Si no selecciona las columnas de entrada para el componente, el componente no recibe ninguna fila de la tarea de flujo de datos.  
@@ -211,7 +211,7 @@ Module Module1
 End Module  
 ```
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Guardar un paquete mediante programación](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
   
   

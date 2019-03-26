@@ -17,15 +17,15 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e6fa3edeeff19f7ddf9fde79114586ba7588324
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 96badece6d707558fa9fcda87bdf9f71af64255e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641322"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290441"
 ---
 # <a name="flat-file-destination"></a>Destino de archivo plano
   El destino de archivo plano escribe datos en un archivo de texto. El archivo de texto puede tener formato delimitado, de ancho fijo, de ancho fijo con delimitador de filas o desigual a la derecha.  
@@ -93,7 +93,7 @@ ms.locfileid: "51641322"
  **Columna de destino**  
  Muestra las columnas de destino disponibles, independientemente de si están asignadas o no.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Origen de archivo plano](../../integration-services/data-flow/flat-file-source.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   

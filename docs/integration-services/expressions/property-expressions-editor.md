@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Property Expressions Editor dialog box
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74efb5537a801e7c01d9a11a2ef9cd219e46312a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7626cff9ab80ef15d6cec283efd8a50a8d038ef1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532154"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275184"
 ---
 # <a name="property-expressions-editor"></a>Editor de expresiones de propiedad
   Utilice el cuadro de diálogo **Editor de expresiones de propiedad** para crear, editar o eliminar las expresiones de propiedad que actualizan valores de propiedad.  
@@ -41,7 +41,7 @@ ms.locfileid: "52532154"
  **Eliminar**  
  Seleccione una propiedad y, después, haga clic en **Eliminar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Página Expresiones](../../integration-services/expressions/expressions-page.md)   
  [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Variables del sistema](../../integration-services/system-variables.md)   

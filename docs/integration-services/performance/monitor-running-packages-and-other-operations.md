@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4ac0343ffe46613e85fc1985a836dd3f05f3d46e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 291dc0fb1be05a9818d7f351867c5c6d25276ee2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623683"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271205"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Monitor de ejecución de paquetes y otras operaciones
   Puede supervisar las ejecuciones de paquetes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , validaciones de proyectos y otras operaciones mediante una o varias de las herramientas siguientes. Algunas herramientas como las derivaciones de datos solo están disponibles para los proyectos que se implementan en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -45,7 +45,7 @@ ms.locfileid: "47623683"
 > [!NOTE]
 > En este artículo se describe cómo supervisar la ejecución de los paquetes SSIS en general y la de los paquetes de forma local. Los paquetes SSIS también se pueden ejecutar y supervisar en Azure SQL Database. Para obtener más información, consulte [Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) (Migrar cargas de trabajo de SQL Server Integration Services a la nube mediante lift-and-shift).
 >
-> Aunque los paquetes SSIS también se pueden ejecutar en Linux, no se proporcionan herramientas de supervisión. Para obtener más información, consulte [Extract, transform, and load data on Linux with SSIS](../../linux/sql-server-linux-migrate-ssis.md) (Extracción, transformación y carga de datos en Linux con SSIS).
+> Aunque los paquetes SSIS también se pueden ejecutar en Linux, no se proporcionan herramientas de supervisión. Para obtener más información, consulte [Extracción, transformación y carga de datos en Linux con SSIS](../../linux/sql-server-linux-migrate-ssis.md) .
 
 ## <a name="operation-types"></a>Tipos de operación  
  En el catálogo de **SSISDB** se supervisan varios tipos diferentes de operaciones, en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cada operación puede tener varios mensajes asociados. Cada mensaje se puede clasificar en uno de varios tipos. Por ejemplo, un mensaje puede ser de información, de advertencia o de error. Para obtener la lista completa de tipos de mensaje, vea la documentación de la vista [catalog.operation_messages &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) de Transact-SQL. Para obtener una lista completa de los tipos de operaciones, vea [catalog.operations &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).  
@@ -152,7 +152,7 @@ ms.locfileid: "47623683"
   
 |Sección|Descripción|  
 |-------------|-----------------|  
-|Filtro|Muestra el filtro actual que se aplica al informe, como el Intervalo de tiempo de inicio.|  
+|Filter|Muestra el filtro actual que se aplica al informe, como el Intervalo de tiempo de inicio.|  
 |Información de ejecución|Muestra la hora de inicio, la hora de finalización y la duración de cada ejecución del paquete. Puede ver una lista de los valores de parámetro usados con una ejecución de paquete, como los valores que se pasaron a un paquete secundario mediante la tarea Ejecutar paquete. Para ver la lista de parámetros, haga clic en Información general.|  
   
  Para obtener más información sobre cómo utilizar la tarea Ejecutar paquete con el fin de que los valores estén disponibles para un paquete secundario, vea [Execute Package Task](../../integration-services/control-flow/execute-package-task.md).  
@@ -204,6 +204,6 @@ ms.locfileid: "47623683"
   
     -   **Todas las conexiones**  
 
-## <a name="see-also"></a>Ver también  
- [Execution of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)  (Ejecución de proyectos y paquetes)  
+## <a name="see-also"></a>Consulte también  
+ [Ejecución de proyectos y paquetes](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
  [Solucionar problemas de informes para la ejecución de paquetes](../troubleshooting/troubleshooting-reports-for-package-execution.md)  

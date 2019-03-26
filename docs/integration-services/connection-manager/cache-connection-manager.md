@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 81c0f330803b5e073425ff4540f20bdd08caf8c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f68d68c9302bccd55ef01b104a592a0462fbe669
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837783"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289941"
 ---
 # <a name="cache-connection-manager"></a>Administrador de conexiones de caché
   El administrador de conexiones de caché lee datos a partir de la transformación de caché o de un archivo caché (.caw) y puede guardar los datos en un archivo caché. Si configura el administrador de conexiones de caché para que utilice un archivo caché, los datos siempre se almacenan en memoria.  
@@ -31,7 +31,7 @@ ms.locfileid: "47837783"
 >  El administrador de conexiones de caché no admite los tipos de datos de objetos binarios grandes (BLOB) DT_TEXT, DT_NTEXT y DT_IMAGE. Si el conjunto de datos de referencia contiene un tipo de datos BLOB, se producirá un error en el componente al ejecutar el paquete. Puede utilizar el **Editor del administrador de conexiones de caché** para modificar los tipos de datos de columna. Para obtener más información, vea [Cache Connection Manager Editor](cache-connection-manager-editor.md).  
   
 > [!NOTE]  
->  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para obtener más información, vea [Acceso a los archivos usados por los paquetes](../../integration-services/security/security-overview-integration-services.md#files).  
+>  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para más información, vea [Acceso a los archivos usados por los paquetes](../../integration-services/security/security-overview-integration-services.md#files).  
   
 ## <a name="configuration-of-the-cache-connection-manager"></a>Configuración del administrador de conexiones de caché  
  Puede configurar el administrador de conexiones de caché de las siguientes maneras:  
@@ -78,7 +78,7 @@ ms.locfileid: "47837783"
  Indicar si se ha de utilizar un archivo caché.  
   
 > [!NOTE]  
->  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para obtener más información, vea [Acceso a los archivos usados por los paquetes](../../integration-services/security/security-overview-integration-services.md#files).  
+>  El nivel de protección del paquete no se aplica al archivo caché. Si el archivo caché contiene información confidencial, utilice una lista de control de acceso (ACL) para restringir el acceso a la ubicación o carpeta en la que almacena el archivo. Solo debería permitir el acceso a ciertas cuentas. Para más información, vea [Acceso a los archivos usados por los paquetes](../../integration-services/security/security-overview-integration-services.md#files).  
   
  Si configura el administrador de conexiones de caché para utilizar un archivo caché, el administrador de conexiones realizará una de las siguientes acciones:  
   
@@ -128,6 +128,6 @@ ms.locfileid: "47837783"
  Especifica la página de códigos para el tipo de columna. Si procede en el caso del tipo de datos, puede actualizar la **Code Page**.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Implementación de una transformación Búsqueda en el modo Caché completa con el Administrador de conexiones de caché](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

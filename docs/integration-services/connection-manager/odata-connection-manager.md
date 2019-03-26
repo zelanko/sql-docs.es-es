@@ -11,15 +11,15 @@ ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 f1_keywords:
 - sql13.dts.designer.odatasource.connectionmanager.f1
 - sql13.dts.designer.odataconnectionmanager.f1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa18c7b1a6aeaccb448c7006e8d4430d436a2516
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 20421d29832aab8fdeb9532c335c689a1314ad2e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511263"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276203"
 ---
 # <a name="odata-connection-manager"></a>Administrador de conexiones OData
  Conéctese a un origen de datos OData con un administrador de conexiones OData. Un componente de origen OData usa un administrador de conexiones OData para conectarse a un origen de datos OData y consumir datos del servicio. Para obtener más información, vea [OData Source](../../integration-services/data-flow/odata-source.md).  

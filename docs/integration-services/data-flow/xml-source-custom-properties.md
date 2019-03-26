@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 60748312c4169eafa50bdf7685c9b5111b3bc66a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a1bd4c6866f7090a00567240350f1355f5c7f5e6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639162"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270348"
 ---
 # <a name="xml-source-custom-properties"></a>Propiedades personalizadas del origen XML
   El origen XML tiene propiedades personalizadas y propiedades comunes a todos los componentes de flujo de datos.  
@@ -40,7 +40,7 @@ ms.locfileid: "51639162"
   
  Para más información, consulte [XML Source](../../integration-services/data-flow/xml-source.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

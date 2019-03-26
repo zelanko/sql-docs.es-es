@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 95c26215be0cb55c916d7162896ec7651132f13f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 02f4c2f408b8ab920b970a29917595841b1183fe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640972"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273778"
 ---
 # <a name="building-packages-programmatically"></a>Generar paquetes mediante programación
   Si necesita crear paquetes de forma dinámica o administrar y ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fuera del entorno de desarrollo, puede manipular paquetes mediante programación. En este enfoque, tiene un intervalo de opciones continuo:  
@@ -96,7 +96,7 @@ ms.locfileid: "51640972"
   
 -   Entrada de blog, [Generar perfiles de rendimiento de las extensiones personalizadas](https://go.microsoft.com/fwlink/?LinkId=238831), en blogs.msdn.com.  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   

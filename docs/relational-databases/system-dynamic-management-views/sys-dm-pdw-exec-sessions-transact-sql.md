@@ -1,7 +1,7 @@
 ---
 title: sys.dm_pdw_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 03/22/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 41042d1dff7a64a8a2d2fe093276f61ab254da56
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fac2105011440cbabd3ed7eedebdaeb5cba37346
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039866"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417177"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "56039866"
 |app_name|**nvarchar(255)**|Captura información de nombre de aplicación, opcionalmente, establecer como parte del proceso de conexión.|Cualquier cadena válida.|  
 |sql_spid|**int**|El número de Id. del SPID. Use el `session_id` esta sesión. Use la `sql_spid` columna unir a **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Advertencia \* \***  esta columna contiene los SPID cerrados.||  
   
- Para obtener información sobre el número máximo de filas retenidas por esta vista, consulte la sección de valores máximos de la vista del sistema en el [valores mínimos y máximos (SQL Server PDW)](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9) tema.  
+ Para obtener información sobre el número máximo de filas retenidas por esta vista, consulte la sección de metadatos en el [límites de capacidad](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) tema.  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso `VIEW SERVER STATE`.  

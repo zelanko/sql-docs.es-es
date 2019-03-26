@@ -12,15 +12,15 @@ helpviewer_keywords:
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 529553265adc0045fa9a52a9303d1c3b24998065
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74f1d8df75ae85367f57de01e9f8a60bab902242
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752213"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274308"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurar salidas mediante el Asistente para dimensión de variación lenta
   El Asistente para dimensiones variables funciona como editor para la transformación Dimensión de variación lenta. Generar y configurar el flujo de datos para datos de dimensiones de variación lenta puede ser una tarea compleja. El Asistente para dimensiones variables ofrece el método más simple para generar el flujo de datos para las salidas de la transformación Dimensión de variación lenta, ya que ofrece una guía paso a paso de la asignación de columnas, la selección de columnas de clave empresarial, el establecimiento de atributos de cambio de las columnas y la configuración de la admisión de miembros de dimensión deducidos.  
@@ -80,7 +80,7 @@ ms.locfileid: "47752213"
 ## <a name="updating-slowly-changing-dimension-outputs"></a>Actualizar salidas de dimensión de variación lenta  
  La manera más simple de actualizar la configuración de la transformación Dimensión de variación lenta es volver a ejecutar el Asistente para dimensiones variablesy modificar las propiedades en las páginas del asistente. También puede actualizar la transformación Dimensión de variación lenta mediante el cuadro de diálogo **Editor avanzado** o mediante programación.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   

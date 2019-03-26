@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoophivetask.f1
 ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 72962fd498057ccb53126f31c13f91acac96b5eb
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 3c78c8b091751e1fd849c3490544acd492cd595c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906205"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282899"
 ---
 # <a name="hadoop-hive-task"></a>Tarea de Hive de Hadoop
   Utilice la tarea de Hive de Hadoop para ejecutar el script de Hive en un clúster de Hadoop.  
@@ -38,7 +38,7 @@ ms.locfileid: "48906205"
 |**HadoopScriptFilePath**|Cuando el valor de **SourceType** sea **ScriptFile**, especifique la ruta de acceso del archivo de script en Hadoop.|  
 |**TimeoutInMinutes**|Especifique un valor de tiempo de espera en minutos. El trabajo de Hadoop se detiene si no se ha terminado antes de que transcurra el tiempo de espera. Especifique 0 para programar el trabajo de Hadoop de modo que se ejecute de forma asincrónica.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de conexiones de Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)  
   
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b063396b2dc55636f85b6884206c1a5a1d6e6109
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 767c643644207d1ca72826831711bd36b385a1d7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509224"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281269"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementar una búsqueda en modo No hay caché o Caché parcial
   Puede configurar la transformación Búsqueda para utilizar el modo Caché parcial o el modo Sin caché:  
@@ -108,7 +108,7 @@ ms.locfileid: "52509224"
   
 14. Haga clic en **Aceptar** para guardar los cambios en la transformación Búsqueda y, a continuación, ejecute el paquete.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f81faab9a9ef4e9ecfeb1438dc45e27bf963e8f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53a05f64b2d6051c30cfde9972f5347418a76361
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671483"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279350"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Usar las salidas de error en un componente de flujo de datos
   Se pueden agregar objetos <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> especiales denominados salidas de error a los componentes para permitir que el componente redirija las filas que no puede procesar durante la ejecución. Los problemas que un componente puede encontrar generalmente se clasifican como errores o truncamientos y son específicos de cada componente. Los componentes que proporcionan las salidas de error ofrecen a los usuarios del componente la flexibilidad para administrar las condiciones de error, para ello filtran las filas de errores fuera del conjunto de resultados, generan un error en el componente cuando se produce un problema o pasan por alto los errores y continúan.  
@@ -431,7 +431,7 @@ Public  Overrides Sub PrimeOutput(ByVal outputs As Integer, ByVal outputIDs As I
 End Sub  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Control de errores en los datos](../../../integration-services/data-flow/error-handling-in-data.md)   
  [Usar salidas de error](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
   

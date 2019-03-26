@@ -14,15 +14,15 @@ helpviewer_keywords:
 - database shrinking [Integration Services]
 - shrinking databases
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cfea8989d573ef107d6c8b493e213c6ea5050b0f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d8c4d8e63cb2d721e60741f5df164048a6c0b5c4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640099"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290751"
 ---
 # <a name="shrink-database-task"></a>Reducir base de datos, tarea
   La tarea Reducir base de datos reduce el tamaño de los datos y los archivos de registro de bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -14,15 +14,15 @@ f1_keywords:
 - sql13.dts.designer.advancededitor.connections.f1
 - sql13.dts.designer.advancededitor.columnmappings.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7ef5d2976ede4bf9c96ae109acd921d9fa385f6d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5f5fd00c43d0b7279e000d3640b0c5d0aca3544a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641462"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276500"
 ---
 # <a name="advanced-editor"></a>Editor avanzado
   Use el cuadro de diálogo **Editor avanzado** para configurar las propiedades del objeto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] seleccionado.  
@@ -53,7 +53,7 @@ ms.locfileid: "51641462"
   
 -   [Transformaciones de Integration Services](../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   

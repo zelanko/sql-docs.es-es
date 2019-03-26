@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd08989eb41f5b5a2b1c3f677f8dcff64b25b6ea
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 34f57edd8b58476a7077f601692086c80c89d0c0
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802759"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306003"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solucionar problemas de conexión al motor de base de datos de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ Antes de solucionar un problema de conexión desde otro equipo, pruebe la capaci
 Si aparece un error en este punto, tendrá que resolverlo antes de continuar. Hay muchos aspectos que podrían plantear problemas. El inicio de sesión podría no estar autorizado a conectarse. Podría faltar la base de datos predeterminada.
 
 > [!NOTE]
->    Algunos mensajes de error que se pasan al cliente no proporcionan suficiente información para solucionar el problema a propósito. Se trata de una característica de seguridad para evitar proporcionar información sobre SQL Server a cualquier atacante. Para ver la información completa sobre el error, busque en el registro de errores de SQL Server. Allí se proporcionan los detalles. Si recibe el error **18456 Error de inicio de sesión para el usuario**, el tema de los Libros en pantalla [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contiene información adicional sobre los códigos de error. Además, el blog de Aaron Bertrand ofrece una lista muy amplia de códigos de error en [Troubleshooting Error 18456 (Solucionar el error 18456)](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx). Puede ver el registro de errores con SSMS (si se puede conectar), en la sección Administración del Explorador de objetos. De lo contrario, puede ver el registro de errores con el programa Bloc de notas de Windows. La ubicación predeterminada varía en función de la versión y se puede cambiar durante la instalación. La ubicación predeterminada de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] es `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
+>    Algunos mensajes de error que se pasan al cliente no proporcionan suficiente información para solucionar el problema a propósito. Se trata de una característica de seguridad para evitar proporcionar información sobre SQL Server a cualquier atacante. Para ver la información completa sobre el error, busque en el registro de errores de SQL Server. Allí se proporcionan los detalles. Si recibe el error **18456 Error de inicio de sesión para el usuario**, el tema de los Libros en pantalla [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contiene información adicional sobre los códigos de error. Además, el blog de Aaron Bertrand ofrece una lista muy amplia de códigos de error en [Troubleshooting Error 18456 (Solucionar el error 18456)](https://sqlblog.org/2011/01/14/troubleshooting-error-18456). Puede ver el registro de errores con SSMS (si se puede conectar), en la sección Administración del Explorador de objetos. De lo contrario, puede ver el registro de errores con el programa Bloc de notas de Windows. La ubicación predeterminada varía en función de la versión y se puede cambiar durante la instalación. La ubicación predeterminada de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] es `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
 4.   Si puede conectar con la memoria compartida, pruebe la conexión mediante TCP. Puede forzar una conexión TCP si especifica **tcp:** antes del nombre. Por ejemplo:
 

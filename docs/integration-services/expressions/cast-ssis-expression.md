@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ba1021832b0018f499dde65c09a46b5817bf073
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15e1ef5983228eb9da820897e7f4a78358c12513
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742373"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270680"
 ---
 # <a name="cast-ssis-expression"></a>Conversión (expresión de SSIS)
   Convierte explícitamente una expresión de un tipo de datos a otro. El operador de conversión también puede funcionar como un operador de truncamiento.  
@@ -43,7 +43,7 @@ ms.locfileid: "47742373"
  Expresión válida.  
   
 ## <a name="result-types"></a>Tipos de resultado  
- El tipo de datos de *type_spec*. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ El tipo de datos de *type_spec*. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="remarks"></a>Notas  
  El siguiente diagrama muestra operaciones de conversión válidas.  
@@ -143,7 +143,7 @@ ms.locfileid: "47742373"
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
  [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   

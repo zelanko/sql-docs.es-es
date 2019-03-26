@@ -11,15 +11,15 @@ helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 54c2f0a9a77b3cbcd4dd1ecc652b78f2bd2909bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d47462eeb7259b0289f7c554c0c6a4bd30dbb995
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505979"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275236"
 ---
 # <a name="add-or-change-a-property-expression"></a>Agregar o cambiar una expresión de propiedad
   Puede crear expresiones de propiedad para paquetes, tareas, contenedores de bucles ForEach, contenedores de bucles For, contenedores de secuencias, controladores de eventos, administradores de conexión de paquetes y proyectos, y proveedores de registro.  
@@ -65,7 +65,7 @@ ms.locfileid: "52505979"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Usar expresiones de propiedad en paquetes](../../integration-services/expressions/use-property-expressions-in-packages.md)   
  [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   

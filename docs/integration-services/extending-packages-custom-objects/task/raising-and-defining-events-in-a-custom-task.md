@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SSIS events, runtime
 - IDTSEvents interface
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f454417b4def127a21888a42f1670cb3606a852a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5241480a1c572085a2f931b22eb76eca9f207178
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640543"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281939"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Provocar y definir eventos en una tarea personalizada
   El motor en tiempo de ejecución de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] facilita una colección de eventos que proporciona el estado del progreso de una tarea cuando esta se valida y ejecuta. La interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> define estos eventos y se proporciona a las tareas como un parámetro para los métodos <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>.  
@@ -190,7 +190,7 @@ Nothing,  bFireOnBeforeIncrement)
     End Class  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Controladores de eventos de Integration Services &#40;SSIS&#41;](../../../integration-services/integration-services-ssis-event-handlers.md)   
  [Agregar un controlador de eventos a un paquete](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   

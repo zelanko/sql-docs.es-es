@@ -14,15 +14,15 @@ helpviewer_keywords:
 - removing files
 - Maintenance Cleanup task
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 296055ef99184d1ea38bf4811bc9ec8b9fb6c690
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0a44c15b2fc324a6f172fbc11e82f822261e0c8e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640242"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289401"
 ---
 # <a name="maintenance-cleanup-task"></a>tarea, Limpieza de mantenimiento
   La tarea Limpieza de mantenimiento quita archivos relacionados con planes de mantenimiento, entre los que se incluyen archivos de copia de seguridad de la base de datos e informes creados a partir de planes de mantenimiento. Para obtener más información, vea [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md) y [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "51640242"
 ## <a name="related-tasks"></a>Related Tasks  
  Para obtener información sobre cómo establecer estas propiedades en el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vea [Establecer las propiedades de tareas o contenedores](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   

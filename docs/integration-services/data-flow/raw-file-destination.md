@@ -18,15 +18,15 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 15fbcd91b9b2604b0ce7faef4d129101c0fb6f40
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c89496fabad28d3491d9b2f648d6355ae404685b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393618"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282309"
 ---
 # <a name="raw-file-destination"></a>destino de archivo sin formato
   El destino de archivo sin formato escribe datos sin procesar en un archivo. Como el formato de los datos es el nativo del destino, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Esto significa que el destino de archivo sin formato puede escribir datos más rápidamente que otros destinos, como el destino de archivo plano o los destinos de OLE DB.  
@@ -219,7 +219,7 @@ ms.locfileid: "52393618"
  **Alias de salida**  
  Especifique un nombre alternativo para usarlo en la columna de salida.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Origen de archivo sin formato](../../integration-services/data-flow/raw-file-source.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   

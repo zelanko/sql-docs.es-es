@@ -13,15 +13,15 @@ helpviewer_keywords:
 - operators [Integration Services]
 - expressions [Integration Services], operators
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4395090e03c904970b5cefcd71b0570a3e184a1e
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: ef0f0c4cb73c28d23eec35a30f8d120c9b49c66f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321731"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280379"
 ---
 # <a name="operators-ssis-expression"></a>Operadores (expresión de SSIS)
   En esta sección se describen los operadores que proporciona el lenguaje de expresiones, así como la precedencia y la capacidad de asociación de los operadores que el evaluador de expresiones utiliza.  
@@ -56,7 +56,7 @@ ms.locfileid: "52321731"
   
  Para obtener información sobre la posición de cada operador en la jerarquía de precedencia, vea [Operator Precedence and Associativity](../../integration-services/expressions/operator-precedence-and-associativity.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)   
  [Ejemplos de expresiones avanzadas de Integration Services](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)   
  [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  

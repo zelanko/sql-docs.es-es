@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Select variables
 - Variable selection
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d75e66a4641ae5624a99b6c4bea88d14f93bbc1a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7e28a0043cef8fc26dc5b98c255d516c5dd523b0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528211"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270452"
 ---
 # <a name="select-variables-page"></a>Página Seleccionar variables
   Utilice el cuadro de diálogo **Seleccionar variables** para seleccionar una o más variables para las propiedades **ReadOnlyVariables** y **ReadWriteVariables** al configurar una tarea Script o un componente de script.  
@@ -38,7 +38,7 @@ ms.locfileid: "52528211"
  **Tipo**  
  Especifica el tipo de datos de una variable.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Editor de la tarea Script &#40;página Script&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
   
   

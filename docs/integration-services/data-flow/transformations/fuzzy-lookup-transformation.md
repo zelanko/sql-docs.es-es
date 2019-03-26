@@ -31,15 +31,15 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ad931e49146aacdfcae92cca008ffce681ae5dd4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1424df38f6ff0cc091e0f71a316a60e1388d7a33
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540894"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273598"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Búsqueda aproximada, transformación
   La Transformación Búsqueda aproximada realiza tareas de limpieza de datos como normalizar datos, corregir datos y proporcionar valores que faltan.  
@@ -214,7 +214,7 @@ ms.locfileid: "52540894"
  **Delimitadores de token**  
  Especifique los delimitadores que la transformación utilizará para dividir en tokens los valores de las columnas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Transformación Búsqueda](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
  [Transformación Agrupación aproximada](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

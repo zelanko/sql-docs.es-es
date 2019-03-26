@@ -11,15 +11,15 @@ helpviewer_keywords:
 - hexadecimal data
 - HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7b17dbcb21362a60ed9076134256ec99f3c264a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fbaa082b67c3093911f000a42e639c5eac9a81a0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517987"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280589"
 ---
 # <a name="hex-ssis-expression"></a>HEX (expresión de SSIS)
   Devuelve una cadena que representa el valor hexadecimal de un entero.  
@@ -76,7 +76,7 @@ HEX(ReorderPoint)
 HEX(@LocaleID)  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

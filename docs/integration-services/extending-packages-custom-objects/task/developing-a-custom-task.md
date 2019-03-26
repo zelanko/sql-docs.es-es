@@ -21,15 +21,15 @@ helpviewer_keywords:
 - tasks [Integration Services], custom
 - TaskHost object
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d2c4f5455a1a305805a7d2322906c569b400b062
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb1b49bed3d8f3b9a839060bfe5480e9574e12ad
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603683"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270977"
 ---
 # <a name="developing-a-custom-task"></a>Desarrollar una tarea personalizada
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] usa tareas para realizar unidades de trabajo con el fin de admitir la extracción, transformación y carga de datos. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye varias tareas que realizan las acciones usadas con más frecuencia, desde ejecutar una instrucción SQL hasta descargar un archivo de un sitio FTP. Si las tareas incluidas y las acciones compatibles no cumplen completamente sus requisitos, puede crear una tarea personalizada.  
@@ -86,7 +86,7 @@ ms.locfileid: "47603683"
  [Desarrollar un componente de flujo de datos personalizado](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  Describe cómo programar orígenes, transformaciones y destinos personalizados del flujo de datos.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Extender el paquete con la tarea Script](../../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
  [Comparar soluciones de scripting y objetos personalizados](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   

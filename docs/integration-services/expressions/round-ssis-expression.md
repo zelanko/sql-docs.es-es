@@ -11,15 +11,15 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [SSIS]
 ms.assetid: 376f1947-4fc5-4611-ad86-823e4db1b468
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 01814908d83b302f5f79ae9ac2be713f022fdb43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bb02a98330a7ad93e7784ae9ce6d08284585ff9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622353"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275951"
 ---
 # <a name="round-ssis-expression"></a>ROUND (expresión de SSIS)
   Devuelve una expresión numérica, redondeada a la longitud o precisión especificada. La evaluación del parámetro de longitud debe devolver un entero.  
@@ -33,7 +33,7 @@ ROUND(numeric_expression,length)
   
 ## <a name="arguments"></a>Argumentos  
  *numeric_expression*  
- Expresión con un tipo numérico válido. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Expresión con un tipo numérico válido. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  *length*  
  Expresión entera. Es la precisión con la que *numeric_expression* se redondea.  
@@ -54,7 +54,7 @@ ROUND(137.1574,3)
 ROUND(137.1575,3)  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

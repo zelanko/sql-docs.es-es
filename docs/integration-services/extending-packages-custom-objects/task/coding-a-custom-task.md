@@ -16,15 +16,15 @@ helpviewer_keywords:
 - validation [Integration Services], design-time tasks
 - SSIS custom tasks, validating
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a83eb948dfdf1f7cde6b6a68ef774b3cb54a9aeb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b58065146f19351c3eab9489a6e507fdc298853
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595883"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277644"
 ---
 # <a name="coding-a-custom-task"></a>Codificar una tarea personalizada
   Una vez que haya creado una clase que herede de la clase base <xref:Microsoft.SqlServer.Dts.Runtime.Task> y haya aplicado el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> a la clase, debe invalidar la implementación de las propiedades y los métodos de la clase base para proporcionar su funcionalidad personalizada.  
@@ -286,7 +286,7 @@ Public Class SampleTask
 End Class  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creating a Custom Task](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)  (Crear una tarea personalizada)  
  [Programar una tarea personalizada](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)   
  [Desarrollar una interfaz de usuario para una tarea personalizada](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  

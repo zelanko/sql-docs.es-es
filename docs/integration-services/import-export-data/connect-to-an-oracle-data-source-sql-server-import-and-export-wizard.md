@@ -3,20 +3,19 @@ title: Conectar a un origen de datos de Oracle (Asistente para importación y ex
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9bbb8092756cd12599c17d8dd7abeaba774689f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 106318f35e6cf4ee730b4cd2a6b0cb1831151041
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761903"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221939"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos de Oracle (Asistente para importación y exportación de SQL Server)
 En este tema se muestra cómo conectarse a un origen de datos **Oracle** desde la página **Elegir un origen de datos** o **Elegir un destino** del asistente para importación y exportación de SQL Server. Hay varios proveedores de datos que puede usar para conectarse a Oracle.

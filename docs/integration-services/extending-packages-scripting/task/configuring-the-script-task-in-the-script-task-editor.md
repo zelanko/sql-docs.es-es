@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Script Task Editor
 - SSIS Script task, configuring
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4ecf4ed7f81f4d490f9f5c966627377f93acaeb6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 26cfb9342efffb46bcb7ce84c069c99dfbb12182
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542046"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274459"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configurar la tarea Script en el editor de la tarea Script
   Antes de escribir código personalizado en la tarea Script, debe configurar sus propiedades principales en las tres páginas del **Editor de la tarea Script**. Puede configurar propiedades de tarea adicionales que no son únicas de la tarea Script mediante la ventana Propiedades.  
@@ -60,7 +60,7 @@ ms.locfileid: "52542046"
 ## <a name="expressions-page-of-the-script-task-editor"></a>Página Expresiones del Editor de la tarea Script  
  En la página **Expresiones** del **Editor de la tarea Script**, puede utilizar expresiones para proporcionar valores a las propiedades de la tarea Script enumeradas anteriormente y para muchas otras propiedades de tarea. Para más información, vea [Expresiones de Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Codificar y depurar la tarea Script](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
   
   

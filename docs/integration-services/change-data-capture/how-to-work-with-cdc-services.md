@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4dc7d069aeba4c494aa07c852b265fcdae7fc82b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fad3dbcd1a181fd2343fc37fb5227a439011c4b6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724193"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273513"
 ---
 # <a name="how-to-work-with-cdc-services"></a>Cómo trabajar con servicios CDC
   En este procedimiento se describe cómo usar la Consola de configuración del servicio CDC para preparar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera que funcione con servicios CDC de Oracle y para crear un nuevo servicio CDC.  
@@ -55,7 +55,7 @@ ms.locfileid: "47724193"
   
          Para más información sobre cómo especificar las credenciales de un inicio de sesión que tenga permisos de escritura en la base de datos MSXDBCDC, como el rol de base de datos **db_owner** , vea [Crear y editar un servicio CDC de Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) y [Conexión con SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Trabajar con servicios CDC](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   

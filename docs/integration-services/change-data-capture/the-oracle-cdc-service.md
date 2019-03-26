@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 105f32a1e95852a0c08b47da0632b53522718957
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34f86e859bb09e6b3e62d9819c13ba1bf7abec26
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780499"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276081"
 ---
 # <a name="the-oracle-cdc-service"></a>El servicio CDC de Oracle
   El servicio CDC de Oracle es un servicio de Windows que ejecuta el programa xdbcdcsvc.exe. El servicio CDC de Oracle se puede configurar para ejecutar varios servicios de Windows en el mismo equipo, cada uno de ellos con un nombre de servicio de Windows diferente. Se suelen crear varios servicios de Windows CDC de Oracle en un único equipo para obtener una mejor separación entre ellos o cuando cada uno de ellos debe trabajar con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente.  
@@ -93,7 +93,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Trabajar con el servicio CDC de Oracle](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cómo administrar un servicio CDC local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)   
  [Administrar un servicio CDC de Oracle](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   

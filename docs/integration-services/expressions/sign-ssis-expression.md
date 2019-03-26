@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SIGN function
 - negative values
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33be3361e58398005196b479c23ec47e755a386c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d10f76b319ac4190b80c394a2f77d8035641339
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857229"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279069"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (expresión de SSIS)
   Devuelve el signo positivo (+1), negativo (-1) o cero (0) de una expresión numérica.  
@@ -34,7 +34,7 @@ SIGN(numeric_expression)
   
 ## <a name="arguments"></a>Argumentos  
  *numeric_expression*  
- Expresión numérica con signo válida. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Expresión numérica con signo válida. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
@@ -55,7 +55,7 @@ SIGN(-123.45)
 SIGN(DealerPrice - StandardCost)  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones &#40;expresión de SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

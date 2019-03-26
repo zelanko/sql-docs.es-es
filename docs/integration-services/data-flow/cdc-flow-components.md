@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3a062cd23809db8edf5439f252dabcc6d905dad
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7fdf13c7a0a2d318846b1140b26c6e56c2290024
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641192"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271181"
 ---
 # <a name="cdc-flow-components"></a>Componentes del flujo de CDC
   Los componentes de la captura de datos modificados de Attunity para Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] ayudan a los desarrolladores de SSIS en su trabajo con CDC y reducen la complejidad de los paquetes CDC.  
@@ -215,7 +215,7 @@ Aparecerá un mensaje después de instalar los componentes. Haga clic en **Sí**
   
 -   Vídeo sobre [CDC para bases de datos de Oracle con SQL Server Integration Services 2012 (vídeo de SQL Server)](https://technet.microsoft.com/sqlserver/jj218898)en technet.microsoft.com.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tarea Control CDC](../../integration-services/control-flow/cdc-control-task.md)  
   
   

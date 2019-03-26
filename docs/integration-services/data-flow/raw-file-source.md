@@ -16,15 +16,15 @@ helpviewer_keywords:
 - raw data [Integration Services]
 - Raw File source
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d5a6a40ef5bee1c50ddbaf1f3424d3199e8494e3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: d3117d79ebdb77031ff2572027544c51ef844dfd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637659"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289991"
 ---
 # <a name="raw-file-source"></a>archivo sin formato, origen
   El origen de archivo sin formato lee datos sin formato de un archivo. Como la representación de los datos es la nativa del origen, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Esto significa que el origen de archivo sin formato puede leer datos más rápidamente que otros orígenes, como el origen de archivo plano o el origen de OLE DB.  
@@ -60,7 +60,7 @@ ms.locfileid: "51637659"
   El origen de archivo sin formato lee datos sin formato de un archivo. Como la representación de los datos es la nativa del origen, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo.   
 ## <a name="raw-file-source-editor-columns-page"></a>Editor de origen de archivos sin formato (página Columnas)
   El origen de archivo sin formato lee datos sin formato de un archivo. Como la representación de los datos es la nativa del origen, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo.   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   

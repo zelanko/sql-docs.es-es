@@ -3,22 +3,21 @@ title: Convertir tipos sin comprobar conversión (Asistente para importación y 
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.nomappingfile.f1
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b46fb0abc31649dd7162e4ddb8de2db5c024080
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5e0afe01fea1855dde6e174a12d6a9971e78b83
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796573"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222169"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Convertir tipos sin comprobar conversión (Asistente para importación y exportación de SQL Server)
   Después de seleccionar las tablas y vistas existentes para copiar o revisar la consulta que ha proporcionado, el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede mostrar **Convertir tipos sin comprobar conversión**. El asistente muestra esta página cuando no puede encontrar uno o varios de los archivos de asignación y de conversión de tipo de datos que necesita para asignar tipos de datos entre el origen y el destino. La página incluye información que le ayudará a comprender qué falta.

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 25c9ff0ea58e4c6f2b8baf99516ed66f5186062d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd0adbfc5f2e7ea27a39758e81c0afaed0186123
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676733"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277180"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extraer datos mediante el origen de OLE DB
   Para agregar y configurar un origen de OLE DB, el paquete ya debe incluir por lo menos una tarea Flujo de datos.  
@@ -65,7 +65,7 @@ ms.locfileid: "47676733"
   
 12. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Origen de OLE DB](../../integration-services/data-flow/ole-db-source.md)   
  [Transformaciones de Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](../../integration-services/data-flow/integration-services-paths.md)   

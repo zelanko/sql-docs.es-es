@@ -14,12 +14,12 @@ ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 3bdc541e919e9a30d4ab043ef9c13d78a2f4b445
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: d25a38a0c7bd274e07d0932d6b8ef451a22dda06
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327356"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306083"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>SQL Server TDE Extensible Key Management Using Azure Key Vault - Setup Steps (Pasos de instalación de Administración extensible de claves de SQL Server TDE mediante Azure Key Vault)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -176,7 +176,7 @@ Versión de SQL Server  |Vínculo de instalación redistribuible
  
     1. Cree localmente la clave de cifrado en un dispositivo HSM local. (Asegúrese de que se trata de una clave RSA 2048 asimétrica, para que sea compatible con SQL Server).
     2. Importe la clave de cifrado a Azure Key Vault. Consulte los pasos siguientes para saber cómo hacerlo.
-    3. Antes de usar la clave por primera vez en Azure Key Vault, cree una copia de seguridad clave de Azure Key Vault. Obtenga más información sobre el comando [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) .
+    3. Antes de usar la clave por primera vez en Azure Key Vault, cree una copia de seguridad clave de Azure Key Vault. Obtenga más información sobre el comando [Backup-AzureKeyVaultKey](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault) .
     4. Cada vez que se haga algún cambio en la clave (por ejemplo, que se agreguen ACL, etiquetas o atributos de clave), asegúrese de crear otra copia de seguridad de la clave de Azure Key Vault.
 
         > [!NOTE]  

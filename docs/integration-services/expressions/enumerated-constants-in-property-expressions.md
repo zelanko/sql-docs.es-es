@@ -15,15 +15,15 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 706ea141faa1e83c915e8ee01ff12f2d20dc10d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a3a0cee0f7aeb5df60c80e23c0ae90af5a066db3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529706"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279139"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas en expresiones de propiedad
   Si las expresiones de propiedad incluyen valores de una lista de miembros enumeradores, la expresión debe utilizar el valor numérico del miembro enumerador en lugar del nombre descriptivo del miembro. Por ejemplo, si una expresión establece la propiedad **LoggingMode** , debe utilizar el valor 2 en lugar del nombre descriptivo Deshabilitado.  
@@ -51,7 +51,7 @@ ms.locfileid: "52529706"
   
 |Nombre descriptivo en DTSPackageType|Valor numérico|  
 |-------------------------------------|-------------------|  
-|Valor de DB-Library|0|  
+|Valor predeterminado|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
@@ -70,7 +70,7 @@ ms.locfileid: "52529706"
   
 |Nombre descriptivo en DTSPriorityClass|Valor numérico|  
 |---------------------------------------|-------------------|  
-|Valor de DB-Library|0|  
+|Valor predeterminado|0|  
 |AboveNormal|1|  
 |Normal|2|  
 |BelowNormal|3|  
@@ -602,7 +602,7 @@ ms.locfileid: "52529706"
 ## <a name="related-tasks"></a>Related Tasks  
  [Agregar o cambiar una expresión de propiedad](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar expresiones de propiedad en paquetes](../../integration-services/expressions/use-property-expressions-in-packages.md)   
  [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Contenedores de Integration Services](../../integration-services/control-flow/integration-services-containers.md)   

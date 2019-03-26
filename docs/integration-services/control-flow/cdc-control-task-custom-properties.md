@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0eb2d790181b73f948e04a0e25f9d9702c6c62e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db93ad1d3f838e82c03b3512ea25c39c0dc1e2de
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761893"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289231"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Propiedades personalizadas de la tarea de control CDC
   En la tabla siguiente se describen las propiedades personalizadas de la tarea de control CDC. Todas las propiedades son de lectura y escritura.  
@@ -33,8 +33,8 @@ ms.locfileid: "47761893"
 |StateTable|String|Especifica el nombre de la tabla donde se almacena el estado del contexto CDC. Esta tabla debe estar accesible mediante la conexión configurada para este componente. Esta tabla debe incluir las columnas varchar denominadas **name** y **state**. (La columna **state** necesita tener como mínimo 256 caracteres).<br /><br /> Esta propiedad solo se aplica cuando **AutomaticStatePersistence** se establece en **true**.|  
 |CommandTimeout|integer|Este valor indica el tiempo de espera (en segundos) que se usará al comunicarse con la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se utiliza este valor siempre que el tiempo de respuesta de la base de datos sea muy lento y el valor predeterminado (30 segundos) no sea suficiente.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)   
- [Editor de la tarea Control CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
+ [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)  
   
   

@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - connection managers [Integration Services], programming
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d08336c4577da996c624cb2368e70502a4136b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33b91b8545a4316bb8c7b1b3e78ea8e4d60ae1ee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782133"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282089"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Trabajar con administradores de conexiones mediante programación
   En [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], el método AcquireConnection de la clase de administradores de conexiones asociada es el método al que se llama con mayor frecuencia cuando se está trabajando con administradores de conexiones en código administrado. Al escribir código administrado, tiene que llamar al método AcquireConnection para utilizar la funcionalidad de un administrador de conexiones. Debe llamar a este método independientemente de si escribe el código administrado en una tarea Script, un componente de script, un objeto personalizado o una aplicación personalizada.  
@@ -66,7 +66,7 @@ ms.locfileid: "47782133"
 |WMI|Administrador de conexiones WMI|**System.Management.ManagementScope**||  
 |SQLMOBILE|Administrador de conexiones de SQL Server Compact|**System.Data.SqlServerCe.SqlCeConnection**||  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conectarse a orígenes de datos de la tarea Script](../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
  [Conectarse a orígenes de datos del componente de script](../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
  [Conectarse a orígenes de datos de una tarea personalizada](../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  

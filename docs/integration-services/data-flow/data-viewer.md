@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c186241a51a0d3c282e8ae12e7ef4ff6737497d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d2232235b1d89384f269edb3a1632f8ff9db067
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662973"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290831"
 ---
 # <a name="data-viewer"></a>Visor de datos
   Si una ruta de acceso se configura para utilizar un visor de datos, el Visor de datos muestra los datos por búfer a medida que éstos se mueven entre dos componentes de flujo de datos.  
@@ -42,7 +42,7 @@ ms.locfileid: "47662973"
  **Copiar datos**  
  Copie datos del búfer actual al Portapapeles.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Depurar el flujo de datos](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
   

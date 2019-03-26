@@ -17,15 +17,15 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6fc41dc0b30164410ca1e5d770632f9866ca26c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acd1c079dbbd79b3cdedd94351cb99829d2f0339
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833539"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277744"
 ---
 # <a name="merge-join-transformation"></a>Combinación de mezcla, transformación
   La transformación Combinación de mezcla proporciona una salida que se genera combinando dos conjuntos de datos ordenados mediante una combinación FULL, LEFT o INNER. Por ejemplo, puede utilizar una combinación LEFT para combinar una tabla que incluye información de productos con una tabla que incluye el país o la región en que se fabricó un producto. El resultado es una tabla que muestra todos los productos y su país o región de origen.  
@@ -87,9 +87,9 @@ ms.locfileid: "47833539"
  **Alias de salida**  
  Escriba un alias para cada columna de salida. El nombre predeterminado es el de la columna de entrada, pero puede elegir cualquier nombre descriptivo único.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Transformación Mezclar](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [Transformación Unión de todo](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

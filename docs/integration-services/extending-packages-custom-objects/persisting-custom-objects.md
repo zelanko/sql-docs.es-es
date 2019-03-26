@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services], persisting
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d318c3a7c9e5ab4a5d434a6b4e50477c88d6e2bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 913eb1bc47687b890032bf2300a237ec4a29bf5e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650993"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281069"
 ---
 # <a name="persisting-custom-objects"></a>Conservar objetos personalizados
   No tiene que implementar la persistencia personalizada para los objetos personalizados que crea, siempre que sus propiedades utilicen solo tipos de datos simples como **integer** y **string**. La implementación predeterminada de persistencia guarda los metadatos del objeto junto con los valores de todas sus propiedades.  
@@ -153,7 +153,7 @@ public void SaveToXML(System.Xml.XmlDocument doc,
 }  
 ```  
  
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Desarrollar objetos personalizados para Integration Services](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   
  [Generar, implementar y depurar objetos personalizados](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
   

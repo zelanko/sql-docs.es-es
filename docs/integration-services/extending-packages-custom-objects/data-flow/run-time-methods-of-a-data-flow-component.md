@@ -14,15 +14,15 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 29778e66926b84044e4ade1036f9f30d31b4be94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 945b92c5f73ad139b79f66e4ca2aeccdb1aabdb7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853443"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277154"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Métodos en tiempo de ejecución de un componente de flujo de datos
   En tiempo de ejecución, la tarea de flujo de datos examina la secuencia de componentes, prepara un plan de ejecución y administra un grupo de subprocesos de trabajo que ejecutan el plan de trabajo. La tarea carga filas de datos de los orígenes, las procesa a través de las transformaciones y, a continuación, las guarda en los destinos.  
@@ -209,7 +209,7 @@ End Sub
   
  Para obtener más información sobre el desarrollo de componentes que reciben filas en los búferes de entrada, vea [Desarrollar un componente de destino personalizado](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) y [Desarrollar un componente de transformación personalizado con salidas sincrónicas](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos en tiempo de diseño de un componente de flujo de datos](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
   
   

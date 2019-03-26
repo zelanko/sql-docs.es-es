@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwsource.columns.f1
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 11bd599ba5e696b5c13269555ef6aea293c85bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d015fad5db2b0c6a8c40118ff6886839693573bc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824673"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274791"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>Editor de origen de SAP BW (página Columnas)
   Use la página **Columnas** del **Editor de origen de SAP BW** para asignar una columna de salida a cada columna externa (origen).  
@@ -57,7 +57,7 @@ ms.locfileid: "47824673"
  **Columna de salida**  
  Permite proporcionar un nombre único para cada columna de salida. El valor predeterminado es el nombre de la columna externa (origen) seleccionada. Sin embargo, puede especificarse cualquier nombre único que sea descriptivo. [!INCLUDE[ssIS](../../includes/ssis-md.md)] mostrará los nombres de la **Columna de salida** para las columnas al configurar los componentes de nivel inferior que utilizan datos de este origen.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Editor de origen de SAP BW &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Editor de origen de SAP BW &#40;página Salida de error&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [Editor de origen de SAP BW &#40;página Opciones avanzadas&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   

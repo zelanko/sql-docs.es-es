@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e4eb0d6b5f40e3acd6b44d86dda24764de6e3bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e44feb2ee9355a5992de3063a669da5b7bb589e8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671723"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272761"
 ---
 # <a name="integration-services-ssis-packages"></a>paquetes de Integration Services (SSIS)
   Un paquete es una colección organizada de conexiones, elementos de flujo de control, elementos de flujo de datos, controladores de eventos, variables, parámetros y configuraciones que se pueden ensamblar con la ayuda de las herramientas gráficas de diseño proporcionadas por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o mediante programación.  A continuación guarda el paquete completado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el Almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] o el sistema de archivos, o puede implementar el proyecto de ssISnoversion en el servidor [!INCLUDE[ssIS](../includes/ssis-md.md)] . El paquete es la unidad de trabajo que se recupera, ejecuta y guarda.  
@@ -87,8 +87,8 @@ ms.locfileid: "47671723"
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
-|**PackageStart**|Indica que se inició la ejecución del paquete.<br /><br /> Nota: Esta entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
-|**PackageEnd**|Indica que finalizó la ejecución del paquete.<br /><br /> Nota: Esta entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
+|**PackageStart**|Indica que se inició la ejecución del paquete.<br /><br /> Nota: Este entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
+|**PackageEnd**|Indica que finalizó la ejecución del paquete.<br /><br /> Nota: Este entrada del registro se escribe automáticamente en el registro. No se puede excluir.|  
 |**Diagnostic**|Proporciona información sobre la configuración del sistema que afecta a la ejecución de paquetes, como el número de ejecutables que se pueden ejecutar simultáneamente.|  
   
 ## <a name="set-the-properties-of-a-package"></a>Establecimiento de las propiedades de un paquete  

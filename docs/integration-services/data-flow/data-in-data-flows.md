@@ -15,21 +15,21 @@ helpviewer_keywords:
 - string comparisons
 - data flow [Integration Services], data options
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dcc79e1bcb8e871b5424e9e4995db58e1f97a513
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07917304412c77e7cd58dd771d9ef97199270f4e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692878"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281189"
 ---
 # <a name="data-in-data-flows"></a>Datos de flujos de datos
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona un conjunto de tipos de datos que se usan en flujos de datos.  
   
 ## <a name="data-type-conversion"></a>Conversión de tipo de datos  
- El origen que se agrega a un flujo de datos convierte los datos de origen en tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Las transformaciones posteriores pueden convertir los datos en diferentes tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y, según el tipo de almacén de datos en el que se cargan los datos, los destinos pueden convertir el tipo de datos final de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el tipo de datos requerido por el almacén de datos de destino. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ El origen que se agrega a un flujo de datos convierte los datos de origen en tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Las transformaciones posteriores pueden convertir los datos en diferentes tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y, según el tipo de almacén de datos en el que se cargan los datos, los destinos pueden convertir el tipo de datos final de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el tipo de datos requerido por el almacén de datos de destino. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Para convertir los datos a un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un componente de flujo de datos analiza los datos. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona dos tipos de análisis de datos: el análisis rápido y el análisis estándar. La mayoría de los componentes de flujo de datos puede usar solamente el análisis estándar. Sin embargo, el origen de archivo plano y la transformación Conversión de datos pueden usar el análisis rápido o estándar. Para más información, consulte [Parsing Data](../../integration-services/data-flow/parsing-data.md).  
   

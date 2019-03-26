@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 714136a95b47626b0d8db0875a6b3d72402a472f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 66b5b6c36b167507397a0a5b33e16dea6b6a8dd4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407352"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283199"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) en un clúster
   No se recomienda la agrupación en clústeres de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] porque el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no es un servicio en clúster o que reconozca clústeres, y no admite la conmutación por error de un nodo de clúster a otro. Por consiguiente, en un entorno en clúster, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se debería instalar e iniciar como un servicio independiente en cada nodo del clúster.  

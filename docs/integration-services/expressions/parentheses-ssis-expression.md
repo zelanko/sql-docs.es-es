@@ -12,15 +12,15 @@ helpviewer_keywords:
 - evaluation order [Integration Services]
 - parentheses operator ()
 ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 705dbabc07308d4e6112489d3d22a0354075fcad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99ab67a88006579d61ba4d084d37b60d5b80bd45
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595443"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276924"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (Paréntesis) (expresión de SSIS)
   Identifica el orden de evaluación de las expresiones. Las expresiones escritas entre paréntesis tienen la prioridad de evaluación más alta. Las expresiones anidadas escritas entre paréntesis se evalúan desde dentro hacia fuera.  
@@ -40,7 +40,7 @@ ms.locfileid: "47595443"
  Es cualquier expresión válida.  
   
 ## <a name="result-types"></a>Tipos de resultado  
- El tipo de datos de *expression*. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ El tipo de datos de *expression*. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="expression-examples"></a>Ejemplos de expresiones  
  Este ejemplo muestra cómo el uso de paréntesis modifica la prioridad de los operadores. La primera expresión se evalúa como 100, mientras que la segunda se evalúa como 31.  
@@ -51,7 +51,7 @@ ms.locfileid: "47595443"
   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

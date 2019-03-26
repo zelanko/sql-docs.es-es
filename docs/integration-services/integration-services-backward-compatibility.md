@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Integration Services, backward compatibility
 - backward compatibility [Integration Services]
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e48a39f307afc8a9c10d2d5b35184bb212db9a7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a45a0a2e2b5bd19203e2cd0b069a0c118901802
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668954"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275101"
 ---
 # <a name="integration-services-backward-compatibility"></a>Compatibilidad con versiones anteriores de Integration Services
   En este tema se describen los cambios entre las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Incluye características que ya no están disponibles o cuya eliminación está prevista para una versión posterior. También describe los cambios en el producto que afectan o cambian el comportamiento de una aplicación existente que incluye la funcionalidad de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

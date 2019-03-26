@@ -17,15 +17,15 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d25f5360e2582cb752dfdc5c92be928da437e06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 582d0a4475ba6e6c20198ffdf50dd2e776cad480
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664493"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283099"
 ---
 # <a name="view-package-objects"></a>Ver objetos de paquete
   En el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , la pestaña **Explorador de paquetes** proporciona una vista de explorador del paquete. La vista refleja la jerarquía de contenedores de la arquitectura de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . El contenedor de paquetes se encuentra en la parte superior de la jerarquía y puede expandir el paquete para ver las conexiones, ejecutables, controladores de eventos, proveedores de registro, restricciones de precedencia y variables del paquete.  
@@ -58,7 +58,7 @@ ms.locfileid: "47664493"
   
 -   Haga clic con el botón derecho en un objeto y luego haga clic en **Eliminar**. 
  
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](../integration-services/control-flow/integration-services-tasks.md)   
  [Contenedores de Integration Services](../integration-services/control-flow/integration-services-containers.md)   
  [Restricciones de precedencia](../integration-services/control-flow/precedence-constraints.md)   

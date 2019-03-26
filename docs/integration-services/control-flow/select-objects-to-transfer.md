@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.transfertasks.selectobjectsmodaldialogs.f1
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8d2f9db52d9e70f87c913db510b59fc387ce8868
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61c14c572d68ee24a0f9239e5ef0b2c7b7b11424
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710213"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58269977"
 ---
 # <a name="select-objects-to-transfer"></a>Seleccionar objetos para transferir
   Utilice este cuadro de diálogo para seleccionar los objetos que se van a transferir desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra mediante una tarea de transferencia de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -27,7 +27,7 @@ ms.locfileid: "47710213"
   
  Para elegir objetos específicos para transferirlos, active la casilla de la primera columna correspondiente a la fila de la cuadrícula en la que se especifica el objeto.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../integration-services/integration-services-error-and-message-reference.md)   
  [Editor de la tarea Transferir trabajos &#40;página General&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)   
  [Editor de la tarea Transferir inicios de sesión &#40;página Inicios de sesión&#41;](../../integration-services/control-flow/transfer-logins-task-editor-logins-page.md)   

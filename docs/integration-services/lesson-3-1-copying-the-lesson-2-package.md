@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c8741daaa12ceabf382c61cdcadefe094b8cc04a
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: b9e03c2b26d702dee0edc1ef445a4a362e9ab359
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143215"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281419"
 ---
 # <a name="lesson-3-1-copy-the-lesson-2-package"></a>Lección 3-1: Copia del paquete de la lección 2
 
@@ -48,7 +48,7 @@ Siga estos pasos si va a copiar la lección 2 completada.  Para copiar el ejempl
 
 1.  Abra [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools y el proyecto SSIS Tutorial.
 
-2.  En **el Explorador de soluciones**, haga clic con el botón derecho en **Paquetes SSIS** y seleccione **Agregar paquete existente**.
+2.  En el **Explorador de soluciones**, haga clic con el botón derecho en **Paquetes SSIS** y seleccione **Agregar paquete existente**.
 
 3.  En el cuadro de diálogo **Agregar copia de paquete existente**, en **Ubicación del paquete**, seleccione **Sistema de archivos**.
 

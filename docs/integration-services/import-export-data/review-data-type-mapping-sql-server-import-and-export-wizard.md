@@ -3,22 +3,21 @@ title: Revisar asignación de tipos de datos (Asistente para importación y expo
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5ef44f25a923471eadbc14abcfb6586606638dd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5805f1c9f7455423bf4fab43c6092e880e62448
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637923"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281529"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Revisar asignación de tipos de datos (Asistente para importación y exportación de SQL Server)
 Si ha especificado una asignación de tipo de datos que puede que no se complete correctamente en la lista **Asignaciones** del cuadro de diálogo **Asignaciones de columnas** , en el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se mostrará la página **Revisar asignación de tipos de datos** . En esta página, revise información detallada sobre las conversiones de tipos de datos que el asistente necesita realizar para que los datos de origen sean compatibles con el destino. En esta información se incluyen indicaciones visuales para distinguir las conversiones de tipos de datos que se espera que sean correctas de las que podrían producir errores o truncamientos. En cada conversión puede decidir si quiere aceptar la conversión que sugiere el asistente, así como especificar cómo administrar los errores que se produzcan.   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d0c8f942-4c96-456f-ad10-577577c0f74e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f693b2a897d0c1baa203f7892bccb140bef4ac3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef9d19eea3ca9c7207f8b55b612006a0807f2f5e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631550"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281449"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Preparar SQL Server para CDC de Oracle (Ver script)
   Este cuadro de diálogo muestra el script SQL de preparación que crea la base de datos MSXDBCDC. Esta base de datos debe estar en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se pueda usar con CDC de Oracle para SQL Server.  
@@ -29,7 +29,7 @@ ms.locfileid: "47631550"
  **Copiar**  
  Copia el script en el Portapapeles. Puede pegar los scripts en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ejecutarlos y crear la base de datos MSXDBCDC.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Preparar SQL Server para CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - mapping query parameters to variables [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f40944b370a49d65615a6771b1ad7fd5bc1516d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62517e3934c7ebb446cdcf02a19eca1e1a547b3b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629483"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270531"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Asignar parámetros de consulta a variables en un componente de flujo de datos
   Al configurar el origen de OLE DB para utilizar las consultas parametrizadas, puede asignar los parámetros a las variables.  
@@ -53,7 +53,7 @@ ms.locfileid: "47629483"
   
 10. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Origen de OLE DB](../../integration-services/data-flow/ole-db-source.md)   
  [Transformación Búsqueda](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   

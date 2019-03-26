@@ -12,15 +12,15 @@ helpviewer_keywords:
 - add operator (+)
 - adding expressions
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db51309754644c99bebb06c94f8d7c0dd628289b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7f51d8027bcb65b1f9e3596748778baed36759e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818293"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270951"
 ---
 # <a name="-add-ssis"></a>+ (Sumar) (SSIS)
   Suma dos expresiones numéricas.  
@@ -38,7 +38,7 @@ numeric_expression1 + numeric_expression2
  Expresión válida de un tipo de datos numérico.  
   
 ## <a name="result-types"></a>Tipos de resultado  
- Determinados por los tipos de datos de los dos argumentos. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Determinados por los tipos de datos de los dos argumentos. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="remarks"></a>Notas  
  Si alguno de los operandos es NULL, el resultado será NULL.  
@@ -62,7 +62,7 @@ VacationHours + SickLeaveHours
 StandardCost + (StandardCost * @[Profit%])  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

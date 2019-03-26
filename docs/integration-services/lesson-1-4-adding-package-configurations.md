@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 51ca1188b8954564fc929dd0cdc34715466aee8b
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+ms.openlocfilehash: 95469ad21694b0b086731986bfb27fc524f02b26
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756680"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282439"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Lección 1-4: Agregar configuraciones de paquetes
 En esta tarea, agregará una configuración a cada paquete. Las configuraciones actualizan los valores de las propiedades de los paquetes y los objetos de los paquetes en tiempo de ejecución.  

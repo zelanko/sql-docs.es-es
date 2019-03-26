@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e825066ecab87f9a338ac7243298d37e9188f852
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d10496080bd9103bb3814ec0abe97f3e690982e9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608653"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281911"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de distribución de valores de columna (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de distribución de valores de columna** seleccionadas en el panel de solicitudes. Un perfil de distribución de valores de columna notifica todos los valores distintos en la columna seleccionada y el porcentaje de filas en la tabla que cada valor representa. El perfil también puede notificar los valores que representan más de un porcentaje especificado de filas en la tabla. Este perfil puede ayudarle a identificar problemas en los datos, por ejemplo un número incorrecto de valores distintos en una columna. Por ejemplo, genera un perfil de una columna de estados de Estados Unidos y detecta más de 50 valores distintos.  
@@ -102,7 +102,7 @@ ms.locfileid: "47608653"
  **FrequentValueThreshold**  
  Especifique el umbral (con un valor entre 0 y 1) por encima del que se debería notificar el valor de la columna. Esta opción está deshabilitada al seleccionar **AllValues** como **ValueDistributionOption**. El valor predeterminado de esta opción es 0.001.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

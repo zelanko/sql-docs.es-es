@@ -11,15 +11,15 @@ helpviewer_keywords:
 - logical Not (!)
 - '! (logical Not)'
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70a95bee2c4d136fbbedfbf5e00afb3724a94c5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0fc2dcf29877c1c1fe0e3c0a4a75ca9b23096bc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602563"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276670"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (Not lógico) (expresión de SSIS)
   Niega un operando booleano.  
@@ -37,7 +37,7 @@ ms.locfileid: "47602563"
   
 ## <a name="arguments"></a>Argumentos  
  *boolean_expression*  
- Cualquier expresión válida que devuelva un valor booleano. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Cualquier expresión válida que devuelva un valor booleano. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Tipos de resultado  
  DT_BOOL  
@@ -64,7 +64,7 @@ ms.locfileid: "47602563"
 !(@MonthNumber != MONTH(GETDATE())  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

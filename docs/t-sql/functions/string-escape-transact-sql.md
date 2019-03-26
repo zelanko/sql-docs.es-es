@@ -18,15 +18,16 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8328c6bc65d7b0f05e9ce38f908b4f3d64b25b82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: = azuresqldb-current||>= sql-server-2016||=azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 8c283fd85aedec31f8774145155fe3b1d7ac9c10
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755213"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342937"
 ---
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Aplica caracteres de escape a caracteres especiales en textos y devuelve texto con caracteres de escape. **STRING_ESCAPE** es una función determinista.  
   
@@ -39,7 +40,7 @@ STRING_ESCAPE( text , type )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *varchar(max)*  
+ *texto*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) **nvarchar** que representa el objeto que se debe escapar.  
   
  *Tipo*  
@@ -86,7 +87,7 @@ escapedText
 \\\t\/\n\\\\\t\"\t
 ```  
   
-### <a name="b-format-json-object"></a>B. Aplicar formato a objeto de JSON  
+### <a name="b-format-json-object"></a>b. Aplicar formato a objeto de JSON  
  En esta consulta se crea texto de JSON a partir de variables de cadena y número, y se aplica un carácter de escape a cualquier carácter especial de JSON en variables.  
   
 ```  
@@ -94,7 +95,7 @@ SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',
     17, STRING_ESCAPE(@name,'json'), STRING_ESCAPE(@surname,'json') );  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  

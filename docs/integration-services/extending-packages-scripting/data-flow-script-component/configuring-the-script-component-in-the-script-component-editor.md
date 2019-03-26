@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SSIS Script component, configuring
 - Script component [Integration Services], configuring
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c5d13e7ee8fa8bcf058abfada37583c7d69cfa72
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 92bc802b8277d933eb0fea3b8211834efe3e34bf
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527430"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275439"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configurar el componente de script en el editor de componentes de script
   Antes de escribir código personalizado en el componente de script, tiene que seleccionar el tipo de componente de flujo de datos que quiere crear (origen, transformación o destino) y, después, configurar los metadatos y las propiedades del componente en el **Editor de transformación Script**.  
@@ -127,7 +127,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  Para obtener más información, consulte [Conectarse a orígenes de datos del componente de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Codificar y depurar el componente de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

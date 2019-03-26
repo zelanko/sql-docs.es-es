@@ -11,15 +11,15 @@ helpviewer_keywords:
 - dates [Integration Services], DATEPART
 - DATEPART function
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8d3eef374c42f11b9e97da4d8b96b1abcef10d27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d82da0734ba0e3dda009b912fa9c537e77a6f39
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666193"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280609"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (expresión de SSIS)
   Devuelve un entero que representa una parte de una fecha.  
@@ -44,7 +44,7 @@ DATEPART(datepart, date)
 ## <a name="remarks"></a>Notas  
  DATEPART devuelve un resultado NULL si el valor del argumento es NULL.  
   
- Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para más información, consulte [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
  En la tabla siguiente se incluyen las partes de fecha y las abreviaturas reconocidas por el evaluador de expresiones. En los nombres de partes de fecha no se distinguen mayúsculas de minúsculas.  
   
@@ -81,7 +81,7 @@ DATEPART("dd", ModifiedDate)
 DATEPART("yy",GETDATE())  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [DATEADD &#40;expresión de SSIS&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
  [DATEDIFF &#40;expresión de SSIS&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
  [DAY &#40;expresión de SSIS&#41;](../../integration-services/expressions/day-ssis-expression.md)   

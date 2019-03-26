@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b79ca6af9b0ccea0dfb1fe66b73f33cc8b9cd062
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3046b281141649746c8d93496a0ddbb8ad3607c6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639252"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282849"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach
   Los procedimientos de este tema explican cómo crear bucles entre libros de Excel en una carpeta o entre tablas en un libro de Excel, mediante el contenedor de bucles Foreach con el enumerador correspondiente.  
@@ -94,7 +94,7 @@ ms.locfileid: "51639252"
   
 9. Cree tareas en el contenedor de bucles Foreach que utilicen el administrador de conexiones con Excel para realizar las mismas operaciones en cada tabla de Excel en el libro especificado. Si usa una tarea Script para examinar el nombre de la tabla enumerada o para trabajar con cada tabla, recuerde agregar la variable de cadena a la propiedad ReadOnlyVariables de la tarea Script.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
  [Configurar un contenedor de bucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [Agregar o cambiar una expresión de propiedad](../../integration-services/expressions/add-or-change-a-property-expression.md)   

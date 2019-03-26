@@ -20,15 +20,15 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c08e1b617755d50b49de7c9286e6f5a512039527
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3a60ec842c22f5c11972b9765f230a00c672ca0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641842"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277194"
 ---
 # <a name="error-handling-in-data"></a>Control de errores en los datos
   Cuando un componente de flujo de datos aplica una transformación a los datos de columna, extrae datos de orígenes o carga datos en destinos, pueden producirse errores. Los errores con frecuencia se producen debido a valores de datos inesperados. Por ejemplo, una conversión de datos genera un error porque una columna contiene una cadena en lugar de un número, una inserción en una base de datos genera un error porque los datos corresponden a una fecha y la columna tiene un tipo de datos numéricos, o una expresión genera un error al evaluarse porque el valor de la columna es cero, lo que da como resultado una operación matemática no válida.  
@@ -145,7 +145,7 @@ Use el cuadro de diálogo **Configurar la salida de errores** para configurar la
   
      Puede agregar el componente Script al segmento de error del flujo de datos en cualquier lugar en un nivel inferior de los componentes del flujo de datos cuyos errores desea capturar. Normalmente el componente Script se coloca inmediatamente antes de que las filas de error se escriban en un destino. De esta manera, el script solo busca descripciones para filas de error escritas. El segmento de error del flujo de datos puede corregir algunos errores y no escribir esas filas en un destino de error.  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)   
  [Transformar datos con transformaciones](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
  [Conectar componentes con rutas de acceso](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   

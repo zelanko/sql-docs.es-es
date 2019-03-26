@@ -3,22 +3,21 @@ title: Configurar el destino del archivo plano (Asistente para importación y ex
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8dd326b588880ca2f095c83c6a2d9ad8f02ac32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23acf4037b9e759fe60847c4d3791528770f89b9
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694153"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222039"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurar el destino del archivo plano (Asistente para importación y exportación de SQL Server)
   Si ha seleccionado un destino de archivo plano, el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra **Configurar el destino del archivo plano** después de especificar que quiere copiar una tabla o después de proporcionar una consulta. En esta página, especifique las opciones de formato del archivo de destino plano. Opcionalmente, revise la asignación de columnas individuales y obtenga una vista previa de los datos de ejemplo.  

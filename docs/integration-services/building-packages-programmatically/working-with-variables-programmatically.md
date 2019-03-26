@@ -20,15 +20,15 @@ helpviewer_keywords:
 - custom variables [Integration Services]
 - variables [Integration Services], customizing
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b163dd722797a7d3c4ec3fdec0551350005507ee
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d46d8b70e22422b821190db5717b0c22062ea75d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203964"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278054"
 ---
 # <a name="working-with-variables-programmatically"></a>Trabajar con variables mediante programación
   Las variables son una manera de establecer valores y controlar procesos en paquetes, contenedores, tareas y controladores de eventos de forma dinámica. Las restricciones de precedencia también pueden usar variables para controlar la dirección del flujo de datos en diferentes tareas. Las variables tienen diversos usos:  

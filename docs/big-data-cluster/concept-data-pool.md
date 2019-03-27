@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c3df07da100bf0bbfc0b2238cb4154b4c3a363e3
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 906b27c186668518702c7ab3a757e6eeb4e5b278
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241616"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478230"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-2019-big-data-cluster"></a>¿Cuáles son los grupos de datos en un clúster de macrodatos de 2019 de SQL Server?
 
@@ -33,6 +33,7 @@ Los grupos de datos permiten la creación de puestos de datos de escalabilidad h
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de los clústeres de macrodatos de SQL Server, consulte la información general siguiente:
+Para obtener más información acerca de los clústeres de macrodatos de SQL Server, consulte los siguientes recursos:
 
 - [¿Qué son los clústeres de macrodatos de 2019 de SQL Server?](big-data-cluster-overview.md)
+- [Taller: Arquitectura de clústeres de macrodatos de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

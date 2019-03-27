@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 996913979669aa85088d6d640436b5610293eb35
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 20ee32b445a7509967b18c51a8e661527585f291
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072130"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477650"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>¿Qué son los clústeres de macrodatos de 2019 de SQL Server?
 
@@ -100,6 +100,9 @@ El plano de compute proporciona recursos informáticos para el clúster. Contien
 ### <a id="dataplane"></a> Plano de datos
 
 El plano de datos se utiliza para la persistencia de datos y almacenamiento en caché. Contiene el grupo de datos SQL y el grupo de almacenamiento.  El grupo de datos SQL consta de uno o varios pods ejecutando SQL Server en Linux. Se utiliza para introducir datos desde las consultas SQL o trabajos de Spark. Datos de gran tamaño en SQL Server data marts se conservan en el grupo de datos del clúster. El bloque de almacenamiento consta de los pods de grupo de almacenamiento consta de SQL Server en Linux, Spark y HDFS. Todos los nodos de almacenamiento en un clúster de macrodatos de SQL Server son miembros de un clúster de HDFS.
+
+> [!TIP]
+> Para obtener información detallada sobre en arquitectura de clúster de macrodatos y la instalación, consulte [taller: Arquitectura de clústeres de macrodatos de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

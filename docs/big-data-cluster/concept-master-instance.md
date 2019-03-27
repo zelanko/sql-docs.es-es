@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 24b5799b71f9102785bdcb6103324d8bf8b1ad96
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 9c3809e481e00c94f01c1968a82638df3e37f80f
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227307"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477951"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>¿Qué es la instancia maestra en un clúster de macrodatos de 2019 de SQL Server?
 
@@ -66,6 +66,7 @@ Con los clústeres de SQL Server 2019 datos de gran tamaño, puede hacer más co
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de los clústeres de macrodatos de SQL Server, consulte la información general siguiente:
+Para obtener más información acerca de los clústeres de macrodatos de SQL Server, consulte los siguientes recursos:
 
 - [¿Qué son los clústeres de macrodatos de 2019 de SQL Server?](big-data-cluster-overview.md)
+- [Taller: Arquitectura de clústeres de macrodatos de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

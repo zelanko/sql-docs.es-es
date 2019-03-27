@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c89ddc5d155af4542b5101e9a6e394effc5d9fd3
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 7dfb89103bb83fc77c590e5c5b5984cbd96b197d
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241526"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477930"
 ---
 # <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>¿Qué es el bloque de almacenamiento (clústeres de SQL Server 2019 macrodatos)?
 
@@ -37,6 +37,7 @@ Son responsables de los nodos de almacenamiento:
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de los clústeres de macrodatos de SQL Server, consulte la información general siguiente:
+Para obtener más información acerca de los clústeres de macrodatos de SQL Server, consulte los siguientes recursos:
 
 - [¿Qué son los clústeres de macrodatos de 2019 de SQL Server?](big-data-cluster-overview.md)
+- [Taller: Arquitectura de clústeres de macrodatos de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

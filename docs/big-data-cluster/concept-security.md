@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8ad12de9456fef0d4803ae83479e615bffa0edcc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241426"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477990"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Conceptos de seguridad para los clústeres de macrodatos de SQL Server
 
@@ -53,13 +53,13 @@ Algunos de estos inicios de sesión son para que los servicios se comuniquen ent
 Tras el aprovisionamiento del clúster, un número de contraseñas de usuario final debe establecerse mediante variables de entorno. Estas son las contraseñas que los administradores de SQL y los administradores de clústeres se usan para tener acceso a servicios:
 
 Nombre de usuario del controlador:
- + CONTROLLER_USERNAME = < controller_username >
+ + CONTROLLER_USERNAME=<controller_username>
 
 Contraseña del controlador:  
  + CONTROLLER_PASSWORD = < controller_password >
 
 Contraseña de SA de SQL Master: 
- + MSSQL_SA_PASSWORD = < controller_sa_password >
+ + MSSQL_SA_PASSWORD=<controller_sa_password>
 
 Contraseña para acceder al punto de conexión de Spark o HDFS:
  + KNOX_PASSWORD = < knox_password >
@@ -81,7 +81,7 @@ Comunicación con los servicios que no son de SQL dentro del clúster de macroda
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información acerca de los clústeres de macrodatos de SQL Server, consulte los artículos siguientes:
+Para obtener más información acerca de los clústeres de macrodatos de SQL Server, consulte los siguientes recursos:
 
 - [¿Qué son los clústeres de macrodatos de 2019 de SQL Server?](big-data-cluster-overview.md)
-- [Inicio rápido: Implementar el clúster de macrodatos de SQL Server en Kubernetes](quickstart-big-data-cluster-deploy.md)
+- [Taller: Arquitectura de clústeres de macrodatos de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

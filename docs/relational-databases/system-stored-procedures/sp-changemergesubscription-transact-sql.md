@@ -16,12 +16,12 @@ ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac79494bfb0d08503be6e138bce748596eb8165
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3b37e09147652e856ac0c4c8160c1d7d3caf6f6d
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819083"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493957"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,15 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicación_**'**  
- Es el nombre de la publicación que se va a cambiar. *publicación* es **sysname**, su valor predeterminado es null. La publicación ya debe existir y ajustarse a las reglas para los identificadores.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a cambiar. *publicación* es **sysname**, su valor predeterminado es null. La publicación ya debe existir y ajustarse a las reglas para los identificadores.  
   
- [  **@subscriber=**] **'**_suscriptor_**'**  
- Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es null.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es null.  
   
- [  **@subscriber_db=**] **'**_subscriber_db_**'**  
- Es el nombre de la base de datos de suscripción. *subscriber_db*es **sysname**, su valor predeterminado es null.  
+`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripción. *subscriber_db*es **sysname**, su valor predeterminado es null.  
   
- [  **@property=**] **'**_propiedad_**'**  
- Es la propiedad que se va a cambiar para la publicación indicada. *propiedad* es **sysname**, y puede tener uno de los valores de la tabla.  
+`[ @property = ] 'property'` Es la propiedad para cambiar para la publicación indicada. *propiedad* es **sysname**, y puede tener uno de los valores de la tabla.  
   
- [  **@value=**] **'**_valor_**'**  
- Es el nuevo valor para el elemento especificado *propiedad*. *valor* es **nvarchar (255)**, y puede tener uno de los valores de la tabla.  
+`[ @value = ] 'value'` Es el nuevo valor para el elemento especificado *propiedad*. *valor* es **nvarchar (255)**, y puede tener uno de los valores de la tabla.  
   
 |Property|Valor|Descripción|  
 |--------------|-----------|-----------------|  
@@ -72,7 +67,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ||**0**|Se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión con el suscriptor.|  
 |**subscriber_login**||Nombre de inicio de sesión del suscriptor.|  
 |**subscriber_password**||Contraseña segura para el inicio de sesión del suscriptor que se ha proporcionado.|  
-|**sync_type**|**Automático**|El esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor.|  
+|**sync_type**|**automatic**|El esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor.|  
 ||**Ninguno**|El suscriptor ya tiene el esquema y los datos iniciales de las tablas publicadas; los datos y las tablas del sistema se transfieren siempre.|  
 |**use_interactive_resolver**|**true**|Permite que los conflictos se resuelvan de forma interactiva para todos los artículos que lo permitan.|  
 ||**False**|Los conflictos se resuelven de forma automática mediante un solucionador predeterminado o personalizado.|  

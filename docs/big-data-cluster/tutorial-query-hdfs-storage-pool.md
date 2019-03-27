@@ -5,17 +5,17 @@ description: Este tutorial muestra cómo consultar datos HDFS en un clúster de 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bb0a028f45567e967f80f11425865098265ab35a
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a8752f4879f4b03f89378e4f30c44c10dc272694
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241676"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494407"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Consulta de HDFS en un clúster de macrodatos de SQL Server
 
@@ -44,18 +44,18 @@ El grupo de almacenamiento contiene datos de la secuencia de clics de web en un 
 
 1. En Azure Data Studio, conéctese a la instancia principal de SQL Server del clúster de macrodatos. Para obtener más información, consulte [conectar a la instancia principal de SQL Server](connect-to-big-data-cluster.md#master).
 
-2. Haga doble clic en la conexión en el **servidores** ventana para mostrar el panel del servidor para la instancia principal de SQL Server. Seleccione **nueva consulta**.
+1. Haga doble clic en la conexión en el **servidores** ventana para mostrar el panel del servidor para la instancia principal de SQL Server. Seleccione **nueva consulta**.
 
    ![Consulta de la instancia principal de SQL Server](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-3. Ejecute el siguiente comando de Transact-SQL para cambiar el contexto para el **ventas** base de datos en la instancia maestra.
+1. Ejecute el siguiente comando de Transact-SQL para cambiar el contexto para el **ventas** base de datos en la instancia maestra.
 
    ```sql
    USE Sales
    GO
    ```
 
-4. Definir el formato del archivo CSV para leer de HDFS. Presione F5 para ejecutar la instrucción.
+1. Definir el formato del archivo CSV para leer de HDFS. Presione F5 para ejecutar la instrucción.
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -69,7 +69,15 @@ El grupo de almacenamiento contiene datos de la secuencia de clics de web en un 
    );
    ```
 
-5. Crear una tabla externa que puede leer el `/clickstream_data` del bloque de almacenamiento. El **SqlStoragePool** es accesible desde la instancia principal de un clúster de macrodatos.
+1. Si aún no existe, cree un origen de datos externo al bloque de almacenamiento.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   ```
+
+1. Crear una tabla externa que puede leer el `/clickstream_data` del bloque de almacenamiento. El **SqlStoragePool** es accesible desde la instancia principal de un clúster de macrodatos.
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]

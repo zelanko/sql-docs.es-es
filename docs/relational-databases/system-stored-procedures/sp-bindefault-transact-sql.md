@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f14b269b65b6a6c30e7ac8de25aebafa7b7c38be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835673"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494257"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,19 +46,16 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@defname=** ] **'***predeterminada***'**  
- Es el nombre del valor predeterminado creado por CREATE DEFAULT. *valor predeterminado* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
+`[ @defname = ] 'default'` Es el nombre del valor predeterminado creado por CREATE DEFAULT. *valor predeterminado* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
   
- [  **@objname=** ] **'***object_name***'**  
- Es el nombre de la tabla y columna, o el tipo de datos de alias al que se va a enlazar el valor predeterminado. *object_name* es **nvarchar(776)** no tiene ningún valor predeterminado. *object_name* no se pueden definir con la **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, o CLR tipos definidos por el usuario.  
+`[ @objname = ] 'object_name'` Es el nombre de tabla y columna o a la que el valor predeterminado es enlazar el tipo de datos de alias. *object_name* es **nvarchar(776)** no tiene ningún valor predeterminado. *object_name* no se pueden definir con la **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, o CLR tipos definidos por el usuario.  
   
  Si *object_name* es un nombre de una parte, se resuelve como un tipo de datos de alias. Si es un nombre de dos o tres partes, se resuelve primero como una tabla y columna. y si se produce un error en esta solución, se resuelve como un tipo de datos de alias. De forma predeterminada, las columnas existentes del tipo de datos de alias heredan *predeterminada*, a menos que el valor predeterminado se ha enlazado directamente a la columna. No se puede enlazar un valor predeterminado para un **texto**, **ntext**, **imagen**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **timestamp**, o CLR columna de tipo definido por el usuario, una columna con la propiedad IDENTITY, una columna calculada o una columna que ya tiene una restricción DEFAULT.  
   
 > [!NOTE]  
 >  *object_name* puede contener corchetes **[]** como identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
- Solo se usa cuando se enlaza un valor predeterminado a un tipo de datos de alias. *futureonly_flag* es **varchar (15)** con el valor predeterminado es NULL. Cuando este parámetro se establece en **futureonly**, las columnas existentes de ese tipo de datos no pueden heredar el nuevo valor predeterminado. Este parámetro nunca se utiliza al enlazar un valor predeterminado con una columna. Si *futureonly_flag* es NULL, el nuevo valor predeterminado se enlaza a las columnas del tipo de datos de alias que actualmente no tiene ningún valor predeterminado o que está usando el valor predeterminado existente del tipo de datos de alias.  
+`[ @futureonly = ] 'futureonly_flag'` Se usa sólo cuando se enlaza un valor predeterminado a un tipo de datos de alias. *futureonly_flag* es **varchar (15)** con el valor predeterminado es NULL. Cuando este parámetro se establece en **futureonly**, las columnas existentes de ese tipo de datos no pueden heredar el nuevo valor predeterminado. Este parámetro nunca se utiliza al enlazar un valor predeterminado con una columna. Si *futureonly_flag* es NULL, el nuevo valor predeterminado se enlaza a las columnas del tipo de datos de alias que actualmente no tiene ningún valor predeterminado o que está usando el valor predeterminado existente del tipo de datos de alias.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -84,7 +81,7 @@ GO
 EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. Enlazar un valor predeterminado con un tipo de datos de alias  
+### <a name="b-binding-a-default-to-an-alias-data-type"></a>b. Enlazar un valor predeterminado con un tipo de datos de alias  
  El valor predeterminado denominado `def_ssn` y el tipo de datos de alias denominado `ssn` ya existen. En el siguiente ejemplo se enlaza el valor predeterminado `def_ssn` con `ssn`. Al crear una tabla, el valor predeterminado es heredado por todas las columnas a las que se asigna el tipo de datos de alias `ssn`. Las columnas existentes del tipo **ssn** también heredan el valor predeterminado **def_ssn**, a menos que **futureonly** se especifica para *futureonly_flag* valor, o bien, a menos que la columna tiene un valor predeterminado enlazado directamente a él. Los valores predeterminados enlazados con columnas siempre tienen preferencia sobre los enlazados con tipos de datos.  
   
 ```  

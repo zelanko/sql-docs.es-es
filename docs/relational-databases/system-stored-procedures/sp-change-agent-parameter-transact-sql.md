@@ -16,12 +16,12 @@ ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30b9216b2c33998b45a07c0b16d58f1b9c1139be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819125"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493467"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@profile_id=**] *profile_id*,  
- Es el identificador del perfil. *profile_id* es **int**, no tiene ningún valor predeterminado.  
+`[ @profile_id = ] profile_id,` Es el identificador del perfil. *profile_id* es **int**, no tiene ningún valor predeterminado.  
   
- [  **@parameter_name=**] **'***parameter_name***'**  
- Es el nombre del parámetro. *parameter_name* es **sysname**, no tiene ningún valor predeterminado. Para los perfiles del sistema, los parámetros que se pueden cambiar dependen del tipo de agente. Para averiguar qué tipo de agente esto *profile_id* representa, busque el *profile_id* columna en el **Msagent_profiles** de tabla y tenga en cuenta el *agent_type*  valor.  
+`[ @parameter_name = ] 'parameter_name'` Es el nombre del parámetro. *parameter_name* es **sysname**, no tiene ningún valor predeterminado. Para los perfiles del sistema, los parámetros que se pueden cambiar dependen del tipo de agente. Para averiguar qué tipo de agente esto *profile_id* representa, busque el *profile_id* columna en el **Msagent_profiles** de tabla y tenga en cuenta el *agent_type*  valor.  
   
 > [!NOTE]  
 >  Si se admite un parámetro para un determinado *agent_type*, pero no se ha definido en el perfil del agente, se devuelve un error. Para agregar un parámetro a un perfil de agente debe ejecutar [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
@@ -209,7 +207,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **StartQueueTimeout**  
   
--   **SyncToAlternate al**  
+-   **SyncToAlternate**  
   
 -   **UploadGenerationsPerBatch**  
   
@@ -243,8 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  Para ver los parámetros que se han definido para un perfil determinado, ejecute **sp_help_agent_profile** y tenga en cuenta la *profile_name* asociado con el *profile_id*. Con los valores adecuados *profile_id*, a continuación ejecute **sp_help_agent_parameters** está utilizando *profile_id* para ver los parámetros asociados con el perfil. Se pueden agregar parámetros a un perfil mediante la ejecución de [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
- [  **@parameter_value=**] **'***parameter_value***'**  
- Es el nuevo valor del parámetro. *parameter_value* es **nvarchar (255)**, no tiene ningún valor predeterminado.  
+`[ @parameter_value = ] 'parameter_value'` Es el nuevo valor del parámetro. *parameter_value* es **nvarchar (255)**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

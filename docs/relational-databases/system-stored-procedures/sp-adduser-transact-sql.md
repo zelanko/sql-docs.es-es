@@ -18,12 +18,12 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 73859064fc8a56a53fd5ea6cb1295d81ed0e4150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b1548f1eb587aa62c0d0427661d97d97bf3cc7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766533"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492943"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@loginame =** ] **'***login***'**  
- Es el nombre del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el inicio de sesión de Windows. *inicio de sesión* es un **sysname**, no tiene ningún valor predeterminado. *inicio de sesión* debe ser una existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión o inicio de sesión de Windows.  
+`[ @loginame = ] 'login'` Es el nombre de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión o inicio de sesión de Windows. *inicio de sesión* es un **sysname**, no tiene ningún valor predeterminado. *inicio de sesión* debe ser una existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión o inicio de sesión de Windows.  
   
- [  **@name_in_db =** ] **'***usuario***'**  
- Es el nombre del nuevo usuario de la base de datos. *usuario* es un **sysname**, su valor predeterminado es null. Si *usuario* no se especifica, el valor predeterminado es el nombre del nuevo usuario de base de datos a la *inicio de sesión* nombre. Especificar *usuario* da al nuevo usuario un nombre de la base de datos diferente del nombre de inicio de sesión de nivel de servidor.  
+`[ @name_in_db = ] 'user'` Es el nombre del nuevo usuario de base de datos. *usuario* es un **sysname**, su valor predeterminado es null. Si *usuario* no se especifica, el valor predeterminado es el nombre del nuevo usuario de base de datos a la *inicio de sesión* nombre. Especificar *usuario* da al nuevo usuario un nombre de la base de datos diferente del nombre de inicio de sesión de nivel de servidor.  
   
- [  **@grpname =** ] **'***rol***'**  
- Es el rol de base de datos del que el nuevo usuario forma parte automáticamente. *rol* es **sysname**, su valor predeterminado es null. *función* debe ser un rol de base de datos válido en la base de datos actual.  
+`[ @grpname = ] 'role'` Es el rol de base de datos de los cuales el nuevo usuario, se convierte en un miembro. *rol* es **sysname**, su valor predeterminado es null. *función* debe ser un rol de base de datos válido en la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -89,7 +86,7 @@ GO
 EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';  
 ```  
   
-### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. Agregar un usuario de base de datos con el mismo Id. de inicio de sesión  
+### <a name="b-adding-a-database-user-with-the-same-login-id"></a>b. Agregar un usuario de base de datos con el mismo Id. de inicio de sesión  
  En el siguiente ejemplo se agrega el usuario `Arvind` a la base de datos para el inicio de sesión `Arvind` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El valor predeterminado que pertenece este usuario **pública** rol.  
   
 ```  

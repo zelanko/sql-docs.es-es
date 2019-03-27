@@ -18,12 +18,12 @@ ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1583f6de4938451b03eabfb7c9425120fa37f2fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537836"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494097"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,18 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id =**] *job_id*  
- Número de identificación del trabajo que se va a aplicar a los servidores o grupos de servidores de destino especificados. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id` El número de identificación del trabajo del trabajo que se aplican a los servidores o grupos de servidores de destino especificados. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
   
- [  **@job_name =**] **'**_job_name_**'**  
- Nombre del trabajo que se va a aplicar a los servidores de destino o grupos de servidores de destino asociados especificados. *job_name* es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'` El nombre del trabajo que se va a aplicar al especificado servidores de destino o grupos de servidores de destino. *job_name* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
- [  **@target_server_groups =**] **'**_target_server_groups_**'**  
- Lista separada por comas que contiene los grupos de servidores de destino a los que se va a aplicar el trabajo especificado. *target_server_groups* es **nvarchar (2048)**, su valor predeterminado es null.  
+`[ @target_server_groups = ] 'target_server_groups'` Una lista separada por comas de grupos de servidores de destino al que el trabajo especificado está en aplicarse. *target_server_groups* es **nvarchar (2048)**, su valor predeterminado es null.  
   
- [  **@target_servers=** ] **'**_target_servers_**'**  
- Lista separada por comas que contiene los servidores de destino a los que se va a aplicar el trabajo especificado. *target_servers*es **nvarchar (2048)**, su valor predeterminado es null.  
+`[ @target_servers = ] 'target_servers'` Una lista separada por comas de los servidores de destino al que el trabajo especificado está en aplicarse. *target_servers*es **nvarchar (2048)**, su valor predeterminado es null.  
   
- [  **@operation=** ] **'**_operación_**'**  
- Indica si se debe aplicar o quitar el trabajo especificado en los servidores de destino o grupos de servidores de destino especificados. *operación*es **varchar(7)**, con el valor predeterminado es APPLY. Las operaciones válidas son **aplicar** y **quitar**.  
+`[ @operation = ] 'operation'` Es si se debe aplicar al trabajo especificado o quitado de los servidores o grupos de servidores de destino especificados. *operación*es **varchar(7)**, con el valor predeterminado es APPLY. Las operaciones válidas son **aplicar** y **quitar**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

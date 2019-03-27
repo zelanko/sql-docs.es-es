@@ -16,12 +16,12 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b7c8e0bd544815b7a26afaccd308d6898e3bc95
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cf650c095e27fe3a270ad9610e959bd6f5f1a6a3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136135"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493117"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,26 +42,21 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicación_**'**  
- Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es %.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es %.  
   
- [  **@publisher=**] **'**_publisher_**'**  
- Es el nombre del publicador. *publicador*es **sysname**, su valor predeterminado es %.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador*es **sysname**, su valor predeterminado es %.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- Es el nombre de la base de datos del publicador. *publisher_db*es **sysname**, su valor predeterminado es %.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db*es **sysname**, su valor predeterminado es %.  
   
- [  **@property=**] **'**_propiedad_**'**  
- Es el nombre de la propiedad que se va a cambiar. *propiedad* es **sysname**, y puede tener uno de los valores de la tabla.  
+`[ @property = ] 'property'` Es el nombre de la propiedad que se va a cambiar. *propiedad* es **sysname**, y puede tener uno de los valores de la tabla.  
   
- [  **@value=**] **'**_valor_**'**  
- Es el nuevo valor para la propiedad especificada. *valor*es **nvarchar (255)**, y puede tener uno de los valores de la tabla.  
+`[ @value = ] 'value'` Es el nuevo valor para la propiedad especificada. *valor*es **nvarchar (255)**, y puede tener uno de los valores de la tabla.  
   
 |Property|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Ubicación donde se almacena la carpeta de instantáneas si la ubicación es distinto o además en la ubicación predeterminada.|  
 |**description**||Descripción de esta suscripción de extracción de mezcla.|  
-|**distribuidor**||Nombre del distribuidor.|  
+|**distributor**||Nombre del distribuidor.|  
 |**distributor_login**||Id. de inicio de sesión utilizado en el distribuidor para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**||Contraseña (cifrada) utilizada en el distribuidor para la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_security_mode**|**1**|Se utiliza la autenticación de Windows para la conexión con el distribuidor.|  
@@ -71,7 +66,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||Disponible únicamente por compatibilidad con versiones anteriores. Se usa el nombre de usuario para conectarse al servicio FTP.|  
 |**ftp_password**||Disponible únicamente por compatibilidad con versiones anteriores. Es la contraseña del usuario que se utiliza para conectarse al servicio FTP.|  
 |**ftp_port**||Disponible únicamente por compatibilidad con versiones anteriores. Es el número de puerto del servicio FTP para el distribuidor.|  
-|**Nombre de host**||Especifica el valor de HOST_NAME() cuando esta función se utiliza en la cláusula WHERE de un filtro de combinación o relación de registros lógicos.|  
+|**hostname**||Especifica el valor de HOST_NAME() cuando esta función se utiliza en la cláusula WHERE de un filtro de combinación o relación de registros lógicos.|  
 |**internet_login**||Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica.|  
 |**internet_password**||Contraseña para el Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica.|  
 |**internet_security_mode**|**1**|Para la conexión con el servidor web que hospeda la sincronización web se utiliza la autenticación de Windows.|  
@@ -86,7 +81,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**publisher_security_mode**|**0**|Se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión con el publicador.|  
 ||**1**|Se utiliza la autenticación de Windows para la conexión con el publicador.|  
 ||**2**|Desencadenadores de sincronización utilizan una estática **sysservers** entrada para realizar la llamada a procedimiento remoto (RPC) y el publicador debe estar definido en el **sysservers** tabla como un servidor remoto o vinculado.|  
-|**sync_type**|**Automático**|El esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor.|  
+|**sync_type**|**automatic**|El esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor.|  
 ||**Ninguno**|El suscriptor ya tiene el esquema y los datos iniciales de las tablas publicadas; los datos y las tablas del sistema se transfieren siempre.|  
 |**use_ftp**|**true**|Se utiliza FTP en lugar del protocolo habitual para recuperar instantáneas.|  
 ||**False**|Utiliza el protocolo habitual para recuperar instantáneas.|  

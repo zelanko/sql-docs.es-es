@@ -16,12 +16,12 @@ ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc01fcc8e614235894b46813da3162064e1c28d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee80fbdac31d58cdb4b4b4b60c61be01670ad65a
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783277"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492243"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_change_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@profile_id=** ] *profile_id*  
- Es el identificador del perfil. *profile_id* es **int**, no tiene ningún valor predeterminado.  
+`[ @profile_id = ] profile_id` Es el identificador del perfil. *profile_id* es **int**, no tiene ningún valor predeterminado.  
   
- [  **@property=** ] **'***propiedad***'**  
- Es el nombre de la propiedad. *propiedad* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @property = ] 'property'` Es el nombre de la propiedad. *propiedad* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@value=** ] **'***valor***'**  
- Es el nuevo valor de la propiedad. *valor* es **nvarchar (3000)**, no tiene ningún valor predeterminado.  
+`[ @value = ] 'value'` Es el nuevo valor de la propiedad. *valor* es **nvarchar (3000)**, no tiene ningún valor predeterminado.  
   
  Esta tabla describe las propiedades del perfil que se pueden modificar.  
   

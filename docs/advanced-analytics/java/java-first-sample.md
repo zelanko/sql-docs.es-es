@@ -3,18 +3,18 @@ title: 'Ejemplo de Java y el tutorial de SQL Server 2019: SQL Server Machine Lea
 description: Ejecutar código de ejemplo de Java en SQL Server de 2019 para conocer los pasos para usar la extensión del lenguaje Java con datos de SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: a2fd078d0b9c61678a83cc1b3b5da70adbd69779
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018041"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493430"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>Tutorial de ejemplo de Java de SQL Server
 
@@ -205,9 +205,22 @@ Para obtener más información acerca de la ruta de clase, vea [establecer CLASS
 
 Si tiene previsto empaquetar las clases y las dependencias en los archivos .jar, proporcione la ruta de acceso completa al archivo .jar en el parámetro CLASSPATH de sp_execute_external_script. Por ejemplo, si el archivo jar se denomina 'ngram.jar', la ruta de clase será ' / home/myclasspath/ngram.jar' en Linux.
 
-## <a name="6---set-permissions"></a>6: establecer permisos
+## <a name="6---create-external-library"></a>6 - Crear biblioteca externa
 
-Ejecución del script solo se realiza correctamente si las identidades de proceso tienen acceso a su código. 
+Mediante la creación de una biblioteca externa, SQL Server tendrán acceso automáticamente para el archivo jar y no es necesario configurar ningún permiso especial para la ruta de clase.
+
+```sql 
+CREATE EXTERNAL LIBRARY ngram
+FROM (CONTENT = '<path>/ngram.jar') 
+WITH (LANGUAGE = 'Java'); 
+GO
+```
+
+## <a name="7---set-permissions-skip-if-you-performed-step-6"></a>7 - establecer permisos (saltar si ha realizado el paso 6)
+
+Este paso no es necesario si usa las bibliotecas externas. Es la manera recomendada de trabajo crear una biblioteca externa de jar. 
+
+Si no desea usar bibliotecas externas, deberá establecer los permisos necesarios. Ejecución del script solo se realiza correctamente si las identidades de proceso tienen acceso a su código. 
 
 ### <a name="on-linux"></a>En Linux
 
@@ -232,7 +245,7 @@ Asegúrese de que ambas identidades de seguridad tienen permisos de 'Lectura y e
 
 <a name="call-method"></a>
 
-## <a name="7---call-getngrams"></a>7 - Call *getNgrams()*
+## <a name="8---call-getngrams"></a>8 - Call *getNgrams()*
 
 Para llamar al código de SQL Server, especifique el método Java **getNgrams()** en el parámetro "script" de sp_execute_external_script. Este método pertenece a un paquete denominado "paquete" y un archivo de clase denominado **Ngram.java**.
 
@@ -246,8 +259,6 @@ En este ejemplo pasa el parámetro de ruta de clase para proporcionar la ruta de
 DECLARE @myClassPath nvarchar(50)
 DECLARE @n int 
 --This is where you store your classes or jars.
---Update this to your own classpath
-SET @myClassPath = N'/home/myclasspath/'
 --This is the size of the ngram
 SET @n = 3
 EXEC sp_execute_external_script
@@ -255,8 +266,7 @@ EXEC sp_execute_external_script
 , @script = N'pkg.Ngram.getNGrams'
 , @input_data_1 = N'SELECT id, text FROM reviews'
 , @parallel = 0
-, @params = N'@CLASSPATH nvarchar(30), @param1 INT'
-, @CLASSPATH = @myClassPath
+, @params = N'@param1 INT'
 , @param1 = @n
 with result sets ((ID int, ngram varchar(20)))
 GO
@@ -270,11 +280,7 @@ Después de ejecutar la llamada, debería obtener un conjunto que muestra las do
 
 ### <a name="if-you-get-an-error"></a>Si se produce un error
 
-Descartar cualquier problema relacionado con la ruta de clase. 
-
-+ Classpath debe constar de la carpeta primaria y todas las subcarpetas, pero no en la subcarpeta "pkg". Si bien debe existir la subcarpeta del paquete, no se supone que esté en el valor de ruta de clase especificado en el procedimiento almacenado.
-
-+ La subcarpeta "pkg" debe contener el código compilado para las tres clases.
++ Al compilar las clases, la subcarpeta "pkg" debe contener el código compilado para las tres clases.
 
 + La longitud de ruta de clase no puede superar el valor declarado (`DECLARE @myClassPath nvarchar(50)`). Si es así, se trunca la ruta de acceso a los 50 primeros caracteres y no se cargará el código compilado. Puede hacer un `SELECT @myClassPath` para comprobar el valor. Aumente la longitud, si no es suficiente 50 caracteres. 
 

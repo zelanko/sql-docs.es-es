@@ -18,12 +18,12 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6ac15a78e8689e76fc9687a6cd8784eb1fc4dd2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eb371603230c0c3b6fbee0012c89ce402711fb6e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537869"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493237"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,29 +55,21 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_name =** ] **'**_job_name_**'**  
- Nombre del trabajo. El nombre debe ser único y no puede contener el porcentaje (**%**) caracteres. *job_name*es **nvarchar (128)**, no tiene ningún valor predeterminado.  
+`[ @job_name = ] 'job_name'` El nombre del trabajo. El nombre debe ser único y no puede contener el porcentaje (**%**) caracteres. *job_name*es **nvarchar (128)**, no tiene ningún valor predeterminado.  
   
- [  **@enabled =** ] *habilitado*  
- Indica el estado del trabajo agregado. *habilitado*es **tinyint**, su valor predeterminado es 1 (habilitado). Si **0**, el trabajo no está habilitado y no se ejecuta según la programación; sin embargo, se puede ejecutar manualmente.  
+`[ @enabled = ] enabled` Indica el estado del trabajo agregado. *habilitado*es **tinyint**, su valor predeterminado es 1 (habilitado). Si **0**, el trabajo no está habilitado y no se ejecuta según la programación; sin embargo, se puede ejecutar manualmente.  
   
- [  **@description =** ] **'**_descripción_**'**  
- Descripción del trabajo. *descripción* es **nvarchar (512)**, su valor predeterminado es null. Si *descripción* es se omite, se utiliza "No hay descripción disponible".  
+`[ @description = ] 'description'` La descripción del trabajo. *descripción* es **nvarchar (512)**, su valor predeterminado es null. Si *descripción* es se omite, se utiliza "No hay descripción disponible".  
   
- [ **@start_step_id =** ] *step_id*  
- Número de identificación del primer paso que se va a ejecutar para el trabajo. *step_id*es **int**, su valor predeterminado es 1.  
+`[ @start_step_id = ] step_id` El número de identificación del primer paso para ejecutar el trabajo. *step_id*es **int**, su valor predeterminado es 1.  
   
- [  **@category_name =** ] **'**_categoría_**'**  
- Categoría del trabajo. *categoría*es **sysname**, su valor predeterminado es null.  
+`[ @category_name = ] 'category'` La categoría del trabajo. *categoría*es **sysname**, su valor predeterminado es null.  
   
- [ **@category_id =** ] *category_id*  
- Mecanismo independiente del idioma para especificar una categoría de trabajo. *category_id*es **int**, su valor predeterminado es null.  
+`[ @category_id = ] category_id` Un mecanismo independiente del idioma para especificar una categoría de trabajo. *category_id*es **int**, su valor predeterminado es null.  
   
- [  **@owner_login_name =** ] **'**_inicio de sesión_**'**  
- Nombre del inicio de sesión al que pertenece el trabajo. *inicio de sesión*es **sysname**, su valor predeterminado es null, que se interpreta como el nombre de inicio de sesión actual. Solo los miembros de la **sysadmin** rol fijo de servidor puede establecer o cambiar el valor de **@owner_login_name**. Si los usuarios que no son miembros de la **sysadmin** rol establecer o cambiar el valor de **@owner_login_name**, se produce un error en la ejecución de este procedimiento almacenado y devuelve un error.  
+`[ @owner_login_name = ] 'login'` El nombre del inicio de sesión que pertenece el trabajo. *inicio de sesión*es **sysname**, su valor predeterminado es null, que se interpreta como el nombre de inicio de sesión actual. Solo los miembros de la **sysadmin** rol fijo de servidor puede establecer o cambiar el valor de **@owner_login_name**. Si los usuarios que no son miembros de la **sysadmin** rol establecer o cambiar el valor de **@owner_login_name**, se produce un error en la ejecución de este procedimiento almacenado y devuelve un error.  
   
- [ **@notify_level_eventlog =** ] *eventlog_level*  
- Valor que indica cuándo se debe incluir una entrada para este trabajo en el registro de aplicación de Microsoft Windows. *eventlog_level*es **int**, y puede tener uno de estos valores.  
+`[ @notify_level_eventlog = ] eventlog_level` Un valor que indica cuándo se debe incluir una entrada en el registro de aplicación de Microsoft Windows para este trabajo. *eventlog_level*es **int**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -86,32 +78,24 @@ sp_add_job [ @job_name = ] 'job_name'
 |**2** (predeterminado)|En caso de error|  
 |**3**|Always|  
   
- [  **@notify_level_email =** ] *email_level*  
- Valor que indica cuándo se debe enviar un mensaje de correo electrónico para notificar la finalización del trabajo. *email_level*es **int**, su valor predeterminado es **0**, lo que no significa que nunca. *email_level*utiliza los mismos valores que *eventlog_level*.  
+`[ @notify_level_email = ] email_level` Un valor que indica cuándo se debe enviar un correo electrónico tras finalizar este trabajo. *email_level*es **int**, su valor predeterminado es **0**, lo que no significa que nunca. *email_level*utiliza los mismos valores que *eventlog_level*.  
   
- [ **@notify_level_netsend =** ] *netsend_level*  
- Valor que indica cuándo se debe enviar un mensaje de red para notificar la finalización del trabajo. *netsend_level*es **int**, su valor predeterminado es **0**, lo que no significa que nunca. *netsend_level* utiliza los mismos valores que *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` Un valor que indica cuándo se debe enviar un mensaje de red tras finalizar este trabajo. *netsend_level*es **int**, su valor predeterminado es **0**, lo que no significa que nunca. *netsend_level* utiliza los mismos valores que *eventlog_level*.  
   
- [ **@notify_level_page =** ] *page_level*  
- Valor que indica cuándo se debe enviar una página para notificar la finalización del trabajo. *page_level*es **int**, su valor predeterminado es **0**, lo que no significa que nunca. *page_level*utiliza los mismos valores que *eventlog_level*.  
+`[ @notify_level_page = ] page_level` Un valor que indica cuándo se debe enviar una página tras finalizar este trabajo. *page_level*es **int**, su valor predeterminado es **0**, lo que no significa que nunca. *page_level*utiliza los mismos valores que *eventlog_level*.  
   
- [  **@notify_email_operator_name =** ] **'**_nombre_correo_**'**  
- El nombre de correo electrónico de la persona para enviar correo electrónico cuando *email_level* se alcanza. *nombre de correo electrónico* es **sysname**, su valor predeterminado es null.  
+`[ @notify_email_operator_name = ] 'email_name'` El nombre de correo electrónico de la persona para enviar correo electrónico cuando *email_level* se alcanza. *nombre de correo electrónico* es **sysname**, su valor predeterminado es null.  
   
- [  **@notify_netsend_operator_name =** ] **'**_netsend_name_**'**  
- Nombre del operador al que se enviará el mensaje de red al finalizar este trabajo. *netsend_name*es **sysname**, su valor predeterminado es null.  
+`[ @notify_netsend_operator_name = ] 'netsend_name'` El nombre del operador al que se envía el mensaje de red al finalizar este trabajo. *netsend_name*es **sysname**, su valor predeterminado es null.  
   
- [  **@notify_page_operator_name =** ] **'**_page_name_**'**  
- Nombre de la persona a la que se enviará un mensaje por localizador al finalizar este trabajo. *page_name*es **sysname**, su valor predeterminado es null.  
+`[ @notify_page_operator_name = ] 'page_name'` El nombre de la persona a la página tras finalizar este trabajo. *page_name*es **sysname**, su valor predeterminado es null.  
   
- [ **@delete_level =** ] *delete_level*  
- Valor que indica cuándo se va a eliminar el trabajo. *delete_value*es **int**, su valor predeterminado es 0, lo que significa que nunca. *delete_level*utiliza los mismos valores que *eventlog_level*.  
+`[ @delete_level = ] delete_level` Un valor que indica cuándo se debe eliminar el trabajo. *delete_value*es **int**, su valor predeterminado es 0, lo que significa que nunca. *delete_level*utiliza los mismos valores que *eventlog_level*.  
   
 > [!NOTE]  
 >  Cuando *delete_level* es **3**, el trabajo se ejecuta solo una vez, independientemente de las programaciones definidas para el trabajo. Además, si un trabajo se elimina a sí mismo, también se elimina todo el historial de trabajos.  
   
- [  **@job_id =** ] _job_id_**salida**  
- Número de identificación que se ha asignado al trabajo si este se ha creado correctamente. *job_id*es una variable de salida de tipo **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] _job_idOUTPUT` El número de identificación del trabajo asignado al trabajo si se creó correctamente. *job_id*es una variable de salida de tipo **uniqueidentifier**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -19,12 +19,12 @@ ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9353e797f5ff84101726b0cfe7d12020f14fca3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 247c834abfbc47485628702bf4cd87c7662c44a8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811453"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494277"
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,23 +47,17 @@ sp_add_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@proxy_name**=] **'***proxy_name***'**  
- Nombre del proxy que se va a crear. El *proxy_name* es **sysname**, su valor predeterminado es null. Cuando el *proxy_name* es NULL o una cadena vacía, el nombre de los valores predeterminados de proxy para el *user_name* proporcionado.  
+`[ @proxy_name = ] 'proxy_name'` El nombre del proxy que se va a crear. El *proxy_name* es **sysname**, su valor predeterminado es null. Cuando el *proxy_name* es NULL o una cadena vacía, el nombre de los valores predeterminados de proxy para el *user_name* proporcionado.  
   
- [ **@enabled** =] *is_enabled*  
- Especifica si el proxy está habilitado. El *is_enabled* marca es **tinyint**, su valor predeterminado es 1. Cuando *is_enabled* es **0**, el proxy no está habilitado y no puede utilizarse por un paso de trabajo.  
+`[ @enabled = ] is_enabled` Especifica si está habilitado el proxy. El *is_enabled* marca es **tinyint**, su valor predeterminado es 1. Cuando *is_enabled* es **0**, el proxy no está habilitado y no puede utilizarse por un paso de trabajo.  
   
- [ **@description**=] **'***descripción***'**  
- Descripción del proxy. La descripción es **nvarchar (512)**, su valor predeterminado es null. La descripción permite documentar el proxy. El Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no le da otros usos. Por tanto, este argumento es opcional.  
+`[ @description = ] 'description'` Una descripción del proxy. La descripción es **nvarchar (512)**, su valor predeterminado es null. La descripción permite documentar el proxy. El Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no le da otros usos. Por tanto, este argumento es opcional.  
   
- [ **@credential_name** =] **'***credential_name***'**  
- Nombre de la credencial para el proxy. El *credential_name* es **sysname**, su valor predeterminado es null. Cualquier *credential_name* o *credential_id* debe especificarse.  
+`[ @credential_name = ] 'credential_name'` El nombre de la credencial del proxy. El *credential_name* es **sysname**, su valor predeterminado es null. Cualquier *credential_name* o *credential_id* debe especificarse.  
   
- [ **@credential_id** =] *credential_id*  
- Número de identificación de la credencial para el proxy. El *credential_id* es **int**, su valor predeterminado es null. Cualquier *credential_name* o *credential_id* debe especificarse.  
+`[ @credential_id = ] credential_id` El número de identificación de la credencial del proxy. El *credential_id* es **int**, su valor predeterminado es null. Cualquier *credential_name* o *credential_id* debe especificarse.  
   
- [ **@proxy_id**=] *id* salida  
- Número de identificación que se ha asignado al proxy si éste se ha creado correctamente.  
+`[ @proxy_id = ] id OUTPUT` El número de identificación de proxy asignado al servidor proxy si se creó correctamente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

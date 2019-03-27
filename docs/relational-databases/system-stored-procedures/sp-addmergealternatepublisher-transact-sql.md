@@ -16,12 +16,12 @@ ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21d0ea34f3521333976ce00a3f5b823c3fcb816a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: efbf4195294ce8bc279a2ed995ce09a5f384a82c
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129305"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491979"
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,32 +46,23 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=**] **'**_publisher_**'**  
- Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publication=**] **'**_publicación_**'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@alternate_publisher=**] **'**_alternate_synchronization_partner_**'**  
- Es el nombre del publicador alternativo. *alternate_synchronization_partner* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'` Es el nombre del publicador alternativo. *alternate_synchronization_partner* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@alternate_publisher_db=**] **'**_publisher_db_**'**  
- Es el nombre de la base de datos de publicación en el publicador alternativo. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` Es el nombre de la base de datos de publicación del publicador alternativo. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@alternate_publication=**] **'**_alternate_synchronization_partner_**'**  
- Es el nombre de la publicación en el asociado de sincronización alternativo. *alternate_synchronization_partner* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'` Es el nombre de la publicación en el asociado de sincronización alternativo. *alternate_synchronization_partner* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@alternate_distributor=**] **'**_alternate_distributor_**'**  
- Es el nombre del distribuidor en el asociado de sincronización alternativo. *alternate_distributor* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @alternate_distributor = ] 'alternate_distributor'` Es el nombre del distribuidor para el asociado de sincronización alternativo. *alternate_distributor* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@friendly_name=**] **'**_Nombre_descriptivo_**'**  
- Es un nombre para mostrar con el que se identifica la asociación del publicador, la publicación y el distribuidor que conforma un asociado de sincronización alternativo. *Nombre_descriptivo* es **nvarchar (255)**, su valor predeterminado es null.  
+`[ @friendly_name = ] 'friendly_name'` Es un nombre para mostrar por el que se puede identificar la asociación del publicador, publicación y distribuidor que conforma un asociado de sincronización alternativo. *Nombre_descriptivo* es **nvarchar (255)**, su valor predeterminado es null.  
   
- [  **@reserved=**] **'**_reservada_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

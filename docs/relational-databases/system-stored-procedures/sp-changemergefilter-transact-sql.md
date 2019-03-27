@@ -16,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c199af62d7cd5cb95c382b412182bb24c957bf89
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127085"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493087"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'**_publicación_**'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@article=** ] **'**_artículo_**'**  
- Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@filtername=** ] **'**_filtername_**'**  
- Es el nombre actual del filtro. *filtername* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @filtername = ] 'filtername'` Es el nombre del filtro actual. *filtername* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@property=** ] **'**_propiedad_**'**  
- Es el nombre de la propiedad que se va a cambiar. *propiedad* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @property = ] 'property'` Es el nombre de la propiedad que se va a cambiar. *propiedad* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@value=**] **'**_valor_**'**  
- Es el nuevo valor para la propiedad especificada. *valor*es **nvarchar (1000)**, no tiene ningún valor predeterminado.  
+`[ @value = ] 'value'` Es el nuevo valor para la propiedad especificada. *valor*es **nvarchar (1000)**, no tiene ningún valor predeterminado.  
   
  En esta tabla se describen las propiedades de los artículos y los valores de esas propiedades.  
   
@@ -72,15 +67,13 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|La combinación se hace sobre una clave exclusiva.|  
 ||**False**|La combinación no se hace sobre una clave exclusiva.|  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
   
  **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la instantánea no es válido. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
   
  **1** significa que los cambios realizados en el artículo de mezcla pueden invalidar la instantánea no es válido y, si hay suscripciones existentes que requieran una nueva instantánea, concede el permiso necesario para marcar como obsoleta la instantánea existente y generado una nueva.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Confirma que la acción realizada por este procedimiento almacenado puede requerir la reinicialización de las suscripciones existentes. *force_reinit_subscription* es un **bit** con un valor predeterminado de **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Confirma que la acción realizada por este procedimiento almacenado puede requerir la reinicialización de las suscripciones existentes. *force_reinit_subscription* es un **bit** con un valor predeterminado de **0**.  
   
  **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la suscripción para reinicializarla. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de las suscripciones existentes, se producirá un error y no se realizarán cambios.  
   

@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo implementar clústeres de macrodat
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fb09a5b13adc7f673c83a91635451435e4a8c945
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 5efefd5bc94aa8d1842ee244c947e48e90604834
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477700"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493737"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes
 
@@ -87,7 +87,7 @@ La configuración del clúster puede personalizarse mediante un conjunto de vari
 | **ACCEPT_EULA** | Sí | N/D | Acepte el contrato de licencia de SQL Server (por ejemplo, 'Yes').  |
 | **CLUSTER_NAME** | Sí | N/D | El nombre del espacio de nombres para implementar SQLServer agrupar datos de gran tamaño en Kubernetes. |
 | **CLUSTER_PLATFORM** | Sí | N/D | La plataforma que se implementa el clúster de Kubernetes. Puede ser `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | El número de réplicas del grupo de proceso para elaborar. En CTP 2.3 solo con valores permitido es 1. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | No | 1 | El número de réplicas del grupo de proceso para elaborar. En CTP 2.4 solo con valores permitido es 1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | No | 2 | El número de datos de grupo de réplicas para elaborar. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | No | 2 | El número de réplicas de grupo de almacenamiento para elaborar. |
 | **DOCKER_REGISTRY** | Sí | TBD | El registro privado donde se almacenan las imágenes se usan para implementar el clúster. |
@@ -278,13 +278,13 @@ Actualmente, la única manera de actualizar un clúster de macrodatos a una nuev
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.4/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

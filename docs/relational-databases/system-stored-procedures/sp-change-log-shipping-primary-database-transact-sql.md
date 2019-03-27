@@ -18,12 +18,12 @@ ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f361039f611a6b7a383649fb18a4af155a0c2b28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a713687d41c21a3c99c30d6b7192d7c59e41505
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710613"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492727"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,20 +51,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@database =** ] '*base de datos*'  
- Es el nombre de la base de datos en el servidor principal. *primary_database* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @database = ] 'database'` Es el nombre de la base de datos en el servidor principal. *primary_database* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@backup_directory =** ] '*directorio_de_copia_de_seguridad*'  
- Es la ruta de acceso a la carpeta de copia de seguridad del servidor principal. *directorio_de_copia_de_seguridad* es **nvarchar (500)**, no tiene ningún valor predeterminado, y no puede ser NULL.  
+`[ @backup_directory = ] 'backup_directory'` Es la ruta de acceso a la carpeta de copia de seguridad en el servidor principal. *directorio_de_copia_de_seguridad* es **nvarchar (500)**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
- [  **@backup_share =** ] '*backup_share*'  
- Es la ruta de acceso de red al directorio de copia de seguridad del servidor principal. *backup_share* es **nvarchar (500)**, no tiene ningún valor predeterminado, y no puede ser NULL.  
+`[ @backup_share = ] 'backup_share'` Es la ruta de acceso de red en el directorio de copia de seguridad en el servidor principal. *backup_share* es **nvarchar (500)**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
- [  **@backup_retention_period =** ] '*backup_retention_period*'  
- Es el tiempo, en minutos, durante el que se retiene el archivo de copia de seguridad de registros en el directorio de copia de seguridad del servidor principal. *backup_retention_period* es **int**, no tiene ningún valor predeterminado, y no puede ser NULL.  
+`[ @backup_retention_period = ] 'backup_retention_period'` Es el período de tiempo, en minutos, que se retiene el archivo de copia de seguridad de registro en el directorio de copia de seguridad en el servidor principal. *backup_retention_period* es **int**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
- [  **@monitor_server_security_mode =** ] '*monitor_server_security_mode*'  
- Modo de seguridad utilizado para conectarse al servidor de supervisión.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Modo de seguridad utilizado para conectarse al servidor de supervisión.  
   
  1 = Autenticación de Windows.  
   
@@ -72,20 +67,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *monitor_server_security_mode* es **bit** y no puede ser NULL.  
   
- [  **@monitor_server_login =** ] '*monitor_server_login*'  
- Es el nombre de usuario de la cuenta utilizada para tener acceso al servidor de supervisión.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Es el nombre de usuario de la cuenta utilizada para tener acceso el servidor de supervisión.  
   
- [  **@monitor_server_password =** ] '*monitor_server_password*'  
- Es la contraseña de la cuenta utilizada para tener acceso al servidor de supervisión.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Es la contraseña de la cuenta utilizada para tener acceso el servidor de supervisión.  
   
- [  **@backup_threshold =** ] '*backup_threshold*'  
- Es el período de tiempo, en minutos, tras la última copia de seguridad antes de un *threshold_alert* se genera el error. *backup_threshold* es **int**, su valor predeterminado es de 60 minutos.  
+`[ @backup_threshold = ] 'backup_threshold'` Es el período de tiempo, en minutos, tras la última copia de seguridad antes de un *threshold_alert* se genera el error. *backup_threshold* es **int**, su valor predeterminado es de 60 minutos.  
   
- [  **@threshold_alert =** ] '*threshold_alert*'  
- Alerta que se generará cuando se sobrepase el umbral de copia de seguridad. *threshold_alert* es **int** y no puede ser NULL.  
+`[ @threshold_alert = ] 'threshold_alert'` La alerta que se genera cuando se supera el umbral de copia de seguridad. *threshold_alert* es **int** y no puede ser NULL.  
   
- [  **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
- Especifica si se generará una alerta cuando *backup_threshold* se supera.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Especifica si se generará una alerta cuando *backup_threshold* se supera.  
   
  1 = habilitada  
   
@@ -93,11 +83,9 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *threshold_alert_enabled* es **bit** y no puede ser NULL.  
   
- [  **@history_retention_period =** ] '*history_retention_period*'  
- Es la cantidad de tiempo en minutos durante la que se retiene el historial. *history_retention_period* es **int**. Si no se especifica ningún valor, se utiliza 14420.  
+`[ @history_retention_period = ] 'history_retention_period'` Es el período de tiempo en minutos en el que se retiene el historial. *history_retention_period* es **int**. Si no se especifica ningún valor, se utiliza 14420.  
   
- [ **@backup_compression**=] *backup_compression_option*  
- Especifica si se usa una configuración de trasvase de registros [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parámetro solo se admite en [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (o una versión posterior).  
+`[ @backup_compression = ] backup_compression_option` Especifica si se usa una configuración de trasvase de registros [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parámetro solo se admite en [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (o una versión posterior).  
   
  0 = Deshabilitada. No se comprimen nunca las copias de seguridad de registros.  
   

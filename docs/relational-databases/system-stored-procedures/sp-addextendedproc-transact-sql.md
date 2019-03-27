@@ -18,12 +18,12 @@ ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 23c97002d5400d3794bed23fea4fb4eb05efd7f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b895692bf9ce65d9e063fb1d484cf84734897c86
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133015"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494287"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@functname =** ] **'**_procedimiento_**'**  
- Es el nombre de la función a la que ha de llamarse dentro de la biblioteca de vínculos dinámicos (DLL). *procedimiento* es **nvarchar (517)**, no tiene ningún valor predeterminado. *procedimiento* puede incluir opcionalmente el nombre del propietario en el formulario *owner.function*.  
+`[ @functname = ] 'procedure'` Es el nombre de la función para llamar a dentro de la biblioteca de vínculos dinámicos (DLL). *procedimiento* es **nvarchar (517)**, no tiene ningún valor predeterminado. *procedimiento* puede incluir opcionalmente el nombre del propietario en el formulario *owner.function*.  
   
- [  **@dllname =** ] **'**_dll_**'**  
- Es el nombre de la DLL que contiene la función. *DLL* es **varchar (255)**, no tiene ningún valor predeterminado. Se recomienda especificar la ruta de acceso completa del archivo DLL.  
+`[ @dllname = ] 'dll'` Es el nombre del archivo DLL que contiene la función. *DLL* es **varchar (255)**, no tiene ningún valor predeterminado. Se recomienda especificar la ruta de acceso completa del archivo DLL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

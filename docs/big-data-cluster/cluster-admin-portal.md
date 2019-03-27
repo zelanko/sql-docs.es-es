@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo usar el portal de administración 
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9048de9c5f1a1241a6d7049f8eeb15efef87cabb
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 2ed73006850a5174c6df07ed09302ea48decf6d2
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017861"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492867"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Cómo usar el portal de administración de clúster para supervisar un clúster de macrodatos de SQL Server
 
@@ -35,7 +35,7 @@ Siga el [inicio rápido para implementar el clúster de macrodatos](quickstart-b
 Una vez que se está ejecutando el pod del controlador, puede usar el portal de administración de clúster para supervisar la implementación. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `endpoint-service-proxy` (por ejemplo: **https://\<ip-address\>: 30777/portal**). Las credenciales de acceso al portal de administración es los valores de `CONTROLLER_USERNAME` y `CONTROLLER_PASSWORD` variables de entorno proporcionadas anteriormente.
 
 > [!NOTE]
-> Para CTP 2.3, hay una advertencia de seguridad al obtener acceso a la página web, dado que usa certificados SSL generados automáticamente.
+> Para CTP 2.4, hay una advertencia de seguridad al obtener acceso a la página web, dado que usa certificados SSL generados automáticamente.
 
 ## <a name="overview"></a>Información general
 

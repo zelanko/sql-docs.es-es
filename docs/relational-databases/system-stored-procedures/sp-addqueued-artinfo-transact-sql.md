@@ -16,12 +16,12 @@ ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c326a8e3a5fa2bd95f536d434ff9782952ba70d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e44891f5a16625cb6c3176fac8188fa568822add
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590900"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493188"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,29 +50,22 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@artid=** ] **'**_artid_**'**  
- Es el nombre del id. de artículo. *artid* es **int**, no tiene ningún valor predeterminado  
+`[ @artid = ] 'artid'` Es el nombre del identificador del artículo. *artid* es **int**, no tiene ningún valor predeterminado  
   
- [  **@article=**] **'**_artículo_**'**  
- Es el nombre del artículo que se va a agregar al script. *artículo* es **sysname**, no tiene ningún valor predeterminado  
+`[ @article = ] 'article'` Es el nombre del artículo que se convertirá en script. *artículo* es **sysname**, no tiene ningún valor predeterminado  
   
- [  **@publisher=**] **'**_publisher_**'**  
- Es el nombre del servidor del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del servidor del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publication=**] **'**_publicación_**'**  
- Es el nombre de la publicación de la que se va a crear un script. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se convertirá en script. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@dest_table=** ] _' dest_table_**'**  
- Es el nombre de la tabla de destino. *dest_table* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @dest_table = ] _'dest_table'` Es el nombre de la tabla de destino. *dest_table* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@owner =** ] **'**_propietario_**'**  
+ [**@owner =** ] **'**_owner_**'**  
  Es el propietario de la suscripción. *propietario* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@cft_table=** ] **'**_cft_table_**'**  
- Nombre de la tabla de conflictos de actualización en cola de este artículo. *cft_table*es **sysname**, no tiene ningún valor predeterminado.  
+`[ @cft_table = ] 'cft_table'` Nombre de la tabla de conflictos de actualización en cola para este artículo. *cft_table*es **sysname**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

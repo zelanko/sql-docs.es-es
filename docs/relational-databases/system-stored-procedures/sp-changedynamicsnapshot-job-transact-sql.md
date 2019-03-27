@@ -16,12 +16,12 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f699a4f7dcf333301889211a0db45248935acdce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130205"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493147"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +52,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- Es el nombre del trabajo de instantánea que se cambia. *dynamic_snapshot_jobname*es **sysname**, con el valor predeterminado es N '%'. Si *dynamic_snapshot_jobid* se especifica, debe usar el valor predeterminado de *dynamic_snapshot_jobname*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Se está cambiando el nombre del trabajo de instantánea. *dynamic_snapshot_jobname*es **sysname**, con el valor predeterminado es N '%'. Si *dynamic_snapshot_jobid* se especifica, debe usar el valor predeterminado de *dynamic_snapshot_jobname*.  
   
- [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
- Es el identificador del trabajo de instantánea que se cambia. *dynamic_snapshot_jobid* es **uniqueidentifier**, su valor predeterminado es NULL. Si *dynamic_snapshot_jobname*se especifica, debe usar el valor predeterminado de *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Se está cambiando el identificador del trabajo de instantánea. *dynamic_snapshot_jobid* es **uniqueidentifier**, su valor predeterminado es NULL. Si *dynamic_snapshot_jobname*se especifica, debe usar el valor predeterminado de *dynamic_snapshot_jobid*.  
   
- [  **@frequency_type =** ] *frequency_type*  
- Es la frecuencia con que se programa el agente. *frequency_type* es **int**, y puede tener uno de los siguientes valores.  
+`[ @frequency_type = ] frequency_type` Es la frecuencia con que se programa al agente. *frequency_type* es **int**, y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -76,8 +72,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**128**|Periódica|  
 |NULL (predeterminado)||  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- Los días en que se ejecuta el agente. *frequency_interval* es **int**, y puede tener uno de los siguientes valores.  
+`[ @frequency_interval = ] frequency_interval` Los días que se ejecuta el agente. *frequency_interval* es **int**, y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -93,8 +88,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**10**|Días del fin de semana|  
 |NULL (predeterminado)||  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- Es la frecuencia de repetición de la programación durante el periodo definido. *frequency_subday* es **int**, y puede tener uno de los siguientes valores.  
+`[ @frequency_subday = ] frequency_subday` Es la frecuencia con la que volver a programar durante el período definido. *frequency_subday* es **int**, y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -104,11 +98,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Hour|  
 |NULL (predeterminado)||  
   
- [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- Es el intervalo de *frequency_subday*. *frequency_subday_interval* es **int**, su valor predeterminado es null.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Es el intervalo de *frequency_subday*. *frequency_subday_interval* es **int**, su valor predeterminado es null.  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- Es la fecha de ejecución del Agente de mezcla. Este parámetro se utiliza cuando *frequency_type* está establecido en **32** (relativo mensual). *frequency_relative_interval* es **int**, y puede tener uno de los siguientes valores.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Es la fecha en que se ejecuta el agente de mezcla. Este parámetro se utiliza cuando *frequency_type* está establecido en **32** (relativo mensual). *frequency_relative_interval* es **int**, y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -119,26 +111,19 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**16**|Último|  
 |NULL (predeterminado)||  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es **int**, su valor predeterminado es null.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es **int**, su valor predeterminado es null.  
   
- [ **@active_start_date =** ] *active_start_date*  
- Es la fecha en que el agente de mezcla se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es **int**, su valor predeterminado es null.  
+`[ @active_start_date = ] active_start_date` Es la fecha en el agente de mezcla programada, con el formato AAAAMMDD. *active_start_date* es **int**, su valor predeterminado es null.  
   
- [ **@active_end_date =** ] *active_end_date*  
- Es la fecha en la que el agente de mezcla deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, su valor predeterminado es null.  
+`[ @active_end_date = ] active_end_date` Es la fecha en el agente de mezcla deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, su valor predeterminado es null.  
   
- [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- Es la hora del día en que el agente de mezcla se programa por primera vez, con el formato HHMMSS. *active_start_time_of_day* es **int**, su valor predeterminado es null.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Es la hora del día en el agente de mezcla se primer programa, con el formato HHMMSS. *active_start_time_of_day* es **int**, su valor predeterminado es null.  
   
- [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- Es la hora del día en que el agente de mezcla deja de estar programado, con el formato HHMMSS. *active_end_time_of_day* es **int**, su valor predeterminado es null.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Es la hora del día en que el agente de mezcla deja de estar programado, con el formato HHMMSS. *active_end_time_of_day* es **int**, su valor predeterminado es null.  
   
- [  **@job_login=** ] **'***job_login***'**  
- Es la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con la que se ejecuta el agente de instantáneas al generar la instantánea para una suscripción con un filtro de fila con parámetros. *job_login* es **nvarchar (257)**, su valor predeterminado es null.  
+`[ @job_login = ] 'job_login'` Es el [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de Windows bajo la que se ejecuta el agente de instantáneas al generar la instantánea para una suscripción con un filtro de fila con parámetros. *job_login* es **nvarchar (257)**, su valor predeterminado es null.  
   
- [  **@job_password=** ] **'***job_password***'**  
- Es la contraseña de la cuenta de Windows con la que se ejecuta el agente de instantáneas al generar la instantánea para una suscripción con un filtro de fila con parámetros. *job_password* es **nvarchar (257)**, su valor predeterminado es null.  
+`[ @job_password = ] 'job_password'` Es la contraseña de la cuenta de Windows bajo la que se ejecuta el agente de instantáneas al generar la instantánea para una suscripción mediante un filtro de fila con parámetros. *job_password* es **nvarchar (257)**, su valor predeterminado es null.  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  

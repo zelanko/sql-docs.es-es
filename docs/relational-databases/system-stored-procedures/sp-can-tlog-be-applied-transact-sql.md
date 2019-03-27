@@ -18,12 +18,12 @@ ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd0273e27ec20f23d683347f9501b72355f560d6
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d21de1f416344202911f80e48afc025cd423b1e2
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588610"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491989"
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@backup_file_name=** ] **'**_nombreDelArchivoDeCopiaDeSeguridad_**'**  
- Es el nombre de un archivo de copia de seguridad. *nombreDelArchivoDeCopiaDeSeguridad* es **nvarchar (128)**.  
+`[ @backup_file_name = ] 'backup_file_name'` Es el nombre de un archivo de copia de seguridad. *nombreDelArchivoDeCopiaDeSeguridad* es **nvarchar (128)**.  
   
- [  **@database_name=** ] **'**_database_name_**'**  
- Es el nombre de la base de datos. *database_name* es **sysname**.  
+`[ @database_name = ] 'database_name'` Es el nombre de la base de datos. *database_name* es **sysname**.  
   
- [  **@result=** ] _resultado_ **salida**  
- Indica si es posible aplicar el registro de transacciones a la base de datos. *resultado* es **bits**.  
+`[ @result = ] _result_ OUTPUT` Indica si el registro de transacciones se puede aplicar a la base de datos. *resultado* es **bits**.  
   
  1 = El registro se puede aplicar.  
   

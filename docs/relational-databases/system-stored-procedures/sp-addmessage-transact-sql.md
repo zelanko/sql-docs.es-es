@@ -18,12 +18,12 @@ ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbf909004f6b3d809babfb99b1787728194bd140
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 63d206e6b6f32aeb12e2e04b9edc2ef1d84599b2
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100866"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494237"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,26 +43,20 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **\@msgnum =** ] *msg_id*  
- Es el identificador del mensaje de error. *msg_id* es **int** con el valor predeterminado es NULL. *msg_id* de error definido por el usuario, los mensajes pueden ser un entero entre 50.001 y 2.147.483.647. La combinación de *msg_id* y *lenguaje* debe ser única; se devuelve un error si ya existe el identificador para el idioma especificado.  
+`[ \@msgnum = ] msg_id` Es el identificador del mensaje. *msg_id* es **int** con el valor predeterminado es NULL. *msg_id* de error definido por el usuario, los mensajes pueden ser un entero entre 50.001 y 2.147.483.647. La combinación de *msg_id* y *lenguaje* debe ser única; se devuelve un error si ya existe el identificador para el idioma especificado.  
   
- [  **\@gravedad =** ]*gravedad*  
- Es el nivel de gravedad del error. *gravedad* es **smallint** con el valor predeterminado es NULL. Los niveles válidos son de 1 a 25. Para obtener más información sobre los niveles de gravedad, vea [Niveles de gravedad de error del motor de base de datos](../../relational-databases/errors-events/database-engine-error-severities.md).  
+`[ \@severity = ]severity` Es el nivel de gravedad del error. *gravedad* es **smallint** con el valor predeterminado es NULL. Los niveles válidos son de 1 a 25. Para obtener más información sobre los niveles de gravedad, vea [Niveles de gravedad de error del motor de base de datos](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
- [  **\@msgtext =** ] **'**_msg_**'**  
- Es el texto del mensaje de error. *msg* es **nvarchar (255)** con el valor predeterminado es NULL.  
+`[ \@msgtext = ] 'msg'` Es el texto del mensaje de error. *msg* es **nvarchar (255)** con el valor predeterminado es NULL.  
   
- [  **\@lang =** ] **'**_lenguaje_**'**  
- Es el idioma de este mensaje. *lenguaje* es **sysname** con el valor predeterminado es NULL. Dado que se pueden instalar varios idiomas en el mismo servidor, *lenguaje* especifica el idioma en que está escrito cada mensaje. Cuando *lenguaje* es el idioma se omite, es el idioma predeterminado para la sesión.  
+`[ \@lang = ] 'language'` Es el idioma para este mensaje. *lenguaje* es **sysname** con el valor predeterminado es NULL. Dado que se pueden instalar varios idiomas en el mismo servidor, *lenguaje* especifica el idioma en que está escrito cada mensaje. Cuando *lenguaje* es el idioma se omite, es el idioma predeterminado para la sesión.  
   
- [  **\@with_log =** ] { **'** TRUE **'** | **'FALSE'** }  
- Especifica si el mensaje debe escribirse en el registro de aplicación Windows cuando se produzca. **\@with_log** es **varchar (5)** con el valor predeterminado es FALSE. Si es TRUE, el error siempre se escribe en el registro de aplicación Windows. Si es FALSE, el error no siempre se escribe en el registro de aplicación Windows, pero se puede escribir, dependiendo de cómo se haya producido el error. Solo los miembros de la **sysadmin** rol de servidor puede usar esta opción.  
+`[ \@with_log = ] { 'TRUE' | 'FALSE' }` Es si el mensaje es para escribirse en el registro de aplicación de Windows cuando se produzca. **\@with_log** es **varchar (5)** con el valor predeterminado es FALSE. Si es TRUE, el error siempre se escribe en el registro de aplicación Windows. Si es FALSE, el error no siempre se escribe en el registro de aplicación Windows, pero se puede escribir, dependiendo de cómo se haya producido el error. Solo los miembros de la **sysadmin** rol de servidor puede usar esta opción.  
   
 > [!NOTE]  
 >  Si se escribe un mensaje en el registro de aplicación Windows, también se escribe en el archivo de registro de errores del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- [  **\@reemplazar =** ] **'**_reemplazar_**'**  
- Si se especifica como la cadena *reemplazar*, un mensaje de error existente se sobrescribe con el nuevo nivel de texto y la gravedad del mensaje. *Reemplace* es **varchar(7)** con el valor predeterminado es NULL. Esta opción debe especificarse si *msg_id* ya existe. Si se sustituye un mensaje en inglés de EE.UU., Se reemplaza el mensaje en inglés, el nivel de gravedad para todos los mensajes en todos los otros lenguajes que tienen el mismo *msg_id*.  
+`[ \@replace = ] 'replace'` Si se especifica como la cadena *reemplazar*, un mensaje de error existente se sobrescribe con el nuevo nivel de texto y la gravedad del mensaje. *Reemplace* es **varchar(7)** con el valor predeterminado es NULL. Esta opción debe especificarse si *msg_id* ya existe. Si se sustituye un mensaje en inglés de EE.UU., Se reemplaza el mensaje en inglés, el nivel de gravedad para todos los mensajes en todos los otros lenguajes que tienen el mismo *msg_id*.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

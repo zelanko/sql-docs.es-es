@@ -18,12 +18,12 @@ ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0177e9e96de30de5efe0f5b3425d417cadad50ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6514f5378c04652ec62cbad0b4899f28a2ade672
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674413"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492717"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,14 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =** ] *job_id*  
- Número de identificación del trabajo. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id` El número de identificación del trabajo. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
   
- [  **@job_name =** ] **'***job_name***'**  
- Nombre del trabajo. *job_name* es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'` El nombre del trabajo. *job_name* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
- [ **@server_name =** ] **'***server***'**  
- Nombre del servidor al que se va a destinar el trabajo. *servidor* es **nvarchar (30)**, su valor predeterminado es n '. *servidor* puede ser **(LOCAL)** para un servidor local, o el nombre de un servidor de destino existente.  
+`[ @server_name = ] 'server'` El nombre del servidor al que se va a destinar el trabajo. *servidor* es **nvarchar (30)**, su valor predeterminado es n '. *servidor* puede ser **(LOCAL)** para un servidor local, o el nombre de un servidor de destino existente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -94,7 +91,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>B. Asignar un trabajo para su ejecución en un servidor diferente  
+### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>b. Asignar un trabajo para su ejecución en un servidor diferente  
  En el ejemplo siguiente se asigna el trabajo multiservidor `Weekly Sales Backups` al servidor `SEATTLE2`.  
   
 > [!NOTE]  

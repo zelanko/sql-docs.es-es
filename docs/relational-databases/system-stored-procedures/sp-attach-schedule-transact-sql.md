@@ -18,12 +18,12 @@ ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f04aefa642e21901a3070d71164f50f01cbc2ec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4102c272fe9d880e6213917091b6078a413aebf8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732849"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494307"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,16 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id=** ] *job_id*  
- El número de identificación del trabajo del trabajo al que se agrega la programación. *job_id*es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id` El número de identificación del trabajo del trabajo al que se agrega la programación. *job_id*es **uniqueidentifier**, su valor predeterminado es null.  
   
- [  **@job_name =** ] **'***job_name***'**  
- El nombre del trabajo al que se agrega la programación. *job_name*es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'` El nombre del trabajo al que se agrega la programación. *job_name*es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
- [ **@schedule_id =** ] *schedule_id*  
- Número de identificación de la programación que se va a configurar para el trabajo. *schedule_id*es **int**, su valor predeterminado es null.  
+`[ @schedule_id = ] schedule_id` El número de identificación de la programación se establece para el trabajo. *schedule_id*es **int**, su valor predeterminado es null.  
   
- [  **@schedule_name =** ] **'***schedule_name***'**  
- Nombre de la programación que se va a configurar para el trabajo. *schedule_name*es **sysname**, su valor predeterminado es null.  
+`[ @schedule_name = ] 'schedule_name'` El nombre de la programación se establece para el trabajo. *schedule_name*es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  Cualquier *schedule_id* o *schedule_name* debe especificarse, pero no se pueden especificar ambos.  

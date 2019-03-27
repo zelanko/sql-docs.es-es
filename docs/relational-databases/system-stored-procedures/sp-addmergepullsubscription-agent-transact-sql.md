@@ -16,12 +16,12 @@ ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c49ade60bdbdbdc04fe7ec5b2ec221c10037982
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 5859d7e4c026375d5e9ade69628b9cf9e4a76ed0
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256540"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494367"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -91,83 +91,64 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@name =** ] **'***name***'**  
- Es el nombre del agente. *nombre* es **sysname**, su valor predeterminado es null.  
+`[ @name = ] 'name'` Es el nombre del agente. *nombre* es **sysname**, su valor predeterminado es null.  
   
- [ **@publisher =** ] **'***publisher***'**  
- Es el nombre del servidor del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del servidor del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@publisher_db =** ] **'***publisher_db***'**  
- Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publication =** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@publisher_security_mode =** ] *publisher_security_mode*  
- Es el modo de seguridad que se debe utilizar al conectarse con un publicador durante la sincronización. *publisher_security_mode* es **int**, su valor predeterminado es 1. Si **0**, especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. Si **1**, especifica la autenticación de Windows.  
+`[ @publisher_security_mode = ] publisher_security_mode` Es el modo de seguridad que se utilizará al conectarse a un publicador durante la sincronización. *publisher_security_mode* es **int**, su valor predeterminado es 1. Si **0**, especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. Si **1**, especifica la autenticación de Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login =** ] **'***publisher_login***'**  
- Es el inicio de sesión que se debe utilizar al conectarse con un publicador durante la sincronización. *publisher_login* es **sysname**, su valor predeterminado es null.  
+`[ @publisher_login = ] 'publisher_login'` Es el inicio de sesión que se utilizará al conectarse a un publicador durante la sincronización. *publisher_login* es **sysname**, su valor predeterminado es null.  
   
- [ **@publisher_password =** ] **'***publisher_password***'**  
- Es la contraseña utilizada para conectarse al publicador. *publisher_password* es **sysname**, su valor predeterminado es null.  
+`[ @publisher_password = ] 'publisher_password'` Es la contraseña utilizada al conectarse al publicador. *publisher_password* es **sysname**, su valor predeterminado es null.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Cuando sea posible, pida a los usuarios que especifiquen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
- [ **@publisher_encrypted_password =** ]*publisher_encrypted_password*  
- Establecer *publisher_encrypted_password* ya no se admite. Al intentar establecer esto **bit** parámetro **1** se producirá un error.  
+`[ @publisher_encrypted_password = ]publisher_encrypted_password` Establecer *publisher_encrypted_password* ya no se admite. Al intentar establecer esto **bit** parámetro **1** se producirá un error.  
   
- [  **@subscriber =** ] **'***suscriptor***'**  
- Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es null.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es null.  
   
- [ **@subscriber_db =** ] **'***subscriber_db***'**  
- Es el nombre de la base de datos de suscripción. *subscriber_db* es **sysname**, su valor predeterminado es null.  
+`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripción. *subscriber_db* es **sysname**, su valor predeterminado es null.  
   
- [ **@subscriber_security_mode =** ] *subscriber_security_mode*  
- Es el modo de seguridad que se debe utilizar al conectarse con un suscriptor durante la sincronización. *subscriber_security_mode* es **int**, su valor predeterminado es 1. Si **0**, especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. Si **1**, especifica la autenticación de Windows.  
+`[ @subscriber_security_mode = ] subscriber_security_mode` Es el modo de seguridad que se utilizará al conectarse a un suscriptor durante la sincronización. *subscriber_security_mode* es **int**, su valor predeterminado es 1. Si **0**, especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. Si **1**, especifica la autenticación de Windows.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. El Agente de mezcla siempre conecta con el suscriptor local mediante Autenticación de Windows. Si se especifica un valor para este parámetro, se devolverá un mensaje de advertencia, pero el valor se pasará por alto.  
   
- [ **@subscriber_login =** ] **'***subscriber_login***'**  
- Es el inicio de sesión del suscriptor que se debe utilizar al conectarse con un suscriptor durante la sincronización. *subscriber_login* es necesaria si *subscriber_security_mode* está establecido en **0**. *subscriber_login* es **sysname**, su valor predeterminado es null.  
+`[ @subscriber_login = ] 'subscriber_login'` Es el inicio de sesión del suscriptor que se utilizará al conectarse a un suscriptor durante la sincronización. *subscriber_login* es necesaria si *subscriber_security_mode* está establecido en **0**. *subscriber_login* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. Si se especifica un valor para este parámetro, se devolverá un mensaje de advertencia, pero el valor se pasará por alto.  
   
- [ **@subscriber_password =** ] **'***subscriber_password***'**  
- Es la contraseña del suscriptor para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *subscriber_password* es necesaria si *subscriber_security_mode* está establecido en **0**. *subscriber_password* es **sysname**, su valor predeterminado es null.  
+`[ @subscriber_password = ] 'subscriber_password'` Es la contraseña del suscriptor para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *subscriber_password* es necesaria si *subscriber_security_mode* está establecido en **0**. *subscriber_password* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. Si se especifica un valor para este parámetro, se devolverá un mensaje de advertencia, pero el valor se pasará por alto.  
   
- [  **@distributor =** ] **'***distribuidor***'**  
- Es el nombre del distribuidor. *distribuidor* es **sysname**, su valor predeterminado es *publisher*; es decir, el publicador también es el distribuidor.  
+`[ @distributor = ] 'distributor'` Es el nombre del distribuidor. *distribuidor* es **sysname**, su valor predeterminado es *publisher*; es decir, el publicador también es el distribuidor.  
   
- [ **@distributor_security_mode =** ] *distributor_security_mode*  
- Es el modo de seguridad que se debe utilizar al conectarse con un distribuidor durante la sincronización. *distributor_security_mode* es **int**, su valor predeterminado es 0. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. **1** especifica autenticación de Windows.  
+`[ @distributor_security_mode = ] distributor_security_mode` Es el modo de seguridad que se utilizará al conectarse a un distribuidor durante la sincronización. *distributor_security_mode* es **int**, su valor predeterminado es 0. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. **1** especifica autenticación de Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@distributor_login =** ] **'***distributor_login***'**  
- Es el inicio de sesión del distribuidor que se debe utilizar al conectarse con un distribuidor durante la sincronización. *distributor_login* es necesaria si *distributor_security_mode* está establecido en **0**. *distributor_login* es **sysname**, su valor predeterminado es null.  
+`[ @distributor_login = ] 'distributor_login'` Es el inicio de sesión del distribuidor que se utilizará al conectarse a un distribuidor durante la sincronización. *distributor_login* es necesaria si *distributor_security_mode* está establecido en **0**. *distributor_login* es **sysname**, su valor predeterminado es null.  
   
- [ **@distributor_password =** ] **'***distributor_password***'**  
- Es la contraseña del distribuidor. *distributor_password* es necesaria si *distributor_security_mode* está establecido en **0**. *distributor_password* es **sysname**, su valor predeterminado es null.  
+`[ @distributor_password = ] 'distributor_password'` Es la contraseña del distribuidor. *distributor_password* es necesaria si *distributor_security_mode* está establecido en **0**. *distributor_password* es **sysname**, su valor predeterminado es null.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Cuando sea posible, pida a los usuarios que especifiquen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
- [ **@encrypted_password =** ] *encrypted_password*  
- Establecer *encrypted_password* ya no se admite. Al intentar establecer esto **bit** parámetro **1** se producirá un error.  
+`[ @encrypted_password = ] encrypted_password` Establecer *encrypted_password* ya no se admite. Al intentar establecer esto **bit** parámetro **1** se producirá un error.  
   
- [ **@frequency_type =** ] *frequency_type*  
- Es la frecuencia con que se programa el agente de mezcla. *frequency_type* es **int**, y puede tener uno de los siguientes valores.  
+`[ @frequency_type = ] frequency_type` Es la frecuencia con que se programa al agente de mezcla. *frequency_type* es **int**, y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -184,8 +165,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  Si se especifica un valor de **64** hace que el agente de mezcla se ejecute en modo continuo. Esto equivale a configurar el **-continua** parámetro para el agente. Para más información, consulte [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
- [ **@frequency_interval =** ] *frequency_interval*  
- El día o los días que se ejecuta el agente de mezcla. *frequency_interval* es **int**, y puede tener uno de estos valores.  
+`[ @frequency_interval = ] frequency_interval` El día o días que se ejecuta el agente de mezcla. *frequency_interval* es **int**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -201,8 +181,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**10**|Días del fin de semana|  
 |NULL (predeterminado)||  
   
- [ **@frequency_relative_interval =** ] *frequency_relative_interval*  
- Es la fecha del Agente de mezcla. Este parámetro se utiliza cuando *frequency_type* está establecido en **32** (relativo mensual). *frequency_relative_interval* es **int**, y puede tener uno de estos valores.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Es la fecha del agente de mezcla. Este parámetro se utiliza cuando *frequency_type* está establecido en **32** (relativo mensual). *frequency_relative_interval* es **int**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -213,11 +192,9 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**16**|Último|  
 |NULL (predeterminado)||  
   
- [ **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es **int**, su valor predeterminado es null.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es **int**, su valor predeterminado es null.  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- Es la frecuencia de repetición de la programación durante el periodo definido. *frequency_subday* es **int**, y puede tener uno de estos valores.  
+`[ @frequency_subday = ] frequency_subday` Es la frecuencia con la que volver a programar durante el período definido. *frequency_subday* es **int**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -227,92 +204,68 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**8**|Hour|  
 |NULL (predeterminado)||  
   
- [ **@frequency_subday_interval =** ] *frequency_subday_interval*  
- Es el intervalo de *frequency_subday*. *frequency_subday_interval* es **int**, su valor predeterminado es null.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Es el intervalo de *frequency_subday*. *frequency_subday_interval* es **int**, su valor predeterminado es null.  
   
- [ **@active_start_time_of_day=**] *active_start_time_of_day*  
- Es la hora del día en que el agente de mezcla se programa por primera vez, con el formato HHMMSS. *active_start_time_of_day* es **int**, su valor predeterminado es null.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Es la hora del día en el agente de mezcla se primer programa, con el formato HHMMSS. *active_start_time_of_day* es **int**, su valor predeterminado es null.  
   
- [ **@active_end_time_of_day =** ] *active_end_time_of_day*  
- Es la hora del día en que el agente de mezcla deja de estar programado, con el formato HHMMSS. *active_end_time_of_day* es **int**, su valor predeterminado es null.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Es la hora del día en que el agente de mezcla deja de estar programado, con el formato HHMMSS. *active_end_time_of_day* es **int**, su valor predeterminado es null.  
   
- [ **@active_start_date =** ] *active_start_date*  
- Es la fecha en que el agente de mezcla se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es **int**, su valor predeterminado es null.  
+`[ @active_start_date = ] active_start_date` Es la fecha en el agente de mezcla programada, con el formato AAAAMMDD. *active_start_date* es **int**, su valor predeterminado es null.  
   
- [ **@active_end_date =** ] *active_end_date*  
- Es la fecha en la que el agente de mezcla deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, su valor predeterminado es null.  
+`[ @active_end_date = ] active_end_date` Es la fecha en el agente de mezcla deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, su valor predeterminado es null.  
   
- [ **@optional_command_line =** ] **'***optional_command_line***'**  
- Es un símbolo del sistema opcional proporcionado al Agente de mezcla. *optional_command_line* es **nvarchar (255)**, su valor predeterminado es ' '. Se puede utilizar para proporcionar parámetros adicionales al Agente de mezcla, como en el siguiente ejemplo, en el que se aumenta el tiempo de espera predeterminado de las consultas a `600` segundos.  
+`[ @optional_command_line = ] 'optional_command_line'` Es un símbolo opcional proporcionado al agente de mezcla. *optional_command_line* es **nvarchar (255)**, su valor predeterminado es ' '. Se puede utilizar para proporcionar parámetros adicionales al Agente de mezcla, como en el siguiente ejemplo, en el que se aumenta el tiempo de espera predeterminado de las consultas a `600` segundos.  
   
 ```  
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
- [ **@merge_jobid =** ] *merge_jobid*  
- Es el parámetro de salida del id. de trabajo. *merge_jobid* es **binary (16)**, su valor predeterminado es null.  
+`[ @merge_jobid = ] merge_jobid` Es el parámetro de salida para el identificador del trabajo. *merge_jobid* es **binary (16)**, su valor predeterminado es null.  
   
- [ **@enabled_for_syncmgr =** ] **'***enabled_for_syncmgr***'**  
- Especifica si la suscripción se puede sincronizar mediante el Administrador de sincronización de Windows. *enabled_for_syncmgr* es **nvarchar (5)**, su valor predeterminado es False. Si **false**, la suscripción no está registrada con el Administrador de sincronización. Si **true**, la suscripción se registra con el Administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Especifica si la suscripción se puede sincronizar mediante el Administrador de sincronización de Windows. *enabled_for_syncmgr* es **nvarchar (5)**, su valor predeterminado es False. Si **false**, la suscripción no está registrada con el Administrador de sincronización. Si **true**, la suscripción se registra con el Administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- [ **@ftp_address =** ] **'***ftp_address***'**  
- Se conserva únicamente por compatibilidad con versiones anteriores.  
+`[ @ftp_address = ] 'ftp_address'` Por compatibilidad con versiones anteriores.  
   
- [ **@ftp_port =** ] *ftp_port*  
- Se conserva únicamente por compatibilidad con versiones anteriores.  
+`[ @ftp_port = ] ftp_port` Por compatibilidad con versiones anteriores.  
   
- [ **@ftp_login =** ] **'***ftp_login***'**  
- Se conserva únicamente por compatibilidad con versiones anteriores.  
+`[ @ftp_login = ] 'ftp_login'` Por compatibilidad con versiones anteriores.  
   
- [ **@ftp_password =** ] **'***ftp_password***'**  
- Se conserva únicamente por compatibilidad con versiones anteriores.  
+`[ @ftp_password = ] 'ftp_password'` Por compatibilidad con versiones anteriores.  
   
- [ **@alt_snapshot_folder =** ] **'***alternate_snapshot_folder***'**  
- Especifica la ubicación de la que se obtienen los archivos de instantáneas. *alternate_snapshot_folder* es **nvarchar (255)**, su valor predeterminado es null. Si es NULL, los archivos de instantáneas se recopilarán desde la ubicación predeterminada especificada por el publicador.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` Especifica la ubicación desde la que se va a recoger los archivos de instantáneas. *alternate_snapshot_folder* es **nvarchar (255)**, su valor predeterminado es null. Si es NULL, los archivos de instantáneas se recopilarán desde la ubicación predeterminada especificada por el publicador.  
   
- [ **@working_directory =** ] **'***working_directory***'**  
- Es el nombre del directorio de trabajo utilizado para almacenar temporalmente archivos de datos y esquema para la publicación cuando se utiliza FTP para transferir archivos de instantáneas. *working_directory* es **nvarchar (255)**, su valor predeterminado es null.  
+`[ @working_directory = ] 'working_directory'` Es el nombre del directorio de trabajo utilizado para almacenar temporalmente archivos de datos y el esquema de la publicación cuando se utiliza FTP para transferir archivos de instantáneas. *working_directory* es **nvarchar (255)**, su valor predeterminado es null.  
   
- [ **@use_ftp =** ] **'***use_ftp***'**  
- Especifica que se utilizará FTP en lugar del protocolo normal para recuperar las instantáneas. *use_ftp* es **nvarchar (5)**, su valor predeterminado es False.  
+`[ @use_ftp = ] 'use_ftp'` Especifica el uso de FTP en lugar del protocolo habitual para recuperar instantáneas. *use_ftp* es **nvarchar (5)**, su valor predeterminado es False.  
   
- [ **@reserved =** ] **'***reserved***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@use_interactive_resolver =** ] **'***use_interactive_resolver***'** ]  
- Usa el solucionador interactivo para resolver conflictos de todos los artículos que permitan la resolución interactiva. *use_interactive_resolver* es **nvarchar (5)**, su valor predeterminado es False.  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` Utiliza el solucionador interactivo para solucionar conflictos de todos los artículos que permitan resolución interactiva. *use_interactive_resolver* es **nvarchar (5)**, su valor predeterminado es False.  
   
- [ **@offloadagent =** ] **'***remote_agent_activation***'**  
+`[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
 >  La activación remota del agente ha quedado desusada y ya no es compatible. Este parámetro solamente se admite por compatibilidad de scripts con versiones anteriores. Establecer *remote_agent_activation* a un valor distinto de **false** generará un error.  
   
- [ **@offloadserver =** ] **'***remote_agent_server_name***'**  
+`[ @offloadserver = ] 'remote_agent_server_name'`
  > [!NOTE]  
 >  La activación remota del agente ha quedado desusada y ya no es compatible. Este parámetro solamente se admite por compatibilidad de scripts con versiones anteriores. Establecer *remote_agent_server_name* en cualquier valor distinto de NULL, se generará un error.  
   
- [  **@job_name =** ] **'***job_name***'** ]  
- Es el nombre de un trabajo del agente existente. *job_name* es **sysname**, su valor predeterminado es null. Este parámetro solamente se especifica cuando la suscripción se va a sincronizar mediante un trabajo existente en lugar de uno recién creado (el valor predeterminado). Si no es un miembro de la **sysadmin** rol fijo de servidor, debe especificar *job_login* y *job_password* al especificar *job_name*.  
+`[ @job_name = ] 'job_name' ]` Es el nombre de un trabajo de agente existente. *job_name* es **sysname**, su valor predeterminado es null. Este parámetro solamente se especifica cuando la suscripción se va a sincronizar mediante un trabajo existente en lugar de uno recién creado (el valor predeterminado). Si no es un miembro de la **sysadmin** rol fijo de servidor, debe especificar *job_login* y *job_password* al especificar *job_name*.  
   
- [ **@dynamic_snapshot_location =** ] **'***dynamic_snapshot_location***'** ]  
- Es la ruta de acceso a la carpeta que los archivos de instantáneas se leerán desde si una instantánea de datos filtrados que se usará. *dynamic_snapshot_location* es **nvarchar (260)**, su valor predeterminado es null. Para obtener más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` Es la ruta de acceso a la carpeta que los archivos de instantáneas se leerán desde si una instantánea de datos filtrados que se usará. *dynamic_snapshot_location* es **nvarchar (260)**, su valor predeterminado es null. Para obtener más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
- [ **@use_web_sync =** ] *use_web_sync*  
- Indica que la sincronización web está habilitada. *use_web_sync* es **bit**, su valor predeterminado es 0. **1** especifica que se puede sincronizar la suscripción de extracción a través de internet mediante HTTP.  
+`[ @use_web_sync = ] use_web_sync` Indica que está habilitada la sincronización Web. *use_web_sync* es **bit**, su valor predeterminado es 0. **1** especifica que se puede sincronizar la suscripción de extracción a través de internet mediante HTTP.  
   
- [ **@internet_url =** ] **'***internet_url***'**  
- Es la ubicación de la escucha de replicación (REPLISAPI.DLL) de la sincronización web. *internet_url* es **nvarchar (260)**, su valor predeterminado es null. *internet_url* es una dirección URL completa, en el formato `http://server.domain.com/directory/replisapi.dll`. Si el servidor está configurado para escuchar en un puerto que no sea el 80, también se debe proporcionar el número de puerto con el formato `http://server.domain.com:portnumber/directory/replisapi.dll`, donde `portnumber` representa al puerto.  
+`[ @internet_url = ] 'internet_url'` Es la ubicación del agente de escucha de replicación (REPLISAPI. DLL) para la sincronización Web. *internet_url* es **nvarchar (260)**, su valor predeterminado es null. *internet_url* es una dirección URL completa, en el formato `http://server.domain.com/directory/replisapi.dll`. Si el servidor está configurado para escuchar en un puerto que no sea el 80, también se debe proporcionar el número de puerto con el formato `http://server.domain.com:portnumber/directory/replisapi.dll`, donde `portnumber` representa al puerto.  
   
- [ **@internet_login =** ] **'***internet_login***'**  
- Es el inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica HTTP. *internet_login* es **sysname**, su valor predeterminado es null.  
+`[ @internet_login = ] 'internet_login'` Es el inicio de sesión que utiliza el agente de mezcla al conectarse al servidor Web que hospeda la sincronización Web utilizando autenticación básica HTTP. *internet_login* es **sysname**, su valor predeterminado es null.  
   
- [ **@internet_password =** ] **'***internet_password***'**  
- Es la contraseña que el Agente de mezcla utiliza cuando se conecta al servidor web que hospeda la sincronización web a través de la autenticación básica HTTP. *internet_password* es **nvarchar (524)**, su valor predeterminado es null.  
+`[ @internet_password = ] 'internet_password'` Es la contraseña que utiliza el agente de mezcla al conectarse al servidor Web que hospeda la sincronización Web utilizando autenticación básica HTTP. *internet_password* es **nvarchar (524)**, su valor predeterminado es null.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
- [ **@internet_security_mode =** ] *internet_security_mode*  
- Es el método de autentificación usado por el Agente de mezcla al conectarse al servidor web durante la sincronización web mediante HTTPS. *internet_security_mode* es **int** y puede tener uno de estos valores.  
+`[ @internet_security_mode = ] internet_security_mode` Es el método de autenticación utilizado por el agente de mezcla al conectarse al servidor Web durante la sincronización Web mediante HTTPS. *internet_security_mode* es **int** y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -322,17 +275,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  Se recomienda utilizar la autenticación básica con sincronización web. Para utilizar la sincronización web, es necesario realizar una conexión SSL al servidor web. Para más información, consulte [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
   
- [ **@internet_timeout =** ] *internet_timeout*  
- Es el tiempo que transcurre, en segundos, hasta que expira una solicitud de sincronización web. *internet_timeout* es **int**, su valor predeterminado es **300** segundos.  
+`[ @internet_timeout = ] internet_timeout` Es el período de tiempo, en segundos, antes de que expire la solicitud de sincronización Web. *internet_timeout* es **int**, su valor predeterminado es **300** segundos.  
   
- [  **@hostname =** ] **'***hostname***'**  
- Omite el valor de HOST_NAME() cuando esta función se utiliza en la cláusula WHERE de un filtro con parámetros. *nombre de host* es **sysname**, su valor predeterminado es null.  
+`[ @hostname = ] 'hostname'` Invalida el valor de HOST_NAME () cuando esta función se utiliza en la cláusula WHERE de un filtro con parámetros. *nombre de host* es **sysname**, su valor predeterminado es null.  
   
- [ **@job_login =** ] **'***job_login***'**  
- Es el inicio de sesión de la cuenta de Windows en la que se ejecuta el agente. *job_login* es **nvarchar (257)**, no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para las conexiones del agente al suscriptor y para las conexiones al distribuidor y al publicador cuando se utiliza Autenticación integrada de Windows.  
+`[ @job_login = ] 'job_login'` Es el inicio de sesión para la cuenta de Windows que se ejecuta el agente. *job_login* es **nvarchar (257)**, no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para las conexiones del agente al suscriptor y para las conexiones al distribuidor y al publicador cuando se utiliza Autenticación integrada de Windows.  
   
- [ **@job_password =** ] **'***job_password***'**  
- Es la contraseña de la cuenta de Windows en la que se ejecuta el agente. *job_password* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @job_password = ] 'job_password'` Es la contraseña de la cuenta de Windows que se ejecuta el agente. *job_password* es **sysname**, no tiene ningún valor predeterminado.  
   
 > [!IMPORTANT]  
 >  No almacene información de autenticación en archivos de script. Para una mayor seguridad, los nombres de inicio de sesión y las contraseñas se deben proporcionar en tiempo de ejecución.  

@@ -18,12 +18,12 @@ ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 37171709c977e55197ac2b7075442b9bf8323cbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8d2ad4c7df20b2b9649b1ad780dd40353a7796e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647433"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492897"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,9 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@dbname=** ] **'***dbname***'**  
- Es el nombre de la base de datos que se va a adjuntar al servidor. El nombre debe ser único. *dbname* es **sysname**, su valor predeterminado es null.  
+`[ @dbname = ] 'dbname'` Es el nombre de la base de datos se adjunta al servidor. El nombre debe ser único. *dbname* es **sysname**, su valor predeterminado es null.  
   
- [  **@physname=** ] **'***physical_name***'**  
- Es el nombre físico, incluida la ruta de acceso, del archivo de base de datos. *physical_name* es **nvarchar (260)**, su valor predeterminado es null.  
+`[ @physname = ] 'physical_name'` Es el nombre físico, incluida la ruta de acceso, del archivo de base de datos. *physical_name* es **nvarchar (260)**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  Este argumento se asigna al parámetro FILENAME de la instrucción CREATE DATABASE. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  

@@ -16,12 +16,12 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c87a0968f2541507c59384bfad82780377301dc7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128225"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493067"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=**] **'**_publisher_**'**  
- Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publication=**] **'**_publicación_**'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@property=**] **'**_propiedad_**'**  
- Es la propiedad que debe cambiarse. *propiedad* es **sysname**.  
+`[ @property = ] 'property'` Es la propiedad que se puede cambiar. *propiedad* es **sysname**.  
   
- [  **@value=**] **'**_valor_**'**  
- Es el nuevo valor de la propiedad. *valor* es **nvarchar (1000)**, no tiene ningún valor predeterminado.  
+`[ @value = ] 'value'` Es el nuevo valor de la propiedad. *valor* es **nvarchar (1000)**, no tiene ningún valor predeterminado.  
   
- [  **@publication_type =** ] *publication_type*  
- Especifica el tipo de replicación de la publicación. *publication_type* es **int**, y puede tener uno de estos valores.  
+`[ @publication_type = ] publication_type` Especifica el tipo de replicación de la publicación. *publication_type* es **int**, y puede tener uno de estos valores.  
   
 |Valor|Tipo de publicación|  
 |-----------|----------------------|  
@@ -87,7 +81,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**ftp_login**||Se conserva únicamente por compatibilidad con versiones anteriores.|  
 |**ftp_password**||Se conserva únicamente por compatibilidad con versiones anteriores.|  
 |**ftp_port**||Se conserva únicamente por compatibilidad con versiones anteriores.|  
-|**Nombre de host**||Nombre del host utilizado al conectarse al publicador.|  
+|**hostname**||Nombre del host utilizado al conectarse al publicador.|  
 |**internet_login**||Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica.|  
 |**internet_password**||Contraseña que el Agente de mezcla utiliza cuando se conecta al servidor web que hospeda la sincronización web a través de la autenticación básica.|  
 |**internet_security_mode**|**1**|Se utiliza la autenticación de Windows integrada para la sincronización web. Se recomienda utilizar la autenticación básica con sincronización web. Para más información, consulte [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  

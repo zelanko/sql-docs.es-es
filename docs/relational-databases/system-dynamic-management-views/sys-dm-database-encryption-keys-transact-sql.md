@@ -1,7 +1,7 @@
 ---
-title: Sys.dm_database_encryption_keys (Transact-SQL) | Microsoft Docs
+title: sys.dm_database_encryption_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/20/2017
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a6624182bdaafac45a01c90c4aba39dd6d64a5a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c041ea8aff23a3b601695236681fda3081def1fa
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669574"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494086"
 ---
 # <a name="sysdmdatabaseencryptionkeys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,16 +37,20 @@ ms.locfileid: "51669574"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Identificador de la base de datos.|  
 |encryption_state|**int**|Indica si la base de datos está cifrada o no.<br /><br /> 0 = Ninguna clave de cifrado de la base de datos, sin cifrado<br /><br /> 1 = Sin cifrar<br /><br /> 2 = Cifrado en curso<br /><br /> 3 = Cifrado<br /><br /> 4 = Cambio de clave en curso<br /><br /> 5 = Descifrado en curso<br /><br /> 6 = Cambio de protección en curso (El certificado o clave asimétrica que cifra la clave de cifrado de la base de datos se está cambiando).|  
-|create_date|**datetime**|Muestra la fecha de creación de la clave de cifrado.|  
-|regenerate_date|**datetime**|Muestra la fecha de regeneración de la clave de cifrado.|  
-|modify_date|**datetime**|Muestra la fecha de modificación de la clave de cifrado.|  
-|set_date|**datetime**|Muestra la fecha de aplicación de la clave de cifrado a la base de datos.|  
-|opened_date|**datetime**|Muestra la última vez que se abrió la clave de la base de datos.|  
+|create_date|**datetime**|Muestra la fecha (en UTC) se creó la clave de cifrado.|  
+|regenerate_date|**datetime**|Muestra la fecha (en UTC) se volvió a generar la clave de cifrado.|  
+|modify_date|**datetime**|Muestra la fecha de modificación de la clave de cifrado (en UTC).|  
+|set_date|**datetime**|Muestra la fecha (en UTC), la clave de cifrado se aplicó a la base de datos.|  
+|opened_date|**datetime**|Muestra cuándo (en UTC) se abrió por última vez la clave de la base de datos.|  
 |key_algorithm|**nvarchar(32)**|Muestra el algoritmo utilizado por la clave.|  
 |key_length|**int**|Muestra la longitud de la clave.|  
 |encryptor_thumbprint|**varbinary(20)**|Muestra la huella digital del sistema de cifrado.|  
 |encryptor_type|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Describe el sistema de cifrado.|  
-|percent_complete|**real**|Porcentaje completado del cambio de estado del cifrado de la base de datos. Será 0 si no hay ningún cambio de estado.|  
+|percent_complete|**real**|Porcentaje completado del cambio de estado del cifrado de la base de datos. Será 0 si no hay ningún cambio de estado.|
+|encryption_state_desc|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br> Cadena que indica si la base de datos está cifrada o no cifrado.<br><br>Ninguno<br><br>SIN CIFRAR<br><br>CIFRADO<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_scan_state|**int**|**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br>Indica el estado actual del examen de cifrado. <br><br>0 = No se ha iniciado el análisis, no está habilitado el TDE<br><br>1 = examen está en curso.<br><br>2 = examen está en curso pero se ha suspendido, el usuario puede reanudar.<br><br>3 = se ha completado correctamente el examen, TDE está habilitado y el cifrado es completando.<br><br>4 = se ha anulado el examen por alguna razón, es necesaria la intervención manual. Para obtener más ayuda, póngase en contacto con Microsoft Support.|
+|encryption_scan_state_desc|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br>Cadena que indica el estado actual del examen de cifrado.<br><br> Ninguno<br><br>RUNNING<br><br>SUSPENDED<br><br>ÍNTEGRO<br><br>ABORTED|
+|encryption_scan_modify_date|**datetime**|**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br> Muestra la fecha (en UTC) se modificó por última vez el estado de examen de cifrado.|
   
 ## <a name="permissions"></a>Permisos
 

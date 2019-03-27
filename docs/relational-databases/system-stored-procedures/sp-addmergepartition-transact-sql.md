@@ -16,12 +16,12 @@ ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 486faeb7d46ee32b40923cd54a018c2005c44621
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5599370f892d174336411573883e2feffa27b886
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760517"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492658"
 ---
 # <a name="spaddmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_addmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication**=] **'***publicación***'**  
- Es la publicación de mezcla en la que se va a crear la partición. *publicación* es **sysname**, no tiene ningún valor predeterminado. Si *suser_sname* se especifica, el valor de *hostname* debe ser NULL.  
+`[ @publication = ] 'publication'` Es la publicación de combinación en el que se va a crear la partición. *publicación* es **sysname**, no tiene ningún valor predeterminado. Si *suser_sname* se especifica, el valor de *hostname* debe ser NULL.  
   
- [ **@suser_sname**=] **'***suser_sname***'**  
- Es el valor utilizado al crear la partición para una suscripción que está filtrada por el valor de la [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) función en el suscriptor. *SUSER_SNAME* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @suser_sname = ] 'suser_sname'` Es el valor utilizado al crear la partición para una suscripción que está filtrada por el valor de la [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) función en el suscriptor. *SUSER_SNAME* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@host_name**=] **'***host_name***'**  
- Es el valor utilizado al crear la partición para una suscripción que está filtrada por el valor de la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función en el suscriptor. *HOST_NAME* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @host_name = ] 'host_name'` Es el valor utilizado al crear la partición para una suscripción que está filtrada por el valor de la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función en el suscriptor. *HOST_NAME* es **sysname**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -18,12 +18,12 @@ ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25aae75151ada9ac38b35324f7c82d98f77d580b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78a7dc76bb4d37558b061b6b13b2aef16ab26166
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535796"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494197"
 ---
 # <a name="spcatalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +40,14 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@server_name =**] **'**_linked_svr_**'**  
- Es el nombre de un servidor vinculado. *linked_svr* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @server_name = ] 'linked_svr'` Es el nombre de un servidor vinculado. *linked_svr* es **sysname**, no tiene ningún valor predeterminado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Catalog_name**|**nvarchar (** 128 **)**|Nombre del catálogo|  
-|**Descripción**|**nvarchar (** 4000 **)**|Descripción del catálogo.|  
+|**Catalog_name**|**nvarchar(** 128 **)**|Nombre del catálogo|  
+|**Descripción**|**nvarchar(** 4000 **)**|Descripción del catálogo.|  
   
 ## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  

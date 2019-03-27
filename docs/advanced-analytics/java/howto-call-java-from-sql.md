@@ -3,18 +3,18 @@ title: 'Cómo llamar a Java desde SQL: SQL Server Machine Learning Services'
 description: Obtenga información sobre cómo llamar a las clases de Java desde procedimientos almacenados de SQL Server mediante la extensión del lenguaje en SQL Server 2019 de programación Java.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 801ffe50ca83fbeda69a3172b5914d39373d643f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 36a949f4d046d4071ffd7d52d34233e993ee700f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017761"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493007"
 ---
 # <a name="how-to-call-java-from-sql-server-2019-preview"></a>Cómo llamar a Java de la versión preliminar de SQL Server 2019
 
@@ -26,7 +26,7 @@ Hay dos métodos para llamar a las clases de Java en SQL Server:
 
 1. Colocar archivos .class o .jar en su [classpath de Java](#classpath). Esto está disponible para Windows y Linux.
 
-2. Cargar clases compiladas en un archivo .jar y otras dependencias en la base de datos mediante el [biblioteca externa](#external-library) DDL. Esta opción está disponible para Windows sólo en CTP 2.3. Se agregará compatibilidad con Linux en un CTP posterior.
+2. Cargar clases compiladas en un archivo .jar y otras dependencias en la base de datos mediante el [biblioteca externa](#external-library) DDL. Esta opción está disponible para Windows y Linux en CTP 2.4.
 
 > [!NOTE]
 > Como recomendación general, utilice archivos .jar y archivos .class no individual. Esto es una práctica común en Java y facilitará la experiencia general. Vea también: [Cómo crear un archivo jar desde archivos de clase](extension-java.md#create-jar).
@@ -93,7 +93,7 @@ Como ha creado una variable del sistema para los archivos ejecutables JDK, puede
 
 ## <a name="external-library"></a>Biblioteca externa
 
-En SQL Server 2019 CTP 2.3, puede usar las bibliotecas externas para Java en Windows. La misma funcionalidad estará disponible en Linux en una próxima versión de CTP. Puede compilar las clases en un archivo .jar y cargar el archivo .jar y otras dependencias en la base de datos mediante el [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
+En SQL Server 2019 CTP 2.4, puede usar las bibliotecas externas para Java en Windows y Linux. La misma funcionalidad estará disponible en Linux en una próxima versión de CTP. Puede compilar las clases en un archivo .jar y cargar el archivo .jar y otras dependencias en la base de datos mediante el [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
 
 Ejemplo de cómo cargar un archivo .jar con biblioteca externa:
 

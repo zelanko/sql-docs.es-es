@@ -18,12 +18,12 @@ ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df800e141a922250cea37eee1aeee5af6f373f7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a84ed0105558772752f4d9871ad28a5bffde6bec
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650233"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493077"
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,33 +48,25 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@primary_server** =] '*primary_server*'  
- El nombre de la instancia principal de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración de trasvase de registros. *primary_server* es **sysname** y no puede ser NULL.  
+`[ @primary_server = ] 'primary_server'` El nombre de la instancia principal de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración de trasvase de registros. *primary_server* es **sysname** y no puede ser NULL.  
   
- [ **@primary_database** =] '*primary_database*'  
- Es el nombre de la base de datos en el servidor principal. *primary_database* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @primary_database = ] 'primary_database'` Es el nombre de la base de datos en el servidor principal. *primary_database* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@backup_source_directory** =] '*backup_source_directory*'  
- Directorio donde se almacenan los archivos de copia de seguridad de registros de transacciones del servidor principal. *backup_source_directory* es **nvarchar (500)** y no puede ser NULL.  
+`[ @backup_source_directory = ] 'backup_source_directory'` El directorio donde se almacenan los archivos de copia de seguridad del registro de transacciones desde el servidor principal. *backup_source_directory* es **nvarchar (500)** y no puede ser NULL.  
   
- [ **@backup_destination_directory** =] '*backup_destination_directory*'  
- Directorio del servidor secundario donde se copian los archivos de copia de seguridad. *backup_destination_directory* es **nvarchar (500)** y no puede ser NULL.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` El directorio en el servidor secundario que se copiarán los archivos de copia de seguridad. *backup_destination_directory* es **nvarchar (500)** y no puede ser NULL.  
   
- [ **@file_retention_period** =] '*file_retention_period*'  
- Es la cantidad de tiempo en minutos durante la que se retendrá el historial. *history_retention_period* es **int**, su valor predeterminado es null. Si se especifica ninguno, se usará un valor de 14420.  
+`[ @file_retention_period = ] 'file_retention_period'` Es el período de tiempo en minutos en el que se retendrá el historial. *history_retention_period* es **int**, su valor predeterminado es null. Si se especifica ninguno, se usará un valor de 14420.  
   
- [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
- Modo de seguridad utilizado para conectarse al servidor de supervisión.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Modo de seguridad utilizado para conectarse al servidor de supervisión.  
   
  1 = Autenticación de Windows;  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *monitor_server_security_mode* es **bit** y no puede ser NULL.  
   
- [ **@monitor_server_login** =] '*monitor_server_login*'  
- Es el nombre de usuario de la cuenta utilizada para tener acceso al servidor de supervisión.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Es el nombre de usuario de la cuenta utilizada para tener acceso el servidor de supervisión.  
   
- [ **@monitor_server_password** =] '*monitor_server_password*'  
- Es la contraseña de la cuenta utilizada para tener acceso al servidor de supervisión.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Es la contraseña de la cuenta utilizada para tener acceso el servidor de supervisión.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

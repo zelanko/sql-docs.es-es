@@ -18,19 +18,19 @@ ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d2586f1ad5f7be9b5916caea7699ca9c90f22db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97964286b3281eee4e5b6850065c85034628bfdc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691413"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493268"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Comprueba que una base de datos se ha configurado correctamente para la distribución en medios extraíbles e informa al usuario si surgen problemas.  
   
-> **IMPORTANTE:** [! INCLUIR[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) en su lugar.  
+> **IMPORTANTE:** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
   
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -44,11 +44,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@dbname=**] **'***dbname***'**  
- Especifica la base de datos que debe comprobarse. *dbname* es **sysname**.  
+`[ @dbname = ] 'dbname'` Especifica la base de datos que debe comprobarse. *dbname* es **sysname**.  
   
- [  **@autofix=**] **'auto'**  
- Asigna la propiedad de la base de datos y de todos sus objetos al administrador del sistema, y quita los usuarios de base de datos creados por el usuario y los permisos que no son predeterminados. *Auto* es **nvarchar (4)**, su valor predeterminado es null.  
+`[ @autofix = ] 'auto'` Asigna la propiedad de la base de datos y todos los objetos de base de datos para el administrador del sistema y quita los usuarios de base de datos creada por el usuario y permisos no predeterminados. *Auto* es **nvarchar (4)**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

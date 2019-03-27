@@ -16,12 +16,12 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5356ebc173e435595315badf9a3c2abe224d186b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802387"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493847"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,29 +45,21 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@xact_seqno_start =**] **'**_xact_seqno_start_**'**  
- Especifica el número de secuencia exacta de menor valor que se puede devolver. *xact_seqno_start* es **nchar (22)**, su valor predeterminado es 0 x 00000000000000000000.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` Especifica el número de secuencia exacta menor valor para devolver. *xact_seqno_start* es **nchar (22)**, su valor predeterminado es 0 x 00000000000000000000.  
   
- [  **@xact_seqno_end =**] **'**_xact_seqno_end_**'**  
- Especifica el número de secuencia exacta de mayor valor que se devuelve. *xact_seqno_end* es **nchar (22)**, su valor predeterminado es 0xFFFFFFFFFFFFFFFFFFFF.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` Especifica el número de secuencia exacta de mayor a devolver. *xact_seqno_end* es **nchar (22)**, su valor predeterminado es 0xFFFFFFFFFFFFFFFFFFFF.  
   
- [  **@originator_id =**] **'**_originator_id_**'**  
- Especifica si los comandos con los valores especificados *originator_id* se devuelven. *originator_id* es **int**, su valor predeterminado es null.  
+`[ @originator_id = ] 'originator_id'` Especifica si los comandos con los valores especificados *originator_id* se devuelven. *originator_id* es **int**, su valor predeterminado es null.  
   
- [  **@publisher_database_id =**] **'**_publisher_database_id_**'**  
- Especifica si los comandos con los valores especificados *publisher_database_id* se devuelven. *publisher_database_id* es **int**, su valor predeterminado es null.  
+`[ @publisher_database_id = ] 'publisher_database_id'` Especifica si los comandos con los valores especificados *publisher_database_id* se devuelven. *publisher_database_id* es **int**, su valor predeterminado es null.  
   
- [  **@article_id =**] **'**_article_id_**'**  
- Especifica si los comandos con los valores especificados *article_id* se devuelven. *article_id* es **int**, su valor predeterminado es null.  
+`[ @article_id = ] 'article_id'` Especifica si los comandos con los valores especificados *article_id* se devuelven. *article_id* es **int**, su valor predeterminado es null.  
   
- [  **@command_id =**] *$command_id*  
- Es la ubicación del comando en [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) descodificarse. *$command_id* es **int**, su valor predeterminado es null. Si se especifica, se deben especificar además, todos los demás parámetros y *xact_seqno_start*debe ser idéntica a *xact_seqno_end*.  
+`[ @command_id = ] command_id` Es la ubicación del comando en [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) descodificarse. *$command_id* es **int**, su valor predeterminado es null. Si se especifica, se deben especificar además, todos los demás parámetros y *xact_seqno_start*debe ser idéntica a *xact_seqno_end*.  
   
- [  **@agent_id =**] *agent_id*  
- Especifica que solo se devuelvan comandos para un agente de replicación específico. *valor de agent_id* es **int**, su valor predeterminado es null.  
+`[ @agent_id = ] agent_id` Especifica que se devuelven únicamente los comandos de un agente de replicación específico. *valor de agent_id* es **int**, su valor predeterminado es null.  
   
- [  **@compatibility_level =**] *compatibility_level*  
- Es la versión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que el *compatibility_level* es **int**, su valor predeterminado de 9000000.  
+`[ @compatibility_level = ] compatibility_level` Es la versión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que el *compatibility_level* es **int**, su valor predeterminado de 9000000.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -76,7 +68,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**xact_seqno**|**varbinary (16)**|Número de secuencia del comando.|  
+|**xact_seqno**|**varbinary(16)**|Número de secuencia del comando.|  
 |**originator_srvname**|**sysname**|Servidor en el que se originó la transacción.|  
 |**originator_db**|**sysname**|Base de datos en la que se originó la transacción.|  
 |**article_id**|**int**|ID. del artículo.|  
@@ -85,9 +77,9 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**hashkey**|**int**|Exclusivamente para uso interno.|  
 |**originator_publication_id**|**int**|Id. de la publicación en la que se originó la transacción.|  
 |**originator_db_version**|**int**|Versión de la base de datos en la que se originó la transacción.|  
-|**originator_lsn**|**varbinary (16)**|Identifica el número de flujo de registro (LSN) para el comando de la publicación en la que se origina. Se utiliza en la replicación transaccional punto a punto.|  
+|**originator_lsn**|**varbinary(16)**|Identifica el número de flujo de registro (LSN) para el comando de la publicación en la que se origina. Se utiliza en la replicación transaccional punto a punto.|  
 |**command**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
-|**$command_id**|**int**|Identificador del comando en [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
+|**command_id**|**int**|Identificador del comando en [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
   
  Los comandos largos se pueden dividir en varias filas en el conjunto de resultados.  
   

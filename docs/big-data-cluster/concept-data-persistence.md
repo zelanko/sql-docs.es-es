@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo funciona la persistencia de los da
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bcb5ee903ab2e5c24cdc2bc705d9b29a4299ba1b
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1dcf390fe87239cde45e8c7fda1bc5cebd10f0ed
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017961"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494167"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistencia de datos con el clúster de macrodatos de SQL Server en Kubernetes
 
@@ -26,7 +26,7 @@ ms.locfileid: "57017961"
 El clúster de macrodatos de SQL Server consume estos volúmenes persistentes de forma es mediante [clases de almacenamiento](https://kubernetes.io/docs/concepts/storage/storage-classes/). Puede crear clases de almacenamiento diferentes para diferentes tipos de almacenamiento y especificarlos en el momento de implementación del clúster de macrodatos. Puede configurar qué clase de almacenamiento para usar con qué propósito (grupo). Crea el clúster de SQL Server macrodatos [notificaciones de volumen persistente](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) con el nombre de clase de almacenamiento especificada para cada pod que requiere volúmenes persistentes. A continuación, monte los volúmenes persistentes correspondientes en el pod.
 
 > [!NOTE]
-> Para CTP 2.3, sólo `ReadWriteOnce` se admite el modo de acceso para todo el clúster.
+> Para CTP 2.4, sólo `ReadWriteOnce` se admite el modo de acceso para todo el clúster.
 
 ## <a name="deployment-settings"></a>Configuración de implementación
 

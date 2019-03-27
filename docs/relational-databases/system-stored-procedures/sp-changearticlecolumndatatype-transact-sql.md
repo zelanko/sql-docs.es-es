@@ -16,12 +16,12 @@ ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07213247345280e992c2fbd5552d5cdfb96747ab
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 31895afacaee167bccf5144f1ab94e344a36be5f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133565"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492475"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,19 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'**_publicación_**'**  
- Es el nombre de la publicación de Oracle. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación de Oracle. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@article =** ] **'**_artículo_**'**  
- Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@column**=] **'**_columna_**'**  
- Es el nombre de la columna a la que se va a cambiar la asignación del tipo de datos. *columna* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @column = ] 'column'` Es el nombre de la columna que se va a cambiar el tipo de datos de asignación. *columna* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@type** =] **'**_tipo_**'**  
- Es el nombre de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos en la columna de destino. *tipo* es **sysname**, su valor predeterminado es null.  
+`[ @type = ] 'type'` Es el nombre de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos en la columna de destino. *tipo* es **sysname**, su valor predeterminado es null.  
   
- [ **@length** =] *longitud*  
- Es la longitud del tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la columna de destino. *longitud* es **bigint**, su valor predeterminado es null.  
+`[ @length = ] length` Es la longitud de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos en la columna de destino. *longitud* es **bigint**, su valor predeterminado es null.  
   
- [ **@precision**=] *precisión*  
- Es la precisión del tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la columna de destino. *precisión* es **bigint**, su valor predeterminado es null.  
+`[ @precision = ] precision` Es la precisión de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos en la columna de destino. *precisión* es **bigint**, su valor predeterminado es null.  
   
- [ **@publisher**=] **'**_publisher_**'**  
- Especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es **sysname**, su valor predeterminado es null.  
+`[ @publisher = ] 'publisher'` Especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

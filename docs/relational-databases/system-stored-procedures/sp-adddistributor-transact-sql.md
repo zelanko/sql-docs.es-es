@@ -18,12 +18,12 @@ ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: db37da85e4b707970436b926f6e772bd74402311
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ada0d0323f4fe8e7f73150560161d8b65738dc13
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774437"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494322"
 ---
 # <a name="spadddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,16 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@distributor=**] **'***distribuidor***'**  
- Es el nombre del servidor de distribución. *distribuidor* es **sysname**, no tiene ningún valor predeterminado. Este parámetro se utiliza únicamente si se está configurando un distribuidor remoto. Agrega entradas para las propiedades del distribuidor en el **msdb.. MSdistributor** tabla.  
+`[ @distributor = ] 'distributor'` Es el nombre del servidor de distribución. *distribuidor* es **sysname**, no tiene ningún valor predeterminado. Este parámetro se utiliza únicamente si se está configurando un distribuidor remoto. Agrega entradas para las propiedades del distribuidor en el **msdb.. MSdistributor** tabla.  
   
- [  **@heartbeat_interval=**] *heartbeat_interval*  
- Es el número máximo de minutos que un agente puede ejecutarse sin registrar un mensaje de progreso. *heartbeat_interval* es **int**, su valor predeterminado es de 10 minutos. Se crea un trabajo del Agente SQL Server que se ejecuta en este intervalo para comprobar el estado de los agentes de replicación que se están ejecutando.  
+`[ @heartbeat_interval = ] heartbeat_interval` Es el número máximo de minutos que un agente puede ejecutarse sin registrar un mensaje de progreso. *heartbeat_interval* es **int**, su valor predeterminado es de 10 minutos. Se crea un trabajo del Agente SQL Server que se ejecuta en este intervalo para comprobar el estado de los agentes de replicación que se están ejecutando.  
   
- [  **@password=**] **'***contraseña***'**]  
- Es la contraseña de la **distributor_admin** inicio de sesión. *contraseña* es **sysname**, su valor predeterminado es null. Si es NULL o una cadena vacía, la contraseña se restablece a un valor aleatorio. La contraseña debe configurarse cuando se agrega el primer distribuidor remoto. **distributor_admin** inicio de sesión y *contraseña* se almacenan para las entradas de servidor vinculado utilizadas para una *distribuidor* conexión RPC, incluidas las conexiones locales. Si *distribuidor* es local, la contraseña de **distributor_admin** se establece en un nuevo valor. Para los publicadores con un distribuidor remoto, el mismo valor para *contraseña* debe especificarse cuando se ejecuta **sp_adddistributor** en el publicador y el distribuidor. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) puede usarse para cambiar la contraseña del distribuidor.  
+`[ @password = ] 'password']` Es la contraseña de la **distributor_admin** inicio de sesión. *contraseña* es **sysname**, su valor predeterminado es null. Si es NULL o una cadena vacía, la contraseña se restablece a un valor aleatorio. La contraseña debe configurarse cuando se agrega el primer distribuidor remoto. **distributor_admin** inicio de sesión y *contraseña* se almacenan para las entradas de servidor vinculado utilizadas para una *distribuidor* conexión RPC, incluidas las conexiones locales. Si *distribuidor* es local, la contraseña de **distributor_admin** se establece en un nuevo valor. Para los publicadores con un distribuidor remoto, el mismo valor para *contraseña* debe especificarse cuando se ejecuta **sp_adddistributor** en el publicador y el distribuidor. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) puede usarse para cambiar la contraseña del distribuidor.  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
- [  **@from_scripting=** ] *from_scripting*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d628f2b5dffc976e32b15bea08407c5d0740c297
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6264266f85edc1cae0821bbcf81c8c0993dba151
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123996"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492348"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,11 +45,9 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tblname=** ] **'**_table_or_indexed_view_name_**'**  
- Es el nombre de la tabla o vista indizada para la que se muestra la opción AUTO_UPDATE_STATISTICS. *table_or_indexed_view_name* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
+`[ @tblname = ] 'table_or_indexed_view_name'` Es el nombre de la tabla o vista indizada para mostrar la opción AUTO_UPDATE_STATISTICS en. *table_or_indexed_view_name* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
   
- [  **@flagc=** ] **'**_stats_value_**'**  
- Actualiza la opción AUTO_UPDATE_STATISTICS a uno de estos valores:  
+`[ @flagc = ] 'stats_value'` Actualiza la opción AUTO_UPDATE_STATISTICS a uno de estos valores:  
   
  **ON** = ON  
   
@@ -57,8 +55,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Cuando *stats_flag* no es se especifica, muestra la configuración actual de AUTO_UPDATE_STATISTICS. *stats_value* es **varchar (10)**, su valor predeterminado es null.  
   
- [  **@indname=** ] **'**_statistics_name_**'**  
- Es el nombre de las estadísticas para las que se muestra o actualiza la opción AUTO_UPDATE_STATISTICS. Para que se muestren las estadísticas de un índice, se puede usar el nombre del mismo; un índice y su objeto de estadísticas correspondiente tienen el mismo nombre.  
+`[ @indname = ] 'statistics_name'` Es el nombre de las estadísticas para mostrar o actualizar la opción AUTO_UPDATE_STATISTICS en. Para que se muestren las estadísticas de un índice, se puede usar el nombre del mismo; un índice y su objeto de estadísticas correspondiente tienen el mismo nombre.  
   
  *statistics_name* es **sysname**, su valor predeterminado es null.  
   
@@ -73,7 +70,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre de índice**|**varchar(60)**|Nombre del índice o de las estadísticas.|  
-|**AUTOSTAT EN**|**varchar(3)**|Valor actual para la opción AUTO_UPDATE_STATISTICS.|  
+|**AUTOSTATS**|**varchar(3)**|Valor actual para la opción AUTO_UPDATE_STATISTICS.|  
 |**Última actualización**|**datetime**|Fecha de la actualización más reciente de las estadísticas.|  
   
  El conjunto de resultados para una tabla o vista indizada incluye estadísticas creadas para índices, estadísticas de columna única generadas con la opción AUTO_CREATE_STATISTICS y estadísticas crean con el [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrucción.  

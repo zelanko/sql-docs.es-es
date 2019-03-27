@@ -16,12 +16,12 @@ ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 031fc14eba8cdea8cdbff41d18d6e6ab6bc42a68
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2966a784f647d402b849d5899b76b0614122b932
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133855"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492498"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@database=**] **'**_base de datos_**'**  
- Es el nombre de la base de datos de distribución. *base de datos* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @database = ] 'database'` Es el nombre de la base de datos de distribución. *base de datos* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@property=**] **'**_propiedad_**'**  
- Es la propiedad que se va a cambiar para la base de datos especificada. *propiedad* es **sysname**, y puede tener uno de estos valores.  
+`[ @property = ] 'property'` Es la propiedad para cambiar la base de datos dada. *propiedad* es **sysname**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -53,8 +51,7 @@ sp_changedistributiondb [ @database= ] 'database'
 |**min_distretention**|Período mínimo de retención de la distribución.|  
 |NULL (predeterminado)|Todos los disponibles *propiedad* valores se imprimen.|  
   
- [  **@value=**] **'**_valor_**'**  
- Es el nuevo valor para la propiedad especificada. *valor* es **nvarchar (255)**, su valor predeterminado es null.  
+`[ @value = ] 'value'` Es el nuevo valor para la propiedad especificada. *valor* es **nvarchar (255)**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

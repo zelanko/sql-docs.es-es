@@ -18,12 +18,12 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 295f29b86e53a8d58622e4c79c1b36734acdbe3e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ac78863fd2bad39675bfe3f486a8a88a8d026e37
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591019"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492987"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@class =** ] **'**_clase_**'**  
- Clase de la categoría que se va a agregar. *clase* es **varchar (8)** con un valor predeterminado es JOB, y puede tener uno de estos valores.  
+`[ @class = ] 'class'` La clase de la categoría que se va a agregar. *clase* es **varchar (8)** con un valor predeterminado es JOB, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -52,8 +51,7 @@ sp_add_category
 |ALERT|Agrega una categoría de alerta.|  
 |OPERATOR|Agrega una categoría de operador.|  
   
- [  **@type =** ] **'**_tipo_**'**  
- Tipo de la categoría que se va a agregar. *tipo* es **varchar (12)**, con un valor predeterminado de **LOCAL**, y puede tener uno de estos valores.  
+`[ @type = ] 'type'` El tipo de categoría que se va a agregarse. *tipo* es **varchar (12)**, con un valor predeterminado de **LOCAL**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -61,8 +59,7 @@ sp_add_category
 |VARIOS SERVIDORES|Categoría de trabajos multiservidor.|  
 |Ninguno|Una categoría para una clase que no sea de trabajo **.**|  
   
- [  **@name =** ] **'**_nombre_**'**  
- Nombre de la categoría que se va a agregar. El nombre debe ser único en la clase especificada. *nombre* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @name = ] 'name'` El nombre de la categoría que se va a agregar. El nombre debe ser único en la clase especificada. *nombre* es **sysname**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

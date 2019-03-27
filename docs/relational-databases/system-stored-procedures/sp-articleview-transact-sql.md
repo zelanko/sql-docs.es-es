@@ -16,12 +16,12 @@ ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b06d348358a141771816230179ca7deae4e4353a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 10c46ac2ff35d73453976a91276246d3e810e425
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132866"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492837"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,50 +47,40 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicación_**'**  
- Es el nombre de la publicación que contiene el artículo. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que contiene el artículo. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@article=**] **'**_artículo_**'**  
- Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@view_name=**] **'**_view_name_**'**  
- Es el nombre de la vista que define el artículo publicado. *view_name* es **nvarchar (386)**, su valor predeterminado es null.  
+`[ @view_name = ] 'view_name'` Es el nombre de la vista que define el artículo publicado. *view_name* es **nvarchar (386)**, su valor predeterminado es null.  
   
- [  **@filter_clause=**] **'**_filter_clause_**'**  
- Es una cláusula de restricción (WHERE) que define un filtro horizontal. Cuando escriba la cláusula de restricción, omita la palabra clave WHERE. *filter_clause* es **ntext**, su valor predeterminado es null.  
+`[ @filter_clause = ] 'filter_clause'` Es una restricción cláusula (WHERE) que define un filtro horizontal. Cuando escriba la cláusula de restricción, omita la palabra clave WHERE. *filter_clause* es **ntext**, su valor predeterminado es null.  
   
- [  **@change_active =** ] *change_active*  
- Permite modificar las columnas en publicaciones con suscripciones. *change_active* es un **int**, su valor predeterminado es **0**. Si **0**, no se cambian las columnas. Si **1**, las vistas se pueden crear o volver a crear en los artículos activos que tienen suscripciones.  
+`[ @change_active = ] change_active` Permite modificar las columnas en las publicaciones que tienen suscripciones. *change_active* es un **int**, su valor predeterminado es **0**. Si **0**, no se cambian las columnas. Si **1**, las vistas se pueden crear o volver a crear en los artículos activos que tienen suscripciones.  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
   
  **0** especifica que los cambios en el artículo no invalidarán la instantánea no es válido. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
   
  **1** especifica que los cambios en el artículo pueden invalidar la instantánea no es válido y si hay suscripciones existentes que requieran una nueva instantánea, concede permiso para marcar como obsoleta la instantánea existente y una nueva instantánea generada.  
   
- [  **@force_reinit_subscription =]** _force_reinit_subscription_  
- Confirma que la acción realizada por este procedimiento almacenado puede requerir la reinicialización de las suscripciones existentes. *force_reinit_subscription* es un **bit** con un valor predeterminado de **0**.  
+`[ @force_reinit_subscription = ] _force_reinit_subscription_` Confirma que la acción realizada por este procedimiento almacenado puede requerir la reinicialización de las suscripciones existentes. *force_reinit_subscription* es un **bit** con un valor predeterminado de **0**.  
   
  **0** especifica que los cambios en el artículo no invalidarán la suscripción para reinicializarla. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de suscripciones, se producirá un error y no se realizarán cambios.  
   
  **1** especifica que los cambios en el artículo hace que la suscripción existente para reinicializarla y concede permiso para que se produzca la reinicialización de suscripción.  
   
- [ **@publisher**=] **'**_publisher_**'**  
- Especifica que no es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es **sysname**, su valor predeterminado es null.  
+`[ @publisher = ] 'publisher'` Especifica que no es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  *publicador* no se debe usar al publicar desde un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
- [ **@refreshsynctranprocs** =] *refreshsynctranprocs*  
- Indica si los procedimientos almacenados utilizados para sincronizar la replicación se vuelven a crear automáticamente. *refreshsynctranprocs* es **bit**, su valor predeterminado es 1.  
+`[ @refreshsynctranprocs = ] refreshsynctranprocs` Es si automáticamente se vuelven a crear los procedimientos almacenados utilizados para sincronizar la replicación. *refreshsynctranprocs* es **bit**, su valor predeterminado es 1.  
   
  **1** significa que los procedimientos almacenados se vuelven a creados.  
   
  **0** significa que los procedimientos almacenados no se vuelven a creados.  
   
- [ **@internal**=] *interno*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @internal = ] internal` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -6,16 +6,16 @@ author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9f766c343152fa601cc22e59e3385c454ec23879
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: f89568860fa656efbb93eb9b72eb647f88ce6089
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162145"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494117"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>Implementar un clúster de macrodatos con compatibilidad con GPU y ejecutar TensorFlow
 
@@ -196,7 +196,7 @@ Los cuadernos de dos ejemplos siguientes muestran entrenar modelos de clasificac
 Coloque el archivo de Bloc de notas adecuado en el equipo local y, a continuación, abra y ejecutarla en Azure Data Studio con el kernel PySpark3. A menos que tenga una necesidad concreta para una versión anterior de TensorFlow o de CUDA, elija CUDA 9 y CUDNN 7/TensorFlow 1.12.0. Para obtener más información acerca de cómo usar cuadernos con clústeres de datos de gran tamaño, vea [para usar cuadernos en versión preliminar de SQL Server 2019](notebooks-guidance.md).
 
 > [!NOTE]
-> Tenga en cuenta que los cuadernos de instalación software en las ubicaciones del sistema. Esto es posible porque actualmente ejecutan blocs de notas con privilegios raíz en CTP 2.3.
+> Tenga en cuenta que los cuadernos de instalación software en las ubicaciones del sistema. Esto es posible porque actualmente ejecutan blocs de notas con privilegios raíz en CTP 2.4.
 
 Después de instalar las bibliotecas de GPU de NVIDIA y TensorFlow para GPU, los cuadernos de lista de dispositivos GPU disponibles. Que, a continuación, ajustarán y evaluación un modelo de TensorFlow para reconocer con el conjunto de datos MNIST de dígitos escritos a mano. Después de comprobar el espacio en disco disponible, descargue y ejecute el ejemplo de clasificación de imágenes de CIFAR 10 desde [ https://github.com/tensorflow/models.git ](https://github.com/tensorflow/models.git). Al ejecutar el ejemplo de CIFAR 10 en clústeres con distintas GPU, puede observar el aumento de velocidad ofrecida por cada generación de GPU disponible en Azure.
 

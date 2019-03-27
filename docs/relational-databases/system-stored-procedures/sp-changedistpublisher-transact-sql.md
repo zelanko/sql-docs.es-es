@@ -16,12 +16,12 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81f6b1ca0ea65068851756dc2a1b91cb84c52227
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128240"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494028"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=** ] **'**_publisher_**'**  
- Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@property=** ] **'**_propiedad_**'**  
- Es la propiedad que se va a cambiar para el publicador indicado. *propiedad* es **sysname** y puede tener uno de estos valores.  
+`[ @property = ] 'property'` Es una propiedad para cambiar para el publicador indicado. *propiedad* es **sysname** y puede tener uno de estos valores.  
   
- [ **@value=** ] **'**_valor_**'**  
- Es el valor de la propiedad especificada. *valor* es **nvarchar (255)**, su valor predeterminado es null.  
+`[ @value = ] 'value'` Es el valor de la propiedad especificada. *valor* es **nvarchar (255)**, su valor predeterminado es null.  
   
- [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
- Es necesario para la instancia administrada de SQL Database, debe coincidir con la clave de acceso para el volumen de almacenamiento de Azure SQL Database. 
+`[ @storage_connection_string = ] 'storage_connection_string'` Es necesario para la instancia administrada de SQL Database, debe coincidir con la clave de acceso para el volumen de almacenamiento de Azure SQL Database. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -60,10 +56,10 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |Property|Valores|Descripción|  
 |--------------|------------|-----------------|  
-|**Active**|**true**|Activa el publicador.|  
+|**active**|**true**|Activa el publicador.|  
 ||**False**|Desactiva el publicador.|  
 |**distribution_db**||Nombre de la base de datos de distribución.|  
-|**inicio de sesión**||Nombre de inicio de sesión.|  
+|**login**||Nombre de inicio de sesión.|  
 |**password**||Contraseña segura para el inicio de sesión que se ha proporcionado.|  
 |**security_mode**|**1**|Se utiliza la autenticación de Windows para la conexión con el publicador. *No se puede cambiar para que no es* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*|  
 ||**0**|Se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión con el publicador. *No se puede cambiar para que no es* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*|  

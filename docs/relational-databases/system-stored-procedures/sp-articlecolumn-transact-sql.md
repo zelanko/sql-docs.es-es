@@ -16,12 +16,12 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 636a0a23c70170ce625b9e462e2715c1c884bda7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e10d4e46e01f4da5a36d7bdf59d7566f2a989e75
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210124"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493157"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,47 +48,37 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicación_**'**  
- Es el nombre de la publicación que contiene este artículo. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que contiene este artículo. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@article=**] **'**_artículo_**'**  
- Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@column=**] **'**_columna_**'**  
- Es el nombre de la columna que se va a agregar o quitar. *columna* es **sysname**, su valor predeterminado es null. Si es NULL, se publican todas las columnas.  
+`[ @column = ] 'column'` Es el nombre de la columna que se va a agregar o quitar. *columna* es **sysname**, su valor predeterminado es null. Si es NULL, se publican todas las columnas.  
   
- [  **@operation=**] **'**_operación_**'**  
- Especifica si se agregan o se quitan columnas en un artículo. *operación* es **nvarchar (5)**, con el valor predeterminado es add. **agregar** marca la columna para la replicación. **quitar** anula la selección de la columna.  
+`[ @operation = ] 'operation'` Especifica si se agregan o quitan columnas en un artículo. *operación* es **nvarchar (5)**, con el valor predeterminado es add. **agregar** marca la columna para la replicación. **quitar** anula la selección de la columna.  
   
- [  **@refresh_synctran_procs=**] *refresh_synctran_procs*  
- Especifica si se vuelven a generar los procedimientos almacenados compatibles con las suscripciones de actualización inmediata para que coincidan con el número de columnas replicadas. *refresh_synctran_procs* es **bit**, su valor predeterminado es **1**. Si **1**, se vuelven a generar los procedimientos almacenados.  
+`[ @refresh_synctran_procs = ] refresh_synctran_procs` Especifica si se vuelven a generar los procedimientos almacenados que admiten suscripciones de actualización inmediata para que coincida con el número de columnas replicadas. *refresh_synctran_procs* es **bit**, su valor predeterminado es **1**. Si **1**, se vuelven a generar los procedimientos almacenados.  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- Indica si este procedimiento almacenado se ejecuta sin conectarse con el distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**. Si **0**, la base de datos debe estar habilitado para la publicación y la caché de artículos debe actualizarse para reflejar las nuevas columnas replicadas en el artículo. Si **1**, permite quitar los artículos que residen en una base de datos no publicada; deben usarse solo en situaciones de recuperación de las columnas de artículo.  
+`[ @ignore_distributor = ] ignore_distributor` Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**. Si **0**, la base de datos debe estar habilitado para la publicación y la caché de artículos debe actualizarse para reflejar las nuevas columnas replicadas en el artículo. Si **1**, permite quitar los artículos que residen en una base de datos no publicada; deben usarse solo en situaciones de recuperación de las columnas de artículo.  
   
- [  **@change_active =** ] *change_active*  
- Permite modificar las columnas en publicaciones con suscripciones. *change_active* es un **int** con un valor predeterminado de **0**. Si **0**, no se modifican columnas. Si **1**, las columnas se pueden agregar o quitar de los artículos activos que tienen suscripciones.  
+`[ @change_active = ] change_active` Permite modificar las columnas en las publicaciones que tienen suscripciones. *change_active* es un **int** con un valor predeterminado de **0**. Si **0**, no se modifican columnas. Si **1**, las columnas se pueden agregar o quitar de los artículos activos que tienen suscripciones.  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
   
  **0** especifica que los cambios en el artículo no invalidarán la instantánea no es válido. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizarán cambios.  
   
  **1** especifica que los cambios en el artículo pueden invalidar la instantánea no es válido y si hay suscripciones existentes que requieran una nueva instantánea, concede permiso para marcar como obsoleta la instantánea existente y una nueva instantánea generada.  
   
- [ **@force_reinit_subscription =** ] *force_reinit_subscription*  
+ [**@force_reinit_subscription =** ] *force_reinit_subscription*  
  Confirma que la acción realizada por este procedimiento almacenado puede requerir la reinicialización de las suscripciones existentes. *force_reinit_subscription* es un **bit**, su valor predeterminado es **0**.  
   
  **0** especifica que los cambios en el artículo no invalidarán la suscripción para reinicializarla. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de suscripciones, se producirá un error y no se realizarán cambios. **1** especifica que los cambios en el artículo que se reinicialicen las suscripciones existentes y concede permiso para que se produzca la reinicialización de suscripción.  
   
- [  **@publisher=** ] **'**_publisher_**'**  
- Especifica que no es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
+`[ @publisher = ] 'publisher'` Especifica que no es [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  *publicador* no debe usarse con un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
- [  **@internal=** ] **'**_interno_**'**  
- Exclusivamente para uso interno.  
+`[ @internal = ] 'internal'` Solo para uso interno.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

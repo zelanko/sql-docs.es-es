@@ -18,12 +18,12 @@ ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 147269759746e143897757aab5518b784e705915
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1a6a9e45b1640a82cd15074373f162a97d9a0a6
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751583"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494087"
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +53,11 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name=** ] **'***nombre***'**  
- Nombre de un operador (destinatario de la notificación). Este nombre debe ser único y no puede contener el porcentaje (**%**) caracteres. *nombre* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @name = ] 'name'` El nombre de un operador (destinatario de notificación). Este nombre debe ser único y no puede contener el porcentaje (**%**) caracteres. *nombre* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@enabled=** ] *habilitado*  
- Indica el estado actual del operador. *habilitado* es **tinyint**, su valor predeterminado es **1** (habilitado). Si **0**, el operador no está habilitado y no recibe notificaciones.  
+`[ @enabled = ] enabled` Indica el estado actual del operador. *habilitado* es **tinyint**, su valor predeterminado es **1** (habilitado). Si **0**, el operador no está habilitado y no recibe notificaciones.  
   
- [  **@email_address=** ] **'***email_address***'**  
- La dirección de correo electrónico del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *Email_Address* es **nvarchar (100)**, su valor predeterminado es null.  
+`[ @email_address = ] 'email_address'` La dirección de correo electrónico del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *Email_Address* es **nvarchar (100)**, su valor predeterminado es null.  
   
  Puede especificar una dirección de correo electrónico física o un alias para *email_address*. Por ejemplo:  
   
@@ -69,29 +66,21 @@ sp_add_operator [ @name = ] 'name'
 > [!NOTE]  
 >  Debe utilizar la dirección de correo electrónico para Correo electrónico de base de datos.  
   
- [  **@pager_address=** ] **'***pager_address***'**  
- La dirección del buscapersonas del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *pager_address* es **narchar(100)**, su valor predeterminado es null.  
+`[ @pager_address = ] 'pager_address'` La dirección del buscapersonas del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *pager_address* es **narchar(100)**, su valor predeterminado es null.  
   
- [ **@weekday_pager_start_time=** ] *weekday_pager_start_time*  
- Hora a partir de la cual el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envía una notificación mediante buscapersonas al operador especificado los días laborables, de lunes a viernes. *weekday_pager_start_time*es **int**, su valor predeterminado es **090000**, lo que indica 9:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time` El tiempo después del cual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente envía una notificación por buscapersonas al operador especificado los días laborables, del lunes al viernes. *weekday_pager_start_time*es **int**, su valor predeterminado es **090000**, lo que indica 9:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [  **@weekday_pager_end_time=** ] *weekday_pager_end_time*  
- El tiempo después del cual **SQLServerAgent** servicio deja de enviar una notificación por buscapersonas al operador especificado los días laborables, del lunes al viernes. *weekday_pager_end_time*es **int**, su valor predeterminado es 180000, lo que indica las 6:00 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
+`[ @weekday_pager_end_time = ] weekday_pager_end_time` El tiempo después del cual **SQLServerAgent** servicio deja de enviar una notificación por buscapersonas al operador especificado los días laborables, del lunes al viernes. *weekday_pager_end_time*es **int**, su valor predeterminado es 180000, lo que indica las 6:00 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [ **@saturday_pager_start_time =**] *saturday_pager_start_time*  
- El tiempo después del cual **SQLServerAgent** servicio envía una notificación por buscapersonas al operador especificado los sábados. *saturday_pager_start_time* es **int**, su valor predeterminado es 090000, lo que indica 9:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
+`[ @saturday_pager_start_time = ] saturday_pager_start_time` El tiempo después del cual **SQLServerAgent** servicio envía una notificación por buscapersonas al operador especificado los sábados. *saturday_pager_start_time* es **int**, su valor predeterminado es 090000, lo que indica 9:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [  **@saturday_pager_end_time=** ] *saturday_pager_end_time*  
- El tiempo después del cual **SQLServerAgent** servicio ya no envía una notificación por buscapersonas al operador especificado los sábados. *saturday_pager_end_time*es **int**, su valor predeterminado es **180000**, lo que indica 6:00 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
+`[ @saturday_pager_end_time = ] saturday_pager_end_time` El tiempo después del cual **SQLServerAgent** servicio ya no envía una notificación por buscapersonas al operador especificado los sábados. *saturday_pager_end_time*es **int**, su valor predeterminado es **180000**, lo que indica 6:00 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [ **@sunday_pager_start_time=** ] *sunday_pager_start_time*  
- El tiempo después del cual **SQLServerAgent** servicio envía una notificación por buscapersonas al operador especificado los domingos. *sunday_pager_start_time*es **int**, su valor predeterminado es **090000**, lo que indica 9:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
+`[ @sunday_pager_start_time = ] sunday_pager_start_time` El tiempo después del cual **SQLServerAgent** servicio envía una notificación por buscapersonas al operador especificado los domingos. *sunday_pager_start_time*es **int**, su valor predeterminado es **090000**, lo que indica 9:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [  **@sunday_pager_end_time =**] *sunday_pager_end_time*  
- El tiempo después del cual **SQLServerAgent** servicio ya no envía una notificación por buscapersonas al operador especificado los domingos. *sunday_pager_end_time*es **int**, su valor predeterminado es **180000**, lo que indica 6:00 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
+`[ @sunday_pager_end_time = ] sunday_pager_end_time` El tiempo después del cual **SQLServerAgent** servicio ya no envía una notificación por buscapersonas al operador especificado los domingos. *sunday_pager_end_time*es **int**, su valor predeterminado es **180000**, lo que indica 6:00 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [  **@pager_days=** ] *pager_days*  
- Es un número que indica los días que el operador está disponible para recibir avisos de localización (de acuerdo con las horas de inicio y fin especificadas). *pager_days*es **tinyint**, su valor predeterminado es **0** nunca está disponible para recibir un aviso que indica el operador. Los valores válidos son de **0** a través de **127**. *pager_days*se calcula sumando los valores individuales de los días necesarios. Por ejemplo, del lunes al viernes es **2**+**4**+**8**+**16** + **32** = **62**. En la siguiente tabla se incluye el valor para cada día de la semana.  
+`[ @pager_days = ] pager_days` Es un número que indica los días que el operador está disponible para las páginas (de acuerdo con las horas inicial y final especificadas). *pager_days*es **tinyint**, su valor predeterminado es **0** nunca está disponible para recibir un aviso que indica el operador. Los valores válidos son de **0** a través de **127**. *pager_days*se calcula sumando los valores individuales de los días necesarios. Por ejemplo, del lunes al viernes es **2**+**4**+**8**+**16** + **32** = **62**. En la siguiente tabla se incluye el valor para cada día de la semana.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -103,11 +92,9 @@ sp_add_operator [ @name = ] 'name'
 |**32**|Viernes|  
 |**64**|Sábado|  
   
- [  **@netsend_address=** ] **'***netsend_address***'**  
- La dirección de red del operador al que se envía el mensaje de red. *netsend_address*es **nvarchar (100)**, su valor predeterminado es null.  
+`[ @netsend_address = ] 'netsend_address'` La dirección de red del operador al que se envía el mensaje de red. *netsend_address*es **nvarchar (100)**, su valor predeterminado es null.  
   
- [  **@category_name=** ] **'***categoría***'**  
- El nombre de la categoría de este operador. *categoría* es **sysname**, su valor predeterminado es null.  
+`[ @category_name = ] 'category'` El nombre de la categoría de este operador. *categoría* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -16,12 +16,12 @@ ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 508eaa25657393dba0d84e0bda6eb0582b3f90fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 399fe5322cb8cb5c3d20a486aac3baa810439ce7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822079"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492358"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicación***'**  
- Es el nombre de la publicación en la que reasignan nuevos rangos de identidad. *publicación* es **sysname**, su valor predeterminado es null.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en la que reasignan nuevos intervalos de identidad. *publicación* es **sysname**, su valor predeterminado es null.  
   
- [  **@table_name=**] **'***table_name***'**  
- Es el nombre de la tabla en la que reasignan nuevos rangos de identidad. *table_name* es **sysname**, su valor predeterminado es null.  
+`[ @table_name = ] 'table_name'` Es el nombre de la tabla en la que reasignan nuevos intervalos de identidad. *table_name* es **sysname**, su valor predeterminado es null.  
   
- [  **@table_owner=**] **'***table_owner***'**  
- Es el propietario de la tabla en el publicador. *TABLE_OWNER* es **sysname**, su valor predeterminado es null. Si *table_owner* no se especifica, se usa el nombre del usuario actual.  
+`[ @table_owner = ] 'table_owner'` Es el propietario de la tabla en el publicador. *TABLE_OWNER* es **sysname**, su valor predeterminado es null. Si *table_owner* no se especifica, se usa el nombre del usuario actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

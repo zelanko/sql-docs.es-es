@@ -5,17 +5,17 @@ description: En este artículo se describe el controlador de un clúster de macr
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8f9a8a82315f98f6013f70a7bc7aa38443849edc
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 25afe48d2191bf77301331ed30850bf0af0baff0
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478066"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491798"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>¿Qué es el controlador en un clúster de macrodatos de 2019 de SQL Server?
 
@@ -29,8 +29,8 @@ El servicio del controlador proporciona la funcionalidad siguiente:
 - Exponer las herramientas de supervisión para observar el estado del clúster
 - Exponer las herramientas de solución de problemas para detectar y reparar problemas inesperados
 - Administrar seguridad del clúster: asegúrese de puntos de conexión del clúster seguro, administrar usuarios y roles, configurar las credenciales para la comunicación dentro del clúster
-- Administrar el flujo de trabajo de actualización de modo que se implementan de forma segura (no disponible en CTP 2.3)
-- Administración de alta disponibilidad y recuperación ante desastres para los servicios con estado en el clúster (no están disponibles en CTP 2.3)
+- Administrar el flujo de trabajo de actualización de modo que se implementan de forma segura (no disponible en CTP 2.4)
+- Administración de alta disponibilidad y recuperación ante desastres para los servicios con estado en el clúster (no están disponibles en CTP 2.4)
 
 ## <a name="deploying-the-controller-service"></a>Implementar el servicio de controlador
 

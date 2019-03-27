@@ -16,12 +16,12 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31ada2bfb184e24011ee91dde82fc9abfb319320
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f2843456f4f95d1019b51f82082d59977ce14d5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777917"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493700"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,43 +46,34 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'**_publicación_**'**  
- Es el nombre de la publicación en la que se agrega el filtro de mezcla. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en el que se va a agregar el filtro de mezcla. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@article=** ] **'**_artículo_**'**  
- Es el nombre del artículo en el que se agrega el filtro de mezcla. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre del artículo en el que se va a agregar el filtro de mezcla. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@filtername=** ] **'**_filtername_**'**  
- Es el nombre del filtro. *filtername* es un parámetro necesario. *filtername*es **sysname**, no tiene ningún valor predeterminado.  
+`[ @filtername = ] 'filtername'` Es el nombre del filtro. *filtername* es un parámetro necesario. *filtername*es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@join_articlename=** ] **'**_join_articlename_**'**  
- Es el artículo primario al que el artículo secundario, especificado por *artículo*, debe combinarse con la cláusula de combinación especificada por *join_filterclause*, con el fin de determinar las filas del artículo secundario que cumplen el criterio de filtro del filtro de combinación. *join_articlename* es **sysname**, no tiene ningún valor predeterminado. El artículo debe estar en la publicación dada por *publicación*.  
+`[ @join_articlename = ] 'join_articlename'` Es el artículo primario al que el artículo secundario, especificado por *artículo*, debe combinarse con la cláusula de combinación especificada por *join_filterclause*, con el fin de determinar las filas del artículo secundario que cumplen el criterio de filtro del filtro de combinación. *join_articlename* es **sysname**, no tiene ningún valor predeterminado. El artículo debe estar en la publicación dada por *publicación*.  
   
- [  **@join_filterclause=** ] *join_filterclause*  
- Es la cláusula de combinación que debe usarse para combinar el artículo secundario especificado por *artículo*y el artículo primario especificado por *join_article*, con el fin de determinar las filas que cumplen criterios del filtro de mezcla. *join_filterclause* es **nvarchar (1000)**.  
+`[ @join_filterclause = ] join_filterclause` Es la cláusula de combinación que debe usarse para combinar el artículo secundario especificado por *artículo*y el artículo primario especificado por *join_article*, con el fin de determinar las filas que cumplen criterios del filtro de mezcla. *join_filterclause* es **nvarchar (1000)**.  
   
- [  **@join_unique_key=** ] *join_unique_key*  
- Especifica si la combinación entre el artículo secundario *artículo*y el artículo primario *join_article*es uno a varios, uno a uno, varios a uno o varios a varios. *join_unique_key* es **int**, su valor predeterminado es 0. **0** indica una combinación de varios a uno o varios a varios. **1** indica una combinación uno a uno o uno a varios. Este valor es **1** cuando las columnas de combinación forman una clave única en *join_article*, o si *join_filterclause* entre una clave externa en *artículo* y una clave principal en *join_article*.  
+`[ @join_unique_key = ] join_unique_key` Especifica si la combinación entre el artículo secundario *artículo*y el artículo primario *join_article*es uno a varios, uno a uno, varios a uno o varios a varios. *join_unique_key* es **int**, su valor predeterminado es 0. **0** indica una combinación de varios a uno o varios a varios. **1** indica una combinación uno a uno o uno a varios. Este valor es **1** cuando las columnas de combinación forman una clave única en *join_article*, o si *join_filterclause* entre una clave externa en *artículo* y una clave principal en *join_article*.  
   
 > [!CAUTION]  
 >  Solo se establece este parámetro en **1** si tiene una restricción en la columna de combinación en la tabla subyacente para el artículo primario que garantice su unicidad. Si *join_unique_key* está establecido en **1** incorrectamente, puede producirse la no convergencia de los datos.  
   
- [  **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
- Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
   
  **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la instantánea no es válido. Si el procedimiento almacenado detecta que el cambio requiere una nueva instantánea, se producirá un error y no se realizará ningún cambio.  
   
  **1** especifica que los cambios realizados en el artículo de mezcla pueden invalidar la instantánea no es válido y si hay suscripciones existentes que requieran una nueva instantánea, concede permiso para marcar como obsoleta la instantánea existente y una nueva instantánea generado.  
   
- [  **@force_reinit_subscription=** ] *force_reinit_subscription*  
- Confirma que la acción realizada por este procedimiento almacenado puede requerir la reinicialización de las suscripciones existentes. *force_reinit_subscription* es un **bit**, su valor predeterminado es 0.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Confirma que la acción realizada por este procedimiento almacenado puede requerir la reinicialización de las suscripciones existentes. *force_reinit_subscription* es un **bit**, su valor predeterminado es 0.  
   
  **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la suscripción para reinicializarla. Si el procedimiento almacenado detecta que el cambio requiere que se reinicialicen las suscripciones, se producirá un error y no se realizarán cambios.  
   
  **1** especifica que los cambios realizados en el artículo de mezcla hará que se reinicialicen las suscripciones existentes y concede permiso para que se produzca la reinicialización de suscripción.  
   
- [  **@filter_type=** ] *filter_type*  
- Especifica el tipo de filtro que se agrega. *filter_type* es **tinyint**, y puede tener uno de los siguientes valores.  
+`[ @filter_type = ] filter_type` Especifica el tipo de filtro que se va a agregar. *filter_type* es **tinyint**, y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  

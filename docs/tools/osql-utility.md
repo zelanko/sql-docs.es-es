@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2a6762f20c05a66c597474d33bd98e9bb8f2c5f4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 88e309d5a7d2f0b1464298ebd1ded5ae31139e78
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589999"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356468"
 ---
 # <a name="osql-utility"></a>osql (utilidad)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -262,7 +262,7 @@ osql -E -i titles.qry -o titles.res
 >  Cuando se usa **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trata el separador de lotes GO, si aparece en el archivo de script de SQL, como un error de sintaxis.  
   
 ## <a name="inserting-comments"></a>Insertar comentarios  
- Puede incluir comentarios en una instrucción Transact-SQL que vaya a enviarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con **osql**. Se permiten dos estilos de comentario: -- y /*...\*/.  
+ Puede incluir comentarios en una instrucción Transact-SQL que vaya a enviarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con **osql**. Se permiten dos estilos de comentario: `--` y `/*...*/`.  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>Utilizar EXIT para devolver resultados en osql  
  Puede utilizar el resultado de una instrucción SELECT como valor devuelto de **osql**. Si es numérica, la primera columna de la última fila del resultado se convierte en un entero de 4 bytes (long). MS-DOS pasa el byte bajo al proceso primario o al nivel de errores del sistema operativo. Windows pasa el entero de 4 bytes completo. La sintaxis es:  

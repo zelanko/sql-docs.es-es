@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24fce778851f514d680a2701cc9c4dcc9ccb277c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2ffaf0e89e1fdbd0a1722ad038ad9e360decf237
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419076"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305893"
 ---
 # <a name="using-integrated-authentication"></a>Uso de la autenticación integrada
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -67,7 +67,7 @@ Para iniciar sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.
   
 Para auditar las actividades realizadas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en nombre de usuarios distintos a la cuenta del sistema, la aplicación debe usar **EXECUTE AS** de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-Para mejorar su rendimiento, las aplicaciones pueden utilizar la agrupación de conexiones con la autenticación integrada y la auditoría. Pero combinar la agrupación de conexiones, la autenticación integrada y la auditoría trae consigo un riesgo de seguridad, ya que el administrador de controladores unixODBC permite que distintos usuarios reutilicen las conexiones agrupadas. Para obtener más información, consulte este artículo sobre la [agrupación de conexiones ODBC](https://www.unixodbc.org/doc/conn_pool.html).  
+Para mejorar su rendimiento, las aplicaciones pueden utilizar la agrupación de conexiones con la autenticación integrada y la auditoría. Pero combinar la agrupación de conexiones, la autenticación integrada y la auditoría trae consigo un riesgo de seguridad, ya que el administrador de controladores unixODBC permite que distintos usuarios reutilicen las conexiones agrupadas. Para obtener más información, consulte este artículo sobre la [agrupación de conexiones ODBC](http://www.unixodbc.org/doc/conn_pool.html).  
 
 Antes de permitir su reutilización, las aplicaciones deben restablecer las conexiones agrupadas al ejecutar `sp_reset_connection`.  
 
@@ -83,7 +83,7 @@ Los desarrolladores pueden implementar una aplicación que utilice un servidor v
   
 -   El servidor de aplicaciones se autentica como una base de datos distinta y se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se autentica como un usuario de bases de datos en otra base de datos ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se autentica como un usuario de base de datos en otra base de datos ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 Tras configurar la autenticación integrada, las credenciales se transmiten al servidor vinculado.  
   
@@ -128,7 +128,7 @@ Si se produce un error en la autenticación Kerberos, el controlador ODBC en Lin
 
 Para obtener más información sobre la autenticación de equipos Linux o macOS con Active Directory, consulte [autenticar los clientes de Linux con Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) y [procedimientos recomendados para integrar OS X con Active Directory](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Para obtener más información sobre la configuración de Kerberos, consulte el [MIT Kerberos documentación](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Instrucciones de programación](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
 [Notas de la versión](../../../connect/odbc/linux-mac/release-notes.md)

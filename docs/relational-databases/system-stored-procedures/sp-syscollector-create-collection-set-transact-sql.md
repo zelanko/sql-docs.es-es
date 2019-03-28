@@ -19,12 +19,12 @@ ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fc1e3d8db223173fcd5d9ac55f608ddeffa3aa3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be818ed92a3c5a7f9522a6142f5acc815077bd10
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688253"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536917"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +56,13 @@ sp_syscollector_create_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name =** ] '*nombre*'  
- Es el nombre del conjunto de recopilación. *nombre* es **sysname** y no puede ser una cadena vacía o NULL.  
+`[ @name = ] 'name'` Es el nombre del conjunto de recopilación. *nombre* es **sysname** y no puede ser una cadena vacía o NULL.  
   
  *nombre* deben ser únicos. Para obtener una lista de los nombres de conjuntos de recopilación actuales, consulte la vista del sistema syscollector_collection_sets.  
   
- [  **@target =** ] '*destino*'  
- Reservado para uso futuro. *nombre* es **nvarchar (128)** con un valor predeterminado es null.  
+`[ @target = ] 'target'` Reservado para uso futuro. *nombre* es **nvarchar (128)** con un valor predeterminado es null.  
   
- [  **@collection_mode =** ] *collection_mode*  
- Especifica la manera en la que se recopilan y se almacenan los datos. *collection_mode* es **smallint** y puede tener uno de los siguientes valores:  
+`[ @collection_mode = ] collection_mode` Especifica la manera en que se recopilan y almacenan los datos. *collection_mode* es **smallint** y puede tener uno de los siguientes valores:  
   
  0 - Modo de almacenamiento en caché. La recopilación y la carga de datos están en programaciones independientes. Especifique el modo de almacenamiento en caché para la recopilación continua.  
   
@@ -73,25 +70,19 @@ sp_syscollector_create_collection_set
   
  El valor predeterminado de *collection_mode* es 0. Cuando *collection_mode* es 0, *valor schedule_uid* o *schedule_name* debe especificarse.  
   
- [  **@days_until_expiration =** ] *days_until_expiration*  
- Es el número de días que los datos recopilados se guardan en el almacén de administración de datos. *days_until_expiration* es **smallint** con un valor predeterminado de 730 (dos años). *days_until_expiration* debe ser 0 o un entero positivo.  
+`[ @days_until_expiration = ] days_until_expiration` Es el número de días que los datos recopilados se guardan en el almacén de datos de administración. *days_until_expiration* es **smallint** con un valor predeterminado de 730 (dos años). *days_until_expiration* debe ser 0 o un entero positivo.  
   
- [  **@proxy_id =** ] *proxy_id*  
- Es el identificador único para una cuenta proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* es **int** con un valor predeterminado es null. Si se especifica, *proxy_name* debe ser NULL. Para obtener *proxy_id*, consulta la tabla del sistema sysproxies. El rol fijo de base de datos dc_admin debe disponer de los permisos necesarios para obtener acceso al proxy. Para obtener más información, consulte [crear un Proxy del Agente SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+`[ @proxy_id = ] proxy_id` Es el identificador único para un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de proxy del agente. *proxy_id* es **int** con un valor predeterminado es null. Si se especifica, *proxy_name* debe ser NULL. Para obtener *proxy_id*, consulta la tabla del sistema sysproxies. El rol fijo de base de datos dc_admin debe disponer de los permisos necesarios para obtener acceso al proxy. Para obtener más información, consulte [crear un Proxy del Agente SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
- [  **@proxy_name =** ] '*proxy_name*'  
- Es el nombre de la cuenta del proxy. *proxy_name* es **sysname** con un valor predeterminado es null. Si se especifica, *proxy_id* debe ser NULL. Para obtener *proxy_name*, consulta la tabla del sistema sysproxies.  
+`[ @proxy_name = ] 'proxy_name'` Es el nombre de la cuenta de proxy. *proxy_name* es **sysname** con un valor predeterminado es null. Si se especifica, *proxy_id* debe ser NULL. Para obtener *proxy_name*, consulta la tabla del sistema sysproxies.  
   
- [  **@schedule_uid =** ] '*valor schedule_uid*'  
- Es el GUID que apunta a una programación. *valor schedule_uid* es **uniqueidentifier** con un valor predeterminado es null. Si se especifica, *schedule_name* debe ser NULL. Para obtener *valor schedule_uid*, consulta la tabla del sistema sysschedules.  
+`[ @schedule_uid = ] 'schedule_uid'` Es el GUID que apunta a una programación. *valor schedule_uid* es **uniqueidentifier** con un valor predeterminado es null. Si se especifica, *schedule_name* debe ser NULL. Para obtener *valor schedule_uid*, consulta la tabla del sistema sysschedules.  
   
  Cuando *collection_mode* se establece en 0, *valor schedule_uid* o *schedule_name* debe especificarse. Cuando *collection_mode* está establecido en 1, *valor schedule_uid* o *schedule_name* se omite si se especifica.  
   
- [  **@schedule_name =** ] '*schedule_name*'  
- Es el nombre de la programación. *schedule_name* es **sysname** con un valor predeterminado es null. Si se especifica, *valor schedule_uid* debe ser NULL. Para obtener *schedule_name*, consulta la tabla del sistema sysschedules.  
+`[ @schedule_name = ] 'schedule_name'` Es el nombre de la programación. *schedule_name* es **sysname** con un valor predeterminado es null. Si se especifica, *valor schedule_uid* debe ser NULL. Para obtener *schedule_name*, consulta la tabla del sistema sysschedules.  
   
- [  **@logging_level =** ] *logging_level*  
- Es el nivel de registro. *LOGGING_LEVEL* es **smallint** con uno de los siguientes valores:  
+`[ @logging_level = ] logging_level` Es el nivel de registro. *LOGGING_LEVEL* es **smallint** con uno de los siguientes valores:  
   
  0 - registrar la información de ejecución y los eventos [!INCLUDE[ssIS](../../includes/ssis-md.md)] que realizan el seguimiento:  
   
@@ -113,14 +104,11 @@ sp_syscollector_create_collection_set
   
  El valor predeterminado de *logging_level* es 1.  
   
- [  **@description =** ] '*descripción*'  
- Es la descripción del conjunto de recopilación. *descripción* es **nvarchar (4000)** con un valor predeterminado es null.  
+`[ @description = ] 'description'` Es la descripción del conjunto de recopilación. *descripción* es **nvarchar (4000)** con un valor predeterminado es null.  
   
- [  **@collection_set_id =** ] *collection_set_id*  
- Es el identificador único local del conjunto de recopilaciones. *collection_set_id* es **int** con los resultados y es necesario.  
+`[ @collection_set_id = ] collection_set_id` Es el identificador local único del conjunto de recopilación. *collection_set_id* es **int** con los resultados y es necesario.  
   
- [  **@collection_set_uid =** ] '*collection_set_uid*'  
- Es el GUID del conjunto de recopilación. *collection_set_uid* es **uniqueidentifier** con OUTPUT y un valor predeterminado es NULL.  
+`[ @collection_set_uid = ] 'collection_set_uid'` Es el GUID del conjunto de recopilación. *collection_set_uid* es **uniqueidentifier** con OUTPUT y un valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -148,7 +136,7 @@ EXECUTE dbo.sp_syscollector_create_collection_set
 GO  
 ```  
   
-### <a name="b-creating-a-collection-set-by-using-specified-values"></a>B. Crear un conjunto de recopilación utilizando los valores especificados  
+### <a name="b-creating-a-collection-set-by-using-specified-values"></a>b. Crear un conjunto de recopilación utilizando los valores especificados  
  En el ejemplo siguiente se crea un conjunto de recopilación con los valores especificados para muchos de los parámetros.  
   
 ```  

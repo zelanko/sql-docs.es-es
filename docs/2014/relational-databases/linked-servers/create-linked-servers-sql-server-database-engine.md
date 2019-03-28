@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766617"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527852"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Crear servidores vinculados (motor de base de datos de SQL Server)
   En este tema se muestra cómo crear un servidor vinculado y tener acceso a los datos desde otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La creación de un servidor vinculado permite trabajar con datos de varios orígenes. El servidor vinculado no necesita ser otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sino que es un escenario común.  
@@ -199,7 +199,7 @@ ms.locfileid: "52766617"
   
 1.  En el Editor de consultas, escriba el siguiente comando [!INCLUDE[tsql](../../includes/tsql-md.md)] para vincular a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] llamada `SRVR002\ACCTG`:  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -211,7 +211,7 @@ ms.locfileid: "52766617"
   
 2.  Ejecute el siguiente código para configurar el servidor vinculado con el fin de que use las credenciales de dominio del inicio de sesión que usa el servidor vinculado.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -220,13 +220,13 @@ ms.locfileid: "52766617"
   
     ```  
   
-##  <a name="FollowUp"></a> Sigue: pasos que se deben realizar después de crear un servidor vinculado  
+##  <a name="FollowUp"></a> Seguimiento: pasos que se deben realizar después de crear un servidor vinculado  
   
 #### <a name="to-test-the-linked-server"></a>Para probar el servidor vinculado  
   
 -   Ejecute el siguiente código para probar la conexión al servidor vinculado. En este ejemplo se devuelven los nombres de las bases de datos del servidor vinculado.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -236,7 +236,7 @@ ms.locfileid: "52766617"
   
 -   Use nombres de cuatro partes para hacer referencia a un objeto de un servidor vinculado. Ejecute el código siguiente para que se devuelva una lista de todos los inicios de sesión del servidor local y sus inicios de sesión coincidentes en el servidor vinculado.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  

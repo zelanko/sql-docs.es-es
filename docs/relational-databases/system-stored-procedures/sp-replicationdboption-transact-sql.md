@@ -16,12 +16,12 @@ ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a3228fc41c571aae60d6609131680162400a310f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 153c2e2b8c75c21451dca3b673129a059d78e3a6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747807"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527337"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,18 +51,15 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**publicación de mezcla**|Se puede utilizar la base de datos para publicaciones de combinación.|  
-|**publicar**|Se puede utilizar la base de datos para otros tipos de publicaciones.|  
-|**suscribirse**|La base de datos es una base de datos de suscripciones.|  
+|**publish**|Se puede utilizar la base de datos para otros tipos de publicaciones.|  
+|**subscribe**|La base de datos es una base de datos de suscripciones.|  
 |**sincronizar con la copia de seguridad**|La base de datos está habilitada para una copia de seguridad coordinada. Para obtener más información, consulte [habilitar copias de seguridad coordinadas para la replicación transaccional &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
- [  **@value=**] **'***valor***'**  
- Indica si se va a habilitar o deshabilitar la opción de base de datos de replicación dada. *valor* es **sysname**y puede ser **true** o **false**. Cuando este valor es **false** y *optname* es **publicación de mezcla**, también se quitan las suscripciones a la base de datos publicada de mezcla.  
+`[ @value = ] 'value'` Es si desea habilitar o deshabilitar la opción de base de datos de replicación determinado. *valor* es **sysname**y puede ser **true** o **false**. Cuando este valor es **false** y *optname* es **publicación de mezcla**, también se quitan las suscripciones a la base de datos publicada de mezcla.  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**, lo que significa que el distribuidor debe se conectará y se actualiza con el nuevo estado de la base de datos de publicación. El valor **1** solamente se debe especificar si el distribuidor es inaccesible y **sp_replicationdboption** se usa para deshabilitar la publicación.  
+`[ @ignore_distributor = ] ignore_distributor` Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**, lo que significa que el distribuidor debe se conectará y se actualiza con el nuevo estado de la base de datos de publicación. El valor **1** solamente se debe especificar si el distribuidor es inaccesible y **sp_replicationdboption** se usa para deshabilitar la publicación.  
   
- [  **@from_scripting=**] *from_scripting*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -82,7 +79,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Eliminar una publicación](../../relational-databases/replication/publish/delete-a-publication.md)   
  [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Deshabilitar la publicación y la distribución)  
- [Sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_remove_plan (Transact-SQL) | Microsoft Docs
+title: sp_query_store_remove_plan (Transct-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03c202a44587511e976c9315b56c2d42dc2578e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b4920df9ba9ae43ed2ff0a8f163810f3271c6bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660099"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533277"
 ---
 # <a name="spquerystoreremoveplan-transct-sql"></a>sp_query_store_remove_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,8 +44,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@plan_id =** ] *plan_id*  
- Es el identificador del plan de consulta va a quitar. *plan_id* es un **bigint**, no tiene ningún valor predeterminado.  
+`[ @plan_id = ] plan_id` Es el identificador del plan de consulta va a quitar. *plan_id* es un **bigint**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

@@ -16,12 +16,12 @@ ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: caf82567ffa375d73263eba64232cfd6629d3f97
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0187853dcf0fc16fe88feb7e2731414a69fdd183
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747497"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536987"
 ---
 # <a name="spregistercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@article_resolver =** ] **'***article_resolver***'**  
- Especifica el nombre descriptivo de la lógica de negocios personalizada que se va a registrar. *article_resolver* es **nvarchar (255)**, no tiene ningún valor predeterminado.  
+`[ @article_resolver = ] 'article_resolver'` Especifica el nombre descriptivo para la lógica de negocios personalizada que se está registrando. *article_resolver* es **nvarchar (255)**, no tiene ningún valor predeterminado.  
   
- [  **@resolver_clsid=** ] **'***resolver_clsid***'**  
- Especifica el valor CLSID del objeto COM que se va a registrar. Lógica de negocios personalizada *resolver_clsid* es **nvarchar (50)**, su valor predeterminado es null. Este parámetro debe estar establecido en un valor CLSID válido o en NULL cuando se registre un ensamblado de controlador de lógica de negocios.  
+`[ @resolver_clsid = ] 'resolver_clsid'` Especifica el valor CLSID del objeto COM que va a registrar. Lógica de negocios personalizada *resolver_clsid* es **nvarchar (50)**, su valor predeterminado es null. Este parámetro debe estar establecido en un valor CLSID válido o en NULL cuando se registre un ensamblado de controlador de lógica de negocios.  
   
- [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'**  
- Especifica el tipo de la lógica de negocios personalizada que se va a registrar. *is_dotnet_assembly* es **nvarchar (50)**, su valor predeterminado es False. **True** indica que la lógica de negocios personalizada que se va a registrar es un controlador de lógica de negocios de ensamblado; **false** indica que es un componente COM.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` Especifica el tipo de lógica de negocios personalizada que se va a registrar. *is_dotnet_assembly* es **nvarchar (50)**, su valor predeterminado es False. **True** indica que la lógica de negocios personalizada que se va a registrar es un controlador de lógica de negocios de ensamblado; **false** indica que es un componente COM.  
   
- [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***'**  
- Es el nombre del ensamblado que implementa el controlador de lógica de negocios. *dotnet_assembly_name* es **nvarchar (255)**, su valor predeterminado es null. Debe especificar la ruta de acceso completa al ensamblado si no está implementado en el mismo directorio que el ejecutable del Agente de mezcla, en el mismo directorio que la aplicación que inicia de forma sincrónica el Agente de mezcla o en la caché de ensamblados global (GAC).  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` Es el nombre del ensamblado que implementa el controlador de lógica de negocios. *dotnet_assembly_name* es **nvarchar (255)**, su valor predeterminado es null. Debe especificar la ruta de acceso completa al ensamblado si no está implementado en el mismo directorio que el ejecutable del Agente de mezcla, en el mismo directorio que la aplicación que inicia de forma sincrónica el Agente de mezcla o en la caché de ensamblados global (GAC).  
   
- [  **@dotnet_class_name=** ] **'***dotnet_class_name***'**  
- Es el nombre de la clase que reemplaza <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar el controlador de lógica de negocios. El nombre debe especificarse en el formulario **EspacioDeNombres.nombreDeClase**. *dotnet_class_name* es **nvarchar (255)**, su valor predeterminado es null.  
+`[ @dotnet_class_name = ] 'dotnet_class_name'` Es el nombre de la clase que invalida <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar el controlador de lógica de negocios. El nombre debe especificarse en el formulario **EspacioDeNombres.nombreDeClase**. *dotnet_class_name* es **nvarchar (255)**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

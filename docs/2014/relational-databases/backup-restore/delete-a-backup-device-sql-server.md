@@ -16,12 +16,12 @@ ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: de81f6e7f5f375e2b71414385e4c27e2ceb8082f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88b723e47b177c6a505a0821ddd4925c7179a15b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187565"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531347"
 ---
 # <a name="delete-a-backup-device-sql-server"></a>Eliminar un dispositivo de copia de seguridad (SQL Server)
   En este tema se describe cómo eliminar un dispositivo de copia de seguridad en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -38,11 +38,11 @@ ms.locfileid: "48187565"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe pertenecer al rol fijo de servidor **diskadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -67,9 +67,9 @@ ms.locfileid: "48187565"
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
-3.  Copie y pegue el ejemplo siguiente en la consulta. En este ejemplo se muestra cómo usar [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) para eliminar un dispositivo de copia de seguridad. Ejecute el primer ejemplo para crear el dispositivo de copia de seguridad `mybackupdisk` y el nombre físico `c:\backup\backup1.bak`. Ejecutar `sp_dropdevice` para eliminar el `mybackupdisk` dispositivo de copia de seguridad. El parámetro `delfile` elimina el nombre físico.  
+3.  Copie y pegue el ejemplo siguiente en la consulta. En este ejemplo se muestra cómo usar [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) para eliminar un dispositivo de copia de seguridad. Ejecute el primer ejemplo para crear el dispositivo de copia de seguridad `mybackupdisk` y el nombre físico `c:\backup\backup1.bak`. Ejecute `sp_dropdevice` para eliminar el dispositivo de copia de seguridad `mybackupdisk`. El parámetro `delfile` elimina el nombre físico.  
   
-```tsql  
+```sql  
 --Define a backup device and physical name.   
 USE AdventureWorks2012 ;  
 GO  

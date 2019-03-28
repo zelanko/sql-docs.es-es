@@ -18,12 +18,12 @@ ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d96a4c72996ab34b03706cc71f6b406344164685
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f37fc61b294cc460fe1d1e41b301ac2c7b1c1077
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591629"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527467"
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@principal_id=** ] *principal_id*  
- Es el identificador de usuario de base de datos o del rol en el **msdb** base de datos para la asociación a la lista. *principal_id* es **int**, su valor predeterminado es null. Cualquier *principal_id* o *principal_name* se puede especificar.  
+`[ @principal_id = ] principal_id` Es el identificador de usuario de base de datos o del rol en el **msdb** base de datos para la asociación a la lista. *principal_id* es **int**, su valor predeterminado es null. Cualquier *principal_id* o *principal_name* se puede especificar.  
   
- [  **@principal_name=** ] **'**_principal_name_**'**  
- Es el nombre de usuario de base de datos o del rol en el **msdb** base de datos para la asociación a la lista. *principal_name* es **sysname**, su valor predeterminado es null. Cualquier *principal_id* o *principal_name* se puede especificar.  
+`[ @principal_name = ] 'principal_name'` Es el nombre de usuario de base de datos o del rol en el **msdb** base de datos para la asociación a la lista. *principal_name* es **sysname**, su valor predeterminado es null. Cualquier *principal_id* o *principal_name* se puede especificar.  
   
- [  **@profile_id=** ] *profile_id*  
- Es el identificador del perfil para la asociación que se va a mostrar. *profile_id* es **int**, su valor predeterminado es null. Cualquier *profile_id* o *profile_name* se puede especificar.  
+`[ @profile_id = ] profile_id` Es el identificador del perfil para la asociación a la lista. *profile_id* es **int**, su valor predeterminado es null. Cualquier *profile_id* o *profile_name* se puede especificar.  
   
- [  **@profile_name=** ] **'**_profile_name_**'**  
- Es el nombre del perfil para la asociación que se va a mostrar. *nombre_perfil* es **sysname**, su valor predeterminado es null. Cualquier *profile_id* o *profile_name* se puede especificar.  
+`[ @profile_name = ] 'profile_name'` Es el nombre del perfil para la asociación a la lista. *nombre_perfil* es **sysname**, su valor predeterminado es null. Cualquier *profile_id* o *profile_name* se puede especificar.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -66,7 +62,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 |**principal_id**|**int**|Id. del usuario de la base de datos.|  
 |**principal_name**|**sysname**|El nombre del usuario de base de datos.|  
 |**profile_id**|**int**|Número de Id. del perfil de Correo electrónico de base de datos.|  
-|**nombre_perfil**|**sysname**|Nombre del perfil de Correo electrónico de base de datos.|  
+|**profile_name**|**sysname**|Nombre del perfil de Correo electrónico de base de datos.|  
 |**is_default**|**bit**|Marca que indica si el perfil es el perfil predeterminado del usuario.|  
   
 ## <a name="remarks"></a>Comentarios  

@@ -13,12 +13,12 @@ ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7e217aedd1c6d3b2c58d946ed455bf9398cd7798
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818357"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535187"
 ---
 # <a name="control-transaction-durability"></a>Controlar la durabilidad de las transacciones
   Las confirmaciones de transacciones de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden ser totalmente durables (el valor predeterminado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) o durables diferidas (conocidas también como confirmaciones diferidas).  
@@ -34,7 +34,7 @@ ms.locfileid: "52818357"
  Las transacciones totalmente durables escriben el registro de transacciones en el disco antes de devolver el control al cliente. Debe utilizar transacciones totalmente durables cuando:  
   
 -   El sistema no puede tolerar la pérdida de datos.   
-    Vea la sección [¿Cuándo puedo perder datos?](control-transaction-durability.md#bkmk_dataloss) para obtener información sobre cuándo puede perder algunos de los datos.  
+    Vea la sección [¿Cuándo puedo perder datos?](#when-can-i-lose-data) para obtener información sobre cuándo puede perder algunos de los datos.  
   
 -   El cuello de botella no se debe a la latencia de escritura en el registro de transacciones.  
   
@@ -87,10 +87,10 @@ ms.locfileid: "52818357"
   
 ## <a name="how-to-control-transaction-durability"></a>Cómo controlar la durabilidad de las transacciones  
   
-###  <a name="bkmk_DbControl"></a> Control de nivel de base de datos  
+### <a name="database-level-control"></a>Control de nivel de base de datos  
  Como administrador de la base de datos (DBA), con la instrucción siguiente puede controlar si los usuarios pueden usar transacciones de durabilidad diferida en una base de datos. Debe establecer la configuración de durabilidad diferida con ALTER DATABASE.  
   
-```tsql  
+```sql  
 ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }  
 ```  
   
@@ -98,27 +98,27 @@ ALTER DATABASE ... SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [valor predeterminado] Con esta configuración, todas las transacciones que se confirman en la base de datos son totalmente durables, independientemente del nivel de confirmación (DELAYED_DURABILITY= [ON | OFF]). No hay necesidad de modificar y recompilar el procedimiento almacenado. De esta forma, puede asegurarse de que la durabilidad diferida nunca ponga datos en peligro.  
   
  `ALLOWED`  
- Con esta configuración, la durabilidad de cada transacción se determina en el nivel de transacción: DELAYED_DURABILITY = { *OFF* | ON }. Vea [Control de nivel de bloque ATOMIC: procedimientos almacenados compilados de forma nativa](control-transaction-durability.md#compiledproccontrol) y [Control de nivel COMMIT: Transact-SQL](control-transaction-durability.md#bkmk_t-sqlcontrol) para obtener más información.  
+ Con esta configuración, la durabilidad de cada transacción se determina en el nivel de transacción: DELAYED_DURABILITY = { *OFF* | ON }. Consulte [control de nivel de bloque Atomic - Natively Compiled Stored Procedures](#atomic-block-level-control---natively-compiled-stored-procedures) y [control de nivel COMMIT: Transact-SQL](#commit-level-control---t-sql) para obtener más información.  
   
  `FORCED`  
  Con esta configuración, cada transacción que se confirma en la base de datos es durable diferida. Independientemente de que la transacción especifique que es totalmente durable (DELAYED_DURABILITY = OFF) o no haga especificación alguna, la transacción es durable diferida. Esta configuración resulta útil cuando la durabilidad diferida es adecuada para una base de datos y no desea cambiar ningún código de aplicación.  
   
-###  <a name="CompiledProcControl"></a> Control de nivel de bloque ATOMIC: procedimientos almacenados compilados de forma nativa  
+### <a name="atomic-block-level-control---natively-compiled-stored-procedures"></a>Control de nivel de bloque atomic - Natively Compiled Stored Procedures  
  El código siguiente va en el interior del bloque ATOMIC.  
   
-```tsql  
+```sql  
 DELAYED_DURABILITY = { OFF | ON }  
 ```  
   
  `OFF`  
- [valor predeterminado] La transacción es totalmente durable, salvo que la opción de base de datos DELAYED_DURABLITY = FORCED esté activa, en cuyo caso la instrucción COMMIT será asíncrona y por tanto durable diferida. Consulte [Database level control](control-transaction-durability.md#bkmk_dbcontrol) para obtener más información.  
+ [valor predeterminado] La transacción es totalmente durable, salvo que la opción de base de datos DELAYED_DURABLITY = FORCED esté activa, en cuyo caso la instrucción COMMIT será asíncrona y por tanto durable diferida. Consulte [Database level control](#database-level-control) para obtener más información.  
   
  `ON`  
- La transacción es durable diferida, salvo que la opción de base de datos DELAYED_DURABLITY = DISABLED esté activa, en cuyo caso la instrucción COMMIT será síncrona y por tanto totalmente durable.  Consulte [Database level control](control-transaction-durability.md#bkmk_dbcontrol) para obtener más información.  
+ La transacción es durable diferida, salvo que la opción de base de datos DELAYED_DURABLITY = DISABLED esté activa, en cuyo caso la instrucción COMMIT será síncrona y por tanto totalmente durable.  Consulte [Database level control](#database-level-control) para obtener más información.  
   
  **Código de ejemplo**  
   
-```tsql  
+```sql  
 CREATE PROCEDURE <procedureName> ...  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -138,19 +138,19 @@ END
 |`DELAYED_DURABILITY = OFF`|El bloque ATOMIC inicia una nueva transacción totalmente durable.|El bloque ATOMIC crea un punto de retorno en la transacción existente y después inicia la nueva transacción.|  
 |`DELAYED_DURABILITY = ON`|El bloque ATOMIC inicia una nueva transacción durable diferida.|El bloque ATOMIC crea un punto de retorno en la transacción existente y después inicia la nueva transacción.|  
   
-###  <a name="bkmk_T-SQLControl"></a> Control de nivel COMMIT -[!INCLUDE[tsql](../../includes/tsql-md.md)]  
+### <a name="commit-level-control---t-sql"></a>CONFIRMAR el control de nivel - (Transact-SQL)
  La sintaxis de COMMIT se ha ampliado para que pueda forzar la durabilidad diferida de transacciones. Si DELAYED_DURABILITY es DISABLED o FORCED en el nivel de base de datos (vea más arriba), esta opción de COMMIT se omite.  
   
-```tsql  
+```sql  
 COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [ WITH ( DELAYED_DURABILITY = { OFF | ON } ) ]  
   
 ```  
   
  `OFF`  
- [valor predeterminado] La instrucción COMMIT de la transacción es totalmente durable, salvo que la opción de base de datos DELAYED_DURABLITY = FORCED esté activa, en cuyo caso la instrucción COMMIT será asincrónica y por tanto durable diferida. Consulte [Database level control](control-transaction-durability.md#bkmk_dbcontrol) para obtener más información.  
+ [valor predeterminado] La instrucción COMMIT de la transacción es totalmente durable, salvo que la opción de base de datos DELAYED_DURABLITY = FORCED esté activa, en cuyo caso la instrucción COMMIT será asincrónica y por tanto durable diferida. Consulte [Database level control](#database-level-control) para obtener más información.  
   
  `ON`  
- La instrucción COMMIT de la transacción es durable diferida, salvo que la opción de base de datos DELAYED_DURABLITY = DISABLED esté activa, en cuyo caso la instrucción COMMIT será sincrónica y por tanto totalmente durable. Consulte [Database level control](control-transaction-durability.md#bkmk_dbcontrol) para obtener más información.  
+ La instrucción COMMIT de la transacción es durable diferida, salvo que la opción de base de datos DELAYED_DURABLITY = DISABLED esté activa, en cuyo caso la instrucción COMMIT será sincrónica y por tanto totalmente durable. Consulte [Database level control](#database-level-control) para obtener más información.  
   
 ### <a name="summary-of-options-and-their-interactions"></a>Resumen de opciones y sus interacciones  
  En esta tabla se resumen las interacciones entre las configuraciones de durabilidad diferida de nivel de base de datos y las configuraciones de nivel de confirmación. Las configuraciones de nivel de base de datos siempre tienen prioridad sobre las configuraciones de nivel de confirmación.  
@@ -169,7 +169,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 -   Ejecutar el procedimiento almacenado del sistema `sp_flush_log`. Este procedimiento fuerza un vaciado en disco de las entradas de registro de todas las transacciones de durabilidad diferida confirmadas previamente. Para obtener más información, vea [sys.sp_flush_log &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql).  
   
-##  <a name="bkmk_OtherSQLFeatures"></a> Durabilidad diferida y otras características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+##  <a name="delayed-durability-and-other-sql-server-features"></a>Durabilidad diferida y otras características de SQL Server  
  **Seguimiento de cambios y captura de datos modificados**  
  Todas las transacciones con seguimiento de cambios son totalmente durables. Las transacciones tienen la propiedad de seguimiento de cambios si realizan operaciones de escritura en tablas que se han habilitado para seguimiento de cambios. No se admite el uso de durabilidad diferida para bases de datos que usan captura de datos modificados (CDC).   
   
@@ -194,13 +194,13 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Copia de seguridad del registro**  
  Solo las transacciones que se han convertido en durables se incluyen en la copia de seguridad.  
   
-##  <a name="bkmk_DataLoss"></a> ¿Cuándo puedo perder datos?  
+## <a name="when-can-i-lose-data"></a>¿Cuándo puedo perder datos?  
  Si implementa la durabilidad diferida en alguna de las tablas, verá que ciertas condiciones pueden provocar la pérdida de datos. Si no puede tolerar una pérdida de datos, no debería usar la durabilidad diferida en las tablas.  
   
 ### <a name="catastrophic-events"></a>Catástrofes  
  En caso de catástrofe, como un bloqueo del servidor, perderá los datos de todas las transacciones confirmadas que no se hayan guardado en el disco. Las transacciones de durabilidad diferida se guardan en el disco siempre que se ejecute una transacción totalmente durable respecto a una tabla (optimizada para memoria durable o basada en disco) en la base de datos o cuando se llama a `sp_flush_log` . Si está usando transacciones de durabilidad diferida, conviene crear una tabla pequeña en la base de datos que podrá actualizar regularmente o llamar de forma periódica a `sp_flush_log` para guardar todas las transacciones confirmadas pendientes. El registro de transacciones también se vacía cada vez que se llena, pero es difícil de predecir e imposible de controlar.  
   
-### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>Cierre y reinicio de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
+### <a name="sql-server-shutdown-and-restart"></a>Reinicio y apagado de SQL Server  
  En lo que respecta a la durabilidad diferida, no hay ninguna diferencia entre el cierre inesperado y el cierre/reinicio planeado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al igual que en las catástrofes, debe prever una pérdida de datos. En un cierre/reinicio planeado, algunas transacciones que no se han escrito en el disco podrían, en primer lugar, guardarse en el disco, pero no debería contar con ello. Tenga previsto sin embargo que en un cierre/reinicio, bien se haya planeado o no, se pierden datos al igual que en las catástrofes.  
   
 ## <a name="see-also"></a>Vea también  

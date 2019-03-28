@@ -16,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3ae8edeff1792cf3a1c70d4e80dea638402e30d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210964"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529007"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**, que limpia los metadatos para todas las publicaciones. La publicación debe existir, si se especifica explícitamente.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**, que limpia los metadatos para todas las publicaciones. La publicación debe existir, si se especifica explícitamente.  
   
- [  **@reinitialize_subscriber =** ] **'***suscriptor***'**  
- Especifica si se debe reinicializar el suscriptor. *suscriptor* es **nvarchar (5)**, puede ser **TRUE** o **FALSE**, su valor predeterminado es **TRUE**. Si **TRUE**, las suscripciones se marcan para reinicialización. Si **FALSE**, las suscripciones no se marcan para reinicialización.  
+`[ @reinitialize_subscriber = ] 'subscriber'` Especifica si se debe reinicializar el suscriptor. *suscriptor* es **nvarchar (5)**, puede ser **TRUE** o **FALSE**, su valor predeterminado es **TRUE**. Si **TRUE**, las suscripciones se marcan para reinicialización. Si **FALSE**, las suscripciones no se marcan para reinicialización.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

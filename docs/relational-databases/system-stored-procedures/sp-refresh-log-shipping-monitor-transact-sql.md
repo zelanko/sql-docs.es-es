@@ -18,12 +18,12 @@ ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4382dc4de4010944e60cb37640759e91a0fc2727
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be900d6b8295aae5871e9162c5e07ae5bed6516c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851563"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528981"
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@agent_id=** ] **'***agent_id***'**  
- Id. principal de la copia de seguridad o Id. secundario de la copia o restauración. *valor de agent_id* es **uniqueidentifier** y no puede ser NULL.  
+`[ @agent_id = ] 'agent_id'` El Id. principal para copia de seguridad o el Id. secundario para la copia o restauración. *valor de agent_id* es **uniqueidentifier** y no puede ser NULL.  
   
- [  **@agent_type=** ] **'***agent_type***'**  
- Es el tipo de trabajo de trasvase de registros.  
+`[ @agent_type = ] 'agent_type'` El tipo de trabajos de trasvase de registros.  
   
  0 = Copia de seguridad.  
   
@@ -58,11 +56,9 @@ sp_refresh_log_shipping_monitor
   
  *agent_type* es **tinyint** y no puede ser NULL.  
   
- [  **@database=** ] **'***base de datos***'**  
- Es la base de datos primaria o secundaria que se utiliza en los registros, que utilizan los agentes de copia de seguridad o restauración.  
+`[ @database = ] 'database'` La principal o secundaria base de datos utilizado por el registro de agentes de copia de seguridad o restauración.  
   
- [ **@mode** ] *n*  
- Especifica si se van a actualizar los datos del monitor o se van a eliminar. Tipo de datos de *m* es tinyint y los valores admitidos son:  
+`[ @mode ] n` Especifica si se debe actualizar los datos del monitor o limpiarlo. Tipo de datos de *m* es tinyint y los valores admitidos son:  
   
  1 = actualizar (valor predeterminado)  
   

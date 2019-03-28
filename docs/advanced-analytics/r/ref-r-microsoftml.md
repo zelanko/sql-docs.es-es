@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 37f52a5ac891ab1d52a9b6335a62fdf2789df9b1
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645314"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512262"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (biblioteca de R en SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,12 +72,12 @@ En esta sección se enumera las funciones por categoría para darle una idea de 
 | Nombre de función | Descripción |
 |---------------|-------------|
 |[concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat) | Transformación para crear una sola columna con valores de vector de varias columnas.  |
-|[categorías](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical) | Crear vector indicador mediante transformación categorías con el diccionario.  |
+|[categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical) | Crear vector indicador mediante transformación categorías con el diccionario.  |
 |[categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalhash) | Convierte el valor de categoría en una matriz de indicador aplicando un algoritmo hash. |
 |[featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizetext) | Genera un contenedor de los recuentos de secuencias de palabras consecutivas, que se llama n-gramas, desde un determinado corpus de texto. Ofrece la detección de idioma, la tokenización, eliminación de palabras irrelevantes, normalización de texto y generación de características.  |
 |[getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | Puntuaciones de texto de lenguaje natural y crea una columna que contiene las probabilidades de que las opiniones del texto son positivas.|
 |[ngram](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/ngram) | permite definir argumentos para la extracción de características basada en recuento y basado en hash.|
-|[Seleccionar columnas](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectcolumns) | Selecciona un conjunto de columnas que se va a reciclar, quitar todos los demás. |
+|[selectColumns](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectcolumns) | Selecciona un conjunto de columnas que se va a reciclar, quitar todos los demás. |
 |[selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectfeatures) | Selecciona las características de las variables especificadas mediante un modo especificado.|
 |[loadImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loadimage) | Carga los datos de imagen.|
 |[resizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/resizeimage) | Cambia el tamaño de una imagen a una dimensión especificada con un método de cambio de tamaño especificado.|
@@ -126,7 +126,7 @@ En esta sección se enumera las funciones por categoría para darle una idea de 
 
 | Nombre de función | Descripción |
 |---------------|-------------|
-|[optimizador](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Especifica los algoritmos de optimización para la [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) algoritmo de aprendizaje automático.|
+|[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Especifica los algoritmos de optimización para la [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) algoritmo de aprendizaje automático.|
 
 
 ## <a name="8-package-state-functions"></a>Funciones de estado del paquete de 8

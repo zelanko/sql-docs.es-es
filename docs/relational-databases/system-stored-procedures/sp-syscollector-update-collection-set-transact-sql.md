@@ -19,12 +19,12 @@ ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9e7ba855bde4caa04efea0411857705eb4bf976
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d77ec36f36260226a78136b46656b1e2e8187e5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702744"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527187"
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,20 +56,15 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@collection_set_id =** ] *collection_set_id*  
- Es el identificador único local del conjunto de recopilaciones. *collection_set_id* es **int** y debe tener un valor si *nombre* es NULL.  
+`[ @collection_set_id = ] collection_set_id` Es el identificador local único del conjunto de recopilación. *collection_set_id* es **int** y debe tener un valor si *nombre* es NULL.  
   
- [  **@name =** ] '*nombre*'  
- Es el nombre del conjunto de recopilación. *nombre* es **sysname** y debe tener un valor si *collection_set_id* es NULL.  
+`[ @name = ] 'name'` Es el nombre del conjunto de recopilación. *nombre* es **sysname** y debe tener un valor si *collection_set_id* es NULL.  
   
- [  **@new_name =** ] '*new_name*'  
- Es el nuevo nombre del conjunto de recopilación. *new_name* es **sysname**, y si se utiliza, no puede ser una cadena vacía. *new_name* deben ser únicos. Para obtener una lista de los nombres de conjuntos de recopilación actuales, consulte la vista del sistema syscollector_collection_sets.  
+`[ @new_name = ] 'new_name'` Es el nuevo nombre del conjunto de recopilación. *new_name* es **sysname**, y si se utiliza, no puede ser una cadena vacía. *new_name* deben ser únicos. Para obtener una lista de los nombres de conjuntos de recopilación actuales, consulte la vista del sistema syscollector_collection_sets.  
   
- [  **@target =** ] '*destino*'  
- Reservado para uso futuro.  
+`[ @target = ] 'target'` Reservado para uso futuro.  
   
- [  **@collection_mode =** ] *collection_mode*  
- Es el tipo de recopilación de datos que se va a utilizar. *collection_mode* es **smallint** y puede tener uno de los siguientes valores:  
+`[ @collection_mode = ] collection_mode` Es el tipo de recopilación de datos para usar. *collection_mode* es **smallint** y puede tener uno de los siguientes valores:  
   
  0 - Modo de almacenamiento en caché. La recopilación y la carga de datos están en programaciones independientes. Especifique el modo de almacenamiento en caché para la recopilación continua.  
   
@@ -77,27 +72,21 @@ sp_syscollector_update_collection_set
   
  Al cambiar del modo sin almacenamiento en caché al modo en caché (0), debe especificar también *valor schedule_uid* o *schedule_name*.  
   
- [  **@days_until_expiration=** ] *days_until_expiration*  
- Es el número de días que los datos recopilados se guardan en el almacén de administración de datos. *days_until_expiration* es **smallint**. *days_until_expiration* debe ser 0 o un entero positivo.  
+`[ @days_until_expiration = ] days_until_expiration` Es el número de días que los datos recopilados se guardan en el almacén de datos de administración. *days_until_expiration* es **smallint**. *days_until_expiration* debe ser 0 o un entero positivo.  
   
- [  **@proxy_id =** ] *proxy_id*  
- Es el identificador único para una cuenta proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* es **int**.  
+`[ @proxy_id = ] proxy_id` Es el identificador único para un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de proxy del agente. *proxy_id* es **int**.  
   
- [  **@proxy_name =** ] '*proxy_name*'  
- Es el nombre del proxy. *proxy_name* es **sysname** y admite valores NULL.  
+`[ @proxy_name = ] 'proxy_name'` Es el nombre del servidor proxy. *proxy_name* es **sysname** y admite valores NULL.  
   
- [ **@schedule_uid** =] '*valor schedule_uid*'  
- Es el GUID que apunta a una programación. *valor schedule_uid* es **uniqueidentifier**.  
+`[ @schedule_uid = ] 'schedule_uid'` Es el GUID que apunta a una programación. *valor schedule_uid* es **uniqueidentifier**.  
   
  Para obtener *valor schedule_uid*, consulta la tabla del sistema sysschedules.  
   
  Cuando *collection_mode* se establece en 0, *valor schedule_uid* o *schedule_name* debe especificarse. Cuando *collection_mode* está establecido en 1, *valor schedule_uid* o *schedule_name* se omite si se especifica.  
   
- [  **@schedule_name =** ] '*schedule_name*'  
- Es el nombre de la programación. *schedule_name* es **sysname** y admite valores NULL. Si se especifica, *valor schedule_uid* debe ser NULL. Para obtener *schedule_name*, consulta la tabla del sistema sysschedules.  
+`[ @schedule_name = ] 'schedule_name'` Es el nombre de la programación. *schedule_name* es **sysname** y admite valores NULL. Si se especifica, *valor schedule_uid* debe ser NULL. Para obtener *schedule_name*, consulta la tabla del sistema sysschedules.  
   
- [  **@logging_level =** ] *logging_level*  
- Es el nivel de registro. *LOGGING_LEVEL* es **smallint** con uno de los siguientes valores:  
+`[ @logging_level = ] logging_level` Es el nivel de registro. *LOGGING_LEVEL* es **smallint** con uno de los siguientes valores:  
   
  0 - información del registro de ejecución y [!INCLUDE[ssIS](../../includes/ssis-md.md)] eventos que realizan el seguimiento:  
   
@@ -119,8 +108,7 @@ sp_syscollector_update_collection_set
   
  El valor predeterminado de *logging_level* es 1.  
   
- [  **@description =** ] '*descripción*'  
- Es la descripción del conjunto de recopilación. *descripción* es **nvarchar (4000)**.  
+`[ @description = ] 'description'` Es la descripción del conjunto de recopilación. *descripción* es **nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -161,7 +149,7 @@ EXECUTE dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-### <a name="b-changing-the-collection-mode-from-non-cached-to-cached"></a>B. Cambiar el modo de recopilación de sin almacenamiento en caché al modo de almacenamiento en caché  
+### <a name="b-changing-the-collection-mode-from-non-cached-to-cached"></a>b. Cambiar el modo de recopilación de sin almacenamiento en caché al modo de almacenamiento en caché  
  En el ejemplo siguiente se cambia el modo de recopilación de sin almacenamiento en caché al modo de almacenamiento en caché. Este cambio requiere que se especifique un identificador o un nombre para la programación.  
   
 ```  

@@ -18,12 +18,12 @@ ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c5f625b2fa697a305cf6ea96b3ace59f9f5ee0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eda439b53c72e41154d4891495470fc271028aee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843926"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529517"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,16 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_name =**] **'***job_name***'**  
- Nombre del trabajo que se va a detener. *job_name* es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'` El nombre del trabajo para detener. *job_name* es **sysname**, su valor predeterminado es null.  
   
- [ **@job_id =**] *job_id*  
- Número de identificación del trabajo que se va a detener. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id` El número de identificación del trabajo para detener. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
   
- [  **@originating_server =**] **'***master_server***'**  
- Nombre del servidor principal. Si se especifica, se detienen todos los trabajos multiservidor. *master_server* es **nvarchar (128)**, su valor predeterminado es null. Especifique este parámetro únicamente cuando se llama **sp_stop_job** en un servidor de destino.  
+`[ @originating_server = ] 'master_server'` El nombre del servidor maestro. Si se especifica, se detienen todos los trabajos multiservidor. *master_server* es **nvarchar (128)**, su valor predeterminado es null. Especifique este parámetro únicamente cuando se llama **sp_stop_job** en un servidor de destino.  
   
 > [!NOTE]  
 >  Solo se puede especificar uno de los tres primeros parámetros.  
   
- [  **@server_name =**] **'***target_server***'**  
- Nombre del servidor de destino específico en que se va a detener un trabajo multiservidor. *target_server* es **nvarchar (128)**, su valor predeterminado es null. Especifique este parámetro únicamente cuando se llama **sp_stop_job** en un servidor maestro para un trabajo multiservidor.  
+`[ @server_name = ] 'target_server'` El nombre del servidor de destino específico en el que se va a detener un trabajo multiservidor. *target_server* es **nvarchar (128)**, su valor predeterminado es null. Especifique este parámetro únicamente cuando se llama **sp_stop_job** en un servidor maestro para un trabajo multiservidor.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

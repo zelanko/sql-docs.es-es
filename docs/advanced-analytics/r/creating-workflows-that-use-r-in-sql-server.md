@@ -3,63 +3,60 @@ title: Crear flujos de trabajo SSIS y de SSRS con R - SQL Server Machine Learnin
 description: Escenarios de integración de combinación de SQL Server Machine Learning Services y R Services, Reporting Services (SSRS) y SQL Server Integration Services (SSIS).
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/15/2019
+ms.date: 03/17/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 76ddf3e3fdb43fea6bb8fd224f8199cda4134b64
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 5d480b7cd24200b051fa2626fc41fa757703eaf8
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57976305"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512392"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>Crear flujos de trabajo SSIS y de SSRS con R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este artículo se explica cómo utilizar procedimientos almacenados en SQL Server Reporting Services SSRS, SQL Server Integration Services (SSIS) y dos características importantes de SQL Server de manera que combina datos relacionales, las funciones de ciencia de datos de las bibliotecas de Microsoft R y las características de BI para las transformaciones de datos coordinados y visualización. Obtenga información sobre qué funcionalidades de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se prestan a una solución de ciencia de datos. En este artículo también te recuerda que código y los datos en SQL Server, por ejemplo, el código R incrustado en procedimientos almacenados, se pueda usar fácilmente en las visualizaciones proporcionadas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
+En este artículo se explica cómo usar el script de R y Python incrustado utilizando las capacidades de ciencia de datos y lenguaje de SQL Server Machine Learning Services con dos características importantes de SQL Server: SQL Server Integration Services (SSIS) y SQL Server Reporting Services SSRS. Bibliotecas de R y Python en SQL Server proporcionan funciones estadísticas y predictivas. SSIS y SSRS proporcionan coordinada transformación de ETL y visualizaciones, respectivamente. En este artículo se explica cómo colocar todas estas características conjuntamente en este patrón de flujo de trabajo:
 
-## <a name="bring-compute-power-to-the-data"></a>Traiga la potencia de proceso a los datos
+> [!div class="checklist"]
+> * Crear un procedimiento almacenado que contiene el ejecutable de R o Python
+> * Ejecutar el procedimiento almacenado desde SSIS o en SSRS
 
-Ha sido un objetivo de diseño clave de la integración de R y Python con SQL Server genere análisis cerca de los datos. Esto ofrece varias ventajas:
-
-+ Seguridad de datos. Volver a poner más cerca de R para el origen de datos evita el movimiento de datos de una pérdida de tiempo o no seguros.
-+ Velocidad. Las bases de datos están optimizadas para operaciones basadas en conjuntos. Las recientes innovaciones realizadas en bases de datos como tablas en memoria los resúmenes y agregaciones con suma y están a un complemento perfecto para ciencia de datos.
-+ Facilidad de integración e implementación. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es el punto central de operaciones para muchas otras tareas de administración de datos y aplicaciones. Con datos que residen en la base de datos o el almacén de informes, se asegura de que los datos utilizados por las soluciones de aprendizaje automático son coherentes y están actualizados. 
-+ Eficiencia en la nube y locales. En lugar de procesar datos en R, puede confiar en las canalizaciones de datos empresariales incluidos [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y Azure Data Factory. Los informes de análisis o de resultados son sencillos a través de Power BI o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].
-
-Si usan la combinación adecuada de SQL y R para distintas tareas de procesamiento y análisis de datos, los científicos de datos y los desarrolladores lograrán ser más productivos.
+Los ejemplos de este artículo son principalmente sobre R y SSIS, pero los conceptos y pasos se aplican igualmente a Python. La segunda sección proporciona instrucciones y vínculos para las visualizaciones de SSRS.
 
 <a name="bkmk_ssis"></a> 
 
-## <a name="use-ssis-for-data-transformation-and-automation"></a>Usar SSIS para la automatización y la transformación de datos
+## <a name="use-ssis-for-automation"></a>Usar SSIS para la automatización
 
 Los flujos de trabajo de ciencia de datos son tremendamente iterativos y conllevan una enorme transformación de los datos, como los ajustes de escala, las agregaciones, el cálculo de probabilidades y cambiar los atributos de nombre y combinarlos. Los científicos de datos están acostumbrados a realizar muchas de estas tareas en R, Python u otro lenguaje. Pero ejecutar estos flujos de trabajo con datos empresariales requiere una integración perfecta con procesos y herramientas de ETL.
 
-Como [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] permite realizar operaciones complejas en R a través de Transact-SQL y de procedimientos almacenados, se pueden integrar las tareas específicas de R con los procesos de ETL existentes sin tener que emplear tiempo en volver a desarrollar. En lugar de seguir una cadena de tareas de gran cantidad de memoria de R, preparación de datos puede optimizarse mediante las herramientas más eficaces, incluyendo [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
+Dado que [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] le permite realizar operaciones complejas en R a través de Transact-SQL y procedimientos almacenados, puede integrar las tareas de ciencia de datos con los procesos ETL existentes. En lugar de realizar una cadena de tareas de gran cantidad de memoria, preparación de datos puede optimizarse mediante las herramientas más eficaces, incluidas [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y [!INCLUDE[tsql](../../includes/tsql-md.md)]. 
 
 Estas son algunas ideas sobre cómo automatizar el procesamiento de datos y modelado de canalizaciones mediante [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]:
 
-+ Use [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tareas para crear características de los datos necesarios en la base de datos SQL
-+ Usar bifurcaciones condicionales para alternar el contexto de ejecución de trabajos de R
-+ Ejecutar trabajos de R que generan sus propios datos en la base de datos y compartir datos con aplicaciones
-+ Cuando se usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cargue el script de R guardado en una variable de texto y ejecutarlo en SQL Server
++ Extraer los datos en el entorno local o en la nube orígenes para generar datos de entrenamiento 
++ Compilar y ejecutar los modelos de R o Python como parte de un flujo de trabajo de integración de datos
++ Volver a entrenar modelos de forma regular (programado)
++ Cargar resultados del script de R o Python a otros destinos, como Excel, Power BI, Oracle y Teradata, por nombrar algunos
++ Utilice las tareas SSIS para crear características de datos en la base de datos SQL
++ Usar bifurcaciones condicionales para cambiar el contexto de proceso para trabajos de R y Python
 
 ## <a name="ssis-example"></a>Ejemplo SSIS
 
-El ejemplo siguiente se origina desde una entrada de blog MSDN ya retirado creada por Jimmy Wong en esta dirección URL: `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`.
+El ejemplo siguiente se origina desde una entrada de blog MSDN ya retirado creada por Jimmy Wong en esta dirección URL: `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
 
 En este ejemplo se muestra cómo automatizar las tareas con SSIS. Crear procedimientos almacenados con incrustado R con SQL Server Management Studio y, a continuación, ejecute los procedimientos almacenados de [tareas Ejecutar T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) en un paquete SSIS.
 
 Para seguir los pasos de este ejemplo, debe estar familiarizado con Management Studio, SSIS, Diseñador SSIS, diseño de paquete y T-SQL. El paquete SSIS usa tres [tareas Ejecutar T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) que insertar los datos de entrenamiento en una tabla, los datos de modelo y puntuar los datos para obtener un resultado de predicción.
 
-### <a name="create-tables"></a>Crear tablas
+### <a name="load-training-data"></a>Cargar datos de entrenamiento
 
-Ejecute el siguiente script en SQL Server Management Studio para crear unas cuantas tablas: uno para almacenar los datos y otro para almacenar un modelo. El rol de la tabla ssis_iris es para que actúe como datos de entrenamiento en un escenario de puesta en marcha. 
+Ejecute el siguiente script en SQL Server Management Studio para crear una tabla para almacenar los datos. Debe crear y usar una base de datos de prueba para este ejercicio. 
 
 ```T-SQL
-Use irissql
+Use test-db
 GO
 
 Create table ssis_iris (
@@ -69,17 +66,9 @@ Create table ssis_iris (
     , "Species" varchar(100) null
 );
 GO
-
-Create table ssis_iris_models (
-    model_name varchar(30) not null default('default model') primary key,
-    model varbinary(max) not null
-);
-GO
 ```
 
-### <a name="create-a-stored-procedure-that-loads-training-data"></a>Crear un procedimiento almacenado que carga datos de entrenamiento
-
-Este script crea un procedimiento almacenado que carga Iris en una trama de datos mediante el conjunto de datos de R integrado.
+Crear un procedimiento almacenado que carga los datos de entrenamiento en la trama de datos. Este ejemplo usa el conjunto de datos de Iris integrado. 
 
 ```T-SQL
 Create procedure load_iris
@@ -94,13 +83,7 @@ begin
 end;
 ```
 
-### <a name="define-an-execute-sql-task-that-refreshes-the-model"></a>Definir una tarea Ejecutar SQL que actualiza el modelo
-
-En el Diseñador SSIS, cree un [tarea Ejecutar SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task).
-
-![Insertar datos](../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "insertar datos")
-
-La secuencia de comandos para SQLStatement es como sigue. La secuencia de comandos quita los datos existentes y, a continuación, vuelve a cargar nuevos datos mediante la **load_iris** que creó en el paso anterior del procedimiento almacenado.
+En el Diseñador SSIS, cree un [tarea Ejecutar SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) que ejecuta el procedimiento almacenado que acaba de definir. La secuencia de comandos para **SQLStatement** quita los datos existentes, especifica los datos que se va a insertar y, a continuación, llama al procedimiento almacenado para proporcionar los datos.
 
 ```T-SQL
 truncate table ssis_iris;
@@ -108,9 +91,24 @@ insert into ssis_iris("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Widt
 exec dbo.load_iris;
 ```
 
-### <a name="create-a-stored-procedure-that-generates-a-model"></a>Crear un procedimiento almacenado que genera un modelo
+![Insertar datos](../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "insertar datos")
 
-Este procedimiento almacenado es código que crea un modelo lineal con [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod). Bibliotecas de RevoScaleR y revoscalepy se cargan automáticamente en las sesiones de R y Python en SQL Server.
+### <a name="generate-a-model"></a>Generar un modelo
+
+Ejecute el siguiente script en SQL Server Management Studio para crear una tabla que almacena un modelo. 
+
+```T-SQL
+Use test-db
+GO
+
+Create table ssis_iris_models (
+    model_name varchar(30) not null default('default model') primary key,
+    model varbinary(max) not null
+);
+GO
+```
+
+Crear un procedimiento almacenado que genera un modelo lineal con [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod). Bibliotecas de RevoScaleR y revoscalepy están disponibles automáticamente en las sesiones de R y Python en SQL Server, por lo que no es necesario para importar la biblioteca.
 
 ```T-SQL
 Create procedure generate_iris_rx_model
@@ -129,11 +127,7 @@ end;
 GO
 ```
 
-### <a name="define-an-execute-sql-task-that-runs-the-model-generation-stored-procedure"></a>Definir una tarea Ejecutar SQL que se ejecuta el procedimiento almacenado de generación de modelos
-
-En este paso, [tarea Ejecutar SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) ejecuta el **generate_iris_rx_model** procedimiento almacenado, crear el modelo e insertarlos en la tabla ssis_iris_models.
-
-![Genera un modelo lineal](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "genera un modelo lineal")
+En el Diseñador SSIS, cree un [tarea Ejecutar SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) para ejecutar el **generate_iris_rx_model** procedimiento almacenado. El modelo se serializa y se guarda en la tabla ssis_iris_models. La secuencia de comandos para **SQLStatement** es como sigue:
 
 ```T-SQL
 insert into ssis_iris_models (model)
@@ -141,13 +135,15 @@ exec generate_iris_rx_model;
 update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default model';
 ```
 
-Una vez finalizada esta tarea, puede consultar el ssis_iris_models que contiene un modelo binario.
+![Genera un modelo lineal](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "genera un modelo lineal")
+
+Como un punto de control, una vez finalizada esta tarea, puede consultar el ssis_iris_models que contiene un modelo binario.
 
 ### <a name="predict-score-outcomes-using-the-trained-model"></a>Predecir los resultados (puntuación) mediante el modelo de "aprendizaje"
 
-En este ejemplo sencillo, la suposición es que ssis_iris_model es un modelo entrenado. Puesto que es el propósito de un modelo entrenado generar predicciones, ahora estamos preparados ejecutar una predicción con él. 
+Ahora que tiene código que carga los datos de entrenamiento y genera un modelo, el único paso izquierda es usar el modelo para generar predicciones. 
 
-Para ello, coloque el script de R en la consulta SQL para desencadenar la [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) función integrada de R en ssis_iris_model. Llama un procedimiento almacenado en SQL Server **predict_species_length** lleva a cabo esta tarea.
+Para ello, coloque el script de R en la consulta SQL para desencadenar la [rxPredict](https://docs.microsoft.com//machine-learning-server/r-reference/revoscaler/rxpredict) función integrada de R en ssis_iris_model. Llama un procedimiento almacenado **predict_species_length** lleva a cabo esta tarea.
 
 ```T-SQL
 Create procedure predict_species_length (@model varchar(100))
@@ -175,15 +171,13 @@ colnames(OutputDataSet) <- c("id", "Sepal.Length.Actual", "Sepal.Length.Expected
 end;
 ```
 
-### <a name="define-an-execute-sql-task-that-predicts-outcomes"></a>Definir una tarea Ejecutar SQL que prediga los resultados
-
-Uso de [tarea Ejecutar SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task), ejecute el **predict_species_length** procedimiento almacenado para generar la longitud del pétalo predicho.
-
-![Generar predicciones](../media/create-workflows-using-r-in-sql-server/ssis-exec-predictions.png "generar predicciones")
+En el Diseñador SSIS, cree un [tarea Ejecutar SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-sql-task) que se ejecuta el **predict_species_length** procedimiento almacenado para generar la longitud del pétalo previstos.
 
 ```T-SQL
 exec predict_species_length 'rxLinMod';
 ```
+
+![Generar predicciones](../media/create-workflows-using-r-in-sql-server/ssis-exec-predictions.png "generar predicciones")
 
 ### <a name="run-the-solution"></a>Ejecutar la solución
 

@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 23318c4a0ad9fceff9b293b706ff61f62643ee6d
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: cf293c0efbc5b9da8fe5338b97cb10c30f45320b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644954"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511542"
 ---
 # <a name="data-type-mappings-betweenr-and-sql-server"></a>Tipo de datos betweenR asignaciones y SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,7 +68,7 @@ De las categorías de tipos de datos compatibles con el [sistema de tipos de SQL
 
 + Tipos de datos que aparecen en la **otros** sección del artículo de sistema de tipo SQL: **cursor**, **timestamp**, **hierarchyid**,  **uniqueidentifier**, **sql_variant**, **xml**, **tabla**
 + Todos los tipos espaciales
-+ **imagen**
++ **image**
 
 ## <a name="data-types-that-might-convert-poorly"></a>Tipos de datos cuya conversión puede ser deficiente
 

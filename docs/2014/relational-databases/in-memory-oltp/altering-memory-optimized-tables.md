@@ -10,12 +10,12 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dfd0d92f5dcf82cbfdd5786fed26e3b41048f8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dab550be7e867486d7a155c2113e2d7e3b63a038
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136487"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533047"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modificar tablas con optimización para memoria
   No se admite la realización de operaciones ALTER en las tablas optimizadas para memoria. Esto incluye operaciones tales como cambiar el bucket_count, agregar o quitar un índice y agregar o quitar una columna. En este tema se proporcionan instrucciones sobre cómo actualizar las tablas optimizadas para memoria.  
@@ -33,7 +33,7 @@ ms.locfileid: "48136487"
   
      Para encontrar los objetos enlazados al esquema que hacen referencia a la tabla, utilice la consulta siguiente:  
   
-    ```tsql  
+    ```sql  
     declare @t nvarchar(255) = N'<table name>'  
   
     select r.referencing_schema_name, r.referencing_entity_name  
@@ -43,7 +43,7 @@ ms.locfileid: "48136487"
   
      Los permisos de un procedimiento almacenado pueden incluirse en scripts mediante el [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente:  
   
-    ```tsql  
+    ```sql  
     declare @sp nvarchar(255) = N'<procedure name>'  
     declare @permissions nvarchar(max) = N''  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48136487"
   
 4.  Cree una copia de la tabla y copie los datos de la tabla original en ella. La copia se puede crear mediante los siguientes [!INCLUDE[tsql](../../includes/tsql-md.md)] <sup>1</sup>.  
   
-    ```tsql  
+    ```sql  
     select * into dbo.T_copy from dbo.T  
     ```  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48136487"
   
  El script para el paso 4 debe actualizarse para reflejar los cambios deseados en el esquema. Si hay algún cambio en las columnas de la tabla, las secuencias de comandos para conocer los pasos 5 (copiar datos de tabla temporal) y 6 (volver a crear procedimientos almacenados) deben actualizarse según sea necesario.  
   
-```tsql  
+```sql  
 # Prepare for schema changes by scripting out the table, as well as associated permissions  
 # --------  
 # Usage: prepare_schema_change.ps1 server_name db_name schema_name table_name  
@@ -226,7 +226,7 @@ write-host ""
   
  Uso: execute_schema_change.ps1 *nombre_servidor ** db_name`schema_name`table_name*  
   
-```tsql  
+```sql  
 # stop execution once an error occurs  
 $ErrorActionPreference="Stop"  
   

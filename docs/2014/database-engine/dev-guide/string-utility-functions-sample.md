@@ -12,12 +12,12 @@ ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe1a3a45ce60ae4678b1b146ff41714db33bf69d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 83a9816afeae77036616bec4e850c09f613f0f74
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368877"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531317"
 ---
 # <a name="string-utility-functions-sample"></a>Ejemplo de funciones de la utilidad String
   El ejemplo de funciones de la utilidad String contiene una función con valores de tabla de transmisión de datos, escrita en Visual C# y Visual Basic, que divide una cadena delimitada por comas en una tabla con una columna. También contiene una función de agregado que convierte una columna de cadenas en una cadena delimitada por comas.  Además, se implementan una función escalar y una función con valores de tabla que permiten reemplazar y buscar expresiones regulares.  
@@ -885,7 +885,7 @@ GO
   
  Este es el script `test.sql`que prueba el ejemplo ejecutando las funciones.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
   

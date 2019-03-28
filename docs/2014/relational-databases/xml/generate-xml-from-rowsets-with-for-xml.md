@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21135669cbacdad77e5dcb2da73500c8cdbe8fa2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113735"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529067"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>Generar XML a partir de conjuntos de filas con FOR XML
   Puede generar un `xml` instancia de tipo de datos de un conjunto de filas mediante FOR XML con el nuevo **tipo** directiva.  
@@ -26,7 +26,7 @@ ms.locfileid: "48113735"
   
  La nueva directiva **FOR XML TYPE** puede emplearse para definir vistas XML de solo lectura en datos relacionales con sintaxis SQL. Es posible realizar consultas en la vista con instrucciones SQL y XQuery incrustado, como se indica en el ejemplo siguiente. También se puede hacer referencia a estas vistas SQL en procedimientos almacenados.  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>Ejemplo: vista SQL que devuelve el tipo de datos xml generado  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>Ejemplo: Tipo de datos SQL devolver generar vista xml  
  La siguiente definición de vista SQL crea una vista XML de una columna relacional, pk, y de los autores de libros recuperados de una columna XML:  
   
 ```  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5972f4dfb9ad47b4017acf36df45098c11eceb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086387"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533037"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar el modo EXPLICIT con FOR XML
   Como se describe en el tema [Generar XML mediante FOR XML](../xml/for-xml-sql-server.md), los modos RAW y AUTO no proporcionan demasiado control sobre la forma del XML generado a partir del resultado de una consulta. Sin embargo, el modo EXPLICIT ofrece la máxima flexibilidad para generar el XML que se desee a partir del resultado de una consulta.  
@@ -147,7 +147,7 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>En esta sección  
  Los siguientes ejemplos ilustran el uso del modo EXPLICIT.  
   
--   [Ejemplo: Recuperar información de los empleados](../xml/example-retrieving-employee-information.md)  
+-   [Ejemplo: Al recuperar la información de empleado](../xml/example-retrieving-employee-information.md)  
   
 -   [Ejemplo: Especificar la directiva ELEMENT](../xml/example-specifying-the-element-directive.md)  
   
@@ -155,7 +155,7 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Ejemplo: Construir elementos del mismo nivel con el modo EXPLICIT](../xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Ejemplo: especificar las directivas ID e IDREF](../xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Ejemplo: Especificar las directivas ID e IDREF](../xml/example-specifying-the-id-and-idref-directives.md)  
   
 -   [Ejemplo: Especificar las directivas ID e IDREFS](../xml/example-specifying-the-id-and-idrefs-directives.md)  
   

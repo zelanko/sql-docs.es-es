@@ -16,12 +16,12 @@ ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84fa72ff11ffb97d736dcd5ed194064367c3a5ba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 812ddd803d2a41695429902d6d8fc470ccef9576
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748338"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529226"
 ---
 # <a name="spreplmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
- Es el nombre del publicador cuyo estado se está supervisando. *publicador* es **sysname**, su valor predeterminado es null. Si **null**, se devolverá información para todos los publicadores que utilizan el distribuidor.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador cuyo estado se está supervisando. *publicador* es **sysname**, su valor predeterminado es null. Si **null**, se devolverá información para todos los publicadores que utilizan el distribuidor.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- Es el nombre de la base de datos publicada. *publisher_db* es **sysname**, su valor predeterminado es null. Si es NULL, se devuelve información sobre todas las bases de datos publicadas en el publicador.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos publicada. *publisher_db* es **sysname**, su valor predeterminado es null. Si es NULL, se devuelve información sobre todas las bases de datos publicadas en el publicador.  
   
- [ **@publication** =] **'***publicación***'**  
- Es el nombre de la publicación que se está supervisando. *publicación* es **sysname**, su valor predeterminado es null.  
+`[ @publication = ] 'publication'` Se está supervisando el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es null.  
   
- [ **@publication_type** =] *publication_type*  
- Es el tipo de publicación. *publication_type* es **int**, y puede tener uno de estos valores.  
+`[ @publication_type = ] publication_type` Si el tipo de publicación. *publication_type* es **int**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -61,24 +57,23 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**2**|Publicación de combinación.|  
 |NULL (predeterminado)|La replicación intenta determinar el tipo de publicación.|  
   
- [  **@refreshpolicy=** ] *refreshpolicy*  
- Exclusivamente para uso interno.  
+`[ @refreshpolicy = ] refreshpolicy` Solo para uso interno.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**publisher_db**|**sysname**|Es el nombre del publicador.|  
-|**publicación**|**sysname**|Es el nombre de una publicación.|  
+|**publication**|**sysname**|Es el nombre de una publicación.|  
 |**publication_type**|**int**|Es el tipo de publicación y puede tener uno de los valores siguientes.<br /><br /> **0** = publicación transaccional<br /><br /> **1** = publicación de instantáneas<br /><br /> **2** = publicación de combinación|  
 |**status**|**int**|Estado máximo de todos los agentes de replicación asociados a la publicación. Puede ser uno de estos valores.<br /><br /> **1** = iniciado<br /><br /> **2** = se ha realizado correctamente<br /><br /> **3** = en curso<br /><br /> **4** = inactivo<br /><br /> **5** = reintentando<br /><br /> **6** = error|  
-|**Advertencia**|**int**|Advertencia de umbral máximo generada por una suscripción que pertenece a la publicación, que puede ser el resultado de OR lógico de uno o más de estos valores.<br /><br /> **1** = expiration: una suscripción a una publicación transaccional no se sincronizó dentro del umbral del período de retención.<br /><br /> **2** = latency: el tiempo necesario para replicar datos desde un publicador transaccional al suscriptor supera el umbral, en segundos.<br /><br /> **4** = mergeexpiration: una suscripción a una publicación de mezcla no se sincronizó dentro del umbral del período de retención.<br /><br /> **8** = mergefastrunduration: el tiempo necesario para completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red rápida.<br /><br /> **16** = mergeslowrunduration: el tiempo necesario para completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red lenta o telefónico.<br /><br /> **32** = mergefastrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, a través de una conexión de red rápida.<br /><br /> **64** = mergeslowrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, a través de una conexión de red lenta o telefónico.|  
+|**warning**|**int**|Advertencia de umbral máximo generada por una suscripción que pertenece a la publicación, que puede ser el resultado de OR lógico de uno o más de estos valores.<br /><br /> **1** = expiration: una suscripción a una publicación transaccional no se sincronizó dentro del umbral del período de retención.<br /><br /> **2** = latency: el tiempo necesario para replicar datos desde un publicador transaccional al suscriptor supera el umbral, en segundos.<br /><br /> **4** = mergeexpiration: una suscripción a una publicación de mezcla no se sincronizó dentro del umbral del período de retención.<br /><br /> **8** = mergefastrunduration: el tiempo necesario para completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red rápida.<br /><br /> **16** = mergeslowrunduration: el tiempo necesario para completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red lenta o telefónico.<br /><br /> **32** = mergefastrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, a través de una conexión de red rápida.<br /><br /> **64** = mergeslowrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, a través de una conexión de red lenta o telefónico.|  
 |**worst_latency**|**int**|La mayor latencia, en segundos, para los cambios de datos propagados por los agentes de distribución o de registro del LOG para una publicación transaccional.|  
 |**best_latency**|**int**|La menor latencia, en segundos, para los cambios de datos propagados por los agentes de distribución o de registro del LOG para una publicación transaccional.|  
 |**average_latency**|**int**|La latencia promedio, en segundos, para los cambios de datos propagados por los agentes de distribución o de registro del LOG para una publicación transaccional.|  
 |**last_distsync**|**datetime**|Es el valor de datetime correspondiente a la última ejecución del Agente de distribución.|  
-|**retención**|**int**|Es el período de retención de la publicación.|  
-|**LatencyThreshold**|**int**|Es el umbral de latencia definido para la publicación transaccional.|  
+|**retention**|**int**|Es el período de retención de la publicación.|  
+|**latencythreshold**|**int**|Es el umbral de latencia definido para la publicación transaccional.|  
 |**expirationthreshold**|**int**|Es el umbral de expiración definido para la publicación si se trata de una publicación de combinación.|  
 |**agentnotrunningthreshold**|**int**|Es el umbral definido para el período de tiempo más largo transcurrido sin que se haya ejecutado un agente.|  
 |**subscriptioncount**|**int**|Es el número de suscripciones de una publicación.|  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27f4458299fd82a1afe74122edba3cbf886d9425
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114105"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527297"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Crear variables y columnas del tipo de datos XML
   El tipo de datos `xml` es un tipo de datos integrado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y es similar a otros tipos integrados como `int` y `varchar`. Igual que con otros tipos integrados, puede usar el `xml` tipo de datos como un tipo de columna cuando crea una tabla como un tipo de variable, tipo de parámetro, un tipo de devolución de función, o en [CAST y CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  
@@ -53,7 +53,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
 ## <a name="assigning-defaults"></a>Asignar valores predeterminados  
  En una tabla, puede asignar una instancia XML predeterminada a una columna de tipo `xml`. Puede proporcionar el XML predeterminado de una de estas dos maneras: con una constante XML o con una conversión explícita al tipo `xml`.  
   
- Para proporcionar el XML predeterminado como una constante XML, utilice la sintaxis como se muestra en el ejemplo siguiente. Tenga en cuenta que la cadena se convierte implícitamente a `xml` tipo.  
+ Para proporcionar el XML predeterminado como una constante XML, utilice la sintaxis como se muestra en el ejemplo siguiente. Observe que la cadena se convierte implícitamente al tipo `xml`.  
   
 ```  
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
@@ -91,7 +91,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- Una alternativa al uso de restricciones consiste en crear un contenedor, la función definida por el usuario para encapsular el `xml` método de tipo de datos y especificar la función definida por el usuario en la restricción check tal como se muestra en el ejemplo siguiente.  
+ Una alternativa al uso de restricciones consiste en crear una función de contenedor definida por el usuario para ajustar el método de tipo de datos `xml` y especificar una función definida por el usuario en la restricción CHECK, como se muestra a continuación.  
   
  En el siguiente ejemplo, la restricción de `Col2` especifica que cada instancia XML almacenada en esta columna debe tener un elemento `<ProductDescription>` con un atributo `ProductID` . Esta restricción se exige mediante la siguiente función definida por el usuario:  
   
@@ -135,9 +135,9 @@ INSERT INTO T values(1,'<Product />')
   
 -   Desea generar un índice XML en la columna de tipo de datos `xml` y la clave principal de la tabla principal es la misma que su clave de agrupación en clústeres. Para obtener más información, consulte [Índices XML &#40;SQL Server&#41;](xml-indexes-sql-server.md).  
   
- Crear la `xml` columna de tipo de datos en una tabla independiente si se cumplen las condiciones siguientes:  
+ Puede crear la columna de tipo de datos `xml` en otra tabla si se cumplen las condiciones siguientes:  
   
--   Desea generar un índice XML el `xml` columna de tipo de datos, pero la clave principal de la tabla principal es diferente de su clave de agrupación en clústeres, o la tabla principal no tiene una clave principal o la tabla principal es un montón (sin clave de agrupación en clústeres). Esto puede ser cierto si la tabla principal ya existe.  
+-   Desea generar un índice XML en la columna de tipo de datos `xml`, pero la clave principal de la tabla principal es distinta de su clave de agrupación en clústeres, la tabla principal no tiene una clave principal, o la tabla principal es un montón (sin clave de agrupación en clústeres). Esto puede ser cierto si la tabla principal ya existe.  
   
 -   No desea que se ralenticen los recorridos de las tablas por la presencia de la columna XML en la tabla. Ésta usa espacio independientemente de si está o no almacenada de manera consecutiva.  
   

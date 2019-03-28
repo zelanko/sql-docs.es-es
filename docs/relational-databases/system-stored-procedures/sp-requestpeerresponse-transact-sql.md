@@ -16,12 +16,12 @@ ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc4c808b60e91faa4c08750b4c48f470ddcb6ee6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9b639f692da326390808376eadfd0ab74aa706ab
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782917"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526207"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication**=] **'***publicación***'**  
- Es el nombre de la publicación en una topología punto a punto de la que se está comprobando el estado. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en una topología punto a punto para el que se está comprobando el estado. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@description**=] **'***descripción***'**  
- Información definida por el usuario que se puede utilizar para identificar solicitudes de estado individuales. *descripción* es **nvarchar (4000)**, su valor predeterminado es null.  
+`[ @description = ] 'description'` Información definida por el usuario que puede usarse para identificar las solicitudes de estado individuales. *descripción* es **nvarchar (4000)**, su valor predeterminado es null.  
   
- [ **@request_id** =] *request_id*  
- Devuelve el identificador de la nueva solicitud. *request_id* es **int** y es un parámetro de salida. Este valor puede usarse al ejecutar [sp_helppeerresponses &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) para ver todas las respuestas a una solicitud de estado.  
+`[ @request_id = ] request_id` Devuelve el identificador de la nueva solicitud. *request_id* es **int** y es un parámetro de salida. Este valor puede usarse al ejecutar [sp_helppeerresponses &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) para ver todas las respuestas a una solicitud de estado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

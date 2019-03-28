@@ -18,19 +18,19 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a15e965cef7109d42383d1a4dc4750c5dfef7374
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: fb0923c57006041c8d01fd0beecbc7cef08c1135
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213774"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535267"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Captura datos de diagnóstico e información de estado acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para detectar errores potenciales. El procedimiento se ejecuta en modo repetido y envía los resultados periódicamente. Se puede invocar desde una conexión DAC o normal.  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,8 +41,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@repeat_interval** =] **'***repeat_interval_in_seconds***'**  
- Indica el intervalo de tiempo en que el procedimiento almacenado se ejecutará varias veces para enviar información del estado.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` Indica el intervalo de tiempo en que se ejecutará el procedimiento almacenado varias veces para enviar información de estado.  
   
  *repeat_interval_in_seconds* es **int** con el valor predeterminado es 0. Los valores válidos de los parámetros son 0 o cualquier valor mayor o igual que 5. El procedimiento almacenado tiene que ejecutarse al menos cinco segundos para devolver los datos completos. El tiempo mínimo que el procedimiento almacenado se ejecuta en el modo repetido es 5 segundos.  
   
@@ -62,16 +61,16 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica la marca de tiempo de creación de la fila. Cada fila de un conjunto de filas único tiene la misma marca de tiempo.|  
 |**component_type**|**sysname**|Indica si la fila contiene información para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente o de un grupo de disponibilidad Always On de nivel de instancia:<br /><br /> instancia<br /><br /> AlwaysOn: AvailabilityGroup|  
-|**nombre_componente**|**sysname**|Indica el nombre del componente o el nombre del grupo de disponibilidad:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventos<br /><br /> *\<nombre del grupo de disponibilidad >*|  
+|**component_name**|**sysname**|Indica el nombre del componente o el nombre del grupo de disponibilidad:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventos<br /><br /> *\<nombre del grupo de disponibilidad >*|  
 |**state**|**int**|Indica el estado de mantenimiento del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Describe la columna de estado. Las descripciones que corresponden a los valores de la columna de estado son:<br /><br /> 0: Desconocido<br /><br /> 1: limpiar<br /><br /> 2: advertencia<br /><br /> 3: error|  
 |**data**|**varchar (max)**|Especifica los datos que son específicos del componente.|  
   
  Estas son las descripciones de los cinco componentes:  
   
--   **sistema**: Recopila los datos desde la perspectiva del sistema en los bloqueos por subproceso, condiciones de procesamiento graves, tareas improductivas, errores de página y el uso de CPU. Esta información genera una recomendación del estado de mantenimiento total.  
+-   **system**: Recopila los datos desde la perspectiva del sistema en los bloqueos por subproceso, condiciones de procesamiento graves, tareas improductivas, errores de página y el uso de CPU. Esta información genera una recomendación del estado de mantenimiento total.  
   
--   **recurso**:  Recopila los datos desde una perspectiva de los recursos de memoria física y virtual, grupos de búferes, páginas, caché y otros objetos de memoria. Esta información genera una recomendación general del estado de mantenimiento.  
+-   **resource**:  Recopila los datos desde una perspectiva de los recursos de memoria física y virtual, grupos de búferes, páginas, caché y otros objetos de memoria. Esta información genera una recomendación general del estado de mantenimiento.  
   
 -   **query_processing**: Recopila los datos desde la perspectiva del procesamiento de consultas en los subprocesos de trabajo, tareas, tipos de espera, sesiones de uso intensivo de CPU y tareas de bloqueo. Esta información genera una recomendación general del estado de mantenimiento.  
   

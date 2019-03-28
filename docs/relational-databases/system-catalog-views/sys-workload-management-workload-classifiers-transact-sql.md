@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 7f655c94d0c77747a4e64c93bf7ad880419aacb4
-ms.sourcegitcommit: 05bb10710489bef16bb2c53b3803e9b8eea1429a
+ms.openlocfilehash: f3ce2327034a9c7197e754dac01dfb9e6f9dc3e5
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57988760"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509592"
 ---
 # <a name="sysworkloadmanagementworkloadclassifiers-transact-sql-preview"></a>sys.workload_management_workload_classifiers (Transact-SQL) (Preview)
 
@@ -28,7 +28,7 @@ ms.locfileid: "57988760"
 |Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|Id. exclusivo del clasificador. No admite valores NULL||
-group_name|**sysname**|Se asigna a nombre del grupo de cargas de trabajo del clasificador. No admite valores NULL. |Clases de recursos estáticos</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br>Clases de recursos dinámicos</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
+group_name|**sysname**|Se asigna a nombre del grupo de cargas de trabajo del clasificador. No admite valores NULL. |Clases de recursos estáticos</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>Clases de recursos dinámicos</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
 NAME|**sysname**|Nombre del clasificador. Debe ser único para la instancia. No admite valores NULL.||
 |importance|**sysname**|Es la importancia relativa de una solicitud de este grupo de cargas de trabajo y a través de grupos de cargas de trabajo para los recursos compartidos.  Importancia especificada en el clasificador invalida la configuración de importancia del grupo de cargas de trabajo.|bajo, below_normal, normal, above_normal, alto |
 |create_time|**datetime**|Hora de que creación del clasificador. No admite valores NULL.||

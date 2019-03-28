@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 6bbce3d58f016b26618413ef0647995d0914a237
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: c0284577d8e30871b354607cf9af978e6d53df63
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432331"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512222"
 ---
 # <a name="python-language-extension-in-sql-server"></a>Extensión del lenguaje Python en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,7 +61,7 @@ Al ejecutar Python "en" SQL Server, debe encapsular el script de Python dentro d
 
 Después de la secuencia de comandos se ha incrustado en el procedimiento almacenado, cualquier aplicación que se puede llamar a un procedimiento almacenado podrá iniciar la ejecución del código Python.  A partir de entonces, SQL Server administra la ejecución de código como se resume en el diagrama siguiente.
 
-![script de python de base de datos](../../advanced-analytics/python/media/script-in-db-python2.png)
+![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
 1. Una solicitud para el runtime de Python se indica mediante el parámetro `@language='Python'` pasa al procedimiento almacenado. SQL Server envía esta solicitud al servicio Launchpad.
 2. El servicio Launchpad inicia el selector adecuado; en este caso, PythonLauncher.
@@ -80,7 +80,7 @@ Puede ejecutar scripts de Python desde un equipo remoto, como un equipo portáti
 
 El diagrama siguiente resume el flujo de trabajo global cuando las secuencias de comandos se envían desde un equipo remoto.
 
-![sqlcc remoto desde python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
+![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
 1. Para las funciones que se admiten en **revoscalepy**, el runtime de Python llama a una función de enlace, que a su vez llama a BxlServer.
 2. BxlServer se incluye con Machine Learning Services (In-Database) y se ejecuta en un proceso independiente desde el tiempo de ejecución de Python.

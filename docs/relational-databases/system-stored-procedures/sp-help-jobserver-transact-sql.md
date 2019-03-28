@@ -18,12 +18,12 @@ ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18408265b75503bc73905eb561f118e4ea950fa8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba2120b4c48ac9df9cc901b4ee789d95f9fc0357
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729903"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533297"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,14 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id=** ] *job_id*  
- Número de identificación del trabajo para el que se va a devolver información. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id` El número de identificación del trabajo que se va a devolver información. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
   
- [  **@job_name=** ] **'***job_name***'**  
- Nombre del trabajo para el que se devuelve información. *job_name* es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'` El nombre del trabajo que se va a devolver información. *job_name* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
- [  **@show_last_run_details=** ] *show_last_run_details*  
- Indica si la información acerca de la última ejecución forma parte del conjunto de resultados. *show_last_run_details* es **tinyint**, su valor predeterminado es **0**. **0** no incluye información de última ejecución, y **1** does.  
+`[ @show_last_run_details = ] show_last_run_details` Es si la información de última ejecución forma parte del conjunto de resultados. *show_last_run_details* es **tinyint**, su valor predeterminado es **0**. **0** no incluye información de última ejecución, y **1** does.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

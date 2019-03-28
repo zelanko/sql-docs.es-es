@@ -18,12 +18,12 @@ ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d4ee1eb7770f9d2c9fe3ab8ed58f59c7d05302a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3344ad65a2445a8d39451f6a048f057b7158d135
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833721"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533407"
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@traceid=** ] *trace_id*  
- Es el número asignado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el nuevo elemento trace. Se pasará por alto cualquier entrada proporcionada por el usuario. *trace_id* es **int**, su valor predeterminado es null. El usuario emplea el *trace_id* valor para identificar, modificar y controlar el seguimiento definido por este procedimiento almacenado.  
+`[ @traceid = ] trace_id` Es el número asignado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el nuevo elemento trace. Se pasará por alto cualquier entrada proporcionada por el usuario. *trace_id* es **int**, su valor predeterminado es null. El usuario emplea el *trace_id* valor para identificar, modificar y controlar el seguimiento definido por este procedimiento almacenado.  
   
- [  **@options=** ] *option_value*  
- Especifica las opciones establecidas para el seguimiento. *option_value* es **int**, no tiene ningún valor predeterminado. Los usuarios pueden elegir una combinación de estas opciones especificando el valor de la suma de las opciones seleccionadas. Por ejemplo, para activar ambas opciones, TRACE_FILE_ROLLOVER y SHUTDOWN_ON_ERROR, especifique **6** para *option_value*.  
+`[ @options = ] option_value` Especifica las opciones establecidas para el seguimiento. *option_value* es **int**, no tiene ningún valor predeterminado. Los usuarios pueden elegir una combinación de estas opciones especificando el valor de la suma de las opciones seleccionadas. Por ejemplo, para activar ambas opciones, TRACE_FILE_ROLLOVER y SHUTDOWN_ON_ERROR, especifique **6** para *option_value*.  
   
  En la tabla siguiente se muestran las opciones, las descripciones y sus valores.  
   
@@ -62,8 +60,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |SHUTDOWN_ON_ERROR|**4**|Especifica que, si por cualquier razón, no se puede escribir el seguimiento en el archivo, SQL Server se cerrará. Esta opción es muy útil cuando se realizan seguimientos de auditoría de seguridad.|  
 |TRACE_PRODUCE_BLACKBOX|**8**|Especifica que el servidor guardará un registro de los últimos 5 MB de información de seguimiento producidos por el servidor. TRACE_PRODUCE_BLACKBOX es incompatible con las demás opciones.|  
   
- [  **@tracefile=** ] *'**trace_file**'*  
- Especifica la ubicación y el nombre de archivo en que se escribirá el seguimiento. *trace_file* es **nvarchar(245)** no tiene ningún valor predeterminado. *trace_file* puede ser un directorio local (como N 'C:\MSSQL\Trace\trace.trc') o una ruta UNC a un recurso compartido o una ruta de acceso (N'\\\\*Servername*\\*Sharename* \\ *Directory*\trace.trc').  
+`[ @tracefile = ] 'trace_file'` Especifica la ubicación y el nombre de archivo a la que se escribirá el seguimiento. *trace_file* es **nvarchar(245)** no tiene ningún valor predeterminado. *trace_file* puede ser un directorio local (como N 'C:\MSSQL\Trace\trace.trc') o una ruta UNC a un recurso compartido o una ruta de acceso (N'\\\\*Servername*\\*Sharename* \\ *Directory*\trace.trc').  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se anexará un **.trc** extensión a todos los nombres de archivo de seguimiento. Si la opción TRACE_FILE_ROLLOVER y un *max_file_size* se especifican, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un nuevo archivo de seguimiento cuando el archivo de seguimiento original alcanza su tamaño máximo. El nuevo archivo tiene el mismo nombre que el archivo original, pero _*n* se anexa para indicar su secuencia, empezando por **1**. Por ejemplo, si el primer archivo de seguimiento se denomina **nombreDeArchivo.trc**, el segundo archivo de seguimiento se denomina **filename_1.trc**.  
   
@@ -78,18 +75,15 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  *trace_file* no se puede especificar cuando se usa la opción TRACE_PRODUCE_BLACKBOX.  
   
- [  **@maxfilesize=** ] *max_file_size*  
- Especifica el tamaño máximo en megabytes (MB) que puede alcanzar un archivo de seguimiento. *max_file_size* es **bigint**, con un valor predeterminado de **5**.  
+`[ @maxfilesize = ] max_file_size` Especifica que el tamaño máximo en megabytes (MB) en un archivo de seguimiento puede crecer. *max_file_size* es **bigint**, con un valor predeterminado de **5**.  
   
  Si se especifica este parámetro sin la opción TRACE_FILE_ROLLOVER, el seguimiento detiene el registro en el archivo cuando el espacio en disco utilizado excede la cantidad especificada por *max_file_size*.  
   
- [  **@stoptime=** ] **'***stop_time***'**  
- Especifica la fecha y la hora de la detención del seguimiento. *stop_time* es **datetime**, su valor predeterminado es null. Si es NULL, el seguimiento se ejecuta hasta que se detiene de forma manual o bien hasta que se cierra el servidor.  
+`[ @stoptime = ] 'stop_time'` Especifica la fecha y hora que se detendrá el seguimiento. *stop_time* es **datetime**, su valor predeterminado es null. Si es NULL, el seguimiento se ejecuta hasta que se detiene de forma manual o bien hasta que se cierra el servidor.  
   
  Si ambos *stop_time* y *max_file_size* se especifican, y TRACE_FILE_ROLLOVER, no se especifica, el seguimiento se detiene cuando se alcanza la hora de detención especificada o el tamaño máximo de archivo. Si *stop_time*, *max_file_size*y se especifica TRACE_FILE_ROLLOVER, el seguimiento se detiene en la hora de detención especificada, suponiendo que el seguimiento no se llene la unidad.  
   
- [  **@filecount=** ] **'***max_rollover_files***'**  
- Especifica el número máximo de archivos de seguimiento que se pueden mantener con el mismo nombre de archivo base. *MAX_ROLLOVER_FILES* es **int**, mayor que uno. Este parámetro solo es válido si se especifica la opción TRACE_FILE_ROLLOVER. Cuando *max_rollover_files* se especifica, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta mantener más de *max_rollover_files* archivos de seguimiento eliminando el archivo de seguimiento más antiguo antes de abrir un archivo de seguimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hace un seguimiento de la edad de los archivos de seguimiento agregando un número al nombre del archivo base.  
+`[ @filecount = ] 'max_rollover_files'` Especifica los archivos de seguimiento o el número máximos para mantenerse con el mismo nombre de archivo base. *MAX_ROLLOVER_FILES* es **int**, mayor que uno. Este parámetro solo es válido si se especifica la opción TRACE_FILE_ROLLOVER. Cuando *max_rollover_files* se especifica, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta mantener más de *max_rollover_files* archivos de seguimiento eliminando el archivo de seguimiento más antiguo antes de abrir un archivo de seguimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hace un seguimiento de la edad de los archivos de seguimiento agregando un número al nombre del archivo base.  
   
  Por ejemplo, cuando el *trace_file* parámetro se especifica como "c:\mytrace", un archivo con el nombre "c:\mytrace_123.trc" es anterior a un archivo con el nombre "c:\mytrace_124.trc". Si *max_rollover_files* está establecido en 2, SQL Server eliminará el archivo "c:\mytrace_123.trc" antes de crear el archivo de seguimiento "c:\mytrace_125.trc".  
   

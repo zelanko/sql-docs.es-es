@@ -10,15 +10,15 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3685674df21d909d88779d1aa82030b8ee3cc283
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142725"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527525"
 ---
 # <a name="create-xml-indexes"></a>Crear índices XML
   En este tema se describe cómo crear índices XML principales y secundarios.  
@@ -46,7 +46,7 @@ ms.locfileid: "48142725"
   
  No se puede crear un índice XML en un `xml` columna en una vista, de tipo en un **tabla** con valores variable con `xml` columnas de tipo o `xml` variables de tipo.  
   
--   Para cambiar un `xml` XML con tipo de columna de tipo de sin tipo a, o viceversa, mediante la opción ALTER TABLE ALTER COLUMN, no debe incluir ningún índice XML en la columna. Si existe alguno, debe quitarse antes de intentar cambiar el tipo de columna.  
+-   Para cambiar una columna de tipo `xml` de XML con tipo a XML sin tipo, o viceversa, con la opción ALTER TABLE ALTER COLUMN, la columna no debe incluir ningún índice XML. Si existe alguno, debe quitarse antes de intentar cambiar el tipo de columna.  
   
 -   Al crear un índice XML, la opción ARITHABORT debe configurarse en ON. Para consultar, insertar, eliminar o actualizar valores en la columna XML usando métodos de tipo de datos XML, debe establecerse la misma opción en la conexión. De lo contrario, los métodos de tipo de datos XML darán error.  
   

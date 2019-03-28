@@ -16,12 +16,12 @@ ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88cf393ac488f6e6f4c078b9bd346a3e6cb53204
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0576f180809a4432af022d278867d847c8087dd4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823059"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526217"
 ---
 # <a name="sprestoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication** =] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, con el valor predeterminado de **todas**. Cuando se especifica, solo se restauran los intervalos de identidad de esa publicación.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, con el valor predeterminado de **todas**. Cuando se especifica, solo se restauran los intervalos de identidad de esa publicación.  
   
- [ **@article** =] **'***artículo***'**  
- Es el nombre del artículo. *artículo* es **sysname**, con un valor predeterminado de **todas**. Cuando se especifica, solo se restauran los intervalos de identidad de ese artículo.  
+`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, con un valor predeterminado de **todas**. Cuando se especifica, solo se restauran los intervalos de identidad de ese artículo.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

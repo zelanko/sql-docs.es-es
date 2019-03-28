@@ -16,12 +16,12 @@ ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3c8037bdccc0b04e2c11399f09e5a99c109df65
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 429a0c439f5257989e6fb7e85d34a8ea576ad41a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134115"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526997"
 ---
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +40,13 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicación_**'**  
- Es el nombre de la publicación cuyo contenido de instantáneas se va a copiar. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación cuyo contenido de instantáneas se va a copiar. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@destination_folder=**] **'**_destination_folder_**'**  
- Es el nombre de la carpeta donde va a copiar el contenido de la instantánea de publicación. *destination_folder*es **nvarchar (255)**, no tiene ningún valor predeterminado. El *destination_folder* puede ser una ubicación alternativa, como en otro servidor, en una unidad de red o en un medio extraíble (como CD-ROM o discos extraíbles).  
+`[ @destination_folder = ] 'destination_folder'` Es el nombre de la carpeta donde va a copiar el contenido de la instantánea de publicación. *destination_folder*es **nvarchar (255)**, no tiene ningún valor predeterminado. El *destination_folder* puede ser una ubicación alternativa, como en otro servidor, en una unidad de red o en un medio extraíble (como CD-ROM o discos extraíbles).  
   
- [  **@subscriber=**] **'**_suscriptor_**'**  
- Es el nombre del suscriptor. *suscriptor* es de tipo sysname y su valor predeterminado es NULL.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *suscriptor* es de tipo sysname y su valor predeterminado es NULL.  
   
- [  **@subscriber_db=**] **'**_subscriber_db_**'**  
- Es el nombre de la base de datos de suscripción. *subscriber_db* es de tipo sysname y su valor predeterminado es NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripción. *subscriber_db* es de tipo sysname y su valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

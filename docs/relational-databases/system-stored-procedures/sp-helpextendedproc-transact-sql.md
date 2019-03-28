@@ -18,12 +18,12 @@ ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43d9180ace10e61bbb9a9e65f48e718b8b426ea8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fc6f82a6f39755b6810a3a1043833fcc13213a0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763883"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529137"
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@funcname =**] **'***procedimiento***'**  
- Es el nombre del procedimiento almacenado extendido cuya información se va a presentar. *procedimiento* es **sysname**, su valor predeterminado es null.  
+`[ @funcname = ] 'procedure'` Es el nombre del procedimiento almacenado extendido cuya información se notifica. *procedimiento* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -54,7 +53,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre del procedimiento almacenado extendido.|  
-|**archivo DLL**|**nvarchar(255)**|Nombre de la DLL.|  
+|**dll**|**nvarchar(255)**|Nombre de la DLL.|  
   
 ## <a name="remarks"></a>Comentarios  
  Cuando *procedimiento* se especifica, **sp_helpextendedproc** informes en el procedimiento almacenado extendido. Si no se proporciona este parámetro, **sp_helpextendedproc** pertenece devuelve todos los extendidos nombres de procedimientos almacenados y los nombres de archivo DLL para que cada procedimiento almacenado extendido.  
@@ -74,7 +73,7 @@ EXEC sp_helpextendedproc;
 GO  
 ```  
   
-### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>B. Presentar ayuda acerca de un solo procedimiento almacenado extendido  
+### <a name="b-reporting-help-on-a-single-extended-stored-procedure"></a>b. Presentar ayuda acerca de un solo procedimiento almacenado extendido  
  En el ejemplo siguiente se notifica en el `xp_cmdshell` el procedimiento almacenado extendido.  
   
 ```  

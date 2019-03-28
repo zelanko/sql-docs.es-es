@@ -10,12 +10,12 @@ ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2adbcc07134b80e78dbc73691e275d56b6f90c6
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356576"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527807"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implementar columnas LOB en una tabla con optimización para memoria
   Las tablas optimizadas para memoria no tienen almacenamiento consecutivos o de objetos grandes (LOB) (esta limitación se ha quitado en SQL Server 2016 y versiones posteriores de - vea [tipos de datos admitidos para OLTP en memoria](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), y el límite de tamaño de fila es de 8060 bytes. El almacenamiento de valores binarios o de cadenas de caracteres grandes se puede realizar de dos maneras:  
@@ -80,7 +80,7 @@ go</code></pre>
   
  También puede definir una tabla basada en disco para las columnas LOB. Cada una de las filas de la tabla optimizada para memoria tendrá una fila correspondiente en la tabla basada en disco con todos los valores de LOB para esa fila. En el ejemplo siguiente, los datos sobre los empleados se almacenan en una tabla optimizada para memoria, mientras que la fotografía de cada uno de ellos se almacena en una tabla basada en disco.  
   
-```tsql  
+```sql  
 CREATE TABLE EmployeePhoto (  
 EmployeeId int NOT NULL PRIMARY KEY CLUSTERED,  
 Photo varbinary(max))  

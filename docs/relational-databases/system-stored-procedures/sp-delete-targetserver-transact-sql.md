@@ -18,12 +18,12 @@ ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63b8fdb66b868d7fc0c1c7a83d574bafb92224b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 194395728e60f31c689293191be2cedca4d549f3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692253"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528917"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@server_name=** ] **'***server***'**  
- Es el nombre del servidor que se va a quitar como servidor de destino disponible. *servidor* es **nvarchar (30)**, no tiene ningún valor predeterminado.  
+`[ @server_name = ] 'server'` El nombre del servidor que se va a quitar como servidor de destino disponible. *servidor* es **nvarchar (30)**, no tiene ningún valor predeterminado.  
   
- [  **@clear_downloadlist=** ] *clear_downloadlist*  
- Especifica si se debe borrar la lista de descarga para el servidor de destino. *clear_downloadlist* es de tipo **bit**, su valor predeterminado es **1**. Cuando *clear_downloadlist* es **1**, el procedimiento borra la lista de descarga para el servidor antes de eliminar el servidor. Cuando *clear_downloadlist* es **0**, no se borra la lista de descarga.  
+`[ @clear_downloadlist = ] clear_downloadlist` Especifica si se debe borrar la lista de descarga para el servidor de destino. *clear_downloadlist* es de tipo **bit**, su valor predeterminado es **1**. Cuando *clear_downloadlist* es **1**, el procedimiento borra la lista de descarga para el servidor antes de eliminar el servidor. Cuando *clear_downloadlist* es **0**, no se borra la lista de descarga.  
   
- [  **@post_defection=** ] *post_defection*  
- Especifica si se va a enviar una instrucción Dar de baja al servidor de destino. *post_defection* es de tipo **bit**, su valor predeterminado es 1. Cuando *post_defection* es **1**, el procedimiento envía una instrucción dar de baja al servidor de destino antes de eliminar el servidor. Cuando *post_defection* es **0**, el procedimiento no expone una instrucción dar de baja al servidor de destino.  
+`[ @post_defection = ] post_defection` Especifica si se debe exponer una instrucción dar de baja al servidor de destino. *post_defection* es de tipo **bit**, su valor predeterminado es 1. Cuando *post_defection* es **1**, el procedimiento envía una instrucción dar de baja al servidor de destino antes de eliminar el servidor. Cuando *post_defection* es **0**, el procedimiento no expone una instrucción dar de baja al servidor de destino.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -18,12 +18,12 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e7305e73d1f2f35d5cb4666e68114c9ee8f58e7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 41c84c97027c8bfae82d3ac457c454f6a4d497e6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126215"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533367"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@rolename =** ] **'**_rol_**'**  
- Es el nombre de un rol fijo de base de datos válida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *rol* es **sysname**, su valor predeterminado es null. Si *rol* no se especifica, se muestran los permisos para todos los roles fijos de base de datos.  
+`[ @rolename = ] 'role'` Es el nombre de una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rol fijo de base de datos. *rol* es **sysname**, su valor predeterminado es null. Si *rol* no se especifica, se muestran los permisos para todos los roles fijos de base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -54,7 +53,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|Nombre del rol fijo de base de datos|  
-|**Permiso**|**nvarchar (70)**|Los permisos asociados con **DbFixedRole**|  
+|**Permiso**|**nvarchar(70)**|Los permisos asociados con **DbFixedRole**|  
   
 ## <a name="remarks"></a>Comentarios  
  Para mostrar una lista de los roles fijos de base de datos, ejecute **sp_helpdbfixedrole**. En la tabla siguiente se muestran los roles fijos de base de datos.  

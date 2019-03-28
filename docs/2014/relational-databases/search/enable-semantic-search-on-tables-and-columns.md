@@ -12,12 +12,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5949bbc7d448c60c5ffbdc028f880a09181c986e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 46d9b46698e4416f2ad9ab15b2fb8a223ab7b7c7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528390"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529587"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar la búsqueda semántica en tablas y columnas
   Describe cómo habilitar o deshabilitar la indización semántica estadística de las columnas seleccionadas que contienen documentos o texto.  
@@ -42,7 +42,7 @@ ms.locfileid: "52528390"
   
 -   Puede crear un índice en columnas que contenga cualquiera de los tipos de datos admitidos para la indización de texto completo. Para obtener más información, vea [Crear y administrar índices de texto completo](create-and-manage-full-text-indexes.md).  
   
--   Puede especificar cualquier tipo de documento admitido para la indización de texto completo para las columnas `varbinary(max)`. Para obtener más información, consulte [How To: Determinar que documento tipos se pueden indizar](#doctypes) en este tema.  
+-   Puede especificar cualquier tipo de documento admitido para la indización de texto completo para las columnas `varbinary(max)`. Para obtener más información, consulte: [Procedimientos: Determinar qué tipos de documento se pueden indexar](#doctypes) en este tema.  
   
 -   La indexación semántica crea dos tipos de índices para las columnas que seleccione: un índice de frases clave y un índice de similitud de documentos. No puede seleccionar solo uno de los tipos de índice o el otro cuando habilite la indización semántica. Sin embargo, puede consultar estos dos índices por separado. Para obtener más información, vea [Buscar frases clave en documentos con la búsqueda semántica](find-key-phrases-in-documents-with-semantic-search.md) y [Buscar documentos similares y relacionados con la búsqueda semántica](find-similar-and-related-documents-with-semantic-search.md).  
   
@@ -56,11 +56,11 @@ ms.locfileid: "52528390"
  **Crear un nuevo índice semántico con Transact-SQL**  
  Llame a la instrucción **CREATE FULLTEXT INDEX** y especifique **STATISTICAL_SEMANTICS** para cada columna en la que quiera crear un índice semántico. Para obtener más información sobre todas las opciones de esta instrucción, vea [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql).  
   
- **Ejemplo 1: Crear un índice único, un índice de texto completo y un índice semántico**  
+ **Ejemplo 1: Creación de un índice único, un índice de texto completo y un índice semántico**  
   
  En el ejemplo siguiente, se crea un catálogo de texto completo predeterminado, **ft**. Después, se crea un índice único en la columna **JobCandidateID** de la tabla **HumanResources.JobCandidate** de la base de datos de ejemplo AdventureWorks2012. Este índice único se requiere como columna de clave de un índice de texto completo. Después, en el ejemplo se crea un índice de texto completo y un índice semántico en la columna **Resume** .  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -78,13 +78,13 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
- **Ejemplo 2: Crear un índice de texto completo y semántico en varias columnas con rellenado de índice retrasado**  
+ **Ejemplo 2: Creación de un índice de texto completo y semántico en varias columnas con rellenado de índice retrasado**  
   
  En el ejemplo siguiente se crea un catálogo de texto completo, **documents_catalog**, en la base de datos de ejemplo AdventureWorks2012. A continuación, se crea un índice de texto completo que usa este nuevo catálogo. El índice de texto completo se crea en las columnas **Title**, **DocumentSummary**y **Document** de la tabla **Production.Document** , mientras que el índice semántico se crea únicamente en la columna **Document** . Este índice de texto completo usa el catálogo de texto completo recién creado y un índice de clave única existente, **PK_Document_DocumentID**. Tal como se recomienda, esta clave de índice se crea en una columna de enteros, **DocumentID**. En el ejemplo se especifica el LCID de inglés, 1033, que es el idioma de los datos de las columnas.  
   
  En este ejemplo también se especifica que el seguimiento de cambios está desactivado sin rellenado. Posteriormente, durante las horas de menor actividad, en el ejemplo se usa una instrucción **ALTER FULLTEXT INDEX** para iniciar un rellenado completo en el nuevo índice y habilitar el seguimiento automático de cambios.  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -107,7 +107,7 @@ GO
   
  Posteriormente, durante horas de menor actividad, el índice se rellena:  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -129,11 +129,11 @@ GO
   
 -   Para agregar una indexación semántica a una columna que ya esté habilitada para la indexación de texto completo, use la opción **ADD STATISTICAL_SEMANTICS** . Solo puede agregar una indización semántica a una columna en una única instrucción **ALTER** .  
   
- **Ejemplo: Agregar una indización semántica a una columna que ya tenga indización de texto completo**  
+ **Ejemplo: Incorporación de una indización semántica a una columna que ya tenga indexación de texto completo**  
   
  En el ejemplo siguiente se modifica un índice de texto completo existente en la tabla **Production.Document** de la base de datos de ejemplo AdventureWorks2012. En el ejemplo se agrega un índice semántico en la columna **Document** de la tabla **Production.Document** , que ya tiene un índice de texto completo. En el ejemplo se especifica que el índice no se volverá a rellenar automáticamente.  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -158,7 +158,7 @@ GO
  **Quitar un índice semántico con Transact-SQL**  
  -   Para quitar la indexación semántica solo de una columna o de algunas columnas, se debe llamar a la instrucción **ALTER FULLTEXT INDEX** con la opción **ALTER COLUMN***nombre_columna***DROP STATISTICAL_SEMANTICS**. Puede quitar la indización de varias columnas en una sola instrucción **ALTER** .  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -170,7 +170,7 @@ GO
   
 -   Para quitar la indexación de texto completo y semántica de una columna, se debe llamar a la instrucción **ALTER FULLTEXT INDEX** con la opción **ALTER COLUMN***nombre_columna***DROP**.  
   
-    ```tsql  
+    ```sql  
     USE database_name  
     GO  
   
@@ -197,7 +197,7 @@ GO
   
  Un valor devuelto de 1 indica que la búsqueda de texto completo y la búsqueda semántica están habilitadas para la base de datos; un valor devuelto de 0 indica lo contrario.  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -219,7 +219,7 @@ GO
   
      Un valor devuelto de 1 indica que la búsqueda semántica está habilitada para la columna; un valor devuelto de 0 indica lo contrario.  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -228,7 +228,7 @@ GO
   
      Un valor de 1 en la columna **statistical_semantics** indica que la columna especificada está habilitada para la indexación semántica además de la indexación de texto completo.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -246,7 +246,7 @@ GO
   
  Consulte la vista de catálogo [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql).  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  

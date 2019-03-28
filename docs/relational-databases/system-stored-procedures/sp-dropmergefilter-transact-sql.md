@@ -16,12 +16,12 @@ ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7de6c03b133746156f414687fd661f70b40e842e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 76d83e2d36307280249ccd886c464e8cd484c296
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128122"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533227"
 ---
 # <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,24 +40,19 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicación_**'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@article=**] **'**_artículo_**'**  
- Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@filtername=**] **'**_filtername_**'**  
- Es el nombre del filtro que se va a quitar. *filtername* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @filtername = ] 'filtername'` Es el nombre del filtro que se va a quitar. *filtername* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
- Habilita o deshabilita la capacidad de que se invalide una instantánea. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Habilita o deshabilita la capacidad de invalidar una instantánea. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
   
  **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la instantánea no es válido.  
   
  **1** significa que los cambios en el artículo de mezcla puede invalidar la instantánea no es válido. Si es así, un valor de **1** concede permiso para la nueva instantánea que se produzca.  
   
- [ **@force_reinit_subscription**=] *force_reinit_subscription*  
- Habilita o deshabilita la funcionalidad para marcar una suscripción como no válida. *force_reinit_subscription* es un **bit**, su valor predeterminado es **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Habilita o deshabilita la capacidad de marcar una suscripción como no válido. *force_reinit_subscription* es un **bit**, su valor predeterminado es **0**.  
   
  **0** especifica que los cambios realizados en el filtro de artículo de mezcla no invalidarán las suscripciones no es válido.  
   

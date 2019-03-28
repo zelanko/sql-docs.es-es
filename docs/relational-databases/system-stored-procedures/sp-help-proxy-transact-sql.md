@@ -18,12 +18,12 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b678182b4580cfac23d6e777c492d22b8f458fba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e0bbf6e8befa751ee680cd97c2a29ad9f0fe084
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618003"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527697"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@proxy_id** =] *Id.*  
- Número de identificación del proxy del que se muestra información. El *proxy_id* es **int**, su valor predeterminado es null. Ya sea el *id* o el *proxy_name* se puede especificar.  
+`[ @proxy_id = ] id` El número de identificación del proxy del servidor proxy para mostrar información. El *proxy_id* es **int**, su valor predeterminado es null. Ya sea el *id* o el *proxy_name* se puede especificar.  
   
- [ **@proxy_name** =] **'***proxy_name***'**  
- Nombre del proxy del que se va a mostrar información. El *proxy_name* es **sysname**, su valor predeterminado es null. Ya sea el *id* o el *proxy_name* se puede especificar.  
+`[ @proxy_name = ] 'proxy_name'` El nombre del servidor proxy para mostrar información. El *proxy_name* es **sysname**, su valor predeterminado es null. Ya sea el *id* o el *proxy_name* se puede especificar.  
   
- [ **@subsystem_name** =] '*subsystem_name*'  
- Nombre del subsistema del que se van a mostrar los servidores proxy. El *subsystem_name* es **sysname**, su valor predeterminado es null. Cuando *subsystem_name* se especifica, *nombre* también debe especificarse.  
+`[ @subsystem_name = ] 'subsystem_name'` El nombre del subsistema para mostrar los servidores proxy para. El *subsystem_name* es **sysname**, su valor predeterminado es null. Cuando *subsystem_name* se especifica, *nombre* también debe especificarse.  
   
  En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
   
@@ -69,8 +66,7 @@ sp_help_proxy
 |Dts|Ejecución de paquetes SSIS|  
 |PowerShell|Script de PowerShell|  
   
- [ **@name** =] '*nombre*'  
- Nombre del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del que se van a mostrar los servidores proxy. El nombre es **nvarchar (256)**, su valor predeterminado es null. Cuando *nombre* se especifica, *subsystem_name* también debe especificarse.  
+`[ @name = ] 'name'` El nombre de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para mostrar los servidores proxy para inicio de sesión. El nombre es **nvarchar (256)**, su valor predeterminado es null. Cuando *nombre* se especifica, *subsystem_name* también debe especificarse.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -83,7 +79,7 @@ sp_help_proxy
 |**Nombre**|**sysname**|Nombre del proxy.|  
 |**credential_identity**|**sysname**|Nombre de dominio y nombre de usuario de Microsoft Windows para la credencial asociada con el proxy.|  
 |**enabled**|**tinyint**|Si el proxy está habilitado. { **0** = no habilitado, **1** = habilitado}|  
-|**Descripción**|**nvarchar(1024)**|Descripción de este proxy.|  
+|**description**|**nvarchar(1024)**|Descripción de este proxy.|  
 |**user_sid**|**varbinary(85)**|Id. de seguridad del usuario de Windows para este proxy.|  
 |**credential_id**|**int**|Identificador de la credencial asociada con este proxy.|  
 |**credential_identity_exists**|**int**|Si existe credential_identity. { 0 = no existe, 1 = existe }|  
@@ -114,7 +110,7 @@ EXEC dbo.sp_help_proxy ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-proxy"></a>B. Mostrar información de un proxy específico  
+### <a name="b-listing-information-for-a-specific-proxy"></a>b. Mostrar información de un proxy específico  
  El ejemplo siguiente muestra información del proxy denominado `Catalog application proxy`.  
   
 ```  

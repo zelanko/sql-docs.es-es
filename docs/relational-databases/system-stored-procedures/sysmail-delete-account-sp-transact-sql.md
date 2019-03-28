@@ -18,12 +18,12 @@ ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb4ffde27fb1b0362debfc4809a79de05e4e966d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96fb6d88431e0740f17db8c00c0e3e490220561c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815821"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537106"
 ---
 # <a name="sysmaildeleteaccountsp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@account_id** =] *account_id*  
- Número de Id. de la cuenta que se va a eliminar. *account_id* es **int**, no tiene ningún valor predeterminado. Cualquier *account_id* o *account_name* debe especificarse.  
+`[ @account_id = ] account_id` El número de Id. de la cuenta que desea eliminar. *account_id* es **int**, no tiene ningún valor predeterminado. Cualquier *account_id* o *account_name* debe especificarse.  
   
- [ **@account_name** =] **'***account_name***'**  
- Nombre de la cuenta que se va a eliminar. *account_name* es **sysname**, no tiene ningún valor predeterminado. Cualquier *account_id* o *account_name* debe especificarse.  
+`[ @account_name = ] 'account_name'` El nombre de la cuenta que desea eliminar. *account_name* es **sysname**, no tiene ningún valor predeterminado. Cualquier *account_id* o *account_name* debe especificarse.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

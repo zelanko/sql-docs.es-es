@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/31/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 5e4ac26b10a8a9f7e17345e927ee89ea6c731fb1
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 2df4fa2fd9ef52fe5edbca9440f73f351553f1ed
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644894"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511532"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>Errores de scripting de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ Si funciona el runtime de R, pero el script devuelve errores, se recomienda que 
 También se recomienda que revise y escribir un poco el script para corregir cualquier problema con los tipos de datos que pueden surgir al mover datos entre R y el motor de base de datos. Para obtener más información, consulte [tipos de datos y las bibliotecas de R](r/r-libraries-and-data-types.md).
 
 Además, puede usar el paquete sqlrutils para incluir el script de R en un formato que sea más fácil uso como un procedimiento almacenado. Para obtener más información, vea:
-* [paquete sqlrutils](r/ref-r-sqlrutils.md)
+* [sqlrutils package](r/ref-r-sqlrutils.md)
 * [Crear un procedimiento almacenado mediante sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## <a name="script-returns-inconsistent-results"></a>Script devuelve resultados incoherentes

@@ -16,12 +16,12 @@ ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 772dc410690a4a29811e2a1bd84ec1ac6d12b3fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f40856b20a76abdb7a3788f2564c02fe2e090619
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779657"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529347"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,15 +38,14 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@frompublisher=** ] *frompublisher*  
- Especifica si se llama al procedimiento almacenado en el publicador o en el distribuidor. *frompublisher* es de tipo bit, con un valor predeterminado de 0. **1** significa que el procedimiento almacenado se llama desde el publicador, y **0** significa que el procedimiento almacenado se llama desde el distribuidor.  
+`[ @frompublisher = ] frompublisher` Especifica si se llama al procedimiento almacenado en el publicador o en el distribuidor. *frompublisher* es de tipo bit, con un valor predeterminado de 0. **1** significa que el procedimiento almacenado se llama desde el publicador, y **0** significa que el procedimiento almacenado se llama desde el distribuidor.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID. del agente.|  
-|**Nombre**|**Nvarchar (100)**|Nombre del agente.|  
+|**Nombre**|**nvarchar(100)**|Nombre del agente.|  
 |**job_id**|**uniqueidentifier**|Id. único del trabajo del agente.|  
 |**job_login**|**nvarchar(512)**|Es la cuenta de Windows bajo la que se ejecuta el agente de distribución, que se devuelve en el formato *dominio*\\*username*.|  
 |**job_password**|**sysname**|Por motivos de seguridad, un valor de **\* \* \* \* \* \* \* \* \* \*** siempre es Devuelve.|  

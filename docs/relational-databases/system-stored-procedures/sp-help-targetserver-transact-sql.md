@@ -18,12 +18,12 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aacb30e4c809f965635b9d8640d8fcd690cd340f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747433"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529697"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@server_name=** ] **'***nombre_servidor***'**  
- Nombre del servidor cuya información se va a devolver. *nombre_servidor* es **nvarchar (30)**, su valor predeterminado es null.  
+`[ @server_name = ] 'server_name'` El nombre del servidor para el que se va a devolver información. *nombre_servidor* es **nvarchar (30)**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -54,14 +53,14 @@ sp_help_targetserver
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Número de identificación del servidor.|  
 |**server_name**|**nvarchar(30)**|Nombre de servidor.|  
-|**Ubicación**|**nvarchar(200)**|Ubicación del servidor especificado.|  
+|**location**|**nvarchar(200)**|Ubicación del servidor especificado.|  
 |**time_zone_adjustment**|**int**|Ajuste de zona horaria, en horas, según la hora del meridiano de Greenwich (GMT).|  
 |**enlist_date**|**datetime**|Fecha de alta del servidor especificado.|  
 |**last_poll_date**|**datetime**|Fecha del último sondeo del servidor en busca de trabajos.|  
 |**status**|**int**|Estado del servidor especificado.|  
 |**unread_instructions**|**int**|Indica si el servidor tiene instrucciones no leídas. Si se han descargado todas las filas, esta columna es **0**.|  
 |**local_time**|**datetime**|Fecha y hora locales del servidor de destino, que están basadas en la hora local del servidor de destino según el último sondeo del servidor maestro.|  
-|**enlisted_by_nt_user**|**Nvarchar (100)**|Usuario de Microsoft Windows dado de alta en el servidor de destino.|  
+|**enlisted_by_nt_user**|**nvarchar(100)**|Usuario de Microsoft Windows dado de alta en el servidor de destino.|  
 |**poll_interval**|**int**|Frecuencia, en segundos, con la que el servidor de destino sondea el servicio SQLServerAgent principal para descargar trabajos y cargar el estado de los trabajos.|  
   
 ## <a name="permissions"></a>Permisos  
@@ -80,7 +79,7 @@ EXEC dbo.sp_help_targetserver ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-target-server"></a>B. Presentar información de un servidor de destino específico  
+### <a name="b-listing-information-for-a-specific-target-server"></a>b. Presentar información de un servidor de destino específico  
  En este ejemplo se presenta información del servidor de destino `SEATTLE2`.  
   
 ```  

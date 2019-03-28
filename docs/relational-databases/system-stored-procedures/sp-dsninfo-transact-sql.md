@@ -16,12 +16,12 @@ ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2836db0eef25c21861ec7b2d766f1195d250f20
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e6eacb453fc2f66f4b87790770fa50916916a27c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817737"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527437"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,27 +42,22 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@dsn =**] **'***dsn***'**  
- Es el nombre del DSN ODBC o del servidor vinculado OLE DB. *DSN* es **varchar (128)**, no tiene ningún valor predeterminado.  
+`[ @dsn = ] 'dsn'` Es el nombre del servidor vinculado DSN de ODBC u OLE DB. *DSN* es **varchar (128)**, no tiene ningún valor predeterminado.  
   
- [  **@infotype =**] **'***tipo_de_info***'**  
- Es el tipo de información que se va a devolver. Si *tipo_de_info* no se especifica o si se especifica NULL, se devuelven todos los tipos de información. *tipo_de_info* es **varchar (128)**, su valor predeterminado es null, y puede tener uno de estos valores.  
+`[ @infotype = ] 'info_type'` Es el tipo de información que se va a devolver. Si *tipo_de_info* no se especifica o si se especifica NULL, se devuelven todos los tipos de información. *tipo_de_info* es **varchar (128)**, su valor predeterminado es null, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**DBMS_NAME**|Especifica el nombre del proveedor del origen de datos.|  
 |**DBMS_VERSION**|Especifica la versión del origen de datos.|  
 |**DATABASE_NAME**|Especifica el nombre de la base de datos.|  
-|**O SQL_SUBSCRIBER**|Especifica que el origen de datos puede ser un suscriptor.|  
+|**SQL_SUBSCRIBER**|Especifica que el origen de datos puede ser un suscriptor.|  
   
- [  **@login =**] **'***inicio de sesión***'**  
- Es el nombre de inicio de sesión del origen de datos. Si el origen de datos incluye un inicio de sesión, especifique NULL u omita el parámetro. *inicio de sesión*es **varchar (128)**, su valor predeterminado es null.  
+`[ @login = ] 'login'` Es el inicio de sesión para el origen de datos. Si el origen de datos incluye un inicio de sesión, especifique NULL u omita el parámetro. *inicio de sesión*es **varchar (128)**, su valor predeterminado es null.  
   
- [  **@password =**] **'***contraseña***'**  
- Es la contraseña del inicio de sesión. Si el origen de datos incluye un inicio de sesión, especifique NULL u omita el parámetro. *contraseña*es **varchar (128)**, su valor predeterminado es null.  
+`[ @password = ] 'password'` Es la contraseña para el inicio de sesión. Si el origen de datos incluye un inicio de sesión, especifique NULL u omita el parámetro. *contraseña*es **varchar (128)**, su valor predeterminado es null.  
   
- [  **@dso_type=**] *dso_type*  
- Es el tipo del origen de datos. *dso_type* es **int**, y puede tener uno de estos valores.  
+`[ @dso_type = ] dso_type` Es el tipo de origen de datos. *dso_type* es **int**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -76,7 +71,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Tipo de información**|**Nvarchar (64)**|Tipos de información, como DBMS_NAME, DBMS_VERSION, DATABASE_NAME o SQL_SUBSCRIBER.|  
+|**Tipo de información**|**nvarchar(64)**|Tipos de información, como DBMS_NAME, DBMS_VERSION, DATABASE_NAME o SQL_SUBSCRIBER.|  
 |**Valor**|**nvarchar(512)**|Valor del tipo de información asociado.|  
   
 ## <a name="remarks"></a>Comentarios  

@@ -16,12 +16,12 @@ ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19fafb4b3ef3737018aaae21992f0b6a859c7ef3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796437"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529537"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,25 +42,21 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=**] **'***publisher***'**  
- Es el nombre del publicador que participa en la actualización de este suscriptor. *publicador* es **sysname**, no tiene ningún valor predeterminado. El publicador debe estar configurado para publicación.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador que participa en la actualización de este suscriptor. *publicador* es **sysname**, no tiene ningún valor predeterminado. El publicador debe estar configurado para publicación.  
   
- [  **@publisher_db =**] **'***publisher_db***'**  
- Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publication=**] **'***publicación***'**  
- Es el nombre de la publicación que participa en la actualización de este suscriptor. *publicación*es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que participa en la actualización de este suscriptor. *publicación*es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@failover_mode_id=**] **'***failover_mode_id***' salida**  
- Devuelve el valor entero del modo de conmutación por error y es un **salida** parámetro. *failover_mode_id* es un **tinyint** con un valor predeterminado de **0**. Devuelve **0** para actualización inmediata y **1** actualización en cola.  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Devuelve el valor entero del modo de conmutación por error y es un **salida** parámetro. *failover_mode_id* es un **tinyint** con un valor predeterminado de **0**. Devuelve **0** para actualización inmediata y **1** actualización en cola.  
   
  [**@failover_mode=**] **'***failover_mode***' salida**  
  Devuelve el modo en que se realizan las modificaciones de datos en el suscriptor. *failover_mode* es un **nvarchar (10)** con el valor predeterminado es NULL. Es un **salida** parámetro.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**Inmediata**|Actualización inmediata: las actualizaciones del suscriptor se propagan inmediatamente al publicador utilizando un protocolo de confirmación en dos fases (2PC).|  
-|**En la cola**|Actualización en cola: las actualizaciones realizadas en el suscriptor se almacenan en una cola.|  
+|**immediate**|Actualización inmediata: las actualizaciones del suscriptor se propagan inmediatamente al publicador utilizando un protocolo de confirmación en dos fases (2PC).|  
+|**queued**|Actualización en cola: las actualizaciones realizadas en el suscriptor se almacenan en una cola.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecf9b63dda28bd65912d606a69b1e188af713be9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594365"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527197"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47594365"
   Marca o quita la marca de una tabla para la indización de texto completo.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), y [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) en su lugar.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)y [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,11 +50,9 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tabname=**] **'***qualified_table_name***'**  
- Se trata de un nombre de tabla con una o dos partes. La tabla debe existir en la base de datos actual. *qualified_table_name* es **nvarchar (517)**, no tiene ningún valor predeterminado.  
+`[ @tabname = ] 'qualified_table_name'` Es un nombre de tabla de una o dos partes. La tabla debe existir en la base de datos actual. *qualified_table_name* es **nvarchar (517)**, no tiene ningún valor predeterminado.  
   
- [  **@action=**] **'***acción***'**  
- Se trata de la acción que se va a realizar. *acción* es **nvarchar (50)**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
+`[ @action = ] 'action'` Es la acción que se realizará. *acción* es **nvarchar (50)**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -71,11 +69,9 @@ sp_fulltext_table
 |**start_incremental**|Inicia un rellenado incremental del índice de texto completo de la tabla.|  
 |**Detener**|Detiene un rellenado completo o incremental.|  
   
- [  **@ftcat=**] **'***fulltext_catalog_name***'**  
- Es un nombre válido y catálogo de texto completo para una **crear** acción. Para todas las demás acciones, este parámetro debe ser NULL. *fulltext_catalog_name* es **sysname**, su valor predeterminado es null.  
+`[ @ftcat = ] 'fulltext_catalog_name'` Es un nombre válido y catálogo de texto completo para una **crear** acción. Para todas las demás acciones, este parámetro debe ser NULL. *fulltext_catalog_name* es **sysname**, su valor predeterminado es null.  
   
- [  **@keyname=**] **'***unique_index_name***'**  
- Es un índice no válido de columna de clave única, único en *qualified_table_name* para un **crear** acción. Para todas las demás acciones, este parámetro debe ser NULL. *unique_index_name* es **sysname**, su valor predeterminado es null.  
+`[ @keyname = ] 'unique_index_name'` Es un índice no válido de columna de clave única, único en *qualified_table_name* para un **crear** acción. Para todas las demás acciones, este parámetro debe ser NULL. *unique_index_name* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -88,7 +84,7 @@ sp_fulltext_table
   
  Si se vuelve a activar la tabla y no se vuelve a llenar el índice, el índice antiguo sigue disponible para las consultas que se realizan sobre las columnas restantes habilitadas para texto completo, pero no sobre las nuevas. Las consultas que especifican una búsqueda en todas las columnas de texto completo encuentran datos de columnas eliminadas.  
   
- Después de una tabla se ha definido para la indización de texto completo, cambiar el texto columna de clave única de un tipo de datos a otro, ya sea cambiando el tipo de datos de esa columna o cambiando la clave única de texto completo de una columna a otro, sin volver a llenar completamente puede producir un error que se produzca durante una consulta posterior y devolver el mensaje de error: "conversión al tipo *data_type* error para el valor de clave de búsqueda de texto completo *key_value*." Para evitar esto, quite la definición de texto completo de esta tabla utilizando la **drop** acción de **sp_fulltext_table** y definirla con **sp_fulltext_table** y **sp_fulltext_column**.  
+ Tras definir una tabla para indización de texto completo, la modificación del tipo de datos de la columna de clave única de texto completo a otro tipo, ya sea mediante la modificación del tipo de datos de la columna o de la clave única de texto completo de una columna a otra, sin volver a realizar un rellenado completo, puede dar lugar a que una consulta posterior no se ejecute correctamente y se devuelva el mensaje de error: "La conversión al tipo *data_type* error para el valor de clave de búsqueda de texto completo *key_value*." Para evitar esto, quite la definición de texto completo de esta tabla utilizando la **drop** acción de **sp_fulltext_table** y definirla con **sp_fulltext_table** y **sp_fulltext_column**.  
   
  La columna de clave de texto completo se debe definir para que tenga 900 bytes o menos. Se recomienda que el tamaño de la columna de clave sea lo más reducido posible por razones de rendimiento.  
   
@@ -111,7 +107,7 @@ EXEC sp_fulltext_table 'Production.Document','activate';
 GO  
 ```  
   
-### <a name="b-activating-and-propagating-track-changes"></a>B. Activar y propagar los cambios de los que se ha realizado un seguimiento  
+### <a name="b-activating-and-propagating-track-changes"></a>b. Activar y propagar los cambios de los que se ha realizado un seguimiento  
  En el ejemplo siguiente se activan y comienzan a propagar los cambios de los que se ha hecho un seguimiento al índice de texto completo mientras se producen.  
   
 ```  

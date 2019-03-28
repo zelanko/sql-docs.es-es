@@ -18,12 +18,12 @@ ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9408fe7939b5a34a18ecde2b1a98f68ac19e49a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84b1e2840240d0d02a3193ecc592a13331719c7a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628544"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527827"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +42,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id=** ] *job_id*  
- Número de identificación del trabajo del que se quitará el paso. *job_id*es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id` El número de identificación del trabajo desde el que se quitará el paso. *job_id*es **uniqueidentifier**, su valor predeterminado es null.  
   
- [  **@job_name=** ] **'***job_name***'**  
- Nombre del trabajo del que se quitará el paso. *job_name*es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'` El nombre del trabajo desde el que se quitará el paso. *job_name*es **sysname**, su valor predeterminado es null.  
   
-> **Nota:** cualquier *job_id* o *job_name* debe especificarse; no se pueden especificar ambos.  
+> **NOTA:** Cualquier *job_id* o *job_name* debe especificarse; no se pueden especificar ambos.  
   
- [  **@step_id=** ] *step_id*  
- Número de identificación del paso que se va a quitar. *step_id*es **int**, no tiene ningún valor predeterminado.  
+`[ @step_id = ] step_id` El número de identificación del paso que se va a quitar. *step_id*es **int**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -64,7 +61,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  Para obtener más información acerca de los pasos asociados con un trabajo determinado, ejecute **sp_help_jobstep**.  
   
-> **Nota:** llamada **sp_delete_jobstep** con un *step_id* valor de cero, eliminan todos los pasos de trabajo para el trabajo.  
+> **NOTA:** Una llamada a **sp_delete_jobstep** con un *step_id* valor de cero, eliminan todos los pasos de trabajo para el trabajo.  
   
  Microsoft SQL Server Management Studio ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
   

@@ -13,12 +13,12 @@ ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa98ef3ab18aa3f5bff7045ae39d08b075c44148
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d68b9452a03c127fe39018c19abab1073dae7c5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107425"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534987"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Administrar y supervisar la búsqueda semántica
   Describe el proceso de indización semántica y las tareas relacionadas con la administración y supervisión de los índices.  
@@ -29,7 +29,7 @@ ms.locfileid: "48107425"
   
  La primera fase de la indización incluye el rellenado del índice de palabras clave de texto completo y el índice semántico de frases clave, así como la extracción de datos de similitud de documentos.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -50,13 +50,13 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> Cómo: Comprobar el tamaño de los índices semánticos  
+##  <a name="HowToCheckSize"></a> Cómo: Compruebe el tamaño de los índices semánticos  
  **¿Qué es el tamaño lógico de un índice semántico de frases clave o un índice de similitud de documentos semántica?**  
  Consulte la vista de administración dinámica [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql).  
   
  El tamaño lógico se muestra en el número de páginas de índice.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -67,7 +67,7 @@ GO
  **¿Qué es el tamaño total de los índices de texto completo y semánticos de un catálogo de texto completo?**  
  Consulte la propiedad **IndexSize** de la función de metadatos [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql).  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
 GO  
 ```  
@@ -75,7 +75,7 @@ GO
  **¿Cuántos elementos se indizan en los índices de texto completo y semántico para un catálogo de texto completo?**  
  Consulte la propiedad **ItemCount** de la función de metadatos [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql).  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
 GO  
 ```  
@@ -85,7 +85,7 @@ GO
   
  Dado que la indización semántica depende de la indización de texto completo, los índices semánticos solo se rellenan cuando lo hacen los índices de texto completo.  
   
- **Ejemplo: iniciar el rellenado completo de los índices de texto completo y semántico**  
+ **Ejemplo: inicio del rellenado completo de los índices de texto completo y semántico**  
   
  En el siguiente ejemplo se inicia el rellenado completo de los índices de texto completo y los índices semánticos modificando un índice de texto completo existente en la tabla **Production.Document** de la base de datos de ejemplo AdventureWorks2012.  
   
@@ -103,7 +103,7 @@ GO
   
  Cuando se deshabilita y se suspende la indización semántica, las consultas sobre datos semánticos siguen funcionando correctamente y devolviendo los datos indizados previamente. Este comportamiento no es coherente con el comportamiento de la búsqueda de texto completo.  
   
-```tsql  
+```sql  
 -- To disable semantic indexing on a table  
 USE database_name  
 GO  
@@ -133,7 +133,7 @@ GO
 2.  **Fase 2**. Después se rellena el índice semántico de similitud de documentos. Este índice depende de los dos índices que se rellenaron en la fase anterior.  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="ProblemNotPopulated"></a> Problema: No se rellenan los índices semánticos  
+##  <a name="ProblemNotPopulated"></a> Problema: Los índices semánticos no se rellenan  
  **¿Se rellenan los índices de texto completo asociados?**  
  Dado que la indización semántica depende de la indización de texto completo, los índices semánticos solo se rellenan cuando lo hacen los índices de texto completo.  
   

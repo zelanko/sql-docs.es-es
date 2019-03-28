@@ -10,12 +10,12 @@ ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c84ecb4076fc7aff20383b56a81b6df56d28ea3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049105"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529297"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Migrar restricciones CHECK y de clave externa
   Las restricciones CHECK y de clave externa no se admiten en [!INCLUDE[hek_2](../includes/hek-2-md.md)] en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Estas construcciones se suelen usar para aplicar la integridad lógica de los datos en el esquema y pueden ser importantes para mantener el correcto funcionamiento de las aplicaciones.  
@@ -40,7 +40,7 @@ ms.locfileid: "48049105"
 ## <a name="table-definition-for-the-workarounds"></a>Definición de tabla para las soluciones alternativas  
  Antes de convertirse a una tabla optimizada para memoria, la definición de [Sales].[SalesOrderDetail] es la siguiente:  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -101,7 +101,7 @@ GO
   
  Observe que rowguid ya no es un ROWGUIDCOL porque no se admite en [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Se ha quitado la columna. Además, LineTotal es una columna calculada y queda fuera del ámbito de este artículo, por lo que también se ha quitado.  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -127,7 +127,7 @@ GO
   
 ## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>Comprobar las restricciones después de una operación de inserción, actualización o eliminación  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -185,7 +185,7 @@ END
   
 ## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>Aplicar las restricciones antes de una operación de inserción, actualización o eliminación  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   

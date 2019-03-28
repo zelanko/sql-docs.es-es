@@ -27,12 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6527d3b3ee6a0198796688bd4028bf9159406b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da2dacf6fcb34d5a5caba14ccb60cbb9eec43467
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649033"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529227"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -57,11 +57,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name=** ] **'**_módulo\_nombre_**'**  
- Es el nombre del procedimiento almacenado, de la función definida por el usuario, de la vista, del desencadenador DML, del desencadenador DDL de nivel de base de datos o del desencadenador DDL de nivel de servidor. *module_name* no puede ser un common language runtime (CLR) procedimiento almacenado o una función CLR. *module_name* no puede estar enlazada a esquema. *module_name* es **nvarchar**, no tiene ningún valor predeterminado. *module_name* puede ser un identificador formado por varias partes, pero solo puede hacer referencia a objetos en la base de datos actual.  
+`[ @name = ] 'module\_name'` Es el nombre del procedimiento almacenado, función definida por el usuario, vista, desencadenador DML, desencadenador DDL de nivel de base de datos o desencadenador DDL de nivel de servidor. *module_name* no puede ser un common language runtime (CLR) procedimiento almacenado o una función CLR. *module_name* no puede estar enlazada a esquema. *module_name* es **nvarchar**, no tiene ningún valor predeterminado. *module_name* puede ser un identificador formado por varias partes, pero solo puede hacer referencia a objetos en la base de datos actual.  
   
- [ **,** @**espacio de nombres** =] **'** \<clase > **'**  
- Es la clase del módulo especificado. Cuando *module_name* es un desencadenador DDL, \<clase > es necesario. *\<clase >* es **nvarchar**(20). Las entradas válidas son:  
+`[ , @namespace = ] ' \<class> '` Es la clase del módulo especificado. Cuando *module_name* es un desencadenador DDL, \<clase > es necesario. *\<clase >* es **nvarchar**(20). Las entradas válidas son:  
   
 |||  
 |-|-|  
@@ -146,7 +144,7 @@ SELECT dbo.to_upper('abcdefgh');
 GO  
 ```  
   
-### <a name="b-refreshing-a-database-level-ddl-trigger"></a>B. Actualizar un desencadenador DDL de nivel de la base de datos  
+### <a name="b-refreshing-a-database-level-ddl-trigger"></a>b. Actualizar un desencadenador DDL de nivel de la base de datos  
  El ejemplo siguiente actualiza un desencadenador DDL de nivel de la base de datos.  
   
 ```  

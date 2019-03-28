@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510020"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527797"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Instrucciones para los niveles de aislamiento de transacciones con tablas con optimización para memoria
   En muchos casos, debe especificar el nivel de aislamiento de transacción. El aislamiento de transacción para las tablas optimizadas para memoria difiere de las tablas basadas en disco.  
@@ -62,7 +62,7 @@ ms.locfileid: "52510020"
   
  En el siguiente ejemplo de transacción de confirmación automática se muestra una combinación entre una tabla Customers optimizada para memoria y una tabla normal [Order History], como parte de un lote ad hoc:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
 GO  
 SELECT *   
@@ -73,7 +73,7 @@ LEFT JOIN dbo.[Order History] AS oh
   
  El siguiente ejemplo de transacciones implícitas o explícitas muestra la misma combinación, pero esta vez en una transacción de usuario explícita. Se tiene acceso a la tabla optimizada para memoria Customers con aislamiento de instantánea, según indica la sugerencia de tabla WITH (SNAPSHOT), y a la tabla normal [Order History] con aislamiento de lectura confirmada:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
 GO  
 BEGIN TRAN  
@@ -105,7 +105,7 @@ COMMIT
   
  Tenga en cuenta que la lógica de sondeo debe estar fuera del ámbito de la transacción, ya que utiliza aislamiento de instantánea para tener acceso a la tabla t1. Si se usa lógica de sondeo en el ámbito de una transacción, se crearía una transacción de ejecución prolongada, que es una práctica incorrecta.  
   
-```tsql  
+```sql  
 -- poll table  
 WHILE NOT EXISTS (SELECT 1 FROM dbo.t1)  
 BEGIN   

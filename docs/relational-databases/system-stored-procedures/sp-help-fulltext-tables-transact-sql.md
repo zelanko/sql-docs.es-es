@@ -18,12 +18,12 @@ ms.assetid: 86e24a5f-a869-43f6-b83e-c52b7b01b5ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfd733d24d36b733dcefed3eea89b7be9342cd93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09cbcf4fca5fefa14dd435e5e91b27c8460194db
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608824"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537067"
 ---
 # <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
- Es el nombre del catálogo de texto completo. *fulltext_catalog_name* es **sysname**, su valor predeterminado es null. Si *fulltext_catalog_name* se omite o es NULL, se devuelven todas las tablas indizadas de texto completo asociadas a la base de datos. Si *fulltext_catalog_name* se especifica, pero *table_name* se omite o es NULL, se recupera la información de índice de texto completo para cada tabla indizada de texto completo asociado a este catálogo. Si ambos *fulltext_catalog_name* y *table_name* se especifican, se devuelve una fila si *table_name* está asociado con *fulltext_catalog_name*; en caso contrario, se produce un error.  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` Es el nombre del catálogo de texto completo. *fulltext_catalog_name* es **sysname**, su valor predeterminado es null. Si *fulltext_catalog_name* se omite o es NULL, se devuelven todas las tablas indizadas de texto completo asociadas a la base de datos. Si *fulltext_catalog_name* se especifica, pero *table_name* se omite o es NULL, se recupera la información de índice de texto completo para cada tabla indizada de texto completo asociado a este catálogo. Si ambos *fulltext_catalog_name* y *table_name* se especifican, se devuelve una fila si *table_name* está asociado con *fulltext_catalog_name*; en caso contrario, se produce un error.  
   
- [  **@table_name=**] **'***table_name***'**  
- Es el nombre de tabla de una o dos partes para la que se solicitan los metadatos de texto completo. *table_name* es **nvarchar (517)**, su valor predeterminado es null. Si solo *table_name* se especifica, la fila relevante para *table_name* se devuelve.  
+`[ @table_name = ] 'table_name'` Es el nombre de tabla de una o dos partes para el que se solicitan los metadatos de texto completo. *table_name* es **nvarchar (517)**, su valor predeterminado es null. Si solo *table_name* se especifica, la fila relevante para *table_name* se devuelve.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

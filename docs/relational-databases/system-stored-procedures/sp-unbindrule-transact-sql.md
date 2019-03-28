@@ -18,12 +18,12 @@ ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f35db2f08be985359de4723cdb9aa393ad608232
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86efa9f7951277e6effdae9f59669fb7101f6f67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624168"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527287"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,12 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@objname=** ] **'***object_name***'**  
- Es el nombre de la tabla y de la columna o el tipo de datos del alias del que se tiene que desenlazar la regla. *object_name* es **nvarchar(776)**, no tiene ningún valor predeterminado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta resolver los identificadores de dos partes en nombres de columna en primer lugar, y después en tipos de datos de alias. Cuando se deshace el enlace de una regla de un tipo de datos de alias, también se deshace el enlace de las columnas de ese tipo de datos que tengan la misma regla. Las columnas de ese tipo de datos con reglas directamente enlazadas a ellas no se ven afectadas.  
+`[ @objname = ] 'object_name'` Es el nombre de la tabla y columna o el tipo de datos de alias desde el que la regla está desenlazada. *object_name* es **nvarchar(776)**, no tiene ningún valor predeterminado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta resolver los identificadores de dos partes en nombres de columna en primer lugar, y después en tipos de datos de alias. Cuando se deshace el enlace de una regla de un tipo de datos de alias, también se deshace el enlace de las columnas de ese tipo de datos que tengan la misma regla. Las columnas de ese tipo de datos con reglas directamente enlazadas a ellas no se ven afectadas.  
   
 > [!NOTE]  
 >  *object_name* puede contener corchetes **[]** como caracteres de identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
- Solo se usa cuando se desenlaza una regla de un tipo de datos de alias. *futureonly_flag* es **varchar (15)**, su valor predeterminado es null. Cuando *futureonly_flag* es **futureonly**, las columnas existentes de ese tipo de datos no pierden la regla especificada.  
+`[ @futureonly = ] 'futureonly_flag'` Se usa solo cuando se desenlaza una regla de un tipo de datos de alias. *futureonly_flag* es **varchar (15)**, su valor predeterminado es null. Cuando *futureonly_flag* es **futureonly**, las columnas existentes de ese tipo de datos no pierden la regla especificada.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -75,7 +73,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 EXEC sp_unbindrule 'employees.startdate';  
 ```  
   
-### <a name="b-unbinding-a-rule-from-an-alias-data-type"></a>B. Desenlazar una regla de un tipo de datos de alias  
+### <a name="b-unbinding-a-rule-from-an-alias-data-type"></a>b. Desenlazar una regla de un tipo de datos de alias  
  En el siguiente ejemplo se deshace el enlace de la regla del tipo de datos de alias `ssn`. Deshace el enlace de la regla de las columnas de ese tipo existentes y futuras.  
   
 ```  

@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2393792341fdbc28bbc0f74657aa2f3cf54ee4d1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3a610c41fd9e3126bb0f5833dcacfe27ce969a72
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374827"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535277"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
   OLTP en memoria incluye en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] los procedimientos almacenados compilados de forma nativa y las tablas optimizadas para memoria. Este artículo proporciona información general del procesamiento de consultas tanto para las tablas optimizadas para memoria como para los procedimientos almacenados compilados de forma nativa.  
@@ -41,7 +41,7 @@ ms.locfileid: "53374827"
   
  Consideramos dos tablas, Customer y Order. El siguiente script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] contiene las definiciones de estas dos tablas y los índices asociados, en su formato basado en disco (tradicional):  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -64,7 +64,7 @@ GO
   
  Considere la siguiente consulta, que combina las tablas Customer y Order y devuelve el identificador del pedido y la información del cliente asociada:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -83,7 +83,7 @@ Plan de consulta para una combinación de tablas basadas en disco.
   
  Considere una ligera variación en esta consulta, que devuelve todas las filas de la tabla Order, no solo OrderID:  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -136,7 +136,7 @@ Canalización de procesamiento de consultas para acceso de Transact-SQL interpre
   
  El siguiente script de [!INCLUDE[tsql](../../../includes/tsql-md.md)] contiene las versiones optimizadas para memoria de las tablas Order y Customer, con índices hash:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -153,7 +153,7 @@ GO
   
  Considere la misma consulta ejecutada en tablas optimizadas para memoria:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -175,7 +175,7 @@ Plan de consulta para una combinación de tablas optimizadas para memoria.
 ## <a name="natively-compiled-stored-procedures"></a>procedimientos almacenados compilados de forma nativa  
  Los procedimientos almacenados compilados de forma nativa son procedimientos almacenados de [!INCLUDE[tsql](../../../includes/tsql-md.md)] compilados con código máquina, en lugar de interpretados por el motor de ejecución de consultas. El siguiente script crea un procedimiento almacenado compilado de forma nativa que ejecuta la consulta de ejemplo (de la sección Consulta de ejemplo).  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -241,7 +241,7 @@ Ejecución de los procedimientos almacenados compilados de forma nativa.
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Recuperar un plan de ejecución de consultas para los procedimientos almacenados compilados de forma nativa  
  El plan de ejecución de consulta para un procedimiento almacenado compilado de forma nativa se puede recuperar con un **Plan de ejecución estimado** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o con la opción SHOWPLAN_XML en [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Por ejemplo:  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -269,7 +269,7 @@ GO
 |Stream Aggregate|Observe que el operador Hash Match no se admite para la agregación. Por consiguiente, toda la agregación en los procedimientos almacenados compilados de forma nativa utiliza el operador Stream Aggregate, incluso si el plan para la misma consulta en [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado utiliza el operador Hash Match.<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## <a name="column-statistics-and-joins"></a>Combinaciones y estadísticas de columnas  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantiene estadísticas en los valores de columnas de clave de índice para ayudar a evaluar el costo de ciertas operaciones, como el examen de índice y las búsquedas de índice. ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] también crea estadísticas en columnas de clave sin índice si se crean explícitamente o si el optimizador de consultas las crea en respuesta a una consulta con un predicado.) La métrica principal en la estimación del costo es el número de filas procesadas por un único operador. Tenga en cuenta que para las tablas basadas en disco, el número de páginas a las que tiene acceso un operador determinado es importante en la estimación de costos. Sin embargo, como el recuento de páginas no es importante para las tablas optimizadas para memoria (siempre es cero), esta explicación se centra en el recuento de filas. La estimación comienza por los operadores de examen y búsqueda de índice en el plan, y se extiende después para incluir los otros operadores, como el operador de combinación. El número estimado de filas que va a procesar un operador de combinación se basa en la estimación de los operadores de examen, índice y búsqueda subyacentes. Para que [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado pueda obtener acceso a las tablas optimizadas para memoria, puede seguir el plan de ejecución real para ver la diferencia entre los recuentos de filas estimado y real de los operadores del plan.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantiene estadísticas en los valores de columnas de clave de índice para ayudar a evaluar el costo de ciertas operaciones, como el examen de índice y las búsquedas de índice. ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] también crea estadísticas en columnas de clave sin índice si se crean explícitamente o si el optimizador de consultas las crea en respuesta a una consulta con predicado). La métrica principal en la estimación del costo es el número de filas procesadas por un único operador. Tenga en cuenta que para las tablas basadas en disco, el número de páginas a las que tiene acceso un operador determinado es importante en la estimación de costos. Sin embargo, como el recuento de páginas no es importante para las tablas optimizadas para memoria (siempre es cero), esta explicación se centra en el recuento de filas. La estimación comienza por los operadores de examen y búsqueda de índice en el plan, y se extiende después para incluir los otros operadores, como el operador de combinación. El número estimado de filas que va a procesar un operador de combinación se basa en la estimación de los operadores de examen, índice y búsqueda subyacentes. Para que [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado pueda obtener acceso a las tablas optimizadas para memoria, puede seguir el plan de ejecución real para ver la diferencia entre los recuentos de filas estimado y real de los operadores del plan.  
   
  Para el ejemplo en la ilustración 1,  
   

@@ -1708,7 +1708,7 @@ items:
       href: ../relational-databases/views/rename-views.md
     - name: DELETE
       href: ../relational-databases/views/delete-views.md
-  - name: Datos XML
+  - name: datos XML
     href: ../relational-databases/xml/xml-data-sql-server.md
     items:
     - name: Columnas y tipos de datos XML
@@ -6894,6 +6894,7 @@ items:
     - name: Consideraciones acerca del uso de servidores de prueba
       href: ../relational-databases/performance/considerations-for-using-test-servers.md
     - name: Procesamiento de consultas inteligentes
+      displayName: adaptive
       href: ../relational-databases/performance/intelligent-query-processing.md
     - name: Centro de rendimiento
       href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
@@ -9791,12 +9792,12 @@ items:
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: Datos de uso anónimos
         href: ../ssms/sql-server-management-studio-telemetry-ssms.md
-  - name: sqlpackage
+  - name: SqlPackage.exe
     items:
     - name: Instalar sqlpackage
       href: ../tools/sqlpackage-download.md
     - name: Notas de la versión
-      href: ../tools/sqlpackage-release-notes.md
+      href: ../tools/release-notes-sqlpackage.md
     - name: sqlpackage ref
       href: ../tools/sqlpackage.md
   - name: SQL Server Profiler
@@ -12726,9 +12727,9 @@ items:
         href: ../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md
       - name: sys.fn_cdc_map_time_to_lsn
         href: ../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md
-      - name: sys.fn_all_changes_<instancia_de_captura>
+      - name: sys.fn_all_changes_<capture_instance>
         href: ../relational-databases/system-functions/sys-fn-all-changes-capture-instance-transact-sql.md
-      - name: sys.fn_net_changes_<instancia_de_captura>
+      - name: sys.fn_net_changes_<capture_instance>
         href: ../relational-databases/system-functions/sys-fn-net-changes-capture-instance-transact-sql.md
     - name: Seguimiento de los cambios
       href: ../relational-databases/system-functions/change-tracking-functions-transact-sql.md
@@ -15899,7 +15900,7 @@ items:
           href: ../t-sql/functions/rtrim-transact-sql.md
         - name: SOUNDEX
           href: ../t-sql/functions/soundex-transact-sql.md
-        - name: ESPACIO
+        - name: SPACE
           href: ../t-sql/functions/space-transact-sql.md
         - name: STR
           href: ../t-sql/functions/str-transact-sql.md
@@ -16188,13 +16189,13 @@ items:
             href: ../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md
           - name: <= (Menor o igual que)
             href: ../t-sql/language-elements/less-than-or-equal-to-transact-sql.md
-          - name: <> (No igual a)
+          - name: <> (No es igual a)
             href: ../t-sql/language-elements/not-equal-to-transact-sql-traditional.md
           - name: '!< (No menor que)'
             href: ../t-sql/language-elements/not-less-than-transact-sql.md
           - name: '!= (No es igual a)'
             href: ../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md
-          - name: '!> (No mayor que)'
+          - name: '!> (no mayor que)'
             href: ../t-sql/language-elements/not-greater-than-transact-sql.md
         - name: Compuestos
           href: ../t-sql/language-elements/compound-operators-transact-sql.md
@@ -17226,9 +17227,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Controlar espacios de nombres en XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 8efef6d8d30133dff4c5ca71d37a753e0168a4e5
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 31c97681d909e7179c9376e187cabea94afe20d3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417237"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538687"

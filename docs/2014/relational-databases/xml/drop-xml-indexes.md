@@ -11,23 +11,23 @@ helpviewer_keywords:
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82fd8836bb4fda85a7fdadd6345826cf432485cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4b1706f81808d90e02df32df7e56828b054bd05
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194155"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535507"
 ---
 # <a name="drop-xml-indexes"></a>Quitar índices XML
   La instrucción [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] se puede usar para quitar índices XML y no XML principales y secundarios existentes. No obstante, ninguna opción de DROP INDEX se aplica a los índices XML. Si se quita el índice XML principal, también se eliminarán todos los índices secundarios existentes.  
   
  La sintaxis de DROP con *TableName.IndexName* está desapareciendo y no es compatible con los índices XML.  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Ejemplo: crear y quitar un índice XML principal  
- En el ejemplo siguiente, se crea un índice XML en un `xml` columna de tipo.  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Ejemplo: Crear y quitar un índice XML principal  
+ En el ejemplo siguiente se muestra cómo crear un índice XML en una columna de tipo `xml`.  
   
 ```  
 DROP TABLE T  
@@ -51,7 +51,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  Al quitar una tabla, se quitan automáticamente todos los índices XML que contiene. No obstante, una columna XML no puede quitarse desde una tabla si existe un índice XML en la columna.  
   
- En el ejemplo siguiente, se crea un índice XML en un `xml` columna de tipo. Para obtener más información, vea [Comparar XML con tipo y XML sin tipo](../xml/compare-typed-xml-to-untyped-xml.md).  
+ En el ejemplo siguiente se muestra cómo crear un índice XML en una columna de tipo `xml`. Para obtener más información, vea [Comparar XML con tipo y XML sin tipo](../xml/compare-typed-xml-to-untyped-xml.md).  
   
 ```  
 CREATE TABLE TestTable(  
@@ -68,7 +68,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Ejemplo: crear un índice XML utilizando la opción de índice DROP_EXISTING  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Ejemplo: Crear un índice XML con la opción de índice DROP_EXISTING  
  El ejemplo siguiente muestra cómo crear un índice XML en una columna (`XmlColx`). A continuación, se creará otro índice XML con el mismo nombre en una columna diferente (`XmlColy`). Dado que se ha especificado la opción `DROP_EXISTING` , el índice XML existente en (`XmlColx)` se quita y se crea un índice XML en (`XmlColy`).  
   
 ```  

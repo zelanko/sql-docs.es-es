@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d298e167e17bea6cc3995479d8ddf8abf4e3531
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc8cae9353ad780a0711c77e138246f0be0d7d15
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594354"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534427"
 ---
 # <a name="sphelprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@rolename =** ] **'***rol***'**  
- Es el nombre de un rol en la base de datos actual. *rol* es **sysname**, su valor predeterminado es null. *rol* debe existir en la base de datos actual. Si *rol* no es se especifica, se devuelve información sobre todas las funciones en la base de datos actual.  
+`[ @rolename = ] 'role'` Es el nombre de un rol en la base de datos actual. *rol* es **sysname**, su valor predeterminado es null. *rol* debe existir en la base de datos actual. Si *rol* no es se especifica, se devuelve información sobre todas las funciones en la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

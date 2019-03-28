@@ -16,12 +16,12 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14ab67bb9d69272960bbce3e1a7cfa059c609e3f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 18a1de1e3b7dc1f312094a9023e0af9df014214b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589809"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526377"
 ---
 # <a name="sphelpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@subscriber =** ] **'**_suscriptor_**'**  
- Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es **%**, que devuelve toda la información.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es **%**, que devuelve toda la información.  
   
- [  **@publisher =** ] **'**_publisher_**'**  
- Es el nombre del publicador. *publicador* es **sysname**y el valor predeterminado es el nombre del servidor actual.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**y el valor predeterminado es el nombre del servidor actual.  
   
 > [!NOTE]  
 >  *publicador* no debe especificarse, excepto cuando es un publicador de Oracle.  
@@ -55,7 +53,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**publicador**|**sysname**|Nombre del publicador.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor.|  
 |**Tipo**|**tinyint**|Tipo de suscriptor:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos **1** = origen de datos ODBC|  
-|**inicio de sesión**|**sysname**|Id. de inicio de sesión para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**login**|**sysname**|Id. de inicio de sesión para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**sysname**|Contraseña de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
 |**commit_batch_size**|**int**|No compatible.|  
 |**status_batch_size**|**int**|No compatible.|  
@@ -71,7 +69,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**active_start_date**|**int**|Fecha en que el agente de distribución se programa por primera vez, con el formato AAAAMMDD.|  
 |**active_end_date**|**int**|Fecha en la que el agente de distribución deja de estar programado, con el formato AAAAMMDD.|  
 |**retryattempt**|**int**|No compatible.|  
-|**retryDelay**|**int**|No compatible.|  
+|**retrydelay**|**int**|No compatible.|  
 |**description**|**nvarchar(255)**|Descripción del suscriptor.|  
 |**security_mode**|**int**|Modo de seguridad implementado.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows|  
 |**frequency_type2**|**int**|Frecuencia de ejecución del Agente de mezcla:<br /><br /> **1** = una vez<br /><br /> **2** = a petición<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente relativa<br /><br /> **64** = inicio automático<br /><br /> **128** = periódica|  

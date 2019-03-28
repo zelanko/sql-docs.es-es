@@ -18,12 +18,12 @@ ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 436b4d5b9a4c0a539ccc4ff9ac7e62572883dfad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c296c668bf553569becb9b4cf2e30001021d47c1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758623"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535757"
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,31 +47,26 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@traceid=** ] *trace_id*  
- Es el id. del seguimiento en el que se establece el filtro. *trace_id* es **int**, no tiene ningún valor predeterminado. El usuario utiliza este *trace_id* valor para identificar, modificar y controlar el seguimiento.  
+`[ @traceid = ] trace_id` Es el identificador de la traza en el que se establece el filtro. *trace_id* es **int**, no tiene ningún valor predeterminado. El usuario utiliza este *trace_id* valor para identificar, modificar y controlar el seguimiento.  
   
- [  **@columnid=** ] *column_id*  
- Es el id. de la columna en la que se aplica el filtro. *column_id* es **int**, no tiene ningún valor predeterminado. Si *column_id* es NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] borra todos los filtros para el seguimiento especificado.  
+`[ @columnid = ] column_id` Es el identificador de la columna que se aplica el filtro. *column_id* es **int**, no tiene ningún valor predeterminado. Si *column_id* es NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] borra todos los filtros para el seguimiento especificado.  
   
- [ **@logical_operator** =] *logical_operator*  
- Especifica si la operación AND (**0**) o OR (**1**) se aplica el operador. *logical_operator* es **int**, no tiene ningún valor predeterminado.  
+`[ @logical_operator = ] logical_operator` Especifica si la operación AND (**0**) o OR (**1**) se aplica el operador. *logical_operator* es **int**, no tiene ningún valor predeterminado.  
   
- [  **@comparison_operator=** ] *comparison_operator*  
- Especifica el tipo de comparación que va a realizarse. *comparison_operator* es **int**, no tiene ningún valor predeterminado. Esta tabla contiene los operadores de comparación y sus valores representativos.  
+`[ @comparison_operator = ] comparison_operator` Especifica el tipo de comparación que se va a realizarse. *comparison_operator* es **int**, no tiene ningún valor predeterminado. Esta tabla contiene los operadores de comparación y sus valores representativos.  
   
 |Valor|Operador de comparación|  
 |-----------|-------------------------|  
 |**0**|= (Es igual a)|  
-|**1**|<> (No es igual a)|  
+|**1**|<> (No igual a)|  
 |**2**|> (Mayor que)|  
 |**3**|< (Menor que)|  
-|**4**|>= (Mayor o igual que)|  
+|**4**|> = (mayor o igual)|  
 |**5**|< = (menor o igual que)|  
 |**6**|LIKE|  
 |**7**|No es como|  
   
- [  **@value=** ] *valor*  
- Especifica el valor en el que se va a filtrar. Tipo de datos de *valor* debe coincidir con el tipo de datos de la columna que se van a filtrar. Por ejemplo, si el filtro está establecido en una columna de Id. de objeto que es un **int** tipo de datos, *valor* debe ser **int**. Si *valor* es **nvarchar** o **varbinary**, puede tener una longitud máxima de 8000.  
+`[ @value = ] value` Especifica el valor en el que se va a filtrar. Tipo de datos de *valor* debe coincidir con el tipo de datos de la columna que se van a filtrar. Por ejemplo, si el filtro está establecido en una columna de Id. de objeto que es un **int** tipo de datos, *valor* debe ser **int**. Si *valor* es **nvarchar** o **varbinary**, puede tener una longitud máxima de 8000.  
   
  Cuando el operador de comparación es LIKE o NOT LIKE, el operador lógico puede incluir "%" u otro filtro adecuado para la operación LIKE.  
   

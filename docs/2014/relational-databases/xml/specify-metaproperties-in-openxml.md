@@ -13,15 +13,15 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15c3a98ad0e74ba7a1d5ee6d683f6de2e7353984
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107625"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535387"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Especificar metapropiedades en OPENXML
   Los atributos de las metapropiedades de un documento XML son atributos que describen las propiedades de un elemento XML (como elemento, atributo o cualquier otro nodo DOM). Estos atributos no existen físicamente en el texto del documento XML. Sin embargo, OPENXML proporciona estas metapropiedades para todos los elementos XML. Estas metapropiedades permiten extraer información, como la posición local e información de espacio de nombres, de los nodos XML. Esta información ofrece más detalles de los que aparentemente hay en la representación textual.  
@@ -102,7 +102,7 @@ FROM OPENXML (@idoc, '/root/Customer/Order', 9)
 EXEC sp_xml_removedocument @idoc  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 id   oid         date                amount    parentIDNo  parentLocalName    
@@ -113,7 +113,7 @@ id   oid         date                amount    parentIDNo  parentLocalName
 25   O4    1996-01-20 00:00:00.000     10000.0     15       Customer  
 ```  
   
-### <a name="b-retrieving-the-whole-xml-document"></a>B. Recuperar todo el documento XML  
+### <a name="b-retrieving-the-whole-xml-document"></a>b. Recuperar todo el documento XML  
  En este ejemplo, se usa OPENXML para crear una vista de conjunto de filas de una columna del documento XML de ejemplo. Esta columna ( **Col1**) se asigna a la metapropiedad **xmltext** y se convierte en una columna de desbordamiento. Como consecuencia, la columna recibe los datos no utilizados. En este caso es todo el documento.  
   
  A continuación, la instrucción SELECT devuelve el conjunto de filas completo.  

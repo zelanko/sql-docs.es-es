@@ -18,12 +18,12 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6df698f13298bf290ad1a0cb9e94ccac0bfce3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15e30a28a816b8105762e9f4cbfc4a0892cae1be
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596423"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538577"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@IndexNamePattern=**] **'***table_or_index_name***'**  
- Es el nombre calificado o no calificado de una tabla o índice definidos por un usuario. *table_or_index_name* es **nvarchar(1035)**, no tiene ningún valor predeterminado. Las comillas solo son necesarias si se especifica un índice o nombre de tabla completo. Si se proporciona un nombre de tabla completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el nombre de la base de datos actual. Si se especifica un nombre de tabla sin ningún índice, el valor de la opción especificada se define para todos los índices de dicha tabla y para la tabla misma si no existe ningún índice clúster.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` Es el nombre completo o incompleto de una tabla definida por el usuario o el índice. *table_or_index_name* es **nvarchar(1035)**, no tiene ningún valor predeterminado. Las comillas solo son necesarias si se especifica un índice o nombre de tabla completo. Si se proporciona un nombre de tabla completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el nombre de la base de datos actual. Si se especifica un nombre de tabla sin ningún índice, el valor de la opción especificada se define para todos los índices de dicha tabla y para la tabla misma si no existe ningún índice clúster.  
   
- [  **@OptionName =**] **'***option_name***'**  
- Es un nombre de opción de índice. *option_name* es **varchar (35)**, no tiene ningún valor predeterminado. *option_name* puede tener uno de los siguientes valores.  
+`[ @OptionName = ] 'option_name'` Es un nombre de la opción de índice. *option_name* es **varchar (35)**, no tiene ningún valor predeterminado. *option_name* puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -60,8 +58,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|Cuando es TRUE no se utilizan bloqueos de fila. Cuando el valor es FALSE, se permiten bloqueos de fila al obtener acceso al índice. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina cuándo se usan los bloqueos de fila.|  
 |**DisAllowPageLocks**|Cuando es TRUE, no se utilizan bloqueos de página. Cuando el valor es FALSE, se permiten bloqueos de página al obtener acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina el momento en que se usan los bloqueos de página.|  
   
- [  **@OptionValue =**] **'***valor***'**  
- Especifica si el *option_name* configuración está habilitado (TRUE, ON, yes o 1) o deshabilitado (FALSE, OFF, no o 0). *valor* es **varchar (12)**, no tiene ningún valor predeterminado.  
+`[ @OptionValue = ] 'value'` Especifica si el *option_name* configuración está habilitado (TRUE, ON, yes o 1) o deshabilitado (FALSE, OFF, no o 0). *valor* es **varchar (12)**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o mayor que 0 (error)  
@@ -98,7 +95,7 @@ EXEC sp_indexoption N'Sales.Customer.IX_Customer_TerritoryID',
     N'disallowpagelocks', TRUE;  
 ```  
   
-### <a name="b-setting-an-option-on-all-indexes-on-a-table"></a>B. Definir una opción en todos los índices de una tabla  
+### <a name="b-setting-an-option-on-all-indexes-on-a-table"></a>b. Definir una opción en todos los índices de una tabla  
  El siguiente ejemplo no permite bloqueos de fila en los índices asociados con la tabla `Product`. La vista de catálogo `sys.indexes` se consulta antes y después de ejecutar el procedimiento `sp_indexoption` para mostrar los resultados de la instrucción.  
   
 ```sql  

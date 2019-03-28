@@ -16,12 +16,12 @@ ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a4c8eb45ad7864466ccedc3de5b034325279322
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: f5c9091e3a949e5a358f5bd1305d096491782012
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589759"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537320"
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,17 +57,13 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'**_publisher_**'**  
- Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publisher_db=** ] **'**_publisher_db_**'**  
- Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publication =** ] **'**_publicación_**'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@frequency_type =** ] *frequency_type*  
- Es la frecuencia con que se ejecuta el agente de instantáneas. *frequency_type* es **int**, y puede tener uno de estos valores.  
+`[ @frequency_type = ] frequency_type` Es la frecuencia con que se ejecuta el agente de instantáneas. *frequency_type* es **int**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -79,11 +75,9 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**20**|Mensualmente, dependiendo del intervalo de frecuencia|  
 |**40**|Cuando se inicia el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- Es el valor que se aplican a la frecuencia establecida por *frequency_type*. *frequency_interval* es **int**, no tiene ningún valor predeterminado.  
+`[ @frequency_interval = ] frequency_interval` Es el valor que se aplican a la frecuencia establecida por *frequency_type*. *frequency_interval* es **int**, no tiene ningún valor predeterminado.  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- Son las unidades para *freq_subday_interval*. *frequency_subday* es **int**, y puede tener uno de estos valores.  
+`[ @frequency_subday = ] frequency_subday` Son las unidades para *freq_subday_interval*. *frequency_subday* es **int**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -92,53 +86,39 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**4**|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- Es el intervalo de *frequency_subday*. *frequency_subday_interval* es **int**, no tiene ningún valor predeterminado.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Es el intervalo de *frequency_subday*. *frequency_subday_interval* es **int**, no tiene ningún valor predeterminado.  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- Es la fecha en que se ejecuta el agente de instantáneas. *frequency_relative_interval* es **int**, no tiene ningún valor predeterminado.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Es la fecha en que se ejecuta el agente de instantáneas. *frequency_relative_interval* es **int**, no tiene ningún valor predeterminado.  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es **int**, no tiene ningún valor predeterminado.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es **int**, no tiene ningún valor predeterminado.  
   
- [ **@active_start_date =** ] *active_start_date*  
- Es la fecha en que el agente de instantáneas se programa por primera vez, con el formato AAAAMMDD. *active_start_date* es **int**, no tiene ningún valor predeterminado.  
+`[ @active_start_date = ] active_start_date` Es la fecha en el agente de instantáneas programada, con el formato AAAAMMDD. *active_start_date* es **int**, no tiene ningún valor predeterminado.  
   
- [ **@active_end_date =** ] *active_end_date*  
- Es la fecha en la que el agente de instantáneas deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, no tiene ningún valor predeterminado.  
+`[ @active_end_date = ] active_end_date` Es la fecha en el agente de instantáneas deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, no tiene ningún valor predeterminado.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- Es la hora del día en que el agente de instantáneas se programa por primera vez, con el formato HHMMSS. *active_start_time_of_day* es **int**, no tiene ningún valor predeterminado.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Es la hora del día, cuando el agente de instantáneas es el primero programada, con el formato HHMMSS. *active_start_time_of_day* es **int**, no tiene ningún valor predeterminado.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- Es la hora del día en que el agente de instantáneas deja de estar programado, con el formato HHMMSS. *active_end_time_of_day* es **int**, no tiene ningún valor predeterminado.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Es la hora del día en que el agente de instantáneas deja de estar programado, con el formato HHMMSS. *active_end_time_of_day* es **int**, no tiene ningún valor predeterminado.  
   
- [  **@snapshot_job_name =** ] **'**_snapshot_agent_name_**'**  
- Es el nombre de un trabajo del agente de instantáneas existente, si se está utilizando un trabajo existente. *snapshot_agent_name* es **nvarchar (100)**, no tiene ningún valor predeterminado.  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'` Es el nombre de un trabajo del agente de instantáneas existente si se usa un trabajo existente. *snapshot_agent_name* es **nvarchar (100)**, no tiene ningún valor predeterminado.  
   
- [ **@publisher_security_mode**=] *publisher_security_mode*  
- Es el modo de seguridad que el agente utiliza al conectarse al publicador. *publisher_security_mode* es **int**, no tiene ningún valor predeterminado. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación, y **1** especifica autenticación de Windows. Un valor de **0** debe especificarse para que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` Es el modo de seguridad utilizado por el agente al conectarse al publicador. *publisher_security_mode* es **int**, no tiene ningún valor predeterminado. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación, y **1** especifica autenticación de Windows. Un valor de **0** debe especificarse para que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**=] **'**_publisher_login_**'**  
- Es el inicio de sesión utilizado al conectar al publicador. *publisher_login* es **sysname**, no tiene ningún valor predeterminado. *publisher_login* debe especificarse cuando *publisher_security_mode* es **0**. Si *publisher_login* es NULL y el publicador *_ ** security_mode* es **1**, la cuenta de Windows especificada en *job_login* será se usa al conectarse al publicador.  
+`[ @publisher_login = ] 'publisher_login'` Se usa el inicio de sesión al conectarse al publicador. *publisher_login* es **sysname**, no tiene ningún valor predeterminado. *publisher_login* debe especificarse cuando *publisher_security_mode* es **0**. Si *publisher_login* es NULL y el publicador *_ ** security_mode* es **1**, la cuenta de Windows especificada en *job_login* será se usa al conectarse al publicador.  
   
- [ **@publisher_password**=] **'**_publisher_password_**'**  
- Es la contraseña utilizada para conectarse al publicador. *publisher_password* es **nvarchar (524)**, no tiene ningún valor predeterminado.  
+`[ @publisher_password = ] 'publisher_password'` Es la contraseña utilizada al conectarse al publicador. *publisher_password* es **nvarchar (524)**, no tiene ningún valor predeterminado.  
   
 > [!IMPORTANT]  
 >  No almacene información de autenticación en archivos de script. Para ayudar a mejorar la seguridad, se recomienda proporcionar nombres de inicio de sesión y contraseñas en tiempo de ejecución.  
   
- [ **@job_login**=] **'**_job_login_**'**  
- Es el inicio de sesión de la cuenta de Windows en la que se ejecuta el agente. *job_login* es **nvarchar (257)**, no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para conexiones del agente con el distribuidor. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas. *No se puede cambiar para que no es* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Publisher.*  
+`[ @job_login = ] 'job_login'` Es el inicio de sesión para la cuenta de Windows que se ejecuta el agente. *job_login* es **nvarchar (257)**, no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para conexiones del agente con el distribuidor. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas. *No se puede cambiar para que no es* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Publisher.*  
   
- [ **@job_password**=] **'**_job_password_**'**  
- Es la contraseña de la cuenta de Windows en la que se ejecuta el agente. *job_password* es **sysname**, no tiene ningún valor predeterminado. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas.  
+`[ @job_password = ] 'job_password'` Es la contraseña de la cuenta de Windows que se ejecuta el agente. *job_password* es **sysname**, no tiene ningún valor predeterminado. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas.  
   
 > [!IMPORTANT]  
 >  No almacene información de autenticación en archivos de script. Para ayudar a mejorar la seguridad, se recomienda proporcionar nombres de inicio de sesión y contraseñas en tiempo de ejecución.  
   
- [ **@publisher_type**=] **'**_publisher_type_**'**  
- Especifica el tipo de publicador cuando el publicador no se ejecuta en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* es **sysname**, y puede tener uno de los siguientes valores.  
+`[ @publisher_type = ] 'publisher_type'` Especifica el tipo de publicador cuando el publicador no se está ejecutando en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publisher_type* es **sysname**, y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  

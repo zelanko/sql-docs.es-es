@@ -10,12 +10,12 @@ ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2abd6a00944e862644b1d62019c24677e6c95d51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124475"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538404"
 ---
 # <a name="migrating-triggers"></a>Migrar desencadenadores
   En este tema se describen los desencadenadores DDL y DML, y las tablas optimizadas para memoria.  
@@ -40,7 +40,7 @@ ms.locfileid: "48124475"
   
  La base de datos contiene los siguientes objetos, incluidos en scripts como instrucciones CREATE TABLE, CREATE TRIGGER y CREATE PROCEDURE:  
   
-```tsql  
+```sql  
 CREATE TABLE OrderDetails  
 (  
    OrderId int not null primary key,  
@@ -98,7 +98,7 @@ GO
   
  Los objetos siguientes son funcionalmente equivalentes al estado previo a la migración:  
   
-```tsql  
+```sql  
 CREATE TABLE OrderDetails  
 (  
    OrderId int not null PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT = 1048576),  

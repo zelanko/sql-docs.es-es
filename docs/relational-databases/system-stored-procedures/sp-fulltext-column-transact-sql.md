@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0173c89273d208824bd945fa7c073ddd7940067e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 782f480ad0ae9f2342180ae1f2a44e32c44b9022
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615013"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537276"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,31 +48,26 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tabname=** ] **'***qualified_table_name***'**  
- Se trata de un nombre de tabla con una o dos partes. La tabla debe existir en la base de datos actual. La tabla debe tener un índice de texto completo. *qualified_table_name* es **nvarchar (517)**, sin valor predeterminado.  
+`[ @tabname = ] 'qualified_table_name'` Es un nombre de tabla de una o dos partes. La tabla debe existir en la base de datos actual. La tabla debe tener un índice de texto completo. *qualified_table_name* es **nvarchar (517)**, sin valor predeterminado.  
   
- [  **@colname=** ] **'***column_name***'**  
- Es el nombre de una columna de *qualified_table_name*. La columna debe ser un carácter, **varbinary (max)** o **imagen** columna y no puede ser una columna calculada. *column_name* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @colname = ] 'column_name'` Es el nombre de una columna de *qualified_table_name*. La columna debe ser un carácter, **varbinary (max)** o **imagen** columna y no puede ser una columna calculada. *column_name* es **sysname**, no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede crear índices de texto completo de datos de texto almacenados en las columnas de **varbinary (max)** o **imagen** tipo de datos. Las imágenes no se indizan.  
   
- [  **@action=** ] **'***acción***'**  
- Se trata de la acción que se va a realizar. *acción* es **varchar (20)**, no tiene ningún valor predeterminado y puede ser uno de los siguientes valores.  
+`[ @action = ] 'action'` Es la acción que se realizará. *acción* es **varchar (20)**, no tiene ningún valor predeterminado y puede ser uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**Agregar**|Agrega *column_name* de *qualified_table_name* al índice de texto completo inactivo de la tabla. Esta acción habilita el indizado de texto completo de la columna.|  
-|**DROP**|Quita *column_name* de *qualified_table_name* de índice de texto completo inactivo de la tabla.|  
+|**add**|Agrega *column_name* de *qualified_table_name* al índice de texto completo inactivo de la tabla. Esta acción habilita el indizado de texto completo de la columna.|  
+|**drop**|Quita *column_name* de *qualified_table_name* de índice de texto completo inactivo de la tabla.|  
   
- [  **@language=** ] **'***language_term***'**  
- Se trata del idioma de los datos almacenados en la columna. Para obtener una lista de los idiomas incluidos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+`[ @language = ] 'language_term'` Es el idioma de los datos almacenados en la columna. Para obtener una lista de los idiomas incluidos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Use 'Neutral' cuando una columna contiene datos en varios idiomas o en un idioma no admitido. El valor predeterminado se especifica en la opción de configuración 'default full-text language'.  
   
- [  **@type_colname =** ] **'***type_column_name***'**  
- Es el nombre de una columna de *qualified_table_name* que contiene el tipo de documento de *column_name*. Esta columna debe ser **char**, **nchar**, **varchar**, o **nvarchar**. Solo se usa cuando el tipo de datos de *column_name* es de tipo **varbinary (max)** o **imagen**. *type_column_name* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @type_colname = ] 'type_column_name'` Es el nombre de una columna de *qualified_table_name* que contiene el tipo de documento de *column_name*. Esta columna debe ser **char**, **nchar**, **varchar**, o **nvarchar**. Solo se usa cuando el tipo de datos de *column_name* es de tipo **varbinary (max)** o **imagen**. *type_column_name* es **sysname**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

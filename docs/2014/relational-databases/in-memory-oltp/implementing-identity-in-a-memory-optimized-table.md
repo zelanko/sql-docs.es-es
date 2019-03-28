@@ -10,19 +10,19 @@ ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c774e0b69565c21a7ba794712212e3b79bcc66e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 591d86011ee769d054c069db98a40e2765b1ec27
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204045"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538137"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>Implementar IDENTITY en una tabla con optimización para memoria
   IDENTITY(1, 1) se admite en una tabla optimizada para memoria. Sin embargo, las columnas de identidad con la definición de IDENTITY(x, y) donde x != 1 o y != 1 no se admiten en las tablas optimizadas para memoria. La solución para los valores de IDENTITY utiliza el objeto SEQUENCE ([Sequence Numbers](../sequence-numbers/sequence-numbers.md)).  
   
  Quite primero la propiedad IDENTITY de la tabla que está convirtiendo a OLTP en memoria. A continuación, defina un nuevo objeto SEQUENCE para la columna en la tabla. Los objetos SEQUENCE como las columnas de identidad se basan en la capacidad de crear valores DEFAULT para las columnas que utilizan la sintaxis NEXT VALUE FOR para obtener un nuevo valor de identidad. Puesto que los valores DEFAULT no se admiten en OLTP en memoria, es necesario pasar el valor SEQUENCE recién generado a la instrucción INSERT o a un procedimiento almacenado compilado de forma nativa que lleve a cabo la inserción. El ejemplo siguiente demuestra este patrón.  
   
-```tsql  
+```sql  
 -- Create a new In-Memory OLTP table to simulate IDENTITY insert  
 -- Here the column C1 was the identity column in the original table  
 --  

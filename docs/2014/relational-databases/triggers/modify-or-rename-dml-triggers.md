@@ -14,12 +14,12 @@ ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3eced987f2f19e5379ab14ebc88eca37b8e19d8a
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 824ea1587955884f10a53579865d2029cc63eefc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084974"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530897"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Modificar o cambiar el nombre de desencadenadores DML
   En este tema se describe cómo modificar o cambiar el nombre de un desencadenador DML en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,7 +48,7 @@ ms.locfileid: "49084974"
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
--   Se recomienda no usar el procedimiento almacenado [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) para cambiar el nombre de un desencadenador. Al cambiar cualquier parte del nombre de un objeto se pueden interrumpir scripts y procedimientos almacenados. Al cambiar el nombre de un desencadenador no se cambia el nombre del objeto correspondiente en la columna de definición de la vista de catálogo [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) . Se recomienda que quite y vuelva a crear el desencadenador en su lugar.  
+-   Se recomienda no usar el procedimiento almacenado [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) para cambiar el nombre de un desencadenador. Al cambiar cualquier parte del nombre de un objeto se pueden interrumpir scripts y procedimientos almacenados. Al cambiar el nombre de un desencadenador no se cambia el nombre del objeto correspondiente en la columna de definición de la vista de catálogo [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) . En su lugar, se recomienda quitar y volver a crear el desencadenador.  
   
 -   Si cambia el nombre de un objeto al que hace referencia un desencadenador DML, deberá modificar este último para que el texto refleje el nuevo nombre. Por tanto, antes de cambiar el nombre de un objeto, vea primero las dependencias del mismo para determinar si algún desencadenador va a verse afectado por el cambio propuesto.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "49084974"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para modificar un desencadenador DML se requiere el permiso ALTER en la tabla o vista en la que se define el desencadenador.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -89,13 +89,13 @@ ms.locfileid: "49084974"
   
 #### <a name="to-modify-a-trigger-using-alter-trigger"></a>Para modificar un desencadenador mediante ALTER TRIGGER  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
 3.  Copie y pegue los ejemplos siguientes en la consulta. Ejecute el primer ejemplo para crear un desencadenador DML que muestre al cliente un mensaje definido por el usuario cuando un usuario intente agregar o cambiar los datos de la tabla `SalesPersonQuotaHistory` . Ejecute la instrucción [ALTER TRIGGER](/sql/t-sql/statements/alter-trigger-transact-sql) para modificar el desencadenador de manera que solo se active en las actividades `INSERT` . Este desencadenador es útil porque recuerda al usuario que actualiza o inserta filas en esta tabla que debe notificar también al departamento `Compensation` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  
@@ -110,7 +110,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER TRIGGER Sales.bonus_reminder  
@@ -123,13 +123,13 @@ GO
   
 #### <a name="to-rename-a-trigger-using-drop-trigger-and-alter-trigger"></a>Para cambiar el nombre de un desencadenador mediante DROP TRIGGER y ALTER TRIGGER  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se usan las instrucciones [DROP TRIGGER](/sql/t-sql/statements/drop-trigger-transact-sql) y [ALTER TRIGGER](/sql/t-sql/statements/alter-trigger-transact-sql) para cambiar el nombre del desencadenador `Sales.bonus_reminder` a `Sales.bonus_reminder_2`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  

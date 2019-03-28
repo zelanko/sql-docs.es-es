@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa52c7e66a690b54c33330e09fe4373962ea2f9b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 910f4f02c17ba0f6524648b9ac1eb201d735b238
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589319"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527927"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@remoteserver =** ] **'**_remoteserver_**'**  
- Es el nombre del servidor remoto asignado al inicio de sesión remoto que se va a quitar. *remoteserver* es **sysname**, no tiene ningún valor predeterminado. *remoteserver* ya debe existir.  
+`[ @remoteserver = ] 'remoteserver'` Es el nombre del servidor remoto asignado al inicio de sesión remoto que se va a quitar. *remoteserver* es **sysname**, no tiene ningún valor predeterminado. *remoteserver* ya debe existir.  
   
- [  **@loginame =** ] **'**_inicio de sesión_**'**  
- Es el nombre de inicio de sesión opcional en el servidor local, asociado al servidor remoto. *login* es de tipo **sysname** y su valor predeterminado es NULL. *inicio de sesión* ya debe existir si se especifica.  
+`[ @loginame = ] 'login'` Es el nombre de inicio de sesión opcional en el servidor local que está asociado con el servidor remoto. *login* es de tipo **sysname** y su valor predeterminado es NULL. *inicio de sesión* ya debe existir si se especifica.  
   
- [  **@remotename =** ] **'**_remote_name_**'**  
- Es el nombre opcional del inicio de sesión remoto asignado a *inicio de sesión* al iniciar sesión desde el servidor remoto. *remote_name* es **sysname**, su valor predeterminado es null.  
+`[ @remotename = ] 'remote_name'` Es el nombre opcional del inicio de sesión remoto asignado a *inicio de sesión* al iniciar sesión desde el servidor remoto. *remote_name* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

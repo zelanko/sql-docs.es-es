@@ -16,12 +16,12 @@ ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e1dc9bdb903b6aaa7bf3ee22c1f70a36dd7b3ba5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: edda5c400ebc9158fbc18e4c8ad8c9a118d9e476
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782997"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534137"
 ---
 # <a name="spreinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
- Es el nombre del publicador. *publicador* es **sysname**, con un valor predeterminado es ALL.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, con un valor predeterminado es ALL.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, con un valor predeterminado es ALL.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, con un valor predeterminado es ALL.  
   
- [ **@publication** =] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, con un valor predeterminado es ALL.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, con un valor predeterminado es ALL.  
   
- [ **@upload_first** =] **'***upload_first***'**  
- Especifica si se cargan los cambios del suscriptor antes de que se reinicialice la suscripción. *upload_first* es **nvarchar (5)**, su valor predeterminado es False. Si **true**, los cambios se cargan antes de reinicializar la suscripción. Si **false**, no se cargan los cambios.  
+`[ @upload_first = ] 'upload_first'` Especifica si se cargan los cambios en el suscriptor antes de reinicializar la suscripción. *upload_first* es **nvarchar (5)**, su valor predeterminado es False. Si **true**, los cambios se cargan antes de reinicializar la suscripción. Si **false**, no se cargan los cambios.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

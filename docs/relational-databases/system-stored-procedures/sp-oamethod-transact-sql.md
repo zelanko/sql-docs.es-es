@@ -18,12 +18,12 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 525a66fa00981c4360295ee9c704102cd1224220
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 703b6464d035d06583193aedaa330257fc38fe34
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591469"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530377"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,8 +65,7 @@ sp_OAMethod objecttoken , methodname
   
 -   El método devuelve una matriz como parámetro de salida.  
   
- [ _@parametername_ **=** ] *parámetro*[ **salida** ]  
- Es un parámetro del método. Si se especifica, *parámetro* debe ser un valor de tipo de datos adecuado.  
+`[ _@parametername = ] parameter[ OUTPUT ]` Es un parámetro de método. Si se especifica, *parámetro* debe ser un valor de tipo de datos adecuado.  
   
  Para obtener el valor devuelto de un parámetro de salida, *parámetro* debe ser una variable local del tipo de datos adecuado, y **salida** debe especificarse. Si se especifica un parámetro constante, o si **salida** no se especifica, todos de retorno se omite el valor de un parámetro de salida.  
   

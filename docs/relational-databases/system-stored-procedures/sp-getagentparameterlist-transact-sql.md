@@ -16,12 +16,12 @@ ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f702d62c14825cc6bdfa261a8a94a33a285c343
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fe50eb497c0bcaf4ba62bb4260567df5ee81c962
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783067"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531637"
 ---
 # <a name="spgetagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@agent_type =** ] **'***agent_type***'**  
- Es el agente de replicación para el que se agrega el parámetro. *agent_type* es **int**, y puede tener uno de estos valores:  
+`[ @agent_type = ] 'agent_type'` Es el agente de replicación para el que se agrega el parámetro. *agent_type* es **int**, y puede tener uno de estos valores:  
   
 |Valor|Agente|  
 |-----------|-----------|  

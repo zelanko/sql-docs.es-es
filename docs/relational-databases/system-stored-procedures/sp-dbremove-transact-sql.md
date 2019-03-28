@@ -18,12 +18,12 @@ ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ffd0874e60d6a9b8ab89ade6e11fc504ac166a2c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cfb2671083b62034d4227f232bc062ce46138a3a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530283"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526287"
 ---
 # <a name="spdbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@dbname=** ] **'**_base de datos_**'**  
- Es el nombre de la base de datos que se va a quitar. *base de datos* es **sysname**, su valor predeterminado es null.  
+`[ @dbname = ] 'database'` Es el nombre de la base de datos que va a quitar. *base de datos* es **sysname**, su valor predeterminado es null.  
   
- [  **@dropdev=** ] **'**_dropdev_**'**  
- Es una marca proporcionada solo para garantizar la compatibilidad con versiones anteriores y actualmente se omite. *dropdev* tiene el valor **dropdev**.  
+`[ @dropdev = ] 'dropdev'` Es una marca proporcionada para la compatibilidad con versiones anteriores y actualmente se omite. *dropdev* tiene el valor **dropdev**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

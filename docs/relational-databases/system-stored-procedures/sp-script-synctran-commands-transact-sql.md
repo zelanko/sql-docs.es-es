@@ -16,12 +16,12 @@ ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4956a449c0b972fffba462a907e899791fadfa5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a9ee35eb4c5d67ff50f4f08c1cfa29596e27aec2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791407"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536187"
 ---
 # <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication** =] **'***publicación***'**  
- Es el nombre de la publicación de la que se va a crear un script. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se convertirá en script. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@article** =] **'***artículo***'**  
- Es el nombre del artículo que se va a agregar al script. *artículo* es **sysname**, su valor predeterminado es **todas**, que especifica todos los artículos se convertirá en script.  
+`[ @article = ] 'article'` Es el nombre del artículo que se convertirá en script. *artículo* es **sysname**, su valor predeterminado es **todas**, que especifica todos los artículos se convertirá en script.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

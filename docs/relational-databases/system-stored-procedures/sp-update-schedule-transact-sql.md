@@ -18,12 +18,12 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eeff4b38e3736241e0dd56729e42c5e7207f310f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b7bf2a2e589a7e3dc69ee805f1958dad4cbecb8c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591809"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538567"
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,20 +56,15 @@ sp_update_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@schedule_id =** ] *schedule_id*  
- Identificador de la programación que se va a modificar. *schedule_id* es **int**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* debe especificarse.  
+`[ @schedule_id = ] schedule_id` El identificador de programación que se va a modificar. *schedule_id* es **int**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* debe especificarse.  
   
- [  **@name =** ] **'**_schedule_name_**'**  
- Nombre de la programación que se va a modificar. *schedule_name*es **sysname**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* debe especificarse.  
+`[ @name = ] 'schedule_name'` El nombre de la programación para modificar. *schedule_name*es **sysname**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* debe especificarse.  
   
- [ **@new_name**= ] *new_name*  
- El nuevo nombre para la programación. *new_name* es **sysname**, su valor predeterminado es null. Cuando *new_name* es NULL, el nombre de la programación se ha modificado.  
+`[ @new_name = ] new_name` El nuevo nombre para la programación. *new_name* es **sysname**, su valor predeterminado es null. Cuando *new_name* es NULL, el nombre de la programación se ha modificado.  
   
- [  **@enabled =** ] *habilitado*  
- Indica el estado actual de la programación. *habilitado*es **tinyint**, su valor predeterminado es **1** (habilitado). Si **0**, la programación no está habilitada. Si la programación no está habilitada, no se ejecuta ningún trabajo en esta programación.  
+`[ @enabled = ] enabled` Indica el estado actual de la programación. *habilitado*es **tinyint**, su valor predeterminado es **1** (habilitado). Si **0**, la programación no está habilitada. Si la programación no está habilitada, no se ejecuta ningún trabajo en esta programación.  
   
- [ **@freq_type =** ] *freq_type*  
- Valor que indica cuándo se va a ejecutar un trabajo. *freq_type*es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
+`[ @freq_type = ] freq_type` Un valor que indica cuándo un trabajo se ejecutará. *freq_type*es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -81,8 +76,7 @@ sp_update_schedule
 |**64**|Se ejecuta cuando se inicia el servicio SQLServerAgent|  
 |**128**|Cuando el equipo esté inactivo|  
   
- [ **@freq_interval =** ] *freq_interval*  
- Días en que se ejecuta un trabajo. *freq_interval* es **int**, su valor predeterminado es **0**y depende del valor de *freq_type*.  
+`[ @freq_interval = ] freq_interval` Los días que se ejecuta un trabajo. *freq_interval* es **int**, su valor predeterminado es **0**y depende del valor de *freq_type*.  
   
 |Valor de *freq_type*|Efecto en *freq_interval*|  
 |---------------------------|--------------------------------|  
@@ -94,8 +88,7 @@ sp_update_schedule
 |**64** (cuando se inicia el servicio SQLServerAgent)|*freq_interval* no se utiliza.|  
 |**128**|*freq_interval* no se utiliza.|  
   
- [ **@freq_subday_type =** ] *freq_subday_type*  
- Especifica las unidades de *freq_subday_interval **.* *freq_subday_type*es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
+`[ @freq_subday_type = ] freq_subday_type` Especifica las unidades de *freq_subday_interval **.* *freq_subday_type*es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
   
 |Valor|Descripción (unidad)|  
 |-----------|--------------------------|  
@@ -104,11 +97,9 @@ sp_update_schedule
 |**0x4**|Minutos|  
 |**0x8**|Horas|  
   
- [ **@freq_subday_interval =** ] *freq_subday_interval*  
- El número de *freq_subday_type* períodos que transcurren entre cada ejecución de un trabajo. *freq_subday_interval*es **int**, su valor predeterminado es **0**.  
+`[ @freq_subday_interval = ] freq_subday_interval` El número de *freq_subday_type* períodos que transcurren entre cada ejecución de un trabajo. *freq_subday_interval*es **int**, su valor predeterminado es **0**.  
   
- [ **@freq_relative_interval =** ] *freq_relative_interval*  
- Aparición de un trabajo de *freq_interval* en cada mes, si *freq_interval* es **32** (relativo mensual). *freq_relative_interval*es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
+`[ @freq_relative_interval = ] freq_relative_interval` Aparición de un trabajo de *freq_interval* en cada mes, si *freq_interval* es **32** (relativo mensual). *freq_relative_interval*es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
   
 |Valor|Descripción (unidad)|  
 |-----------|--------------------------|  
@@ -118,28 +109,21 @@ sp_update_schedule
 |**8**|Cuarto|  
 |**16**|Último|  
   
- [ **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
- Número de semanas o meses entre las ejecuciones programadas de un trabajo. *freq_recurrence_factor* solo se usa si *freq_type* es **8**, **16**, o **32**. *freq_recurrence_factor*es **int**, su valor predeterminado es **0**.  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor` El número de semanas o meses entre la ejecución de un trabajo programada. *freq_recurrence_factor* solo se usa si *freq_type* es **8**, **16**, o **32**. *freq_recurrence_factor*es **int**, su valor predeterminado es **0**.  
   
- [ **@active_start_date =** ]  *active_start_date*  
- La fecha en que puede comenzar la ejecución de un trabajo. *active_start_date*es **int**, su valor predeterminado es NULL, lo que indica la fecha de hoy. La fecha tiene el formato AAAAMMDD. Si *active_start_date* no es NULL, la fecha debe ser mayor o igual a 19900101.  
+`[ @active_start_date = ] active_start_date` La fecha en que puede comenzar la ejecución de un trabajo. *active_start_date*es **int**, su valor predeterminado es NULL, lo que indica la fecha de hoy. La fecha tiene el formato AAAAMMDD. Si *active_start_date* no es NULL, la fecha debe ser mayor o igual a 19900101.  
   
  Una vez creada la programación, revise la fecha de inicio y confirme que es correcta. Para obtener más información, vea la sección "Programar fechas de inicio" en [crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
- [ **@active_end_date =** ] *active_end_date*  
- Fecha en la que puede detenerse la ejecución de un trabajo. *active_end_date*es **int**, su valor predeterminado es **99991231**, lo que indica el 31 de diciembre de 9999. Tiene el formato AAAAMMDD.  
+`[ @active_end_date = ] active_end_date` La fecha en que puede detenerse la ejecución de un trabajo. *active_end_date*es **int**, su valor predeterminado es **99991231**, lo que indica el 31 de diciembre de 9999. Tiene el formato AAAAMMDD.  
   
- [  **@active_start_time =** ] *active_start_time*  
- La hora de un día entre *active_start_date* y *active_end_date* para comenzar la ejecución de un trabajo. *active_start_time*es **int**, su valor predeterminado es 000000, lo que indica 12:00:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
+`[ @active_start_time = ] active_start_time` La hora de un día entre *active_start_date* y *active_end_date* para comenzar la ejecución de un trabajo. *active_start_time*es **int**, su valor predeterminado es 000000, lo que indica 12:00:00 A.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [  **@active_end_time =** ] *active_end_time*  
- La hora de un día entre *active_start_date* y *active_end_date* para finalizar la ejecución de un trabajo. *active_end_time*es **int**, su valor predeterminado es **235959**, lo que indica 11:59:59 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
+`[ @active_end_time = ] active_end_time` La hora de un día entre *active_start_date* y *active_end_date* para finalizar la ejecución de un trabajo. *active_end_time*es **int**, su valor predeterminado es **235959**, lo que indica 11:59:59 P.M. en un reloj de 24 horas. Se debe especificar con el formato HHMMSS.  
   
- [ **@owner_login_name**=] **'**_owner_login_name_**'**]  
- Nombre de la entidad de seguridad del servidor a la que pertenece la programación. *owner_login_name* es **sysname**, su valor predeterminado es NULL, lo que indica que la programación pertenece al creador.  
+`[ @owner_login_name = ] 'owner_login_name']` El nombre de la entidad de seguridad de servidor que posee la programación. *owner_login_name* es **sysname**, su valor predeterminado es NULL, lo que indica que la programación pertenece al creador.  
   
- [ **@automatic_post =**] *automatic_post*  
- Reservado.  
+`[ @automatic_post = ] automatic_post` Reservado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

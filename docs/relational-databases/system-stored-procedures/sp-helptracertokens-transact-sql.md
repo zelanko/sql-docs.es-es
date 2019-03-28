@@ -16,12 +16,12 @@ ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f521f416c7415d2a27554e7f3d91f5df89023798
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2e365c4a71c7bfdb5deece18e19c9950dd2ddf45
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210414"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526367"
 ---
 # <a name="sphelptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,19 +40,16 @@ sp_helptracertokens [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicación***'**  
- Es el nombre de la publicación en la que se han insertado tokens de seguimiento. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en los testigos de seguimiento se han insertado tokens. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publisher=** ] **'***publisher***'**  
- El nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null.  
+`[ @publisher = ] 'publisher'` El nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]
 >  Este parámetro solo debe especificarse para que no sean de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- El nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null. Si el procedimiento almacenado se ejecuta en el publicador, se omite este parámetro.  
+`[ @publisher_db = ] 'publisher_db'` El nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null. Si el procedimiento almacenado se ejecuta en el publicador, se omite este parámetro.  
   
-## <a name="result-set"></a>Conjunto de resultados  
+## <a name="result-set"></a>Tipo de cursor  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

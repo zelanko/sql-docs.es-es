@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0228a3f0719bd6a56142e571323fdf809e534337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61301b0c6916ba11cb54cc0c8d8ab961cc3ae659
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635695"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534327"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -46,21 +46,19 @@ sp_help_fulltext_system_components
  'all'  
  Devuelve información para todos los componentes de texto completo.  
   
- [  **@component_type=** ] *component_type*  
- Especifica el tipo de componente. *component_type* puede ser uno de los siguientes:  
+`[ @component_type = ] component_type` Especifica el tipo de componente. *component_type* puede ser uno de los siguientes:  
   
--   **separador de palabras**  
+-   **wordbreaker**  
   
 -   **filter**  
   
 -   **controlador de protocolo**  
   
--   **FullPath**  
+-   **fullpath**  
   
  Si se especifica una ruta de acceso completa, también se debe especificar *param* con la ruta de acceso completa del archivo DLL del componente; de lo contrario, se devuelve un mensaje de error.  
   
- [  **@param=** ] *param*  
- En función del tipo de componente, puede ser uno de los elementos siguientes: un identificador de configuración regional (LCID), la extensión de archivo con el prefijo ".", el nombre de componente completo del controlador de protocolo o la ruta de acceso completa del archivo DLL del componente.  
+`[ @param = ] param` Según el tipo de componente, esta es una de las acciones siguientes: un identificador de configuración regional (LCID), con la extensión de archivo ".", el componente completo nombre del prefijo del controlador de protocolo o la ruta de acceso completa a la DLL del componente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -70,12 +68,12 @@ sp_help_fulltext_system_components
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**componentType**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
-|**nombre de componente**|**sysname**|Nombre del componente.|  
-|**CLSID**|**uniqueidentifier**|Identificador de clase del componente.|  
-|**FullPath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el llamador no es un miembro de **serveradmin** rol fijo de servidor.|  
+|**componenttype**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
+|**componentname**|**sysname**|Nombre del componente.|  
+|**clsid**|**uniqueidentifier**|Identificador de clase del componente.|  
+|**fullpath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el llamador no es un miembro de **serveradmin** rol fijo de servidor.|  
 |**version**|**nvarchar(30)**|Versión del componente.|  
-|**Fabricante**|**sysname**|Nombre del fabricante del componente.|  
+|**manufacturer**|**sysname**|Nombre del fabricante del componente.|  
   
  El siguiente conjunto de resultados se devuelve si uno o más de un catálogo de texto existe que usa *component_type*.  
   
@@ -100,7 +98,7 @@ EXEC sp_help_fulltext_system_components 'all';
 GO  
 ```  
   
-### <a name="b-listing-word-breakers"></a>B. Mostrar separadores de palabras  
+### <a name="b-listing-word-breakers"></a>b. Mostrar separadores de palabras  
  En el ejemplo siguiente se muestran todos los separadores de palabras registrados en la instancia del servicio.  
   
 ```  

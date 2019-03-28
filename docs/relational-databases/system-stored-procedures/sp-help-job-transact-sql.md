@@ -18,12 +18,12 @@ ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18dde2c47f1da8c20457a9a0fbdd86c7adfe6e56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818087"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528147"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,43 +53,34 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id =**] *job_id*  
- El número de identificación del trabajo. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id` El número de identificación del trabajo. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
   
- [  **@job_name =**] **'***job_name***'**  
- Nombre del trabajo. *job_name* es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'` El nombre del trabajo. *job_name* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  Para ver un trabajo específico, ya sea *job_id* o *job_name* debe especificarse.  Omitir ambos *job_id* y *job_name* para devolver información sobre todos los trabajos.
   
- [  **@job_aspect =**] **'***job_aspect***'**  
- Atributo de trabajo que se va a mostrar. *job_aspect* es **varchar (9)**, su valor predeterminado es null, y puede tener uno de estos valores.  
+`[ @job_aspect = ] 'job_aspect'` El atributo de trabajo para mostrar. *job_aspect* es **varchar (9)**, su valor predeterminado es null, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**ALL**|Información del aspecto del trabajo|  
-|**TRABAJO**|Información del trabajo|  
+|**JOB**|Información del trabajo|  
 |**PROGRAMACIONES**|Información de la programación|  
-|**PASOS**|Información de los pasos del trabajo|  
+|**STEPS**|Información de los pasos del trabajo|  
 |**DESTINOS**|Información de los destinos|  
   
- [  **@job_type =**] **'***job_type***'**  
- Tipo de trabajos que se incluirán en el informe. *job_type* es **varchar (12)**, su valor predeterminado es null. *job_type* puede ser **LOCAL** o **MULTISERVIDOR**.  
+`[ @job_type = ] 'job_type'` El tipo de trabajos que se incluirán en el informe. *job_type* es **varchar (12)**, su valor predeterminado es null. *job_type* puede ser **LOCAL** o **MULTISERVIDOR**.  
   
- [  **@owner_login_name =**] **'***login_name***'**  
- Nombre de inicio de sesión del propietario del trabajo. *login_name* es **sysname**, su valor predeterminado es null.  
+`[ @owner_login_name = ] 'login_name'` El nombre de inicio de sesión del propietario del trabajo. *login_name* es **sysname**, su valor predeterminado es null.  
   
- [ **@subsystem =**] **'***subsystem***'**  
- Nombre del subsistema. *subsistema* es **nvarchar (40)**, su valor predeterminado es null.  
+`[ @subsystem = ] 'subsystem'` El nombre del subsistema. *subsistema* es **nvarchar (40)**, su valor predeterminado es null.  
   
- [ **@category_name =**] **'***category***'**  
- El nombre de la categoría. *categoría* es **sysname**, su valor predeterminado es null.  
+`[ @category_name = ] 'category'` El nombre de la categoría. *categoría* es **sysname**, su valor predeterminado es null.  
   
- [ **@enabled =**] *enabled*  
- Número que indica si se muestra información de los trabajos habilitados o los trabajos deshabilitados. *habilitado* es **tinyint**, su valor predeterminado es null. **1** indica trabajos habilitados y **0** indica trabajos deshabilitados.  
+`[ @enabled = ] enabled` Un número que indica si se muestra información para habilita los trabajos o los trabajos deshabilitados. *habilitado* es **tinyint**, su valor predeterminado es null. **1** indica trabajos habilitados y **0** indica trabajos deshabilitados.  
   
- [  **@execution_status =**] *estado*  
- Estado de ejecución de los trabajos. *estado* es **int**, su valor predeterminado es null, y puede tener uno de estos valores.  
+`[ @execution_status = ] status` Estado de ejecución de los trabajos. *estado* es **int**, su valor predeterminado es null, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -101,17 +92,13 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Suspendido.|  
 |**7**|Realizando acciones de finalización.|  
   
- [  **@date_comparator =**] **'***date_comparison***'**  
- El operador de comparación a usar en las comparaciones de *date_created* y *date_modified*. *date_comparison* es **char (1)** y puede ser =, \<, o >.  
+`[ @date_comparator = ] 'date_comparison'` El operador de comparación a usar en las comparaciones de *date_created* y *date_modified*. *date_comparison* es **char (1)** y puede ser =, \<, o >.  
   
- [  **@date_created =**] *date_created*  
- Fecha de creación del trabajo. *Date_Created*es **datetime**, su valor predeterminado es null.  
+`[ @date_created = ] date_created` La fecha en que se creó el trabajo. *Date_Created*es **datetime**, su valor predeterminado es null.  
   
- [  **@date_last_modified =**] *date_modified*  
- La fecha en que se modificó por última vez el trabajo. *DATE_MODIFIED* es **datetime**, su valor predeterminado es null.  
+`[ @date_last_modified = ] date_modified` La fecha en que se modificó por última vez el trabajo. *DATE_MODIFIED* es **datetime**, su valor predeterminado es null.  
   
- [  **@description =**] **'***description_pattern***'**  
- Descripción del trabajo. *description_pattern* es **nvarchar (512)**, su valor predeterminado es null. *description_pattern* puede incluir los caracteres comodín de SQL Server para la coincidencia de patrones.  
+`[ @description = ] 'description_pattern'` La descripción del trabajo. *description_pattern* es **nvarchar (512)**, su valor predeterminado es null. *description_pattern* puede incluir los caracteres comodín de SQL Server para la coincidencia de patrones.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -125,10 +112,10 @@ sp_help_job { [ @job_id = ] job_id
 |**originating_server**|**nvarchar(30)**|Nombre del servidor del que proviene el trabajo.|  
 |**Nombre**|**sysname**|Nombre del trabajo.|  
 |**enabled**|**tinyint**|Indica si el trabajo está habilitado para su ejecución.|  
-|**Descripción**|**nvarchar(512)**|Descripción del trabajo.|  
+|**description**|**nvarchar(512)**|Descripción del trabajo.|  
 |**start_step_id**|**int**|Id. del paso del trabajo en el que debe comenzar la ejecución.|  
-|**Categoría**|**sysname**|Categoría del trabajo|  
-|**Propietario**|**sysname**|Propietario del trabajo.|  
+|**category**|**sysname**|Categoría del trabajo|  
+|**owner**|**sysname**|Propietario del trabajo.|  
 |**notify_level_eventlog**|**int**|**Máscara de bits** que indica en qué circunstancias se debe registrar un evento de notificación en el registro de aplicación de Microsoft Windows. Puede ser uno de estos valores:<br /><br /> **0** no = nunca<br /><br /> **1** = cuando se realiza correctamente un trabajo<br /><br /> **2** = cuando se produce un error en el trabajo<br /><br /> **3** = cuando el trabajo se completa (independientemente del resultado del trabajo)|  
 |**notify_level_email**|**int**|**Máscara de bits** que indica en qué circunstancias se debe enviar una notificación por correo electrónico cuando se completa un trabajo. Los valores posibles son los mismos que para **notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|**Máscara de bits** que indica en qué circunstancias se debe enviar un mensaje de red cuando se completa un trabajo. Los valores posibles son los mismos que para **notify_level_eventlog**.|  
@@ -161,7 +148,7 @@ sp_help_job { [ @job_id = ] job_id
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Identificador único del paso (en este trabajo).|  
-|**Step_name**|**sysname**|Nombre del paso.|  
+|**step_name**|**sysname**|Nombre del paso.|  
 |**subsystem**|**nvarchar(40)**|Subsistema en el que se ejecuta el comando del paso.|  
 |**command**|**nvarchar(3200)**|Comando que se ejecuta.|  
 |**flags**|**nvarchar(4000)**|**Máscara de bits** de valores que controlan el comportamiento del paso.|  
@@ -248,7 +235,7 @@ EXEC dbo.sp_help_job ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-jobs-matching-a-specific-criteria"></a>B. Mostrar información de los trabajos que coinciden con un criterio específico  
+### <a name="b-listing-information-for-jobs-matching-a-specific-criteria"></a>b. Mostrar información de los trabajos que coinciden con un criterio específico  
  En el siguiente ejemplo se muestra información sobre el trabajo para los trabajos multiservidor que pertenecen a `françoisa`, donde el trabajo se habilita y ejecuta.  
   
 ```  

@@ -16,12 +16,12 @@ ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 151e990e6a6f353b6b35eb669300f305fd562f2b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f15e5104c03e271b72f6b61dc40077aabdea4e76
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812997"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526507"
 ---
 # <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es null. Este parámetro es obligatorio. Especifique un valor de **todas** para quitar las suscripciones a todas las publicaciones  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es null. Este parámetro es obligatorio. Especifique un valor de **todas** para quitar las suscripciones a todas las publicaciones  
   
- [  **@publisher=**] **'***publisher***'**  
- Es el nombre del publicador. *publicador*es **sysname**, su valor predeterminado es null. Este parámetro es obligatorio.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador*es **sysname**, su valor predeterminado es null. Este parámetro es obligatorio.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- Es el nombre de la base de datos del publicador. *publisher_db*es **sysname**, su valor predeterminado es null. Este parámetro es obligatorio.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db*es **sysname**, su valor predeterminado es null. Este parámetro es obligatorio.  
   
- [  **@reserved=**] **'***reservada***'**  
- Está reservado para su uso futuro. *reservado* es **bit**, su valor predeterminado es **0**.  
+`[ @reserved = ] 'reserved'` está reservado para uso futuro. *reservado* es **bit**, su valor predeterminado es **0**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

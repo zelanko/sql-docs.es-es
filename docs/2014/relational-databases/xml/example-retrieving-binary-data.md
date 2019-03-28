@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving binary data example
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ebfd863d458231c802f3648e3a53411f13f8bed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c39f508d20e194b0031baecf168851cd300031e1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144025"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528187"
 ---
-# <a name="example-retrieving-binary-data"></a>Ejemplo: Recuperar datos binarios
+# <a name="example-retrieving-binary-data"></a>Ejemplo: Recuperación de datos binarios
   La consulta siguiente devuelve la fotografía del producto almacenada en una columna de tipo `varbinary(max)`. En la consulta, se especifica la opción `BINARY BASE64` para devolver los datos binarios en formato codificado en base 64.  
   
 ## <a name="example"></a>Ejemplo  
@@ -34,7 +34,7 @@ FOR XML RAW, BINARY BASE64 ;
 GO  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <row ProductModelID="1" ThumbNailPhoto="base64 encoded binary data"/>  

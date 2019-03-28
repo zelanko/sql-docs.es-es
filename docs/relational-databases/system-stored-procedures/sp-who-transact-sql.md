@@ -18,12 +18,12 @@ ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d748f06a592283c49d85624c97f4db7afdc188e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbed86af1415f89a59b7de85061a6db1db324307
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628963"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536356"
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@loginame =** ] **'***inicio de sesión***'** | *Id. de sesión* | **'ACTIVE'**  
- Se utiliza para filtrar el conjunto de resultados.  
+`[ @loginame = ] 'login' | session ID | 'ACTIVE'` Se utiliza para filtrar el conjunto de resultados.  
   
  *inicio de sesión* es **sysname** e identifica los procesos que pertenecen a un inicio de sesión determinada.  
   
@@ -60,11 +59,11 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |columna|Data type|Descripción|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|Id. de sesión.|  
-|**ECID**|**smallint**|Id. de contexto de ejecución de un subproceso determinado, asociado con un Id. de sesión específico.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, donde 0 siempre representa el método main o subproceso primario y {1, 2, 3,... *n*} representan los subprocesos secundarios.|  
-|**status**|**nchar(30)**|Estado del proceso. Los valores posibles son:<br /><br /> **latente**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la sesión.<br /><br /> **ejecutando**. La sesión está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **en segundo plano**. La sesión está ejecutando una tarea en segundo plano, como una detección de interbloqueos.<br /><br /> **reversión**. La sesión está realizando una reversión de una transacción.<br /><br /> **pendiente**. La sesión está esperando que un subproceso de trabajo esté disponible.<br /><br /> **puede ejecutar**. La tarea de la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **spinloop**. La tarea de la sesión está esperando que se libere un bloqueo por bucle.<br /><br /> **suspende**. La sesión está esperando a que finalice un evento, como una entrada o salida.|  
+|**ecid**|**smallint**|Id. de contexto de ejecución de un subproceso determinado, asociado con un Id. de sesión específico.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, donde 0 siempre representa el método main o subproceso primario y {1, 2, 3,... *n*} representan los subprocesos secundarios.|  
+|**status**|**nchar(30)**|Estado del proceso. Los valores posibles son:<br /><br /> **dormant**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la sesión.<br /><br /> **ejecutando**. La sesión está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **en segundo plano**. La sesión está ejecutando una tarea en segundo plano, como una detección de interbloqueos.<br /><br /> **reversión**. La sesión está realizando una reversión de una transacción.<br /><br /> **pendiente**. La sesión está esperando que un subproceso de trabajo esté disponible.<br /><br /> **runnable**. La tarea de la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **spinloop**. La tarea de la sesión está esperando que se libere un bloqueo por bucle.<br /><br /> **suspende**. La sesión está esperando a que finalice un evento, como una entrada o salida.|  
 |**loginame**|**nchar(128)**|Nombre de inicio de sesión asociado al proceso específico.|  
-|**Nombre de host**|**nchar(128)**|Nombre del host o equipo de cada proceso.|  
-|**BLK**|**Char (5)**|Id. de sesión del proceso de bloqueo, si existe. De lo contrario, esta columna tiene el valor cero.<br /><br /> Cuando una transacción huérfana distribuida bloquea una transacción asociada con un Id. de sesión determinado, esta columna devolverá '-2' para la transacción huérfana de bloqueo.|  
+|**hostname**|**nchar(128)**|Nombre del host o equipo de cada proceso.|  
+|**blk**|**char(5)**|Id. de sesión del proceso de bloqueo, si existe. De lo contrario, esta columna tiene el valor cero.<br /><br /> Cuando una transacción huérfana distribuida bloquea una transacción asociada con un Id. de sesión determinado, esta columna devolverá '-2' para la transacción huérfana de bloqueo.|  
 |**dbname**|**nchar(128)**|Base de datos utilizado por el proceso.|  
 |**cmd**|**nchar(16)**|Comando de [!INCLUDE[ssDE](../../includes/ssde-md.md)] (instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)], proceso de [!INCLUDE[ssDE](../../includes/ssde-md.md)] interno, etc.) que se ejecuta para el proceso.|  
 |**request_id**|**int**|Id. de las solicitudes que se ejecutan en una sesión específica.|  
@@ -93,7 +92,7 @@ EXEC sp_who;
 GO  
 ```  
   
-### <a name="b-listing-a-specific-users-process"></a>B. Mostrar un proceso de un usuario específico  
+### <a name="b-listing-a-specific-users-process"></a>b. Mostrar un proceso de un usuario específico  
  En el ejemplo siguiente se muestra cómo ver información acerca de un usuario actual a partir de su nombre de inicio de sesión.  
   
 ```  
@@ -123,7 +122,7 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [Sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ec03794e60027ea578988dbe38855d8ad14cb09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c856e11b55040bf699eace2fb1f917f058c2fc9a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596803"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536377"
 ---
 # <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@devname =** ] **'***nombre***'**  
- Es el nombre del dispositivo de copia de seguridad para el que se proporciona información. El valor de *nombre* siempre **sysname**.  
+`[ @devname = ] 'name'` Es el nombre del dispositivo de copia de seguridad para el que se notifica la información. El valor de *nombre* siempre **sysname**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -55,9 +54,9 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|Nombre del dispositivo lógico.|  
 |**physical_name**|**nvarchar(260)**|Nombre de archivo físico.|  
-|**Descripción**|**nvarchar(255)**|Descripción del dispositivo.|  
+|**description**|**nvarchar(255)**|Descripción del dispositivo.|  
 |**status**|**int**|Un número que corresponde a la descripción del estado de la **descripción** columna.|  
-|**CntrlType**|**smallint**|Tipo de controlador del dispositivo:<br /><br /> 2 = Dispositivo de disco<br /><br /> 5 = Dispositivo de cinta|  
+|**cntrltype**|**smallint**|Tipo de controlador del dispositivo:<br /><br /> 2 = Dispositivo de disco<br /><br /> 5 = Dispositivo de cinta|  
 |**size**|**int**|Tamaño del dispositivo en páginas de 2 KB.|  
   
 ## <a name="remarks"></a>Comentarios  

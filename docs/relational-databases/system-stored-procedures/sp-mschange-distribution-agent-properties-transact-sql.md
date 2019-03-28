@@ -16,12 +16,12 @@ ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b7ebae98b83c743fa2ea111a2809b3d1a043005
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 93462a0f9529b20b3a74d37a3b844eb643e9f7b3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774137"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526647"
 ---
 # <a name="spmschangedistributionagentproperties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,19 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
- Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publication =** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@subscriber=** ] **'***suscriptor***'**  
- Es el nombre del suscriptor. *suscriptor* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *suscriptor* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@subscriber_db=** ] **'***subscriber_db***'**  
- Es el nombre de la base de datos de suscripción. *subscriber_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripción. *subscriber_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@property =** ] **'***propiedad***'**  
- Es la propiedad de publicación que se va a cambiar. *propiedad* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @property = ] 'property'` Es la propiedad de publicación para cambiar. *propiedad* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@value =** ] **'***valor***'**  
- Es el nuevo valor de la propiedad. *valor* es **nvarchar (524)**, su valor predeterminado es null.  
+`[ @value = ] 'value'` Es el nuevo valor de propiedad. *valor* es **nvarchar (524)**, su valor predeterminado es null.  
   
  Esta tabla describe las propiedades del trabajo del Agente de distribución que se pueden cambiar y las restricciones en los valores de esas propiedades.  
   
@@ -80,10 +73,10 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |**subscriber_providerstring**||Cadena de conexión específica del proveedor OLE DB que identifica el origen de datos. *Esta propiedad sólo es válida para que no son suscriptores de SQL Server.*|  
 |**subscriber_security_mode**|**1**|Autenticación de Windows.<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
 ||**0**|Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**propiedad subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptor|  
+|**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptor|  
 ||**1**|Servidor del origen de datos ODBC|  
 ||**3**|Proveedor OLE DB|  
-|**flujos de suscripción**||Indica el número de conexiones permitidas por Agente de distribución para aplicar lotes de cambios de forma paralela a un suscriptor. *No se admite para que no sean de* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *los suscriptores, los publicadores de Oracle o suscripciones punto a punto.*|  
+|**subscriptionstreams**||Indica el número de conexiones permitidas por Agente de distribución para aplicar lotes de cambios de forma paralela a un suscriptor. *No se admite para que no sean de* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *los suscriptores, los publicadores de Oracle o suscripciones punto a punto.*|  
   
 > [!NOTE]  
 >  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  

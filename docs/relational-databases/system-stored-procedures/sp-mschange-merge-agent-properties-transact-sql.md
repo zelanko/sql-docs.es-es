@@ -16,12 +16,12 @@ ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ad4b46cbf4c19b637bdc836e5c311321273de63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f682400bc827d66878499b6e625671d5b9061da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769787"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535655"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,19 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
- Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publication =** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@subscriber=** ] **'***suscriptor***'**  
- Es el nombre del suscriptor. *suscriptor* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *suscriptor* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@subscriber_db=** ] **'***subscriber_db***'**  
- Es el nombre de la base de datos de suscripción. *subscriber_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripción. *subscriber_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@property =** ] **'***propiedad***'**  
- Es la propiedad de publicación que se va a cambiar. *propiedad* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @property = ] 'property'` Es la propiedad de publicación para cambiar. *propiedad* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@value =** ] **'***valor***'**  
- Es el nuevo valor de la propiedad. *valor* es **nvarchar (524)**, su valor predeterminado es null.  
+`[ @value = ] 'value'` Es el nuevo valor de propiedad. *valor* es **nvarchar (524)**, su valor predeterminado es null.  
   
  Esta tabla describe las propiedades del trabajo del Agente de mezcla que se pueden cambiar y las restricciones de los valores de esas propiedades.  
   

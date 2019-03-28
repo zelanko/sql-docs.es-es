@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c9ed0ee742d1562d8b573b71e5d62b7d10bc7d02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c214c8b061e2530c4dcf4b178b6028cbdca01fa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843833"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530027"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@acctname =** ] **'***account_name***'**  
- Es el nombre de un usuario o grupo de Windows al que se ha concedido acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* es **sysname**, su valor predeterminado es null. Si *account_name* no se especifica, todos los grupos de Windows y los usuarios de Windows que se han explícitamente permiso de inicio de sesión se notifican. *account_name* debe ser un nombre completo. Por ejemplo, 'ADVWKS4\macraes' o 'BUILTIN\Administrators'.  
+`[ @acctname = ] 'account_name'` Es el nombre de un usuario de Windows o grupo que se le concedido acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *account_name* es **sysname**, su valor predeterminado es null. Si *account_name* no se especifica, todos los grupos de Windows y los usuarios de Windows que se han explícitamente permiso de inicio de sesión se notifican. *account_name* debe ser un nombre completo. Por ejemplo, 'ADVWKS4\macraes' o 'BUILTIN\Administrators'.  
   
  **'all'** | **"members"**  
  Especifica si se presenta información de todas las rutas de acceso a permisos de la cuenta o si se presenta información de los miembros del grupo de Windows. **@option** es **varchar (10)**, su valor predeterminado es null. A menos que **todas** se especifica, se muestra solo la primera ruta de permisos.  
   
- [  **@privilege =** ] *variable_name*  
- Es un parámetro de salida que devuelve el nivel de privilegio de la cuenta de Windows especificada. *variable_name* es **varchar (10)**, su valor predeterminado es 'Not wanted'. El nivel de privilegio devuelto es **usuario**, **admin**, o **null**.  
+`[ @privilege = ] variable_name` Es un parámetro de salida que devuelve el nivel de privilegio de la cuenta de Windows especificada. *variable_name* es **varchar (10)**, su valor predeterminado es 'Not wanted'. El nivel de privilegio devuelto es **usuario**, **admin**, o **null**.  
   
  OUTPUT  
  Cuando se especifica, coloca *variable_name* en el parámetro de salida.  
@@ -62,8 +60,8 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre de cuenta**|**sysname**|Nombre completo de la cuenta de Windows.|  
-|**Tipo**|**Char (8)**|Tipo de cuenta de Windows. Los valores válidos son **usuario** o **grupo**.|  
-|**privilegio**|**char(9)**|Privilegio de acceso para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores válidos son **admin**, **usuario**, o **null**.|  
+|**Tipo**|**char(8)**|Tipo de cuenta de Windows. Los valores válidos son **usuario** o **grupo**.|  
+|**privilege**|**char(9)**|Privilegio de acceso para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores válidos son **admin**, **usuario**, o **null**.|  
 |**nombre de inicio de sesión asignado**|**sysname**|Cuentas de usuario que tienen privilegio de usuario, **asigna el nombre de inicio de sesión** muestra el nombre de inicio de sesión asignado que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta usar al iniciar sesión con esta cuenta mediante el uso de las reglas de asociación con el nombre de dominio agregado antes.|  
 |**ruta de acceso de permiso**|**sysname**|Pertenencia al grupo que permite que la cuenta tenga acceso.|  
   

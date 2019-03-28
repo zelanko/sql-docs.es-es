@@ -16,12 +16,12 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d28c8da014a3922a9dbd1cba533b4cbf1d7a9215
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590079"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538617"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,33 +44,26 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =**] **'**_publicación_**'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@article =**] **'**_artículo_**'**  
- Es el nombre del artículo de la publicación. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @article = ] 'article'` Es el nombre del artículo de la publicación. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@column =**] **'**_columna_**'**  
- Identifica las columnas donde se va a crear la partición vertical. *columna* es **sysname**, su valor predeterminado es null. Si es NULL y `@operation = N'add'`, de manera predeterminada se agregan al artículo todas las columnas de la tabla de origen. *columna* no puede ser NULL cuando *operación* está establecido en **drop**. Para excluir las columnas de un artículo, ejecute **sp_mergearticlecolumn** y especifique *columna* y `@operation = N'drop'` para cada columna que se va a quitar de la especificada *artículo*.  
+`[ @column = ] 'column'` Identifica las columnas que se va a crear la partición vertical. *columna* es **sysname**, su valor predeterminado es null. Si es NULL y `@operation = N'add'`, de manera predeterminada se agregan al artículo todas las columnas de la tabla de origen. *columna* no puede ser NULL cuando *operación* está establecido en **drop**. Para excluir las columnas de un artículo, ejecute **sp_mergearticlecolumn** y especifique *columna* y `@operation = N'drop'` para cada columna que se va a quitar de la especificada *artículo*.  
   
- [  **@operation =**] **'**_operación_**'**  
- Es el estado de replicación. *operación* es **nvarchar (4)**, con el valor predeterminado es ADD. **agregar** marca la columna para la replicación. **quitar** borra la columna.  
+`[ @operation = ] 'operation'` Es el estado de replicación. *operación* es **nvarchar (4)**, con el valor predeterminado es ADD. **agregar** marca la columna para la replicación. **quitar** borra la columna.  
   
- [  **@schema_replication=**] **'**_el argumento schema_replication_**'**  
- Especifica que un cambio en el esquema se propagará al ejecutar el agente de mezcla. *el argumento schema_replication* es **nvarchar (5)**, su valor predeterminado es False.  
+`[ @schema_replication = ] 'schema_replication'` Especifica que un cambio de esquema se propagará cuando se ejecuta el agente de mezcla. *el argumento schema_replication* es **nvarchar (5)**, su valor predeterminado es False.  
   
 > [!NOTE]  
 >  Solo **FALSE** es compatible con *el argumento schema_replication*.  
   
- [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
- Habilita o deshabilita la capacidad de que se invalide una instantánea. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Habilita o deshabilita la capacidad de invalidar una instantánea. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
   
  **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la instantánea no es válido.  
   
  **1** especifica que los cambios realizados en el artículo de mezcla pueden invalidar la instantánea no es válido, y si es así, un valor de **1** concede permiso para la nueva instantánea que se produzca.  
   
- [  **@force_reinit_subscription =]**_force_reinit_subscription_  
- Habilita o deshabilita la capacidad de reinicializar la suscripción. *force_reinit_subscription* es un poco con un valor predeterminado de **0**.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` Habilita o deshabilita la capacidad de reinicializar la suscripción. *force_reinit_subscription* es un poco con un valor predeterminado de **0**.  
   
  **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la suscripción para reinicializarla.  
   

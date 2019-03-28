@@ -18,12 +18,12 @@ ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 98e962d5600064194ef4aff4a8f514e39a8f71a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1db15a2f8c8e1d7616065ff88aa40b08f92127a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806783"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530278"
 ---
 # <a name="sprevokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name_in_db =** ] **'***nombre***'**  
- Es el nombre del usuario de base de datos que se va a quitar. *nombre* es un **sysname** no tiene ningún valor predeterminado. *nombre* puede ser el nombre de un inicio de sesión de servidor, un inicio de sesión de Windows o un grupo de Windows y debe existir en la base de datos actual. Si especifica un inicio de sesión de Windows o un grupo de Windows, debe especificar el nombre con el que se conoce en la base de datos.  
+`[ @name_in_db = ] 'name'` Es el nombre del usuario de base de datos va a quitar. *nombre* es un **sysname** no tiene ningún valor predeterminado. *nombre* puede ser el nombre de un inicio de sesión de servidor, un inicio de sesión de Windows o un grupo de Windows y debe existir en la base de datos actual. Si especifica un inicio de sesión de Windows o un grupo de Windows, debe especificar el nombre con el que se conoce en la base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

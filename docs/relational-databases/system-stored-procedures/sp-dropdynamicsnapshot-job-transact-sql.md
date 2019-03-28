@@ -16,12 +16,12 @@ ms.assetid: 128e428a-01b3-4062-8c6e-d22d5fa268a9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4612c7b20e448eecbd6c83a3d09d0796dcff542
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 04564b2d2830a6bd925a1c334c8026b376d0894f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126265"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526387"
 ---
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,16 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicación_**'**  
- Es el nombre de la publicación de la que se quita el trabajo de instantáneas de datos filtrados. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación desde el que se está quitando el trabajo de instantáneas de datos filtrados. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@dynamic_snapshot_jobname**=] **'**_dynamic_snapshot_jobname_**'**  
- Es el nombre del trabajo de instantáneas de datos filtrados que se va a quitar. *dynamic_snapshot_jobname*es de tipo sysname y si no está proporcionado los valores predeterminados para cualquier trabajo nombre está asociado con *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Se está quitando el nombre del trabajo de instantánea de datos filtrados. *dynamic_snapshot_jobname*es de tipo sysname y si no está proporcionado los valores predeterminados para cualquier trabajo nombre está asociado con *dynamic_snapshot_jobid*.  
   
- [ **@dynamic_snapshot_jobid**=] **'**_dynamic_snapshot_jobid_**'**  
- Es un identificador del trabajo de instantáneas de datos filtrados que se va a quitar. *dynamic_snapshot_jobid*es **uniqueidentifier**, no tiene valor predeterminado es null.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Se está quitando un identificador para el trabajo de instantáneas de datos filtrados. *dynamic_snapshot_jobid*es **uniqueidentifier**, no tiene valor predeterminado es null.  
   
 > [!IMPORTANT]  
 >  Solo *dynamic_snapshot_jobid*o *dynamic_snapshot_jobname* se puede especificar. Si no se proporcionaron valores para cualquier *dynamic_snapshot_jobid*o *dynamic_snapshot_jobname*, se quitan todos los trabajos de instantáneas dinámicas para la publicación.  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- *ignore_distributor* es **bit**, su valor predeterminado es **0**. Este parámetro se puede utilizar para quitar un trabajo de instantáneas dinámicas sin tener que realizar tareas de limpieza en el distribuidor.  
+`[ @ignore_distributor = ] ignore_distributor` *ignore_distributor* es **bit**, su valor predeterminado es **0**. Este parámetro se puede utilizar para quitar un trabajo de instantáneas dinámicas sin tener que realizar tareas de limpieza en el distribuidor.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

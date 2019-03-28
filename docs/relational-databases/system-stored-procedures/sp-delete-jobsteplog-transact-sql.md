@@ -18,12 +18,12 @@ ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 719038f8ce72bdb05ad9dbf3c3585c377abb3a75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f3a3140c154f5d4eb224259001333747ce410e67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526234"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533877"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,27 +44,21 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] **'**_job_id_**'**  
- Número de identificación del trabajo que contiene el registro de paso de trabajo que se va a quitar. *job_id* es **int**, su valor predeterminado es null.  
+`[ @job_id = ] 'job_id'` El número de identificación del trabajo para el trabajo que contiene el registro de paso de trabajo va a quitar. *job_id* es **int**, su valor predeterminado es null.  
   
- [  **@job_name =**] **'**_job_name_**'**  
- Nombre del trabajo. *job_name* es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'` El nombre del trabajo. *job_name* es **sysname**, su valor predeterminado es null.  
   
 > **NOTA:** Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
- [ **@step_id =**] *step_id*  
- Número de identificación del paso en el trabajo cuyo registro de paso de trabajo se va a eliminar. Si no se incluye, se eliminarán todos los registros de paso de trabajo en el trabajo a menos que **@older_than** o **@larger_than** se especifican. *step_id* es **int**, su valor predeterminado es null.  
+`[ @step_id = ] step_id` El número de identificación del paso del trabajo para el que el registro de paso de trabajo se va a eliminar. Si no se incluye, se eliminarán todos los registros de paso de trabajo en el trabajo a menos que **@older_than** o **@larger_than** se especifican. *step_id* es **int**, su valor predeterminado es null.  
   
- [  **@step_name =**] **'**_step_name_**'**  
- Nombre del paso del trabajo cuyo registro de paso de trabajo se va a eliminar. *Step_name* es **sysname**, su valor predeterminado es null.  
+`[ @step_name = ] 'step_name'` El nombre del paso del trabajo para el que el registro de paso de trabajo se va a eliminar. *Step_name* es **sysname**, su valor predeterminado es null.  
   
 > **NOTA:** Cualquier *step_id* o *step_name* se pueden especificar, pero no se pueden especificar ambos.  
   
- [  **@older_than =**] **'**_fecha_**'**  
- Fecha y hora del registro de paso de trabajo más antiguo que desea conservar. Todos los registros de paso de trabajo con fecha anterior a esta fecha y hora se quitarán. *fecha* es **datetime**, su valor predeterminado es null. Ambos **@older_than** y **@larger_than** se puede especificar.  
+`[ @older_than = ] 'date'` La fecha y hora del registro del paso de trabajo más antiguo que desea mantener. Todos los registros de paso de trabajo con fecha anterior a esta fecha y hora se quitarán. *fecha* es **datetime**, su valor predeterminado es null. Ambos **@older_than** y **@larger_than** se puede especificar.  
   
- [  **@larger_than =**] **'**_size_in_bytes_**'**  
- Tamaño en bytes del registro de paso de trabajo más grande que desea conservar. Todos los registros de paso de trabajo con un tamaño superior a este se quitan. Ambos **@larger_than** y **@older_than** se puede especificar.  
+`[ @larger_than = ] 'size_in_bytes'` El tamaño en bytes del registro del paso de trabajo más grande que desea mantener. Todos los registros de paso de trabajo con un tamaño superior a este se quitan. Ambos **@larger_than** y **@older_than** se puede especificar.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

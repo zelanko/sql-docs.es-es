@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9c70e32de4ad1c44f5d38262573a075e81417ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1b567b7d20f4d588fe0ca70f68be4318ce24398
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756543"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531677"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@language=** ] **'***lenguaje***'**  
- Es el nombre del idioma alternativo para el que se muestra información. *lenguaje* es **sysname**, su valor predeterminado es null. Si *lenguaje* está especificado, se devuelve información sobre el lenguaje especificado. Si no se especifica el idioma, información acerca de todos los idiomas en el **sys.syslanguages** se devuelve la vista de compatibilidad.  
+`[ @language = ] 'language'` Es el nombre del idioma alternativo para el que se va a mostrar información. *lenguaje* es **sysname**, su valor predeterminado es null. Si *lenguaje* está especificado, se devuelve información sobre el lenguaje especificado. Si no se especifica el idioma, información acerca de todos los idiomas en el **sys.syslanguages** se devuelve la vista de compatibilidad.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -52,16 +51,16 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**LangID**|**smallint**|Número de identificación del idioma.|  
+|**langid**|**smallint**|Número de identificación del idioma.|  
 |**dateformat**|**nchar(3)**|Formato de la fecha.|  
-|**DATEFIRST**|**tinyint**|Primer día de la semana: 1 para lunes, 2 para martes y así sucesivamente hasta 7 para domingo.|  
-|**Actualizar**|**int**|Versión de la última actualización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este idioma.|  
+|**datefirst**|**tinyint**|Primer día de la semana: 1 para lunes, 2 para martes y así sucesivamente hasta 7 para domingo.|  
+|**upgrade**|**int**|Versión de la última actualización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este idioma.|  
 |**Nombre**|**sysname**|Nombre del idioma.|  
 |**alias**|**sysname**|Nombre alternativo del idioma.|  
 |**meses**|**nvarchar(372)**|Nombres de los meses.|  
-|**SHORTMONTHS**|**nvarchar(132)**|Abreviaturas de los nombres de los meses.|  
-|**Días**|**nvarchar(217)**|Nombres de los días.|  
-|**LCID**|**int**|Id. de configuración regional de Windows para el idioma.|  
+|**shortmonths**|**nvarchar(132)**|Abreviaturas de los nombres de los meses.|  
+|**days**|**nvarchar(217)**|Nombres de los días.|  
+|**lcid**|**int**|Id. de configuración regional de Windows para el idioma.|  
 |**msglangid**|**smallint**|Identificador del grupo de mensajes del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="permissions"></a>Permisos  
@@ -76,7 +75,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 sp_helplanguage French;  
 ```  
   
-### <a name="b-returning-information-about-all-languages"></a>B. Devolver información acerca de todos los idiomas  
+### <a name="b-returning-information-about-all-languages"></a>b. Devolver información acerca de todos los idiomas  
  El siguiente ejemplo muestra información acerca de todos los idiomas alternativos instalados.  
   
 ```  

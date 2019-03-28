@@ -10,12 +10,12 @@ ms.assetid: 808db1d0-acc1-41d0-9287-8a5455001a02
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e3120bc2f18b780101b705200761f868ba94b06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fdddf626aa081138d58387b9562327964d600074
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186905"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530047"
 ---
 # <a name="mssqlserver1793"></a>MSSQLSERVER_1793
     
@@ -42,7 +42,7 @@ ms.locfileid: "48186905"
   
  En el siguiente ejemplo se produce un error porque un esquema de partición se especifica en los datos básicos, pero no se especifica en los datos FILESTREAM.  
   
-```tsql  
+```sql  
 DROP INDEX [<clustered_index_name>] ON [<table_name>]   
 WITH ( ONLINE = OFF, MOVE TO [PRIMARY] )  
 GO  
@@ -50,7 +50,7 @@ GO
   
  El siguiente ejemplo funciona correctamente debido a que se especifican tanto una cláusula **MOVE TO** para los datos base como una cláusula **FILESTREAM_ON** para los datos FILESTREAM.  
   
-```tsql  
+```sql  
 DROP INDEX [<clustered_index_name>] ON [<table_name>]   
 WITH ( ONLINE = OFF, MOVE TO [PRIMARY], filestream_on 'default' )  
 GO  
@@ -58,7 +58,7 @@ GO
   
  El siguiente ejemplo también funciona correctamente debido a que no se especifican ni una cláusula **MOVE TO** para los datos base ni una cláusula **FILESTREAM_ON** para los datos FILESTREAM.  
   
-```tsql  
+```sql  
 DROP INDEX [<clustered_index_name>] ON [<table_name>]   
 WITH ( ONLINE = OFF )  
 GO  

@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Consultar columnas de tipo XML | Microsoft Docs'
+title: 'Ejemplo: Consulta de columnas de tipo XML | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0457f9eddad9130e5b486cd09e754c2059a586a5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373857"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526787"
 ---
-# <a name="example-querying-xmltype-columns"></a>Ejemplo: Consultar columnas de tipo XML
+# <a name="example-querying-xmltype-columns"></a>Ejemplo: Consulta de columnas de tipo XML
   La consulta siguiente incluye columnas de tipo `xml`. La consulta recupera el identificador, nombre y pasos de fabricación del modelo de producto en la primera ubicación de la columna `Instructions` de tipo `xml`.  
   
 ## <a name="example"></a>Ejemplo  

@@ -18,12 +18,12 @@ ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 258a9e6002fccd27b4980140c49679b26c78f64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4dc6bce6ae10c040123b4a00c29e5ad0f57506
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792003"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535967"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name_in_db =** ] **'***security_account***'**  
- Es el nombre de un usuario o un rol de la base de datos actual. *security_account* debe existir en la base de datos actual. *security_account* es **sysname**, su valor predeterminado es null. Si *security_account* no se especifica, **sp_helpuser** devuelve información acerca de todas las entidades de base de datos.  
+`[ @name_in_db = ] 'security_account'` Es el nombre de usuario de base de datos o rol de base de datos en la base de datos actual. *security_account* debe existir en la base de datos actual. *security_account* es **sysname**, su valor predeterminado es null. Si *security_account* no se especifica, **sp_helpuser** devuelve información acerca de todas las entidades de base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -76,7 +75,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Role_name**|**sysname**|Nombre del rol en la base de datos actual.|  
 |**Role_id**|**smallint**|Id. de rol para el rol en la base de datos actual.|  
 |**Users_in_role**|**sysname**|Miembro del rol en la base de datos actual.|  
-|**Identificador de usuario**|**smallint**|Id. de usuario para el miembro del rol.|  
+|**Userid**|**smallint**|Id. de usuario para el miembro del rol.|  
   
 ## <a name="remarks"></a>Comentarios  
  Para obtener información acerca de la pertenencia de roles de base de datos, use [sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Para obtener información acerca de los miembros del rol de servidor, use [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)y para obtener información acerca de las entidades de nivel de servidor, use [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -95,7 +94,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 EXEC sp_helpuser;  
 ```  
   
-### <a name="b-listing-information-for-a-single-user"></a>B. Presentar información de un solo usuario  
+### <a name="b-listing-information-for-a-single-user"></a>b. Presentar información de un solo usuario  
  En el siguiente ejemplo se presenta información acerca del propietario de la base de datos del usuario (`dbo`).  
   
 ```  

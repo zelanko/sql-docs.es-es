@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: cc983f79dfa1eafd0f0175448467c3a8d9a69aa0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5beab3dc255e5679191dd6ea5d05bfdd98bef6ba
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736873"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534928"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,13 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@proxy_id** =] *proxy_id*  
- Número de identificación del proxy del que se va a mostrar información. El *proxy_id* es **int**, su valor predeterminado es null. Ya sea el *id* o el *proxy_name* se puede especificar.  
+`[ @proxy_id = ] proxy_id` El número de identificación del proxy que se muestra información. El *proxy_id* es **int**, su valor predeterminado es null. Ya sea el *id* o el *proxy_name* se puede especificar.  
   
- [ **@proxy_name** =] **'***proxy_name***'**  
- Nombre del proxy del que se va a mostrar información. El *proxy_name* es **sysname**, su valor predeterminado es null. Ya sea el *id* o el *proxy_name* se puede especificar.  
+`[ @proxy_name = ] 'proxy_name'` El nombre del servidor proxy para mostrar información. El *proxy_name* es **sysname**, su valor predeterminado es null. Ya sea el *id* o el *proxy_name* se puede especificar.  
   
- [ **@subsystem_id** =] *subsystem_id*  
- Número de identificación del subsistema del que se va a mostrar información. El *subsystem_id* es **int**, su valor predeterminado es null. Ya sea el *subsystem_id* o *subsystem_name* se puede especificar.  
+`[ @subsystem_id = ] subsystem_id` El número de identificación del subsistema para mostrar información. El *subsystem_id* es **int**, su valor predeterminado es null. Ya sea el *subsystem_id* o *subsystem_name* se puede especificar.  
   
- [ **@subsystem_name** =] **'***subsystem_name***'**  
- Nombre del subsistema del que se va a mostrar información. El *subsystem_name* es **sysname**, su valor predeterminado es null. Ya sea el *subsystem_id* o *subsystem_name* se puede especificar.  
+`[ @subsystem_name = ] 'subsystem_name'` El nombre del subsistema para mostrar información. El *subsystem_name* es **sysname**, su valor predeterminado es null. Ya sea el *subsystem_id* o *subsystem_name* se puede especificar.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -92,7 +88,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem ;
 GO  
 ```  
   
-### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>B. Determinar si un proxy tiene acceso a un subsistema específico  
+### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>b. Determinar si un proxy tiene acceso a un subsistema específico  
  En el ejemplo siguiente se devuelve una fila si el proxy `Catalog application proxy` tiene acceso al subsistema `ActiveScripting`. En caso contrario, se devuelve un conjunto de resultados vacío.  
   
 ```  

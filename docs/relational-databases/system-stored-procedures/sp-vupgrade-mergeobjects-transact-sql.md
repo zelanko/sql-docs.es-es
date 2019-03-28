@@ -16,12 +16,12 @@ ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 97b527ef6d3b0363874d770e950106a7127c5483
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 293c00f0112dd35de9a546d8c34f237a8561ec40
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819257"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532167"
 ---
 # <a name="spvupgrademergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,11 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@login=**] **'***inicio de sesión***'**  
- Es el inicio de sesión del administrador del sistema a usar al crear nuevos objetos del sistema en la base de datos de distribución. *login* es de tipo **sysname** y su valor predeterminado es NULL. Este parámetro no es necesario si *security_mode* está establecido en **1**, es decir, autenticación de Windows.  
+`[ @login = ] 'login'` Es el inicio de sesión del administrador del sistema a usar al crear nuevos objetos del sistema en la base de datos de distribución. *login* es de tipo **sysname** y su valor predeterminado es NULL. Este parámetro no es necesario si *security_mode* está establecido en **1**, es decir, autenticación de Windows.  
   
- [  **@password=**] **'***contraseña***'**  
- Es la contraseña del administrador del sistema que se utilizará para crear los nuevos objetos del sistema en la base de datos de distribución. *contraseña* es **sysname**, su valor predeterminado es **''** (cadena vacía). Este parámetro no es necesario si *security_mode* está establecido en **1**, es decir, autenticación de Windows.  
+`[ @password = ] 'password'` Es la contraseña de administrador del sistema a usar al crear nuevos objetos del sistema en la base de datos de distribución. *contraseña* es **sysname**, su valor predeterminado es **''** (cadena vacía). Este parámetro no es necesario si *security_mode* está establecido en **1**, es decir, autenticación de Windows.  
   
- [  **@security_mode=**] **'***security_mode***'**  
- Es el modo de seguridad de inicio de sesión que se usará al crear nuevos objetos del sistema en la base de datos de distribución. *security_mode* es **bit** con un valor predeterminado de **1**. Si **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usará autenticación. Si **1**, se usará la autenticación de Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] 'security_mode'` Es el modo de seguridad de inicio de sesión que se usará al crear nuevos objetos del sistema en la base de datos de distribución. *security_mode* es **bit** con un valor predeterminado de **1**. Si **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usará autenticación. Si **1**, se usará la autenticación de Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

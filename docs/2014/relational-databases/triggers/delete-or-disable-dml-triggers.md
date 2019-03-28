@@ -17,12 +17,12 @@ ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8ed56b0d2c3ce14888f7856cadbcf1f1dc67a5ef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1195d1b15ed845728cd254032fc7187b3f355f8f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760697"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536797"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>Eliminar o deshabilitar desencadenadores DML
   En este tema se describe cómo eliminar o deshabilitar un desencadenador DML en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "52760697"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para eliminar un desencadenador DML se necesita el permiso ALTER en la tabla o vista en la que está definido el desencadenador.  
   
  Para deshabilitar o habilitar un desencadenador DML, el usuario debe contar como mínimo con el permiso ALTER en la tabla o vista en la que se creó el desencadenador.  
@@ -84,13 +84,13 @@ ms.locfileid: "52760697"
   
 #### <a name="to-delete-a-dml-trigger"></a>Para eliminar un desencadenador DML  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
 3.  Copie y pegue los ejemplos siguientes en la ventana de consultas. Ejecute la instrucción [CREATE TRIGGER](/sql/t-sql/statements/create-trigger-transact-sql) para crear el desencadenador `Sales.bonus_reminder` . Para eliminar el desencadenador, ejecute la instrucción [DROP TRIGGER](/sql/t-sql/statements/drop-trigger-transact-sql) .  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -106,7 +106,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Delete the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -118,13 +118,13 @@ GO
   
 #### <a name="to-disable-and-enable-a-dml-trigger"></a>Para deshabilitar y habilitar un desencadenador DML  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
 3.  Copie y pegue los ejemplos siguientes en la ventana de consultas. Ejecute la instrucción [CREATE TRIGGER](/sql/t-sql/statements/create-trigger-transact-sql) para crear el desencadenador `Sales.bonus_reminder` . Para deshabilitar y habilitar el desencadenador, ejecute las instrucciones [DISABLE TRIGGER](/sql/t-sql/statements/disable-trigger-transact-sql) y [HABILITE TRIGGER](/sql/t-sql/statements/enable-trigger-transact-sql) , respectivamente.  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -140,7 +140,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Disable the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -149,7 +149,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Enable the trigger.  
 USE AdventureWorks2012;  
 GO  

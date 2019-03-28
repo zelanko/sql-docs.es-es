@@ -16,12 +16,12 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad32cd5b8e6936bc646fa664052a307a9e0d7ed0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4643cfc08db68e5369cfca25d2de76d314ffb347
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779377"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530677"
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,55 +44,48 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**. La publicación debe existir y debe cumplir las normas de los identificadores. Si es NULL o **%**, se devuelve información sobre todas las publicaciones de combinación y suscripciones en la base de datos actual.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**. La publicación debe existir y debe cumplir las normas de los identificadores. Si es NULL o **%**, se devuelve información sobre todas las publicaciones de combinación y suscripciones en la base de datos actual.  
   
- [  **@subscriber=**] **'***suscriptor***'**  
- Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es **%**. Si es NULL o %, se devuelve información acerca de todas las suscripciones a la publicación dada.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es **%**. Si es NULL o %, se devuelve información acerca de todas las suscripciones a la publicación dada.  
   
- [  **@subscriber_db=**] **'***subscriber_db***'**  
- Es el nombre de la base de datos de suscripción. *subscriber_db*es **sysname**, su valor predeterminado es **%**, que devuelve información sobre todas las bases de datos de suscripción.  
+`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripción. *subscriber_db*es **sysname**, su valor predeterminado es **%**, que devuelve información sobre todas las bases de datos de suscripción.  
   
- [  **@publisher=**] **'***publisher***'**  
- Es el nombre del publicador. El publicador debe ser un servidor válido. *publicador*es **sysname**, su valor predeterminado es **%**, que devuelve información acerca de todos los publicadores.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. El publicador debe ser un servidor válido. *publicador*es **sysname**, su valor predeterminado es **%**, que devuelve información acerca de todos los publicadores.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- Es el nombre de la base de datos del publicador. *publisher_db*es **sysname**, su valor predeterminado es **%**, que devuelve información acerca de todas las bases de datos del publicador.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db*es **sysname**, su valor predeterminado es **%**, que devuelve información acerca de todas las bases de datos del publicador.  
   
- [  **@subscription_type=**] **'***subscription_type***'**  
- Es el tipo de suscripción. *subscription_type*es **nvarchar (15)**, y puede tener uno de estos valores.  
+`[ @subscription_type = ] 'subscription_type'` Es el tipo de suscripción. *subscription_type*es **nvarchar (15)**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**inserción** (valor predeterminado)|Suscripción de inserción.|  
-|**Incorporación de cambios**|Suscripción de extracción|  
+|**pull**|Suscripción de extracción|  
 |**ambos**|Suscripción de inserción y extracción|  
   
- [  **@found=**] **'***encuentra***' salida**  
- Es una marca para indicar que se devuelven filas. *se encontró*es **int** y un parámetro OUTPUT y su valor predeterminado es null. **1** indica que se encuentra la publicación. **0** indica que no se encuentra la publicación.  
+`[ @found = ] 'found'OUTPUT` Es una marca para indicar que devuelven filas. *se encontró*es **int** y un parámetro OUTPUT y su valor predeterminado es null. **1** indica que se encuentra la publicación. **0** indica que no se encuentra la publicación.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|Nombre de la suscripción.|  
-|**publicación**|**sysname**|Nombre de la publicación.|  
+|**publication**|**sysname**|Nombre de la publicación.|  
 |**publicador**|**sysname**|Nombre del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor.|  
 |**subscriber_db**|**sysname**|Nombre de la base de datos de suscripciones.|  
 |**status**|**int**|Estado de la suscripción:<br /><br /> **0** todos los = trabajos están esperando para iniciar<br /><br /> **1** = uno o más trabajos se están iniciando<br /><br /> **2** = todos los trabajos se han ejecutado correctamente<br /><br /> **3** = al menos un trabajo se está ejecutando<br /><br /> **4** = todos los trabajos están programados y se encuentran inactivos<br /><br /> **5** = al menos un trabajo intenta ejecutarse después de un error anterior<br /><br /> **6** = al menos un trabajo no ha podido ejecutar correctamente|  
-|**propiedad subscriber_type**|**int**|Tipo de suscriptor.|  
+|**subscriber_type**|**int**|Tipo de suscriptor.|  
 |**subscription_type**|**int**|Tipo de suscripción:<br /><br /> **0** = inserción<br /><br /> **1** = extracción<br /><br /> **2** = both|  
 |**priority**|**float(8)**|Número que indica la prioridad de la suscripción.|  
 |**sync_type**|**tinyint**|Tipo de sincronización de la suscripción.|  
 |**description**|**nvarchar(255)**|Breve descripción de esta suscripción de mezcla.|  
-|**merge_jobid**|**binary (16)**|Id. de trabajo del Agente de mezcla.|  
+|**merge_jobid**|**binary(16)**|Id. de trabajo del Agente de mezcla.|  
 |**full_publication**|**tinyint**|Indica si la suscripción es a una publicación completa o filtrada.|  
 |**offload_enabled**|**bit**|Especifica si se ha establecido que la ejecución de la descarga de un agente de replicación se lleve a cabo en el suscriptor. Si es NULL, la ejecución se lleva a cabo en el publicador.|  
 |**offload_server**|**sysname**|Nombre del servidor donde se está ejecutando el agente.|  
 |**use_interactive_resolver**|**int**|Devuelve si se utiliza o no el solucionador interactivo durante la reconciliación. Si **0**, no se utiliza el solucionador interactivo.|  
-|**Nombre de host**|**sysname**|Valor suministrado cuando una suscripción se filtra por el valor de la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función.|  
+|**hostname**|**sysname**|Valor suministrado cuando una suscripción se filtra por el valor de la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función.|  
 |**subscriber_security_mode**|**smallint**|Es el modo de seguridad en el suscriptor, donde **1** significa autenticación de Windows y **0** significa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
 |**subscriber_login**|**sysname**|Es el nombre de inicio de sesión del suscriptor.|  
 |**subscriber_password**|**sysname**|La contraseña real del suscriptor no se devuelve nunca. El resultado se enmascara mediante una "**\*\*\*\*\*\***" cadena.|  

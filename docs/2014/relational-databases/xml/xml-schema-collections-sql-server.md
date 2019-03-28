@@ -18,15 +18,15 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a86a39aa3473495b5eed6bc2eff92376a5a68cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362789"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533717"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Colecciones de esquemas XML (SQL Server)
   Como se describe en el tema [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server proporciona almacenamiento nativo de los datos XML mediante el `xml` tipo de datos. Opcionalmente, puede asociar esquemas XSD a una variable o una columna de `xml` tipo a través de una colección de esquemas XML. Esta colección almacena los esquemas XML importados y luego se usa para lo siguiente:  
@@ -190,7 +190,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  Se pueden obtener esquemas XML individuales dentro de la colección como `xml` instancias del tipo de datos especificando el espacio de nombres de destino como tercer argumento **xml_schema_namespace ()**. Esto se muestra en el ejemplo siguiente.  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Ejemplo: Obtener un esquema especificado de una colección de esquemas XML  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Ejemplo: Obtener un esquema especificado a partir de una colección de esquemas XML  
  La instrucción siguiente genera como resultado el esquema XML con el espacio de nombres de destino "<https://www.microsoft.com/books>" a partir de la colección de esquemas XML "myCollection" dentro del esquema relacional dbo.  
   
 ```  

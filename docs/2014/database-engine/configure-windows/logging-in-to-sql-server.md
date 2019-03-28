@@ -21,12 +21,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7f054808a5432c7be95eeb419308012603f46069
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d1536592d7a5463dc1e15df20aee4fe188323cf5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369317"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531727"
 ---
 # <a name="logging-in-to-sql-server"></a>Iniciar una sesión en SQL Server
   Puede iniciar una sesión en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cualquiera de las herramientas gráficas de administración o desde el símbolo del sistema.  
@@ -71,7 +71,7 @@ ms.locfileid: "53369317"
 ## <a name="verifying-your-connection-protocol"></a>Comprobar el protocolo de conexión  
  Cuando se conecta a [!INCLUDE[ssDE](../../includes/ssde-md.md)], la siguiente consulta devolverá el protocolo usado para la conexión actual, junto con el método de autenticación (NTLM o Kerberos), e indicará si la conexión está cifrada.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

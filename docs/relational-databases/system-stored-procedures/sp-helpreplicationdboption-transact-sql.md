@@ -16,12 +16,12 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29fcbe7f5e7b2b7e72c88390df9d5fe20c0f7352
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812037"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536707"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,20 +40,17 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@dbname=**] **'***dbname***'**  
- Es el nombre de la base de datos. *dbname* es **sysname**, su valor predeterminado es **%**. Si **%**, a continuación, el conjunto de resultados contiene todas las bases de datos en el publicador, en caso contrario, solo en la base de datos especificado se devuelve información. No se devuelve ninguna información para las bases de datos en que el usuario no tiene los permisos correspondientes según se describe a continuación.  
+`[ @dbname = ] 'dbname'` Es el nombre de la base de datos. *dbname* es **sysname**, su valor predeterminado es **%**. Si **%**, a continuación, el conjunto de resultados contiene todas las bases de datos en el publicador, en caso contrario, solo en la base de datos especificado se devuelve información. No se devuelve ninguna información para las bases de datos en que el usuario no tiene los permisos correspondientes según se describe a continuación.  
   
- [  **@type=**] **'***tipo***'**  
- Restringe el conjunto de resultados para contener solo las bases de datos en el que la opción de replicación especificado *tipo* se ha habilitado el valor. *tipo* es **sysname**, y puede tener uno de los siguientes valores.  
+`[ @type = ] 'type'` Restringe el conjunto de resultados para contener solo las bases de datos en el que la opción de replicación especificado *tipo* se ha habilitado el valor. *tipo* es **sysname**, y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**publicar**|La replicación transaccional está permitida.|  
+|**publish**|La replicación transaccional está permitida.|  
 |**publicación de mezcla**|La replicación de mezcla está permitida.|  
 |**permitidos la replicación** (valor predeterminado)|La replicación transaccional o de mezcla están permitidas.|  
   
- [  **@reserved=** ] *reservado*  
- Especifica si la información sobre las publicaciones y suscripciones existentes se devuelve. *reservado* es **bit**, con un valor predeterminado de 0. Si **1**, el conjunto de resultados incluye información sobre si la base de datos especificada tiene publicaciones existentes o las suscripciones.  
+`[ @reserved = ] reserved` Especifica si se devuelve información sobre las publicaciones existentes y las suscripciones. *reservado* es **bit**, con un valor predeterminado de 0. Si **1**, el conjunto de resultados incluye información sobre si la base de datos especificada tiene publicaciones existentes o las suscripciones.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -64,7 +61,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |**transpublish**|**bit**|Si se ha habilitado la base de datos de instantánea o publicación transaccional; el valor **1** significa que la publicación transaccional o instantáneas está habilitada.|  
 |**mergepublish**|**bit**|Si se ha habilitado la base de datos para la combinación de publicación; el valor **1** significa que la publicación de combinación está habilitada.|  
 |**dbowner**|**bit**|Si el usuario es miembro de la **db_owner** fijo de base de datos; el valor **1** indica que el usuario es miembro de este rol.|  
-|**dbReadOnly**|**bit**|Es si la base de datos está marcado como de solo lectura. el valor **1** significa que la base de datos es de solo lectura.|  
+|**dbreadonly**|**bit**|Es si la base de datos está marcado como de solo lectura. el valor **1** significa que la base de datos es de solo lectura.|  
 |**haspublications**|**bit**|Indica si la base de datos tiene publicaciones existentes; el valor **1** significa que hay publicaciones existentes.|  
 |**haspullsubscriptions**|**bit**|Indica si la base de datos tiene las suscripciones de extracción existentes; el valor **1** significa que existen las suscripciones de extracción.|  
   

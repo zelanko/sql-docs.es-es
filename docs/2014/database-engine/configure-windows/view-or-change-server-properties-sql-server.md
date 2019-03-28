@@ -15,12 +15,12 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 83fc6db21fd2892ebbc42b329515a94b371cb1ce
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 2597a2e8f1f97635ed52bf639d57f8de3c26fcd4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641546"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528677"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Ver o cambiar las propiedades del servidor (SQL Server)
   En este tema se describe cómo ver o cambiar las propiedades de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o el Administrador de configuración de SQL Server.  
@@ -41,7 +41,7 @@ ms.locfileid: "52641546"
   
      [Administrador de configuración de SQL Server](#PowerShellProcedure)  
   
--   **Seguimiento:**  [Después de cambiar las propiedades del servidor](#FollowUp)  
+-   **Seguimiento:**  [después de cambiar propiedades del servidor](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52641546"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para obtener más información, vea [Roles de nivel de servidor](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
  Permisos de ejecución `sp_configure` sin parámetros o con solo el primer parámetro que se conceden a todos los usuarios de forma predeterminada. Para ejecutar `sp_configure` con ambos parámetros para cambiar una opción de configuración o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en nivel de servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
@@ -73,26 +73,26 @@ ms.locfileid: "52641546"
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Para ver las propiedades del servidor mediante la función integrada SERVERPROPERTY  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se emplea la función integrada [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) en una instrucción `SELECT` para devolver información sobre el servidor actual. Este escenario es útil cuando hay varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instaladas en un servidor basado en Windows y el cliente debe abrir otra conexión a la misma instancia usada por la conexión actual.  
   
-    ```tsql  
+    ```sql  
     SELECT CONVERT( sysname, SERVERPROPERTY('servername'));  
     GO  
     ```  
   
 #### <a name="to-view-server-properties-by-using-the-sysservers-catalog-view"></a>Para ver las propiedades del servidor mediante la vista de catálogo sys.servers  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se consulta la vista de catálogo [sys.servers](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql) para devolver el nombre (`name`) y el identificador (`server_id`) del servidor actual, además del nombre del proveedor OLE DB (`provider`) para conectarse a un servidor vinculado.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, server_id, provider  
@@ -103,7 +103,7 @@ ms.locfileid: "52641546"
   
 #### <a name="to-view-server-properties-by-using-the-sysconfigurations-catalog-view"></a>Para ver las propiedades del servidor mediante la vista de catálogo sys.configurations  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -120,13 +120,13 @@ ms.locfileid: "52641546"
   
 #### <a name="to-change-a-server-property-by-using-spconfigure"></a>Para cambiar una propiedad del servidor mediante sp_configure  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
 3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. Este ejemplo muestra cómo usar [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) para cambiar una propiedad del servidor. El ejemplo cambia el valor de la opción `fill factor` a `100`. El servidor debe reiniciarse para que el cambio surta efecto.  
   
-```tsql  
+```sql  
 Use AdventureWorks2012;  
 GO  
 sp_configure 'show advanced options', 1;  
@@ -154,7 +154,7 @@ GO
   
 4.  En el cuadro de diálogo **Propiedades de (\<***nombredeinstancia***>) de SQL Server**, cambie las propiedades del servidor en las pestañas **Servicio** o **Avanzadas** y, después, haga clic en **Aceptar**.  
   
-##  <a name="FollowUp"></a> Sigue: Después de cambiar las propiedades del servidor  
+##  <a name="FollowUp"></a> Seguimiento: después de cambiar propiedades del servidor  
  Para algunas propiedades, puede que sea necesario reiniciar el servidor para que el cambio surta efecto.  
   
 ## <a name="see-also"></a>Vea también  

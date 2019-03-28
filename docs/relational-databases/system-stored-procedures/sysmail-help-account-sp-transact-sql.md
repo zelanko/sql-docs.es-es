@@ -18,12 +18,12 @@ ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0798359bedc959e792f56b3d81507329b618f217
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2dd164f25848d4c6b4f913ca2ddc746d7801fb78
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781333"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536617"
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@account_id** =] *account_id*  
- Id. de la cuenta para la que se va a mostrar información. *account_id* es **int**, su valor predeterminado es null.  
+`[ @account_id = ] account_id` El identificador de la cuenta que se muestra información de cuenta. *account_id* es **int**, su valor predeterminado es null.  
   
- [ **@account_name** =] **'***account_name***'**  
- Nombre de la cuenta para la que se va a mostrar información. *account_name* es **sysname**, su valor predeterminado es null.  
+`[ @account_name = ] 'account_name'` El nombre de la cuenta que se muestra información. *account_name* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -57,14 +55,14 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |Nombre de columna|Tipo de datos|Descripción|  
 |**account_id**|**int**|Id. de la cuenta.|  
 |**Nombre**|**sysname**|El nombre de la cuenta.|  
-|**Descripción**|**nvarchar(256)**|Descripción de la cuenta.|  
+|**description**|**nvarchar(256)**|Descripción de la cuenta.|  
 |**email_address**|**nvarchar(128)**|Dirección de correo electrónico desde la que se envían los mensajes.|  
 |**display_name**|**nvarchar(128)**|El nombre para mostrar de la cuenta.|  
 |**replyto_address**|**nvarchar(128)**|La dirección donde se envían las respuestas a mensajes desde esta cuenta.|  
-|**ServerType**|**sysname**|Tipo de servidor de correo electrónico para la cuenta.|  
-|**nombre de servidor**|**sysname**|Nombre del servidor de correo electrónico para la cuenta.|  
+|**servertype**|**sysname**|Tipo de servidor de correo electrónico para la cuenta.|  
+|**servername**|**sysname**|Nombre del servidor de correo electrónico para la cuenta.|  
 |**port**|**int**|Número de puerto que utiliza el servidor de correo electrónico.|  
-|**Nombre de usuario**|**nvarchar(128)**|Nombre de usuario que se utiliza para iniciar sesión en el servidor de correo electrónico si éste utiliza autenticación. Cuando **username** es NULL, correo electrónico de base de datos no utiliza la autenticación para esta cuenta.|  
+|**username**|**nvarchar(128)**|Nombre de usuario que se utiliza para iniciar sesión en el servidor de correo electrónico si éste utiliza autenticación. Cuando **username** es NULL, correo electrónico de base de datos no utiliza la autenticación para esta cuenta.|  
 |**use_default_credentials**|**bit**|Especifica si se debe enviar el correo al servidor SMTP con las credenciales de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** es de tipo bit, no tiene ningún valor predeterminado. Si el valor de este parámetro es 1, el Correo electrónico de base de datos utiliza las credenciales del servicio [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Cuando este parámetro es 0, el correo electrónico de base de datos utiliza el **@username** y **@password** para la autenticación en el servidor SMTP. Si **@username** y **@password** son NULL, el correo electrónico de base de datos utiliza la autenticación anónima. Consulte al administrador de SMTP antes de especificar este parámetro.|  
 |**enable_ssl**|**bit**|Especifica si el Correo electrónico de base de datos cifra la comunicación mediante Capa de sockets seguros (SSL). Utilice esta opción si se requiere SSL en el servidor SMTP. **enable_ssl** es de tipo bit, no tiene ningún valor predeterminado. El valor 1 indica que el Correo electrónico de base de datos cifra la comunicación mediante SSL. El valor 0 indica que el Correo electrónico de base de datos envía el correo sin cifrado SSL.|  
   

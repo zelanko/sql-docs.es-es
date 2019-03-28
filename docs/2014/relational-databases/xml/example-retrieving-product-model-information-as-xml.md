@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Recuperar información de modelos de productos como XML | Microsoft Docs'
+title: 'Ejemplo: Recuperar información del modelo de producto como XML | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ec7ed358ab8c6c5f42e378a23dd4ba911800ae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219885"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537767"
 ---
-# <a name="example-retrieving-product-model-information-as-xml"></a>Ejemplo: Recuperar información de modelos de productos como XML
+# <a name="example-retrieving-product-model-information-as-xml"></a>Ejemplo: Recuperación de información de modelos de productos como XML
   En la siguiente consulta se devuelve información de modelos de productos. `RAW` se especifica en la cláusula `FOR XML` .  
   
 ## <a name="example"></a>Ejemplo  
@@ -52,7 +52,7 @@ FOR XML RAW, ELEMENTS;
 GO  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <row>  
@@ -65,7 +65,7 @@ GO
 </row>  
 ```  
   
- Opcionalmente, puede especificar el `TYPE` directiva para recuperar los resultados como `xml` tipo. La directiva `TYPE` no cambia el contenido de los resultados. Solo afecta al tipo de datos de los resultados.  
+ Opcionalmente, se puede especificar la directiva `TYPE` para recuperar los resultados como de tipo `xml`. La directiva `TYPE` no cambia el contenido de los resultados. Solo afecta al tipo de datos de los resultados.  
   
 ```  
 USE AdventureWorks2012;  

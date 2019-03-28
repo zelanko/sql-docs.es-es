@@ -18,12 +18,12 @@ ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 78cf616c0b09d1404f0c7e7fe5f3b382f08d59a8
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: c18aa6fefb23bb3d388069773aa1633c29859e90
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168816"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533537"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -46,11 +46,9 @@ sp_setapprole [ @rolename = ] 'role',
 
 ## <a name="arguments"></a>Argumentos
 
- [  **@rolename =** ] **'***rol***'**  
- Es el nombre del rol de aplicación definido en la base de datos actual. *rol* es **sysname**, no tiene ningún valor predeterminado. *rol* debe existir en la base de datos actual.  
+`[ @rolename = ] 'role'` Es el nombre del rol de aplicación definido en la base de datos actual. *rol* es **sysname**, no tiene ningún valor predeterminado. *rol* debe existir en la base de datos actual.  
   
- [  **@password =** ] **{cifrar N'***contraseña***'}**  
- Es la contraseña necesaria para activar el rol de aplicación. *contraseña* es **sysname**, no tiene ningún valor predeterminado. *contraseña* puede ofuscarse mediante ODBC **cifrar** función. Cuando se usa el **cifrar** función, la contraseña se debe convertir en una cadena Unicode mediante la colocación de **N** antes de la primera comilla.  
+`[ @password = ] { encrypt N'password' }` Es la contraseña necesaria para activar el rol de aplicación. *contraseña* es **sysname**, no tiene ningún valor predeterminado. *contraseña* puede ofuscarse mediante ODBC **cifrar** función. Cuando se usa el **cifrar** función, la contraseña se debe convertir en una cadena Unicode mediante la colocación de **N** antes de la primera comilla.  
   
  No se admite la opción de cifrado en las conexiones que usan **SqlClient**.  
   
@@ -63,11 +61,9 @@ sp_setapprole [ @rolename = ] 'role',
  **@encrypt= 'odbc'**  
  Especifica que ODBC ofuscará la contraseña mediante el uso de ODBC **cifrar** función antes de enviar la contraseña para el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Solo se puede especificar cuando se utiliza un cliente ODBC o el Proveedor OLE DB para SQL Server.  
   
- [  **@fCreateCookie =** ] **true** | **false**  
- Especifica si se va a crear una cookie. **True** se convierte implícitamente a 1. **false** se convierte implícitamente a 0.  
+`[ @fCreateCookie = ] true | false` Especifica si se puede crear una cookie. **True** se convierte implícitamente a 1. **false** se convierte implícitamente a 0.  
   
- [  **@cookie =** ]  **@cookie SALIDA**  
- Especifica un parámetro de salida que contendrá la cookie. La cookie solo se genera si el valor de **@fCreateCookie** es **true**. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` Especifica un parámetro de salida que contendrá la cookie. La cookie solo se genera si el valor de **@fCreateCookie** es **true**. **varbinary(8000)**  
   
 > [!NOTE]  
 > El parámetro **OUTPUT** de la cookie para **sp_setapprole** está documentado actualmente como **varbinary(8000)** , que es la longitud máxima correcta. Pero la implementación actual devuelve **varbinary(50)**. Las aplicaciones deben seguir reservando **varbinary (8000)** para que la aplicación siga funcionando correctamente si la cookie devuelto tamaño aumenta en una versión futura.
@@ -101,7 +97,7 @@ EXEC sys.sp_setapprole 'SalesApprole', 'AsDeF00MbXX';
 GO
 ```
 
-### <a name="b-activating-an-application-role-with-a-cookie-and-then-reverting-to-the-original-context"></a>B. Activar un rol de aplicación con una cookie y revertir al contexto original
+### <a name="b-activating-an-application-role-with-a-cookie-and-then-reverting-to-the-original-context"></a>b. Activar un rol de aplicación con una cookie y revertir al contexto original
 
  En el siguiente ejemplo se habilita el rol de aplicación `Sales11` con la contraseña `fdsd896#gfdbfdkjgh700mM` y se crea una cookie. En el ejemplo se devuelve el nombre del usuario actual y se revierte al contexto original ejecutando `sp_unsetapprole`.  
 

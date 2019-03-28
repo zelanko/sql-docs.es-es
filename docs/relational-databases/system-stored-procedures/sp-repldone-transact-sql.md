@@ -16,12 +16,12 @@ ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aaeebd1aa2d6fe4ea443c7ed18ac157135ae4d64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8aa102f134d262eb2342e3774c1960f33f8adffc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747757"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538237"
 ---
 # <a name="sprepldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@xactid=**] *xactid*  
- Es el número de secuencia de registro (LSN) del primer registro de la última transacción distribuida del servidor. *xactid* es **binary (10)**, no tiene ningún valor predeterminado.  
+`[ @xactid = ] xactid` Es el número de secuencia de registro (LSN) del primer registro de la última transacción distribuida del servidor. *xactid* es **binary (10)**, no tiene ningún valor predeterminado.  
   
- [  **@xact_seqno=**] *xact_seqno*  
- Es el LSN del último registro de la última transacción distribuida del servidor. *xact_seqno* es **binary (10)**, no tiene ningún valor predeterminado.  
+`[ @xact_seqno = ] xact_seqno` Es el LSN del último registro de la última transacción distribuida del servidor. *xact_seqno* es **binary (10)**, no tiene ningún valor predeterminado.  
   
- [  **@numtrans=**] *numtrans*  
- Es el número de transacciones distribuidas. *numtrans* es **int**, no tiene ningún valor predeterminado.  
+`[ @numtrans = ] numtrans` Es el número de transacciones distribuidas. *numtrans* es **int**, no tiene ningún valor predeterminado.  
   
- [  **@time=**] *tiempo*  
- Es el número de milisegundos, si se especifica, necesarios para distribuir el último lote de transacciones. *tiempo* es **int**, no tiene ningún valor predeterminado.  
+`[ @time = ] time` Es el número de milisegundos, si se proporciona, necesario para distribuir el último lote de transacciones. *tiempo* es **int**, no tiene ningún valor predeterminado.  
   
- [  **@reset=**] *restablecer*  
- Es el estado de la restauración. *restablecer* es **int**, no tiene ningún valor predeterminado. Si **1**y replicado todas las transacciones en el registro se marcan como distribuidas. Si **0**, se restablece el registro de transacciones en la primera transacción replicada y no hay transacciones replicadas se marcan como distribuidas. *restablecer* solo es válido cuando ambos *xactid* y *xact_seqno* son NULL.  
+`[ @reset = ] reset` Es el estado de restablecimiento. *restablecer* es **int**, no tiene ningún valor predeterminado. Si **1**y replicado todas las transacciones en el registro se marcan como distribuidas. Si **0**, se restablece el registro de transacciones en la primera transacción replicada y no hay transacciones replicadas se marcan como distribuidas. *restablecer* solo es válido cuando ambos *xactid* y *xact_seqno* son NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 374fab9dca601e7cc933143643bcc5055f47bda7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a32df85b1a2b7362a22c27d05f68c07cf32a3200
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803923"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534017"
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,17 +49,13 @@ sp_createstats
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@indexonly=** ] **'indexonly'**  
- Crea estadísticas solo en columnas que se encuentran en un índice existente y que no son la primera columna de cualquier definición de índice. **indexonly** es **char (9)**. El valor predeterminado es NO.  
+`[ @indexonly = ] 'indexonly'` Crea estadísticas solo en las columnas que están en un índice existente y no son la primera columna de cualquier definición de índice. **indexonly** es **char (9)**. El valor predeterminado es NO.  
   
- [  **@fullscan=** ] **'fullscan'**  
- Usa el [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrucción con el **FULLSCAN** opción. **FULLSCAN** es **char (9)**.  El valor predeterminado es NO.  
+`[ @fullscan = ] 'fullscan'` Usa el [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrucción con el **FULLSCAN** opción. **FULLSCAN** es **char (9)**.  El valor predeterminado es NO.  
   
- [  **@norecompute=** ] **'norecompute'**  
- Usa el [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrucción con el **NORECOMPUTE** opción. **NORECOMPUTE** es **char(12)**.  El valor predeterminado es NO.  
+`[ @norecompute = ] 'norecompute'` Usa el [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrucción con el **NORECOMPUTE** opción. **NORECOMPUTE** es **char(12)**.  El valor predeterminado es NO.  
   
- [  **@incremental=** ] **"incremental"**  
- Usa el [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrucción con el **INCREMENTAL = ON** opción. **Incremental** es **char(12)**.  El valor predeterminado es NO.  
+`[ @incremental = ] 'incremental'` Usa el [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrucción con el **INCREMENTAL = ON** opción. **Incremental** es **char(12)**.  El valor predeterminado es NO.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -85,7 +81,7 @@ EXEC sp_createstats;
 GO  
 ```  
   
-### <a name="b-create-single-column-statistics-on-all-eligible-index-columns"></a>B. Crear estadísticas de columna única en todas las columnas de índice coincidentes  
+### <a name="b-create-single-column-statistics-on-all-eligible-index-columns"></a>b. Crear estadísticas de columna única en todas las columnas de índice coincidentes  
  En el ejemplo siguiente, se crean estadísticas de columna única en todas las columnas coincidentes que ya se encuentran en un índice y que no son la primera columna del índice.  
   
 ```  

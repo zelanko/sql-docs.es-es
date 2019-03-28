@@ -16,12 +16,12 @@ ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e9ab98dc5beb4f2e07ac7fa62386f9fd44703ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 77a0e3f1795545e553347ae699e719af2ad506b4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823338"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531587"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@viewname**=] **'***view_name***'**  
- Es el nombre de la vista que se va a verificar. *view_name* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @viewname = ] 'view_name'` Es el nombre de la vista para comprobar. *view_name* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@fhasnullcols**=] *field_has_null_columns* salida  
- Indica si el índice de la vista tiene columnas que permiten valores NULL. *view_name* es **sysname**, no tiene ningún valor predeterminado. Devuelve un valor de **1** si el índice de la vista tiene columnas que permiten valores NULL. Devuelve un valor de **0** si la vista no contiene columnas que permiten valores NULL.  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` Es la marca que indica si el índice de la vista tiene columnas que permiten valores NULL. *view_name* es **sysname**, no tiene ningún valor predeterminado. Devuelve un valor de **1** si el índice de la vista tiene columnas que permiten valores NULL. Devuelve un valor de **0** si la vista no contiene columnas que permiten valores NULL.  
   
 > [!NOTE]  
 >  Si el propio procedimiento almacenado devuelve un código de retorno de **1**, lo que significa que la ejecución del procedimiento almacenado ha producido un error, este valor es **0** y debe omitirse.  

@@ -16,12 +16,12 @@ ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f8a7e698fcb4eeb0f1e10c00acf4c34d233f755
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f5f537dcb0f41c975ebbb7b5c6a27c2b2e306a09
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794917"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532177"
 ---
 # <a name="spreplmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
- Es el nombre del publicador cuyo estado se está supervisando. *publicador* es **sysname**, su valor predeterminado es null. Si el valor es NULL, se devuelve información para todos los publicadores que utilizan el distribuidor.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador cuyo estado se está supervisando. *publicador* es **sysname**, su valor predeterminado es null. Si el valor es NULL, se devuelve información para todos los publicadores que utilizan el distribuidor.  
   
- [  **@refreshpolicy=** ] *refreshpolicy*  
- Exclusivamente para uso interno.  
+`[ @refreshpolicy = ] refreshpolicy` Solo para uso interno.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -52,7 +50,7 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 |**publicador**|**sysname**|Es el nombre de un publicador.|  
 |**distribution_db**|**sysname**|Es el nombre de la base de datos de distribución utilizada por un publicador.|  
 |**status**|**int**|Estado máximo de todos los agentes de replicación asociados a las publicaciones de este publicador, el cual puede ser uno de los valores siguientes.<br /><br /> **1** = iniciado<br /><br /> **2** = se ha realizado correctamente<br /><br /> **3** = en curso<br /><br /> **4** = inactivo<br /><br /> **5** = reintentando<br /><br /> **6** = error|  
-|**Advertencia**|**int**|Advertencia de umbral máximo generada por una suscripción perteneciente a una publicación de este publicador, la cual puede ser el resultado lógico OR de uno o más de estos valores.<br /><br /> **1** = expiration: una suscripción a una publicación transaccional no se sincronizó dentro del umbral del período de retención.<br /><br /> **2** = latency: el tiempo necesario para replicar datos desde un publicador transaccional al suscriptor supera el umbral, en segundos.<br /><br /> **4** = mergeexpiration: una suscripción a una publicación de mezcla no se sincronizó dentro del umbral del período de retención.<br /><br /> **8** = mergefastrunduration: el tiempo necesario para completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red rápida.<br /><br /> **16** = mergeslowrunduration: el tiempo necesario para completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red lenta o telefónico.<br /><br /> **32** = mergefastrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, a través de una conexión de red rápida.<br /><br /> **64** = mergeslowrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, a través de una conexión de red lenta o telefónico.|  
+|**warning**|**int**|Advertencia de umbral máximo generada por una suscripción perteneciente a una publicación de este publicador, la cual puede ser el resultado lógico OR de uno o más de estos valores.<br /><br /> **1** = expiration: una suscripción a una publicación transaccional no se sincronizó dentro del umbral del período de retención.<br /><br /> **2** = latency: el tiempo necesario para replicar datos desde un publicador transaccional al suscriptor supera el umbral, en segundos.<br /><br /> **4** = mergeexpiration: una suscripción a una publicación de mezcla no se sincronizó dentro del umbral del período de retención.<br /><br /> **8** = mergefastrunduration: el tiempo necesario para completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red rápida.<br /><br /> **16** = mergeslowrunduration: el tiempo necesario para completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red lenta o telefónico.<br /><br /> **32** = mergefastrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, a través de una conexión de red rápida.<br /><br /> **64** = mergeslowrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, a través de una conexión de red lenta o telefónico.|  
 |**publicationcount**|**int**|Es el número de publicaciones pertenecientes al publicador.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

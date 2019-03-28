@@ -16,12 +16,12 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e08a08bbd3343386ed4b07749bde5216ae23c8b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 224d304a44c3e66eb8f2c18f4c581bf271f926f9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789197"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538507"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@agent_name** =] **'***agent_name***'**  
- Es el nombre del agente. *agent_name* es **nvarchar (100)** no tiene ningún valor predeterminado.  
+`[ @agent_name = ] 'agent_name'` Es el nombre del agente. *agent_name* es **nvarchar (100)** no tiene ningún valor predeterminado.  
   
- [ **@hours** =] *horas*  
- Es el intervalo de tiempo en horas sobre el que se devuelve información de historial de las sesiones del agente. *horas* es **int**, que puede ser uno de los siguientes intervalos.  
+`[ @hours = ] hours` Es el intervalo de tiempo, en horas, para el que se devuelve información de sesión de agente históricos. *horas* es **int**, que puede ser uno de los siguientes intervalos.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -55,22 +53,18 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**0** (valor predeterminado)|Devuelve información sobre todas las ejecuciones pasadas del agente.|  
 |> **0**|Devuelve información de agente de ejecuciones que se ha producido en los últimos *horas* número de horas.|  
   
- [ **@session_type** =] *session_type*  
- Filtra el conjunto de resultados según el resultado del fin de la sesión. *session_type* es **int**, y puede tener uno de estos valores.  
+`[ @session_type = ] session_type` Filtra el conjunto de resultados en función del resultado final de sesión. *session_type* es **int**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**1** (predeterminado)|Sesiones del agente con un reintento o un resultado correcto.|  
 |**0**|Sesiones del agente con un resultado erróneo.|  
   
- [ **@publisher** =] **'***publisher***'**  
- Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null. Este parámetro se usa al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null. Este parámetro se usa al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null. Este parámetro se usa al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null. Este parámetro se usa al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
   
- [  **@publication=** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es null. Este parámetro se usa al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es null. Este parámetro se usa al ejecutar **sp_replmonitorhelpmergesession** en el suscriptor.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -84,7 +78,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**UploadedCommands**|**int**|Número de comandos cargados durante la sesión del agente.|  
 |**DownloadedCommands**|**int**|Número de comandos descargados durante la sesión del agente.|  
 |**ErrorMessages**|**int**|Número de mensajes de error generados durante la sesión del agente.|  
-|**Identificador del error**|**int**|Id. del error producido.|  
+|**ErrorID**|**int**|Id. del error producido.|  
 |**PercentageDone**|**decimal**|Porcentaje estimado de los cambios totales que ya se han entregado en una sesión activa.|  
 |**TimeRemaining**|**int**|Número estimado de segundos que restan en una sesión activa.|  
 |**CurrentPhase**|**int**|Es la fase actual de una sesión activa y puede ser una de las siguientes.<br /><br /> **1** = carga<br /><br /> **2** = descarga|  

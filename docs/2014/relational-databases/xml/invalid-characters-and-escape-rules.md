@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FOR XML clause, invalid characters
 - FOR XML clause, escape rules
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 717cfa0e25e85114994479c3a7dcb19e36885705
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aafacefa7a5bab5f8bc828f48384a79e17a13b11
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116010"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532157"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>Reglas de escape y caracteres no válidos
   En este tema se describe cómo la cláusula FOR XML controla los caracteres XML no válidos y se enumeran las reglas de escape para los caracteres que no son válidos en los nombres XML.  

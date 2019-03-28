@@ -18,12 +18,12 @@ ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a543aa923d892e12bc3baea0e3aa9d1f9c3e7504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827683"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534397"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@server =** ] **'***server***'**  
- Es el servidor cuya información se va a presentar. Cuando *server* no se especifica, los informes sobre todos los servidores de **master.sys.servers**. *servidor* es **sysname**, su valor predeterminado es null.  
+`[ @server = ] 'server'` Es el servidor sobre qué información se notifica. Cuando *server* no se especifica, los informes sobre todos los servidores de **master.sys.servers**. *servidor* es **sysname**, su valor predeterminado es null.  
   
- [  **@optname =** ] **'***opción***'**  
- Es la opción que describe al servidor. *opción* es **varchar (** 35 **)**, su valor predeterminado es null, y debe ser uno de estos valores.  
+`[ @optname = ] 'option'` Es la opción que describe el servidor. *opción* es **varchar (** 35 **)**, su valor predeterminado es null, y debe ser uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -56,14 +54,13 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**dpub**|Publicador remoto de este distribuidor.|  
 |**validación diferida de esquema**|Omite la comprobación del esquema de las tablas remotas al comienzo de la consulta.|  
 |**pub**|Publicador.|  
-|**RPC**|Habilita RPC desde el servidor especificado.|  
+|**rpc**|Habilita RPC desde el servidor especificado.|  
 |**RPC fuera**|Habilita RPC en el servidor especificado.|  
-|**Sub**|Suscriptor.|  
-|**Sistema**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**sub**|Suscriptor.|  
+|**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Usar intercalación remota**|Usa la intercalación de una columna remota en lugar de la del servidor local.|  
   
- [  **@show_topology =** ] **'***show_topology***'**  
- Es la relación del servidor especificado con otros servidores. *show_topology* es **varchar (** 1 **)**, su valor predeterminado es null. Si *show_topology* no es igual a **t** o es NULL, **sp_helpserver** devuelve columnas que se muestran en la sección conjuntos de resultados. Si *show_topology* es igual a **t**, además de las columnas enumeradas en los conjuntos de resultados, **sp_helpserver** también devuelve **topx** y **topy** información.  
+`[ @show_topology = ] 'show_topology'` Es la relación del servidor especificado a otros servidores. *show_topology* es **varchar (** 1 **)**, su valor predeterminado es null. Si *show_topology* no es igual a **t** o es NULL, **sp_helpserver** devuelve columnas que se muestran en la sección conjuntos de resultados. Si *show_topology* es igual a **t**, además de las columnas enumeradas en los conjuntos de resultados, **sp_helpserver** también devuelve **topx** y **topy** información.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error).  
@@ -73,9 +70,9 @@ sp_helpserver [ [ @server = ] 'server' ]
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre**|**sysname**|Nombre de servidor.|  
-|**nombre_red**|**sysname**|El nombre de red del servidor.|  
-|**status**|**varchar (** 70 **)**|Estado del servidor.|  
-|**id**|**Char (** 4 **)**|Número de identificación del servidor.|  
+|**network_name**|**sysname**|El nombre de red del servidor.|  
+|**status**|**varchar(** 70 **)**|Estado del servidor.|  
+|**id**|**char(** 4 **)**|Número de identificación del servidor.|  
 |**collation_name**|**sysname**|Intercalación del servidor.|  
 |**connect_timeout**|**int**|Valor del tiempo de espera para conectar a un servidor vinculado.|  
 |**query_timeout**|**int**|Valor del tiempo de espera para consultas sobre un servidor vinculado.|  
@@ -97,7 +94,7 @@ GO
 EXEC sp_helpserver;  
 ```  
   
-### <a name="b-displaying-information-about-a-specific-server"></a>B. Presentar información acerca de un servidor específico  
+### <a name="b-displaying-information-about-a-specific-server"></a>b. Presentar información acerca de un servidor específico  
  En este ejemplo se presenta toda la información acerca del servidor `SEATTLE2`.  
   
 ```  

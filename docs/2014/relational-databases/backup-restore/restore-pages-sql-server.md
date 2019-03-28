@@ -19,12 +19,12 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d30c8adfc19daa58f4aa3782072c6a9b08f11d83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108735"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536397"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
   En este tema se describe cómo restaurar páginas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. El objetivo de una restauración de páginas es restaurar una o varias páginas dañadas sin restaurar la base de datos completa. Normalmente, las páginas candidatas para la restauración se han marcado como "sospechosas" debido a un error al tener acceso a la página. Las páginas sospechosas se identifican en la tabla [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) de la base de datos **msdb** .  
@@ -47,7 +47,7 @@ ms.locfileid: "48108735"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="WhenUseful"></a> ¿Cuándo es útil la restauración de páginas?  
  La restauración de páginas se ha diseñado para reparar páginas aisladas que se han dañado. La restauración y recuperación de una pequeña cantidad de páginas es más rápida que la restauración de un archivo, ya que reduce la cantidad de datos sin conexión durante la operación de restauración. Sin embargo, si debe restaurar una cantidad mayor de páginas de un archivo, la restauración del archivo completo suele ser más efectiva. Por ejemplo, la presencia de un gran número de páginas dañadas en un dispositivo puede indicar un error de dispositivo pendiente. Pruebe a restaurar el archivo, posiblemente en otra ubicación, y repare el dispositivo.  
@@ -62,7 +62,7 @@ ms.locfileid: "48108735"
   
     -   Registro de transacciones  
   
-    -   Páginas de asignación: páginas del mapa de asignación global (GAM), páginas del mapa de asignación global compartido (SGAM) y páginas de espacio disponible en páginas (PFS).  
+    -   Páginas de asignación: Páginas del mapa de asignación global (GAM), páginas del mapa de asignación global compartido (SGAM) y páginas de espacio disponible en páginas (PFS).  
   
     -   Página 0 de todos los archivos de datos (la página de arranque del archivo)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "48108735"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator** , y al propietario (**dbo**) de la base de datos (para la opción FROM DATABASE_SNAPSHOT, la base de datos siempre existe).  
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
@@ -130,11 +130,11 @@ ms.locfileid: "48108735"
      **Conjuntos de copia de seguridad**  
      Esta sección muestra los conjuntos de copia de seguridad implicados en la restauración.  
   
-    |Encabezado|Valores|  
+    |Header|Valores|  
     |------------|------------|  
-    |**Nombre**|Nombre del conjunto de copia de seguridad.|  
+    |**Name**|Nombre del conjunto de copia de seguridad.|  
     |**Componente**|Componente del que se ha realizado una copia de seguridad: **Base de datos**, **Archivo** o **\<en blanco>** (para registros de transacciones).|  
-    |**Tipo**|Tipo de copia de seguridad realizada: **Completa**, **Diferencial**o **Registro de transacciones**.|  
+    |**Tipo**|Tipo de copia de seguridad realizada: **Completa**, **Diferencial** o **Registro de transacciones**.|  
     |**Server**|Nombre de la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizó la operación de copia de seguridad.|  
     |**Base de datos**|Nombre de la base de datos para la operación de copia de seguridad.|  
     |**Posición**|Posición del conjunto de copias de seguridad en el volumen.|  
@@ -204,7 +204,7 @@ ms.locfileid: "48108735"
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  En el siguiente ejemplo se restauran cuatro páginas dañadas del archivo `B` con `NORECOVERY`. A continuación, se aplican dos copias de seguridad de registros con `NORECOVERY`y, después, la copia del final del registro, restaurada con `RECOVERY`. En este ejemplo se realiza una restauración en línea. En el ejemplo, el identificador del archivo `B` es `1`y los identificadores de las páginas dañadas son `57`, `202`, `916`y `1016`.  
   
-```tsql  
+```sql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
    FROM <file_backup_of_file_B>   
    WITH NORECOVERY;  

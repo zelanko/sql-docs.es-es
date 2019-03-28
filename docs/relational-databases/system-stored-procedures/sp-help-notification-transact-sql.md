@@ -18,12 +18,12 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ccc926844f6d3c054a69cb51f3156dc8e186a98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833583"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538637"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@object_type =**] **'***object_type***'**  
- Tipo de información que se va a devolver. *object_type*es **char (9)**, no tiene ningún valor predeterminado. *object_type* puede ser ALERTS, que enumera las alertas asignadas al nombre del operador especificado *,* u OPERATORS, que se enumeran los operadores responsables del nombre de alerta especificado *.*  
+`[ @object_type = ] 'object_type'` El tipo de información que se devuelve. *object_type*es **char (9)**, no tiene ningún valor predeterminado. *object_type* puede ser ALERTS, que enumera las alertas asignadas al nombre del operador especificado *,* u OPERATORS, que se enumeran los operadores responsables del nombre de alerta especificado *.*  
   
- [  **@name =**] **'***nombre***'**  
- Un nombre de operador (si *object_type* es OPERATORS) o un nombre de alerta (si *object_type* es ALERTS). *nombre* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @name = ] 'name'` Un nombre de operador (si *object_type* es OPERATORS) o un nombre de alerta (si *object_type* es ALERTS). *nombre* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@enum_type =**] **'***enum_type***'**  
- El *object_type*información que se devuelve. *enum_type* es ACTUAL en la mayoría de los casos. *enum_type*es **char (10)**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
+`[ @enum_type = ] 'enum_type'` El *object_type*información que se devuelve. *enum_type* es ACTUAL en la mayoría de los casos. *enum_type*es **char (10)**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -60,8 +57,7 @@ sp_help_notification
 |ALL|Enumera todos los*tipos de objetos* incluidos aquellos que no están asociados con *nombre*.|  
 |TARGET|Muestra sólo el *tipos de objetos* coincidencia proporcionado *target_name*, independientemente de la asociación con*nombre*.|  
   
- [  **@notification_method =**] *notification_method*  
- Valor numérico que determina las columnas del método de notificación que se van a devolver. *notification_method* es **tinyint**, y puede tener uno de los siguientes valores.  
+`[ @notification_method = ] notification_method` Un valor numérico que determina las columnas del método de notificación para devolver. *notification_method* es **tinyint**, y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -70,8 +66,7 @@ sp_help_notification
 |**4**|NetSend: devuelve solamente el **use_netsend** columna.|  
 |**7**|Todas: devuelve todas las columnas.|  
   
- [  **@target_name =**] **'***target_name***'**  
- Para buscar un nombre de alerta (si *object_type* es ALERTS) o un nombre de operador para buscar (si *object_type* es OPERATORS). *target_name* solo es necesario si *enum_type* es el destino. *target_name* es **sysname**, su valor predeterminado es null.  
+`[ @target_name = ] 'target_name'` Para buscar un nombre de alerta (si *object_type* es ALERTS) o un nombre de operador para buscar (si *object_type* es OPERATORS). *target_name* solo es necesario si *enum_type* es el destino. *target_name* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-valves"></a>Código de retorno  
  0 (correcto) o 1 (error)  
@@ -126,7 +121,7 @@ EXEC dbo.sp_help_notification
 GO  
 ```  
   
-### <a name="b-listing-operators-for-a-specific-alert"></a>B. Presentar los operadores de una alerta específica  
+### <a name="b-listing-operators-for-a-specific-alert"></a>b. Presentar los operadores de una alerta específica  
  En el ejemplo siguiente se devuelven todos los operadores que reciben algún tipo de notificación de la alerta `Test Alert`.  
   
 ```  

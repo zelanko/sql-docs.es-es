@@ -16,12 +16,12 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34ba40387c246fe5f7f2de8dd74197b7cd43c0f5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 1b360eed1619317e7ca3092bc47da086c520bf04
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130745"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535557"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,31 +43,25 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'**_publicación_**'**  
- Es el nombre de publicación. *publicación* es **sysname**, su valor predeterminado es null. La publicación debe existir y debe cumplir las normas de los identificadores.  
+`[ @publication = ] 'publication'` Es el nombre de publicación. *publicación* es **sysname**, su valor predeterminado es null. La publicación debe existir y debe cumplir las normas de los identificadores.  
   
- [  **@subscriber=**] **'**_suscriptor_**'**  
- Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es null.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *suscriptor* es **sysname**, su valor predeterminado es null.  
   
- [  **@subscriber_db=** ] **'**_subscriber_db_**'**  
- Es el nombre de la base de datos de suscripción. *subscription_database*es **sysname**, su valor predeterminado es null.  
+`[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripción. *subscription_database*es **sysname**, su valor predeterminado es null.  
   
- [  **@subscription_type=** ] **'**_subscription_type_**'**  
- Es el tipo de suscripción. *subscription_type*es **nvarchar (15)**, y puede tener uno de estos valores.  
+`[ @subscription_type = ] 'subscription_type'` Es el tipo de suscripción. *subscription_type*es **nvarchar (15)**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**Todos los**|Suscripciones de inserción, de extracción y anónimas.|  
-|**Anónimo**|Suscripción anónima.|  
-|**inserción**|Suscripción de inserción.|  
-|**Incorporación de cambios**|Suscripción de extracción.|  
+|**all**|Suscripciones de inserción, de extracción y anónimas.|  
+|**anonymous**|Suscripción anónima.|  
+|**push**|Suscripción de inserción.|  
+|**pull**|Suscripción de extracción.|  
 |**ambos** (valor predeterminado)|Suscripción de inserción y de extracción.|  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
- Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**. Este parámetro se puede utilizar para quitar una suscripción sin tener que realizar tareas de limpieza en el distribuidor. También es útil cuando ha sido necesario volver a instalar el distribuidor.  
+`[ @ignore_distributor = ] ignore_distributor` Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**. Este parámetro se puede utilizar para quitar una suscripción sin tener que realizar tareas de limpieza en el distribuidor. También es útil cuando ha sido necesario volver a instalar el distribuidor.  
   
- [  **@reserved=** ] *reservado*  
- Está reservado para su uso futuro. *reservado* es **bit**, su valor predeterminado es **0**.  
+`[ @reserved = ] reserved` está reservado para uso futuro. *reservado* es **bit**, su valor predeterminado es **0**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

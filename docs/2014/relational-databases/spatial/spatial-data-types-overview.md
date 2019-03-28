@@ -14,12 +14,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8f792d128d8d75bdf39a2b04b104b827d74c7b63
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 135541d4474ab68fc8bdbc294663c8d9bcbc7c14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376427"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526687"
 ---
 # <a name="spatial-data-types-overview"></a>Información general de los tipos de datos espaciales
   Hay dos tipos de datos espaciales. El tipo de datos `geometry` admite datos planos o euclidianos (de tierra plana). El tipo de datos `geometry` se ajusta tanto a las características simples de Geospatial Consortium (OGC) para la especificación SQL versión 1.1.0 como a SQL MM (estándar ISO).  
@@ -123,7 +123,7 @@ ms.locfileid: "53376427"
   
  En este ejemplo se muestra cómo almacenar los triángulos isósceles anteriores tanto con una instancia de `LineString` como con una instancia de `CircularString`:  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry;  
 DECLARE @g2 geometry;  
 SET @g1 = geometry::STGeomFromText('LINESTRING(1 1, 5 1, 3 5, 1 1)', 0);  
@@ -139,7 +139,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
   
  Considere el fragmento de código siguiente:  
   
-```tsql  
+```sql  
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);  
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);  
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];  
@@ -154,14 +154,14 @@ LS LengthCS Length
   
  La ilustración siguiente muestra cómo se almacena cada tipo (línea roja indica `LineString``@g1`azul muestra la línea `CircularString``@g2`):  
   
- ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4A4B-8560-50cdcf905b76")  
+ ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")  
   
  Como se muestra en la ilustración anterior, las instancias de `CircularString` usan menos puntos para almacenar límites curvos con mayor precisión que las instancias de `LineString` . Las instancias de `CircularString` son útiles para almacenar límites circulares como un radio de búsqueda de veinte millas desde un punto específico. Las instancias de `LineString` funcionan bien para almacenar límites que son lineales como un bloque de ciudad cuadrado.  
   
 ### <a name="linestring-and-compoundcurve-comparison"></a>Comparación de LineString y CompoundCurve  
  En los siguientes ejemplos de código se muestra cómo almacenar la misma figura con instancias de `LineString` y `CompoundCurve`:  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');  
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');  
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');  
@@ -171,7 +171,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
   
  En los ejemplos anteriores, una instancia de `LineString` o un instancia de `CompoundCurve` pudieron almacenar la figura.  En el siguiente ejemplo se usa `CompoundCurve` para almacenar un segmento de gráfico circular:  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
   
@@ -180,7 +180,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0,
 ### <a name="circularstring-and-compoundcurve-comparison"></a>Comparación de CircularString y CompoundCurve  
  En el siguiente ejemplo de código se muestra cómo se puede almacenar el segmento de gráfico circular en una instancia de `CircularString`:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');  
 SELECT @g.ToString(), @g.STLength();  
@@ -188,13 +188,13 @@ SELECT @g.ToString(), @g.STLength();
   
  Para almacenar el segmento de gráfico circular mediante una instancia de `CircularString` se requiere que se usen tres puntos para cada segmento de línea.  Si no se conoce un punto intermedio, se debe calcular o se debe duplicar el extremo del segmento de línea como muestra el siguiente fragmento de código:  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
  Las instancias de `CompoundCurve` permiten componentes tanto de `LineString` como de `CircularString` para que solo se necesiten conocer dos puntos en los segmentos de línea del segmento de gráfico circular.  En este ejemplo de código se muestra cómo usar `CompoundCurve` para almacenar la misma figura:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING( 3 6.3246, 0 7, -3 6.3246), (-3 6.3246, 0 0, 3 6.3246))');  
 SELECT @g.ToString(), @g.STLength();  

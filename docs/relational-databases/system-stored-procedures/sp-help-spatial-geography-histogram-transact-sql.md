@@ -18,12 +18,12 @@ ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2fa398eade8b3cac1497c1168882dbacbc6e9817
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a6fa55cd5359c64f2a124ff85429745c995fae96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659494"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538167"
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,19 +41,15 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tabname =**] **'***tabname***'**  
- Es el nombre completo o incompleto de la tabla para la que se ha especificado el índice espacial.  
+`[ @tabname = ] 'tabname'` Es el nombre completo o incompleto de la tabla para la que se ha especificado el índice espacial.  
   
  Se requieren comillas únicamente si se especifica una tabla certificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *TabName* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@colname =** ] **'***columnname***'**  
- Es el nombre de la columna espacial especificada. *ColumnName* es un **sysname**, no tiene ningún valor predeterminado.  
+`[ @colname = ] 'columnname'` Es el nombre de la columna espacial especificada. *ColumnName* es un **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@resolution =** ] **'***resolución***'**  
- Es la resolución del cuadro de límite. Los valores válidos van del 10 al 5000. *resolución* es un **tinyint**, no tiene ningún valor predeterminado.  
+`[ @resolution = ] 'resolution'` Es la resolución del cuadro de límite. Los valores válidos van del 10 al 5000. *resolución* es un **tinyint**, no tiene ningún valor predeterminado.  
   
- [  **@sample =** ] **'***ejemplo***'**  
- Es el porcentaje de la tabla que se usa. Los valores válidos son de 0 a 100. *TABLESAMPLE* es un **float**. Valor predeterminado es 100.  
+`[ @sample = ] 'sample'` Es el porcentaje de la tabla que se utiliza. Los valores válidos son de 0 a 100. *TABLESAMPLE* es un **float**. Valor predeterminado es 100.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Se devuelve un valor de tabla. En la siguiente cuadrícula se describe el contenido de la columna de la tabla.  
@@ -61,7 +57,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Representa el identificador único de cada celda, con el contador inicial igual a 1.|  
-|**celda**|**geography**|Es un polígono rectangular que representa cada celda. La forma de la celda es idéntica a la de la celda usada para los índices espaciales.|  
+|**cell**|**geography**|Es un polígono rectangular que representa cada celda. La forma de la celda es idéntica a la de la celda usada para los índices espaciales.|  
 |**row_count**|**bigint**|Indica el número de objetos espaciales que tocan la celda o que están contenidos en ella.|  
   
 ## <a name="permissions"></a>Permisos  

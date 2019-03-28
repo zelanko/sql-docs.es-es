@@ -18,12 +18,12 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b043b71ca3f0349ce8ed7ac7accf136f4b7eff60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3461d6f80bb1ac693cca78954e5165fb7f012436
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595233"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529747"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@LoginNamePattern =** ] **'***login***'**  
- Es un nombre de inicio de sesión. *login* es de tipo **sysname** y su valor predeterminado es NULL. *inicio de sesión* debe existir si se especifica. Si *inicio de sesión* no es se especifica, se devuelve información sobre todos los inicios de sesión.  
+`[ @LoginNamePattern = ] 'login'` Es un nombre de inicio de sesión. *login* es de tipo **sysname** y su valor predeterminado es NULL. *inicio de sesión* debe existir si se especifica. Si *inicio de sesión* no es se especifica, se devuelve información sobre todos los inicios de sesión.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -55,8 +54,8 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**SID**|**varbinary(85)**|Identificador de seguridad (SID) del inicio de sesión.|  
 |**DefDBName**|**sysname**|Base de datos predeterminada que **LoginName** utiliza al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**DefLangName**|**sysname**|Idioma predeterminado utilizado por **LoginName**.|  
-|**Auser**|**Char (5)**|Sí = **LoginName** tiene un nombre de usuario asociada en una base de datos.<br /><br /> No = **LoginName** no tiene un nombre de usuario asociado.|  
-|**Remota**|**caracter (7)**|Sí = **LoginName** tiene asociado un inicio de sesión remoto.<br /><br /> No = **LoginName** no tiene asociado un inicio de sesión.|  
+|**Auser**|**char(5)**|Sí = **LoginName** tiene un nombre de usuario asociada en una base de datos.<br /><br /> No = **LoginName** no tiene un nombre de usuario asociado.|  
+|**ARemote**|**char(7)**|Sí = **LoginName** tiene asociado un inicio de sesión remoto.<br /><br /> No = **LoginName** no tiene asociado un inicio de sesión.|  
   
  El segundo informe contiene información sobre los usuarios asignados a cada inicio de sesión y las pertenencias a roles del inicio de sesión como se muestra en la tabla siguiente.  
   
@@ -65,7 +64,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**LoginName**|**sysname**|Nombre de inicio de sesión.|  
 |**DBName**|**sysname**|Base de datos predeterminada que **LoginName** utiliza al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**UserName**|**sysname**|Cuenta de usuario que **LoginName** está asociado en **DBName**y los roles que **LoginName** es un miembro en **DBName**.|  
-|**UserOrAlias**|**Char (8)**|MemberOf = **UserName** es un rol.<br /><br /> Usuario = **UserName** es una cuenta de usuario.|  
+|**UserOrAlias**|**char(8)**|MemberOf = **UserName** es un rol.<br /><br /> Usuario = **UserName** es una cuenta de usuario.|  
   
 ## <a name="remarks"></a>Comentarios  
  Antes de quitar un inicio de sesión, utilice **sp_helplogins** para identificar las cuentas de usuario que se asignan al inicio de sesión.  

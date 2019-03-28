@@ -16,12 +16,12 @@ ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04bd9a7d072f31fd6791e8cea7b17e14650e63c7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 268f94665641e29156c20ea55debf26db63e1142
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215411"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526637"
 ---
 # <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,22 +41,18 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicación***'**  
- Es el nombre de la publicación en la que se ha insertado el token de seguimiento. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en el que se ha insertado el testigo de seguimiento. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@tracer_id=** ] *tracer_id*  
- Es el identificador del token de seguimiento en el [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) qué historial se devuelve información de tabla. *tracer_id* es **int**, no tiene ningún valor predeterminado.  
+`[ @tracer_id = ] tracer_id` Es el identificador del token de seguimiento en el [MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) qué historial se devuelve información de tabla. *tracer_id* es **int**, no tiene ningún valor predeterminado.  
   
- [  **@publisher=** ] **'***publisher***'**  
- El nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null.  
+`[ @publisher = ] 'publisher'` El nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]
 >  Este parámetro solo debe especificarse para que no sean de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- El nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null. Si el procedimiento almacenado se ejecuta en el publicador, se omite este parámetro.  
+`[ @publisher_db = ] 'publisher_db'` El nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null. Si el procedimiento almacenado se ejecuta en el publicador, se omite este parámetro.  
   
-## <a name="result-set"></a>Conjunto de resultados  
+## <a name="result-set"></a>Tipo de cursor  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

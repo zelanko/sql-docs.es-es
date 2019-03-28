@@ -16,12 +16,12 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e31a8827f940e0dd5a3debe2d03bf675f33df3cd
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6c60f56980aedc29c8262089748a77f113cc0449
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591179"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536487"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicación_**'**  
- Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**. Si se especifica la publicación, se devuelven todos los conflictos calificados por la publicación.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**. Si se especifica la publicación, se devuelven todos los conflictos calificados por la publicación.  
   
- [  **@source_object=**] **'**_source_object_**'**  
- Es el nombre del objeto de origen. *source_object* es **nvarchar (386)**, su valor predeterminado es null.  
+`[ @source_object = ] 'source_object'` Es el nombre del objeto de origen. *source_object* es **nvarchar (386)**, su valor predeterminado es null.  
   
- [  **@publisher=**] **'**_publisher_**'**  
- Es el nombre del publicador. *publisher* es **sysname**, su valor predeterminado es null.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publisher* es **sysname**, su valor predeterminado es null.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, su valor predeterminado es null.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -62,7 +58,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |**conflict_type**|**int**|Código que indica el tipo de conflicto:<br /><br /> **1** = UpdateConflict: Conflicto se detecta en el nivel de fila.<br /><br /> **2** = ColumnUpdateConflict: Conflicto se detecta en el nivel de columna.<br /><br /> **3** = UpdateDeleteWinsConflict: Eliminación gana el conflicto.<br /><br /> **4** = UpdateWinsDeleteConflict: La columna rowguid eliminada que pierde el conflicto se registra en esta tabla.<br /><br /> **5** = UploadInsertFailed: Inserción del suscriptor no pudo aplicarse en el publicador.<br /><br /> **6** = DownloadInsertFailed: Inserción del publicador no pudo aplicarse en el suscriptor.<br /><br /> **7** = UploadDeleteFailed: No se pudo cargar la eliminación en el suscriptor en el publicador.<br /><br /> **8** = DownloadDeleteFailed: No se pudo descargar la eliminación en el publicador al suscriptor.<br /><br /> **9** = UploadUpdateFailed: Actualización del suscriptor no pudo aplicarse en el publicador.<br /><br /> **10** = DownloadUpdateFailed: Actualización en el publicador no pudo aplicarse al suscriptor.|  
 |**reason_code**|**Int**|Código del error, que puede depender del contexto.|  
 |**reason_text**|**varchar(720)**|Descripción del error, que puede depender del contexto.|  
-|**origin_datasource**|**varchar (255)**|Origen del conflicto.|  
+|**origin_datasource**|**varchar(255)**|Origen del conflicto.|  
 |**pubid**|**uniqueidentifier**|Identificador de la publicación.|  
 |**MSrepl_create_time**|**datetime**|Hora en que Se ha agregado la información del conflicto.|  
   

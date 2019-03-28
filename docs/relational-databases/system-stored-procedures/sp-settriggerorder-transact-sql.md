@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: acbdb4b406d3ec0c2820e2be7988c32af249379c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b9dca1aca3883b16b13f4e0abdb842deaf5bbfdd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590319"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537907"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,23 +44,20 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@triggername=** ] **'**[ _triggerschema_**.**] _triggername_**'**  
- Es el nombre del desencadenador y el esquema al que pertenece, si procede, cuyo orden se va a establecer o cambiar. [_triggerschema_**.**] *triggername* es **sysname**. Si el nombre no corresponde a un desencadenador o si corresponde a un desencadenador INSTEAD OF, el procedimiento devolverá un error. *triggerschema* no se puede especificar para desencadenadores DDL o logon.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` Es el nombre del desencadenador y el esquema al que pertenece, si procede, cuyo orden es necesario establecer o cambiar. [_triggerschema_**.**] *triggername* es **sysname**. Si el nombre no corresponde a un desencadenador o si corresponde a un desencadenador INSTEAD OF, el procedimiento devolverá un error. *triggerschema* no se puede especificar para desencadenadores DDL o logon.  
   
- [ **@order=** ] **'**_valor_**'**  
- Es el valor del nuevo orden del desencadenador. *valor* es **varchar (10)** y puede ser uno de los siguientes valores.  
+`[ @order = ] 'value'` Es la configuración del nuevo orden del desencadenador. *valor* es **varchar (10)** y puede ser uno de los siguientes valores.  
   
 > [!IMPORTANT]  
 >  El **primera** y **última** desencadenadores deben ser dos desencadenadores diferentes.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**Primero**|El desencadenador se activa primero.|  
+|**First**|El desencadenador se activa primero.|  
 |**Último**|El desencadenador se activa el último.|  
 |**Ninguno**|El desencadenador se activa sin un orden definido.|  
   
- [  **@stmttype=** ] **'**_statement_type_**'**  
- Especifica la instrucción SQL que activa el desencadenador. *statement_type* es **varchar (50)** y puede ser INSERT, UPDATE, DELETE, LOGON o cualquier [!INCLUDE[tsql](../../includes/tsql-md.md)] enumerado en el evento de instrucción [eventos DDL](../../relational-databases/triggers/ddl-events.md). Los grupos de eventos no se pueden especificar.  
+`[ @stmttype = ] 'statement_type'` Especifica la instrucción SQL que activa el desencadenador. *statement_type* es **varchar (50)** y puede ser INSERT, UPDATE, DELETE, LOGON o cualquier [!INCLUDE[tsql](../../includes/tsql-md.md)] enumerado en el evento de instrucción [eventos DDL](../../relational-databases/triggers/ddl-events.md). Los grupos de eventos no se pueden especificar.  
   
  Un desencadenador puede designarse como el **primera** o **última** desencadenador para un tipo de instrucción solo después de haber definido ese desencadenador como desencadenador para ese tipo de instrucción. Por ejemplo, desencadenar **TR1** puede designarse **primera** para INSERT en la tabla **T1** si **TR1** se define como un desencadenador INSERT. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] devuelve un error si **TR1**, que se ha definido solo como un desencadenador INSERT, se establece como un **primera**, o **última**, desencadenador de una instrucción UPDATE. Para obtener más información, vea la sección Comentarios.  
   

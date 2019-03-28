@@ -18,12 +18,12 @@ ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d5f307fca906d138428fe9852752d3f718633181
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44dc2d5341e536179fe0bf6ef152ef7d39afe966
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729863"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532107"
 ---
 # <a name="sysmailaddprofileaccountsp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@profile_id** =] *profile_id*  
- Identificador de perfil que se agrega a la cuenta. *profile_id* es **int**, su valor predeterminado es null. Ya sea el *profile_id* o *profile_name* debe especificarse.  
+`[ @profile_id = ] profile_id` El identificador de perfil que se agrega la cuenta. *profile_id* es **int**, su valor predeterminado es null. Ya sea el *profile_id* o *profile_name* debe especificarse.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- Nombre de perfil que se agrega a la cuenta. *nombre_perfil* es **sysname**, su valor predeterminado es null. Ya sea el *profile_id* o *profile_name* debe especificarse.  
+`[ @profile_name = ] 'profile_name'` El nombre del perfil que se agrega la cuenta. *nombre_perfil* es **sysname**, su valor predeterminado es null. Ya sea el *profile_id* o *profile_name* debe especificarse.  
   
- [ **@account_id** =] *account_id*  
- Identificador de cuenta que se agrega al perfil. *account_id* es **int**, su valor predeterminado es null. Ya sea el *account_id* o *account_name* debe especificarse.  
+`[ @account_id = ] account_id` El identificador de cuenta para agregar al perfil. *account_id* es **int**, su valor predeterminado es null. Ya sea el *account_id* o *account_name* debe especificarse.  
   
- [ **@account_name** =] **'***account_name***'**  
- Nombre de la cuenta que se va a agregar al perfil. *account_name* es **sysname**, su valor predeterminado es null. Ya sea el *account_id* o *account_name* debe especificarse.  
+`[ @account_name = ] 'account_name'` El nombre de la cuenta para agregar al perfil. *account_name* es **sysname**, su valor predeterminado es null. Ya sea el *account_id* o *account_name* debe especificarse.  
   
- [ **@sequence_number** =] *sequence_number*  
- Número de secuencia de la cuenta en el perfil. *sequence_number* es **int**, no tiene ningún valor predeterminado. El número de secuencia determina el orden en que las cuentas se utilizan en el perfil.  
+`[ @sequence_number = ] sequence_number` El número de secuencia de la cuenta en el perfil. *sequence_number* es **int**, no tiene ningún valor predeterminado. El número de secuencia determina el orden en que las cuentas se utilizan en el perfil.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

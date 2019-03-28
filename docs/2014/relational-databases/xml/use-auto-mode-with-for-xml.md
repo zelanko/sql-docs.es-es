@@ -12,15 +12,15 @@ helpviewer_keywords:
 - FOR XML AUTO mode
 - AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 599707905c1d4c9693f1ccec53abf4933f4a6193
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8e6464fee5779e35559b6eca23981aa09312aeb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187065"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534797"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Usar el modo AUTO con FOR XML
   Tal como se describe en [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md), el modo AUTO devuelve los resultados de la consulta como elementos XML anidados. Esto no ofrece un gran control sobre la forma del XML generado a partir del resultado de una consulta. Las consultas en modo AUTO son útiles si desea generar jerarquías sencillas. Pero [Usar el modo EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md) y [Usar el modo PATH con FOR XML](use-path-mode-with-for-xml.md) ofrecen mayor control y flexibilidad a la hora de decidir la forma del XML procedente del resultado de una consulta.  

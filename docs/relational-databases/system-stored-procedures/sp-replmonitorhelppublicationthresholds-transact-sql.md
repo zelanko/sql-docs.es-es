@@ -16,12 +16,12 @@ ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 99b577b27b8edd2f37f1af3a13162f1b1aaa8c42
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b69d1ae90224b94d5db5f9658942e1beed0b61d1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747657"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526937"
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher**=] **'***publisher***'**  
- Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@publisher_db**=] **'***publisher_db***'**  
- Es el nombre de la base de datos publicada. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos publicada. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@publication**=] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@publication_type**=] *publication_type*  
- Es el tipo de publicación. *publication_type* es **int**, y puede tener uno de estos valores.  
+`[ @publication_type = ] publication_type` Si el tipo de publicación. *publication_type* es **int**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -69,7 +65,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 |**title**|**sysname**|Nombre de la métrica de rendimiento de la replicación.|  
 |**value**|**int**|El valor de umbral de la métrica de rendimiento.|  
 |**shouldalert**|**bit**|Es si se debe generar una alerta cuando la métrica supera el umbral definido para esta publicación; un valor de **1** indica que debe generarse una alerta.|  
-|**IsEnabled**|**bit**|Especifica si se habilita la supervisión para esta métrica de rendimiento de replicación para esta publicación; un valor de **1** indica que la supervisión está habilitada.|  
+|**isenabled**|**bit**|Especifica si se habilita la supervisión para esta métrica de rendimiento de replicación para esta publicación; un valor de **1** indica que la supervisión está habilitada.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

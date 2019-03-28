@@ -18,12 +18,12 @@ ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4b27da09e0e57029b65c21110a93de46ed0d81a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9ae7fdde89c9f927fbc56a9ca395138c264e931
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783973"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532117"
 ---
 # <a name="spsyspolicyconfigure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name =** ] **'***nombre***'**  
- Es el nombre del valor que desea configurar. *nombre* es **sysname**, es obligatorio y no puede ser NULL ni una cadena vacía.  
+`[ @name = ] 'name'` Es el nombre de la configuración que desea configurar. *nombre* es **sysname**, es obligatorio y no puede ser NULL ni una cadena vacía.  
   
  *nombre* puede ser cualquiera de los siguientes valores:  
   
@@ -52,8 +51,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess': especifica si la administración basada en directivas registra las evaluaciones de la directiva correctas.  
   
- [  **@value =** ] *valor*  
- Es el valor que está asociado con el valor especificado para *nombre*. *valor* es **sql_variant**y es necesario.  
+`[ @value = ] value` Es el valor que está asociado con el valor especificado para *nombre*. *valor* es **sql_variant**y es necesario.  
   
 -   Si especifica 'Enabled' para *nombre*, puede usar cualquiera de los siguientes valores:  
   
@@ -81,7 +79,7 @@ sp_syspolicy_configure [ @name = ] 'name'
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Posible elevación de credenciales: los usuarios del rol PolicyAdministratorRole pueden crear desencadenadores del servidor y programar ejecuciones de directivas que pueden afectar al funcionamiento de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por ejemplo, los usuarios del rol PolicyAdministratorRole pueden crear una directiva que puede evitar que la mayoría de los objetos se creen en [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Debido a esta posible elevación de credenciales, el rol PolicyAdministratorRole se debería conceder únicamente a los usuarios que sean de confianza para controlar la configuración de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Posible elevación de credenciales: Los usuarios del rol PolicyAdministratorRole pueden crear desencadenadores del servidor y programar ejecuciones de directivas que pueden afectar al funcionamiento de la instancia de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por ejemplo, los usuarios del rol PolicyAdministratorRole pueden crear una directiva que puede evitar que la mayoría de los objetos se creen en [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Debido a esta posible elevación de credenciales, el rol PolicyAdministratorRole se debería conceder únicamente a los usuarios que sean de confianza para controlar la configuración de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se habilita la administración basada en directivas.  

@@ -18,12 +18,12 @@ ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 905386a1e346ed982c3ad84baf57f532aa5b020f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6480c498914c4ec0bc02ba21552615bbdd28f6e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828363"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535697"
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,16 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_id =**] **'***job_id***'**  
- Número de identificación del trabajo para el que se va a devolver información del registro de pasos de trabajo. *job_id* es **int**, su valor predeterminado es null.  
+`[ @job_id = ] 'job_id'` El número de identificación del trabajo que se va a devolver información del registro de paso de trabajo. *job_id* es **int**, su valor predeterminado es null.  
   
- [  **@job_name =**] **'***job_name***'**  
- Nombre del trabajo. *job_name* es **sysname**, su valor predeterminado es NULL.  
+`[ @job_name = ] 'job_name'` El nombre del trabajo. *job_name* es **sysname**, su valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
- [ **@step_id =**] *step_id*  
- Número de identificación del paso en el trabajo. Si no se especifica, se incluirán todos los pasos del trabajo. *step_id* es **int**, su valor predeterminado es null.  
+`[ @step_id = ] step_id` El número de identificación del paso del trabajo. Si no se especifica, se incluirán todos los pasos del trabajo. *step_id* es **int**, su valor predeterminado es null.  
   
- [  **@step_name =**] **'***step_name***'**  
- Nombre del paso en el trabajo. *Step_name* es **sysname**, su valor predeterminado es null.  
+`[ @step_name = ] 'step_name'` El nombre del paso del trabajo. *Step_name* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -68,12 +64,12 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**job_id**|**uniqueidentifier**|Identificador único del trabajo.|  
 |**job_name**|**sysname**|Nombre del trabajo.|  
 |**step_id**|**int**|Identificador del paso en el trabajo. Por ejemplo, si el paso es el primer paso en el trabajo, su *step_id* es 1.|  
-|**Step_name**|**sysname**|Nombre del paso del trabajo.|  
+|**step_name**|**sysname**|Nombre del paso del trabajo.|  
 |**step_uid**|**uniqueidentifier**|Identificador único del paso en el trabajo (generado por el sistema).|  
 |**date_created**|**datetime**|Fecha de creación del paso.|  
 |**date_modified**|**datetime**|Fecha de la última modificación del paso.|  
 |**log_size**|**float**|Tamaño del registro de pasos de trabajo, en megabytes (MB).|  
-|**registro**|**nvarchar(max)**|Salida del registro de pasos de trabajo.|  
+|**log**|**nvarchar(max)**|Salida del registro de pasos de trabajo.|  
   
 ## <a name="remarks"></a>Comentarios  
  **sp_help_jobsteplog** está en el **msdb** base de datos.  
@@ -105,7 +101,7 @@ EXEC dbo.sp_help_jobsteplog
 GO  
 ```  
   
-### <a name="b-return-job-step-log-information-about-a-specific-job-step"></a>B. Devolver información del registro de pasos de trabajo para un paso de trabajo específico  
+### <a name="b-return-job-step-log-information-about-a-specific-job-step"></a>b. Devolver información del registro de pasos de trabajo para un paso de trabajo específico  
  En el ejemplo siguiente se devuelve información del registro de pasos de trabajo para el primer paso de trabajo del trabajo denominado `Weekly Sales Data Backup`.  
   
 ```  

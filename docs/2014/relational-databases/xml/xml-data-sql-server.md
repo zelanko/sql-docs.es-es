@@ -10,20 +10,20 @@ helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9c07abd9f7c9ce9ed03bb571a4dc25a77b3c497
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226414"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530237"
 ---
 # <a name="xml-data-sql-server"></a>Datos XML (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una plataforma eficaz para desarrollar aplicaciones completas para la administración de datos semiestructurados. La compatibilidad con XML está integrada en todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e incluye lo siguiente:  
   
--   El `xml` tipo de datos. Los valores XML se pueden almacenar de forma nativa en una columna de tipo de datos `xml` cuyo tipo se puede asignar de acuerdo con una colección de esquemas XML o que puede dejarse sin tipo. Es posible indizar la columna XML.  
+-   El tipo de datos `xml`. Los valores XML se pueden almacenar de forma nativa en una columna de tipo de datos `xml` cuyo tipo se puede asignar de acuerdo con una colección de esquemas XML o que puede dejarse sin tipo. Es posible indizar la columna XML.  
   
 -   La capacidad de especificar una consulta XQuery con datos XML almacenados en columnas y variables de tipo `xml`.  
   

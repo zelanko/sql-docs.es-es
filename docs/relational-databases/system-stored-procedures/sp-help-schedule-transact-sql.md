@@ -18,12 +18,12 @@ ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62a8246c6d694ae002a615e803c520127ab595c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fff543b074936f8bf1d69d841a1e81e402e9b0ae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630189"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535437"
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@schedule_id =** ] *Id.*  
- Identificador de la programación que se va a mostrar. *schedule_name* es **int**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* se puede especificar.  
+`[ @schedule_id = ] id` El identificador de la programación a la lista. *schedule_name* es **int**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* se puede especificar.  
   
- [  **@schedule_name =** ] **'***schedule_name***'**  
- Nombre de la programación que se va a mostrar. *schedule_name* es **sysname**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* se puede especificar.  
+`[ @schedule_name = ] 'schedule_name'` El nombre de la programación a la lista. *schedule_name* es **sysname**, no tiene ningún valor predeterminado. Cualquier *schedule_id* o *schedule_name* se puede especificar.  
   
- [ **@attached_schedules_only** =] *attached_schedules_only* ]  
- Especifica si se muestran únicamente las programaciones a las que está adjunto un trabajo. *attached_schedules_only* es **bit**, su valor predeterminado es **0**. Cuando *attached_schedules_only* es **0**, se muestran todas las programaciones. Cuando *attached_schedules_only* es **1**, el conjunto de resultados contiene solo las programaciones que están asociadas a un trabajo.  
+`[ @attached_schedules_only = ] attached_schedules_only ]` Especifica si se muestran solo las programaciones que está adjunto un trabajo. *attached_schedules_only* es **bit**, su valor predeterminado es **0**. Cuando *attached_schedules_only* es **0**, se muestran todas las programaciones. Cuando *attached_schedules_only* es **1**, el conjunto de resultados contiene solo las programaciones que están asociadas a un trabajo.  
   
- [ **@include_description** =] *include_description*  
- Especifica si se incluyen descripciones en el conjunto de resultados. *include_description* es **bit**, su valor predeterminado es **0**. Cuando *include_description* es **0**, *schedule_description* columna del conjunto de resultados contiene un marcador de posición. Cuando *include_description* es **1**, la descripción de la programación se incluye en el conjunto de resultados.  
+`[ @include_description = ] include_description` Especifica si se incluyen descripciones en el conjunto de resultados. *include_description* es **bit**, su valor predeterminado es **0**. Cuando *include_description* es **0**, *schedule_description* columna del conjunto de resultados contiene un marcador de posición. Cuando *include_description* es **1**, la descripción de la programación se incluye en el conjunto de resultados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -111,7 +107,7 @@ EXEC dbo.sp_help_schedule ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-schedule"></a>B. Mostrar información de una programación específica  
+### <a name="b-listing-information-for-a-specific-schedule"></a>b. Mostrar información de una programación específica  
  El ejemplo siguiente muestra información de la programación denominada `NightlyJobs`.  
   
 ```  

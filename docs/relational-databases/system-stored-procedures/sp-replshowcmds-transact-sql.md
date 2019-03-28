@@ -16,12 +16,12 @@ ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18ccbda41c5b7683c33bc0258a05738ab227ec69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e73b67cce73005b7a992c09a436dbda1db5c4e52
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813327"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526617"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@maxtrans** =] *maxtrans*  
- Es el número de transacciones de las que se devolverá información. *maxtrans* es **int**, su valor predeterminado es **1**, que especifica el número máximo de transacciones pendientes de replicación para el que **sp_replshowcmds** Devuelve información.  
+`[ @maxtrans = ] maxtrans` Es el número de transacciones que se va a devolver información. *maxtrans* es **int**, su valor predeterminado es **1**, que especifica el número máximo de transacciones pendientes de replicación para el que **sp_replshowcmds** Devuelve información.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_replshowcmds** es un procedimiento de diagnóstico que devuelve información acerca de la base de datos de publicación desde la que se ejecuta.  

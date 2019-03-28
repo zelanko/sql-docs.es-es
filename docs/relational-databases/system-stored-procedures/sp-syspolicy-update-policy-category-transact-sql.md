@@ -18,12 +18,12 @@ ms.assetid: 6b6413c2-7a3b-4eff-91d9-5db2011869d6
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 815e19a5a36f23173af9f674fd26cbfafb8f9287
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dfe649892c30a26024f3053c7a8a0f6c596d7c7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835753"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530617"
 ---
 # <a name="spsyspolicyupdatepolicycategory-transact-sql"></a>sp_syspolicy_update_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name=** ] **'***nombre***'**  
- Es el nombre de la categoría de directiva. *nombre* es **sysname**y debe especificarse si *policy_category_id* es NULL.  
+`[ @name = ] 'name'` Es el nombre de la categoría de directiva. *nombre* es **sysname**y debe especificarse si *policy_category_id* es NULL.  
   
- [  **@policy_category_id=** ] *policy_category_id*  
- Es el identificador de la categoría de directiva. *policy_category_id* es **int**y debe especificarse si *nombre* es NULL.  
+`[ @policy_category_id = ] policy_category_id` Es el identificador de la categoría de directiva. *policy_category_id* es **int**y debe especificarse si *nombre* es NULL.  
   
- [  **@mandate_database_subscriptions=** ] *mandate_database_subscriptions*  
- Determina si la suscripción de la base de datos está asignada para la categoría de directiva. *mandate_database_subscriptions* es un **bit** valor, su valor predeterminado es null. Puede usar alguno de los valores siguientes:  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Determina si la suscripción de la base de datos está asignada para la categoría de directiva. *mandate_database_subscriptions* es un **bit** valor, su valor predeterminado es null. Puede usar alguno de los valores siguientes:  
   
 -   0 = no asignado  
   
@@ -66,7 +63,7 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Posible elevación de credenciales: los usuarios del rol PolicyAdministratorRole pueden crear desencadenadores del servidor y programar ejecuciones de directivas que pueden afectar al funcionamiento de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por ejemplo, los usuarios del rol PolicyAdministratorRole pueden crear una directiva que puede evitar que la mayoría de los objetos se creen en [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Debido a esta posible elevación de credenciales, el rol PolicyAdministratorRole se debería conceder únicamente a los usuarios que sean de confianza para controlar la configuración de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Posible elevación de credenciales: Los usuarios del rol PolicyAdministratorRole pueden crear desencadenadores del servidor y programar ejecuciones de directivas que pueden afectar al funcionamiento de la instancia de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por ejemplo, los usuarios del rol PolicyAdministratorRole pueden crear una directiva que puede evitar que la mayoría de los objetos se creen en [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Debido a esta posible elevación de credenciales, el rol PolicyAdministratorRole se debería conceder únicamente a los usuarios que sean de confianza para controlar la configuración de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente actualiza la categoría 'Finance' para asignar las suscripciones de base de datos.  

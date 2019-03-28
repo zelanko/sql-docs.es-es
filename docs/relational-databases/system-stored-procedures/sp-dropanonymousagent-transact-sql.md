@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: dc5cc9c4d7bb7ca9b2d758e33142d140bf6fc6fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 82519f069aaa59020e2dccb760df5d2a24c9178b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818987"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537887"
 ---
 # <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +37,9 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@subid=**] *sub_id*  
- Es el identificador global de una suscripción anónima. *sub_id* es **uniqueidentifier**, no tiene ningún valor predeterminado. Este identificador se puede recuperar en el suscriptor mediante **sp_helppullsubscription**. El valor de la **subid** campo del conjunto de resultados devuelto es este identificador global.  
+`[ @subid = ] sub_id` Es el identificador global de una suscripción anónima. *sub_id* es **uniqueidentifier**, no tiene ningún valor predeterminado. Este identificador se puede recuperar en el suscriptor mediante **sp_helppullsubscription**. El valor de la **subid** campo del conjunto de resultados devuelto es este identificador global.  
   
- [  **@type=**] *tipo*  
- Es el tipo de suscripción. *tipo* es **int**, no tiene ningún valor predeterminado. Los valores válidos son **1** o **2**. Especificar **1**, si la replicación de instantáneas o replicación transaccional con el agente de distribución. Especificar **2**, si utiliza el agente de mezcla de replicación de mezcla.  
+`[ @type = ] type` Es el tipo de suscripción. *tipo* es **int**, no tiene ningún valor predeterminado. Los valores válidos son **1** o **2**. Especificar **1**, si la replicación de instantáneas o replicación transaccional con el agente de distribución. Especificar **2**, si utiliza el agente de mezcla de replicación de mezcla.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b1e2b14830e6b2be7d1e00ac1419070ee26eb5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8fd3e7ba4880a5d908991d32faaa9c1a5275976f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833144"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533997"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,25 +47,19 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@procedure_name =** ] **'***nombre***'**  
- Es el nombre del procedimiento que se utiliza para devolver información de catálogo. *nombre* es **nvarchar (** 390 **)**, su valor predeterminado es %, lo que significa que todas las tablas de la base de datos actual. Se admite la coincidencia de patrón de caracteres comodín.  
+`[ @procedure_name = ] 'name'` Es el nombre del procedimiento utilizado para devolver información del catálogo. *nombre* es **nvarchar (** 390 **)**, su valor predeterminado es %, lo que significa que todas las tablas de la base de datos actual. Se admite la coincidencia de patrón de caracteres comodín.  
   
- [  **@procedure_owner =**] **'***propietario***'**  
- Es el nombre del propietario del procedimiento. *propietario*es **nvarchar (** 384 **)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas predeterminadas de visibilidad de procedimiento del DBMS subyacente.  
+`[ @procedure_owner = ] 'owner'` Es el nombre del propietario del procedimiento. *propietario*es **nvarchar (** 384 **)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas predeterminadas de visibilidad de procedimiento del DBMS subyacente.  
   
  Si el usuario actual es propietario de un procedimiento que tiene el nombre especificado, se devuelve información sobre ese procedimiento. Si *propietario*no se especifica y el usuario actual no posee un procedimiento con el nombre especificado, **sp_sproc_columns** busca un procedimiento con el nombre especificado que pertenezca al propietario de la base de datos. Si el procedimiento existe, se devuelve información sobre sus columnas.  
   
- [  **@procedure_qualifier =**] **'***calificador***'**  
- Es el nombre del calificador del procedimiento. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (*qualifier.owner.name*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este parámetro representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+`[ @procedure_qualifier = ] 'qualifier'` Es el nombre del calificador del procedimiento. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (*qualifier.owner.name*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este parámetro representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
- [  **@column_name =**] **'***column_name***'**  
- Es una sola columna y se utiliza cuando se desea solo una columna de información del catálogo. *column_name* es **nvarchar (** 384 **)**, su valor predeterminado es null. Si *column_name* es se omite, se devuelven todas las columnas. Se admite la coincidencia de patrón de caracteres comodín. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de ISO (caracteres comodín % y _).  
+`[ @column_name = ] 'column_name'` Es una sola columna y se utiliza cuando se desea solo una columna de información del catálogo. *column_name* es **nvarchar (** 384 **)**, su valor predeterminado es null. Si *column_name* es se omite, se devuelven todas las columnas. Se admite la coincidencia de patrón de caracteres comodín. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de ISO (caracteres comodín % y _).  
   
- [  **@ODBCVer =**] **'***ODBCVer***'**  
- Es la versión de ODBC que se está utilizando. *ODBCVer* es **int**, su valor predeterminado es 2, lo que indica ODBC versión 2.0. Para obtener más información acerca de las diferencias entre ODBC versión 2.0 y ODBC versión 3.0, consulte ODBC **SQLProcedureColumns** especificación de ODBC versión 3.0  
+`[ @ODBCVer = ] 'ODBCVer'` Se está usando la versión de ODBC. *ODBCVer* es **int**, su valor predeterminado es 2, lo que indica ODBC versión 2.0. Para obtener más información acerca de las diferencias entre ODBC versión 2.0 y ODBC versión 3.0, consulte ODBC **SQLProcedureColumns** especificación de ODBC versión 3.0  
   
- [  **@fUsePattern =**] **'***fUsePattern***'**  
- Determina si los caracteres de subrayado (_), porcentaje (%) y corchetes ([ ]) se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es **bit**, su valor predeterminado es 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina si el carácter de subrayado (_), porcentaje (%) y caracteres de corchete ([]) se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es **bit**, su valor predeterminado es 1.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -76,18 +70,18 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Nombre del calificador del procedimiento. Esta columna puede ser NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nombre del propietario del procedimiento. Esta columna siempre devuelve un valor.|  
-|**PROCEDURE_NAME**|**nvarchar (** 134 **)**|Nombre del procedimiento. Esta columna siempre devuelve un valor.|  
+|**PROCEDURE_NAME**|**nvarchar(** 134 **)**|Nombre del procedimiento. Esta columna siempre devuelve un valor.|  
 |**COLUMN_NAME**|**sysname**|Nombre de columna para cada columna de la **TABLE_NAME** devuelto. Esta columna siempre devuelve un valor.|  
 |**COLUMN_TYPE**|**smallint**|Este campo siempre devuelve un valor:<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE|  
 |**DATA_TYPE**|**smallint**|Código del tipo de datos entero de un tipo de datos de ODBC. Si no se puede asignar este tipo de datos a un tipo de ISO, el valor es NULL. Se devuelve el nombre de tipo de datos nativos en el **TYPE_NAME** columna.|  
 |**TYPE_NAME**|**sysname**|Representación de cadena del tipo de datos. Es el nombre del tipo de datos como lo presenta el DBMS subyacente.|  
 |**PRECISION**|**int**|Número de dígitos significativos. El valor devuelto para la **precisión** columna es en base 10.|  
 |**LENGTH**|**int**|Tamaño de transferencia de los datos.|  
-|**ESCALA**|**smallint**|Número de dígitos a la derecha del separador decimal.|  
+|**SCALE**|**smallint**|Número de dígitos a la derecha del separador decimal.|  
 |**RADIX**|**smallint**|Es la base de tipos numéricos.|  
-|**QUE ACEPTA VALORES NULL**|**smallint**|Especifica la nulabilidad:<br /><br /> 1 = El tipo de datos se puede crear para permitir valores NULL.<br /><br /> 0 = No se permiten valores NULL.|  
-|**COMENTARIOS**|**varchar (** 254 **)**|Descripción de la columna de procedimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
-|**COLUMN_DEF**|**nvarchar (** 4000 **)**|Valor predeterminado de la columna.|  
+|**NULLABLE**|**smallint**|Especifica la nulabilidad:<br /><br /> 1 = El tipo de datos se puede crear para permitir valores NULL.<br /><br /> 0 = No se permiten valores NULL.|  
+|**COMENTARIOS**|**varchar(** 254 **)**|Descripción de la columna de procedimiento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
+|**COLUMN_DEF**|**nvarchar(** 4000 **)**|Valor predeterminado de la columna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor del tipo de datos SQL tal como aparece en el **tipo** campo del descriptor. Esta columna es igual que la columna **DATA_TYPE**, salvo por los tipos de datos **datetime** e **interval** de ISO. Esta columna siempre devuelve un valor.|  
 |**SQL_DATETIME_SUB**|**smallint**|El subcódigo **datetime** ISO **interval** si el valor de **SQL_DATA_TYPE** es **SQL_DATETIME** o **SQL_INTERVAL**. Para tipos de datos distinto **datetime** e ISO **intervalo**, este campo es NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Longitud máxima en bytes de un **carácter** o **binario** columna tipo de datos. Para todos los demás tipos de datos, esta columna devuelve NULL.|  

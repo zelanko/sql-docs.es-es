@@ -16,12 +16,12 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78328463828b3c4a93b72ddc8790df13677dee81
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 13f48722b940c26cda8b29258f16f641f74d15e9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125375"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531897"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,34 +44,27 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'**_publicación_**'**  
- Es el nombre de la publicación de la que se va a quitar un artículo. *publicación*es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación desde la que se va a quitar un artículo. *publicación*es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@article=**] **'**_artículo_**'**  
- Es el nombre del artículo que se va a quitar de la publicación especificada. *artículo*es **sysname**, no tiene ningún valor predeterminado. Si **todas**, se quitan todos los artículos existentes en la publicación de combinación especificada. Incluso si *artículo* es **todas**, la publicación debe quitarse por separado desde el artículo.  
+`[ @article = ] 'article'` Es el nombre del artículo que se va a quitar de la publicación indicada. *artículo*es **sysname**, no tiene ningún valor predeterminado. Si **todas**, se quitan todos los artículos existentes en la publicación de combinación especificada. Incluso si *artículo* es **todas**, la publicación debe quitarse por separado desde el artículo.  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**.  
   
- [  **@reserved=**] *reservado*  
- Está reservado para su uso futuro. *reservado* es **nvarchar (20)**, su valor predeterminado es null.  
+`[ @reserved = ] reserved` está reservado para uso futuro. *reservado* es **nvarchar (20)**, su valor predeterminado es null.  
   
- [  **@force_invalidate_snapshot=**] *force_invalidate_snapshot*  
- Habilita o deshabilita la capacidad de que se invalide una instantánea. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Habilita o deshabilita la capacidad de invalidar una instantánea. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
   
  **0** especifica que los cambios realizados en el artículo de mezcla no invalidarán la instantánea no es válido.  
   
  **1** significa que los cambios en el artículo de mezcla puede invalidar la instantánea no es válido, y si es así, un valor de **1** concede permiso para la nueva instantánea que se produzca.  
   
- [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
- Confirma que para quitar el artículo deben reinicializarse las suscripciones existentes. *force_reinit_subscription* es un **bit**, su valor predeterminado es **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Confirma que para quitar el artículo se reinicializarán las suscripciones existentes. *force_reinit_subscription* es un **bit**, su valor predeterminado es **0**.  
   
  **0** especifica que al quitar el artículo no invalidarán la suscripción para reinicializarla.  
   
  **1** significa que al quitar el artículo hace que se reinicialicen las suscripciones existentes y concede permiso para que se produzca la reinicialización de suscripción.  
   
- [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
- Exclusivamente para uso interno.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` Solo para uso interno.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

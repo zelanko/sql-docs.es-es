@@ -16,12 +16,12 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 409f79007479fabe82b1c904f3bc0db943e3c116
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817867"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534657"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,24 +44,20 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=** ] **'***publisher***'**  
- Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado. Para un publicador que no es - SQL Server, *publisher_db* es el nombre de la base de datos de distribución.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, no tiene ningún valor predeterminado. Para un publicador que no es - SQL Server, *publisher_db* es el nombre de la base de datos de distribución.  
   
- [  **@publication=** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado. Cuando el agente de distribución se comparte por más de una publicación, debe especificar un valor de ALL para *publicación*.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado. Cuando el agente de distribución se comparte por más de una publicación, debe especificar un valor de ALL para *publicación*.  
   
- [  **@xact_seqno=** ] *xact_seqno*  
- Es el LSN de la siguiente transacción en el distribuidor que se tiene que aplicar en el suscriptor. *xact_seqno* es **varbinary (16)**, no tiene ningún valor predeterminado.  
+`[ @xact_seqno = ] xact_seqno` Es el LSN de la siguiente transacción en el distribuidor que se aplicará en el suscriptor. *xact_seqno* es **varbinary (16)**, no tiene ningún valor predeterminado.  
   
-## <a name="result-set"></a>Conjunto de resultados  
+## <a name="result-set"></a>Tipo de cursor  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**XACT_SEQNO ORIGINAL**|**varbinary (16)**|El LSN original de la siguiente transacción que se va a aplicar en el suscriptor.|  
-|**XACT_SEQNO ACTUALIZADA**|**varbinary (16)**|El LSN actualizado de la siguiente transacción que se va a aplicar en el suscriptor.|  
+|**ORIGINAL XACT_SEQNO**|**varbinary(16)**|El LSN original de la siguiente transacción que se va a aplicar en el suscriptor.|  
+|**UPDATED XACT_SEQNO**|**varbinary(16)**|El LSN actualizado de la siguiente transacción que se va a aplicar en el suscriptor.|  
 |**NÚMERO DE SECUENCIA DE LA SUSCRIPCIÓN**|**int**|El número de flujos de suscripción utilizados durante la última sincronización.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

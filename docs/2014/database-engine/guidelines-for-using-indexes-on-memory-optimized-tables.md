@@ -12,17 +12,17 @@ ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 514b6c8fedb50417b8c4060cb45e73bfa88fdddb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094371"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527957"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Directrices para usar índices en las tablas con optimización para memoria
   Los índices se utilizan para tener acceso a los datos de forma eficaz en las tablas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar los índices adecuados puede mejorar drásticamente el rendimiento de las consultas. Considere, por ejemplo, la consulta:  
   
-```tsql  
+```sql  
 SELECT c1, c2 FROM t WHERE c1 = 1;  
 ```  
   
@@ -72,8 +72,8 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |Index scan, recupera todas las filas de la tabla.|Sí|Sí|Sí|  
 |Index seek en predicados de igualdad (=).|Sí<br /><br /> (Clave completa necesaria.)|Sí <sup>1</sup>|Sí|  
 |Index seek en predicados de desigualdad (>, <, \<=, > =, BETWEEN).|No (resultados en un examen de índice)|Sí <sup>1</sup>|Sí|  
-|Recupere las filas en un orden que coincida con la definición de índice.|no|Sí|Sí|  
-|Recupere las filas en un orden que coincida con el opuesto de la definición de índice.|no|no|Sí|  
+|Recupere las filas en un orden que coincida con la definición de índice.|No|Sí|Sí|  
+|Recupere las filas en un orden que coincida con el opuesto de la definición de índice.|No|No|Sí|  
   
  En la tabla, Sí se refiere a que el índice puede prestar servicio correctamente a la solicitud y No se refiere a que el índice no se puede usar correctamente para atender la solicitud.  
   
@@ -90,10 +90,10 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      La recolección de elementos no utilizados funciona mejor si todos los índices de la tabla se utilizan con frecuencia. Los índices que se usan poco pueden hacer que el sistema de recopilación de elementos no utilizados no se comporten de forma óptimo en las versiones de fila anteriores.  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>Crear un índice con optimización para memoria: ejemplos de código  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>Crear un índice con optimización para memoria: Ejemplos de código  
  Índice hash de nivel de columna:  
   
-```tsql  
+```sql  
 CREATE TABLE t1   
    (c1 INT NOT NULL INDEX idx HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -101,7 +101,7 @@ CREATE TABLE t1
   
  Índice hash de nivel de tabla:  
   
-```tsql  
+```sql  
 CREATE TABLE t1_1   
    (c1 INT NOT NULL,   
    INDEX IDX HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -110,7 +110,7 @@ CREATE TABLE t1_1
   
  Índice hash de la clave principal de nivel de columna:  
   
-```tsql  
+```sql  
 CREATE TABLE t2   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -118,7 +118,7 @@ CREATE TABLE t2
   
  Índice hash de la clave principal de nivel de tabla:  
   
-```tsql  
+```sql  
 CREATE TABLE t2_2   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -127,7 +127,7 @@ CREATE TABLE t2_2
   
  Índice no clúster de nivel de columna:  
   
-```tsql  
+```sql  
 CREATE TABLE t3   
    (c1 INT NOT NULL INDEX ID)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -135,7 +135,7 @@ CREATE TABLE t3
   
  Índice no clúster de nivel de tabla:  
   
-```tsql  
+```sql  
 CREATE TABLE t3_3   
    (c1 INT NOT NULL,   
    INDEX IDX NONCLUSTERED (c1))   
@@ -144,7 +144,7 @@ CREATE TABLE t3_3
   
  Índice no clúster de la clave principal de nivel de columna:  
   
-```tsql  
+```sql  
 CREATE TABLE t4   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -152,7 +152,7 @@ CREATE TABLE t4
   
  Índice no clúster de la clave principal de nivel de tabla:  
   
-```tsql  
+```sql  
 CREATE TABLE t4_4   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED (c1))   
@@ -161,7 +161,7 @@ CREATE TABLE t4_4
   
  Índice de varias columnas definido después de definir las columnas:  
   
-```tsql  
+```sql  
 create table t (  
        a int not null constraint ta primary key nonclustered,  
        b int not null,  

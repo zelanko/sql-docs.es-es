@@ -18,12 +18,12 @@ ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85d45de0ec858766bea51e983e80087d93d94ec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 109e031e95b7535733bd9cb71baa4d20128ceb5e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826633"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534497"
 ---
 # <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_help_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@database =** ] '*base de datos*'  
- Es el nombre de la base de datos principal de trasvase de registros. *base de datos* es **sysname**, no tiene ningún valor predeterminado, y no puede ser NULL.  
+`[ @database = ] 'database'` Es el nombre de la base de datos principal de trasvase de registros. *base de datos* es **sysname**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
- [  **@primary_id =** ] '*primary_id*'  
- Id. de la base de datos principal para la configuración del trasvase de registros. *primary_id* es **uniqueidentifier** y no puede ser NULL.  
+`[ @primary_id = ] 'primary_id'` El identificador de la base de datos principal para la configuración de trasvase de registros. *primary_id* es **uniqueidentifier** y no puede ser NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

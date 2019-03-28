@@ -1,7 +1,7 @@
 ---
 title: Introducir datos en un grupo de datos de SQL Server
 titleSuffix: SQL Server 2019 big data clusters
-description: Este tutorial muestra cómo introducir datos en el grupo de datos de un clúster de macrodatos de 2019 de SQL Server (versión preliminar) con el procedimiento almacenado de sp_data_pool_table_insert_data.
+description: Este tutorial muestra cómo introducir datos en el grupo de datos de un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0a3e39e5eb38f44c439dabd9e4fc3bdcb23d283a
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5ae0777c2bc98e99c83bca35fa2aab8efc8b57a5
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493817"
+ms.locfileid: "58509942"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Introducir datos en un grupo de datos de SQL Server con Transact-SQL
 
@@ -56,7 +56,15 @@ Los pasos siguientes crean una tabla externa en el grupo de datos llamado **web_
    GO
    ```
 
-1. Crear una tabla externa denominada **web_clickstream_clicks_data_pool** en el grupo de datos. El `SqlDataPool` origen de datos es un tipo de origen de datos especial que puede utilizarse desde la instancia principal de cualquier clúster de macrodatos.
+1. Crear un origen de datos externo para el grupo de datos si aún no existe.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   ```
+
+1. Crear una tabla externa denominada **web_clickstream_clicks_data_pool** en el grupo de datos.
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_tables WHERE name = 'web_clickstream_clicks_data_pool')
@@ -75,21 +83,35 @@ Los pasos siguientes crean una tabla externa en el grupo de datos llamado **web_
 
 Los pasos siguientes ingieren datos de secuencia de clics de web de ejemplo en el grupo de datos utilizando la tabla externa creada en los pasos anteriores.
 
-1. Defina variables para la consulta que desea usar para insertar datos en el grupo de datos. A continuación, utilice el **modelo... sp_data_pool_table_insert_data** procedimiento almacenado para insertar los resultados de la consulta en el grupo de datos (el **web_clickstream_clicks_data_pool** tabla externa).
+1. Defina variables para la consulta que desea usar para insertar datos en el grupo de datos. CTP 2.3 o anterior, el **modelo... sp_data_pool_table_insert_data** se necesita el procedimiento almacenado. CTP 2.4 y versiones posteriores, puede usar un `INSERT INTO` instrucción para insertar los resultados de la consulta en el grupo de datos (el **web_clickstream_clicks_data_pool** tabla externa).
 
    ```sql
-   DECLARE @db_name SYSNAME = 'Sales'
-   DECLARE @schema_name SYSNAME = 'dbo'
-   DECLARE @table_name SYSNAME = 'web_clickstream_clicks_data_pool'
-   DECLARE @query NVARCHAR(MAX) = '
-   SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-   FROM sales.dbo.web_clickstreams
-   INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
-      AND wcs_user_sk IS NOT NULL)
-   GROUP BY wcs_user_sk, i_category_id
-   HAVING COUNT_BIG(*) > 100;'
+   IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+   BEGIN
+      INSERT INTO web_clickstream_clicks_data_pool
+      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
+        FROM sales.dbo.web_clickstreams_hdfs_parquet
+      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
+                              AND wcs_user_sk IS NOT NULL)
+      GROUP BY wcs_user_sk, i_category_id
+      HAVING COUNT_BIG(*) > 100;
+   END
 
-   EXEC model..sp_data_pool_table_insert_data @db_name, @schema_name, @table_name, @query
+   ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+   BEGIN
+      DECLARE @db_name SYSNAME = 'Sales'
+      DECLARE @schema_name SYSNAME = 'dbo'
+      DECLARE @table_name SYSNAME = 'web_clickstream_clicks_data_pool'
+      DECLARE @query NVARCHAR(MAX) = '
+      SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
+      FROM sales.dbo.web_clickstreams
+      INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
+         AND wcs_user_sk IS NOT NULL)
+      GROUP BY wcs_user_sk, i_category_id
+      HAVING COUNT_BIG(*) > 100;'
+
+      EXEC model..sp_data_pool_table_insert_data @db_name, @schema_name, @table_name, @query
+   END
    ```
 
 1. Inspeccione los datos insertados con dos consultas SELECT.

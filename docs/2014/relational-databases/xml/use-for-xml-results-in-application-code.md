@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43b7fb86b7529de3629d07d294f0fd663b93561d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368677"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532847"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar los resultados de FOR XML en el código de aplicación
   Al utilizar cláusulas FOR XML con consultas SQL, se pueden recuperar e incluso convertir los resultados de la consulta como datos XML. Esta funcionalidad permite realizar las siguientes operaciones cuando los resultados de las consultas FOR XML se pueden utilizar en el código de aplicación XML:  
@@ -157,9 +157,9 @@ ms.locfileid: "53368677"
   
 -   **AnnualRevenue:** 150000  
   
--   **Nombre del banco:** International principal  
+-   **BankName:** International principal  
   
--   **BusinessType:** SISTEMA OPERATIVO  
+-   **BusinessType:** OS  
   
 -   **YearOpened:** 1974  
   

@@ -16,12 +16,12 @@ ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 027e2f2f423024a374533decd6f35bb9bf7ccb3e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a3f0fa918d0247f5fd6dbe11c4a91a2376c52dd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760227"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530817"
 ---
 # <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,22 +39,20 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@starting_schemaversion=** ] *starting_schemaversion*  
- Es el número más bajo de cambio de esquema que se va a incluir en el conjunto de resultados.  
+`[ @starting_schemaversion = ] starting_schemaversion` Es el cambio de esquema de número más bajo para incluir en el conjunto de resultados.  
   
-## <a name="result-set"></a>Conjunto de resultados  
+## <a name="result-set"></a>Tipo de cursor  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**article_name**|**sysname**|Nombre del artículo al que se aplica el cambio de esquema, o **toda la publicación** los cambios de esquema que se aplican a toda la publicación.|  
-|**schemaVersion**|**int**|Número del cambio de esquema pendiente.|  
-|**tipo de esquema**|**sysname**|Valor de texto que representa el tipo de cambio de esquema.|  
+|**schemaversion**|**int**|Número del cambio de esquema pendiente.|  
+|**schematype**|**sysname**|Valor de texto que representa el tipo de cambio de esquema.|  
 |**schematext**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] que describe el cambio de esquema.|  
-|**schemastatus**|**nvarchar (10)**|Indica si hay un cambio de esquema pendiente para el artículo, que puede tener los valores siguientes:<br /><br /> **Active** = cambio de esquema está pendiente<br /><br /> **inactivo** = cambio de esquema está inactivo<br /><br /> **omitir** = no se replica el cambio de esquema|  
-|**SchemaGuid**|**uniqueidentifier**|Identifica el cambio de esquema.|  
+|**schemastatus**|**nvarchar(10)**|Indica si hay un cambio de esquema pendiente para el artículo, que puede tener los valores siguientes:<br /><br /> **Active** = cambio de esquema está pendiente<br /><br /> **inactivo** = cambio de esquema está inactivo<br /><br /> **omitir** = no se replica el cambio de esquema|  
+|**schemaguid**|**uniqueidentifier**|Identifica el cambio de esquema.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -18,12 +18,12 @@ ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a612506b4efa34e9f47511789d792e3116f8b91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea326db0d0e093e4d6371d0dda10a4b9faccc572
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817555"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536043"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +44,11 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@alert_name =**] **'***alerta***'**  
- Nombre de la alerta asociada a esta notificación. *alerta* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @alert_name = ] 'alert'` El nombre de la alerta asociada con esta notificación. *alerta* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@operator_name =**] **'***operador***'**  
- Operador que notificará el momento de producirse la alerta. *operador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @operator_name = ] 'operator'` El operador que se notificará cuando se produzca la alerta. *operador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@notification_method =**] *notificación*  
- Método que se utilizará para notificar al operador. *notificación*es **tinyint**, no tiene ningún valor predeterminado y puede tener uno o varios de estos valores.  
+`[ @notification_method = ] notification` El método por el que se va a notificar al operador. *notificación*es **tinyint**, no tiene ningún valor predeterminado y puede tener uno o varios de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  

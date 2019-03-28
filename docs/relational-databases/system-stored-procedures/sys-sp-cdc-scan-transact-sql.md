@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_scan (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_scan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7eaa167c46937d48bd760d29bd17828a2d555538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e7651c6df4a277d72a71c0cdb8a5910ae19ba76
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763087"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536787"
 ---
 # <a name="sysspcdcscan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,13 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@maxtrans=** ] *max_trans*  
- Número máximo de transacciones para procesar en cada ciclo de recorrido. *max_trans* es **int** con el valor predeterminado es 500.  
+`[ @maxtrans = ] max_trans` Número máximo de transacciones para procesar en cada ciclo de examen. *max_trans* es **int** con el valor predeterminado es 500.  
   
- [  **@maxscans=** ] *max_scans*  
- Número máximo de ciclos de recorrido que se ejecutarán para extraer todas las filas del registro. *max_scans* es **int** con el valor predeterminado es 10.  
+`[ @maxscans = ] max_scans` Número máximo de ciclos de examen que se ejecutarán para extraer todas las filas del registro. *max_scans* es **int** con el valor predeterminado es 10.  
   
- [  **@continuous=** ] *continua*  
- Indica si el procedimiento almacenado debe finalizar después de ejecutar un ciclo de examen (0) o se ejecuta continuamente, el tiempo especificado por *polling_interval* antes deteniéndose el ciclo de examen (1). *continua* es **tinyint** con el valor predeterminado es 0.  
+`[ @continuous = ] continuous` Indica si el procedimiento almacenado debe finalizar después de ejecutar un ciclo de examen (0) o se ejecuta continuamente, el tiempo especificado por *polling_interval* antes deteniéndose el ciclo de examen (1). *continua* es **tinyint** con el valor predeterminado es 0.  
   
- [  **@pollinginterval=** ] *polling_interval*  
- Número de segundos entre los ciclos de recorrido del registro. *polling_interval* es **bigint** con el valor predeterminado es 0.  
+`[ @pollinginterval = ] polling_interval` Número de segundos entre ciclos de examen del registro. *polling_interval* es **bigint** con el valor predeterminado es 0.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

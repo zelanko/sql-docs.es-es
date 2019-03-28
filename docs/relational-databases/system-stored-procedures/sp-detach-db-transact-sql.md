@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201914"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538227"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@dbname =** ] **'***database_name***'**  
- Es el nombre de la base de datos que se va a separar. *database_name* es un **sysname** valor, su valor predeterminado es null.  
+`[ @dbname = ] 'database_name'` Es el nombre de la base de datos que se va a desasociar. *database_name* es un **sysname** valor, su valor predeterminado es null.  
   
- [  **@skipchecks =** ] **'***skipchecks***'**  
- Especifica si se debe omitir o ejecutar UPDATE STATISTIC. *valor de skipchecks* es un **nvarchar (10)** valor, su valor predeterminado es null. Para omitir UPDATE STATISTICS, especifique **true**. Para ejecutar UPDATE STATISTICS de forma explícita, especifique **false**.  
+`[ @skipchecks = ] 'skipchecks'` Especifica si se debe omitir o ejecutar UPDATE STATISTIC. *valor de skipchecks* es un **nvarchar (10)** valor, su valor predeterminado es null. Para omitir UPDATE STATISTICS, especifique **true**. Para ejecutar UPDATE STATISTICS de forma explícita, especifique **false**.  
   
  De forma predeterminada, UPDATE STATISTICS se ejecuta para actualizar información acerca de los datos de las tablas e índices. Ejecutar UPATE STATISTICS es útil para las bases de datos que se trasladan a medios de solo lectura.  
   
- [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
- Especifica que el archivo de índice de texto completo asociado a la base de datos que se va a separar no se quitará durante la operación de separación de la base de datos. *KeepFulltextIndexFile* es un **nvarchar (10)** valor predeterminado es de **true**. Si *KeepFulltextIndexFile* es **false**, todos los archivos de índice de texto completo asociado a la base de datos y se quitan los metadatos del índice de texto completo, a menos que la base de datos es de solo lectura. Si es NULL o **true**, relacionada con el texto completo se conservan los metadatos.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Especifica que no se quitará el archivo de índice de texto completo asociado a la base de datos que se va a separar la base de datos durante la operación de desasociación. *KeepFulltextIndexFile* es un **nvarchar (10)** valor predeterminado es de **true**. Si *KeepFulltextIndexFile* es **false**, todos los archivos de índice de texto completo asociado a la base de datos y se quitan los metadatos del índice de texto completo, a menos que la base de datos es de solo lectura. Si es NULL o **true**, relacionada con el texto completo se conservan los metadatos.  
   
 > [!IMPORTANT]
 >  El**@keepfulltextindexfile** parámetro se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No use este parámetro en nuevos trabajos de desarrollo, y modifique lo antes posible las aplicaciones que lo usen actualmente.  

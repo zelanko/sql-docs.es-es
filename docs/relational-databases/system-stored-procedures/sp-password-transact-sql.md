@@ -18,12 +18,12 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0bef77291c0a719b9cdc96106d3c173dff652da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1904b1549613e53c685d784628696e84b134a03
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644683"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534717"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,14 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@old=** ] **'***old_password***'**  
- Es la contraseña antigua. *old_password* es **sysname**, su valor predeterminado es null.  
+`[ @old = ] 'old_password'` Es la contraseña antigua. *old_password* es **sysname**, su valor predeterminado es null.  
   
- [  **@new=** ] **'***nuevacontraseña***'**  
- Es la nueva contraseña. *nuevacontraseña* es **sysname**, no tiene ningún valor predeterminado. *old_password* debe especificarse si no se utilizan parámetros con nombre.  
+`[ @new = ] 'new_password'` Es la nueva contraseña. *nuevacontraseña* es **sysname**, no tiene ningún valor predeterminado. *old_password* debe especificarse si no se utilizan parámetros con nombre.  
   
 > [!IMPORTANT]  
 >  No utilice una contraseña NULL. Utilice una contraseña segura. Para obtener más información, consulte [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
- [  **@loginame=** ] **'***inicio de sesión***'**  
- Es el nombre del inicio de sesión afectado por el cambio de contraseña. *login* es de tipo **sysname** y su valor predeterminado es NULL. *inicio de sesión* ya debe existir y solo pueden especificarlo los miembros de la **sysadmin** o **securityadmin** roles fijos de servidor.  
+`[ @loginame = ] 'login'` Es el nombre del inicio de sesión afectado por el cambio de contraseña. *login* es de tipo **sysname** y su valor predeterminado es NULL. *inicio de sesión* ya debe existir y solo pueden especificarlo los miembros de la **sysadmin** o **securityadmin** roles fijos de servidor.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -80,7 +77,7 @@ ALTER LOGIN Victoria WITH PASSWORD = 'B3r1000d#2-36';
 GO  
 ```  
   
-### <a name="b-changing-a-password"></a>B. Cambiar una contraseña  
+### <a name="b-changing-a-password"></a>b. Cambiar una contraseña  
  En el siguiente ejemplo se muestra cómo utilizar `ALTER LOGIN` para cambiar la contraseña del inicio de sesión de `Victoria` de `B3r1000d#2-36` a `V1cteAmanti55imE`. Éste es el método preferido. El usuario `Victoria` puede ejecutar este comando sin permisos adicionales. Otros usuarios necesitan el permiso ALTER ANY LOGIN.  
   
 ```  

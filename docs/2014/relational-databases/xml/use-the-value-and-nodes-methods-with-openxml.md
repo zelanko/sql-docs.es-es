@@ -11,22 +11,22 @@ helpviewer_keywords:
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15384e112b4d770d49095d0450341f5da89c2bd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 377f9ecfd0f3d94388929d78a048bc65e5020a3e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156065"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526547"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Utilizar los métodos de valor() y nodos() con OPENXML
   Puede usar varios **value()** métodos en `xml` tipo de datos en un **seleccione** cláusula para generar un conjunto de filas de valores extraídos. El método **nodes()** da como resultado una referencia interna para cada nodo seleccionado, que se puede usar para hacer más consultas. La combinación de los métodos **nodes()** y **value()** puede ser más eficaz para generar el conjunto de filas cuando tiene varias columnas y, tal vez, cuando las expresiones de ruta de acceso empleadas en su generación son complejas.  
   
  El **nodes()** método da como resultado instancias de un especial `xml` tipo de datos, cada uno de los cuales tiene su contexto establecido en un nodo seleccionado diferente. Este tipo de instancia XML admite los métodos **query()**, **value()**, **nodes()** y **exist()** y se puede usar en agregaciones **count(\*)**. Otros usos generarían un error.  
   
-## <a name="example-using-nodes"></a>Ejemplo: utilizar nodes()  
+## <a name="example-using-nodes"></a>Ejemplo: Utilizar nodes()  
  Suponga que desea extraer el nombre y los apellidos de los autores cuyo nombre no sea "David". Además, desea extraer esta información como un conjunto de filas que contiene dos columnas: FirstName y LastName. Con los métodos **nodes()** y **value()** puede lograrlo, como se indica aquí:  
   
 ```  
@@ -40,7 +40,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  SQL Server 2000 permite generar un conjunto de filas a partir de una instancia XML con **OpenXml()**. Puede especificar el esquema relacional para el conjunto de filas y la manera en que se asignan los valores dentro de la instancia XML a columnas del conjunto de filas.  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>Ejemplo: utilizar OpenXml() en el tipo de datos xml  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>Ejemplo: Utilizar OpenXml() en el tipo de datos xml  
  La consulta se puede volver a escribir a partir del ejemplo anterior usando **OpenXml()** como se indica aquí. Para ello, se crea un cursor que lee cada instancia XML en una variable XML y luego le aplica OpenXML:  
   
 ```  

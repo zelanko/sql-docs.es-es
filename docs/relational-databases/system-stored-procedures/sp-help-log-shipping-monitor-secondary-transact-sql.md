@@ -18,12 +18,12 @@ ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cb4dad948b38fa4c490263a9dcc08ae98f88bdc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbfc973f476bfb2f855b42f2b2e4d4486ba631c2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717673"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526257"
 ---
 # <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@secondary_server =** ] '*secondary_server*'  
- Es el nombre del servidor secundario. *secondary_server* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @secondary_server = ] 'secondary_server'` Es el nombre del servidor secundario. *secondary_server* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@secondary_database =** ] '*secondary_database*'  
- Es el nombre de la base de datos secundaria. *secondary_database* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @secondary_database = ] 'secondary_database'` Es el nombre de la base de datos secundaria. *secondary_database* es **sysname**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

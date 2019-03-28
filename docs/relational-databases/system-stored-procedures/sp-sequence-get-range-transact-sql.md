@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03d79ee58cdaf1237581bd59fbd696325e9e3f80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66ec81fdc6ebdbecf83791c6fffa5735a37723bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700733"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527947"
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -52,29 +52,21 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@sequence_name** =] **N**'*secuencia*'  
- Nombre del objeto de secuencia. El esquema es opcional. *sequence_name* es **nvarchar(776)**.  
+`[ @sequence_name = ] N'sequence'` El nombre del objeto de secuencia. El esquema es opcional. *sequence_name* es **nvarchar(776)**.  
   
- [ **@range_size** =] *range_size*  
- Número de valores que se van a capturar de la secuencia. **@range_size** es **bigint**.  
+`[ @range_size = ] range_size` El número de valores para capturar de la secuencia. **@range_size** es **bigint**.  
   
- [ **@range_first_value** =] *range_first_value*  
- El parámetro de salida devuelve el primer valor (mínimo o máximo) del objeto de secuencia que se usa para calcular el intervalo solicitado. **@range_first_value** es **sql_variant** con el mismo tipo base del objeto de secuencia utilizado en la solicitud.  
+`[ @range_first_value = ] range_first_value` Parámetro de salida devuelve el primer valor (mínimo o máximo) del objeto de secuencia utilizado para calcular el intervalo solicitado. **@range_first_value** es **sql_variant** con el mismo tipo base del objeto de secuencia utilizado en la solicitud.  
   
- [ **@range_last_value** =] *range_last_value*  
- El parámetro de salida opcional devuelve el último valor del intervalo solicitado. **@range_last_value** es **sql_variant** con el mismo tipo base del objeto de secuencia utilizado en la solicitud.  
+`[ @range_last_value = ] range_last_value` Parámetro de salida opcional devuelve el último valor del intervalo solicitado. **@range_last_value** es **sql_variant** con el mismo tipo base del objeto de secuencia utilizado en la solicitud.  
   
- [ **@range_cycle_count** =] range_cycle_count  
- El parámetro de salida opcional devuelve el número de veces que se recorre el objeto de secuencia para devolver el intervalo solicitado. **@range_cycle_count** es **int**.  
+`[ @range_cycle_count = ] range_cycle_count` Parámetro de salida opcional devuelve el número de veces que recorre el objeto de secuencia con el fin de devolver el intervalo solicitado. **@range_cycle_count** es **int**.  
   
- [ **@sequence_increment** =] *sequence_increment*  
- El parámetro de salida opcional devuelve el incremento del objeto de secuencia utilizado para calcular el intervalo solicitado. **@sequence_increment** es **sql_variant** con el mismo tipo base del objeto de secuencia utilizado en la solicitud.  
+`[ @sequence_increment = ] sequence_increment` Parámetro de salida opcional devuelve el incremento del objeto de secuencia utilizado para calcular el intervalo solicitado. **@sequence_increment** es **sql_variant** con el mismo tipo base del objeto de secuencia utilizado en la solicitud.  
   
- [ **@sequence_min_value** =] *sequence_min_value*  
- El parámetro de salida opcional devuelve el valor mínimo del objeto de secuencia. **@sequence_min_value** es **sql_variant** con el mismo tipo base del objeto de secuencia utilizado en la solicitud.  
+`[ @sequence_min_value = ] sequence_min_value` Parámetro de salida opcional devuelve el valor mínimo del objeto de secuencia. **@sequence_min_value** es **sql_variant** con el mismo tipo base del objeto de secuencia utilizado en la solicitud.  
   
- [ **@sequence_max_value** =] *sequence_max_value*  
- El parámetro de salida opcional devuelve el valor máximo del objeto de secuencia. **@sequence_max_value** es **sql_variant** con el mismo tipo base del objeto de secuencia utilizado en la solicitud.  
+`[ @sequence_max_value = ] sequence_max_value` Parámetro de salida opcional devuelve el valor máximo del objeto de secuencia. **@sequence_max_value** es **sql_variant** con el mismo tipo base del objeto de secuencia utilizado en la solicitud.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -130,7 +122,7 @@ SELECT @range_first_value_output AS FirstNumber ;
   
 ```  
   
-### <a name="b-returning-all-output-parameters"></a>B. Devolver todos los parámetros de salida  
+### <a name="b-returning-all-output-parameters"></a>b. Devolver todos los parámetros de salida  
  El ejemplo siguiente devuelve todos los valores de salida del procedimiento sp_sequence_get_range.  
   
 ```  

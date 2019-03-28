@@ -10,12 +10,12 @@ ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ccf8ea4fc15be567d0e95a66b2e5320fae7dbbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8739a95f0676adfdbc890512aeb5246565bacdb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205165"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528527"
 ---
 # <a name="cross-database-queries"></a>Consultas entre bases de datos
   En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], las tablas optimizadas para memoria no admiten las transacciones entre bases de datos. No puede tener acceso a otra base de datos desde la misma transacción o desde la misma consulta que tiene acceso también a una tabla optimizada para memoria. No puede copiar fácilmente los datos de una tabla de una base de datos en una tabla optimizada para memoria de otra base de datos.  
@@ -24,7 +24,7 @@ ms.locfileid: "48205165"
   
  Por ejemplo, para copiar la fila de la tabla t1 en la base de datos db1 en la tabla t2 de db2, utilizando la variable @v1 de tipo dbo.tt1, puede usar algo como:  
   
-```tsql  
+```sql  
 USE db2   
 GO   
 DECLARE @v1 dbo.tt1   

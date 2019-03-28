@@ -16,12 +16,12 @@ ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fde5daf72455af7c4c46c9ef19e4975a3f87a2dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9a51015d8c1e6e6df7f23f32fc7febf7fe9e429f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802237"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537167"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,18 +39,16 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publication**=] **'***publicación***'**  
- Es el nombre de la publicación de una topología punto a punto para la que se han enviado solicitudes de estado. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación en una topología punto a punto para que se han enviado solicitudes de estado. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@description**=] **'***descripción***'**  
- Valor que se puede usar para identificar solicitudes de estado individuales, lo que permite filtrar las respuestas devueltas en función de usuario define la información proporcionada al llamar a [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *descripción* es **nvarchar (4000)**, su valor predeterminado es **%**. De forma predeterminada, se devuelven todas las solicitudes de estado para la publicación. Este parámetro se usa para devolver sólo las solicitudes de estado con una descripción que coincide con el valor proporcionado en *descripción*, donde se comparan las cadenas de caracteres con un [como &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)cláusula.  
+`[ @description = ] 'description'` Valor que se puede usar para identificar solicitudes de estado individuales, lo que permite filtrar las respuestas devueltas en función de usuario define la información proporcionada al llamar a [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *descripción* es **nvarchar (4000)**, su valor predeterminado es **%**. De forma predeterminada, se devuelven todas las solicitudes de estado para la publicación. Este parámetro se usa para devolver sólo las solicitudes de estado con una descripción que coincide con el valor proporcionado en *descripción*, donde se comparan las cadenas de caracteres con un [como &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)cláusula.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identifica una solicitud.|  
-|**publicación**|**sysname**|Nombre de la publicación para la que se envía la solicitud de estado.|  
+|**publication**|**sysname**|Nombre de la publicación para la que se envía la solicitud de estado.|  
 |**sent_date**|**datetime**|Fecha y hora en que se envía la solicitud de estado.|  
 |**description**|**nvarchar(4000)**|Información que puede usarse para identificar las solicitudes de estado individuales definidas por el usuario.|  
   

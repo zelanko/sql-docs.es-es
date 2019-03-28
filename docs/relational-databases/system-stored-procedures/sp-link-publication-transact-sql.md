@@ -16,12 +16,12 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c713b4efcfd37c245f340769a4725b0792d7528b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210063"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537846"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,17 +50,13 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher**=] **'***publisher***'**  
- Es el nombre del publicador con el que se establece el vínculo. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador para vincular a. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@publisher_db**=] **'***publisher_db***'**  
- Es el nombre de la base de datos del publicador con el que se establece el vínculo. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador para vincular a. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@publication**=] **'***publicación***'**  
- Es el nombre de la publicación con la que se establece el vínculo. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación para vincular a. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@security_mode**=] *security_mode*  
- Es el modo de seguridad que el suscriptor utiliza para conectarse con un editor remoto para la actualización inmediata. *security_mode* es **int**, y puede tener uno de estos valores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode` Es el modo de seguridad utilizado por el suscriptor para conectarse a un publicador remoto para la actualización inmediata. *security_mode* es **int**, y puede tener uno de estos valores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -68,14 +64,11 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|Utiliza el contexto de seguridad (autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o autenticación de Windows) del usuario que realiza el cambio en el suscriptor.<br /><br /> Nota: Esta cuenta también debe existir en el publicador con privilegios suficientes. Al usar la autenticación de Windows, se debe admitir la delegación de cuentas de seguridad.|  
 |**2**|Utiliza una existente, definido por el usuario inicio de sesión vinculado creado mediante **sp_link_publication**.|  
   
- [ **@login**=] **'***inicio de sesión***'**  
- Es el inicio de sesión. *login* es de tipo **sysname** y su valor predeterminado es NULL. Este parámetro debe especificarse cuando *security_mode* es **0**.  
+`[ @login = ] 'login'` Es el inicio de sesión. *login* es de tipo **sysname** y su valor predeterminado es NULL. Este parámetro debe especificarse cuando *security_mode* es **0**.  
   
- [ **@password**=] **'***contraseña***'**  
- Es la contraseña. *contraseña* es **sysname**, su valor predeterminado es null. Este parámetro debe especificarse cuando *security_mode* es **0**.  
+`[ @password = ] 'password'` Es la contraseña. *contraseña* es **sysname**, su valor predeterminado es null. Este parámetro debe especificarse cuando *security_mode* es **0**.  
   
- [  **@distributor=** ] **'***distribuidor***'**  
- Es el nombre del distribuidor. *distribuidor* es **sysname**, su valor predeterminado es null.  
+`[ @distributor = ] 'distributor'` Es el nombre del distribuidor. *distribuidor* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

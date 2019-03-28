@@ -18,12 +18,12 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fd6986a245d960a96592c8c63c9744b741fa5ff
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: c12e078505c8049511e59973c26d6a1417c7eae0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119692"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537857"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,34 +57,25 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id =**] *job_id*  
- Número de identificación del trabajo que se va a actualizar. *job_id*es **uniqueidentifier**.  
+`[ @job_id = ] job_id` El número de identificación del trabajo que se puede actualizar. *job_id*es **uniqueidentifier**.  
   
- [  **@job_name =**] **'***job_name***'**  
- Nombre del trabajo. *job_name* es **nvarchar (128)**.  
+`[ @job_name = ] 'job_name'` El nombre del trabajo. *job_name* es **nvarchar (128)**.  
   
-> **Nota:** cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
+> **NOTA:** Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
- [  **@new_name =**] **'***new_name***'**  
- Nuevo nombre del trabajo. *new_name* es **nvarchar (128)**.  
+`[ @new_name = ] 'new_name'` El nuevo nombre para el trabajo. *new_name* es **nvarchar (128)**.  
   
- [ **@enabled =**] *enabled*  
- Especifica si el trabajo está habilitado (**1**) o no habilitada (**0**). *habilitado* es **tinyint**.  
+`[ @enabled = ] enabled` Especifica si el trabajo está habilitado (**1**) o no habilitada (**0**). *habilitado* es **tinyint**.  
   
- [  **@description =**] **'***descripción***'**  
- Descripción del trabajo. *descripción* es **nvarchar (512)**.  
+`[ @description = ] 'description'` La descripción del trabajo. *descripción* es **nvarchar (512)**.  
   
- [ **@start_step_id =**] *step_id*  
- Número de identificación del primer paso que se va a ejecutar para el trabajo. *step_id* es **int**.  
+`[ @start_step_id = ] step_id` El número de identificación del primer paso para ejecutar el trabajo. *step_id* es **int**.  
   
- [ **@category_name =**] **'***category***'**  
- La categoría del trabajo. *categoría* es **nvarchar (128)**.  
+`[ @category_name = ] 'category'` La categoría del trabajo. *categoría* es **nvarchar (128)**.  
   
- [  **@owner_login_name =**] **'***inicio de sesión***'**  
- Nombre del inicio de sesión al que pertenece el trabajo. *inicio de sesión* es **nvarchar (128)** sólo los miembros de la **sysadmin** rol fijo de servidor puede cambiar la propiedad de un trabajo.  
+`[ @owner_login_name = ] 'login'` El nombre del inicio de sesión que pertenece el trabajo. *inicio de sesión* es **nvarchar (128)** sólo los miembros de la **sysadmin** rol fijo de servidor puede cambiar la propiedad de un trabajo.  
   
- [  **@notify_level_eventlog =**] *eventlog_level*  
- Especifica cuándo se debe incluir una entrada para este trabajo en el registro de aplicación de Microsoft Windows. *eventlog_level*es **int**, y puede tener uno de estos valores.  
+`[ @notify_level_eventlog = ] eventlog_level` Especifica cuándo se debe incluir una entrada en el registro de aplicación de Microsoft Windows para este trabajo. *eventlog_level*es **int**, y puede tener uno de estos valores.  
   
 |Valor|Descripción (acción)|  
 |-----------|----------------------------|  
@@ -93,29 +84,21 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**2**|En caso de error|  
 |**3**|Always|  
   
- [  **@notify_level_email =**] *email_level*  
- Especifica cuándo se debe enviar un mensaje de correo electrónico tras finalizar este trabajo. *email_level*es **int**. *email_level*utiliza los mismos valores que *eventlog_level*.  
+`[ @notify_level_email = ] email_level` Especifica cuándo se debe enviar un correo electrónico tras finalizar este trabajo. *email_level*es **int**. *email_level*utiliza los mismos valores que *eventlog_level*.  
   
- [  **@notify_level_netsend =**] *netsend_level*  
- Especifica cuándo se debe enviar un mensaje de red tras finalizar este trabajo. *netsend_level*es **int**. *netsend_level*utiliza los mismos valores que *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` Especifica cuándo se debe enviar un mensaje de red tras finalizar este trabajo. *netsend_level*es **int**. *netsend_level*utiliza los mismos valores que *eventlog_level*.  
   
- [  **@notify_level_page =**] *page_level*  
- Especifica cuándo se debe enviar una página tras finalizar este trabajo. *page_level* es **int**. *page_level*utiliza los mismos valores que *eventlog_level*.  
+`[ @notify_level_page = ] page_level` Especifica cuándo se debe enviar una página tras finalizar este trabajo. *page_level* es **int**. *page_level*utiliza los mismos valores que *eventlog_level*.  
   
- [  **@notify_email_operator_name =**] **'***nombre_operador***'**  
- El nombre del operador al que se envía el correo electrónico cuando *email_level* se alcanza. *nombre de correo electrónico* es **nvarchar (128)**.  
+`[ @notify_email_operator_name = ] 'operator_name'` El nombre del operador al que se envía el correo electrónico cuando *email_level* se alcanza. *nombre de correo electrónico* es **nvarchar (128)**.  
   
- [  **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
- El nombre del operador al que se envía el mensaje de red. *netsend_operator* es **nvarchar (128)**.  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'` El nombre del operador al que se envía el mensaje de red. *netsend_operator* es **nvarchar (128)**.  
   
- [  **@notify_page_operator_name =**] **'***page_operator***'**  
- El nombre del operador al que se envía una página. *page_operator* es **nvarchar (128)**.  
+`[ @notify_page_operator_name = ] 'page_operator'` El nombre del operador al que se envía una página. *page_operator* es **nvarchar (128)**.  
   
- [  **@delete_level =**] *delete_level*  
- Especifica cuándo debe eliminarse el trabajo. *delete_value*es **int**. *delete_level*utiliza los mismos valores que *eventlog_level*.  
+`[ @delete_level = ] delete_level` Especifica cuándo se debe eliminar el trabajo. *delete_value*es **int**. *delete_level*utiliza los mismos valores que *eventlog_level*.  
   
- [ **@automatic_post =**] *automatic_post*  
- Reservado.  
+`[ @automatic_post = ] automatic_post` Reservado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

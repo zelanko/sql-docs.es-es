@@ -10,12 +10,12 @@ ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4bad6da6de694d9b835a6d3fe23fbc68d8642f50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124105"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532857"
 ---
 # <a name="atomic-blocks"></a>Bloques atomic
   `BEGIN ATOMIC` es parte del estándar ANSI SQL. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los bloques atomic solo en el nivel superior de los procedimientos almacenados compilados de forma nativa.  
@@ -29,13 +29,13 @@ ms.locfileid: "48124105"
 ## <a name="transactions-and-error-handling"></a>Transacciones y control de errores  
  Si una transacción ya existe en una sesión (porque un lote ejecutó una instrucción `BEGIN TRANSACTION` y la transacción permanece activa), iniciar a continuación un bloque atomic creará un punto de retorno de la transacción. Si el bloque sale sin una excepción, se confirma el punto de retorno que se creó para el bloque, pero la transacción no se confirmará hasta que se confirme en el nivel de sesión. Si el bloque produce una excepción, los efectos del bloque se revierten pero la transacción en el nivel de sesión continuará, a menos que la excepción invalide la transacción. Por ejemplo, un conflicto de escritura invalida la transacción, mientras que un error de conversión no la invalida.  
   
- Si no hay ninguna transacción activa en una sesión, `BEGIN ATOMIC` iniciará una nueva transacción. Si no se inicia una excepción fuera del ámbito del bloque, la transacción se confirmará al final del bloque. Si el bloque produce una excepción (es decir, la excepción no se detecta ni se controla en el bloque), la transacción se revertirá. Para las transacciones que ocupan un único bloque atomic (un único procedimiento almacenado compilado nativamente), no tiene que escribir explícita `BEGIN TRANSACTION` y `COMMIT` o `ROLLBACK` instrucciones.  
+ Si no hay ninguna transacción activa en una sesión, `BEGIN ATOMIC` iniciará una nueva transacción. Si no se inicia una excepción fuera del ámbito del bloque, la transacción se confirmará al final del bloque. Si el bloque produce una excepción (es decir, la excepción no se detecta ni se controla en el bloque), la transacción se revertirá. Para las transacciones que ocupan un único bloque atomic (un solo procedimiento almacenado compilado de forma nativa), no se deben escribir instrucciones `BEGIN TRANSACTION` y `COMMIT` o `ROLLBACK` explícitas.  
   
- Compatibilidad con los procedimientos almacenados de forma nativa la `TRY`, `CATCH`, y `THROW` construcciones de control de errores. `RAISERROR` no se admite.  
+ Los procedimientos almacenados compilados de forma nativa admiten las construcciones `TRY`, `CATCH` y `THROW` para el control de errores. No se admite `RAISERROR`.  
   
  En el ejemplo siguiente se muestra el comportamiento de control de errores con bloques atomic y procedimientos almacenados compilados de forma nativa:  
   
-```tsql  
+```sql  
 -- sample table  
 CREATE TABLE dbo.t1 (  
   c1 int not null primary key nonclustered  
@@ -123,23 +123,23 @@ ORDER BY c1
 GO  
 ```  
   
- Los mensajes de error siguientes específicos de las tablas optimizadas para memoria invalidan las transacciones. Si aparecen en el ámbito de un bloque atomic, causarán que se anulen las transacciones: 10772, 41301, 41302, 41305, 41325, 41332 y 41333.  
+ Los mensajes de error siguientes específicos de las tablas optimizadas para memoria invalidan las transacciones. Si se producen en el ámbito de un bloque ATOMIC, harán que la transacción se interrumpa: 10772, 41301, 41302, 41305, 41325, 41332 y 41333.  
   
 ## <a name="session-settings"></a>Configuración de la sesión  
- Los parámetros de configuración de sesión de los bloques atomic son fijos cuando se compila el procedimiento almacenado. Se pueden especificar algunas opciones de configuración con `BEGIN ATOMIC` mientras que otros están fijos siempre en el mismo valor.  
+ Los parámetros de configuración de sesión de los bloques atomic son fijos cuando se compila el procedimiento almacenado. Algunos parámetros se pueden especificar con `BEGIN ATOMIC`, mientras que otros están fijos siempre en el mismo valor.  
   
  Se requieren las siguientes opciones con `BEGIN ATOMIC`:  
   
 |Configuración necesaria|Descripción|  
 |----------------------|-----------------|  
-|`TRANSACTION ISOLATION LEVEL`|Los valores admitidos son `SNAPSHOT`, `REPEATABLEREAD`, y `SERIALIZABLE`.|  
+|`TRANSACTION ISOLATION LEVEL`|Los valores admitidos son `SNAPSHOT`, `REPEATABLEREAD` y `SERIALIZABLE`.|  
 |`LANGUAGE`|Determina los formatos de fecha y hora y los mensajes del sistema. Se admiten todos los lenguajes y alias de [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql).|  
   
  Los siguientes parámetros de configuración son opcionales:  
   
 |Configuración opcional|Descripción|  
 |----------------------|-----------------|  
-|`DATEFORMAT`|Se admiten todos los formatos de fecha de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se especifica, `DATEFORMAT` reemplaza el formato de fecha predeterminado asociado con `LANGUAGE`.|  
+|`DATEFORMAT`|Se admiten todos los formatos de fecha de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se especifica, `DATEFORMAT` reemplaza el formato de fecha predeterminado asociado a `LANGUAGE`.|  
 |`DATEFIRST`|Cuando se especifica, `DATEFIRST` reemplaza el valor predeterminado asociado a `LANGUAGE`.|  
 |`DELAYED_DURABILITY`|Los valores admitidos son `OFF` y `ON`.<br /><br /> Las confirmaciones de transacción de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden ser totalmente durables (el valor predeterminado) o durables diferidas. Para más información, vea [Controlar la durabilidad de las transacciones](../logs/control-transaction-durability.md).|  
   

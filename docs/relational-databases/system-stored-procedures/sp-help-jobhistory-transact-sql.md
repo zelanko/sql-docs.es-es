@@ -18,12 +18,12 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c355fb36e5bc0562b4e20b48ab2a3f33e182c22c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742203"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534437"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,38 +54,27 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id=** ] *job_id*  
- El número de identificación del trabajo. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id` El número de identificación del trabajo. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
   
- [  **@job_name=** ] **'***job_name***'**  
- Nombre del trabajo. *job_name* es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'` El nombre del trabajo. *job_name* es **sysname**, su valor predeterminado es null.  
   
- [  **@step_id=** ] *step_id*  
- El número de identificación del paso. *step_id* es **int**, su valor predeterminado es null.  
+`[ @step_id = ] step_id` El número de identificación del paso. *step_id* es **int**, su valor predeterminado es null.  
   
- [  **@sql_message_id=** ] *sql_message_id*  
- Número de identificación del mensaje de error devuelto por Microsoft SQL Server cuando se ejecuta el trabajo. *sql_message_id* es **int**, su valor predeterminado es null.  
+`[ @sql_message_id = ] sql_message_id` El número de identificación del mensaje de error devuelto por Microsoft SQL Server cuando se ejecuta el trabajo. *sql_message_id* es **int**, su valor predeterminado es null.  
   
- [  **@sql_severity=** ] *sql_severity*  
- Nivel de gravedad del mensaje de error devuelto por SQL Server cuando se ejecuta el trabajo. *sql_severity* es **int**, su valor predeterminado es null.  
+`[ @sql_severity = ] sql_severity` El nivel de gravedad del mensaje de error devuelto por SQL Server cuando se ejecuta el trabajo. *sql_severity* es **int**, su valor predeterminado es null.  
   
- [  **@start_run_date=** ] *start_run_date*  
- Fecha en que se inició el trabajo. *start_run_date*es **int**, su valor predeterminado es null. *start_run_date* se debe escribir con el formato AAAAMMDD, donde AAAA es un año con cuatro cifras, MM es un mes con dos cifras y DD es el día con dos cifras.  
+`[ @start_run_date = ] start_run_date` La fecha en que se inició el trabajo. *start_run_date*es **int**, su valor predeterminado es null. *start_run_date* se debe escribir con el formato AAAAMMDD, donde AAAA es un año con cuatro cifras, MM es un mes con dos cifras y DD es el día con dos cifras.  
   
- [  **@end_run_date=** ] *end_run_date*  
- Fecha en que se completó el trabajo. *end_run_date* es **int**, su valor predeterminado es null. *end_run_date*se debe escribir con el formato AAAAMMDD, donde AAAA es el año de cuatro dígitos, MM es un mes con dos cifras y DD es el día con dos cifras.  
+`[ @end_run_date = ] end_run_date` La fecha en que se completó el trabajo. *end_run_date* es **int**, su valor predeterminado es null. *end_run_date*se debe escribir con el formato AAAAMMDD, donde AAAA es el año de cuatro dígitos, MM es un mes con dos cifras y DD es el día con dos cifras.  
   
- [  **@start_run_time=** ] *start_run_time*  
- Hora a la que comenzó el trabajo. *start_run_time* es **int**, su valor predeterminado es null. *start_run_time*se debe escribir con el formato HHMMSS, donde HH es la hora del día, MM es un minutos del día con dos cifras y SS son los segundos dos caracteres del día.  
+`[ @start_run_time = ] start_run_time` La hora en que se inició el trabajo. *start_run_time* es **int**, su valor predeterminado es null. *start_run_time*se debe escribir con el formato HHMMSS, donde HH es la hora del día, MM es un minutos del día con dos cifras y SS son los segundos dos caracteres del día.  
   
- [  **@end_run_time=** ] *end_run_time*  
- Hora a la que se completó la ejecución del trabajo. *end_run_time* es **int**, su valor predeterminado es null. *end_run_time*se debe escribir con el formato HHMMSS, donde HH es la hora del día, MM es un minutos del día con dos cifras y SS son los segundos dos caracteres del día.  
+`[ @end_run_time = ] end_run_time` El tiempo que el trabajo completado su ejecución. *end_run_time* es **int**, su valor predeterminado es null. *end_run_time*se debe escribir con el formato HHMMSS, donde HH es la hora del día, MM es un minutos del día con dos cifras y SS son los segundos dos caracteres del día.  
   
- [  **@minimum_run_duration=** ] *minimum_run_duration*  
- Duración mínima de la realización del trabajo. *minimum_run_duration* es **int**, su valor predeterminado es null. *minimum_run_duration*se debe escribir con el formato HHMMSS, donde HH es la hora del día, MM es un minutos del día con dos cifras y SS son los segundos dos caracteres del día.  
+`[ @minimum_run_duration = ] minimum_run_duration` La longitud mínima de tiempo para la finalización del trabajo. *minimum_run_duration* es **int**, su valor predeterminado es null. *minimum_run_duration*se debe escribir con el formato HHMMSS, donde HH es la hora del día, MM es un minutos del día con dos cifras y SS son los segundos dos caracteres del día.  
   
- [  **@run_status=** ] *run_status*  
- Estado de ejecución del trabajo. *run_status* es **int**, su valor predeterminado es null, y puede tener uno de estos valores.  
+`[ @run_status = ] run_status` El estado de ejecución del trabajo. *run_status* es **int**, su valor predeterminado es null, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -96,17 +85,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**4**|Mensaje en curso|  
 |**5**|Desconocido|  
   
- [  **@minimum_retries=** ] *minimum_retries*  
- Número mínimo de veces que se debe volver a intentar la ejecución de un trabajo. *minimum_retries* es **int**, su valor predeterminado es null.  
+`[ @minimum_retries = ] minimum_retries` El número mínimo de veces que un trabajo debe intentar volver a ejecutar. *minimum_retries* es **int**, su valor predeterminado es null.  
   
- [  **@oldest_first=** ] *oldest_first*  
- Indica si la salida se debe presentar con los trabajos más antiguos en primer lugar. *oldest_first* es **int**, su valor predeterminado es **0**, que presenta los trabajos más recientes en primer lugar. **1** presenta los trabajos más antiguos en primer lugar.  
+`[ @oldest_first = ] oldest_first` Es si se debe presentar la salida con los trabajos más antiguos en primer lugar. *oldest_first* es **int**, su valor predeterminado es **0**, que presenta los trabajos más recientes en primer lugar. **1** presenta los trabajos más antiguos en primer lugar.  
   
- [  **@server=** ] **'***server***'**  
- Nombre del servidor en el que se realizó el trabajo. *servidor* es **nvarchar (30)**, su valor predeterminado es null.  
+`[ @server = ] 'server'` El nombre del servidor en el que se realizó el trabajo. *servidor* es **nvarchar (30)**, su valor predeterminado es null.  
   
- [  **@mode=** ] **'***modo***'**  
- Indica si SQL Server imprime todas las columnas del conjunto de resultados (**completa**) o un resumen de las columnas. *modo* es **varchar(7)**, su valor predeterminado es **resumen**.  
+`[ @mode = ] 'mode'` Indica si SQL Server imprime todas las columnas del conjunto de resultados (**completa**) o un resumen de las columnas. *modo* es **varchar(7)**, su valor predeterminado es **resumen**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -120,7 +105,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**job_id**|**uniqueidentifier**|Número de identificación del trabajo.|  
 |**job_name**|**sysname**|Nombre del trabajo.|  
 |**step_id**|**int**|Número de identificación de paso (será **0** para un historial de trabajos).|  
-|**Step_name**|**sysname**|Nombre de paso (será NULL para un historial de trabajos).|  
+|**step_name**|**sysname**|Nombre de paso (será NULL para un historial de trabajos).|  
 |**sql_message_id**|**int**|Para pasos [!INCLUDE[tsql](../../includes/tsql-md.md)], número de error de [!INCLUDE[tsql](../../includes/tsql-md.md)] más reciente encontrado en la ejecución del comando.|  
 |**sql_severity**|**int**|Para pasos [!INCLUDE[tsql](../../includes/tsql-md.md)], nivel de gravedad más alto de los errores de [!INCLUDE[tsql](../../includes/tsql-md.md)] encontrado en la ejecución del comando.|  
 |**message**|**nvarchar(1024)**|Mensaje del historial de trabajos o pasos.|  
@@ -128,9 +113,9 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**run_date**|**int**|Fecha en que empezó la ejecución del trabajo o del paso.|  
 |**run_time**|**int**|Hora en que empezó la ejecución del trabajo o del paso.|  
 |**run_duration**|**int**|Tiempo transcurrido en la ejecución del trabajo o paso en formato HHMMSS.|  
-|**operator_emailed**|**nvarchar (20)**|Operador que recibió mensajes de correo electrónico relativos a este trabajo (es NULL para el historial de pasos).|  
-|**operator_netsent**|**nvarchar (20)**|Operador que recibió mensajes de red relativos a este trabajo (es NULL para el historial de pasos).|  
-|**operator_paged**|**nvarchar (20)**|Operador que recibió mensajes de localizador relativos a este trabajo (es NULL para el historial de pasos).|  
+|**operator_emailed**|**nvarchar(20)**|Operador que recibió mensajes de correo electrónico relativos a este trabajo (es NULL para el historial de pasos).|  
+|**operator_netsent**|**nvarchar(20)**|Operador que recibió mensajes de red relativos a este trabajo (es NULL para el historial de pasos).|  
+|**operator_paged**|**nvarchar(20)**|Operador que recibió mensajes de localizador relativos a este trabajo (es NULL para el historial de pasos).|  
 |**retries_attempted**|**int**|Número de veces que se ha vuelto a intentar el paso (siempre es 0 para un historial de trabajos).|  
 |**servidor**|**nvarchar(30)**|Servidor en el que se ejecuta el paso o el trabajo. Siempre es (**local**).|  
   
@@ -164,7 +149,7 @@ EXEC dbo.sp_help_jobhistory
 GO  
 ```  
   
-### <a name="b-listing-information-for-jobs-that-match-certain-conditions"></a>B. Mostrar información de trabajos que cumplen determinadas condiciones  
+### <a name="b-listing-information-for-jobs-that-match-certain-conditions"></a>b. Mostrar información de trabajos que cumplen determinadas condiciones  
  En el siguiente ejemplo se imprimen todas las columnas y toda la información de los trabajos o pasos de trabajo que no progresaron y devolvieron el mensaje de error `50100` (mensaje de error definido por el usuario) y una gravedad de `20`.  
   
 ```  

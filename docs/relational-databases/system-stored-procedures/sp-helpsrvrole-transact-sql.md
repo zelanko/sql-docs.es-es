@@ -18,12 +18,12 @@ ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 651bab70f71726beeb9f3b28026e8ee4683c404f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c0cd34d0a10fc8809280be0abcc0761cebd72ae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731973"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526237"
 ---
 # <a name="sphelpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@srvrolename=** ] **'***rol***'**  
- Es el nombre del rol fijo de servidor. *rol* es **sysname**, su valor predeterminado es null. *rol* puede ser uno de los siguientes valores.  
+`[ @srvrolename = ] 'role'` Es el nombre del rol fijo de servidor. *rol* es **sysname**, su valor predeterminado es null. *rol* puede ser uno de los siguientes valores.  
   
 |Rol fijo de servidor|Descripción|  
 |-----------------------|-----------------|  
@@ -85,7 +84,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 EXEC sp_helpsrvrole ;  
 ```  
   
-### <a name="b-listing-fixed-and-user-defined-server-roles"></a>B. Lista de roles de servidor fijos y definidos por el usuario  
+### <a name="b-listing-fixed-and-user-defined-server-roles"></a>b. Lista de roles de servidor fijos y definidos por el usuario  
  La siguiente consulta devuelve una lista tanto de los roles fijos de servidor como de los definidos por el usuario.  
   
 ```  

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95316400d336a13304f1da0850ecdcc9565fe5bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b518c7b79ca6a054b5d6435ea7cb2fe10e419b7
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707333"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536327"
 ---
 # <a name="sphelptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@objname =** ] **'***nombre***'**  
- Es el nombre, completo o no, de un objeto definido por el usuario en el ámbito de esquema. Se requieren comillas solo si se especifica un nombre de objeto calificado. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. El objeto debe estar en la base de datos actual. *nombre* es **nvarchar(776)**, no tiene valor predeterminado.  
+`[ @objname = ] 'name'` Es el nombre completo o incompleto de un objeto definido por el usuario, el ámbito de esquema. Se requieren comillas solo si se especifica un nombre de objeto calificado. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. El objeto debe estar en la base de datos actual. *nombre* es **nvarchar(776)**, no tiene valor predeterminado.  
   
- [  **@columnname =** ] **'***computed_column_name***'**  
- Es el nombre de la columna calculada para la que se va a mostrar la definición. Se debe especificar la tabla que contiene la columna como *nombre de*. *column_name* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @columnname = ] 'computed_column_name'` Es el nombre de la columna calculada para que muestre información de definición. Se debe especificar la tabla que contiene la columna como *nombre de*. *column_name* es **sysname**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -60,7 +58,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
  sp_helptext muestra la definición que se utiliza para crear un objeto en varias filas. Cada fila contiene 255 caracteres de la definición de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La definición reside en el **definición** columna en el [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista de catálogo.  
   
 ## <a name="permissions"></a>Permisos  
- Debe pertenecer al rol **public** . Las definiciones de los objetos del sistema están visibles públicamente. La definición de los objetos de usuario está visible para el propietario del objeto o los receptores de los permisos siguientes: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  
+ Debe pertenecer al rol **public** . Las definiciones de los objetos del sistema están visibles públicamente. La definición de objetos de usuario está visible para el propietario del objeto o para los receptores que dispongan de uno de los siguientes permisos: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -74,7 +72,7 @@ EXEC sp_helptext 'HumanResources.dEmployee';
 GO  
 ```  
   
-### <a name="b-displaying-the-definition-of-a-computed-column"></a>B. Mostrar la definición de una columna calculada  
+### <a name="b-displaying-the-definition-of-a-computed-column"></a>b. Mostrar la definición de una columna calculada  
  En el ejemplo siguiente se muestra la definición de la columna calculada `TotalDue` de la tabla `SalesOrderHeader` de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  

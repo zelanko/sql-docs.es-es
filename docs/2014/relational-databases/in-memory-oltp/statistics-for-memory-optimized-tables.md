@@ -10,12 +10,12 @@ ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee7c3d44f3575fd1bf25a6e304a379ca6ca6391b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4e47a8c6f5b0da31aea9168bbbc56bd9b28afb96
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136075"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530837"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>Estadísticas para las tablas con optimización para memoria
   El optimizador de consultas utiliza las estadísticas de las columnas para crear planes de consulta que mejoren el rendimiento de las consultas. Las estadísticas se recopilan de las tablas de la base de datos y se almacenan en los metadatos de la base de datos.  
@@ -41,7 +41,7 @@ ms.locfileid: "48136075"
 ## <a name="guidelines-for-statistics-when-deploying-memory-optimized-tables"></a>Directrices para las estadísticas cuando se implementan tablas con optimización para memoria  
  Para asegurarse de que el optimizador de consultas dispone de estadísticas actualizadas al crear los planes de consulta, implemente las tablas optimizadas para memoria siguiendo estos cinco pasos:  
   
-1.  Cree tablas e índices. Los índices están alineados especificado en el `CREATE TABLE` instrucciones.  
+1.  Cree tablas e índices. Los índices se especifican insertados en instrucciones `CREATE TABLE`.  
   
 2.  Cargue datos en las tablas.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48136075"
   
 4.  Cree procedimientos almacenados que tengan acceso a las tablas.  
   
-5.  Ejecutar la carga de trabajo, que puede contener una combinación de compilado de forma nativa e interpretados [!INCLUDE[tsql](../../../includes/tsql-md.md)] almacena los procedimientos, así como lotes ad hoc.  
+5.  Ejecute la carga de trabajo, que puede contener una combinación de procedimientos almacenados de [!INCLUDE[tsql](../../../includes/tsql-md.md)] compilados de forma nativa e interpretados, así como lotes ad hoc.  
   
  El hecho de crear procedimientos almacenados compilados de forma nativa después de cargar los datos y actualizar las estadísticas asegura que el optimizador dispondrá de estadísticas para las tablas optimizadas para memoria. Esto garantizará planes de consulta eficaces cuando se compile el procedimiento.  
   
@@ -64,9 +64,9 @@ ms.locfileid: "48136075"
   
  Para actualizar las estadísticas:  
   
--   Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] a [crear un Plan de mantenimiento](../maintenance-plans/create-a-maintenance-plan.md) con un [tarea Actualizar estadísticas](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
+-   Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para [Create a Maintenance Plan](../maintenance-plans/create-a-maintenance-plan.md) con una [Tarea Actualizar estadísticas](../maintenance-plans/update-statistics-task-maintenance-plan.md)  
   
--   O bien, actualice las estadísticas mediante un script [!INCLUDE[tsql](../../../includes/tsql-md.md)], tal como se describe a continuación.  
+-   O bien, actualice las estadísticas mediante un script [!INCLUDE[tsql](../../../includes/tsql-md.md)] , tal como se describe a continuación.  
   
  Para actualizar las estadísticas de una sola tabla optimizada para memoria (*myschema*. *Mytable*), ejecute el script siguiente:  
   
@@ -76,7 +76,7 @@ UPDATE STATISTICS myschema.Mytable WITH FULLSCAN, NORECOMPUTE
   
  Para actualizar las estadísticas de todas las tablas optimizadas para memoria de la base de datos actual, ejecute el script siguiente:  
   
-```tsql  
+```sql  
 DECLARE @sql NVARCHAR(MAX) = N''  
   
 SELECT @sql += N'  
@@ -90,7 +90,7 @@ EXEC sp_executesql @sql
   
  En el ejemplo siguiente se informa de cuándo se han actualizado por última vez las estadísticas de las tablas optimizadas para memoria. Esta información puede ayudarle a determinar si necesita actualizar las estadísticas.  
   
-```tsql  
+```sql  
 select t.object_id, t.name, sp.last_updated as 'stats_last_updated'  
 from sys.tables t join sys.stats s on t.object_id=s.object_id cross apply sys.dm_db_stats_properties(t.object_id, s.stats_id) sp  
 where t.is_memory_optimized=1  

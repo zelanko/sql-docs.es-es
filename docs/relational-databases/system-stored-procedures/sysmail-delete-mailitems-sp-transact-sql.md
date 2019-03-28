@@ -18,12 +18,12 @@ ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c1e161a678b6834123aabf1eb5126445927a7fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650789"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531767"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@sent_before=** ] **'***sent_before***'**  
- Elimina mensajes de correo electrónico hasta la fecha y hora especificadas por el *sent_before* argumento. *sent_before* es **datetime** con NULL como valor predeterminado. NULL indica todas las fechas.  
+`[ @sent_before = ] 'sent_before'` Elimina mensajes de correo electrónico hasta la fecha y hora especificadas por el *sent_before* argumento. *sent_before* es **datetime** con NULL como valor predeterminado. NULL indica todas las fechas.  
   
- [  **@sent_status=** ] **'***sent_status***'**  
- Elimina mensajes de correo electrónico del tipo especificado por *sent_status*. *sent_status* es **varchar (8)** no tiene ningún valor predeterminado. Las entradas válidas son **envía**, **sin enviar**, **reintentando**, y **no se pudo**. NULL indica todos los estados.  
+`[ @sent_status = ] 'sent_status'` Elimina mensajes de correo electrónico del tipo especificado por *sent_status*. *sent_status* es **varchar (8)** no tiene ningún valor predeterminado. Las entradas válidas son **envía**, **sin enviar**, **reintentando**, y **no se pudo**. NULL indica todos los estados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -70,7 +68,7 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @GETDATE;
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-e-mails"></a>B. Eliminar los mensajes de correo electrónico más antiguos  
+### <a name="b-deleting-the-oldest-e-mails"></a>b. Eliminar los mensajes de correo electrónico más antiguos  
  En el ejemplo siguiente se eliminan los mensajes de correo electrónico del registro del Correo electrónico de base de datos anteriores a la fecha `October 9, 2005`.  
   
 ```  

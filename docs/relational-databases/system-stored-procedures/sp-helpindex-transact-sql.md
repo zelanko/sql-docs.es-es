@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 064018cdc595935ce3987fc44bc7be7da74bbd02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d4191a53db7c4921f026e4b6e6f8406b2ce5c24
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727703"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534027"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@objname=** ] **'***nombre***'**  
- Es el nombre calificado o no calificado de una tabla o vista definida por un usuario. Solo son necesarias las comillas si se especifica una tabla o nombre de vista calificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *nombre* es **nvarchar(776)**, no tiene valor predeterminado.  
+`[ @objname = ] 'name'` Es el nombre completo o incompleto de una tabla definida por el usuario o la vista. Solo son necesarias las comillas si se especifica una tabla o nombre de vista calificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *nombre* es **nvarchar(776)**, no tiene valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -53,7 +52,7 @@ sp_helpindex [ @objname = ] 'name'
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|Nombre del índice.|  
 |**index_description**|**varchar(210)**|Descripción del índice incluido el grupo de archivos en el que está ubicado.|  
-|**index_keys**|**nvarchar (2078)**|Columnas de tabla o vista sobre las que se genera el índice.|  
+|**index_keys**|**nvarchar(2078)**|Columnas de tabla o vista sobre las que se genera el índice.|  
   
  Aparecerá listada una columna de índice descendente en el conjunto de resultados con un signo menos (-) tras el nombre; la columna predeterminada de índice ascendente aparecerá listada solamente por su nombre.  
   

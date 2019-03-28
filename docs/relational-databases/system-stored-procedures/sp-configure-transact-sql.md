@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f3b983411fade381b926e05a3bdbb81355bf4c02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23b75beb0782fc0a13155d12890cbe3a620e1733
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852343"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530247"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -61,13 +61,11 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@configname=** ] **'***nombre_de_opción***'**  
- Es el nombre de una opción de configuración. *option_name* es **varchar(35)** y su valor predeterminado es NULL. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reconoce cualquier cadena única que forme parte del nombre de configuración. Si no se especifica, se devuelve la lista completa de opciones.  
+`[ @configname = ] 'option_name'` Es el nombre de una opción de configuración. *option_name* es **varchar(35)** y su valor predeterminado es NULL. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] reconoce cualquier cadena única que forme parte del nombre de configuración. Si no se especifica, se devuelve la lista completa de opciones.  
   
  Para obtener información sobre las opciones de configuración disponibles y su configuración, consulte [las opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
- [ **@configvalue=** ] **'***valor***'**  
- Es la nueva configuración. *value* es de tipo **int**y su valor predeterminado es NULL. El valor máximo depende de la opción individual.  
+`[ @configvalue = ] 'value'` Es la nueva configuración. *value* es de tipo **int**y su valor predeterminado es NULL. El valor máximo depende de la opción individual.  
   
  Para ver el valor máximo para cada opción, consulte el **máximo** columna de la **sys.configurations** vista de catálogo.  
   
@@ -126,7 +124,7 @@ GO
 EXEC sp_configure 'show advanced option', '1';  
 ```  
   
- Este es el mensaje: "Se ha cambiado la opción de configuración 'show advanced options' de 0 a 1. Ejecute la instrucción RECONFIGURE para instalar".  
+ Este es el mensaje: "Opción de configuración 'show advanced options' cambió de 0 a 1. Ejecute la instrucción RECONFIGURE para instalar".  
   
  Ejecute `RECONFIGURE` y muestre todas las opciones de configuración:  
   
@@ -135,7 +133,7 @@ RECONFIGURE;
 EXEC sp_configure;  
 ```  
   
-### <a name="b-changing-a-configuration-option"></a>B. Cambiar una opción de configuración  
+### <a name="b-changing-a-configuration-option"></a>b. Cambiar una opción de configuración  
  En el siguiente ejemplo se establece el `recovery interval` (intervalo de recuperación) del sistema en `3` minutos.  
   
 ```  

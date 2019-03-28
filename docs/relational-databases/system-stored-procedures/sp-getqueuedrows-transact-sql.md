@@ -16,12 +16,12 @@ ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30e0828c7d116c2c48c398ecdee78899ad8913db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818887"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535417"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tablename =**] **'***tablename***'**  
- Es el nombre de la tabla. *TableName* es **sysname**, no tiene ningún valor predeterminado. La tabla debe formar parte de una suscripción en cola.  
+`[ @tablename = ] 'tablename'` Es el nombre de la tabla. *TableName* es **sysname**, no tiene ningún valor predeterminado. La tabla debe formar parte de una suscripción en cola.  
   
- [  **@owner =**] **'***propietario***'**  
- Es el propietario de la suscripción. *propietario* es **sysname**, su valor predeterminado es null.  
+`[ @owner = ] 'owner'` Es el propietario de la suscripción. *propietario* es **sysname**, su valor predeterminado es null.  
   
- [  **@tranid =** ] **'***transaction_id***'**  
- Permite filtrar el resultado por el identificador de la transacción. *transaction_id* es **nvarchar (70)**, su valor predeterminado es null. Si se especifica, se muestra el Id. de la transacción asociado con el comando en cola. Si es NULL, se muestran todos los comandos de la cola.  
+`[ @tranid = ] 'transaction_id'` Permite la salida ser filtradas por el identificador de transacción. *transaction_id* es **nvarchar (70)**, su valor predeterminado es null. Si se especifica, se muestra el Id. de la transacción asociado con el comando en cola. Si es NULL, se muestran todos los comandos de la cola.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -57,10 +54,10 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Acción**|**nvarchar (10)**|Tipo de acción que se llevará a cabo cuando tenga lugar la sincronización.<br /><br /> INS= insertar <br /><br /> DEL = eliminar<br /><br /> UPD = actualizar|  
-|**transacción**|**nvarchar (70)**|Id. de transacción con el que se ejecutó el comando.|  
+|**Acción**|**nvarchar(10)**|Tipo de acción que se llevará a cabo cuando tenga lugar la sincronización.<br /><br /> INS= insertar <br /><br /> DEL = eliminar<br /><br /> UPD = actualizar|  
+|**transacción**|**nvarchar(70)**|Id. de transacción con el que se ejecutó el comando.|  
 |**tabla column1... n**||El valor para cada columna de la tabla especificada en *tablename*.|  
-|**MSrepl_tran_version**|**uniqueidentifier**|Esta columna se utiliza para realizar un seguimiento de los cambios de datos replicados y para llevar a cabo la detección de conflictos en el publicador. Esta columna se agrega a la tabla automáticamente.|  
+|**msrepl_tran_version**|**uniqueidentifier**|Esta columna se utiliza para realizar un seguimiento de los cambios de datos replicados y para llevar a cabo la detección de conflictos en el publicador. Esta columna se agrega a la tabla automáticamente.|  
   
 ## <a name="remarks"></a>Comentarios  
  **sp_getqueuedrows** se utiliza en los suscriptores que participan en la actualización en cola.  

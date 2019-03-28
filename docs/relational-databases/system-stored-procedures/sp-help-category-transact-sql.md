@@ -18,12 +18,12 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05e5ef298e9365b63b4e66b93c0f2aa637be8312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707003"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534147"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,15 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@class=**] **'***clase***'**  
- La clase sobre la que se solicita información. *clase* es **varchar (8)**, con un valor predeterminado de **trabajo**. *clase* puede ser uno de estos valores.  
+`[ @class = ] 'class'` La clase sobre la que se solicita información. *clase* es **varchar (8)**, con un valor predeterminado de **trabajo**. *clase* puede ser uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**TRABAJO**|Proporciona información acerca de una categoría de trabajo.|  
-|**ALERTA**|Proporciona información acerca de una categoría de alerta.|  
-|**OPERADOR**|Proporciona información acerca de una categoría de operador.|  
+|**JOB**|Proporciona información acerca de una categoría de trabajo.|  
+|**ALERT**|Proporciona información acerca de una categoría de alerta.|  
+|**OPERATOR**|Proporciona información acerca de una categoría de operador.|  
   
- [  **@type=** ] **'***tipo***'**  
- Tipo de categoría cuya información se solicita. *tipo* es **varchar (12)**, su valor predeterminado es null, y puede tener uno de estos valores.  
+`[ @type = ] 'type'` El tipo de categoría cuya información se solicita. *tipo* es **varchar (12)**, su valor predeterminado es null, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -61,11 +59,9 @@ sp_help_category [ [ @class = ] 'class' ]
 |**MULTI-SERVIDOR**|Categoría de trabajo multiservidor.|  
 |**NONE**|Categoría para una clase distinta **trabajo**.|  
   
- [  **@name=** ] **'***nombre***'**  
- Nombre de la categoría cuya información se solicita. *nombre* es **sysname**, su valor predeterminado es null.  
+`[ @name = ] 'name'` El nombre de la categoría cuya información se solicita. *nombre* es **sysname**, su valor predeterminado es null.  
   
- [  **@suffix=** ] *sufijo*  
- Especifica si el **category_type** columna del conjunto de resultados es un identificador o un nombre. *sufijo* es **bit**, su valor predeterminado es **0**. **1** muestra el **category_type** como un nombre, y **0** lo muestra como un identificador.  
+`[ @suffix = ] suffix` Especifica si el **category_type** columna del conjunto de resultados es un identificador o un nombre. *sufijo* es **bit**, su valor predeterminado es **0**. **1** muestra el **category_type** como un nombre, y **0** lo muestra como un identificador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -76,7 +72,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Id. de categoría|  
-|**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = local<br /><br /> **2** = multiservidor<br /><br /> **3** = ninguno|  
+|**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = Local<br /><br /> **2** = multiservidor<br /><br /> **3** = ninguno|  
 |**Nombre**|**sysname**|Nombre de la categoría|  
   
  Cuando **@suffix** es **1**, **sp_help_category** devuelve el conjunto de resultados siguientes:  
@@ -117,7 +113,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-### <a name="b-returning-alert-information"></a>B. Devolver información de alertas  
+### <a name="b-returning-alert-information"></a>b. Devolver información de alertas  
  Este ejemplo devuelve información acerca de la categoría de alertas de replicación.  
   
 ```  

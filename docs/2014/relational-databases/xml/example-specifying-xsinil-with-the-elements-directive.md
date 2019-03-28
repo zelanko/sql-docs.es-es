@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Especificar XSINIL con la directiva ELEMENTS | Microsoft Docs'
+title: 'Ejemplo: Especificación de XSINIL con la directiva ELEMENTS | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, specifying XSINIL example
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf5020a092199d4440905302b309a573358d4471
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 34cc4479a26d633e689963a945095248f683993f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062935"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531797"
 ---
-# <a name="example-specifying-xsinil-with-the-elements-directive"></a>Ejemplo: Especificar XSINIL con la directiva ELEMENTS
+# <a name="example-specifying-xsinil-with-the-elements-directive"></a>Ejemplo: Especificación de XSINIL con la directiva ELEMENTS
   En esta consulta se especifica la directiva `ELEMENTS` para generar XML centrado en elementos a partir del resultado de la consulta.  
   
 ## <a name="example"></a>Ejemplo  

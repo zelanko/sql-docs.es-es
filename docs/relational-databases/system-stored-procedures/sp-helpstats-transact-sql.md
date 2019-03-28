@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae3b5a2d826fbafc5bc9f5bfc265794e7898a0d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a78ec7a666c40c1c1bd742545139aa2e9ea0aec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640788"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534898"
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,11 +45,9 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@objname=**] **'***object_name***'**  
- Especifica la tabla donde proporcionar la información estadística. *object_name* es **nvarchar (520)** y no puede ser null. Se puede especificar un nombre de una o dos partes.  
+`[ @objname = ] 'object_name'` Especifica la tabla en la que se va a proporcionar la información estadística. *object_name* es **nvarchar (520)** y no puede ser null. Se puede especificar un nombre de una o dos partes.  
   
- [  **@results=**] **'***valor***'**  
- Especifica la extensión de la información que se va a proporcionar. Las entradas válidas son **todas** y **estadísticas**. **Todos los** presenta estadísticas de todos los índices y columnas con estadísticas creadas en ellas; **Estadísticas** solamente presenta estadísticas no asociadas con un índice. *valor* es **nvarchar (5)** con un valor predeterminado es STATS.  
+`[ @results = ] 'value'` Especifica la extensión de la información que proporcione. Las entradas válidas son **todas** y **estadísticas**. **Todos los** presenta estadísticas de todos los índices y columnas con estadísticas creadas en ellas; **Estadísticas** solamente presenta estadísticas no asociadas con un índice. *valor* es **nvarchar (5)** con un valor predeterminado es STATS.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

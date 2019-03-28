@@ -16,12 +16,12 @@ ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57866bdc46e88587d0d8b3db27a416c8153b6003
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 85f9104d9a9bb634dd10dfb588cf07e01d1c1fb1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773907"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535927"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,29 +41,25 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@type** =] **'***tipo***'**  
- Es el tipo de procedimiento almacenado personalizado o el script que se registra. *tipo* es **varchar (16)**, no tiene ningún valor predeterminado y puede ser uno de los siguientes valores.  
+`[ @type = ] 'type'` Se está registrando el tipo de procedimiento almacenado personalizado o el script. *tipo* es **varchar (16)**, no tiene ningún valor predeterminado y puede ser uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**insert**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción INSERT.|  
-|**Actualización de**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción UPDATE.|  
+|**update**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción UPDATE.|  
 |**delete**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción DELETE.|  
 |**custom_script**|El script se ejecuta al final del desencadenador de lenguaje de definición de datos (DDL).|  
   
- [ **@value**=] **'***valor***'**  
- Nombre de un procedimiento almacenado o nombre y ruta de acceso completa al archivo de script de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se está registrando. *valor* es **nvarchar (1024)**, no tiene ningún valor predeterminado.  
+`[ @value = ] 'value'` Nombre de un procedimiento almacenado o el nombre y la ruta de acceso completa a la [!INCLUDE[tsql](../../includes/tsql-md.md)] archivo de script que se va a registrar. *valor* es **nvarchar (1024)**, no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
 >  Si se especifica NULL *valor*anulará un script registrado con anterioridad, que es igual que ejecutar el parámetro [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
  Cuando el valor de *tipo* es **custom_script**, el nombre y ruta de acceso completa de un [!INCLUDE[tsql](../../includes/tsql-md.md)] se espera que el archivo de script. En caso contrario, *valor* debe ser el nombre de un procedimiento almacenado registrado.  
   
- [ **@publication**=] **'***publicación***'**  
- Nombre de la publicación para la que se está registrando el procedimiento almacenado personalizado o el script. *publicación* es **sysname**, su valor predeterminado es **NULL**.  
+`[ @publication = ] 'publication'` Nombre de la publicación para el que se está registrando el procedimiento almacenado personalizado o una secuencia de comandos. *publicación* es **sysname**, su valor predeterminado es **NULL**.  
   
- [ **@article**=] **'***artículo***'**  
- Nombre del artículo para el que se está registrando el procedimiento almacenado personalizado o el script. *artículo* es **sysname**, su valor predeterminado es **NULL**.  
+`[ @article = ] 'article'` Nombre del artículo para el que se está registrando el procedimiento almacenado personalizado o una secuencia de comandos. *artículo* es **sysname**, su valor predeterminado es **NULL**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

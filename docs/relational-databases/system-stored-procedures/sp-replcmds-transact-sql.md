@@ -16,12 +16,12 @@ ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c868fe69df1f3fd34fe0c1f550507e7db7b6c944
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 42d64a5a62fd1d1371604c7d8311ba42dabf7861
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823429"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529717"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@maxtrans=**] *maxtrans*  
- Es el número de transacciones para devolver información acerca de. *maxtrans* es **int**, su valor predeterminado es **1**, que especifica la siguiente transacción en espera para la distribución.  
+`[ @maxtrans = ] maxtrans` Es el número de transacciones para devolver información acerca de. *maxtrans* es **int**, su valor predeterminado es **1**, que especifica la siguiente transacción en espera para la distribución.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -52,16 +51,16 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**partial_command**|**bit**|Indica si se trata de un comando parcial o no.|  
 |**command**|**varbinary(1024)**|El valor del comando.|  
 |**xactid**|**binary(10)**|Id. de la transacción.|  
-|**xact_seqno**|**varbinary (16)**|El número de secuencia.|  
+|**xact_seqno**|**varbinary(16)**|El número de secuencia.|  
 |**publication_id**|**int**|Id. de la publicación.|  
-|**$command_id**|**int**|Identificador del comando en [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
+|**command_id**|**int**|Identificador del comando en [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
 |**command_type**|**int**|Tipo de comando.|  
 |**originator_srvname**|**sysname**|Servidor en el que se originó la transacción.|  
 |**originator_db**|**sysname**|Base de datos en la que se originó la transacción.|  
 |**pkHash**|**int**|Exclusivamente para uso interno.|  
 |**originator_publication_id**|**int**|Id. de la publicación en la que se originó la transacción.|  
 |**originator_db_version**|**int**|Versión de la base de datos en la que se originó la transacción.|  
-|**originator_lsn**|**varbinary (16)**|Identifica el número de flujo de registro (LSN) para el comando de la publicación en la que se origina.|  
+|**originator_lsn**|**varbinary(16)**|Identifica el número de flujo de registro (LSN) para el comando de la publicación en la que se origina.|  
   
 ## <a name="remarks"></a>Comentarios  
  **sp_replcmds** utilizado por el proceso del lector de registro en la replicación transaccional.  

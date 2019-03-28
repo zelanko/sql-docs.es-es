@@ -16,12 +16,12 @@ ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d75fde4ff1ccabd56243e1a1ccdff8051923fefb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 35e0ace5f88e15ce4afc0da797d949039398e898
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794897"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535926"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +39,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@agent_type=**] *agent_type*  
- Es el tipo de agente. *agent_type* es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
+`[ @agent_type = ] agent_type` Es el tipo de agente. *agent_type* es **int**, su valor predeterminado es **0**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -50,15 +49,14 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|Agente de mezcla|  
 |**9**|Agente de lectura de cola|  
   
- [  **@profile_id=**] *profile_id*  
- Es el identificador del perfil que se va a mostrar. *profile_id* es **int**, su valor predeterminado es **-1**, que devuelve todos los perfiles de la **MSagent_profiles** tabla.  
+`[ @profile_id = ] profile_id` Es el identificador del perfil que se mostrará. *profile_id* es **int**, su valor predeterminado es **-1**, que devuelve todos los perfiles de la **MSagent_profiles** tabla.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|Identificador del perfil.|  
-|**nombre_perfil**|**sysname**|Único para el tipo de agente.|  
+|**profile_name**|**sysname**|Único para el tipo de agente.|  
 |**agent_type**|**int**|**1** = agente de instantáneas<br /><br /> **2** = Agente lector del registro<br /><br /> **3** = agente de distribución<br /><br /> **4** = agente de mezcla<br /><br /> **9** = agente de lector de cola|  
 |**Tipo**|**int**|**0** = sistema<br /><br /> **1** = personalizado|  
 |**description**|**varchar(3000)**|Descripción del perfil.|  

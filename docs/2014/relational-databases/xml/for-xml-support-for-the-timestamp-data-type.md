@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - timestamp data type
 ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95f33ea5c042217f4d4e1fbc11353a1a2ee088b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 094cd2859c9973c2d91145de5960d4752800ce1a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204755"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538377"
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>Compatibilidad de FOR XML con el tipo de datos de marca de tiempo
   En la transformación FOR XML, los valores de tipo **timestamp** se tratan como datos **varbinary(8)** y siempre se codifican en base 64. El esquema XSD o XDR, si se solicita, refleja este tipo.  
@@ -37,7 +37,7 @@ for xml auto, xmldata
 go  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <Schema name="Schema1"   

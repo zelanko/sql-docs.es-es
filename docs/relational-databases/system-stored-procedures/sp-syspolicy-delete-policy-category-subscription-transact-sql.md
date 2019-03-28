@@ -18,12 +18,12 @@ ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2e93a3272e16af482afaaecb052f7a89ac04100e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 39a658a9e2d863f3e4ed8c60a69773e439757cc4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604065"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526327"
 ---
 # <a name="spsyspolicydeletepolicycategorysubscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- Es el identificador de la suscripción de categoría de directiva. *policy_category_subscription_id* es **int**.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` Es el identificador de la suscripción de categoría de directiva. *policy_category_subscription_id* es **int**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

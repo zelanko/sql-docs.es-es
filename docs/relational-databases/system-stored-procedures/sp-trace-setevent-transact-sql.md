@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266106"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538587"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@traceid=** ] *trace_id*  
- Es el id. del seguimiento que va a modificarse. *trace_id* es **int**, no tiene ningún valor predeterminado. El usuario utiliza este *trace_id* valor para identificar, modificar y controlar el seguimiento.  
+`[ @traceid = ] trace_id` Es el identificador del objeto trace que se puede modificar. *trace_id* es **int**, no tiene ningún valor predeterminado. El usuario utiliza este *trace_id* valor para identificar, modificar y controlar el seguimiento.  
   
- [  **@eventid=** ] *event_id*  
- Es el Id. del evento que se debe activar. *event_id* es **int**, no tiene ningún valor predeterminado.  
+`[ @eventid = ] event_id` Es el identificador del evento que se va a activar. *event_id* es **int**, no tiene ningún valor predeterminado.  
   
  Esta tabla muestra una lista de los eventos que pueden agregarse o quitarse de un seguimiento.  
   
@@ -239,8 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Guía de plan incorrecta|Indica que SQL Server no pudo generar un plan de ejecución para una consulta o lote que contenía una guía de plan. SQL Server intentó generar un plan de ejecución para esta consulta o lote sin aplicar la guía de plan. Una guía de plan no válida puede ser la causa de este problema. Puede utilizar la función del sistema sys.fn_validate_plan_guide para validar la guía de plan.|  
 |235|Audit Fulltext||  
   
- [  **@columnid=** ] *column_id*  
- Es el Id. de la columna que va a agregarse para el evento. *column_id* es **int**, no tiene ningún valor predeterminado.  
+`[ @columnid = ] column_id` Es el identificador de la columna que se agrega para el evento. *column_id* es **int**, no tiene ningún valor predeterminado.  
   
  En la tabla siguiente se muestra una lista de las columnas que pueden agregarse para un evento.  
   
@@ -274,7 +271,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |26|**ServerName**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ya sea *servername* o *nombreDeServidor\nombreDeInstancia*, que se va a realizar un seguimiento.|  
 |27|**EventClass**|Tipo de clase de evento que se está registrando.|  
 |28|**ObjectType**|Tipo de objeto, por ejemplo: tabla, función o procedimiento almacenado.|  
-|29|**NestLevel**|Nivel de anidamiento en el que se ejecuta este procedimiento almacenado. Consulte [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
+|29|**NestLevel**|Nivel de anidamiento en el que se ejecuta este procedimiento almacenado. See [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
 |30|**Estado**|Estado del servidor, si se produce un error.|  
 |31|**Error**|Número de error.|  
 |32|**Modo**|Modo de bloqueo del bloqueo adquirido. Esta columna no se llena con el **bloqueo: publicado** eventos.|  
@@ -311,7 +308,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a **sys.dm_exec_sql_text()** para recuperar el texto SQL asociado.|  
 |64|**SessionLoginName**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con **inicioDeSesión1** y ejecuta una instrucción como **inicioDeSesión2**, **SessionLoginName** muestra **inicioDeSesión1**y **LoginName** muestra **inicioDeSesión2**. En esta columna de datos se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|  
   
- **[ @on=]** *en*  
+ **[ @on=]** *on*  
  Especifica la activación o desactivación del evento mediante ON (1) u OFF (0). *en* es **bit**, no tiene ningún valor predeterminado.  
   
  Si *en* está establecido en **1**, y *column_id* es NULL, a continuación, el evento se establece en ON y se borran todas las columnas. Si *column_id* no es null, la columna se establece en ON para ese evento.  

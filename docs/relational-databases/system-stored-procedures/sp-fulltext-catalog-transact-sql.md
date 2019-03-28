@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab482a70374c9a11256719811db02dd4eb1586e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f97a1f480b360270d803c502dd40a6e1653b3935
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663243"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526447"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@ftcat=**] **'***fulltext_catalog_name***'**  
- Es el nombre del catálogo de texto completo. Los nombres de catálogo deben ser únicos en cada base de datos. *fulltext_catalog_name* es **sysname**.  
+`[ @ftcat = ] 'fulltext_catalog_name'` Es el nombre del catálogo de texto completo. Los nombres de catálogo deben ser únicos en cada base de datos. *fulltext_catalog_name* es **sysname**.  
   
- [  **@action=**] **'***acción***'**  
- Se trata de la acción que se va a realizar. *acción* es **varchar (20)**, y puede tener uno de estos valores.  
+`[ @action = ] 'action'` Es la acción que se realizará. *acción* es **varchar (20)**, y puede tener uno de estos valores.  
   
 > [!NOTE]  
 >  Los catálogos de texto completo se pueden crear, quitar o modificar como precise. No obstante, evite realizar cambios de esquema en varios catálogos al mismo tiempo. Estas acciones pueden realizarse mediante la **sp_fulltext_table** procedimiento almacenado, que es la manera recomendada.  
@@ -64,8 +62,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 |**Detener**|Detiene un rellenado del índice para *fulltext_catalog_name*. Se muestra un error si el catálogo no existe. No se muestra ninguna advertencia si el rellenado ya se ha detenido.|  
 |**Volver a generar**|Vuelve a generar *fulltext_catalog_name*. Cuando vuelve a generarse un catálogo, el catálogo existente se elimina y se crea uno nuevo en su lugar. Todas las tablas que tienen referencias de índices de texto completo se asocian al catálogo nuevo. La regeneración restablece los metadatos de texto completo de las tablas del sistema de la base de datos.<br /><br /> Si el seguimiento de cambios está establecido en OFF, la regeneración no hace que se vuelva a rellenar el catálogo de texto completo recién creado. En este caso, para volver a llenar, ejecute **sp_fulltext_catalog** con el **start_full** o **start_incremental** acción.|  
   
- [  **@path=**] **'***root_directory***'**  
- Es el directorio raíz (no la ruta física completa) de un **crear** acción. *root_directory* es **nvarchar (100)** y tiene un valor predeterminado es null, lo que indica el uso de la ubicación predeterminada especificada durante la instalación. Esto es el subdirectorio Ftdata del directorio Mssql; Por ejemplo, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. El directorio raíz especificado debe existir, residir en una unidad en el mismo equipo y constar de más datos que solo la letra de unidad, y no puede ser una ruta de acceso relativa. No se admiten las unidades de red, discos extraíbles, disquetes y rutas de acceso UNC. Los catálogos de texto completo deben crearse en una unidad de disco duro local asociada con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @path = ] 'root_directory'` Es el directorio raíz (no la ruta física completa) de un **crear** acción. *root_directory* es **nvarchar (100)** y tiene un valor predeterminado es null, lo que indica el uso de la ubicación predeterminada especificada durante la instalación. Esto es el subdirectorio Ftdata del directorio Mssql; Por ejemplo, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. El directorio raíz especificado debe existir, residir en una unidad en el mismo equipo y constar de más datos que solo la letra de unidad, y no puede ser una ruta de acceso relativa. No se admiten las unidades de red, discos extraíbles, disquetes y rutas de acceso UNC. Los catálogos de texto completo deben crearse en una unidad de disco duro local asociada con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **@path** solo es válido cuando *acción* es **crear**. Para acciones distintas a **crear** (**detener**, **recompilar**, y así sucesivamente), **@path** debe ser NULL o se omite.  
   
@@ -97,7 +94,7 @@ EXEC sp_fulltext_catalog 'Cat_Desc', 'create';
 GO  
 ```  
   
-### <a name="b-to-rebuild-a-full-text-catalog"></a>B. Para regenerar un catálogo de texto completo  
+### <a name="b-to-rebuild-a-full-text-catalog"></a>b. Para regenerar un catálogo de texto completo  
  En este ejemplo se vuelve a generar un catálogo de texto completo existente, **Cat_Desc**, en el **AdventureWorks2012** base de datos.  
   
 ```  

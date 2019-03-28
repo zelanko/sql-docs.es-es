@@ -18,12 +18,12 @@ ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 04a3fe5351b3c7fc3a6dd711e6e2d638b079c136
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2af55b8c5354dd90e80a0a2a9d149f56abdef27
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601823"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533875"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@principal_id** =] *principal_id*  
- El identificador de usuario de base de datos o del rol en el **msdb** base de datos de asociación que se va a cambiar. *principal_id* es **int**, su valor predeterminado es null. Cualquier *principal_id* o *principal_name* debe especificarse.  
+`[ @principal_id = ] principal_id` El identificador de usuario de base de datos o del rol en el **msdb** base de datos de asociación que se va a cambiar. *principal_id* es **int**, su valor predeterminado es null. Cualquier *principal_id* o *principal_name* debe especificarse.  
   
- [ **@principal_name** =] **'***principal_name***'**  
- El nombre de usuario de base de datos o del rol en el **msdb** base de datos de asociación que se va a actualizar. *principal_name* es **sysname**, su valor predeterminado es null. Cualquier *principal_id* o *principal_name* se puede especificar.  
+`[ @principal_name = ] 'principal_name'` El nombre de usuario de base de datos o del rol en el **msdb** base de datos de asociación que se va a actualizar. *principal_name* es **sysname**, su valor predeterminado es null. Cualquier *principal_id* o *principal_name* se puede especificar.  
   
- [ **@profile_id** =] *profile_id*  
- Identificador del perfil para la asociación que se va a cambiar. *profile_id* es **int**, su valor predeterminado es null. Cualquier *profile_id* o *profile_name* debe especificarse.  
+`[ @profile_id = ] profile_id` El identificador del perfil para la asociación a cambiar. *profile_id* es **int**, su valor predeterminado es null. Cualquier *profile_id* o *profile_name* debe especificarse.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- Nombre del perfil para la asociación que se va a cambiar. *nombre_perfil* es **sysname**, su valor predeterminado es null. Cualquier *profile_id* o *profile_name* debe especificarse.  
+`[ @profile_name = ] 'profile_name'` El nombre del perfil para la asociación a cambiar. *nombre_perfil* es **sysname**, su valor predeterminado es null. Cualquier *profile_id* o *profile_name* debe especificarse.  
   
- [ **@is_default** =] **'***is_default***'**  
- Determina si este perfil es el perfil predeterminado para el usuario de la base de datos. El usuario de la base de datos solo puede tener un perfil predeterminado. *is_default* es **bit**, no tiene ningún valor predeterminado.  
+`[ @is_default = ] 'is_default'` Es si este perfil es el perfil predeterminado para el usuario de base de datos. El usuario de la base de datos solo puede tener un perfil predeterminado. *is_default* es **bit**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

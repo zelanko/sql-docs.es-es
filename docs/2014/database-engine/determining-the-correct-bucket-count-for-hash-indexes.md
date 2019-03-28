@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377905"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536697"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinar el número correcto de depósitos para los índices hash
   Debe especificar un valor para el parámetro `BUCKET_COUNT` al crear la tabla optimizada para memoria. En este tema se hacen recomendaciones para determinar el valor adecuado para el parámetro `BUCKET_COUNT`. Si no puede determinar el número de cubos correcto, utilice un índice no clúster en su lugar.  Un valor incorrecto de `BUCKET_COUNT`, especialmente si es demasiado bajo, puede afectar significativamente el rendimiento de la carga de trabajo, así como afectar el tiempo de recuperación de la base de datos. Es mejor sobrestimar el número de cubos.  
@@ -38,7 +38,7 @@ ms.locfileid: "53377905"
 ### <a name="primary-key-and-unique-indexes"></a>Clave principal e índices únicos  
  Dado que el índice de clave principal es único, el número de valores distintos en la clave corresponde al número de filas de la tabla. Para una clave principal de ejemplo en (SalesOrderID, SalesOrderDetailID) de la tabla Sales.SalesOrderDetail de la base de datos AdventureWorks, ejecute la consulta siguiente para calcular el número de valores de clave principal distintos, que corresponde al número de filas de la tabla:  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [row count]   
 FROM Sales.SalesOrderDetail  
 ```  
@@ -48,7 +48,7 @@ FROM Sales.SalesOrderDetail
 ### <a name="non-unique-indexes"></a>Índices no únicos  
  Para otros índices, por ejemplo un índice de varias columnas en (SpecialOfferID, ProductID), ejecute la consulta siguiente para determinar el número de valores de clave de índice único:  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [SpecialOfferID_ProductID index key count]  
 FROM   
    (SELECT DISTINCT SpecialOfferID, ProductID   
@@ -65,7 +65,7 @@ FROM
 ## <a name="troubleshooting-the-bucket-count"></a>Solucionar problemas del número de depósitos  
  Para solucionar problemas de recuento de depósitos en tablas optimizadas para memoria, use [sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) para obtener estadísticas sobre los depósitos vacíos y la longitud de cadenas de fila. La siguiente consulta se puede utilizar para obtener estadísticas sobre todos los índices de hash de la base de datos actual. La consulta puede tardar varios minutos en ejecutarse si hay tablas de gran tamaño en la base de datos.  
   
-```tsql  
+```sql  
 SELECT   
    object_name(hs.object_id) AS 'object name',   
    i.name as 'index name',   
@@ -99,7 +99,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
   
  Por ejemplo, considere la tabla y el script siguientes para insertar filas de ejemplo de la tabla:  
   
-```tsql  
+```sql  
 CREATE TABLE [Sales].[SalesOrderHeader_test]  
 (  
    [SalesOrderID] [uniqueidentifier] NOT NULL DEFAULT (newid()),  

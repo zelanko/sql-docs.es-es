@@ -16,12 +16,12 @@ ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8eb21085625c7f2f0071c18da80501774088fdc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3f174940b27adbaba75efd6660f09140c403bf8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789377"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529887"
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
- Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null. El servidor debe estar configurado para publicación. Su valor es NULL para todos los publicadores.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null. El servidor debe estar configurado para publicación. Su valor es NULL para todos los publicadores.  
   
- [ **@publisherdb** =] **'***publisher_db***'** ]  
- Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null. Su valor es NULL para todas las bases de datos de publicaciones.  
+`[ @publisherdb = ] 'publisher_db' ]` Es el nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null. Su valor es NULL para todas las bases de datos de publicaciones.  
   
- [ **@publication** =] **'***publicación***'** ]  
- Es el nombre de la publicación. *publicación*es **sysname**, su valor predeterminado es null. Su valor es NULL para todas las publicaciones.  
+`[ @publication = ] 'publication' ]` Es el nombre de la publicación. *publicación*es **sysname**, su valor predeterminado es null. Su valor es NULL para todas las publicaciones.  
   
- [ **@tranid** =] **'***la transacción***'** ]  
- Es el identificador de la transacción. *la transacción*es **sysname**, su valor predeterminado es null. Su valor es NULL para todas las transacciones.  
+`[ @tranid = ] 'tranid' ]` Es el identificador de transacción. *la transacción*es **sysname**, su valor predeterminado es null. Su valor es NULL para todas las transacciones.  
   
  [**@queuetype=** ] **'***queuetype***'** ]  
  Es el tipo de cola que almacena las transacciones. *queuetype* es **tinyint** con un valor predeterminado de **0**, y puede tener uno de estos valores.  

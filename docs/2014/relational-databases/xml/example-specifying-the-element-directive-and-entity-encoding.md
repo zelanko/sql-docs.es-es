@@ -10,17 +10,17 @@ helpviewer_keywords:
 - ELEMENT directive
 - entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a90045a7a85bfc2c1397a1021125e9b413196b68
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 28e0e9f808820acc1959ccc11266174e5610600c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360807"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532397"
 ---
-# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Ejemplo: Especificar la directiva ELEMENT y la codificación de entidades
+# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Ejemplo: Especificación de la directiva ELEMENT y la codificación de entidades
   Este ejemplo muestra la diferencia entre las directivas **ELEMENT** y **XML** . La directiva **ELEMENT** crea entidades para los datos, pero la directiva **XML** no lo hace. Al elemento \<Summary> se le asigna XML, `<Summary>This is summary description</Summary>`, en la consulta.  
   
  Considere esta consulta:  

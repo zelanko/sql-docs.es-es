@@ -16,12 +16,12 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 41e5f03dbe8619ca2e00d70b2c569d90f75d2d2f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9e8695c847e6c5efce1869d55ec68e17bdee5800
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211285"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537217"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,17 +46,13 @@ sp_table_validation [ @table = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@table=**] **'***tabla***'**  
- Es el nombre de la tabla. *tabla* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @table = ] 'table'` Es el nombre de la tabla. *tabla* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@expected_rowcount=**] *expected_rowcount*salida  
- Especifica si se devuelve el número de filas esperado en la tabla. *expected_rowcount* es **int**, su valor predeterminado es null. Si es NULL, el recuento de filas real se devuelve como parámetro de salida. Si se proporciona un valor, dicho valor se compara con el recuento de filas real para identificar posibles diferencias.  
+`[ @expected_rowcount = ] expected_rowcountOUTPUT` Especifica si se debe devolver el número esperado de filas de la tabla. *expected_rowcount* es **int**, su valor predeterminado es null. Si es NULL, el recuento de filas real se devuelve como parámetro de salida. Si se proporciona un valor, dicho valor se compara con el recuento de filas real para identificar posibles diferencias.  
   
- [  **@expected_checksum=**] *expected_checksum*salida  
- Especifica si se devuelve la suma de comprobación esperada para la tabla. *expected_checksum* es **numérico**, su valor predeterminado es null. Si es NULL, la suma de comprobación real se devuelve como parámetro de salida. Si se proporciona un valor, dicho valor se compara con la suma de comprobación real para identificar posibles diferencias.  
+`[ @expected_checksum = ] expected_checksumOUTPUT` Especifica si se devuelve la suma de comprobación esperada para la tabla. *expected_checksum* es **numérico**, su valor predeterminado es null. Si es NULL, la suma de comprobación real se devuelve como parámetro de salida. Si se proporciona un valor, dicho valor se compara con la suma de comprobación real para identificar posibles diferencias.  
   
- [  **@rowcount_only=**] *type_of_check_requested*  
- Especifica qué tipo de suma de comprobación o recuento de filas se va a realizar. *type_of_check_requested* es **smallint**, su valor predeterminado es **1**.  
+`[ @rowcount_only = ] type_of_check_requested` Especifica qué tipo de suma de comprobación o recuento de filas para realizar. *type_of_check_requested* es **smallint**, su valor predeterminado es **1**.  
   
  Si **0**, realizar un recuento de filas y un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suma de comprobación compatible con 7.0.  
   
@@ -64,11 +60,9 @@ sp_table_validation [ @table = ] 'table'
   
  Si **2**, realizar un recuento de filas y binario de suma de comprobación.  
   
- [  **@owner=**] **'***propietario***'**  
- Es el nombre del propietario de la tabla. *propietario* es **sysname**, su valor predeterminado es null.  
+`[ @owner = ] 'owner'` Es el nombre del propietario de la tabla. *propietario* es **sysname**, su valor predeterminado es null.  
   
- [  **@full_or_fast=**] *full_or_fast*  
- Es el método utilizado para calcular el recuento de filas. *full_or_fast* es **tinyint**, su valor predeterminado es **2**, y puede tener uno de estos valores.  
+`[ @full_or_fast = ] full_or_fast` Es el método utilizado para calcular el recuento de filas. *full_or_fast* es **tinyint**, su valor predeterminado es **2**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -76,14 +70,11 @@ sp_table_validation [ @table = ] 'table'
 |**1**|Un recuento rápido desde **sysindexes.rows**. Recuento de filas en **sysindexes** es mucho más rápido que el recuento de filas en la tabla real. Sin embargo, dado que **sysindexes** constantemente actualizado, el recuento de filas puede no ser exacto.|  
 |**2** (predeterminado)|Realiza un recuento rápido condicional intentando primero el método rápido. Si el método rápido muestra diferencias, se utiliza el método completo. Si *expected_rowcount* es NULL y el procedimiento almacenado que se usa para obtener el valor, una completa COUNT(*) siempre se utiliza.|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- Si se está ejecutando el agente de distribución **sp_table_validation**, especifica si el agente de distribución debe cerrarse inmediatamente tras la finalización de la validación. *shutdown_agent* es **bit**, su valor predeterminado es **0**. Si **0**, el agente de replicación no se cierra. Si **1**, se produce el error 20578 y el agente de replicación se señala a apagar. Este parámetro se omite cuando **sp_table_validation** es ejecutado directamente por un usuario.  
+`[ @shutdown_agent = ] shutdown_agent` Si se está ejecutando el agente de distribución **sp_table_validation**, especifica si el agente de distribución debe cerrarse inmediatamente tras la finalización de la validación. *shutdown_agent* es **bit**, su valor predeterminado es **0**. Si **0**, el agente de replicación no se cierra. Si **1**, se produce el error 20578 y el agente de replicación se señala a apagar. Este parámetro se omite cuando **sp_table_validation** es ejecutado directamente por un usuario.  
   
- [  **@table_name =**] *table_name*  
- Es el nombre de tabla de la vista utilizada para los mensajes de salida. *table_name* es **sysname**, su valor predeterminado es **@table**.  
+`[ @table_name = ] table_name` Es el nombre de tabla de la vista utilizada para los mensajes de salida. *table_name* es **sysname**, su valor predeterminado es **@table**.  
   
- [ **@column_list**=] **'***column_list***'**  
- Es la lista de columnas que se deben utilizar en la función de suma de comprobación. *column_list* es **nvarchar (4000)**, su valor predeterminado es null. Habilita la validación de artículos de mezcla para especificar una lista de columnas que excluya las columnas calculadas y de marca de tiempo.  
+`[ @column_list = ] 'column_list'` Es la lista de columnas que se debe usar en la función de suma de comprobación. *column_list* es **nvarchar (4000)**, su valor predeterminado es null. Habilita la validación de artículos de mezcla para especificar una lista de columnas que excluya las columnas calculadas y de marca de tiempo.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  Si realiza una validación de suma de comprobación y la suma de comprobación esperada es igual a la suma de comprobación en la tabla, **sp_table_validation** devuelve un mensaje que la tabla ha pasado la validación de suma de comprobación. De lo contrario, devuelve un mensaje que indica que la tabla puede no estar sincronizada e informa de la diferencia entre el número de filas real y el esperado.  
@@ -103,7 +94,7 @@ sp_table_validation [ @table = ] 'table'
  Para ejecutar **sp_table_validation**, debe tener permisos SELECT en la tabla que se está validando.  
   
 ## <a name="see-also"></a>Vea también  
- [Suma de comprobación &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
+ [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)   
  [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
  [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   

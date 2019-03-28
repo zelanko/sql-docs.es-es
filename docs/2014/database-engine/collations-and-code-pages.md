@@ -10,12 +10,12 @@ ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4238e512975d2f333ac066e6b0183c60ead7d97d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118175"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536537"
 ---
 # <a name="collations-and-code-pages"></a>Intercalaciones y páginas de códigos
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] tiene restricciones en cuanto a las páginas de códigos compatibles para las columnas (var)char en las tablas optimizadas para memoria y las intercalaciones compatibles empleadas en índices y procedimientos almacenados compilados de forma nativa.  
@@ -31,7 +31,7 @@ ms.locfileid: "48118175"
 > [!IMPORTANT]  
 >  No puede usar order by o group by en columnas de cadena de índice que no empleen la intercalación BIN2.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP  
   
 ALTER DATABASE IMOLTP ADD FILEGROUP IMOLTP_mod CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -60,7 +60,7 @@ GO
   
 -   Las columnas (var)char de las tablas optimizadas para memoria deben utilizar la intercalación de la página de códigos 1252. Esta restricción no se aplica a las columnas n(var)char. El código siguiente recupera todas las intercalaciones 1252:  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for (var)char columns in memory-optimized tables  
     select * from sys.fn_helpcollations()  
     where collationproperty(name, 'codepage') = 1252;  
@@ -70,7 +70,7 @@ GO
   
 -   Los índices en columnas (n)(var)char solo se pueden especificar con intercalaciones BIN2 (vea el primer ejemplo). La consulta siguiente recupera todas las intercalaciones BIN2 admitidas:  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for indexes on memory-optimized tables and   
     -- comparison/sorting in natively compiled stored procedures  
     select * from sys.fn_helpcollations() where name like '%BIN2'  
@@ -84,7 +84,7 @@ GO
   
 -   El truncamiento de los datos UTF-16 no se admite dentro de procedimientos almacenados compilados de forma nativa. Esto significa que char n (var) (*n*) los valores no se puede convertir al tipo n (var) char (*i*), si *i* < *n*, si el intercalación tiene la propiedad _SC. Por ejemplo, la siguiente vista no se admite:  
   
-    ```tsql  
+    ```sql  
     -- column definition using an _SC collation  
      c2 nvarchar(200) collate Latin1_General_100_CS_AS_SC not null   
     -- assignment to a smaller variable, requiring truncation  
@@ -98,7 +98,7 @@ GO
   
  El ejemplo siguiente muestra algunas de las implicaciones y las soluciones alternativas para las limitaciones de la intercalación en OLTP en memoria. El ejemplo utiliza la tabla employees especificada anteriormente. En este ejemplo se enumeran todos los empleados. Observe que, para LastName, debido a la intercalación binaria, los nombres en mayúsculas se clasifican antes que los nombres en minúsculas. Por consiguiente, 'Thomas' viene antes de 'nolan' porque los caracteres en mayúsculas tienen puntos de código inferiores. FirstName tiene una intercalación sin distinción entre mayúsculas y minúsculas. Así, la clasificación se realiza según la letra del alfabeto, no por el punto de código de los caracteres.  
   
-```tsql  
+```sql  
 -- insert a number of values  
 INSERT Employees VALUES (1,'thomas', 'john')  
 INSERT Employees VALUES (2,'Thomas', 'rupert')  

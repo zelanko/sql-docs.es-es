@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 883496e1a0f31e69b09c8e4f5eeebdb94e006e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7eecd8743d24ab783e163ab10abc0441362b37a4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732743"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528138"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@proxy_id =** ] *Id.*  
- Número de identificación del proxy al que se va a conceder acceso. El *proxy_id* es **int**, su valor predeterminado es null. Cualquier *proxy_id* o *proxy_name* debe especificarse, pero no se pueden especificar ambos.  
+`[ @proxy_id = ] id` El número de identificación del proxy del servidor proxy para conceder acceso. El *proxy_id* es **int**, su valor predeterminado es null. Cualquier *proxy_id* o *proxy_name* debe especificarse, pero no se pueden especificar ambos.  
   
- [  **@proxy_name =** ] **'***proxy_name***'**  
- Nombre del proxy al que se va a conceder el acceso. El *proxy_name* es **sysname**, su valor predeterminado es null. Cualquier *proxy_id* o *proxy_name* debe especificarse, pero no se pueden especificar ambos.  
+`[ @proxy_name = ] 'proxy_name'` El nombre del servidor proxy para conceder acceso. El *proxy_name* es **sysname**, su valor predeterminado es null. Cualquier *proxy_id* o *proxy_name* debe especificarse, pero no se pueden especificar ambos.  
   
- [  **@subsystem_id =** ] *Id.*  
- Número de Id. del subsistema al que se va a conceder el acceso. El *subsystem_id* es **int**, su valor predeterminado es null. Cualquier *subsystem_id* o *subsystem_name* debe especificarse, pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
+`[ @subsystem_id = ] id` El número de Id. del subsistema para conceder acceso a. El *subsystem_id* es **int**, su valor predeterminado es null. Cualquier *subsystem_id* o *subsystem_name* debe especificarse, pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -64,8 +61,7 @@ sp_grant_proxy_to_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] ejecución de paquetes|  
 |**12**|Script de PowerShell|  
   
- [  **@subsystem_name =** ] **'***subsystem_name***'**  
- Nombre del subsistema al que se va a conceder el acceso. El **subsystem_name** es **sysname**, su valor predeterminado es null. Cualquier *subsystem_id* o *subsystem_name* debe especificarse, pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
+`[ @subsystem_name = ] 'subsystem_name'` El nombre del subsistema para conceder acceso a. El **subsystem_name** es **sysname**, su valor predeterminado es null. Cualquier *subsystem_id* o *subsystem_name* debe especificarse, pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -102,7 +98,7 @@ EXEC dbo.sp_grant_proxy_to_subsystem
 GO  
 ```  
   
-### <a name="b-granting-access-to-a-subsystem-by-name"></a>B. Conceder acceso a un subsistema mediante el nombre.  
+### <a name="b-granting-access-to-a-subsystem-by-name"></a>b. Conceder acceso a un subsistema mediante el nombre.  
  En el siguiente ejemplo se concede acceso al proxy `Catalog application proxy` al subsistema de ejecución de paquetes SSIS.  
   
 ```  

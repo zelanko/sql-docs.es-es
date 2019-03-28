@@ -10,15 +10,15 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 365a47a47abd0e74c1716971998f145501a3cae4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150989"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530187"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Conceder permisos para una colección de esquemas XML
   Puede conceder permisos para crear una colección de esquemas XML y también puede concederlos para un objeto de colección de esquemas XML.  
@@ -57,11 +57,11 @@ ms.locfileid: "48150989"
   
 -   El permiso TAKE OWNERSHIP es necesario para transferir la propiedad de la colección de esquemas XML de una entidad de seguridad a otra.  
   
--   El permiso REFERENCES permite que la entidad de seguridad para usar la colección de esquemas XML para escribir o restringir `xml` columnas en tablas, vistas y parámetros de tipo. El permiso REFERENCES también es necesario cuando una colección de esquemas XML hace referencia a otra.  
+-   El permiso REFERENCES permite que la entidad de seguridad utilice la colección de esquemas XML para escribir o restringir columnas de tipo `xml` en tablas, vistas y parámetros. El permiso REFERENCES también es necesario cuando una colección de esquemas XML hace referencia a otra.  
   
 -   El permiso VIEW DEFINITION permite que la entidad de seguridad consulte el contenido de una colección de esquemas XML a través de XML_SCHEMA_NAMESPACE o de las vistas de catálogo, siempre que esta entidad de seguridad tenga uno de los permisos ALTER, REFERENCES o CONTROL en la colección.  
   
--   El permiso EXECUTE es necesario para validar valores insertados o actualizados por la entidad de seguridad frente a la colección de esquemas XML que está escribiendo o restringiendo el `xml` escribir columnas, variables y parámetros. También necesita este permiso para consultar el XML almacenado en estas columnas y variables.  
+-   El permiso EXECUTE es necesario para validar valores insertados o actualizados por la entidad de seguridad según la colección de esquemas XML que está escribiendo o restringiendo los parámetros, variables y columnas de tipo `xml`. También necesita este permiso para consultar el XML almacenado en estas columnas y variables.  
   
 ## <a name="examples"></a>Ejemplos  
  Los escenarios de los ejemplos siguientes ilustran el funcionamiento de los permisos de los esquemas XML. En cada ejemplo se crea la base de datos de prueba, los esquemas relacionales y los inicios de sesión necesarios. A estos inicios de sesión se les conceden los permisos necesarios para la colección de esquemas XML. Al final, cada ejemplo realiza las operaciones de limpieza necesarias.  
@@ -120,7 +120,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>B. Conceder permisos para utilizar una colección de esquemas XML existente  
+### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>b. Conceder permisos para utilizar una colección de esquemas XML existente  
  El ejemplo siguiente muestra el modelo de permisos para la colección de esquemas XML. Ilustra los diferentes permisos que se necesitan para crear y utilizar la colección de esquemas XML.  
   
  En el ejemplo, se crea una base de datos de prueba y un inicio de sesión, `TestLogin1`. `TestLogin1` crea una colección de esquemas XML en la base de datos. El inicio de sesión crea una tabla y utiliza la colección de esquemas XML para crear una columna xml con tipo. A continuación, el usuario inserta los datos y los consulta. Todos estos pasos requieren los permisos de esquema necesarios que muestra el código.  

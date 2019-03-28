@@ -11,12 +11,12 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a75375ae8636cd3c8861030131ce08c63832460
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 46d4018e125633319ed6d235873f56720fbe6bc2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404289"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534687"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lección 6: Migrar una base de datos de una máquina de origen local a un equipo de destino de Windows Azure
   En esta lección se supone que ya tiene otro servidor SQL Server, que puede residir en otro equipo local o en una máquina virtual de Windows Azure. Para obtener información sobre cómo crear una máquina virtual de SQL Server en Windows Azure, consulte [aprovisionamiento de una máquina Virtual de SQL Server en Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Después de aprovisionar una máquina virtual de SQL Server en Windows Azure, asegúrese de que puede conectarse a una instancia de SQL Server en esta máquina virtual a través de SQL Server Management Studio en otro equipo.  
@@ -53,7 +53,7 @@ ms.locfileid: "52404289"
   
         3.  Copie y pegue el ejemplo siguiente en la ventana de consulta, y modifíquelo como sea necesario. La siguiente instrucción crea una credencial de SQL Server para almacenar el certificado de acceso compartido del contenedor de almacenamiento.  
   
-            ```tsql  
+            ```sql  
   
             USE master   
             GO   
@@ -66,13 +66,13 @@ ms.locfileid: "52404289"
   
         4.  Para ver todas las credenciales disponibles, puede ejecutar la siguiente instrucción en la ventana de consulta:  
   
-            ```tsql  
+            ```sql  
             SELECT * from sys.credentials   
             ```  
   
         5.  Cuando se conecte al servidor de destino, abra la ventana de consulta y ejecute:  
   
-            ```tsql  
+            ```sql  
   
             -- Create a master key and a server certificate   
             USE master   
@@ -94,7 +94,7 @@ ms.locfileid: "52404289"
   
     2.  A continuación, cree una base de datos con los archivos de registro y de datos que señalan a los archivos existentes en Azure Storage con la opción FOR ATTACH. En la ventana de consulta, ejecute la instrucción siguiente:  
   
-        ```tsql  
+        ```sql  
   
         --Create a database on the destination server   
         CREATE DATABASE TestDB1onDest   
@@ -113,7 +113,7 @@ ms.locfileid: "52404289"
   
     4.  Después, en la ventana de consulta, ejecute la instrucción siguiente:  
   
-        ```tsql  
+        ```sql  
   
         USE TestDB1onDest   
         SELECT * FROM Table1;   

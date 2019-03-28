@@ -18,12 +18,12 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36e00cf0e5d39722fee1c60fc86f0e6f81fd7e43
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 982596981c6c363abcad57b94427fcb4178c2c65
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100360"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532887"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +44,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@job_id=** ] *job_id*  
- El número de identificación del trabajo. *job_id*es **uniqueidentifier**, su valor predeterminado es null.  
+`[ @job_id = ] job_id` El número de identificación del trabajo. *job_id*es **uniqueidentifier**, su valor predeterminado es null.  
   
- [  **@job_name=** ] **'**_job_name_**'**  
- Nombre del trabajo. *job_name*es **sysname**, su valor predeterminado es null.  
+`[ @job_name = ] 'job_name'` El nombre del trabajo. *job_name*es **sysname**, su valor predeterminado es null.  
   
-> **NOTA:** Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
+> [!NOTE]
+> Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.
+
+`[ @schedule_name = ] 'schedule_name'` El nombre del elemento de programación del trabajo. *schedule_name*es **sysname**, su valor predeterminado es null.  
   
- [  **@schedule_name=** ] **'**_schedule_name_**'**  
- Nombre del elemento de programación del trabajo. *schedule_name*es **sysname**, su valor predeterminado es null.  
+`[ @schedule_id = ] schedule_id` El número de identificación del elemento de programación del trabajo. *schedule_id*es **int**, su valor predeterminado es null.  
   
- [  **@schedule_id=** ] *schedule_id*  
- Número de identificación del elemento de programación del trabajo. *schedule_id*es **int**, su valor predeterminado es null.  
-  
- [  **@include_description=** ] *include_description*  
- Especifica si se va a incluir la descripción de la programación en el conjunto de resultados. *include_description* es **bit**, su valor predeterminado es **0**. Cuando *include_description* es **0**, la descripción de la programación no se incluye en el conjunto de resultados. Cuando *include_description* es **1**, la descripción de la programación se incluye en el conjunto de resultados.  
+`[ @include_description = ] include_description` Especifica si se debe incluir la descripción de la programación en el conjunto de resultados. *include_description* es **bit**, su valor predeterminado es **0**. Cuando *include_description* es **0**, la descripción de la programación no se incluye en el conjunto de resultados. Cuando *include_description* es **1**, la descripción de la programación se incluye en el conjunto de resultados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -152,5 +148,3 @@ GO
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  

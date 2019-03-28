@@ -16,12 +16,12 @@ ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 128efbfb754508cf3ad395c89b2085f7f8b6297e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783039"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532737"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@article_resolver =** ] **'***article_resolver***'**  
- Especifica el nombre de la lógica de negocios personalizada cuyo registro se está cancelando. *article_resolver* es **nvarchar (255)**, no tiene ningún valor predeterminado. Si la lógica de negocios que se va a quitar es un componente COM, este parámetro es el nombre descriptivo del componente. Si la lógica de negocios es un ensamblado de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, este parámetro es el nombre del ensamblado.  
+`[ @article_resolver = ] 'article_resolver'` Especifica el nombre de la lógica de negocios personalizada que se va a anular el registro. *article_resolver* es **nvarchar (255)**, no tiene ningún valor predeterminado. Si la lógica de negocios que se va a quitar es un componente COM, este parámetro es el nombre descriptivo del componente. Si la lógica de negocios es un ensamblado de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, este parámetro es el nombre del ensamblado.  
   
- [ **@resolver_clsid**=] **'***resolver_clsid***'** salida  
- Es el valor CLSID del objeto COM asociado con el nombre de la lógica de negocios personalizada especificada en el *article_resolver* parámetro. *resolver_clsid* es **nvarchar (50)**, su valor predeterminado es null.  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` Es el valor CLSID del objeto COM asociado con el nombre de la lógica de negocios personalizada especificada en el *article_resolver* parámetro. *resolver_clsid* es **nvarchar (50)**, su valor predeterminado es null.  
   
- [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'** salida  
- Especifica el tipo de la lógica de negocios personalizada que se va a registrar. *is_dotnet_assembly* es **bit**, su valor predeterminado es 0. **1** indica que la lógica de negocios personalizada que se va a registrar es un controlador de lógica de negocios de ensamblado; **0** indica que es un componente COM.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Especifica el tipo de lógica de negocios personalizada que se va a registrar. *is_dotnet_assembly* es **bit**, su valor predeterminado es 0. **1** indica que la lógica de negocios personalizada que se va a registrar es un controlador de lógica de negocios de ensamblado; **0** indica que es un componente COM.  
   
- [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***'** salida  
- Es el nombre del ensamblado que implementa el controlador de lógica de negocios. *dotnet_assembly_name* es **nvarchar (255)**, su valor predeterminado es null.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` Es el nombre del ensamblado que implementa el controlador de lógica de negocios. *dotnet_assembly_name* es **nvarchar (255)**, su valor predeterminado es null.  
   
- [  **@dotnet_class_name=** ] **'***dotnet_class_name***'** salida  
- Es el nombre de la clase que reemplaza <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar el controlador de lógica de negocios. *dotnet_class_name* es **nvarchar (255)**, su valor predeterminado es null.  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` Es el nombre de la clase que invalida <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar el controlador de lógica de negocios. *dotnet_class_name* es **nvarchar (255)**, su valor predeterminado es null.  
   
- [  **@publisher=** ] **'***publisher***'**  
- Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null. Utilice este parámetro si no se llama al procedimiento almacenado desde el publicador. Si no se especifica, se da por supuesto que el servidor local es el publicador.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null. Utilice este parámetro si no se llama al procedimiento almacenado desde el publicador. Si no se especifica, se da por supuesto que el servidor local es el publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -75,7 +69,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
  Solo los miembros de la **db_owner** rol fijo de base de datos en la base de datos de publicación puede ejecutar **sp_lookupcustomresolver**.  
   
 ## <a name="see-also"></a>Vea también  
- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detección y resolución de conflictos de replicación de mezcla avanzada](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Ejecutar lógica de negocios durante la sincronización de mezcla](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  (Implementar un controlador de lógica de negocios para un artículo de mezcla)  
  [Especificar a un solucionador de artículos de mezcla](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   

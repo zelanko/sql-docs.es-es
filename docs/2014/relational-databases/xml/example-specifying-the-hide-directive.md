@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Especificar la directiva HIDE | Microsoft Docs'
+title: 'Ejemplo: Especificación de la directiva HIDE | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - HIDE directive
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26c71a7012cb69a50bf7d3d7223b35aedcfcc570
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 901fa0d72798862f54ebc23131870b704538cb8a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357091"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531807"
 ---
-# <a name="example-specifying-the-hide-directive"></a>Ejemplo: Especificar la directiva HIDE
+# <a name="example-specifying-the-hide-directive"></a>Ejemplo: Especificación de la directiva HIDE
   En este ejemplo se muestra el uso de la directiva **HIDE** . Esta directiva es útil cuando se desea que la consulta devuelva un atributo para ordenar las filas de la tabla universal devuelta por la consulta, pero no se desea que ese atributo aparezca en el documento XML resultante.  
   
  Esta consulta genera este XML:  

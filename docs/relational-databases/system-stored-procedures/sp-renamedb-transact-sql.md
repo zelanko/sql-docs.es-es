@@ -18,12 +18,12 @@ ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f61002319606a199354022a3fc33ce13a170539d
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: dd46309ebd44bdd16da132b9aef1c903ad1f4b78
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590250"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528347"
 ---
 # <a name="sprenamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@dbname=**] **'***old_name***'**  
- Es el nombre actual de la base de datos. *old_name* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @dbname = ] 'old_name'` Es el nombre de la base de datos actual. *old_name* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@newname=**] **'***new_name***'**  
- Es el nuevo nombre de la base de datos. *new_name* debe seguir las reglas para identificadores. *new_name* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @newname = ] 'new_name'` Es el nuevo nombre de la base de datos. *new_name* debe seguir las reglas para identificadores. *new_name* es **sysname**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  

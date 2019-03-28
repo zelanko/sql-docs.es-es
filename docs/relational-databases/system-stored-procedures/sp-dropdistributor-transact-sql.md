@@ -16,12 +16,12 @@ ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1e2bde09ee15af5ebf6ef48cfd52222fe030a937
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8f1a1baec088af48cd18972c177463fbb3f574eb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783017"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530687"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +39,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@no_checks=**] *no_checks*  
- Indica si se comprobará si existen objetos dependientes antes de quitar el distribuidor. *no_checks* es **bit**, su valor predeterminado es 0.  
+`[ @no_checks = ] no_checks` Indica si se comprobarán los objetos dependientes antes de quitar el distribuidor. *no_checks* es **bit**, su valor predeterminado es 0.  
   
  Si **0**, **sp_dropdistributor** comprobaciones para asegurarse de que se han quitado todos los objetos de publicación y distribución y el distribuidor.  
   
  Si **1**, **sp_dropdistributor** quita todos los objetos de publicación y distribución antes de desinstalar el distribuidor.  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Indica si este procedimiento almacenado se ejecuta sin conectarse al distribuidor. *ignore_distributor* es **bit**, su valor predeterminado es **0**.  
   
  Si **0**, **sp_dropdistributor** se conecta al distribuidor y quita todos los objetos de replicación. Si **sp_dropdistributor** no puede conectarse al distribuidor, el procedimiento almacenado, produce un error.  
   

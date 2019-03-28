@@ -16,12 +16,12 @@ ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 673baf1b41e3ffcceaa635191352af376008313e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ddf87e08b113d3512a8d824ff4abdf1359476e32
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779357"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530163"
 ---
 # <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +40,14 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@suser_sname=** ] **'***suser_sname***'**  
- Es el valor de SUSER_SNAME utilizado para definir una partición. *SUSER_SNAME* es **sysname**, su valor predeterminado es null. Proporcione este parámetro para limitar el conjunto de resultados tan solo a las particiones en que SUSER_SNAME se resuelve en el valor suministrado.  
+`[ @suser_sname = ] 'suser_sname'` Es el valor SUSER_SNAME utilizado para definir una partición. *SUSER_SNAME* es **sysname**, su valor predeterminado es null. Proporcione este parámetro para limitar el conjunto de resultados tan solo a las particiones en que SUSER_SNAME se resuelve en el valor suministrado.  
   
 > [!NOTE]  
 >  Cuando *suser_sname* se proporciona, *host_name* debe ser NULL  
   
- [  **@host_name=** ] **'***host_name***'**  
- Es el valor de HOST_NAME utilizado para definir una partición. *HOST_NAME* es **sysname**, su valor predeterminado es null. Proporcione este parámetro para limitar el conjunto de resultados tan solo a las particiones en que HOST_NAME se resuelve en el valor suministrado.  
+`[ @host_name = ] 'host_name'` Es el valor HOST_NAME utilizado para definir una partición. *HOST_NAME* es **sysname**, su valor predeterminado es null. Proporcione este parámetro para limitar el conjunto de resultados tan solo a las particiones en que HOST_NAME se resuelve en el valor suministrado.  
   
 > [!NOTE]  
 >  Cuando *suser_sname* se proporciona, *host_name* debe ser NULL  
@@ -59,9 +56,9 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**partición**|**int**|Identifica la partición del suscriptor.|  
-|**HOST_NAME**|**sysname**|Valor utilizado al crear la partición para una suscripción que está filtrada por el valor de la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función en el suscriptor.|  
-|**SUSER_SNAME**|**sysname**|Valor utilizado al crear la partición para una suscripción que está filtrada por el valor de la [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) función en el suscriptor.|  
+|**partition**|**int**|Identifica la partición del suscriptor.|  
+|**host_name**|**sysname**|Valor utilizado al crear la partición para una suscripción que está filtrada por el valor de la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función en el suscriptor.|  
+|**suser_sname**|**sysname**|Valor utilizado al crear la partición para una suscripción que está filtrada por el valor de la [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) función en el suscriptor.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Ubicación de la instantánea de datos filtrados para la partición del suscriptor.|  
 |**date_refreshed**|**datetime**|Última fecha en que el trabajo de instantáneas se ha ejecutado para generar la instantánea de datos filtrados para la partición.|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|Identifica el trabajo que crea la instantánea de datos filtrados para una partición.|  

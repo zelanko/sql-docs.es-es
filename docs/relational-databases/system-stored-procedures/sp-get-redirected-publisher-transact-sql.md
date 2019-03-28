@@ -14,12 +14,12 @@ ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22cc39e815fa5a98254f5bae3099da2745357b07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 49bffb24c5ddc45c1c6b88fb424ab419445819fb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819317"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529973"
 ---
 # <a name="spgetredirectedpublisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +39,11 @@ sp_get_redirected_publisher
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@original_publisher** =] **'***original_publisher***'**  
- El nombre de la base de datos que se va a publicar. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @original_publisher = ] 'original_publisher'` El nombre de la base de datos que se está publicando. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- El nombre de la base de datos que se va a publicar. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` El nombre de la base de datos que se está publicando. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@bypass_publisher_validation** = ] [0 | 1 ]  
- Se utiliza para omitir la validación del publicador redirigido. Si es 0, se realiza la validación. Si es 1, no se realiza la validación. *bypass_publisher_validation* es **bit**, su valor predeterminado es 0.  
+`[ @bypass_publisher_validation = ] [0 | 1 ]` Se utiliza para omitir la validación del publicador redirigido. Si es 0, se realiza la validación. Si es 1, no se realiza la validación. *bypass_publisher_validation* es **bit**, su valor predeterminado es 0.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

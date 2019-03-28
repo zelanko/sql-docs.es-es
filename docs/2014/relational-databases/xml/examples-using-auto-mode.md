@@ -9,20 +9,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 969721724f3d2dd171c56d5d62e56b41ec0ece73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081975"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538457"
 ---
 # <a name="examples-using-auto-mode"></a>Ejemplos: Usar el modo AUTO
   Los siguientes ejemplos ilustran el uso del modo AUTO. Muchas de estas consultas se especifican utilizando los documentos XML de instrucciones de fabricación de bicicletas almacenados en la columna Instructions de la tabla ProductModel en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Ejemplo: recuperar información de cliente, pedido y detalle del pedido  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Ejemplo: Recuperación de cliente, pedido e información detallada de pedidos  
  Esta consulta recupera información del cliente, pedidos y pedidos detallados de un cliente específico.  
   
 ```  
@@ -113,7 +113,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>Ejemplo: especificar columnas calculadas en el modo AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Ejemplo: Especificar columnas calculadas en el modo AUTO  
  Esta consulta devuelve nombres de cliente individuales concatenados y la información de los pedidos. La columna calculada se asigna al nivel más interno de ese punto, el elemento <`SOH`> en este ejemplo. Los nombres de cliente concatenados se agregan como atributos del elemento <`SOH`> en el resultado.  
   
 ```  
@@ -166,7 +166,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>Ejemplo: devolver datos binarios  
+## <a name="example-returning-binary-data"></a>Ejemplo: Devolver datos binarios  
  Esta consulta devuelve una fotografía del producto de la tabla `ProductPhoto` . `ThumbNailPhoto` es una columna `varbinary(max)` de la tabla `ProductPhoto`. De manera predeterminada, el modo `AUTO` devuelve a los datos binarios una referencia que es una dirección URL relativa de la raíz virtual de la base de datos donde se ejecuta la consulta. Se debe especificar el atributo clave `ProductPhotoID` para identificar la imagen. Al recuperar la referencia de una imagen como se muestra en este ejemplo, también debe especificarse la clave principal en la cláusula `SELECT` para identificar una fila de forma única.  
   
 ```  
@@ -176,7 +176,7 @@ WHERE ProductPhotoID=70
 FOR XML AUTO;  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
  `-- result`  
   
@@ -195,7 +195,7 @@ WHERE ProductPhotoID=70
 FOR XML AUTO, BINARY BASE64;  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
  `-- result`  
   
@@ -212,7 +212,7 @@ WHERE  ProductPhotoID=70
 FOR XML AUTO;  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
  `<Production.PRODUCTPHOTO`  
   
@@ -222,7 +222,7 @@ FOR XML AUTO;
   
  Eso puede ser un problema especialmente cuando se ejecutan consultas dbobject en una base de datos que distingue mayúsculas y minúsculas. Para evitarlo, el formato de mayúsculas y minúsculas del nombre de tabla o columna especificado en las consultas debe coincidir con el formato de mayúsculas y minúsculas del nombre de tabla o columna de la base de datos.  
   
-## <a name="example-understanding-the-encoding"></a>Ejemplo: descripción de la codificación  
+## <a name="example-understanding-the-encoding"></a>Ejemplo: Descripción de la codificación  
  Este ejemplo muestra varias codificaciones que tienen lugar en el resultado.  
   
  Cree esta tabla:  
@@ -243,7 +243,7 @@ INSERT INTO [Special Chars] VALUES ('&', 0x20), ('#', 0x20);
 SELECT * FROM [Special Chars] FOR XML AUTO;  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
  `<Special_x0020_Chars`  
   

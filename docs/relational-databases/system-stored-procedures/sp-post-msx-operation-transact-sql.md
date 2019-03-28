@@ -18,12 +18,12 @@ ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa0293daf2c7dacf65450d8d3b9323b2903e77ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f36ad40a2b16401218fe2a5927407464fe6ac11b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832703"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536136"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,29 +46,23 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@operation =**] **'***operación***'**  
- Tipo de la operación expuesta. *operación*es **varchar(64)**, no tiene ningún valor predeterminado. Las operaciones válidas dependen *object_type*.  
+`[ @operation = ] 'operation'` El tipo de operación para la operación expuesta. *operación*es **varchar(64)**, no tiene ningún valor predeterminado. Las operaciones válidas dependen *object_type*.  
   
 |Tipo de objeto|Operación|  
 |-----------------|---------------|  
-|**TRABAJO**|INSERT<br /><br /> UPDATE<br /><br /> Delete<br /><br /> START<br /><br /> STOP|  
-|**SERVIDOR**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
-|**PROGRAMACIÓN**|INSERT<br /><br /> UPDATE<br /><br /> Delete|  
+|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> SUPRIMIR<br /><br /> START<br /><br /> STOP|  
+|**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
+|**PROGRAMACIÓN**|INSERT<br /><br /> UPDATE<br /><br /> SUPRIMIR|  
   
- [  **@object_type =**] **'***objeto***'**  
- Tipo de objeto para el que se expone una operación. Los tipos válidos son **trabajo**, **SERVER**, y **programación**. *objeto* es **varchar(64)**, su valor predeterminado es **trabajo**.  
+`[ @object_type = ] 'object'` El tipo de objeto para el que se expone una operación. Los tipos válidos son **trabajo**, **SERVER**, y **programación**. *objeto* es **varchar(64)**, su valor predeterminado es **trabajo**.  
   
- [ **@job_id =**] *job_id*  
- Número de identificación del trabajo al que se aplica la operación. *job_id* es **uniqueidentifier**, no tiene ningún valor predeterminado. **0 x 00** indica todos los trabajos. Si *objeto* es **SERVER**, a continuación, *job_id*no es necesario.  
+`[ @job_id = ] job_id` El número de identificación del trabajo del trabajo al que se aplica la operación. *job_id* es **uniqueidentifier**, no tiene ningún valor predeterminado. **0 x 00** indica todos los trabajos. Si *objeto* es **SERVER**, a continuación, *job_id*no es necesario.  
   
- [  **@specific_target_server =**] **'***target_server***'**  
- Nombre del servidor de destino al que se aplica la operación especificada. Si *job_id* se especifica, pero *target_server* no se especifica, las operaciones se exponen para todos los trabajos del trabajo de los servidores. *target_server* es **nvarchar (30)**, su valor predeterminado es null.  
+`[ @specific_target_server = ] 'target_server'` El nombre del servidor de destino que se aplica la operación especificada. Si *job_id* se especifica, pero *target_server* no se especifica, las operaciones se exponen para todos los trabajos del trabajo de los servidores. *target_server* es **nvarchar (30)**, su valor predeterminado es null.  
   
- [  **@value =**] *valor*  
- Intervalo de sondeo, en segundos. *value* es de tipo **int**y su valor predeterminado es NULL. Especifique este parámetro solo si *operación* es **SET-POLL**.  
+`[ @value = ] value` El intervalo de sondeo, en segundos. *value* es de tipo **int**y su valor predeterminado es NULL. Especifique este parámetro solo si *operación* es **SET-POLL**.  
   
- [  **@schedule_uid=** ] *valor schedule_uid*  
- Identificador único de la programación a la que se aplica la operación. *valor schedule_uid* es **uniqueidentifier**, no tiene ningún valor predeterminado.  
+`[ @schedule_uid = ] schedule_uid` El identificador único para el plan al que se aplica la operación. *valor schedule_uid* es **uniqueidentifier**, no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d89fefdf575cdb7961df0ceae811184ca31fc51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b4d8fc3b59d3296a2996d37a190dc5c8e075744a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822539"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530347"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamaño de tabla y fila de las tablas con optimización para memoria
   Una tabla optimizada para memoria consta de una colección de filas e índices que contienen punteros a las filas. En una tabla optimizada para memoria, las filas no pueden ser mayores de 8060 bytes. Conocer el tamaño de una tabla optimizada para memoria le ayudará a saber si el equipo tiene memoria suficiente.  
@@ -72,7 +72,7 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
 |Sección|Tamaño|Comentarios|  
 |-------------|----------|--------------|  
-|Columnas de tipo superficial|SUM ([tamaño de tipos superficiales])<br /><br /> **Tamaño de los tipos individuales es como sigue:**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numérico (precisión < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(Precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
+|Columnas de tipo superficial|SUM ([tamaño de tipos superficiales])<br /><br /> **Tamaño de los tipos individuales es como sigue:**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numérico (precisión < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |Relleno superficial de la columna|Los valores posibles son:<br /><br /> 1, si hay columnas de tipo profundo y el tamaño total de datos de las columnas superficiales es un número impar.<br /><br /> De lo contrario, es 0|Los tipos profundos son (var)binary y (n)(var)char.|  
 |Matriz de desplazamiento para las columnas de tipo profundo|Los valores posibles son:<br /><br /> 0, si no hay columnas de tipos profundos<br /><br /> 2 + 2 * [número de columnas de tipo profundo], en caso contrario|Los tipos profundos son (var)binary y (n)(var)char.|  
 |Matriz NULL|[número de columnas que admiten valores NULL] / 8, redondeado a bytes completos.|La matriz tiene un bit por cada columna que admite valores NULL. Se redondea a bytes completos.|  
@@ -105,7 +105,7 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
 -   Primer cubo: (John, Beijing); (John, París); (Jane, Praga)  
   
--   Segundo cubo: (Susan, Bogotá)  
+-   Segundo cubo: (Susan, Bogota)  
   
  Las cadenas para el índice de la ciudad son las siguientes:  
   
@@ -117,14 +117,14 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
  Para un tiempo mayor que 200, la tabla contiene las filas siguientes:  
   
-|Nombre|City|  
+|Name|City|  
 |----------|----------|  
 |John|Beijing|  
 |Jane|Praga|  
   
  Sin embargo, cualquier transacción activa con el tiempo de inicio 100 verá la versión siguiente de la tabla:  
   
-|Nombre|City|  
+|Name|City|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Praga|  
@@ -135,7 +135,7 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
  Considere una tabla Orders con la definición siguiente:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -217,7 +217,7 @@ GO
   
  La memoria real asignada a esta tabla y usada por ella y sus índices se pueden obtener con la consulta siguiente:  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  

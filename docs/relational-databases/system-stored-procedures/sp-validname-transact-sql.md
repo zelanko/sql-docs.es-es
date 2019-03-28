@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68e3cd191dc397574e739faa62f315f018bcb466
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8cdd1fd6120f74030875dbe1d624f3b5b162c3d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836673"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529947"
 ---
 # <a name="spvalidname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name=** ] **'***nombre***'**  
- Es el nombre de la [identificadores](../../relational-databases/databases/database-identifiers.md) para que se va a comprobar la validez. *nombre* es **sysname**, no tiene ningún valor predeterminado. *nombre* no puede ser NULL, no puede ser una cadena vacía y no puede contener un carácter cero binario.  
+`[ @name = ] 'name'` Es el nombre de la [identificadores](../../relational-databases/databases/database-identifiers.md) para que se va a comprobar la validez. *nombre* es **sysname**, no tiene ningún valor predeterminado. *nombre* no puede ser NULL, no puede ser una cadena vacía y no puede contener un carácter cero binario.  
   
- [  **@raise_error=** ] *raise_error*  
- Especifica si se produce un error. *raise_error* es **bit**, su valor predeterminado es 1. Esto significa que aparecerán errores. 0 hace que no aparezca ningún mensaje de error.  
+`[ @raise_error = ] raise_error` Especifica si se produce un error. *raise_error* es **bit**, su valor predeterminado es 1. Esto significa que aparecerán errores. 0 hace que no aparezca ningún mensaje de error.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

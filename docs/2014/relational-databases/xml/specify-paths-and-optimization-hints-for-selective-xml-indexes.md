@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8d5493c63b48c627dbc2cb192d8e10f8bfc4a43
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533990"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528807"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Especificar rutas de acceso y sugerencias de optimización para índices XML selectivos
   En este tema se describe cómo especificar rutas de acceso del nodo al índice y sugerencias de optimización para indizar cuando se crean o modifican índices XML selectivos.  
@@ -61,7 +61,7 @@ ms.locfileid: "52533990"
   
  A continuación se muestra un ejemplo de un índice XML selectivo creado con las asignaciones predeterminadas. Para las tres rutas de acceso, se usa el tipo de nodo predeterminado (**xs:untypedAtomic**) y cardinalidad.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_default  
 ON Tbl(xmlcol)  
 FOR  
@@ -92,7 +92,7 @@ mypath03 = '/a/b/d'
   
  Puede optimizar el índice XML selectivo que se muestra de la manera siguiente:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_optimized  
 ON Tbl(xmlcol)  
 FOR  
@@ -116,7 +116,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
  Estudie la siguiente consulta:  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/d)[1]', 'NVARCHAR(200)')  
 FROM myXMLTable T  
@@ -124,7 +124,7 @@ FROM myXMLTable T
   
  La consulta especificada devuelve un valor de la ruta de acceso `/a/b/d` empaquetado en un tipos de datos NVARCHAR(200), por lo que el tipo de datos para especificar el nodo es obvio. Sin embargo, no hay ningún esquema para especificar la cardinalidad del nodo en XML sin tipo. Para especificar que el nodo `d` aparece como máximo una vez en su nodo primario `b`, cree un índice XML selectivo que use la sugerencia de optimización SINGLETON de la manera siguiente:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_US  
 ON Tbl(xmlcol)  
 FOR  
@@ -223,7 +223,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
      Examine la consulta simple siguiente sobre el [documento XML de ejemplo](#sample) de este tema:  
   
-    ```tsql  
+    ```sql  
     SELECT T.record FROM myXMLTable T  
     WHERE T.xmldata.exist('/a/b[./c = "43"]') = 1  
     ```  
@@ -238,7 +238,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
  Para mejorar el rendimiento de la instrucción SELECT mostrada anteriormente, puede crear el índice XML selectivo siguiente:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX simple_sxi  
 ON Tbl(xmlcol)  
 FOR  
@@ -251,7 +251,7 @@ FOR
 ### <a name="indexing-identical-paths"></a>Indizar rutas de acceso idénticas  
  No puede promover rutas de acceso idénticas como el mismo tipo de datos con nombres de ruta de acceso diferentes. Por ejemplo, la consulta siguiente genera un error porque `pathOne` y `pathTwo` son idénticas:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -262,7 +262,7 @@ FOR
   
  Sin embargo, puede promover rutas de acceso idénticas como tipos de datos diferentes con nombres distintos. Por ejemplo, la consulta siguiente ahora es aceptable porque los tipos de datos son diferentes:  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -278,7 +278,7 @@ FOR
   
  Esta es una expresión XQuery simple que usa el método exist():  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1  
 ```  
@@ -293,7 +293,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1
   
  Esta es una variación más compleja de la expresión XQuery anterior a la que se ha aplicado un predicado:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1  
 ```  
@@ -309,7 +309,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
   
  Esta es una consulta más compleja con una cláusula value():  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/c/d/e[./f = "SQL"]/g)[1]', 'nvarchar(100)')  
 FROM myXMLTable T  
@@ -327,7 +327,7 @@ FROM myXMLTable T
   
  Esta es una consulta que usa una cláusula FLWOR dentro de una cláusula exist(). (El nombre FLWOR proviene de las cinco cláusulas que pueden crear una expresión FLWOR de XQuery: for, let, where, order by y return).  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('  
   For $x in /a/b/c/d/e  
@@ -380,7 +380,7 @@ WHERE T.xmldata.exist('
   
  Considere el ejemplo siguiente:  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b[./c=5]') = 1  
 ```  

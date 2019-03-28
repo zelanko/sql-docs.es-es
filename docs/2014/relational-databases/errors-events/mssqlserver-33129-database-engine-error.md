@@ -12,12 +12,12 @@ ms.assetid: 83b5f368-f1a1-4a40-9bb6-c77e2dec690f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60be94308520f93c76f28ef5e0d1bbbf474dfdbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 991757d1bfeae8ecc0dec3a69d82c3dcab6415b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063745"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531657"
 ---
 # <a name="mssqlserver33129"></a>MSSQLSERVER_33129
     
@@ -38,7 +38,7 @@ ms.locfileid: "48063745"
 ## <a name="user-action"></a>Acción del usuario  
  El inicio de sesión de un grupo de Windows no se puede deshabilitar. Para quitar temporalmente un permiso de acceso concedido a un grupo de Windows, REVOQUE el permiso CONNECT del inicio de sesión del grupo de Windows. Los usuarios de Windows quizá sigan teniendo acceso a través de su inicio de sesión individual o de otro grupo de Windows. En el siguiente ejemplo se revoca el permiso de conexión al grupo de contabilidad del dominio WESTCOAST.  
   
-```tsql  
+```sql  
 REVOKE CONNECT TO [WESTCOAST\Accounting];  
 ```  
   

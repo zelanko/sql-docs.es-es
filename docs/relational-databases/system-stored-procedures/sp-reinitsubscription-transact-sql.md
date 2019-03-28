@@ -16,12 +16,12 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da8e0d9ab1959251bf5e41e35e4b3d647e072d8a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b9d03099ae48bf463df82d1392e97d4729ec518a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207342"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528787"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,32 +45,24 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=**] **'***publicación***'**  
- Es el nombre de la publicación. *publicación* es **sysname**, con un valor predeterminado es all.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, con un valor predeterminado es all.  
   
- [  **@article=**] **'***artículo***'**  
- Es el nombre del artículo. *artículo* es **sysname**, con un valor predeterminado es all. Para una publicación de actualización inmediata, *artículo* debe ser **todas**; en caso contrario, el procedimiento almacenado omite la publicación y notifica un error.  
+`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, con un valor predeterminado es all. Para una publicación de actualización inmediata, *artículo* debe ser **todas**; en caso contrario, el procedimiento almacenado omite la publicación y notifica un error.  
   
- [  **@subscriber=**] **'***suscriptor***'**  
- Es el nombre del suscriptor. *suscriptor* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor. *suscriptor* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@destination_db=**] **'***destination_db***'**  
- Es el nombre de la base de datos de destino. *destination_db* es **sysname**, con un valor predeterminado es all.  
+`[ @destination_db = ] 'destination_db'` Es el nombre de la base de datos de destino. *destination_db* es **sysname**, con un valor predeterminado es all.  
   
- [  **@for_schema_change=**] **'***for_schema_change***'**  
- Indica si la reinicialización se produce como resultado de un cambio de esquema en la base de datos de publicación. *for_schema_change* es **bit**, su valor predeterminado es 0. Si **0**, las suscripciones activas para las publicaciones que permiten la actualización inmediata se reactivan siempre y cuando toda la publicación y no solo algunos de los artículos se reinicialicen. Esto significa que la reinicialización se produce como resultado de un cambio de esquema. Si **1**, las suscripciones activas no se reactivan hasta que se ejecuta el agente de instantáneas.  
+`[ @for_schema_change = ] 'for_schema_change'` Indica si la reinicialización se produce como resultado un cambio de esquema en la base de datos de publicación. *for_schema_change* es **bit**, su valor predeterminado es 0. Si **0**, las suscripciones activas para las publicaciones que permiten la actualización inmediata se reactivan siempre y cuando toda la publicación y no solo algunos de los artículos se reinicialicen. Esto significa que la reinicialización se produce como resultado de un cambio de esquema. Si **1**, las suscripciones activas no se reactivan hasta que se ejecuta el agente de instantáneas.  
   
- [  **@publisher=** ] **'***publisher***'**  
- Especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es **sysname**, su valor predeterminado es null.  
+`[ @publisher = ] 'publisher'` Especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  *publicador* no debe usarse para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores.  
   
- [  **@ignore_distributor_failure=** ] *ignore_distributor_failure*  
- Permite la reinicialización incluso si el distribuidor no existe o está sin conexión. *ignore_distributor_failure* es **bit**, su valor predeterminado es 0. Si **0**, reinicialización se produce un error si el distribuidor no existe o está sin conexión.  
+`[ @ignore_distributor_failure = ] ignore_distributor_failure` Permite la reinicialización incluso si el distribuidor no existe o está sin conexión. *ignore_distributor_failure* es **bit**, su valor predeterminado es 0. Si **0**, reinicialización se produce un error si el distribuidor no existe o está sin conexión.  
   
- [  **@invalidate_snapshot=** ] *invalidate_snapshot*  
- Invalida la instantánea de publicación existente. *invalidate_snapshot* es **bit**, su valor predeterminado es 0. Si **1**, se genera una nueva instantánea para la publicación.  
+`[ @invalidate_snapshot = ] invalidate_snapshot` Invalida la instantánea de publicación existente. *invalidate_snapshot* es **bit**, su valor predeterminado es 0. Si **1**, se genera una nueva instantánea para la publicación.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

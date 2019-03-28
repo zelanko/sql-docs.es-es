@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cfbf93fc858f52cd35401bd80fe5ede7dee86a3d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 644873dd367705b02c3d14fcc7d95e0c9c81736e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591749"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536107"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +48,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_type=** ] **'**_job_type_**'**  
- Tipo de trabajo para modificar. *job_type* es **nvarchar (20)** con un valor predeterminado es 'capture'. Las entradas válidas son 'capture' y 'cleanup'.  
+`[ @job_type = ] 'job_type'` Tipo de trabajo para modificar. *job_type* es **nvarchar (20)** con un valor predeterminado es 'capture'. Las entradas válidas son 'capture' y 'cleanup'.  
   
- [ **@maxtrans** ] **=** _max_trans_  
- Número máximo de transacciones para procesar en cada ciclo de recorrido. *max_trans* es **int** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. Si se especifica, el valor debe ser un entero positivo.  
+`[ @maxtrans ] = max_trans_` Número máximo de transacciones para procesar en cada ciclo de examen. *max_trans* es **int** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. Si se especifica, el valor debe ser un entero positivo.  
   
  *max_trans* solo es válida para los trabajos de captura.  
   
- [ **@maxscans** ] **=** _max_scans_  
- Número máximo de ciclos de recorrido que se ejecutarán para extraer todas las filas del registro. *max_scans* es **int** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
+`[ @maxscans ] = max_scans_` Número máximo de ciclos de examen que se ejecutarán para extraer todas las filas del registro. *max_scans* es **int** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
   
  *max_scan* solo es válida para los trabajos de captura.  
   
- [ **@continuous** ] **=** _continua_  
- Indica si el trabajo de captura se ejecutará continuamente (1), o solo una vez (0). *continua* es **bit** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
+`[ @continuous ] = continuous_` Indica si el trabajo de captura se ejecutará continuamente (1), o solo una vez (0). *continua* es **bit** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
   
  Cuando *continua* = 1, el [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) examina el registro de trabajo y procesa hasta (*max_trans* \* *max_scans*) transacciones. A continuación, espera a que el número de segundos especificado en *polling_interval* antes de comenzar el recorrido del registro siguiente.  
   
@@ -74,18 +70,15 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *continua* solo es válida para los trabajos de captura.  
   
- [ **@pollinginterval** ] **=** _polling_interval_  
- Número de segundos entre los ciclos de recorrido del registro. *polling_interval* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
+`[ @pollinginterval ] = polling_interval_` Número de segundos entre ciclos de examen del registro. *polling_interval* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro.  
   
  *polling_interval* es válido sólo para la captura de los trabajos cuando *continua* está establecido en 1.  
   
- [ **@retention** ] **=** _retención_  
- Número de minutos durante los que las filas de cambio deben retenerse en las tablas de cambio. *retención* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. El valor máximo es 52494800 (100 años). Si se especifica, el valor debe ser un entero positivo.  
+`[ @retention ] = retention_` Número de minutos que las filas de cambios es se retendrán en tablas de cambios. *retención* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. El valor máximo es 52494800 (100 años). Si se especifica, el valor debe ser un entero positivo.  
   
  *retención* solo es válida para los trabajos de limpieza.  
   
- [  **@threshold=** ] **'**_eliminar umbral_**'**  
- Número máximo de entradas de eliminación que se pueden eliminar mediante el uso de una única instrucción en el proceso de limpieza. *eliminar umbral* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. *eliminar umbral* solo es válida para los trabajos de limpieza.  
+`[ @threshold = ] 'delete threshold'` Número máximo de entradas de eliminación que se pueden eliminar con una única instrucción en la limpieza. *eliminar umbral* es **bigint** su valor predeterminado es null, que no indica que ningún cambio para este parámetro. *eliminar umbral* solo es válida para los trabajos de limpieza.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -18,12 +18,12 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f034b1247f9865b83077ed11f644d6fdbbc4cecd
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5d135b3b4b0f9d63ccd89db04be259f3c7031b7e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589390"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538497"
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@table_server=** ] **'**_table_server_**'**  
- Es el nombre del servidor vinculado para el que se devuelve información de tabla. *table_server* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @table_server = ] 'table_server'` Es el nombre del servidor vinculado que se va a devolver información de la tabla. *table_server* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **,** [  **@table_name=** ] **'**_table_name_**'**]  
- Es el nombre de la tabla vinculado para la que se devuelve información de tipo de datos. *table_name*es **sysname**, su valor predeterminado es null.  
+``[ , [ @table_name = ] 'table_name']`` Es el nombre de la tabla para que se va a devolver información de tipo de datos. *table_name*es **sysname**, su valor predeterminado es null.  
   
- [  **@table_schema=** ] **'**_table_schema_**'**]  
- Es el esquema de la tabla. *TABLE_SCHEMA*es **sysname**, su valor predeterminado es null.  
+`[ @table_schema = ] 'table_schema']` Es el esquema de tabla. *TABLE_SCHEMA*es **sysname**, su valor predeterminado es null.  
   
- [  **@table_catalog=** ] **'**_table_catalog_**'**  
- Es el nombre de la base de datos en el que el especificado *table_name* reside. *TABLE_CATALOG* es **sysname**, su valor predeterminado es null.  
+`[ @table_catalog = ] 'table_catalog'` Es el nombre de la base de datos en el que el especificado *table_name* reside. *TABLE_CATALOG* es **sysname**, su valor predeterminado es null.  
   
- [  **@table_type=** ] **'**_table_type_**'**  
- Es el tipo de la tabla que se va a devolver. *TABLE_TYPE* es **sysname**, su valor predeterminado es null y puede tener uno de los siguientes valores.  
+`[ @table_type = ] 'table_type'` Es el tipo de la tabla para devolver. *TABLE_TYPE* es **sysname**, su valor predeterminado es null y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -71,8 +66,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|Nombre de una tabla de usuario.|  
 |**VIEW**|Nombre de una vista.|  
   
- [  **@fUsePattern=** ] **'**_fUsePattern_**'**  
- Determina si los caracteres **_**, **%**, **[**, y **]** se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es **bit**, su valor predeterminado es 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina si los caracteres **_**, **%**, **[**, y **]** se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es **bit**, su valor predeterminado es 1.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -82,9 +76,9 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Nombre del calificador de tabla. Varios productos DBMS admiten nombres de tres partes para tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En otros productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
-|**SEGÚN TABLE_SCHEM**|**sysname**|Nombre de propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre del usuario de base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
+|**TABLE_SCHEM**|**sysname**|Nombre de propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre del usuario de base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla. Este campo siempre devuelve un valor.|  
-|**TABLE_TYPE**|**varchar (32)**|Tabla, tabla del sistema o vista.|  
+|**TABLE_TYPE**|**varchar(32)**|Tabla, tabla del sistema o vista.|  
 |**COMENTARIOS**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
   
 ## <a name="remarks"></a>Comentarios  

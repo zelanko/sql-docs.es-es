@@ -18,12 +18,12 @@ ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c979104c30ec9b134f2d73acb2d85ecd22490371
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2b1616fdf7b690d61c6a2605cc15da2508a3fb9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854213"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534667"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@profile_id** =] *profile_id*  
- El identificador de perfil para la actualización. *profile_id* es **int**, su valor predeterminado es null. Al menos uno de *profile_id* o *profile_name* debe especificarse. Si se especifican los dos, el procedimiento cambia el nombre del perfil.  
+`[ @profile_id = ] profile_id` El identificador de perfil para la actualización. *profile_id* es **int**, su valor predeterminado es null. Al menos uno de *profile_id* o *profile_name* debe especificarse. Si se especifican los dos, el procedimiento cambia el nombre del perfil.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- Nombre del perfil que se va a actualizar o nombre nuevo del perfil. *nombre_perfil* es **sysname**, su valor predeterminado es null. Al menos uno de *profile_id* o *profile_name* debe especificarse. Si se especifican los dos, el procedimiento cambia el nombre del perfil.  
+`[ @profile_name = ] 'profile_name'` El nombre del perfil que desea actualizar o el nuevo nombre para el perfil. *nombre_perfil* es **sysname**, su valor predeterminado es null. Al menos uno de *profile_id* o *profile_name* debe especificarse. Si se especifican los dos, el procedimiento cambia el nombre del perfil.  
   
- [ **@description** =] **'***descripción***'**  
- La nueva descripción del perfil. *descripción* es **nvarchar (256)**, su valor predeterminado es null.  
+`[ @description = ] 'description'` La nueva descripción para el perfil. *descripción* es **nvarchar (256)**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

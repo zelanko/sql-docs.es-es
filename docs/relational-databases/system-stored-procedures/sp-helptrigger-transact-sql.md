@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dfb494c7b25d3a580059e4d1ad3250abbe91ee54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828983"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528597"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tabname=** ] **'***tabla***'**  
- Es el nombre de la tabla de la base de datos actual cuya información de desencadenadores se va a presentar. *tabla* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
+`[ @tabname = ] 'table'` Es el nombre de la tabla en la base de datos actual que se va a devolver información de desencadenadores. *tabla* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
   
- [  **@triggertype=** ] **'***tipo***'**  
- Es el tipo de desencadenador DML cuya información se va a presentar. *tipo* es **char(6)**, su valor predeterminado es null, y puede tener uno de estos valores.  
+`[ @triggertype = ] 'type'` Es el tipo de desencadenador DML para devolver información acerca de. *tipo* es **char(6)**, su valor predeterminado es null, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -66,7 +64,7 @@ sp_helptrigger [ @tabname = ] 'table'
 |**trigger_owner**|**sysname**|Nombre del propietario de la tabla donde se definió el desencadenador.|  
 |**isupdate**|**int**|1=Desencadenador UPDATE<br /><br /> 0=No es un desencadenador UPDATE|  
 |**isdelete**|**int**|1=Desencadenador DELETE<br /><br /> 0=No es un desencadenador DELETE|  
-|**propiedad IsInsert**|**int**|1=Desencadenador INSERT<br /><br /> 0=No es un desencadenador INSERT|  
+|**isinsert**|**int**|1=Desencadenador INSERT<br /><br /> 0=No es un desencadenador INSERT|  
 |**isafter**|**int**|1=Desencadenador AFTER<br /><br /> 0=No es un desencadenador AFTER|  
 |**isinsteadof**|**int**|1=Desencadenador INSTEAD OF<br /><br /> 0=No es un desencadenador INSTEAD OF|  
 |**trigger_schema**|**sysname**|Nombre del esquema al que pertenece el desencadenador.|  

@@ -18,12 +18,12 @@ ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d6e7c28e628254fd33269ab4ee200fee0067870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a01132d30a293bca084669a733834c7d034048e4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741053"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538187"
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@filegroupname =** ] **'***nombre***'**  
- Es el nombre lógico de cualquier grupo de archivos de la base de datos actual. *nombre* es **sysname**, su valor predeterminado es null. Si *nombre* no se especifica, se enumeran todos los grupos de archivos en la base de datos actual y se muestran solo el primer conjunto de resultados que se muestra en la sección conjuntos de resultados.  
+`[ @filegroupname = ] 'name'` Es el nombre lógico de cualquier grupo de archivos en la base de datos actual. *nombre* es **sysname**, su valor predeterminado es null. Si *nombre* no se especifica, se enumeran todos los grupos de archivos en la base de datos actual y se muestran solo el primer conjunto de resultados que se muestra en la sección conjuntos de resultados.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -50,20 +49,20 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**nombre de grupo**|**sysname**|Nombre del grupo de archivos.|  
-|**GroupID**|**smallint**|Identificador numérico del grupo de archivos.|  
-|**FileCount**|**int**|Número de archivos del grupo de archivos.|  
+|**groupname**|**sysname**|Nombre del grupo de archivos.|  
+|**groupid**|**smallint**|Identificador numérico del grupo de archivos.|  
+|**filecount**|**int**|Número de archivos del grupo de archivos.|  
   
  Si *nombre* está especificado, se devuelve una fila para cada archivo en el grupo de archivos.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|Nombre lógico del campo en el grupo de archivos.|  
-|**FileID**|**smallint**|Identificador numérico del archivo.|  
-|**Nombre de archivo**|**nchar(260)**|Nombre físico del archivo, incluida la ruta de acceso del directorio.|  
-|**size**|**nvarchar (15)**|Tamaño del archivo en kilobytes.|  
-|**tamaño máximo**|**nvarchar (15)**|Tamaño máximo del archivo.<br /><br /> Es el tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
-|**Crecimiento**|**nvarchar (15)**|Incremento de crecimiento del archivo. Indica la cantidad de espacio que se agrega al archivo cada vez que se necesita espacio.<br /><br /> 0 = El archivo tiene un tamaño fijo y no aumenta.|  
+|**fileid**|**smallint**|Identificador numérico del archivo.|  
+|**filename**|**nchar(260)**|Nombre físico del archivo, incluida la ruta de acceso del directorio.|  
+|**size**|**nvarchar(15)**|Tamaño del archivo en kilobytes.|  
+|**maxsize**|**nvarchar(15)**|Tamaño máximo del archivo.<br /><br /> Es el tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
+|**growth**|**nvarchar(15)**|Incremento de crecimiento del archivo. Indica la cantidad de espacio que se agrega al archivo cada vez que se necesita espacio.<br /><br /> 0 = El archivo tiene un tamaño fijo y no aumenta.|  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
@@ -80,7 +79,7 @@ EXEC sp_helpfilegroup;
 GO  
 ```  
   
-### <a name="b-returning-all-files-in-a-filegroup"></a>B. Devolver todos los archivos de un grupo de archivos  
+### <a name="b-returning-all-files-in-a-filegroup"></a>b. Devolver todos los archivos de un grupo de archivos  
  En el siguiente ejemplo se devuelve información para todos los archivos del grupo de archivos `PRIMARY` de la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  

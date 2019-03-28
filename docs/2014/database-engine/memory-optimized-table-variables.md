@@ -10,15 +10,15 @@ ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c2035a5fba0d5ab37f0a545701551d5e7dfe80d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065795"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530747"
 ---
 # <a name="memory-optimized-table-variables"></a>Variables de tabla con optimización para memoria
-  Además de a las tablas optimizadas para memoria (para acceso de datos eficaz) y nativa de los procedimientos almacenados (para el procesamiento de consultas eficaz y la ejecución de lógica de negocios) compilados [!INCLUDE[hek_2](../includes/hek-2-md.md)] introduce una tercera clase de objeto: el tipo de tabla optimizada para memoria. Una variable de tabla creada mediante un tipo de tabla optimizada para memoria es una variable de tabla optimizada para memoria.  
+  Además de las tablas optimizadas para memoria (para el acceso eficaz a los datos) y los procedimientos almacenados compilados de forma nativa (para el procesamiento de consultas y la ejecución de lógica de negocios de forma eficaz), [!INCLUDE[hek_2](../includes/hek-2-md.md)] presenta una tercera clase de objeto: el tipo de tabla optimizada para memoria. Una variable de tabla creada mediante un tipo de tabla optimizada para memoria es una variable de tabla optimizada para memoria.  
   
  Las variables de tabla con optimización para memoria proporcionan las ventajas siguientes en comparación con las variables de tabla basadas en disco:  
   
@@ -36,11 +36,11 @@ ms.locfileid: "48065795"
   
 -   Se pueden usar variables de tabla para simular cursores en los procedimientos almacenados compilados de forma nativa, lo que puede ayudarle a evitar limitaciones del área expuesta en procedimientos almacenados compilados de forma nativa.  
   
- Al igual que las tablas optimizadas para memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera un archivo DLL para cada tipo de tabla optimizada para memoria. (Se invoca la compilación cuando se crea el tipo de tabla optimizada para memoria y no cuando se utiliza para crear variables de tabla optimizada para memoria). Este archivo DLL incluye las funciones para obtener acceso a los índices y recuperar los datos de las variables de tabla. Cuando una variable de tabla optimizada para memoria se declara basándose en el tipo de tabla, se crea una instancia de las estructuras de tabla y de índice correspondientes al tipo de tabla en la sesión de usuario. La variable de tabla se puede usar del mismo modo que las variables de tabla basadas en disco. Puede insertar, actualizar y eliminar filas en la variable de tabla, y puede usar las variables en las consultas de [!INCLUDE[tsql](../includes/tsql-md.md)]. También puede pasar las variables a procedimientos almacenados compilados de forma nativa e interpretados, como parámetros con valores de tabla (TVP).  
+ Igual que las tablas optimizadas para memoria, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] genera un archivo DLL para cada tipo de tabla optimizada para memoria. (Se invoca la compilación cuando se crea el tipo de tabla optimizada para memoria y no cuando se utiliza para crear variables de tabla optimizada para memoria). Este archivo DLL incluye las funciones para obtener acceso a los índices y recuperar los datos de las variables de tabla. Cuando una variable de tabla optimizada para memoria se declara basándose en el tipo de tabla, se crea una instancia de las estructuras de tabla y de índice correspondientes al tipo de tabla en la sesión de usuario. La variable de tabla se puede usar del mismo modo que las variables de tabla basadas en disco. Puede insertar, actualizar y eliminar filas en la variable de tabla, y puede usar las variables en las consultas de [!INCLUDE[tsql](../includes/tsql-md.md)] . También puede pasar las variables a procedimientos almacenados compilados de forma nativa e interpretados, como parámetros con valores de tabla (TVP).  
   
  En el ejemplo siguiente se muestra un tipo de tabla optimizada para memoria del ejemplo de OLTP en memoria basado en AdventureWorks ([Ejemplo de OLTP en memoria de SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   
-```tsql
+```sql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
    AS TABLE
 (
@@ -64,7 +64,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
 -   El tipo debe tener al menos un índice. Como con tablas optimizadas para memoria, puede usar índices de hash e índices no clúster.  
   
-     Para un índice de hash, el número de cubos debe ser aproximadamente de una a dos veces el número de claves de índice único esperadas. Para obtener más información, consulte [determinar el número correcto de depósitos para los índices Hash](../relational-databases/indexes/indexes.md).  
+     Para un índice de hash, el número de cubos debe ser aproximadamente de una a dos veces el número de claves de índice único esperadas. Para obtener más información, vea [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md).  
   
 -   Las restricciones de tipo de datos y restricciones en las tablas optimizadas para memoria se aplican también a los tipos de tabla optimizada para memoria. Por ejemplo, en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] se admiten las restricciones predeterminadas, pero las restricciones CHECK no.  
   
@@ -81,7 +81,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
 ## <a name="table-valued-parameters"></a>Parámetros con valores de tabla  
  El script de ejemplo siguiente muestra la declaración de una variable de tabla como el tipo de tabla optimizada para memoria `Sales.SalesOrderDetailType_inmem`, la inserción de tres filas en la variable y el paso de la variable como un TVP a `Sales.usp_InsertSalesOrder_inmem`.  
   
-```tsql  
+```sql  
 DECLARE @od Sales.SalesOrderDetailType_inmem,  
   @SalesOrderID uniqueidentifier,  
   @DueDate datetime2 = SYSDATETIME()  
@@ -103,7 +103,7 @@ EXEC Sales.usp_InsertSalesOrder_inmem
 ## <a name="temp-table-replacement"></a>Reemplazo de la tabla #temp  
  El ejemplo siguiente muestra tipos de tabla de ejemplo optimizadas para memoria y variables de tabla como una sustitución de tablas #temp locales a un procedimiento almacenado.  
   
-```tsql  
+```sql  
 -- Using SQL procedure and temp table  
 CREATE TABLE #tempTable (c INT NOT NULL PRIMARY KEY NONCLUSTERED)  
   
@@ -139,7 +139,7 @@ GO
 ## <a name="creating-a-single-result-set"></a>Crear un único conjunto de resultados  
  El ejemplo siguiente muestra cómo almacenar los resultados intermedios y crear conjuntos de resultados únicos basados en varias consultas en procedimientos almacenados compilados de forma nativa. El ejemplo está calculando la unión `SELECT c1 FROM dbo.t1 UNION SELECT c1 FROM dbo.t2`.  
   
-```tsql  
+```sql  
 CREATE DATABASE hk  
 GO  
 ALTER DATABASE hk ADD FILEGROUP hk_mod CONTAINS MEMORY_OPTIMIZED_DATA  

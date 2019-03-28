@@ -16,12 +16,12 @@ ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f5bb18d06fd8ab9545825174cba0723f0d553ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e3c4797478b114918ce2bd79abb9e4671a0dd022
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791527"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529937"
 ---
 # <a name="spdeletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication=** ] **'***publicación***'**  
- Nombre de la publicación para la que se realizó la solicitud de estado. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Nombre de la publicación para el que se realizó la solicitud de estado. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@request_id=** ] *request_id*  
- Especifica una solicitud de estado individual para que se eliminen todas las respuestas a esta solicitud. *request_id* es **int**, su valor predeterminado es null.  
+`[ @request_id = ] request_id` Especifica una solicitud de estado individual para que se eliminarán todas las respuestas a esta solicitud. *request_id* es **int**, su valor predeterminado es null.  
   
- [  **@cutoff_date=** ] *cutoff_date*  
- Especifica una fecha límite, antes de la cual se eliminan todos los registros de repuestas. *cutoff_date* es **datetime**, su valor predeterminado es null.  
+`[ @cutoff_date = ] cutoff_date` Especifica una fecha límite, antes de que se eliminan todos los registros de repuestas. *cutoff_date* es **datetime**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

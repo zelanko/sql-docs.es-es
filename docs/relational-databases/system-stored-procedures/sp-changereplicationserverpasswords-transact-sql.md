@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6fa6606d7daf4a1b61ff986d1d7c5675b5ae5f1f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125715"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531817"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,28 +41,24 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@login_type** =] *login_type*  
- Es el tipo de autenticación de las credenciales proporcionadas. *LOGIN_TYPE* es **tinyint**, no tiene ningún valor predeterminado.  
+`[ @login_type = ] login_type` Es el tipo de autenticación para las credenciales proporcionadas. *LOGIN_TYPE* es **tinyint**, no tiene ningún valor predeterminado.  
   
  **1** = autenticación integrada de Windows  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación  
   
- [ **@login** =] **'**_inicio de sesión_**'**  
- Es el nombre de la cuenta de Windows o del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se va a cambiar. *inicio de sesión* es **nvarchar (257)**, no tiene ningún valor predeterminado  
+`[ @login = ] 'login'` Es el nombre de la cuenta de Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión que se está cambiando. *inicio de sesión* es **nvarchar (257)**, no tiene ningún valor predeterminado  
   
- [ **@password** =] **'**_contraseña_**'**  
- Es la nueva contraseña que se almacenará para el elemento especificado *inicio de sesión*. *contraseña* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @password = ] 'password'` Es la nueva contraseña que se almacenará para el elemento especificado *inicio de sesión*. *contraseña* es **sysname**, no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
 >  Después de cambiar una contraseña de replicación, es necesario detener y reiniciar cada agente que utilice la contraseña para que el cambio surta efecto en dicho agente.  
   
- [ **@server** =] **'**_server_**'**  
- Es la conexión con el servidor cuya contraseña almacenada se está cambiando. *servidor* es **sysname**, y puede tener uno de estos valores:  
+`[ @server = ] 'server'` Es la conexión de servidor para el que se está cambiando la contraseña almacenada. *servidor* es **sysname**, y puede tener uno de estos valores:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**distribuidor**|Todas las conexiones del agente al distribuidor.|  
+|**distributor**|Todas las conexiones del agente al distribuidor.|  
 |**publicador**|Todas las conexiones del agente al publicador.|  
 |**suscriptor**|Todas las conexiones del agente al suscriptor.|  
 |**%** (valor predeterminado)|Todas las conexiones del agente a todos los servidores de una topología de replicación.|  

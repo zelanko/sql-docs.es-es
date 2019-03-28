@@ -16,12 +16,12 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e661ed27a586b45bbcfd812e6e47d169daa70b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dbafa8dd407269fa23ca37574f18a12be519c448
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813057"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534643"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@session_id** =] *session_id*  
- Especifica una sesión de agente. *session_id* es **int** no tiene ningún valor predeterminado.  
+`[ @session_id = ] session_id` Especifica una sesión de agente. *session_id* es **int** no tiene ningún valor predeterminado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -54,10 +53,10 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**Actualizaciones**|**int**|Número de actualizaciones de cada sesión.|  
 |**Eliminaciones**|**int**|Número de eliminaciones de cada sesión.|  
 |**Conflictos**|**int**|Número de conflictos ocurridos en una sesión.|  
-|**Identificador del error**|**int**|Identificador de un error de la sesión.|  
+|**ErrorID**|**int**|Identificador de un error de la sesión.|  
 |**SeqNo**|**int**|Orden de las sesiones en el conjunto de resultados.|  
 |**RowType**|**int**|Indica el tipo de información que representa cada fila del conjunto de resultados.<br /><br /> **0** = inicialización<br /><br /> **1** = resumen de la carga<br /><br /> **2** = detalles de la carga de artículo<br /><br /> **3** = resumen de la descarga<br /><br /> **4** = detalles de descarga del artículo|  
-|**Modificar esquema**|**int**|Número de cambios de esquema de cada sesión.|  
+|**SchemaChanges**|**int**|Número de cambios de esquema de cada sesión.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

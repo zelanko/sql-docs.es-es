@@ -18,12 +18,12 @@ ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c29562bbdaeff69084547c3505fc84def3a0c668
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 914c68d313d77d1cb363f44daee2935976161418
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663242"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534297"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,31 +45,23 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@tabname =**] **'***tabname***'**  
- Es el nombre completo o incompleto de la tabla para la que se ha especificado el índice espacial.  
+`[ @tabname = ] 'tabname'` Es el nombre completo o incompleto de la tabla para la que se ha especificado el índice espacial.  
   
  Se requieren comillas únicamente si se especifica una tabla certificada. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *TabName* es **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@colname =** ] **'***colname***'**  
- Es el nombre de la columna espacial especificada. *colname* es un **sysname**, no tiene ningún valor predeterminado.  
+`[ @colname = ] 'colname'` Es el nombre de la columna espacial especificada. *colname* es un **sysname**, no tiene ningún valor predeterminado.  
   
- [  **@resolution =** ] **'***resolución***'**  
- Es la resolución del cuadro de límite. Los valores válidos van del 10 al 5000. *resolución* es un **tinyint**, no tiene ningún valor predeterminado.  
+`[ @resolution = ] 'resolution'` Es la resolución del cuadro de límite. Los valores válidos van del 10 al 5000. *resolución* es un **tinyint**, no tiene ningún valor predeterminado.  
   
- [  **@xmin =** ] **'***xmin***'**  
- Es la propiedad del cuadro de límite X mínimo. *XMIN* es un **float**, no tiene ningún valor predeterminado.  
+`[ @xmin = ] 'xmin'` Es la propiedad de cuadro de límite X mínimo. *XMIN* es un **float**, no tiene ningún valor predeterminado.  
   
- [  **@ymin =** ] **'***ymin***'**  
- Es la propiedad del cuadro de límite Y mínimo. *YMIN* es un **float**, no tiene ningún valor predeterminado.  
+`[ @ymin = ] 'ymin'` Es la propiedad del cuadro de límite mínimo. *YMIN* es un **float**, no tiene ningún valor predeterminado.  
   
- [  **@xmax =** ] **'***xmax***'**  
- Es la propiedad del cuadro de límite X máximo. *XMAX* es un **float**, no tiene ningún valor predeterminado.  
+`[ @xmax = ] 'xmax'` Es la propiedad del cuadro de límite X máximo. *XMAX* es un **float**, no tiene ningún valor predeterminado.  
   
- [  **@ymax =** ] **'***ymax***'**  
- Es la propiedad del cuadro de límite Y máximo. *YMAX* es un **float**, no tiene ningún valor predeterminado.  
+`[ @ymax = ] 'ymax'` Es la propiedad del cuadro de límite Y máximo. *YMAX* es un **float**, no tiene ningún valor predeterminado.  
   
- [  **@sample =** ] **'***ejemplo***'**  
- Es el porcentaje de la tabla que se usa. Los valores válidos son de 0 a 100. *ejemplo* es un **float**. Valor predeterminado es 100.  
+`[ @sample = ] 'sample'` Es el porcentaje de la tabla que se utiliza. Los valores válidos son de 0 a 100. *ejemplo* es un **float**. Valor predeterminado es 100.  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Se devuelve un valor de tabla. En la siguiente cuadrícula se describe el contenido de la columna de la tabla.  
@@ -77,7 +69,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Representa el identificador único de cada celda, el recuento empieza por 1.|  
-|**celda**|**geometry**|Es un polígono rectangular que representa cada celda. La forma de la celda es idéntica a la de la celda usada para los índices espaciales.|  
+|**cell**|**geometry**|Es un polígono rectangular que representa cada celda. La forma de la celda es idéntica a la de la celda usada para los índices espaciales.|  
 |**row_count**|**bigint**|Indica el número de objetos espaciales que tocan la celda o que están contenidos en ella.|  
   
 ## <a name="permissions"></a>Permisos  

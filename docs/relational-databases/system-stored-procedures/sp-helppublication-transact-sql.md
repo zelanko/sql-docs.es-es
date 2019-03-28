@@ -16,12 +16,12 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a0e823731ff80c714bc31a54210dbcd0e0fea18
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d6f2760d225848503d93ea361a54a0069ce16c14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205214"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532977"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publication =** ] **'***publicación***'**  
- Es el nombre de la publicación que se va a consultar. *publicación* es de tipo sysname y su valor predeterminado es **%**, que devuelve información sobre todas las publicaciones.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a verse. *publicación* es de tipo sysname y su valor predeterminado es **%**, que devuelve información sobre todas las publicaciones.  
   
- [  **@found =** ] **'***encuentra***'** salida  
- Es una marca para indicar que se devuelven filas. *se encontró*es **int** y un parámetro OUTPUT y su valor predeterminado es **23456**. **1** indica que se encuentra la publicación. **0** indica que no se encuentra la publicación.  
+`[ @found = ] 'found' OUTPUT` Es una marca para indicar que devuelven filas. *se encontró*es **int** y un parámetro OUTPUT y su valor predeterminado es **23456**. **1** indica que se encuentra la publicación. **0** indica que no se encuentra la publicación.  
   
- [ **@publisher** =] **'***publisher***'**  
- Especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es de tipo sysname y su valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'` Especifica que no es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publicador* es de tipo sysname y su valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  *publicador* no se debe especificar al solicitar información de publicación de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
@@ -73,7 +70,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |immediate_sync_ready|**bit**|Indica si el Agente de instantáneas generó o no una instantánea que está lista para que la utilicen las nuevas suscripciones. Este parámetro se define únicamente si la publicación se define para tener siempre una instantánea disponible para las suscripciones nuevas o reinicializadas.|  
 |allow_sync_tran|**bit**|Indica si se permiten suscripciones de actualización inmediata a la publicación.|  
 |autogen_sync_procs|**bit**|Indica si se generan automáticamente procedimientos almacenados para admitir las suscripciones de actualización inmediata.|  
-|snapshot_jobid|**binary (16)**|Id. de tarea programada.|  
+|snapshot_jobid|**binary(16)**|Id. de tarea programada.|  
 |retention|**int**|Volumen de cambio, en horas, que se debe guardar para la publicación indicada.|  
 |has subscription|**bit**|Indica si la publicación tiene suscripciones activas. **1** significa que la publicación tiene suscripciones activas, y **0** significa que la publicación no tiene ninguna suscripción.|  
 |allow_queued_tran|**bit**|Especifica si se han habilitado las deshabilitaciones de colocación en cola de los cambios del suscriptor hasta que se puedan aplicar en el publicador. Si **0**, los cambios del suscriptor no se ponen en cola.|  

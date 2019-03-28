@@ -15,12 +15,12 @@ ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ee4e94ff48db339bbe5c012f821368306bfb253
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406565"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536577"
 ---
 # <a name="recompile-a-stored-procedure"></a>Volver a compilar un procedimiento almacenado
   En este tema se describe cómo volver a compilar un procedimiento almacenado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. Hay tres maneras de hacerlo: `WITH RECOMPILE` opción en la definición del procedimiento o cuando se llama al procedimiento, el `RECOMPILE` sugerencia de consulta en instrucciones individuales, o mediante el `sp_recompile` procedimiento almacenado del sistema. En este tema se describe el uso de la opción WITH RECOMPILE al crear una definición de procedimiento y ejecutar un procedimiento existente. También se describe el uso del procedimiento almacenado del sistema sp_recompile para volver a compilar un procedimiento existente.  
@@ -53,7 +53,7 @@ ms.locfileid: "52406565"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  `WITH RECOMPILE` Opción  
  Si se usa esta opción cuando se crea la definición del procedimiento, se necesita el permiso CREATE PROCEDURE en la base de datos y el permiso ALTER en el esquema en el que se crea el procedimiento.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52406565"
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Para volver a compilar un procedimiento almacenado usando la opción WITH RECOMPILE  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -97,7 +97,7 @@ AS
   
 #### <a name="to-recompile-a-stored-procedure-by-using-the-with-recompile-option"></a>Para volver a compilar un procedimiento almacenado usando la opción WITH RECOMPILE  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -105,7 +105,7 @@ AS
   
      Después, copie y pegue el segundo ejemplo de código en la ventana de consulta y, a continuación, haga clic en **Ejecutar**. Esto ejecutará el procedimiento y volverá a compilar el plan de consulta del procedimiento.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXECUTE HumanResources.uspGetAllEmployees WITH RECOMPILE;  
@@ -115,7 +115,7 @@ GO
   
 #### <a name="to-recompile-a-stored-procedure-by-using-sprecompile"></a>Para volver a compilar un procedimiento almacenado mediante sp_recompile  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -123,7 +123,7 @@ GO
   
      Después, copie y pegue el ejemplo siguiente en la ventana de consulta y, a continuación, haga clic en **Ejecutar**. Esto no ejecuta el procedimiento, sino que lo marca para que se vuelva a compilar de forma que su plan de consulta se actualice la próxima vez que se ejecute el procedimiento.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_recompile N'HumanResources.uspGetAllEmployees';  

@@ -18,12 +18,12 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ee5620aecfc4e263c16fb9c710b7a41e1564f6e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 73ca766827c1b6149bcb40cec8adefe86e944890
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590599"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531707"
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,19 +40,18 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@queue_type** =] **'**_queue_type_**'**  
- Argumento opcional elimina los mensajes de correo electrónico del tipo especificado como el *queue_type*. *queue_type* es **nvarchar(6)** no tiene ningún valor predeterminado. Las entradas válidas son **correo** y **estado**.  
+`[ @queue_type = ] 'queue_type'` Argumento opcional elimina los mensajes de correo electrónico del tipo especificado como el *queue_type*. *queue_type* es **nvarchar(6)** no tiene ningún valor predeterminado. Las entradas válidas son **correo** y **estado**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="result-set"></a>Conjunto de resultados  
+## <a name="result-set"></a>Tipo de cursor  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar(6)**|Tipo de cola. Los valores posibles son **correo** y **estado**.|  
 |**length**|**int**|Número de elementos de correo de la cola especificada.|  
-|**state**|**Nvarchar (64)**|Estado del monitor. Los valores posibles son **inactivo** (cola está inactiva), **NOTIFIED** (cola ha sido una notificación de recepción que se produzca), y **RECEIVES_OCCURRING** (cola está recibiendo).|  
+|**state**|**nvarchar(64)**|Estado del monitor. Los valores posibles son **inactivo** (cola está inactiva), **NOTIFIED** (cola ha sido una notificación de recepción que se produzca), y **RECEIVES_OCCURRING** (cola está recibiendo).|  
 |**last_empty_rowset_time**|**FECHA Y HORA**|Fecha y hora en que la cola estuvo vacía por última vez. En formato de hora militar y zona horaria GMT.|  
 |**last_activated_time**|**FECHA Y HORA**|Fecha y hora en que la cola se activó por última vez. En formato de hora militar y zona horaria GMT.|  
   

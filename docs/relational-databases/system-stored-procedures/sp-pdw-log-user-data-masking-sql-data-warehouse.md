@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a0d9a6ec090e799b4b6f0aad7e7335d1e36999dd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a24007abad9148a02da3542587967ae9dcc63f16
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022995"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535657"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,8 +40,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- [ **@masking_mode=** ] *masking_mode*  
- Determina si está habilitados el enmascaramiento de datos del usuario de registro de cifrado transparente de los datos. *masking_mode* es **int**, y puede tener uno de los siguientes valores:  
+`[ @masking_mode = ] masking_mode` Determina si está habilitados el enmascaramiento de datos del usuario de registro de cifrado transparente de los datos. *masking_mode* es **int**, y puede tener uno de los siguientes valores:  
   
 -   0 = deshabilitado, los datos aparecen en el usuario la [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los registros de actividad.  
   

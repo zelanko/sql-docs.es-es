@@ -18,12 +18,12 @@ ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 297f0040f127ae210f8507374f940e4439cdf0d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2262bf4d05e10ef20a531794cd342a5ee903fe3a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855623"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536737"
 ---
 # <a name="spsyspolicyrenamepolicy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name=** ] **'***nombre***'**  
- Es el nombre de la directiva a la que desea cambiar el nombre. *nombre* es **sysname**y debe especificarse si *policy_id* es NULL.  
+`[ @name = ] 'name'` Es el nombre de la directiva que desea cambiar el nombre. *nombre* es **sysname**y debe especificarse si *policy_id* es NULL.  
   
- [  **@policy_id=** ] *policy_id*  
- Es el identificador de la directiva a la que se desea cambiar el nombre. *policy_id* es **int**y debe especificarse si *nombre* es NULL.  
+`[ @policy_id = ] policy_id` Es el identificador de la directiva que desea cambiar el nombre. *policy_id* es **int**y debe especificarse si *nombre* es NULL.  
   
- [  **@new_name=** ] **'***new_name***'**  
- Es el nuevo nombre para la directiva. *new_name* es **sysname**y es necesario. No puede ser NULL ni una cadena vacía.  
+`[ @new_name = ] 'new_name'` Es el nuevo nombre para la directiva. *new_name* es **sysname**y es necesario. No puede ser NULL ni una cadena vacía.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -63,7 +60,7 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Posible elevación de credenciales: los usuarios del rol PolicyAdministratorRole pueden crear desencadenadores del servidor y programar ejecuciones de directivas que pueden afectar al funcionamiento de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por ejemplo, los usuarios del rol PolicyAdministratorRole pueden crear una directiva que puede evitar que la mayoría de los objetos se creen en [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Debido a esta posible elevación de credenciales, el rol PolicyAdministratorRole se debería conceder únicamente a los usuarios que sean de confianza para controlar la configuración de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Posible elevación de credenciales: Los usuarios del rol PolicyAdministratorRole pueden crear desencadenadores del servidor y programar ejecuciones de directivas que pueden afectar al funcionamiento de la instancia de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por ejemplo, los usuarios del rol PolicyAdministratorRole pueden crear una directiva que puede evitar que la mayoría de los objetos se creen en [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Debido a esta posible elevación de credenciales, el rol PolicyAdministratorRole se debería conceder únicamente a los usuarios que sean de confianza para controlar la configuración de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se cambia el nombre de una directiva que se denomina 'Test Policy 1' por 'Test Policy 2'.  

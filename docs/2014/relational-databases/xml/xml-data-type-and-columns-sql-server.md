@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df5d06478e5e48de00efcbdb7b872a7a1907eec0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370007"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530827"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Tipo de datos XML y columnas (SQL Server)
   En este tema se describe las ventajas y las limitaciones de la `xml` tipo de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y le ayuda a elegir cómo almacenar datos XML.  
@@ -113,12 +113,12 @@ ms.locfileid: "53370007"
   
  El almacenamiento XML nativo es útil cuando se tienen documentos XML con una serie de estructuras, o si se tienen documentos XML que se ajustan a esquemas diferentes o completos que son demasiado difíciles de asignar a estructuras relacionales.  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Ejemplo: Modelado de datos XML mediante el tipo de datos xml  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Ejemplo: modelado de datos XML mediante el tipo de datos xml  
  Piense en el manual de un producto en formato XML compuesto por un capítulo independiente para cada tema y por varias secciones dentro de cada capítulo. Una sección puede contener subsecciones. Como resultado, \<section> es un elemento recursivo. Los manuales de productos contienen una gran cantidad de contenido, diagramas y material técnico entremezclado; los datos están semiestructurados. Es posible que los usuarios deseen efectuar búsquedas contextuales de temas de interés, como la sección sobre "índices clúster" en el capítulo sobre "indización", y consultar dimensiones técnicas.  
   
  Un modelo de almacenamiento apropiado para los documentos XML es una columna de tipo de datos `xml`. Así se preserva el contenido InfoSet de los datos XML. La indización de la columna XML favorece el rendimiento de las consultas.  
   
-#### <a name="example-retaining-exact-copies-of-xml-data"></a>Ejemplo: Retener copias exactas de los datos XML  
+#### <a name="example-retaining-exact-copies-of-xml-data"></a>Ejemplo: conservación de copias exactas de los datos XML  
  A modo de ilustración, suponga que las normativas del gobierno le exigen que retenga copias textuales exactas de sus documentos XML, como documentos firmados, documentos legales o pedidos de transacciones de almacén. Tal vez desee almacenar los documentos en una columna `[n]varchar(max)`.  
   
  Para realizar consultas, convierta los datos al tipo de datos `xml` en tiempo de ejecución y ejecute Xquery. La conversión en tiempo de ejecución puede ser larga, especialmente si el documento es grande. Si realiza consultas con frecuencia, puede almacenar repetidamente los documentos en una columna de tipo de datos `xml` e indizarla mientras devuelve copias exactas de los documentos desde la columna `[n]varchar(max)`.  
@@ -142,7 +142,7 @@ ms.locfileid: "53370007"
   
  Algunos ejemplos son datos relacionales expuestos como XML para el intercambio de datos y servicios web, y datos XML con esquema fijo. Para obtener más información, vea la biblioteca en línea [MSDN Library](https://go.microsoft.com/fwlink/?linkid=31174).  
   
-#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Ejemplo: Modelado de datos utilizando un esquema XML anotado (AXSD)  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Ejemplo: modelado de datos con un esquema XML anotado (AXSD)  
  A modo de ilustración, suponga que tiene datos relacionales como clientes, pedidos y artículos de línea, que desea tratar como XML. Defina una vista XML utilizando AXSD sobre los datos relacionales. La vista XML permite efectuar una carga masiva de datos XML en las tablas así como consultar y actualizar los datos relacionales utilizando dicha vista. Este modelo es útil si hay que intercambiar datos que contienen marcado XML con otras aplicaciones, mientras las aplicaciones SQL se ejecutan ininterrumpidamente.  
   
 ### <a name="hybrid-model"></a>Modelo híbrido  

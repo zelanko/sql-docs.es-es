@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27c6e8b8a1eca70a9f6d7753c2c0c943444f65d7
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 13c566ef9163cd7bc71ac6934f3db9782c87f06f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589787"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536367"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,25 +49,20 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@table_name=** ] **'**_nombre_**'**  
- Es la tabla que se usa para devolver información de catálogo. *nombre* es **nvarchar (384)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín.  
+`[ @table_name = ] 'name'` Es la tabla que se utiliza para devolver información del catálogo. *nombre* es **nvarchar (384)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín.  
   
- [  **@table_owner=** ] **'**_propietario_**'**  
- Es el propietario de la tabla de la tabla utilizada para devolver información del catálogo. *propietario* es **nvarchar (384)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si no se especifica el propietario, se aplican las reglas de visibilidad de tabla predeterminadas del DBMS subyacente.  
+`[ @table_owner = ] 'owner'` Es el propietario de la tabla de la tabla utilizada para devolver información del catálogo. *propietario* es **nvarchar (384)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si no se especifica el propietario, se aplican las reglas de visibilidad de tabla predeterminadas del DBMS subyacente.  
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual posee una tabla en la que se especifica el nombre, se devuelven las columnas de esa tabla. Si no se especifica el propietario y el usuario actual no es el propietario de una tabla con el nombre especificado, este procedimiento busca una tabla con el nombre especificado que pertenezca al propietario de la base de datos. Si existe una, se devuelven las columnas de esa tabla.  
   
- [  **@table_qualifier=** ] **'**_calificador_**'**  
- Es el nombre del calificador de tabla. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+`[ @table_qualifier = ] 'qualifier'` Es el nombre del calificador de tabla. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
- [ **,** [  **@table_type=** ] **"'**_tipo_**'**, **'** tipo **'"** ]  
- Es una lista de los valores, separados por comas, que proporcionan información acerca de todas las tablas de los tipos especificados. Estos incluyen **tabla**, **SYSTEMTABLE**, y **vista**. *tipo* es **varchar (100)**, su valor predeterminado es null.  
+``[ , [ @table_type = ] "'type', 'type'" ]`` Es una lista de valores separados por comas, que proporciona información sobre todas las tablas de los tipos de tabla que se especifican. Estos incluyen **tabla**, **SYSTEMTABLE**, y **vista**. *tipo* es **varchar (100)**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  Cada tipo de tabla debe especificarse entre comillas simples y todo el parámetro debe especificarse entre comillas dobles. Los tipos de tabla deben especificarse en mayúsculas. Si SET QUOTED_IDENTIFIER está establecido en ON (activado), las comillas simples deben ser comillas dobles y todo el parámetro debe especificarse entre comillas simples.  
   
- [  **@fUsePattern =** ] **'**_fUsePattern_**'**  
- Determina si los caracteres de subrayado ( _ ), porcentaje ( % ) y paréntesis ( [ o ] ) se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es **bit**, su valor predeterminado es 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Determina si el carácter de subrayado (_), porcentaje (%) y entre corchetes ([o]) caracteres se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es **bit**, su valor predeterminado es 1.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -79,7 +74,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_QUALIFIER**|**sysname**|Nombre del calificador de tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. Este campo puede ser NULL.|  
 |**TABLE_OWNER**|**sysname**|Nombre de propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre del usuario de base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla. Este campo siempre devuelve un valor.|  
-|**TABLE_TYPE**|**varchar (32)**|Tabla, tabla del sistema o vista.|  
+|**TABLE_TYPE**|**varchar(32)**|Tabla, tabla del sistema o vista.|  
 |**COMENTARIOS**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -135,7 +130,7 @@ EXEC sp_tables
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Sys.SYNONYMS &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
+ [sys.synonyms &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

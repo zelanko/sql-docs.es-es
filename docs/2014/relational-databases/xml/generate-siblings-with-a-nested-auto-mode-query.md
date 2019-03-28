@@ -10,15 +10,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 883d66d07c776a7391b28f59c6f091c3f42ca3e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164975"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534477"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Generar elementos del mismo nivel con una consulta de modo AUTO anidada
   En el siguiente ejemplo se muestra cómo generar elementos del mismo nivel utilizando una consulta en modo AUTO anidada. Solo hay otra forma de generar este XML, que es utilizar el modo EXPLICIT. Sin embargo, esto puede ser tedioso.  
@@ -124,7 +124,7 @@ WHERE SalesOrderID=43659 or SalesOrderID=43660
 FOR XML AUTO, TYPE  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <Sales.SalesOrderHeader SalesOrderID="43659" SalesPersonID="279" CustomerID="676">  
@@ -144,7 +144,7 @@ FOR XML AUTO, TYPE
   
 -   La consulta anterior se agrega a la cláusula `FROM` . El resultado de la consulta se devuelve como una tabla. Observe el alias `XmlCol` agregado.  
   
--   La cláusula `SELECT` especifica una consulta XQuery en el `XmlCol` devuelto en la cláusula `FROM` . El `query()` método de la `xml` tipo de datos se utiliza en la especificación de la expresión XQuery. Para obtener más información, vea [query&#40;&#41; &#40;método de tipo de datos xml&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
+-   La cláusula `SELECT` especifica una consulta XQuery en el `XmlCol` devuelto en la cláusula `FROM` . Para especificar la consulta XQuery se utiliza el método `query()` del tipo de datos `xml`. Para obtener más información, vea [query&#40;&#41; &#40;método de tipo de datos xml&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

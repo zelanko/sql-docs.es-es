@@ -18,12 +18,12 @@ ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b8d56f7989d3f0c76c3eaa46309ab029fc3d42d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eadc5efc471f44998abddc596f1acc5c6e378ca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601133"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527937"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@data_type=** ] *data_type*  
- Es el número de código del tipo de datos especificado. Para obtener una lista de todos los tipos de datos, omita este parámetro. *data_type* es **int**, su valor predeterminado es 0.  
+`[ @data_type = ] data_type` Es el número de código para el tipo de datos especificado. Para obtener una lista de todos los tipos de datos, omita este parámetro. *data_type* es **int**, su valor predeterminado es 0.  
   
- [  **@ODBCVer=** ] *odbc_version*  
- Es la versión de ODBC que se utiliza. *odbc_version* es **tinyint**, con el valor predeterminado es 2.  
+`[ @ODBCVer = ] odbc_version` Es la versión de ODBC que se utiliza. *odbc_version* es **tinyint**, con el valor predeterminado es 2.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -57,9 +55,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |TYPE_NAME|**sysname**|Tipo de datos dependiente del DBMS.|  
 |DATA_TYPE|**smallint**|Código para el tipo de ODBC al que se asignan todas las columnas de este tipo.|  
 |PRECISION|**int**|Precisión máxima del tipo de datos en el origen de datos. Se devuelve NULL para los tipos de datos a los que no se puede aplicar un parámetro de precisión. El valor devuelto para la columna PRECISION está expresado en base 10.|  
-|LITERAL_PREFIX|**varchar (** 32 **)**|Carácter o caracteres utilizados antes de una constante. Por ejemplo, una comilla simple (**'**) para tipos de carácter y 0 x para el archivo binario.|  
-|LITERAL_SUFFIX|**varchar (** 32 **)**|Carácter o caracteres utilizados para terminar una constante. Por ejemplo, una comilla simple (**'**) para tipos de caracteres y sin comillas binario.|  
-|CREATE_PARAMS|**varchar (** 32 **)**|Descripción de los parámetros de creación para este tipo de datos. Por ejemplo, **decimal** es "precisión, escala", **float** es NULL, y **varchar** es "max_length".|  
+|LITERAL_PREFIX|**varchar(** 32 **)**|Carácter o caracteres utilizados antes de una constante. Por ejemplo, una comilla simple (**'**) para tipos de carácter y 0 x para el archivo binario.|  
+|LITERAL_SUFFIX|**varchar(** 32 **)**|Carácter o caracteres utilizados para terminar una constante. Por ejemplo, una comilla simple (**'**) para tipos de caracteres y sin comillas binario.|  
+|CREATE_PARAMS|**varchar(** 32 **)**|Descripción de los parámetros de creación para este tipo de datos. Por ejemplo, **decimal** es "precisión, escala", **float** es NULL, y **varchar** es "max_length".|  
 |NULLABLE|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Permite valores NULL.<br /><br /> 0 = No permite valores NULL.|  
 |CASE_SENSITIVE|**smallint**|Especifica si deben distinguirse mayúsculas y minúsculas.<br /><br /> 1 = Todas las columnas de este tipo distinguen mayúsculas y minúsculas (para intercalaciones).<br /><br /> 0 = Las columnas de este tipo no distinguen mayúsculas y minúsculas.|  
 |SEARCHABLE|**smallint**|Especifica la capacidad de búsqueda del tipo de columna:<br /><br /> 1 = No se puede buscar.<br /><br /> 2 = Se puede buscar con LIKE.<br /><br /> 3 = Se puede buscar con WHERE.<br /><br /> 4 = Se puede buscar con WHERE o LIKE.|  

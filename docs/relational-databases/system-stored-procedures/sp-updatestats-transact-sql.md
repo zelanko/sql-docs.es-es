@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5eb82ba893b39da389640f7b139279f8caf70da6
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: 51fd5471ac678a1d61986aaa9219eec923c38485
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586248"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535769"
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,8 +45,7 @@ sp_updatestats [ [ @resample = ] 'resample']
  0 (correcto) o 1 (error)  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@resample** =] **'resample'**  
- Especifica que **sp_updatestats** utilizará la opción RESAMPLE de la [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) instrucción. Si **'resample'** no se especifica, **sp_updatestats** actualiza las estadísticas mediante el muestreo predeterminado. **volver a muestrear** es **varchar (8)** con el valor predeterminado es NO.  
+`[ @resample = ] 'resample'` Especifica que **sp_updatestats** utilizará la opción RESAMPLE de la [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) instrucción. Si **'resample'** no se especifica, **sp_updatestats** actualiza las estadísticas mediante el muestreo predeterminado. **volver a muestrear** es **varchar (8)** con el valor predeterminado es NO.  
   
 ## <a name="remarks"></a>Comentarios  
  **sp_updatestats** ejecuta `UPDATE STATISTICS`, especificando el `ALL` palabra clave, en todas las tablas internas y definidas por el usuario en la base de datos. sp_updatestats muestra mensajes que indican su progreso. Cuando la actualización se ha completado, informa de que se han actualizado las estadísticas de todas las tablas.  

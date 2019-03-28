@@ -16,12 +16,12 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d557fccc94c6502bb664f8345d1d7a6bd982124
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 587c66322a7d40f42f81bceb48e1c0d422322d46
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789337"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538477"
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,17 +46,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publisher***'**  
- Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- Es el nombre de la base de datos publicada. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos publicada. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@publication** =] **'***publicación***'**  
- Es el nombre de la publicación para la que se cambian los atributos del umbral de supervisión. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación para el que se cambian los atributos del umbral de supervisión. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ **@publication_type** =] *publication_type*  
- Es el tipo de publicación. *publication_type* es **int**, y puede tener uno de estos valores.  
+`[ @publication_type = ] publication_type` Si el tipo de publicación. *publication_type* es **int**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -65,8 +61,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**2**|Publicación de combinación.|  
 |NULL (predeterminado)|La replicación intenta determinar el tipo de publicación.|  
   
- [ **@metric_id** =] *metric_id*  
- Es el identificador de la métrica de umbral de publicación que se va a cambiar. *metric_id* es **int**, su valor predeterminado es null y puede tener uno de estos valores.  
+`[ @metric_id = ] metric_id` Se está cambiando el identificador de la métrica de umbral de publicación. *metric_id* es **int**, su valor predeterminado es null y puede tener uno de estos valores.  
   
 |Valor|Nombre de la métrica|  
 |-----------|-----------------|  
@@ -80,17 +75,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  Debe especificar *metric_id* o *thresholdmetricname*. Si *thresholdmetricname* se especifica, a continuación, *metric_id* debe ser NULL.  
   
- [ **@thresholdmetricname** =] **'***thresholdmetricname***'**  
- Es el nombre de la métrica de umbral de publicación que se va a cambiar. *thresholdmetricname* es **sysname**, su valor predeterminado es null. Debe especificar *thresholdmetricname* o *metric_id*. Si *metric_id* se especifica, a continuación, *thresholdmetricname* debe ser NULL.  
+`[ @thresholdmetricname = ] 'thresholdmetricname'` Se está cambiando el nombre de la métrica de umbral de publicación. *thresholdmetricname* es **sysname**, su valor predeterminado es null. Debe especificar *thresholdmetricname* o *metric_id*. Si *metric_id* se especifica, a continuación, *thresholdmetricname* debe ser NULL.  
   
- [ **@value** =] *valor*  
- Es el nuevo valor de la métrica de umbral de la publicación. *valor* es **int**, su valor predeterminado es null. Si **null**, no se actualiza el valor de métrica.  
+`[ @value = ] value` Es el nuevo valor de la métrica de umbral de publicación. *valor* es **int**, su valor predeterminado es null. Si **null**, no se actualiza el valor de métrica.  
   
- [ **@shouldalert** =] *shouldalert*  
- Especifica si se debe generar una alerta al alcanzar la métrica de umbral de una publicación. *shouldalert* es **bit**, su valor predeterminado es null. Un valor de **1** significa que se genera una alerta y el valor de **0** significa que no se generará una alerta.  
+`[ @shouldalert = ] shouldalert` Es si se genera una alerta cuando se alcanza una métrica de umbral de publicación. *shouldalert* es **bit**, su valor predeterminado es null. Un valor de **1** significa que se genera una alerta y el valor de **0** significa que no se generará una alerta.  
   
- [ **@mode** =] *modo*  
- Especifica si se habilita la métrica de umbral de la publicación. *modo* es **tinyint**, su valor predeterminado es **1**. Un valor de **1** significa que la supervisión de esta métrica está habilitada y el valor de **2** significa que la supervisión de esta métrica está deshabilitada.  
+`[ @mode = ] mode` Especifica si se habilita la métrica de umbral de publicación. *modo* es **tinyint**, su valor predeterminado es **1**. Un valor de **1** significa que la supervisión de esta métrica está habilitada y el valor de **2** significa que la supervisión de esta métrica está deshabilitada.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

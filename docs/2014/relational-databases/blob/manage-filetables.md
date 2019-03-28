@@ -13,12 +13,12 @@ ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bfb5fa710122df0e467b27a99c08d75cc2897adf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2e8522cde5be0ccc34f858ce6bff945433af11ac
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416726"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537607"
 ---
 # <a name="manage-filetables"></a>Administrar FileTables
   Describe las tareas administrativas comunes para administrar FileTables.  
@@ -30,7 +30,7 @@ ms.locfileid: "52416726"
   
 -   [sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql) (consultar el valor de la columna **is_filetable**).  
   
-```tsql  
+```sql  
 SELECT * FROM sys.filetables;  
 GO  
   
@@ -40,7 +40,7 @@ GO
   
  Para obtener una lista de los objetos definidos por el sistema que se crearon al mismo tiempo que las FileTables asociadas, vea la vista de catálogo [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql).  
   
-```tsql  
+```sql  
 SELECT object_id, OBJECT_NAME(object_id) AS 'Object Name'  
     FROM sys.filetable_system_defined_objects  
     WHERE object_id = filetable_object_id;  
@@ -85,7 +85,7 @@ GO
  **Para deshabilitar el acceso no transaccional total**  
  Llame a la instrucción **ALTER DATABASE** y establezca el valor de **NON_TRANSACTED_ACCESS** en **READ_ONLY** o en **OFF**.  
   
-```tsql  
+```sql  
 -- Disable write access.  
 ALTER DATABASE database_name  
     SET FILESTREAM ( NON_TRANSACTED_ACCESS = READ_ONLY );  
@@ -100,7 +100,7 @@ GO
  **Para volver a habilitar el acceso no transaccional total**  
  Llame a la instrucción **ALTER DATABASE** y establezca el valor de **NON_TRANSACTED_ACCESS** en **FULL**.  
   
-```tsql  
+```sql  
 ALTER DATABASE database_name  
     SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );  
 GO  
@@ -142,14 +142,14 @@ GO
  Se llama a la instrucción ALTER TABLE con la opción **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** .  
   
  **Para deshabilitar el espacio de nombres de FileTable**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
     DISABLE FILETABLE_NAMESPACE;  
 GO  
 ```  
   
  **Para volver a habilitar el espacio de nombres de FileTable**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
     ENABLE FILETABLE_NAMESPACE;  
 GO  
@@ -164,7 +164,7 @@ GO
 ###  <a name="HowToListOpen"></a> Cómo: Obtener una lista de identificadores de archivos abiertos asociados con FileTable  
  Consulte la vista de catálogo [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql).  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_filestream_non_transacted_handles;  
 GO  
 ```  
@@ -194,7 +194,7 @@ GO
  **Para identificar los archivos abiertos y los bloqueos asociados**  
  Combine el campo **request_owner_id** de la vista de administración dinámica [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) con el campo **fcb_id** de [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql). En algunos casos, el bloqueo no se corresponde con ningún identificador de archivos abierto.  
   
-```tsql  
+```sql  
 SELECT opened_file_name  
     FROM sys.dm_filestream_non_transacted_handles  
     WHERE fcb_id IN  

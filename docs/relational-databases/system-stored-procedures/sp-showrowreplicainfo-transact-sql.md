@@ -16,12 +16,12 @@ ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51b5b2aa6c6f815f1b2f5f37c9093698955ffd3b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0d009b05fea2a2c587f97dc4b2416588932ad0bc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136115"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530367"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@ownername**=] **'***ownername***'**  
- Es el nombre del propietario de la tabla. *ownername* es **sysname**, su valor predeterminado es null. Este parámetro resulta útil para diferenciar las tablas en caso de que la base de datos contenga varias tablas con el mismo nombre pero con propietarios distintos.  
+`[ @ownername = ] 'ownername'` Es el nombre del propietario de la tabla. *ownername* es **sysname**, su valor predeterminado es null. Este parámetro resulta útil para diferenciar las tablas en caso de que la base de datos contenga varias tablas con el mismo nombre pero con propietarios distintos.  
   
- [  **@tablename =**] **'***tablename***'**  
- Es el nombre de la tabla que contiene la fila para la cual se devuelve la información. *TableName* es **sysname**, su valor predeterminado es null.  
+`[ @tablename = ] 'tablename'` Es el nombre de la tabla que contiene la fila para el que se devuelve la información. *TableName* es **sysname**, su valor predeterminado es null.  
   
- [  **@rowguid =**] *rowguid*  
- Es el identificador único de la fila. *ROWGUID* es **uniqueidentifier**, no tiene ningún valor predeterminado.  
+`[ @rowguid = ] rowguid` Es el identificador único de la fila. *ROWGUID* es **uniqueidentifier**, no tiene ningún valor predeterminado.  
   
- [ **@show**=] **'***mostrar***'**  
- Determina la cantidad de información que se devuelve en el conjunto de resultados. *Mostrar* es **nvarchar (20)** con un valor predeterminado es BOTH. Si **fila**, se devuelve solo información de versión de fila. Si **columnas**, se devuelve solo información de versión de columna. Si **ambos**, filas y se devuelve información de columna.  
+`[ @show = ] 'show'` Determina la cantidad de información que se devuelve en el conjunto de resultados. *Mostrar* es **nvarchar (20)** con un valor predeterminado es BOTH. Si **fila**, se devuelve solo información de versión de fila. Si **columnas**, se devuelve solo información de versión de columna. Si **ambos**, filas y se devuelve información de columna.  
   
 ## <a name="result-sets-for-row-information"></a>Conjuntos de resultados para información de fila  
   
@@ -61,9 +57,9 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Nombre de la base de datos que realizó esta entrada.|  
 |**db_nickname**|**binary(6)**|Alias de la base de datos que realizó esta entrada.|  
 |**version**|**int**|Versión de la entrada.|  
-|**current_state como**|**nvarchar(9)**|Devuelve información sobre el estado actual de la fila.<br /><br /> **y** -datos de la fila representan el estado actual de la fila.<br /><br /> **n** -los datos de fila no representan el estado actual de la fila.<br /><br /> **\<n/a >** : no aplicable.<br /><br /> **\<desconocido >** -no se puede determinar el estado actual.|  
+|**current_state**|**nvarchar(9)**|Devuelve información sobre el estado actual de la fila.<br /><br /> **y** -datos de la fila representan el estado actual de la fila.<br /><br /> **n** -los datos de fila no representan el estado actual de la fila.<br /><br /> **\<n/a >** : no aplicable.<br /><br /> **\<desconocido >** -no se puede determinar el estado actual.|  
 |**rowversion_table**|**nchar(17)**|Indica si las versiones de fila se almacenan en el [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) tabla o la [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) tabla.|  
-|**Comentario**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de fila. Este campo suele estar vacío.|  
+|**comment**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de fila. Este campo suele estar vacío.|  
   
 ## <a name="result-sets-for-column-information"></a>Conjuntos de resultados para información de columna  
   
@@ -74,7 +70,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_nickname**|**binary(6)**|Alias de la base de datos que realizó esta entrada.|  
 |**version**|**int**|Versión de la entrada.|  
 |**colname**|**sysname**|Nombre de la columna del artículo que representa la entrada de la versión de columna.|  
-|**Comentario**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de columna. Este campo suele estar vacío.|  
+|**comment**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de columna. Este campo suele estar vacío.|  
   
 ## <a name="result-set-for-both"></a>Conjuntos de resultados para ambos  
  Si el valor **ambos** se elige para *mostrar*, a continuación, se devuelven los conjuntos de resultados de la fila y la columna.  

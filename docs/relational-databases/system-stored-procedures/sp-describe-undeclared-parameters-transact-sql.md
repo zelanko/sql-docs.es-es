@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a35880dd299cc9eff81643dd5d955101c5eec68
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679643"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532487"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **\@tsql =** ] **'**_Transact-SQL\_batch_**'**  
- Una o varias instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *Transact-SQL_batch* puede ser **nvarchar (**_n_**)** o **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` Uno o más [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones. *Transact-SQL_batch* puede ser **nvarchar (**_n_**)** o **nvarchar (max)**.  
   
- [  **\@params =** ] **N'**_parámetros_**'**  
- \@params proporciona una cadena de declaración para los parámetros para el [!INCLUDE[tsql](../../includes/tsql-md.md)] funciona por lotes, de forma similar a la forma de sp_executesql. *Parámetros* puede ser **nvarchar (**_n_**)** o **nvarchar (max)**.  
+`[ \@params = ] N'parameters'` \@params proporciona una cadena de declaración para los parámetros para el [!INCLUDE[tsql](../../includes/tsql-md.md)] funciona por lotes, de forma similar a la forma de sp_executesql. *Parámetros* puede ser **nvarchar (**_n_**)** o **nvarchar (max)**.  
   
  Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en *Transact SQL_batch*. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. n es un marcador de posición que indica definiciones de parámetros adicionales. Si la instrucción Transact-SQL o el lote en la instrucción no contiene parámetros, \@params no es necesario. El valor predeterminado de este parámetro es NULL.  
   
@@ -70,20 +68,20 @@ sp_describe_undeclared_parameters
 |**suggested_precision**|**tinyint no NULL**|Consulte sys.columns. para obtener la descripción de la columna de precisión.|  
 |**suggested_scale**|**tinyint no NULL**|Consulte sys.columns. para obtener la descripción de la columna de escala.|  
 |**suggested_user_type_id**|**int NULL**|Para los tipos de alias y CLR, contiene el user_type_id del tipo de datos de la columna tal y como se especifica en sys.types. De lo contrario, es NULL.|  
-|**suggested_user_type_database**|**sysname es NULL**|Para los tipos de alias y CLR, contiene el nombre de la base de datos en la que se define el tipo. De lo contrario, es NULL.|  
-|**suggested_user_type_schema**|**sysname es NULL**|Para los tipos de alias y CLR, contiene el nombre del esquema en el que se define el tipo. De lo contrario, es NULL.|  
-|**suggested_user_type_name**|**sysname es NULL**|Para los tipos de alias y CLR, contiene el nombre del tipo. De lo contrario, es NULL.|  
+|**suggested_user_type_database**|**sysname NULL**|Para los tipos de alias y CLR, contiene el nombre de la base de datos en la que se define el tipo. De lo contrario, es NULL.|  
+|**suggested_user_type_schema**|**sysname NULL**|Para los tipos de alias y CLR, contiene el nombre del esquema en el que se define el tipo. De lo contrario, es NULL.|  
+|**suggested_user_type_name**|**sysname NULL**|Para los tipos de alias y CLR, contiene el nombre del tipo. De lo contrario, es NULL.|  
 |**suggested_assembly_qualified_type_name**|**nvarchar (4000) NULL**|Para los tipos de CLR, devuelve el nombre del ensamblado y la clase que define el tipo. De lo contrario, es NULL.|  
 |**suggested_xml_collection_id**|**int NULL**|Contiene el xml_collection_id del tipo de datos del parámetro tal como se especifica en sys.columns. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
-|**suggested_xml_collection_database**|**sysname es NULL**|Contiene la base de datos en la que se define la colección de esquema XML asociado a este tipo. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
-|**suggested_xml_collection_schema**|**sysname es NULL**|Contiene el esquema en el que se define la colección de esquema XML asociado a este tipo. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
-|**suggested_xml_collection_name**|**sysname es NULL**|Contiene el nombre de la colección de esquema XML asociado a este tipo. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
+|**suggested_xml_collection_database**|**sysname NULL**|Contiene la base de datos en la que se define la colección de esquema XML asociado a este tipo. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
+|**suggested_xml_collection_schema**|**sysname NULL**|Contiene el esquema en el que se define la colección de esquema XML asociado a este tipo. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
+|**suggested_xml_collection_name**|**sysname NULL**|Contiene el nombre de la colección de esquema XML asociado a este tipo. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
 |**suggested_is_xml_document**|**bit NOT NULL**|Devuelve 1 si el tipo que se va a devolver es XML y se garantiza que es un documento XML. De lo contrario, devuelve 0.|  
 |**suggested_is_case_sensitive**|**bit NOT NULL**|Devuelve 1 si la columna es de un tipo de cadena con distinción entre mayúsculas y minúsculas, y 0 en caso contrario.|  
 |**suggested_is_fixed_length_clr_type**|**bit NOT NULL**|Devuelve 1 si la columna es de un tipo CLR de longitud fija y 0 en caso contrario.|  
 |**suggested_is_input**|**bit NOT NULL**|Devuelve 1 si el parámetro se utiliza en cualquier otro lugar que no sea el lado izquierdo de una asignación. De lo contrario, devuelve 0.|  
 |**suggested_is_output**|**bit NOT NULL**|Devuelve 1 si el parámetro se utiliza en el lado izquierdo de una asignación o se pasa a un parámetro de salida de un procedimiento almacenado. De lo contrario, devuelve 0.|  
-|**formal_parameter_name**|**sysname es NULL**|Si el parámetro es un argumento para un procedimiento almacenado o una función definida por el usuario, devuelve el nombre del parámetro formal correspondiente. En caso contrario, devuelve NULL.|  
+|**formal_parameter_name**|**sysname NULL**|Si el parámetro es un argumento para un procedimiento almacenado o una función definida por el usuario, devuelve el nombre del parámetro formal correspondiente. En caso contrario, devuelve NULL.|  
 |**suggested_tds_type_id**|**int no NULL**|Para uso interno.|  
 |**suggested_tds_length**|**int no NULL**|Para uso interno.|  
   

@@ -18,19 +18,19 @@ ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fac8fd56139b340df2a2c4cdcfc7376de02dcab
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 3f842060c6ca621fc52fa34f08838541dc65e993
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168855"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535637"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve información relacionada con el plan de mantenimiento especificado. Si no se especifica un plan, este procedimiento almacenado devuelve información acerca de todos los planes de mantenimiento.  
   
-> **Nota:** este procedimiento almacenado se utiliza con planes de mantenimiento de bases de datos. Esta característica se ha reemplazado por planes de mantenimiento que no utilizan este procedimiento almacenado. Utilice este procedimiento para conservar planes de mantenimiento de bases de datos en instalaciones actualizadas de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> **NOTA:** Este procedimiento almacenado se utiliza con planes de mantenimiento de bases de datos. Esta característica se ha reemplazado por planes de mantenimiento que no utilizan este procedimiento almacenado. Utilice este procedimiento para conservar planes de mantenimiento de bases de datos en instalaciones actualizadas de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -45,11 +45,10 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@plan_id =**] **'**_plan\_id_**'**  
- Especifica el identificador del plan del plan de mantenimiento. *plan_id* es **UNIQUEIDENTIFIER**. El valor predeterminado es NULL.  
+`[ @plan_id = ] 'plan\_id'` Especifica el identificador del plan del plan de mantenimiento. *plan_id* es **UNIQUEIDENTIFIER**. El valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- Ninguno  
+ None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Si *plan_id* se especifica, **sp_help_maintenance_plan** devolverá tres tablas: Plan, base de datos y de trabajo.  
@@ -61,12 +60,12 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**plan_id**|**uniqueidentifier**|Id. del plan de mantenimiento.|  
 |**plan_name**|**sysname**|Nombre del plan de mantenimiento.|  
 |**date_created**|**datetime**|Fecha de creación del plan de mantenimiento.|  
-|**Propietario**|**sysname**|Propietario del plan de mantenimiento.|  
+|**owner**|**sysname**|Propietario del plan de mantenimiento.|  
 |**max_history_rows**|**int**|Número máximo de filas asignadas para registrar el historial del plan de mantenimiento de la tabla del sistema.|  
 |**remote_history_server**|**int**|El nombre del servidor remoto en el que se puede escribir el informe de historial.|  
 |**max_remote_history_rows**|**int**|Número máximo de filas asignadas en la tabla del sistema en un servidor remoto en el que se puede escribir el informe del historial.|  
 |**user_defined_1**|**int**|Valor predeterminado es NULL.|  
-|**user_defined_2**|**Nvarchar (100)**|Valor predeterminado es NULL.|  
+|**user_defined_2**|**nvarchar(100)**|Valor predeterminado es NULL.|  
 |**user_defined_3**|**datetime**|Valor predeterminado es NULL.|  
 |**user_defined_4**|**uniqueidentifier**|Valor predeterminado es NULL.|  
   

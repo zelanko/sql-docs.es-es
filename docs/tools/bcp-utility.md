@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5b1c1112e886c7874471c82b442e7583a8232dc8
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 90a5d458bcb7b1e90993a51ccfb4ebe217622f34
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955996"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538657"
 ---
 # <a name="bcp-utility"></a>bcp (utilidad)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -529,7 +529,7 @@ La utilidad bcp también se puede descargar por separado desde el [Feature Pack 
  
 -   A. Identificar la versión de la utilidad **bcp**
   
--   b. Copiar filas de tablas en un archivo de datos (con una conexión de confianza)  
+-   B. Copiar filas de tablas en un archivo de datos (con una conexión de confianza)  
   
 -   [C.](#c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication) Copiar filas de tablas en un archivo de datos (con autenticación de modo mixto)  
   
@@ -552,7 +552,7 @@ Los ejemplos siguientes usan la base de datos de ejemplo `WideWorldImporters` pa
 
 El script siguiente crea una copia vacía de la tabla `WideWorldImporters.Warehouse.StockItemTransactions` y luego agrega una restricción PRIMARY KEY.  Ejecute el siguiente script T-SQL en SQL Server Management Studio (SSMS)
 
-```tsql  
+```sql  
 USE WideWorldImporters;  
 GO  
 
@@ -581,7 +581,7 @@ En el símbolo del sistema, escriba el siguiente comando:
 bcp -v
 ```
   
-### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>b. Copiar filas de tablas en un archivo de datos (con una conexión de confianza)  
+### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>B. Copiar filas de tablas en un archivo de datos (con una conexión de confianza)  
 En el siguiente ejemplo se ilustra la opción **out** de la tabla `WideWorldImporters.Warehouse.StockItemTransactions` .
 
 - **Basic**  

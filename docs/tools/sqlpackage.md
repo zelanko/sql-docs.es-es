@@ -2,33 +2,33 @@
 title: SqlPackage.exe | Microsoft Docs
 ms.prod: sql
 ms.technology: ssdt
-ms.date: 06/27/2018
+ms.date: 06/28/2018
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: d9a3dc9088c833b3448927c1455052c40f185ec7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033613"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527597"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
 **SqlPackage.exe** es una utilidad de línea de comandos que automatiza las siguientes tareas de desarrollo de base de datos:  
   
-- [Extract](#help-for-the-extract-action): crea un archivo de instantáneas de base de datos (.dacpac) a partir de una base de datos activa de SQL Server o Azure SQL Database.  
+- [Extraer](#help-for-the-extract-action): crea un archivo de instantáneas de base de datos (.dacpac) a partir de una SQL Database de SQL Server o Microsoft Azure.  
   
-- [Publish](#publish-parameters-properties-and-sqlcmd-variables): actualiza de forma incremental un esquema de la base de datos para coincidir con el esquema de un archivo .dacpac de origen. Si no existe la base de datos en el servidor, la operación de publicación la crea. En caso contrario, se actualiza una base de datos existente.  
+- [Publicar](#publish-parameters-properties-and-sqlcmd-variables): actualiza de forma incremental un esquema de la base de datos para que coincida con el esquema de un archivo .dacpac de origen. Si no existe la base de datos en el servidor, la operación de publicación la crea. En caso contrario, se actualiza una base de datos existente.  
   
-- [Export](#export-parameters-and-properties): exporta una base de datos activa, incluidos los datos de usuario y el esquema de base de datos, desde SQL Server o Azure SQL Database a un paquete BACPAC (archivo.bacpac).  
+- [Exportar](#export-parameters-and-properties): exporta una base de datos activa, incluidos los datos de usuario y el esquema de base de datos, desde SQL Server o Azure SQL Database a un paquete BACPAC (archivo.bacpac).  
   
-- [Import](#import-parameters-and-properties): importa los datos de esquema y tabla de un paquete BACPAC en una nueva base de datos de usuario en una instancia de SQL Server o Azure SQL Database.  
+- [Importar](#import-parameters-and-properties): importa los datos de esquema y tabla de un paquete BACPAC en una nueva base de datos de usuario en una instancia de SQL Server o Azure SQL Database.  
   
-- [DeployReport](#deployreport-parameters-and-properties): crea un informe XML de los cambios que realizaría una acción de publicación.  
+- [DeployReport](#deployreport-parameters-and-properties): crea un informe XML de los cambios que una acción de publicación realizarían.  
   
 - [DriftReport](#driftreport-parameters): crea un informe XML de los cambios que se han realizado en una base de datos registrada desde que se registró por última vez.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "56033613"
   
 La línea de comandos **SqlPackage.exe** permite especificar estas acciones junto con parámetros y propiedades específicos de cada acción.  
 
-**[Descargar la última versión](sqlpackage-download.md)**. Para obtener más información acerca de la versión más reciente, consulte el [notas de la versión](sqlpackage-release-notes.md).
+**[Descargar la última versión](sqlpackage-download.md)**. Para obtener más información acerca de la versión más reciente, consulte el [notas de la versión](release-notes-sqlpackage.md).
   
 ## <a name="command-line-syntax"></a>Sintaxis de línea de comandos
 

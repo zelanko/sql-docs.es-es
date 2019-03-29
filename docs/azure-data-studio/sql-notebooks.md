@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9aad778475649280e5472f80ad96973d09803375
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392723"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566384"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Uso de cuadernos en Azure Data Studio
 
@@ -45,7 +45,7 @@ Hay varias formas de iniciar un nuevo cuaderno.
 
 ## <a name="supported-kernels-and-attach-to-context"></a>Admite los kernels y asociar al contexto
 
-La instalación de Bloc de notas en Azure Data Studio admite de forma nativa del núcleo de SQL. Si es un desarrollador SQL y le gustaría utilizar cuadernos entonces esto sería elegido Kernel. 
+La instalación de Bloc de notas en Azure Data Studio admite de forma nativa del núcleo de SQL. Si es un desarrollador SQL y le gustaría utilizar blocs de notas, entonces esto sería elegido Kernel. 
 
 El núcleo de SQL también puede utilizarse para conectarse a instancias de servidor de PostgreSQL. Si es un desarrollador de PostgreSQL y le gustaría conectarse al servidor de PostgreSQL, a continuación, descargue el [ **PostgreSQL extensión** ](postgres-extension.md) en el marketplace de extensiones de Azure Data Studio.
 
@@ -116,7 +116,7 @@ Hacer clic fuera de la celda de texto se mostrará el texto de markdown.
 
 Blocs de notas abierto en Azure Data Studio son predeterminados **confianza**.
 
-Si abre un bloc de notas de algún otro origen se abrirá en **que no son de confianza** modo y, a continuación, se puede realizar **confianza**.
+Si abre un bloc de notas de algún otro origen, se abrirá en **que no son de confianza** modo y, a continuación, se puede realizar **confianza**.
 
 ### <a name="save"></a>Guardar 
 

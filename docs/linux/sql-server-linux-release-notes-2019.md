@@ -4,18 +4,18 @@ description: En este artículo contiene las notas de la versión y las caracter�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/11/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c0a14531fb2ad82e4dcab31022f55d5726064c4a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9c3ee750afe0af5971f571a2a0352397ed8c4f40
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271837"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566574"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Notas de la versión de vista previa de 2019 de SQL Server en Linux
 
@@ -48,6 +48,7 @@ La tabla siguiente muestra el historial de versión de vista previa de SQL Serve
 
 | Versión               | Versión       | Fecha de la versión |
 |-----------------------|---------------|--------------|
+| [CTP 2.4](#CTP24)     | 15.0.1400.75  | 2019-3-27    |
 | [CTP 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |
 | [CTP 2.2](#CTP22)     | 15.0.1200.24  | 2018-12-11   |
 | [CTP 2.1](#CTP21)     | 15.0.1100.94  | 2018-11-06   |
@@ -65,7 +66,27 @@ Si va a actualizar los paquetes existentes de SQL Server, ejecute el comando de 
 - [Instalar la versión preliminar de SQL Server 2019 R de Machine Learning Services y compatibilidad con Python en Linux](sql-server-linux-setup-machine-learning.md)
 - [Habilitar el Agente SQL Server](sql-server-linux-setup-sql-agent.md)
 
-## <a id="CTP23"></a> CTP 2.3 (marzo de 2019)
+## <a id="CTP24"></a> CTP 2.4 (marzo de 2019)
+
+Las secciones siguientes proporcionan las ubicaciones de paquete y versión de los problemas conocidos de la CTP 2.4. Para obtener más información acerca de las nuevas características para Linux en SQL Server 2019, vea el [Novedades de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
+
+### <a name="package-details"></a>Detalles del paquete
+
+Para las instalaciones de paquete manual o sin conexión, puede descargar los paquetes RPM y Debian con la información en la tabla siguiente:
+
+| Paquete | Versión del paquete | Descargas |
+|-----|-----|-----|
+| Paquete de Red Hat RPM | 15.0.1400.75-2 | [Paquete RPM del motor](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1400.75-2.x86_64.rpm)</br>[Paquete alta disponibilidad RPM](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1400.75-2.x86_64.rpm)</br>[Paquete de RPM de búsqueda de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1400.75-2.x86_64.rpm)</br>[Paquete RPM de extensibilidad](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1400.75-2.x86_64.rpm)</br>[Paquete RPM de extensibilidad de Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1400.75-2.x86_64.rpm)|
+| Paquete RPM SLES | 15.0.1400.75-2 | [paquete de MSSQL-server motor RPM](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1400.75-2.x86_64.rpm)</br>[Paquete alta disponibilidad RPM](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1400.75-2.x86_64.rpm)</br>[Paquete de RPM de búsqueda de texto completo](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1400.75-2.x86_64.rpm)</br>[Paquete RPM de extensibilidad](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1400.75-2.x86_64.rpm)</br>[Paquete RPM de extensibilidad de Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1400.75-2.x86_64.rpm)|
+| Paquete de Debian Ubuntu 16.04 | 15.0.1400.75-2 | [Paquete de Debian motor](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1400.75-2_amd64.deb)</br>[Paquete de Debian de alta disponibilidad](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1400.75-2_amd64.deb)</br>[Paquete de Debian de búsqueda de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1400.75-2_amd64.deb)</br>[Paquete de Debian de extensibilidad](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1400.75-2_amd64.deb)</br>[Paquete de Debian de extensibilidad de Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1400.75-2_amd64.deb)|
+
+### <a name="known-issues"></a>Problemas conocidos
+
+#### <a id="msdtc"></a> Coordinador de transacciones distribuidas de Microsoft
+
+Actualmente, MSDTC requiere que las transacciones no autenticados. Por ejemplo, si está usando un servidor vinculado de SQL Server en Windows para SQL Server en Linux o usar una aplicación de cliente de Windows para iniciar una transacción distribuida en SQL Server en Linux, a continuación, MSDTC en Windows server o cliente es necesario usar la opción "No Se requiere autenticación".
+
+## <a id="CTP23"></a> CTP 2.3 (febrero de 2019)
 
 Las secciones siguientes proporcionan las ubicaciones de paquete y versión de los problemas conocidos de la CTP 2.3. Para obtener más información acerca de las nuevas características para Linux en SQL Server 2019, vea el [Novedades de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
 

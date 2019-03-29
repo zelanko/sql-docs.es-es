@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 68fe779dbdc99bd3eca1870a4e8ff1ee0fa7d95f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017851"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566524"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>Tutorial: Cargar datos de ejemplo en un clúster de macrodatos de SQL Server 2019
 
@@ -115,4 +115,18 @@ Los pasos siguientes describen cómo usar a un cliente Linux para cargar los dat
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Después de ejecutar el script de arranque, el clúster de macrodatos tiene bases de datos de ejemplo y datos de HDFS. Para empezar a explorar estos datos y los clústeres de datos de gran tamaño, consulte el [tutoriales](tutorial-query-hdfs-storage-pool.md) en esta sección.
+Después de ejecutar el script de arranque, el clúster de macrodatos tiene bases de datos de ejemplo y datos de HDFS. Los tutoriales siguientes usan los datos de ejemplo para demostrar las capacidades de clúster de macrodatos:
+
+Virtualización de datos:
+
+- [Tutorial: Consulta de HDFS en un clúster de macrodatos de SQL Server](tutorial-query-hdfs-storage-pool.md)
+- [Tutorial: Consultas de Oracle desde un clúster de macrodatos de SQL Server](tutorial-query-oracle.md)
+
+Ingesta de datos:
+
+- [Tutorial: Introducir datos en un grupo de datos de SQL Server con Transact-SQL](tutorial-data-pool-ingest-sql.md)
+- [Tutorial: Introducir datos en un grupo de datos de SQL Server con trabajos de Spark](tutorial-data-pool-ingest-spark.md)
+
+Blocs de notas:
+
+- [Tutorial: Ejecutar un cuaderno de ejemplo en un clúster de macrodatos de SQL Server 2019](tutorial-notebook-spark.md)

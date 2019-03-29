@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f6cb8c09525b998d5e864124eff0e5bb0aa509
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd23184f25ff8083bdfffbb46ef8c5b5f5f91eae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807383"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281239"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Cargar datos mediante el destino de OLE DB
   Para agregar y configurar un destino de OLE DB, el paquete ya debe incluir al menos una tarea Flujo de datos y un origen.  
@@ -37,13 +37,13 @@ ms.locfileid: "47807383"
   
 5.  Haga doble clic en el destino de OLE DB.  
   
-6.  En el **Editor de destino de OLE DB** , en la página **Administrador de conexiones** , seleccione un administrador de conexiones OLE DB o haga clic en **Nuevo** para crear un nuevo administrador de conexiones. Para más información, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+6.  En el **Editor de destino de OLE DB** , en la página **Administrador de conexiones** , seleccione un administrador de conexiones OLE DB o haga clic en **Nuevo** para crear un nuevo administrador de conexiones. Para más información, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 7.  Seleccione el método de acceso de datos:  
   
     -   **Tabla o vista** Seleccione una tabla o vista en la base de datos que contiene los datos.  
   
-    -   **Carga rápida de tabla o vista** Seleccione una tabla o una vista en la base de datos que contiene los datos y, después, establezca las opciones de carga rápida: **Mantener valores de identidad**, **Mantener valores NULL**, **Bloqueo de tabla**, **Restricción CHECK**, **Filas por lote**o **Tamaño máximo de confirmación de inserción**.  
+    -   **Tabla o vista: carga rápida** Seleccione una tabla o una vista de la base de datos que contiene los datos y, a continuación, establezca las opciones de carga rápida: **Mantener valores de identidad**, **Mantener valores NULL**, **Bloqueo de tabla**, **Restricción CHECK**, **Filas por lote** o **Tamaño máximo de confirmación de inserción**.  
   
     -   **Variable de nombre de tabla o nombre de vista** Seleccione la variable definida por el usuario que contiene el nombre de una tabla o vista en la base de datos.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "47807383"
   
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Destino de OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
  [Transformaciones de Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](../../integration-services/data-flow/integration-services-paths.md)   

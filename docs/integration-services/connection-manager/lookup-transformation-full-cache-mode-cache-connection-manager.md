@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b44eaab3266d75663458572af238f5a15bd35b5e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c30fcacb779a9656b70edad79e976bde575537de
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642292"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290601"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Transformación Búsqueda en el modo Caché completa - Administrador de conexiones de caché
   Puede configurar la transformación de búsqueda para utilizar el modo de caché completa y un Administrador de conexiones de caché. En el modo de caché completa, el conjunto de datos de referencia se carga en la memoria caché antes de que se ejecute la transformación Búsqueda.  
@@ -62,7 +62,7 @@ ms.locfileid: "51642292"
   
 -   [Contenedor de secuencias](../../integration-services/control-flow/sequence-container.md)  
   
- Para ver un vídeo donde se muestra cómo implementar una transformación de búsquedas en el modo de caché completa con el Administrador de conexiones de caché, visite [Cómo implementar una transformación Búsqueda en modo de memoria caché completa (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Para ver un vídeo donde se muestra cómo implementar una transformación Búsqueda en el modo de caché completa mediante el administrador de conexiones de caché, vea [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131031) (Cómo implementar una transformación Búsqueda en modo de memoria caché completa [vídeo de SQL Server]).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Implementar una transformación Búsqueda en el modo de caché completa en un paquete utilizando el Administrador de conexiones de caché y un origen de datos del flujo de datos  
   
@@ -280,7 +280,7 @@ ms.locfileid: "51642292"
   
 9. Ejecute el paquete.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implementación de una búsqueda en los modos No hay caché o Caché parcial](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformaciones de Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  

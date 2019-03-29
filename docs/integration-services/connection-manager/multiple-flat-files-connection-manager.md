@@ -20,15 +20,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f49a603d7b5307c2ddac938b32361e67716f705f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0e81e43aa0eafb76b107c30b2bdd07a0a70b60fd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534373"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275735"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>administrador de conexiones de varios archivos planos
   Un administrador de conexiones de varios archivos planos permite a un paquete obtener acceso a datos de varios archivos planos. Por ejemplo, un origen de archivos planos puede utilizar un administrador de conexiones para varios archivos planos cuando la tarea Flujo de datos se encuentra en un contenedor de bucles, como el contenedor de bucles For. En cada bucle del contenedor, el origen de archivos planos carga los datos del siguiente nombre de archivo que proporciona el administrador de conexiones de varios archivos planos.  
@@ -234,9 +234,9 @@ ms.locfileid: "52534373"
 |Propiedad|Descripción|  
 |--------------|-----------------|  
 |**ColumnType**|Denota si la columna es delimitada, de ancho fijo o derecho irregular. Esta propiedad es de solo lectura. Los archivos de derecho irregular son archivos en los que todas las columnas tienen un ancho fijo, a excepción de la última, que se termina con el delimitador de filas.|  
-|**OutputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, aparecerá como recuento de caracteres. En la tarea Flujo de datos este valor se utiliza para establecer el ancho de la columna de salida para el origen del archivo plano.<br /><br /> Nota: en el modelo de objetos, el nombre de esta propiedad es MaximumWidth.|  
+|**OutputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, aparecerá como recuento de caracteres. En la tarea Flujo de datos este valor se utiliza para establecer el ancho de la columna de salida para el origen del archivo plano.<br /><br /> Nota: En el modelo de objetos, el nombre de esta propiedad es MaximumWidth.|  
 |**DataType**|Seleccione los tipos de datos disponibles en la lista. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
-|**TextQualified**|Indica si los datos de texto se han calificado mediante un carácter calificador de texto.<br /><br /> **True**: se califican los datos de texto del archivo plano.<br /><br /> **False**: no se califican los datos de texto del archivo plano.|  
+|**TextQualified**|Indica si los datos de texto se han calificado mediante un carácter calificador de texto.<br /><br /> **True**: Se califican los datos de texto del archivo plano.<br /><br /> **False**: No se califican los datos de texto del archivo plano.|  
 |**Nombre**|Proporcione un nombre de columna. Una lista numerada de columnas es el valor predeterminado; sin embargo, puede elegir un nombre único y descriptivo.|  
 |**DataScale**|Especifique la escala de los datos numéricos. La escala hace referencia al número de posiciones decimales. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Seleccione los delimitadores de columna disponibles en la lista. Elija delimitadores que no sea probable encontrar en el texto. Este valor se omite para las columnas de ancho fijo.<br /><br /> **{CR}{LF}**: las columnas se delimitan con una combinación de retorno de carro y avance de línea.<br /><br /> **{CR}**: las columnas se delimitan mediante un retorno de carro.<br /><br /> **{LF}**: las columnas se delimitan mediante un avance de línea.<br /><br /> **Punto y coma {;}**: las columnas se delimitan mediante un punto y coma.<br /><br /> **Colon {:}**: las columnas se delimitan mediante dos puntos.<br /><br /> **Coma {,}**: las columnas se delimitan mediante una coma.<br /><br /> **Pestaña {t}**: las columnas se delimitan mediante un tabulador.<br /><br /> **Barra vertical {&#124;}**: las columnas se delimitan con una barra vertical.|  
@@ -276,7 +276,7 @@ ms.locfileid: "52534373"
  **Vista previa de filas**  
  Presenta datos de ejemplo del primer archivo plano seleccionado, divididos en columnas y filas mediante las opciones seleccionadas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Origen de archivo plano](../../integration-services/data-flow/flat-file-source.md)   
  [Destino de archivo plano](../../integration-services/data-flow/flat-file-destination.md)   
  [Conexiones de Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

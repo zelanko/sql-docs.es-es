@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 604fbafb-15fa-4d11-8487-77d7b626eed8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c1296ab84f5cf75013b68c72aba435c77ff129a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edb9b3188669883b6f1d744185c4b643dffdface
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608423"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271118"
 ---
 # <a name="extract-change-data-using-the-cdc-source"></a>Extraer datos de modificaciones mediante el origen de CDC
   Para agregar y configurar un destino CDC, el paquete ya debe incluir por lo menos una tarea Flujo de datos y una tarea Control CDC.  
@@ -45,15 +45,15 @@ ms.locfileid: "47608423"
   
 8.  Seleccione el modo de procesamiento que mejor controle las necesidades de procesamiento. Las opciones posibles son:  
   
-    -   **Todos**: devuelve los cambios en el intervalo CDC actual sin los valores de **Antes de actualización** .  
+    -   **Todos**: devuelve los cambios en el intervalo CDC actual sin los valores de **Antes de actualizar**.  
   
-    -   **Todos con valores antiguos**: devuelve los cambios en el intervalo de procesamiento CDC actual, incluidos los valores antiguos (**Antes de actualización**). Para cada operación de actualización habrá dos filas: una con los valores anteriores a la actualización y otra con los valores posteriores a la actualización.  
+    -   **Todos con los valores antiguos**: devuelve los cambios en el intervalo de procesamiento CDC actual, incluidos los valores antiguos (**Antes de actualizar**). Para cada operación de actualización habrá dos filas: una con los valores anteriores a la actualización y otra con los valores posteriores a la actualización.  
   
     -   **Neto**: devuelve una sola fila de cambios por cada fila de origen modificada en el intervalo de procesamiento de CDC actual. Si una fila de origen se actualizó varias veces, se genera el cambio combinado (por ejemplo, se genera insertar+actualizar como una actualización única y se genera actualizar+eliminar como una eliminación única). Al trabajar en el modo de procesamiento de cambios Neto, es posible dividir los cambios en salidas de eliminar, insertar y actualizar y controlarlos todos en paralelo, ya que la fila de origen única aparece en más de un resultado.  
   
-    -   **Neto con máscara de actualización**: este modo es similar al modo Neto normal, pero también agrega columnas booleanas con el patrón de nombre **__$\<column-name>\__Changed** que indica las columnas modificadas en la fila de cambio actual.  
+    -   **Neto con máscara de actualización**: este modo es similar al modo neto normal, pero también agrega columnas booleanas con el patrón de nombre **__$\<column-name>\__Changed** que indican las columnas modificadas en la fila de cambio actual.  
   
-    -   **Neto con combinación**: este modo es similar al modo Neto normal, pero con las operaciones de inserción y actualización combinadas en una sola operación de combinación (UPSERT).  
+    -   **Neto con combinación**: este modo es similar al modo neto normal, pero con las operaciones de inserción y actualización combinadas en una sola operación de combinación (UPSERT).  
   
 9. Seleccione la variable de paquete de la cadena de SSIS que mantenga el estado CDC para el contexto CDC actual. Para obtener más información sobre la variable de estado CDC, vea [Definir una variable de estado](../../integration-services/data-flow/define-a-state-variable.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47608423"
   
 15. Haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Editor de origen de CDC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
  [Editor de origen de CDC &#40;página Columnas&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)   
  [Editor de origen de CDC &#40;página Salida de error&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  

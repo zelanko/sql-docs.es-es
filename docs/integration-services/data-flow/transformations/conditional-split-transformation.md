@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b6d56b9d109935db3adeafd4a3c11139109af8f7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3150d6a8c42a9e4cb0c4cb0cf17b581be61fd418
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640472"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280886"
 ---
 # <a name="conditional-split-transformation"></a>División condicional, transformación
   La transformación División condicional puede dirigir filas de datos a salidas diferentes en función del contenido de los datos. La implementación de la transformación División condicional es similar a una estructura de decisión CASE de un lenguaje de programación. Evalúa expresiones y, en función de los resultados, dirige la fila de datos a la salida especificada. Esta transformación también proporciona una salida predeterminada, de modo que si una fila no coincide con ninguna expresión, se dirige a la salida predeterminada.  
@@ -87,7 +87,7 @@ ms.locfileid: "51640472"
   
  Puede especificar el valor de esta propiedad con una expresión de propiedad.  
   
- **Temas relacionados**: [Expresiones de Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **Temas relacionados:**  [Expresiones de Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **Nombre de salida predeterminado**  
  Escriba un nombre para la salida predeterminada o utilice el nombre predeterminado.  
@@ -95,7 +95,7 @@ ms.locfileid: "51640472"
  **Configurar la salida de errores**  
  Especifique cómo quiere controlar los errores mediante el cuadro de diálogo [Configurar la salida de errores](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

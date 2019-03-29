@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: La sintaxis de CREATE DATABASE para SQL Server, Azure SQL Database, Azure SQL Data Warehouse y Analytics Platform System
 ms.custom: ''
-ms.date: 03/08/2019
+ms.date: 03/18/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 6283f95a8d3dc34964d13a21b75097ab5f51a56d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: d63faad8a29853354e6187d963dc23ccd78b0252
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974554"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222149"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -1317,7 +1317,7 @@ El tamaño máximo permitido para la base de datos. La base de datos no puede su
 Tamaño máximo permitido para los datos de almacenamiento de filas de la base de datos. Los datos almacenados en tablas de almacenamiento de filas, en el almacén delta de un índice de almacén de columnas o en un índice no agrupado de un índice de almacén de columnas agrupado no pueden superar el valor de MAXSIZE. Los datos comprimidos en formato de almacén de columnas no tienen un límite de tamaño y no están restringidos por el valor de MAXSIZE.
 
 SERVICE_OBJECTIVE     
-Especifica el nivel de rendimiento. Para más información sobre los objetivos de servicio para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vea [Niveles de rendimiento](https://azure.microsoft.com/documentation/articles/performance-tiers/).
+Especifica el nivel de rendimiento. Para más información sobre los objetivos de servicio para SQL Data Warehouse, consulte [Unidades de almacenamiento de datos (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="general-remarks"></a>Notas generales
 Use [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) para ver las propiedades de la base de datos.

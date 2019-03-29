@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e8a7300f2b3a006ade820831f682eb379e9e200
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 95a771a7eb5f8f77f7ee7e869c0a434b1b604d26
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393978"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282399"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE en paquetes de Integration Services
   En la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la instrucción SQL de una tarea Ejecutar SQL puede contener una instrucción MERGE. Esta instrucción MERGE permite llevar a cabo varias operaciones INSERT, UPDATE y DELETE en una única instrucción.  

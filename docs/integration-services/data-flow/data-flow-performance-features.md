@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b172eb0635c54bf6b9e0289ac220676eb08fd9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b20f9d2d48452d95ff0c219f7c291a2a5b1cd887
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411992"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275497"
 ---
 # <a name="data-flow-performance-features"></a>Características de rendimiento del flujo de datos
   En este tema se proporcionan sugerencias sobre cómo diseñar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas de rendimiento comunes. También proporciona información sobre las características y las herramientas que puede utilizar para solucionar problemas relacionados con el rendimiento de los paquetes.  
@@ -77,7 +77,7 @@ ms.locfileid: "52411992"
  No aumente el tamaño de los búferes hasta un punto en el que se produzca la paginación del disco. La paginación del disco afecta al rendimiento más que al hecho de no optimizar el tamaño de los búferes. Para saber si se está produciendo la paginación, supervise el contador de rendimiento "Búferes puestos en cola" en el complemento Rendimiento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC).  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>Configurar el paquete para la ejecución en paralelo  
- La ejecución en paralelo mejora el rendimiento en los equipos que tienen varios procesadores físicos o lógicos. Para admitir la ejecución en paralelo de tareas diferentes del paquete, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa dos propiedades: **MaxConcurrentExecutables** y **EngineThreads**.  
+ La ejecución en paralelo mejora el rendimiento en los equipos que tienen varios procesadores físicos o lógicos. Para admitir la ejecución en paralelo de tareas diferentes del paquete, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utiliza dos propiedades: **MaxConcurrentExecutables** y **EngineThreads**.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>La propiedad MaxConcurrentExcecutables  
  La propiedad **MaxConcurrentExecutables** es una propiedad del propio paquete. Esta propiedad define cuántas tareas se pueden ejecutar simultáneamente. El valor predeterminado es -1, que significa el número de procesadores físicos o lógicos más 2.  
@@ -148,7 +148,7 @@ ms.locfileid: "52411992"
   
  Normalmente, los componentes más lentos de la transformación Dimensión de variación lenta son las transformaciones Comando de OLE DB que ejecutan cláusulas UPDATE sobre las filas de una en una. Por consiguiente, la manera más efectiva de mejorar el rendimiento de la transformación Dimensión de variación lenta consiste en reemplazar las transformaciones Comando de OLE DB. Puede reemplazar estas transformaciones por componentes de destino que guarden todas las filas que hay que actualizar en una tabla de ensayo. A continuación, puede agregar una tarea Ejecutar SQL que ejecute una cláusula Transact-SQL UPDATE basada en un solo conjunto sobre todas las filas al mismo tiempo.  
   
- Los usuarios avanzados pueden diseñar un flujo de datos personalizado para el procesamiento de dimensiones de variación lenta que esté optimizado para las dimensiones de gran tamaño. Para obtener una descripción y un ejemplo de este método, consulte la sección "Unique dimension scenario" en las notas del producto [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+ Los usuarios avanzados pueden diseñar un flujo de datos personalizado para el procesamiento de dimensiones de variación lenta que esté optimizado para las dimensiones de gran tamaño. Para obtener una descripción y un ejemplo de este método, consulte la sección dedicada al escenario de dimensión única en las notas del producto, [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ### <a name="destinations"></a>Destinos  
  Para lograr un mejor rendimiento con los destinos, considere la posibilidad de utilizar un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de probar el rendimiento del destino.  
@@ -171,9 +171,9 @@ ms.locfileid: "52411992"
 ## <a name="related-content"></a>Contenido relacionado  
  **Artículos y publicaciones de blogs**  
   
--   Artículo técnico con una [estrategia para el rendimiento en SQL Server 2005 Integration Services](https://go.microsoft.com/fwlink/?LinkId=98899), en technet.microsoft.com  
+-   Artículo técnico, [SQL Server 2005 Integration Services: A Strategy for Performance](https://go.microsoft.com/fwlink/?LinkId=98899), en technet.microsoft.com  
   
--   Artículo técnico con [técnicas de ajuste del rendimiento en SQL Server 2005 Integration Services](https://go.microsoft.com/fwlink/?LinkId=98900), en technet.microsoft.com  
+-   Artículo técnico, [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900), en technet.microsoft.com  
   
 -   Artículo técnico sobre cómo [incrementar el rendimiento en las canalizaciones dividiendo las transformaciones sincrónicas en varias tareas](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), en sqlcat.com  
   
@@ -201,7 +201,7 @@ ms.locfileid: "52411992"
   
 -   Vídeo, [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), en technet.microsoft.com.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas para solucionar problemas con el desarrollo de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Herramientas para solucionar problemas con la ejecución de paquetes](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23753d15f1113b5a11a00e768c836f8860db96ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6df83cd3a7609097a6e27bd92c59daf24458548
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733663"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283068"
 ---
 # <a name="precedence-constraints"></a>Restricciones de precedencia
   Las restricciones de precedencia vinculan ejecutables, contenedores y tareas de paquetes en un flujo de control, y especifican condiciones que determinan si se ejecutan los ejecutables. Un ejecutable puede ser un contenedor de bucles For, de bucles Foreach o de secuencia, o bien una tarea o un controlador de eventos. Los controladores de eventos usan las restricciones de precedencia para vincular sus ejecutables en un flujo de control.  
@@ -111,10 +111,10 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
   
 ### <a name="options"></a>Opciones  
  **Operación de evaluación**  
- Permite especificar la operación de evaluación que utiliza la restricción de precedencia. Las operaciones son: **Restricción**, **Expresión**, **Expresión y restricción**, y **Expresión o restricción**.  
+ Permite especificar la operación de evaluación que utiliza la restricción de precedencia. Las operaciones son: **Restricción**, **Expresión**, **Expresión y restricción** y **Expresión o restricción**.  
   
  **Value**  
- Permite especificar el valor de restricción: **Correcto**, **Error**o **Conclusión**.  
+ Especifique el valor de restricción: **Correcto**, **Error** o **Finalización**.  
   
 > [!NOTE]  
 >  La línea de restricción de precedencia es verde para **Correcto**, resaltada para **Error**y azul para **Conclusión**.  
@@ -237,7 +237,7 @@ Una restricción de precedencia conecta dos ejecutables: dos tareas, dos contene
 ### <a name="logicaland-property"></a>Propiedad LogicalAnd  
  Si una tarea o contenedor tiene varias restricciones, la propiedad **LogicalAnd** especifica si se evalúa una restricción de precedencia individualmente o en conjunto con otras restricciones.  
   
- Puede especificar la propiedad **LogicalAnd** mediante el **Editor de restricciones de precedencia** en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)], o en la ventana Propiedades que proporciona [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ Puede especificar la propiedad **LogicalAnd** mediante el **Editor de restricciones de precedencia** en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , o en la ventana Propiedades que proporciona [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
 
 ## <a name="set-the-default-value-for-precedence-constraints"></a>Establecer el valor predeterminado para las restricciones de precedencia  
 Cuando se usa por primera vez el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , el valor predeterminado de una restricción de precedencia es **Success**. Siga estos pasos para configurar el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] y usar un valor predeterminado diferente para las restricciones de precedencia.

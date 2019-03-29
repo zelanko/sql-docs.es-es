@@ -16,15 +16,15 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 184f3337f706d2a19210a8304d6b351b352ea309
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3e2e77caa45d704c1ecaccb1bb85b6bf6845dd47
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639902"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281969"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   La tarea Consulta de minería de datos ejecuta consultas de predicción basadas en modelos de minería de datos integrados en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La consulta de predicción crea una predicción para datos nuevos a partir de modelos de minería de datos. Por ejemplo, una consulta de predicción puede predecir cuántos barcos de vela es probable vender durante los meses de verano, así como generar una lista de clientes que podrían estar interesados en comprar uno.  
@@ -116,12 +116,12 @@ ms.locfileid: "51639902"
  **Consulta de minería de datos**  
  Escriba una consulta de minería de datos.  
   
- **Temas relacionados:** [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
+ **Temas relacionados:**  [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
   
  **Generar nueva consulta**  
  Cree la consulta de minería de datos con una herramienta gráfica.  
   
- **Temas relacionados:** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
+ **Temas relacionados:** [Consulta de minería de datos](../../integration-services/control-flow/data-mining-query.md)  
   
 ### <a name="parameter-mapping-tab-options"></a>Opciones de la pestaña Asignación de parámetros  
  **Nombre de parámetro**  

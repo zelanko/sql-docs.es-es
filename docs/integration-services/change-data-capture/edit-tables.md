@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - tabProps
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 108b3bf1ccd37b92144bcf0aa21d60546dc68979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35b2aac2558a78133830d305abd587c7603e9ec9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613003"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281699"
 ---
 # <a name="edit-tables"></a>Editar tablas
   Use la pestaña **Tablas** para realizar cambios en las tablas y columnas que seleccionó en la base de datos de origen de Oracle. Esta pestaña contiene los elementos siguientes:  
@@ -26,11 +26,11 @@ ms.locfileid: "47613003"
  **Lista de la tabla**  
  La lista de tablas tiene tres columnas:  
   
--   **Nombre de tabla de Oracle**: nombre de la tabla, incluido el esquema de tabla.  
+-   **Nombre de la tabla de Oracle**: nombre de la tabla, incluido el esquema de tabla.  
   
--   **Instancia de captura**: nombre de la instancia de captura que se usa para denominar los objetos de captura de datos modificados específicos de una instancia. La instancia de captura no puede ser NULL. Si no se especifica, el nombre deriva del nombre del esquema de origen más el nombre de la tabla de origen, con el formato `<schema-name>_<table-name>.` . El nombre de la instancia de captura no puede tener más de 100 caracteres y debe ser único dentro de la base de datos. Puede hacer clic en cualquier celda de esta columna para editar manualmente **capture_instance**.  
+-   **Instancia de captura**: el nombre de la instancia de captura que se usa para denominar los objetos de captura de datos modificados específicos de una instancia. La instancia de captura no puede ser NULL. Si no se especifica, el nombre deriva del nombre del esquema de origen más el nombre de la tabla de origen, con el formato `<schema-name>_<table-name>.` . El nombre de la instancia de captura no puede tener más de 100 caracteres y debe ser único dentro de la base de datos. Puede hacer clic en cualquier celda de esta columna para editar manualmente **capture_instance**.  
   
--   **Rol de seguridad**: nombre del rol de base de datos usado para obtener acceso a los datos de cambios. Puede hacer clic en cualquier celda de esta columna para editar manualmente **security_role**.  
+-   **Rol de seguridad**: nombre del rol de base de datos usado para obtener acceso a los datos modificados. Puede hacer clic en cualquier celda de esta columna para editar manualmente **security_role**.  
   
  **Agregar tablas**  
  Haga clic en **Agregar tablas** para abrir el cuadro de diálogo Selección de tabla, donde puede [Agregar tablas a una instancia CDC](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md). La primera vez que tenga acceso a la base de datos de Oracle en esta sesión, debe [Connect to Oracle](../../integration-services/change-data-capture/connect-to-oracle.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "47613003"
  **Quitar**  
  Seleccione una tabla de la lista y haga clic en **Quitar** para quitar la tabla de la instancia CDC.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cómo editar las propiedades de la instancia CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Seleccione las columnas y tablas de Oracle ](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   

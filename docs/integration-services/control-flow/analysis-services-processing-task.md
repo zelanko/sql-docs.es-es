@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: babc48270415cdd4485dd75b43b052904824ebe5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2f1c260b97c60fd6b60a9a8c0ecf6e8fbd696fee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641782"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271058"
 ---
 # <a name="analysis-services-processing-task"></a>Procesamiento de Analysis Services, tarea
   La tarea Procesamiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] procesa objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como modelos tabulares, cubos, dimensiones y modelos de minería de datos.  
@@ -113,7 +113,7 @@ ms.locfileid: "51641782"
  **Nueva**  
  Cree un administrador de conexiones de Analysis Services nuevo.  
   
- **Temas relacionados:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones con Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Temas relacionados:** [Administrador de conexiones de Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Referencia de la interfaz de usuario del cuadro de diálogo Agregar administrador de conexiones de Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Lista de objetos**  
  |Propiedad|Descripción|  
@@ -132,7 +132,7 @@ ms.locfileid: "51641782"
  **Análisis de impacto**  
  Lleve a cabo el análisis de impacto en el objeto seleccionado.  
   
- **Temas relacionados:** [Cuadro de diálogo Análisis de impacto &#40;Analysis Services - Datos multidimensionales&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **Temas relacionados:** [Impacto del cuadro de diálogo de análisis &#40;Analysis Services: datos multidimensionales&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **Resumen de configuración de lotes**  
  |Propiedad|Descripción|  
@@ -146,5 +146,5 @@ ms.locfileid: "51641782"
  **Cambiar configuración**  
  Cambie las opciones de procesamiento y el control de errores en las claves de dimensiones.  
   
- **Temas relacionados:** [Cuadro de diálogo Cambiar configuración &#40;Analysis Services - Datos multidimensionales&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **Temas relacionados:** [Cuadro de diálogo Cambiar configuración &#40;(Analysis Services: datos multidimensionales)&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   

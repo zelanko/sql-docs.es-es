@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2dc364cc2665d800e311625d754716e4582b6b65
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1f41ef937dd3045be524eeb71274ce3f46f85653
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392868"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282685"
 ---
 # <a name="the-oracle-cdc-databases"></a>Las bases de datos CDC de Oracle
   Una instancia CDC de Oracle está asociada a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el mismo nombre en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. Esta base de datos se denomina la base de datos CDC de Oracle (o la base de datos CDC).  
@@ -99,7 +99,7 @@ ms.locfileid: "52392868"
 |----------|-----------------|  
 |version|Hace un seguimiento de la versión de la configuración de la instancia CDC. Se actualiza cada vez que se actualiza la tabla y cada vez que se agrega una nueva instancia de captura o cuando se quita una instancia de captura existente.|  
 |connect_string|Cadena de conexión de Oracle. Un ejemplo básico es:<br /><br /> `<server>:<port>/<instance>` (por ejemplo, `erp.contoso.com:1521/orcl`).<br /><br /> La cadena de conexión también puede especificar un descriptor de conexión de Oracle Net, por ejemplo `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Si se usa un servidor de directorio o tnsnames, la cadena de conexión puede ser el nombre de la conexión.<br /><br /> Para obtener más información sobre las cadenas de conexión de Oracle, vea [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153) para obtener información detallada sobre las cadenas de conexión a bases de datos de Oracle para el cliente Oracle Instant usado por el servicio CDC de Oracle.|  
-|use_windows_authentication|Valor booleano que puede ser:<br /><br /> **0**: se proporcionan un nombre de usuario y una contraseña de Oracle para la autenticación (valor predeterminado).<br /><br /> **1**: se usa la autenticación de Windows para conectar con la base de datos de Oracle. Solo puede usar esta opción si la base de datos de Oracle está configurada para usar la autenticación de Windows.|  
+|use_windows_authentication|Valor booleano que puede ser:<br /><br /> **0**: se proporcionan un nombre de usuario y una contraseña de Oracle para la autenticación (valor predeterminado).<br /><br /> **1**: se usa la autenticación de Windows para conectar con la base de datos Oracle. Solo puede usar esta opción si la base de datos de Oracle está configurada para usar la autenticación de Windows.|  
 |username|Nombre del usuario de la base de datos de Oracle de minería de registros. Solo es necesario si **use_windows_authentication = 0**.|  
 |password|Contraseña del usuario de la base de datos de Oracle de minería de registros. Solo es necesario si **use_windows_authentication = 0**.|  
 |transaction_staging_timeout|Tiempo, en segundos, que una transacción de Oracle no confirmada se conserva en memoria antes de escribirse en la tabla **cdc.xdbcdc_staged_transactions** . El valor predeterminado es 120 segundos.|  
@@ -186,7 +186,7 @@ ms.locfileid: "52392868"
 |data_end_cn|Número de cambio (CN) del último cambio en los datos de esta fila.|  
 |datos|Cambios almacenados provisionalmente para la transacción en forma de blob.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Diseñador de captura de datos modificados para Oracle de Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)  
   
   

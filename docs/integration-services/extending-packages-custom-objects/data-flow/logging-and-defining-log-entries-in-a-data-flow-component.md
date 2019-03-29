@@ -13,15 +13,15 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], logging
 - data flow components [Integration Services], logging
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4bd559b5e69e8f20d7791ce0eeddb2021c1813d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59725d4638561346af3e7fbac08275e56dacb4f1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637573"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281309"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>Registrar y definir entradas de registro en un componente de flujo de datos
   Los componentes de flujo de datos personalizados pueden publicar mensajes en una entrada de registro existente con el método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.PostLogMessage%2A> de la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. También pueden presentar información al usuario con el método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireInformation%2A> o métodos similares de la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Sin embargo, este enfoque supone la sobrecarga de provocar y controlar eventos adicionales y obliga al usuario a buscar los mensajes que le pueden interesar entre todos los mensajes informativos detallados. Puede utilizar una entrada de registro personalizada tal como se describe a continuación para proporcionar información de registro personalizada etiquetada de forma diferenciada a los usuarios del componente.  
@@ -60,7 +60,7 @@ End Sub
   
  La enumeración <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency> proporciona una sugerencia al motor en tiempo de ejecución sobre la frecuencia con que se registrará el evento:  
   
--   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_OCCASIONAL>: el evento solamente se registra en ocasiones, no durante cada ejecución.  
+-   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_OCCASIONAL>: el evento se registra solo algunas veces, no durante cada ejecución.  
   
 -   <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>: el evento se registra un número constante de veces durante cada ejecución.  
   
@@ -98,7 +98,7 @@ End Sub
   
  Cuando el usuario ejecuta el paquete, después de seleccionar "My Custom Component Log Entry" en el cuadro de diálogo **Registro**, el registro contendrá una entrada claramente etiquetada como "User::My Custom Component Log Entry". Esta nueva entrada de registro contiene el texto de la instrucción SQL, la marca de tiempo y cualquier dato adicional registrado por el programador.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Registro de Integration Services &#40;SSIS&#41;](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   

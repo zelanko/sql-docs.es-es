@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0eb8532c10069f50283e13ab997560330dfa5a1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bea5d30cb17920584c4d4eafdf888eeedbc014e6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715373"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282949"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Escalado horizontal de Integration Services (SSIS)
 La escalabilidad horizontal de SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) proporciona una ejecución de alto rendimiento de paquetes de SSIS mediante la distribución de ejecuciones de paquetes en varios equipos. Tras configurar la escalabilidad horizontal, puede ejecutar múltiples ejecuciones de paquetes en paralelo (en el modo de escalabilidad horizontal) desde SQL Server Management Studio (SSMS).
@@ -46,4 +46,4 @@ Tras configurar la escalabilidad horizontal, puede hacer lo siguiente:
 ## <a name="next-steps"></a>Pasos siguientes
 -   [Introducción a la escalabilidad horizontal de Integration Services (SSIS) en un único equipo](get-started-with-ssis-scale-out-onebox.md)
 
--   [Tutorial: configuración del escalado horizontal de Integration Services](walkthrough-set-up-integration-services-scale-out.md)
+-   [Tutorial: Configuración de la escalabilidad horizontal de Integration Services](walkthrough-set-up-integration-services-scale-out.md)

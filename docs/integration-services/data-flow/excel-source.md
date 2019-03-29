@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3a6d3345b1a6e8f7ffdebec05ae3f71d04cb8fe3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4284edefaec85304fdf189de6ea53f4de87a7efd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639312"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290041"
 ---
 # <a name="excel-source"></a>Origen de Excel
   El origen de Excel extrae datos de hojas de cálculo o de rangos de libros de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -77,7 +77,7 @@ ms.locfileid: "51639312"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |Tabla o vista|Recupera los datos de una hoja de cálculo o un rango con nombre del archivo Excel.|  
-|Variable de nombre de tabla o nombre de vista|Especifique la hoja de calculo o el rango con nombre de una variable.<br /><br /> **Información relacionada** [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Variable de nombre de tabla o nombre de vista|Especifique la hoja de calculo o el rango con nombre de una variable.<br /><br /> **Información relacionada:** [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Comando SQL|Recupera datos del archivo Excel mediante una consulta SQL. |  
 |Comando SQL de variable|Especifique el texto de la consulta SQL de una variable.|  
   

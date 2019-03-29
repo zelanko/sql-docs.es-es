@@ -26,15 +26,15 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 85a35b34610982ac4418e0e8ab05d3e1b188b968
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3ea9c1c590b9f09f1bd31b491d9b0170f59f8406
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507472"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282579"
 ---
 # <a name="term-extraction-transformation"></a>Extracción de términos, transformación
   La transformación Extracción de términos extrae términos del texto en una columna de entrada de transformación y luego escribe los términos en una columna de salida de transformación. La transformación funciona solo con texto en inglés y utiliza únicamente su propio diccionario en inglés e información lingüística sobre el idioma inglés.  
@@ -238,7 +238,7 @@ ms.locfileid: "52507472"
  Especifica que la puntuación está determinada por la frecuencia del término.  
   
  **TFIDF**  
- Mediante esta opción se indica que la puntuación está determinada por el valor TFIDF del término. La puntuación TFIDF es el producto de la frecuencia del término y la frecuencia inversa del documento, definida de esta forma: TFIDF de un término T = (frecuencia de T) * log( (n.º de filas de entrada) / (n.º de filas con T) )  
+ Mediante esta opción se indica que la puntuación está determinada por el valor TFIDF del término. La puntuación TFIDF es el producto de la frecuencia del término y la frecuencia inversa del documento, tal y como se define a continuación: TFIDF de un término T = (frecuencia de T) * log ((#filas en entrada)/(#filas con T))  
   
  **Umbral de frecuencia**  
  Permite especificar el número de veces que una palabra o frase debe aparecer antes de extraerla. El valor predeterminado es 2.  
@@ -252,7 +252,7 @@ ms.locfileid: "52507472"
  **Configurar la salida de errores**  
  Use el cuadro de diálogo [Configurar la salida de errores](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) para especificar las opciones de control de errores para las filas que provocan errores.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Transformación Búsqueda de términos](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
 

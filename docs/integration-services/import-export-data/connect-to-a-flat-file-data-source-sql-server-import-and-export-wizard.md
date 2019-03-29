@@ -3,20 +3,19 @@ title: Conexión a un origen de datos de archivo plano (Asistente para importaci
 ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ffb879aa1b3fdbb5c89690de5cb4c61c5e9eab2d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a071c773077832c15d41f73764b56c3bac9e5cf0
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393719"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222139"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Conexión a un origen de datos de archivo plano (Asistente para importación y exportación de SQL Server)
 En este tema se muestra cómo conectarse a un origen de datos de **archivo plano** (archivo de texto) desde la página **Seleccionar un origen de datos** o **Seleccionar un destino** del Asistente para importación y exportación de SQL Server. Para los archivos planos, estas dos páginas del Asistente presentan diferentes conjuntos de opciones, por lo que en este tema se describen el origen y el destino del archivo plano por separado.
@@ -212,7 +211,7 @@ En la captura de pantalla, tenga en cuenta que la columna **id**, que contiene n
 |**DataScale**|Especifique la escala de los datos numéricos. La escala hace referencia al número de posiciones decimales.|
 |**DataType**|Seleccione los tipos de datos disponibles en la lista.<br/>Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|
 |**OutputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, el valor corresponde a un recuento de caracteres. En la tarea Flujo de datos este valor se utiliza para establecer el ancho de la columna de salida para el origen del archivo plano. En el modelo de objetos, el nombre de esta propiedad es MaximumWidth.|  
-|**TextQualified**|Indica si los datos de texto están entre caracteres calificadores de texto como caracteres de comillas.<br /><br /> True: se califican los datos de texto del archivo plano. False: no se califican los datos de texto del archivo plano.|  
+|**TextQualified**|Indica si los datos de texto están entre caracteres calificadores de texto como caracteres de comillas.<br /><br /> True: Se califican los datos de texto del archivo plano. False: No se califican los datos de texto del archivo plano.|  
   
 **Nueva**  
  Para agregar una columna, haga clic en **Nuevo**. De manera predeterminada, el botón **Nueva** agrega una columna nueva al final de la lista. El botón siempre tiene las siguientes opciones, disponibles en la lista desplegable.  

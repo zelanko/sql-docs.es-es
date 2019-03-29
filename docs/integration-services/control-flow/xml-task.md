@@ -14,15 +14,15 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e5dcf629121edc7d4502b0cedbf9825e74813587
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a399ee84e84f0c85e057b8eaf6294548e18f75ee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530645"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290571"
 ---
 # <a name="xml-task"></a>Tarea XML
   La tarea XML se usa para trabajar con datos XML. Mediante esta tarea, un paquete puede recuperar documentos XML, aplicar operaciones a los documentos mediante las hojas de estilos Extensible Stylesheet Language Transformations (XSLT) y expresiones XPath, combinar varios documentos, o bien validar, comparar y guardar los documentos actualizados en archivos y variables.  
@@ -169,7 +169,7 @@ ms.locfileid: "52530645"
   
  Si **Source** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **Source** está establecido en **Variable**, seleccione una variable existente o haga clic en **\<Nueva variable...>** para crear una nueva.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "52530645"
  **Destino**  
  Seleccione un administrador de conexiones de archivos existente o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  **DestinationType**  
  Seleccione el tipo de destino del documento XML. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
@@ -230,7 +230,7 @@ ms.locfileid: "52530645"
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **XPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
   
@@ -248,7 +248,7 @@ ms.locfileid: "52530645"
  **Destino**  
  Si **DestinationType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **DestinationType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
   
@@ -276,7 +276,7 @@ ms.locfileid: "52530645"
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **XPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
   
@@ -294,7 +294,7 @@ ms.locfileid: "52530645"
  **Destino**  
  Si **DestinationType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **DestinationType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
   
@@ -322,7 +322,7 @@ ms.locfileid: "52530645"
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **XPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
   
@@ -357,7 +357,7 @@ ms.locfileid: "52530645"
   
  Si **XPathStringSourceType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **XPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
   
@@ -374,7 +374,7 @@ ms.locfileid: "52530645"
  **Destino**  
  Si **DestinationType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **DestinationType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
   
@@ -402,7 +402,7 @@ ms.locfileid: "52530645"
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **SecondOperandType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
   
@@ -428,11 +428,11 @@ ms.locfileid: "52530645"
 |**IgnoreXMLDeclaration**|Especifique si desea comparar la declaración XML.|  
 |**IgnoreDTD**|Especifique si desea ignorar la definición de tipo de documento (DTD).|  
 |**IgnoreWhiteSpaces**|Especifique si se omitirán las diferencias en la cantidad de espacios en blanco al comparar documentos.|  
-|**IgnoreNameSpaces**|Especifique si desea comparar el identificador uniforme de recursos (URI) de espacio de nombres de un elemento y los nombres de atributo.<br /><br /> Nota: Si esta opción se establece como **True**, se considerarán idénticos dos elementos con el mismo nombre local, pero con distintos espacios de nombres.|  
+|**IgnoreNameSpaces**|Especifique si desea comparar el identificador uniforme de recursos (URI) de espacio de nombres de un elemento y los nombres de atributo.<br /><br /> Nota: Si esta opción se establece en **True**, se considerarán idénticos dos elementos con el mismo nombre local, pero con distintos espacios de nombres.|  
 |**IgnoreProcessingInstructions**|Especifique si desea comparar las instrucciones de procesamiento.|  
-|**IgnoreOrderOf ChildElements**|Especifique si desea comparar el orden de los elementos secundarios.<br /><br /> Nota: Si esta opción se establece como **True**, los elementos secundarios que se diferencian solamente por su posición en una lista de elementos del mismo nivel se consideran idénticos.|  
+|**IgnoreOrderOf ChildElements**|Especifique si desea comparar el orden de los elementos secundarios.<br /><br /> Nota: Si esta opción se establece en **True**, los elementos secundarios que se diferencian solamente por su posición en una lista de elementos del mismo nivel se consideran idénticos.|  
 |**IgnoreComments**|Especifique si desea comparar los nodos de comentario.|  
-|**IgnorePrefixes**|Especifique si desea comparar los prefijos de los nombres de elemento y atributo.<br /><br /> Nota: Si esta opción se establece como **True**, dos elementos con el mismo nombre local, pero con prefijos y URI de espacios de nombres diferentes se consideran idénticos.|  
+|**IgnorePrefixes**|Especifique si desea comparar los prefijos de los nombres de elemento y atributo.<br /><br /> Nota: Si esta opción se establece en **True**, dos elementos con el mismo nombre local, pero con prefijos y URI de espacios de nombres diferentes se consideran idénticos.|  
   
  **FailOnDifference**  
  Especifique si desea que se produzca un error en la tarea si se produce un error en la operación de comparación.  
@@ -449,7 +449,7 @@ ms.locfileid: "52530645"
  **Destino**  
  Si **DestinationType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **DestinationType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
   
@@ -477,7 +477,7 @@ ms.locfileid: "52530645"
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **SecondOperandType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
   
@@ -495,7 +495,7 @@ ms.locfileid: "52530645"
  **Destino**  
  Si **DestinationType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **DestinationType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
   
@@ -523,7 +523,7 @@ ms.locfileid: "52530645"
   
  Si **SecondOperandType** se ha establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **SecondOperandType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable...**> para crear una nueva.  
   

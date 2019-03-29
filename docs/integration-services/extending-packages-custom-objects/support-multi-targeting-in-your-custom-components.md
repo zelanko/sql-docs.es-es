@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 49252f4743f3235275c93f504b44f4419941029d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 67005532329ebdda27f0c86985604fb8a63babe1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797473"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273547"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Admitir múltiples versiones de los componentes personalizados
  Ahora puede usar el Diseñador SSIS en SQL Server Data Tools (SSDT) para crear, mantener y ejecutar paquetes que se destinen a SQL Server 2016, SQL Server 2014 o SQL Server 2012. Para obtener SSDT para Visual Studio 2015, consulte [Descargar SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
@@ -94,7 +94,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 ### <a name="invalidcastexception"></a>InvalidCastException
 
-**Mensaje de error.** No se puede convertir el objeto COM del tipo "System.__ComObject" al tipo de interfaz "Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100". Se produjo un error en esta operación debido a que la llamada QueryInterface en el componente COM para la interfaz con IID "{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}" generó el siguiente error: No se admite dicha interfaz (Excepción de HRESULT: 0x80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
+**Mensaje de error.** No se puede convertir el objeto COM del tipo "System.__ComObject" al tipo de interfaz "Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100". No se pudo realizar esta operación porque la llamada QueryInterface en el componente COM para la interfaz con IID "{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}" generó el siguiente error: No se admite dicha interfaz (excepción de HRESULT: 0x80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
 
 **Solución.** Si la extensión personalizada hace referencia a ensamblados de interoperabilidad de SSIS, como Microsoft.SqlServer.DTSPipelineWrap o Microsoft.SqlServer.DTSRuntimeWrap, establezca el valor de la propiedad **Insertar tipos de interoperabilidad** en **False**.
 

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d4b26ccd758bbd7d4a5cbe8959e7939848fd493
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 18b1fd7ce88d7b9be5dfa8440a9675945e99837c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639832"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280459"
 ---
 # <a name="flat-file-custom-properties"></a>Propiedades personalizadas de archivo plano
   **Propiedades personalizadas de origen**  
@@ -27,7 +27,7 @@ ms.locfileid: "51639832"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|FileNameColumnName|String|Nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, se generará ninguna columna de salida que contenga el nombre de archivo.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de origen de archivos planos**, pero se puede establecer mediante el **Editor avanzado**.|  
+|FileNameColumnName|String|Nombre de una columna de salida que contiene el nombre de archivo. Si no se especifica ningún nombre, se generará ninguna columna de salida que contenga el nombre de archivo.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de origen de archivos planos**, pero se puede definir con el **Editor avanzado**.|  
 |RetainNulls|Boolean|Valor que especifica si retener los valores Null del archivo de origen como tales cuando el motor de canalización de transformación de datos procesa los datos. El valor predeterminado de esta propiedad es **False**.|  
   
  La salida del origen de archivo plano no tiene ninguna propiedad personalizada.  
@@ -36,7 +36,7 @@ ms.locfileid: "51639832"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|FastParse|Boolean|Valor que indica si la columna usa las rutinas de análisis más rápidas que no distinguen la configuración regional y permiten un análisis rápido que DTS proporciona, o las rutinas de análisis estándar que sí distinguen la configuración regional. Para obtener más información, consulte [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) y [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). El valor predeterminado de esta propiedad es **False**.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de origen de archivos planos**, pero se puede establecer mediante el **Editor avanzado**.|  
+|FastParse|Boolean|Valor que indica si la columna usa las rutinas de análisis más rápidas que no distinguen la configuración regional y permiten un análisis rápido que DTS proporciona, o las rutinas de análisis estándar que sí distinguen la configuración regional. Para obtener más información, consulte [Fast Parse](https://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) y [Standard Parse](https://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013). El valor predeterminado de esta propiedad es **False**.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de origen de archivos planos**, pero se puede definir con el **Editor avanzado**.|  
   
  Para más información, consulte [Flat File Source](../../integration-services/data-flow/flat-file-source.md).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "51639832"
   
  Para más información, consulte [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

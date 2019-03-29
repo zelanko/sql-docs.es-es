@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 39235b99879ca5d49bc05dc3aabba71c37351e65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4d5bf2b8247d3ee7907f5a064f090c88344c18e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738349"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275577"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Manage an Oracle CDC Service
   Puede usar la Consola de configuración del servicio CDC para administrar un servicio CDC específico.  
@@ -47,7 +47,7 @@ ms.locfileid: "47738349"
   
  También puede hacer clic con el botón derecho en el servicio CDC que quiera eliminar y seleccionar **Eliminar**.  
   
- **Nota**: si el servicio se está ejecutando cuando se elimina el servicio, se detendrá el servicio antes de eliminarlo.  
+ **Nota**: Si cuando se elimina el servicio, este está en ejecución, se detiene antes de eliminarse.  
   
  Para eliminar la definición del servicio de Windows CDC de Oracle, el programa necesita acceso de actualización a la base de datos MSXDBCDC en la instancia asociada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al hacer clic en Aceptar para eliminar el servicio, el programa intenta eliminar el registro del servicio CDC de Oracle en la base de datos MSXDBCDC. Si el programa no puede eliminar el registro del servicio CDC de Oracle porque no tiene los permisos adecuados, pedirá al usuario que especifique un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con permisos de actualización para la base de datos MSXDBCDC.  
   

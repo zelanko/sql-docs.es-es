@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27976be0f3b6091450650f2bf3a73d1afbe42d20
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cca0fb51c67bf4cba471b10c30267d535d83d159
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518472"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274073"
 ---
 # <a name="data-flow-task"></a>tarea Flujo de datos
   La tarea Flujo de datos encapsula el motor de flujo de datos que mueve datos entre orígenes y destinos, y permite al usuario transformar, limpiar y modificar datos a medida que se mueven. Agregar una tarea Flujo de datos a un flujo de control de paquetes permite que el paquete extraiga, transforme y cargue datos.  
@@ -87,7 +87,7 @@ ms.locfileid: "52518472"
   
  Muchos eventos de registro escriben varias entradas, y los mensajes de un gran número de entradas del registro contienen datos complejos. Para facilitar la comprensión y comunicar el contenido de mensajes complejos, puede analizar el texto del mensaje. En función de la ubicación de los registros, puede usar instrucciones Transact-SQL o un componente de script para separar el texto complejo en columnas u otros formatos que considere más útiles.  
   
- Por ejemplo, la tabla siguiente contiene el mensaje "Se proporcionaron filas como entrada de un componente de flujo de datos. :  : 1185 : Salida de origen de OLE DB : 1180 : Ordenar : 1181 : Entrada de ordenación : 76", analizado en columnas. El evento **OnPipelineRowsSent** escribió el mensaje cuando se enviaron filas del origen de OLE DB a la transformación Ordenar.  
+ Por ejemplo, la tabla siguiente contiene el mensaje "Se proporcionaron filas como entrada de un componente de flujo de datos. :  : 1185: Salida de origen de OLE DB: 1180: Ordenar: 1181: Entrada de ordenación: 76", analizado en columnas. El evento **OnPipelineRowsSent** escribió el mensaje cuando se enviaron filas del origen de OLE DB a la transformación Ordenar.  
   
 |columna|Descripción|Valor|  
 |------------|-----------------|-----------|  

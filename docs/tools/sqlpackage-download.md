@@ -2,7 +2,7 @@
 title: Descargue e instale sqlpackage | Microsoft Docs
 description: Descargue e instale sqlpackage para Windows, macOS o Linux
 ms.custom: tools|sos
-ms.date: 06/18/2018
+ms.date: 06/19/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.prod_service: sql-tools
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 7620050a28029010a4e0f0fd2e125a17a84721a0
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: 5a45803f4ce2a91962a5bba824a468ca436f7839
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737146"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527217"
 ---
 # <a name="download-and-install-sqlpackage"></a>Descargue e instale sqlpackage
 
@@ -29,7 +29,7 @@ Descargue e instale la versión más reciente de .NET Framework y macOS y Linux 
 |macOS (versión preliminar) de .NET Core|[archivo zip](https://go.microsoft.com/fwlink/?linkid=2069126)|1 de febrero de 2019 | 18.1 |15.0.4316.1|
 |.NET Core (versión preliminar) de Linux|[archivo zip](https://go.microsoft.com/fwlink/?linkid=2069122)|1 de febrero de 2019 | 18.1 |15.0.4316.1|
 
-Para obtener más información acerca de la versión más reciente, consulte el [notas de la versión](sqlpackage-release-notes.md).
+Para obtener más información acerca de la versión más reciente, consulte el [notas de la versión](release-notes-sqlpackage.md).
 
 ## <a name="get-sqlpackage-for-windows"></a>Obtener sqlpackage para Windows
 

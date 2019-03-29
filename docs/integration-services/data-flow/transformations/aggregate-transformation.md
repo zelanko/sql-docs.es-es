@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42ed9609e1c2b9337e0c7f98b27c533144f8213d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9a45b20ac413c04ca641674020e8d98ed39a01e8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638932"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290561"
 ---
 # <a name="aggregate-transformation"></a>Transformación Agregado
   La transformación Agregado aplica funciones de agregado, como Average, a los valores de columnas y copia los resultados en la salida de transformación. Además de las funciones de agregado, la transformación proporciona la cláusula GROUP BY, que se puede usar para especificar los grupos en los que se debe realizar el agregado.  
@@ -103,7 +103,7 @@ ms.locfileid: "51638932"
   
  La transformación Agregado es asincrónica, lo que significa que no utiliza ni publica datos fila por fila. En lugar de ello, utiliza todo el conjunto de filas, realiza sus agrupaciones y agregaciones, y, seguidamente, publica los resultados.  
   
- Esta transformación no pasa por ninguna columna, sino que crea nuevas columnas en el flujo de datos para los datos que publica. Solo las columnas de entrada a las que se aplican las funciones de agregado o las columnas de entrada que usa la transformación para agrupar se copian en la salida de transformación. Por ejemplo, una entrada de la transformación Agregado puede tener tres columnas: **CountryRegion**, **City**y **Population**. La transformación agrupa de acuerdo con la columna **CountryRegion** y aplica la función Sum a la columna **Population** . Por tanto, la salida no incluye la columna **City** .  
+ Esta transformación no pasa por ninguna columna, sino que crea nuevas columnas en el flujo de datos para los datos que publica. Solo las columnas de entrada a las que se aplican las funciones de agregado o las columnas de entrada que usa la transformación para agrupar se copian en la salida de transformación. Por ejemplo, una entrada de transformación Agregado puede tener tres columnas: **PaísRegión**, **Ciudad** y **Población**. La transformación agrupa de acuerdo con la columna **CountryRegion** y aplica la función Sum a la columna **Population** . Por tanto, la salida no incluye la columna **City** .  
   
  Puede también agregar varias salidas a la transformación Agregado y dirigir cada agregación a una salida diferente. Por ejemplo, si la transformación Agregado aplica las funciones Sum y Average, cada agregación se puede dirigir a una salida diferente.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "51638932"
  **Factor de ampliación automática**  
  Utilice un valor comprendido entre 1 y 100 para especificar el porcentaje en el que se puede ampliar la memoria durante la agregación. De forma predeterminada, el valor de esta opción es **25%**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   
  [Transformaciones de Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

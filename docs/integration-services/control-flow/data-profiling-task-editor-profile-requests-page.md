@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1f056b10aea5144c3d8bda96d7fe049377bc6532
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3f98e88428c25c3ecf2af415c942c30a18e9cf1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641745"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273380"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor de tareas de generación de perfiles de datos (página Solicitudes de perfil)
   Use la página **Solicitudes de perfil** del **Editor de tareas de generación de perfiles de datos** para seleccionar y configurar los perfiles que desee calcular. En una única tarea de generación de perfiles puede calcular varias filas para varias columnas o combinaciones de columnas en varias tablas o vistas.  
@@ -51,13 +51,13 @@ ms.locfileid: "47641745"
   
 -   Si selecciona ver **Todas las solicitudes**, el panel de solicitudes tiene dos columnas: **Tipo de perfil** e **Id. de solicitud**.  
   
--   Si selecciona ver uno de los cinco perfiles de columna, el panel de solicitud tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **Columna**e **Id. de solicitud**.  
+-   Si selecciona ver uno de los cinco perfiles de columna, el panel de solicitudes tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **Columna** e **Id. de solicitud**.  
   
--   Si selecciona ver un perfil de claves candidatas, el panel de solicitudes tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **Columnas de clave**e **Id. de solicitud**.  
+-   Si selecciona ver un perfil de claves candidatas, el panel de solicitudes tiene cuatro columnas: **Tipo de perfil**, **Tabla o vista**, **KeyColumns**, e **Id. de solicitud**.  
   
--   Si selecciona ver un perfil de dependencia funcional, el panel de solicitudes tiene cinco columnas: **Tipo de perfil**, **Tabla o vista**, **Columnas determinantes**, **Columna dependiente**e **Id. de solicitud**.  
+-   Si selecciona ver un perfil de dependencia funcional, el panel de solicitudes tiene cinco columnas: **Tipo de perfil**, **Tabla o vista**, **Columnas determinantes**, **Columna dependiente** e **Id. de solicitud**.  
   
--   Si selecciona ver un perfil de inclusión de valores, el panel de solicitudes tiene seis columnas: **Tipo de perfil**, **Tabla o vista de subconjuntos**, **Tabla o vista de superconjuntos**, **Columnas de subconjunto**, **Columnas de superconjunto**e **Id. de solicitud**.  
+-   Si selecciona ver un perfil de inclusión de valores, el panel de solicitudes tiene seis columnas: **Tipo de perfil**, **Tabla o vista de subconjuntos**, **Tabla o vista de superconjuntos**, **Columnas de subconjuntos**, **Columnas de superconjuntos** e **Id. de solicitud**.  
   
  En las secciones siguientes se describe cada una de esas columnas.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "47641745"
   
 -   [Opciones de Solicitud de perfil de inclusión de valores &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Editor de tareas de generación de perfiles de datos &#40;página General&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

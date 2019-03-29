@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d7544f30f065b9acbef3efc55ac7165b58da2e6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2aa8b928d9bfc7c8c76672b4de5387cad96c6b19
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417924"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281439"
 ---
 # <a name="hadoop-connection-manager"></a>Administrador de conexiones de Hadoop
   El administrador de conexiones de Hadoop permite que un paquete de SQL Server Integration Services (SSIS) se conecte a un clúster de Hadoop usando los valores especificados para las propiedades.  
@@ -63,10 +63,10 @@ ms.locfileid: "52417924"
 
 ## <a name="connect-with-kerberos-authentication"></a>Conectar con la autenticación Kerberos
 Hay dos opciones para configurar el entorno local de forma que pueda usar la autenticación Kerberos con el administrador de conexiones de Hadoop. Puede elegir la opción que mejor se adapte a sus circunstancias.
--   Opción 1: [unir el equipo SSIS al dominio Kerberos](#kerberos-join-realm)
--   Opción 2: [habilitar la confianza mutua entre el dominio de Windows y el dominio Kerberos](#kerberos-mutual-trust)
+-   Opción 1: [Unir el equipo SSIS al dominio Kerberos](#kerberos-join-realm)
+-   Opción 2: [Habilitar la confianza mutua entre el dominio de Windows y el dominio Kerberos](#kerberos-mutual-trust)
 
-### <a name="kerberos-join-realm"></a>Opción 1: unir el equipo SSIS al dominio Kerberos
+### <a name="kerberos-join-realm"></a>Opción 1: Unir el equipo SSIS al dominio Kerberos
 
 #### <a name="requirements"></a>Requisitos:
 
@@ -96,7 +96,7 @@ En el equipo SSIS:
         kdc = <your_kdc_server_address>
     ```
 
-### <a name="kerberos-mutual-trust"></a>Opción 2: habilitar la confianza mutua entre el dominio de Windows y el dominio Kerberos
+### <a name="kerberos-mutual-trust"></a>Opción 2: Habilitar la confianza mutua entre el dominio de Windows y el dominio Kerberos
 
 #### <a name="requirements"></a>Requisitos:
 -   El equipo de puerta de enlace se debe unir a un dominio de Windows.
@@ -172,7 +172,7 @@ En el controlador de dominio:
 
     1. Vaya a **Administrador del servidor** > **Administración de directivas de grupo** > **Dominio**. Desde allí, vaya a **Objetos de directiva de grupo** > **Default or Active Domain Policy** (Directiva de dominio predeterminada o activa)  > **Editar**.
 
-    2. En la ventana emergente del **Editor de administración de directivas de grupo**, vaya a **Configuración del equipo** > **Directivas** > **Configuración de Windows**. Desde allí, vaya a **Configuración de seguridad** > **Directivas locales** > **Opciones de seguridad**. Configure **Seguridad de red: configurar tipos de cifrado permitidos para Kerberos**.
+    2. En la ventana emergente del **Editor de administración de directivas de grupo**, vaya a **Configuración del equipo** > **Directivas** > **Configuración de Windows**. Desde allí, vaya a **Configuración de seguridad** > **Directivas locales** > **Opciones de seguridad**. Configure la**seguridad de red: Configure los tipos de cifrado permitidos para Kerberos**.
 
     3. Seleccione el algoritmo de cifrado que quiere usar para conectarse al KDC. Normalmente, se puede seleccionar cualquiera de las opciones.
 

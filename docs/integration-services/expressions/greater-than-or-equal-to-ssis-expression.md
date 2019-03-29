@@ -11,15 +11,15 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - greater than or equal to (>=)
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 40dbb89b6b783535560fb0bb6ea3cced67d40989
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58e6b1d0335cc169a63eaae8b8af5a7cdccb3d74
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771573"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289871"
 ---
 # <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (Mayor o igual que) (expresión de SSIS)
   Realiza una comparación para determinar si la primera expresión es mayor o igual que la segunda. El evaluador de expresiones convierte automáticamente muchos tipos de datos antes de realizar la comparación.  
@@ -59,7 +59,7 @@ expression1 >= expression2
     > [!NOTE]  
     >  En las comparaciones de cadenas se distingue mayúsculas de minúsculas, caracteres acentuados, tipos de kana y el ancho.  
   
--   **Date, Time o Date/Time** *expression1* y *expression2* deben devolver uno de los siguientes tipos de datos: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET o DT_FILETIME.  
+-   **Fecha, hora o fecha y hora** Tanto *expression1* como *expression2* se deben evaluar con uno de los siguientes tipos de datos: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET o DT_FILETIME.  
   
     > [!NOTE]  
     >  El sistema no admite comparaciones entre una expresión que devuelve un tipo de datos de hora y una expresión que devuelve un tipo de datos de fecha o de fecha/hora. El sistema genera un error.  
@@ -103,7 +103,7 @@ ListPrice >= 500
 @LPrice >= 500  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [&#62; &#40;Mayor que&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
  [&#60; &#40;Menor que&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
  [&#60;= &#40;Menor o igual que&#41; &#40;expresión de SSIS&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   

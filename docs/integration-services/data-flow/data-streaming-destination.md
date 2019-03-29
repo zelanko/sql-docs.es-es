@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL11.DTS.DESIGNER.DATASTREAMINGDEST.F1
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 10ad201fd848ba195c5c448dfc1f27c2b6ff058d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a58fe80fe0d71cfb7d645df29d2fb06624ad66a8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638612"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278978"
 ---
 # <a name="data-streaming-destination"></a>Destino de streaming de datos
   El **Destino de streaming de datos** es un componente de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) que permite que el **proveedor OLE DB para SSIS** consuma la salida de un paquete SSIS como un conjunto de resultados tabular. Para crear un servidor vinculado que utilice el proveedor OLE DB para SSIS y, después, ejecutar una consulta SQL en el servidor vinculado para mostrar los datos devueltos por el paquete SSIS.  
@@ -31,7 +31,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ```  
   
 ## <a name="data-feed-publishing-components"></a>Componentes de publicación de las fuentes de distribución de datos  
- Entre los componentes de publicación de las fuentes de distribución de datos se incluyen los siguientes: el proveedor OLE DB para SSIS, el Destino de streaming de datos y el Asistente para publicación de paquetes SSIS. El asistente permite publicar un paquete SSIS como una vista SQL en una instancia de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El asistente lo ayudará a crear un servidor vinculado que use el proveedor OLE DB para SSIS y una vista SQL que represente una consulta en el servidor vinculado. Puede ejecutar la vista para consultar los resultados del paquete SSIS como un conjunto de datos tabular.  
+ Los componentes de publicación de fuente de distribución de datos incluyen los siguientes: Proveedor de OLE DB para SSIS, Destino de streaming de datos y Asistente para la publicación de paquetes SSIS. El asistente permite publicar un paquete SSIS como una vista SQL en una instancia de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El asistente lo ayudará a crear un servidor vinculado que use el proveedor OLE DB para SSIS y una vista SQL que represente una consulta en el servidor vinculado. Puede ejecutar la vista para consultar los resultados del paquete SSIS como un conjunto de datos tabular.  
   
  Para confirmar que está instalado el proveedor SSISOLEDB, en SQL Server Management Studio, expanda **Objetos de servidor**, **Servidores vinculados**y **Proveedores**, y confirme que aparece el proveedor **SSISOLEDB** . Haga doble clic en **SSISOLEDB**, habilite **Permitir InProcess** si no está habilitado y haga clic en **Aceptar**.  
   
@@ -42,12 +42,12 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
 2.  Abra el **Asistente para publicación de paquetes SSIS** ejecutando ISDataFeedPublishingWizard.exe desde C:\Archivos de programa\Microsoft SQL Server\130\DTS\Binn o el Asistente para publicación de fuentes de distribución de datos de SSIS en el menú Inicio.  
   
-     El asistente crea un servidor vinculado mediante el proveedor OLE DB para SSIS (SSISOLEDB) y, tras ello, genera una vista SQL que se compone de una consulta en el servidor vinculado. Esta consulta incluye el nombre de la carpeta, del proyecto y del paquete en el catálogo de SSIS.  
+     El asistente crea un servidor vinculado mediante el proveedor OLE DB para SSIS (SSISOLEDB) y, tras ello, genera una vista SQL que se compone de una consulta en el servidor vinculado. Esta consulta incluye el nombre de la carpeta, el nombre del proyecto y el nombre del paquete en el catálogo de SSIS.  
   
 3.  Ejecute la vista SQL en SQL Server Management Studio y consulte los resultados del paquete SSIS. La vista envía una consulta al proveedor OLE DB para SSIS mediante el servidor vinculado que ha creado. El proveedor OLE DB para SSIS ejecuta el paquete especificado en la consulta y devuelve el conjunto de resultados tabulares.  
   
 > [!IMPORTANT]  
->  Para obtener instrucciones detalladas, vea [Tutorial: Publicar un paquete SSIS como una vista SQL](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md).  
+>  Para obtener pasos detallados, consulte el [Tutorial: Publicación de un paquete SSIS como una vista SQL](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)  
   
 ## <a name="expose-output-data-from-an-ssis-package-as-an-odata-feed-by-using-the-power-bi-admin-center"></a>Exposición de datos de salida de un paquete SSIS como una fuente OData mediante el Centro de administración de Power BI  
  Mediante el Centro de administración de Power BI, los administradores de TI pueden exponer datos procedentes de orígenes de datos locales, como fuentes de OData, a los usuarios. El Centro de administración de Power BI, de manera predeterminada, permite registrar solo los orígenes de datos de SQL Server. Pero puede registrar paquetes SSIS como orígenes de datos en el portal mediante **Destino de streaming de datos** y el **proveedor Microsoft OLE DB para SQL Server Integration Services (SSISOLEDB)** , y exponer los datos de resultados del paquete SSIS como una fuente de OData al usuario.  
@@ -58,12 +58,12 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Tutorial: Publicar un paquete SSIS como una vista SQL](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)  
+-   [Tutorial: Publicación de un paquete SSIS como una vista SQL](../../integration-services/data-flow/walkthrough-publish-an-ssis-package-as-a-sql-view.md)  
   
 ## <a name="configure-data-streaming-destination"></a>Configuración del destino de streaming de datos
   Configure el destino de streaming de datos en el cuadro de diálogo **Advanced Editor for Data Streaming Destination** (Editor avanzado para destino de streaming de datos). Abra este cuadro de diálogo; para ello, haga doble clic en el componente, o bien haga clic con el botón derecho en el componente del diseñador del flujo de datos y luego haga clic en **Editar**.  
   
- Este cuadro de diálogo tiene tres pestañas: **Propiedades de componente**, **Columnas de entrada**y **Propiedades de entrada y salida**.  
+ Este cuadro de diálogo tiene tres pestañas: **Propiedades de componente**, **Columnas de entrada** y **Propiedades de entrada y salida**.  
   
 ## <a name="component-properties-tab"></a>Pestaña Propiedades de componente  
  Esta pestaña contiene los campos editables siguientes:  
@@ -80,7 +80,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="input-output-properties-tab"></a>Pestaña Propiedades de entrada y salida  
  Al igual que ocurre con la pestaña Columnas de entrada, puede cambiar los nombres de las columnas de salida en esta pestaña. En la vista de árbol de la izquierda, expanda **Data Streaming Destination Input** (Entrada de destino de streaming de datos) y luego expanda **Columnas de entrada**. Haga clic en el nombre de la columna de entrada y cambie el nombre de la columna de salida en el panel derecho.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Publish SSIS Packages as OData Feed Sources](https://go.microsoft.com/fwlink/?LinkID=317367)  
   
   

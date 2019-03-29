@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ae626cfb67bbc2041a150940f2a03bb73dfb9b51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e8f03d8978056ecd0faefd247163d2806dc7988
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764469"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290491"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor de tareas de generación de perfiles de datos (página General)
   Utilice la página **General** del **Editor de tareas de generación de perfiles de datos** para configurar las opciones siguientes:  
@@ -53,8 +53,8 @@ ms.locfileid: "47764469"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**FileConnection**|Guarde el perfil generado en un archivo de la ubicación que se especifica en un administrador de conexiones de archivos.<br /><br /> Nota: Para especificar qué administrador de conexiones de archivos utilizar, use la opción **Destino** .|  
-|**Variable**|Guarde el perfil generado en una variable de paquete.<br /><br /> Para especificar qué variable de paquete utilizar, use la opción **Destino** .|  
+|**FileConnection**|Guarde el perfil generado en un archivo de la ubicación que se especifica en un administrador de conexiones de archivos.<br /><br /> Nota: Para especificar qué administrador de conexiones de archivos usar, utilice la opción **Destino**.|  
+|**Variable**|Guarde el perfil generado en una variable de paquete.<br /><br /> Nota: Para especificar qué variable de paquete usar, utilice la opción **Destination**.|  
   
  **Destino**  
  Especifique qué administrador de conexiones de archivos o variable de paquete contiene el perfil de datos generado:  
@@ -79,7 +79,7 @@ ms.locfileid: "47764469"
 > [!NOTE]  
 >  También puede abrir el Visor de perfil de datos si ejecuta el archivo DataProfileViewer.exe en la carpeta *\<unidad>*:\Archivos de programa (x86) | Archivos de programa\Microsoft SQL Server\110\DTS\Binn.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Formulario de perfil rápido de tabla única &#40;tarea de generación de perfiles de datos&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   
  [Editor de tareas de generación de perfiles de datos &#40;página Solicitudes de perfil&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   

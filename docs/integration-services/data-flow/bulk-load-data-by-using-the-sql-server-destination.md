@@ -14,15 +14,15 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7e6535428eefaf4e0f2a84d1de40c5d8c7f4989
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68902b0249fc40e8aa48a0bd6fc6f6eef47d4caa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669503"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274362"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Realizar una carga masiva de datos mediante el destino de SQL Server
   Para agregar y configurar un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen de datos.  
@@ -39,7 +39,7 @@ ms.locfileid: "47669503"
   
 5.  Haga doble clic en el destino.  
   
-6.  En el **Editor de destino de SQL Server**, en la página del **Administrador de conexiones** , seleccione un administrador de conexiones OLE DB o haga clic en **Nuevo** para crear un nuevo administrador de conexiones. Para más información, vea [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+6.  En el **Editor de destino de SQL Server**, en la página del **Administrador de conexiones** , seleccione un administrador de conexiones OLE DB o haga clic en **Nuevo** para crear un nuevo administrador de conexiones. Para más información, consulte [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 7.  Para especificar la tabla o vista en la que desea cargar los datos, realice una de las siguientes acciones:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47669503"
     > [!NOTE]  
     >  El destino asigna automáticamente las columnas con el mismo nombre.  
   
-9. Haga clic en **Avanzadas** y establezca las opciones de carga masiva: **Mantener valores de identidad**, **Mantener valores NULL**, **Bloqueo de tabla**, **Comprobar restricciones**y **Activar desencadenadores**.  
+9. Haga clic en **Avanzadas** y establezca las opciones de carga masiva: **Mantener valores de identidad**, **Mantener valores NULL**, **Bloqueo de tabla**, **Restricciones CHECK** y **Activar desencadenadores**.  
   
      Opcionalmente, especifique la primera y última fila de entrada que desea insertar, la cantidad máxima de errores que pueden producirse antes de que se detenga la operación de inserción y las columnas en las que se ordena la inserción.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47669503"
   
 11. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)   
  [Transformaciones de Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Rutas de Integration Services](../../integration-services/data-flow/integration-services-paths.md)   

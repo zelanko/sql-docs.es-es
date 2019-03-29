@@ -19,15 +19,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d100819807cd669803ef698d4614373b0b997905
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e2c7ac89c705c8825a87cfeee381190a6becfa90
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503991"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282369"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   La tarea Cola de mensajes le permite usar Message Queue Server (que también recibe el nombre de MSMQ) para enviar y recibir mensajes entre paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o enviar mensajes a una cola de aplicaciones procesada por una aplicación personalizada. Estos mensajes pueden adoptar la forma de texto simple, archivos o variables y sus valores.  
@@ -296,7 +296,7 @@ ms.locfileid: "52503991"
  Cree una nueva variable.  
   
  **Temas relacionados:** [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   

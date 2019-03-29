@@ -16,15 +16,15 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf68976e003eb3466d613f7f1c41db129c70f570
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 87a757f007b2a4b30172c51971e56dd585c166f6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540876"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280666"
 ---
 # <a name="creating-a-package-programmatically"></a>Crear un paquete mediante programación
   El objeto <xref:Microsoft.SqlServer.Dts.Runtime.Package> es el contenedor de nivel superior para todos los demás objetos de una solución de proyecto [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Al igual que el contenedor de nivel superior, el paquete es el primer objeto creado y los objetos subsiguientes se agregan a él y, a continuación, se ejecutan dentro del contexto del paquete. El propio paquete no mueve o transforma los datos. El paquete se basa en las tareas que contiene para realizar el trabajo. Las tareas realizan la mayor parte del trabajo que realiza un paquete y definen la funcionalidad de un paquete. Un paquete se crea y ejecuta con solo tres líneas de código, pero se agregan varias tareas y los objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> para proporcionar una funcionalidad adicional al paquete. En esta sección se describe cómo crear un paquete mediante programación. No proporciona información acerca de cómo crear las tareas o <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Estos temas se tratan en secciones posteriores.  
@@ -72,7 +72,7 @@ End Module
   
  **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- También puede crear un paquete cargando un paquete existente que se guardó en disco, en el sistema de archivos o en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La diferencia es que primero se crea el objeto <xref:Microsoft.SqlServer.Dts.Runtime.Application> y, después, uno de los métodos sobrecargados de la aplicación rellena el objeto de paquete: **LoadPackage** para archivos planos, **LoadFromSQLServer** para archivos guardados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> para los paquetes guardados en el sistema de archivos. En el ejemplo siguiente se carga un paquete existente desde el disco y, a continuación, se muestran varias propiedades en el paquete.  
+ También puede crear un paquete cargando un paquete existente que se guardó en disco, en el sistema de archivos o en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La diferencia es que primero se crea el objeto <xref:Microsoft.SqlServer.Dts.Runtime.Application> y, luego, se rellena el objeto de paquete mediante uno de los métodos sobrecargados de la aplicación: **LoadPackage** para archivos planos, **LoadFromSQLServer** para los paquetes guardados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> para los paquetes guardados en el sistema de archivos. En el ejemplo siguiente se carga un paquete existente desde el disco y, a continuación, se muestran varias propiedades en el paquete.  
   
 ```csharp  
 using System;  
@@ -155,7 +155,7 @@ End Module
   
 -   Entrada de blog sobre [EzAPI, actualizado para SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=243223), en blogs.msdn.com.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Agregar tareas mediante programación](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
   
   

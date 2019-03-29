@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16801a8865260a1175fe4786869272774ed8b2c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c0ea69dd7aca4d8fea8499b59577dc3d507ad4a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596203"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272133"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Determinar si los datos modificados están preparados
   En el flujo de control de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de los datos modificados, la segunda tarea consiste en asegurarse de que éstos están listos para el intervalo seleccionado. Este paso es necesario porque el proceso de captura asincrónico podría no haber procesado todavía todos los cambios hasta el extremo seleccionado.  
@@ -335,6 +335,6 @@ ms.locfileid: "47596203"
 ## <a name="next-step"></a>Paso siguiente  
  Después de determinar que los datos modificados están listos, el paso siguiente consiste en preparar la consulta de los mismos.  
   
- **Siguiente tema:** [Preparar para consultar datos modificados](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+ **Tema siguiente:** [Preparar para consultar datos modificados](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
   

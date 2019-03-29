@@ -18,15 +18,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2bb26e75401f7dfd93e23c197a8e1419ad21cb2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c50b86d2d5e96951b9bdeabf6750fbb8dd7a3d30
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528453"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271481"
 ---
 # <a name="send-mail-task"></a>Enviar correo, tarea
   La tarea Enviar correo envía un mensaje de correo electrónico. Un paquete puede utilizar la tarea Enviar correo para enviar mensajes si las tareas del paquete de flujo de trabajo finalizan correctamente o si se producen errores, o para enviar mensajes en respuesta a eventos provocados por el paquete en tiempo de ejecución. Por ejemplo, la tarea puede notificar a un administrador de base de datos si la tarea Copia de seguridad de la base de datos se realizó correctamente o no.  
@@ -152,7 +152,7 @@ ms.locfileid: "52528453"
  **MessageSource**  
  Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = Variable  
  **MessageSource**  
@@ -160,7 +160,7 @@ ms.locfileid: "52528453"
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   

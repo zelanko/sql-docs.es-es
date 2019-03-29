@@ -17,15 +17,15 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2148cf2e25e6cdddab20a29751cea82238159668
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8cda7bf1c07cbba3233a94c05d14c5620fa784ce
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535702"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280129"
 ---
 # <a name="execute-package-task"></a>Tarea Ejecutar paquete
   La tarea Ejecutar paquete amplía las capacidades empresariales de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ya que permite que los paquetes ejecuten otros paquetes como parte de un flujo de trabajo.  

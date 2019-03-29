@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.parameterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 27af358d3d6fb5feb1bd5d10fb194beb52df011e
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 529bc6a4568ad9979da984607602c2a014b02743
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858705"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281319"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Paquete de Integration Services (SSIS) y parámetros del proyecto
   Los parámetros de[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) permiten asignar valores a las propiedades de los paquetes en el momento de la ejecución de los mismos. Puede crear *parámetros de proyecto* en el nivel de proyecto y *parámetros de paquete* en el nivel de paquete. Los parámetros de proyecto se usan para proporcionar cualquier entrada externa que el proyecto recibe a uno o más paquetes del proyecto. Los parámetros de paquete permiten modificar la ejecución del paquete sin tener que modificarlo ni volver a implementarlo.  
@@ -103,7 +103,7 @@ ms.locfileid: "51858705"
 ## <a name="create-parameters"></a>Create Parameters
 Puede usar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear parámetros de proyecto y parámetros de paquete. Los procedimientos siguientes proporcionan instrucciones paso a paso para crear parámetros de paquete o proyecto.  
   
-> **NOTA:** Si va a convertir un proyecto que creó con una versión anterior de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] al modelo de implementación de proyectos, puede usar el **Asistente para conversión de proyectos de Integration Services** con el fin de crear parámetros de acuerdo con las configuraciones. Para obtener más información, consulte [Deploy Integration Services (SSIS) Projects and Packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md) (Implementación de proyectos y paquetes de Integration Services [SSIS]).  
+> **NOTA:** Si va a convertir un proyecto que creó utilizando una versión anterior de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] al modelo de implementación de proyectos, puede utilizar el **Asistente para conversión de proyectos de Integration Services** para crear parámetros de acuerdo con las configuraciones. Para obtener más información, consulte [Deploy Integration Services (SSIS) Projects and Packages](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md) (Implementación de proyectos y paquetes de Integration Services [SSIS]).  
   
 ### <a name="create-package-parameters"></a>Creación de parámetros del paquete  
   
@@ -206,7 +206,7 @@ El Asistente para la implementación permite establecer valores de parámetro pr
   
 3.  Abra la página de parámetros haciendo clic en **Parámetros** debajo de **Seleccionar una página**.  
   
-4.  Seleccione el parámetro deseado en la lista **Parámetros** . Nota: la columna **Contenedor** ayuda a distinguir los parámetros del proyecto de los parámetros del paquete.  
+4.  Seleccione el parámetro deseado en la lista **Parámetros** . Nota: La columna **Contenedor** ayuda a distinguir los parámetros del proyecto de los parámetros del paquete.  
   
 5.  En la columna de **Valor** , especifique el valor del parámetro predeterminado del servidor deseado.  
 

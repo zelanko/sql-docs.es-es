@@ -17,15 +17,15 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b55b675cf28bd0e61dd74b011aad9c50cd8325fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 273199612b1cf358ff82192c126b33c3fd2a94fd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531611"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277664"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expresiones de propiedad en paquetes
   Una expresión de propiedad es una expresión asignada a una propiedad para permitir la actualización dinámica de la propiedad en tiempo de ejecución. Por ejemplo, una expresión de propiedad puede actualizar la línea Para que utiliza una tarea Enviar correo, insertando una dirección de correo electrónico almacenada en una variable.  
@@ -172,7 +172,7 @@ ms.locfileid: "52531611"
   
 -   Artículo técnico, sobre [ejemplos de expresiones SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
   
   

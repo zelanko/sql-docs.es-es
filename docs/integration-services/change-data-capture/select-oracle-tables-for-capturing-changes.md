@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - selOraTabDia
 ms.assetid: 2e295dc8-999d-4c4d-96cc-1519674b47a4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4078dd31ec70008803149835276d22835f26424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 232837ed4d42fe7c61036bcb5e4b2a80ec688b64
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754003"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273289"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>Seleccionar tablas de Oracle para capturar cambios
   Use este cuadro de diálogo para seleccionar las tablas incluidas en la instancia CDC. Las tablas seleccionadas se agregarán a la lista de la página **Seleccionar tablas y columnas** del Asistente para nueva instancia. Puede hacer lo siguiente en este cuadro de diálogo.  
@@ -35,7 +35,7 @@ ms.locfileid: "47754003"
 > [!NOTE]  
 >  Puede especificar criterios en uno o ambos campos.  
   
--   **Mostrar las 1000 primeras tablas coincidentes**: de forma predeterminada, esta casilla está activada. Limita la presentación a las 1000 primeras tablas coincidentes. Si se desactiva la casilla, se mostrarán todas las tablas que cumplan los criterios. Si hay un gran número de tablas, se puede tardar mucho tiempo en mostrar la lista.  
+-   **Mostrar las 1000 primeras tablas coincidentes**: esta casilla está activada de forma predeterminada. Limita la presentación a las 1000 primeras tablas coincidentes. Si se desactiva la casilla, se mostrarán todas las tablas que cumplan los criterios. Si hay un gran número de tablas, se puede tardar mucho tiempo en mostrar la lista.  
   
  **Para seleccionar las tablas que se van a incluir en la instancia CDC**  
  Haga clic en la casilla situada junto a cualquiera de las tablas que quiera incluir y, después, haga clic en **Agregar**. Las tablas se agregarán a la lista de la página **Seleccionar tablas y columnas** del Asistente para nueva instancia.  
@@ -45,8 +45,8 @@ ms.locfileid: "47754003"
 > [!NOTE]  
 >  Si selecciona una tabla que incluye un tipo de datos no admitido, verá un mensaje de error y la tabla no se incluirá.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cómo crear la instancia de base de datos de cambios de SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Seleccione las columnas y tablas de Oracle ](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
+ [Seleccionar tablas y columnas de Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   
   

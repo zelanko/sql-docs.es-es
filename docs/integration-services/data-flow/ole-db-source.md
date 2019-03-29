@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 37c720096cb27f19617744512c212c415373612b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b160f1a6aa71b612c80eb21daa8d2173376cee69
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639622"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272976"
 ---
 # <a name="ole-db-source"></a>Origen de OLE DB
   El origen de OLE DB extrae datos de varias bases de datos relacionales compatibles con OLE DB mediante una tabla de base de datos, una vista o un comando SQL. Por ejemplo, el origen de OLE DB puede extraer datos de tablas de bases de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -226,7 +226,7 @@ ms.locfileid: "51639622"
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Destino de OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
  [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  

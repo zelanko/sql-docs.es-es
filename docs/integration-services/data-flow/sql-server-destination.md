@@ -19,15 +19,15 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b165b4579497f28ad1b7dc2cb930daf5162941a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 19fe20d882810488e077ed1158b79c3399cc12f8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503297"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290591"
 ---
 # <a name="sql-server-destination"></a>SQL Server, destino
   El destino de SQL Server se conecta a una base de datos local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y realiza una carga masiva de datos en tablas y vistas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No se puede usar el destino de SQL Server en paquetes con acceso a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un servidor remoto. En su lugar, los paquetes deben utilizar el destino de OLE DB. Para más información, consulte [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "52503297"
  Los usuarios que ejecutan paquetes que incluyen el destino de SQL Server deben tener el permiso Crear objetos globales. Para otorgar este permiso a los usuarios, utilice la herramienta Directiva de seguridad local que se abre desde el menú **Herramientas administrativas** . Si recibe un mensaje de error al ejecutar un paquete que utiliza el destino de SQL Server, asegúrese de que la cuenta que ejecuta el paquete tiene el permiso Crear objetos globales.  
   
 ## <a name="bulk-inserts"></a>Inserciones masivas  
- Si se intenta utilizar el destino de SQL Server para realizar una carga masiva de datos en una base de datos remota de SQL Server, puede recibir un mensaje de error similar al siguiente: "Hay un registro OLE DB disponible. Origen: "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Resultado: 0x80040E14 Descripción: "No se pudo realizar la carga masiva porque el objeto de asignación de archivos SSIS "Global\DTSQLIMPORT" no se pudo abrir. Código de error del sistema operativo 2 (El sistema no encuentra el archivo especificado). Asegúrese de que tiene acceso a un servidor local mediante Seguridad de Windows."".  
+ Si se intenta usar el destino de SQL Server para realizar una carga masiva de datos en una base de datos remota de SQL Server, puede recibir un mensaje de error similar al siguiente: "Hay un registro OLE DB disponible". Origen : "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult: 0x80040E14 Descripción: "No se pudo realizar la carga masiva porque el objeto de asignación de archivos "Global\DTSQLIMPORT" no se pudo abrir. Código de error del sistema operativo 2 (El sistema no encuentra el archivo especificado). Asegúrese de que tiene acceso a un servidor local mediante Seguridad de Windows."".  
   
  El destino de SQL Server ofrece la misma inserción de datos de alta velocidad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que proporciona la tarea Inserción masiva. En cambio, al usar el destino de SQL Server, un paquete puede aplicar transformaciones a los datos de las columnas antes de que estos se carguen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -200,7 +200,7 @@ ms.locfileid: "52503297"
  **Columnas de orden**  
  Escriba los nombres de las columnas de orden. Las columnas se pueden ordenar en sentido ascendente o descendente. Si utiliza varias columnas de orden, delimite la lista con comas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Flujo de datos](../../integration-services/data-flow/data-flow.md)  
   
   

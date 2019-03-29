@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: faa30c32aea774d51a901402ff57975f14207e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9594567f4412ddf72943a397c7fa3d425f8fb27
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808293"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273432"
 ---
 # <a name="odbc-destination"></a>Destino ODBC
   El destino ODBC carga de forma masiva los datos en tablas de base de datos que admiten ODBC. El destino ODBC usa un administrador de conexiones ODBC para conectarse al origen de datos.  
@@ -33,16 +33,16 @@ ms.locfileid: "47808293"
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> Opciones de carga  
  El destino ODBC puede usar uno de dos módulos de de carga de acceso. Establezca el modo en el [Editor de orígenes ODBC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md). Los dos modos son:  
   
--   **Lote**: en este modo, el destino ODBC intenta usar el método más eficaz de inserción en función de las capacidades del proveedor ODBC percibidas. Para la mayoría de los proveedores ODBC modernos, esto significaría preparar una instrucción INSERT con parámetros y usar después un enlace de parámetros de matriz en las filas (donde el tamaño de la matriz está controlado por la propiedad **BatchSize** ). Si selecciona **Lote** y el proveedor no admite este método, el destino ODBC cambia automáticamente los modificadores al modo **Fila a fila** .  
+-   **Lote**: en este modo, el destino ODBC intenta usar el método más eficaz de inserción en función de las funcionalidades del proveedor ODBC percibidas. Para la mayoría de los proveedores ODBC modernos, esto significaría preparar una instrucción INSERT con parámetros y usar después un enlace de parámetros de matriz en las filas (donde el tamaño de la matriz está controlado por la propiedad **BatchSize** ). Si selecciona **Lote** y el proveedor no admite este método, el destino ODBC cambia automáticamente los modificadores al modo **Fila a fila** .  
   
--   **Fila a fila**: en este modo, el destino ODBC prepara una instrucción INSERT con parámetros y usa **Execute de SQL** para insertar las filas de una en una.  
+-   **Fila a fila**: en este modo, el destino ODBC prepara una instrucción INSERT con parámetros y usa **Ejecutar SQL** para insertar las filas de una en una.  
   
 ## <a name="error-handling"></a>Tratamiento de errores  
  El destino ODBC tiene una salida de error. La salida de error del componente incluye las columnas de salida siguientes:  
   
 -   **Código de error**: número que corresponde al error actual. Vea la documentación de la base de datos de origen para obtener una lista de errores. Para obtener una lista de códigos de errores de SSIS, vea la referencia Código de errores y mensajes de SSIS.  
   
--   **Columna de error**: columna de origen que produce el error (para los errores de conversión).  
+-   **Columna de error**: la columna de origen que produce el error (para los errores de conversión).  
   
 -   Columnas estándar de datos de salida.  
   
@@ -110,9 +110,9 @@ ms.locfileid: "47808293"
 |Opción|Descripción|  
 |------------|-----------------|  
 |Nombre de la tabla - Lote|Seleccione esta opción para configurar el destino de ODBC de manera que funcione en modo por lotes. Cuando seleccione esta opción, aparecerán las opciones siguientes:|  
-||**Nombre de la tabla o la vista**: seleccione una tabla o vista disponible en la lista.<br /><br /> Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el carácter comodín (\*) para escribir cualquier parte del nombre con el fin de mostrar las tablas que quiere usar.<br /><br /> **Tamaño del lote**: escriba el tamaño del lote para la carga masiva. Es el número de filas cargadas como un lote.|  
+||**Nombre de la tabla o la vista**: seleccione una tabla o vista disponible de la lista.<br /><br /> Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el carácter comodín (\*) para escribir cualquier parte del nombre con el fin de mostrar las tablas que quiere usar.<br /><br /> **Tamaño del lote**: escriba el tamaño del lote para la carga masiva. Es el número de filas cargadas como un lote.|  
 |Nombre de la tabla - Fila a fila|Seleccione esta opción para configurar el destino de ODBC de manera que se inserte cada una de las filas en la tabla de destino de una en una. Cuando seleccione esta opción, aparecerá la opción siguiente:|  
-||**Nombre de la tabla o la vista**: seleccione en la lista una tabla o vista disponible en la base de datos.<br /><br /> Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el comodín (*) para escribir cualquier parte del nombre con el fin de mostrar la tabla o las tablas que desea usar.|  
+||**Nombre de la tabla o la vista**: seleccione una tabla o vista disponible desde la base de datos de la lista.<br /><br /> Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el comodín (*) para escribir cualquier parte del nombre con el fin de mostrar la tabla o las tablas que desea usar.|  
   
 #### <a name="preview"></a>Vista previa  
  Haga clic en **Vista previa** para ver hasta 200 filas de datos para la tabla que ha seleccionado.  

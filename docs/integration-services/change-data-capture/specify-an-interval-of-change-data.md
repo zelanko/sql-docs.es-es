@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],specifying interval
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a115010220a9d98cf861b8e603fee69472f1e305
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7a249a9a155b64ff641197724e55129a6f2fc403
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640144"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278014"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar un intervalo de datos modificados
   En el flujo de control de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la primera tarea consiste en calcular los extremos del intervalo de cambios. Estos extremos son valores **datetime** y se almacenarán en variables de paquete para su uso posterior en el paquete.  
@@ -108,7 +108,7 @@ ms.locfileid: "51640144"
   
  **Tema siguiente:** [Determinar si los datos modificados están preparados](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar variables en paquetes](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Tarea Ejecutar SQL](../../integration-services/control-flow/execute-sql-task.md)   

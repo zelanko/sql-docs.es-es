@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcsource.columns.f1
 - sql13.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e291d13b6fb9d7f83bef22783baebccf6b713ee4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0518701a8f776fbe625fa77d35bfcc4f961973b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694514"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289841"
 ---
 # <a name="odbc-source"></a>Origen ODBC
   El origen ODBC extrae los datos de una base de datos con ODBC mediante una tabla de base de datos, una vista o una instrucción SQL.  
@@ -43,7 +43,7 @@ ms.locfileid: "47694514"
   
 -   **Código de error**: número que corresponde al error actual. Vea la documentación de la base de datos con ODBC que usa para obtener una lista de errores. Para obtener una lista de códigos de errores de SSIS, vea la referencia Código de errores y mensajes de SSIS.  
   
--   **Columna de error**: columna de origen que produce el error (para los errores de conversión).  
+-   **Columna de error**: la columna de origen que produce el error (para los errores de conversión).  
   
 -   Columnas estándar de datos de salida.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47694514"
 ## <a name="extract-options"></a>Opciones de extracción  
  El origen ODBC funciona en modo **Lote** o **Fila a fila** . La propiedad **FetchMethod** determina el modo usado. En la lista siguiente, se describen los modos.  
   
--   **Lote**: el componente intenta usar el método más eficaz de búsqueda en función de las capacidades del proveedor ODBC percibidas. Para la mayoría de los proveedores ODBC modernos, es SQLFetchScroll con enlace de matriz (donde el tamaño de la matriz se determina mediante la propiedad **BatchSize** ). Si selecciona **Lote** y el proveedor no admite este método, el destino ODBC cambia automáticamente al modo **Fila a fila** .  
+-   **Lote**: el componente intenta usar el método más eficaz de búsqueda en función de las funcionalidades del proveedor ODBC percibidas. Para la mayoría de los proveedores ODBC modernos, es SQLFetchScroll con enlace de matriz (donde el tamaño de la matriz se determina mediante la propiedad **BatchSize** ). Si selecciona **Lote** y el proveedor no admite este método, el destino ODBC cambia automáticamente los modificadores al modo **Fila a fila** .  
   
 -   **Fila a fila**: el componente usa SQLFetch para recuperar las filas de una en una.  
   

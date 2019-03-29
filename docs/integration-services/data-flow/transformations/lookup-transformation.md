@@ -21,15 +21,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7f269e0cbbc3e5f98667e49b7db6987c692c881
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4e3de21943f0bdd50e05cb30a1d9b1774f41ab37
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639662"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273290"
 ---
 # <a name="lookup-transformation"></a>Transformación de búsqueda
   La transformación Búsqueda realiza búsquedas mediante la combinación de datos de columnas de entrada con columnas de un conjunto de datos de referencia. La búsqueda se utiliza para tener acceso a información adicional en una tabla relacionada que está basada en valores de columnas comunes.  
@@ -131,11 +131,11 @@ ms.locfileid: "51639662"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Vídeo, [Cómo implementar una transformación Búsqueda en modo de memoria caché completa (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031), en msdn.microsoft.com  
+-   Vídeo [ Cómo implementar una transformación Búsqueda en modo de memoria caché completa](https://go.microsoft.com/fwlink/?LinkId=131031), en msdn.microsoft.com  
   
 -   Entrada de blog, [Prácticas recomendadas para utilizar los modos de caché de la transformación Búsqueda](https://go.microsoft.com/fwlink/?LinkId=146623)(en inglés), en blogs.msdn.com  
   
--   Entrada de blog, [Patrón de búsqueda: sin distinción de mayúsculas y minúsculas](https://go.microsoft.com/fwlink/?LinkId=157782), en blogs.msdn.com  
+-   Entrada de blog, [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782) (Patrón de búsqueda: falta de distinción entre mayúsculas y minúsculas), en blogs.msdn.com  
   
 -   Ejemplo, [Transformación de búsqueda](https://go.microsoft.com/fwlink/?LinkId=267528), en msftisprodsamples.codeplex.com.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "51639662"
 ### <a name="external-resources"></a>Recursos externos  
  Entrada del blog, [Lookup cache modes](https://go.microsoft.com/fwlink/?LinkId=219518) en blogs.msdn.com  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Transformación Búsqueda aproximada](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Transformación Búsqueda de términos](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Flujo de datos](../../../integration-services/data-flow/data-flow.md)   

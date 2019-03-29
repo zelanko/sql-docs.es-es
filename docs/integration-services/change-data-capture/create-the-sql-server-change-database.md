@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 32a56380f94cb03c4c871855edc56629f6334d42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0281dfb4471fd28eb08c0900f2a087b731139d2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651603"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280708"
 ---
 # <a name="create-the-sql-server-change-database"></a>Crear la base de datos de cambios de SQL Server
   Cuando se inicia el Asistente para nueva instancia, se abre la página Crear base de datos CDC. Use la página Crear base de datos CDC para proporcionar información sobre la nueva instancia CDC y crear una nueva base de datos Cambios.  
@@ -38,12 +38,12 @@ ms.locfileid: "47651603"
   
 -   **Nombre**: escriba un nombre para el nuevo servicio. También será el nombre de la nueva base de datos Cambios.  
   
--   **Descripción**: escriba una descripción de la nueva instancia como ayuda para identificarla. Esto es opcional.  
+-   **Descripción**: escriba una descripción para la nueva instancia para que le ayude a identificarla. Esto es opcional.  
   
  **Base de datos de cambios de SQL Server**  
  Esta sección se emplea para crear la base de datos.  
   
-1.  **Base de datos de cambios**: el nombre de la nueva base de datos de cambios. El nombre de la base de datos es el mismo que el que asignó a la instancia. Este campo de solo lectura muestra la ruta de acceso completa a la base de datos.  
+1.  **Cambiar la base de datos**: el nombre de la nueva base de datos cambiada. El nombre de la base de datos es el mismo que el que asignó a la instancia. Este campo de solo lectura muestra la ruta de acceso completa a la base de datos.  
   
 2.  **Crear base de datos**: haga clic en **Crear base de datos** para crear la base de datos.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47651603"
   
      Después de crear la base de datos, puede hacer clic en **Siguiente** para [Connect to an Oracle Source Database](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cómo crear la instancia de base de datos de cambios de SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [El servicio CDC de Oracle](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
   

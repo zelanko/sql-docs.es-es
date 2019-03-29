@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.designer.cdccontroltask.f1
 - sql13.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b187fb1d2e5595ef1ec75ed99c9a6e3f85029f3e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 87815205efb5598dd2901b46d4220092f76cde4a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640702"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283039"
 ---
 # <a name="cdc-control-task"></a>Tarea Control CDC
   La tarea Control CDC se usa para controlar el ciclo de vida de los paquetes de captura de datos modificados (CDC). Controla la sincronización de paquetes CDC con el paquete de carga inicial, la administración de los intervalos de número de secuencia de registro (LSN) que se procesan en una ejecución de un paquete CDC. Además, la tarea Control CDC se ocupa de los escenarios de error y de la recuperación.  
@@ -42,16 +42,16 @@ ms.locfileid: "51640702"
 |Operación|Descripción|  
 |---------------|-----------------|  
 |GetProcessingRange|Esta operación se usa antes de invocar el flujo de datos que usa el flujo de datos origen de CDC. Establece un intervalo de LSN que lee el flujo de datos de origen de CDC cuando se invoca. El intervalo se almacena en una variable de paquete SSIS que usa el origen de CDC durante el procesamiento del flujo de datos.<br /><br /> Para obtener más información sobre los estados que se almacenan, vea [Definir una variable de estado](../../integration-services/data-flow/define-a-state-variable.md).|  
-|MarkProcessedRange|: esta operación se ejecuta después de cada ejecución de CDC (después de que el flujo de datos de CDC se completa correctamente) para registrar el último LSN que se ha procesado totalmente en la ejecución de CDC. La próxima vez que se ejecute GetProcessingRange, esta posición será el inicio del intervalo de procesamiento.|  
+|MarkProcessedRange|: esta operación se ejecuta después de cada ejecución de CDC (después de que el flujo de datos de CDC se completa correctamente) para registrar el último LSN que se procesó totalmente en la ejecución de CDC. La próxima vez que se ejecute GetProcessingRange, esta posición será el inicio del intervalo de procesamiento.|  
   
 ## <a name="handling-cdc-state-persistency"></a>Controlar la persistencia de estado CDC  
  La tarea Control CDC mantiene un estado persistente entre las activaciones. La información almacenada en el estado CDC se usa para determinar y mantener el intervalo de procesamiento del paquete CDC y para detectar condiciones de error. El estado persistente se almacena como una cadena. Para obtener más información, consulte [Definir una variable de estado](../../integration-services/data-flow/define-a-state-variable.md).  
   
  La tarea Control CDC admite dos tipos de persistencia de estado  
   
--   Persistencia de estado manual: en este caso, la tarea Control CDC administra el estado almacenado en una variable de paquete pero el desarrollador del paquete debe leer la variable desde un almacén persistente antes de llamar al Control CDC y después escribirla de nuevo en el almacén persistente cuando el Control CDC se llame por última vez y la ejecución del CDC se complete.  
+-   Persistencia de estado manual: en este caso, la tarea Control CDC administra el estado almacenado en una variable de paquete pero el desarrollador de paquetes debe leer la variable desde un almacén persistente antes de llamar al Control CDC y después escribirla de nuevo en ese almacén persistente cuando el Control CDC se llame por última vez y la ejecución del CDC se complete.  
   
--   Persistencia de estado automática: el estado del CDC se almacena en una tabla de una base de datos. El estado se almacena con un nombre proporcionado en la propiedad **StateName** en una tabla denominada en la propiedad **Tabla para Storing State** , que se encuentra en un administrador de conexiones seleccionado para almacenar el estado. El valor predeterminado es el administrador de conexiones de origen pero la práctica común es que sea el administrador de conexiones de destino. La tarea Control CDC actualiza el valor de estado en la tabla de estados y esta se confirma como parte de la transacción ambiente.  
+-   Persistencia de estado automática: el estado de CDC se almacena en una tabla de una base de datos. El estado se almacena con un nombre proporcionado en la propiedad **StateName** en una tabla denominada en la propiedad **Tabla para Storing State** , que se encuentra en un administrador de conexiones seleccionado para almacenar el estado. El valor predeterminado es el administrador de conexiones de origen pero la práctica común es que sea el administrador de conexiones de destino. La tarea Control CDC actualiza el valor de estado en la tabla de estados y esta se confirma como parte de la transacción ambiente.  
   
 ## <a name="error-handling"></a>Tratamiento de errores  
  La tarea Control CDC puede notificar un error cuando:  
@@ -102,27 +102,27 @@ ms.locfileid: "51640702"
  **Operación de Control CDC**  
  Seleccione la operación que vaya a ejecutar para esta tarea. Todas las operaciones usan la variable de estado que se almacena en una variable de paquete SSIS donde se almacena el estado y lo pasa entre los distintos componentes del paquete.  
   
--   **Marcar comienzo de carga inicial**: esta operación se usa cuando se ejecuta una carga inicial desde una base de datos activa sin una instantánea. Se invoca al comienzo de un paquete de carga inicial para registrar el LSN actual en la base de datos de origen antes de que el paquete de carga inicial comience a leer las tablas de origen. Esto requiere una conexión a la base de datos de origen.  
+-   **Mark initial load start** (Marcar comienzo de carga inicial): esta operación se usa al ejecutar una carga inicial desde una base de datos activa sin una instantánea. Se invoca al comienzo de un paquete de carga inicial para registrar el LSN actual en la base de datos de origen antes de que el paquete de carga inicial comience a leer las tablas de origen. Esto requiere una conexión a la base de datos de origen.  
   
      Si selecciona **Mark Initial Load Start** (Marcar comienzo de carga inicial) cuando trabaja en CDC de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser  **db_owner** o **sysadmin**.  
   
--   **Marcar final de carga inicial**: esta operación se usa al ejecutar una carga inicial desde una base de datos activa sin una instantánea. Se invoca al final de un paquete de carga inicial para registrar el LSN actual en la base de datos de origen después de que el paquete de carga inicial termine de leer las tablas de origen. Este LSN se determina mediante el registro de la hora en el momento en que se produjo esta operación y, posteriormente, mediante consulta a la tabla de asignación de `cdc.lsn_time_`de la base de datos CDC en busca de un cambio que hubiera tenido lugar después de dicha hora.  
+-   **Mark initial load end** (Marcar final de carga inicial): esta operación se usa al ejecutar una carga inicial desde una base de datos activa sin una instantánea. Se invoca al final de un paquete de carga inicial para registrar el LSN actual en la base de datos de origen después de que el paquete de carga inicial termine de leer las tablas de origen. Este LSN se determina mediante el registro de la hora en el momento en que se produjo esta operación y, posteriormente, mediante consulta a la tabla de asignación de `cdc.lsn_time_`de la base de datos CDC en busca de un cambio que hubiera tenido lugar después de dicha hora.  
   
      Si selecciona **Mark Initial Load End** (Marcar final de carga inicial) cuando trabaja en CDC de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser  **db_owner** o **sysadmin**.  
   
--   **Marcar comienzo de CDC**: esta operación se utiliza cuando la carga inicial se realiza desde una base de datos de base de datos de instantánea o desde una base de datos de inactividad. Se invoca en cualquier punto del paquete de carga inicial. La operación acepta un parámetro que puede ser un LSN de instantánea, un nombre de una base de datos de instantánea (desde la que el LSN de instantánea se deriva automáticamente) o se puede dejar vacío, en cuyo caso el LSN de la base de datos actual se usa como el LSN de inicio para el paquete de procesamiento de cambios.  
+-   **Mark CDC start** (Marcar comienzo de CDC): esta operación se usa cuando la carga inicial se realiza desde una base de datos de instantáneas o desde una base de datos de inactividad. Se invoca en cualquier punto del paquete de carga inicial. La operación acepta un parámetro que puede ser un LSN de instantánea, un nombre de una base de datos de instantánea (desde la que el LSN de instantánea se deriva automáticamente) o se puede dejar vacío, en cuyo caso el LSN de la base de datos actual se usa como el LSN de inicio para el paquete de procesamiento de cambios.  
   
      Esta operación se usa en lugar de las operaciones Marcar comienzo/final de carga inicial.  
   
      Si selecciona **Mark CDC Start** (Marcar comienzo de CDC) cuando trabaja en CDC de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (es decir, no en Oracle), el usuario especificado en el administrador de conexiones debe ser  **db_owner** o **sysadmin**.  
   
--   **Obtener intervalo de procesamiento**: esta operación se usa en un paquete de procesamiento de cambios antes de invocar el flujo de datos que usa el flujo de datos de origen de CDC. Establece un intervalo de LSN que lee el flujo de datos de origen de CDC cuando se invoca. El intervalo se almacena en una variable de paquete SSIS que usa el origen de CDC durante el procesamiento del flujo de datos.  
+-   **Get processing range** (Obtener intervalo de procesamiento): esta operación se usa en un paquete de procesamiento de cambios antes de invocar el flujo de datos que usa el flujo de datos de origen de CDC. Establece un intervalo de LSN que lee el flujo de datos de origen de CDC cuando se invoca. El intervalo se almacena en una variable de paquete SSIS que usa el origen de CDC durante el procesamiento del flujo de datos.  
   
      Para obtener más información sobre los posibles estados CDC que se almacenan, vea [Definir una variable de estado](../../integration-services/data-flow/define-a-state-variable.md).  
   
--   **Marcar intervalo procesado**: esta operación se usa en un paquete de procesamiento de cambios al final de una ejecución CDC (después de que el flujo de datos CDC se complete correctamente) para registrar el último LSN que se haya procesado totalmente en la ejecución CDC. La próxima vez que se ejecute `GetProcessingRange` , esta posición determinará el inicio del siguiente intervalo de procesamiento.  
+-   **Mark processed range** (Marcar intervalo procesado): esta operación se usa en un paquete de procesamiento de cambios al final de una ejecución de CDC (después de que el flujo de datos de CDC se complete correctamente) para registrar el último LSN que se haya procesado totalmente en la ejecución de CDC. La próxima vez que se ejecute `GetProcessingRange` , esta posición determinará el inicio del siguiente intervalo de procesamiento.  
   
--   **Restablecer estado CDC**: esta operación se usa para restablecer el estado CDC persistente asociado al contexto CDC actual. Después de ejecutar esta operación, el LSN máximo actual de la tabla de `sys.fn_cdc_get_max_lsn` de la marca de tiempo de LSN se convierte en el inicio del intervalo para el siguiente intervalo de procesamiento. Esta operación requiere una conexión a la base de datos de origen.  
+-   **Reset CDC state** (Restablecer estado CDC): Esta operación se usa para restablecer el estado CDC persistente asociado al contexto CDC actual. Después de ejecutar esta operación, el LSN máximo actual de la tabla de `sys.fn_cdc_get_max_lsn` de la marca de tiempo de LSN se convierte en el inicio del intervalo para el siguiente intervalo de procesamiento. Esta operación requiere una conexión a la base de datos de origen.  
   
      Un ejemplo de uso de esta operación es cuando se desea procesar solo los registros de cambios creados recientemente y omitir todos los registros de cambios anteriores.  
   

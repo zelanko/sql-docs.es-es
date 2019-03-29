@@ -11,18 +11,18 @@ f1_keywords:
 - sql13.dts.designer.afpstorageconn.f1
 - sql14.dts.designer.afpstorageconn.f1
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 31440d6479353467d687467466f9c838a49d5252
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a46945b7c7725d680fb303a451327dc2733642aa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724153"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277834"
 ---
 # <a name="azure-storage-connection-manager"></a>Administrador de conexiones de Almacenamiento de Azure
-  El **Administrador de conexiones de Almacenamiento de Azure** habilita un paquete SSIS para conectarse a una cuenta de Almacenamiento de Azure utilizando los valores especificados para las propiedades nombre de cuenta y clave de cuenta de almacenamiento.  
+  El **administrador de conexiones de Azure Storage** permite que un paquete SSIS se conecte a una cuenta de Azure Storage mediante los valores especificados para las propiedades: Nombre de la cuenta de almacenamiento y Clave de la cuenta.  
    
  El **Administrador de conexiones de Azure Storage** es un componente de [Feature Pack de SQL Server Integration Services (SSIS) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   

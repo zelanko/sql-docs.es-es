@@ -21,27 +21,27 @@ helpviewer_keywords:
 - JPEG format [Integration Services]
 - .jpeg files
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: de5aa91ae884b8aef977c47a2fa288f179a086fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dee6d377d6b099a89dcbc2b12e93dc4aa7d86874
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595714"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270592"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Trabajar con imágenes con la tarea Script
   Una base de datos de productos o usuarios suele incluir imágenes además de datos de texto y numéricos. El espacio de nombres **System.Drawing** de Microsoft .NET Framework proporciona clases para manipular las imágenes.  
   
- [Ejemplo 1: Convertir las imágenes al formato JPEG](#example1)  
+ [Ejemplo 1: Conversión de imágenes al formato JPEG](#example1)  
   
- [Ejemplo 2: Crear y guardar las imágenes en miniatura](#example2)  
+ [Ejemplo 2: Creación y almacenamiento de imágenes en miniatura](#example2)  
   
 > [!NOTE]  
 >  Si desea crear una tarea que pueda reutilizar más fácilmente en varios paquetes, considere la posibilidad de utilizar el código de este ejemplo de tarea Script como punto inicial de una tarea personalizada. Para más información, vea [Desarrollar una tarea personalizada](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a> Ejemplo 1: Descripción: convertir las imágenes al formato JPEG  
+##  <a name="example1"></a> Descripción del ejemplo 1: Conversión de imágenes al formato JPEG  
  En el ejemplo siguiente se abre un archivo de imagen especificado por una variable y se guarda como un archivo JPEG comprimido mediante un codificador. El código para recuperar la información del codificador se encapsula en una función privada.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar este ejemplo de la tarea Script para su uso con un archivo de imagen único  
@@ -150,7 +150,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> Ejemplo 2: Descripción: crear y guardar las imágenes en miniatura  
+##  <a name="example2"></a> Descripción del ejemplo 2: Creación y almacenamiento de imágenes en miniatura  
  En el ejemplo siguiente se abre un archivo de imagen especificado por una variable, se crea una miniatura de la imagen a la vez que se mantiene una relación de aspecto constante y se guarda la miniatura con un nombre de archivo modificado. El código que calcula el alto y ancho de la miniatura a la vez que mantiene una relación de aspecto constante se encapsula en una subrutina privada.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Para configurar este ejemplo de la tarea Script para su uso con un archivo de imagen único  

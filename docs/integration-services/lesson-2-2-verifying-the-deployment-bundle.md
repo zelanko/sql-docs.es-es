@@ -1,5 +1,5 @@
 ---
-title: 'Paso 2: Comprobar el conjunto de implementación | Microsoft Docs'
+title: 'Paso 2: Comprobación del paquete de implementación | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b5f0799a26848f70bc67b24708a5d4352339d50
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c15564e665361caef562aa9add1c28b267a8a512
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532061"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283142"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>Lección 2-2: Comprobar el conjunto de implementación
 En la lección 1, ha creado el proyecto Deployment Tutorial y le ha agregado paquetes y archivos auxiliares; en la tarea anterior, ha creado una utilidad de implementación para el proyecto.  
@@ -56,7 +56,7 @@ En esta tarea, comprobará el contenido del paquete de implementación. El paque
 5.  Salga de Internet Explorer o del editor de texto.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 3: Instalar paquetes](../integration-services/lesson-3-install-ssis-packages.md)  
+[Lección 3: Instalación de paquetes SSIS](../integration-services/lesson-3-install-ssis-packages.md)  
   
   
   

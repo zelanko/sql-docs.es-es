@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: be748729eeb9a50a5e206a5778e20420f4137177
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 82856b272e4799fc06929fe4f2d153320f879f0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640052"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270780"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Recopilar una lista para el bucle Foreach con la tarea Script
   El enumerador de variable para Foreach enumera los elementos de una lista que le se pasa en una variable y realiza las mismas tareas en cada elemento. Puede utilizar código personalizado en una tarea Script para rellenar una lista con este fin. Para obtener más información sobre el enumerador, vea [Contenedor de bucles Para cada uno](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "51640052"
  En el ejemplo siguiente se utilizan métodos del espacio de nombres **System.IO** para recopilar una lista de libros de Excel del equipo que son posteriores o anteriores a un número de días especificado por el usuario en una variable. Busca de forma recursiva en los directorios de la unidad C los archivos que tienen la extensión .xls y examina la fecha en la que cada archivo se modificó por última vez para determinar si el archivo pertenece a la lista. Agrega los archivos correspondientes a un objeto **ArrayList** y guarda **ArrayList** en una variable para el uso posterior en un contenedor de bucles Para cada uno. El contenedor de bucles Foreach se configura para utilizar el enumerador de variable para Foreach.  
   
 > [!NOTE]  
->  La variable que utiliza con el enumerador de variable para Para cada uno debe ser del tipo **Object**. El objeto que se coloca en la variable debe implementar una de las interfaces siguientes: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** o **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. En general, se usa **Array** o **ArrayList**. **ArrayList** requiere una referencia y una instrucción **Imports** para el espacio de nombres **System.Collections**.  
+>  La variable que utiliza con el enumerador de variable para Para cada uno debe ser del tipo **Object**. El objeto que incluye en la variable debe implementar una de las interfaces siguientes: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** o **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. En general, se usa **Array** o **ArrayList**. **ArrayList** requiere una referencia y una instrucción **Imports** para el espacio de nombres **System.Collections**.  
   
  Puede experimentar con esta tarea utilizando diferentes valores positivos y negativos en la variable de paquete `FileAge`. Por ejemplo, puede escribir 5 para buscar archivos creados en los cinco últimos días o escribir -3 para buscar archivos creados hace más de tres días. Esta tarea puede tardar un minuto o dos en una unidad de disco con un gran número de carpetas donde buscar.  
   
@@ -246,7 +246,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
     }  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Contenedor de bucles Para cada uno](../../integration-services/control-flow/foreach-loop-container.md)   
  [Configurar un contenedor de bucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   

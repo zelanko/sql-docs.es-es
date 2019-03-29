@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 07ec3a12ada376275ab4be5b40078d7ffc9aa469
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 47776933cee01725d19c74b571c63ad91342dd88
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639862"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272202"
 ---
 # <a name="file-system-task"></a>Tarea Sistema de archivos
   La tarea Sistema de archivos realiza operaciones en archivos y directorios del sistema de archivos. Por ejemplo, un paquete puede utilizar la tarea Sistema de archivos para crear, mover o eliminar directorios y archivos. También puede utilizar la tarea Sistema de archivos para establecer atributos en archivos y directorios. Por ejemplo, la tarea Sistema de archivos puede convertir los archivos en archivos ocultos o de solo lectura.  
@@ -149,7 +149,7 @@ ms.locfileid: "51639862"
  **DestinationConnection**  
  Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 ### <a name="issourcepathvariable-dynamic-options"></a>Opciones dinámicas de IsSourcePathVariable  
   
@@ -184,7 +184,7 @@ ms.locfileid: "51639862"
  **UseDirectoryIfExists**  
  Indica si la operación **Crear directorio** usa un directorio existente con el nombre especificado, en lugar de crear un directorio.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ff217e16fb9d153872d00074ff2f5d672be056d0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504075"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273913"
 ---
 # <a name="execute-sql-task"></a>Tarea Ejecutar SQL
   La tarea Ejecutar SQL ejecuta instrucciones SQL o procedimientos almacenados de un paquete. La tarea puede contener una sola instrucción SQL o múltiples instrucciones SQL que se ejecutarán de forma secuencial. Puede usar la tarea Ejecutar SQL para los siguientes fines:  
@@ -189,7 +189,7 @@ Para más información sobre el lenguaje de consultas Transact-SQL y su sintaxis
  **FileConnection**  
  Seleccione un administrador de conexiones de archivos existente o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
@@ -286,7 +286,7 @@ Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros d
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Usar parámetros con administradores de conexiones ADO.NET y ADO  
  Los administradores de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] y ADO tienen requisitos concretos para los comandos SQL que utilizan parámetros:  
   
--   Los administradores de conexión [!INCLUDE[vstecado](../../includes/vstecado-md.md)] requieren que el comando SQL utilice nombres de parámetros como marcadores de parámetros. Esto significa que las variables se pueden asignar directamente a los parámetros. Por ejemplo, la variable `@varName` se asigna al parámetro denominado `@parName` y proporciona un valor al parámetro `@parName`.  
+-   Los administradores de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] requieren que el comando SQL utilice nombres de parámetros como marcadores de parámetros. Esto significa que las variables se pueden asignar directamente a los parámetros. Por ejemplo, la variable `@varName` se asigna al parámetro denominado `@parName` y proporciona un valor al parámetro `@parName`.  
   
 -   Los administradores de conexiones ADO requieren que el comando SQL utilice signos de interrogación (?) como marcadores de parámetros. Sin embargo, puede utilizar cualquier nombre definido por el usuario, salvo valores enteros, como nombres de parámetro.  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - prepSqlSrv
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 041cc37bf58d0e6466348edfb5f14f715b0b536c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9b0ba6e5a3ee22bb29aac7bedc0be7e5a4619d0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856883"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283109"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>Preparar SQL Server para CDC
   El servicio CDC de Oracle necesita que todas las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino contengan la base de datos MSXDBCDC. Esta base de datos se crea mediante la acción Preparar SQL Server de la Consola de configuración del servicio CDC. Esto crea un script especial que se ejecuta para crear las tablas, los procedimientos almacenados y otros artefactos necesarios para esta base de datos. Esta tarea solo se realiza una vez para cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
@@ -37,16 +37,16 @@ ms.locfileid: "47856883"
   
 -   **Autenticación de Windows**  
   
--   **Autenticación de SQL Server**: si selecciona esta opción, debe escribir el **Nombre de usuario** y la **Contraseña** del usuario del servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que se está conectando.  
+-   **Autenticación de SQL Server**: si selecciona esta opción, debe escribir los valores de **Nombre de usuario** y **Contraseña** del usuario de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que se va a conectar.  
   
  Para preparar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para CDC de Oracle, el inicio de sesión debe tener permiso de escritura para la base de datos MSXDBCDC. Escriba las credenciales para un inicio de sesión que tenga permiso de escritura para la base de datos MSXDBCDC, como un miembro del rol `sysasmin` .  
   
 ### <a name="options"></a>Opciones  
  Haga clic en la flecha para ver las opciones disponibles que se pueden configurar. Puede elegir dejar estas opciones con el valor predeterminado. Las opciones disponibles son:  
   
--   **Tiempo de espera de la conexión**: escriba el tiempo (en segundos) que el servicio CDC para Oracle espera una conexión con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de agotarse el tiempo de espera. El valor predeterminado es **15**.  
+-   **Tiempo de espera de la conexión**: Escriba el tiempo (en segundos) que el servicio CDC para Oracle espera una conexión con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antes de agotarse el tiempo de espera. El valor predeterminado es **15**.  
   
--   **Tiempo de espera de ejecución**: escriba el tiempo (en segundos) que el servicio de Windows CDC de Oracle espera la ejecución de un comando antes de agotarse el tiempo de espera. El valor predeterminado es **30**.  
+-   **Tiempo de espera de ejecución**: Escriba el tiempo (en segundos) que el servicio de Windows CDC de Oracle espera que se ejecute un comando antes de agotarse el tiempo de espera. El valor predeterminado es **30**.  
   
 -   **Cifrar conexión**: seleccione **Cifrar conexión** para que la comunicación entre el servicio CDC de Oracle y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino se realice mediante una conexión cifrada.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "47856883"
 ### <a name="view-script"></a>Ver script  
  Haga clic en **Ver script** para ver una versión de solo lectura del script de configuración. Un administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede copiar este script en la consola de administración de SQL Server para editarlo, si es necesario. Para obtener más información sobre el script para preparar SQL Server, vea [Preparar SQL Server para CDC de Oracle (Ver script)](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cómo trabajar con servicios CDC](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [Cómo preparar SQL Server para CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   

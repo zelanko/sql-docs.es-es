@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 820541da1699e2e74a9ec0b9a5f00f094a14f38c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f5ba8afdf4acadd114363280501f29e1616349ae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638663"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290621"
 ---
 # <a name="odata-source"></a>Origen OData
 Use el componente de origen OData en un paquete SSIS para consumir datos de un servicio de Open Data Protocol (OData).
@@ -102,7 +102,7 @@ Para detectar los tipos de datos de las columnas del origen de datos, vea la pá
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Usar ruta de acceso de colección o de recurso = Ruta de acceso a recursos  
  **Resource path**  
- Escriba una ruta de acceso a recursos. Por ejemplo: Empleados  
+ Escriba una ruta de acceso a recursos. Por ejemplo: Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>Editor de origen OData (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de origen OData** para seleccionar las columnas externas (origen) que se van a incluir en la salida y asignarlas a columnas de salida.  
@@ -144,7 +144,7 @@ Para detectar los tipos de datos de las columnas del origen de datos, vea la pá
  **Aplicar**  
  Aplica la opción de control de errores a las celdas seleccionadas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de conexiones OData](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   

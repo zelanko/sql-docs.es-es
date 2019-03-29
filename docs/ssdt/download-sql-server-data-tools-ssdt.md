@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c485156992dbb78157af56b7d5066ee40a92e36
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 596a32bc9942bde7a8301635150287f63a5fbeed
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58051922"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58431283"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Descargar e instalar SQL Server Data Tools (SSDT) para Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,8 +49,7 @@ El instalador enumera las instancias disponibles de Visual Studio a las que se v
 
 > [!IMPORTANT]
 > - Antes de instalar SSDT para Visual Studio 2017 (15.9.0), desinstale las extensiones *Proyectos de Analysis Services* y *Proyectos de Reporting Services*, si están instaladas, y cierre todas las instancias de VS.
-> - Use SSDT para Visual Studio 2017, versión 15.8.0 o anterior, para diseñar paquetes SSIS que contengan orígenes y destinos de Teradata. Visual Studio 2017 (15.8.2) no permite diseñar paquetes SSIS que contengan orígenes y destinos de Teradata. 
-
+> - Use SSDT para Visual Studio 2017 (15.8.0) o anterior, para diseñar paquetes SSIS que contengan orígenes y destinos de Teradata. SSDT para Visual Studio 2017 después de 15.8.0 no puede diseñar paquetes SSIS que contengan orígenes y destinos de Teradata de Attunity.
 
 
 **Información de versión**  
@@ -59,7 +58,7 @@ Número de versión: 15.9.0
 Número de compilación: 14.0.16186.0  
 Fecha de publicación: 28 de enero de 2019  
 
-Para ver la lista completa de cambios, consulte el [registro de cambios](changelog-for-sql-server-data-tools-ssdt.md).
+Para ver una lista completa de cambios, consulte las [notas de la versión de SQL Server Data Tools (SSDT)](release-notes-ssdt.md).
 
 SSDT para Visual Studio 2017 tiene los mismos [requisitos del sistema](https://docs.microsoft.com/visualstudio/productinfo/vs2017-system-requirements-vs) que Visual Studio.  
 

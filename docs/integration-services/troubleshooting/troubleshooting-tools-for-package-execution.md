@@ -14,15 +14,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aca92b322d3eb0a3b987300d88a877d29cf3cda
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e0ee84933cf0644ac4759639c5ce6e2b3f183f04
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639032"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290131"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Herramientas para solucionar problemas con la ejecución de paquetes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye características y herramientas que puede utilizar para solucionar problemas de los paquetes durante su ejecución, después de que los paquetes se hayan completado e implementado.  
@@ -82,7 +82,7 @@ ms.locfileid: "51639032"
   
     3.  **Posibilidad de capturar datos de recuento de filas**. Tenga en cuenta la posibilidad de crear una tabla independiente para almacenar información de recuento de filas, donde cada instancia de ejecución del paquete se identifique mediante su ExecutionID. Utilice la transformación Recuento de filas para guardar el recuento de filas en una serie de variables en puntos clave del flujo de datos. Tras finalizar el flujo de datos, utilice una tarea Ejecutar SQL para insertar la serie de valores en una fila de la tabla para permitir realizar análisis y generar informes posteriormente.  
   
-     Para obtener más información sobre este enfoque, vea la sección sobre auditoría y registro del ETL, en las notas del producto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+     Para más información sobre este enfoque, consulte la sección sobre auditoría y registro del ETL, en las notas del producto de [!INCLUDE[msCoName](../../includes/msconame-md.md)], [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Solución de problemas de ejecución de paquetes utilizando archivos de volcado de depuración  
  En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede crear archivos de volcado de depuración que proporcionen información sobre la ejecución de un paquete. Para obtener más información, consulte [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  

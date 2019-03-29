@@ -16,17 +16,17 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f14e6d10f7793fff889dea43841556b9d43d09c
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+monikerRange: '>=sql-server-2017||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: eff2d9980e4036acae9f2b11a41582847b1a686b
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652564"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342926"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 Devuelve la cadena proporcionada como primer argumento después de que algunos caracteres especificados en el segundo argumento se hayan convertido en un conjunto de destino de caracteres especificado en el tercer argumento.
 

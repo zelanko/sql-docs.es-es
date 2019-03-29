@@ -1,5 +1,5 @@
 ---
-title: 'Paso 3: Probar los paquetes implementados | Microsoft Docs'
+title: 'Paso 3: Prueba de los paquetes implementados | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f3461277f86e7d8aa8466b5d56cce7a54ed82852
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 751480be76b38ff10f0c71fbde12bcc6765e6ef6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836233"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277263"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Lección 3-3: Probar los paquetes implementados
 En esta tarea probará los paquetes que ha implementado en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -104,7 +104,7 @@ Las carpetas de nivel superior dentro de la carpeta Paquetes almacenados son car
   
     La consulta devuelve 21 filas de datos. El resultado devuelto consta de filas del archivo de datos XML, orders.xml. Cada fila es un resumen por país y región; la fila presenta el nombre de un país o región, el número de pedidos de cada país o región, y las fechas del pedido más reciente y más antiguo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [dtexec (utilidad)](../integration-services/packages/dtexec-utility.md)  
   
   

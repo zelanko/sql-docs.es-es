@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dts.designer.afppigtask.f1
 - sql14.dts.designer.afppigtask.f1
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cee619bb2c7e11a1bb6609fcc6a6c1f51ebf6da7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc61b40b94942c03037f237a0fe23e0b54063af1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832913"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272416"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Tarea de Pig de Azure HDInsight
 Utilice la **tarea de Pig de Azure HDInsight** para ejecutar el script de Pig en un clúster de Azure HDInsight.
@@ -40,7 +40,7 @@ La **tarea de Pig de Azure HDInsight** es un componente del paquete de caracter�
   
 5.  Hay dos maneras de especificar el script de Pig que se va a ejecutar:
   
-    1.  **Script en línea**: especifique el campo **Script** escribiendo en línea el script que quiere ejecutar en el cuadro de diálogo **Escriba el script**.
+    1.  **Script insertado**: para especificar el campo **Script**, escriba el script insertado que quiere ejecutar en el cuadro de diálogo **Escriba el script**.
   
     2.  **Archivo de script**: cargue el archivo de script en Azure Blob Storage y especifique el campo **BlobName**. Si el blob no está en el contenedor ni en la cuenta de almacenamiento predeterminados asociados con el clúster de HDInsight, deben especificarse los campos **ExternalStorageAccountName** y **ExternalBlobContainer**. Para un blob externo, asegúrese de que está configurado como accesible públicamente.  
   

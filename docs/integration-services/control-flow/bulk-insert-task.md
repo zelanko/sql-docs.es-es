@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bd16052afcb3acf9b0d5a45f6f57ab896fcdc1c1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 42e26d257b915aad5ffa457605fbb68c1b66fab9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531827"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290711"
 ---
 # <a name="bulk-insert-task"></a>Inserción masiva, tarea
   La tarea Inserción masiva proporciona una forma muy eficaz de copiar grandes cantidades de datos a una tabla o vista de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, suponga que su empresa almacena una lista de productos de un millón de filas en un sistema central, pero el sistema de comercio electrónico de la empresa usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para rellenar páginas web. Debe actualizar la tabla de productos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todas las noches con la lista maestra de productos del gran sistema. Para ello, debe guardar la lista de productos con un formato delimitado por tabuladores y utilizar la tarea Inserción masiva para copiar los datos directamente a la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

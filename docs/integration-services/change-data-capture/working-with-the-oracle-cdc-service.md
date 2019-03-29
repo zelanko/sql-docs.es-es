@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82e08d0cdffd4d9f339b4dc1c35322d8e2dd687d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2500ac75e7b6a34803c822bb8d661ada57130bb8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607865"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274190"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabajar con el servicio CDC de Oracle
   En esta sección se describen algunos conceptos importantes del servicio CDC de Oracle. Los conceptos incluidos en esta sección son:  
@@ -261,7 +261,7 @@ ms.locfileid: "47607865"
   
  **Nota**: Los parámetros que contienen espacios en blanco o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cómo usar la interfaz de línea de comandos del servicio CDC](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   
  [Cómo preparar SQL Server para CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   

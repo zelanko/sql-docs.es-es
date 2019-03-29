@@ -2523,6 +2523,8 @@ items:
         href: ../connect/jdbc/using-parameter-metadata.md
       - name: Usar tipos de datos básicos
         href: ../connect/jdbc/using-basic-data-types.md
+      - name: Uso del tipo de datos SQL_variant
+        href: ../connect/jdbc/using-sql-variant-datatype.md
       - name: Utilizar tipos de datos espaciales
         href: ../connect/jdbc/use-spatial-datatypes.md
       - name: Descripción de transacciones
@@ -2557,7 +2559,7 @@ items:
         href: ../connect/jdbc/using-connection-pooling.md
       - name: Referencia de la API de Always Encrypted para el controlador JDBC
         href: ../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md
-      - name: Mediante la autenticación integrada de Kerberos para conectarse a SQL Server
+      - name: Usar la autenticación integrada de Kerberos para conectar con SQL Server
         href: ../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md
       - name: Usar un procedimiento almacenado con un recuento de actualizaciones
         href: ../connect/jdbc/using-a-stored-procedure-with-an-update-count.md
@@ -2617,10 +2619,13 @@ items:
         href: ../connect/jdbc/using-sql-escape-sequences.md
       - name: Usar instrucciones con procedimientos almacenados
         href: ../connect/jdbc/using-statements-with-stored-procedures.md
-      - name: Versión de ejemplo de Azure Key Vault 6.0.0
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
-      - name: Versión de ejemplo de Azure Key Vault 6.2.2
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+      - name: Ejemplos de Azure Key Vault para la versión 7.0 y otras.
+        href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
+        items:
+        - name: Versión de ejemplo de Azure Key Vault 6.2.2
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+        - name: Versión de ejemplo de Azure Key Vault 6.0.0
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
 - name: Node.js
   items:
   - name: Controlador Node.js de SQL Server
@@ -3413,7 +3418,7 @@ items:
                   href: ../odbc/reference/develop-app/batch-processing.md
             - name: Probar aplicaciones interoperables
               href: ../odbc/reference/develop-app/testing-interoperable-applications.md
-          - name: Consideraciones de programación
+          - name: Consideraciones sobre la programación
             href: ../odbc/reference/develop-app/programming-considerations.md
             items:
             - name: Subprocesamiento múltiple
@@ -7644,9 +7649,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: Glosario de términos de ADO
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: 67cfc70b3bdd5744c91ace414dc04d4b9090f4d7
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: f55c9266746f452d2592d7d0ded5993ebb4fab80
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478310"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566644"

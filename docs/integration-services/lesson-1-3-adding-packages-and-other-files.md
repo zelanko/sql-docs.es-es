@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9cca20997ed2bfe8b32d09376186691253d6e90
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2eb654217e05004dab02c97941171e0725af5715
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528602"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58288781"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Lección 1-3: Agregar paquetes y otros archivos
 En esta tarea, agregará paquetes existentes, archivos auxiliares que admitan paquetes individuales y un archivo Léame al proyecto Deployment Tutorial que ha creado en la tarea anterior. Por ejemplo, agregará un archivo de datos XML que contiene los datos de un paquete y un archivo de texto que proporciona información del archivo Léame sobre todos los paquetes del proyecto.  
@@ -69,7 +69,7 @@ En la siguiente tarea, agregará configuraciones a los paquetes DataTransfer y L
 4.  En el menú Archivo, haga clic en **Guardar todo**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Paso 4: Agregar configuraciones de paquetes](../integration-services/lesson-1-4-adding-package-configurations.md)  
+[Paso 4: Adición de configuraciones de paquetes](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
   
   

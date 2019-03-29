@@ -15,15 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c59a55f8ccb713024394ecf611299f71a5cf733c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502607"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271969"
 ---
 # <a name="web-service-task"></a>Tarea Servicio web
   La tarea Servicio web ejecuta un método de servicio web. Puede usar la tarea Servicio web para los siguientes objetivos:  
@@ -89,7 +89,7 @@ ms.locfileid: "52502607"
 > [!IMPORTANT]  
 >  El administrador de conexiones HTTP solo es compatible con la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
   
- **Temas relacionados**: [Administrador de conexiones HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md).  
+ **Temas relacionados:**  [Administrador de conexiones HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Editor del administrador de conexiones HTTP &#40;página Servidor&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  Escriba la ruta de acceso completa de un archivo WSDL local del equipo, o bien haga clic en el botón Examinar **(…)** y busque el archivo.  
@@ -172,13 +172,13 @@ ms.locfileid: "52502607"
  **Archivo**  
  Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = Variable  
  **Variable**  
  Seleccione una variable de la lista, o bien haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Temas relacionados:**  [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Vídeo [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=259642)(Cómo llamar a un servicio web usando la tarea Servicio web (vídeo de SQL Server)), en technet.microsoft.com.  
+ Vídeo [ How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=259642) (Procedimiento para llamar a un servicio web con la tarea Servicio web [vídeo de SQL Server]), en technet.microsoft.com.  

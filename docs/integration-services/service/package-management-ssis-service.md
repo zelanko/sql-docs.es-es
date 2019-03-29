@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 141810965960031cf004f9c9999943760bc6c810
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 00ed915265b9b3c19e7bafdcf7d6c41208e8319a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532082"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280469"
 ---
 # <a name="package-management-ssis-service"></a>Administración de paquetes (servicio SSIS)
   La administración de paquetes incluye la supervisión, administración, importación y exportación de paquetes.  
@@ -284,7 +284,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
 ### <a name="packages-stored-in-the-file-system"></a>Paquetes almacenados en el sistema de archivos  
  La copia de seguridad de los paquetes guardados en el sistema de archivos debe incluirse en el plan de copia de seguridad del sistema de archivos del servidor. El archivo de configuración del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , que tiene el nombre predeterminado MsDtsSrvr.ini.xml, contiene una lista de las carpetas del servidor que supervisa el servicio. Debe asegurarse de que se cree la copia de seguridad de estas carpetas. Además, los paquetes se pueden almacenar en otras carpetas del servidor y debe asegurarse de incluir estas carpetas en la copia de seguridad.  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Servicio Integration Services &#40;servicio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   

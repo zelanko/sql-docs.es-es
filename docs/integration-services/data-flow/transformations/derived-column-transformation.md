@@ -17,15 +17,15 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1d842af4f5e9245836e595c02a8adebfeaae3dba
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6b03494d1c74313eb6e0698e96062869b9e08cfa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639332"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270993"
 ---
 # <a name="derived-column-transformation"></a>Transformación Columna derivada
   La transformación Columna derivada crea nuevos valores de columna aplicando expresiones a las columnas de entrada de la transformación. Una expresión puede contener cualquier combinación variables, funciones, operadores y columnas de la entrada de transformación. El resultado puede agregarse como una nueva columna o insertarse en una columna existente como un valor de reemplazo. La transformación Columna derivada puede definir varias columnas derivadas, y cualquier variable o columna de entrada puede aparecer en varias expresiones.  
@@ -95,7 +95,7 @@ ms.locfileid: "51639332"
   
  Puede especificar el valor de esta propiedad con una expresión de propiedad.  
   
- **Temas relacionados**: [Expresiones de Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41](../../../integration-services/expressions/functions-ssis-expression.md).  
+ **Temas relacionados:**: [Expresiones de Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **Tipo de datos**  
  Si agrega datos a una nueva columna, el cuadro de diálogo **Editor de transformación Columna derivada** evalúa automáticamente la expresión y establece el tipo de datos según corresponda. El valor de esta columna es de solo lectura. Para obtener más información, vea [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  

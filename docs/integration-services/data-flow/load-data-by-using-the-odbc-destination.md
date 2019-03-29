@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7276644fefc9aa4adcd7ea796c3266c8135a97d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bbf24f97146e98fc074870410f8e68a83672f72
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670903"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282329"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Cargar datos mediante el destino de ODBC
   Este procedimiento muestra cómo cargar datos mediante el destino ODBC. Para agregar y configurar un destino ODBC el paquete ya debe incluir al menos una tarea Flujo de datos y un origen.  
@@ -35,9 +35,9 @@ ms.locfileid: "47670903"
   
 6.  Seleccione el método de acceso de datos.  
   
-    -   **Nombre de tabla - lote**: seleccione esta opción para configurar el destino ODBC para trabajar en modo de lote. Al seleccionar esta opción, puede establecer el **Tamaño de lote**.  
+    -   **Nombre de la tabla: Lote** Seleccione esta opción para configurar el destino de ODBC de manera que funcione en modo por lotes. Al seleccionar esta opción, puede establecer el **Tamaño de lote**.  
   
-    -   **Nombre de tabla - fila a fila**: seleccione esta opción para configurar el destino ODBC para que cada una de las filas se inserte en la tabla de destino una por una. Al seleccionar esta opción, los datos se cargan en la tabla una fila cada vez.  
+    -   **Nombre de la tabla: Fila a fila**: Seleccione esta opción para configurar el destino de ODBC de manera que se inserte cada una de las filas en la tabla de destino de una en una. Al seleccionar esta opción, los datos se cargan en la tabla una fila cada vez.  
   
 7.  En el campo **Nombre de la tabla o la vista** , seleccione una tabla o vista disponible desde la base de datos de la lista o escriba una expresión regular para identificar la tabla. Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el comodín (*) para escribir cualquier parte del nombre con el fin de mostrar la tabla o las tablas que desea usar.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "47670903"
   
 12. Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Editor de destino de ODBC &#40;página Administrador de conexiones&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
  [Editor de destino de ODBC &#40;página Asignaciones&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
  [Editor de orígenes ODBC &#40;página Salida de error&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  

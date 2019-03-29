@@ -10,24 +10,24 @@ ms.topic: conceptual
 f1_keywords:
 - desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3acfc4beeb64631a1c8bc00fe5e4a6ca2c31f470
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: bb127d4c413a4b08927b0dca57dbea3b62039b2a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641242"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280859"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Diseñador de captura de datos modificados para Oracle de Attunity
   La consola del diseñador CDC se emplea para desarrollar y mantener instancias CDC de Oracle. La Consola del diseñador CDC es un complemento de Microsoft Management Console que contiene los elementos siguientes:  
   
--   Asistente para nueva instancia: este asistente crea una nueva instancia CDC de Oracle. Para obtener información acerca de cómo usar el Asistente para nueva instancia, vea [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
+-   Asistente para nueva instancia: este asistente crea una instancia CDC de Oracle. Para obtener información acerca de cómo usar el Asistente para nueva instancia, vea [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md).  
   
--   Visor de propiedades de instancia CDC: se trata de una vista acoplada que muestra el estado y la configuración de la instancia CDC seleccionada. Para obtener información sobre el visor de propiedades, vea [Cómo administrar una instancia CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
+-   Visor de propiedades de instancia CDC: es una vista acoplada que muestra el estado y la configuración de la instancia CDC seleccionada. Para obtener información sobre el visor de propiedades, vea [Cómo administrar una instancia CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
--   Editor de propiedades de instancia CDC: este cuadro de diálogo se emplea para editar cualquier instancia de servicio CDC de Oracle existente. Para obtener información acerca de cómo editar las propiedades de la instancia CDC, vea [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
+-   Editor de propiedades de instancia CDC: este cuadro de diálogo se usa para editar cualquier instancia del servicio CDC de Oracle existente. Para obtener información acerca de cómo editar las propiedades de la instancia CDC, vea [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md).  
   
  El servicio y el diseñador de captura de datos modificados para Oracle de Attunity de Microsoft® para Microsoft SQL Server® 2016 forman parte del Feature Pack de SQL Server 2016. Descargue los componentes del Feature Pack, en la [página web de SQL Server 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=746297).  
   

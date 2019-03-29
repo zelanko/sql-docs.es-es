@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69771260dbffe33583e300942548a69fd21a5258
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e39c96672016f19ecc6506d48266da70e0edf1b5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529596"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274879"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Trabajar con archivos de Excel con la tarea Script
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona el administrador de conexiones de Excel, el origen de Excel y el destino de Excel para trabajar con datos almacenados en hojas de cálculo en el formato de archivo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Las técnicas descritas en este tema usan la tarea Script para obtener información acerca de las bases de datos de Excel disponibles (archivos de libro) y tablas (hojas de cálculo y rangos con nombre).
@@ -66,7 +66,7 @@ ms.locfileid: "52529596"
   
 5.  Establezca el lenguaje de scripting predeterminado para el componente de script mediante la opción **Lenguaje de scripting** de la página **General** del cuadro de diálogo **Opciones**. Para obtener más información, vea [General Page](../general-page-of-integration-services-designers-options.md).  
   
-##  <a name="example1"></a> Descripción de ejemplo 1: comprobar si existe un archivo de Excel  
+##  <a name="example1"></a> Descripción del ejemplo 1: Comprobación de si existe un archivo de Excel  
  En este ejemplo se determina si existe el archivo de libro de Excel especificado en la variable `ExcelFile` y, a continuación, se establece el valor booleano de la variable `ExcelFileExists` en el resultado. Puede usar este valor booleano para la bifurcación en el flujo de trabajo del paquete.  
   
 ### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script  
@@ -136,7 +136,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> Descripción de ejemplo 2: comprobar si existe una tabla de Excel  
+##  <a name="example2"></a> Descripción del ejemplo 2: Comprobación de si existe una tabla de Excel  
  En este ejemplo se determina si existe la hoja de cálculo de Excel o el rango con nombre especificado en la variable `ExcelTable` en el archivo de libro de Excel especificado en la variable `ExcelFile` y, a continuación, se establece el valor booleano de la variable `ExcelTableExists` en el resultado. Puede usar este valor booleano para la bifurcación en el flujo de trabajo del paquete.  
   
 ### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script  
@@ -243,7 +243,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> Descripción de ejemplo 3: obtener una lista de archivos de Excel en una carpeta  
+##  <a name="example3"></a> Descripción del ejemplo 3: Obtención de una lista de archivos de Excel en una carpeta  
  En este ejemplo se llena una matriz con la lista de archivos de Excel ubicados en la carpeta especificada del valor de la variable `ExcelFolder` y, a continuación, se copia la matriz en la variable `ExcelFiles`. Puede usar el enumerador de variable para Foreach para iterar sobre los archivos en la matriz.  
   
 ### <a name="to-configure-this-script-task-example"></a>Para configurar este ejemplo de tarea Script  
@@ -315,7 +315,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Solución alternativa  
  En lugar de usar una tarea Script para recopilar una lista de archivos de Excel en una matriz, puede usar también el enumerador de archivos ForEach para iterar sobre todos los archivos de Excel de una carpeta. Para obtener más información, consulte [Loop through Excel Files and Tables by Using a Foreach Loop Container](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md) (Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Para cada uno).  
   
-##  <a name="example4"></a> Descripción de ejemplo 4: obtener una lista de tablas en un archivo de Excel  
+##  <a name="example4"></a> Descripción del ejemplo 4: Obtención de una lista de tablas en un archivo de Excel  
  En este ejemplo se llena una matriz con la lista de hojas de cálculo y rangos con nombre ubicados en el archivo de libro de Excel especificado por el valor de la variable `ExcelFile` y, a continuación, se copia la matriz en la variable `ExcelTables`. Puede usar el enumerador de variable para Foreach para iterar sobre las tablas en la matriz.  
   
 > [!NOTE]  
@@ -533,7 +533,7 @@ public class ScriptMain
 }  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cargar datos de o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)  
  [Crear bucles entre archivos y tablas de Excel mediante un contenedor de bucles ForEach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   

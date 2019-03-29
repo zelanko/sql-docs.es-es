@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d99085d1f743177a24c7902daebf584455f38a79
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c487852af232224304e0d746f0ab32bf0fe90dbe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642248"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290541"
 ---
 # <a name="cdc-source"></a>origen de CDC
   El origen CDC lee un intervalo de datos modificados de las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y entrega los cambios de nivel inferior a otros componentes de SSIS.  
@@ -53,7 +53,7 @@ ms.locfileid: "51642248"
   
 -   **Columna de error**: la columna de origen que produce el error (para los errores de conversión).  
   
--   **Columnas de fila de error**: datos de registro que ocasionan el error.  
+-   **Columnas de fila de error**: los datos del registro que ocasionan el error.  
   
  Según la configuración del comportamiento de los errores, el origen CDC permite devolver los errores (conversión de datos, truncamiento) que aparecerán durante el proceso de extracción en la salida de error.  
   
@@ -153,15 +153,15 @@ use <cdc-enabled-database-name>
  **Modo de procesamiento CDC**  
  Seleccione el modo de procesamiento que mejor controle las necesidades de procesamiento. Las opciones posibles son:  
   
--   **Todos**: devuelve los cambios en el intervalo CDC actual sin los valores de **Antes de actualización** .  
+-   **Todos**: devuelve los cambios en el intervalo CDC actual sin los valores de **Antes de actualizar**.  
   
--   **Todos con valores antiguos**: devuelve los cambios en el intervalo de procesamiento CDC actual, incluidos los valores antiguos (**Antes de actualización**). Para cada operación de actualización habrá dos filas: una con los valores anteriores a la actualización y otra con los valores posteriores a la actualización.  
+-   **Todos con los valores antiguos**: devuelve los cambios en el intervalo de procesamiento CDC actual, incluidos los valores antiguos (**Antes de actualizar**). Para cada operación de actualización habrá dos filas: una con los valores anteriores a la actualización y otra con los valores posteriores a la actualización.  
   
 -   **Neto**: devuelve una sola fila de cambios por cada fila de origen modificada en el intervalo de procesamiento de CDC actual. Si una fila de origen se actualizó varias veces, se genera el cambio combinado (por ejemplo, se genera insertar+actualizar como una actualización única y se genera actualizar+eliminar como una eliminación única). Al trabajar en el modo de procesamiento de cambios Neto, es posible dividir los cambios en salidas de eliminar, insertar y actualizar y controlarlos todos en paralelo, ya que la fila de origen única aparece en más de un resultado.  
   
--   **Neto con máscara de actualización**: este modo es similar al modo Neto normal, pero también agrega columnas booleanas con el patrón de nombre **__$\<column-name>\__Changed** que indica las columnas modificadas en la fila de cambio actual.  
+-   **Neto con máscara de actualización**: este modo es similar al modo neto normal, pero también agrega columnas booleanas con el patrón de nombre **__$\<column-name>\__Changed** que indican las columnas modificadas en la fila de cambio actual.  
   
--   **Neto con combinación**: este modo es similar al modo Neto normal, pero con las operaciones de inserción y actualización combinadas en una sola operación de combinación (UPSERT).  
+-   **Neto con combinación**: este modo es similar al modo neto normal, pero con las operaciones de inserción y actualización combinadas en una sola operación de combinación (UPSERT).  
   
 > [!NOTE]  
 >  Para todas las opciones de cambio Neto, la tabla de origen debe tener una clave principal o un índice único. Para las tablas sin una clave principal o índices únicos, debe usar la opción **Todos** .  

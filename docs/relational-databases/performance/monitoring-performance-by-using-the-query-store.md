@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec0f97e29154885d335f8e9073771817b710eefe
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 92752fa479852c2f0c17ded6fa2a047cfcff5dcb
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087854"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356478"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisión del rendimiento mediante el almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -173,7 +173,7 @@ Consulte la vista **sys.database_query_store_options** para determinar las opcio
 Para obtener más información sobre el establecimiento de opciones mediante instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , vea [Administración de opciones](#OptionMgmt).  
   
 ## <a name="Related"></a> Vistas, funciones y procedimientos relacionados  
- El Almacén de consultas se puede ver y administrar a través de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o usando las siguientes vistas y procedimientos.  
+ Vea y administre El Almacén de consultas mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o por medio de las siguientes vistas y procedimientos.  
 
 ### <a name="query-store-functions"></a>Funciones del Almacén de consultas  
  Las funciones ayudan a las operaciones del Almacén de consultas. 

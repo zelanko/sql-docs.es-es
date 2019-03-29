@@ -28,15 +28,15 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 12f91e676983cea041d966a0306fb1faf636019b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 981d659d05517b1e1b54244cbea22d52ccf964f2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505926"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271322"
 ---
 # <a name="foreach-loop-container"></a>Contenedor Foreach Loop
   El contenedor de bucles Foreach define un flujo de control que se repite en un paquete. La implementación del bucle es similar a la estructura de bucle **Foreach** de los lenguajes de programación. En un paquete, los bucles se habilitan mediante un enumerador Foreach.  El contenedor de bucles Foreach repite el flujo de control para cada miembro de un enumerador especificado.  
@@ -215,7 +215,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Expresiones**  
  Haga clic en **Expresiones** o expándalo para ver la lista de expresiones de propiedad existentes. Haga clic en el botón de puntos suspensivos **(…)** para agregar una expresión de propiedad para una propiedad de enumerador, o bien para editar y evaluar una expresión de propiedad existente.  
   
- **Temas relacionados:** [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Editor de expresiones de propiedad](../../integration-services/expressions/property-expressions-editor.md), [Generador de expresiones](../../integration-services/expressions/expression-builder.md).  
+ **Temas relacionados:**  [Expresiones de Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md), [Editor de expresiones de propiedad](../../integration-services/expressions/property-expressions-editor.md), [Generador de expresiones](../../integration-services/expressions/expression-builder.md)  
   
 ### <a name="enumerator-dynamic-options"></a>Opciones dinámicas de los enumeradores  
   
@@ -312,7 +312,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
 > [!IMPORTANT]  
 >  El administrador de conexiones ADO.NET debe utilizar un proveedor .NET para OLE DB. Si se conecta a SQL Server, el proveedor recomendado es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, que aparece enumerado en la sección **Proveedores .NET de OleDb** del cuadro de diálogo **Administrador de conexiones** .  
   
- **Temas relacionados:** [ADO Connection Manager](../../integration-services/connection-manager/ado-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ **Temas relacionados:** [Administrador de conexiones de ADO](../../integration-services/connection-manager/ado-connection-manager.md), [Configurar el administrador de conexiones de ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  **Esquema**  
  Seleccione el esquema que desea enumerar.  
@@ -320,7 +320,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Establecer restricciones**  
  Permite establecer las restricciones que se deben aplicar al esquema especificado.  
   
- **Temas relacionados:** [Restricciones de esquema, cuadro de diálogo](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
+ **Temas relacionados:** [Restricciones de esquema (cuadro de diálogo)](https://msdn.microsoft.com/library/92e5fd32-4944-4f7c-a448-b458df93d0d5)  
   
 #### <a name="enumerator--foreach-from-variable-enumerator"></a>Enumerador = Enumerador de variable para Foreach  
  El enumerador de variable para Foreach se utiliza para enumerar los objetos enumerables incluidos en una variable especificada. Por ejemplo, si el bucle Foreach incluye una tarea Ejecutar SQL que ejecuta una consulta y almacena el resultado en una variable, puede utilizar el enumerador de variable para Foreach para enumerar los resultados de la consulta.  
@@ -351,7 +351,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
   
  Si **DocumentSourceType** está establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión…**> para crear uno.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **DocumentSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable…**> para crear una.  
   
@@ -381,7 +381,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
   
  Si **OuterXPathStringSourceType** está establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión…**> para crear uno.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **OuterXPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable…**> para crear una.  
   
@@ -404,7 +404,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
   
  Si **InnerXPathStringSourceType** está establecido en **Conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**Nueva conexión…**> para crear uno.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  Si **InnerXPathStringSourceType** está establecido en **Variable**, seleccione una variable existente o haga clic en \<**Nueva variable…**> para crear una nueva.  
   
@@ -416,7 +416,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Conexión**  
  Seleccione un administrador de conexiones ADO.NET existente o haga clic en \<**Nueva conexión…**> para crear uno.  
   
- Temas relacionados: [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
+ Temas relacionados: [Administrador de conexiones de ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Configurar el administrador de conexiones de ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  **Enumerar**  
  Especifique el objeto SMO que desea enumerar.  
@@ -424,7 +424,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Examinar**  
  Seleccione la enumeración SMO.  
   
- **Temas relacionados:** [Seleccionar enumeración de SMO, cuadro de diálogo](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0).  
+ **Temas relacionados:** [Seleccionar enumeración de SMO (cuadro de diálogo)](https://msdn.microsoft.com/library/64ada1fe-21a2-4675-98fc-d5c803aa32f0)  
   
 ####  <a name="ForeachHDFSFile"></a> Enumerador = Enumerador de archivos HDFS para Para cada uno  
  El **Enumerador de archivos HDFS para Foreach** habilita un paquete SSIS para enumerar los archivos HDFS en la ubicación especificada de HDFS. El nombre de un archivo HDFS se puede almacenar en una variable y usar en tareas en el Contenedor de bucles Foreach.  
@@ -458,7 +458,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Administrador de conexiones de almacenamiento de Azure**  
  Seleccione un administrador de conexiones de almacenamiento de Azure existente o cree uno que haga referencia a una cuenta de almacenamiento de Azure.  
   
- Temas relacionados: [Azure Storage Connection Manager](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
+ Temas relacionados: [Administrador de conexiones de Azure Storage](../../integration-services/connection-manager/azure-storage-connection-manager.md).  
   
  **Nombre del contenedor de blob**  
  Especifique el nombre del contenedor de blob que contiene los archivos de blob que hay que enumerar.
@@ -522,7 +522,7 @@ Utilice el cuadro de diálogo **Restricciones de esquema** para establecer las r
  **Variable**  
  Utilice una variable para definir restricciones. Seleccione una variable de la lista o haga clic en **Nueva variable** para crear una nueva.  
   
- **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **Texto**  
  Proporciona el texto para definir restricciones.  
@@ -572,7 +572,7 @@ Use el cuadro de diálogo **Seleccionar enumeración de SMO** para especificar e
   
  Para evitar consecuencias negativas de tiempos no determinativos en la ejecución paralela de tareas en el bucle, se debe configurar el paquete para que ejecute solamente un ejecutable a la vez. Por ejemplo, si un paquete puede ejecutar varias tareas simultáneamente, un contenedor de bucles Foreach que enumera archivos en la carpeta, recupera los nombres de los archivos y luego utiliza una tarea Ejecutar SQL para insertar los nombres de archivos en una tabla puede incurrir en conflictos de escritura cuando dos instancias de la tarea Ejecutar SQL intentan escribir al mismo tiempo. Para más información, vea [Usar expresiones de propiedad en paquetes](../../integration-services/expressions/use-property-expressions-in-packages.md).  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Flujo de control](../../integration-services/control-flow/control-flow.md)   
  [Contenedores de Integration Services](../../integration-services/control-flow/integration-services-containers.md)  
   

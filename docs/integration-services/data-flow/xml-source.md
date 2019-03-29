@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 88c92298743eb9eec610b472f498186938d6b651
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 50775777118d9f276e744f2c8fd8aff06bf0f0fe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640462"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290631"
 ---
 # <a name="xml-source"></a>Origen XML
   El origen XML lee un archivo de datos XML y rellena las columnas de la salida de origen con los datos.  

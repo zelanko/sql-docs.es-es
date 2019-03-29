@@ -1,5 +1,5 @@
 ---
-title: '? : (Condicional) (expresión de SSIS) | Microsoft Docs'
+title: '? : (Condicional) (Expresión de SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd01f26f7c57ebe5b2c17b342b77ffc5add7e150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43ba631d4b93e3f748afa0c64ff95d42609bd545
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626023"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272097"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (Condicional) (expresión de SSIS)
   Devuelve una de dos expresiones en función del resultado de la evaluación de una expresión booleana. Si la evaluación de la expresión booleana devuelve TRUE, se evalúa la primera expresión y el resultado es el resultado de la expresión. Si devuelve FALSE, se evalúa la segunda expresión y el resultado es el resultado de la expresión.  
@@ -58,9 +58,9 @@ boolean_expression?expression1:expression2
   
 -   **Numeric**   *expression1* y *expression2* deben ser un tipo de datos numérico. La intersección de los tipos de datos debe ser un tipo de datos numérico, tal como se especifica en las reglas para las conversiones numéricas implícitas que realiza el evaluador de expresiones. La intersección de dos tipos de datos numéricos no puede ser NULL. Para más información, consulte [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
--   **Cadena** *expression1* y *expression2* deben tener un tipo de datos de cadena: DT_STR o DT_WSTR. Las dos expresiones pueden tener tipos de datos de cadena distintos. El resultado tiene el tipo de datos DT_WSTR con la longitud del argumento más largo.  
+-   **Cadena** Tanto *expression1* como *expression2* deben tener un tipo de datos de cadena: DT_STR o DT_WSTR. Las dos expresiones pueden tener tipos de datos de cadena distintos. El resultado tiene el tipo de datos DT_WSTR con la longitud del argumento más largo.  
   
--   **Fecha, Hora o Fecha y hora** *expression1* y *expression2* deben devolver uno de los siguientes tipos de datos: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET o DT_FILETIME.  
+-   **Fecha, hora o fecha y hora** Tanto *expression1* como *expression2* se deben evaluar con uno de los siguientes tipos de datos: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET o DT_FILETIME.  
   
     > [!NOTE]  
     >  El sistema no admite comparaciones entre una expresión que devuelve un tipo de datos de hora y una expresión que devuelve un tipo de datos de fecha o de fecha/hora. El sistema genera un error.  
@@ -98,7 +98,7 @@ boolean_expression?expression1:expression2
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Precedencia y capacidad de asociación de operadores](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Operadores &#40;expresión de SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

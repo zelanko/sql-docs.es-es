@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24aeaa696a55feb7ad4e60889e2853a71f81f08b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6655e4fcf33b66e4bef4025f69c91ec3c13bc79e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677663"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280899"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lección 2-1: Generar la utilidad de implementación
 En esta tarea, configurará y generará una utilidad de implementación para el proyecto Deployment Tutorial.  
@@ -49,7 +49,7 @@ Antes de generar la utilidad de implementación, debe modificar las propiedades 
   
 4.  En la ventana de resultados, compruebe la siguiente información:  
   
-    Generación iniciada: proyecto de SQL Integration Services: Incremental...  
+    Compilación iniciada: Proyecto de SQL Integration Services: Incremental ...  
   
     Creando la utilidad de implementación...  
   
@@ -57,14 +57,14 @@ Antes de generar la utilidad de implementación, debe modificar las propiedades 
   
     Generación completa -- 0 errores, 0 advertencias  
   
-    ========== Compilación: 0 correcto, 0 errores, 1 actualizados, 0 omitidos ==========  
+    ========== Build: 0 correcto, 0 errores, 1 actualizados, 0 omitidos ==========  
   
 5.  En el menú **Archivo** , haga clic en **Salir**. Si se le pregunta si quiere guardar los cambios en los elementos de Deployment Tutorial, haga clic en **Sí**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Paso 2: Comprobar el paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+[Paso 2: Comprobación del paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear una utilidad de implementación](../integration-services/packages/create-a-deployment-utility.md)  
   
   

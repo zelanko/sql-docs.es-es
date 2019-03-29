@@ -15,15 +15,15 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Data Reader task [Integration Services]
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dbe9e655bff91e514c8157a1afb74504b9dc6717
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 043c99a06b42e1bc1fcbe76971c55d77fc2bd45f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502723"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290451"
 ---
 # <a name="wmi-data-reader-task"></a>Tarea Lector de datos WMI
   La tarea Lector de datos WMI ejecuta consultas mediante el Lenguaje de consulta del Instrumental de administración de Windows (WMI), que devuelve información de WMI sobre un sistema informático. Puede usar la tarea Lector de datos WMI para los siguientes fines:  
@@ -122,7 +122,7 @@ Select * FROM Win32_QuickFixEngineering
  **WMIConnectionName**  
  Seleccione un administrador de conexiones WMI de la lista, o bien haga clic en \<**Nueva conexión WMI…**> para crear un administrador de conexiones.  
   
- **Temas relacionados** [Administrador de conexiones WMI](../../integration-services/connection-manager/wmi-connection-manager.md), [Editor del administrador de conexiones WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones WMI](../../integration-services/connection-manager/wmi-connection-manager.md), [Editor del administrador de conexiones WMI](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
   
  **WQLQuerySourceType**  
  Seleccione el tipo de origen de la consulta WQL que ejecuta la tarea. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
@@ -157,7 +157,7 @@ Select * FROM Win32_QuickFixEngineering
  **WQLQuerySource**  
  Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = Variable  
  **WQLQuerySource**  
@@ -171,7 +171,7 @@ Select * FROM Win32_QuickFixEngineering
  **Destino**  
  Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
   
- **Temas relacionados:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="destinationtype--variable"></a>DestinationType = Variable  
  **Destino**  
@@ -179,7 +179,7 @@ Select * FROM Win32_QuickFixEngineering
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tareas de Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flujo de control](../../integration-services/control-flow/control-flow.md)  
   

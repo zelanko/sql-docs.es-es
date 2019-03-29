@@ -2,7 +2,7 @@
 title: Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server | Microsoft Docs
 description: Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: f410ddf4e3843936da6f93f488f379feea863e59
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: b7f138438d522c9da1b7ef74acbaf963e17d6144
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744859"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492607"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "56744859"
 
 Controlador OLE DB de Microsoft para SQL Server (versión 18.2.1) agrega compatibilidad con la codificación UTF-8 del servidor. Para obtener información sobre la compatibilidad con UTF-8 de SQL Server, consulte:
 - [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [Compatibilidad con UTF-8 (CTP 2.2)](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-22)
+- [Compatibilidad con UTF-8](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-23)
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Inserción de datos en un UTF-8 codificada columna CHAR o VARCHAR
 Al crear un búfer de parámetro de entrada para la inserción, se describe el búfer mediante el uso de una matriz de [estructuras DBBINDING](https://go.microsoft.com/fwlink/?linkid=2071182). Cada estructura DBBINDING asocia un solo parámetro para el búfer del consumidor y contiene información como la longitud y el tipo del valor de datos. Un búfer de parámetro de entrada de tipo CHAR, el *wType* de DBBINDING estructura debe establecerse en DBTYPE_STR. Un búfer de parámetro de entrada de tipo WCHAR, el *wType* de DBBINDING estructura debe establecerse en DBTYPE_WSTR.

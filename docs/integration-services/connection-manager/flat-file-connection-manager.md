@@ -20,15 +20,15 @@ helpviewer_keywords:
 - flat files
 - flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e6a920aa5f31bb18d717ea3da8edd328bd398a92
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: af7d7dfb72ade1121151feddaeaded0fa9f06fe5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420546"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274381"
 ---
 # <a name="flat-file-connection-manager"></a>Administrador de conexiones de archivos planos
   Un administrador de conexiones de archivos planos permite a un paquete obtener acceso a datos en un archivo plano. Por ejemplo, el origen y el destino de archivos planos pueden hacer que los administradores de conexión de archivos planos extraigan y carguen datos.  
@@ -252,7 +252,7 @@ ms.locfileid: "52420546"
 |**ColumnType**|Denota si la columna es delimitada, de ancho fijo o derecho irregular. Esta propiedad es de solo lectura. Los archivos de derecho irregular son archivos en los que todas las columnas tienen un ancho fijo, a excepción de la última. Se delimita mediante el delimitador de fila.|  
 |**OutputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, el valor corresponde a un recuento de caracteres. En la tarea Flujo de datos este valor se utiliza para establecer el ancho de la columna de salida para el origen del archivo plano. En el modelo de objetos, el nombre de esta propiedad es MaximumWidth.|  
 |**DataType**|Seleccione los tipos de datos disponibles en la lista. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
-|**TextQualified**|Indica si los datos de texto están entre caracteres calificadores de texto como caracteres de comillas.<br /><br /> True: se califican los datos de texto del archivo plano. False: no se califican los datos de texto del archivo plano.|  
+|**TextQualified**|Indica si los datos de texto están entre caracteres calificadores de texto como caracteres de comillas.<br /><br /> True: Se califican los datos de texto del archivo plano. False: No se califican los datos de texto del archivo plano.|  
 |**Nombre**|Proporcione un nombre de columna descriptivo. Si no se escribe un nombre, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea uno automáticamente con el formato Columna 0, Columna 1, etc.|  
 |**DataScale**|Especifique la escala de los datos numéricos. La escala hace referencia al número de posiciones decimales. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Seleccione los delimitadores de columna disponibles en la lista. Elija delimitadores que no sea probable encontrar en el texto. Este valor se omite para las columnas de ancho fijo.<br /><br /> **{CR}{LF}**. Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.<br /><br /> **{CR}**. Las columnas se delimitan mediante un retorno de carro.<br /><br /> **{LF}**. Las columnas se delimitan mediante un avance de línea.<br /><br /> **Punto y coma {;}**. Las columnas se delimitan mediante un punto y coma.<br /><br /> **Dos puntos {:}**. Las columnas se delimitan mediante un punto y coma.<br /><br /> **Coma {,}**. Las columnas se delimitan mediante una coma.<br /><br /> **Tabulación {t}**. Las columnas se delimitan mediante un tabulador.<br /><br /> **Barra vertical {&#124;}**. Las columnas se delimitan mediante una barra vertical.|  

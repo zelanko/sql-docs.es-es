@@ -1,7 +1,7 @@
 ---
 title: Colecciones de esquemas XML (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8a69b903fefb85b30ee6cd0a0019466c279fd0e
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d1b1110877d4735dee8606805f78a891c4a4b950
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255720"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375293"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Colecciones de esquemas XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "54255720"
   
  Considere, por ejemplo, el siguiente esquema:  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             targetNamespace="uri:Cust_Orders2"  
@@ -130,6 +130,7 @@ ms.locfileid: "54255720"
 |**blockDefault**|El atributo **block** se aplica a todas las declaraciones de elemento y definiciones de tipo donde todavía no está presente y el valor se establece en el valor del atributo **blockDefault** .|  
 |**finalDefault**|El atributo **final** se aplica a todas las declaraciones de elemento y definiciones de tipo donde todavía no está presente y el valor se establece en el valor del atributo **finalDefault** .|  
 |**targetNamespace**|La información acerca de los componentes que pertenecen al espacio de nombres de destino se almacena en los metadatos.|  
+| &nbsp; | &nbsp; |
   
 ##  <a name="perms"></a> Permisos en una colección de esquemas XML  
  Deberá tener los permisos necesarios para realizar las operaciones siguientes:  
@@ -163,7 +164,7 @@ ms.locfileid: "54255720"
 ##  <a name="info"></a> Obtener información acerca de los esquemas XML y las colecciones de esquemas  
  Las colecciones de esquemas XML se enumeran en la vista de catálogo sys.xml_schema_collections. La colección de esquemas XML "sys" la define el sistema. Contiene los espacios de nombres predefinidos que se pueden usar en todas las colecciones de esquemas XML definidas por el usuario, sin tener que cargarlos explícitamente. Esta lista contiene los espacios de nombres para xml, xs, xsi, fn y xdt. Otras dos vistas de catálogo son sys.xml_schema_namespaces, que enumera todos los espacios de nombres incluidos en una colección de esquemas XML, y sys.xml_components, que enumera todos los componentes de esquemas XML dentro de cada esquema XML.  
   
- La función integrada **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, genera una instancia de tipo de datos **xml** . Esta instancia contiene fragmentos de esquemas XML correspondientes a esquemas incluidos en una colección de esquemas XML, excepto los esquemas XML predefinidos.  
+ La función integrada **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, genera una instancia de tipo de datos **xml**. Esta instancia contiene fragmentos de esquemas XML correspondientes a esquemas incluidos en una colección de esquemas XML, excepto los esquemas XML predefinidos.  
   
  Puede enumerar el contenido de una colección de esquemas XML de las siguientes maneras:  
   
@@ -176,7 +177,7 @@ ms.locfileid: "54255720"
 ### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Ejemplo: Enumerar los espacios de nombres XML en una colección de esquemas XML  
  Use la siguiente consulta para la colección de esquemas XML "myCollection".  
   
-```  
+```sql
 SELECT XSN.name  
 FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN  
     ON (XSC.xml_collection_id = XSN.xml_collection_id)  
@@ -186,18 +187,18 @@ WHERE    XSC.name = 'myCollection'
 ### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Ejemplo: Enumerar el contenido de una colección de esquemas XML  
  La instrucción siguiente enumera el contenido de la colección de esquemas XML "myCollection" dentro del esquema relacional dbo.  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
  Es posible obtener esquemas XML individuales incluidos en la colección como instancias de tipo de datos **xml** ; para ello, especifique el espacio de nombres de destino como tercer argumento de **XML_SCHEMA_NAMESPACE()**. Esto se muestra en el ejemplo siguiente.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Ejemplo: Obtener un esquema especificado a partir de una colección de esquemas XML  
- La instrucción siguiente genera como resultado el esquema XML con el espacio de nombres de destino "<https://www.microsoft.com/books>" a partir de la colección de esquemas XML "myCollection" dentro del esquema relacional dbo.  
+ La instrucción siguiente genera como resultado el esquema XML con el espacio de nombres de destino _pretend_ http:/\/www.microsoft.com/books" a partir de la colección de esquemas XML "myCollection" dentro del esquema relacional dbo.  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'https://www.microsoft.com/books')  
+N'https://www.microsoft.com/was-books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>Consultar esquemas XML  

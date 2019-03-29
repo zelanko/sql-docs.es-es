@@ -18,15 +18,15 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c92d803dd38015950123501743d6a0e0cdfa8fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6238c07e4da7aa9b19a5264282a1c7c2733ecad
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739613"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277284"
 ---
 # <a name="deploy-packages-with-ssis"></a>Implementar paquetes con SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona herramientas que permiten implementar paquetes en otro equipo. Las herramientas de implementación también administran las dependencias, como configuraciones y archivos que necesita el paquete. En este tutorial, aprenderá a usar estas herramientas para instalar paquetes y sus dependencias en un equipo de destino.    
@@ -49,7 +49,7 @@ El objetivo de este tutorial es simular la complejidad de los problemas reales d
 La mejor forma de familiarizarse con las nuevas herramientas, los controles y las características disponibles en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es usándolas. Este tutorial le guía por los pasos para crear un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y, a continuación, agregar los paquetes y otros archivos necesarios al proyecto. Después de completar el proyecto, creará un paquete de implementación, copiará el paquete al equipo de destino e instalará los paquetes en él.    
     
 ## <a name="prerequisites"></a>Prerequisites    
-Este tutorial está concebido para los usuarios familiarizados con las operaciones básicas del sistema de archivos, pero que no conocen con detalle las nuevas características disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para comprender mejor los conceptos básicos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que usará en este tutorial, puede resultarle útil completar primero el siguiente tutorial de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] : [Tutorial de SSIS: Crear un paquete ETL sencillo](../integration-services/ssis-how-to-create-an-etl-package.md).    
+Este tutorial está concebido para los usuarios familiarizados con las operaciones básicas del sistema de archivos, pero que no conocen con detalle las nuevas características disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para comprender mejor los conceptos básicos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que usará en este tutorial, puede resultarle útil completar primero el siguiente tutorial de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]: [Tutorial de SSIS: Crear un paquete ETL sencillo](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
 ### <a name="on-the-source-computer"></a>En el equipo de origen
 
@@ -89,10 +89,10 @@ Si planea implementar paquetes en el mismo equipo en el que va a crear el paquet
 [Lección 1: Preparar la creación del paquete de implementación](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 En esta lección, se preparará para implementar una solución ETL creando un nuevo proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y agregando los paquetes y otros archivos necesarios al proyecto.    
     
-[Lección 2: Crear el paquete de implementación en SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
+[Lección 2: Creación del paquete de implementación en SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
 En esta lección, generará una utilidad de implementación y comprobará que el paquete de implementación incluye los archivos necesarios.    
     
-[Lección 3: Instalar los paquetes de SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
+[Lección 3: Instalación de paquetes SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
 En esta lección, copiará el paquete de implementación en el equipo de destino, instalará los paquetes y, a continuación, los ejecutará.    
     
 

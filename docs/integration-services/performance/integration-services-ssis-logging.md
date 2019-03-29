@@ -27,15 +27,15 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c3843517e906cd2a1e6eaa7bcfe80d029525a902
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ce4c2955896be6fc90063c220d2a33bd78901ee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542912"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277514"
 ---
 # <a name="integration-services-ssis-logging"></a>Registro de Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye proveedores de registro que se pueden usar para implementar registros en paquetes, contenedores y tareas. Con los registros, se puede capturar información de tiempo de ejecución sobre un paquete, lo que le ayuda a auditar y solucionar los problemas de un paquete cada vez que se ejecuta. Por ejemplo, un registro puede capturar el nombre del operador que ejecutó el paquete y la hora en que el paquete empezó y terminó.  
@@ -153,7 +153,7 @@ ms.locfileid: "52542912"
   
 1.  Habilite el paquete y sus tareas para el registro. El registro se puede producir en el nivel de paquete, de contenedor y de tarea. Puede especificar diferentes registros para paquetes, contenedores y tareas.  
   
-2.  Seleccione un proveedor de registro y agregue un registro para el paquete. Solo se pueden crear registros en el nivel de paquete y una tarea o un contenedor deben utilizar uno de los registros creados para el paquete. Cada registro está asociado a uno de los proveedores de registro siguientes: archivo de texto, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Registro de eventos de Windows o archivo XML. Para más información, vea [Habilitar el registro de paquetes en SQL Server Data Tools](#ssdt).  
+2.  Seleccione un proveedor de registro y agregue un registro para el paquete. Solo se pueden crear registros en el nivel de paquete y una tarea o un contenedor deben utilizar uno de los registros creados para el paquete. Cada registro está asociado con uno de los proveedores de registros siguientes: Archivo de texto, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], registro de eventos de Windows o archivo XML. Para más información, vea [Habilitar el registro de paquetes en SQL Server Data Tools](#ssdt).  
   
 3.  Seleccione los eventos y la información del esquema de registro de cada evento que desee capturar en el registro. Para más información, vea [Configurar el registro usando un archivo de configuración guardado](#saved_config).  
   
@@ -311,7 +311,7 @@ ms.locfileid: "52542912"
  **Configuración**  
  Seleccione un administrador de conexiones de la lista o haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones nuevo. En función del tipo de proveedor de registro, puede configurar un administrador de conexiones OLE DB o un administrador de conexiones de archivos. El proveedor de registro para Registro de eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows no requiere conexión.  
   
- Temas relacionados: [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) , [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
+ Temas relacionados: [Administrador de conexiones OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **Eliminar**  
  Seleccione un proveedor de registro y haga clic en **Eliminar**.  

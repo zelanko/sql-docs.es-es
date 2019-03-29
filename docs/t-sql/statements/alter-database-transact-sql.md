@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: ''
-ms.date: 03/08/2019
+ms.date: 03/21/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f1ce25ad1f6ac2a84b391a50e1be6014dae23c5b
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.openlocfilehash: a9d870d766d7c2080b177270156cfa2428c21fc7
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683705"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417247"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -120,18 +120,22 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>Argumentos
 
-*database_name* Es el nombre de la base de datos que se va a modificar.
+*database_name*     
+Es el nombre de la base de datos que se va a modificar.
 
 > [!NOTE]
 > Esta opción no está disponible en las bases de datos independientes.
 
-CURRENT **Se aplica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+CURRENT     
+**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 Designa que la base de datos actual en uso se debe modificar.
 
-MODIFY NAME **=**_new_database_name_ Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name*.
+MODIFY NAME **=**_new_database_name_     
+Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name*.
 
-COLLATE *collation_name* Especifica la intercalación de la base de datos. *collation_name* puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Si no se especifica, se asigna a la base de datos la intercalación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+COLLATE *collation_name*    
+Especifica la intercalación de la base de datos. *collation_name* puede ser un nombre de intercalación de Windows o un nombre de intercalación de SQL. Si no se especifica, se asigna a la base de datos la intercalación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 > No se puede cambiar la intercalación después de crear la base de datos en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -140,24 +144,24 @@ Al crear bases de datos con una intercalación diferente de la predeterminada, l
 
 Para más información sobre los nombres de intercalación de Windows y de SQL, consulte [COLLATE](~/t-sql/statements/collations.md).
 
-**\<delayed_durability_option> ::=**
-**Se aplica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+**\<delayed_durability_option> ::=**      
+**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 Para más información, consulte [Opciones de ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) y [Controlar la durabilidad de las transacciones](../../relational-databases/logs/control-transaction-durability.md).
 
-**\<file_and_filegroup_options>::=** Para obtener más información, vea [Opciones File y Filegroup de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
+**\<file_and_filegroup_options>::=**     
+Para más información, consulte [Opciones File y Filegroup de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
 
 ## <a name="remarks"></a>Notas
-
 Para quitar una base de datos, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 
 Para reducir el tamaño de una base de datos, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
-La instrucción ALTER DATABASE se debe ejecutar en el modo de confirmación automática (modo de administración de transacciones predeterminado) y no se permite en una transacción explícita o implícita.
+La instrucción `ALTER DATABASE` se debe ejecutar en modo de confirmación automática (modo predeterminado de administración de transacciones) y no se permite en una transacción explícita o implícita.
 
-El estado de un archivo de base de datos (por ejemplo, en línea o sin conexión) se mantiene con independencia del estado de la base de datos. Para más información, vea [Estados de los archivos](../../relational-databases/databases/file-states.md). El estado de los archivos de un grupo de archivos determina la disponibilidad de todo el grupo de archivos. Para que un grupo de archivos esté disponible, todos los archivos del grupo de archivos deben estar en línea. Si un grupo de archivos se encuentra en modo sin conexión, todos los intentos de acceso al grupo de archivos por parte de una instrucción SQL generan un error. Al generar un plan de consulta para las instrucciones SELECT, el optimizador de consultas evita los índices no clúster y las vistas indizadas que residen en los grupos de archivos sin conexión. Esto permite que las instrucciones se ejecuten correctamente. No obstante, si el grupo de archivos sin conexión contiene el montón o el índice clúster de la tabla de destino, las instrucciones SELECT no funcionarán. Adicionalmente, cualquier instrucción INSERT, UPDATE o DELETE que modifique una tabla con cualquier índice en un grupo de archivos sin conexión no funcionará.
+El estado de un archivo de base de datos (por ejemplo, en línea o sin conexión) se mantiene con independencia del estado de la base de datos. Para más información, vea [Estados de los archivos](../../relational-databases/databases/file-states.md). El estado de los archivos de un grupo de archivos determina la disponibilidad de todo el grupo de archivos. Para que un grupo de archivos esté disponible, todos los archivos del grupo de archivos deben estar en línea. Si un grupo de archivos se encuentra en modo sin conexión, todos los intentos de acceso al grupo de archivos por parte de una instrucción SQL generan un error. Al generar un plan de consulta para las instrucciones SELECT, el optimizador de consultas evita los índices no clúster y las vistas indizadas que residen en los grupos de archivos sin conexión. Esto permite que las instrucciones se ejecuten correctamente. No obstante, si el grupo de archivos sin conexión contiene el montón o el índice clúster de la tabla de destino, las instrucciones SELECT no funcionarán. Asimismo, cualquier instrucción `INSERT`, `UPDATE` o `DELETE` que modifique una tabla con cualquier índice en un grupo de archivos sin conexión no funcionará.
 
-Si una base de datos se encuentra en estado RESTORING, se producirán errores en la mayoría de las instrucciones ALTER DATABASE. La excepción es el establecimiento de opciones de creación de reflejo de la base de datos. Es posible que una base de datos se encuentre en estado RESTORING durante una operación de restauración activa o cuando se produce un error en una operación de restauración de una base de datos o de un archivo de registro, debido a un archivo de copia de seguridad dañado.
+Si una base de datos se encuentra en estado RESTORING, se producirán errores en la mayoría de las instrucciones `ALTER DATABASE`. La excepción es el establecimiento de opciones de creación de reflejo de la base de datos. Es posible que una base de datos se encuentre en estado RESTORING durante una operación de restauración activa o cuando se produce un error en una operación de restauración de una base de datos o de un archivo de registro, debido a un archivo de copia de seguridad dañado.
 
 La memoria caché de planes para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se borra si se establece alguna de las opciones siguientes.
 
@@ -169,11 +173,11 @@ La memoria caché de planes para la instancia de [!INCLUDE[ssNoVersion](../../in
 |COLLATE|MODIFY FILEGROUP READ_ONLY|
 |READ_ONLY|PAGE_VERIFY|
 
-Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la memoria caché de planes) debido a determinadas operaciones de mantenimiento de base de datos o reconfiguración". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
+Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene el siguiente mensaje informativo: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
 
-La memoria caché de procedimientos también se vacía en los escenarios siguientes:
+La caché de planes también se vacía en los escenarios siguientes:
 
-- Una base de datos tiene la opción de base de datos AUTO_CLOSE establecida en ON. Cuando ninguna conexión de usuario hace referencia a la base de datos ni la usa, la tarea de segundo plano intenta cerrar la base de datos y apagarla de modo automático.
+- Una base de datos tiene la opción de base de datos `AUTO_CLOSE` establecida en ON. Cuando ninguna conexión de usuario hace referencia a la base de datos ni la usa, la tarea de segundo plano intenta cerrar la base de datos y apagarla de modo automático.
 - Ejecuta varias consultas con una base de datos que tiene opciones predeterminadas. Después, la base de datos se quita.
 - Se quita una instantánea de base de datos para una base de datos de origen.
 - Volvió a generar correctamente el registro de transacciones para una base de datos.
@@ -187,17 +191,16 @@ Antes de aplicar otra intercalación a una base de datos, asegúrese de que se c
 - Es el único usuario que utiliza actualmente la base de datos.
 - Ningún objeto enlazado a un esquema depende de la intercalación de la base de datos.
 
-  Si los objetos siguientes, que dependen de la intercalación de la base de datos, existen en la base de datos, la instrucción ALTER DATABASE*database_name*COLLATE producirá un error. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolverá un mensaje de error para cada objeto que bloquee la acción de ALTER:
+Si los objetos siguientes, que dependen de la intercalación de la base de datos, existen en la base de datos, la instrucción ALTER DATABASE*database_name*COLLATE producirá un error. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolverá un mensaje de error para cada objeto que bloquee la acción de `ALTER`:
 
   - Vistas y funciones definidas por el usuario creadas con SCHEMABINDING
   - Columnas calculadas
   - CHECK, restricciones
   - Funciones con valores de tabla que devuelven tablas con columnas de caracteres con intercalaciones heredadas de la intercalación predeterminada de la base de datos
   
-    La información de dependencia de las entidades no vinculadas a esquemas se actualiza automáticamente si se cambia la intercalación de la base de datos.
+La información de dependencia de las entidades no vinculadas a esquemas se actualiza automáticamente si se cambia la intercalación de la base de datos.
 
 Cambiar la intercalación de la base de datos no crea duplicados entre los nombres del sistema para los objetos de base de datos. Si se producen nombres duplicados en la intercalación cambiada, los siguientes espacios de nombres pueden provocar errores en el cambio de la intercalación de la base de datos:
-
 - Nombres de objetos, como un procedimiento, una tabla, un desencadenador o una vista
 - Nombres de esquemas
 - Entidades de seguridad, como un grupo, rol o usuario
@@ -214,7 +217,7 @@ Se pueden utilizar vistas de catálogo, funciones del sistema y procedimientos a
 
 ## <a name="permissions"></a>Permisos
 
-Requiere el permiso ALTER en la base de datos.
+Debe tener el permiso `ALTER` para la base de datos.
 
 ## <a name="examples"></a>Ejemplos
 
@@ -282,11 +285,14 @@ En Azure SQL Database, use esta instrucción para modificar una base de datos en
 
 Debido a su longitud, la sintaxis de ALTER DATABASE se divide en varios artículos.
 
-ALTER DATABASE En el artículo actual se proporciona la sintaxis e información relacionada para cambiar el nombre y la intercalación de una base de datos.
+ALTER DATABASE     
+En el artículo actual se proporciona la sintaxis e información relacionada para cambiar el nombre y la intercalación de una base de datos.
 
-[Opciones SET de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls) Proporciona la sintaxis e información relacionada para cambiar los atributos de una base de datos usando las opciones SET de ALTER DATABASE.
+[Opciones SET de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md?view=azuresqldb-currentls)      
+Proporciona la sintaxis e información relacionada para cambiar los atributos de una base de datos usando las opciones SET de ALTER DATABASE.
 
-[Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls) Proporciona la sintaxis e información relacionada de las opciones SET de ALTER DATABASE relacionadas con los niveles de compatibilidad de la base de datos.
+[Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?view=azuresqldb-currentls)       
+Proporciona la sintaxis e información relacionada de las opciones SET de ALTER DATABASE relacionadas con los niveles de compatibilidad de la base de datos.
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -362,16 +368,13 @@ ALTER DATABASE { database_name | CURRENT }
 
 ## <a name="arguments"></a>Argumentos
 
-*database_name*
-
+*database_name*      
 Es el nombre de la base de datos que se va a modificar.
 
-CURRENT
-
+CURRENT        
 Designa que la base de datos actual en uso se debe modificar.
 
-MODIFY NAME **=**_new_database_name_
-
+MODIFY NAME **=**_new_database_name_      
 Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name*. En el ejemplo siguiente se cambia el nombre de la base de datos `db1` a `db2`:
 
 ```sql
@@ -379,8 +382,7 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])
-
+MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])      
 Cambia el nivel de servicio de la base de datos.
 
 En el ejemplo siguiente se cambia la edición a `premium`:
@@ -390,10 +392,10 @@ ALTER DATABASE current
     MODIFY (EDITION = 'premium');
 ```
 
-Se produce un error en el cambio de EDITION si la propiedad MAXSIZE de la base de datos está establecida en un valor fuera del intervalo válido admitido por esa edición.
+> [!IMPORTANT]
+> Se produce un error en el cambio de EDITION si la propiedad MAXSIZE de la base de datos está establecida en un valor fuera del intervalo válido admitido por esa edición.
 
-MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)
-
+MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)       
 Especifica el tamaño máximo de la base de datos. El tamaño máximo debe cumplir con el conjunto válido de valores de la propiedad EDITION de la base de datos. Cambiar el tamaño máximo de la base de datos puede causar que cambie también el valor de EDITION de la base de datos.
 
 > [!NOTE]
@@ -486,8 +488,7 @@ Las reglas siguientes se aplican a los argumentos MAXSIZE y EDITION:
 - Si se especifica EDITION pero no se especifica MAXSIZE, se usa el valor predeterminado de la edición. Por ejemplo, si EDITION está establecido en Standard y MAXSIZE no se especifica, el valor de MAXSIZE se establece automáticamente en 500 MB.
 - Si no se especifican los valores de MAXSIZE ni EDITION, este último se establece en Standard (S0) y MAXSIZE en 250 GB.
 
-MODIFY (SERVICE_OBJECTIVE = \<objetivo_de_servicio>)
-
+MODIFY (SERVICE_OBJECTIVE = \<objetivo_de_servicio>)      
 Especifica el nivel de rendimiento. El ejemplo siguiente se cambia el objetivo de servicio de una base de datos Premium a `P6`:
 
 ```sql
@@ -505,8 +506,7 @@ ALTER DATABASE current
 
 Para conocer las descripciones de los objetivos de servicio y obtener más información sobre las combinaciones de tamaño, ediciones y objetivos de servicio, consulte [Niveles de servicio y niveles de rendimiento de Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [DTU-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) (Límites de recursos basados en DTU) y [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) (Límites de recursos basados en núcleo virtual). Se ha quitado la compatibilidad para los objetivos de servicio de PRS. Si tiene preguntas, use este alias de correo electrónico: premium-rs@microsoft.com.
 
-MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)
-
+MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)       
 Para agregar una base de datos existente a un grupo elástico, establezca el valor SERVICE_OBJECTIVE de la base de datos en ELASTIC_POOL e indique el nombre del grupo. También se puede usar esta opción para cambiar la base de datos a un grupo elástico diferente dentro del mismo servidor. Para obtener más información, vea [Create and manage a SQL Database elastic pool](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/) (Creación y administración de un grupo elástico de SQL Database). Para quitar una base de datos de un grupo elástico, use ALTER DATABASE para establecer el valor SERVICE_OBJECTIVE en un nivel de rendimiento de una sola base de datos.
 
 > [!NOTE]
@@ -519,36 +519,30 @@ Crea una base de datos de replicación geográfica secundaria con el mismo nombr
 > [!IMPORTANT]
 > El nivel de servicio Hyperscale no es compatible actualmente con la replicación geográfica.
 
-WITH ALLOW_CONNECTIONS { **ALL** | NO }
-
+WITH ALLOW_CONNECTIONS { **ALL** | NO }     
 Cuando no se especifica ALLOW_CONNECTIONS, se establece en ALL de forma predeterminada. Si se establece en ALL, es una base de datos de solo lectura que permite la conexión de todos los inicios de sesión con los permisos adecuados.
 
 WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80` }
 
 Cuando no se especifica SERVICE_OBJECTIVE, la base de datos secundaria se crea en el mismo nivel de servicio que la principal. Cuando se especifica SERVICE_OBJECTIVE, la base de datos secundaria se crea en el nivel especificado. Esta opción permite crear bases de datos secundarias con replicación geográfica con niveles de servicio más económicos. El valor SERVICE_OBJECTIVE especificado debe estar en la misma edición que el origen. Por ejemplo, no se puede especificar S0 si la edición es Premium.
 
-ELASTIC_POOL (name = \<elastic_pool_name>)
-
+ELASTIC_POOL (name = \<elastic_pool_name>)      
 Cuando no se especifica ELASTIC_POOL, la base de datos secundaria no se crea en un grupo elástico. Cuando se especifica ELASTIC_POOL, la base de datos secundaria se crea en el grupo especificado.
 
 > [!IMPORTANT]
 > El usuario que ejecuta el comando ADD SECONDARY debe ser DBManager en el servidor principal, ser miembro de db_owner en la base de datos local y DBManager en el servidor secundario.
 
-REMOVE SECONDARY ON SERVER \<partner_server_name>
-
+REMOVE SECONDARY ON SERVER \<partner_server_name>     
 Quita la base de datos secundaria con replicación geográfica especificada en el servidor especificado. El comando se ejecuta en la base de datos maestra en el servidor que hospeda la base de datos principal.
 
 > [!IMPORTANT]
 > El usuario que ejecuta el comando REMOVE SECONDARY debe ser DBManager en el servidor principal.
 
-FAILOVER
-
+FAILOVER      
 Promueve la base de datos secundaria en colaboración de replicación geográfica en la que el comando se ejecuta para convertirla en la principal y degrada la base de datos principal actual para convertirla en la nueva base de datos secundaria. Como parte de este proceso, el modo de replicación geográfica se cambia temporalmente de asincrónico a sincrónico. Durante el proceso de conmutación por error:
 
 1. La base de datos principal deja de aceptar nuevas transacciones.
-
 2. Todas las transacciones pendientes se vacían en la base de datos secundaria.
-
 3. La base de datos secundaria se convierte en la principal y comienza la replicación geográfica asincrónica con la base de datos principal anterior y la base de datos secundaria nueva.
 
 Esta secuencia garantiza que no se produzca pérdida de datos. El período durante el que ambas bases de datos no están disponibles es de entre 0 y 25 segundos mientras se intercambian los roles. La operación total no debería tardar más de un minuto aproximadamente. Si la base de datos principal no está disponible cuando se emite este comando, el comando produce un error con un mensaje de error en el que se indica que la base de datos principal no está disponible. Si el proceso de conmutación por error no se completa y aparece bloqueado, se puede usar el comando para forzar la conmutación por error y aceptar la pérdida de datos, y después, si tiene que recuperar los datos perdidos, llama a devops (CSS) para recuperarlos.
@@ -556,46 +550,40 @@ Esta secuencia garantiza que no se produzca pérdida de datos. El período duran
 > [!IMPORTANT]
 > El usuario que ejecuta el comando FAILOVER debe ser DBManager tanto en el servidor principal como en el secundario.
 
-FORCE_FAILOVER_ALLOW_DATA_LOSS
-
+FORCE_FAILOVER_ALLOW_DATA_LOSS      
 Promueve la base de datos secundaria en colaboración de replicación geográfica en la que el comando se ejecuta para convertirla en la principal y degrada la base de datos principal actual para convertirla en la nueva base de datos secundaria. Use este comando solo cuando la base de datos principal actual ya no esté disponible. Está diseñado solo para la recuperación ante desastres, cuando la restauración de la disponibilidad sea esencial y se acepte cierta pérdida de datos.
 
 Durante una conmutación por error forzada:
-
 1. La base de datos secundaria especificada se convierte inmediatamente en la base de datos principal y comienza a aceptar nuevas transacciones.
 2. Cuando la base de datos principal original se pueda volver a conectar con la nueva base de datos principal, se toma una copia de seguridad incremental en la base de datos principal original y se convierte en una nueva base de datos secundaria.
 3. Para recuperar datos de esta copia de seguridad incremental en la base de datos principal anterior, el usuario usa devops/CSS.
 4. Si hay otras bases de datos secundarias, se reconfiguran de forma automática para convertirse en secundarias de la nueva base de datos principal. Este proceso es asincrónico y puede haber un retraso hasta que finalice. Hasta que se haya completado la reconfiguración, las bases de datos secundarias siguen siendo secundarias de la base de datos principal anterior.
 
 > [!IMPORTANT]
-> El usuario que ejecuta el comando FORCE_FAILOVER_ALLOW_DATA_LOSS debe ser DBManager tanto en el servidor principal como en el secundario.
+> El usuario que ejecuta el comando `FORCE_FAILOVER_ALLOW_DATA_LOSS` debe pertenecer al rol `dbmanager` tanto en el servidor principal como en el secundario.
 
 ## <a name="remarks"></a>Notas
-
 Para quitar una base de datos, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 Para reducir el tamaño de una base de datos, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
-La instrucción ALTER DATABASE se debe ejecutar en el modo de confirmación automática (modo de administración de transacciones predeterminado) y no se permite en una transacción explícita o implícita.
+La instrucción `ALTER DATABASE` se debe ejecutar en modo de confirmación automática (modo predeterminado de administración de transacciones) y no se permite en una transacción explícita o implícita.
 
-Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la memoria caché de planes) debido a determinadas operaciones de mantenimiento de base de datos o reconfiguración". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
+Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene el siguiente mensaje informativo: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
 
 La caché de procedimientos también se vacía en el escenario siguiente: Ejecuta varias consultas con una base de datos que tiene opciones predeterminadas. Después, la base de datos se quita.
 
 ## <a name="viewing-database-information"></a>Ver la información de la base de datos
-
 Se pueden utilizar vistas de catálogo, funciones del sistema y procedimientos almacenados del sistema para devolver información sobre bases de datos, archivos y grupos de archivos.
 
 ## <a name="permissions"></a>Permisos
-
 Solo el inicio de sesión principal de nivel de servidor (creado por el proceso de aprovisionamiento) o los miembros del rol de base de datos `dbmanager` pueden modificar una base de datos.
 
 > [!IMPORTANT]
 > El propietario de la base de datos no puede modificarla a menos que sea miembro del rol `dbmanager`.
 
 ## <a name="examples"></a>Ejemplos
-
 ### <a name="a-check-the-edition-options-and-change-them"></a>A. Comprobación y cambio de las opciones de edición
-
+Establece un tamaño máximo y de edición para la base de datos db1:
 ```sql
 SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
         ServiceObjective = DATABASEPROPERTYEX('db1', 'ServiceObjective'),
@@ -605,7 +593,6 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJ
 ```
 
 ### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>b. Movimiento de una base de datos a otro grupo elástico
-
 Mueve una base de datos existente en un grupo denominado pool1:
 
 ```sql
@@ -614,7 +601,6 @@ MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;
 ```
 
 ### <a name="c-add-a-geo-replication-secondary"></a>C. Adición de una base de datos secundaria de replicación geográfica
-
 Crea una base de datos secundaria legible db1 en el servidor `secondaryserver` de db1 en el servidor local.
 
 ```sql
@@ -624,7 +610,6 @@ WITH ( ALLOW_CONNECTIONS = ALL )
 ```
 
 ### <a name="d-remove-a-geo-replication-secondary"></a>D. Eliminación de una base de datos secundaria de replicación geográfica
-
 Quita la base de datos secundaria db1 en el servidor `secondaryserver`.
 
 ```sql
@@ -633,7 +618,6 @@ REMOVE SECONDARY ON SERVER testsecondaryserver
 ```
 
 ### <a name="e-failover-to-a-geo-replication-secondary"></a>E. Conmutación por error a una base de datos secundaria de replicación geográfica
-
 Promueve una base de datos secundaria db1 en el servidor `secondaryserver` para que se convierta en la nueva base de datos principal cuando se ejecute en el servidor `secondaryserver`.
 
 ```sql
@@ -641,7 +625,6 @@ ALTER DATABASE db1 FAILOVER
 ```
 
 ### <a name="f-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>F. Actualizar una única base de datos al nivel de servicio S0 (edición estándar, nivel de rendimiento 0)
-
 Actualiza una sola base de datos a la edición estándar (nivel de servicio) con un nivel de rendimiento de S0 y un tamaño máximo de 250 GB.
 
 ```sql
@@ -681,14 +664,17 @@ En Instancia administrada de Azure SQL Database, use esta instrucción para esta
 
 Debido a su longitud, la sintaxis de ALTER DATABASE se divide en varios artículos.
 
-ALTER DATABASE  
+ALTER DATABASE    
 En el artículo actual se proporciona la sintaxis e información relacionada para establecer las opciones File y Filegroup, para establecer las opciones de base de datos y el nivel de compatibilidad de base de datos.  
   
-[Opciones File y Filegroup de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi) Proporciona la sintaxis e información relacionada para agregar y eliminar archivos y grupos de archivos de una base de datos y para cambiar los atributos de archivos y grupos de archivos.  
+[Opciones File y Filegroup de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi)     
+Proporciona la sintaxis e información relacionada para agregar y eliminar archivos y grupos de archivos de una base de datos y para cambiar los atributos de archivos y grupos de archivos.  
   
-[Opciones SET de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi) Proporciona la sintaxis e información relacionada para cambiar los atributos de una base de datos usando las opciones SET de ALTER DATABASE.  
+[Opciones SET de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbmi)    
+Proporciona la sintaxis e información relacionada para cambiar los atributos de una base de datos usando las opciones SET de ALTER DATABASE.  
   
-[Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi) Proporciona la sintaxis e información relacionada de las opciones SET de ALTER DATABASE relacionadas con los niveles de compatibilidad de la base de datos.  
+[Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md?&tabs=sqldbmi)   
+Proporciona la sintaxis e información relacionada de las opciones SET de ALTER DATABASE relacionadas con los niveles de compatibilidad de la base de datos.  
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -730,38 +716,32 @@ ALTER DATABASE { database_name | CURRENT }
 ```
 ## <a name="arguments"></a>Argumentos
 
-*database_name*
-
+*database_name*      
 Es el nombre de la base de datos que se va a modificar.
 
-CURRENT
-
+CURRENT     
 Designa que la base de datos actual en uso se debe modificar.
 
 ## <a name="remarks"></a>Notas
-
 Para quitar una base de datos, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 Para reducir el tamaño de una base de datos, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
-La instrucción ALTER DATABASE se debe ejecutar en el modo de confirmación automática (modo de administración de transacciones predeterminado) y no se permite en una transacción explícita o implícita.
+La instrucción `ALTER DATABASE` se debe ejecutar en modo de confirmación automática (modo predeterminado de administración de transacciones) y no se permite en una transacción explícita o implícita.
 
 Al borrar la memoria caché de planes, se provoca una nueva compilación de todos los planes de ejecución posteriores y puede ocasionar una disminución repentina y temporal del rendimiento de las consultas. Para cada almacén de caché borrado de la caché de planes, el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contendrá el siguiente mensaje informativo: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha detectado %d instancias de vaciado del almacén de caché "%s" (parte de la memoria caché de planes) debido a determinadas operaciones de mantenimiento de base de datos o reconfiguración". Este mensaje se registra cada cinco minutos siempre que se vacíe la memoria caché dentro de ese intervalo de tiempo.
 
-La caché de procedimientos también se vacía en el escenario siguiente: Ejecuta varias consultas con una base de datos que tiene opciones predeterminadas. Después, la base de datos se quita.
+También se vacía la caché de planes cuando se ejecutan varias consultas en una base de datos que tiene las opciones predeterminadas. Después, la base de datos se quita.
 
 ## <a name="viewing-database-information"></a>Ver la información de la base de datos
-
 Se pueden utilizar vistas de catálogo, funciones del sistema y procedimientos almacenados del sistema para devolver información sobre bases de datos, archivos y grupos de archivos.
 
 ## <a name="permissions"></a>Permisos
-
 Solo el inicio de sesión principal de nivel de servidor (creado por el proceso de aprovisionamiento) o los miembros del rol de base de datos `dbcreator` pueden modificar una base de datos.
 
 > [!IMPORTANT]
 > El propietario de la base de datos no puede modificarla a menos que sea miembro del rol `dbcreator`.
 
 ## <a name="examples"></a>Ejemplos
-
 En los ejemplos siguientes se muestra cómo establecer el ajuste automático y cómo agregar un archivo en una instancia administrada.
 
 ```sql
@@ -819,29 +799,33 @@ ALTER DATABASE database_name
       | SERVICE_OBJECTIVE = {
             'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500'
           | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000'
-          | 'DW3000' | 'DW6000' | 'DW1000c' | 'DW1500c' | 'DW2000c'
-          | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c' | 'DW7500c'
-          | 'DW10000c' | 'DW15000c' | 'DW30000c'
+          | 'DW3000' | 'DW6000' | 'DW500c' | 'DW1000c' | 'DW1500c'
+          | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' | 'DW6000c'
+          | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
 
 ## <a name="arguments"></a>Argumentos
 
-*database_name* Especifica el nombre de la base de datos que se va a modificar.
+*database_name*     
+Especifica el nombre de la base de datos que se va a modificar.
 
-MODIFY NAME = *new_database_name* Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name*.
+MODIFY NAME = *new_database_name*    
+Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name*.
 
-MAXSIZE El valor predeterminado es 245, 760 GB (240 TB).
+MAXSIZE    
+El valor predeterminado es 245 760 GB (240 TB).
 
-**Se aplica a:** optimizado para el nivel de rendimiento de Elasticity.
+**Se aplica a:** Optimizado para Compute Gen1
 
 El tamaño máximo permitido para la base de datos. La base de datos no puede superar el valor de MAXSIZE.
 
-**Se aplica a:** optimizado para el nivel de rendimiento de Compute.
+**Se aplica a:** Optimizado para Compute Gen2
 
-Tamaño máximo permitido para los datos de almacenamiento de filas de la base de datos. Los datos almacenados en tablas de almacenamiento de filas, en el almacén delta de un índice de almacén de columnas o en un índice no agrupado de un índice de almacén de columnas agrupado no pueden superar el valor de MAXSIZE. Los datos comprimidos en formato de almacén de columnas no tienen un límite de tamaño y no están restringidos por el valor de MAXSIZE.
+Tamaño máximo permitido para los datos de almacenamiento de filas de la base de datos. Los datos almacenados en tablas de almacenamiento de filas, en el almacén delta de un índice de almacén de columnas o en un índice no agrupado de un índice de almacén de columnas en clúster no pueden superar el valor de MAXSIZE. Los datos comprimidos en formato de almacén de columnas no tienen un límite de tamaño y no están restringidos por el valor de MAXSIZE.
 
-SERVICE_OBJECTIVE Especifica el nivel de rendimiento. Para más información sobre los objetivos de servicio para [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], vea [Niveles de rendimiento](https://azure.microsoft.com/documentation/articles/performance-tiers/).
+SERVICE_OBJECTIVE      
+Especifica el nivel de rendimiento. Para más información sobre los objetivos de servicio para SQL Data Warehouse, consulte [Unidades de almacenamiento de datos (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="permissions"></a>Permisos
 
@@ -858,15 +842,13 @@ La base de datos actual debe ser diferente de la base de datos que está modific
 
 SQL Data Warehouse está establecido en COMPATIBILITY_LEVEL 130 y no se puede cambiar. Para más información, vea [Rendimiento de consultas mejorado con el nivel de compatibilidad 130 en Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
 
-Para reducir el tamaño de una base de datos, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
-
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones
 
-Para ejecutar ALTER DATABASE, la base de datos debe estar en línea y no puede encontrarse en estado de pausa.
+Para ejecutar `ALTER DATABASE`, la base de datos debe estar en línea y no puede encontrarse en estado de pausa.
 
-La instrucción ALTER DATABASE debe ejecutarse en modo de confirmación automática, que es el modo de administración de transacciones predeterminado. Esto se establece en la configuración de conexión.
+La instrucción `ALTER DATABASE` debe ejecutarse en modo de confirmación automática, que es el modo de administración de transacciones predeterminado. Esto se establece en la configuración de conexión.
 
-La instrucción ALTER DATABASE no puede formar parte de una transacción definida por el usuario.
+La instrucción `ALTER DATABASE` no puede formar parte de una transacción definida por el usuario.
 
 No es posible cambiar la intercalación de base de datos.
 
@@ -943,50 +925,56 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>Argumentos
 
-*database_name* El nombre de la base de datos que se va a modificar. Para mostrar una lista de bases de datos en el dispositivo, use [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
+*database_name*        
+Nombre de la base de datos que se va a modificar. Para mostrar una lista de bases de datos en el dispositivo, use [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-AUTOGROW = { ON | OFF } Actualiza la opción AUTOGROW. Cuando AUTOGROW es ON, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] aumenta automáticamente el espacio asignado para las tablas replicadas, tablas distribuidas y el registro de transacciones según sea necesario para adecuarse al crecimiento de los requisitos de almacenamiento. Cuando AUTOGROW es OFF, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] devuelve un error si las tablas replicadas, tablas distribuidas o el registro de transacciones supera la configuración de tamaño máximo.
+AUTOGROW = { ON | OFF }        
+Actualiza la opción AUTOGROW. Cuando AUTOGROW es ON, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] aumenta automáticamente el espacio asignado para las tablas replicadas, tablas distribuidas y el registro de transacciones según sea necesario para adecuarse al crecimiento de los requisitos de almacenamiento. Cuando AUTOGROW es OFF, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] devuelve un error si las tablas replicadas, tablas distribuidas o el registro de transacciones supera la configuración de tamaño máximo.
 
-REPLICATED_SIZE = *size* [GB] Especifica el nuevo tamaño máximo en gigabytes por nodo de ejecución para almacenar todas las tablas replicadas en la base de datos que se va a modificar. Si tiene planeado el espacio de almacenamiento del dispositivo, debe multiplicar REPLICATED_SIZE por el número de nodos de ejecución en el dispositivo.
+REPLICATED_SIZE = *tamaño* [GB]         
+Especifica el nuevo tamaño máximo en gigabytes por nodo de ejecución para almacenar todas las tablas replicadas en la base de datos que se va a modificar. Si tiene planeado el espacio de almacenamiento del dispositivo, debe multiplicar REPLICATED_SIZE por el número de nodos de ejecución en el dispositivo.
 
-DISTRIBUTED_SIZE = *size* [GB] Especifica el nuevo tamaño máximo en gigabytes por base de datos para almacenar todas las tablas distribuidas de la base de datos que se va a modificar. El tamaño se distribuye entre todos los nodos de ejecución en el dispositivo.
+DISTRIBUTED_SIZE = *tamaño* [GB]        
+Especifica el nuevo tamaño máximo en gigabytes por base de datos para almacenar todas las tablas distribuidas de la base de datos que se va a modificar. El tamaño se distribuye entre todos los nodos de ejecución en el dispositivo.
 
-LOG_SIZE = *size* [GB] Especifica el nuevo tamaño máximo en gigabytes por base de datos para almacenar todas los registros de transacciones de la base de datos que se va a modificar. El tamaño se distribuye entre todos los nodos de ejecución en el dispositivo.
+LOG_SIZE = *tamaño* [GB]         
+Especifica el nuevo tamaño máximo en gigabytes por base de datos para almacenar todas los registros de transacciones de la base de datos que se va a modificar. El tamaño se distribuye entre todos los nodos de ejecución en el dispositivo.
 
-ENCRYPTION { ON | OFF } Establece que la base de datos se cifre (ON) o no se cifre (OFF). Solo se puede configurar el cifrado para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] cuando [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) se haya establecido en **1**. Se debe crear una clave de cifrado de base de datos antes de poder configurar el cifrado de datos transparente. Para obtener más información sobre el cifrado de bases de datos, vea [Cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).
+ENCRYPTION { ON | OFF }         
+Establece que se cifre (ON) o no se cifre (OFF) la base de datos. Solo se puede configurar el cifrado para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] cuando [sp_pdw_database_encryption](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md) se haya establecido en **1**. Se debe crear una clave de cifrado de base de datos antes de poder configurar el cifrado de datos transparente. Para obtener más información sobre el cifrado de bases de datos, vea [Cifrado de datos transparente (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).
 
-SET AUTO_CREATE_STATISTICS { ON | OFF } Cuando se activa la opción automática de creación de estadísticas, AUTO_CREATE_STATISTICS, el optimizador de consultas crea las estadísticas en columnas individuales en el predicado de consulta, según sea necesario, para mejorar las estimaciones de cardinalidad para el plan de consulta. Estas estadísticas de columna única se crean en las columnas que aún no tienen un histograma en un objeto de estadísticas existente.
+SET AUTO_CREATE_STATISTICS { ON | OFF }        
+Cuando está activada la opción automática de creación de estadísticas, AUTO_CREATE_STATISTICS, el optimizador de consultas crea las estadísticas en columnas individuales en el predicado de consulta, según sea necesario, para mejorar las estimaciones de cardinalidad del plan de consulta. Estas estadísticas de columna única se crean en las columnas que aún no tienen un histograma en un objeto de estadísticas existente.
 
 El valor predeterminado es ON para las bases de datos creadas después de actualizar a AU7. El valor predeterminado es OFF para las bases de datos creadas antes de la actualización.
 
 Para obtener más información sobre las estadísticas, vea [Estadísticas](../../relational-databases/statistics/statistics.md).
 
-SET AUTO_UPDATE_STATISTICS { ON | OFF } Cuando se activa la opción automática de actualización de estadísticas, AUTO_UPDATE_STATISTICS, el optimizador de consultas determina cuándo es posible que las estadísticas queden obsoletas y las actualiza cuando una consulta las usa. Las estadísticas se vuelven obsoletas después de que las operaciones de inserción, actualización, eliminación o combinación cambien la distribución de los datos en la tabla o la vista indexada. El optimizador de consultas determina cuándo han podido quedar obsoletas las estadísticas contando el número de modificaciones de datos desde la actualización más reciente de las estadísticas, comparando el número de modificaciones con respecto a un umbral. El umbral se basa en el número de filas de la tabla o la vista indizada.
+SET AUTO_UPDATE_STATISTICS { ON | OFF }       
+Cuando está activada la opción automática de actualización de estadísticas, AUTO_UPDATE_STATISTICS, el optimizador de consultas determina cuándo las estadísticas pueden quedar obsoletas y las actualiza cuando una consulta las usa. Las estadísticas se vuelven obsoletas después de que las operaciones de inserción, actualización, eliminación o combinación cambien la distribución de los datos en la tabla o la vista indexada. El optimizador de consultas determina cuándo han podido quedar obsoletas las estadísticas contando el número de modificaciones de datos desde la actualización más reciente de las estadísticas, comparando el número de modificaciones con respecto a un umbral. El umbral se basa en el número de filas de la tabla o la vista indizada.
 
 El valor predeterminado es ON para las bases de datos creadas después de actualizar a AU7. El valor predeterminado es OFF para las bases de datos creadas antes de la actualización.
 
 Para obtener más información sobre las estadísticas, vea [Estadísticas](../../relational-databases/statistics/statistics.md).
 
-SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } La opción de actualización asincrónica de estadísticas, AUTO_UPDATE_STATISTICS_ASYNC, determina si el optimizador de consultas usa actualizaciones de estadísticas sincrónicas o asincrónicas. La opción AUTO_UPDATE_STATISTICS_ASYNC se aplica a los objetos de estadística creados para índices y columnas únicas de los predicados de consulta, así como a las estadísticas creadas con la instrucción CREATE STATISTICS.
+SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }        
+La opción de actualización asincrónica de estadísticas AUTO_UPDATE_STATISTICS_ASYNC determina si el Optimizador de consultas utiliza actualizaciones sincrónicas o asincrónicas de las estadísticas. La opción AUTO_UPDATE_STATISTICS_ASYNC se aplica a los objetos de estadística creados para índices y columnas únicas de los predicados de consulta, así como a las estadísticas creadas con la instrucción CREATE STATISTICS.
 
 El valor predeterminado es ON para las bases de datos creadas después de actualizar a AU7. El valor predeterminado es OFF para las bases de datos creadas antes de la actualización.
 
 Para obtener más información sobre las estadísticas, vea [Estadísticas](/sql/relational-databases/statistics/statistics).
 
 ## <a name="permissions"></a>Permisos
-
-Requiere el permiso ALTER en la base de datos.
+Se necesita el permiso `ALTER` en la base de datos.
 
 ## <a name="error-messages"></a>mensajes de error
 
-Si se deshabilitan las estadísticas automáticas y se intenta modificar la configuración de las estadísticas, PDW genera el error "Esta opción no se admite en PDW". El administrador del sistema puede habilitar las estadísticas automáticas si habilita el modificador de características [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md).
+Si se deshabilitan las estadísticas automáticas e intenta modificar las estadísticas, PDW genera el error `This option is not supported in PDW`. El administrador del sistema puede habilitar las estadísticas automáticas si habilita el modificador de características [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md).
 
 ## <a name="general-remarks"></a>Notas generales
-
-Los valores para REPLICATED_SIZE, DISTRIBUTED_SIZE y LOG_SIZE pueden ser mayor que, igual o menor que los valores actuales de la base de datos.
+Los valores de `REPLICATED_SIZE`, `DISTRIBUTED_SIZE` y `LOG_SIZE` pueden ser mayor que, igual que o menor que los valores actuales de la base de datos.
 
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones
-
 Las operaciones de crecimiento y reducción son aproximadas. Los tamaños reales resultantes pueden variar con respecto a los parámetros de tamaño.
 
 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] no ejecuta la instrucción ALTER DATABASE como una operación atómica. Si la instrucción se anula durante la ejecución, se conservarán los cambios que ya se han producido.
@@ -994,15 +982,12 @@ Las operaciones de crecimiento y reducción son aproximadas. Los tamaños reales
 La configuración de las estadísticas solo funcionará si el administrador ha habilitado las estadísticas automáticas. Si es un administrador, use el modificador de características [AutoStatsEnabled](../../analytics-platform-system/appliance-feature-switch.md) para habilitar o deshabilitar las estadísticas automáticas.
 
 ## <a name="locking-behavior"></a>Comportamiento del bloqueo
-
 Toma un bloqueo compartido en el objeto DATABASE. No se puede modificar una base de datos que está en uso por otro usuario para operaciones lectura o escritura. Esto incluye las sesiones que han emitido una instrucción [USE](../language-elements/use-transact-sql.md) en la base de datos.
 
 ## <a name="performance"></a>Rendimiento
-
 Reducir una base de datos puede consumir mucho tiempo y recursos del sistema, en función del tamaño de los datos reales en la base de datos y la cantidad de fragmentación del disco. Por ejemplo, reducir una base de datos puede tardar varias horas o más.
 
 ## <a name="determining-encryption-progress"></a>Determinar el progreso del cifrado
-
 Use la consulta siguiente para determinar el progreso del cifrado de datos transparente de base de datos como un porcentaje:
 
 ```sql

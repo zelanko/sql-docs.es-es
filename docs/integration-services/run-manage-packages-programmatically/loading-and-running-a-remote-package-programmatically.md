@@ -12,15 +12,15 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - remote packages [Integration Services]
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b1954044626059e8a637aa41292839062269250
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 922a9abd267bec8b0400bc7d2c43d945d011d938
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640038"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274674"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Cargar y ejecutar mediante programación un paquete remoto
   Para ejecutar los paquetes remotos desde un equipo local que no tiene instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], inicie los paquetes para que se ejecuten en el equipo remoto en el que está instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para ello, haga que el equipo local use el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un servicio web o un componente remoto para iniciar los paquetes en el equipo remoto. Si intenta iniciar los paquetes remotos directamente desde el equipo local, se cargarán y se intentará ejecutar los paquetes desde el equipo local. Si el equipo local no tiene instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], no se ejecutarán los paquetes.  
@@ -417,9 +417,9 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Recursos externos  
   
--   Vídeo: [Cómo automatizar la ejecución de paquetes SSIS usando el Agente SQL Server (vídeo de SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx), en technet.microsoft.com  
+-   Vídeo [ Automate SSIS Package Execution by Using the SQL Server Agent (SQL Server Video)](https://technet.microsoft.com/sqlserver/ff686764.aspx) (Automatización de la ejecución de paquetes SSIS usando el Agente SQL Server [vídeo de SQL Server]), en technet.microsoft.com  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Descripción de las diferencias entre la ejecución local y remota](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Cargar y ejecutar un paquete local mediante programación](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Cargar la salida de un paquete local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

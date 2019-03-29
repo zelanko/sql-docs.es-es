@@ -11,18 +11,18 @@ f1_keywords:
 - sql13.dts.designer.afpblobsrc.f1
 - sql14.dts.designer.afpblobsrc.f1
 ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 61c4f6794e5d491fa1b7d935e54d470734a99d10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62d4cc21bbe5469886e4087c9ec310abc9185ed8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698773"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282079"
 ---
 # <a name="azure-blob-source"></a>Origen de blobs de Azure
-  El componente **Azure Blob Source** (Origen de blobs de Azure) permite que un paquete SSIS lea datos de un blob de Azure. Los formatos de archivo admitidos son: CSV y AVRO.
+  El componente **Azure Blob Source** (Origen de blobs de Azure) permite que un paquete SSIS lea datos de un blob de Azure. Los formatos de archivo compatibles son los siguientes: CSV y AVRO.
   
   Para ver el editor del origen de blob de Azure, arrastre y coloque el **origen de blob de Azure** en el diseñador de flujos de datos y haga doble clic en él para abrir el editor.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47698773"
 
 6.  Si el archivo está comprimido, seleccione **Decompress the file** (Descomprimir el archivo).
 
-7.  Si el archivo está comprimido, seleccione el **Tipo de compresión**: **GZIP**, **DEFLATE** o **BZIP2**. Tenga en cuenta que no se admite el formato Zip.
+7.  Si el archivo está comprimido, seleccione el **tipo de compresión**: **GZIP**, **DEFLATE** o **BZIP2**. Tenga en cuenta que no se admite el formato Zip.
   
 8.  Después de especificar la información de conexión, cambie a la página **Columnas** para asignar columnas de origen a columnas de destino para el flujo de datos SSIS.  
   

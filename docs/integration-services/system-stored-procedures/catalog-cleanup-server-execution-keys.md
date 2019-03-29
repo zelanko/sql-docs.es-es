@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff408f0fd410e330f0ab5e3dfcdeee965a72a051
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 80177e1ba1a16d6f4cb88cf2ce972d8028540057
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545232"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277574"
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
      Puede especificar el ámbito o el nivel (ejecución o proyecto) y el número de claves que va a eliminar. El tamaño predeterminado del lote para la eliminación es 1000. Cuando el nivel se establece en 2, solo se eliminan las claves y certificados si se han eliminado los proyectos asociados.  
   
- Para obtener más información, vea el artículo de Knowledge Base siguiente. [FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012](https://support.microsoft.com/kb/2972285) (REVISIÓN: Problemas de rendimiento cuando usa SSISDB como almacén de implementación en SQL Server 2012)  
+ Para obtener más información, vea el artículo de Knowledge Base siguiente. [FIX: Performance issues when you use SSISDB as your deployment store in SQL Server 2012](https://support.microsoft.com/kb/2972285) (REVISIÓN: Problemas de rendimiento cuando se usa SSISDB como almacén de implementación en SQL Server 2012)  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo siguiente se llama al procedimiento almacenado cleanup_server_execution_keys.  

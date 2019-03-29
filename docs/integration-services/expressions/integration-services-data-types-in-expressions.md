@@ -11,15 +11,15 @@ helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 978ec0b00cbb4954a7aa6e50e6d182857ac8338a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 72c03667c768f19569dbcce37079f24dc85ef2db
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639852"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273454"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de datos de Integration Services en las expresiones
   El evaluador de expresiones utiliza tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cuando los datos entran por primera vez en un flujo de datos de un paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , el motor de flujo de datos convierte todos los datos de columna a un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los datos de columna ya utilizados por una expresión a un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Las expresiones usadas en las transformaciones División condicional y Columna derivada pueden hacer referencia a columnas, ya que forman parte de un flujo de datos que incluye datos de columna.  
@@ -122,7 +122,7 @@ ms.locfileid: "51639852"
   
 -   Los argumentos pasados a funciones matemáticas deben devolver un tipo de datos numérico. Dependiendo de la función o la operación, puede ser necesario usar un tipo de datos numérico específico. Por ejemplo, la función HEX requiere un entero con o sin signo.  
   
--   Los argumentos pasados a funciones de cadena debe contener un tipo de datos de carácter: DT_STR o DT_WSTR. Por ejemplo, UPPER("flor"). Algunas funciones de cadena, como SUBSTRING, requieren argumentos enteros adicionales para la posición inicial y la longitud de la cadena.  
+-   Los argumentos pasados a funciones de cadena se deben evaluar con un tipo de datos de carácter: DT_STR o DT_WSTR. Por ejemplo, UPPER("flor"). Algunas funciones de cadena, como SUBSTRING, requieren argumentos enteros adicionales para la posición inicial y la longitud de la cadena.  
   
 -   Los argumentos pasados a funciones de fecha y hora deben contener una fecha válida. Por ejemplo, DAY(GETDATE()). Algunas funciones, como DATEADD, requieren un argumento entero adicional para el número de días que la función agrega a una fecha.  
   

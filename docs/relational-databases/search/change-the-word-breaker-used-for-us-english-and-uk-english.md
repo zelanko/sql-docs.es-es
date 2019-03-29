@@ -1,27 +1,26 @@
 ---
 title: Cambio del separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e6d1ec3aff285b91e1099187f53b904cad7368c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9f26af2d630270428aec6affa0d633eeac86194b
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670875"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305463"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Cambiar el separador de palabras usado para el inglés de Estados Unidos y el del Reino Unido
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala una nueva versión (versión 14.0.4999.1038) del separador de palabras y del lematizador para el idioma inglés, reemplazando la versión anterior de estos componentes (versión 12.0.6828.0). Para obtener más información sobre el comportamiento modificado de los nuevos componentes, vea [Cambios de comportamiento en la búsqueda de texto completo](https://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). En este tema se describe cómo pasar de la nueva versión de estos componentes a la versión previa o viceversa. Para las instalaciones de clúster, estos cambios deben realizarse en todos los nodos principales y pasivos.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala una nueva versión (versión 14.0.4999.1038) del separador de palabras y del lematizador para el idioma inglés, reemplazando la versión anterior de estos componentes (versión 12.0.6828.0). Para obtener más información sobre el comportamiento modificado de los nuevos componentes, vea [Cambios de comportamiento en la búsqueda de texto completo](/sql/database-engine/behavior-changes-to-full-text-search). En este tema se describe cómo pasar de la nueva versión de estos componentes a la versión previa o viceversa. Para las instalaciones de clúster, estos cambios deben realizarse en todos los nodos principales y pasivos.  
   
  Las versiones previas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizaban separadores de palabras distintos representados por CLSID diferentes para el inglés de Estados Unidos (LCID 1033) y el inglés del Reino Unido (LCID 2057). En esta versión, ambos LCID usan los mismos componentes con los mismos CLSID, como se muestra en la siguiente tabla:  
   
@@ -38,7 +37,7 @@ ms.locfileid: "51670875"
   
 #### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>Para pasar de la versión actual del separador de palabras de inglés de Estados Unidos a la versión anterior  
   
-1.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Siga estos pasos para agregar nuevas claves a los COM ClassID de las interfaces en inglés de Estados Unidos de separadores de palabras y lematizadores del LCID 1033:  
   
@@ -50,7 +49,7 @@ ms.locfileid: "51670875"
   
     4.  Actualice los datos (predeterminados) de ese valor de clave a **infosoft.dll**.  
   
-3.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu**.  
+3.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu**.  
   
 4.  Actualice el valor de clave **WBreakerClass** a **{188D6CC5-CB03-4C01-912E-47D21295D77E}**.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "51670875"
   
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Para pasar de la versión actual del separador de palabras de inglés del Reino Unido a la versión anterior  
   
-1.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Siga estos pasos para agregar una nueva clave para los ClassID COM de las interfaces inglesas del Reino Unido de separadores de palabras y lematizadores del LCID 2057:  
   
@@ -72,7 +71,7 @@ ms.locfileid: "51670875"
   
     4.  Actualice los datos (predeterminados) de ese valor de clave a **infosoft.dll**.  
   
-3.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
+3.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
 4.  Actualice el valor de clave **WBreakerClass** a **{173C97E2-AEBE-437C-9445-01B237ABF2F6}**.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "51670875"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>Para volver a la versión anterior del separador de palabras de inglés de Estados Unidos a la versión actual  
   
-1.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Si las siguientes claves no existen, siga los siguientes pasos para agregar una nueva clave para los ClassID COM de las interfaces inglesas de Estados Unidos de separadores de palabras y lematizadores actuales del LCID 1033:  
   
@@ -96,7 +95,7 @@ ms.locfileid: "51670875"
   
     4.  Actualice los datos (predeterminados) de ese valor de clave a **MsWb7.dll**.  
   
-3.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
+3.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
 4.  Actualice el valor de clave **WBreakerClass** a **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
   
@@ -106,7 +105,7 @@ ms.locfileid: "51670875"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>Para volver a la versión anterior del separador de palabras de inglés del Reino Unido a la versión actual  
   
-1.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+1.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Si las siguientes claves no existen, siga estos pasos para agregar una nueva clave para los ClassID COM de las interfaces inglesas del Reino Unido de separadores de palabras y lematizadores actuales del LCID 2057:  
   
@@ -118,7 +117,7 @@ ms.locfileid: "51670875"
   
     4.  Actualice los datos (predeterminados) de ese valor de clave a **MsWb7.dll**.  
   
-3.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
+3.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
 4.  Actualice el valor de clave **WBreakerClass** a **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
   
@@ -126,8 +125,8 @@ ms.locfileid: "51670875"
   
 6.  Reinicie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Revertir los separadores de palabras usados por las búsquedas a la versión anterior](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [Cambios de comportamiento en la búsqueda de texto completo](https://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
+ [Cambios de comportamiento en la búsqueda de texto completo](/sql/database-engine/behavior-changes-to-full-text-search)  
   
   

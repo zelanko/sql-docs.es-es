@@ -14,15 +14,15 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 38152544ed3f0684cc13db7c2f429b46ed9ef5b1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 65d62759cff20cb0c41acd7a9955ccea52a5968c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521544"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272227"
 ---
 # <a name="debugging-data-flow"></a>Depurar el flujo de datos
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y el Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluyen características y herramientas que puede usar para solucionar los problemas de los flujos de datos en un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -272,7 +272,7 @@ select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid
 ### <a name="video"></a>Vídeo  
  En este [vídeo de TechNet](https://technet.microsoft.com/sqlserver/dn600163) se muestra cómo agregar y usar derivaciones de datos en el catálogo de SSISDB de SQL Server 2012, que permiten depurar paquetes mediante programación y capturar los resultados parciales en tiempo de ejecución. También explica cómo enumerar o quitar estas derivaciones de datos y las prácticas recomendadas para usar derivaciones de datos en paquetes de SSIS.  
  
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Control de errores en los datos](../../integration-services/data-flow/error-handling-in-data.md)  
   
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],retrieving data
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c57c4c3d8b8fcc839c6cb7e1ee36606a0c798beb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c48817f8f24cdb9ab0055c3d46e1e9124bcdc9c6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733793"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277904"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>Recuperar y describir datos modificados
   En el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la primera tarea consiste en ejecutar la consulta que recupera los datos modificados. Esta consulta se ejecuta dentro de un componente de origen en una tarea Flujo de Datos. A continuación, pueden utilizarse transformaciones y destinos de nivel inferior para aplicar los datos modificados a un destino.  

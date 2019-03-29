@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Preparar la creación del conjunto de implementación | Microsoft Docs'
+title: 'Lección 1: Preparar la creación del paquete de implementación | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64408332b9f4739aea5566149a80d905bf87c9d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69d125ec70ea297edc4e02b9a2ee4b034a88a2c3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628393"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289571"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>Lección 1: Preparar la creación del paquete de implementación
 En esta lección, creará las carpetas de trabajo y la variables de entorno que admiten el tutorial, creará un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , agregará varios paquetes y sus archivos auxiliares al proyecto e implementará las configuraciones en los paquetes.  
@@ -32,18 +32,18 @@ Después de agregar estas configuraciones, debe abrir los paquetes en el Diseña
 ## <a name="lesson-tasks"></a>Tareas de la lección  
 Esta lección contiene las siguientes tareas:  
   
--   [Paso 1: crear carpetas de trabajo y variables de entorno](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+-   [Paso 1: Creación de las carpetas de trabajo y las variables de entorno](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
 -   [Paso 2: Crear el proyecto de implementación](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
--   [Paso 3: Agregar paquetes y otros archivos](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
+-   [Paso 3: Adición de paquetes y otros archivos](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
--   [Paso 4: Agregar configuraciones de paquetes](../integration-services/lesson-1-4-adding-package-configurations.md)  
+-   [Paso 4: Adición de configuraciones de paquetes](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
 -   [Paso 5: Probar los paquetes actualizados](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
-[Paso 1: Crear carpetas de trabajo y variables de entorno](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
+[Paso 1: Creación de las carpetas de trabajo y las variables de entorno](../integration-services/lesson-1-1-creating-working-folders-and-environment-variables.md)  
   
   
   

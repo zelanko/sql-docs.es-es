@@ -5,17 +5,17 @@ description: En este artículo se describe las últimas actualizaciones y proble
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2502396dba4b88a9750aa3bfc62c4153711e1426
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c7c80b69ac7120f2cd88500d3c276a313ef34390
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510342"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618312"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas de la versión para los clústeres de datos de gran tamaño en SQL Server
 
@@ -31,8 +31,11 @@ Las secciones siguientes describen las nuevas características y problemas conoc
 
 | Nueva característica o la actualización | Detalles |
 |:---|:---|
-| Admite la orientación en GPU para la ejecución de TensorFlow en Spark de aprendizaje profundo. | [Implementar un clúster de macrodatos con compatibilidad con GPU y ejecutar TensorFlow](spark-gpu-tensorflow.md) |
+| Admite la orientación en GPU para la ejecución de TensorFlow en Spark de aprendizaje profundo. | [Implementar un clúster de macrodatos con compatibilidad con GPU y ejecutar TensorFlow](spark-gpu-tensorflow.md). |
 | **SqlDataPool** y **SqlStoragePool** orígenes de datos ya no se crean de forma predeterminada. | Cree manualmente según sea necesario. Consulte la [problemas conocidos](#externaltablesctp24). |
+| `INSERT INTO SELECT` soporte técnico para el grupo de datos. | Para obtener un ejemplo, vea [Tutorial: Introducir datos en un grupo de datos de SQL Server con Transact-SQL](tutorial-data-pool-ingest-sql.md). |
+| `FORCE SCALEOUTEXECUTION` y `DISABLE SCALEOUTEXECUTION` opción. | Fuerza o deshabilita el uso de la agrupación de proceso para las consultas en las tablas externas. Por ejemplo, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
+| Recomendaciones de implementación de AKS actualizadas. | Al evaluar los clústeres de macrodatos en AKS, ahora se recomienda utilizar un único nodo del tamaño **Standard_L8s**. |
 | Actualización del runtime de Spark a Spark 2.4. | |
 
 ### <a name="known-issues"></a>Problemas conocidos

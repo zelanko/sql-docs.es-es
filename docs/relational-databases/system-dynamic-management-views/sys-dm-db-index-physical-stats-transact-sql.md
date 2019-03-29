@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d093983408502d391c4025e03ba0a590e8f77a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 9330c41ccf23cdb03add4c15fc2160594c2ff7a7
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617885"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618302"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *database_id* | NULL | 0 | VALOR PREDETERMINADO  
+ *database_id* | NULL | 0 | DEFAULT  
  Es el identificador de la base de datos. *database_id* es **smallint**. Las entradas válidas son el número de identificador de una base de datos, NULL, 0 y DEFAULT. El valor predeterminado es 0. NULL, 0 y DEFAULT son valores equivalentes en este contexto.  
   
  Especifique NULL para devolver información de todas las bases de datos en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si especifica NULL para *database_id*, también debe especificar NULL para *object_id*, *index_id*, y *partition_number*.  
@@ -82,7 +82,7 @@ sys.dm_db_index_physical_stats (
   
  *partition_number* está basado en 1. Un montón o un índice sin particiones tiene *partition_number* establecido en 1.  
   
- *modo* | NULL | VALOR PREDETERMINADO  
+ *mode* | NULL | DEFAULT  
  Es el nombre del modo. *modo* especifica el nivel de examen que se utiliza para obtener las estadísticas. *modo* es **sysname**. Las entradas válidas son DEFAULT, NULL, LIMITED, SAMPLED o DETAILED. El valor predeterminado (NULL) es LIMITED.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
@@ -197,7 +197,7 @@ GO
   
 -   Utilice ALTER INDEX REBUILD, el sustituto de DBCC DBREINDEX, para volver a generar el índice en línea o sin conexión. Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
- La fragmentación por sí sola no es una razón suficiente para reorganizar o volver a generar un índice. El principal efecto de la fragmentación es una disminución del rendimiento de la lectura anticipada de páginas durante los recorridos de índice. Esto se traduce en tiempos de respuesta más lentos. Si la carga de consultas en un índice o tabla fragmentado no implica recorridos, debido a que la carga incluye principalmente búsquedas singleton, es posible que la eliminación de la fragmentación no tenga ninguna consecuencia. Para obtener más información, consulte este [sitio Web de Microsoft](https://go.microsoft.com/fwlink/?linkid=31012).  
+ La fragmentación por sí sola no es una razón suficiente para reorganizar o volver a generar un índice. El principal efecto de la fragmentación es una disminución del rendimiento de la lectura anticipada de páginas durante los recorridos de índice. Esto se traduce en tiempos de respuesta más lentos. Si la carga de consultas en un índice o tabla fragmentado no implica recorridos, debido a que la carga incluye principalmente búsquedas singleton, es posible que la eliminación de la fragmentación no tenga ninguna consecuencia.
   
 > [!NOTE]  
 >  Al ejecutar DBCC SHRINKFILE o DBCC SHRINKDATABASE, puede producirse una fragmentación si un índice se mueve parcial o totalmente durante la operación de reducción. Por esta razón, si tiene que realizar una operación de reducción, debe realizarla antes de quitar la fragmentación.  

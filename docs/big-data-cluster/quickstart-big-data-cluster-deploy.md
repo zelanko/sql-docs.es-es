@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b89ec7cd24ed61f08cf44f934066a9b0fc619434
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 00810eb3f57fdaf8f87fc0db16744ab9e3334f70
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493558"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618152"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Inicio rápido: Implementar el clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
@@ -78,14 +78,14 @@ Utilice los pasos siguientes para ejecutar el script de implementación. Este sc
    | **Nombre de usuario de docker** | El nombre de usuario de Docker proporcionada como parte de la versión preliminar pública limitada. |
    | **Contraseña de docker** | La contraseña de Docker proporcionada como parte de la versión preliminar pública limitada. |
    | **Región de Azure** | La región de Azure para el nuevo clúster AKS (valor predeterminado **westus**). |
-   | **Tamaño de la máquina** | El [tamaño de la máquina](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) que se usará para los nodos del clúster AKS (valor predeterminado **Standard_L4s**). |
-   | **Nodos de trabajo** | El número de nodos de trabajo en el clúster de AKS (valor predeterminado **3**). |
+   | **Tamaño de la máquina** | El [tamaño de la máquina](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) que se usará para los nodos del clúster AKS (valor predeterminado **Standard_L8s**). |
+   | **Nodos de trabajo** | El número de nodos de trabajo en el clúster de AKS (valor predeterminado **1**). |
    | **Nombre del clúster** | El nombre de clúster AKS y el clúster de macrodatos. El nombre del clúster debe ser solo caracteres alfanuméricos en minúsculas y sin espacios en blanco. (valor predeterminado **sqlbigdata**). |
    | **Contraseña** | Contraseña para el controlador, la puerta de enlace de Spark o HDFS y la instancia maestra (valor predeterminado **MySQLBigData2019**). |
    | **Controlador para el usuario** | Nombre de usuario para el usuario del controlador (predeterminado: **admin**). |
 
    > [!IMPORTANT]
-   > El valor predeterminado **Standard_L4s** tamaño de la máquina no estén disponible en todas las regiones de Azure. Si selecciona un tamaño de máquina diferentes, asegúrese de que el número total de discos que se puede conectar a través de los nodos del clúster es mayor o igual a 24. Cada notificación de volumen persistente en el clúster requiere un disco conectado. Actualmente, el clúster de macrodatos requiere 24 notificaciones de volumen persistente. Por ejemplo, el [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) tamaño de máquina admite 16 discos conectados, por lo que significa de tres nodos que se pueden conectar 48 discos.
+   > El valor predeterminado **Standard_L8s** tamaño de la máquina no estén disponible en todas las regiones de Azure. Si selecciona un tamaño de máquina diferentes, asegúrese de que el número total de discos que se puede conectar a través de los nodos del clúster es mayor o igual a 24. Cada notificación de volumen persistente en el clúster requiere un disco conectado. Actualmente, el clúster de macrodatos requiere 24 notificaciones de volumen persistente. Por ejemplo, el [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) tamaño de la máquina es compatible con 32 discos conectados, por lo que se pueden evaluar los clústeres de datos de gran tamaño con un solo nodo de este tamaño de la máquina.
 
    > [!NOTE]
    > El `sa` cuenta es un administrador del sistema en la instancia principal de SQL Server que se crea durante la instalación. Después de crear la implementación, el `MSSQL_SA_PASSWORD` variable de entorno es reconocible ejecutando `echo $MSSQL_SA_PASSWORD` en el contenedor de la instancia maestra. Por motivos de seguridad, cambiar su `sa` contraseña en la instancia principal después de la implementación. Para obtener más información, consulte [cambiar la contraseña de SA](../linux/quickstart-install-connect-docker.md#sapassword).

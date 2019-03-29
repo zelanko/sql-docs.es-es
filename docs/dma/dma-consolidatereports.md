@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35b90cec967f60f0adfc4d9720f3aec809006f8c
-ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
+ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58198204"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618182"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluar una empresa y consolidar los informes de evaluación con DMA
 
@@ -72,7 +72,11 @@ Este inventario puede estar en uno de dos formas:
 
 ### <a name="if-using-a-csv-file"></a>Si usa un archivo CSV
 > [!IMPORTANT]
+>
 > Asegúrese de que el archivo de inventario se guarda como archivo separados por comas (CSV).
+>
+> Para las instancias predeterminadas, establezca el nombre de instancia MSSQLServer.
+>
 
 Cuando se usa un archivo csv para importar los datos, asegúrese de que hay solo dos columnas de datos - **nombre de instancia** y **nombre de base de datos**, y que las columnas no tienen filas de encabezado.
  

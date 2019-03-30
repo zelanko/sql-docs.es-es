@@ -2,17 +2,17 @@
 title: 'Aprendizaje automático de ciclo de vida y el proceso de equipo: SQL Server Machine Learning Services'
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4d19c103f2e90220bc7d80a1da65eb0352252ad6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c06155a433718a068bc914b071f0f738cd236613
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511292"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645437"
 ---
 # <a name="machine-learning-lifecycle-and-personas"></a>Roles y ciclo de vida de machine learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,7 +21,7 @@ Proyectos de aprendizaje automático pueden ser complejos, ya que requieren las 
 
 > [!TIP]
 > 
-> Antes de comenzar en un proyecto de machine learning, se recomienda que revise las herramientas y procedimientos recomendados proporcionados por el [proceso de ciencia de datos de equipo de Microsoft](https://blogs.technet.microsoft.com/machinelearning/2017/10/09/the-microsoft-team-data-science-process-tdsp-recent-updates/), o TDSP. Este proceso se creó con consultores de Microsoft para consolidar las prácticas recomendadas de planificación y efectuar una iteración en los proyectos de aprendizaje automático de aprendizaje automático. El TDSP tiene sus raíces en estándares del sector como CRISP-DM, pero incorpora varias prácticas recientes como DevOps y visualización.
+> Antes de comenzar en un proyecto de machine learning, se recomienda que revise las herramientas y procedimientos recomendados proporcionados por el [proceso de ciencia de datos de equipo de Microsoft](https://docs.microsoft.com/azure/machine-learning/team-data-science-process/overview), o TDSP. Este proceso se creó con consultores de Microsoft para consolidar las prácticas recomendadas de planificación y efectuar una iteración en los proyectos de aprendizaje automático de aprendizaje automático. El TDSP tiene sus raíces en estándares del sector como CRISP-DM, pero incorpora varias prácticas recientes como DevOps y visualización.
 
 ## <a name="machine-learning-life-cycle"></a>Ciclo de vida de Machine learning
 

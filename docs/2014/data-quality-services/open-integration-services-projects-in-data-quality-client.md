@@ -10,12 +10,12 @@ ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 52a1bcb820d444e33ab034a09ee486592540e50c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9e1d315ca23b379238a19baf09ac2591d0085fad
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020146"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658089"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Abrir proyectos de Integration Services en Data Quality Client
   [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] le permite ejecutar un proyecto de limpieza en modo por lotes. Sin embargo, en ocasiones es posible que desee revisar los resultados de la limpieza en un paquete de Integration Services de forma parecida a como se hace en la pestaña **Administrar y ver resultados** de una actividad de limpieza en un proyecto de calidad de datos de DQS. DQS le permite abrir proyectos de Integration Services en la pantalla [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] Abrir proyecto **de** como si fuera cualquier otro proyecto de calidad de datos, así como disfrutar de una experiencia interactiva de limpieza de los resultados de limpieza en ellos.  
@@ -35,10 +35,8 @@ ms.locfileid: "56020146"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_kb_operator en la base de datos DQS_MAIN para abrir un proyecto de Integration Services.  
-  
- ![Icono de flecha usado con el vínculo volver al principio](../2014-toc/media/uparrow16x16.gif "icono de flecha usado con el vínculo volver al principio") [en este tema](#Intro)  
   
 ##  <a name="Open"></a> Abrir un proyecto de Integration Services  
   
@@ -60,10 +58,6 @@ ms.locfileid: "56020146"
   
 6.  Una vez exportados los datos, haga clic en **Finalizar** para cerrar el proyecto de Integration Services.  
   
- ![Icono de flecha usado con el vínculo volver al principio](../2014-toc/media/uparrow16x16.gif "icono de flecha usado con el vínculo volver al principio") [en este tema](#Intro)  
-  
 ## <a name="see-also"></a>Vea también  
  [Transformación Limpieza de DQS](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Proyectos de Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-projects-and-solutions.md)  
-  
-  

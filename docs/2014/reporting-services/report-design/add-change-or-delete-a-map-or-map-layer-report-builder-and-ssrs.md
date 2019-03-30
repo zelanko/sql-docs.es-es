@@ -28,12 +28,12 @@ ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a894da9840b82dd861d6cb3b0e858663248f98e5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f174d2ba00211459d8ef7d7c0d61a0affa0b38ae
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290413"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657699"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Agregar, cambiar o eliminar un mapa o una capa de mapa (Generador de informes y SSRS)
   Un mapa es una colección de capas. Al agregar un mapa a un informe, define la primera capa. Puede crear capas adicionales con el Asistente para capas de mapa.  
@@ -67,22 +67,18 @@ ms.locfileid: "56290413"
 -   De la Cinta de opciones, en el menú **Insertar** , haga clic en **Mapa**y, a continuación, haga clic en **Mapa Wizard.** . El asistente le permite agregar una capa al mapa existente. La mayor parte de las páginas son idénticas en el Asistente para mapas y el Asistente para capas de mapa.  
   
      Para obtener más información, vea [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ##  <a name="ChangeLayer"></a> Cambiar las opciones de una capa con el Asistente para capas de mapa  
   
 -   Ejecute el Asistente para capas de mapa. Este asistente le permite cambiar las opciones de una capa que creó utilizando el Asistente para capas de mapa. En el panel Mapa, haga clic con el botón derecho en la capa y, en la barra de herramientas, haga clic en el botón del Asistente para capas (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
   
      Para obtener más información, vea [Asistente para mapas y Asistente para capas de mapa &#40;Generador de informes y SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md).  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ##  <a name="AddVectorLayer"></a> Agregar una capa de punto, línea o polígono desde la barra de herramientas del panel Mapa  
   
 1.  Haga clic en el mapa hasta que aparezca el panel Mapa.  
   
-2.  En la barra de herramientas, haga clic en el **Agregar capa** botón y, en la lista desplegable, haga clic en el tipo de capa que desea agregar: **Punto**, **línea**, o **polígono**.  
+2.  En la barra de herramientas, haga clic en el botón **Agregar capa** y, en la lista desplegable, haga clic en el tipo de capa que quiere agregar: **Punto**, **Línea** o **Polígono**.  
   
     > [!NOTE]  
     >  Aunque puede agregar una capa de mapa y configurarla manualmente, recomendamos utilizar el Asistente para capas de mapa si desea agregar capas nuevas. Para iniciar el asistente desde la barra de herramientas del panel Mapa, haga clic en el botón del Asistente para capas (![rs_IconMapLayerWizard](../../tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
@@ -106,9 +102,7 @@ ms.locfileid: "56290413"
      Para obtener más información sobre cómo vincular datos espaciales y analíticos, vea [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ##  <a name="FilterAnalyticalData"></a> Para filtrar datos analíticos de la capa  
   
 1.  Haga clic en el mapa hasta que aparezca el panel Mapa.  
@@ -118,9 +112,7 @@ ms.locfileid: "56290413"
 3.  Haga clic en **Filtros**.  
   
 4.  Defina una ecuación de filtro para limitar los datos analíticos que se usan en la presentación del mapa. Para más información, vea [Ejemplos de ecuaciones de filtro &#40;Generador de informes y SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md).  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ##  <a name="PointProperties"></a> Para controlar las propiedades del punto para una capa de punto o para puntos centrales de polígonos  
   
 1.  Seleccione **General** en el cuadro de diálogo **Propiedades de punto de mapa** para cambiar las opciones de etiqueta, información sobre herramientas y tipo de marcador de los elementos de mapa siguientes:  
@@ -128,9 +120,7 @@ ms.locfileid: "56290413"
     -   Todos los puntos dinámicos o incrustados de una capa de punto. Las reglas de color, reglas de tamaño y reglas de tipo de marcador de los puntos invalidan estas opciones. Para invalidar las opciones de un punto incrustado concreto, utilice la página [Map Embedded Point Properties Dialog Box, Marker](../map-embedded-point-properties-dialog-box-marker.md) .  
   
     -   El punto central de todos los polígonos dinámicos o incrustados de una capa de polígono. Las reglas de color, reglas de tamaño y reglas de tipo de marcador de los puntos centrales invalidan estas opciones. Para invalidar las opciones de un punto central concreto, use la página [Cuadro de diálogo de Propiedades de punto incrustado de mapa, Marcador](../map-embedded-point-properties-dialog-box-marker.md) .  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ##  <a name="Embedded"></a> Para especificar datos incrustados como un origen de datos espaciales  
   
 1.  Haga clic en el mapa hasta que aparezca el panel Mapa.  
@@ -147,9 +137,7 @@ ms.locfileid: "56290413"
     >  Si no sabe el nombre del campo y buscó un archivo de forma ESRI, use la opción **Vínculo a archivo de forma ESRI** en lugar de esta.  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ##  <a name="ESRI"></a> Especificar un archivo de forma ESRI como un origen de datos espaciales  
   
 1.  Haga clic en el mapa hasta que aparezca el panel Mapa.  
@@ -164,9 +152,7 @@ ms.locfileid: "56290413"
     >  Si el archivo de forma está en el equipo local, los datos espaciales se incrustan en la definición de informe. Para recuperar los datos dinámicamente cuando se procesa el informe, debe cargar el archivo de forma ESRI .shp y su archivo auxiliar .dbf en el servidor de informes. Para obtener más información, vea "Cómo: Cargar un archivo o informe (Administrador de informes) "en el [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en libros en pantalla de SQL Server.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ##  <a name="DatasetField"></a> Especificar un campo de conjunto de datos de informe como un origen de datos espaciales  
   
 1.  Haga clic en el mapa hasta que aparezca el panel Mapa.  
@@ -180,9 +166,7 @@ ms.locfileid: "56290413"
 5.  En **Nombre de campo espacial**, haga clic en el nombre del campo en el conjunto de datos que contenga los datos espaciales.  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ##  <a name="TileLayer"></a> Agregar una capa de mosaico  
   
 1.  Haga clic en el mapa hasta que aparezca el panel Mapa.  
@@ -198,9 +182,7 @@ ms.locfileid: "56290413"
   
     > [!NOTE]  
     >  Se puede agregar también una capa de mosaico al agregar una capa de polígono, línea o punto en el Asistente para mapas o en el Asistente para capas de mapa. En la página **Elegir opciones de datos espaciales y vista de mapa** , seleccione la opción **Agregar un fondo de Bing Maps a esta vista del mapa**.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ##  <a name="DrawingOrder"></a> Cambiar el orden del dibujo de una capa  
   
 1.  Haga clic en el mapa hasta que aparezca el panel Mapa.  
@@ -208,9 +190,7 @@ ms.locfileid: "56290413"
 2.  Haga clic en la capa en el panel Mapa para seleccionarla.  
   
 3.  En la barra de herramientas del panel Mapa, haga clic en la flecha arriba o abajo para cambiar el orden de dibujo de cada capa.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ##  <a name="Transparency"></a> Cambiar la transparencia de una capa de polígono, línea o punto  
   
 1.  Haga clic en el mapa hasta que aparezca el panel Mapa.  
@@ -222,9 +202,7 @@ ms.locfileid: "56290413"
 4.  En **Opciones de transparencia**, escriba un valor que represente la transparencia en porcentaje, por ejemplo **40**. Un transparencia de cero (0)% significa que la capa es opaca. Una transparencia de 100% significa que la capa no se verá en el informe.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ##  <a name="TileTransparency"></a> Cambiar la transparencia de una capa de mosaico  
   
 1.  Haga clic en el mapa hasta que aparezca el panel Mapa.  
@@ -236,9 +214,7 @@ ms.locfileid: "56290413"
 4.  En **Opciones de transparencia**, escriba un valor que represente la transparencia en porcentaje, por ejemplo **40**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ##  <a name="Secure"></a> Especificar una conexión segura para una capa de mosaico  
   
 1.  Haga clic en el mapa hasta que aparezca el panel Mapa.  
@@ -248,9 +224,7 @@ ms.locfileid: "56290413"
 3.  En el panel Propiedades, establezca UseSecureConnection en **True**.  
   
  La conexión para el servicio web de Bing Maps utilizará el servicio SSL (Capa de sockets seguros) de HTTP para recuperar mosaicos de Bing Maps para esta capa.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ##  <a name="Language"></a> Especificar el idioma de las etiquetas de mosaico  
   
 1.  De forma predeterminada, en los estilos de mosaico que muestran etiquetas, el idioma se determina con la configuración regional predeterminada para el Generador de informes. Puede personalizar la configuración de idioma para las etiquetas de mosaico de las maneras siguientes.  
@@ -260,9 +234,7 @@ ms.locfileid: "56290413"
     -   Haga clic en el fondo del informe para seleccionar el informe. En el panel Propiedades, para la propiedad Language seleccione un valor de referencia cultural en la lista desplegable.  
   
      El orden de prioridad para establecer el idioma de la etiqueta de mosaico es la propiedad de informe Language, la configuración regional predeterminada del Generador de informes y la propiedad de mapa TileLanguage.  
-  
-2.  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ##  <a name="ConditionalHide"></a> Para ocultar una capa de forma condicional según el nivel de zoom de la ventanilla  
   
 1.  Establecer `Visibility` opciones para controlar la presentación de una capa de mapa.  
@@ -278,11 +250,7 @@ ms.locfileid: "56290413"
     -   Opcional. Escriba un valor para la transparencia.  
   
      También puede ocultar la capa de forma condicional. Para obtener más información, vea [Ocultar un elemento &#40;Generador de informes y SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md).  
-  
-2.  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ## <a name="see-also"></a>Vea también  
  [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Solucionar problemas de los informes: Informes de mapa &#40;generador de informes y SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
-  
-  
+ [Solucionar problemas de los informes: informes de mapa &#40;Generador de informes y SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  

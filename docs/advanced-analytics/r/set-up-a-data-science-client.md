@@ -3,17 +3,17 @@ title: Configurar un cliente de ciencia de datos para el desarrollo de R - SQL S
 description: Instalar herramientas y bibliotecas de R locales en una estación de trabajo de desarrollo para las conexiones remotas a SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/17/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 12fefddcc01caeb9705c823a4e7283169dda1cc3
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b46ce112af08fca4c8986be51ba11a15d277fb4f
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510442"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645537"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configurar un cliente de ciencia de datos para el desarrollo de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,9 +27,6 @@ En este artículo, obtenga información sobre cómo configurar una estación de 
 ![Componentes de cliente / servidor](media/sqlmls-r-client-revo.png "bibliotecas y las sesiones de R Local y remotas")
 
 Para validar la instalación, puede usar integrada **RGUI** herramienta tal como se describe en este artículo, o [vincular las bibliotecas](#install-ide) a RStudio o cualquier otro IDE que suela usar.
-
-> [!Tip]
-> Para una demostración en vídeo de estos ejercicios, consulte [ejecute R y Python de forma remota en SQL Server en cuadernos de Jupyter](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
 
 > [!Note]
 > Una alternativa a la instalación de la biblioteca de cliente está usando un [servidor independiente](../install/sql-machine-learning-standalone-windows-install.md) como un cliente enriquecido, que algunos clientes prefieren para el trabajo de escenario más profundo. Un servidor independiente se separa por completo de SQL Server, pero porque tiene las mismas bibliotecas de R, puede usar como un cliente para el análisis en bases de datos de SQL Server. También puede usar para el trabajo no relacionados con SQL, incluida la capacidad para importar y modelar datos desde otras plataformas de datos. Si instala un servidor independiente, puede encontrar el archivo ejecutable de R en esta ubicación: `C:\Program Files\Microsoft SQL Server\140\R_SERVER`. Para validar la instalación, [abrir una aplicación de consola de R](#R-tools) para ejecutar comandos con el R.exe en esa ubicación.

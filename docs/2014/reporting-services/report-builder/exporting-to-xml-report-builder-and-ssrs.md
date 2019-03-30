@@ -11,12 +11,12 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a1e9e221816a4b720695a4031850f08fd17a71e1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b32bf178677b564d31182a5d23d5abda1f024cf
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295903"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658039"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportar a XML (Generador de informes y SSRS)
   La extensión de presentación en XML devuelve un informe en formato XML. El esquema XML del informe es específico de éste y solamente contiene datos. La extensión de representación en XML no representa la información de diseño ni mantiene la paginación. El XML que genera esta extensión se puede importar a una base de datos, se puede usar como mensaje de datos XML o se puede enviar a una aplicación personalizada.  
@@ -54,8 +54,6 @@ ms.locfileid: "56295903"
   
 -   Se omiten `Images, lines, and custom report items`.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
 ##  <a name="DataTypes"></a> Tipos de datos  
  Al elemento o atributo del cuadro de texto se le asigna un tipo de datos XSD según los valores que muestra el cuadro de texto.  
   
@@ -71,8 +69,6 @@ ms.locfileid: "56295903"
 |`String`, `Char`|**xsd:cadena**|  
 |Otros|**xsd:cadena**|  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
 ##  <a name="XMLSpecificRenderingRules"></a> Reglas de representación específicas de XML  
  En las secciones siguientes se describe cómo interpreta los elementos del informe la extensión de representación en XML.  
   
@@ -85,7 +81,7 @@ ms.locfileid: "56295903"
   
  Los valores de las variables son los siguientes:  
   
-|Nombre|Valor|  
+|Name|Valor|  
 |----------|-----------|  
 |Informe|Report.DataElementName|  
 |ReportURL|Dirección URL absoluta con codificación URL al informe en el servidor.|  
@@ -115,8 +111,6 @@ ms.locfileid: "56295903"
   
 ### <a name="lines"></a>Líneas  
  Las líneas no se representan.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ### <a name="tables-matrices-and-lists"></a>Tablas, matrices y listas  
  Las tablas, matrices y listas se representan como un elemento. El nombre del elemento procede de la propiedad RDL DataElementName de Tablix.  
@@ -155,17 +149,11 @@ ms.locfileid: "56295903"
   
  Si el valor de la propiedad DataElementOutput es igual al de la salida, el encabezado de un elemento repetitivo se representa como un elemento secundario del elemento de detalle.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
 ##  <a name="CustomFormatsXSLTransformations"></a> Formatos personalizados y transformaciones XSL  
  Los archivos XML generados por la extensión de representación en XML se pueden transformar prácticamente a cualquier formato mediante las transformaciones XSL (XSLT). Esta funcionalidad se puede usar para generar datos en formatos todavía no admitidos por las extensiones de representación existentes. Se recomienda utilizar la extensión de representación en XML y XSLT antes de intentar crear una extensión de representación propia.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
 ##  <a name="DuplicateName"></a> Nombres duplicados  
  Si hay nombres de elementos de datos duplicados dentro del mismo ámbito, el representador muestra un mensaje de error.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ##  <a name="XSLTTransformations"></a> Transformaciones XSLT  
  El representador de XML puede aplicar una transformación XSLT en el servidor a los datos XML originales. Cuando se aplica una XSLT, el representador genera el contenido transformado en lugar de los datos XML originales. La transformación se produce en el servidor, no en el cliente.  
@@ -173,8 +161,6 @@ ms.locfileid: "56295903"
  La transformación XSLT que se debe aplicar a la salida se define en el archivo de definición de informe con la propiedad DataTransform del informe o con el parámetro *DeviceInfo* de XSLT. Si se establece cualquiera de estos valores, la transformación se produce cada vez que se usa el representador de XML. Cuando se usan suscripciones, la transformación XSLT se debe definir en la propiedad RDL DataTransform.  
   
  Si se especifica un archivo XSLT, tanto con la propiedad de definición DataTransform como con la configuración de la información del dispositivo, primero se produce la transformación XSLT especificada en DataTransform y después la establecida mediante la configuración de la información del dispositivo.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
  Puede cambiar parte de la configuración predeterminada de este representador cambiando valores de configuración de la información del dispositivo como los siguientes:  
@@ -195,13 +181,9 @@ ms.locfileid: "56295903"
   
  Para obtener más información, vea [XML Device Information Settings](../xml-device-information-settings.md).  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
 ## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

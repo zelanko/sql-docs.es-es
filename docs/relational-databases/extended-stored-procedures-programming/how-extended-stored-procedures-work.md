@@ -1,7 +1,7 @@
 ---
 title: Cómo funcionan los procedimientos almacenados extendidos | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,14 +13,15 @@ ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 118603088f1cad1ee612f7e4035dc69ba66bc860
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab0864e8eb320c63bd757d4c6edab384c6c821b8
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838323"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645467"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Cómo funcionan los procedimientos almacenados extendidos
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -35,8 +36,3 @@ ms.locfileid: "47838323"
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] llama al procedimiento almacenado extendido solicitado (está implementado como una función dentro de la DLL).  
   
 4.  El procedimiento almacenado extendido pasa conjuntos de resultados y devuelve parámetros de retorno al servidor mediante la API Procedimiento almacenado extendido.  
-  
-## <a name="see-also"></a>Vea también  
- [Programación de procedimientos almacenados extendidos de motor de base de datos](../../relational-databases/database-engine-extended-stored-procedure-programming.md)  
-  
-  

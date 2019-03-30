@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 72ca07a14495261d61601c4acd503790697ce6a4
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160633"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658099"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configuración de clúster SLES para el grupo de disponibilidad de SQL Server
 
@@ -30,7 +30,7 @@ Para obtener más información sobre la configuración del clúster, las opcione
 >En este momento, integración de SQL Server con Pacemaker en Linux no es tan acoplamiento como con WSFC en Windows. Servicio de SQL Server en Linux no es compatible con clústeres. Pacemaker controla todo de la orquestación de los recursos de clúster, incluido el recurso de grupo de disponibilidad. En Linux, no deben depender siempre en disponibilidad grupo vistas de administración dinámica (DMV) que proporcionan información del clúster como sys.dm_hadr_cluster. Además, nombre de red virtual es WSFC específico, no hay ningún equivalente de la misma en Pacemaker. Puede crear un agente de escucha para que lo utilicen para la reconexión después de la conmutación por error transparente, pero tendrá que registrar manualmente el nombre de agente de escucha en el servidor DNS con la dirección IP usada para crear el recurso IP virtual (como se explica en las secciones siguientes).
 
 
-## <a name="roadmap"></a>Mapa de ruta
+## <a name="roadmap"></a>Roadmap
 
 El procedimiento para crear un grupo de disponibilidad para alta disponibilidad difiere entre los servidores Linux y un clúster de conmutación por error de Windows Server. En la lista siguiente se describe los pasos de alto nivel: 
 
@@ -221,7 +221,7 @@ Vallado de nivel de recurso principalmente garantiza que no hay ningún daño de
 
 Vallado de nivel de nodo, se garantiza que un nodo no ejecuta todos los recursos. Para ello, al restablecer el nodo y su implementación Pacemaker se denomina STONITH (que es el acrónimo "grabar el otro nodo en el encabezado"). Pacemaker es compatible con una gran variedad de dispositivos, como tarjetas de interfaz de una fuente de alimentación o de administración de alimentación ininterrumpida para servidores de barrera.
 
-Para obtener más información, consulte [clústeres de Pacemaker desde cero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [vallado y Stonith](https://clusterlabs.org/doc/crm_fencing.html) y [documentación de alta disponibilidad de SUSE: Vallado y STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Para obtener más información, consulte [clústeres de Pacemaker desde cero](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/), [vallado y Stonith](https://clusterlabs.org/doc/crm_fencing.html) y [documentación de alta disponibilidad de SUSE: Vallado y STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 En tiempo de inicialización de clúster, STONITH está deshabilitada si no se detecta ninguna configuración. Se puede habilitar más tarde ejecutando el comando siguiente:
 

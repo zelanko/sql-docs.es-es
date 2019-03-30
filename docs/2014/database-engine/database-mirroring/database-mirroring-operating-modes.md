@@ -12,12 +12,12 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: debec2f4cf7e62552d82ee7a0f87a2a359f4aa34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542935"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658369"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modos de funcionamiento de la creación de reflejo de la base de datos
   En este tema se describen los modos de funcionamiento sincrónico y asincrónico para las sesiones de creación de reflejo de la base de datos.  
@@ -80,7 +80,7 @@ ms.locfileid: "52542935"
 -   Si se pierde el servidor principal, forzar el servicio en el servidor reflejado requiere que éste se conecte al testigo.  
   
 > [!NOTE]  
->  Para obtener información acerca de los tipos de quórum, vea [quórum: Cómo un testigo afecta a la disponibilidad de la base de datos &#40;la creación de reflejo de base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+>  Para obtener información acerca de los tipos de quórum, vea [quórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="WhenPrincipalFails"></a> Responder ante los errores del servidor principal  
  Si se produce un error en el servidor principal, el propietario de la base de datos tiene varias opciones:  
@@ -146,7 +146,7 @@ ms.locfileid: "52542935"
   
  A diferencia de los dos asociados, el testigo no sirve a la base de datos. El testigo simplemente admite la conmutación automática por error al comprobar que el servidor principal se encuentre activo y en funcionamiento. El servidor reflejado inicia la conmutación automática por error solo si éste y el testigo permanecen mutuamente conectados después de haberse desconectado del servidor principal.  
   
- Cuando se define un testigo, la sesión requiere *quórum*, una relación entre al menos dos instancias de servidor que permite que la base de datos pueda estar disponible. Para obtener más información, consulte [testigo de creación de reflejo de base de datos](database-mirroring-witness.md) y [quórum: Cómo un testigo afecta a la disponibilidad de la base de datos &#40;la creación de reflejo de base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Cuando se define un testigo, la sesión requiere *quórum*, una relación entre al menos dos instancias de servidor que permite que la base de datos pueda estar disponible. Para obtener más información, consulte [testigo de creación de reflejo de base de datos](database-mirroring-witness.md) y [quórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  La conmutación automática por error requiere las condiciones siguientes:  
   
@@ -193,7 +193,7 @@ ms.locfileid: "52542935"
   
 -   SAFETY OFF  
   
-     Desactivar la seguridad de las transacciones hace que la sesión funcione de forma asincrónica, en modo de alto rendimiento. Si la propiedad SAFETY está establecida en OFF, la propiedad WITNESS también debe estar establecida en OFF (el valor predeterminado). Para obtener información sobre el efecto del testigo en el modo de alto rendimiento, vea [Estado del testigo](#WitnessState)a continuación. Para obtener más información sobre la ejecución con la seguridad de transacción desactivada, vea [Operación asincrónica de creación de reflejo de la base de datos (Modo de alto rendimiento)](#Async), anteriormente en este tema.  
+     Desactivar la seguridad de las transacciones hace que la sesión funcione de forma asincrónica, en modo de alto rendimiento. Si la propiedad SAFETY está establecida en OFF, la propiedad WITNESS también debe estar establecida en OFF (el valor predeterminado). Para obtener información sobre el efecto del testigo en el modo de alto rendimiento, vea [Estado del testigo](#WitnessState)a continuación. Para obtener más información sobre la ejecución con la seguridad de transacción desactivada, vea [Operación asincrónica de creación de reflejo de la base de datos (Modo de alto rendimiento)](#VisualElement), anteriormente en este tema.  
   
  La configuración de seguridad de las transacciones de la base de datos está registrada en cada asociado de la vista de catálogo **sys.database_mirroring** en las columnas **mirroring_safety_level** y **mirroring_safety_level_desc**. Para obtener más información, vea [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
@@ -208,7 +208,7 @@ ms.locfileid: "52542935"
   
 -   Cuando hay un testigo pero no está conectado a un asociado, el testigo tiene el estado UNKOWN o DISCONNECTED en relación con el asociado. En este caso, el testigo carece de quórum con ese asociado y, si los asociados no están conectados entre sí, la base de datos se vuelve no disponible.  
   
- Para obtener información acerca del quórum, consulte [quórum: Cómo un testigo afecta a la disponibilidad de la base de datos &#40;la creación de reflejo de base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Para obtener información acerca del quórum, consulte [quórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  El estado de cada testigo en una instancia del servidor se registra en la vista de catálogo **sys.database_mirroring**, en las columnas **mirroring_witness_state** y **mirroring_witness_state_desc**. Para obtener más información, vea [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
@@ -222,7 +222,7 @@ ms.locfileid: "52542935"
   
  <sup>1</sup> si el testigo se desconecta, se recomienda establecer WITNESS OFF hasta que la instancia del servidor testigo esté disponible.  
   
- <sup>2</sup> si hay un testigo en modo de alto rendimiento, el testigo no participa en la sesión. Sin embargo, para que la base de datos esté disponible, al menos dos de las instancias de servidor deben permanecer conectadas. Por lo tanto, se recomienda mantener la propiedad WITNESS establecida en OFF en las sesiones en modo de alto rendimiento. Para obtener más información, consulte [quórum: Cómo un testigo afecta a la disponibilidad de la base de datos &#40;la creación de reflejo de base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ <sup>2</sup> si hay un testigo en modo de alto rendimiento, el testigo no participa en la sesión. Sin embargo, para que la base de datos esté disponible, al menos dos de las instancias de servidor deben permanecer conectadas. Por lo tanto, se recomienda mantener la propiedad WITNESS establecida en OFF en las sesiones en modo de alto rendimiento. Para más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="ViewWitness"></a> Ver la configuración de seguridad y el estado del testigo  
  Para ver la configuración de seguridad y el estado del testigo de una base de datos, use la vista de catálogo **sys.database_mirroring** . Las columnas relevantes son:  
@@ -266,5 +266,3 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 ## <a name="see-also"></a>Vea también  
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)   
  [Testigo de creación de reflejo de la base de datos](database-mirroring-witness.md)  
-  
-  

@@ -12,12 +12,12 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: d3b3aaf9688d3517127495fe4b963f5b6de56f0f
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 82f4df8607af55a4b50f0ecfaf7b66a8c088c43a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973594"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657939"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Usar la autenticación de Active Directory con SQL Server en Linux
 
@@ -164,7 +164,7 @@ Siga estos pasos para unir un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.
    
    > SQL Server utiliza SSSD y NSS para asignar cuentas de usuario y grupos a los identificadores de seguridad (SID). SSSD debe estar configurado y se ejecutan en orden para SQL Server crear los inicios de sesión de AD correctamente. Realmd normalmente lo hace automáticamente como parte de la unión al dominio, pero en algunos casos debe hacerlo por separado.
    >
-   > Consulte las siguientes opciones para configurar [SSSD manualmente](https://access.redhat.com/articles/3023951), y [configurar NSS para trabajar con SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
+   > Consulte las siguientes opciones para configurar [SSSD manualmente](https://access.redhat.com/articles/3023951), y [configurar NSS para trabajar con SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/Configuring_Services#Configuration_Options-NSS_Configuration_Options)
 
 5. Compruebe que el dominio está configurado en `/etc/krb5.conf`
     ```/etc/krb5.conf

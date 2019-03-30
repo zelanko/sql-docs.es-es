@@ -1,7 +1,7 @@
 ---
 title: Novedades - servicios de SQL Server Machine Learning | Microsoft Docs
 description: Anuncios sobre nuevas características para cada versión de SQL Server 2016 R Services, R Server, SQL Server 2017 Machine Learning Services.
-ms.date: 03/27/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a41844fb7cd9c7e638d42fe9edbbb05ef0b81be1
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 64fbf68f09f685223ba42d9d2b79d5a8454f7125
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509832"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645527"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades de SQL Server Machine Learning Services
 
@@ -47,7 +47,7 @@ Esta versión agrega las características más solicitadas para las operaciones 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2017"></a>Novedades de SQL Server 2017
 
-Esta versión agrega [compatibilidad con Python y algoritmos de aprendizaje automático de líderes del sector](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Cambia para reflejar el nuevo ámbito, SQL Server 2017 marca la introducción de [SQL Server Machine Learning Services (In-Database)](what-is-sql-server-machine-learning.md), con compatibilidad con lenguaje Python y R. 
+Esta versión agrega [compatibilidad con Python y algoritmos de aprendizaje automático de líderes del sector](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Cambia para reflejar el nuevo ámbito, SQL Server 2017 marca la introducción de [SQL Server Machine Learning Services (In-Database)](what-is-sql-server-machine-learning.md), con compatibilidad con lenguaje Python y R. 
 
 Para todos los anuncios de características de seguridad, consulte [What ' s New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 

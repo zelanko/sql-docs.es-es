@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5df94dc555aead1225bcb791456e7dc87c0b7590
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 583059b93268f3652cf2e8f324574ec739d449dd
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214966"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658238"
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Actualización de datos Power Pivot con SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -235,7 +235,7 @@ ms.locfileid: "53214966"
 ##  <a name="bkmk_moreinformation"></a> Más información  
  [Solución de problemas de actualización de datos Power Pivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [Servicios de Excel en SharePoint 2013](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (<http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15>).  
+ [Servicios de Excel en SharePoint](/sharepoint/dev/general-development/excel-services-in-sharepoint).  
   
 ## <a name="see-also"></a>Vea también  
  [Instalación de Analysis Services en el modo PowerPivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  

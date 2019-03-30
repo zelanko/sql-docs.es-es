@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: b8be84952a1f7652fc9e40cf82ce5ca25dfa25f4
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: b174f21cc0fa15404587f63019b5bcda2eb72534
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160623"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658109"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar el clúster de Ubuntu y recursos del grupo de disponibilidad
 
@@ -29,7 +29,7 @@ Este documento explica cómo crear un clúster de tres nodos en Ubuntu y agregar
 
 Las siguientes secciones se guiarán por los pasos para configurar una solución de clúster de conmutación por error. 
 
-## <a name="roadmap"></a>Mapa de ruta
+## <a name="roadmap"></a>Roadmap
 
 Los pasos para crear un grupo de disponibilidad en los servidores de Linux para lograr alta disponibilidad son diferentes de los pasos en un clúster de conmutación por error de Windows Server. En la lista siguiente se describe los pasos de alto nivel: 
 
@@ -135,7 +135,7 @@ El siguiente comando crea un clúster de tres nodos. Antes de ejecutar el script
 
 ## <a name="configure-fencing-stonith"></a>Configurar vallado (STONITH)
 
-Los proveedores de clúster de pacemaker requieren STONITH esté habilitado y un dispositivo de vallado configurado para una configuración de clúster compatibles. Cuando el Administrador de recursos de clúster no puede determinar el estado de un nodo o de un recurso en un nodo, vallado sirve para poner el clúster en un estado conocido de nuevo. Vallado de nivel de recurso principalmente garantiza que no hay ningún daño de datos en el caso de una interrupción del servicio mediante la configuración de un recurso. Puede usar la barrera de nivel de recurso, por ejemplo, con DRBD (distribuida replica bloque dispositivo) para marcar el disco en un nodo como obsoletos cuando el vínculo de comunicación deja de funcionar. Vallado de nivel de nodo, se garantiza que un nodo no ejecuta todos los recursos. Para ello, al restablecer el nodo y su implementación Pacemaker se denomina STONITH (que es el acrónimo "grabar el otro nodo en el encabezado"). Pacemaker es compatible con una gran variedad de dispositivos de vallado, por ejemplo, una fuente de alimentación ininterrumpida o administración de tarjetas de interfaz de servidores. Para obtener más información, consulte [clústeres de Pacemaker desde cero](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html) y [vallado y Stonith](https://clusterlabs.org/doc/crm_fencing.html) 
+Los proveedores de clúster de pacemaker requieren STONITH esté habilitado y un dispositivo de vallado configurado para una configuración de clúster compatibles. Cuando el Administrador de recursos de clúster no puede determinar el estado de un nodo o de un recurso en un nodo, vallado sirve para poner el clúster en un estado conocido de nuevo. Vallado de nivel de recurso principalmente garantiza que no hay ningún daño de datos en el caso de una interrupción del servicio mediante la configuración de un recurso. Puede usar la barrera de nivel de recurso, por ejemplo, con DRBD (distribuida replica bloque dispositivo) para marcar el disco en un nodo como obsoletos cuando el vínculo de comunicación deja de funcionar. Vallado de nivel de nodo, se garantiza que un nodo no ejecuta todos los recursos. Para ello, al restablecer el nodo y su implementación Pacemaker se denomina STONITH (que es el acrónimo "grabar el otro nodo en el encabezado"). Pacemaker es compatible con una gran variedad de dispositivos de vallado, por ejemplo, una fuente de alimentación ininterrumpida o administración de tarjetas de interfaz de servidores. Para obtener más información, consulte [clústeres de Pacemaker desde cero](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/) y [vallado y Stonith](https://clusterlabs.org/doc/crm_fencing.html) 
 
 Dado que el nivel del nodo Configuración de vallado depende en gran medida en su entorno, se deshabilita para este tutorial (se puede configurar en un momento posterior). Ejecute el siguiente script en el nodo principal: 
 

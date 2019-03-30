@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d3411efb39bf6d944c1646704185ef9038aba1db
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: dab79e4efec442a24eb9bb5d944cb52e5c9b5640
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289333"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658349"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services en SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] es un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] entorno con mejoras específicas para soluciones de inteligencia empresarial. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] se incluye con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -31,9 +31,7 @@ ms.locfileid: "56289333"
   
 ##  <a name="bkmk_SolutionsandProjects"></a> Soluciones y proyectos  
  Un proyecto de informe actúa como contenedor de definiciones y recursos de informe. Todos los archivos del proyecto de informe se publican en el servidor de informes cuando se implementa el proyecto. Cuando se crea un proyecto por primera vez, también se crea una solución como contenedor del proyecto. Se pueden agregar varios proyectos a una solución.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_Configurations"></a> Configuraciones  
  Para crear varios conjuntos de propiedades de proyecto para las variaciones de implementación, como servidores de informes de prueba y producción, use el Administrador de configuración. Para obtener más información, vea [Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
@@ -45,11 +43,9 @@ ms.locfileid: "56289333"
 -   **Asistente de proyectos de servidor de informes.** Cuando se selecciona un proyecto de asistente de proyectos de servidor de informes, se crea automáticamente un proyecto de servidor de informes y se abre el Asistente para informes. En el asistente, puede crear un informe siguiendo las instrucciones de cada página para crear una cadena de conexión a un origen de datos, establecer las credenciales del origen de datos, diseñar una consulta, agregar una región de datos de tabla o matriz, especificar datos y grupos de informe, elegir un estilo de fuente y color, publicar el informe en un servidor de informes y obtener una vista previa del informe localmente. Después de crear un informe con el asistente, puede modificar los datos del informe y el diseñador de informes mediante el Diseñador de informes en el proyecto de servidor de informes.  
   
  ![Nuevas plantillas de proyecto de SSDT](../../analysis-services/media/ssdt-biprojects.png "Nuevas plantillas de proyecto de SSDT")  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Ventanas y paneles del Diseñador de informes  
- El Diseñador de informes admite dos vistas: **Diseño** para definir los datos de informe y el diseño del informe y **Preview** para mostrar una vista representada del informe. En cada vista, pueden mostrarse varias ventanas como ayuda para diseñar o ver un informe representado.  
+ El Diseñador de informes admite dos vistas: **Diseño** para definir los datos del informe y el diseño del informe y **Vista previa** para mostrar una vista representada del informe. En cada vista, pueden mostrarse varias ventanas como ayuda para diseñar o ver un informe representado.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Panel Datos de informe  
  El panel Datos de informe muestra los campos integrados, orígenes de datos, conjuntos de datos, colecciones de campos, parámetros de informe e imágenes.  
@@ -72,9 +68,7 @@ ms.locfileid: "56289333"
   
 > [!NOTE]  
 >  Si no ve el panel datos de informe, en el **vista** menú, haga clic en **datos de informe**. Si el panel Datos de informe está flotando, puede anclarlo. Para más información, vea [Acoplar el panel Datos de informe en el Diseñador de informes &#40;SSRS&#41;](dock-the-report-data-pane-in-report-designer-ssrs.md).  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_GroupingPane"></a> Panel de agrupación  
  Use el panel de agrupación para definir los grupos para una región de datos Tablix. Puede definir grupos de filas y grupos de detalles para las tablas, y grupos de filas y columnas para las matrices. No puede usar el panel de agrupación para definir grupos para los gráficos u otras regiones de datos. Para obtener más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
   
@@ -90,9 +84,7 @@ ms.locfileid: "56289333"
 >  Para cambiar entre los modos **Predeterminado** y **Avanzado** , haga clic con el botón derecho en la flecha abajo, a la derecha del icono **Grupos de columnas** .  
   
  Para obtener más información, vea [Grouping Pane](grouping-pane.md).  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_Toolbox"></a> Cuadro de herramientas  
  El cuadro de herramientas contiene los elementos de informe que se pueden arrastrar a la superficie de diseño. Las regiones de datos son elementos de informe que se usan para organizar los datos en el informe. Tabla, matriz, lista, gráfico, medidor, barras de datos, minigráfico e indicador son regiones de datos. Otros elementos de informe son mapa, cuadro de texto, rectángulo, línea, imagen y subinforme. También pueden aparecer elementos de informe personalizados en esta lista si el administrador del sistema los ha instalado y registrado.  
   
@@ -108,9 +100,7 @@ ms.locfileid: "56289333"
 -   Establecer propiedades para el miembro del grupo seleccionado en el panel de agrupación. Las propiedades de miembro del grupo ayudan a controlar la forma en que las filas de encabezado y pie de grupo se repiten para cada grupo instancias. Para más información, vea [Mostrar encabezados y pies de página con un grupo &#40;Generador de informes y SSRS&#41;](../report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
   
  Para mostrar el panel de propiedades, haga clic en **Ventana de propiedades** en el menú **Ver**. Puede desacoplar este panel y moverlo a otra área de la ventana de [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]o mostrarlo como una vista con pestañas en la superficie de diseño.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_SolutionExplorer"></a> Explorador de soluciones  
  El Explorador de soluciones es un componente estándar de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] que muestra todos los elementos del proyecto. Para un proyecto de servidor de informes, se incluyen las carpetas para organizar los orígenes de datos compartidos, conjuntos de datos compartidos, informes y recursos. Los elementos de la carpeta se alfabetizan al abrir el archivo de solución. Para ver las propiedades de elementos del panel de propiedades, seleccione el elemento.  
   
@@ -118,9 +108,7 @@ ms.locfileid: "56289333"
  La ventana de salida muestra los errores de procesamiento cuando se obtiene la vista previa de un informe y los errores de publicación cuando se implementa un informe en un origen de datos compartido.  
   
  Use las ventanas Salida y Esquema de documento para depurar los errores en las expresiones.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_DocumentOutline"></a> Esquema de documento  
  La ventana Esquema de documento muestra una lista jerárquica de todos los elementos de informe de la definición de informe. Para abrir el panel Esquema de documento, en el menú **Ver** , seleccione **Otras ventanas** y haga clic en **Ventana de documento**.  
   
@@ -128,9 +116,7 @@ ms.locfileid: "56289333"
   
 ###  <a name="bkmk_TaskList"></a> Lista de tareas  
  La ventana Lista de tareas muestra errores de compilación para las características no compatibles cuando se importa un informe desde otra aplicación, como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerDesignView"></a> Vista de diseño del Diseñador de informes  
  De forma predeterminada, cuando se crea un proyecto de servidor de informes, el Diseñador de informes se abre en la vista de diseño y muestra la superficie de diseño. De forma predeterminada, la superficie de diseño muestra el cuerpo y el fondo del informe.  
   
@@ -139,9 +125,7 @@ ms.locfileid: "56289333"
  Use el control de zoom para aumentar o reducir la ampliación del informe.  
   
  Para diseñar un informe, arrastre los elementos del informe desde el cuadro de herramientas a la superficie de diseño y, a continuación, configure sus propiedades y modifique su organización en el informe.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerPreview"></a> Vista previa del Diseñador de informes  
  Use la vista previa para ejecutar el informe y ver el informe representado en el visor de informes. La vista previa almacena los datos del informe localmente en la memoria caché. También puede establecer las propiedades de configuración para ejecutar el informe en la vista de depuración utilizando un explorador.  
   
@@ -154,9 +138,7 @@ ms.locfileid: "56289333"
 -   **Obtener una vista previa del informe mediante el Administrador de configuración y la depuración.** En [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], las propiedades del proyecto definen la forma en que deben implementarse y depurarse los informes. Estas propiedades se aplican a todos los informes y orígenes de datos compartidos del proyecto. Para establecer las propiedades del proyecto, en el menú **Proyecto** , haga clic en **Propiedades**. Use estos valores para probar los informes y publicarlos en el servidor de informes.  
   
 -   **Supervisar el panel de salida para comprobar si hay mensajes de error.** Cuando se obtiene la vista previa de un informe y el procesador de informes detecta un problema, escribe los mensajes de error en el panel de salida.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerMenus"></a> Menús del Diseñador de informes  
  Cuando un proyecto de diseñador de informes está activo en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], se agregan las siguientes barras de herramientas a la barra de herramientas principal. Los menús del Diseñador de informes solamente están visibles en la vista Diseño.  
   
@@ -188,7 +170,7 @@ ms.locfileid: "56289333"
   
 -   **Propiedades del informe** Seleccione esta opción para abrir el cuadro de diálogo **Propiedades del informe** . En este cuadro de diálogo pueden asignarse propiedades generales al informe, como el nombre de autor y el espaciado de cuadrícula, y especificar propiedades para el diseño del informe, como el número de columnas y el tamaño de página. También puede incluir código personalizado, referencias a ensamblados y clases, así como los nombres de los elementos del resultado, la transformación y los esquemas de los datos.  
   
--   **Vista** cambiar entre las dos pestañas del Diseñador de informes: Diseño y vista previa.  
+-   **Vista** Cambie entre las dos pestañas del diseñador de informes: Diseño y vista previa.  
   
 -   **Encabezado de página** Agregue un encabezado de página al informe o elimine un encabezado de página del informe. Al eliminar un encabezado de página, se eliminan todos los elementos del encabezado de página.  
   
@@ -231,9 +213,7 @@ ms.locfileid: "56289333"
 -   **Actualizar elementos del cuadro de herramientas de proyecto** Actualice la caché del cuadro de herramientas cuando instale nuevos elementos de informe personalizados en el proyecto.  
   
 -   **Propiedades** Abre el cuadro de diálogo **Páginas de propiedades** de este proyecto. Para más información, vea [Páginas de propiedades del proyecto (cuadro de diálogo)](project-property-pages-dialog-box.md).  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerToolbars"></a> Barras de herramientas del Diseñador de informes  
  El Diseñador de informes proporciona las siguientes barras de herramientas especializadas que se pueden usar para diseñar informes:  
   
@@ -248,9 +228,7 @@ ms.locfileid: "56289333"
 -   **Estándar** Abra o guarde proyectos, muestre ventanas y seleccione la configuración de depuración.  
   
  Utilice el menú **Ver** para controlar si deben mostrarse estas barras de herramientas. Puede haber otras barras de herramientas de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] deshabilitadas si su funcionalidad no se aplica a las características del Diseñador de informes.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_SourceControl"></a> Control de código fuente  
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] se puede integrar con los complementos de origen. Use las páginas Proyectos y Soluciones del cuadro de diálogo **Opciones** para especificar el complemento y configurar las propiedades.  
   
@@ -258,9 +236,7 @@ ms.locfileid: "56289333"
  Para usar informes personalizados como plantillas para los informes nuevos, basta con copiarlas en la carpeta ReportProject del equipo en el que [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] está instalado. De forma predeterminada, esta carpeta se encuentra en \<unidad >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject. Al agregar un elemento nuevo al proyecto de informe, el informe personalizado aparece en el panel de plantillas.  
   
  También puede agregar estilos personalizados al Asistente para informes.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> Compatibilidad de la línea de comandos con SQL Server Data Tools  
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] se basa en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10.0 y la aplicación devenv.exe subyacente. Para poder usar estas opciones, debe establecer valores válidos para los dos elementos siguientes:  
   
@@ -289,9 +265,7 @@ ms.locfileid: "56289333"
     ```  
     devenv.exe "C:\Users\MyUser\Documents\Visual Studio 2010\Projects\Reports\Reports.sln" /build "Debug" /out mybuildlog.txt  
     ```  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_KeyboardShortcuts"></a> Métodos abreviados de teclado en Reporting Services  
  Use los métodos abreviados de teclado para:  
   
@@ -320,9 +294,7 @@ ms.locfileid: "56289333"
     |En un cuadro de texto, seleccionar el texto desde la posición del cursor actual hasta el principio de la expresión|CTRL+MAYÚS+INICIO|  
     |En un cuadro de texto, seleccionar el texto desde la posición del cursor actual hasta el final de la expresión|CTRL+MAYÚS+FIN|  
     |Abrir el menú contextual para el elemento de informe seleccionado|MAYÚS+F10+tecla de propiedad en teclados más recientes|  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#bkmk_Top)  
-  
+
 ## <a name="see-also"></a>Vea también  
  [Explorador de soluciones](../../ssms/solution/solution-explorer.md)   
  [Informes de Reporting Services &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)   

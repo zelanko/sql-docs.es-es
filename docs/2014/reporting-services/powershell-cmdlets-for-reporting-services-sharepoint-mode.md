@@ -11,12 +11,12 @@ ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5c010d299448bbecd7f527b349cf3ca719809493
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e51aef3d9aa06790420cec9fab0d487a68563a4a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013526"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658269"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlets de PowerShell para el modo de SharePoint de Reporting Services
   Al instalar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint, se instalan cmdlets de PowerShell para admitir servidores de informes en modo de SharePoint. Los cmdlets abarcan tres categorías de funcionalidad.  
@@ -56,7 +56,7 @@ ms.locfileid: "56013526"
     -   [Cambiar y enumerar propietarios de suscripciones](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> Resumen de los cmdlets  
- Para ejecutar los cmdlets es necesario abrir el Shell de administración de SharePoint. También puede usar el editor de la interfaz gráfica de usuario incluido en Microsoft Windows, **Entorno de scripting integrado (ISE) de Windows PowerShell**. Para obtener más información, consulte [iniciar Windows PowerShell en Windows Server](https://technet.microsoft.com/library/hh847814.aspx) (https://technet.microsoft.com/library/hh847814.aspx). En los resúmenes siguientes de cmdlet, las referencias al servicio application 'databases' hacen referencia a todas las bases de datos creadas y usadas por un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicación de servicio. Esto incluye la configuración, la creación de alertas y las bases de datos temporales.  
+ Para ejecutar los cmdlets es necesario abrir el Shell de administración de SharePoint. También puede usar el editor de la interfaz gráfica de usuario incluido en Microsoft Windows, **Entorno de scripting integrado (ISE) de Windows PowerShell**. Para más información, vea [Starting Windows PowerShell on Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). En los resúmenes siguientes de cmdlet, las referencias al servicio application 'databases' hacen referencia a todas las bases de datos creadas y usadas por un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicación de servicio. Esto incluye la configuración, la creación de alertas y las bases de datos temporales.  
   
  Si ve un mensaje de error similar al siguiente al escribir los ejemplos de PowerShell:  
   

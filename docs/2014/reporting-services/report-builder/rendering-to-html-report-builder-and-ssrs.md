@@ -11,12 +11,12 @@ ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 83485916e0dcfeb02555e3068931415801691692
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 473ff59f217662ea01f8e24335f3723bf26d40ec
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296853"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658029"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Representar en HTML (Generador de informes y SSRS)
   La extensión de representación en HTML representa un informe en formato HTML. La extensión de representación también puede generar páginas HTML completas o fragmentos de HTML para incrustarlos en otras páginas HTML. Todos los HTML se generan con la codificación UTF-8.  
@@ -35,8 +35,6 @@ ms.locfileid: "56296853"
 ##  <a name="RenderingMHTML"></a> Representación en MHTML  
  La extensión de representación en HTML también puede representar informes en MHTML (Encapsulación MIME de documentos HTML agregados). MHTML extiende HTML para incrustar objetos codificados, como imágenes, en el documento HTML. Con la extensión de representación en MHTML, puede incrustar en un único archivo recursos tales como imágenes, documentos u otros archivos binarios como estructuras MIME incluidas en el informe HTML. Los informes MHTML también resultan útiles para incrustarlos en mensajes de correo electrónico porque todos los recursos se incluyen en el informe. Aunque la extensión de representación en HTML es la que en realidad representa el MHTML, esta funcionalidad también se denomina extensión de representación en MHTML.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
 ##  <a name="BrowserSupport"></a> Compatibilidad con exploradores  
  Esta extensión de representación admite las versiones siguientes de los exploradores:  
   
@@ -47,8 +45,6 @@ ms.locfileid: "56296853"
 -   Safari 3.0 y versiones posteriores  
   
  Debido a los distintos comportamientos de los exploradores, el informe representado puede variar ligeramente de un explorador a otro. Por ejemplo, el cuadro de texto contiene una propiedad denominada WritingMode. Esta propiedad no es compatible con Firefox.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ##  <a name="HTMLSpecificRenderingRules"></a> Reglas de representación específicas de HTML  
  Durante la representación se aplican las siguientes reglas específicas de HTML:  
@@ -66,8 +62,6 @@ ms.locfileid: "56296853"
 -   Las demás filas y columnas pueden aumentar en función del tamaño de cada elemento de informe.  
   
 -   Todas las coordenadas y los tamaños de los elementos de informe se convierten a milímetros. Todos los demás tamaños, incluidas las propiedades de estilo, conservan sus unidades originales. Cuando la diferencia entre el tamaño y la posición es inferior a 0,2 mm se trata como si fuera 0 mm.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
 ##  <a name="Interactivity"></a> Interactividad  
  Algunos elementos interactivos se admiten en HTML. A continuación se describen sus comportamientos específicos.  
@@ -92,18 +86,12 @@ ms.locfileid: "56296853"
   
  El control ReportViewer de formularios Web Forms proporciona funcionalidad adicional de búsqueda.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
 ##  <a name="DeviceInfo"></a> Configuración de la información del dispositivo  
  Para cambiar algunos valores de configuración predeterminados para este representador, incluido el modo de representación, solo tiene que cambiar la configuración de la información del dispositivo. Para más información, consulte [HTML Device Information Settings](../html-device-information-settings.md).  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
-  
+
 ## <a name="see-also"></a>Vea también  
  [Paginación en Reporting Services &#40;Generador de informes y SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Funcionalidad interactiva para diferentes extensiones de representación de informes &#40;Generador de informes y SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Representar elementos de informe &#40;Generador de informes y SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

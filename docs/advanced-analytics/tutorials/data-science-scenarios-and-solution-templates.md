@@ -2,17 +2,17 @@
 title: 'Escenarios de ciencia de datos y plantillas de solución: SQL Server Machine Learning'
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c40d5d60d43739ccfa6fa326ba0ca1c2688543a6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509852"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645497"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Escenarios de ciencia de datos y plantillas de solución
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,8 +24,6 @@ Cada solución incluye datos de ejemplo, código de R o código de Python y proc
 > [!TIP]
 > 
 > La mayoría de las plantillas tienen varias versiones que admiten tanto en el entorno local y plataformas para el aprendizaje automático en la nube. Por ejemplo, puede compilar la solución con SQL Server sólo, o puede crear la solución en Microsoft R Server o en Azure Machine Learning.
-
-+ Para obtener detalles y actualizaciones, consulte este anuncio: [Plantillas nuevas e interesantes en Azure Machine Learning](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 + Para su descarga e instrucciones de configuración, consulte [cómo usar las plantillas de](#bkmk_HowTo).
 
@@ -67,8 +65,6 @@ Cada solución incluye datos de ejemplo, código de R o código de Python y proc
 [Plantilla de mantenimiento predictivo (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **Qué:** Mantenimiento predictivo pretende aumentar la eficacia de las tareas de mantenimiento mediante la captura de errores del pasado y usar esa información para predecir cuándo o dónde se puede producir un error en un dispositivo. La capacidad de previsión de obsolescencia de los dispositivos es especialmente valiosa para aquellas aplicaciones que se basan en datos distribuidos o sensores. Este método también se pueden aplicar para supervisar o predecir errores en los dispositivos de IoT (Internet de las cosas).
-
-Vea este anuncio para obtener más información: [Nueva plantilla de mantenimiento predictivo](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 **Cómo:** Esta solución se centra en responder a la pregunta, "Cuando en un equipo producirá un error?" Los datos de entrada representan medidas de sensor simuladas para motores de avión. Los datos obtenidos de la supervisión de condiciones de funcionamiento actuales del motor, como el ciclo de trabajo actual, la configuración y las medidas de sensor, se usan para crear tres tipos de modelos de predicción:
 

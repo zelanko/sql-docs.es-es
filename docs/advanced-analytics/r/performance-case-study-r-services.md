@@ -2,17 +2,17 @@
 title: 'Rendimiento de SQL Server R Services: resultados y los recursos: SQL Server Machine Learning Services'
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4b71afb8f373eed4f49bc2cf0ea1c6086b6f121d
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510762"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645557"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Rendimiento de R Services: los resultados y los recursos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -337,10 +337,8 @@ Muchos usuarios han indican que hay una pausa pequeña como el tiempo de ejecuci
 
 Por todas estas razones, no hay ninguna solución única para mitigar este tiempo de carga inicial, como el impacto de rendimiento varía considerablemente dependiendo de la tarea. Por ejemplo, se realiza el almacenamiento en caché para puntuar en lotes; de fila única por lo tanto, las operaciones sucesivas de puntuación son mucho más rápidas y se vuelve a cargar el modelo ni el tiempo de ejecución de R. También puede usar [puntuación nativa](../sql-native-scoring.md) para evitar cargar el runtime de R por completo.
 
-Para entrenar modelos grandes o de puntuación por lotes grande, la sobrecarga puede ser mínima en comparación con las mejoras de evitar el movimiento de datos o de procesamiento paralelo y streaming. Consulte estos ejemplos para obtener instrucciones adicionales del rendimiento y blogs recientes:
+Para entrenar modelos grandes o de puntuación por lotes grande, la sobrecarga puede ser mínima en comparación con las mejoras de evitar el movimiento de datos o de procesamiento paralelo y streaming. Consulte este blog para la Guía de rendimiento adicionales:
 
-+ [Clasificación de préstamos con SQL Server 2016 R Services](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2016/09/27/loan-classification-using-sql-server-2016-r-services/)
-+ [Experiencias de los primeros clientes con R Services](https://blogs.msdn.microsoft.com/sqlcat/2016/06/16/early-customer-experiences-with-sql-server-r-services/)
 + [Uso de R para detectar el fraude en 1 millón de transacciones por segundo](https://blog.revolutionanalytics.com/2016/09/fraud-detection.html/)
 
 ## <a name="resources"></a>Recursos

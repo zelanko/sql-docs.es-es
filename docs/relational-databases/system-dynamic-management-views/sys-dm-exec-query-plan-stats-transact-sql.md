@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 0dd8b138c425adb47f0bb228848ca39361ffa87e
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 0bef01ab6b4ecf1a9f05b1c7b40e2767aaae0db3
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618614"
+ms.locfileid: "58645357"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -80,7 +80,7 @@ En las siguientes condiciones, un **simplificada <sup>1</sup>**  de salida de Sh
     **AND**    
 -   La consulta es bastante sencilla, generalmente se clasifican como parte de una carga de trabajo OLTP.
 
-<sup>1</sup> se refiere a un plan de presentación que solo contiene el operador de nodo raíz (SELECT). 
+<sup>1</sup> se refiere a un plan de presentación que solo contiene el operador de nodo raíz (SELECT). Para [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4 sólo se refiere al plan almacenado en caché como disponible a través de sys.dm_exec_cached_plans.
 
 En las siguientes condiciones, **no se devuelve ningún resultado** desde **sys.dm_exec_query_plan_stats**:
 
@@ -135,5 +135,5 @@ GO
 ## <a name="see-also"></a>Vea también
   [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vistas de administración dinámica relacionadas con la base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 

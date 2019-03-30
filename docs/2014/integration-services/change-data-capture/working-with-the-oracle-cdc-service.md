@@ -10,12 +10,12 @@ ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 90659977d3183108b5d97fe0bc92894f5277bb85
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394418"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658059"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabajar con el servicio CDC de Oracle
   En esta sección se describen algunos conceptos importantes del servicio CDC de Oracle. Los conceptos incluidos en esta sección son:  
@@ -24,7 +24,7 @@ ms.locfileid: "58394418"
   
      En esta sección se describen las tablas incluidas en esta base de datos y su importancia para CDC.  
   
--   [Las bases de datos CDC](#BKMK_CDCdatabas)  
+-   [Las bases de datos CDC](#BKMK_CDCdatabase)  
   
      En esta sección se proporciona una breve descripción de las bases de datos CDC. Estas bases de datos se crean mediante la Consola del diseñador CDC de Oracle. Vea la documentación incluida con la instalación de la Consola del diseñador CDC para obtener más información acerca de las bases de datos CDC.  
   
@@ -217,7 +217,7 @@ ms.locfileid: "58394418"
   
  **sql-username**y **sql-password** son las credenciales de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se están actualizando. Si sqlacct tiene un nombre de usuario vacío y una contraseña vacía, el servicio CDC de Oracle conectará con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la autenticación de Windows.  
   
- **Nota**: Los parámetros que contienen espacios o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
+ **Nota**: Los parámetros que contienen espacios en blanco o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
   
 ###  <a name="BKMK_create"></a> Crear  
  Use `Create` para crear un servicio CDC de Oracle desde un script. El comando debe ser ejecutado por un administrador del equipo. A continuación se muestra un ejemplo del comando `Create` :  
@@ -243,7 +243,7 @@ ms.locfileid: "58394418"
   
  **sql-username**y **sql-password** son el nombre de cuenta y la contraseña de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usados para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si ambos parámetros están vacíos, el servicio CDC para Oracle conectará con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la autenticación de Windows.  
   
- **Nota**: Los parámetros que contienen espacios o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
+ **Nota**: Los parámetros que contienen espacios en blanco o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
   
 ###  <a name="BKMK_delete"></a> Delete  
  Use `Delete` para eliminar correctamente el servicio CDC de Oracle desde un script. Este comando debe ser ejecutado por un administrador del equipo. A continuación se muestra un ejemplo del comando `Delete` .  
@@ -258,10 +258,8 @@ ms.locfileid: "58394418"
   
  **cdc-service-name** es el nombre del servicio CDC que se va a eliminar.  
   
- **Nota**: Los parámetros que contienen espacios o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
+ **Nota**: Los parámetros que contienen espacios en blanco o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
   
 ## <a name="see-also"></a>Vea también  
  [Cómo usar la interfaz de línea de comandos del servicio CDC](how-to-use-the-cdc-service-command-line-interface.md)   
  [Cómo preparar SQL Server para CDC](prepare-sql-server-for-cdc.md)  
-  
-  

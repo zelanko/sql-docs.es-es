@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ca750b483aee088a6997f9f0b1beac6d15b0d9df
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: d049833897685b7998fc1168ec09398860df233b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509872"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657750"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -43,7 +43,7 @@ ms.locfileid: "58509872"
 |resource_class|**nvarchar(20)**|La clase de recursos para esta solicitud. Consulte el artículo relacionado **concurrency_slots_used** en [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Para obtener más información sobre las clases de recursos, consulte [administración de recursos de las clases de & carga de trabajo](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Clases de recursos estáticos</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Clases de recursos dinámicos</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |importancia (versión preliminar de SQL DW Gen2)|**nvarchar(32)**|La importancia de la configuración de la solicitud se envió con. Las solicitudes con una importancia menor permanecerán en cola en estado suspendido, si se envían solicitudes mayor importancia.  Las solicitudes con mayor importancia se ejecutarán antes de menor importancia las solicitudes enviadas anteriormente.  Para obtener más información sobre la importancia, consulte [importancia de la carga de trabajo](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>normal (predeterminado)</br>above_normal</br>high|
   
- Para obtener información sobre el número máximo de filas retenidas por esta vista, consulte la sección de metadatos en el [límites de capacidad](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) tema.   
+ Para obtener información sobre el número máximo de filas retenidas por esta vista, consulte la sección de metadatos en el [límites de capacidad](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) tema.   
   
 ## <a name="permissions"></a>Permisos
 

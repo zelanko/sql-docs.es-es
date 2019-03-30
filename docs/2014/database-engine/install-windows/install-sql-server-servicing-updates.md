@@ -10,12 +10,12 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 823967123c459112c77fb460eb10b011895110e8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374558"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657849"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>Instalar actualizaciones de servicio de SQL Server 2014
   Este tema proporciona información acerca de cómo instalar actualizaciones para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esta sección proporciona información acerca de lo siguiente:  
@@ -46,7 +46,7 @@ ms.locfileid: "53374558"
   
 ## <a name="see-also"></a>Vea también  
  [Instalar SQL Server 2014 desde el Asistente para instalación &#40;el programa de instalación&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
- [Agregar características a una instancia de SQL Server 2014 &#40;el programa de instalación&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
+ [Instalar actualizaciones desde el símbolo del sistema](installing-updates-from-the-command-prompt.md) [agregar características a una instancia de SQL Server 2014 &#40;el programa de instalación&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
  [Anular una instalación de SQL Server 2014](repair-a-failed-sql-server-installation.md)  
   
   

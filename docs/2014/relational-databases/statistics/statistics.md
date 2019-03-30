@@ -23,12 +23,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9ce37ee013e8424079e9d2e526ccdbeacfb5544b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367147"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658239"
 ---
 # <a name="statistics"></a>Estadísticas
   El optimizador de consultas utiliza las estadísticas para crear planes de consulta que mejoren el rendimiento de las consultas. Para la mayoría de las consultas, el optimizador de consultas genera ya las estadísticas necesarias para un plan de consulta de alta calidad; en algunos casos, para obtener los mejores resultados, necesita crear estadísticas adicionales o modificar el diseño de la consulta. En este tema se explican los conceptos de estadísticas y se proporcionan directrices para usar las estadística de optimización de consultas de forma eficaz.  
@@ -105,8 +105,6 @@ ORDER BY s.name;
 |-|  
 |**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#Top)  
-  
 ##  <a name="CreateStatistics"></a> Cuándo crear las estadísticas  
  El optimizador de consultas crea ya las estadísticas de las maneras siguientes:  
   
@@ -154,7 +152,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>La consulta realiza la selección entre un subconjunto de datos  
  Cuando el optimizador de consultas crea las estadísticas para las columnas únicas e índices, crea las estadísticas para los valores de todas las filas. Cuando las consultas realizan la selección de entre un subconjunto de filas, y ese subconjunto de filas tiene una distribución de datos única, las estadísticas filtradas pueden mejorar los planes de consulta. Puede crear estadísticas filtradas utilizando la instrucción CREATE STATISTICS con la cláusula WHERE para definir la expresión del predicado de filtro.  
   
- Por ejemplo, mediante [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada producto en la tabla Production.Product pertenece a una de las cuatro categorías de la tabla Production.ProductCategory: Bicicletas, componentes, ropa y accesorios. Cada una de las categorías tiene una distribución de datos diferente en función del peso: el peso de las bicicletas (bikes) va de 13,77 a 30,0, el de los componentes (components) de 2,12 a 1050,00 con algunos valores NULL, todos los pesos de la ropa (clothing) son NULL, lo mismo que los de los accesorios (accessories).  
+ Por ejemplo, mediante [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], cada producto en la tabla Production.Product pertenece a una de las cuatro categorías de la tabla Production.ProductCategory: Bikes, Components, Clothing y Accessories. Cada una de las categorías tiene una distribución de datos diferente en función del peso: el peso de las bicicletas (bikes) va de 13,77 a 30,0, el de los componentes (components) de 2,12 a 1050,00 con algunos valores NULL, todos los pesos de la ropa (clothing) son NULL, lo mismo que los de los accesorios (accessories).  
   
  Utilizando las bicicletas (Bikes) como un ejemplo, las estadísticas filtradas en todo los pesos de bicicleta proporcionarán estadísticas más precisas al optimizador de consultas y podrán mejorar la calidad del plan de consulta en comparación con las estadísticas de tabla completa o las estadísticas no existentes en la columna Weight. La columna de peso de bicicleta es una buena candidata para las estadísticas filtradas, pero no necesariamente para un índice filtrado si el número de búsquedas de peso es relativamente pequeño. La ganancia de rendimiento para las búsquedas que proporciona un índice filtrado no podría ser mayor que el mantenimiento adicional y el costo de almacenamiento de agregar un índice filtrado a la base de datos.  
   
@@ -197,8 +195,6 @@ GO
   
  Debido a que las estadísticas temporales se almacenan en `tempdb`, el reinicio del servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provoca que desaparezcan todas las estadísticas temporales.  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#Top)  
-  
 ##  <a name="UpdateStatistics"></a> Cuándo actualizar las estadísticas  
  El optimizador de consultas determina cuándo las estadísticas podrían estar desusadas y, a continuación, las actualiza cuando es necesario para un plan de consulta. En algunos casos puede mejorar el plan de consulta y, por consiguiente, mejorar el rendimiento de la consulta, actualizando las estadísticas con más frecuencia que la que se produce cuando está activada AUTO_UPDATE_STATISTICS. Puede actualizar las estadísticas con la instrucción UPDATE STATISTICS o con el procedimiento almacenado sp_updatestats.  
   
@@ -228,8 +224,6 @@ GO
  Considere la actualización de las estadísticas después de haber realizado procedimientos de mantenimiento que cambian la distribución de los datos, como truncar una tabla o realizar una inserción masiva de un porcentaje grande de las filas. Esto puede evitar los retrasos futuros en el procesamiento de la consulta, mientras las consultas esperan las actualizaciones automáticas de las estadísticas.  
   
  Otras operaciones, como regenerar, desfragmentar o reorganizar un índice, no cambian la distribución de los datos. Por consiguiente, no necesita actualizar las estadísticas después de realizar las operaciones ALTER INDEX REBUILD, DBCC REINDEX, DBCC INDEXDEFRAG o ALTER INDEX REORGANIZE. El optimizador de consultas actualiza las estadísticas cuando regenera un índice en una tabla o vista con ALTER INDEX REBUILD o DBCC DBREINDEX, sin embargo; esta actualización de las estadísticas es un subproducto de la recreación del índice. El optimizador de consultas no actualiza las estadísticas después de las operaciones DBCC INDEXDEFRAG o ALTER INDEX REORGANIZE.  
-  
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#Top)  
   
 ##  <a name="DesignStatistics"></a> Consultas que usan eficazmente las estadísticas  
  Algunas implementaciones de consulta, como las variables locales y las expresiones complejas en el predicado de consulta, pueden conducir a planes de consulta que no son óptimos. Las siguientes instrucciones de diseño de consulta para el uso eficaz de las estadísticas pueden evitarlo. Para obtener más información sobre los predicados de consulta, vea [Condición de búsqueda &#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql).  
@@ -328,8 +322,6 @@ GO
 ### <a name="improving-cardinality-estimates-with-plan-guides"></a>Mejorar las estimaciones de cardinalidad con guías de plan  
  En algunas aplicaciones, podrían no aplicarse las instrucciones de diseño de consulta, porque no puede cambiar la consulta o porque usar la sugerencia de consulta RECOMPILE podría ser la causa de demasiadas recompilaciones. Puede utilizar las guías de plan para especificar otras sugerencias, como USE PLAN, para controlar el comportamiento de la consulta mientras investiga los cambios de la aplicación con el proveedor de la aplicación. Para obtener más información acerca de las guías de plan, vea [Plan Guides](../performance/plan-guides.md).  
   
- ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#Top)  
-  
 ## <a name="see-also"></a>Vea también  
  [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
@@ -340,5 +332,3 @@ GO
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [Crear índices filtrados](../indexes/create-filtered-indexes.md)  
-  
-  

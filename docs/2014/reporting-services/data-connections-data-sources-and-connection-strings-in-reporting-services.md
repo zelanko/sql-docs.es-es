@@ -20,12 +20,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da5fb3c4c5dec240a9148772c95bb357f981db1e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3323683075b99ce2ab8cbcb456240bc24323762f
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291775"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658128"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   Para incluir datos en un informe de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , es preciso que antes cree *orígenes de datos* y *conjuntos de datos*. En este tema, se describe el tipo de orígenes de datos y cómo crear orígenes de datos, además se ofrece información importante relacionada con las credenciales de los orígenes de datos. Un origen de datos incluye el tipo de origen de datos, la información de conexión y el tipo de credenciales que se han de usar. Hay dos tipos de orígenes de datos: incrustados y compartidos. Un origen de datos incrustado se define en el informe y se usa solo en ese informe. Un origen de datos compartido se define independientemente de un informe y se puede usar en varios informes. Para obtener más información, vea [Conexiones de datos u orígenes de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) y [Conjuntos de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -86,7 +86,7 @@ ms.locfileid: "56291775"
   
 -   **Tipo de origen de datos** Tipo de conexión, por ejemplo, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Elija este valor en la lista desplegable de tipos de conexión.  
   
--   **Información de conexión** La información de conexión incluye el nombre y la ubicación del origen de datos y las propiedades de conexión específicas de cada proveedor de datos. La *cadena de conexión* es la representación en texto de la información de conexión. Por ejemplo, si el origen de datos es una base de datos de SQL Server, puede especificar el nombre de la base de datos. Para los orígenes de datos incrustados, también puede escribir cadenas de conexión basadas en expresiones que se evalúan en tiempo de ejecución. Para obtener más información, vea [Cadenas de conexión basadas en expresiones](#Expressions) más adelante en este tema.  
+-   **Información de conexión** La información de conexión incluye el nombre y la ubicación del origen de datos y las propiedades de conexión específicas de cada proveedor de datos. La *cadena de conexión* es la representación en texto de la información de conexión. Por ejemplo, si el origen de datos es una base de datos de SQL Server, puede especificar el nombre de la base de datos. Para los orígenes de datos incrustados, también puede escribir cadenas de conexión basadas en expresiones que se evalúan en tiempo de ejecución. Para obtener más información, vea [Cadenas de conexión basadas en expresiones](#bkmk_Expressions_in_connection_strings) más adelante en este tema.  
   
 -   **Credenciales** Proporcione las credenciales necesarias para tener acceso a los datos. El propietario del origen de datos debe haberle concedido los permisos apropiados para tener acceso al origen de datos y a los datos específicos del origen de datos. Por ejemplo, para conectar con la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] instalada en un servidor de la red, debe tener permiso para conectar con el servidor así como permiso de solo lectura para tener acceso a la base de datos.  
   
@@ -185,5 +185,3 @@ ms.locfileid: "56291775"
  [Establecer propiedades de implementación &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
-  

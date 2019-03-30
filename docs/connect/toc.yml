@@ -5345,7 +5345,7 @@ items:
     - name: Tutorial de instalación de controladores de PHP en Linux y Mac
       href: ../connect/php/installation-tutorial-linux-mac.md
     - name: Notas de la versión
-      href: ../connect/php/release-notes-for-the-php-sql-driver.md
+      href: ../connect/php/release-notes-php-sql-driver.md
     - name: Recursos de soporte
       href: ../connect/php/support-resources-for-the-php-sql-driver.md
     - name: Sobre los ejemplos de código
@@ -7649,9 +7649,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: Glosario de términos de ADO
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: f55c9266746f452d2592d7d0ded5993ebb4fab80
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: ac6634fdea120f7c047f7b4ef8f532865e9e59c4
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566644"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645607"

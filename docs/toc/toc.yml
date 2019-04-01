@@ -905,6 +905,8 @@ items:
           href: ../database-engine/database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md
         - name: Pausar o reanudar
           href: ../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md
+        - name: Establecer una sesión
+          href: ../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md
         - name: Conectar los clientes
           href: ../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md
         - name: Umbrales de advertencia de rendimiento
@@ -4123,6 +4125,8 @@ items:
       href: ../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md
     - name: Habilitar la opción de bloqueo de páginas en memoria
       href: ../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md
+    - name: Grupo de búferes híbrido
+      href: ../database-engine/configure-windows/hybrid-buffer-pool.md
     - name: Cambiar el modo de autenticación del servidor
       href: ../database-engine/configure-windows/change-server-authentication-mode.md
     - name: servicio del objeto de escritura de SQL
@@ -6978,6 +6982,8 @@ items:
           href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
         - name: Base de datos de ejemplo para OLTP en memoria
           href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
+        - name: Hardware para OLTP en memoria
+          href: ../relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
       - name: Tablas con optimización para memoria
         href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
         items:
@@ -7950,6 +7956,8 @@ items:
         href: ../relational-databases/security/strong-passwords.md
       - name: Seguridad de nivel de fila
         href: ../relational-databases/security/row-level-security.md
+      - name: Enmascaramiento dinámico de datos
+        href: ../relational-databases/security/dynamic-data-masking.md
       - name: Enmascaramiento estático de datos
         href: ../relational-databases/security/static-data-masking.md
       - name: Certificados y claves asimétricas
@@ -15281,6 +15289,8 @@ items:
         href: ../t-sql/data-types/constants-transact-sql.md
       - name: Conversión
         href: ../t-sql/data-types/data-type-conversion-database-engine.md
+      - name: Conversión no determinista
+        href: ../t-sql/data-types/nondeterministic-convert-date-literals.md
       - name: Prioridad
         href: ../t-sql/data-types/data-type-precedence-transact-sql.md
       - name: Sinónimos
@@ -16555,6 +16565,8 @@ items:
           href: ../t-sql/statements/restore-statements-labelonly-transact-sql.md
         - name: RESTORE MASTER KEY
           href: ../t-sql/statements/restore-master-key-transact-sql.md
+        - name: RESTORE SERVICE MASTER KEY
+          href: ../t-sql/statements/restore-service-master-key-transact-sql.md
         - name: RESTORE REWINDONLY
           href: ../t-sql/statements/restore-statements-rewindonly-transact-sql.md
         - name: RESTORE VERIFYONLY
@@ -17245,9 +17257,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Controlar espacios de nombres en XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: a94ce2e407a2a01759189d0a1892847477961d94
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 0683d445dc2cdfd5df37354a7922774433bab8b0
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618332"
+ms.locfileid: "58658499"

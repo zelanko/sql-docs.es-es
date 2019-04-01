@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b7a27d9358d6f7f5719aaf1fea1fb292b2db1af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a038d146b21660e629c7ba7e44332aa6d2133a2c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545287"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658169"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Resistencia de conexión en el controlador Windows ODBC
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52545287"
 > [!IMPORTANT]  
 >  La característica de resistencia de conexión es compatible con versiones de bases de datos SQL de Microsoft Azure y SQL Server 2014 (y posterior).  
   
- Para obtener más información sobre la resistencia de conexión inactiva, vea [el artículo técnico sobre esta característica](https://go.microsoft.com/fwlink/?LinkId=393996).  
+ Para obtener más información sobre la resistencia de conexión inactiva, vea [el artículo técnico sobre esta característica](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Idle%20Connection%20Resiliency.docx).
   
  Para controlar el comportamiento de reconexión, ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Windows, tiene dos opciones:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "52545287"
   
 -   Intervalo de reintentos de conexión.  
   
-     La opción de intervalo de reintentos de conexión especifica el número de segundos entre cada reintento de conexión. Los valores válidos son: El tiempo total para volver a realizar la reconexión no puede superar el de espera de conexión (SQL_ATTR_QUERY_TIMEOUT en SQLSetStmtAttr). El valor predeterminado es 10 segundos.  
+     La opción de intervalo de reintentos de conexión especifica el número de segundos entre cada reintento de conexión. Los valores válidos oscilan entre 1 y 60. El tiempo total para volver a realizar la reconexión no puede superar el de espera de conexión (SQL_ATTR_QUERY_TIMEOUT en SQLSetStmtAttr). El valor predeterminado es 10 segundos.  
   
      Puede modificar el intervalo de reintentos de conexión:  
   
@@ -173,7 +173,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Microsoft ODBC Driver for SQL Server en Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

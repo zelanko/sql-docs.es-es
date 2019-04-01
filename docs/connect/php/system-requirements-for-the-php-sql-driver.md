@@ -13,12 +13,12 @@ ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2347dc6f1d18afb4f26dc137a1158ceb53663050
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: d53a3233d2e2af6aa9806cdea06b2a203e31bf89
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744515"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658419"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ Para obtener información sobre cómo descargar e instalar los archivos binarios
 
 -   En el directorio de extensión PHP debe haber una versión del archivo de controlador. Consulte [las versiones del controlador](#driver-versions) para obtener información acerca de los archivos de controlador diferente.  Para descargar los controladores, vea [Download the Microsoft Drivers for PHP for SQL Server](../../connect/php/download-drivers-php-sql-server.md) (Descargar los controladores de Microsoft para PHP para SQL Server). Para obtener información sobre cómo configurar el controlador para el runtime PHP, vea [Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md) (Cargar los controladores de Microsoft para PHP para SQL Server).
 
--   Se requiere un servidor web. El servidor web debe estar configurado para ejecutar PHP. Para obtener información sobre cómo hospedar aplicaciones PHP con IIS, vea el [tutorial en el sitio web de PHP](https://php.net/manual/fa/install.windows.iis.php).  
+-   Se requiere un servidor web. El servidor web debe estar configurado para ejecutar PHP. Para obtener información sobre cómo hospedar aplicaciones PHP con IIS, vea el [tutorial en el sitio web de PHP](http://docs.php.net/manual/da/install.windows.iis7.php).
 
     Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] se han probado utilizando IIS 10 con FastCGI.  
 

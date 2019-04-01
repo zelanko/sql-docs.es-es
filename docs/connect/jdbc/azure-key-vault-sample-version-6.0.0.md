@@ -1,22 +1,21 @@
 ---
 title: Ejemplo de versión 6.0.0 el almacén de claves de Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/01/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0176ff43bd56210c7a88c9140a9924e9d91b623a
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: 3d17442d8a05c76ed3c3b08dc24aa54d70a08066
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736856"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566454"
 ---
 # <a name="azure-key-vault-sample-version-600"></a>Versión de ejemplo de Azure Key Vault 6.0.0
 
@@ -229,5 +228,5 @@ public class AKV_600 {
 
 ## <a name="see-also"></a>Consulte también
 
-[Azure Key Vault ejemplo versión 7.0.0](../../connect/jdbc/azure-key-vault-sample.md)
-[Azure Key Vault 6.2.2 de versión de ejemplo](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
+[Versión de ejemplo de Azure Key Vault 7.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
+[Versión de ejemplo de Azure Key Vault 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)

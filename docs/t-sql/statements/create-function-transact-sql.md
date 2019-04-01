@@ -334,7 +334,7 @@ Es un valor predeterminado para el parámetro. Si se define un valor *default*, 
   
  En las TVF insertadas, el valor devuelto de TABLE se define mediante una única instrucción SELECT. Las funciones insertadas no tienen variables devueltas asociadas.  
   
- <a name="mstvf"></a> En las MSTVF, @*return_variable* es una variable de TABLE, que se usa para almacenar y acumular las filas que se deben devolver como valor de la función. @ *return_variable* solamente se puede especificar para funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], no para funciones CLR.  
+ <a name="mstvf"></a> En las MSTVF, @ *return_variable* es una variable de TABLE, que se usa para almacenar y acumular las filas que se deben devolver como valor de la función. @ *return_variable* solamente se puede especificar para funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], no para funciones CLR.  
   
  *select_stmt*  
  Es la instrucción SELECT individual que define el valor devuelto de una función insertada con valores de tabla (TVF).  
@@ -367,7 +367,7 @@ En un ejemplo típico de MyFood.DLL, en el que todos los tipos están en el espa
 > [!NOTE]  
 > Esta opción no está disponible en las bases de datos independientes.  
   
- *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Define el tipo de datos de tabla de una función [!INCLUDE[tsql](../../includes/tsql-md.md)]. La declaración de tabla incluye definiciones de columna y restricciones de columna o de tabla. La tabla se coloca siempre en el grupo de archivos principal.  
+ *\<* table_type_definition *>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) Define el tipo de datos de tabla de una función [!INCLUDE[tsql](../../includes/tsql-md.md)]. La declaración de tabla incluye definiciones de columna y restricciones de columna o de tabla. La tabla se coloca siempre en el grupo de archivos principal.  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
  **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([versión preliminar en algunas regiones](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  

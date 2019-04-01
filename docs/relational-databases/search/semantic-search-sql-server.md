@@ -31,7 +31,7 @@ La búsqueda semántica estadística proporciona una visión general amplia de l
   
  En los ejemplos siguientes se demuestran las capacidades de la búsqueda semántica. Al mismo tiempo, estos ejemplos muestran las tres funciones de conjunto de filas de Transact-SQL que se utilizan para consultar los índices semánticos y recuperar los resultados como datos estructurados.  
   
-###  <a name="find1"></a> Find the key phrases in a document  
+###  <a name="find1"></a> Buscar las frases clave en un documento  
  La consulta siguiente obtiene las frases clave que se identificaron en el documento de ejemplo. Muestra los resultados en orden descendente por la puntuación que clasifica la importancia estadística de cada frase clave.
  
  Esta consulta llama a la función [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md).  
@@ -69,7 +69,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Find the key phrases that make documents similar or related  
+###  <a name="find3"></a> Buscar las frases clave que hacen los documentos similares o relacionados  
  La consulta siguiente obtiene las frases clave que hacen a los dos documentos de ejemplo similares o relacionados entre sí. Muestra los resultados en orden descendente por la puntuación que clasifica el peso de cada frase clave.
  
  Esta consulta llama a la función [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b615f54cc13f432500710a616e995cdffc0c85c8
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: baa1f607e9bdce0dfedc989125e5d29111d44f93
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256510"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511612"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Denegar permisos en una colección de esquemas XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>b. Denegar permisos en una colección de esquemas XML  
+### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>B. Denegar permisos en una colección de esquemas XML  
  El ejemplo siguiente muestra cómo se puede denegar a un inicio de sesión un permiso específico en una colección de esquemas XML existente. En este ejemplo, se deniega el permiso REFERENCES a un inicio de sesión de prueba para una colección de esquemas XML existente.  
   
  El ejemplo crea un usuario, `TestLogin1`, y una base de datos. Además del esquema `dbo` , también se crea un esquema relacional en la base de datos. Inicialmente, el permiso `CREATE XML SCHEMA` permite al usuario crear una colección de esquemas en cualquier lugar de la base de datos.  

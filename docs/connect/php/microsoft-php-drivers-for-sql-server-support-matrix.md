@@ -1,33 +1,35 @@
 ---
 title: Matriz de compatibilidad de controladores de Microsoft para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
-ms.author: v-daveng
+ms.author: genemi
 manager: ''
-ms.openlocfilehash: ec5a151d79d9a66bfd65342336ad7aa3afcf567d
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: 0790d2cc0497ef2912f96cd4679e4541fc9b2262
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744405"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645507"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Controladores de Microsoft para PHP para SQL Server Support Matrix
+
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-  Esta página contiene la matriz de compatibilidad y la directiva de ciclo de vida de soporte técnico de los controladores de Microsoft para PHP para SQL Server.
+Esta página contiene la matriz de compatibilidad y la directiva de ciclo de vida de soporte técnico de los controladores de Microsoft para PHP para SQL Server.
 
 ## <a name="microsoft-php-drivers-support-lifecycle-matrix-and-policy"></a>Matriz de ciclo de vida de compatibilidad de controladores de Microsoft para PHP y la directiva
- La directiva de ciclo de vida de soporte de Microsoft (MSL) proporciona información transparente y predecible sobre el ciclo de vida de soporte de productos de Microsoft. Las versiones 3.x, 4.x y 5.x de los controladores PHP incluyen cinco años de soporte técnico estándar del controlador a partir de la fecha de publicación. El soporte estándar se define en el [sitio web del ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle).
 
- Las opciones de soporte técnico extendido y personalizado no están disponibles para controladores de Microsoft para PHP.
+La directiva de ciclo de vida de soporte de Microsoft (MSL) proporciona información transparente y predecible sobre el ciclo de vida de soporte de productos de Microsoft. Las versiones 3.x, 4.x y 5.x de los controladores PHP incluyen cinco años de soporte técnico estándar del controlador a partir de la fecha de publicación. El soporte estándar se define en el [sitio web del ciclo de vida de soporte técnico de Microsoft](https://support.microsoft.com/lifecycle).
 
- Se admiten los siguientes controladores de Microsoft para PHP hasta la fecha indicada de finalización del soporte técnico.
+Las opciones de soporte técnico extendido y personalizado no están disponibles para controladores de Microsoft para PHP.
+
+Se admiten los siguientes controladores de Microsoft para PHP hasta la fecha indicada de finalización del soporte técnico.
 
 |Nombre del controlador|Versión del paquete de controladores|Finalización de soporte técnico|
 |-|:-:|-|
@@ -38,14 +40,16 @@ ms.locfileid: "56744405"
 |Microsoft PHP Driver 4.0 for SQL Server|4.0|11 de julio de 2021|
 |3.2 de controladores de Microsoft para PHP para SQL Server|3.2|9 de marzo de 2020|
 |3.1 de controladores de Microsoft para PHP para SQL Server|3.1|12 de diciembre de 2019|
+| &nbsp; | &nbsp; | &nbsp; |
 
- Ya no se admiten los siguientes controladores de Microsoft para PHP.
+Ya no se admiten los siguientes controladores de Microsoft para PHP.
 
 |Nombre del controlador|Versión del paquete de controladores|Finalización de soporte técnico|
 |-|:-:|-|
 |Controladores 3.0 de Microsoft para PHP para SQL Server|3.0|6 de marzo de 2017|
 |Controladores de Microsoft para PHP 2.0 para SQL Server|2.0|10 de agosto de 2015|
 |Controladores de Microsoft para PHP 1.0 para SQL Server|1,0|28 de abril de 2014|
+| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-version-certified-compatibility"></a>Certificada de compatibilidad de versión de SQL Server
  La siguiente matriz enumera las versiones de SQL Server que se han probado y certificadas como compatibles con la versión del controlador correspondiente. Nos esforzamos por mantener la compatibilidad con versiones anteriores del controlador, pero solo el controlador más reciente compatible con se prueban y se certifican con nuevas versiones de SQL Server como SQL Server se libera.
@@ -60,9 +64,11 @@ ms.locfileid: "56744405"
 |SQL Server 2012         |S|S|S|S|S|S|S|S| |
 |SQL Server 2008 R2      |S|S|S|S|S|S|S|S|S|
 |SQL Server 2008         | | | | |S|S|S|S|S|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="php-version-support"></a>Compatibilidad de versiones de PHP
- Se admiten las siguientes versiones de PHP con la versión de la lista de los controladores de PHP de Microsoft:
+
+Se admiten las siguientes versiones de PHP con la versión de la lista de los controladores de PHP de Microsoft:
 
 |PHP para la versión del controlador de SQL Server&#8594;<br />&#8595; versión de PHP|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |:---:|---|---|---|---|---|---|---|---|---|
@@ -75,11 +81,13 @@ ms.locfileid: "56744405"
 |5.4|                |                |                |       |       |5.4.32  |5.4.32  |5.4.32  |        |
 |5.3|                |                |                |       |       |        |        |5.3.0   |5.3.0   |
 |5.2|                |                |                |       |       |        |        |        |5.2.4<br />5.2.13|
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 1. Versiones 7.2.1 y más adelante se admiten en Windows, mientras que las versiones 7.2.0 y versiones posteriores se admiten en Linux y macOS.
 
 ## <a name="supported-operating-systems"></a>Sistemas operativos admitidos
- Las siguientes versiones de sistema operativo Windows son compatibles con la versión de la lista de los controladores de PHP de Microsoft:
+
+Las siguientes versiones de sistema operativo Windows son compatibles con la versión de la lista de los controladores de PHP de Microsoft:
 
 |PHP para la versión del controlador de SQL Server&#8594;<br />&#8595; sistema operativo|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -97,8 +105,9 @@ ms.locfileid: "56744405"
 |Windows 7 SP1                       |   |   |   |   |S  |S  |S  |S  |   |
 |Windows Vista SP2                   |   |   |   |   |S  |S  |S  |S  |S  |
 |Windows XP SP3                      |   |   |   |   |   |   |   |   |S  |
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
- Los siguientes Linux y Mac (solo 64 bits) de versiones de sistema operativo son compatibles con la versión de la lista de los controladores de PHP de Microsoft:
+Los siguientes Linux y Mac (solo 64 bits) de versiones de sistema operativo son compatibles con la versión de la lista de los controladores de PHP de Microsoft:
 
 |PHP para la versión del controlador de SQL Server&#8594;<br />&#8595; sistema operativo|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -117,9 +126,11 @@ ms.locfileid: "56744405"
 |macOS High Sierra (64 bits)          |S  |S  |   |   |   |   |   |   |   |
 |macOS Sierra (64 bits)               |S  |S  |S  |S  |   |   |   |   |   |
 |macOS El capitán (64 bits)           |   |S  |S  |S  |   |   |   |   |   |
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>Consulte también  
-[Notas de la versión](../../connect/php/release-notes-for-the-php-sql-driver.md)
+## <a name="see-also"></a>Consulte también
+
+[Notas de la versión](../../connect/php/release-notes-php-sql-driver.md)
 
 [Recursos de soporte técnico](../../connect/php/support-resources-for-the-php-sql-driver.md)
 

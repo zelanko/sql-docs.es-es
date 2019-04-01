@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3d911c26eee5893d6817fe98b7a982e2ce25316f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 185c03ef5c5ffdd35a1d32df6fecb29568d5ab82
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133215"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657809"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "54133215"
   
 -   [Autenticación de Windows integrada con protección ampliada](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Asesor de seguridad de Microsoft (973811), protección ampliada para la autenticación](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Asesor de seguridad de Microsoft (973811), protección ampliada para la autenticación](/security-updates/SecurityAdvisories/2009/973811)
   
 ## <a name="settings"></a>Configuración  
  Hay tres opciones de configuración de la conexión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que afectan al enlace de servicio y al enlace de canal. Las opciones se pueden configurar utilizando el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o WMI, y se pueden ver mediante la faceta **Configuración del protocolo del servidor** de la administración basada en directivas.  

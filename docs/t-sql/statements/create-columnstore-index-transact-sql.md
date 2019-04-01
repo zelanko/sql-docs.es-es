@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c25ae621c281e0bafd3c2c7e683a05cfc55746b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 15688c3767b691e8a59568143db390eb82dd3993
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128375"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658429"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -287,7 +287,7 @@ Crea el índice especificado en el grupo de archivos predeterminado.
   
 El término predeterminado (default), en este contexto, no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON **"** default **"** u ON **[** default **]**. Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
 ##  <a name="GenRemarks"></a> Notas generales  
@@ -383,7 +383,7 @@ Si la tabla subyacente tiene una columna con un tipo de datos no admitido para l
  **Los índices de almacén de columnas no se pueden combinar con las siguientes características:**  
 -   Columnas calculadas A partir de SQL Server 2017, un índice clúster de almacén de columnas puede contener una columna calculada no persistente. Pero en SQL Server 2017, los índices clúster de almacén de columnas no pueden contener columnas calculadas persistentes y no se pueden crear índices no clúster en columnas calculadas. 
 -   Compresión de página y fila, y formato de almacenamiento **vardecimal** (un índice de almacén de columnas ya está comprimido en otro formato).  
--   REPLICATION  
+-   Replicación  
 -   Secuencia de archivos
 
 No puede usar cursores ni desencadenadores en una tabla con un índice clúster de almacén de columnas. Esta restricción no se aplica a los índices no clúster de almacén de columnas; puede usar cursores y desencadenadores en una tabla con un índice no clúster de almacén de columnas.
@@ -425,7 +425,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_Simple ON SimpleTable;
 GO  
 ```  
   
-### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>b. Convertir un índice clúster en un índice clúster de almacén de columnas con el mismo nombre.  
+### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>B. Convertir un índice clúster en un índice clúster de almacén de columnas con el mismo nombre.  
  En este ejemplo se crea la tabla con un índice clúster y después se muestra la sintaxis para convertir el índice clúster en un índice clúster de almacén de columnas. Esto cambia el almacenamiento de la tabla de un almacén de filas a un almacén de columnas.  
   
 ```sql  
@@ -614,7 +614,7 @@ ON SimpleTable
 GO  
 ```  
   
-### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>b. Crear un índice no clúster de almacén de columnas simple con todas las opciones  
+### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. Crear un índice no clúster de almacén de columnas simple con todas las opciones  
  En el ejemplo siguiente se muestra la sintaxis para crear un índice no clúster de almacén de columnas usando todas las opciones.  
   
 ```sql  
@@ -694,7 +694,7 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### <a name="b-rebuild-a-clustered-columnstore-index"></a>b. Volver a compilar un índice clúster de almacén de columnas  
+### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Volver a compilar un índice clúster de almacén de columnas  
  A partir del ejemplo anterior, en este ejemplo se usa CREATE CLUSTERED COLUMNSTORE INDEX para volver a compilar el índice clúster de almacén de columnas existente denominado cci_xDimProduct.  
   
 ```sql  
@@ -735,7 +735,7 @@ WITH ( DROP_EXISTING = ON);
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. Volver a convertir una tabla de almacén de columnas en un montón de almacén de filas  
- Use [DROP INDEX (SQL Server PDW)](https://msdn.microsoft.com/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) para quitar el índice clúster de almacén de columnas y convertir la tabla en un montón de almacén de filas. En este ejemplo se convierte la tabla cci_xDimProduct en un montón de almacén de filas. La tabla se sigue distribuyendo, pero se almacena como un montón.  
+ Use [DROP INDEX (SQL Server PDW)](drop-index-transact-sql.md) para quitar el índice clúster de almacén de columnas y convertir la tabla en un montón de almacén de filas. En este ejemplo se convierte la tabla cci_xDimProduct en un montón de almacén de filas. La tabla se sigue distribuyendo, pero se almacena como un montón.  
   
 ```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  

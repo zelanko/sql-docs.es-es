@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b9ae80895fa2cfd316e455e5084e5c1330365a62
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: b584c7fc3ffee49bf2d63fd95c8a8e23f0b09013
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504300"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657693"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Cmdlets de PowerShell para el modo de SharePoint de Reporting Services
 
@@ -34,7 +34,7 @@ Al instalar SQL Server 2016 Reporting Services en modo de SharePoint, se instala
 
 ## <a name="cmdlet-summary"></a>Resumen de los cmdlets
 
- Para ejecutar los cmdlets es necesario abrir el Shell de administración de SharePoint. También puede usar el editor de la interfaz gráfica de usuario incluido en Microsoft Windows, **Entorno de scripting integrado (ISE) de Windows PowerShell**. Para más información, vea [Starting Windows PowerShell on Windows Server](https://technet.microsoft.com/library/hh847814.aspx). En los resúmenes de cmdlet siguientes, las referencias a la aplicación de servicio "databases" se aplican a todas las bases de datos creadas y usadas por una aplicación de servicio de Reporting Services. Esto incluye la configuración, la creación de alertas y las bases de datos temporales.  
+ Para ejecutar los cmdlets es necesario abrir el Shell de administración de SharePoint. También puede usar el editor de la interfaz gráfica de usuario incluido en Microsoft Windows, **Entorno de scripting integrado (ISE) de Windows PowerShell**. Para más información, vea [Starting Windows PowerShell on Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). En los resúmenes de cmdlet siguientes, las referencias a la aplicación de servicio "databases" se aplican a todas las bases de datos creadas y usadas por una aplicación de servicio de Reporting Services. Esto incluye la configuración, la creación de alertas y las bases de datos temporales.  
   
  Si ve un mensaje de error similar al siguiente al escribir los ejemplos de PowerShell:  
   
@@ -94,7 +94,7 @@ Al instalar SQL Server 2016 Reporting Services en modo de SharePoint, se instala
 |Mount-SPRSDatabase|Monta bases de datos para una aplicación de servicio de Reporting Services.|  
 |New-SPRSDatabase|Crea nuevas bases de datos de la aplicación de servicio para la aplicación de servicio de Reporting Services especificada.|  
 |Get-SPRSDatabaseCreationScript|Envía el script de creación de base de datos a la pantalla de una aplicación de servicio de Reporting Services. Este script se puede ejecutar a continuación en SQL Server Management Studio.|  
-|Get-SPRSDatabase|Obtiene una o más bases de datos de aplicación de servicio de Reporting Services. Use el comando para obtener el identificador de la base de datos de la aplicación del servicio de forma que pueda usar el cmdlet Set-SPRSDatabase para modificar las propiedades, por ejemplo `querytimeout`. Vea el ejemplo de este tema, [Obtener y establecer las propiedades de la base de datos de aplicación de Reporting Services](#bkmk_example_db_properties).|  
+|Get-SPRSDatabase|Obtiene una o más bases de datos de aplicación de servicio de Reporting Services. Use el comando para obtener el identificador de la base de datos de la aplicación del servicio de forma que pueda usar el cmdlet Set-SPRSDatabase para modificar las propiedades, por ejemplo `querytimeout`. Vea el ejemplo de este tema, [Obtener y establecer las propiedades de la base de datos de aplicación de Reporting Services](#get-and-set-properties-of-the-reporting-service-application-database).|  
 |Get-SPRSDatabaseRightsScript|Envía el script de derechos de base de datos a la pantalla de una aplicación de servicio de Reporting Services. Solicita el usuario y la base de datos, y luego devuelve Transact-SQL que se puede ejecutar para modificar los permisos. Este script se puede ejecutar a continuación en SQL Server Management Studio.|  
 |Get-SPRSDatabaseUpgradeScript|Muestra el script de actualización de bases de datos en la pantalla. El script actualiza las bases de datos de la aplicación de servicio de Reporting Services a la versión de base de datos de la instalación actual de Reporting Services.|  
   

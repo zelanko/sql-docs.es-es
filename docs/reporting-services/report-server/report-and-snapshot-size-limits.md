@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 582359e25e0eaec775deb1abbcb64af211d68350
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 2803e8d4ed2e0246c27dae775e864e81e10d91eb
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021819"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658139"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Límites de tamaño de informes e instantáneas
   Los responsables de administrar una implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pueden usar la información de este tema para conocer los límites de tamaño de los informes cuando se publican en un servidor de informes, cuando se representan en tiempo de ejecución y cuando se guardan en el sistema de archivos. En este tema también se incluyen directrices prácticas para medir el tamaño de una base de datos del servidor de informes y se describe cómo afecta el tamaño de las instantáneas al rendimiento del servidor.  
@@ -50,7 +50,7 @@ ms.locfileid: "50021819"
  Existen límites claros para el tamaño de un informe cuando se representa en formato Excel. Las hojas de cálculo no pueden tener más de 65536 filas o 256 columnas. Los demás formatos de representación no tienen estos límites, por lo que su tamaño solamente depende de la cantidad de recursos del servidor.  
   
 > [!NOTE]  
->  El procesamiento y la representación de los informes se producen en memoria. Si los informes son grandes o hay muchos usuarios, asegúrese de planear la capacidad de alguna manera para garantizar que la implementación del servidor de informes funciona en un grado que sea satisfactorio para los usuarios. Para obtener más información sobre herramientas e instrucciones, vea las publicaciones siguientes en MSDN: [Planning for Scalability and Performance with Reporting Services](https://go.microsoft.com/fwlink/?LinkID=70650) y [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
+>  El procesamiento y la representación de los informes se producen en memoria. Si los informes son grandes o hay muchos usuarios, asegúrese de planear la capacidad de alguna manera para garantizar que la implementación del servidor de informes funciona en un grado que sea satisfactorio para los usuarios. Para obtener más información sobre herramientas e instrucciones, vea las publicaciones siguientes en MSDN: [Planning for Scalability and Performance with Reporting Services](/previous-versions/sql/sql-server-2005/administrator/cc966418(v=technet.10)) y [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
 ## <a name="measuring-snapshot-storage"></a>Medir el almacenamiento de instantáneas  
  El tamaño de una instantánea es directamente proporcional a la cantidad de datos del informe. Las instantáneas suelen ser mucho mayores que otros elementos que se almacenan en un servidor de informes. El tamaño de una instantánea puede ser de algunos megabytes a decenas de megabytes. Si los informes son muy grandes, es de esperar que haya instantáneas incluso mayores. En función de la frecuencia con la que se utilicen las instantáneas y de cómo se haya configurado el historial de informes, la cantidad de espacio de disco que requiere la base de datos del servidor de informes puede crecer rápidamente en poco tiempo.  
@@ -77,7 +77,7 @@ EXEC sp_spaceused
   
  El número de instantáneas que se almacenan en una base de datos del servidor de informes no es de por sí un factor de rendimiento. Se pueden almacenar muchas instantáneas sin que el rendimiento del servidor se vea afectado. Las instantáneas se pueden conservar de manera indefinida. No obstante, debe tenerse en cuenta que el historial de informes es configurable. Si un administrador del servidor de informes reduce el límite del historial de informes, pueden perderse informes históricos que se pensaba conservar. Si se elimina el informe, se elimina también el historial.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Base de datos del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Procesar informes grandes](../../reporting-services/report-server/process-large-reports.md)  

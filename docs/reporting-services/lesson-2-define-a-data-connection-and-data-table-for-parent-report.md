@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 43cd64469ef5a1cf08b1c99e42ee5f6dd20ab85b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: c2daa3e5ab74a49e5d0e66bfd972cc4b4eff1663
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391728"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657799"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario
 Después de crear un proyecto de sitio Web nuevo con la plantilla de sitio Web ASP.NET para Visual C#, el paso siguiente consiste en crear una conexión de datos y una tabla de datos para el informe primario. En este tutorial, la conexión de datos se produce con la base de datos AdventureWorks2014.  
@@ -26,7 +26,7 @@ Después de crear un proyecto de sitio Web nuevo con la plantilla de sitio Web A
   
     De este modo, agrega un nuevo archivo XSD **DataSet1.xsd** al proyecto y abre el Diseñador de DataSet.  
   
-3.  En la ventana del Cuadro de herramientas, arrastre un control **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx.aspx)** hasta la superficie de diseño. De este modo, se inicia el Asistente para configuración de **TableAdapter** .  
+3.  En la ventana del Cuadro de herramientas, arrastre un control **[TableAdapter](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)** hasta la superficie de diseño. De este modo, se inicia el Asistente para configuración de **TableAdapter** .  
   
 4.  En la página **Elegir la conexión de datos** , haga clic en **Nueva conexión**.  
   

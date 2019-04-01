@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7745fd3b583a1044e670487570bdf97f3a85673f
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.openlocfilehash: 464ad33fd322226d68c79b364a72bd55de0d62b2
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434459"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657959"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Crear y almacenar claves maestras de columna (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Existen varias maneras de crear un certificado que sea una clave maestra de colu
 
 ### <a name="create-a-self-signed-certificate-using-powershell"></a>Crear un certificado autofirmado mediante PowerShell
 
-Use el cmdlet [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633.aspx) para crear un certificado autofirmado. En el siguiente ejemplo se muestra cómo generar un certificado que pueda usarse como una clave maestra de columna para Always Encrypted.
+Use el cmdlet [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) para crear un certificado autofirmado. En el siguiente ejemplo se muestra cómo generar un certificado que pueda usarse como una clave maestra de columna para Always Encrypted.
 
 ```
 # New-SelfSignedCertificate is a Windows PowerShell cmdlet that creates a self-signed certificate. The below examples show how to generate a certificate that can be used as a column master key for Always Encrypted.
@@ -94,7 +94,7 @@ Si la clave maestra de columna es un certificado almacenado en la ubicación del
 Si la clave maestra de columna es un certificado almacenado en la ubicación del almacén de certificados del *usuario actual* , necesita exportar el certificado con la clave privada e importarlo en la ubicación del almacén de certificados del usuario actual de todas las cuentas de usuario que ejecuten aplicaciones que está previsto que cifren o descifren datos almacenados en las columnas cifradas, o herramientas para configurar Always Encrypted y para administrar las claves Always Encrypted (en todos los equipos que contengan esas aplicaciones o herramientas). No se necesita ninguna configuración de permisos; después de iniciar sesión en el equipo, un usuario puede tener acceso a todos los certificados en su ubicación del almacén de certificados del usuario actual.
 
 #### <a name="using-powershell"></a>Usar PowerShell
-Use los cmdlets [Import-PfxCertificate](https://msdn.microsoft.com/library/hh848625.aspx) y [Export-PfxCertificate](https://msdn.microsoft.com/library/hh848635.aspx) para importar y exportar un certificado.
+Use los cmdlets [Import-PfxCertificate](/powershell/module/pkiclient/import-pfxcertificate) y [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) para importar y exportar un certificado.
 
 #### <a name="using-microsoft-management-console"></a>Usar Microsoft Management Console 
 

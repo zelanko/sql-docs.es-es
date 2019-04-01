@@ -22,15 +22,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2090a18508801be077a1011034093047b738f94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30b163359523771630c697acaa82e1171085db71
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788753"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513337"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisitos y limitaciones de las colecciones de esquemas XML en el servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "47788753"
 |[Las condiciones de memoria insuficiente y las grandes colecciones de esquemas XML](../../relational-databases/xml/large-xml-schema-collections-and-out-of-memory-conditions.md)|Proporciona soluciones para la condición de falta de memoria que se produce en ocasiones con colecciones de esquemas de gran tamaño.|  
 |[Finalización de los modelos de contenido no determinista](../../relational-databases/xml/non-deterministic-content-models.md)|Describe las limitaciones relacionadas con los modelos de contenido no deterministas.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Datos XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [Comparar XML con tipo y XML sin tipo](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Conceder permisos para una colección de esquemas XML](../../relational-databases/xml/grant-permissions-on-an-xml-schema-collection.md)   

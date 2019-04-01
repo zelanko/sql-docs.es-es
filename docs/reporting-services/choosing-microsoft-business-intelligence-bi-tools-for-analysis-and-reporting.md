@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 586a8623e202674cdab644ac882be3ed45adc62a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+ms.openlocfilehash: 3acb11029c767efb3be21274d27ab271a5140793
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294002"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658079"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Análisis e informes con herramientas de Microsoft Business Intelligence (BI)
 
@@ -22,7 +22,7 @@ Elegir la herramienta de inteligencia empresarial adecuada puede ser abrumador. 
 
 En la tabla siguiente se asignan las cargas de trabajo para el análisis de datos y los informes a las herramientas de Microsoft BI más adecuadas para esas cargas de trabajo. Para obtener más información acerca de un producto, haga clic en el vínculo del producto en la tabla.  
   
- Si está buscando una breve introducción a estas herramientas para ayudarle a decidir cuáles son las adecuadas en su caso, vea [Introducing Microsoft Business Intelligence (BI) Tools](https://msdn.microsoft.com/library/dn655131.aspx) [Introducción a las herramientas de Microsoft Business Intelligence (BI)].  
+ Si está buscando una breve introducción a estas herramientas para ayudarle a decidir cuáles son las adecuadas en su caso, vea [Introducing Microsoft Business Intelligence (BI) Tools](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Introducing_Microsoft_BI_Tools.docx) [Introducción a las herramientas de Microsoft Business Intelligence (BI)].
   
 |Cargas de trabajo|Usuario|||Herramientas de BI|||  
 |---------------|----------|-|-|--------------|-|-|  

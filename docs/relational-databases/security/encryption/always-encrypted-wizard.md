@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 696d3bfc454e396f8cc590d3178f8ae54b89128a
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: 5007955504a0eb6501ee32600e9d4e86bc9e1feb
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805721"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657650"
 ---
 # <a name="always-encrypted-wizard"></a>Asistente para Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ Use el **Asistente para Always Encrypted** para ayudar a proteger los datos conf
  
    - **Almacenar una clave maestra en el Almacén de claves de Azure** Para obtener más información, consulte [Introducción al Almacén de claves de Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).  
  
- - Para generar una clave maestra de columna en el Almacén de claves de Azure, el usuario debe tener los permisos **WrapKey**, **UnwrapKey**, **Verify**y **Sign** para el almacén de claves. Los usuarios también podrían necesitar los permisos **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**y **Restore** . Para más información, consulte [¿Qué es Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) y [Set-AzKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx).  
+ - Para generar una clave maestra de columna en el Almacén de claves de Azure, el usuario debe tener los permisos **WrapKey**, **UnwrapKey**, **Verify**y **Sign** para el almacén de claves. Los usuarios también podrían necesitar los permisos **Get**, **List**, **Create**, **Delete**, **Update**, **Import**, **Backup**y **Restore** . Para más información, consulte [¿Qué es Azure Key Vault?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) y [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy).  
  
  - El asistente solo admite dos opciones. Los módulos de seguridad de hardware y los almacenes de cliente deben configurarse mediante [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)[!INCLUDE[tsql](../../../includes/tsql-md.md)].  
  

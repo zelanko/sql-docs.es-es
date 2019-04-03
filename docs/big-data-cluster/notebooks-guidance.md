@@ -1,6 +1,6 @@
 ---
 title: Ejecutar blocs de notas en Azure Data Studio
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Este artículo explica cómo ejecutar Jupyter Notebook en Azure Data Studio conectado a un clúster de macrodatos de SQL Server 2019.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3bdd1a9de5e22a4577bcc8ac38ba1dde6c2ceb7c
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: a220b78fe93b286837e0e235b881ffd1a612e512
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566444"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859976"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Uso de cuadernos en versión preliminar de SQL Server 2019
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se describe cómo iniciar la experiencia del cuaderno en Azure Data Studio y cómo empezar a crear sus propios cuadernos. También muestra cómo escribir utilizando diferentes kernels de cuadernos.
 

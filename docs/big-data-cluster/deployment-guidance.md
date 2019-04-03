@@ -1,6 +1,6 @@
 ---
 title: Cómo implementar
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Obtenga información sobre cómo implementar clústeres de macrodatos de 2019 de SQL Server (versión preliminar) en Kubernetes.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5efefd5bc94aa8d1842ee244c947e48e90604834
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c991181fc79627aee1f2c2e397ad7d9b1aaf953f
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493737"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860597"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Clúster de macrodatos de SQL Server se puede implementar como contenedores de docker en un clúster de Kubernetes. Se trata de una visión general de los pasos de instalación y configuración:
 
@@ -42,9 +44,9 @@ Puede elegir implementar Kubernetes en cualquiera de estas tres maneras:
 
 | Implementación de Kubernetes en: | Descripción | Vínculo |
 |---|---|---|
-| **Minikube** | Un clúster de Kubernetes de nodo único en una máquina virtual. | [Instrucciones](deploy-on-minikube.md) |
-| **Azure Kubernetes Service (AKS)** | Un servicio de contenedor de Kubernetes administrado en Azure. | [Instrucciones](deploy-on-aks.md) |
-| **Varias máquinas** | Un clúster de Kubernetes implementado en máquinas físicas o virtuales con **kubeadm** | [Instrucciones](deploy-with-kubeadm.md) |
+| **Minikube** | Un clúster de Kubernetes de nodo único en una máquina virtual. | [Instructions](deploy-on-minikube.md) |
+| **Azure Kubernetes Service (AKS)** | Un servicio de contenedor de Kubernetes administrado en Azure. | [Instructions](deploy-on-aks.md) |
+| **Varias máquinas** | Un clúster de Kubernetes implementado en máquinas físicas o virtuales con **kubeadm** | [Instructions](deploy-with-kubeadm.md) |
   
 > [!TIP]
 > Para un script de python de ejemplo que implementa el clúster de macrodatos AKS y SQL Server, vea [implementar un clúster de macrodatos en Azure Kubernetes Service (AKS) de SQL Server](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/aks).
@@ -54,7 +56,7 @@ Puede elegir implementar Kubernetes en cualquiera de estas tres maneras:
 Antes de implementar el clúster de SQL Server 2019 datos de gran tamaño, en primer lugar [instalar las herramientas de datos de gran tamaño](deploy-big-data-tools.md):
 - **mssqlctl**
 - **kubectl**
-- **Azure Data Studio**
+- **Azure Data Studio **
 - **Extensión de SQL Server 2019**
 
 ## <a id="deploy"></a> Implementar el clúster de macrodatos de SQL Server

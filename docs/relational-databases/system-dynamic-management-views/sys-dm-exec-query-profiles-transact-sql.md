@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f4758f443ebb5398ecc1e3b3d833d375b068c4a
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 87488f36a4b4b01181cd973a75d6e5c7f2e233d7
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080412"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860726"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -34,64 +34,60 @@ ms.locfileid: "58080412"
 Supervisa el progreso de la consulta en tiempo real mientras la consulta está en ejecución. Por ejemplo, use esta DMV para determinar qué parte de la consulta se está ejecutando con lentitud. Combine esta DMV con otras DMV del sistema mediante las columnas identificadas en el campo de descripción. O bien, combine esta DMV con otros contadores de rendimiento (como el Monitor de rendimiento, xperf) mediante las columnas de marca de tiempo.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
- Los contadores devueltos son por operador y por subproceso. Los resultados son dinámicos y no se corresponden con los resultados de las opciones existentes como SET STATISTICS XML ON, que solamente genera resultados cuando se completa la consulta.  
+Los contadores devueltos son por operador y por subproceso. Los resultados son dinámicos y no coinciden con los resultados de las opciones existentes como `SET STATISTICS XML ON` que solo crear salida cuando finalice la consulta.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|session_id|**smallint**|Identifica la sesión en la que se ejecuta esta consulta. Hace referencia a dm_exec_sessions.session_id.|  
-|request_id|**int**|Identifica la solicitud de destino. Hace referencia a dm_exec_sessions.request_id.|  
-|sql_handle|**varbinary(64)**|Es un símbolo (token) que identifica el lote o procedimiento almacenado que forma parte de la consulta. Hace referencia a dm_exec_query_stats.sql_handle.|  
-|plan_handle|**varbinary(64)**|Es un token que identifica de forma exclusiva un plan de ejecución de consulta para un lote que se ha ejecutado y su plan reside en la caché del plan o se está ejecutando actualmente. Hace referencia a dm_exec_query_stats.plan_handle.|  
+|session_id|**SMALLINT**|Identifica la sesión en la que se ejecuta esta consulta. Hace referencia a dm_exec_sessions.session_id.|  
+|request_id|**INT**|Identifica la solicitud de destino. Hace referencia a dm_exec_sessions.request_id.|  
+|sql_handle|**varbinary (64)**|Es un símbolo (token) que identifica el lote o procedimiento almacenado que forma parte de la consulta. Hace referencia a dm_exec_query_stats.sql_handle.|  
+|plan_handle|**varbinary (64)**|Es un token que identifica de forma exclusiva un plan de ejecución de consulta para un lote que se ha ejecutado y su plan reside en la caché del plan o se está ejecutando actualmente. Hace referencia a dm_exec_query_stats.plan_handle.|  
 |physical_operator_name|**nvarchar(256)**|Nombre del operador físico.|  
-|node_id|**int**|Identifica un nodo de operador en el árbol de consulta.|  
-|thread_id|**int**|Distingue los subprocesos (para una consulta en paralelo) que pertenecen al mismo nodo de operador de consulta.|  
-|task_address|**varbinary(8)**|Identifica la tarea de SQLOS que está utilizando este subproceso. Hace referencia a dm_os_tasks.task_address.|  
-|row_count|**bigint**|Número de filas que ha devuelto hasta ahora el operador.|  
-|rewind_count|**bigint**|Número de rebobinados hasta ahora.|  
-|rebind_count|**bigint**|Número de reenlaces hasta ahora.|  
-|end_of_scan_count|**bigint**|Número de finales de examen hasta ahora.|  
-|estimate_row_count|**bigint**|Número de filas estimado. Puede ser útil comparar estimated_row_count con el row_count real.|  
-|first_active_time|**bigint**|Hora, en milisegundos, a la que se llamó por primera vez al operador.|  
-|last_active_time|**bigint**|Hora, en milisegundos, a la que se llamó por última vez al operador.|  
-|open_time|**bigint**|Marca de tiempo al abrir (en milisegundos).|  
-|first_row_time|**bigint**|Marca de tiempo en la que se abrió la primera fila (en milisegundos).|  
-|last_row_time|**bigint**|Marca de tiempo en la que se abrió la última fila (en milisegundos).|  
-|close_time|**bigint**|Marca de tiempo al cerrar (en milisegundos).|  
-|elapsed_time_ms|**bigint**|Tiempo total transcurrido (en milisegundos) utilizado por las operaciones del nodo de destino hasta el momento.|  
-|cpu_time_ms|**bigint**|Total de hasta ahora el uso de CPU de tiempo (en milisegundos) por las operaciones del nodo de destino.|  
-|database_id|**smallint**|Identificador de la base de datos que contiene el objeto en el que se efectúan las lecturas y escrituras.|  
-|object_id|**int**|El identificador para el objeto en el que se efectúan las lecturas y escrituras. Hace referencia a sys.objects.object_id.|  
-|index_id|**int**|El índice (si existe) en el que se abre el conjunto de filas.|  
-|scan_count|**bigint**|Número de exámenes de índice o tabla hasta ahora.|  
-|logical_read_count|**bigint**|Número de lecturas lógicas hasta ahora.|  
-|physical_read_count|**bigint**|Número de lecturas físicas hasta ahora.|  
-|read_ahead_count|**bigint**|Número de lecturas anticipadas hasta ahora.|  
-|write_page_count|**bigint**|Número de escrituras en páginas hasta ahora debido al rebosamiento.|  
-|lob_logical_read_count|**bigint**|Número de lecturas lógicas LOB hasta ahora.|  
-|lob_physical_read_count|**bigint**|Número de lecturas físicas LOB hasta ahora.|  
-|lob_read_ahead_count|**bigint**|Número de lecturas anticipadas LOB hasta ahora.|  
-|segment_read_count|**int**|Número de lecturas anticipadas de segmento hasta ahora.|  
-|segment_skip_count|**int**|Número de segmentos omitidos hasta ahora.| 
-|actual_read_row_count|**bigint**|Número de filas leídas por un operador antes de aplica el predicado residual.| 
-|estimated_read_row_count|**bigint**|**Se aplica a:** A partir [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número de filas estimado que leerá un operador antes de aplica el predicado residual.|  
+|node_id|**INT**|Identifica un nodo de operador en el árbol de consulta.|  
+|thread_id|**INT**|Distingue los subprocesos (para una consulta en paralelo) que pertenecen al mismo nodo de operador de consulta.|  
+|task_address|**varbinary (8)**|Identifica la tarea de SQLOS que está utilizando este subproceso. Hace referencia a dm_os_tasks.task_address.|  
+|row_count|**BIGINT**|Número de filas que ha devuelto hasta ahora el operador.|  
+|rewind_count|**BIGINT**|Número de rebobinados hasta ahora.|  
+|rebind_count|**BIGINT**|Número de reenlaces hasta ahora.|  
+|end_of_scan_count|**BIGINT**|Número de finales de examen hasta ahora.|  
+|estimate_row_count|**BIGINT**|Número de filas estimado. Puede ser útil comparar estimated_row_count con el row_count real.|  
+|first_active_time|**BIGINT**|Hora, en milisegundos, a la que se llamó por primera vez al operador.|  
+|last_active_time|**BIGINT**|Hora, en milisegundos, a la que se llamó por última vez al operador.|  
+|open_time|**BIGINT**|Marca de tiempo al abrir (en milisegundos).|  
+|first_row_time|**BIGINT**|Marca de tiempo en la que se abrió la primera fila (en milisegundos).|  
+|last_row_time|**BIGINT**|Marca de tiempo en la que se abrió la última fila (en milisegundos).|  
+|close_time|**BIGINT**|Marca de tiempo al cerrar (en milisegundos).|  
+|elapsed_time_ms|**BIGINT**|Tiempo total transcurrido (en milisegundos) utilizado por las operaciones del nodo de destino hasta el momento.|  
+|cpu_time_ms|**BIGINT**|Total de hasta ahora el uso de CPU de tiempo (en milisegundos) por las operaciones del nodo de destino.|  
+|database_id|**SMALLINT**|Identificador de la base de datos que contiene el objeto en el que se efectúan las lecturas y escrituras.|  
+|object_id|**INT**|El identificador para el objeto en el que se efectúan las lecturas y escrituras. Hace referencia a sys.objects.object_id.|  
+|index_id|**INT**|El índice (si existe) en el que se abre el conjunto de filas.|  
+|scan_count|**BIGINT**|Número de exámenes de índice o tabla hasta ahora.|  
+|logical_read_count|**BIGINT**|Número de lecturas lógicas hasta ahora.|  
+|physical_read_count|**BIGINT**|Número de lecturas físicas hasta ahora.|  
+|read_ahead_count|**BIGINT**|Número de lecturas anticipadas hasta ahora.|  
+|write_page_count|**BIGINT**|Número de escrituras en páginas hasta ahora debido al rebosamiento.|  
+|lob_logical_read_count|**BIGINT**|Número de lecturas lógicas LOB hasta ahora.|  
+|lob_physical_read_count|**BIGINT**|Número de lecturas físicas LOB hasta ahora.|  
+|lob_read_ahead_count|**BIGINT**|Número de lecturas anticipadas LOB hasta ahora.|  
+|segment_read_count|**INT**|Número de lecturas anticipadas de segmento hasta ahora.|  
+|segment_skip_count|**INT**|Número de segmentos omitidos hasta ahora.| 
+|actual_read_row_count|**BIGINT**|Número de filas leídas por un operador antes de aplica el predicado residual.| 
+|estimated_read_row_count|**BIGINT**|**Se aplica a:** A partir [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número de filas estimado que leerá un operador antes de aplica el predicado residual.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Si el nodo del plan de consulta no tiene ninguna E/S, todos los contadores / relacionados con E/s se establecen en NULL.  
   
  Los contadores / relacionados con E/s informados Esta DMV son más granulares que los que informa `SET STATISTICS IO` en las dos maneras siguientes:  
   
--   `SET STATISTICS IO` agrupa los contadores para todas las E/S en una tabla determinada junto. Con esta DMV obtendrá contadores independientes por cada nodo en el plan de consultas que realice E/S en la tabla.  
+-   `SET STATISTICS IO` agrupa los contadores para todas las E/S en una tabla determinada junto. Con esta DMV obtendrá contadores independientes para cada nodo en el plan de consulta que realiza la E/S a la tabla.  
   
 -   Si se realizaran búsquedas en paralelo, esta DMV informa sobre los contadores para cada uno de los subprocesos paralelos que se ejecutan en la búsqueda.
  
-A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, las estadísticas de ejecución de consulta estándar infraestructura de generación de perfiles no existe en paralelo con una estadísticas de ejecución ligero infraestructura de generación de perfiles. 
-
-`SET STATISTICS XML ON` y `SET STATISTICS PROFILE ON` use siempre las estadísticas de ejecución de consulta estándar infraestructura de generación de perfiles.
-
-Para habilitar el resultado en `sys.dm_exec_query_profiles` habilitar la generación de perfiles de infraestructura de consulta. Para obtener más información, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).    
+A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, el *generación de perfiles de infraestructura de estadísticas de ejecución de consulta estándar* existe side-by-side con un *generación de perfiles de infraestructura de estadísticas de ejecución de consultas ligero* . `SET STATISTICS XML ON` y `SET STATISTICS PROFILE ON` use siempre la *generación de perfiles de infraestructura de estadísticas de ejecución de consulta estándar*. Para `sys.dm_exec_query_profiles` para rellenarse, uno de la consulta de las infraestructuras de generación de perfiles debe estar habilitado. Para obtener más información, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
-> La consulta está investigando tiene que iniciar una vez que se ha habilitado la infraestructura de generación de perfiles. Si ya se está ejecutando la consulta, que comience una sesión de eventos extendidos no producirá los resultados en sys.dm_exec_query_profiles.
+> Tiene que iniciar en la consulta está investigando **después** se ha habilitado la generación de perfiles de infraestructura de consulta, habilitarlo después de iniciar la consulta no producirá los resultados en `sys.dm_exec_query_profiles`. Para obtener más información sobre cómo habilitar la generación de perfiles de las infraestructuras de consulta, vea [infraestructura de generación de perfiles de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## <a name="permissions"></a>Permisos  
 
@@ -132,6 +128,4 @@ ORDER BY node_id;
 ## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Funciones y vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-  
-  
-
+ 

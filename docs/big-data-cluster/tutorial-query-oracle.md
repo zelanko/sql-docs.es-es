@@ -1,6 +1,6 @@
 ---
 title: Consultar datos externos en Oracle
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Este tutorial muestra cómo consultar datos de Oracle desde un clúster de macrodatos de 2019 de SQL Server (versión preliminar). Crear una tabla externa a través de los datos de Oracle y, a continuación, ejecutar una consulta.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 27956603d3627f1d4a78e62fbf9c7aeaa1e55974
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 139c5dd5ade04c3d1a71412060f823d492843ecb
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241916"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859986"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutorial: Consultas de Oracle desde un clúster de macrodatos de SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este tutorial muestra cómo consultar datos de Oracle desde un clúster de macrodatos de SQL Server 2019. Para ejecutar este tutorial, necesita tener acceso a un servidor de Oracle. Si no tiene acceso, en este tutorial puede dar una idea de cómo funciona la virtualización de datos para orígenes de datos externos en el clúster de macrodatos de SQL Server.
 
@@ -34,7 +36,7 @@ En este tutorial, obtendrá información sobre cómo:
 
 - [Herramientas de datos de gran tamaño](deploy-big-data-tools.md)
    - **kubectl**
-   - **Azure Data Studio**
+   - **Azure Data Studio **
    - **Extensión de SQL Server 2019**
 - [Cargar datos de ejemplo en el clúster de macrodatos](tutorial-load-sample-data.md)
 

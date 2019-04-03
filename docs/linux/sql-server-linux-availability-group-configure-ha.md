@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 9f88178450fb5ca19e52703ad02e29d107ca562a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 95e9ae2bd77bc3042a44b0322ac9a607be3725e8
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201964"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872205"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurar SQL Server grupo de disponibilidad AlwaysOn para alta disponibilidad en Linux
 
@@ -30,7 +30,7 @@ Las configuraciones que garantizan la alta disponibilidad y protección de datos
 
 Deben ser todos los servidores físicos o virtuales y servidores virtuales deben estar en la misma plataforma de virtualización. Este requisito es porque los agentes de vallado son específicas de la plataforma. Consulte [directivas para los clústeres invitados](https://access.redhat.com/articles/29440#guest_policies).
 
-## <a name="roadmap"></a>Mapa de ruta
+## <a name="roadmap"></a>Roadmap
 
 Los pasos para crear un grupo de disponibilidad en los servidores de Linux para lograr alta disponibilidad son diferentes de los pasos en un clúster de conmutación por error de Windows Server. En la lista siguiente se describe los pasos de alto nivel: 
 
@@ -72,7 +72,7 @@ Los ejemplos en esta sección explican cómo crear el grupo de disponibilidad me
 
 Para una configuración de alta disponibilidad que garantiza la conmutación automática por error, el grupo de disponibilidad requiere al menos tres réplicas. Cualquiera de las siguientes configuraciones pueda admitir alta disponibilidad:
 
-- [Tres réplicas sincrónicas.](sql-server-linux-availability-group-ha.md#threeSynch)
+- [Tres réplicas sincrónicas](sql-server-linux-availability-group-ha.md#threeSynch)
 
 - [Una réplica de la configuración más de dos réplicas sincrónicas](sql-server-linux-availability-group-ha.md#twoSynch)
 
@@ -132,6 +132,7 @@ Ejecute **sola** de los siguientes scripts:
    >[!IMPORTANT]
    >Después de ejecutar el script anterior para crear un grupo de disponibilidad con tres réplicas sincrónicas, no ejecute el siguiente script:
 
+<a name="configOnly"></a>
 - Crear grupo de disponibilidad con dos réplicas sincrónicas y una réplica de la configuración:
 
    >[!IMPORTANT]

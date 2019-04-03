@@ -1,31 +1,33 @@
 ---
 title: Consumir las aplicaciones en clústeres de macrodatos
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Consumir una aplicación implementada en un clúster de macrodatos de 2019 de SQL Server mediante un servicio web RESTful (versión preliminar).
 author: jeroenterheerdt
 ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.reviewer: rothja
-ms.openlocfilehash: a9ef02cae7899a1deb5ce6d84b10dac2297b9d2f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 4d299f364b4d67e1f31ce7c0e70d6ba062933f37
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389963"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860546"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Consumo de una aplicación implementada en el clúster de macrodatos de SQL Server mediante un servicio web RESTful
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se describe cómo consumir una aplicación implementada en un clúster de macrodatos de 2019 de SQL Server mediante un servicio web RESTful (versión preliminar).
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 - [Clúster de macrodatos de SQL Server 2019](deployment-guidance.md)
-- [mssqlctl command-line utility](deploy-install-mssqlctl.md)
+- [utilidad de línea de comandos mssqlctl](deploy-install-mssqlctl.md)
 - Una aplicación implementada mediante [ `mssqlctl` ](big-data-cluster-create-apps.md) o [implementar aplicación de extensión](app-deployment-extension.md)
 
 ## <a name="capabilities"></a>Capabilities

@@ -1,6 +1,6 @@
 ---
 title: Use kubectl para solucionar problemas de monitor /
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: En este artículo se proporcionan comandos de kubectl útil para la supervisión y solución de problemas de un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 624c4ad4f53c0ad78cf5b972c976aadc57fd35d3
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8b9be0566725822e0241c65c7f8324b153cca072
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017911"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860376"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>Comandos de Kubectl para la supervisión y solución de problemas de clústeres de macrodatos de SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se describe varios comandos útiles de Kubernetes que puede usar para supervisar y solucionar problemas de un clúster de macrodatos de 2019 de SQL Server (versión preliminar). Este artículo tratan las tareas comunes, como copiar archivos a o desde un contenedor que ejecuta uno de los servicios de clúster de macrodatos de SQL Server. También muestra cómo ver información detallada de un pod u otros artefactos de Kubernetes que se encuentran en el clúster de macrodatos.
 

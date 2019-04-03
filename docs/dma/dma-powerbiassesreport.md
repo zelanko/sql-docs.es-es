@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 786e86fb6f0326e2f8ea568f4c069828ff1ff4c6
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c00196468b846174bb73c8d82c691f482aa8b21e
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974124"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872076"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analizar los informes de evaluación consolidada creados por Data Migration Assistant con Power BI
 
@@ -34,23 +34,23 @@ Puede descargar ejemplos de informes de Power BI para valoraciones consolidadas 
 
 Los siguientes informes se incluyen: 
 
-- [Panel](#dashboard--details)
+- [Panel](#dashboard-report)
 
   Incluye estadísticas de la instantánea y un informe de exploración en profundidad.
 
-- [Preparación de actualización local](#on-premises-upgrade-readiness--details)
+- [Preparación de actualización local](#on-premises-upgrade-readiness-report)
 
   El origen de datos es la vista de UpgradeSuccessRanking en la base de datos DMAReporting.  Este informe muestra el porcentaje de actualización correcta para las bases de datos evaluados.
 
-- [Paridad de características en el entorno local](#on-premise-feature-parity--details)
+- [Paridad de características en el entorno local](#on-premises-feature-parity-report)
 
   Se muestran las recomendaciones de característica para la versión de SQL Server de destino.
 
-- [Preparación de actualización de base de datos SQL Azure](#azure-sql-db-upgrade-readiness--details)
+- [Preparación de actualización de base de datos SQL Azure](#azure-sql-db-upgrade-readiness-report)
 
   El origen de datos es la vista de UpgradeSuccessRanking en la base de datos DMAReporting.  Este informe muestra el porcentaje de actualización correcta para bases de datos que se evalúa para las migraciones de base de datos de SQL Azure.
 
-- [Características de Azure SQL DB no compatibles](#azure-sql-db-unsupported-features--details)
+- [Características de Azure SQL DB no compatibles](#azure-sql-db-unsupported-features-report)
 
   Muestra características de las bases de datos existentes que no se admiten en Azure SQL Database (V12).
 

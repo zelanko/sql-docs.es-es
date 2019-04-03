@@ -1,22 +1,25 @@
 ---
 title: Extensión de la implementación de aplicación
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Implementar un script de Python o R como una aplicación en clúster de macrodatos de 2019 de SQL Server (versión preliminar).
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 10fcc71c69ecc138f78cd19c4661f917067ead7e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222029"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860416"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Cómo utilizar VS Code para implementar aplicaciones en clústeres de macrodatos de SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se describe cómo implementar aplicaciones en un clúster de macrodatos de SQL Server con Visual Studio Code con la extensión de la implementación de la aplicación. Esta funcionalidad se introdujo en CTP 2.3. 
 
@@ -29,11 +32,11 @@ En este artículo se describe cómo implementar aplicaciones en un clúster de m
 
 Esta extensión admite las siguientes tareas en Visual Studio Code:
 
-- Autenticar con el clúster de Macrodatos SQL Server.
+- Autenticar con el clúster de macrodatos de SQL Server.
 - Recuperar una plantilla de aplicación desde el repositorio de GitHub para la implementación de runtimes compatibles.
 - Administrar plantillas de aplicación abierto actualmente en el área de trabajo del usuario.
 - Implementar una aplicación a través de una especificación de formato YAML.
-- Administrar las aplicaciones implementadas en el clúster grande de datos de SQL Server.
+- Administrar las aplicaciones implementadas en el clúster de macrodatos de SQL Server.
 - Ver todas las aplicaciones que haya implementado en la barra lateral con información adicional.
 - Generar una especificación de ejecución para utilizar la aplicación o eliminar la aplicación desde el clúster.
 - Consumir las aplicaciones implementadas a través de una especificación de ejecución YAML.

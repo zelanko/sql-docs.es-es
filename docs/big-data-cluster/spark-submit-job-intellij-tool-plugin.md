@@ -1,39 +1,43 @@
 ---
-title: Ejecutar trabajos de Spark en el Kit de herramientas de Azure para IntelliJ en clúster grande de datos de SQL Server
-titleSuffix: SQL Server Big Data Clusters
-description: Envío de trabajos de Spark SQL Big Data en clústeres de servidores en el Kit de herramientas de Azure para IntelliJ.
+title: Ejecutar trabajos de Spark en el Kit de herramientas de Azure para IntelliJ en clúster de macrodatos de SQL Server
+titleSuffix: SQL Server big data clusters
+description: Envío de trabajos de Spark en clústeres de macrodatos de SQL Server en el Kit de herramientas de Azure para IntelliJ.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
-ms.openlocfilehash: 672898e93331fdcf65b1fe978a5ebb47956fdb5b
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.prod: sql
+ms.technology: big-data-cluster
+ms.openlocfilehash: e48aebbb15b9bd684b2ed3f5d4d314191a55ba42
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683625"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860327"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Enviar trabajos de Spark en clústeres SQL Server de datos grande en IntelliJ
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Enviar trabajos de Spark en clústeres de macrodatos de SQL Server en IntelliJ
 
-Uno de los escenarios clave para los clústeres grandes de datos de SQL Server es la capacidad para enviar trabajos de Spark. La característica de envío de trabajos de Spark permite enviar archivos Jar o Py locales con referencias a los clústeres grandes de datos de SQL Server. También permite ejecutar archivos Jar o Py, ya se encuentran en el sistema de archivos HDFS. 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+Uno de los escenarios claves para los clústeres de macrodatos de SQL Server es la capacidad para enviar trabajos de Spark. La característica de envío de trabajos de Spark permite enviar archivos Jar o Py locales con referencias a los clústeres de macrodatos de SQL Server. También permite ejecutar archivos Jar o Py, ya se encuentran en el sistema de archivos HDFS. 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Clúster de Macrodatos SQL Server.
+- Clúster de macrodatos de SQL Server.
 - Kit de desarrollo de Java de Oracle. Puede instalarlo desde el [sitio Web de Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 - IntelliJ IDEA. Puede instalarlo desde el [sitio Web de JetBrains](https://www.jetbrains.com/idea/download/).
 - Azure Toolkit for IntelliJ extension. Para obtener instrucciones de instalación, consulte [instalar Azure Toolkit for IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation).
 
-## <a name="link-sql-server-big-data-cluster"></a>Clúster de Macrodatos de vínculo SQL Server
+## <a name="link-sql-server-big-data-cluster"></a>Clúster de macrodatos de SQL Server de vínculo
 1. Abra la herramienta de IntelliJ IDEA.
 
 2. Si usa un certificado autofirmado, deshabilitar la validación del certificado SSL de **herramientas** menú, seleccione **Azure**, **validar un certificado de SSL de clúster de Spark**, entonces  **Deshabilitar**.
 
-    ![vincular el clúster grande de datos de SQL Server: deshabilitar SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![vincular el clúster de macrodatos de SQL Server: deshabilitar SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. Abra el Explorador de Azure desde **vista** menú, seleccione **herramienta Windows**y, a continuación, seleccione **Azure Explorer**.
-4. Haga clic con el botón derecho en **clúster grande de datos de SQL Server**, seleccione **clúster grande de datos de vínculo SQL Server**. Escriba el **Server**, **nombre de usuario**, y **contraseña**, a continuación, haga clic en **Aceptar**.
+4. Haga clic con el botón derecho en **clúster de SQL Server macrodatos**, seleccione **clúster de macrodatos de vínculo de SQL Server**. Escriba el **Server**, **nombre de usuario**, y **contraseña**, a continuación, haga clic en **Aceptar**.
 
     ![vincular el clúster de Big Data: cuadro de diálogo](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-dialog.png)
 
@@ -87,8 +91,8 @@ Uno de los escenarios clave para los clústeres grandes de datos de SQL Server e
       ![Información de artefacto en el cuadro de diálogo](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
 
-## <a name="submit-application-to-sql-server-big-data-cluster"></a>Enviar la aplicación en clúster grande de datos de SQL Server
-Después de vincular un clúster grande de datos de SQL Server, puede enviar la aplicación en él.
+## <a name="submit-application-to-sql-server-big-data-cluster"></a>Enviar la aplicación en clúster de macrodatos de SQL Server
+Después de vincular un clúster de macrodatos de SQL Server, puede enviar la aplicación en él.
 
 1. Establezca la configuración en **ejecutar/depurar configuraciones** ventana, haga clic en + ->**Apache Spark en SQL Server**, seleccione ficha **ejecutar de forma remota en clúster**, establezca los parámetros como después, haga clic en Aceptar.
 
@@ -129,7 +133,7 @@ Asegúrese de que haber satisfecho el WINUTILS. Requisito previo EXE.
 
 1. En la barra de menús, vaya a **ejecutar** > **editar configuraciones...** .
 
-2. Desde el **ejecutar/depurar configuraciones** ventana, en el panel izquierdo, vaya a **Apache Spark en el clúster grande de datos de SQL Server** > **[Spark en SQL] myApp**.
+2. Desde el **ejecutar/depurar configuraciones** ventana, en el panel izquierdo, vaya a **Apache Spark en el clúster de SQL Server macrodatos** > **myApp [Spark en SQL]**.
 
 3. En la ventana principal, seleccione el **ejecutar localmente** ficha.
 
@@ -163,7 +167,7 @@ Solo se admite la Console(Scala) de sesión de Spark interactiva de Livy en Inte
 
 1. En la barra de menús, vaya a **ejecutar** > **editar configuraciones...** .
 
-2. Desde el **ejecutar/depurar configuraciones** ventana, en el panel izquierdo, vaya a **Apache Spark en el clúster grande de datos de SQL Server** > **[Spark en SQL] myApp**.
+2. Desde el **ejecutar/depurar configuraciones** ventana, en el panel izquierdo, vaya a **Apache Spark en el clúster de SQL Server macrodatos** > **myApp [Spark en SQL]**.
 
 3. En la ventana principal, seleccione el **ejecutar de forma remota en clúster** ficha.
 
@@ -191,4 +195,4 @@ Para mayor comodidad, puede ver el resultado del script mediante el envío de c�
    ![Enviar selección a la consola de Spark](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener más información sobre los escenarios relacionados y clúster grande de datos de SQL Server, vea [¿cuáles son los clústeres de SQL Server 2019 macrodatos](big-data-cluster-overview.md)?
+Para obtener más información sobre los escenarios relacionados y clúster de macrodatos de SQL Server, vea [¿cuáles son los clústeres de SQL Server 2019 macrodatos](big-data-cluster-overview.md)?

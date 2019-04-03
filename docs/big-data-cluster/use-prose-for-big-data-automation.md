@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4d13d200bf331771b0f2f8735bf2c76c1f227979
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241656"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860086"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Uso del Acelerador de código de PROSE de Wrangling de datos
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Acelerador de código PROSE genera código de Python legible para las tareas de tratamiento de datos. Puede mezclar el código generado con el código escrito a mano de forma transparente mientras trabaja en un bloc de notas en Azure Data Studio. En este artículo se proporciona información general de cómo puede usar el Acelerador de código.
 
@@ -112,7 +114,7 @@ Para obtener más información, consulte el [documentación](https://aka.ms/pros
 Otro escenario común es detectar patrones en una columna de cadena con el fin de limpieza o de agrupación. Por ejemplo, puede tener una columna de fecha con fechas en varios formatos diferentes. Con el fin de normalizar los valores, puede escribir instrucciones condicionales mediante expresiones regulares.
 
 
-|   |Nombre                      |BirthDate      |
+|   |Name                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Desconocido        |

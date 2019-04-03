@@ -1,6 +1,6 @@
 ---
 title: Exportar modelos de aprendizaje automático de Spark con MLeap
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Obtenga información sobre cómo exportar modelos con MLeap de aprendizaje automático de Spark.
 author: lgongmsft
 ms.author: shivprashant
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ee858f66c99ff7b85e2e6c456ad509ec7deb0a6e
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: a2a834ff8b841c515b9d3481a961306b721f194d
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242136"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860156"
 ---
 # <a name="export-spark-machine-learning-models-with-mleap"></a>Exportar modelos con MLeap de aprendizaje automático de Spark
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Un escenario de aprendizaje automático típico implica el entrenamiento del modelo en Spark y la puntuación fuera de Spark. Exportar modelos en un formato portátil, que se puede usar fuera de Spark. [MLeap](https://github.com/combust/mleap) es un formato de intercambio de este tipo modelo. Permite a Spark canalizaciones de aprendizaje automático y modelos que se exportan como formatos de portátiles y usar en cualquier sistema basados en JVM con el `Mleap` en tiempo de ejecución.
 

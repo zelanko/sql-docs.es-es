@@ -1,6 +1,6 @@
 ---
 title: Configurar el servicio de Kubernetes de Azure
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Obtenga información sobre cómo configurar Azure Kubernetes Service (AKS) para las implementaciones de clústeres (versión preliminar) de datos de gran tamaño de SQL Server 2019.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ac8632c3966da750e9eb7d7053dad1d102760c8c
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: b70b5672bff38c8c82dd9bfd837e267328bf6aa9
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618242"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860166"
 ---
-# <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>Configuración de Azure Kubernetes Service para las implementaciones de clústeres (versión preliminar) de datos de gran tamaño de SQL Server 2019
+# <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configuración de Azure Kubernetes Service para las implementaciones de clústeres de macrodatos de SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se describe cómo configurar Azure Kubernetes Service (AKS) para las implementaciones de clústeres (versión preliminar) de datos de gran tamaño de SQL Server 2019.
 
@@ -31,10 +33,10 @@ En este artículo se describe los pasos para implementar en Kubernetes en AKS me
 ## <a name="prerequisites"></a>Requisitos previos
 
 - [Implementar las herramientas de datos de gran tamaño de SQL Server 2019](deploy-big-data-tools.md):
-   - **kubectl**
-   - **Azure Data Studio**
+   - **Kubectl**
+   - **Azure Data Studio **
    - **Extensión de SQL Server 2019**
-   - **Azure CLI**
+   - **CLI de Azure**
 
 - Versión mínima 1.10 para servidor de Kubernetes. Para AKS, deberá usar `--kubernetes-version` parámetro para especificar una versión distinta de la predeterminada.
 

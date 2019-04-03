@@ -1,6 +1,6 @@
 ---
 title: Instalación de herramientas de macrodatos
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Obtenga información sobre cómo instalar las herramientas que se usan con los clústeres de macrodatos de 2019 de SQL Server (versión preliminar).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 0413da85b4f213eb75a1b9ed5d80852663870c74
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: dc53bdfb71efeafd55752686ff136355bc79bd34
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898961"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860486"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalar las herramientas de macrodatos de SQL Server 2019
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se describe las herramientas de cliente que se deben instalar para crear, administrar, y con SQL Server 2019 macrodatos clústeres (versión preliminar). La siguiente sección proporciona una lista de herramientas y vínculos a instrucciones de instalación. Antes de implementar un clúster de macrodatos, configure las herramientas marcadas como necesarias en Windows o Linux.
 
@@ -29,11 +31,11 @@ En la tabla siguiente se enumera herramientas comunes de clúster de macrodatos 
 
 | Herramienta | Obligatorio | Descripción | Instalación |
 |---|---|---|---|
-| **mssqlctl** | Sí | Herramienta de línea de comandos para instalar y administrar un clúster de macrodatos. | [Instalar](deploy-install-mssqlctl.md) |
+| **mssqlctl** | Sí | Herramienta de línea de comandos para instalar y administrar un clúster de macrodatos. | [Install](deploy-install-mssqlctl.md) |
 | **kubectl**<sup>1</sup> | Sí | Herramienta de línea de comandos para supervisar el clúster Kuberentes subyacente ([obtener más información](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio** | Sí | Herramienta gráfica multiplataforma para realizar consultas en SQL Server ([obtener más información](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Instalar](../azure-data-studio/download.md) |
-| **Extensión de SQL Server 2019** | Sí | Extensión de Azure Data Studio que admite la conexión al clúster de macrodatos. También proporciona a un Asistente para la virtualización de datos. | [Instalar](../azure-data-studio/sql-server-2019-extension.md) |
-| **Azure CLI**<sup>2</sup> | Para AKS | Interfaz de línea de comandos moderna para la administración de servicios de Azure. Puede usar con las implementaciones de clústeres AKS macrodatos ([obtener más información](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Instalar](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **Azure Data Studio ** | Sí | Herramienta gráfica multiplataforma para realizar consultas en SQL Server ([obtener más información](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Install](../azure-data-studio/download.md) |
+| **Extensión de SQL Server 2019** | Sí | Extensión de Azure Data Studio que admite la conexión al clúster de macrodatos. También proporciona a un Asistente para la virtualización de datos. | [Install](../azure-data-studio/sql-server-2019-extension.md) |
+| **Azure CLI**<sup>2</sup> | Para AKS | Interfaz de línea de comandos moderna para la administración de servicios de Azure. Puede usar con las implementaciones de clústeres AKS macrodatos ([obtener más información](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Install](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Opcional | Interfaz de línea de comandos moderna para realizar consultas en SQL Server ([obtener más información](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | Para algunas secuencias de comandos | Herramienta de línea de comandos heredado para realizar consultas en SQL Server ([obtener más información](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** <sup>3</sup> | Para algunas secuencias de comandos | Herramienta de línea de comandos para la transferencia de datos con las direcciones URL. | [Windows](https://curl.haxx.se/windows/) \| Linux: paquete de instalación de curl |
@@ -57,7 +59,7 @@ La tabla anterior proporciona todas las herramientas comunes que se usan con los
 
 - **mssqlctl**
 - **kubectl**
-- **Azure Data Studio**
+- **Azure Data Studio **
 - **Extensión de SQL Server 2019**
 
 Las herramientas restantes son necesarias solo en determinados escenarios. **CLI de Azure** puede usarse para administrar los servicios de Azure asociados con implementaciones de AKS. **MSSQL-cli** es una herramienta opcional pero muy útil que le permite conectarse a la instancia principal de SQL Server en el clúster y ejecutar consultas desde la línea de comandos. Y **sqlcmd** y **curl** son necesarios si va a instalar los datos de ejemplo con el script de GitHub.

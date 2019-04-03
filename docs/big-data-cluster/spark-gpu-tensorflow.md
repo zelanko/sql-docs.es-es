@@ -1,6 +1,6 @@
 ---
 title: Compatibilidad con la GPU y TensorFlow
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Implementar un clúster de macrodatos con compatibilidad con GPU y usar TensorFlow en Azure Data Studio blocs de notas.
 author: lgongmsft
 ms.author: shivprashant
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f89568860fa656efbb93eb9b72eb647f88ce6089
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0336c39a4afc235e29111dd78db128495a8b6e64
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494117"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860466"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>Implementar un clúster de macrodatos con compatibilidad con GPU y ejecutar TensorFlow
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se muestra cómo implementar un clúster de macrodatos en Azure Kubernetes Service (AKS) que admite grupos de nodos basados en GPU para las cargas de trabajo de proceso intensivo. A continuación, ejecutar cuadernos de ejemplo en Azure Data Studio que realizan la clasificación de imágenes con TensorFlow para GPU.
 
@@ -26,9 +28,9 @@ En este artículo se muestra cómo implementar un clúster de macrodatos en Azur
 - [Herramientas de macrodatos](deploy-big-data-tools.md):
   - **mssqlctl**
   - **kubectl**
-  - **Azure Data Studio**
+  - **Azure Data Studio **
   - **Extensión de SQL Server 2019**
-  - **Azure CLI**
+  - **CLI de Azure**
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -142,7 +144,7 @@ Para implementar un clúster de macrodatos de 2019 de SQL Server (versión preli
       SET MSSQL_SA_PASSWORD=<sa_password_of_master_sql_instance, password complexity compliant>
 
       SET DOCKER_REGISTRY=marinchcreus3.azurecr.io
-      SET DOCKER_REPOSITORY=ctp23-8-0-61-gpu
+      SET DOCKER_REPOSITORY=ctp24-8-0-61-gpu
       SET DOCKER_USERNAME=<your username, gpu-specific credentials provided by Microsoft>
       SET DOCKER_PASSWORD=<your password, gpu-specific credentials provided by Microsoft>
       SET DOCKER_EMAIL=<your email address>
@@ -170,7 +172,7 @@ Para implementar un clúster de macrodatos de 2019 de SQL Server (versión preli
       export MSSQL_SA_PASSWORD="<sa_password_of_master_sql_instance, password complexity compliant>"
 
       export DOCKER_REGISTRY="marinchcreus3.azurecr.io"
-      export DOCKER_REPOSITORY="ctp23-8-0-61-gpu"
+      export DOCKER_REPOSITORY="ctp24-8-0-61-gpu"
       export DOCKER_USERNAME="<your username, gpu-specific credentials provided by Microsoft>"
       export DOCKER_PASSWORD="<your password, gpu-specific credentials provided by Microsoft>"
       export DOCKER_EMAIL="<your email address>"

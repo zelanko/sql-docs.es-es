@@ -1,6 +1,6 @@
 ---
 title: Introducir datos en un grupo de datos de SQL Server
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Este tutorial muestra cómo introducir datos en el grupo de datos de un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5ae0777c2bc98e99c83bca35fa2aab8efc8b57a5
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 497dd1856a8847bbba9b05d3abc11836841f6e7c
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509942"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860347"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Introducir datos en un grupo de datos de SQL Server con Transact-SQL
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este tutorial muestra cómo utilizar Transact-SQL para cargar datos en el [grupo datos](concept-data-pool.md) de un clúster de macrodatos de 2019 de SQL Server (versión preliminar). Con los clústeres de macrodatos de SQL Server, pueden ingeridos datos desde una variedad de orígenes y distribuirse entre las instancias del grupo de datos.
 
@@ -35,7 +37,7 @@ En este tutorial, obtendrá información sobre cómo:
 
 - [Herramientas de datos de gran tamaño](deploy-big-data-tools.md)
    - **kubectl**
-   - **Azure Data Studio**
+   - **Azure Data Studio **
    - **Extensión de SQL Server 2019**
 - [Cargar datos de ejemplo en el clúster de macrodatos](tutorial-load-sample-data.md)
 

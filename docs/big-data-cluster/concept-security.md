@@ -1,23 +1,26 @@
 ---
 title: Conceptos de seguridad
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: En este artículo se describe los conceptos de seguridad de clúster de macrodatos de 2019 de SQL Server (versión preliminar). Esto incluye la descripción de los puntos de conexión del clúster y la autenticación del clúster.
 author: nelgson
 ms.author: negust
+ms.reviewer: jroth
 manager: craigg
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: ebe1ef0a9a0337af29a09018bcc2e0150d676879
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477990"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860116"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Conceptos de seguridad para los clústeres de macrodatos de SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Un clúster seguro macrodatos implica la compatibilidad de consistente y coherente para los escenarios de autenticación y autorización, a través de SQL Server y Spark o HDFS. La autenticación es el proceso de comprobar la identidad de un usuario o servicio y asegurarse de que es quien se afirma ser. Autorización hace referencia a conceder o denegar el acceso a recursos específicos según la identidad del usuario solicitante. Este paso se realiza después de que un usuario se identifica mediante la autenticación.
 

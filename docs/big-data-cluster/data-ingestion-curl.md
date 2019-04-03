@@ -1,6 +1,7 @@
 ---
-title: Use curl para cargar datos en HDFS en clústeres de SQL Server 2019 macrodatos | Microsoft Docs
-description: ''
+title: Use curl para cargar datos en HDFS | Microsoft Docs
+titleSuffix: SQL Server big data clusters
+description: Use curl para cargar datos en HDFS en clústeres de macrodatos de SQL Server 2019.
 author: rothja
 ms.author: jroth
 manager: craigg
@@ -9,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1a7c7691ec20f459f39a39270e9a78fc9d8ad96f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 56bee3241427b9de9768e7bdd9e49646b51521d1
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017551"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860151"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-big-data-clusters"></a>Use curl para cargar datos en HDFS en clústeres de macrodatos de SQL Server 2019
+# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Use curl para cargar datos en HDFS en clústeres de macrodatos de SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se explica cómo usar **curl** para cargar datos en HDFS en clústeres de macrodatos de 2019 de SQL Server (versión preliminar).
 

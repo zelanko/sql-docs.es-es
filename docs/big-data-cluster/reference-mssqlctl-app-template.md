@@ -1,6 +1,6 @@
 ---
 title: referencia de plantillas de aplicación mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Artículo de referencia para los comandos de plantilla de aplicación mssqlctl.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 16583ba970bfc13312864ea2e9d2571b04c20fcb
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: c67ed74750ac36d1a5c79503417414a9dd8ab6b5
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527228"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860106"
 ---
-# <a name="mssqlctl-app-template"></a>plantilla de aplicación mssqlctl
+# <a name="mssqlctl-app-template"></a>Plantilla de aplicación mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 El siguiente artículo proporciona la referencia para la **plantilla de aplicación** comandos en el **mssqlctl** herramienta. Para obtener más información acerca de otros **mssqlctl** comandos, consulte [mssqlctl referencia](reference-mssqlctl.md).
 
@@ -24,7 +26,7 @@ El siguiente artículo proporciona la referencia para la **plantilla de aplicaci
 
 |||
 |---|---|
-| [list](#list) | Obtener plantillas compatibles. |
+| [enumerar](#list) | Obtener plantillas compatibles. |
 | [pull](#pull) | Descargue plantillas compatibles. |
 
 ## <a id="list"></a> lista de plantillas de aplicación mssqlctl
@@ -72,7 +74,7 @@ mssqlctl app template pull
 | Parámetros | Descripción |
 |---|---|
 | **--destino -d** | Dónde colocar la plantilla de aplicación esqueleto.  Valor predeterminado:. / plantillas. |
-| **--name -n** | Nombre de la plantilla. Para obtener una lista completa desactivar los nombres de plantilla admitidos, ejecute `mssqlctl app template list`. |
+| **: nombre - n** | Nombre de la plantilla. Para obtener una lista completa desactivar los nombres de plantilla admitidos, ejecute `mssqlctl app template list`. |
 | **--url -u** | Especifique una ubicación de repositorio de plantillas diferentes. Predeterminado:
 https://github.com/Microsoft/sql-server-samples.git  |
 

@@ -1,6 +1,6 @@
 ---
 title: Ingesta de datos con los trabajos de Spark
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Este tutorial muestra cómo introducir datos en el grupo de datos de un clúster de macrodatos de 2019 de SQL Server (versión preliminar) mediante trabajos de Spark en Azure Data Studio.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1611a8b0513e8f1a9e50d3cc612b114c88698df5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c29b6b942b797b5a58679d9d7f5cb91e68561123
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491908"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860676"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Introducir datos en un grupo de datos de SQL Server con trabajos de Spark
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este tutorial muestra cómo usar trabajos de Spark para cargar datos en el [grupo datos](concept-data-pool.md) de un clúster de macrodatos de 2019 de SQL Server (versión preliminar). 
 
@@ -35,7 +37,7 @@ En este tutorial, obtendrá información sobre cómo:
 
 - [Herramientas de datos de gran tamaño](deploy-big-data-tools.md)
    - **kubectl**
-   - **Azure Data Studio**
+   - **Azure Data Studio **
    - **Extensión de SQL Server 2019**
 - [Cargar datos de ejemplo en el clúster de macrodatos](tutorial-load-sample-data.md)
 

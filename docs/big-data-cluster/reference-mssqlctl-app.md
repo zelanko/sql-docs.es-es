@@ -1,6 +1,6 @@
 ---
 title: referencia de aplicación mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Artículo de referencia para los comandos de la aplicación de mssqlctl.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fa2b43c352fbab39cd00112b9646a87a2b752f5b
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527258"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860656"
 ---
-# <a name="mssqlctl-app"></a>aplicación mssqlctl
+# <a name="mssqlctl-app"></a>Aplicación mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 El siguiente artículo proporciona la referencia para la **aplicación** comandos en el **mssqlctl** herramienta. Para obtener más información acerca de otros **mssqlctl** comandos, consulte [mssqlctl referencia](reference-mssqlctl.md).
 
@@ -24,14 +26,14 @@ El siguiente artículo proporciona la referencia para la **aplicación** comando
 
 |||
 |---|---|
-| [create](#create) | Crear la aplicación. |
-| [delete](#delete) | Eliminar la aplicación. |
+| [crear](#create) | Crear la aplicación. |
+| [eliminar](#delete) | Eliminar la aplicación. |
 | [describe](#describe) | Describir la aplicación. |
-| [init](#init) | Nueva aplicación KickStart esqueleto. |
-| [list](#list) | Lista de aplicaciones. |
-| [run](#run) | Ejecutar la aplicación. |
+| [Init](#init) | Nueva aplicación KickStart esqueleto. |
+| [enumerar](#list) | Lista de aplicaciones. |
+| [ejecutar](#run) | Ejecutar la aplicación. |
 | [update](#update) | Actualizar la aplicación. |
-| [template](reference-mssqlctl-app-template.md) | Comandos de la plantilla. |
+| [plantilla](reference-mssqlctl-app-template.md) | Comandos de la plantilla. |
 
 ## <a id="create"></a> Crear aplicación mssqlctl
 
@@ -60,13 +62,13 @@ mssqlctl app create
 | **--code -c** | Ruta de acceso al archivo de código R o Python. |
 | **--description -d** | Descripción de la aplicación. |
 | **--entrypoint** |  |
-| **--inputs** | Esquema de parámetros de entrada. |
-| **--name -n** | Nombre de aplicación. |
-| **--outputs** | Esquema de parámetros de salida. |
-| **--runtime -r** | Tiempo de ejecución de la aplicación.  Valores permitidos: Mleap, Python, R, SSIS. |
+| **--entradas** | Esquema de parámetros de entrada. |
+| **: nombre - n** | Nombre de aplicación. |
+| **--salidas** | Esquema de parámetros de salida. |
+| **--en tiempo de ejecución - r** | Tiempo de ejecución de la aplicación.  Valores permitidos: Mleap, Python, R, SSIS. |
 | **--spec -s** | Ruta de acceso a un directorio con un archivo de YAML especificación que describe la aplicación. |
-| **--version -v** | Versión de la aplicación. |
-| **--yes -y** | No solicita confirmación al crear una aplicación del archivo de spec.yaml del CWD. |
+| **--versión - v** | Versión de la aplicación. |
+| **--Sí -y** | No solicita confirmación al crear una aplicación del archivo de spec.yaml del CWD. |
 
 ### <a name="examples"></a>Ejemplos
 
@@ -108,8 +110,8 @@ mssqlctl app delete
 
 | Parámetros | Descripción |
 |---|---|
-| **--name -n** | Nombre de aplicación. |
-| **--version -v** | Versión de la aplicación. |
+| **: nombre - n** | Nombre de aplicación. |
+| **--versión - v** | Versión de la aplicación. |
 
 ### <a name="examples"></a>Ejemplos
 
@@ -134,9 +136,9 @@ mssqlctl app describe
 
 | Parámetros | Descripción |
 |---|---|
-| **--name -n** | Nombre de aplicación. |
+| **: nombre - n** | Nombre de aplicación. |
 | **--spec -s** | Ruta de acceso a un directorio con un archivo de YAML especificación que describe la aplicación. |
-| **--version -v** | Versión de la aplicación. |
+| **--versión - v** | Versión de la aplicación. |
 
 ### <a name="examples"></a>Ejemplos
 
@@ -165,11 +167,11 @@ mssqlctl app init
 | Parámetros | Descripción |
 |---|---|
 | **--destino -d** | Dónde colocar el esqueleto de la aplicación. Valor predeterminado: directorio de trabajo actual. |
-| **--name -n** | Nombre de aplicación. |
+| **: nombre - n** | Nombre de aplicación. |
 | **--spec -s** | Generar simplemente una spec.yaml de aplicación. |
 | **--template -t** | Nombre de la plantilla. Para obtener una lista completa desactivar los nombres de plantilla admitidos, ejecute `mssqlctl app template list`. |
 | **--url -u** | Especifique una ubicación de repositorio de plantillas diferentes. Valor predeterminado: https://github.com/Microsoft/sql-server-samples.git. |
-| **--version -v** | Versión de la aplicación. |
+| **--versión - v** | Versión de la aplicación. |
 
 ### <a name="examples"></a>Ejemplos
 
@@ -211,8 +213,8 @@ mssqlctl app list
 
 | Parámetros | Descripción |
 |---|---|
-| **--name -n** | Nombre de aplicación. |
-| **--version -v** | Versión de la aplicación. |
+| **: nombre - n** | Nombre de aplicación. |
+| **--versión - v** | Versión de la aplicación. |
 
 ### <a name="examples"></a>Ejemplos
 
@@ -249,9 +251,9 @@ mssqlctl app run
 
 | Parámetros | Descripción |
 |---|---|
-| **--name -n** | Nombre de aplicación. |
-| **--version -v** | Versión de la aplicación. |
-| **--inputs** | Aplicación de parámetros de entrada en un archivo CSV `name=value` formato. |
+| **: nombre - n** | Nombre de aplicación. |
+| **--versión - v** | Versión de la aplicación. |
+| **--entradas** | Aplicación de parámetros de entrada en un archivo CSV `name=value` formato. |
 
 ### <a name="examples"></a>Ejemplos
 
@@ -288,7 +290,7 @@ mssqlctl app update
 | Parámetros | Descripción |
 |---|---|
 | **--spec -s** | Ruta de acceso a un directorio con un archivo de YAML especificación que describe la aplicación. |
-| **--yes -y** | No solicita confirmación al actualizar una aplicación partir spec.yaml archivo del CWD. |
+| **--Sí -y** | No solicita confirmación al actualizar una aplicación partir spec.yaml archivo del CWD. |
 
 ## <a name="next-steps"></a>Pasos siguientes
 

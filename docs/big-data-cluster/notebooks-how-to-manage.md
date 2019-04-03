@@ -1,6 +1,6 @@
 ---
 title: Administración de blocs de notas en Azure Data Studio
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Obtenga información sobre cómo administrar los cuadernos en Azure Data Studio. Esto incluye la apertura de blocs de notas, guardarlos y cambiar la conexión de clúster de macrodatos.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 107a567da4727fa5786b0b913f1c75706a23a9b7
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ab731e3f657a629dbb1b4058bd94b32677c2def0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241931"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860516"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Administración de blocs de notas en Azure Data Studio
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este artículo muestra cómo abrir y guardar archivos del Bloc de notas en Azure Data Studio con la versión preliminar de SQL Server 2019. También se muestra cómo cambiar la conexión a su clúster de macrodatos de SQL Server.
 
@@ -27,7 +29,7 @@ En este artículo se da por supuesto que ya tiene un bloc de notas que desea usa
 
 - [Implementar un clúster de macrodatos](quickstart-big-data-cluster-deploy.md).
 - [Herramientas de SQL Server 2019 macrodatos](deploy-big-data-tools.md):
-   - **Azure Data Studio**
+   - **Azure Data Studio **
    - **Extensión de SQL Server 2019**
    - **kubectl**
 

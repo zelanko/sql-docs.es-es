@@ -1,6 +1,6 @@
 ---
-title: Cargar datos de ejemplo
-titleSuffix: SQL Server 2019 big data clusters
+title: Carga de datos de muestra
+titleSuffix: SQL Server big data clusters
 description: Este tutorial muestra cómo cargar datos de ejemplo en un clúster de macrodatos de SQL Server. Los datos de ejemplo incluyen datos relacionales en la instancia principal de SQL Server. También incluye datos de HDFS en el bloque de almacenamiento. Estos datos es compatible con otros tutoriales de esta sección.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: faee29ed293c59752988760ea9ca27a4cf3e372a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566524"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859996"
 ---
-# <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>Tutorial: Cargar datos de ejemplo en un clúster de macrodatos de SQL Server 2019
+# <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Cargar datos de ejemplo en un clúster de macrodatos de SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este tutorial explica cómo usar un script para cargar datos de ejemplo en un clúster de macrodatos de 2019 de SQL Server (versión preliminar). Muchos de los otros tutoriales en la documentación de usan estos datos de ejemplo.
 

@@ -13,12 +13,12 @@ author: HJToland3
 ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: f0ea70ded49d37d553f5de188a4a0735f521ee66
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7630aee7ab39f98f372af7c33f277e7272042f43
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987701"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872245"
 ---
 # <a name="get-started-with-database-experimentation-assistant"></a>Empezar a trabajar con el Asistente para experimentación de base de datos
 
@@ -81,7 +81,7 @@ Para reproducir el archivo de seguimiento:
 
    - **Nombre de la reproducción**: El nombre de archivo para el seguimiento de reproducción.
    - **Nombre del equipo controlador**: El nombre de la máquina del controlador de Distributed Replay.
-   - **Ruta de acceso al archivo de seguimiento de origen en el controlador**: La ruta de acceso del archivo de seguimiento de origen de [capturar](#Capture).
+   - **Ruta de acceso al archivo de seguimiento de origen en el controlador**: La ruta de acceso del archivo de seguimiento de origen de [capturar](#capture).
    - **Nombre de instancia de SQL Server**: El nombre de la instancia de SQL Server en el que se va a reproducir el seguimiento de origen.
    - **Ruta de acceso para almacenar el archivo de seguimiento de destino en la máquina de SQL Server**: La ruta de acceso de carpeta para el archivo de seguimiento de reproducción resultante.
 

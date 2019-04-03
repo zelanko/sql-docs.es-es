@@ -1,6 +1,6 @@
 ---
 title: Depuración y diagnóstico de aplicaciones de Spark
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Utilice el servidor de historial de Spark para depurar y diagnosticar aplicaciones de Spark que se ejecutan en clústeres de macrodatos de SQL Server 2019.
 author: jejiang
 ms.author: jejiang
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6b3cac808386d2341e1c22b18999009f7d72a43f
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e7444a9f5bcdc480425ba02c8a068831c081b47a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241796"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860337"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Depuración y diagnóstico de aplicaciones de Spark en clústeres de macrodatos de SQL Server en el servidor de historial de Spark
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Este artículo proporcionan instrucciones sobre cómo usar el servidor de historial de Spark extendido para depurar y diagnosticar aplicaciones de Spark en un clúster de macrodatos de 2019 de SQL Server (versión preliminar). Estas funcionalidades de depuración y diagnóstico están integradas en el servidor de historial de Spark y con tecnología de Microsoft. La extensión incluye datos fichas y pestaña gráfico y un diagnóstico más detallado. En la pestaña datos, los usuarios pueden comprobar los datos de entrada y salida del trabajo de Spark. En la pestaña gráfico, los usuarios pueden comprobar el flujo de datos y reproducir el gráfico del trabajo. En la pestaña de diagnóstico, pueden hacer referencia a los usuarios asimetría de datos, el desfase temporal y análisis de uso de ejecutor.
 

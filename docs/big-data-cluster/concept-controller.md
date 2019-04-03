@@ -1,23 +1,26 @@
 ---
 title: ¿Qué es el controlador?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: En este artículo se describe el controlador de un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 author: mihaelablendea
 ms.author: mihaelab
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 25afe48d2191bf77301331ed30850bf0af0baff0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 3677a2a68799ab1cfa7b6101893fe2b799b5b04a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491798"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860076"
 ---
-# <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>¿Qué es el controlador en un clúster de macrodatos de 2019 de SQL Server?
+# <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>¿Qué es el controlador en un clúster de macrodatos de SQL Server?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 El controlador hospeda la lógica básica para implementar y administrar un clúster de macrodatos. Se encarga de todas las interacciones con Kubernetes, las instancias de SQL Server que forman parte del clúster y otros componentes, como HDFS y Spark. 
 

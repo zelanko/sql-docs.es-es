@@ -1,6 +1,6 @@
 ---
 title: ¿Cuáles son los grupos de datos?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: En este artículo se describe el grupo de datos en un clúster de macrodatos de SQL Server 2019.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 906b27c186668518702c7ab3a757e6eeb4e5b278
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 8345ae06280458e7fa479ad95ffa20383e429267
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478230"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860126"
 ---
-# <a name="what-are-data-pools-in-a-sql-server-2019-big-data-cluster"></a>¿Cuáles son los grupos de datos en un clúster de macrodatos de 2019 de SQL Server?
+# <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>¿Cuáles son los grupos de datos en un clúster de macrodatos de SQL Server?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se describe el rol de *los grupos de datos de SQL Server* en un clúster de macrodatos de 2019 de SQL Server (versión preliminar). Las secciones siguientes describen la arquitectura y la funcionalidad de un grupo de datos SQL.
 

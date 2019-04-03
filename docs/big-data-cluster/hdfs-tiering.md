@@ -1,6 +1,6 @@
 ---
 title: Configurar los niveles de HDFS
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Este artículo explica cómo configurar HDFS niveles para montar un sistema de archivos externo de Azure Data Lake Storage en HDFS en un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 author: nelgson
 ms.author: negust
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2542c7c05b222517ae9f4a4c05152f21a5ba293b
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493788"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859647"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>Configurar HDFS niveles en clústeres de macrodatos de SQL Server 2019
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurar HDFS niveles en clústeres de macrodatos de SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Los niveles de HDFS proporciona la capacidad de montar externo, sistema de archivos compatible con HDFS en HDFS. Este artículo explica cómo configurar los niveles para los clústeres de macrodatos de 2019 de SQL Server (versión preliminar) de HDFS. En este momento, CTP 2.4 solo admite la conexión a Azure Data Lake Storage Gen2, que es el enfoque de este artículo.
 

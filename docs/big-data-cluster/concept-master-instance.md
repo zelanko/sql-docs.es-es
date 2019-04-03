@@ -1,6 +1,6 @@
 ---
 title: ¿Qué es la instancia maestra?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: En este artículo se describe la instancia principal de SQL Server en un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9c3809e481e00c94f01c1968a82638df3e37f80f
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 68d412e3d4b8147a2e451ff2932aa79e6dbeca5e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477951"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860687"
 ---
-# <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>¿Qué es la instancia maestra en un clúster de macrodatos de 2019 de SQL Server?
+# <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>¿Qué es la instancia maestra en un clúster de macrodatos de SQL Server?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se describe el rol de la *instancia principal de SQL Server* en un clúster de macrodatos de SQL Server 2019. La instancia maestra es una instancia de SQL Server que se ejecuta en un clúster de SQL Server macrodatos [plano de control](big-data-cluster-overview.md#controlplane).
 

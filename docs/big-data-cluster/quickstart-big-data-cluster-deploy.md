@@ -1,6 +1,6 @@
 ---
 title: Guía de inicio rápido de implementación
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Tutorial de una implementación de clústeres de macrodatos de 2019 de SQL Server (versión preliminar) en Azure Kubernetes Service (AKS).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 00810eb3f57fdaf8f87fc0db16744ab9e3334f70
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 7b8abf65b5c2e7abf8823ce98aede22bba14caad
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618152"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860535"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Inicio rápido: Implementar el clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este tutorial, usará un script de implementación de ejemplo para implementar el clúster de macrodatos de 2019 de SQL Server (versión preliminar) para Azure Kubernetes Service (AKS). 
 
@@ -34,9 +36,9 @@ La implementación del clúster de macrodatos predeterminado usada aquí consta 
 - [Herramientas de macrodatos](deploy-big-data-tools.md):
    - **mssqlctl**
    - **kubectl**
-   - **Azure Data Studio**
+   - **Azure Data Studio **
    - **Extensión de SQL Server 2019**
-   - **Azure CLI**
+   - **CLI de Azure**
 
 ## <a name="log-in-to-your-azure-account"></a>Inicie sesión en su cuenta de Azure
 

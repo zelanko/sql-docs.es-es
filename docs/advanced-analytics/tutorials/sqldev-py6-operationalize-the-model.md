@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: de46594a5de2bee6e50786de25826c96da01ae53
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 77d08db22ca7ff1b4b66620d277280f0c1ac314e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513072"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860586"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Ejecutar predicciones con Python incrustado en un procedimiento almacenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -172,8 +172,8 @@ A veces, en lugar de puntuación por lotes, es posible que van a pasar en una so
 
 En esta sección, aprenderá a crear predicciones únicas mediante una llamada a dos procedimientos almacenados:
 
-+ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy) está diseñado para la puntuación de fila única mediante el scikit-aprender modelo.
-+ [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy) está diseñado para la puntuación de fila única mediante el modelo de revoscalepy.
++ [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) está diseñado para la puntuación de fila única mediante el scikit-aprender modelo.
++ [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) está diseñado para la puntuación de fila única mediante el modelo de revoscalepy.
 + Si aún no lo ha entrenado un modelo todavía, volver a [paso 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
 
 Ambos modelos se toman como entrada una serie de valores únicos, como número de pasajeros, distancia de viaje y así sucesivamente. Una función con valores de tabla, `fnEngineerFeatures`, se utiliza para convertir los valores de latitud y longitud de las entradas a una nueva característica, la distancia directa. [Lección 4](sqldev-py4-create-data-features-using-t-sql.md) contiene una descripción de esta función con valores de tabla.

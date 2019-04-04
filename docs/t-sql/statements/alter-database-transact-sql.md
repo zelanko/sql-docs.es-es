@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a9d870d766d7c2080b177270156cfa2428c21fc7
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417247"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538667"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -233,7 +233,7 @@ Modify Name = Northwind ;
 GO
 ```
 
-### <a name="b-changing-the-collation-of-a-database"></a>b. Cambiar la intercalación de una base de datos
+### <a name="b-changing-the-collation-of-a-database"></a>B. Cambiar la intercalación de una base de datos
 
 En el siguiente ejemplo se crea una base de datos denominada `testdb` con la intercalación `SQL_Latin1_General_CP1_CI_A`S, y luego se cambia la intercalación de la base de datos `testdb` a `COLLATE French_CI_AI`.
 
@@ -592,7 +592,7 @@ SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
 ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJECTIVE = 'P15');
 ```
 
-### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>b. Movimiento de una base de datos a otro grupo elástico
+### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. Movimiento de una base de datos a otro grupo elástico
 Mueve una base de datos existente en un grupo denominado pool1:
 
 ```sql
@@ -624,7 +624,15 @@ Promueve una base de datos secundaria db1 en el servidor `secondaryserver` para 
 ALTER DATABASE db1 FAILOVER
 ```
 
-### <a name="f-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>F. Actualizar una única base de datos al nivel de servicio S0 (edición estándar, nivel de rendimiento 0)
+### <a name="e-force-failover-to-a-geo-replication-secondary-with-data-loss"></a>E. Forzado de la conmutación por error a una base de datos secundaria de replicación geográfica con pérdida de datos
+
+Obliga a una base de datos secundaria db1 en el servidor `secondaryserver` a convertirse en la nueva base de datos principal cuando se ejecute en el servidor `secondaryserver`, en el caso de que el servidor principal ya no esté disponible. Esta opción puede conllevar la pérdida de datos. 
+
+```sql
+ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
+```
+
+### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>G. Actualizar una única base de datos al nivel de servicio S0 (edición estándar, nivel de rendimiento 0)
 Actualiza una sola base de datos a la edición estándar (nivel de servicio) con un nivel de rendimiento de S0 y un tamaño máximo de 250 GB.
 
 ```sql
@@ -863,7 +871,7 @@ ALTER DATABASE AdventureWorks2012
 MODIFY NAME = Northwind;
 ```
 
-### <a name="b-change-max-size-for-the-database"></a>b. Cambiar el tamaño máximo de la base de datos
+### <a name="b-change-max-size-for-the-database"></a>B. Cambiar el tamaño máximo de la base de datos
 
 ```sql
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB );
@@ -1045,7 +1053,7 @@ ALTER DATABASE CustomerSales
     SET ( AUTOGROW = ON );
 ```
 
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>b. Modificación del almacenamiento máximo para las tablas replicadas
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. Modificación del almacenamiento máximo para las tablas replicadas
 
 En el ejemplo siguiente se establece el límite de almacenamiento de tablas replicadas en 1 GB para la base de datos `CustomerSales`. Este es el límite de almacenamiento por nodo de ejecución.
 

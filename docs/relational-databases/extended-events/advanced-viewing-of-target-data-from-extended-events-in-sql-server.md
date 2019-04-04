@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9ce1619d4ad2d61a784ace4ea16dc4064569e09
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d80831a3a152d29d8a2f608527105c9feb23b126
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658884"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478170"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -36,7 +37,7 @@ En este artículo se explica cómo usar las características avanzadas de SQL Se
 
 En este artículo se da por hecho que ya sabe cómo crear e iniciar una sesión de eventos. En este artículo encontrará instrucciones sobre cómo crear una sesión de eventos:
 
-[Quick Start: Extended Events in SQL Server (Inicio rápido: Eventos extendidos en SQL Server)](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+[Inicio rápido: Eventos extendidos en SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
 
 
 En este artículo también se da por hecho que ha instalado una versión mensual muy reciente de SSMS. Encontrará ayuda para instalarlo en:

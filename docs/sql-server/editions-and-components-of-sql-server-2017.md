@@ -1,7 +1,7 @@
 ---
 title: Ediciones y características admitidas de SQL Server 2017 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/11/2017
+ms.date: 03/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: db8b22746702fa0df86478dadee700938cd63c40
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: d43593a5c95a77ef6cbd692a07305a46c77e7e07
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974504"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566504"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Ediciones y características admitidas de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -74,12 +74,14 @@ Para leer las notas de la versión más reciente e información sobre las noveda
   
 |Edición de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Definición|  
 |---------------------------------------|----------------|  
-|Enterprise|La mejor oferta, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition proporciona funciones de centro de datos de tecnología avanzada completas con un rendimiento ultrarápido, virtualización ilimitada e inteligencia empresarial integral, lo que habilita los mayores niveles de servicio para las cargas de trabajo de gran importancia y el acceso del usuario final a información sobre los datos.|  
+|Enterprise|La oferta premium, [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise Edition, proporciona funciones de centro de datos de tecnología avanzada completas con un rendimiento ultrarrápido, virtualización ilimitada<sup>1</sup> e inteligencia empresarial integral, lo que habilita los mayores niveles de servicio para las cargas de trabajo de gran importancia y el acceso del usuario final a información sobre los datos.|  
 |Estándar|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard Edition proporciona administración básica de datos y base de datos de inteligencia empresarial para que los departamentos y pequeñas organizaciones ejecuten sus aplicaciones y admite las herramientas de desarrollo comunes, tanto locales como en la nube, que habilitan la administración eficaz de bases de datos con recursos de TI mínimos.|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web Edition es una opción con un costo total de propiedad bajo para los hosts de Web y los VAP de Web que proporciona capacidades asequibles de administración y escalabilidad para propiedades web, tanto de pequeña como de gran escala.|  
 |Desarrollador|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer Edition permite a los desarrolladores compilar cualquier tipo de aplicación en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Incluye toda la funcionalidad de la edición Enterprise, pero tiene licencias para usarse como sistema de prueba y desarrollo, no como un servidor de producción. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer es una opción ideal para las personas que compilan y prueban aplicaciones.|  
 |Ediciones Express|Express Edition es una base de datos gratuita para principiantes y es ideal para aprender a compilar pequeñas aplicaciones de servidor y de escritorio orientadas a datos. Es la mejor opción para los fabricantes de software independientes, los desarrolladores y los aficionados que compilan aplicaciones cliente. Si necesita características de base de datos más avanzadas, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express se puede actualizar sin problemas a otras versiones superiores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB es una versión ligera de Express que tiene todas sus características de capacidad de programación, se ejecuta en modo usuario y presenta una instalación rápida y sin configuración, y una lista reducida de requisitos previos.|  
-  
+
+<sup>1</sup> La virtualización ilimitada está disponible en Enterprise Edition para los clientes empresariales con [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default). Las implementaciones deben cumplir la [directiva de licencias](https://www.microsoft.com/sql-server/sql-server-2017-pricing).  
+
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>Usar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con un servidor de Internet  
  En un servidor de Internet, como el servidor en el que se ejecuta Internet Information Services (IIS), se instalan normalmente las herramientas de cliente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Las herramientas de cliente incluyen los componentes de conectividad del cliente utilizados por una aplicación que se conecta a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

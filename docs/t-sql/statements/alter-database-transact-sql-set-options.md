@@ -2,7 +2,7 @@
 title: Opciones de ALTER DATABASE SET (Transact-SQL) | Microsoft Docs
 description: Aprenda a configurar las opciones de base de datos, como la optimización automática, el cifrado y el almacén de consultas, en SQL Server y Azure SQL Database.
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fabf89ea24461953089a3f7eb928878e600f3d6
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 37f2dc54498e98fc6d940a014dd8db4927b38027
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356528"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494437"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL)
 
@@ -149,7 +149,7 @@ SET
     DATE_CORRELATION_OPTIMIZATION { ON | OFF }
   
 <db_encryption_option> ::=
-    ENCRYPTION { ON | OFF }
+    ENCRYPTION { ON | OFF | SUSPEND | RESUME }
 
 <db_state_option> ::=
     { ONLINE | OFFLINE | EMERGENCY }
@@ -455,11 +455,13 @@ La configuración actual de esta opción se puede determinar mediante el examen 
 
 Controla el estado del cifrado de la base de datos.
 
-ENCRYPTION {ON | OFF} Establece que la base de datos se cifre (ON) o no se cifre (OFF). Para más información sobre el cifrado de base de datos, consulte [Cifrado de datos transparente](../../relational-databases/security/encryption/transparent-data-encryption.md) y [Cifrado de datos transparente con Azure SQL Database](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+ENCRYPTION { ON | OFF | SUSPEND | RESUME} Establece que la base de datos se cifre (ON) o no se cifre (OFF). Para más información sobre el cifrado de base de datos, consulte [Cifrado de datos transparente](../../relational-databases/security/encryption/transparent-data-encryption.md) y [Cifrado de datos transparente con Azure SQL Database](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md).
+
+En [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores, las opciones SUSPEND y RESUME pueden utilizarse para pausar y reanudar el análisis de cifrado después de que TDE se haya habilitado o deshabilitado, o después de cambiar la clave de cifrado.
 
 Cuando el cifrado está habilitado en el nivel de la base de datos, se cifrarán todos los grupos de archivos. Todos los grupos de archivos nuevos heredarán la propiedad de cifrado. Si en la base de datos hay grupos de archivos establecidos en **READ ONLY**, se producirá un error en la operación de cifrado de la base de datos.
 
-Puede ver el estado del cifrado de la base de datos mediante la vista de administración dinámica [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
+Puede ver el estado del cifrado de la base de datos, así como el estado del análisis de cifrado, mediante la vista de administración dinámica [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
 
 **\<db_state_option> ::=**
 
@@ -1033,7 +1035,7 @@ GO
 
 ```
 
-### <a name="b-setting-the-database-to-readonly"></a>b. Establecer la base de datos en READ_ONLY
+### <a name="b-setting-the-database-to-readonly"></a>B. Establecer la base de datos en READ_ONLY
 
 El cambio del estado de una base de datos o un grupo de archivos a READ_ONLY o READ_WRITE requiere el acceso exclusivo a la base de datos. En el siguiente ejemplo la base de datos se establece en el modo `SINGLE_USER` para obtener acceso exclusivo. A continuación, el ejemplo establece el estado de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en `READ_ONLY` y devuelve el acceso a la base de datos a todos los usuarios.
 
@@ -1745,7 +1747,7 @@ GO
 
 ```
 
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>b. Habilitar el aislamiento de instantánea en una base de datos
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Habilitar el aislamiento de instantánea en una base de datos
 
 En el siguiente ejemplo se habilita la opción del marco de aislamiento de instantánea para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .
 
@@ -2357,7 +2359,7 @@ GO
 
 ```
 
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>b. Habilitar el aislamiento de instantánea en una base de datos
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>B. Habilitar el aislamiento de instantánea en una base de datos
 
 En el siguiente ejemplo se habilita la opción del marco de aislamiento de instantánea para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .
 

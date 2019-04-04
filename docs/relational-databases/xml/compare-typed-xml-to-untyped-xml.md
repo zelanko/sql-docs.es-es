@@ -23,15 +23,15 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1a8113ba4f9df20fcf11a7f4662abb1f2a24b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8e4679cb4627f5366327c02f6b30db32d3b2610
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841289"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510922"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML con tipo y XML sin tipo
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,14 +69,14 @@ ms.locfileid: "47841289"
   
  En los ejemplos siguientes se usa una convención de nomenclatura de dos partes para especificar el nombre de la recopilación de esquemas XML. La primera parte corresponde al nombre de esquema y la segunda al nombre de la colección de esquemas XML.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Ejemplo: Asociar una colección de esquemas con una variable de tipo XML  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Ejemplo: Asociación de una colección de esquemas con una variable de tipo XML  
  En el ejemplo siguiente se crea una variable de tipo **xml** y se le asocia una colección de esquemas. La colección de esquemas especificada en el ejemplo ya se ha importado a la base de datos **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Ejemplo: Especificar un esquema para una columna de tipo XML  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Ejemplo: Especificación de un esquema para una columna de tipo XML  
  En el ejemplo siguiente se crea una tabla con una columna de tipo **xml** y se especifica un esquema para la columna:  
   
 ```  
@@ -85,7 +85,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Ejemplo: Pasar un parámetro de tipo XML a un procedimiento almacenado  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Ejemplo: Cómo pasar un parámetro de tipo XML a un procedimiento almacenado  
  En el ejemplo siguiente se pasa un parámetro de tipo **xml** a un procedimiento almacenado y se especifica un esquema para la variable:  
   
 ```  
@@ -107,7 +107,7 @@ AS
   
  En la jerarquía de tipos de datos, el tipo de datos **xml** aparece por debajo de **sql_variant** y los tipos definidos por el usuario, pero por encima de los tipos integrados.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Ejemplo: Especificar facetas para restringir una columna XML con tipo  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Ejemplo: Especificación de facetas para restringir una columna XML con tipo  
  En las columnas **xml** con tipo se puede restringir la columna para permitir que solo se almacenen en ella elementos únicos de nivel superior para cada instancia. Para ello, se especifica la faceta opcional `DOCUMENT` cuando se crea una tabla, como se muestra en el ejemplo siguiente:  
   
 ```  
@@ -157,9 +157,9 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
  Observe que todavía puede usar una instrucción SELECT de SQL para recuperar todo el tipo de datos XML, aun cuando contiene años negativos. Se recomienda que reemplace los años negativos por un año dentro del intervalo recientemente admitido o cambie el tipo del elemento o atributo a **xs:string**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear instancias de datos XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [métodos del tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Métodos de tipo de datos xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Lenguaje de manipulación de datos XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [Datos XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

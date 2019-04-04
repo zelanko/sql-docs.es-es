@@ -13,12 +13,12 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fd75ed198aa454c25a1be027c9bbb68f15142730
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: be3b29da5db98d63426f790986c21a54b85159bf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407722"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528197"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>Ver la configuración de NodeWeight de quórum de clúster
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52407722"
   
 -   **Antes de empezar:**  [Requisitos previos](#Prerequisites), [Seguridad](#Security)  
   
--   **Para ver la configuración de NodeWeight de quórum con:** [Usar Transact-SQL](#TsqlProcedure), [Usar PowerShell](#PowerShellProcedure), [Usar Cluster.exe](#CommandPromptProcedure)  
+-   **Para ver la configuración de NodeWeight de quórum con:** [Uso de Transact-SQL](#TsqlProcedure), [Uso de Powershell](#PowerShellProcedure), [Uso de Cluster.exe](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
@@ -55,7 +55,7 @@ ms.locfileid: "52407722"
 ### <a name="example-transact-sql"></a>Ejemplo (Transact-SQL)  
  En el ejemplo siguiente se consulta una vista del sistema para devolver valores para todos los nodos del clúster de esa instancia.  
   
-```tsql  
+```sql  
 SELECT  member_name, member_state_desc, number_of_quorum_votes  
  FROM   sys.dm_hadr_cluster_members;  
 ```  
@@ -102,7 +102,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 cluster.exe Cluster001 node /status /properties  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configuración de los votos y modos de cuórum WSFC &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)   
  [Configurar los valores de NodeWeight de quórum de clúster](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)   
  [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql.md)   

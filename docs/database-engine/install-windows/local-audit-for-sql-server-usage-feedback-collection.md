@@ -1,7 +1,7 @@
 ---
 title: Auditoría local para colección de comentarios sobre el uso de SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2017
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a094030a35acf997186061b752f9b61d8f7b8200
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: fb5810e787456673d67322823a28df4d79208d1e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601689"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493887"
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Auditoría local para colección de comentarios sobre el uso de SQL Server
 
@@ -183,7 +183,7 @@ Auditoría local generará un archivo de registro al día. Los archivos de regis
 | Máquina | operatingSystem 
 | Instancia | instanceUniqueID, correlationID y clientVersion 
 | Session | sessionID, traceName 
-| Consulta | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
+| Consultar | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
 | data |  datos 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>Definición y ejemplos de pares nombre-valor 
@@ -203,9 +203,9 @@ Las columnas siguientes representan el orden de la salida de archivo de Auditor�
 |querySetVersion | La versión de un grupo de definiciones de consulta | 1.0.0.0 
 |traceName | Categorías de seguimientos: (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | Un identificador de la consulta | SQLServerProperties.002 
-|datos   | El resultado de la información recopilada en queryIdentifier como salida de la consulta T-SQL, la sesión de XE o la aplicación |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
+|datos   | El resultado de la información recopilada en queryIdentifier como salida de la consulta T-SQL, la sesión de XE o la aplicación |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep 7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
 |Query| Si corresponde, la definición de consulta T-SQL relacionada con el identificador queryIdentifier que genera los datos.        El servicio CEIP de SQL Server no carga este componente. Solo se incluye en Auditoría local como referencia para los clientes.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027PolyBaseRole\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
-|queryTimeInTicks | La duración necesaria para que se ejecute la consulta con la siguiente categoría de seguimiento: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
+|queryTimeInTicks | Duración necesaria para que se ejecute la consulta con la siguiente categoría de seguimiento: (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
 ### <a name="trace-categories"></a>Categorías de seguimiento 
 Actualmente recopilamos las siguientes categorías de seguimiento: 
@@ -368,5 +368,5 @@ FROM OPENJSON(@JSONFile)
 WHERE queryIdentifier = 'DatabaseProperties.001'
 ```
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 [Auditoría local para colección de comentarios sobre el uso de SSMS](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms)

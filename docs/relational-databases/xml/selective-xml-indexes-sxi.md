@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 328772e1bad2a93bba60ecdd215567ba65dd8076
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3858371c92965db9c84ec70d7d86969b0d9311ba
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673193"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513352"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Índices XML selectivos (SXI)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -115,13 +115,13 @@ FOR
   
   
 ###  <a name="unsupported"></a> Características XML no admitidas  
- Los índices XML selectivos no admiten las siguientes características compatibles con la implementación de XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+ Los índices XML selectivos no admiten las siguientes características compatibles con la implementación de XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Indizar nodos con tipos XS complejos: tipos de unión, tipos de secuencia y tipos de lista.  
   
 -   Indizar nodos con tipos XS binarios: por ejemplo, base64Binary y hexBinary.  
   
--   Especificar los nodos para indizar con expresiones Xpath que contienen el carácter comodín `*` al final. Por ejemplo,  `/a/b/c/*`, `/a//b/*`o `/a/b/*:c`.  
+-   Especificar los nodos para indizar con expresiones XPath que contienen el carácter comodín `*` al final, por ejemplo, `/a/b/c/*`, `/a//b/*`o `/a/b/*:c`.  
   
 -   Indizar cualquier eje distinto de secundario, atributo o descendiente. El caso `//<step>` se permite como un caso especial.  
   

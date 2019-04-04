@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: especificar las directivas ID e IDREF | Microsoft Docs'
+title: 'Ejemplo: Especificación de las directivas ID e IDREF | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20f5301d07d054800775b6cf624e30447950867d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b69385e2481d772da2777dfffde4907c8d18d3b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726093"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511172"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>Ejemplo: especificar las directivas ID e IDREF
+# <a name="example-specifying-the-id-and-idref-directives"></a>Ejemplo: Especificación de las directivas ID e IDREF
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Este ejemplo es casi idéntico al ejemplo [Especificar la directiva ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) . La única diferencia consiste en que la consulta especifica las directivas **ID** e **IDREF** . Estas directivas sobrescriben los tipos del atributo **SalesPersonID** en los elementos <`OrderHeader`> y <`OrderDetail`>. De este modo, se forman vínculos dentro de los documentos. Para ver los tipos sobrescritos, se necesita el esquema. Por lo tanto, la consulta especifica la opción **XMLDATA** en la cláusula FOR XML para recuperar el esquema.  
   
@@ -107,7 +107,7 @@ FOR XML EXPLICIT, XMLDATA
 ...  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

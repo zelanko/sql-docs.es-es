@@ -12,15 +12,15 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23c2911c656087fe3d4c0f5a81ea037ff02d6706
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36a775666da4905d4ccc9f11083470872b714804
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650333"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511602"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar el modo EXPLICIT con FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -149,27 +149,27 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>En esta sección  
  Los siguientes ejemplos ilustran el uso del modo EXPLICIT.  
   
--   [Ejemplo: Recuperar información de los empleados](../../relational-databases/xml/example-retrieving-employee-information.md)  
+-   [Ejemplo: Recuperación de información de los empleados](../../relational-databases/xml/example-retrieving-employee-information.md)  
   
--   [Ejemplo: Especificar la directiva ELEMENT](../../relational-databases/xml/example-specifying-the-element-directive.md)  
+-   [Ejemplo: Especificación de la directiva ELEMENT](../../relational-databases/xml/example-specifying-the-element-directive.md)  
   
--   [Ejemplo: Especificar la directiva ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
+-   [Ejemplo: Especificación de la directiva ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [Ejemplo: Construir elementos del mismo nivel con el modo EXPLICIT](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [Ejemplo: Construcción de elementos del mismo nivel con el modo EXPLICIT](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Ejemplo: especificar las directivas ID e IDREF](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Ejemplo: Especificación de las directivas ID e IDREF](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [Ejemplo: Especificar las directivas ID e IDREFS](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [Ejemplo: Especificación de las directivas ID e IDREFS](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Ejemplo: Especificar la directiva HIDE](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
+-   [Ejemplo: Especificación de la directiva HIDE](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   
--   [Ejemplo: Especificar la directiva ELEMENT y la codificación de entidades](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Ejemplo: Especificación de la directiva ELEMENT y la codificación de entidades](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [Ejemplo: Especificar la directiva CDATA](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
+-   [Ejemplo: Especificación de la directiva CDATA](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
   
--   [Ejemplo: Especificar la directiva XMLTEXT](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
+-   [Ejemplo: Especificación de la directiva XMLTEXT](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo RAW con FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [Usar el modo AUTO con FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [Usar el modo PATH con FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)   

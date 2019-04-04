@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Especificar la directiva CDATA | Microsoft Docs'
+title: 'Ejemplo: Especificación de la directiva CDATA | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - CDATA directive
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 604fce70ed6b03b3a3d752ec1ee75eda6aed0a2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f2cba1b43d782ef9d9a75d159e245f0f5d4077a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725503"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511102"
 ---
-# <a name="example-specifying-the-cdata-directive"></a>Ejemplo: Especificar la directiva CDATA
+# <a name="example-specifying-the-cdata-directive"></a>Ejemplo: Especificación de la directiva CDATA
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Si se establece la directiva en **CDATA**, los datos contenidos no se codifican por entidad, pero se colocan en la sección CDATA. Los atributos **CDATA** no deben tener nombre.  
   
@@ -48,7 +48,7 @@ FOR XML EXPLICIT
 </ProductModel>  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

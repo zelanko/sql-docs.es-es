@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cac151a3c3192c03f915c95eb0ac228ad2d8c05
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: add30d400db0a4ce73313ac5b7c4637bff8adfd9
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414180"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658299"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,6 +133,6 @@ De este modo, el optimizador de consultas puede procesar la combinación con may
 -   [Carga masiva en una tabla con particiones](https://msdn.microsoft.com/library/cc966380.aspx)    
 -   [Proyecto REAL: Ciclo de vida de datos: la creación de particiones](https://technet.microsoft.com/library/cc966424.aspx)    
 -   [Mejoras de procesamiento de consultas en las tablas e índices con particiones](https://msdn.microsoft.com/library/ms345599.aspx)    
--   [Los 10 mejores procedimientos recomendados para compilar un almacén de datos relacionales a gran escala](https://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
+-   [Los 10 mejores procedimientos recomendados para compilar un almacenamiento de datos relacionales a gran escala](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf) en el manual _SQLCAT's Guide to: Relational Engineering_
   
   

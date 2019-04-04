@@ -12,15 +12,15 @@ helpviewer_keywords:
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c178b093da4fb3fb4c157a56136558ab18de894
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fc2c328a58b0fa7bdb69123d1e0b07cd59888b1
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639933"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513162"
 ---
 # <a name="drop-xml-indexes"></a>Quitar índices XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47639933"
   
  La sintaxis de DROP con *TableName.IndexName* está desapareciendo y no es compatible con los índices XML.  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Ejemplo: crear y quitar un índice XML principal  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Ejemplo: Creación y eliminación de un índice XML principal  
  En el ejemplo siguiente se muestra cómo crear un índice XML en una columna de tipo **xml** .  
   
 ```  
@@ -70,7 +70,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Ejemplo: crear un índice XML utilizando la opción de índice DROP_EXISTING  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Ejemplo: Creación de un índice XML con la opción de índice DROP_EXISTING  
  El ejemplo siguiente muestra cómo crear un índice XML en una columna (`XmlColx`). A continuación, se creará otro índice XML con el mismo nombre en una columna diferente (`XmlColy`). Dado que se ha especificado la opción `DROP_EXISTING` , el índice XML existente en (`XmlColx)` se quita y se crea un índice XML en (`XmlColy`).  
   
 ```  
@@ -98,7 +98,7 @@ AND    si.object_id=object_id('T')
   
  Esta consulta devuelve el nombre de la columna en la que el índice XML especificado se ha creado.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

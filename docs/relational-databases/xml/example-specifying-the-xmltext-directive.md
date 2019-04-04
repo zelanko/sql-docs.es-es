@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Especificar la directiva XMLTEXT | Microsoft Docs'
+title: 'Ejemplo: Especificación de la directiva XMLTEXT | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c20ecd2ea4df8ea3e3a22138473ec1de48fc7a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e22a94fef64ac6b31d4a7609c01a50f11d5020bf
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806823"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511942"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Ejemplo: Especificar la directiva XMLTEXT
+# <a name="example-specifying-the-xmltext-directive"></a>Ejemplo: Especificación de la directiva XMLTEXT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   En este ejemplo se muestra cómo se tratan los datos de la columna de desbordamiento con la directiva **XMLTEXT** en una instrucción `SELECT` con el modo EXPLICIT.  
   
@@ -175,7 +175,7 @@ FOR XML EXPLICIT, xmldata;
  </overflow>
  ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

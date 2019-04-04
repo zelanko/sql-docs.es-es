@@ -11,25 +11,25 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc8dc35b72a5544bc6b52934a4e2e517a047a621
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4b311802506ac8d0517026a9258a340e927a10f9
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215371"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566564"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>Configuración de un grupo de disponibilidad Always On distribuido  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Para crear un grupo de disponibilidad distribuido, debe crear un grupo de disponibilidad y el agente de escucha en cada clúster de conmutación por error de Windows Server (WSFC). Después, combine estos grupos de disponibilidad en un grupo de disponibilidad distribuido. En los pasos siguientes se proporciona un ejemplo básico de Transact-SQL. Este ejemplo no cubre todos los detalles relativos a cómo crear grupos de disponibilidad y agentes de escucha, sino que se centra en resaltar los requisitos clave. 
+Para crear un grupo de disponibilidad distribuido, debe tener dos grupos de disponibilidad, cada uno con su propio agente de escucha. Después, combine estos grupos de disponibilidad en un grupo de disponibilidad distribuido. En los pasos siguientes se proporciona un ejemplo básico de Transact-SQL. Este ejemplo no cubre todos los detalles relativos a cómo crear grupos de disponibilidad y agentes de escucha, sino que se centra en resaltar los requisitos clave.
 
-Para ver una introducción técnica de los grupos de disponibilidad distribuidos, vea [Distributed availability groups](distributed-availability-groups.md) (Grupos de disponibilidad distribuidos).   
+Para ver una introducción técnica de los grupos de disponibilidad distribuidos, vea [Distributed availability groups](distributed-availability-groups.md) (Grupos de disponibilidad distribuidos).
 
 ## <a name="prerequisites"></a>Prerequisites
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Establecer los agentes de escucha de punto de conexión para que escuchen en todas las direcciones IP
 
-Asegúrese de que los puntos de conexión pueden comunicarse entre los diferentes grupos de disponibilidad del grupo de disponibilidad distribuido. Si un grupo de disponibilidad está configurado en una red específica en el punto de conexión, el grupo de disponibilidad distribuido no funcionará correctamente. Configure el agente de escucha como `LISTENER_IP = ALL` en cada servidor que hospede una réplica en el grupo de disponibilidad distribuido. 
+Asegúrese de que los puntos de conexión pueden comunicarse entre los diferentes grupos de disponibilidad del grupo de disponibilidad distribuido. Si un grupo de disponibilidad está configurado en una red específica en el punto de conexión, el grupo de disponibilidad distribuido no funcionará correctamente. Establezca el agente de escucha para escuchar en todas las direcciones IP (`LISTENER_IP = ALL`) en cada servidor que hospede una réplica en el grupo de disponibilidad distribuido.
 
 #### <a name="create-a-listener-to-listen-to-all-ip-addresses"></a>Crear un agente de escucha para que escuche en todas las direcciones IP
 
@@ -60,7 +60,7 @@ GO
 ## <a name="create-first-availability-group"></a>Crear el primer grupo de disponibilidad
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>Creación del grupo de disponibilidad principal en el primer clúster  
-Crear un grupo de disponibilidad en el primer WSFC.   En este ejemplo, el grupo de disponibilidad se denomina `ag1` en la base de datos `db1`. La réplica principal del grupo de disponibilidad principal se conoce como **principal global** en un grupo de disponibilidad distribuido. Servidor1 es el principal global en este ejemplo.        
+Cree un grupo de disponibilidad en el primer clúster de conmutación por error de Windows Server (WSFC).   En este ejemplo, el grupo de disponibilidad se denomina `ag1` en la base de datos `db1`. La réplica principal del grupo de disponibilidad principal se conoce como **principal global** en un grupo de disponibilidad distribuido. Servidor1 es el principal global en este ejemplo.        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -209,11 +209,19 @@ Una vez que la base de datos de la réplica secundaria del segundo grupo de disp
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
-```  
+```
   
 ## <a name="failover"></a> Conmutación por error de un grupo de disponibilidad secundario  
-En estos momentos, solo se admite la conmutación por error manual. La instrucción Transact-SQL siguiente conmuta por error un grupo de disponibilidad distribuido denominado `distributedag`:  
 
+En estos momentos, solo se admite la conmutación por error manual. Para conmutar por error manualmente un grupo de disponibilidad distribuido:
+
+1. Para asegurarse de que no se pierden datos, establezca el grupo de disponibilidad distribuido en confirmación sincrónica.
+1. Espere a que el grupo de disponibilidad distribuido esté sincronizado.
+1. En la réplica principal global, establezca el rol del grupo de disponibilidad distribuido en `SECONDARY`.
+1. Pruebe la preparación de la conmutación por error.
+1. Conmute por error el grupo de disponibilidad principal.
+
+Los ejemplos de Transact-SQL siguientes muestran los pasos detallados para conmutar por error el grupo de disponibilidad distribuido denominado `distributedag`:
 
 1. Establezca el grupo de disponibilidad distribuido en confirmación sincrónica ejecutando el siguiente código *tanto* en el principal global como en el reenviador.   
     
@@ -242,8 +250,7 @@ En estos momentos, solo se admite la conmutación por error manual. La instrucci
 
       ```  
    >[!NOTE]
-   >De forma similar a los grupos de disponibilidad normal, el estado de sincronización entre dos elementos de réplica de grupos de disponibilidad de un grupo de disponibilidad distribuido depende del modo de disponibilidad de ambas réplicas. Por ejemplo, para que tenga lugar la confirmación sincrónica, tanto el grupo de disponibilidad principal actual como el grupo de disponibilidad secundario deben estar configurados con el modo de disponibilidad synchronous_commit.  
-
+   >En los grupos de disponibilidad distribuidos, el estado de sincronización entre dos elementos de réplica de grupos de disponibilidad depende del modo de disponibilidad de ambas réplicas. Para el modo de confirmación sincrónica, tanto el grupo de disponibilidad principal actual como el grupo de disponibilidad secundario actual deben estar configurados en modo de disponibilidad `SYNCHRONOUS_COMMIT`. Por este motivo, debe ejecutar el script anterior en la réplica principal global y en el reenviador.
 
 1. Espere hasta que el estado del grupo de disponibilidad distribuida haya cambiado a `SYNCHRONIZED`. Ejecute la siguiente consulta en el principal global, que es la réplica principal del grupo de disponibilidad principal. 
     

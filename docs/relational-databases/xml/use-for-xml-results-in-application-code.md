@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9252d2161fcca10b3ccd686d7f33de525cfe239
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: be1c2f24083d86ee03156617acaa8c18b903fed0
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670475"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510722"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar los resultados de FOR XML en el código de aplicación
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -155,9 +155,9 @@ ms.locfileid: "51670475"
   
 ##### <a name="client-side-processing-of-xml-document-mydataisle"></a>Procesamiento del documento XML MyDataIsle en el cliente  
   
--   **AnnualSales:** 1500000  
+-   **AnnualSales:** 1 500 000  
   
--   **AnnualRevenue:** 150000  
+-   **AnnualRevenue:** 150 000  
   
 -   **BankName:** Primary International  
   
@@ -167,7 +167,7 @@ ms.locfileid: "51670475"
   
 -   **Specialty:** Road  
   
--   **SquareFeet:** 38000  
+-   **SquareFeet:** 38 000  
   
 -   **Brands:** 3  
   
@@ -294,7 +294,7 @@ SqlConnection closed.
 > [!NOTE]  
 >  La compatibilidad con el tipo de datos **xml** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite solicitar que el resultado de una consulta FOR XML se devuelva como un tipo de datos **xml** en lugar de datos con tipo cadena o imagen, especificando la [directiva TYPE](../../relational-databases/xml/type-directive-in-for-xml-queries.md). Cuando se usa la directiva TYPE en las consultas FOR XML, el tipo de acceso que se proporciona mediante programación a los resultados de FOR XML es similar al que se muestra en [Usar datos XML en las aplicaciones](../../relational-databases/xml/use-xml-data-in-applications.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

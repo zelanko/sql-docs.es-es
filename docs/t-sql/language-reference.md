@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5e9346b2ea7a6e3f881d960462fbb56b4cd7000
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f7d3690f00742c93e33a7fa2ac3b4130b8045a0b
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802689"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566434"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Referencia de Transact-SQL (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -32,10 +32,10 @@ En este tema se proporcionan los conceptos básicos sobre cómo encontrar y util
 
 Estas son algunas de las herramientas de Microsoft que emiten comandos T-SQL:
 
-- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md)
-- [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md).  
-- [sqlcmd](../tools/sqlcmd-utility.md).  
-- [Azure Data Studio (versión preliminar)](../azure-data-studio/what-is.md).  
+- [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- [sqlcmd](../tools/sqlcmd-utility.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
   
  
 ## <a name="locate-the-transact-sql-reference-topics"></a>Encontrar los temas de referencia de Transact-SQL  

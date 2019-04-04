@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 13ad41189f1d8d1b9a7401502dec4d24e6e37c1d
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 85e4ceb8c70d6aa11ac37a8b3e8fd28c997c03dc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974394"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493793"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -43,11 +43,12 @@ Esta instrucción permite varios valores de configuración de base de datos en e
 - Habilitar o deshabilitar la caché de identidad en el nivel de base de datos.
 - Habilitar o deshabilitar un código auxiliar de plan compilado que se almacenará en caché cuando se compile un lote por primera vez.
 - Habilitar o deshabilitar la recolección de estadísticas de ejecución para los módulos de T-SQL compilados de forma nativa.
-- Habilitar o deshabilitar ONLINE mediante opciones predeterminadas para las instrucciones de DDL que admiten la sintaxis ONLINE=.
-- Habilitar o deshabilitar RESUMABLE mediante opciones predeterminadas para las instrucciones de DDL que admiten la sintaxis RESUMABLE=.
-- Habilitar o deshabilitar la funcionalidad para quitar automáticamente las tablas temporales globales. 
+- Habilitar o deshabilitar las opciones en línea de forma predeterminada para las instrucciones de DDL que admiten la sintaxis `ONLINE =`.
+- Habilitar o deshabilitar las opciones reanudables de forma predeterminada para las instrucciones de DDL que admiten la sintaxis `RESUMABLE =`.
+- Habilitar o deshabilitar la funcionalidad para quitar automáticamente las tablas temporales globales.
 - Habilitar o deshabilitar características de [Procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md).
 - Habilitar o deshabilitar la [infraestructura de generación de perfiles ligera de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).
+- Habilitar o deshabilitar el nuevo mensaje de error `String or binary data would be truncated`.
 
 ![Icono de vínculo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -83,6 +84,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | DEFERRED_COMPILATION_TV = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
+    | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
 }
 ```
 
@@ -185,11 +187,11 @@ Permite habilitar o deshabilitar las combinaciones adaptables en modo por lotes 
 
 TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (característica en versión preliminar pública)
+**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (la característica está en versión preliminar pública)
 
-Permite habilitar o deshabilitar la inserción UDF escalar de T-SQL del ámbito de la base de datos y, a la vez, mantener el nivel de compatibilidad de la base de datos 150 y superior. La inserción UDF escalar de T-SQL es una característica que forma parte de la familia de características [Procesamiento de consultas inteligente](../../relational-databases/performance/intelligent-query-processing.md).
+Permite habilitar o deshabilitar la inserción UDF escalar de T-SQL del ámbito de la base de datos y, a la vez, mantener el nivel de compatibilidad de la base de datos 150 y superior. La inserción UDF escalar de T-SQL forma parte de la familia de características [Procesamiento de consultas inteligente](../../relational-databases/performance/intelligent-query-processing.md).
 
-> [!NOTE] 
+> [!NOTE]
 > Para un nivel de compatibilidad de base de datos de 140 o inferior, esta configuración de ámbito de base de datos no tiene ningún efecto.
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
@@ -292,7 +294,21 @@ LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
 Permite habilitar o deshabilitar la [infraestructura ligera de generación de perfiles de consulta](../../relational-databases/performance/query-profiling-infrastructure.md). La infraestructura ligera de generación de perfiles de consulta (LWP) está habilitada de forma predeterminada y proporciona datos de rendimiento de consulta de una forma más eficaz que los mecanismos de generación de perfiles estándar.
 
-## <a name="Permissions"></a> Permissions
+VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
+
+**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+
+Permite habilitar o deshabilitar el nuevo mensaje de error `String or binary data would be truncated`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] presenta un mensaje de error nuevo y más específico (2628) para este escenario:  
+
+`String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
+
+Al establecerlo en ON bajo el nivel de compatibilidad de base de datos 150, los errores de truncamiento generan el nuevo mensaje de error 2628 para proporcionar más contexto y simplificar el proceso de solución de problemas.
+
+Al establecerlo en OFF bajo el nivel de compatibilidad de base de datos 150, los errores de truncamiento generan el mensaje de error 8152 anterior.
+
+Para el nivel de compatibilidad de base de datos 140 o inferior, el mensaje de error 2628 sigue siendo uno opcional que requiere que la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460 esté habilitada; esta configuración con ámbito de base de datos no tiene ningún efecto.
+
+## <a name="Permissions"></a> Permisos
 
 Requiere `ALTER ANY DATABASE SCOPE CONFIGURATION` en la base de datos. Este permiso se puede conceder por un usuario con permiso CONTROL en una base de datos.
 
@@ -356,7 +372,7 @@ En este ejemplo se concede el permiso necesario para ejecutar ALTER DATABASE SCO
 GRANT ALTER ANY DATABASE SCOPED CONFIGURATION to [Joe] ;
 ```
 
-### <a name="b-set-maxdop"></a>b. Configuración de MAXDOP
+### <a name="b-set-maxdop"></a>B. Configuración de MAXDOP
 En este ejemplo se establece MAXDOP = 1 para una base de datos principal y MAXDOP = 4 para una base de datos secundaria en un escenario de replicación geográfica.
 
 ```sql

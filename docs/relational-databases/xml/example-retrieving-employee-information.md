@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Recuperar información de los empleados | Microsoft Docs'
+title: 'Ejemplo: Recuperación de información de los empleados | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dedcea064cf71695764e1892b1fb6b7dd96bed21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1984c3c378f4408b8e1126f427a5e06560adef91
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699093"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510332"
 ---
-# <a name="example-retrieving-employee-information"></a>Ejemplo: Recuperar información de los empleados
+# <a name="example-retrieving-employee-information"></a>Ejemplo: Recuperación de información de los empleados
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   En este ejemplo, se recupera el identificador y el nombre de cada empleado. En la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , el identificador de empleado se puede obtener de la columna BusinessEntityID de la tabla Employee. Los nombres de los empleados se pueden obtener de la tabla Person. Para combinar las tablas, se puede usar la columna BusinessEntityID.  
   
@@ -87,41 +87,29 @@ FOR XML EXPLICIT;
   
  Éste es el resultado parcial:  
   
- `<Employee EmpID="1">`  
-  
- `<Name FName="Ken" LName="Sánchez" />`  
-  
- `</Employee>`  
-  
- `<Employee EmpID="2">`  
-  
- `<Name FName="Terri" LName="Duffy" />`  
-  
- `</Employee>`  
-  
- `...`  
+```
+<Employee EmpID="1">
+  <Name FName="Ken" LName="Sánchez" />
+</Employee>
+<Employee EmpID="2">
+  <Name FName="Terri" LName="Duffy" />
+</Employee>
+...
+```
   
  El primer `SELECT` especifica los nombres para las columnas del conjunto de filas resultante. Estos nombres forman dos grupos de columnas. El grupo con el valor `Tag` de `1` en el nombre de columna identifica `Employee` como elemento y `EmpID` como atributo. El otro grupo de columnas tiene el valor `Tag` de `2` en la columna e identifica <`Name`> como elemento, y `FName` y `LName` como atributos.  
   
  La siguiente tabla muestra el conjunto de filas parcial generado por la consulta:  
   
- `Tag Parent  Employee!1!EmpID Name!2!FName Name!2!LName`  
-  
- `--- ------  ---------------- ------------ ------------`  
-  
- `1   NULL    1                NULL         NULL`  
-  
- `2   1       1                Ken          Sánchez`  
-  
- `1   NULL    2                NULL         NULL`  
-  
- `2   1       2                Terri        Duffy`  
-  
- `1   NULL    3                NULL         NULL`  
-  
- `2   1       3                Roberto      Tamburello`  
-  
- `...`  
+Etiqueta | Parent | Employee!1!EmpID | Name!2!FName | Name!2!LName
+-|-|-|-|-
+1 | NULL | 1 | NULL | NULL 
+2 | 1 | 1 | Ken | Sánchez 
+1 | NULL | 2 | NULL | NULL 
+2 | 1 | 2 | Terri | Duffy 
+1 | NULL | 3 | NULL | NULL 
+2 | 1 | 3 | Roberto | Tamburello 
+… | … | … | … | …
   
  Así es como se procesan las filas de la tabla universal para crear el árbol XML resultante:  
   
@@ -131,7 +119,7 @@ FOR XML EXPLICIT;
   
  Este proceso se repite con el resto de filas del conjunto. Observe la importancia de ordenar las filas de la tabla universal para que FOR XML EXPLICIT pueda procesar el conjunto de filas por orden y generar el XML deseado.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar el modo EXPLICIT con FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

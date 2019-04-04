@@ -11,15 +11,15 @@ helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ca351da87aaead7fb4a7829b0cc28d16babb373
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaf25e09c5f7c8706c685875ebc7eb39bce95fcf
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538370"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511042"
 ---
 # <a name="load-xml-data"></a>Cargar datos XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52538370"
 ## <a name="bulk-loading-xml-data"></a>Carga masiva de datos XML  
  Puede realizar una carga masiva de datos XML en el servidor mediante las funciones de carga masiva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como bcp. OPENROWSET permite cargar datos en una columna XML desde archivos. El siguiente ejemplo muestra esta función.  
   
-##### <a name="example-loading-xml-from-files"></a>Ejemplo: cargar XML desde archivos  
+##### <a name="example-loading-xml-from-files"></a>Ejemplo: Carga de XML desde archivos  
  Este ejemplo muestra cómo insertar una fila en la tabla T. El valor de la columna XML se carga desde el archivo C:\MyFile\xmlfile.xml como CLOB y se suministra el valor 10 a la columna de enteros.  
   
 ```  
@@ -54,7 +54,7 @@ FROM    (SELECT *
   
 -   Para usar una codificación explícita, use el tipo **varbinary()** , que no tiene interacción con páginas de códigos, o un tipo de cadena de la página de códigos apropiada. A continuación, asigne los datos a una columna, una variable o un parámetro XML.  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>Ejemplo: especificar explícitamente una codificación  
+### <a name="example-explicitly-specifying-an-encoding"></a>Ejemplo: Especificación explícita de una codificación  
  Suponga que tiene un documento XML, vcdoc, almacenado como **varchar(max)** , que no dispone de una declaración XML explícita. La instrucción siguiente agrega una declaración XML con la codificación "iso8859-1", concatena el documento XML, convierte el resultado a **varbinary(max)** de modo que se preserve la representación de bytes y, finalmente, lo convierte a XML. De este modo, se habilita el procesador XML para analizar los datos según la codificación especificada "iso8859-1" y generar la representación UTF-16 correspondiente para los valores de cadena.  
   
 ```  
@@ -83,7 +83,7 @@ INSERT INTO T VALUES (N'...')
 CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema ... '  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Datos XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   
   

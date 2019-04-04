@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
-ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
+ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55771351"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535857"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Actualización de instancias de la réplica del grupo de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,19 +78,25 @@ Tenga en cuenta las siguientes instrucciones al realizar actualizaciones de serv
   
  ![Escenario de actualización de AG en HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Escenario de actualización de AG en HADR")  
   
-1.  Quitar la conmutación por error automática en todas las réplicas de confirmación sincrónica  
+1.  Quite la conmutación por error automática en todas las réplicas de confirmación sincrónica.  
   
-2.  Actualizar todas las instancias de réplica secundaria que ejecutan réplicas secundarias de confirmación asincrónica  
+2.  Actualice todas las instancias de la réplica secundaria de confirmación asincrónica. 
   
-3.  Actualizar todas las instancias de réplica local que no se ejecutan actualmente en la principal  
+3.  Actualice todas las instancias de la réplica secundaria de confirmación asincrónica remota. 
+
+4.  Actualice todas las instancias de la réplica secundaria de confirmación asincrónica local. 
   
-4.  Conmutación por error manual del AG en una réplica secundaria de confirmación sincrónica local  
+4.  Conmute por error manualmente el AG en una réplica secundaria de confirmación sincrónica local.  
   
-5.  Actualizar la instancia de réplica local que antes hospedaba la principal  
+5.  Actualice la instancia de réplica local que antes hospedaba la principal.  
   
-6.  Configurar los asociados de conmutación por error automática según convenga  
+6.  Configure los asociados de conmutación por error automática según convenga.
   
  Si es necesario, puede realizar una conmutación por error manual adicional para devolver al AG a su configuración original.  
+ 
+   > [!NOTE]
+   > - Al actualizar una réplica de confirmación sincrónica y desconectarla, no se retrasarán las transacciones en el servidor principal. Una vez que la réplica secundaria esté desconectada, las transacciones se confirmarán en el servidor principal sin tener que esperar a los registros para reforzar la seguridad en la réplica secundaria. 
+   > - Si `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` está establecido en `1` o `2`, la réplica principal puede no estar disponible para la lectura o escritura cuando un número correspondiente de réplicas secundarias de sincronización tampoco lo esté durante el proceso de actualización. 
   
 ## <a name="ag-with-one-remote-secondary-replica"></a>AG con una réplica secundaria remota  
  Si ha implementado un AG para la recuperación de desastres, puede que tenga que conmutar por error el AG en una réplica secundaria de confirmación asincrónica. Tal configuración se muestra en la ilustración siguiente:  

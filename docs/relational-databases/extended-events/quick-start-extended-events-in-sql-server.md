@@ -1,25 +1,26 @@
 ---
-title: 'Inicio rápido: Eventos extendidos en SQL Server | Microsoft Docs'
+title: 'Inicio rápido: Eventos extendidos en SQL Server | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: quickstart
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7c3718d1402ebdc6ff82bddc55172f09ff8b61a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e32610836ab856710de35dcf24104a3e4433877
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658354"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478240"
 ---
-# <a name="quick-start-extended-events-in-sql-server"></a>Quick Start: Extended Events in SQL Server (Inicio rápido: Eventos extendidos en SQL Server)
+# <a name="quickstart-extended-events-in-sql-server"></a>Inicio rápido: Eventos extendidos en SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -426,7 +427,7 @@ En la siguiente tabla se enumeran los términos que se usan en los eventos exten
 
 | Término | Descripción |
 | :--- | :---------- |
-| sesión de eventos | Una construcción que se centra en torno a uno o más eventos, además de elementos complementarios como acciones y destinos. La instrucción CREATE EVENT SESSION construye cada sesión de eventos. Puede modificar una sesión de eventos para iniciarla y detenerla a su voluntad. <br/> <br/> A veces, se hace referencia a una sesión de eventos solo como *sesión*, cuando el contexto lo aclara significa *sesión de eventos*. <br/> <br/> Puede encontrar más información sobre las sesiones de eventos en: [SQL Server Extended Events Sessions (Sesiones de eventos extendidos de SQL Server)](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
+| sesión de eventos | Una construcción que se centra en torno a uno o más eventos, además de elementos complementarios como acciones y destinos. La instrucción CREATE EVENT SESSION construye cada sesión de eventos. Puede modificar una sesión de eventos para iniciarla y detenerla a su voluntad. <br/> <br/> A veces, se hace referencia a una sesión de eventos solo como *sesión*, cuando el contexto lo aclara significa *sesión de eventos*. <br/> <br/> Encontrará más información sobre las sesiones de eventos en [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | event | Una repetición específica en el sistema que se observa mediante una sesión de eventos activa. <br/> <br/> Por ejemplo, el evento *sql_statement_completed* representa el momento en que cualquier instrucción T-SQL se completa. El evento puede notificar su duración y otros datos. |
 | target | Un elemento que recibe los datos de salida de un evento capturado. El destino le muestra los datos. <br/> <br/> Entre los ejemplos se incluye *event_file*, su elemento Cousin útil y ligero, y la memoria *ring_buffer*. El sofisticado destino *histogram* realiza un procesamiento de los datos antes de mostrarlos. <br/> <br/> Puede usarse cualquier destino para cualquier sesión de eventos. Para más información, consulte [Destinos para eventos extendidos en SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md). |
 | action | Un campo conocido del evento. Los datos del campo se envían al destino. El campo de acción está estrechamente relacionado con el *filtro de predicado*. |
@@ -485,7 +486,7 @@ Otra opción de búsqueda es usar la interfaz de usuario de SSMS en el cuadro de
 #### <a name="sql-trace-event-classes-with-extended-events"></a>Clases de evento de Seguimiento de SQL con eventos extendidos
 
 
-Puede obtener una descripción de cómo usar eventos extendidos con las columnas y clases de evento de Seguimiento de SQL en: [Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md).
+En el siguiente vínculo encontrará una descripción sobre el uso de los eventos extendidos con las columnas y las clases de eventos de Seguimiento de SQL: [Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
 
 
 
@@ -525,7 +526,7 @@ Puede ver estas sesiones de eventos en el **Explorador de objetos** de SSMS en *
 ### <a name="powershell-provider-for-extended-events"></a>Proveedor de PowerShell para eventos extendidos
 
 
-Puede administrar los eventos extendidos de SQL Server mediante el proveedor de SQL Server PowerShell. Puede obtener más información en: [Usar el proveedor de PowerShell para eventos extendidos](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md).
+Puede administrar los eventos extendidos de SQL Server mediante el proveedor de SQL Server PowerShell. Puede encontrar información en: [Usar el proveedor de PowerShell para eventos extendidos](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
 
 
 ### <a name="system-views-for-extended-events"></a>Vistas del sistema para eventos extendidos
@@ -554,7 +555,7 @@ Las vistas del sistema para eventos extendidos incluyen:
 
 
 <a name="appendix1"></a>
-## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a>Apéndice: instrucciones SELECT para averiguar el propietario del permiso por anticipado
+## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a>Apéndice: Instrucciones SELECT para averiguar el propietario del permiso por anticipado
 
 
 Los permisos que se mencionan en este artículo son:
@@ -649,7 +650,7 @@ Aquí se muestran vínculos a la documentación relacionada con estas instruccio
 - [GRANT (permisos de servidor de Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
 - [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
 - Especialmente para Base de datos SQL de Azure, [sys.database_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms187328.aspx)
-- Blog: [Effective Database Engine Permissions (Permisos eficaces del motor de base de datos)](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
+- Blog: [Effective Database Engine Permissions](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx) (Permisos eficaces del motor de base de datos)
 - [Póster](https://aka.ms/sql-permissions-poster)que se puede acercar, en formato PDF, que muestra la jerarquía de todos los permisos de SQL Server.
 
 

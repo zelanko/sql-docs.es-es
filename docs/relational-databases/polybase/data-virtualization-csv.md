@@ -3,22 +3,39 @@ title: Virtualización de datos externos en SQL Server 2019 CTP 2.0 | Microsoft 
 description: En esta página se detallan los pasos para usar al Asistente para crear tablas externas para un archivo CSV
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4529d31ab27f06b6a44b396dd6b20bd6e438dbef
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: dae0692bafd8c4de295a914c9da0ead5c6e3980b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405683"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512962"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>Uso del Asistente para tablas externas con archivos CSV
 
 SQL Server 2019 también permite virtualizar los datos desde un archivo CSV en HDFS.  Este proceso permite que los datos permanezcan en su ubicación original, pero puede **virtualizarlos** en una instancia de SQL Server para que se puedan consultar como cualquier otra tabla de SQL Server. Esta característica minimizará la necesidad de procesos ETL. Esto es posible gracias a los conectores de PolyBase. Para más información sobre la virtualización de datos, vea el documento de [introducción a PolyBase](polybase-guide.md).
+
+## <a name="prerequisite"></a>Requisito previo
+
+A partir de CTP 2.4, el grupo de datos y los orígenes de datos externos del grupo de almacenamiento ya no se crean de forma predeterminada en el clúster de macrodatos. Antes de usar el asistente, cree el origen de datos externo predeterminado **SqlStoragePool** en la base de datos de destino con la siguiente consulta Transact-SQL. Primero asegúrese de cambiar el contexto de la consulta a la base de datos de destino.
+
+```sql
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+  BEGIN
+    IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+      CREATE EXTERNAL DATA SOURCE SqlStoragePool
+      WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+    ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+      CREATE EXTERNAL DATA SOURCE SqlStoragePool
+      WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+  END
+```
 
 ## <a name="launch-the-external-table-wizard"></a>Inicio del Asistente para tablas externas
 

@@ -1,7 +1,7 @@
 ---
 title: Descargar SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2019
+ms.date: 03/29/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
@@ -24,12 +24,12 @@ ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
 manager: craigg
-ms.openlocfilehash: 4e109a44ced3a640ee64f7099dc45da5655c5e3f
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: ff8380e286c40f479bbc9afaea48b12feeab1694
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334732"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566544"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Descarga de SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ Use SSMS para consultar, diseñar y administrar bases de datos y almacenes de da
 
 SSMS es gratuito.
 
-[SSMS 18.0 versión preliminar pública 7 ya está disponible](#ssms-180-preview-7), y es la generación más reciente de *SQL Server Management Studio* que ofrece compatibilidad con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+[La versión candidata para lanzamiento 1 (RC1) de SSMS 18.0 ya está disponible](#ssms-180-rc1), y es la generación más reciente de *SQL Server Management Studio* que ofrece compatibilidad con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9.1 es la versión actual de disponibilidad General (GA) de SSMS
 
@@ -74,19 +74,19 @@ Para obtener más información sobre SSMS 17.9.1, vea el [registro de cambios de
   * Asegúrese de que todas las actualizaciones más recientes del sistema operativo estén instaladas en el equipo.
   * Las acciones indicadas suelen ser necesarias solo una vez. Hay algunos casos en los que se necesita reiniciar durante las actualizaciones adicionales a la misma versión principal de SSMS. En el caso de las actualizaciones menores, todos los requisitos previos de SSMS ya están instalados en el equipo.
 
-## <a name="ssms-180-preview-7"></a>SSMS 18.0 (versión preliminar 7)
+## <a name="ssms-180-rc1"></a>SSMS 18.0 (RC1)
 
-**SSMS 18.0 versión preliminar pública 7 ya está disponible, y es la generación más reciente de *SQL Server Management Studio* que ofrece compatibilidad con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
+**La versión candidata para lanzamiento 1 (RC1) de SSMS 18.0 ya está disponible, y es la generación más reciente de *SQL Server Management Studio* que ofrece compatibilidad con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-**[![descargar](../ssdt/media/download.png) Descargar SQL Server Management Studio 18.0 (versión preliminar 7)](https://go.microsoft.com/fwlink/?linkid=2078638)**
+**[![descarga](../ssdt/media/download.png) Descarga de SQL Server Management Studio 18.0 (RC1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
 
-*Preview 7* es la versión preliminar pública más reciente de SSMS 18.0. Si tiene instalada una versión preliminar anterior de SSMS 18.0, desinstálela antes de instalar la versión preliminar 7 de SSMS 18.0.
+*RC1* es la versión preliminar pública más reciente de SSMS 18.0. Si tiene instalada una versión preliminar anterior de SSMS 18.0, desinstálela antes de instalar SSMS 18.0 RC1.
 
 **Información de versión**
 
-- Número de versión: 18.0 (versión preliminar 7)<br>
-- Número de compilación: 15.0.18092.0<br>
-- Fecha de publicación: 1 de marzo de 2019
+- Número de versión: 18.0 (RC1)<br>
+- Número de compilación: 15.0.18098.0<br>
+- Fecha de publicación: 28 de marzo de 2019
 
 Si tiene comentarios o sugerencias, o quiere informar de algún problema, la mejor manera de contactar con el equipo de SSMS es a través de [UserVoice](https://aka.ms/sqlfeedback).
 
@@ -94,32 +94,32 @@ La instalación de SSMS 18.x no actualiza ni reemplaza las versiones 17.x de SSM
 
 Si un equipo contiene instalaciones en paralelo de SSMS, compruebe que inicia la versión correcta para sus necesidades específicas. La versión más reciente tiene la etiqueta **Microsoft SQL Server Management Studio 18**:
  
-## <a name="available-languages-ssms-180-preview-7"></a>Idiomas disponibles (SSMS 18.0 versión preliminar 7)
+## <a name="available-languages-ssms-180-rc1"></a>Idiomas disponibles (SSMS 18.0 RC1)
 
 Esta versión de SSMS puede instalarse en los idiomas siguientes:
 
-SQL Server Management Studio 18.0 (versión preliminar 7):<br>
-[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2078638&clcid=0x40a)
+SQL Server Management Studio 18.0 (RC1):<br>
+[Chino (simplificado)](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x804) | [Chino (tradicional)](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x404) | [Inglés (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x409) | [Francés](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x40c) | [Alemán](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x410) | [Japonés](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x412) | [Portugués (Brasil)](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x416) | [Ruso](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x419) | [Español](https://go.microsoft.com/fwlink/?linkid=2085742&clcid=0x40a)
 
 Paquete de actualización de SQL Server Management Studio 18.0 (actualización hasta la versión 18.0):<br>
-No hay ninguna opción de actualización disponible en este momento. Si tiene instalada una versión preliminar anterior de SSMS 18.0, desinstálela antes de instalar la versión preliminar 7 de SSMS 18.0.
+No hay ninguna opción de actualización disponible en este momento. Si tiene instalada una versión preliminar anterior de SSMS 18.0, desinstálela antes de instalar SSMS 18.0 RC1.
 
 > [!NOTE]
 > El módulo SQL Server PowerShell se instala de forma independiente a través de la Galería de PowerShell. Para más información, vea [Descarga del módulo de PowerShell de SQL Server](download-sql-server-ps-module.md).
 
-## <a name="new-in-this-release-ssms-180-preview-7"></a>Novedades de esta versión (SSMS 18.0 versión preliminar 7)
+## <a name="new-in-this-release-ssms-180-rc1"></a>Novedades de esta versión (SSMS 18.0 RC1)
 
-SSMS 18.0 (versión preliminar 7) es la versión más reciente de SQL Server Management Studio. La generación 18.x de SSMS proporciona compatibilidad con casi todas las áreas de características desde SQL Server 2008 hasta SQL Server 2019 versión preliminar.
+SSMS 18.0 (RC1) es la versión más reciente de SQL Server Management Studio. La generación 18.x de SSMS proporciona compatibilidad con casi todas las áreas de características desde SQL Server 2008 hasta SQL Server 2019 versión preliminar.
 
 Para más detalles sobre las novedades de esta versión, vea el [registro de cambios de SSMS](sql-server-management-studio-changelog-ssms.md).
 
-## <a name="supported-sql-offerings-ssms-180-preview-7"></a>Ofertas de SQL admitidas (SSMS 18.0 versión preliminar 7)
+## <a name="supported-sql-offerings-ssms-180-rc1"></a>Ofertas de SQL admitidas (SSMS 18.0 RC1)
 
 * Esta versión de SSMS funciona con todas las [versiones compatibles de SQL Server 2008 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) y proporciona el mayor nivel de compatibilidad para trabajar con las últimas características de nube en Azure SQL Database y en Azure SQL Data Warehouse.
 * Además, SSMS 18.x puede instalarse en paralelo con SSMS 17.x, SSMS 16.x o SQL Server 2014 SSMS y versiones anteriores.
 * SQL Server Integration Services (SSIS) - SSMS versión 17.x o versiones posteriores no admite la conexión con el servicio heredado de SQL Server Integration Services. Para conectarse a una versión anterior del servicio heredado de Integration Services, use la versión de SSMS alineada con la versión de SQL Server. Por ejemplo, use SSMS 16.x para conectar con el servicio heredado de SQL Server 2016 Integration Services. SSMS 17.x y SSMS 16.x pueden instalarse en paralelo en el mismo equipo. Desde el lanzamiento de SQL Server 2012, la base de datos del catálogo de SSIS (SSISDB) es la manera recomendada de almacenar, administrar, ejecutar y supervisar los paquetes de Integration Services. Para más información, vea [Catálogo de SSIS](../integration-services/catalog/ssis-catalog.md).
 
-## <a name="supported-operating-systems-ssms-180-preview-7"></a>Sistemas operativos admitidos (SSMS 18.0 versión preliminar 7)
+## <a name="supported-operating-systems-ssms-180-rc1"></a>Sistemas operativos admitidos (SSMS 18.0 RC1)
 
 Esta versión de SSMS admite las siguientes plataformas de 64 bits cuando se usa con el Service Pack más reciente disponible:
 
@@ -134,7 +134,7 @@ Esta versión de SSMS admite las siguientes plataformas de 64 bits cuando se usa
 > [!NOTE]
 > SSMS se ejecuta solamente en Windows. Si necesita una herramienta que se ejecuta en plataformas distintas de Windows, eche un vistazo a Azure Data Studio. Azure Data Studio es una nueva herramienta multiplataforma que se ejecuta en macOS, Linux y Windows. Para más detalles, vea [What is Azure Data Studio?](../azure-data-studio/what-is.md) ¿Qué es Azure Data Studio?.
   
-## <a name="release-notes-ssms-180-preview-7"></a>Notas de la versión (SSMS 18.0 versión preliminar 7)
+## <a name="release-notes-ssms-180-rc1"></a>Notas de la versión (SSMS 18.0 RC1)
 
 N/D
 

@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
+ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889986"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645567"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestructura de generación de perfiles de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,6 +123,27 @@ WITH (MAX_MEMORY=4096 KB,
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] incluye una versión recién revisada de la generación de perfiles ligera que recopila información de recuento de filas para todas las ejecuciones. La generación de perfiles ligera está habilitada de forma predeterminada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y la marca de seguimiento 7412 no tiene ningún efecto.
 
+Se ha introducido una nueva DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) para devolver el equivalente del último plan de ejecución real conocido para la mayoría de las consultas. Un nuevo evento extendido *query_post_execution_plan_profile* recopila el equivalente de un plan de ejecución real en función de la generación de perfiles ligera, a diferencia de *query_post_execution_showplan* que utiliza la generación de perfiles estándar. 
+
+Se puede configurar una sesión de ejemplo que use el evento ampliado *query_post_execution_plan_profile*, como en el ejemplo siguiente:
+
+```sql
+CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+  ACTION(sqlos.scheduler_id,sqlserver.database_id,sqlserver.is_system,
+    sqlserver.plan_handle,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,
+    sqlserver.server_instance_name,sqlserver.session_id,sqlserver.session_nt_username,
+    sqlserver.sql_text))
+ADD TARGET package0.ring_buffer(SET max_memory=(25600))
+WITH (MAX_MEMORY=4096 KB,
+  EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+  MAX_DISPATCH_LATENCY=30 SECONDS,
+  MAX_EVENT_SIZE=0 KB,
+  MEMORY_PARTITION_MODE=NONE,
+  TRACK_CAUSALITY=OFF,
+  STARTUP_STATE=OFF);
+```
+
 ## <a name="remarks"></a>Notas
 
 > [!IMPORTANT]
@@ -130,7 +151,10 @@ WITH (MAX_MEMORY=4096 KB,
 
 A partir de la generación de perfiles ligera v2 y su baja sobrecarga, cualquier servidor que aún no esté enlazado a CPU puede ejecutar la generación de perfiles ligera **continuamente** y permitir que los profesionales de bases de datos pulsen en cualquier ejecución activa en cualquier momento, por ejemplo mediante Monitor de actividad o directamente al consultar a `sys.dm_exec_query_profiles`, y obtengan el plan de consulta con estadísticas en tiempo de ejecución.
 
-Para más información sobre la sobrecarga de rendimiento del generación de perfiles de consulta, vea la entrada de blog [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar). 
+Para más información sobre la sobrecarga de rendimiento del generación de perfiles de consulta, vea la entrada de blog [Developers Choice: Query progress - anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar). 
+
+> [!NOTE]
+> Los eventos extendidos que aprovechan la generación de perfiles ligera usarán información de la generación de perfiles estándar en el caso de que la infraestructura correspondiente ya esté habilitada. Por ejemplo, se está ejecutando una sesión de evento extendido mediante `query_post_execution_showplan` y se inicia otra mediante `query_post_execution_plan_profile`. La segunda sesión seguirá utilizando la información de la generación de perfiles estándar.
 
 ## <a name="see-also"></a>Consulte también  
  [Supervisar y optimizar el rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -145,4 +169,4 @@ Para más información sobre la sobrecarga de rendimiento del generación de per
  [Referencia de operadores lógicos y físicos del plan de presentación](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [Mostrar un plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [Estadísticas de consultas activas](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar)
+ [Developers Choice: Query progress - anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004) (Elección de los desarrolladores: progreso de la consulta, en cualquier momento y en cualquier lugar)

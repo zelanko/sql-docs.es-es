@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_page_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_page_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -20,39 +20,34 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 37c334f5c5107b2716601916517e888d90164226
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 2246abe2343622f2aece785a31e1e31f7166822b
+ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732082"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899721"
 ---
-# <a name="sysdmdbpageinfo-transact-sql"></a>Sys.dm_db_page_info (Transact-SQL)
+# <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Devuelve información sobre una página en una base de datos.  La función devuelve una fila que contiene la información de encabezado en la página, incluido el `object_id`, `index_id`, y `partition_id`.  Esta función reemplaza la necesidad de usar `DBCC PAGE` en la mayoría de los casos.
 
-## <a name="syntax"></a>Sintaxis  
-  
+## <a name="syntax"></a>Sintaxis   
 ```  
 sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )  
 ``` 
 
 ## <a name="arguments"></a>Argumentos  
- *DatabaseId* | NULL | VALOR PREDETERMINADO  
-
- Es el identificador de la base de datos. *DatabaseId* es **smallint**. Una entrada válida es el número de Id. de una base de datos. El valor predeterminado es NULL, pero se envía que un valor NULL para este parámetro producirá un error.
+*DatabaseId* | NULL | DEFAULT     
+Es el identificador de la base de datos. *DatabaseId* es **smallint**. Una entrada válida es el número de Id. de una base de datos. El valor predeterminado es NULL, pero se envía que un valor NULL para este parámetro producirá un error.
  
-*FileId* | NULL | VALOR PREDETERMINADO
-
+*FileId* | NULL | DEFAULT   
 Identificador del archivo. *FileId* es **int**.  La entrada válida es el número de identificación de un archivo en la base de datos especificado por *DatabaseId*. El valor predeterminado es NULL, pero se envía que un valor NULL para este parámetro producirá un error.
 
-*PageId* | NULL | VALOR PREDETERMINADO
-
+*PageId* | NULL | DEFAULT   
 Es el identificador de la página.  *PageId* es **int**.  Una entrada válida es el número de Id. de una página en el archivo especificado por *FileId*. El valor predeterminado es NULL, pero se envía que un valor NULL para este parámetro producirá un error.
 
-*modo* | NULL | VALOR PREDETERMINADO
-
+*modo* | NULL | VALOR PREDETERMINADO   
 Determina el nivel de detalle en la salida de la función. "Limitados" devolverá valores NULL para todas las columnas de descripción, 'DETAILED' rellenar las columnas de descripción.  El valor predeterminado es 'Limitado'.
 
 ## <a name="table-returned"></a>Tabla devuelta  
@@ -63,11 +58,11 @@ Determina el nivel de detalle en la salida de la función. "Limitados" devolver�
 |file_id |INT |Id. de archivo |
 |page_id |INT |Identificador de página |
 |page_type |INT |Tipo de página |
-|page_type_desc |Nvarchar (64) |Descripción del tipo de página |
-|page_flag_bits |Nvarchar (64) |Bits de marca de encabezado de página |
+|page_type_desc |nvarchar(64) |Descripción del tipo de página |
+|page_flag_bits |nvarchar(64) |Bits de marca de encabezado de página |
 |page_flag_bits_desc |nvarchar(256) |Descripción de bits de marca en el encabezado de página |
-|page_type_flag_bits |Nvarchar (64) |Bits de marca de tipo en el encabezado de página |
-|page_type_flag_bits_desc |Nvarchar (64) |Descripción de bits de la marca de tipo en el encabezado de página |
+|page_type_flag_bits |nvarchar(64) |Bits de marca de tipo en el encabezado de página |
+|page_type_flag_bits_desc |nvarchar(64) |Descripción de bits de la marca de tipo en el encabezado de página |
 |object_id |INT |Id. de objeto propietario de la página |
 |index_id |INT |Id. del índice (0 para las páginas de datos del montón) |
 |partition_id |BIGINT |Identificador de la partición |
@@ -81,35 +76,35 @@ Determina el nivel de detalle en la salida de la función. "Limitados" devolver�
 |pfs_file_id |SMALLINT |Id. de archivo de página PFS correspondiente |
 |pfs_page_id |INT |Identificador de página PFS correspondiente |
 |pfs_alloc_percent |INT |Porcentaje de asignación según lo indicado en el byte PFS |
-|pfs_status |Nvarchar (64) |Byte PFS |
-|pfs_status_desc |Nvarchar (64) |Descripción del byte PFS |
+|pfs_status |nvarchar(64) |Byte PFS |
+|pfs_status_desc |nvarchar(64) |Descripción del byte PFS |
 |gam_file_id |SMALLINT |Id. de archivo de la página GAM correspondiente |
 |gam_page_id |INT |Identificador de la página GAM correspondiente |
 |gam_status |bit |Bit indicar si asignada en GAM |
-|gam_status_desc |Nvarchar (64) |Descripción de la página GAM estado |
+|gam_status_desc |nvarchar(64) |Descripción de la página GAM estado |
 |sgam_file_id |SMALLINT |Id. de archivo de la página SGAM correspondiente |
 |sgam_page_id |INT |Identificador de la página SGAM correspondiente |
 |sgam_status |bit |Bit indicar si asignada en SGAM |
-|sgam_status_desc |Nvarchar (64) |Descripción de los bits de estado SGAM |
+|sgam_status_desc |nvarchar(64) |Descripción de los bits de estado SGAM |
 |diff_map_file_id |SMALLINT |Id. de la página correspondiente de mapa de bits diferencial de archivo |
 |diff_map_page_id |INT |Identificador de la página de mapa de bits diferencial correspondiente |
 |diff_status |bit |Bit para indicar si se cambia el estado de diferencias |
-|diff_status_desc |Nvarchar (64) |Descripción del bit de estado de diferencias |
+|diff_status_desc |nvarchar(64) |Descripción del bit de estado de diferencias |
 |ml_file_id |SMALLINT |Id. de archivo de la página correspondiente de mapa de bits de registro mínimo |
 |ml_page_id |INT |Identificador de la página de mapa de bits correspondiente registro mínimo |
 |ml_status |bit |Bit para indicar si la página se registra al mínimo |
-|ml_status_desc |Nvarchar (64) |Descripción del estado de registro mínimo de bits |
+|ml_status_desc |nvarchar(64) |Descripción del estado de registro mínimo de bits |
 |free_bytes |SMALLINT |Número de bytes libres en la página |
 |free_data_offset |INT |Desplazamiento de espacio libre al final del área de datos |
 |reserved_bytes |SMALLINT |Número de bytes libres reservadas por todas las transacciones (si montón) <br> Número de filas fantasmas (si la hoja de índice) |
 |reserved_xdes_id |SMALLINT |Espacio que aporta m_xdesID a m_reservedCnt <br> Solo con fines de depuración |
-|xdes_id |Nvarchar (64) |Última transacción que aporta m_reserved <br> Solo con fines de depuración |
+|xdes_id |nvarchar(64) |Última transacción que aporta m_reserved <br> Solo con fines de depuración |
 |prev_page_file_id |SMALLINT |Id. de archivo de página anterior |
 |prev_page_page_id |INT |Id. de página anterior de página |
 |next_page_file_id |SMALLINT |Id. de archivo de página siguiente |
 |next_page_page_id |INT |Id. de página siguiente de página |
 |MIN_LEN |SMALLINT |Longitud de las filas de tamaño fijo |
-|lsn |Nvarchar (64) |Número de secuencia de registro / marca de tiempo |
+|lsn |nvarchar(64) |Número de secuencia de registro / marca de tiempo |
 |header_version |INT |Versión de encabezado de página |
 
 ## <a name="remarks"></a>Comentarios
@@ -149,6 +144,7 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 ## <a name="see-also"></a>Vea también  
 [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Vistas de administración dinámica relacionadas con la base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
+[sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 
 

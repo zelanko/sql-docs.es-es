@@ -1,5 +1,5 @@
 ---
-title: Dimensiones habilitadas para escritura | Documentos de Microsoft
+title: Dimensiones habilitadas para escritura | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 23f2fff5a78be0dad52f674a8d23c1922a86391c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4baa8b1fa57acde99439584483381f84f7a8d5c4
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023329"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042264"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensiones habilitadas para escritura
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34023329"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- Los datos de una dimensión son normalmente de solo lectura. Con todo, en ciertos casos, puede interesarle habilitar una dimensión para escritura. Al habilitar para escritura una dimensión en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los usuarios empresariales pueden modificar el contenido de la dimensión y observar el efecto inmediato de los cambios realizados en las jerarquías de la dimensión. Es posible habilitar para escritura cualquier dimensión basada en una sola tabla. En una dimensión habilitada para escritura, los usuarios empresariales y los administradores pueden cambiar, mover, agregar y eliminar los miembros de atributo de la dimensión. Estas actualizaciones se denominan de forma colectiva *reescritura de dimensión*.  
+ Los datos de una dimensión son normalmente de solo lectura. Con todo, en ciertos casos, puede interesarle habilitar una dimensión para escritura. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], habilitar para escritura una dimensión permite que los usuarios empresariales modificar el contenido de la dimensión y observar el efecto inmediato de los cambios en las jerarquías de la dimensión. Es posible habilitar para escritura cualquier dimensión basada en una sola tabla. En una dimensión habilitada para escritura, los usuarios empresariales y los administradores pueden cambiar, mover, agregar y eliminar los miembros de atributo de la dimensión. Estas actualizaciones se denominan de forma colectiva *reescritura de dimensión*.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la reescritura en la dimensión en todos los atributos de dimensión y, además, cualquier miembro de una dimensión puede modificarse. En un cubo o partición habilitados para escritura, las actualizaciones se almacenan en una tabla de reescritura separada de las tablas de origen del cubo. Sin embargo, para una dimensión habilitada para escritura, las actualizaciones se registran directamente en la tabla de la dimensión. Además, si la dimensión habilitada para escritura está incluida en un cubo con varias particiones en las que algunos o todos sus orígenes de datos tienen copias de la tabla de dimensión, solo se actualizará la tabla de dimensión original durante el proceso de reescritura.  
   
@@ -56,6 +56,6 @@ ms.locfileid: "34023329"
 ## <a name="see-also"></a>Vea también  
  [Propiedades de la dimensión de base de datos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [Particiones habilitadas para escritura](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Dimensiones & #40; Analysis Services - datos multidimensionales & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

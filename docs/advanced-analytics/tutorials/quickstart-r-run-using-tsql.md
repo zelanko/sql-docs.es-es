@@ -3,17 +3,17 @@ title: 'Guía de inicio rápido para una ejecución de código de "Hello World" 
 description: Guía de inicio rápido para script de R en SQL Server. Obtenga información sobre los conceptos básicos de llamar al script de R mediante el procedimiento almacenado del sistema sp_execute_external_script en un ejercicio de hello world.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7517b9ab18c7448014e8c9113430b2c21047f972
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 1ec9580a533e51b7e99ea0ac34c1d322a27da452
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046974"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042284"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>Inicio rápido: Script de R "Hello world" en SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,8 @@ El siguiente ejercicio se centra en el primer modelo de interacción: cómo pasa
     b <- 2
     c <- a/b
     d <- a*b
-    print(c, d)'
+    print(c(c, d))'
+    '
     ```
 
 2. Se calcula suponiendo que tiene todo está configurado correctamente el resultado correcto y el R `print` función devuelve el resultado a la **mensajes** ventana.
@@ -81,7 +82,7 @@ Entradas de este procedimiento almacenado se incluyen:
 
 **Resultado**
 
-| Hola mundo |
+| Hello World |
 |-------------|
 | 1 |
 
@@ -90,4 +91,4 @@ Entradas de este procedimiento almacenado se incluyen:
 Ahora que ha ejecutado un par de scripts de R, eche un vistazo más de cerca en estructurar las entradas y salidas.
 
 > [!div class="nextstepaction"]
-> [Inicio rápido: Controlar las entradas y salidas](quickstart-r-inputs-and-outputs.md)
+> [Inicio rápido: Control de entradas y salidas](quickstart-r-inputs-and-outputs.md)

@@ -12,12 +12,12 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d346379cf0aeb945187b18f7eb1fd7a868b33e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518101"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042434"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Actualizar el trasvase de registros a SQL Server 2014 (Transact-SQL)
   Es posible conservar las configuraciones de trasvase de registros al actualizar de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. En este tema se describen escenarios alternativos y prácticas recomendadas para actualizar la configuración de trasvase de registros.  
@@ -130,7 +130,7 @@ ms.locfileid: "52518101"
   
     5.  Tenga cuidado de que el registro de transacciones de la base de datos secundaria no se llene mientras la base de datos está en línea. Para evitar que el registro de transacciones se llene, puede que sea necesario realizar una copia de seguridad del mismo. En ese caso, se recomienda que ponga la copia de seguridad en una ubicación compartida, un *recurso compartido de copia de seguridad*, de modo que las copias de seguridad estén disponibles para restaurarse en la otra instancia del servidor.  
   
-#####  <a name="Procedure2 "></a> Procedimiento 2: Actualice la instancia de servidor principal Original a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#####  <a name="Procedure2"></a> Procedimiento 2: Actualice la instancia de servidor principal Original a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Después de actualizar la instancia del servidor principal original a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos todavía estará sin conexión y en el formato.  
   
 #####  <a name="Procedure3"></a> Procedimiento 3: Configuración de trasvase de registros en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -193,7 +193,7 @@ ms.locfileid: "52518101"
 > [!IMPORTANT]  
 >  Actualice siempre todas las instancias de los servidores secundarios antes de actualizar el servidor principal.  
   
- **Para actualizar mediante una conmutación por error y volver al servidor principal original**  
+ **Para actualizar con una conmutación por error y volver al servidor principal original.**  
   
 1.  Actualice todas las instancias de los servidores secundarios (servidor B y servidor C).  
   
@@ -222,8 +222,6 @@ ms.locfileid: "52518101"
  Para obtener información acerca de cómo habilitar el trasvase de registros, vea [configuración del trasvase de registros &#40;SQL Server&#41;](configure-log-shipping-sql-server.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
+ [Copias de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Tablas y procedimientos almacenados de trasvase de registros](log-shipping-tables-and-stored-procedures.md)  
-  
-  
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  

@@ -1,6 +1,6 @@
 ---
 title: Propiedades generales de Analysis Services | Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 04/04/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 883df6b2562e7fa3b80fac6a0063bd6483d1119d
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072392"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042394"
 ---
 # <a name="general-properties"></a>Propiedades generales
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -34,6 +34,11 @@ ms.locfileid: "53072392"
   
  **BackupDir**  
  Una propiedad de cadena que identifica el nombre del directorio donde se almacenan los archivos de copia de seguridad de forma predeterminada, en caso de que no se especifica una ruta de acceso como parte del comando de copia de seguridad.  
+ 
+**ClientCacheRefreshPolicy** se aplica a Azure Analysis Services solo. Invalida el **actualización de caché programada** establecer para todos los conjuntos de datos de Power BI. Todos los informes de Live Connect respetará la configuración de nivel de servidor, independientemente de la configuración de nivel de conjunto de datos o área de trabajo que residen en.
+
+El valor predeterminado de esta propiedad es -1, lo que permite que toda la memoria caché en segundo plano actualiza como se especifica en la actualización de caché programada para el conjunto de datos. Para impedir que toda la memoria caché en segundo plano actualiza, especifique cero (0).
+
   
  **CollationName**  
  Propiedad de cadena que identifica la intercalación del servidor. Para más información, vea [Idiomas e intercalaciones &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md).  
@@ -139,14 +144,14 @@ ms.locfileid: "53072392"
  Propiedad de cadena que especifica la ubicación de almacenamiento de los archivos temporales utilizados durante las operaciones de procesamiento y restauración, entre otras. El valor predeterminado de esta propiedad viene determinado por la configuración. Si no se especifica, el valor predeterminado es el directorio Data.  
   
 ## <a name="requestprioritization-category"></a>Categoría RequestPrioritization  
- **Enabled**  
+ **Habilitado**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **StatisticsStoreSize**  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
- [Propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+ [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

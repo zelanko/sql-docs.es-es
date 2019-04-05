@@ -3,17 +3,17 @@ title: 'Ejecución en T-SQL: SQL Server Machine Learning de código de inicio r�
 description: Guía de inicio rápido para script de Python en SQL Server. Obtenga información sobre los conceptos básicos de llamar al script de Python con el procedimiento almacenado del sistema sp_execute_external_script en un ejercicio de hello world.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/11/2019
+ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fb05e3b04fe9d6f33389e249d189baa7cc093016
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: f5e93ce5261d79acf5bf5a7419992c81c872d680
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513775"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042224"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>Inicio rápido: Script de Python "Hello world" en SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ El siguiente ejercicio se centra en el primer modelo de interacción: cómo pasa
     b = 2
     c = a/b
     d = a*b
-    print(c, d)
+    print(c(c, d))
     '
     ```
 
@@ -98,4 +98,4 @@ Entradas de este procedimiento almacenado se incluyen:
 Ahora que ha ejecutado un par de scripts de Python sencillo, eche un vistazo más de cerca en estructurar las entradas y salidas.
 
 > [!div class="nextstepaction"]
-> [Inicio rápido: Controlar las entradas y salidas](quickstart-python-inputs-and-outputs.md)
+> [Inicio rápido: Control de entradas y salidas](quickstart-python-inputs-and-outputs.md)

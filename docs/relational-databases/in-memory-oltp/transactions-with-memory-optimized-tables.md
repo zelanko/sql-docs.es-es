@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7854ddbe4795a347b0a824f607c7206c0bc6b78c
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: dc51c4376f38d62f63969aaf3bba39715a9871ba
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421372"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872295"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ En este artículo se describen todos los aspectos de las transacciones específi
   
 Los niveles de aislamiento de transacción en SQL Server se aplican de manera diferente en las tablas optimizadas para memoria y en las tablas basadas en disco, y los mecanismos subyacentes son diferentes. Entender las diferencias ayuda al programador a diseñar un sistema de alto rendimiento. El objetivo común en todos los casos es garantizar la integridad de las transacciones.  
 
-Para ver condiciones de error específicas de las transacciones en tablas optimizadas para memoria, vaya a la sección [Detección de conflictos y lógica de reintento](#confdetretry34ni).
+Para ver condiciones de error específicas de las transacciones en tablas optimizadas para memoria, vaya a la sección [Detección de conflictos y lógica de reintento](#conflict-detection-and-retry-logic).
   
 Para obtener información general, consulte [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
@@ -97,7 +97,7 @@ Las tablas basadas en disco tienen indirectamente un sistema básico de versione
   
 ## <a name="isolation-levels"></a>Niveles de aislamiento 
   
-En la tabla siguiente se muestran los posibles niveles de aislamiento de transacción, ordenados de menor a mayor aislamiento. Para obtener más información sobre los conflictos que se pueden producir y la lógica de reintento para abordarlos, vea [Detección de conflictos y lógica de reintento](#confdetretry34ni). 
+En la tabla siguiente se muestran los posibles niveles de aislamiento de transacción, ordenados de menor a mayor aislamiento. Para obtener más información sobre los conflictos que se pueden producir y la lógica de reintento para abordarlos, vea [Detección de conflictos y lógica de reintento](#conflict-detection-and-retry-logic). 
   
 | Nivel de aislamiento | Descripción |   
 | :-- | :-- |   
@@ -123,7 +123,7 @@ A continuación se muestran las descripciones de las fases.
 #### <a name="validation-phase-2-of-3"></a>Validación: Fase 2 (de 3)  
   
 - La fase de validación arranca con la asignación de la hora de finalización, esto es, marcando la transacción como completa lógicamente. Tras la finalización de este paso, todos los cambios de la transacción quedan visibles para las demás transacciones, que crearán una dependencia de esta transacción. Las transacciones dependientes no se pueden confirmar hasta no haber confirmado correctamente esta transacción. Además, las transacciones que conservan estas dependencias no pueden devolver conjuntos de resultados al cliente para procurar que el cliente solamente vea los datos confirmados correctamente en la base de datos.  
-- Esta fase incluye la validación de lectura repetible y la validación serializable. En la primera, comprueba si alguna de las filas leídas por la transacción se ha actualizado desde la última vez que se comprobó, mientras que, en el caso de la segunda, comprueba si alguna de las filas se ha insertado en un rango de datos analizado por esta transacción. Según la tabla de [Niveles de aislamiento y conflictos](#confdegreeiso30ni), la validación de lectura repetible y la validación serializable pueden ocurrir cuando se usa el aislamiento SNAPSHOT para validar la coherencia de las restricciones de clave única y externa.  
+- Esta fase incluye la validación de lectura repetible y la validación serializable. En la primera, comprueba si alguna de las filas leídas por la transacción se ha actualizado desde la última vez que se comprobó, mientras que, en el caso de la segunda, comprueba si alguna de las filas se ha insertado en un rango de datos analizado por esta transacción. Según la tabla de [Niveles de aislamiento y conflictos](#isolation-levels), la validación de lectura repetible y la validación serializable pueden ocurrir cuando se usa el aislamiento SNAPSHOT para validar la coherencia de las restricciones de clave única y externa.  
   
 #### <a name="commit-processing-phase-3-of-3"></a>Confirmación del procesamiento: Fase 3 (de 3)  
   

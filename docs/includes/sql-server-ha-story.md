@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bac867f5f3532f931d2708c46979659e2851645f
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055700"
+---
 En este artículo se ofrece una visión global de las soluciones de continuidad empresarial para alta disponibilidad y recuperación ante desastres en SQL Server. 
 
 Una tarea habitual que todo usuario que implemente SQL Server debe tener en cuenta es la comprobación de que todas las instancias de SQL Server críticas y las bases de datos que contienen están disponibles en el momento en que el negocio y los usuarios finales las necesitan; ya sea de 9 a 5 o durante todo el día. El objetivo es mantener la empresa en funcionamiento con una interrupción mínima o inexistente. Este concepto se conoce también como continuidad empresarial.
@@ -128,9 +136,7 @@ La lista siguiente resalta algunas diferencias con las FCI en Windows Server y L
 * El nombre común usado por las FCI en Linux se define en DNS, y debe ser el mismo que el recurso creado para la FCI.
 
 #### <a name="log-shipping"></a>Trasvase de registros
-Si el punto de recuperación y los objetivos de tiempo de recuperación son más flexibles, o las bases de datos no se consideran muy críticas, el trasvase de registros es otra característica de eficacia probada en cuanto a disponibilidad en SQL Server. En función de las copias de seguridad nativas de SQL Server, el proceso para el trasvase de registros genera de forma automática copias de seguridad del registro de transacciones, las copia en una o varias instancias conocidas como estado de espera semiactiva y aplica automáticamente las copias de seguridad del registro de transacciones a dicho estado de espera. El trasvase de registros usa trabajos del Agente SQL Server para automatizar el proceso de copia de seguridad, copia y aplicación de las copias de seguridad del registro de transacciones. 
-> [!IMPORTANT] 
-> En Linux, los trabajos del Agente SQL Server no se incluyen como parte de la instalación del propio SQL Server. Está disponible en los trabajos mssql-server-Agent del paquete, que también debe instalarse para usar el trasvase de registros.
+Si el punto de recuperación y los objetivos de tiempo de recuperación son más flexibles, o las bases de datos no se consideran muy críticas, el trasvase de registros es otra característica de eficacia probada en cuanto a disponibilidad en SQL Server. En función de las copias de seguridad nativas de SQL Server, el proceso para el trasvase de registros genera de forma automática copias de seguridad del registro de transacciones, las copia en una o varias instancias conocidas como estado de espera semiactiva y aplica automáticamente las copias de seguridad del registro de transacciones a dicho estado de espera. El trasvase de registros usa trabajos del Agente SQL Server para automatizar el proceso de copia de seguridad, copia y aplicación de las copias de seguridad del registro de transacciones.
 
 ![Trasvase de registros](media/sql-server-ha-story/image5.png)
  

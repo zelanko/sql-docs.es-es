@@ -12,12 +12,12 @@ ms.assetid: edc1143c-6a47-4b02-92ab-441bdea8ea8a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f0774c99f1610f87abc08b69e6ef5333c97bec95
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3ca69ca5ca402e06999e2817c24c11c6b52d75f6
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241553"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Conectar al servidor (página Propiedades de conexión del motor de base de datos)
   Use esta pestaña para ver o especificar opciones cuando se conecte a una enstancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o cuando registre [!INCLUDE[ssDE](../../includes/ssde-md.md)] en **Servidores registrados**. **Conectar** y **Opciones** solo aparecen en este cuadro de diálogo al conectarse a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. **Probar** y **Guardar** solo aparecen en este cuadro de diálogo al registrar [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -28,7 +28,7 @@ ms.locfileid: "53350131"
   
  Al conectarse a una instancia del motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de la base de datos de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], es preciso que use la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y especifique una base de datos en el cuadro de diálogo **Conectar al servidor** en la pestaña **Propiedades de conexión** . Asegúrese de que activa la casilla **Cifrar conexión** .  
   
- De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecta a **master**. Si especifica una base de datos de usuario, verá solo esa base de datos y sus objetos en el Explorador de objetos. Si se conecta a **master**, podrá ver todas las bases de datos. Para más información, consulte la [Introducción a Microsoft Azure SQL Database](https://go.microsoft.com/fwlink/?LinkId=163948).  
+ De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecta a **master**. Si especifica una base de datos de usuario, verá solo esa base de datos y sus objetos en el Explorador de objetos. Si se conecta a **master**, podrá ver todas las bases de datos. Para más información, consulte la [Introducción a Microsoft Azure SQL Database](/azure/sql-database/sql-database-technical-overview).  
   
  **Protocolo de red**  
  Seleccione un protocolo de la lista. Los protocolos de cliente disponibles son los que se han configurado con la Configuración de red de cliente en Administración de equipos.  
@@ -46,7 +46,7 @@ ms.locfileid: "53350131"
  Fuerza el cifrado de la conexión.  
   
  **Usar color personalizado**  
- Seleccione esta opción para especificar el color de fondo para la barra de estado en una ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Para especificar el color, haga clic en **Seleccionar**. En el cuadro de diálogo **Color** , seleccione un color predefinido en la cuadrícula **Colores básicos** o haga clic en **Definir colores personalizados** para definir y usar un color personalizado.  
+ Seleccione esta opción para especificar el color de fondo para la barra de estado en una ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para especificar el color, haga clic en **Seleccionar**. En el cuadro de diálogo **Color** , seleccione un color predefinido en la cuadrícula **Colores básicos** o haga clic en **Definir colores personalizados** para definir y usar un color personalizado.  
   
 -   Al especificar un color para una entrada del servidor en el panel del **Explorador de objetos** , ese color se usa al abrir una ventana del Editor de consultas. Para abrir una ventana del Editor de consultas, haga clic con el botón derecho en la entrada de servidor y seleccione **Nueva consulta**o, cuando el panel del **Explorador de objetos** esté activo y centrado en este servidor, haga clic en **Nueva consulta** en la barra de herramientas.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "53350131"
  **Opciones**  
  Haga clic aquí para modificar el cuadro de diálogo y ocultar las opciones adicionales de conexión al servidor, como recordar la contraseña.  
   
- **Probar**  
+ **Prueba**  
  Al registrar [!INCLUDE[ssDE](../../includes/ssde-md.md)] en **Servidores registrados**, haga clic para probar la conexión.  
   
  **Guardar**  

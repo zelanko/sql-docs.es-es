@@ -14,12 +14,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 8a9018c43ace6ebbf0a905567bb806b616530a02
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1484a32eb808e6778896a498d5a6dee525b18aed
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242463"
 ---
 # <a name="sql-server-encryption"></a>Cifrado de SQL Server
   El cifrado es el proceso consistente en ofuscar los datos mediante el uso de una clave o contraseña. Esto puede hacer que los datos sean inútiles sin la clave o contraseña de descifrado correspondiente. El cifrado no resuelve los problemas de control de acceso. Sin embargo, mejora la seguridad debido a que limita la pérdida de datos, incluso si se superan los controles de acceso. Por ejemplo, si el equipo host de base de datos no está configurado correctamente y un usuario malintencionado obtiene datos confidenciales, esa información robada podría resultar inservible si está cifrada.  
@@ -62,7 +62,7 @@ ms.locfileid: "53352190"
  Información sobre cómo utilizar un certificado para cifrar datos.  
   
 ## <a name="external-resources"></a>Recursos externos  
- [Microsoft TechNet: TechCenter de SQL Server: Protección y seguridad de SQL Server 2005](https://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
+ [10 pasos para la seguridad de SQL Server 2005](https://www.itprotoday.com/sql-server/10-steps-sql-server-2005-security)  
  Información actual sobre la seguridad en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  

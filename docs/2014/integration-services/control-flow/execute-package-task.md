@@ -16,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7d0273e166f715030da1ae2a984f4f744364ba4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387143"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241253"
 ---
 # <a name="execute-package-task"></a>Tarea Ejecutar paquete
   La tarea Ejecutar paquete amplía las capacidades empresariales de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ya que permite que los paquetes ejecuten otros paquetes como parte de un flujo de trabajo.  
@@ -97,14 +97,14 @@ ms.locfileid: "58387143"
  Para más información, vea [Usar los valores de variables y parámetros en un paquete secundario](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### <a name="accessing-parent-package-variables"></a>Obtener acceso a variables de paquetes primarios  
- Los paquetes secundarios pueden tener acceso a variables de paquetes primarios mediante la tarea Script. Al escribir el nombre de la variable del paquete primario en la página **Script** del **Editor de la tarea Script**, no incluya **Usuario:** en el nombre de la variable. De lo contrario, el paquete secundario no podrá encontrar la variable al ejecutar el paquete primario. Para obtener más información sobre el uso de la tarea Script para tener acceso a variables del paquete principal, consulte esta entrada de blog, [SSIS: Obtener acceso a variables en un paquete primario](https://go.microsoft.com/fwlink/?LinkId=257729), en consultingblogs.emc.com.  
+ Los paquetes secundarios pueden tener acceso a variables de paquetes primarios mediante la tarea Script. Al escribir el nombre de la variable del paquete primario en la página **Script** del **Editor de la tarea Script**, no incluya **Usuario:** en el nombre de la variable. De lo contrario, el paquete secundario no podrá encontrar la variable al ejecutar el paquete primario. Para obtener más información sobre el uso de la tarea Script para tener acceso a variables del paquete principal, consulte esta entrada de blog, [SSIS: Obtener acceso a variables en un paquete primario](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/).  
   
 ## <a name="configuring-the-execute-package-task"></a>Configurar la tarea Ejecutar paquete  
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Execute Package Task Editor](../execute-package-task-editor.md)  
+-   [Editor de la tarea Ejecutar paquete](../execute-package-task-editor.md)  
   
 -   [Página Expresiones](../expressions/expressions-page.md)  
   
@@ -118,6 +118,6 @@ ms.locfileid: "58387143"
   
 -   Entrada de blog, [SSIS: ¿Debe ejecutar los paquetes secundarios en proceso o fuera de proceso? ](https://go.microsoft.com/fwlink/?LinkId=220819), en consultingblogs.emc.com.  
   
--   Entrada de blog, [SSIS: Obtener acceso a variables en un paquete primario](https://go.microsoft.com/fwlink/?LinkId=257729), en consultingblogs.emc.com.  
+-   Entrada de blog, [SSIS: Obtener acceso a variables en un paquete primario](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), en andyleonard.blog. 
   
   

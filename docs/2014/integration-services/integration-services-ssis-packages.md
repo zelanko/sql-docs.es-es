@@ -20,12 +20,12 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 324ed64290b85c03401d3add09e773b69c841bdd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: dccae9216609e80b0eb87582a78b94cd6e7b2f0c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241663"
 ---
 # <a name="integration-services-ssis-packages"></a>paquetes de Integration Services (SSIS)
   Un paquete es una colección organizada de conexiones, elementos de flujo de control, elementos de flujo de datos, controladores de eventos, variables, parámetros y configuraciones que se pueden ensamblar con la ayuda de las herramientas gráficas de diseño proporcionadas por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o mediante programación.  A continuación guarda el paquete completado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el Almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] o el sistema de archivos, o puede implementar el proyecto de ssISnoversion en el servidor [!INCLUDE[ssIS](../includes/ssis-md.md)] . El paquete es la unidad de trabajo que se recupera, ejecuta y guarda.  
@@ -112,11 +112,6 @@ ms.locfileid: "58381383"
 -   [Crear paquetes en herramientas de datos de SQL Server](create-packages-in-sql-server-data-tools.md)  
   
 -   Vea la sección que describe cómo **generar paquetes mediante programación** en la Guía del desarrollador.  
-  
-## <a name="related-content"></a>Contenido relacionado  
-  
--   [Implementación de SQL Server Integration Services con Microsoft Dynamics Mobile](https://msdn.microsoft.com/library/cc563950)  
-  
--   [Cómo: Configurar el paquete SQL Server Integration Services para Microsoft Dynamics AX](https://msdn.microsoft.com/library/bb986852)  
+
   
   

@@ -12,12 +12,12 @@ ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 30a14fbc60de7f06ead34e85140a903e4206544e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9d349a21fdd522b5af299c3ad130cdce984f569c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364407"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241983"
 ---
 # <a name="storage-system-input-output-time-out"></a>Tiempo de espera de entrada y salida del sistema de almacenamiento
   Esta regla comprueba el identificador EventId 9 se encuentra en el registro de eventos del sistema. Este mensaje indica que se ha superado el tiempo de espera de E/S en el sistema de almacenamiento.  
@@ -30,6 +30,6 @@ ms.locfileid: "53364407"
 -   [Artículo 154690 de Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=117747)  
   
 ## <a name="for-more-information"></a>Para obtener más información  
- [Elementos fundamentales de E/S de SQL Server, capítulo 2](https://go.microsoft.com/fwlink/?LinkId=69370)  
+ [Elementos fundamentales de E/S de SQL Server, capítulo 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
   
   

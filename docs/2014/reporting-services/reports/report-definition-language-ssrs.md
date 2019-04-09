@@ -20,12 +20,12 @@ ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 32442fad5d3d6f265769927d291c3154ff362f38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 88c22eebf7a070628e72515fafc83591a8e34c64
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241156"
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
   El lenguaje RDL (Report Definition Language) es una representación XML de una definición de informe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una definición de informe contiene información acerca de la recuperación y el diseño de los datos de un informe. RDL está formado por elementos XML que cumplen la sintaxis XML creada para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Puede agregar sus propias funciones personalizadas para controlar los valores de elemento de informe, los estilos y el formato si obtiene acceso a los ensamblados de código en los archivos de definición de informe.  
@@ -71,7 +71,7 @@ ms.locfileid: "56010436"
 |`Language`|Propiedad con un valor de texto que contiene un código de idioma y referencia cultural, como "es-es" para español de España. El valor debe ser un idioma específico o un idioma neutro para el que se defina un idioma predeterminado en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].|  
 |`Name`|Propiedad con un valor de texto de cadena. Los nombres deben ser únicos en el espacio de nombres del elemento. Si no se especifica, el espacio de nombres de un elemento es el objeto contenedor más interno que tiene un nombre.|  
 |`NormalizedString`|Una propiedad con un valor de texto de cadena que se ha normalizado.|  
-|`Size`|Un elemento de tamaño debe contener un número (con un punto como un separador decimal opcional). Un designador debe seguir al número para una unidad de longitud de CSS como cm, mm, pulgadas, pt o pc. Dejar un espacio entre el número y el designador es opcional. Para obtener más información sobre los designadores de tamaño, vea la [Referencia de unidades de longitud de CSS](https://go.microsoft.com/fwlink/?LinkId=9257).<br /><br /> En RDL, el valor máximo para `Size` es de 160 pulgadas. El tamaño mínimo es de 0 pulgadas.|  
+|`Size`|Un elemento de tamaño debe contener un número (con un punto como un separador decimal opcional). Un designador debe seguir al número para una unidad de longitud de CSS como cm, mm, pulgadas, pt o pc. Dejar un espacio entre el número y el designador es opcional. Para obtener más información sobre los designadores de tamaño, vea la [Referencia de unidades de longitud de CSS](https://www.w3schools.com/CSSref/css_units.asp).<br /><br /> En RDL, el valor máximo para `Size` es de 160 pulgadas. El tamaño mínimo es de 0 pulgadas.|  
 |`String`|Propiedad con un valor de texto de cadena.|  
 |`UnsignedInt`|Una propiedad con un valor de tipo Integer (uint32) sin signo.|  
 |`Variant`|Una propiedad con cualquier tipo XML sencillo.|  

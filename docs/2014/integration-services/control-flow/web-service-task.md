@@ -14,12 +14,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 86b86039f3e308953d41f5a463b0716a76d5c361
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240814"
 ---
 # <a name="web-service-task"></a>Tarea Servicio web
   La tarea Servicio web ejecuta un método de servicio web. Puede usar la tarea Servicio web para los siguientes objetivos:  
@@ -82,8 +82,8 @@ ms.locfileid: "58377313"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Vídeo [ Llamar a un servicio Web mediante la tarea de servicio Web (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642), en technet.microsoft.com.  
+ Vídeo [ How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=259642) (Procedimiento para llamar a un servicio web con la tarea Servicio web [vídeo de SQL Server]), en technet.microsoft.com.  
   
- Respuesta seleccionada, [Consume Web Services in SSIS using Scripts](https://go.microsoft.com/fwlink/?LinkId=321996)(Usar servicios Web en SSIS mediante scripts), en curatedviews.cloudapp.  
+ [Cómo consumir el servicio Web a través del paquete SSIS](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
   
   

@@ -11,21 +11,21 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5409938a5e859d5df6a153cddf327129b2ca8878
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296903"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241743"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lección 6: Agregar grupos y totales (Reporting Services)
   Agregue grupos y totales al informe para organizar y resumir los datos.  
   
- Para obtener información acerca de cómo agregar totales acumulados a los informes, vea esta selección en curah.microsoft.com sobre [Agregar totales a los informes de Reporting Services (SSRS)](https://go.microsoft.com/fwlink/p/?LinkId=403698).  
+ Para obtener información sobre cómo agregar totales acumulativos a informes, vea: [Agregar totales a los informes de Reporting Services (SSRS)](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
   
  **En este tema:**  
   
--   [Para agrupar los datos en un informe](#bkmk_groupdata)  
+-   [Para agrupar datos en un informe](#bkmk_groupdata)  
   
 -   [Para agregar totales a un informe](#bkmk_addtotals)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "56296903"
   
 6.  En el menú **Formato** , haga clic en **Color de fondo**y, a continuación, haga clic en **Gris claro**y en **Aceptar**.  
   
-     ![Vista de diseño: Tabla básica con total del pedido](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "vista de diseño: Tabla básica con total del pedido")  
+     ![Vista de diseño: tabla básica con total de pedidos](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Vista de diseño: tabla básica con total general")  
   
 ##  <a name="bkmk_adddailytotal"></a> Para agregar un total diario a un informe  
   
@@ -107,13 +107,13 @@ ms.locfileid: "56296903"
   
 4.  En el menú **Formato** , haga clic en **Color de fondo**y, a continuación, haga clic en **Azul claro**y en **Aceptar**.  
   
-     ![Vista de diseño: Total general en tabla básica](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "vista de diseño: Total general en tabla básica")  
+     ![Vista de diseño: total general en tabla básica](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Vista de diseño: total general en la tabla básica")  
   
 5.  Haga clic en Vista previa.  
   
      La última página debe tener un aspecto similar a este:  
   
-     ![Vista previa: Tabla básica con total general](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "vista previa: Tabla básica con total general")  
+     ![Vista previa: tabla básica con total general](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Vista previa: tabla básica con total general")  
   
 ##  <a name="bkmk_publishreport"></a> Para publicar el informe en el servidor de informes (opcional)  
   

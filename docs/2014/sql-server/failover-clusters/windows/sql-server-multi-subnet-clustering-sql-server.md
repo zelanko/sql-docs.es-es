@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7773774d15cb6d6bdfd9e2335eac40bbf00652e8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: be4125f417b6333bfcb3002b15f1319f484d22a1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241613"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Agrupación en clústeres de varias subredes de SQL Server (SQL Server)
   Un clúster de conmutación por error de múltiples subredes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una configuración donde cada nodo clúster se conecta a una subred diferente o un conjunto de subredes diferente. Estas subredes pueden estar en la misma ubicación o en sitios geográficamente dispersos. A veces se hace referencia a la agrupación en clústeres en sitios geográficamente dispersos como clústeres elásticos. Como no existe ningún almacenamiento compartido al que todos los nodos puedan tener acceso, los datos se deben replicar entre el almacenamiento de datos en las diversas subredes. Con la replicación de datos, hay más de una copia de los datos disponible. Por consiguiente, un clúster de conmutación por error de múltiples subredes proporciona una solución de recuperación ante desastres además de alta disponibilidad.  
@@ -82,8 +82,8 @@ ms.locfileid: "53349218"
 |Instalar un clúster de conmutación por error de SQL Server|[Crear un nuevo clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Actualización en contexto del clúster de conmutación por error existente de SQL Server|[Actualizar una instancia de clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
 |Mantener el clúster de conmutación por error existente de SQL Server|[Agregar o quitar nodos en un clúster de conmutación por error de SQL Server &#40;programa de instalación&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
-|Clústeres de conmutación por error de Windows|[Windows 2008 R2 conmutación por error de agrupación en clústeres multisitio](https://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)|  
-|Usar el complemento Administración del clúster de conmutación por error para ver eventos y registros de WSFC|[View Events and Logs for a Failover Cluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
+|Clústeres de conmutación por error de Windows|[Prácticas recomendadas de clúster de conmutación por error de varios sitios de Microsoft Windows](https://secureinfra.blog/2013/11/09/microsoft-windows-multi-site-failover-cluster-best-practices/)|  
+|Usar el complemento Administración del clúster de conmutación por error para ver eventos y registros de WSFC|[Ver eventos y registros para un clúster de conmutación por error](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)|  
 |Usar Windows PowerShell para crear un archivo de registro para todos los nodos (o un determinado nodo) en un clúster de conmutación por error de WSFC|[Cmdlet de clúster de conmutación por error Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx)|  
   
  

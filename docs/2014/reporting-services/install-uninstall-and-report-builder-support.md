@@ -13,12 +13,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 542225a31879c47e58893f438e3af0309a6eca88
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 939a60c8c23ee59e77f6a2f3c3a2b71a98a426bf
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241723"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Instalar, desinstalar y asistencia del Generador de informes
   El Generador de informes es una herramienta de creación de informes que puede usar para crear, actualizar y compartir informes, elementos de informe y conjuntos de datos compartidos. El Generador de informes está disponible en dos versiones: independiente y [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. Usted mismo o un administrador pueden instalar la versión independiente en el equipo. La versión [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] se instala automáticamente con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] y se descarga en su equipo desde el Administrador de informes o un sitio de SharePoint integrado con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "56298323"
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Instalar en el equipo la versión ClickOnce del Generador de informes  
  La versión [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] del Generador de informes se instala con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Se instala mediante instalaciones tanto en modo como en modo integrado de SharePoint de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] es una tecnología de Microsoft para implementar aplicaciones Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permite a los usuarios instalar y ejecutar una aplicación Windows, como el Generador de informes, haciendo clic un vínculo de una página web. Para obtener más información acerca de cómo implementar aplicaciones [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , aplicar la seguridad de aplicaciones [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] o ejecutar aplicaciones [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] en la zona Internet, vea los artículos "Implementación de ClickOnce para aplicaciones Windows Forms", "Información general sobre la seguridad en formularios Windows Forms" e "Información general sobre la implementación de aplicaciones de confianza" en el sitio web de [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network en [www.microsoft.com/msdn](https://www.microsoft.com/msdn).  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] es una tecnología de Microsoft para implementar aplicaciones Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permite a los usuarios instalar y ejecutar una aplicación Windows, como el Generador de informes, haciendo clic un vínculo de una página web. Para obtener más información acerca de la implementación [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplicaciones, aplicar [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] seguridad de la aplicación o al ejecutar [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] aplicaciones en la zona de Internet, consulte la "implementación de Windows Forms aplicaciones ClickOnce", "la seguridad en Información general de Windows Forms"o"Trusted Application Deployment Overview"los artículos sobre la [!INCLUDE[msCoName](../includes/msconame-md.md)] sitio Web Developer Network en [ https://developer.microsoft.com/ ](https://developer.microsoft.com/).  
   
  La versión [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] del Generador de informes se encuentra en el servidor de informes y se instalará en su equipo al hacer clic en el botón **Generador de informes** en Administrador de informes o en la opción **Informe del Generador de informes** del menú **Nuevo documento** de una biblioteca de SharePoint.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "56298323"
 |1030|Danish|da-DK|  
 |1031|German|de-DE|  
 |1032|Greek|el-GR|  
-|3082|Inglés|en-US|  
+|3082|Inglés|es-ES|  
 |1035|Finlandés|fi-FI|  
 |1036|Francés|fr-FR|  
 |1038|Húngaro|hu-HU|  

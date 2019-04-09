@@ -10,18 +10,18 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 77812ef81d77be668a449af6c79e833ffc4d81aa
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390153"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241803"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lección 1: Crear el proyecto y el paquete básico
   En esta lección, creará un paquete ETL simple que extrae datos de un único origen de archivo plano, transforma los datos usando dos componentes de la transformación de búsqueda y escribe dichos datos en la tabla de hechos **FactCurrency** de **AdventureWorksDW2012**. Como parte de esta lección, aprenderá a crear paquetes nuevos, agregar y configurar orígenes de datos y conexiones de destino, y trabajar con nuevos componentes de flujo de control y flujo de datos.  
   
 > [!IMPORTANT]  
->  Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información sobre la instalación e implementación de **AdventureWorksDW2012**, consulte [Ejemplos de producto de Reporting Services en CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=52691).  
+>  Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información sobre la instalación e implementación **AdventureWorksDW2012**, consulte [Microsoft SQL Server Product Samples: Reporting Services](https://archive.codeplex.com/?p=msftrsprodsamples).  
   
 ## <a name="understanding-the-package-requirements"></a>Descripción de los requisitos de paquete  
  Este tutorial necesita Microsoft SQL Server Data Tools.  
@@ -82,7 +82,7 @@ ms.locfileid: "58390153"
   
 -   [Paso 1: Crear un nuevo proyecto de Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Paso 2: Adición y configuración de un administrador de conexiones de archivos planos](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Paso 2: Agregar y configurar un administrador de conexiones de archivos planos](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
 -   [Paso 3: Agregar y configurar un administrador de conexiones OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
@@ -94,9 +94,9 @@ ms.locfileid: "58390153"
   
 -   [Paso 7: Agregar y configurar el destino de OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Paso 8: Lo más fácil de entender el paquete de la lección 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Paso 8: Facilitar la comprensión del paquete de la lección 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Paso 9: Probar el paquete del Tutorial de la lección 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Paso 9: Probar el paquete del tutorial de la lección 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
  [Paso 1: Crear un nuevo proyecto de Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  

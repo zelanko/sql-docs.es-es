@@ -12,18 +12,18 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad54f13fbb939b9ac65f656f37bbba94560da829
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241673"
 ---
 # <a name="create-tables-database-engine"></a>Crear tablas (motor de base de datos)
   Puede crear una nueva tabla, asignarle un nombre y agregarla a una base de datos existente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Si está conectado a una base de datos de SQL Azure, la opción de nueva tabla inicia un script de plantilla de creación de tabla. Modifique los parámetros y, a continuación, ejecute el script para crear una nueva tabla. Para obtener más información, vea [Introducción a SQL Azure](https://go.microsoft.com/fwlink/?LinkId=163948).  
+>  Si está conectado a una base de datos de SQL Azure, la opción de nueva tabla inicia un script de plantilla de creación de tabla. Modifique los parámetros y, a continuación, ejecute el script para crear una nueva tabla. Para obtener más información, vea [Introducción a SQL Azure](https://microsoft.sharepoint.com/sites/infopedia_g01/pages/cards/azure-sql-database.aspx).  
   
  **En este tema**  
   
@@ -31,7 +31,7 @@ ms.locfileid: "53377437"
   
      [Seguridad](#Security)  
   
--   **Para crear una tabla, utilizando:**  
+-   **Para crear una tabla con:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "53377437"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Se necesita el permiso CREATE TABLE en la base de datos y el permiso ALTER en el esquema en que se crea la tabla.  
   
  Si alguna columna de la instrucción CREATE TABLE se define como un tipo definido por el usuario de CLR, se necesita la propiedad del tipo o el permiso REFERENCES.  

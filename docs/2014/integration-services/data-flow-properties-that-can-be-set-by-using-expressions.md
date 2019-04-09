@@ -20,12 +20,12 @@ ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378603"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240423"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propiedades de flujo de datos que se pueden establecer utilizando expresiones
   Los valores de ciertas propiedades de objetos de flujo de datos se pueden especificar utilizando expresiones de propiedades disponibles en el contenedor de tareas Flujo de Datos.  
@@ -71,15 +71,15 @@ ms.locfileid: "58378603"
 |----------------------|--------------|  
 |Destino ADO NET|Propiedad TableOrViewName<br /><br /> Propiedad BatchSize<br /><br /> Propiedad CommandTimeOut|  
 |Destino de archivo plano|Propiedad Header|  
-|Destino de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Propiedad TableName|  
-|Destino de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Propiedad BulkInsertTableName<br /><br /> Propiedad BulkInsertFirstRow<br /><br /> Propiedad BulkInsertLastRow<br /><br /> Propiedad BulkInsertOrder<br /><br /> Propiedad Tiempo de espera|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Propiedad TableName|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destino|Propiedad BulkInsertTableName<br /><br /> Propiedad BulkInsertFirstRow<br /><br /> Propiedad BulkInsertLastRow<br /><br /> Propiedad BulkInsertOrder<br /><br /> Propiedad Tiempo de espera|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 -   [Agregar o cambiar una expresión de propiedad](expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](http://pragmaticworks.com/cheatsheet/), en pragmaticworks.com  
+ Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), en pragmaticworks.com  
   
 ## <a name="see-also"></a>Vea también  
  [Usar expresiones de propiedad en paquetes](expressions/use-property-expressions-in-packages.md)   

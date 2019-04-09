@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea69aa9c04ce323b43e28d5426acd383d574a538
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 04ad145d23cfcd158cf68ac941606e1c3bd0114a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242173"
 ---
 # <a name="implementation-of-child-packages"></a>Implementación de paquetes secundarios
   Cuando implementa el equilibrio de carga mediante [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], los paquetes secundarios se instalan en otros servidores para aprovechar el tiempo de servidor o CPU disponible. Para crear y ejecutar los paquetes secundarios, es necesario realizar los pasos siguientes:  
@@ -68,8 +68,8 @@ ms.locfileid: "58386783"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Entrada de blog, [SSIS: Obtener acceso a variables en un paquete primario](https://go.microsoft.com/fwlink/?LinkId=257729), en consultingblogs.emc.com.  
+-   Entrada de blog, [SSIS: Obtener acceso a variables en un paquete primario](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), en andyleonard.blog.  
   
--   Entrada de blog, [SSIS: ¿Debe ejecutar los paquetes secundarios en proceso o fuera de proceso? ](https://go.microsoft.com/fwlink/?LinkId=220819), en consultingblogs.emc.com.  
+-   Artículo [tarea Ejecutar paquete](../integration-services/control-flow/execute-package-task.md).  
   
   

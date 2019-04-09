@@ -21,12 +21,12 @@ ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e591982dfccbc06d705879bc63fb8aa87c041d40
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360717"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242453"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Accesibilidad para personas con discapacidades
   [!INCLUDE[msCoName](../includes/msconame-md.md)] se compromete a que sus productos y servicios sean más fáciles de usar para todos. En este tema se proporciona información acerca de las siguientes características, productos y servicios que hacen que los productos de la familia de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server sean más fáciles de usar para las personas con discapacidades.  
@@ -48,12 +48,12 @@ ms.locfileid: "53360717"
   
 ### <a name="free-step-by-step-tutorials"></a>Tutoriales paso a paso gratuitos  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] ofrece una serie de tutoriales paso a paso para ayudarle a ajustar la configuración de accesibilidad en el equipo. Los tutoriales proporcionan procedimientos detallados acerca de cómo ajustar opciones, características y valores de configuración para cubrir las necesidades de personas con discapacidades y las necesidades de accesibilidad. Esta información se presenta en paralelo para que pueda ver al mismo tiempo cómo utilizar el mouse, el teclado o una combinación de ambos. Existen tutoriales paso a paso disponibles para los diversos productos en el [sitio web de accesibilidad de Microsoft](https://go.microsoft.com/fwlink/?LinkID=67163).  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] ofrece una serie de tutoriales paso a paso para ayudarle a ajustar la configuración de accesibilidad del equipo. Los tutoriales proporcionan procedimientos detallados acerca de cómo ajustar opciones, características y valores de configuración para cubrir las necesidades de personas con discapacidades y las necesidades de accesibilidad. Esta información se presenta en paralelo para que pueda ver al mismo tiempo cómo utilizar el mouse, el teclado o una combinación de ambos. Existen tutoriales paso a paso disponibles para los diversos productos en el [sitio web de accesibilidad de Microsoft](https://go.microsoft.com/fwlink/?LinkID=67163).  
   
 ## <a name="assistive-technology-products-for-windows"></a>Productos de tecnología de ayuda para Windows  
  Hay una variedad de productos de tecnología de ayuda disponibles para facilitar el uso de los equipos a las personas con discapacidades.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] Proporciona un catálogo de productos de tecnología de asistencia que se ejecutan en sistemas operativos de Windows en que se puede buscar el [sitio Web de accesibilidad de Microsoft](https://go.microsoft.com/fwlink/?LinkID=67166).  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] proporciona un catálogo en el que se pueden realizar búsquedas de productos de tecnología de ayuda que se ejecutan en sistemas operativos Windows en el [sitio web de accesibilidad de Microsoft](https://go.microsoft.com/fwlink/?LinkID=67166).  
   
  Hay los siguientes tipos de productos disponibles:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "53360717"
  Si utiliza un producto de tecnología de ayuda, póngase en contacto con su proveedor para comprobar la compatibilidad con los productos de su equipo antes de actualizar. Su proveedor de tecnología de ayuda también puede ayudarle a ajustar la configuración para optimizar la compatibilidad con su versión de Windows u otros productos de [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
 ## <a name="includemsconameincludesmsconame-mdmd-documentation-in-alternative-formats"></a>Documentación de [!INCLUDE[msCoName](../includes/msconame-md.md)] en formatos alternativos  
- La documentación de productos de [!INCLUDE[msCoName](../includes/msconame-md.md)] está disponible en formatos alternativos para ayudar a los usuarios en lo que respecta a sus necesidades de accesibilidad.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] documentación del producto está disponible en formatos alternativos para ayudar a nuestros clientes con necesidades de accesibilidad.  
   
 ### <a name="obtaining-documentation-for-includessnoversionincludesssnoversion-mdmd"></a>Obtener documentación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  La documentación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponible en línea. Para obtener más información, consulte [documentación del producto SQL Server Use](../2014-toc/books-online-for-sql-server-2014.md).  
@@ -90,7 +90,9 @@ ms.locfileid: "53360717"
   
  Número de teléfono fuera de estados estados y Canadá: (609) 452-0606  
   
- Fax: (609) 987-8116 web: [http://www.rfbd.org/](https://go.microsoft.com/fwlink/?LinkId=48621)  
+ Fax: (609) 987-8116 Web: 
+
+[Sitio Web de accesibilidad de Microsoft](https://www.microsoft.com/accessibility/)  
   
 ## <a name="customer-service-for-people-who-are-deaf-or-hard-of-hearing"></a>Servicio de atención al cliente para personas sordas o con impedimentos auditivos  
  Si es usted sordo o tiene impedimentos auditivos, dispone de acceso completo a los servicios de soporte técnico para usuarios de [!INCLUDE[msCoName](../includes/msconame-md.md)] mediante un servicio de teléfono de texto (TTY/TDD).  
@@ -99,7 +101,7 @@ ms.locfileid: "53360717"
  Puede ponerse en contacto con el [!INCLUDE[msCoName](../includes/msconame-md.md)] Sales Information Center en un teléfono de texto de marcado (800) 892-5234 entre 6:30 a. M. y las 5:30 p. m., hora del Pacífico, de lunes a viernes, excepto festivos.  
   
 ### <a name="technical-help"></a>Ayuda técnica  
- Para obtener ayuda técnica en Estados Unidos, puede ponerse en contacto con los servicios de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] en el teléfono de texto (800) 892-5234 entre las 6:00 a. m. y a las 06:00:00 p. m. hora del Pacífico, de lunes a viernes, excepto festivos. En Canadá, llame al (905) 568-9641 entre las 8:00 a. m. y a las 8:00 p. m. hora de la costa este, de lunes a viernes, excepto festivos. Los servicios de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] están sujetos a los precios, términos y condiciones vigentes en el momento de usar el servicio.  
+ Para obtener ayuda técnica en Estados Unidos, puede ponerse en contacto con los servicios de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] en el teléfono de texto (800) 892-5234 entre las 6:00 a. m. y a las 06:00:00 p. m. hora del Pacífico, de lunes a viernes, excepto festivos. En Canadá, llame al (905) 568-9641 entre las 8:00 a. m. y a las 8:00 p. m. hora de la costa este, de lunes a viernes, excepto festivos. [!INCLUDE[msCoName](../includes/msconame-md.md)] están sujetos a los precios, términos y condiciones vigentes en el momento de usar el servicio.  
   
 ## <a name="getting-more-accessibility-information"></a>Obtener más información de accesibilidad  
  Puede obtener información sobre la tecnología de ayuda orientada a facilitar la vida a las personas con discapacidades en el [sitio web de accesibilidad de Microsoft](https://go.microsoft.com/fwlink/?LinkID=8287).  

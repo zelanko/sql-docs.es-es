@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536697"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241963"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinar el número correcto de depósitos para los índices hash
   Debe especificar un valor para el parámetro `BUCKET_COUNT` al crear la tabla optimizada para memoria. En este tema se hacen recomendaciones para determinar el valor adecuado para el parámetro `BUCKET_COUNT`. Si no puede determinar el número de cubos correcto, utilice un índice no clúster en su lugar.  Un valor incorrecto de `BUCKET_COUNT`, especialmente si es demasiado bajo, puede afectar significativamente el rendimiento de la carga de trabajo, así como afectar el tiempo de recuperación de la base de datos. Es mejor sobrestimar el número de cubos.  
@@ -26,7 +26,7 @@ ms.locfileid: "58536697"
   
  Se asigna una tabla hash para cada índice de hash de una tabla optimizada para memoria. El tamaño de la tabla hash asignada para un índice especificado por el `BUCKET_COUNT` parámetro [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) o [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). El número de cubos se redondeará internamente hasta la siguiente potencia de dos. Por ejemplo, especificar un número de cubos de 300.000 producirá un número real de cubos de 524.288.  
   
- Para ver vínculos a un artículo y vídeo en el número de cubos, consulte [Cómo determinar el número de cubos adecuado para índices de hash (OLTP en memoria)](https://go.microsoft.com/fwlink/p/?LinkId=525853).  
+ Para ver vínculos a un artículo y vídeo en el número de cubos, consulte [Cómo determinar el número de cubos adecuado para índices de hash (OLTP en memoria)](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/).  
   
 ## <a name="recommendations"></a>Recomendaciones  
  En la mayoría de los casos el número de cubos debe estar entre 1 y 2 veces el número de valores distintos de la clave de índice. Si la clave de índice contiene muchos valores duplicados, como promedio hay más de 10 filas por cada valor de clave de índice, utilice un índice no clúster en su lugar.  

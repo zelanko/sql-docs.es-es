@@ -12,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80e557d9d286040b1d145c852779a9eca5cd4e64
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382731"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241793"
 ---
 # <a name="cdc-source"></a>origen de CDC
   El origen CDC lee un intervalo de datos modificados de las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y entrega los cambios de nivel inferior a otros componentes de SSIS.  
@@ -45,11 +45,11 @@ ms.locfileid: "58382731"
 ## <a name="error-handling"></a>Tratamiento de errores  
  El origen de CDC tiene una salida de error. La salida de error del componente incluye las columnas de salida siguientes:  
   
--   **Código de error**: El valor es siempre -1.  
+-   **Código de error**: el valor es siempre -1.  
   
--   **Columna de error**: La columna de origen que produce el error (para errores de conversión).  
+-   **Columna de error**: la columna de origen que produce el error (para los errores de conversión).  
   
--   **Columnas de la fila de error**: Los datos del registro que ocasionan el error.  
+-   **Columnas de fila de error**: los datos del registro que ocasionan el error.  
   
  Según la configuración del comportamiento de los errores, el origen CDC permite devolver los errores (conversión de datos, truncamiento) que aparecerán durante el proceso de extracción en la salida de error. Para más información, vea [CDC Source Editor &#40;Error Output Page&#41;](../cdc-source-editor-error-output-page.md).  
   
@@ -88,7 +88,7 @@ use <cdc-enabled-database-name>
 #### <a name="sql-server-error-message"></a>Mensaje de error de SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]podría devolver el mensaje siguiente:  
   
- **Se ha especificado un número insuficiente de argumentos para el procedimiento o función cdc.fn_cdc_get_net_changes_ \<..>.**  
+ **Se proporcionaron un número insuficiente de argumentos para el procedimiento o función cdc.fn_cdc_get_net_changes_\<... >.**  
   
  Este error indica que falta un argumento. Indica que los valores de LSN inicial o final de la variable de estado CDC no son válidos.  
   
@@ -125,6 +125,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Entrada del blog, sobre [Modos de procesamiento para el origen CDC](https://go.microsoft.com/fwlink/?LinkId=242541), en mattmasson.com.  
+-   Entrada del blog, sobre [Modos de procesamiento para el origen CDC](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/), en mattmasson.com.  
   
   

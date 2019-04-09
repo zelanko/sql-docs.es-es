@@ -17,12 +17,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0df4e17291e03e23cb68e984c8473064b0208a9c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366327"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241441"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la **protección ampliada** a partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protección ampliada para la autenticación** es una característica de los componentes de red que implementa el sistema operativo. La**protección ampliada** se admite en Windows 7 y Windows Server 2008 R2. **Protección ampliada** se incluye en Service packs para [!INCLUDE[msCoName](../../includes/msconame-md.md)] sistemas operativos antiguos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es más seguro cuando las conexiones se realizan con **Extended Protection**.  
@@ -55,7 +55,7 @@ ms.locfileid: "53366327"
   
 -   [Autenticación de Windows integrada con protección ampliada](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Asesor de seguridad de Microsoft (973811), protección ampliada para la autenticación](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Asesor de seguridad de Microsoft (973811), protección ampliada para la autenticación](https://support.microsoft.com//help/973811/microsoft-security-advisory-extended-protection-for-authentication)  
   
 ## <a name="settings"></a>Configuración  
  Hay tres opciones de configuración de la conexión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que afectan al enlace de servicio y al enlace de canal. Las opciones se pueden configurar utilizando el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o WMI, y se pueden ver mediante la faceta **Configuración del protocolo del servidor** de la administración basada en directivas.  
@@ -64,7 +64,7 @@ ms.locfileid: "53366327"
   
      Los valores posibles son **Activado** y **Desactivado**. Para usar el enlace de canal, **Forzar cifrado** debe estar establecido en **Activado**y todos los clientes se verán obligados a realizar el cifrado. Si es **Desactivado**, solo se garantiza el enlace de servicio. **Forzar cifrado** está en **Propiedades de Protocolos de MSSQLSERVER (pestaña Marcas)** en el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **Protección ampliada**  
+-   **protección ampliada**  
   
      Los valores posibles son **Desactivado**, **Permitido**y **Requerido**. La variable **Protección ampliada** permite a los usuarios configurar el nivel de **protección ampliada** de cada sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Protección extendida** está en **Propiedades de Protocolos de MSSQLSERVER (pestaña Avanzadas)** en el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

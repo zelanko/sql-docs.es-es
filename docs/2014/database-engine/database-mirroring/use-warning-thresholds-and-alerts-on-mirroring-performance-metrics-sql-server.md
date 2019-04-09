@@ -17,12 +17,12 @@ ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 41044c16343ba93055815851000a1a642578e39a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242223"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo (SQL Server)
   Este tema contiene información acerca de los eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los que se pueden configurar y administrar umbrales de advertencia para la creación de reflejo de la base de datos. Puede usar el Monitor de creación de reflejo de la base de datos o los procedimientos almacenados **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**y **sp_dbmmonitordropalert** . Este tema también contiene información acerca de cómo configurar alertas en los eventos de creación de reflejo de la base de datos.  
@@ -37,14 +37,14 @@ ms.locfileid: "53354733"
   
 -   [Usar alertas para una base de datos reflejada](#UseAlerts)  
   
--   [Tareas relacionadas](#RelatedTasks)  
+-   [Related Tasks](#RelatedTasks)  
   
 ##  <a name="PerfMetricsAndWarningThresholds"></a> Métricas de rendimiento y umbrales de advertencia  
  En la siguiente tabla se presenta una lista de las métricas de rendimiento para las que se pueden configurar advertencias, se describe el umbral de advertencia correspondiente y se muestra la etiqueta correspondiente del Monitor de creación de reflejo de la base de datos.  
   
 |Métrica de rendimiento|Umbral de advertencia|Etiqueta del Monitor de creación de reflejo de la base de datos|  
 |------------------------|-----------------------|--------------------------------------|  
-|Registro sin enviar|Especifica cuántos kilobytes (KB) de registro sin enviar generan una advertencia en la instancia del servidor principal. Esta advertencia ayuda a medir la pérdida de datos potencial en términos de KB y resulta especialmente importante en el modo de alto rendimiento. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|**Advierte si el registro sin enviar supera el valor de umbral**|  
+|Registro sin enviar|Especifica cuántos kilobytes (KB) de registro sin enviar generan una advertencia en la instancia del servidor principal. Esta advertencia ayuda a medir la pérdida de datos potencial en términos de KB y resulta especialmente importante en el modo de alto rendimiento. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|**Advertir si el registro sin enviar sobrepasa el umbral**|  
 |Registro sin restaurar|Especifica cuántos KB de registro sin restaurar generan una advertencia en la instancia del servidor reflejado. Esta advertencia ayuda a medir el tiempo de conmutación por error. El*tiempo de la conmutación por error* se compone principalmente del tiempo que el servidor reflejado anterior necesita para poner al día los registros pendientes en su cola rehecha, más un breve tiempo adicional.<br /><br /> Nota: En una conmutación automática por error, el tiempo para que el sistema detecte el error es independiente del tiempo de conmutación por error.<br /><br /> Para obtener más información, vea [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|**Advertir si el registro sin restaurar sobrepasa el umbral**|  
 |Transacción no enviada más antigua|Especifica el número de minutos de transacciones que se pueden acumular en la cola de envío antes de que se genere una advertencia en la instancia del servidor principal. Esta advertencia ayuda a medir la pérdida de datos potencial en términos de tiempo y resulta especialmente importante en el modo de alto rendimiento. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|**Advierte si la antigüedad de la transacción sin enviar más antigua supera el valor de umbral**|  
 |Sobrecarga de confirmación del servidor reflejado|Especifica el número de milisegundos de retardo medio por transacción que se tolera antes de que se genere una advertencia en el servidor principal. Este retardo es la cantidad de sobrecarga en la que se incurre mientras la instancia del servidor principal espera a la instancia del servidor reflejado para escribir la entrada de registro de la transacción en la cola de puesta al día. Este valor solo es relevante en el modo de alta seguridad.|**Advierte si la sobrecarga de confirmación del servidor reflejado supera el valor de umbral**|  
@@ -105,7 +105,7 @@ ms.locfileid: "53354733"
   
  Cuando se definen alertas de eventos de la creación de reflejo de la base de datos, se recomienda definir umbrales de advertencia y alertas en las instancias de los servidores asociados. Los eventos individuales se generan en el servidor principal o reflejado, pero cada asociado puede realizar cualquiera de los roles en cualquier momento. Para asegurarse de que una alerta continúa en funcionamiento después de una conmutación por error, la alerta se debe definir en ambos asociados.  
   
- Para obtener más información, consulte las notas del producto sobre alertas de eventos de la creación de reflejo de la base de datos en este [sitio web de SQL Server](https://go.microsoft.com/fwlink/?linkid=62373). Estas notas del producto contienen información acerca de la configuración de alertas mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los eventos WMI de la creación de reflejo y scripts de ejemplo.  
+ Para obtener más información, consulte las notas del producto sobre alertas de eventos de la creación de reflejo de la base de datos en este [sitio web de SQL Server](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md). Estas notas del producto contienen información acerca de la configuración de alertas mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los eventos WMI de la creación de reflejo y scripts de ejemplo.  
   
 > [!IMPORTANT]  
 >  En todas las sesiones de creación de reflejo, se recomienda encarecidamente configurar la base de datos para que envíe una alerta de cualquier evento de cambio de estado. Significará que se ha producido algo que puede poner en riesgo los datos, a menos que un cambio de estado se espere como resultado de un cambio de configuración manual. Identificar y solucionar la causa de un cambio de estado inesperado le ayudará a proteger los datos.  
@@ -115,7 +115,7 @@ ms.locfileid: "53354733"
   
 -   [Crear una alerta con un número de error](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
--   [Crear una alerta de evento WMI](../../ssms/agent/create-a-wmi-event-alert.md)  
+-   [Create a WMI Event Alert](../../ssms/agent/create-a-wmi-event-alert.md)  
   
  **Para supervisar la creación de reflejo de la base de datos**  
   

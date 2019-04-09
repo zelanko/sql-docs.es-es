@@ -12,12 +12,12 @@ ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9a67eff74a4c95a851c65b2fb7db959d765bc192
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374537"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240643"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Nuevo catálogo de texto completo (página General)
   Use este cuadro de diálogo para crear un nuevo catálogo de texto completo.  
@@ -27,7 +27,7 @@ ms.locfileid: "53374537"
 -   [Crear y administrar catálogos de texto completo](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
- **nombre del catálogo de texto completo**  
+ **Nombre del catálogo de texto completo**  
  Nombre del catálogo de texto completo.  
   
  **Propietario**  
@@ -38,7 +38,7 @@ ms.locfileid: "53374537"
  Active esta opción para establecer este catálogo como predeterminado para los nuevos catálogos de texto completo.  
   
  **Distinción de acentos**  
- Indica si el catálogo distingue las marcas diacríticas, como la tilde (**~**), el acento agudo (**'**) o la diéresis (**¨**). Si selecciona **Sin distinción**, las marcas diacríticas se omiten en los índices de texto asociados a este catálogo de texto completo. Para obtener información acerca de las marcas diacríticas, vea[marca diacrítica](https://go.microsoft.com/fwlink/?LinkId=154091) en la enciclopedia MSN Encarta.  
+ Indica si el catálogo distingue las marcas diacríticas, como la tilde (**~**), el acento agudo (**'**) o la diéresis (**¨**). Si selecciona **Sin distinción**, las marcas diacríticas se omiten en los índices de texto asociados a este catálogo de texto completo. Para obtener información acerca de las marcas diacríticas, vea [marca diacrítica](https://www.merriam-webster.com/dictionary/diacritic) en el sitio Web de Merriam Webster.  
   
 ## <a name="see-also"></a>Vea también  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

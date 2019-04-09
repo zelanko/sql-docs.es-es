@@ -16,12 +16,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e18d8058519127108b2b23a6a798fe3d37c25c0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386643"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240383"
 ---
 # <a name="xml-source"></a>Origen XML
   El origen XML lee un archivo de datos XML y rellena las columnas de la salida de origen con los datos.  
@@ -69,7 +69,7 @@ ms.locfileid: "58386643"
   
  El origen XML admite varias salidas normales y varias salidas de error.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye el cuadro de diálogo **Editor de origen de XML**para configurar el origen XML. Este cuadro de diálogo está disponible en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the **XML Source Edito**r dialog box for configuring incluye el cuadro de diálogo **Editor de origen de XML**para configurar el origen XML.sEste cuadro de diálogo está disponible en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "58386643"
   
  El cuadro de diálogo **Editor avanzado** indica las propiedades que se pueden establecer mediante programación. Para obtener más información acerca de las propiedades que puede establecer a través del cuadro de diálogo **Editor avanzado** o mediante programación, haga clic en uno de los temas siguientes:  
   
--   [Common Properties](../common-properties.md)  
+-   [Propiedades comunes](../common-properties.md)  
   
 -   [Propiedades personalizadas del origen XML](xml-source-custom-properties.md)  
   
@@ -95,6 +95,6 @@ ms.locfileid: "58386643"
  [Extraer datos mediante el origen de XML](xml-source.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Respuesta seleccionada, [Create an XML Destination for an SSIS Package](https://go.microsoft.com/fwlink/?LinkId=321993)(Crear un destino XML para un paquete SSIS), en curatedviews.cloudapp.net.  
+ Artículo técnico, [mediante un archivo XML para configurar un paquete SSIS](https://www.sqlshack.com/using-xml-file-configure-ssis-package/).  
   
   

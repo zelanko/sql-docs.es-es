@@ -14,12 +14,12 @@ ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93e3ca09b1d1d20be103db8bbd92aa15e3a1ba5a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ecc6eefcf6fea5ee815190e1d4204a00cca60f0a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241243"
 ---
 # <a name="define-attribute-relationships"></a>Definir relaciones de atributo
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los atributos son la unidad de creación fundamental de una dimensión. Una dimensión contiene un conjunto de atributos que se organizan en función de las relaciones de atributo.  
@@ -35,7 +35,7 @@ ms.locfileid: "53360437"
 -   Hace que los algoritmos de diseños de agregaciones seleccionen agregados más efectivos, siempre y cuando las jerarquías definidas por el usuario se hayan establecido a lo largo de las rutas de acceso de la relación.  
   
     > [!NOTE]  
-    >  Para obtener más información sobre la importancia e implicaciones de definir y configurar relaciones de atributo, vea la sección "Mejora del rendimiento de consulta", en el [Guía de rendimiento de SQL Server 2005 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81621).  
+    >  Para obtener más información sobre la importancia e implicaciones de definir y configurar relaciones de atributo, vea la sección "Mejora del rendimiento de consulta", en el [Guía de rendimiento de SQL Server 2005 Analysis Services](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  
   
 ## <a name="attribute-relationship-considerations"></a>Consideraciones sobre las relaciones de atributo  
  Si los datos subyacentes lo permiten, también debería definir relaciones de atributo únicas entre atributos. Para definir relaciones de atributo únicas, utilice la pestaña **Relación de los atributos** del Diseñador de dimensiones.  
@@ -48,6 +48,6 @@ ms.locfileid: "53360437"
 >  Si las relaciones de atributo no se definen correctamente, puede que los resultados de las consultas no sean válidos.  
   
 ## <a name="see-also"></a>Vea también  
- [Relación de los atributos](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [Relaciones de atributo](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

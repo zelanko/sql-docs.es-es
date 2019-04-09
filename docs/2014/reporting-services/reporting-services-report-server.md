@@ -25,12 +25,12 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0b745a3d9cfd88bb65b60720903768672fbe1e88
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a6c183fc402571ab359071160d515939257f773b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241633"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de informes de Reporting Services
   En este tema se ofrece información general del servidor de informes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , el componente central de una instalación de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Está compuesto por un par de motores de procesamiento, además de una serie de extensiones con finalidades especiales que administran la autenticación, el procesamiento de datos, la representación y las operaciones de entrega. Un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se ejecuta en uno de dos modos de implementación: modo nativo o modo de SharePoint. Consulte la sección [Comparación de características de SharePoint en modo nativo](#bkmk_featuresupport) para obtener una comparación de las características.  
@@ -49,23 +49,23 @@ ms.locfileid: "56019096"
   
 ##  <a name="bkmk_top"></a> En este tema  
   
--   [Información general de los modos de servidor de informes](#bkmk_overview)  
+-   [Información general de los modos del servidor de informes](#bkmk_overview)  
   
--   [Comparación de características de SharePoint y modo nativo](#bkmk_featuresupport)  
+-   [Comparación de características de SharePoint en modo nativo](#bkmk_featuresupport)  
   
 -   [Modo nativo](#bkmk_nativemode)  
   
--   [Modo nativo con elementos Web de SharePoint](#bkmk_nativewithwebparts)  
+-   [Modo nativo con elementos web de SharePoint](#bkmk_nativewithwebparts)  
   
--   [Modo de SharePoint](#bkmk_sharepointmode)  
+-   [Modo SharePoint](#bkmk_sharepointmode)  
   
--   [Procesos, el proceso de entrega y programación de informes](#bkmk_reportprocessor)  
+-   [Proceso de informes y proceso de entrega y programación](#bkmk_reportprocessor)  
   
--   [Base de datos del servidor de informes](#bkmk_reportdatabase)  
+-   [base de datos del servidor de informes](#bkmk_reportdatabase)  
   
--   [Autenticación, representación, datos y las extensiones de entrega](#bkmk_authentication)  
+-   [Autenticación, representación, datos y extensiones de entrega](#bkmk_authentication)  
   
--   [Tareas relacionadas](#bkmk_relatedtasks)  
+-   [Related Tasks](#bkmk_relatedtasks)  
   
 ##  <a name="bkmk_overview"></a> Información general de los modos de servidor de informes  
  Los motores de procesamiento (procesadores) son el núcleo del servidor de informes. Los procesadores admiten la integridad del sistema de informes y no se pueden modificar ni ampliar. Las extensiones son también procesadores, pero realizan funciones muy específicas. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye una o varias extensiones predeterminadas para cada tipo de extensión admitida. Puede agregar extensiones personalizadas a un servidor de informes. Ello permite extender un servidor de informes para que admita características que requieren adaptaciones. Ejemplos de funcionalidad personalizada pueden ser la compatibilidad con tecnologías de inicio de sesión único, la salida de informes en formatos de aplicación no controlados por las extensiones de representación predeterminadas, y la entrega de informes a una impresora o aplicación.  
@@ -84,7 +84,7 @@ ms.locfileid: "56019096"
   
 ##  <a name="bkmk_featuresupport"></a> Comparación de características de SharePoint y modo nativo  
   
-|Componente o característica|Modo nativo|Modo SharePoint|  
+|Componente o característica|Modo nativo|Modo de SharePoint|  
 |--------------------------|-----------------|---------------------|  
 |**Direcciones URL**|Sí|El direccionamiento de direcciones URL es distinto en el modo integrado de SharePoint. Las direcciones URL de SharePoint se utilizan para hacer referencia a informes, modelos de informe, orígenes de datos compartidos y recursos. No se utiliza la jerarquía de carpetas del servidor de informes. Si tiene aplicaciones personalizadas que dependen del acceso de direcciones URL como las admitidas en un servidor de informes en modo nativo, esa funcionalidad ya no funcionará cuando el servidor de informes se configure para la integración de SharePoint.<br /><br /> Para más información sobre el acceso URL, vea [Referencia de parámetros de acceso URL](url-access-parameter-reference.md).|  
 |**Extensiones de seguridad personalizadas**|Sí|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en el servidor de informes. El servidor de informes incluye una extensión de seguridad para fines especiales que se utiliza siempre que se configura un servidor de informes para que se ejecute en el modo integrado de SharePoint. Esta extensión de seguridad es un componente interno que se requiere para las operaciones integradas.|  
@@ -169,7 +169,7 @@ ms.locfileid: "56019096"
 |Revisar los requisitos de hardware y software.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md).|  
 |Instalar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint.|[Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |Si es un programador web o tiene experiencia creando hojas de estilos en cascada, puede modificar los estilos predeterminados bajo su responsabilidad para cambiar los colores, las fuentes y el diseño de la barra de herramientas o el Administrador de informes. En esta versión no se documentan las hojas de estilos predeterminadas ni las instrucciones para modificarlas.|[Personalizar hojas de estilos para el Visor HTML y el Administrador de informes](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
-|Los desarrolladores web que están familiarizados con estilos HTML y las hojas de estilos en cascada (CSS) pueden usar la información de este tema para determinar qué archivos se pueden modificar para personalizar el aspecto del Administrador de informes.|[Configurar el Administrador de informes para pasar cookies de autenticación personalizadas](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
+|Los desarrolladores web que están familiarizados con estilos HTML y las hojas de estilos en cascada (CSS) pueden usar la información de este tema para determinar qué archivos se pueden modificar para personalizar el aspecto del Administrador de informes.|[Configurar el Administrador de informes para pasar cookies de autenticación personalizada](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 |Explica cómo ajustar la configuración de memoria para el servicio web del servidor de informes y el servicio de Windows.|[Configurar la memoria disponible para las aplicaciones del servidor de informes](report-server/configure-available-memory-for-report-server-applications.md)|  
 |Explica los pasos recomendados para configurar el servidor de informes para la administración remota.|[Configurar un servidor de informes para la administración remota](report-server/configure-a-report-server-for-remote-administration.md)|  
 |Proporciona instrucciones para configurar la disponibilidad de **Mis informes** en una instancia del servidor de informes nativo.|[Habilitar y deshabilitar Mis informes](report-server/enable-and-disable-my-reports.md)|  
@@ -183,6 +183,6 @@ ms.locfileid: "56019096"
  [Implementar una extensión de seguridad](extensions/security-extension/implementing-a-security-extension.md)   
  [Implementar una extensión de procesamiento de datos](extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Cómo administrar SSRS con PowerShell (respuesta seleccionada)](https://go.microsoft.com/fwlink/?LinkId=321992)  
+ [Administración de SSRS mediante PowerShell](https://sqlbelle.wordpress.com/2015/08/17/automate-ssrs-report-generation-using-powershell/)  
   
   

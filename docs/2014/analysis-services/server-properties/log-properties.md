@@ -54,12 +54,12 @@ ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da1f12da9dc3ff3145e2fc1ea9f592e70cfe0c3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240734"
 ---
 # <a name="log-properties"></a>Propiedades de registro
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor de registro descritas en las siguientes tablas. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -101,18 +101,18 @@ ms.locfileid: "53374597"
  **ErrorLog\KeyErrorLimitAction**  
  Especifica la acción que realiza el servidor cuando el número de errores de clave alcanza el límite superior. Entre las respuestas válidas a esta acción se incluyen:  
   
--   `StopProcessing` indica al servidor que detenga el procesamiento cuando se alcance el límite de errores.  
+-   `StopProcessing` indica al servidor que detenga el procesamiento cuando se alcanza el límite de errores.  
   
--   `StopLogging` indica al servidor que detenga el registro de errores cuando se alcance el límite de errores, pero que permita que el procesamiento continúe.  
+-   `StopLogging` indica al servidor que detenga el registro de errores cuando se alcanza el límite de errores, pero permitir que continúe el procesamiento.  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
  Especifica la acción que realiza el servidor cuando se produce un error de `KeyNotFound`. Entre las respuestas válidas a este error se incluyen:  
   
--   `IgnoreError` indica al servidor que continúe con el procesamiento sin registrar el error o contarlo de cara al límite de errores de clave. Si se omite el error, se permite que el procesamiento continúe sin agregarlo al recuento de errores o registrarlo en la pantalla o en el archivo de registro. El registro en cuestión tiene un problema de integridad de datos y no se puede agregar a la base de datos. El registro se descartará o se agregará al Miembro desconocido, según determine la propiedad `KeyErrorAction`.  
+-   `IgnoreError` indica al servidor para continuar procesando sin registrar el error o contarlo de cara al límite de errores. Si se omite el error, se permite que el procesamiento continúe sin agregarlo al recuento de errores o registrarlo en la pantalla o en el archivo de registro. El registro en cuestión tiene un problema de integridad de datos y no se puede agregar a la base de datos. El registro se descartará o se agregará al Miembro desconocido, según determine la propiedad `KeyErrorAction`.  
   
--   `ReportAndContinue` indica al servidor que registre el error, lo cuente de cara al límite de errores de clave y continúe con el procesamiento. El registro que desencadena el error se descarta o se convierte en Miembro desconocido.  
+-   `ReportAndContinue` indica al servidor que registre el error, lo cuente de cara al límite de errores y continuar el procesamiento. El registro que desencadena el error se descarta o se convierte en Miembro desconocido.  
   
--   `ReportAndStop` indica al servidor que registre el error y detenga el procesamiento inmediatamente, cualquiera que sea el límite de errores de clave. El registro que desencadena el error se descarta o se convierte en Miembro desconocido.  
+-   `ReportAndStop` indica al servidor para registrar el error y detener el procesamiento inmediatamente, cualquiera que sea el límite de errores de clave. El registro que desencadena el error se descarta o se convierte en Miembro desconocido.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
  Especifica la acción que realiza el servidor cuando se encuentra una clave duplicada. Entre los valores válidos se incluyen `IgnoreError` para continuar con el procesamiento como si el error no se hubiera producido, `ReportAndContinue` para registrar el error y continuar con el procesamiento, y `ReportAndStop` para registrar el error y detener el procesamiento inmediatamente, aunque el recuento de errores esté por debajo del límite de errores.  
@@ -199,7 +199,7 @@ ms.locfileid: "53374597"
  El valor predeterminado para esta propiedad es False, que indica que el servidor no creará automáticamente la tabla del registro y no registrará eventos de consulta.  
   
 > [!NOTE]  
->  Para obtener más información sobre cómo configurar el registro de consultas, vea el tema sobre la [configuración del registro de consultas de Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81890).  
+>  Para obtener más información acerca de cómo configurar el registro de consultas, vea [las operaciones de registro en Analysis Services](../instances/log-operations-in-analysis-services.md).  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  
@@ -233,7 +233,7 @@ ms.locfileid: "53374597"
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar las propiedades del servidor en Analysis Services](server-properties-in-analysis-services.md)   
+ [Configurar las propiedades de servidor en Analysis Services](server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

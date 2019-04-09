@@ -13,12 +13,12 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99687b8168c16b0ad1ceef5f802b3345038524fe
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378273"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241035"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Tipos de datos de Integration Services en las expresiones
   El evaluador de expresiones utiliza tipos de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Cuando los datos entran por primera vez en un flujo de datos de un paquete [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , el motor de flujo de datos convierte todos los datos de columna a un tipo de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y los datos de columna ya utilizados por una expresión a un tipo de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Las expresiones usadas en las transformaciones División condicional y Columna derivada pueden hacer referencia a columnas, ya que forman parte de un flujo de datos que incluye datos de columna.  
@@ -51,7 +51,7 @@ ms.locfileid: "58378273"
 >   
 >  Para evitar errores o resultados inesperados, no debe escribirse código que se base en valores numéricos específicos para `True` y `False`. Siempre que sea posible, se debe restringir el uso de las variables booleanas a los valores lógicos para los que están diseñadas.  
   
- Para obtener más información, vea los temas siguientes:  
+ Para obtener más información, consulte los temas siguientes:  
   
 -   [== &#40;Igual&#41; &#40;expresión de SSIS&#41;](equal-ssis-expression.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "58378273"
   
 -   Los argumentos pasados a funciones matemáticas deben devolver un tipo de datos numérico. Dependiendo de la función o la operación, puede ser necesario usar un tipo de datos numérico específico. Por ejemplo, la función HEX requiere un entero con o sin signo.  
   
--   Argumentos pasados a funciones de cadena deben evaluarse como un tipo de datos de caracteres: DT_STR o DT_WSTR. Por ejemplo, UPPER("flor"). Algunas funciones de cadena, como SUBSTRING, requieren argumentos enteros adicionales para la posición inicial y la longitud de la cadena.  
+-   Los argumentos pasados a funciones de cadena se deben evaluar con un tipo de datos de carácter: DT_STR o DT_WSTR. Por ejemplo, UPPER("flor"). Algunas funciones de cadena, como SUBSTRING, requieren argumentos enteros adicionales para la posición inicial y la longitud de la cadena.  
   
 -   Los argumentos pasados a funciones de fecha y hora deben contener una fecha válida. Por ejemplo, DAY(GETDATE()). Algunas funciones, como DATEADD, requieren un argumento entero adicional para el número de días que la función agrega a una fecha.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "58378273"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](https://go.microsoft.com/fwlink/?LinkId=217683), en pragmaticworks.com  
+-   Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet3), en pragmaticworks.com  
   
 -   Artículo técnico, sobre [ejemplos de expresiones SSIS](https://go.microsoft.com/fwlink/?LinkId=220761), en social.technet.microsoft.com  
   

@@ -19,12 +19,12 @@ ms.assetid: a560383b-bb58-472e-95f5-65d03d8ea08b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db5d75d08fbcbbba4bb888af9a8b6cb640d6321a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9287cc028357c8db8e37242153e9815398b11858
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367747"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242273"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>Aspectos básicos de las consultas MDX (Analysis Services)
   Las expresiones multidimensionales (MDX) permiten consultar objetos multidimensionales, como los cubos, y devolver conjuntos de celdas multidimensionales que contengan los datos del cubo. Este tema y los temas secundarios proporcionan información general sobre las consultas MDX.  
@@ -32,7 +32,7 @@ ms.locfileid: "53367747"
  En los temas siguientes se describen las consultas MDX y los conjuntos de celdas que generan, y proporcionan información más detallada acerca de la sintaxis básica de MDX.  
   
 > [!NOTE]  
->  Para obtener más información acerca de los problemas de rendimiento relacionados con los cálculos y consultas MDX, vea la sección "Escritura de MDX eficaz" en el [Guía de rendimiento de SQL Server 2005 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81621).  
+>  Para obtener más información acerca de los problemas de rendimiento relacionados con los cálculos y consultas MDX, vea la sección "Escritura de MDX eficaz" en el [Guía de rendimiento de SQL Server 2005 Analysis Services](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  
   
 ## <a name="in-this-section"></a>En esta sección  
   

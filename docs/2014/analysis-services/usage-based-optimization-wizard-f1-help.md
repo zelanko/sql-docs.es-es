@@ -15,12 +15,12 @@ ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3800e9ed229491c4abe1746f6d0325ff1c63525d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240403"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Asistente para optimización basada en el uso (Ayuda F1)
   El Asistente para optimización basada en el uso es parecido en su resultado al Asistente para diseñar agregaciones, y se utiliza para diseñar agregaciones para una partición. No obstante, el Asistente para optimización basada en el uso diseña agregaciones en función de patrones de uso específicos de consultas registradas en un registro de consultas de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Las agregaciones proporcionan mejoras de rendimiento al permitir que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recupere los totales calculados previamente de forma directa desde el almacenamiento del cubo en vez de tener que volver a calcular datos de un origen de datos subyacente para cada consulta.  
@@ -44,28 +44,28 @@ ms.locfileid: "53365267"
  Generalmente, ambos asistentes se utilizan conjuntamente para mejorar el rendimiento durante la implementación y a lo largo del tiempo. El Asistente para diseñar agregaciones debe utilizarse en primer lugar, cuando se implementa inicialmente la partición (o el cubo o grupo de medida que contiene la partición), para proporcionar beneficios sobre el rendimiento general. Tras un período de tiempo durante el que habrá registrado las consultas de los usuarios de empresa para la partición en el registro de consultas, puede utilizar el Asistente para optimización basada en el uso para centrar la agregación en el diseño con el fin de optimizar el rendimiento y satisfacer los requisitos de las consultas de los usuarios de empresa.  
   
 > [!NOTE]  
->  Para más información sobre cómo configurar el registro de consultas, vea [Configuring the Analysis Services Query Log (Configuración del registro de consultas de Analysis Services)](https://www.microsoft.com/technet/prodtechnol/sql/2005/technologies/config_ssas_querylog.mspx).  
+>  Para más información sobre cómo configurar el registro de consultas, vea [Configuring the Analysis Services Query Log (Configuración del registro de consultas de Analysis Services)](instances/log-operations-in-analysis-services.md?view=sql-server-2014#bkmk_querylog).  
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Seleccionar particiones para modificar &#40;Asistente para optimización basada en uso&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [Seleccionar particiones para modificar &#40;Asistente para optimización basada en el uso&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [Especifique los criterios de consulta &#40;Asistente para optimización basada en uso&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [Especificar los criterios de consulta &#40;Asistente para optimización basada en el uso&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
--   [Revisar las consultas que se optimizarán &#40;Asistente para optimización basada en uso&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
+-   [Revisar las consultas que se optimizarán &#40;Asistente para optimización basada en el uso&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [Revise el uso de agregaciones &#40;Asistente para optimización basada en uso&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [Revisar el uso de agregaciones &#40;Asistente para optimización basada en el uso&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [Especificar recuentos de objetos &#40;Asistente para optimización basada en uso&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [Especificar recuentos de objetos &#40;Asistente para optimización basada en el uso&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [Establecer las opciones de agregaciones &#40;Asistente para optimización basada en uso&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [Establecer las opciones de agregaciones &#40;Asistente para optimización basada en el uso&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [Finalización del asistente &#40;Asistente para optimización basada en uso&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [Finalización del asistente &#40;Asistente para optimización basada en el uso&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Las agregaciones y diseños de agregaciones](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
+ [Agregaciones y diseños de agregaciones](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Cubos en modelos multidimensionales](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Ayuda de F1 del Asistente de diseño de agregación](aggregation-design-wizard-f1-help.md)   
- [Asistentes de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Asistente para diseñar agregaciones (Ayuda F1, SSAS)](aggregation-design-wizard-f1-help.md)   
+ [Asistentes de Analysis Services &#40;Datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

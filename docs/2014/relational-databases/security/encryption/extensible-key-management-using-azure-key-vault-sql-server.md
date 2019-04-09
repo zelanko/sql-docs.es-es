@@ -16,12 +16,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: c2a6acd93bc711e4722f3ca437b17cba603dfcad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242213"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Administración extensible de claves con Azure Key Vault (SQL Server)
   El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conector para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cifrado para aprovechar el servicio de Azure Key Vault como un [administración Extensible de claves &#40;EKM&#41; ](extensible-key-management-ekm.md) proveedor para proteger su claves de cifrado.  
@@ -30,17 +30,17 @@ ms.locfileid: "53372767"
   
 -   [Usos de EKM](#Uses)  
   
--   [Paso 1: Configuración de Key Vault para su uso con SQL Server](#Step1)  
+-   [Paso 1: configuración de Key Vault para su uso con SQL Server](#Step1)  
   
--   [Paso 2: Instalación del conector SQL Server](#Step2)  
+-   [Paso 2: instalación del conector de SQL Server](#Step2)  
   
--   [Paso 3: Configurar SQL Server para usar un proveedor EKM para Key Vault](#Step3)  
+-   [Paso 3: configuración de SQL Server para usar un proveedor EKM para Key Vault](#Step3)  
   
--   [Ejemplo A: Cifrado de datos transparente mediante el uso de una clave asimétrica desde el almacén de claves](#ExampleA)  
+-   [Ejemplo A: cifrado de datos transparente con una clave asimétrica desde Key Vault](#ExampleA)  
   
--   [Ejemplo B: Cifrado de copias de seguridad con una clave asimétrica desde el almacén de claves](#ExampleB)  
+-   [Ejemplo B: Cifrado de copias de seguridad con una clave asimétrica desde Key Vault](#ExampleB)  
   
--   [Ejemplo C: Cifrado de nivel de columna mediante el uso de una clave asimétrica desde el almacén de claves](#ExampleC)  
+-   [Ejemplo C: Cifrado de nivel de columna con una clave asimétrica desde el Almacén de claves](#ExampleC)  
   
 ##  <a name="Uses"></a> Usos de EKM  
  Una organización puede utilizar el cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para proteger datos confidenciales. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye cifrado [cifrado de datos transparente &#40;TDE&#41;](transparent-data-encryption.md), [cifrado de nivel de columna](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE) y [cifrado de copia de seguridad](../../backup-restore/backup-encryption.md). En todos estos casos, los datos se cifran con una clave de cifrado de datos simétrica. La clave de cifrado de datos simétrica se protege, además, cifrándose con una jerarquía de claves almacenadas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O bien, la arquitectura del proveedor EKM permite a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proteger las claves de cifrado de datos con una clave asimétrica que se almacena fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un proveedor de servicios criptográficos externo. El uso de la arquitectura de proveedor de EKM agrega un nivel de seguridad adicional y permite a las organizaciones separar la administración de claves y datos.  
@@ -52,7 +52,7 @@ ms.locfileid: "53372767"
  ![Administración extensible de claves de SQL mediante Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "Administración extensible de claves de SQL mediante Azure Key Vault")  
   
 ##  <a name="Step1"></a> Paso 1: Configuración de Key Vault para su uso con SQL Server  
- Siga estos pasos para configurar un Almacén de claves y poder usarlo con [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] para la protección de claves de cifrado. Puede que la organización ya use un almacén. Si no existe un almacén, el administrador de Azure de su organización encargado de administrar las claves de cifrado puede crear uno, generar una clave asimétrica en él y, a continuación, autorizar a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a usar la clave. Para familiarizarse con la revisión del servicio de almacén de claves, consulte [Introducción al almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521402)y la referencia sobre [cmdlets del almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521403) de PowerShell.  
+ Siga estos pasos para configurar un Almacén de claves y poder usarlo con [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] para la protección de claves de cifrado. Puede que la organización ya use un almacén. Si no existe un almacén, el administrador de Azure de su organización encargado de administrar las claves de cifrado puede crear uno, generar una clave asimétrica en él y, a continuación, autorizar a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a usar la clave. Para familiarizarse con la revisión del servicio de almacén de claves, consulte [Introducción al almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521402)y la referencia sobre [cmdlets del almacén de claves de Azure](/powershell/module/azurerm.keyvault/) de PowerShell.  
   
 > [!IMPORTANT]  
 >  Si tiene varias suscripciones de Azure, debe usar la suscripción que contenga [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -96,7 +96,7 @@ ms.locfileid: "53372767"
   
     -   [¿Qué es el Almacén de claves de Azure?](https://go.microsoft.com/fwlink/?LinkId=521401)  
   
-    -   [Introducción al Almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521402)  
+    -   [Introducción al almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
     -   Referencia de [cmdlets del Almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521403) de PowerShell  
   
@@ -115,7 +115,7 @@ ms.locfileid: "53372767"
   
 ##  <a name="Step3"></a> Paso 3: configuración de SQL Server para usar un proveedor EKM para Key Vault  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Para completar este proceso, son necesarios el permiso CONTROL SERVER o la pertenencia al rol fijo de servidor **sysadmin** . Los siguientes permisos son necesarios para realizar acciones concretas:  
   
 -   Para crear un proveedor de servicios criptográficos, son necesarios el permiso CONTROL SERVER o la pertenencia al rol fijo de servidor **sysadmin** .  

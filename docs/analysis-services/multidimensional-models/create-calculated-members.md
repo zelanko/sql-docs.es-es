@@ -1,5 +1,5 @@
 ---
-title: Crear miembros calculados | Documentos de Microsoft
+title: Crear miembros calculados | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a0cee9d01fb55ace4d7062f96b5d3ea16c026669
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3bfa37a34ae6c3010c36dfe7693bb6d569e6e63d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023182"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241474"
 ---
 # <a name="create-calculated-members"></a>Crear miembros calculados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Puede crear medidas o miembros de una dimensión personalizados, denominados miembros calculados, combinando datos del cubo, operadores aritméticos, números y funciones. Por ejemplo, puede crear un miembro calculado denominado Euros que convierta dólares en euros multiplicando una medida de dólar existente por una tasa de cambio. De esta manera, se puede mostrar a los usuarios finales el valor en euros en una fila o una columna independiente.  
   
- Las definiciones de los miembros calculados se almacenan, pero sus valores solo existen en la memoria. En el ejemplo anterior, los usuarios finales ven los valores en euros, pero éstos no se almacenan como datos del cubo.  
+ Las definiciones de los miembros calculados se almacenan, pero sus valores solo existen en la memoria. En el ejemplo anterior, los valores en euros se muestran a los usuarios finales, pero no se almacenan como datos del cubo.  
   
  Los miembros calculados se crean en cubos. Para crear un miembro calculado, en el Diseñador de cubos, en la pestaña **Cálculos** , haga clic en el icono de **Nuevo miembro calculado** de la barra de herramientas. Este comando abre un formulario para especificar las siguientes opciones para el miembro calculado:  
   

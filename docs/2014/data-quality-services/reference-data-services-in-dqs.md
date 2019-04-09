@@ -10,12 +10,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4b1a5d1aa7c35455e83361e2c04a686a75713574
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d52c140a1a3b9bc4c329c8034918486f2fd3e01e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038356"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241763"
 ---
 # <a name="reference-data-services-in-dqs"></a>Servicios de datos de referencia en DQS
   Los datos de referencia hacen referencia a un conjunto completo y preciso de datos globales relacionados o clasificados (más allá de los límites de una empresa) que está disponible en dominios públicos de confianza o en proveedores de contenido comercial premium.  
@@ -31,7 +31,7 @@ ms.locfileid: "56038356"
 -   Admite el uso directo de datos de referencia de Windows Azure Marketplace y de proveedores de datos de referencia de terceros.  
   
 ##  <a name="Marketplace"></a> Usar datos de referencia de Windows Azure Marketplace  
- DQS admite el uso de datos de referencia de Windows Azure Marketplace para permitir a los proveedores de contenido proporcionar servicios de datos de referencia a través de Marketplace. Marketplace es un servicio de Microsoft que proporciona un único canal de catálogo de soluciones y entrega de datos de alta calidad y aplicaciones como servicio basado en nube. Para obtener más información sobre Marketplace, vea [Learn About Windows Azure Marketplace](https://go.microsoft.com/fwlink/?LinkId=211291) (Información sobre Windows Azure Marketplace) (https://go.microsoft.com/fwlink/?LinkId=211291).  
+ DQS admite el uso de datos de referencia de Windows Azure Marketplace para permitir a los proveedores de contenido proporcionar servicios de datos de referencia a través de Marketplace. Marketplace es un servicio de Microsoft que proporciona un único canal de catálogo de soluciones y entrega de datos de alta calidad y aplicaciones como servicio basado en nube. Para obtener más información acerca de Marketplace, consulte [Learn About Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/).  
   
  La perfecta integración entre Marketplace y DQS simplifica los pasos asociados con la detección, búsqueda y adquisición de información para los proyectos de calidad de datos desde DQS. Los datos se utilizan desde DQS, y los usuarios de DQS pueden conseguir datos de alta calidad aunando las características de DQS, Marketplace y los proveedores de servicios de datos de referencia de una manera innovadora.  
   
@@ -53,23 +53,23 @@ ms.locfileid: "56038356"
 ##  <a name="HowToCleanse"></a> Cómo limpiar datos mediante el uso de datos de referencia  
  La limpieza de los datos en DQS mediante los datos de referencia incluye los tres pasos siguientes:  
   
-1.  **Configurar los detalles del proveedor de datos de referencia en DQS**: Para poder usar datos de referencia en DQS, debe configurar los detalles de servicio de datos de referencia en DQS.  
+1.  **Configurar los detalles del proveedor de datos de referencia en DQS**: si desea usar datos de referencia en DQS, deberá configurar en este los detalles del servicio de datos de referencia.  
   
-    1.  Si utiliza Marketplace, proporcione una clave de cuenta de Marketplace válida, busque la categoría de datos [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) en Marketplace y suscríbase a los proveedores deseados.  
+    1.  Si utiliza Marketplace, proporcione una clave de cuenta de Marketplace válida, busque la categoría de datos [Data Quality Services](../data-quality-services/data-quality-services.md) en Marketplace y suscríbase a los proveedores deseados.  
   
     2.  Si utiliza un proveedor directo de datos de referencia de terceros en línea, deberá agregar los detalles de este a DQS para poder utilizarlo.  
   
      La configuración de los detalles del proveedor de datos de referencia en DQS es una actividad que se realiza una sola vez para cada proveedor de datos. Solo los administradores de DQS pueden configurar los valores de los datos de referencia en DQS.  
   
-2.  **Asignar un dominio o un dominio compuesto en una base de conocimiento al servicio de datos de referencia**: Asignar un dominio o un dominio compuesto al servicio de datos de referencia apropiado suscrito/agregado en el paso 1.  
+2.  **Asignar un dominio o un dominio compuesto de una base de conocimiento a un servicio de datos de referencia**: asignar un dominio o un dominio compuesto al servicio de datos de referencia suscrito o agregado en el paso 1.  
   
-3.  **Utilizar los dominios asignados para la actividad de limpieza en un proyecto de calidad de datos**: Al crear un proyecto de calidad de datos para el **limpieza** actividad, seleccione la base de conocimiento que contiene dominios o dominios compuestos asignados a los servicios de datos de referencia en el paso 2 y realizar la actividad de limpieza.  
+3.  **Utilizar los dominios asignados para la actividad de limpieza en un proyecto de calidad de datos**: al crear un proyecto de calidad de datos para la actividad **Limpieza**, seleccione la base de conocimiento que contiene los dominios o dominios compuestos asignados a los servicios de datos de referencia en el paso 2 y realice la actividad de limpieza.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Describe cómo configurar DQS para utilizar los servicios de datos de referencia de Marketplace o de proveedores directos de datos de terceros en línea.|[Configurar DQS para usar datos de referencia](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)|  
+|Describe cómo configurar DQS para utilizar los servicios de datos de referencia de Marketplace o de proveedores directos de datos de terceros en línea.|[Configurar DQS para utilizar datos de referencia](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |Describe cómo asignar un dominio o un dominio compuesto de una base de conocimiento a un servicio de datos de referencia.|[Adjuntar un dominio o un dominio compuesto a datos de referencia](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
 |Describe cómo limpiar los datos mediante el servicio de datos de referencia.|[Limpiar datos mediante el conocimiento de datos de referencia &#40;externo&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   

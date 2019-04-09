@@ -17,12 +17,12 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f931b6c9edd917a12d3a84cc9cd65af862f0697e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384753"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242193"
 ---
 # <a name="literals-ssis"></a>Literales (SSIS)
   Las expresiones pueden incluir literales numéricos, de cadena y booleanos. El evaluador de expresiones admite diversos literales numéricos tales como constantes enteras, decimales y de punto flotante. El evaluador de expresiones también admite sufijos que indican valor largo o de tipo flotante, con los que se especifica cómo controla el evaluador de expresiones los valores, y notación científica en literales numéricos.  
@@ -55,11 +55,11 @@ ms.locfileid: "58384753"
 |Expresión regular|Descripción|  
 |------------------------|-----------------|  
 |{D}+{IS}|Literal numérico entero con al menos un dígito (D) y, opcionalmente, el sufijo de valor largo o sin signo (IS).  Ejemplos: 457, 785u, 986L y 7945ul.|  
-|{D}+{E}{FS}|Literal numérico no entero con al menos un dígito (D), notación científica y el sufijo de valor largo o de tipo flotante.  Ejemplos: 4E8l, 13e-2f y 5E + L.|  
-|{D}*"."{D}+{E}?{FS}|Literal numérico no entero con una posición decimal, una fracción decimal con al menos un dígito (D), un exponente opcional (E) y un identificador de valor de punto flotante o largo (FS). Este literal numérico tiene el tipo de datos DT_R4 o DT_R8.  Ejemplos: 6.45E3f, 89E - 2l y 1.05E + 7F.|  
-|{D}+"."{D}*{E}?{FS}|Literal numérico no entero con al menos un dígito significativo (D), una posición decimal, un exponente (E) y un identificador de valor largo o de punto flotante (FS). Este literal numérico tiene el tipo de datos DT_R4 o DT_R8.  Ejemplos: 1.E-4f, 4.6E6L y 8.365E + 2f.|  
+|{D}+{E}{FS}|Literal numérico no entero con al menos un dígito (D), notación científica y el sufijo de valor largo o de tipo flotante.  Ejemplos: 4E8l, 13e-2f y 5E+L.|  
+|{D}*"."{D}+{E}?{FS}|Literal numérico no entero con una posición decimal, una fracción decimal con al menos un dígito (D), un exponente opcional (E) y un identificador de valor de punto flotante o largo (FS). Este literal numérico tiene el tipo de datos DT_R4 o DT_R8.  Ejemplos: 6.45E3f, .89E-2l y 1.05E+7F.|  
+|{D}+"."{D}*{E}?{FS}|Literal numérico no entero con al menos un dígito significativo (D), una posición decimal, un exponente (E) y un identificador de valor largo o de punto flotante (FS). Este literal numérico tiene el tipo de datos DT_R4 o DT_R8.  Ejemplos: 1.E-4f, 4.6E6L y 8.365E+2f.|  
 |{D}*.{D}+|Literal numérico no entero con precisión y escala. Tiene una posición decimal y una fracción decimal con al menos un dígito (D). Este literal numérico tiene el tipo de datos DT_NUMERIC.  Ejemplos: 0,9, 5,8 y 0,346.|  
-|{D}+.{D}*|Literal numérico no entero con precisión y escala. Tiene al menos un dígito significativo (D) y una posición decimal. Este literal numérico tiene el tipo de datos DT_NUMERIC.  Ejemplos: 6., 0,2 y 8,0.|  
+|{D}+.{D}*|Literal numérico no entero con precisión y escala. Tiene al menos un dígito significativo (D) y una posición decimal. Este literal numérico tiene el tipo de datos DT_NUMERIC.  Ejemplos: 6., 0.2 y 8.0.|  
 |#{D}+|Identificador de linaje. Consta del carácter de número (#) y al menos un dígito (D). Ejemplos: #123.|  
 |0[xX]{H}+{uU}|Literal numérico en formato hexadecimal. Incluye un cero, una x en mayúsculas o minúsculas, al menos una H en mayúsculas y, opcionalmente, el sufijo de valor sin signo. Ejemplos: 0xFF0A y 0X000010000U.|  
   
@@ -117,6 +117,6 @@ ms.locfileid: "58384753"
 >  En una expresión, un literal booleano debe estar delimitado por espacios.  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](https://go.microsoft.com/fwlink/?LinkId=217683), en pragmaticworks.com  
+ Artículo técnico, sobre la [referencia rápida de expresiones de SSIS](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), en pragmaticworks.com  
   
   

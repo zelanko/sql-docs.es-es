@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9cf146720502f31a030cb5be63c0a238e460c41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
+ms.lasthandoff: 04/10/2019
 ms.locfileid: "47646953"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Siempre las funciones en las vistas de administración dinámica de grupos de disponibilidad:

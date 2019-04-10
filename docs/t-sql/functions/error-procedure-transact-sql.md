@@ -25,12 +25,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caae632e8e413001d57d125126bb3f8f979a8e82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: bc0765e02958e6ec59a419933716e8485879add3
+ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617065"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899731"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ ERROR_PROCEDURE ( )
 **nvarchar(128)**  
   
 ## <a name="return-value"></a>Valor devuelto  
-Cuando se llama en un bloque CATCH de procedimiento almacenado donde se produce un error, `ERROR_PROCEDURE` devuelve el nombre de ese procedimiento almacenado.  
+Cuando se le llama en un bloque CATCH, `ERROR_PROCEDURE` devuelve el nombre del desencadenador o el procedimiento almacenado en el que se originó el error.
   
 `ERROR_PROCEDURE` devuelve NULL si el error no se produjo en un procedimiento almacenado o un desencadenador.  
   
@@ -143,7 +143,7 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorMessage             
 
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   

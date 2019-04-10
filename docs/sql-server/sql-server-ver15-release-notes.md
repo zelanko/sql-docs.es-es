@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 6336e6ebc549d1be2787bb8a100efec1ea9b6836
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 62c637f8432fd168a9b23a92b7d50c00ea6c1e14
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492857"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860066"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Notas de la versión preliminar de SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -37,13 +37,13 @@ En este artículo se describen las limitaciones y los problemas conocidos de las
 ## <a name="ctp-24"></a>CTP 2.4
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 es la versión pública más reciente de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.3 está disponible únicamente como edición de evaluación. No hay más ediciones disponibles. La compatibilidad con las versiones de CTP se describe en `license_Eval.rtf` con el soporte de instalación.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 está disponible únicamente como edición de evaluación. No hay más ediciones disponibles. La compatibilidad con las versiones de CTP se describe en `license_Eval.rtf` con el soporte de instalación.
 
 Se puede detectar una compatibilidad limitada en una de las siguientes ubicaciones:
 
 - Foros
   - [Comentarios de SQL Server](https://aka.ms/sqlfeedback)
-  - [Introducción a SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
+  - [Introducción a SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
   - [Documentación de SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 

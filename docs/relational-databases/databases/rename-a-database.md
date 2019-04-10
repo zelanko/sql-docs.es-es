@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0ea80a51a578f99cdff6189acacfe991ab34c43
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0e3d57094a6863bb5b6bebd96f05ed57a1fcc25f
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557842"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872025"
 ---
 # <a name="rename-a-database"></a>Cambiar el nombre de una base de datos
 
@@ -41,12 +41,12 @@ ms.locfileid: "51557842"
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **Follow Up:**  [After renaming a database](#FollowUp)  
+- **Seguimiento:**  [Después de cambiar el nombre de una base de datos](#backup-after-renaming-a-database)  
 
 > [!NOTE]
 > Para cambiar el nombre de una base de datos en Azure SQL Data Warehouse o en Almacenamiento de datos paralelos, utilice la instrucción [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md).
   
-## <a name="before-you-begin"></a>Antes de comenzar
+## <a name="before-you-begin"></a>Antes de empezar
   
 ### <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
   
@@ -111,7 +111,7 @@ Siga estos pasos para cambiar el nombre de una base de datos de Azure SQL Databa
 
 Después de cambiar el nombre de una base de datos en SQL Server, haga una copia de seguridad de la base de datos `master`. En Azure SQL Database, esto no es necesario porque las copias de seguridad se realizan automáticamente.  
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [Identificadores de base de datos](../../relational-databases/databases/database-identifiers.md)  

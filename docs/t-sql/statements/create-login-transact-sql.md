@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 410cd9444cec90f5d6357e2084bab47f5ab25d37
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2440f1b61b1b97fab41bf22e1fd466cd30b8e4cf
+ms.sourcegitcommit: 258b4aa0d431537323c5ab1307f599615c29df53
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828375"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58797045"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -142,7 +142,7 @@ ASYMMETRIC KEY *asym_key_name* Especifica el nombre de una clave asimétrica a l
 
 ## <a name="permissions"></a>Permisos
 
-- Solo los usuarios con el permiso **ALTER ANY LOGIN** en el servidor o la pertenencia al rol fijo de servidor **securityadmin** pueden crear inicios de sesión. Para obtener más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) y [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
+- Solo los usuarios con el permiso **ALTER ANY LOGIN** en el servidor o la pertenencia al rol fijo de servidor **securityadmin** pueden crear inicios de sesión. Para más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) y [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 - Si se utiliza la opción **CREDENTIAL** , también será necesario el permiso **ALTER ANY CREDENTIAL** en el servidor.
 
 ## <a name="after-creating-a-login"></a>Después de crear un inicio de sesión
@@ -165,7 +165,7 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO
 ```
 
-### <a name="b-creating-a-login-with-a-password-that-must-be-changed"></a>b. Crear un inicio de sesión con una contraseña que se debe cambiar
+### <a name="b-creating-a-login-with-a-password-that-must-be-changed"></a>B. Crear un inicio de sesión con una contraseña que se debe cambiar
 
 El ejemplo siguiente crea un inicio de sesión para un usuario determinado y le asigna una contraseña. La opción `MUST_CHANGE` exige a los usuarios que cambien la contraseña la primera vez que se conecten al servidor.
 
@@ -311,7 +311,7 @@ Para obtener más información sobre los inicios de sesión de SQL Database, vea
 
 ## <a name="permissions"></a>Permisos
 
-Solo pueden crear inicios de sesión el inicio de sesión de entidad de seguridad a nivel de servidor (creado por el proceso de aprovisionamiento) o los miembros del rol de base de datos `loginmanager` en la base de datos maestra. Para obtener más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) y [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
+Solo pueden crear inicios de sesión el inicio de sesión de entidad de seguridad a nivel de servidor (creado por el proceso de aprovisionamiento) o los miembros del rol de base de datos `loginmanager` en la base de datos maestra. Para más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) y [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## <a name="logins"></a>Inicios de sesión
 
@@ -323,7 +323,7 @@ Solo pueden crear inicios de sesión el inicio de sesión de entidad de segurida
 Después de crear un inicio de sesión, el inicio de sesión se puede conectar a SQL Database, pero solo tiene los permisos concedidos al rol **public**. Considere la posibilidad de realizar algunas de las actividades siguientes.
 
 - Para conectarse a una base de datos, cree un usuario de base de datos para el inicio de sesión en esa base de datos. Para obtener más información, vea [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Para conceder permisos a un usuario en una base de datos, use la instrucción **ALTER SERVER ROLE**... **ADD MEMBER** para agregar al usuario a uno de los roles de base de datos integrados o a un rol personalizado, o bien conceda los permisos al usuario directamente mediante la instrucción [GRANT](../../t-sql/statements/grant-transact-sql.md). Para más información, vea [Roles no administradores](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles y la instrucción [GRANT](grant-transact-sql.md).
+- Para conceder permisos a un usuario en una base de datos, use la instrucción **ALTER SERVER ROLE**... **ADD MEMBER** para agregar al usuario a uno de los roles de base de datos integrados o a un rol personalizado, o bien conceda los permisos al usuario directamente mediante la instrucción [GRANT](../../t-sql/statements/grant-transact-sql.md). Para más información, consulte [Roles no administradores](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Roles administrativos de nivel de servidor adicional](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) y las instrucciones [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) y [GRANT](grant-transact-sql.md).
 - Para conceder permisos de todo el servidor, cree un usuario de base de datos en la base de datos maestra y use la instrucción **ALTER SERVER ROLE**... **ADD MEMBER** para agregar al usuario a uno de los roles de servidor de administración. Para obtener más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) y [Roles de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 - Use la instrucción de **GRANT**, para conceder permisos de servidor al nuevo inicio de sesión o un rol que contiene el inicio de sesión. Para obtener más información, vea [GRANT](../../t-sql/statements/grant-transact-sql.md).
 
@@ -338,7 +338,7 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO
 ```
 
-### <a name="b-creating-a-login-from-a-sid"></a>b. Crear un inicio de sesión de un SID
+### <a name="b-creating-a-login-from-a-sid"></a>B. Crear un inicio de sesión de un SID
 
 En el ejemplo siguiente primero se crea un inicio de sesión de autenticación de SQL Server y se determina el SID del inicio de sesión.
 
@@ -418,7 +418,9 @@ SID **=** *sid* Se usa para volver a crear un inicio de sesión. Solo se aplica 
 - La nueva sintaxis se presentó para la creación de entidades de seguridad de nivel de servidor asignadas a cuentas de Azure AD (**FROM EXTERNAL PROVIDER**)
 - Cuando se especifica **FROM EXTERNAL PROVIDER**:
 
-  - login_name debe representar una cuenta de Azure AD (usuario, grupo o aplicación) existente que sea accesible en Azure AD mediante la Instancia administrada de Azure SQL actual.
+  - login_name debe representar una cuenta de Azure AD (usuario, grupo o aplicación) existente que sea accesible en Azure AD mediante la Instancia administrada de Azure SQL actual. En las entidades de seguridad de Azure AD, la sintaxis de CREATE LOGIN requiere:
+    - UserPrincipalName del objeto Azure AD para los usuarios de Azure AD.
+    - DisplayName del objeto Azure AD para los grupos de Azure AD y las aplicaciones de Azure AD.
   - No se puede usar la opción **PASSWORD**.
   - Actualmente, el primer inicio de sesión de Azure AD lo tiene que crear la cuenta de SQL Server estándar (que no sea de Azure AD) que sea `sysadmin` mediante la sintaxis anterior.
   - Al crear un inicio de sesión de Azure AD mediante un administrador de Azure AD para la Instancia administrada de SQL Database, se produce el error siguiente:</br>
@@ -448,7 +450,7 @@ De forma predeterminada, el permiso estándar que se concede a un inicio de sesi
 Después de crear un inicio de sesión, se puede conectar a una Instancia administrada de SQL Database, pero solo tiene los permisos concedidos al rol **public**. Considere la posibilidad de realizar algunas de las actividades siguientes.
 
 - Para crear un usuario de Azure AD a partir de un inicio de sesión de Azure AD, vea [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Para conceder permisos a un usuario en una base de datos, use la instrucción **ALTER SERVER ROLE**... **ADD MEMBER** para agregar al usuario a uno de los roles de base de datos integrados o a un rol personalizado, o bien conceda los permisos al usuario directamente mediante la instrucción [GRANT](../../t-sql/statements/grant-transact-sql.md). Para más información, vea [Roles no administradores](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles y la instrucción [GRANT](grant-transact-sql.md).
+- Para conceder permisos a un usuario en una base de datos, use la instrucción **ALTER SERVER ROLE**... **ADD MEMBER** para agregar al usuario a uno de los roles de base de datos integrados o a un rol personalizado, o bien conceda los permisos al usuario directamente mediante la instrucción [GRANT](../../t-sql/statements/grant-transact-sql.md). Para más información, consulte [Roles no administradores](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Roles administrativos de nivel de servidor adicional](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) y las instrucciones [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) y [GRANT](grant-transact-sql.md).
 - Para conceder permisos de todo el servidor, cree un usuario de base de datos en la base de datos maestra y use la instrucción **ALTER SERVER ROLE**... **ADD MEMBER** para agregar al usuario a uno de los roles de servidor de administración. Para obtener más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) y [Roles de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
   - Use el comando siguiente para agregar el rol `sysadmin` a un inicio de sesión de Azure AD: `ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]`
 - Use la instrucción de **GRANT**, para conceder permisos de servidor al nuevo inicio de sesión o un rol que contiene el inicio de sesión. Para obtener más información, vea [GRANT](../../t-sql/statements/grant-transact-sql.md).
@@ -472,7 +474,7 @@ El ejemplo siguiente crea un inicio de sesión para un usuario determinado y le 
  GO
  ```
 
-### <a name="b-creating-a-login-from-a-sid"></a>b. Crear un inicio de sesión de un SID
+### <a name="b-creating-a-login-from-a-sid"></a>B. Crear un inicio de sesión de un SID
 
  En el ejemplo siguiente primero se crea un inicio de sesión de autenticación de SQL Server y se determina el SID del inicio de sesión.
 
@@ -608,14 +610,14 @@ Para obtener más información sobre los inicios de sesión de Azure SQL Data Wa
 
 ## <a name="permissions"></a>Permisos
 
-Solo pueden crear inicios de sesión el inicio de sesión de entidad de seguridad a nivel de servidor (creado por el proceso de aprovisionamiento) o los miembros del rol de base de datos `loginmanager` en la base de datos maestra. Para obtener más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) y [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
+Solo pueden crear inicios de sesión el inicio de sesión de entidad de seguridad a nivel de servidor (creado por el proceso de aprovisionamiento) o los miembros del rol de base de datos `loginmanager` en la base de datos maestra. Para más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) y [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## <a name="after-creating-a-login"></a>Después de crear un inicio de sesión
 
 Después de crear un inicio de sesión, el inicio de sesión se puede conectar a SQL Data Warehouse, pero solo tiene los permisos concedidos al rol **public**. Considere la posibilidad de realizar algunas de las actividades siguientes.
 
 - Para conectarse a una base de datos, cree una para el inicio de sesión. Para obtener más información, vea [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Para conceder permisos a un usuario en una base de datos, use la instrucción **ALTER SERVER ROLE**... **ADD MEMBER** para agregar al usuario a uno de los roles de base de datos integrados o a un rol personalizado, o bien conceda los permisos al usuario directamente mediante la instrucción [GRANT](grant-transact-sql.md). Para más información, vea [Roles no administradores](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles y la instrucción [GRANT](grant-transact-sql.md).
+- Para conceder permisos a un usuario en una base de datos, use la instrucción **ALTER SERVER ROLE**... **ADD MEMBER** para agregar al usuario a uno de los roles de base de datos integrados o a un rol personalizado, o bien conceda los permisos al usuario directamente mediante la instrucción [GRANT](grant-transact-sql.md). Para más información, consulte [Roles no administradores](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Roles administrativos de nivel de servidor adicional](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles) y las instrucciones [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) y [GRANT](grant-transact-sql.md).
 - Para conceder permisos de todo el servidor, cree un usuario de base de datos en la base de datos maestra y use la instrucción **ALTER SERVER ROLE**... **ADD MEMBER** para agregar al usuario a uno de los roles de servidor de administración. Para obtener más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) y [Roles de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 
 - Use la instrucción de **GRANT**, para conceder permisos de servidor al nuevo inicio de sesión o un rol que contiene el inicio de sesión. Para obtener más información, vea [GRANT](../../t-sql/statements/grant-transact-sql.md).
@@ -631,7 +633,7 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO
 ```
 
-### <a name="b-creating-a-login-from-a-sid"></a>b. Crear un inicio de sesión de un SID
+### <a name="b-creating-a-login-from-a-sid"></a>B. Crear un inicio de sesión de un SID
 
  En el ejemplo siguiente primero se crea un inicio de sesión de autenticación de SQL Server y se determina el SID del inicio de sesión.
 
@@ -730,7 +732,7 @@ WINDOWS Especifica que el inicio de sesión se asigna a un inicio de sesión de 
 
 ## <a name="permissions"></a>Permisos
 
-Solo los usuarios con el permiso **ALTER ANY LOGIN** en el servidor o la pertenencia al rol fijo de servidor **securityadmin** pueden crear inicios de sesión. Para obtener más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) y [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
+Solo los usuarios con el permiso **ALTER ANY LOGIN** en el servidor o la pertenencia al rol fijo de servidor **securityadmin** pueden crear inicios de sesión. Para más información, vea [Roles de nivel de servidor](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) y [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## <a name="after-creating-a-login"></a>Después de crear un inicio de sesión
 

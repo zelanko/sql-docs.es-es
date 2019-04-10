@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c43e8ae5b32753eccb42e1e706bbe13b9bf4f8d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421222"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042175"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -192,15 +192,16 @@ CREATE USER user_name
   
  Especifica la entidad de seguridad de Azure Active Directory para la que se crea el usuario de base de datos. *Azure_Active_Directory_principal* puede ser un usuario, un grupo o una aplicación de Azure Active Directory. (Los usuarios de Azure Active Directory no pueden tener inicios de sesión de autenticación de Windows en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; solo los usuarios de base de datos). La cadena de conexión debe especificar la base de datos independiente como el catálogo inicial.
 
- Para los usuarios, utilice el alias completo de su entidad de seguridad del dominio.   
- 
--   `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
-  
--   `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+ En las entidades de seguridad de Azure AD, la sintaxis de CREATE USER requiere:
 
- En los grupos de seguridad, use el *nombre para mostrar* del grupo de seguridad. En el grupo de seguridad *Enfermeras*, utilice:  
+- UserPrincipalName del objeto Azure AD para los usuarios de Azure AD.
+
+  - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+
+- DisplayName del objeto Azure AD para los grupos de Azure AD y las aplicaciones de Azure AD. Si tuviera el grupo de seguridad *Enfermeras*, utilizaría:  
   
--   `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
  Para más información, consulte [Conexión a Base de datos SQL mediante autenticación de Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
   
@@ -336,7 +337,7 @@ Al crear el usuario en la base de datos de Instancia administrada de SQL Databas
   
  En una base de datos independiente, la creación de usuarios ayuda a separar la base de datos de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que la base de datos se pueda mover fácilmente a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Bases de datos independientes](../../relational-databases/databases/contained-databases.md) y [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Para cambiar un usuario de base de datos de un usuario basado en un inicio de sesión de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un usuario de base de datos independiente con contraseña, vea [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- En una base de datos independiente, los usuarios no deben disponer de inicios de sesión en la base de datos **maestra**. Los administradores del [!INCLUDE[ssDE](../../includes/ssde-md.md)] deben comprender que el acceso a una base de datos independiente se puede conceder en el nivel de base de datos, en vez de en el nivel de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para más información, vea [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ En una base de datos independiente, los usuarios no deben disponer de inicios de sesión en la base de datos **maestra**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] los administradores deben comprender que el acceso a una base de datos independiente se puede conceder en el nivel de base de datos, en vez de en el nivel de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para más información, vea [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  Al usar los usuarios de la base de datos independiente de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configure el acceso con una regla de firewall de nivel de base de datos en lugar de una regla de firewall de nivel de servidor. Para obtener más información, vea [sp_set_database_firewall_rule &#40;Base de datos SQL de Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
@@ -361,7 +362,7 @@ CREATE USER AbolrousHazem FOR LOGIN AbolrousHazem;
 GO   
 ```  
   
-### <a name="b-creating-a-database-user-with-a-default-schema"></a>b. Crear un usuario de base de datos con un esquema predeterminado  
+### <a name="b-creating-a-database-user-with-a-default-schema"></a>B. Crear un usuario de base de datos con un esquema predeterminado  
  En el siguiente ejemplo, primero se crea un inicio de sesión de servidor denominado `WanidaBenshoof` con una contraseña y, a continuación, se crea el usuario de base de datos `Wanida` correspondiente con el esquema predeterminado `Marketing`.  
   
 ```  
@@ -468,7 +469,7 @@ WITH
 
  Para crear un usuario de Azure AD a partir de un inicio de sesión de Azure AD, use la sintaxis siguiente.
 
- Inicie sesión en la Instancia administrada con un inicio de sesión de Azure AD que tenga concedido el rol `sysadmin`. Lo siguiente crea un usuario de Azure AD bob@contoso.com, a partir del inicio de sesión bob@contoso.com. Este inicio de sesión se ha creado en el ejemplo [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account).
+ Inicie sesión en la Instancia administrada con un inicio de sesión de Azure AD que tenga concedido el rol `sysadmin`. Lo siguiente crea un usuario de Azure AD bob@contoso.com, a partir del inicio de sesión bob@contoso.com. Este inicio de sesión se ha creado en el ejemplo [CREATE LOGIN](create-login-transact-sql.md#examples).
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -513,9 +514,5 @@ También puede interesarle [otorgar permisos de objeto](../../t-sql/statements/g
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)   
- [Uso de la autenticación de Azure Active Directory con SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
+ [Conexión a Base de datos SQL mediante autenticación de Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
  [Introducción a los permisos de los motores de bases de datos](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
-  
-  
-
-

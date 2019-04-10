@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Additional tips and tricks for using SQL Server Management Studio'
+Title: 'Tutorial: Recomendaciones y trucos adicionales para usar SQL Server Management Studio'
 description: 'Tutorial que incluye algunas recomendaciones y trucos adicionales al usar SSMS. '
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: 2b113d701bbcd5d385303e6a36fcc603d03c0cdf
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: ab394ef046d123b461dac813b2901dfcfd02b596
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663111"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872225"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: Otras recomendaciones y trucos al usar SSMS
 En este tutorial se le ofrecen algunos trucos adicionales al usar SQL Server Management Studio (SSMS). En este artículo aprenderá a: 
@@ -216,7 +216,7 @@ La ruta de acceso para su registro de errores de SQL Server puede variar según 
 Tiene a su disposición algunas opciones para buscar el nombre de su instancia de SQL Server antes y después de conectarse a SQL Server.  
 
 ### <a name="before-you-connect-to-sql-server"></a>Antes de conectarse a SQL Server
-1. Siga los pasos necesarios para buscar el [registro de errores de SQL Server en el disco](#finding-your-error-log-if-you-cannot-connect-to-sql). Su ruta de acceso puede variar respecto de la imagen siguiente.
+1. Siga los pasos necesarios para buscar el [registro de errores de SQL Server en el disco](#find-the-error-log-location-if-you-cant-connect-to-sql-server). Su ruta de acceso puede variar respecto de la imagen siguiente.
 2. Abra el archivo errorlog.log en el Bloc de notas.  
 3. Busque el texto *El nombre del servidor es*.
     
@@ -253,5 +253,3 @@ Si se ha conectado a un alias o a un agente de escucha del grupo de disponibilid
 4. Vea los resultados de la consulta para identificar el nombre de la instancia de SQL Server a la que se ha conectado: 
     
     ![Consultar el nombre de SQL Server](media/ssms-tricks/queryservername.png)
-
-

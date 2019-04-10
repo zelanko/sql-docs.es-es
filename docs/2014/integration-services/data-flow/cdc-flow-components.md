@@ -10,12 +10,12 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73d071b0fc5724c23074c0d827f1c12466f47bab
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380723"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241733"
 ---
 # <a name="cdc-flow-components"></a>Componentes del flujo de CDC
   Los componentes de la captura de datos modificados de Attunity para Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] ayudan a los desarrolladores de SSIS en su trabajo con CDC y reducen la complejidad de los paquetes CDC.  
@@ -32,7 +32,7 @@ ms.locfileid: "58380723"
   
  **Componentes de flujo de datos CDC**:  
   
- [Origen de CDC](cdc-source.md)  
+ [origen de CDC](cdc-source.md)  
   
  [Divisor CDC](cdc-splitter.md)  
   
@@ -192,7 +192,7 @@ ms.locfileid: "58380723"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Origen de CDC](cdc-source.md)  
+-   [origen de CDC](cdc-source.md)  
   
 -   [Divisor CDC](cdc-splitter.md)  
   
@@ -204,7 +204,7 @@ ms.locfileid: "58380723"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Entrada del blog, sobre [CDC en SSIS para SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242543), en mattmasson.com.  
+-   Entrada del blog sobre [CDC en SSIS para SQL Server 2012](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)en mattmasson.com.  
   
 -   Entrada del blog sobre la configuración del servicio CDC, [CDC para Oracle en SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=247827), en blogs.msdn.com.  
   

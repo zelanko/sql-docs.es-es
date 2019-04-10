@@ -25,12 +25,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3583a5a0a4f68304bdc4cc78eadbadf3fb14b20
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973654"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042279"
 ---
 # <a name="populate-full-text-indexes"></a>Rellenar índices de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -217,8 +217,8 @@ El archivo de registro de rastreo sigue el siguiente esquema de nomenclatura:
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 Las partes variables del nombre de archivo de registro de rastreo son las siguientes.
--   <**DatabaseID**> - El identificador de una base de datos. <**dbid**> es un número de cinco dígitos con ceros a la izquierda.  
--   <**FullTextCatalogID**> - Identificador de catálogo de texto completo. <**catid**> es un número de cinco dígitos con ceros a la izquierda.  
+-   <**DatabaseID**> - El identificador de una base de datos. \<**dbid**> es un número de cinco dígitos con ceros a la izquierda.  
+-   <**FullTextCatalogID**> - Identificador de catálogo de texto completo. \<**catid**> es un número de cinco dígitos con ceros a la izquierda.  
 -   <**n**> - Es un entero que indica la existencia de uno o varios registros de rastreo del mismo catálogo de texto completo.  
   
  Por ejemplo, `SQLFT0000500008.2` es el archivo de registro de rastreo para un identificador de base de datos = 5 y un identificador de catálogo de texto completo = 8. El 2 al final del nombre de archivo indica que existen dos archivos de registro de rastreo para esta pareja de base de datos y catálogo.  

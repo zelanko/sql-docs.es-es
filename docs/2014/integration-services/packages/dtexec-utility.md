@@ -10,12 +10,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f12fdd6e68b2e6d823ec32f88334804443a79555
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241914"
 ---
 # <a name="dtexec-utility"></a>dtexec (utilidad)
   El `dtexec` utilidad de símbolo del sistema se usa para configurar y ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquetes. La utilidad `dtexec` proporciona acceso a todas las características de configuración y ejecución de paquetes, tales como parámetros, conexiones, propiedades, variables, registro e indicadores de progreso. El `dtexec` utilidad le permite cargar paquetes desde estos orígenes: el [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, un archivo de proyecto .ispac, una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos, el [!INCLUDE[ssIS](../../includes/ssis-md.md)] paquete Store y el sistema de archivos.  
@@ -126,7 +126,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="cmdshell"></a> Usar dtexec desde xp_cmdshell  
  **Usar dtexec desde xp_cmdshell**  
   
- Puede ejecutar dtexec desde el símbolo del sistema **xp_cmdshell** . En el siguiente ejemplo se muestra cómo ejecutar un paquete denominado UpsertData.dtsx y pasar por alto el código de retorno:  
+ Puede ejecutar dtexec desde el símbolo del sistema **xp_cmdshell**. En el siguiente ejemplo se muestra cómo ejecutar un paquete denominado UpsertData.dtsx y pasar por alto el código de retorno:  
   
 ```  
 EXEC xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'  
@@ -140,7 +140,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  En [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la opción **xp_cmdshell** se deshabilita de forma predeterminada en las instalaciones nuevas. La opción se puede habilitar se ejecuta el procedimiento almacenado del sistema **sp_configure** . Para más información, vea [xp_cmdshell (opción de configuración del servidor)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  En [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la opción **xp_cmdshell** se deshabilita de forma predeterminada en las instalaciones nuevas. La opción se puede habilitar se ejecuta el procedimiento almacenado del sistema **sp_configure**. Para más información, vea [xp_cmdshell (opción de configuración del servidor)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
 ##  <a name="syntax"></a> Sintaxis  
   
@@ -285,7 +285,7 @@ dtexec /option [value] [/option [value]]...
   
      Si especifica un *option_name* argumento, `dtexec` inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla y muestra el tema utilidad dtexec.  
   
--   `/ISServer` *PackagePath*:  
+-   `/ISServer` *packagepath*:  
                   Opcional. Ejecuta un paquete implementado en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . El argumento *PackagePath* especifica el nombre de archivo y la ruta de acceso completa del paquete que se ha implementado en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si la ruta de acceso o el nombre de archivo especificado en el argumento *PackagePath* contiene un espacio, debe escribir el argumento *PackagePath* entre comillas.  
   
      El formato del paquete es el siguiente:  
@@ -516,7 +516,7 @@ dtexec /option [value] [/option [value]]...
 ##  <a name="example"></a> Ejemplos  
  Los ejemplos siguientes muestran cómo usar el `dtexec` utilidad de línea de comandos para configurar y ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquetes.  
   
- **Paquetes en ejecución**  
+ **Ejecutar paquetes**  
   
  Para ejecutar un paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] guardado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando la autenticación de Windows, utilice el siguiente código:  
   
@@ -629,7 +629,7 @@ dtexec /f "c:\pkgOne.dtsx" /conf "c:\pkgOneConfig.cfg"
   
  **Opción SET**  
   
- En el ejemplo siguiente se muestra cómo usar la opción **/SET** , que permite cambiar el valor de cualquier propiedad o variable de paquete al iniciar el paquete desde la línea de comandos.  
+ En el ejemplo siguiente se muestra cómo usar la opción **/SET**, que permite cambiar el valor de cualquier propiedad o variable de paquete al iniciar el paquete desde la línea de comandos.  
   
 ```  
 /SET \package\DataFlowTask.Variables[User::MyVariable].Value;newValue  
@@ -666,9 +666,9 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
 ```  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Ejecutar un paquete en herramientas de datos de SQL Server](../run-a-package-in-sql-server-data-tools.md)  
+ [Ejecutar un paquete en SQL Server Data Tools](../run-a-package-in-sql-server-data-tools.md)  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Entrada de blog [Códigos de salida, catálogo de DTEXEC y SSIS](https://go.microsoft.com/fwlink/?LinkId=251523), en www.mattmasson.com.  
+ Entrada de blog [Códigos de salida, catálogo de DTEXEC y SSIS](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), en www.mattmasson.com.  
   
   

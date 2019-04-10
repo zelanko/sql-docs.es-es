@@ -2,7 +2,7 @@
 title: Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad
 description: Una descripción de los requisitos previos, las restricciones y las recomendaciones para implementar un grupo de disponibilidad Always On.
 ms.custom: seodec18
-ms.date: 01/31/2019
+ms.date: 03/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -20,12 +20,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 28d0e3c791fc838a292d1846613af34fdabd32a4
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: dec0b9aa3c92cdefa82e3031546ea8200f70bb6e
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570808"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042444"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,13 +118,13 @@ ms.locfileid: "55570808"
   
  **En esta sección:**  
   
--   [Checklist: Requisitos previos](#PrerequisitesSI)  
+-   [Lista de comprobación: Prerequisites](#PrerequisitesSI)  
   
 -   [Uso de subprocesos por parte de los grupos de disponibilidad](#ThreadUsage)  
   
 -   [Permisos](#PermissionsSI)  
   
--   [Tareas relacionadas](#RelatedTasksSI)  
+-   [Related Tasks](#RelatedTasksSI)  
   
 -   [Contenido relacionado](#RelatedContentSI)  
   
@@ -133,13 +133,13 @@ ms.locfileid: "55570808"
 ||Requisito previo|Vínculos|  
 |-|------------------|-----------|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Este equipo host debe ser un nodo de WSFC. Las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedan réplicas de disponibilidad de un determinado grupo de disponibilidad residen en nodos independientes del clúster. Un grupo de disponibilidad puede ocupar temporalmente dos clústeres mientras se migra a otro clúster. SQL Server 2016 incorpora la novedad de los grupos de disponibilidad distribuidos. En un grupo de disponibilidad distribuido, dos grupos de disponibilidad residen en clústeres distintos.|[Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Grupos de disponibilidad distribuidos (Grupos de disponibilidad AlwaysOn)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
-|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Si desea que un grupo de disponibilidad trabaje con Kerberos:<br /><br /> Todas las instancias de servidor que hospedan una réplica de disponibilidad para el grupo de disponibilidad deben usar la misma cuenta de servicio de SQL Server.<br /><br /> El administrador de dominio debe registrar manualmente un nombre principal de servicio (SPN) con Active Directory en la cuenta del servicio SQL Server para el nombre de red virtual (VNN) del agente de escucha del grupo de disponibilidad. Si el SPN se registra en una cuenta distinta de la cuenta del servicio SQL Server, la autenticación no se realizará correctamente.<br /><br /> <br /><br /> <b>\*\* Importante \*\*</b> Si cambia la cuenta del servicio SQL Server, el administrador de dominio deberá volver a registrar manualmente el SPN.|[Registrar un nombre principal de servicio para las conexiones con Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Breve explicación:**<br /><br /> Kerberos y los SPN exigen la autenticación mutua. El SPN se asigna a la cuenta de Windows que inicia los servicios SQL Server. Si el SPN no se registra correctamente o provoca un error, el nivel de seguridad de Windows no podrá determinar la cuenta asociada al SPN y no podrá utilizarse la autenticación Kerberos.<br /><br /> <br /><br /> Nota: NTLM no tiene este requisito.|  
+|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Si desea que un grupo de disponibilidad trabaje con Kerberos:<br /><br /> Todas las instancias de servidor que hospedan una réplica de disponibilidad para el grupo de disponibilidad deben usar la misma cuenta de servicio de SQL Server.<br /><br /> El administrador de dominio debe registrar manualmente un nombre principal de servicio (SPN) con Active Directory en la cuenta del servicio SQL Server para el nombre de red virtual (VNN) del agente de escucha del grupo de disponibilidad. Si el SPN se registra en una cuenta distinta de la cuenta del servicio SQL Server, la autenticación no se realizará correctamente.<br /><br /> <br /><br /> <b>\*\* Importante \*\*</b> Si cambia la cuenta del servicio SQL Server, el administrador de dominio deberá volver a registrar manualmente el SPN.|[Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Breve explicación:**<br /><br /> Kerberos y los SPN exigen la autenticación mutua. El SPN se asigna a la cuenta de Windows que inicia los servicios SQL Server. Si el SPN no se registra correctamente o provoca un error, el nivel de seguridad de Windows no podrá determinar la cuenta asociada al SPN y no podrá utilizarse la autenticación Kerberos.<br /><br /> <br /><br /> Nota: NTLM no tiene este requisito.|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Si va a usar una instancia de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para hospedar una réplica de disponibilidad, asegúrese de que comprende las restricciones de FCI y de que se cumplen los requisitos de FCI.|[Requisitos previos y requisitos para usar una instancia de clúster de conmutación por error (FCI) de SQL Server para hospedar una réplica de disponibilidad](#FciArLimitations) (más adelante en este artículo)|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Cada instancia del servidor debe ejecutar la misma versión de SQL Server para participar en un grupo de disponibilidad Always On.|Ediciones y características admitidas para [SQL 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016), [SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017).|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Todas las instancias del servidor que hospedan réplicas de disponibilidad para un grupo de disponibilidad deben usar la misma intercalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Configurar o cambiar la intercalación del servidor](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
-|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Habilite la característica de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en cada instancia de servidor que hospeda una réplica de disponibilidad para cualquier grupo de disponibilidad. En un equipo determinado, puede habilitar tantas instancias de servidor de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] como admita la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Habilitar y deshabilitar grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* Importante \*\*</b> Si elimina y vuelve a crear un WSFC, debe deshabilitar y volver a habilitar la característica [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en cada instancia del servidor habilitada para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en el clúster original.|  
-|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Cada instancia del servidor requiere un extremo de creación de reflejo de la base de datos. Observe que todas las réplicas de disponibilidad, asociados de creación de reflejo de la base de datos y testigos de la instancia del servidor comparten este extremo.<br /><br /> Si una instancia de servidor seleccionada para hospedar una réplica de disponibilidad se ejecuta bajo una cuenta de usuario de dominio y no tiene todavía un punto de conexión de creación de reflejo de la base de datos, el [Asistente para nuevo grupo de disponibilidad](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (o el [asistente Agregar réplica a grupo de disponibilidad](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) puede crear el punto de conexión y conceder el permiso CONNECT a la cuenta de servicio de la instancia de servidor. Sin embargo, si el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ejecuta como una cuenta integrada (como sistema local, servicio local o servicio de red), o una cuenta que no es de dominio, debe usar certificados para la autenticación de extremos y el asistente no podrá crear un extremo de creación de reflejo de la base de datos en la instancia de servidor. En este caso, se recomienda crear los extremos de creación de reflejo de la base de datos manualmente antes de iniciar el asistente.<br /><br /> <br /><br /> <b>\*\* Nota de seguridad \*\*</b> La seguridad de transporte para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] es la misma que para la creación de reflejo de la base de datos.|[El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
-|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Si va a agregar cualquier base de datos que usa FILESTREAM a un grupo de disponibilidad, asegúrese de que FILESTREAM está habilitado en cada instancia de servidor que hospedará una réplica de disponibilidad para el grupo de disponibilidad.|[Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
+|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Habilite la característica de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en cada instancia de servidor que hospeda una réplica de disponibilidad para cualquier grupo de disponibilidad. En un equipo determinado, puede habilitar tantas instancias de servidor de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] como admita la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|[Habilitar y deshabilitar grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* Importante \*\*</b> Si elimina y vuelve a crear un WSFC, debe deshabilitar y volver a habilitar la característica [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en cada instancia del servidor habilitada para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en el clúster original.|  
+|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Cada instancia del servidor requiere un extremo de creación de reflejo de la base de datos. Observe que todas las réplicas de disponibilidad, asociados de creación de reflejo de la base de datos y testigos de la instancia del servidor comparten este extremo.<br /><br /> Si una instancia de servidor seleccionada para hospedar una réplica de disponibilidad se ejecuta bajo una cuenta de usuario de dominio y no tiene todavía un punto de conexión de creación de reflejo de la base de datos, el [Asistente para nuevo grupo de disponibilidad](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (o el [asistente Agregar réplica a grupo de disponibilidad](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) puede crear el punto de conexión y conceder el permiso CONNECT a la cuenta de servicio de la instancia de servidor. Sin embargo, si el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ejecuta como una cuenta integrada (como sistema local, servicio local o servicio de red), o una cuenta que no es de dominio, debe usar certificados para la autenticación de extremos y el asistente no podrá crear un extremo de creación de reflejo de la base de datos en la instancia de servidor. En este caso, se recomienda crear los extremos de creación de reflejo de la base de datos manualmente antes de iniciar el asistente.<br /><br /> <br /><br /> <b>\*\* Nota de seguridad \*\*</b> La seguridad de transporte para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] es la misma que para la creación de reflejo de la base de datos.|[El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server &#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
+|![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Si va a agregar cualquier base de datos que usa FILESTREAM a un grupo de disponibilidad, asegúrese de que FILESTREAM está habilitado en cada instancia de servidor que hospedará una réplica de disponibilidad para el grupo de disponibilidad.|[Habilitar y configurar FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)|  
 |![Casilla](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Casilla")|Si va a agregar cualquier base de datos independiente a un grupo de disponibilidad, asegúrese de que la opción de servidor **contained database authentication** esté establecida en **1** en cada instancia del servidor que hospedará una réplica de disponibilidad para el grupo de disponibilidad.|[contained database authentication (opción de configuración del servidor)](../../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)<br /><br /> [Opciones de configuración de servidor &#40;SQL Server&#41;](../../../database-engine/configure-windows/server-configuration-options-sql-server.md)|  
   
 ###  <a name="ThreadUsage"></a> Uso de subprocesos por parte de los grupos de disponibilidad  
@@ -187,7 +187,7 @@ ms.locfileid: "55570808"
   
 ###  <a name="RelatedContentSI"></a> Contenido relacionado (instancia del servidor)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
+-   [Always On - HADRON Learning Series: uso del grupo de trabajo para las bases de datos compatibles con HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ##  <a name="NetworkConnect"></a> Recomendaciones de conectividad de red  
  Se recomienda usar los mismos vínculos de red para las comunicaciones entre los nodos de WSFC y las comunicaciones entre las réplicas de disponibilidad.  El uso de vínculos de red independientes puede provocar comportamientos inesperados si alguno de los vínculos da error (incluso de forma intermitente).  
@@ -200,11 +200,11 @@ ms.locfileid: "55570808"
 ##  <a name="FciArLimitations"></a> Requisitos previos y restricciones para usar una instancia de clúster de conmutación por error (FCI) de SQL Server para hospedar una réplica de disponibilidad  
  **En esta sección:**  
   
--   [Restricciones](#RestrictionsFCI)  
+-   [Restrictions](#RestrictionsFCI)  
   
--   [Checklist: Requisitos previos](#PrerequisitesFCI)  
+-   [Lista de comprobación: Prerequisites](#PrerequisitesFCI)  
   
--   [Tareas relacionadas](#RelatedTasksFCIs)  
+-   [Related Tasks](#RelatedTasksFCIs)  
   
 -   [Contenido relacionado](#RelatedContentFCIs)  
   
@@ -243,18 +243,18 @@ ms.locfileid: "55570808"
   
 -   [Clústeres de conmutación por error y grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Guía de arquitectura de Always On: generación de una solución de alta disponibilidad y recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [Guía de arquitectura de Always On: generar una solución de alta disponibilidad y recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](https://technet.microsoft.com/library/jj215886.aspx)  
   
 ##  <a name="PrerequisitesForAGs"></a> Requisitos previos y restricciones de los grupos de disponibilidad  
  **En esta sección:**  
   
--   [Restricciones](#RestrictionsAG)  
+-   [Restrictions](#RestrictionsAG)  
   
 -   [Requisitos](#RequirementsAG)  
   
 -   [Seguridad](#SecurityAG)  
   
--   [Tareas relacionadas](#RelatedTasksAGs)  
+-   [Related Tasks](#RelatedTasksAGs)  
   
 ###  <a name="RestrictionsAG"></a> Restricciones (grupos de disponibilidad)  
   
@@ -267,7 +267,7 @@ ms.locfileid: "55570808"
   
 -   **Réplicas de disponibilidad:**  Cada grupo de disponibilidad admite una réplica principal y hasta ocho réplicas secundarias. Todas las réplicas pueden ejecutarse en el modo de confirmación asincrónica o hasta tres de ellas pueden ejecutarse en el modo de confirmación sincrónica (una réplica principal con dos réplicas secundarias sincrónicas).  
   
--   **Número máximo de grupos de disponibilidad y bases de datos de disponibilidad por equipo:** El número real de bases de datos y grupos de disponibilidad que puede colocar en un equipo (equipo físico o máquina virtual) depende del hardware y de la carga de trabajo, pero no hay ningún límite impuesto. Microsoft ha probado exhaustivamente con 10 grupos de disponibilidad y 100 bases de datos por equipo físico. Los signos de sistemas sobrecargados pueden incluir, pero no limitarse a los siguientes: agotamiento de subprocesos de trabajo, tiempos de respuesta lentos para vistas del sistema del grupo de disponibilidad y DMV de AlwaysOn o volcados del sistema del distribuidor detenidos. Asegúrese de comprobar minuciosamente el entorno con una carga de trabajo similar a la que usará en producción para asegurarse de que puede controlar la capacidad de carga de trabajo máxima con sus contratos de nivel de servicio de aplicación. Cuando evalúe los contratos de nivel de servicio, no olvide tener en cuenta la carga en condiciones de error además de los tiempos de respuesta esperados.  
+-   **Número máximo de grupos de disponibilidad y bases de datos de disponibilidad por equipo:** El número real de bases de datos y grupos de disponibilidad que puede colocar en un equipo (equipo físico o máquina virtual) depende del hardware y de la carga de trabajo, pero no hay ningún límite impuesto. Microsoft ha probado hasta 10 grupos de disponibilidad y 100 bases de datos por máquina física, pero este no es un límite vinculante. Según la especificación de hardware en el servidor y la carga de trabajo, puede poner un mayor número de bases de datos y grupos de disponibilidad en una instancia de SQL Server. Los signos de sistemas sobrecargados pueden incluir, pero no limitarse a los siguientes: agotamiento de subprocesos de trabajo, tiempos de respuesta lentos para vistas del sistema del grupo de disponibilidad y DMV de AlwaysOn o volcados del sistema del distribuidor detenidos. Asegúrese de comprobar minuciosamente el entorno con una carga de trabajo similar a la que usará en producción para asegurarse de que puede controlar la capacidad de carga de trabajo máxima con sus contratos de nivel de servicio de aplicación. Cuando evalúe los contratos de nivel de servicio, no olvide tener en cuenta la carga en condiciones de error además de los tiempos de respuesta esperados.  
   
 -   **No use el Administrador de clústeres de conmutación por error para manipular grupos de disponibilidad:**  
   
@@ -314,7 +314,7 @@ ms.locfileid: "55570808"
 |----------|-----------|  
 |Crear un grupo de disponibilidad|[Usar el grupo de disponibilidad (Asistente para nuevo grupo de disponibilidad)](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Crear un grupo de disponibilidad (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)<br /><br /> [Crear un grupo de disponibilidad (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)<br /><br /> [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)|  
 |Modificar el número de réplicas de disponibilidad|[Agregar una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [Combinar una réplica secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [Quitar una réplica secundaria de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
-|Crear un agente de escucha del grupo de disponibilidad|[Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
+|Crear un agente de escucha del grupo de disponibilidad|[Crear o configurar un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
 |Quitar un grupo de disponibilidad|[Quitar un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)|  
   
 ##  <a name="PrerequisitesForDbs"></a> Requisitos previos y restricciones de las bases de datos de disponibilidad  
@@ -324,13 +324,13 @@ ms.locfileid: "55570808"
   
 -   [Requisitos](#RequirementsDb)  
   
--   [Restricciones](#RestrictionsDb)  
+-   [Restrictions](#RestrictionsDb)  
   
 -   [Recomendaciones para equipos que hospedan réplicas de disponibilidad (sistema de Windows)](#TDEdbs)  
   
 -   [Permisos](#PermissionsDbs)  
   
--   [Tareas relacionadas](#RelatedTasksADb)  
+-   [Related Tasks](#RelatedTasksADb)  
   
 ###  <a name="RequirementsDb"></a> Lista de comprobación: Requisitos (bases de datos de disponibilidad)  
  Para poder agregarse a un grupo de disponibilidad, una base de datos debe:  
@@ -387,7 +387,7 @@ ms.locfileid: "55570808"
   
 -   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
+-   [Always On - HADRON Learning Series: uso del grupo de trabajo para las bases de datos compatibles con HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

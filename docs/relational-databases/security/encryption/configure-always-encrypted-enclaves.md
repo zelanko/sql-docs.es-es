@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 866d71333297b609642707a793b27c735d29057d
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e6e0f7bc107ae731e3eb2e7f6685e6c02914d41d
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327896"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872155"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configuración de Always Encrypted con enclaves seguros
 
@@ -144,7 +144,7 @@ Básicamente, la presentación de claves habilitadas para el enclave no cambia l
 - Se ha establecido la propiedad **ENCLAVE_COMPUTATIONS** en los metadatos de clave maestra de columna en la base de datos.
 - Los valores de propiedad de la clave maestra de columna (incluida la configuración de **ENCLAVE_COMPUTATIONS**) se han firmado digitalmente. La herramienta agrega la firma, producida mediante la clave maestra de columna actual, a los metadatos. La finalidad de la firma es impedir que DBA y administradores de equipos malintencionados alteren la configuración de **ENCLAVE_COMPUTATIONS**. Los controladores cliente SQL comprueban las firmas antes de permitir el uso de enclaves. Esto proporciona a los administradores de seguridad control sobre qué datos de la columna se pueden calcular en el enclave.
 
-La propiedad **ENCLAVE_COMPUTATIONS** de una clave maestra de columna es inmutable (no puede cambiarla una vez que se ha aprovisionado la clave). Puede, sin embargo, reemplazar la clave maestra de columna por una nueva clave con un valor de la propiedad **ENCLAVE_COMPUTATIONS** diferente al de la clave original, a través de un proceso llamado [rotación de clave maestra de columna](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key). Para obtener más información sobre la propiedad **ENCLAVE_COMPUTATIONS**, consulte [CREAR CLAVE MAESTRA DE COLUMNA](../../../t-sql/statements/create-column-master-key-transact-sql.md).
+La propiedad **ENCLAVE_COMPUTATIONS** de una clave maestra de columna es inmutable (no puede cambiarla una vez que se ha aprovisionado la clave). Puede, sin embargo, reemplazar la clave maestra de columna por una nueva clave con un valor de la propiedad **ENCLAVE_COMPUTATIONS** diferente al de la clave original, a través de un proceso llamado [rotación de clave maestra de columna](#make-columns-enclave-enabled-by-rotating-their-column-master-key). Para obtener más información sobre la propiedad **ENCLAVE_COMPUTATIONS**, consulte [CREAR CLAVE MAESTRA DE COLUMNA](../../../t-sql/statements/create-column-master-key-transact-sql.md).
 
 Para aprovisionar una clave de cifrado de columnas habilitada para el enclave, debe asegurarse de que la clave maestra de columna que cifra la clave de cifrado de columnas está habilitada para el enclave.
 
@@ -152,7 +152,7 @@ Las siguientes limitaciones se aplican actualmente a las claves habilitadas para
 
 - Las claves maestras de columna habilitadas para el enclave **deben almacenarse en el almacén de certificados de Windows o en Azure Key Vault**. El almacenamiento de claves maestras de columna habilitadas para el enclave en otros tipos de almacenes de claves (módulos de seguridad de hardware o almacenes de claves personalizados) no se admite actualmente.
 
-### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>**Aprovisionamiento de claves habilitadas para el enclave mediante SQL Server Management Studio (SSMS)**
+### **<a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>Aprovisionamiento de claves habilitadas para el enclave mediante SQL Server Management Studio (SSMS)**
 
 Los siguientes pasos crean claves habilitadas para el enclave (se requiere la versión 18.0 de SSMS o posterior):
 
@@ -177,7 +177,7 @@ Los siguientes pasos crean claves habilitadas para el enclave (se requiere la ve
     3. En la lista desplegable **Clave maestra de columna**, seleccione la clave maestra de columna que creó en los pasos anteriores.
     4. Haga clic en **Aceptar**.
 
-### <a name="provision-enclave-enabled-keys-using-powershell"></a>**Aprovisionamiento de claves habilitadas para el enclave mediante PowerShell**
+### **<a name="provision-enclave-enabled-keys-using-powershell"></a>Aprovisionamiento de claves habilitadas para el enclave mediante PowerShell**
 
 En las siguientes secciones se proporcionan scripts de PowerShell de ejemplo para aprovisionar claves habilitadas para el enclave. Se resaltan los pasos que son específicos (nuevos) de Always Encrypted con enclaves seguros. Para obtener más información (no específica de Always Encrypted con enclaves seguros) sobre cómo aprovisionar claves mediante PowerShell, consulte [Configure Always Encrypted Keys using PowerShell](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell) (Configurar claves de Always Encrypted con PowerShell).
 
@@ -218,7 +218,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 En el equipo de desarrollo/cliente, abra Windows PowerShell ISE y ejecute el siguiente script.
 
-**Paso 1: Aprovisionamiento de una clave maestra de columna en Azure Key Vault**
+**Paso 1: Aprovisionamiento de una clave maestra de columna en Azure Key Vault**
 
 Esto también puede realizarse con Azure Portal. Para obtener detalles, consulte [Manage your key vaults from Azure portal](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/) (Administrar sus almacenes de claves desde Azure Portal).
 
@@ -742,8 +742,8 @@ GO
 
 La forma más rápida de probar consultas completas sobre sus columnas habilitadas para el enclave es desde una ventana de consulta de SSMS con Parametrización para Always Encrypted habilitada. Para obtener detalles sobre esta útil funcionalidad de SSMS, consulte:
 
-- [Parameterization for Always Encrypted - Using SSMS to Insert into, Update and Filter by Encrypted Columns](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/) (Parametrización para Always Encrypted: uso de SSMS para insertar columnas cifradas, actualizarlas y filtrar por ellas)
-- [Consulta de columnas cifradas](configure-always-encrypted-using-sql-server-management-studio.md#querying-encrypted-columns)
+- [Parameterization for Always Encrypted - Using SSMS to Insert into, Update and Filter by Encrypted Columns (Parametrización para Always Encrypted: uso de SSMS para insertar columnas cifradas, actualizarlas y filtrar por ellas)](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
+- [Consultar columnas cifradas](configure-always-encrypted-using-sql-server-management-studio.md#querying-encrypted-columns)
 
 
 
@@ -861,7 +861,7 @@ Además, su aplicación debe cumplir las directrices habituales que se aplican a
 Para obtener detalles sobre el desarrollo de aplicaciones .NET Framework mediante Always Encrypted, consulte los siguientes artículos:
 
 - [Desarrollar con Always Encrypted con el proveedor de datos .NET Framework](develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Always Encrypted: protección de información confidencial en SQL Database y almacenamiento de las claves de cifrado en Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+- [Always Encrypted: protección de información confidencial en SQL Database y almacenamiento de las claves de cifrado en Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
 
 #### <a name="example"></a>Ejemplo
 

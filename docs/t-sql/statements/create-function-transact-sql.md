@@ -41,12 +41,12 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9957e69ae2cc285ecad5709a9169bd3ee01be464
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801599"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042454"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -334,7 +334,7 @@ Es un valor predeterminado para el parámetro. Si se define un valor *default*, 
   
  En las TVF insertadas, el valor devuelto de TABLE se define mediante una única instrucción SELECT. Las funciones insertadas no tienen variables devueltas asociadas.  
   
- <a name="mstvf"></a> En las MSTVF, @ *return_variable* es una variable de TABLE, que se usa para almacenar y acumular las filas que se deben devolver como valor de la función. @ *return_variable* solamente se puede especificar para funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], no para funciones CLR.  
+ <a name="mstvf"></a> En las MSTVF, \@*return_variable* es una variable de TABLE, que se usa para almacenar y acumular las filas que se deben devolver como valor de la función. \@ *return_variable* solamente se puede especificar para funciones [!INCLUDE[tsql](../../includes/tsql-md.md)], no para funciones CLR.  
   
  *select_stmt*  
  Es la instrucción SELECT individual que define el valor devuelto de una función insertada con valores de tabla (TVF).  
@@ -567,15 +567,15 @@ Si una función definida por el usuario no se crea con la cláusula `SCHEMABINDI
 
 -   Instrucciones de control de flujo excepto instrucciones `TRY...CATCH`.  
 
--   Instrucciones `DECLARE` que definen variables de datos y cursores locales.  
+-   `DECLARE` instrucciones que definen variables de datos y cursores locales.  
 
--   Instrucciones `SELECT` que contienen listas de selección con expresiones que asignan valores a variables locales.  
+-   `SELECT` instrucciones que contienen listas de selección con expresiones que asignan valores a variables locales.  
 
 -   Operaciones de cursor que hacen referencia a cursores locales que se declaran, abren, cierran y cuya asignación se cancela en la función. Solamente se permiten las instrucciones `FETCH` que asignan valores a las variables locales mediante la cláusula `INTO`; no se permiten las instrucciones `FETCH` que devuelven datos al cliente.  
 
--   Instrucciones `INSERT`, `UPDATE` y `DELETE` que modifican variables de tabla locales.  
+-   `INSERT`Instrucciones `UPDATE` y `DELETE` que modifican variables de tabla locales.  
 
--   Instrucciones `EXECUTE` que llaman a procedimientos almacenados extendidos.  
+-   `EXECUTE` instrucciones que llaman a procedimientos almacenados extendidos.  
 
 Para más información, vea [Crear funciones definidas por el usuario &#40;motor de base de datos&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
@@ -645,11 +645,11 @@ Cuando utilice la cláusula `ORDER` en funciones CLR con valores de tabla, siga 
   
     -   Consultas Insert en las que la cláusula `ORDER` es compatible con un índice.  
   
-    -   Cláusulas `ORDER BY` que son compatibles con la cláusula `ORDER`.  
+    -   `ORDER BY` cláusulas que son compatibles con la cláusula `ORDER`.  
   
     -   Agregados, donde `GROUP BY` es compatible con cláusula `ORDER`.  
   
-    -   Agregados `DISTINCT` donde las columnas distintas son compatibles con la cláusula `ORDER`.  
+    -   `DISTINCT` agregados donde las columnas distintas son compatibles con la cláusula `ORDER`.  
   
 La cláusula `ORDER` no garantiza que los resultados estén ordenados al ejecutar una consulta SELECT, a menos que también se especifique la cláusula `ORDER BY` en la consulta. Vea [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md) para más información sobre cómo consultar las columnas incluidas en el criterio de ordenación para las funciones con valores de tabla.  
   
@@ -710,7 +710,7 @@ ISO Week
 52  
 ```  
   
-### <a name="b-creating-an-inline-table-valued-function"></a>b. Crear una función alineada con valores de tabla  
+### <a name="b-creating-an-inline-table-valued-function"></a>B. Crear una función alineada con valores de tabla  
  El ejemplo siguiente devuelve una función insertada con valores de tabla en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Devuelve tres columnas `ProductID`, `Name` y el agregado de ventas totales anuales hasta la fecha por tienda como `YTD Total` para cada producto vendido a la tienda.  
   
 ```sql  
@@ -831,7 +831,7 @@ GO
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  (Funciones definidas por el usuario CLR)  
+ [Funciones CLR definidas por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
   

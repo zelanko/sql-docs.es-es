@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4214bcf8d2dcd3c8b00d51580ea71eae0e40e96e
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880548"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872335"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guía de diseño y de arquitectura de índices de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -277,7 +277,7 @@ Si el índice agrupado no se crea con la propiedad `UNIQUE`, el [!INCLUDE[ssDE](
     Por ejemplo, un Id. de empleado identifica de forma exclusiva a los empleados. Un índice agrupado o una restricción [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) en la columna `EmployeeID` aumentaría el rendimiento de las consultas que buscan información de empleado según el número de identificador del empleado. También se podría crear un índice clúster en las columnas `LastName`, `FirstName`y `MiddleName` , ya que los registros de empleados se suelen agrupar y consultar de esta forma, y la combinación de estas columnas seguiría proporcionando un alto grado de diferencia. 
 
     > [!TIP]
-    > Si no se especifica de otra forma, al crear una restricción [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crea un [índice agrupado](#clustered_index) para admitir esa restricción.
+    > Si no se especifica de otra forma, al crear una restricción [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crea un [índice agrupado](#Clustered) para admitir esa restricción.
     > Aunque se puede usar *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* para aplicar la unicidad como PRIMARY KEY, no es una clave de agrupación eficaz.
     > Si usa *uniqueidentifier* como PRIMARY KEY, se recomienda crearlo como un índice no agrupado y usar otra columna, como `IDENTITY`, para crear el índice agrupado.   
   
@@ -896,7 +896,7 @@ Al consultar una tabla optimizada para memoria con predicados de desigualdad, el
 [Creación de una clave principal](../relational-databases/tables/create-primary-keys.md)    
 [Índices de tablas con optimización para memoria](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [Introducción a los índices de almacén de columnas](../relational-databases/indexes/columnstore-indexes-overview.md)  
-[Solución de problemas de índices de hash de tablas optimizadas para memoria](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
+[Solución de problemas de índices de hash para tablas optimizadas para memoria](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
 [Vistas de administración dinámica de tablas optimizadas para memoria &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [Funciones y vistas de administración dinámica relacionadas con índices &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [Índices en columnas calculadas](../relational-databases/indexes/indexes-on-computed-columns.md)   

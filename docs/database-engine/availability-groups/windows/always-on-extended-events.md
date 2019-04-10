@@ -11,12 +11,12 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207574"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860636"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configuración de eventos extendidos para grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [Eventos extendidos para la depuración](always-on-extended-events.md#BKMK_Debugging)  
   
- [Referencia de eventos extendidos de grupos de disponibilidad Always On](always-on-extended-events.md#BKMK_Reference)  
+ [Referencia de eventos extendidos de grupos de disponibilidad Always On](always-on-extended-events.md#BKMK_Reference)  
   
 ##  <a name="BKMK_alwayson_health"></a> Sesión Alwayson_health  
  La sesión de eventos extendidos alwayson_health se crea automáticamente al crear el grupo de disponibilidad y captura un subconjunto de los eventos relacionados del grupo de disponibilidad. Esta sesión está preconfigurada como una útil y cómoda herramienta que ayuda a empezar a trabajar rápidamente a la vez que soluciona los problemas de un grupo de disponibilidad. El Asistente para crear un grupo de disponibilidad inicia automáticamente la sesión en cada réplica de disponibilidad participante configurada en el asistente.  
@@ -83,7 +83,7 @@ Para obtener información sobre algunos de los eventos cubiertos por alwayson_he
   
  [error_reported (1480): rol de réplica de base de datos cambiado](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change "></a> availability_replica_state_change  
+###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  Se produce cuando cambia el estado de una réplica de disponibilidad. La creación de un grupo de disponibilidad o la combinación de una réplica de disponibilidad pueden desencadenar este evento. Es útil para el diagnóstico de errores en conmutaciones automáticas por error. También se puede usar para el seguimiento de los pasos de conmutación por error.  
   
 #### <a name="event-information"></a>Información del evento  
@@ -384,5 +384,3 @@ GO
   
 ## <a name="next-steps"></a>Pasos siguientes  
  [Ver datos de sesiones de eventos](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   
- 
-  

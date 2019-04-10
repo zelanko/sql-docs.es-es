@@ -13,12 +13,12 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2f7a8a738a101545a23d14f06961b53415c2b9b6
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: fc06dca68c6b6a4cedc730433401076ca07b126b
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685532"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042344"
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
+ `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
  Nombre de una, dos o tres partes de la tabla que se va a mostrar. En el caso de los nombres de tabla de dos o tres partes, el nombre debe incluirse entre comillas dobles (""). El uso de comillas en un nombre de tabla de una parte es opcional. Cuando no se especifica ningún nombre de tabla, se muestra la información de la base de datos actual.  
   
 ## <a name="permissions"></a>Permisos  
@@ -82,7 +82,7 @@ DBCC PDW_SHOWSPACEUSED ( "dbo.FactInternetSales" );
 DBCC PDW_SHOWSPACEUSED ( FactInternetSales );  
 ```  
   
-### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>b. Mostrar el espacio en disco usado por todas las tablas de la base de datos actual  
+### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>B. Mostrar el espacio en disco usado por todas las tablas de la base de datos actual  
  En el ejemplo siguiente se muestra el espacio en disco reservado y usado por todas las tablas de usuario y las tablas del sistema en la base de datos [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```sql

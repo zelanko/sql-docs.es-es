@@ -11,12 +11,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203362"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872325"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Supervisión del rendimiento para grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,15 +24,15 @@ ms.locfileid: "53203362"
   
  Se tratan los siguientes temas:  
   
--   [Proceso de sincronización de datos](#BKMK_DATA_SYNC_PROCESS)  
+-   [Proceso de sincronización de datos](#data-synchronization-process)  
   
--   [Puertas de control de flujo](#BKMK_FLOW_CONTROL_GATES)  
+-   [Puertas de control de flujo](#flow-control-gates)  
   
--   [Estimación del tiempo de conmutación por error (RTO)](#BKMK_RTO)  
+-   [Estimación del tiempo de conmutación por error (RTO)](#estimating-failover-time-rto)  
   
--   [Estimación de la posible pérdida de datos (RPO)](#BKMK_RPO)  
+-   [Estimación de la posible pérdida de datos (RPO)](#estimating-potential-data-loss-rpo)  
   
--   [Supervisión de RTO y RPO](#BKMK_Monitoring_for_RTO_and_RPO)  
+-   [Supervisión de RTO y RPO](#monitoring-for-rto-and-rpo)  
   
 -   [Escenarios de solución de problemas de rendimiento](#BKMK_SCENARIOS)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "53203362"
   
 |||||  
 |-|-|-|-|  
-|**Level**|**Número de puertas**|**Número de mensajes**|**Métricas de utilidad**|  
+|**Nivel**|**Número de puertas**|**Número de mensajes**|**Métricas de utilidad**|  
 |Transporte|1 por réplica de disponibilidad|8192|Evento extendido **database_transport_flow_control_action**|  
 |Base de datos|1 por base de datos de disponibilidad|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Evento extendido **hadron_database_flow_control_action**|  
   
@@ -331,7 +331,7 @@ Se pueden consultar las DMV [sys.dm_hadr_database_replica_states](../../../relat
 ##  <a name="monitoring-for-rto-and-rpo"></a>Supervisión de RTO y RPO  
  En esta sección se muestra cómo supervisar las métricas RTO y RPO de los grupos de disponibilidad. Esta demostración es similar al tutorial de GUI proporcionado en [The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (El modelo de estado de Always On, parte 2: extensión del modelo de estado).  
   
- Se proporcionan elementos de los cálculos de tiempo de conmutación por error y de posible pérdida de datos de [Estimación del tiempo de conmutación por error (RTO)](#BKMK_RTO) y [Estimación de la posible pérdida de datos (RPO)](#BKMK_RPO) como métricas de rendimiento de la faceta de administración de directivas **Estado de réplica de base de datos** (vea [Ver las facetas de administración basada en directivas en un objeto de SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Puede supervisar estas dos métricas según una programación y recibir alertas cuando superen el RTO y el RPO, respectivamente.  
+ Se proporcionan elementos de los cálculos de tiempo de conmutación por error y de posible pérdida de datos de [Estimación del tiempo de conmutación por error (RTO)](#estimating-failover-time-rto) y [Estimación de la posible pérdida de datos (RPO)](#estimating-potential-data-loss-rpo) como métricas de rendimiento de la faceta de administración de directivas **Estado de réplica de base de datos** (vea [Ver las facetas de administración basada en directivas en un objeto de SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Puede supervisar estas dos métricas según una programación y recibir alertas cuando superen el RTO y el RPO, respectivamente.  
   
  Los scripts que se muestran crean dos directivas del sistema que se ejecutan según sus respectivas programaciones, con las siguientes características:  
   
@@ -458,8 +458,8 @@ Para crear las directivas, siga las instrucciones siguientes en todas las instan
   
 |Escenario|Descripción|  
 |--------------|-----------------|  
-|[Solución de problemas: el grupo de disponibilidad superó el RTO](troubleshoot-availability-group-exceeded-rto.md)|Después de una conmutación por error automática o una manual planeada sin pérdida de datos, el tiempo de conmutación por error supera el RTO. O bien, al estimar el tiempo de conmutación por error de una réplica secundaria de confirmación sincrónica (por ejemplo, un asociado de conmutación automática por error), descubre que supera el RTO.|  
-|[Solución de problemas: el grupo de disponibilidad superó el RPO](troubleshoot-availability-group-exceeded-rpo.md)|Después de realizar una conmutación por error manual forzada, la pérdida de datos supera la RPO. O bien, al calcular la posible pérdida de datos de una réplica secundaria de confirmación asincrónica, descubre que supera la RPO.|  
+|[Solución de problemas: El grupo de disponibilidad superó el RTO](troubleshoot-availability-group-exceeded-rto.md)|Después de una conmutación por error automática o una manual planeada sin pérdida de datos, el tiempo de conmutación por error supera el RTO. O bien, al estimar el tiempo de conmutación por error de una réplica secundaria de confirmación sincrónica (por ejemplo, un asociado de conmutación automática por error), descubre que supera el RTO.|  
+|[Solución de problemas: El grupo de disponibilidad superó el RPO](troubleshoot-availability-group-exceeded-rpo.md)|Después de realizar una conmutación por error manual forzada, la pérdida de datos supera la RPO. O bien, al calcular la posible pérdida de datos de una réplica secundaria de confirmación asincrónica, descubre que supera la RPO.|  
 |[Solución de problemas: cambios en la réplica principal que no se reflejan en la réplica secundaria](troubleshoot-primary-changes-not-reflected-on-secondary.md)|La aplicación cliente finaliza una actualización en la réplica principal correctamente, pero una consulta a la réplica secundaria muestra que el cambio no se ha reflejado.|  
   
 ##  <a name="BKMK_XEVENTS"></a> Eventos extendidos de utilidad  
@@ -474,5 +474,3 @@ Para crear las directivas, siga las instrucciones siguientes en todas las instan
 |hadr_dump_primary_progress|`alwayson`|Depuración|Principal|  
 |hadr_dump_log_progress|`alwayson`|Depuración|Principal|  
 |hadr_undo_of_redo_log_scan|`alwayson`|Analíticos|Secundario|  
-  
-  

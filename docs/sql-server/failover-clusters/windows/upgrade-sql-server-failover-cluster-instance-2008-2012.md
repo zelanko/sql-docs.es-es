@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a7534e39be1973861ab827e7f5e2dab6adf941e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017006"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872255"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012
 
@@ -47,8 +47,8 @@ La estrategia de migración adecuada dependerá de ciertos parámetros de la top
 |                                   | Requiere todos los objetos de servidor y VNNS | Requiere todos los objetos de servidor y VNNS | No requiere ningún objeto de servidor ni VNN\* | No requiere ningún objeto de servidor ni VNN\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
 | **_¿Grupos de disponibilidad? (S/N)_**                  | **_S_**                              | **_N_**                                                            | **_S_**    | **_N_**    |
-| **El clúster solo usa FCI de SQL**         | [Escenario 3](#scenario-3-cluster-has-sql-fcis-only-and-uses-availability-groups)                           | [Escenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag)                                                        | [Escenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Escenario 2](#scenario-2-cluster-to-migrate-has-sql-fcis-only-and-no-ag) |
-| **El clúster usa instancias independientes** | [Escenario 5](#scenario-5-cluster-has-some-non-fci-and-uses-availability-groups)                           | [Escenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups)                                                         | [Escenario 1](#scenario-1-cluster-to-migrate-uses-strictly-availability-groups-windows-server-2008-r2-sp1) | [Escenario 4](#scenario-4-cluster-has-some-non-fci-and-no-availability-groups) |
+| **El clúster solo usa FCI de SQL**         | [Escenario 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [Escenario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [Escenario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Escenario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
+| **El clúster usa instancias independientes** | [Escenario 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [Escenario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [Escenario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Escenario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
 \* Excluir nombres de agentes de escucha del grupo de disponibilidad
 
@@ -255,7 +255,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
     Al igual que los grupos de disponibilidad, deberá quitar y volver a crear los agentes de escucha en lugar de realizar su migración directamente.
 
-### <a name="replication"></a>REPLICATION
+### <a name="replication"></a>Replicación
 
 -   **Distribuidores remotos, publicadores, suscriptores**
 
@@ -285,7 +285,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
 ### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>e[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 
--   **Jobs**
+-   **trabajos**
 
     Se realizará correctamente la migración de los trabajos junto con las bases de datos del sistema. Cualquier usuario que ejecute un trabajo del agente de SQL o el propio agente tendrá los mismos permisos en el equipo de destino, tal como se especifica en los requisitos previos.
 
@@ -309,7 +309,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
 ### <a name="integration-services"></a>Integration Services
 
--   **Proyectos de SSIS**
+-   **SSIS, proyectos**
 
     Los proyectos de SSIS se incluyen en migraciones junto con la base de datos de SSIS. Una vez que se mueva la base de datos de SSIS, los paquetes serán ejecutables inmediatamente antes de mover las tablas del sistema.
 

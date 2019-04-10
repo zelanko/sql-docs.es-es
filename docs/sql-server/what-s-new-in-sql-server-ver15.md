@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cfb679bdec74536d62b3f332ff644d80435907c0
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 0c36b85b210cf10a3d35e5708b123a30e85e3c39
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618272"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042424"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -27,8 +27,8 @@ Para obtener más información y problemas conocidos, vea [Notas de la versión 
 **Pruebe [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]**
 
 - [![Descarga desde el Centro de evaluación](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Descargue [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] para instalarlo en Windows](https://go.microsoft.com/fwlink/?LinkID=862101).
-- Realice la instalación en Linux para [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) y [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
-- [Ejecute [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] en Docker](../linux/quickstart-install-connect-docker.md).
+- Instalar en Linux para [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) y [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
+- [Ejecutar [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] en Docker](../linux/quickstart-install-connect-docker.md).
 
 **Use las [herramientas más recientes](#tools) para obtener la mejor experiencia con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
@@ -39,8 +39,8 @@ Community Technology Preview (CTP) 2.4 es la versión pública más reciente de
 - [Clúster de macrodatos](#bigdatacluster)
   - Orientación sobre la compatibilidad de GPU para la ejecución de aprendizaje profundo con TensorFlow en Spark.
   - Actualización del entorno de ejecución de Spark a Spark 2.4.
-  - Compatibilidad de `INSERT INTO SELECT` con el grupo de datos.
-  - Cláusula de opción `FORCE SCALEOUTEXECUTION` y `DISABLE SCALEOUTEXECUTION` para las consultas de tabla externa.
+  - `INSERT INTO SELECT` compatibilidad con el grupo de datos.
+  - `FORCE SCALEOUTEXECUTION` y la cláusula de opción `DISABLE SCALEOUTEXECUTION` para las consultas de tabla externa.
 
 - [Motor de base de datos](#databaseengine)
   - Valores predeterminados del mensaje de error de truncamiento para incluir los nombres de tabla y columna, así como el valor truncado. Vea [Truncamiento](#truncation).
@@ -55,12 +55,12 @@ Las secciones siguientes describen las nuevas características que se han introd
 
 ## <a id="bigdatacluster"></a>Clústeres de macrodatos
 
-Los [clústeres de macrodatos](../big-data-cluster/big-data-cluster-overview.md) de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] habilitan nuevos escenarios, como los siguientes:
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Los [clústeres de macrodatos](../big-data-cluster/big-data-cluster-overview.md) habilitan nuevos escenarios, como los siguientes:
 
 - [Compatibilidad de GPU para la ejecución de aprendizaje profundo con TensorFlow en Spark.](../big-data-cluster/spark-gpu-tensorflow.md) (CTP 2.4)
 - Actualización del entorno de ejecución de Spark a Spark 2.4. (CTP 2.4)
-- Compatibilidad de `INSERT INTO SELECT` con el grupo de datos.
-- Cláusula de opción `FORCE SCALEOUTEXECUTION` y `DISABLE SCALEOUTEXECUTION` para las consultas de tabla externa.
+- `INSERT INTO SELECT` compatibilidad con el grupo de datos.
+- `FORCE SCALEOUTEXECUTION` y la cláusula de opción `DISABLE SCALEOUTEXECUTION` para las consultas de tabla externa.
 - [Envío de trabajos de Spark en clústeres de macrodatos de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] en IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md). (CTP 2.3)
 - [Experiencia de administración e implementación de aplicaciones](../big-data-cluster/big-data-cluster-create-apps.md) para diversas aplicaciones relacionadas con los datos, incluida la operacionalización de modelos de aprendizaje automático mediante R y Python, la ejecución de trabajos de SQL Server Integration Services (SSIS) y mucho más. (CTP 2.3)
 - [Uso de Sparklyr en clústeres de macrodatos de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](../big-data-cluster/sparklyr-from-RStudio.md). (CTP 2.3)
@@ -171,7 +171,7 @@ El resultado final es una reducción de las recompilaciones extrañas y la sobre
 
 ### <a name="improved-indirect-checkpoint-scalability-ctp-23"></a>Escalabilidad mejorada de puntos de control indirectos (CTP 2.3)
 
-En versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], es posible que los usuarios experimenten errores de programador que no rinde cuando hay una base de datos que genera un gran número de páginas desfasadas, como tempdb. En [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se presenta una mejor escalabilidad para los puntos de control indirectos, lo que debería evitar estos errores en las bases de datos con una gran carga de trabajo de operaciones UPDATE o INSERT.
+En versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], es posible que los usuarios experimenten errores de programador que no rinde cuando hay una base de datos que genera un gran número de páginas desfasadas, como tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se presenta una mejor escalabilidad para los puntos de control indirectos, lo que debería evitar estos errores en las bases de datos con una gran carga de trabajo de operaciones UPDATE o INSERT.
 
 ### <a name="utf-8-support-ctp-23"></a>Compatibilidad con UTF-8 (CTP 2.3)
 
@@ -330,9 +330,9 @@ Para usar el procesamiento de consultas inteligentes, establezca la base datos `
 
 - Establezca estos valores predeterminados mediante las opciones de configuración de ámbito de base de datos `ELEVATE_ONLINE` y `ELEVATE_RESUMABLE`. Ambas opciones harán que el motor eleve automáticamente las operaciones compatibles a la ejecución de índices ONLINE o RESUMABLE. Puede habilitar los siguientes comportamientos con estas opciones:
 
-  - La opción `FAIL_UNSUPPORTED` permite todas las operaciones de índices en línea o reanudables y las operaciones de índices con errores que no se admiten para las opciones en línea o reanudables.
-  - La opción `WHEN_SUPPPORTED` permite las operaciones admitidas en línea o reanudables y ejecutan operaciones no admitidas de índices sin conexión o no reanudables.
-  - La opción `OFF` permite el comportamiento actual de la ejecución de todas las operaciones de índices sin conexión y no reanudables, salvo que se especifique explícitamente lo contrario en la instrucción DDL.
+  - `FAIL_UNSUPPORTED` opción permite todas las operaciones de índices en línea o reanudables y las operaciones de índices con errores que no se admiten para las opciones en línea o reanudables.
+  - `WHEN_SUPPPORTED` opción permite las operaciones admitidas en línea o reanudables y ejecutan operaciones no admitidas de índices sin conexión o no reanudables.
+  - `OFF` opción permite el comportamiento actual de la ejecución de todas las operaciones de índices sin conexión y no reanudables, salvo que se especifique explícitamente lo contrario en la instrucción DDL.
 
 Para invalidar la configuración predeterminada, incluya la opción `ONLINE` o `RESUMABLE` en los comandos de recompilación y creación de índices. 
 
@@ -490,7 +490,7 @@ FROM sys.dm_exec_requests AS d
   - Compatibilidad con Always Encrypted con enclaves seguros (CTP 2.0)
   - Tamaño de descarga más pequeño (CTP 2.0)
   - Se basa ahora en el shell aislado de Visual Studio 2017 (CTP 2.0)
-  - Para ver una lista completa, consulte el [registro de cambios de SSMS](../ssms/sql-server-management-studio-changelog-ssms.md). (CTP 2.0)
+  - Para ver una lista completa, consulte el [registro de cambios de SSMS](../ssms/release-notes-ssms.md). (CTP 2.0)
 
 - [**Módulo SQL Server PowerShell**](http://www.powershellgallery.com/packages/SqlServer/21.1.18080): El módulo SqlServer PowerShell permite a los desarrolladores, administradores y profesionales de inteligencia empresarial de SQL Server automatizar la implementación de bases de datos y la administración de servidores.
 
@@ -524,11 +524,11 @@ Los grupos de cálculo resuelven un problema común de los modelos complejos, do
 
 Un grupo de cálculo puede tener cualquier número de elementos de cálculo. Cada elemento de cálculo se define mediante una expresión DAX. Se han introducido tres funciones DAX nuevas para trabajar con los grupos de cálculo: 
 
-- `SELECTEDMEASURE()`: devuelve una referencia a la medida en el contexto actual.  
+- `SELECTEDMEASURE()` : devuelve una referencia a la medida en el contexto actual.  
 
-- `SELECTEDMEASURENAME()`: devuelve una cadena que contiene el nombre de la medida en el contexto actual.  
+- `SELECTEDMEASURENAME()` : devuelve una cadena que contiene el nombre de la medida en el contexto actual.  
 
-- `ISSELECTEDMEASURE(M1, M2, …)`: devuelve un valor booleano que indica si la medida en el contexto actual es una de las que se han especificado como argumento.
+- `ISSELECTEDMEASURE(M1, M2, …)` : devuelve un valor booleano que indica si la medida en el contexto actual es una de las que se han especificado como argumento.
 
 Además de las funciones DAX nuevas, se han presentado dos nuevas vistas de administración dinámica:
 

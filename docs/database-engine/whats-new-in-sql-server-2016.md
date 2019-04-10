@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 22a4907e0eec995839648371a14022a3f9c94d78
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266086"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872315"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novedades de Motor de base de datos de Microsoft SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ Si quiere revisar las novedades de los otros componentes de SQL Server, vea [Nov
 > Para ver las notas de la versión actual, consulte [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
--  Ahora, la sintaxis `CREATE OR ALTER <object>` está disponible para los [procedimientos](../t-sql/statements/create-procedure-transact-sql.md), [vistas](../t-sql/statements/create-view-transact-sql.md), [ funciones](../t-sql/statements/create-function-transact-sql.md) y [desencadenadores](../t-sql/statements/create-trigger-transact-sql.md).
+-  `CREATE OR ALTER <object>` la sintaxis ahora está disponible para los [procedimientos](../t-sql/statements/create-procedure-transact-sql.md), [vistas](../t-sql/statements/create-view-transact-sql.md), [funciones](../t-sql/statements/create-function-transact-sql.md) y [desencadenadores](../t-sql/statements/create-trigger-transact-sql.md).
 -   Se ha agregado compatibilidad para un modelo de sugerencias de consultas más genérico: `OPTION (USE HINT('<hint1>', '<hint2>'))`. Para obtener más información, consulte [Sugerencias de consulta (Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md).  
 - Se ha agregado la DMV [sys.dm_exec_valid_use_hints](../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) a las sugerencias de lista.  
 - Se ha agregado la DMV [sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) para devolver estadísticas transitorias de planes de presentación XML.  
@@ -56,28 +56,28 @@ Si quiere revisar las novedades de los otros componentes de SQL Server, vea [Nov
 ##  <a name="Feature"></a> SQL Server 2016 RTM
 Esta sección contiene las siguientes subsecciones:
 
--   [Índices de almacén de columnas](#columnstore)
--   [Configuraciones con ámbito de base de datos](#scopedconfiguration)
--   [OLTP en memoria](#InMemory)
--   [Optimizador de consultas](#QueryOptimizer)
--   [Estadísticas de consultas activas](#LiveStats)
--   [Almacén de consultas](#QueryStore)
--   [Tablas temporales](#TT)
--   [Copias de seguridad seccionadas en Microsoft Azure Blob Storage](#StripedBackupToAzure)
--   [Copias de seguridad de instantánea de archivos en Microsoft Azure Blob Storage](#FileSnapshotBackup)
--   [Copia de seguridad administrada](#ManagedBackup)
--   [Base de datos TempDB](#multipleTempDB)
--   [Compatibilidad de JSON integrada](#ForJson)
--   [PolyBase](#bkPolyBase)
--   [Stretch Database](#stretch)
--   [Compatibilidad con UTF-8](#UTF8)
--   [Nuevo tamaño de base de datos predeterminada y valores de crecimiento automático](#DefaultDB)
--   [Mejoras de Transact-SQL](#TSQL)
--   [Mejoras de la vista del sistema](#SystemTable)
--   [Mejoras de seguridad](#Security)
--   [Mejoras de alta disponibilidad](#HighAvailability)
--   [Mejoras en la replicación](#Repl)
--   [Mejoras de las herramientas](#Tools)
+-   [Índices de almacén de columnas](#columnstore-indexes)
+-   [Configuraciones con ámbito de base de datos](#database-scoped-configurations)
+-   [OLTP en memoria](#in-memory-oltp)
+-   [Optimizador de consultas](#query-optimizer)
+-   [Estadísticas de consulta activa](#live-query-statistics)
+-   [Almacén de consultas](#query-store)
+-   [Tablas temporales](#temporal-tables)
+-   [Copias de seguridad seccionadas en Microsoft Azure Blob Storage](#striped-backups-to-microsoft-azure-blob-storage)
+-   [Copias de seguridad de instantánea de archivos en Microsoft Azure Blob Storage](#file-snapshot-backups-to-microsoft-azure-blob-storage)
+-   [Copia de seguridad administrada](#managed-backup)
+-   [Base de datos TempDB](#tempdb-database)
+-   [Compatibilidad de JSON integrada](#built-in-json-support)
+-   [PolyBase](#polybase)
+-   [Stretch Database](#stretch-database)
+-   [Compatibilidad con UTF-8](#support-for-utf-8)
+-   [Nuevo tamaño de base de datos predeterminada y valores de crecimiento automático](#new-default-database-size-and-autogrow-values)
+-   [Mejoras de Transact-SQL](#transact-sql-enhancements)
+-   [Mejoras de la vista del sistema](#system-view-enhancements)
+-   [Mejoras de seguridad](#security-enhancements)
+-   [Mejoras de alta disponibilidad](#high-availability-enhancements)
+-   [Mejoras en la replicación](#replication-enhancements)
+-   [Mejoras de las herramientas](#tools-enhancements)
 
 ## <a name="columnstore-indexes"></a>Índices de almacén de columnas
 
@@ -120,7 +120,7 @@ La nueva instrucción está disponible tanto en [!INCLUDE[ssSQL15](../includes/s
 
 El formato de almacenamiento para tablas con optimización para memoria cambia entre SQL Server 2014 y 2016. Para actualizar y adjuntar o restaurar desde SQL Server 2014, el nuevo formato de almacenamiento se serializa y la base de datos se reinicia una vez durante la recuperación de la misma.
 
-- [Actualizar a SQL Server 2016](../database-engine/install-windows/upgrade-sql-server.md)
+- [Upgrade to SQL Server 2016](../database-engine/install-windows/upgrade-sql-server.md)
 
 
 ### <a name="alter-table-is-log-optimized-and-runs-in-parallel"></a>ALTER TABLE tiene optimización para registro y se ejecuta en paralelo
@@ -206,7 +206,7 @@ Para obtener información general, vea:
 
 - [Seguridad de nivel de fila en tablas con optimización para memoria](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md#rls)
 
-- Las conexiones de [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) ahora pueden tener acceso a tablas con optimización para memoria y a procedimientos almacenados compilados de manera nativa.
+- Las conexiones de [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) ahora pueden tener acceso a tablas optimizadas para memoria y a procedimientos almacenados compilados de manera nativa.
 
 - Compatibilidad del [Cifrado de datos transparente (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md). Si una base de datos está configurada para ENCRYPTION, los archivos del [grupo de archivos con optimización para memoria](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) ahora también se cifran.
 
@@ -385,7 +385,7 @@ La seguridad de nivel de fila presenta el control de acceso basado en predicados
 Con Always Encrypted, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede realizar operaciones sobre datos cifrados y, lo mejor de todo, es que la clave de cifrado reside con la aplicación dentro del entorno de confianza del cliente y no en el servidor. Always Encrypted protege los datos de cliente para que los administradores de base de datos no tengan acceso a los datos de texto sin formato. El cifrado y descifrado de datos se produce sin problemas en el nivel de controlador, lo que minimiza los cambios que se deben realizar en las aplicaciones existentes. Para obtener más información, vea [Always Encrypted &#40;motor de base de datos&#41;](../relational-databases/security/encryption/always-encrypted-database-engine.md).
 
 
-### <a name="dynamic-data-masking"></a>Enmascaramiento de datos dinámicos
+### <a name="dynamic-data-masking"></a>Enmascaramiento dinámico de datos
 El enmascaramiento dinámico de datos limita la exposición de información confidencial ocultándolos a los usuarios sin privilegios. El enmascaramiento dinámico de datos evita el acceso no autorizado a información confidencial permitiendo que los clientes designen la cantidad de información confidencial que se debe revelar, con un impacto mínimo en la capa de aplicación. Se trata de una característica de seguridad basada en directivas que oculta la información confidencial del conjunto de resultados de una consulta de campos designados de una base de datos, sin modificar los datos de esta última. Para obtener más información, vea [Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md).
 
 

@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: b5e86d63ebfc5f842f2df8c090243fb5f311915b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9fd3ee0706e30d6a7077f22488a1f64084b5ae8a
+ms.sourcegitcommit: 258b4aa0d431537323c5ab1307f599615c29df53
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290261"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58797015"
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de la versión de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,8 @@ En este artículo se describen las limitaciones y los problemas de SQL Server 20
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
 - **Problema e impacto en el cliente:**  en la página de permisos de usuario, al conceder permisos al nivel raíz de la vista de árbol de entidades, verá el siguiente error: `"The model permission cannot be saved. The object guid is not valid"`
 
-- **Soluciones alternativas:** 
+- **Solución alternativa:** 
   - Conceda permisos a los subnodos en la vista de árbol en lugar de a nivel de raíz.
-  - o Administrador de configuración de
-  - Ejecute el script descrito en el blog del equipo de MDS sobre el [error al aplicar los permisos en el nivel de entidad](https://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx).
 
 ### <a name="analysis-services"></a>Analysis Services
 - **Problema e impacto en el cliente:** los conectores de datos de los siguientes orígenes aún no están disponibles para los modelos tabulares en el nivel de compatibilidad 1400.

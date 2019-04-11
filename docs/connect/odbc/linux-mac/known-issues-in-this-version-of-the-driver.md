@@ -1,7 +1,7 @@
 ---
-title: Problemas conocidos de esta versión del controlador de SQL Server | Microsoft Docs
+title: Problemas conocidos en esta versión del controlador para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 02/15/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,30 +12,30 @@ helpviewer_keywords:
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15c0402f83dec65b6476d481b77553a037d4fa47
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 504b5264f44109060bff3b6e5e9a6fd4fca448e9
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602035"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042314"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>Problemas conocidos en esta versión del controlador
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-En este artículo contiene una lista de problemas conocidos de Microsoft ODBC Driver 13, 13.1 y 17 para SQL Server en Linux y macOS.
+Este artículo contiene una lista de problemas conocidos de Microsoft ODBC Driver 13, 13.1 y 17 para SQL Server en Linux y macOS.
 
 Se publicarán más problemas en el [blog del equipo de Microsoft ODBC Driver](https://blogs.msdn.com/b/sqlnativeclient/).  
 
-- Windows, Linux y macOS pueden convertir caracteres del área de uso privado (PUA) o caracteres definidos por el usuario final (EUDC) de forma diferente. Las conversiones que se realizan en el servidor de [!INCLUDE[tsql](../../../includes/tsql-md.md)] usan la biblioteca de conversión de Windows. Las conversiones del controlador usar las bibliotecas de conversión de Windows, Linux o macOS. Cada biblioteca puede generar resultados distintos al realizar estas conversiones. Para obtener más información, consulte [End-User-Defined and Private Use Area Characters](/windows/desktop/Intl/end-user-defined-characters) (Caracteres del área de uso privado y definidos por el usuario final).
+- Windows, Linux y macOS pueden convertir caracteres del área de uso privado (PUA) o caracteres definidos por el usuario final (EUDC) de forma diferente. Las conversiones que se realizan en el servidor de [!INCLUDE[tsql](../../../includes/tsql-md.md)] usan la biblioteca de conversión de Windows. Las conversiones del controlador usan las bibliotecas de conversión de Windows, Linux o macOS. Cada biblioteca puede generar resultados distintos al realizar estas conversiones. Para obtener más información, consulte [End-User-Defined and Private Use Area Characters](/windows/desktop/Intl/end-user-defined-characters) (Caracteres del área de uso privado y definidos por el usuario final).
 
-- Si el cliente de codificación es UTF-8, el Administrador de controladores no siempre convierte correctamente de UTF-8 a UTF-16. Actualmente, daños en los datos se producen cuando uno o más caracteres de la cadena no son caracteres de UTF-8 válidos. Caracteres ASCII se asignan correctamente. El administrador de controladores intenta realizar esta conversión al llamar a las versiones de SQLCHAR de la API de ODBC (por ejemplo, SQLDriverConnectA). El Administrador de controladores no intentará realizar esta conversión al llamar a las versiones de SQLWCHAR de la API de ODBC (por ejemplo, SQLDriverConnectW).  
+- Si la codificación del cliente es UTF-8, el administrador de controladores no siempre convierte correctamente de UTF-8 a UTF-16. Actualmente, se producen daños en los datos cuando uno o varios caracteres de la cadena no son caracteres UTF-8 válidos. Los caracteres ASCII se asignan correctamente. El administrador de controladores intenta realizar esta conversión al llamar a las versiones de SQLCHAR de la API de ODBC (por ejemplo, SQLDriverConnectA). El Administrador de controladores no intentará realizar esta conversión al llamar a las versiones de SQLWCHAR de la API de ODBC (por ejemplo, SQLDriverConnectW).  
 
-- El *ColumnSize* parámetro de **SQLBindParameter** hace referencia al número de caracteres en el tipo SQL, mientras que *BufferLength* es el número de bytes en la aplicación búfer. Pero si el tipo de datos de SQL es `varchar(n)` o `char(n)`, la aplicación enlaza el parámetro como SQL_C_CHAR o SQL_C_VARCHAR y la codificación de caracteres del cliente es UTF-8, es posible que obtenga un error "Datos tipo String, se truncarán por la derecha" del controlador, aunque el valor de *ColumnSize* se corresponda con el tamaño del tipo de datos del servidor. Este error se produce porque las conversiones entre las codificaciones de caracteres pueden cambiar la longitud de los datos. Por ejemplo, un apóstrofo derecho de caracteres (2019) está codificado en CP-1252 como el único byte 0 x 92, pero en UTF-8 como secuencia 0xe2 de 3 bytes 0x80 0x99.
+- El parámetro *ColumnSize* de **SQLBindParameter** hace referencia al número de caracteres en el tipo SQL, mientras que *BufferLength* es el número de bytes en el búfer de la aplicación. Pero si el tipo de datos de SQL es `varchar(n)` o `char(n)`, la aplicación enlaza el parámetro como SQL_C_CHAR o SQL_C_VARCHAR y la codificación de caracteres del cliente es UTF-8, es posible que obtenga un error "Datos tipo String, se truncarán por la derecha" del controlador, aunque el valor de *ColumnSize* se corresponda con el tamaño del tipo de datos del servidor. Este error se produce porque las conversiones entre las codificaciones de caracteres pueden cambiar la longitud de los datos. Por ejemplo, un carácter de apóstrofo derecho (U+2019) codificado en CP-1252 como 0x92 de un solo byte, pero en UTF-8 como la secuencia de 3 bytes 0xe2 0x80 0x99.
 
-Por ejemplo, si la codificación es UTF-8 y especifique 1 para ambos *BufferLength* y *ColumnSize* en **SQLBindParameter** para un parámetro out y, a continuación, intenta recuperar el carácter anterior almacenado en un `char(1)` columna en el servidor (mediante CP-1252), el controlador intenta convertirlo a la codificación de UTF-8 de 3 bytes, pero no puede ajustar el resultado en un búfer de 1 byte. En la otra dirección, lo compara *ColumnSize* con el *BufferLength* en **SQLBindParameter** antes de realizar la conversión entre páginas de códigos diferentes en el cliente y servidor. Dado que un parámetro *ColumnSize* con un valor de 1 es inferior a uno *BufferLength* con, por ejemplo, un valor de 3, el controlador generará un error. Para evitar este error, asegúrese de que la longitud de los datos después de conversión se adapta a la columna o el búfer especificado. Tenga en cuenta que *ColumnSize* no puede ser superior a 8000 la `varchar(n)` tipo.
+Por ejemplo, si la codificación es UTF-8 y especifica 1 para *BufferLength* y *ColumnSize* en **SQLBindParameter** para un parámetro de salida, y luego intenta recuperar el carácter anterior almacenado en una columna `char(1)` en el servidor (mediante CP-1252), el controlador intenta convertirlo a la codificación UTF-8 de 3 bytes, pero no puede ajustar el resultado en un búfer de 1 byte. En la otra dirección, el controlador compara *ColumnSize* con *BufferLength* en **SQLBindParameter** antes de realizar la conversión entre las diferentes páginas de códigos del cliente y el servidor. Dado que un parámetro *ColumnSize* con un valor de 1 es inferior a uno *BufferLength* con, por ejemplo, un valor de 3, el controlador generará un error. Para evitar este error, asegúrese de que la longitud de los datos después de la conversión se ajuste a la columna o al búfer especificados. El parámetro*ColumnSize* no puede ser superior a 8000 para el tipo `varchar(n)`.
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Instrucciones de programación](../../../connect/odbc/linux-mac/programming-guidelines.md)  
-[Notas de la versión](../../../connect/odbc/linux-mac/release-notes.md)  
+[Notas de la versión](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  
 

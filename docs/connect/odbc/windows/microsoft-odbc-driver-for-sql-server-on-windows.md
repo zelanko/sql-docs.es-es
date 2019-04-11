@@ -11,17 +11,17 @@ ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9edff1e2afead8dcec3a23fa2d89c4eb8c6a1ef2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 059c949b11c0cd571fdf3c6ff2575476c477ef04
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602855"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788082"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server en Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Los controladores ODBC de Microsoft para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] son controladores ODBC independientes que proporcionan una interfaz de programación de aplicaciones (API) que implementa las interfaces ODBC estándar a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+Los controladores ODBC de Microsoft para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] son controladores ODBC independientes que proporcionan una interfaz de programación de aplicaciones (API) que implementa las interfaces ODBC estándar en Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 Microsoft ODBC Driver for SQL Server puede usarse para crear nuevas aplicaciones. También se pueden actualizar las aplicaciones más antiguas que usen actualmente un controlador ODBC anterior. ODBC Driver for SQL Server admite conexiones a Azure SQL Database, Azure SQL Data Warehouse, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 y SQL Server 2005.  
 
@@ -29,15 +29,15 @@ Microsoft ODBC Driver for SQL Server puede usarse para crear nuevas aplicaciones
 
 | Versión       | Características admitidas      |
 | ------------- |---------------| 
-| Microsoft ODBC Driver 17 for SQL Server | <ul><li>Compatibilidad con Always Encrypted para BCP API</li><li>Nuevo atributo de cadena de conexión UseFMTONLY hace que el controlador usar los metadatos heredados en casos especiales que requieren las tablas temporales</li>
+| Microsoft ODBC Driver 17 for SQL Server | <ul><li>Compatibilidad con Always Encrypted para la API de BCP</li><li>El nuevo atributo de cadena de conexión UseFMTONLY hace que el controlador use metadatos heredados en casos especiales que requieren tablas temporales</li>
 | Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Always Encrypted</li><li>Autenticación de Azure AD</li><li>Grupos de disponibilidad (AG) AlwaysOn</li></ul>   | 
 | Microsoft ODBC Driver 13 for SQL Server      | <ul><li>Nombre de dominio internacionalizado (IDN)</li></ul> |
 | Controlador ODBC 11 de Microsoft para SQL Server | <ul><li>Agrupación de conexiones dependientes del controlador</li><li>Resistencia de conexión</li><li>Ejecución asincrónica (método de sondeo)</li></ul> |    
 
 ## <a name="documentation"></a>Documentación  
-Estos son los temas que trata esta documentación sobre Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
+Estos son los temas que trata esta documentación sobre Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
--   [Notas de la versión](../../../connect/odbc/windows/release-notes.md)  
+-   [Notas de la versión de ODBC para SQL Server en Windows](../../../connect/odbc/windows/release-notes-odbc-sql-server-windows.md)  
 -   [Características de Microsoft ODBC Driver for SQL Server en Windows](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  
 -   [Requisitos del sistema, instalación y archivos del controlador](../../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)  
 -   [Agrupación de conexiones dependientes del controlador ODBC para SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)  
@@ -51,7 +51,7 @@ Estos son los temas que trata esta documentación sobre Microsoft ODBC Driver fo
 - [Blog del equipo de Microsoft ODBC Driver for SQL Server](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
 - [Foro para el acceso a los datos de SQL Server](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 - [Sobre SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
 - [Generar aplicaciones con SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
 - [Preguntas más frecuentes de SQL Server Native Client](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   

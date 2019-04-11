@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 624d00d0c9cd27acbaa00fefa52f6880c7a69916
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: f5f5a449fc3bf87ce6999f424957466bae49ee38
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400591"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872235"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de informes de Reporting Services
 
@@ -25,7 +25,7 @@ Obtenga información sobre la parte central de una instalación de [!INCLUDE[ssN
 > [!NOTE]
 > La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
 
-Un servidor de informes de Reporting Services se ejecuta en uno de dos modos de implementación: modo nativo o modo de SharePoint. Consulte la sección [Comparación de características de SharePoint en modo nativo](#bkmk_featuresupport) para obtener una comparación de las características.  
+Un servidor de informes de Reporting Services se ejecuta en uno de dos modos de implementación: modo nativo o modo de SharePoint. Consulte la sección [Comparación de características de SharePoint en modo nativo](#feature-comparison-of-sharepoint-and-native-mode) para obtener una comparación de las características.  
   
  **Instalación:** para obtener información sobre la instalación de Reporting Services, vea [Instalar Reporting Services](../install-windows/install-reporting-services.md).
 
@@ -54,16 +54,16 @@ Un servidor de informes de Reporting Services se ejecuta en uno de dos modos de 
 |**Administrador de configuración**|Sí|**\*\* Importante \*\*** El Administrador de configuración no se puede usar para administrar un servidor de informes en modo de SharePoint. En su lugar, utilice Administración central de SharePoint.|  
 |**Administrador de informes**|Sí|El Administrador de informes no se puede usar para administrar el modo de SharePoint. Use las páginas de aplicación de SharePoint. Para más información, vea [Aplicaciones de servicio y servicio de SharePoint de Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Informes vinculados**|Sí|No.|  
-|**Mis informes**|Sí|no|  
-|**Mis suscripciones** y métodos de procesamiento por lotes.|Sí|no|  
-|**Alertas de datos**|no|Sí|  
-|**Power View**|no|Sí<br /><br /> Requiere Silverlight en el explorador cliente. Para más información sobre los requisitos del explorador, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
+|**Mis informes**|Sí|No|  
+|**Mis suscripciones** y métodos de procesamiento por lotes.|Sí|No|  
+|**Alertas de datos**|No|Sí|  
+|**Power View**|No|Sí<br /><br /> Requiere Silverlight en el explorador cliente. Para más información sobre los requisitos del explorador, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
 |**Informes .RDL**|Sí|Sí<br /><br /> Los informes .RDL se pueden ejecutar en servidores de informes de Reporting Services en modo nativo o en modo de SharePoint.|  
-|**Informes .RDLX**|no|Sí<br /><br /> Los informes .RDLX de Power View solo se pueden ejecutar en servidores de informes de Reporting Services en modo de SharePoint.|  
-|**Credenciales de token de usuario de SharePoint para la extensión de lista de SharePoint**|no|Sí|  
-|**Zonas de AAM para implementaciones con conexión a Internet**|no|Sí|  
-|**Copias de seguridad y recuperación de SharePoint**|no|Sí|  
-|**Compatibilidad con registros de ULS**|no|Sí|  
+|**Informes .RDLX**|No|Sí<br /><br /> Los informes .RDLX de Power View solo se pueden ejecutar en servidores de informes de Reporting Services en modo de SharePoint.|  
+|**Credenciales de token de usuario de SharePoint para la extensión de lista de SharePoint**|No|Sí|  
+|**Zonas de AAM para implementaciones con conexión a Internet**|No|Sí|  
+|**Copias de seguridad y recuperación de SharePoint**|No|Sí|  
+|**Compatibilidad con registros de ULS**|No|Sí|  
   
 ## <a name="native-mode"></a>en modo nativo
 
@@ -87,7 +87,7 @@ Un servidor de informes de Reporting Services se ejecuta en uno de dos modos de 
   
  El modo de SharePoint requiere:  
   
--   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] o bien [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
+-   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
 -   Una versión adecuada del Complemento de Reporting Services para productos de SharePoint 2010.  
   
@@ -155,4 +155,4 @@ Un servidor de informes de Reporting Services se ejecuta en uno de dos modos de 
 [Implementar una extensión de procesamiento de datos](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
 [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services.](https://go.microsoft.com/fwlink/?LinkId=620231)

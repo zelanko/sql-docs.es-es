@@ -1,7 +1,7 @@
 ---
 title: Microsoft ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/04/2019
+ms.date: 02/05/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,30 +11,30 @@ ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4a6c86f3097efdc30089820432fedcb0ab530e04
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: e991ad5b1b88798604f4c8ba6486af3d739c96c1
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662619"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041884"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Controlador ODBC de Microsoft para SQL Server
 
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-ODBC es la API de acceso de datos nativos principal para aplicaciones escritas en C y C++ para SQL Server. Hay un controlador ODBC para la mayoría de los orígenes de datos. Otros lenguajes que pueden usar ODBC incluyen COBOL, Perl, PHP y Python. ODBC se usa ampliamente en escenarios de integración de datos.
+ODBC es la API nativa y principal de acceso a datos de las aplicaciones escritas en C y C++ para SQL Server. Hay disponible un controlador ODBC para la mayoría de los orígenes de datos. Otros lenguajes que pueden usar ODBC incluyen COBOL, Perl, PHP y Python. ODBC se usa ampliamente en escenarios de integración de datos.
 
 El controlador ODBC incluye herramientas como [**sqlcmd**](../../tools/sqlcmd-utility.md) y [**bcp**](../../tools/bcp-utility.md). La utilidad **sqlcmd** permite ejecutar instrucciones Transact-SQL, procedimientos del sistema y scripts SQL. La utilidad **bcp** copia datos de forma masiva entre una instancia de Microsoft SQL Server y un archivo de datos en el formato que especifique el usuario. Puede usar **bcp** para importar muchas filas nuevas en tablas de SQL Server o exportar datos de tablas a archivos de datos.  
 
-## <a name="code-example-in-c"></a>Ejemplo de código de C++
+## <a name="code-example-in-c"></a>Ejemplo de código en C++
 
-El siguiente ejemplo de C++ muestra cómo usar las API de ODBC para conectarse y tener acceso a una base de datos:
+El siguiente ejemplo de C++ muestra cómo usar las API de ODBC para conectarse y acceder a una base de datos:
 
 - [Ejemplo de código de C++, con ODBC](../../odbc/reference/sample-odbc-program.md)
 
 ## <a name="download"></a>Descargar
 
-- ![En círculo la flecha abajo de descarga](../../ssdt/media/download.png)[para descargar el controlador ODBC](download-odbc-driver-for-sql-server.md)
+- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[Para descargar un controlador ODBC](download-odbc-driver-for-sql-server.md)
 
 ## <a name="documentation"></a>Documentación
 
@@ -42,7 +42,7 @@ El siguiente ejemplo de C++ muestra cómo usar las API de ODBC para conectarse y
 
 - [Proveedores de almacén de claves personalizados](../../connect/odbc/custom-keystore-providers.md)
 - [Atributos y palabras clave de cadena de conexión y DSN](dsn-connection-string-attribute.md)
-- [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (las características disponibles también se aplican, sin OLEDB para el controlador ODBC para SQL Server)
+- [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (las características disponibles también se aplican, sin OLEDB, al controlador ODBC para SQL Server)
 - [Uso de Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 - [Uso de Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
 - [Uso de resolución de IP de red transparente](../../connect/odbc/using-transparent-network-ip-resolution.md)
@@ -51,7 +51,7 @@ El siguiente ejemplo de C++ muestra cómo usar las API de ODBC para conectarse y
 ### <a name="linux-and-macos"></a>Linux y macOS
 
 - [Instalación del controlador](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [Conexión a SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
+- [Conectarse a SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [Conexión con **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [Conexión con **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
 - [Seguimiento de acceso a datos](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
@@ -59,7 +59,7 @@ El siguiente ejemplo de C++ muestra cómo usar las API de ODBC para conectarse y
 - [Instalación del Administrador de controladores](../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 - [Problemas conocidos](../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 - [Instrucciones de programación](../../connect/odbc/linux-mac/programming-guidelines.md)
-- [Notas de la versión](../../connect/odbc/linux-mac/release-notes.md)
+- [Notas de la versión](../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
 - [Soporte para alta disponibilidad y recuperación ante desastres](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 - [Uso de la autenticación integrada (Kerberos)](../../connect/odbc/linux-mac/using-integrated-authentication.md)
 
@@ -69,7 +69,7 @@ El siguiente ejemplo de C++ muestra cómo usar las API de ODBC para conectarse y
 - [Resistencia de conexión en el controlador Windows ODBC](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
 - [Agrupación de conexiones dependientes del controlador](../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
 - [Características y cambios de comportamiento](../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
-- [Notas de la versión](../../connect/odbc/windows/release-notes.md)
+- [Notas de la versión de ODBC a SQL Server en Windows](windows/release-notes-odbc-sql-server-windows.md)
 - [Requisitos del sistema, instalación y archivos del controlador](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
 

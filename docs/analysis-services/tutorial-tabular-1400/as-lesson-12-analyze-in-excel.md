@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685433"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476721"
 ---
 # <a name="analyze-in-excel"></a>Analizar en Excel
 
@@ -33,7 +33,7 @@ En este artículo forma parte de un tutorial de modelado tabular, que se debe co
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Examinar utilizando las perspectivas Predeterminada y Venta por Internet  
 
-En estas primeras tareas, examinar el modelo utilizando tanto la perspectiva predeterminada, que incluye todos los objetos del modelo, y también mediante el uso de la perspectiva venta por Internet que anteriormente. La perspectiva Venta por Internet excluye el objeto de tabla Cliente.  
+En estas primeras tareas, examinar el modelo utilizando tanto la perspectiva predeterminada, que incluye todos los objetos del modelo, y también mediante el uso de la perspectiva venta por Internet que creó anteriormente. La perspectiva Venta por Internet excluye el objeto de tabla Cliente.  
   
 #### <a name="to-browse-by-using-the-default-perspective"></a>Para examinar con la perspectiva predeterminada  
   

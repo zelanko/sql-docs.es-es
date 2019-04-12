@@ -1,5 +1,5 @@
 ---
-title: Sys.user_token (Transact-SQL) | Microsoft Docs
+title: sys.user_token (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,28 +24,28 @@ ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 806675392484e7d9d23d9432b336f6367d04bd1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a120fe3802235ff0d5548693d9bf7f4638ef5e42
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770143"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506492"
 ---
 # <a name="sysusertoken-transact-sql"></a>sys.user_token (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Devuelve una fila por cada entidad de seguridad de base de datos que forma parte del token del usuario en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**principal_id**|**int**|Id. de la entidad de seguridad. El valor es único en la base de datos.|  
-|**SID**|**varbinary(85)**|Identificador de seguridad de la entidad de seguridad si ésta está definida como externa a la base de datos. Por ejemplo, puede ser un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un inicio de sesión de Windows, un inicio de sesión del grupo de Windows o un inicio de sesión asignado a un certificado; de lo contrario, este valor es NULL.|  
-|**Nombre**|**nvarchar (128)**|Nombre de la entidad de seguridad. El valor es único en la base de datos.|  
+|**principal_id**|**INT**|Id. de la entidad de seguridad. El valor es único en la base de datos.|  
+|**sid**|**varbinary(85)**|Identificador de seguridad de la entidad de seguridad si ésta está definida como externa a la base de datos. Por ejemplo, puede ser un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un inicio de sesión de Windows, un inicio de sesión del grupo de Windows o un inicio de sesión asignado a un certificado; de lo contrario, este valor es NULL.|  
+|**NAME**|**nvarchar (128)**|Nombre de la entidad de seguridad. El valor es único en la base de datos.|  
 |**Tipo**|**nvarchar (128)**|Descripción del tipo de entidad de seguridad. Todos los tipos se asignan a **sid**. El valor puede ser uno de los siguientes:<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> ROL DE BASE DE DATOS<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
-|**Uso de**|**nvarchar (128)**|Indica que la entidad de seguridad participa en la evaluación de los permisos GRANT o DENY o sirve como autenticador.<br /><br /> Este valor puede ser uno de los siguientes:<br /><br /> GRANT o DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
+|**usage**|**nvarchar (128)**|Indica que la entidad de seguridad participa en la evaluación de los permisos GRANT o DENY o sirve como autenticador.<br /><br /> Este valor puede ser uno de los siguientes:<br /><br /> GRANT o DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
   
 ## <a name="see-also"></a>Vea también  
- [Sys.login_token &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-login-token-transact-sql.md)   
+ [sys.login_token &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-login-token-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  

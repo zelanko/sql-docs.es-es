@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e95110bdbbfbe0f5ca6ff453045cc4f759163036
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c8f202dd4f383d1ed2186e589b275afc0049fb50
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973684"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542215"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +37,20 @@ ms.locfileid: "57973684"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-sp_filestream_force_garbage_collection  
-    [ @dbname = ]  'database_name',  
-    [ @filename = ] 'logical_file_name' ]  
+sp_filestream_force_garbage_collection
+    [ @dbname = ]  'database_name'
+    [ , [ @filename = ] 'logical_file_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **@dbname** = *database_name* indica el nombre de la base de datos para ejecutar el recolector de elementos no utilizados.  
+ `[ @dbname = ]  'database_name'`  
+ Indica el nombre de la base de datos en la que se debe ejecutar el recolector de elementos no utilizados.  
   
 > [!NOTE]  
->  *dbname* es **sysname**. Si no se especifica, se supone que es la base de datos actual.  
+> `@dbname` es **sysname**. Si no se especifica, se supone que es la base de datos actual.  
   
- **@filename** = *logical_file_name*  
- Especifica el nombre lógico del contenedor de FILESTREAM en el que se va a ejecutar el recolector de elementos no utilizados. **@filename** es opcional. Si no se especifica ningún nombre de archivo lógico, el recolector de elementos no utilizados limpia todos los contenedores FILESTREAM en la base de datos especificado.  
+ `[ @filename = ] 'logical_file_name'`  
+ Especifica el nombre lógico del contenedor de FILESTREAM en el que se va a ejecutar el recolector de elementos no utilizados. `@filename` es opcional. Si no se especifica ningún nombre de archivo lógico, el recolector de elementos no utilizados limpia todos los contenedores FILESTREAM en la base de datos especificado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
   

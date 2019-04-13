@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 13bd39a2d5334c2d343fdbc6c77a697a5d6a8403
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626325"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516611"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Implementar un contenedor de SQL Server en Kubernetes con Azure Kubernetes Services (AKS)
 
@@ -155,7 +155,7 @@ Configurar un [volumen persistente](https://kubernetes.io/docs/concepts/storage/
 
 En este ejemplo, el contenedor que hospeda la instancia de SQL Server se describe como un objeto de implementación de Kubernetes. La implementación crea un conjunto de réplicas. El conjunto de réplicas, crea el pod. 
 
-En este paso, creará un manifiesto para describir el contenedor en función del servidor SQL [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) imagen de Docker. Las referencias de manifiesto la `mssql-server` notificación de volumen persistente y el `mssql` secreto que ya ha aplicado al clúster de Kubernetes. El manifiesto también describe una [servicio](https://kubernetes.io/docs/concepts/services-networking/service/). Este servicio es un equilibrador de carga. El equilibrador de carga garantiza que la dirección IP se conserve después de que se recupera la instancia de SQL Server. 
+En este paso, creará un manifiesto para describir el contenedor en función del servidor SQL [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) imagen de Docker. Las referencias de manifiesto la `mssql-server` notificación de volumen persistente y el `mssql` secreto que ya ha aplicado al clúster de Kubernetes. El manifiesto también describe una [servicio](https://kubernetes.io/docs/concepts/services-networking/service/). Este servicio es un equilibrador de carga. El equilibrador de carga garantiza que la dirección IP se conserve después de que se recupera la instancia de SQL Server. 
 
 1. Cree un manifiesto (un archivo YAML) para describir la implementación. El ejemplo siguiente describe una implementación, incluido un contenedor en función de la imagen de contenedor de SQL Server.
 
@@ -253,7 +253,7 @@ En este paso, creará un manifiesto para describir el contenedor en función del
    En la imagen anterior, el pod tiene un estado de `Running`. Este estado indica que el contenedor está listo. Esto puede tardar varios minutos.
 
    >[!NOTE]
-   >Una vez creada la implementación, puede tardar unos minutos antes de que está visible el pod. El retraso sea porque el clúster extrae la [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) imagen desde Docker hub. Después de la imagen se extrae la primera vez, las implementaciones posteriores pueden ser más rápidas si la implementación es en un nodo que ya tiene la imagen almacenada en ella. 
+   >Una vez creada la implementación, puede tardar unos minutos antes de que está visible el pod. El retraso sea porque el clúster extrae la [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) imagen desde Docker hub. Después de la imagen se extrae la primera vez, las implementaciones posteriores pueden ser más rápidas si la implementación es en un nodo que ya tiene la imagen almacenada en ella. 
 
 1. Compruebe que se ejecutan los servicios. Ejecute el siguiente comando:
 

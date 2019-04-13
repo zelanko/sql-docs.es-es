@@ -18,12 +18,12 @@ ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 51bc927dc252eb700825dac6e865e8932586cd07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838113"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542195"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,30 +35,29 @@ ms.locfileid: "47838113"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'   
-     [ , [ @useself = ] 'TRUE' | 'FALSE' | NULL ]   
+     [ , [ @useself = ] { 'TRUE' | 'FALSE' | NULL } ]   
      [ , [ @locallogin = ] 'locallogin' ]   
      [ , [ @rmtuser = ] 'rmtuser' ]   
      [ , [ @rmtpassword = ] 'rmtpassword' ]   
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @rmtsrvname **=** ] **'***rmtsrvname***'**  
+ `[ @rmtsrvname = ] 'rmtsrvname'`  
  Es el nombre de un servidor vinculado al que se aplica la asignación de inicio de sesión. *rmtsrvname* es **sysname**, no tiene ningún valor predeterminado.  
   
- [ @useself **=** ] **'** TRUE **'** | 'FALSE' | 'NULL'  
+ `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
  Determina si se debe conectar a *rmtsrvname* por suplantación de inicios de sesión locales o enviando explícitamente un inicio de sesión y una contraseña. El tipo de datos es **varchar (** 8 **)**, su valor predeterminado es true.  
   
  Un valor TRUE especifica que los inicios de sesión utilizan sus propias credenciales para conectarse a *rmtsrvname*, con el *rmtuser* y *rmtpassword* argumentos que se pasan por alto. FALSE especifica que el *rmtuser* y *rmtpassword* argumentos que se usan para conectarse a *rmtsrvname* especificado *locallogin* . Si *rmtuser* y *rmtpassword* también está establecido en NULL, ningún inicio de sesión o la contraseña se utiliza para conectarse al servidor vinculado.  
   
- [ @locallogin **=** ] **'***locallogin***'**  
+ `[ @locallogin = ] 'locallogin'`  
  Es un inicio de sesión en el servidor local. *locallogin* es **sysname**, su valor predeterminado es null. NULL especifica que esta entrada se aplica a todos los inicios de sesión locales que se conectan a *rmtsrvname*. Si no es NULL, *locallogin* puede ser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión o un inicio de sesión de Windows. El inicio de sesión de Windows debe disponer de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ya sea directamente o en calidad de miembro de un grupo de Windows al que se ha concedido acceso.  
   
- [ @rmtuser **=** ] **'***rmtuser***'**  
+ `[ @rmtuser = ] 'rmtuser'`  
  Es el inicio de sesión remoto utilizado para conectarse a *rmtsrvname* cuando @useself es FALSE. Cuando el servidor remoto es una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no utiliza la autenticación de Windows, *rmtuser* es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión. *rmtuser* es **sysname**, su valor predeterminado es null.  
   
- [ @rmtpassword **=** ] **'***rmtpassword***'**  
+ `[ @rmtpassword = ] 'rmtpassword'`  
  Es la contraseña asociada *rmtuser*. *rmtpassword* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -108,7 +107,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'true';
 > [!NOTE]  
 >  Si hay asignaciones explícitas creadas para inicios de sesión individuales, éstas tienen prioridad sobre cualquier asignación global que exista para ese servidor vinculado.  
   
-### <a name="b-connecting-a-specific-login-to-the-linked-server-by-using-different-user-credentials"></a>B. Conectar un inicio de sesión específico al servidor vinculado mediante credenciales de usuario distintas  
+### <a name="b-connecting-a-specific-login-to-the-linked-server-by-using-different-user-credentials"></a>b. Conectar un inicio de sesión específico al servidor vinculado mediante credenciales de usuario distintas  
  En el ejemplo siguiente se crea una asignación para asegurar que solo el usuario de Windows `Domain\Mary` se conecta a través del servidor vinculado `Accounts` mediante el inicio de sesión `MaryP` y la contraseña `d89q3w4u`.  
   
 ```  

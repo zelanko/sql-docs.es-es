@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9a9a3d18f1850b563882a2303db8dd28b2916ac4
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205754"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542235"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Crear y configurar un grupo de disponibilidad para SQL Server en Linux
 
@@ -243,7 +243,7 @@ En este ejemplo creará certificados para una configuración de tres nodos. Los 
     GO
     ```
     
-10.  Restaurar LinAGN1_Cert y LinAGN3_Cert en LinAGN2. 
+10. Restaurar LinAGN1_Cert y LinAGN3_Cert en LinAGN2.
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -257,8 +257,9 @@ En este ejemplo creará certificados para una configuración de tres nodos. Los 
     FROM FILE = '/var/opt/mssql/data/LinAGN3_Cert.cer';
     
     GO
+    ```
     
-11.  Grant the logins associated with LinAG1 and LinAGN3 permission to connect to the endpoint on LinAGN2.
+11. Conceder a los inicios de sesión asociados con LinAG1 y LinAGN3 permiso para conectarse al punto de conexión en LinAGN2.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -270,7 +271,7 @@ En este ejemplo creará certificados para una configuración de tres nodos. Los 
     GO
     ```
     
-12.  Cree los inicios de sesión de nivel de instancia y los usuarios asociados con LinAGN1 y LinAGN2 en LinAGN3.
+12. Cree los inicios de sesión de nivel de instancia y los usuarios asociados con LinAGN1 y LinAGN2 en LinAGN3.
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -284,7 +285,7 @@ En este ejemplo creará certificados para una configuración de tres nodos. Los 
     GO
     ```
     
-13.  Restaurar LinAGN1_Cert y LinAGN2_Cert en LinAGN3. 
+13. Restaurar LinAGN1_Cert y LinAGN2_Cert en LinAGN3. 
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -298,8 +299,9 @@ En este ejemplo creará certificados para una configuración de tres nodos. Los 
     FROM FILE = '/var/opt/mssql/data/LinAGN2_Cert.cer';
     
     GO
+    ```
     
-14.  Grant the logins associated with LinAG1 and LinAGN2 permission to connect to the endpoint on LinAGN3.
+14. Conceder a los inicios de sesión asociados con LinAG1 y LinAGN2 permiso para conectarse al punto de conexión en LinAGN3.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -369,7 +371,7 @@ En esta sección se muestra cómo crear un grupo de disponibilidad con un tipo d
 
 16. Una vez completada la creación del grupo de disponibilidad, haga clic en **cerrar** en los resultados. Ahora puede ver el grupo de disponibilidad en las réplicas en las vistas de administración dinámica, así como en la carpeta de alta disponibilidad de AlwaysOn en SSMS.
 
-### <a name="use-transact-sql"></a>Usar Transact-SQL
+### <a name="use-transact-sql"></a>Uso de Transact-SQL
 
 En esta sección se muestra ejemplos de creación de un grupo de disponibilidad mediante Transact-SQL. El agente de escucha y el enrutamiento de solo lectura se pueden configurar una vez creado el grupo de disponibilidad. Se puede modificar el grupo de disponibilidad con `ALTER AVAILABILITY GROUP`, pero cambiar el tipo de clúster no puede realizarse [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Si no tenía la intención crear un grupo de disponibilidad con un tipo de clúster externo, debe eliminarlo y volver a crearlo con un tipo de clúster ninguno. Obtener más información y otras opciones se pueden encontrar en los vínculos siguientes:
 
@@ -416,7 +418,7 @@ En este ejemplo se muestra cómo crear un grupo de disponibilidad de dos réplic
     GO
     ```
     
-3.  En una ventana de consulta conectada a la réplica de solo configuración, debe unirla al grupo de disponibilidad.
+3. En una ventana de consulta conectada a la réplica de solo configuración, debe unirla al grupo de disponibilidad.
     
    ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -539,7 +541,7 @@ Un clúster de alta disponibilidad de Pacemaker subyacente [!INCLUDE[ssnoversion
 1.  En una ventana de consulta conectada a la primera réplica, ejecute lo siguiente:
 
     ```SQL
-    CREATE LOGIN PMLogin WITH PASSWORD '<StrongPassword>';
+    CREATE LOGIN PMLogin WITH PASSWORD ='<StrongPassword>';
     
     GO
     

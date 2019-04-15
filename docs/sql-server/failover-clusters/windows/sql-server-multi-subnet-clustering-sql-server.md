@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39030ba95129160680782eeb88e3b4c99da622e7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: faa34ef2e1b38fe13f487574ba95d0ad015b08a4
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407882"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516591"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Agrupación en clústeres de varias subredes de SQL Server (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52407882"
 ##  <a name="VisualElement"></a> Clúster de conmutación por error de múltiples subredes de SQL Server (dos nodos, dos subredes)  
  La ilustración siguiente representa una instancia de clúster de conmutación por error (FCI) con dos nodos y dos subredes en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- ![Arquitectura de múltiples subredes con MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Arquitectura de múltiples subredes con MultiSubnetFailover")  
+ ![Arquitectura de múltiples subredes con MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Arquitectura de múltiples subredes con MultiSubnetFailover")  
   
   
 ##  <a name="Configurations"></a> Configuraciones de instancias de clúster de conmutación por error de múltiples subredes.  
@@ -50,7 +50,7 @@ ms.locfileid: "52407882"
 ##  <a name="ComponentsAndConcepts"></a> Consideraciones de recursos de dirección IP  
  En una configuración de clúster de conmutación por error de múltiples subredes, no todos los nodos clúster de conmutación por error poseen las direcciones IP y puede que no todos estén con conexión durante el inicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], se puede establecer la dependencia de recurso de dirección IP en **OR**. Esto permite que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esté con conexión cuando hay al menos una dirección IP válida a la que se puede enlazar.  
   
-> **NOTA:** En las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], se usaba una tecnología de V-LAN elástica en las configuraciones de clúster de varios sitios para exponer una sola dirección IP para la conmutación por error entre sitios. Con la nueva capacidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para agrupar los nodos de clúster entre diferentes subredes, ahora se pueden configurar los clústeres de conmutación por error [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entre varios sitios sin necesidad de implementar la tecnología de V-LAN elástica.  
+> **NOTA:** En las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], se utilizaba una tecnología de V-LAN elástica en las configuraciones de clúster de varios sitios para exponer una sola dirección IP para la conmutación por error entre sitios. Con la nueva capacidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para agrupar los nodos de clúster entre diferentes subredes, ahora se pueden configurar los clústeres de conmutación por error [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entre varios sitios sin necesidad de implementar la tecnología de V-LAN elástica.  
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>Consideraciones acerca de la dependencia OR del recurso de dirección IP  
  Es conveniente considerar el siguiente comportamiento de la conmutación por error si se establece en **OR**la dependencia de recurso de dirección IP:  

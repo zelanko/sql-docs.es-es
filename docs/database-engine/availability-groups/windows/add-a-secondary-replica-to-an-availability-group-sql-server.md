@@ -2,7 +2,7 @@
 title: Adición de una réplica secundaria a un grupo de disponibilidad
 description: Obtenga información sobre cómo agregar una réplica secundaria a un grupo de disponibilidad Always On mediante Transact-SQL (T-SQL), PowerShell o el Asistente para grupo de disponibilidad de SQL Server Management Studio (SSMS).
 ms.custom: seodec18
-ms.date: 05/17/2016
+ms.date: 05/18/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -14,12 +14,12 @@ ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ffebb3bc39d15f52aeda8e2deed54c49e011df4e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 423d9370285d3b5e7df89ee8cecb6d539b16eb47
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213014"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241863"
 ---
 # <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>Adición de una réplica secundaria a un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +31,15 @@ ms.locfileid: "53213014"
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal.  
   
  Para obtener más información, vea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
-  
+
 ##  <a name="Security"></a> Seguridad  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
-  
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+
+[!INCLUDE[Freshness](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para agregar una réplica**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  
@@ -103,7 +105,7 @@ ms.locfileid: "53213014"
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de agregar una réplica secundaria  
  Para agregar una réplica para un grupo de disponibilidad existente, debe realizar los pasos siguientes:  
@@ -137,7 +139,7 @@ ms.locfileid: "53213014"
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
- [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [Usar el Panel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

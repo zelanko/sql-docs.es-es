@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 1714cc67cae1d8f2b49117891fa5a5b060f14415
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191055"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533353"
 ---
 # <a name="create-indexed-views"></a>Crear vistas indizadas
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "52191055"
 > <sup>1</sup> Como las operaciones UPDATE, DELETE o INSERT.   
   
 ###  <a name="Restrictions"></a> Opciones SET requeridas para vistas indizadas  
-La evaluación de la misma expresión puede producir resultados diferentes en el [!INCLUDE[ssDE](../../includes/ssde-md.md)] cuando hay diferentes opciones SET activas cuando se ejecuta la consulta. Por ejemplo, después de establecer la opción SET `CONCAT_NULL_YIELDS_NULL` en ON, la expresión `'abc' + NULL` devuelve el valor NULL `NULL`, aunque al establecer `CONCAT_NULL_YIEDS_NULL` en OFF, la misma expresión genera `'abc'`.  
+La evaluación de la misma expresión puede producir resultados diferentes en el [!INCLUDE[ssDE](../../includes/ssde-md.md)] cuando hay diferentes opciones SET activas cuando se ejecuta la consulta. Por ejemplo, después de establecer la opción SET `CONCAT_NULL_YIELDS_NULL` en ON, la expresión `'abc' + NULL` devuelve el valor NULL `NULL`, aunque al establecer `CONCAT_NULL_YIELDS_NULL` en OFF, la misma expresión genera `'abc'`.  
   
 Para asegurar el correcto mantenimiento de las vistas y la generación de resultados coherentes, las vistas indizadas requieren valores fijos para varias opciones SET. Las opciones SET de la tabla siguiente se deben establecer en los valores que se muestran en la columna **Valor requerido** siempre que se den las siguientes condiciones:  
   
@@ -155,12 +155,12 @@ Al ejecutar DML (como `UPDATE`, `DELETE` or `INSERT`) en una tabla a la que hace
   
  Los índices de las tablas y las vistas se pueden deshabilitar. Cuando se deshabilita un índice clúster de una tabla, también se deshabilitan los índices de las vistas asociadas a la tabla.  
  
-<a name="nondeterministic"></a> Las expresiones que implican la conversión implícita de cadenas de caracteres a **datetime** o **smalldatetime** se consideran no deterministas. Para obtener más información, vea [Nondeterministic conversion of literal date strings into DATE values](../../t-sql/data-types/nondeterministic-convert-date-literals.md) (Conversión no determinista de las cadenas de fecha literales en valores DATE).
+<a name="nondeterministic"></a> Las expresiones que implican la conversión implícita de cadenas de caracteres a **datetime** o **smalldatetime** se consideran no deterministas. Para obtener más información, vea [Conversión no determinista de las cadenas de fecha literales en valores DATE](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
 
 
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Se necesita el permiso **CREATE VIEW** en la base de datos y el permiso **ALTER** en el esquema en que se crea la vista.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
@@ -222,7 +222,7 @@ Al ejecutar DML (como `UPDATE`, `DELETE` or `INSERT`) en una tabla a la que hace
   
 Para obtener más información, vea [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   

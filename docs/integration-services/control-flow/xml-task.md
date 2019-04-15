@@ -17,12 +17,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a399ee84e84f0c85e057b8eaf6294548e18f75ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 84711a5bdef0ce13f640b26b3973860b9b5a6f48
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290571"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291555"
 ---
 # <a name="xml-task"></a>Tarea XML
   La tarea XML se usa para trabajar con datos XML. Mediante esta tarea, un paquete puede recuperar documentos XML, aplicar operaciones a los documentos mediante las hojas de estilos Extensible Stylesheet Language Transformations (XSLT) y expresiones XPath, combinar varios documentos, o bien validar, comparar y guardar los documentos actualizados en archivos y variables.  
@@ -121,7 +121,7 @@ ms.locfileid: "58290571"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Validar XML con la tarea XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [Página Expresiones](../../integration-services/expressions/expressions-page.md)  
   
@@ -530,9 +530,7 @@ ms.locfileid: "58290571"
  **Temas relacionados**: [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>Contenido relacionado  
-  
--   Entrada del blog sobre el [Componente script de destino XML](https://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/), en agilebi.com  
-  
+
 -   Ejemplo en CodePlex, [ejemplo de proceso de paquete de datos XML](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), en www.codeplex.com  
   
   

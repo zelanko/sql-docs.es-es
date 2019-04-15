@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 729464b51af6c9450f9166bd9a3c51d35541810f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 21f9be84c86e2991a600dc340347c4ca89f519e9
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801920"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533343"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Crear una copia de seguridad completa de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +54,12 @@ ms.locfileid: "56801920"
   
  A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] las opciones **PASSWORD** y **MEDIAPASSWORD** no se pueden utilizar para crear copias de seguridad. Todavía puede restaurar las copias de seguridad creadas con contraseñas.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, los permisos BACKUP DATABASE y BACKUP LOG corresponden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator** .  
   
  Los problemas de propiedad y permisos del archivo físico del dispositivo de copia de seguridad pueden interferir con una operación de copia de seguridad. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe poder leer y escribir en el dispositivo y la cuenta en la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **debe** tener permisos de escritura. En cambio, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que agrega una entrada para un dispositivo de copia de seguridad en las tablas del sistema, no comprueba los permisos de acceso a los archivos. Es posible que estos problemas con el archivo físico del dispositivo de copia de seguridad no aparezcan hasta que se tenga acceso al recurso físico, al intentar la copia de seguridad o la restauración.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 >  Al especificar una tarea de copia de seguridad mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) script by clicking the **Script** button and selecting a script destination.  
   
@@ -211,19 +211,19 @@ Se ha creado una directiva de acceso almacenada con derechos de lectura, escritu
 *
     5.  Seleccione `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` en el cuadro de texto **Contenedor de almacenamiento de Azure** .
 
-    6.  En el cuadro de texto **Archivo de copia de seguridad** , escriba `Sales_stripe1of2_20160601.bak`.
+   6.  En el cuadro de texto **Archivo de copia de seguridad** , escriba `Sales_stripe1of2_20160601.bak`.
 
-    7.  Haga clic en **Aceptar**.
+   7.  Haga clic en **Aceptar**.
 
-    8.  Repita los pasos **4** y **5**.
+   8.  Repita los pasos **4** y **5**.
 
-    9.  En el cuadro de texto **Archivo de copia de seguridad** , escriba `Sales_stripe2of2_20160601.bak`.
+   9.  En el cuadro de texto **Archivo de copia de seguridad** , escriba `Sales_stripe2of2_20160601.bak`.
 
-    10.  Haga clic en **Aceptar**.
+   10.  Haga clic en **Aceptar**.
 
-    11.   Haga clic en **Aceptar**.
+   11.   Haga clic en **Aceptar**.
 
-    **D2.  Existe una firma de acceso compartido pero no una credencial de SQL Server**
+   **D2.  Existe una firma de acceso compartido pero no una credencial de SQL Server**
   5.    Escriba `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` en el cuadro de texto **Contenedor de almacenamiento de Azure** .
   
   6.    Escriba la firma de acceso compartido en el cuadro de texto **Directiva de acceso compartido** .

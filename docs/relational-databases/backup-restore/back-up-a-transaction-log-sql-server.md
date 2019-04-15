@@ -1,7 +1,7 @@
 ---
 title: Realizar copias de seguridad de un registro de transacciones (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/01/2017
+ms.date: 02/02/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b110483faa6fd1f051cc35849858bd20b9fc1b04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d36963c5107a1a25ce25201ac38883e5c0925315
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756863"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241713"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Realizar copia de seguridad de un registro de transacciones (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,15 @@ ms.locfileid: "47756863"
 -   De forma predeterminada, cada operación de copia de seguridad correcta agrega una entrada en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y en el registro de eventos del sistema. Si se hace una copia de seguridad del registro con frecuencia, estos mensajes que indican la corrección de la operación pueden acumularse rápidamente, lo que da lugar a registros de errores muy grandes que pueden dificultar la búsqueda de otros mensajes. En esos casos, puede suprimir estas entradas de registro usando la marca de seguimiento 3226 si ninguno de los scripts depende de esas entradas. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
 **Compruebe los permisos correctos antes de empezar.** 
 
-De forma predeterminada, los permisos BACKUP DATABASE y BACKUP LOG necesarios se conceden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator** .  
+De forma predeterminada, los permisos BACKUP DATABASE y BACKUP LOG necesarios se conceden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator**.  
   
- Los problemas de propiedad y permisos del archivo físico del dispositivo de copia de seguridad pueden interferir con una operación de copia de seguridad. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe poder leer y escribir en el dispositivo y la cuenta en la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de escritura. Pero [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que agrega una entrada para un dispositivo de copia de seguridad en las tablas del sistema, no comprueba los permisos de acceso a los archivos. Es posible que los problemas con los permisos del archivo físico del dispositivo de copia de seguridad no sean evidentes para usted hasta que intente tener acceso al [recurso físico](backup-devices-sql-server.md) al tratar de realizar una copia de seguridad o restaurar. De este modo, una vez más, compruebe los permisos antes de empezar.
-  
-  
+ Los problemas de propiedad y permisos del archivo físico del dispositivo de copia de seguridad pueden interferir con una operación de copia de seguridad. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe poder leer y escribir en el dispositivo y la cuenta en la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de escritura. En cambio, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que agrega una entrada para un dispositivo de copia de seguridad en las tablas del sistema, no comprueba los permisos de acceso a los archivos. Es posible que los problemas con los permisos del archivo físico del dispositivo de copia de seguridad no sean evidentes para usted hasta que intente tener acceso al [recurso físico](backup-devices-sql-server.md) al tratar de realizar una copia de seguridad o restaurar. De este modo, una vez más, compruebe los permisos antes de empezar.
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="back-up-using-ssms"></a>Realizar una copia de seguridad usando SSMS  
   
 1.  Después de conectarse a la instancia apropiada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol de servidores.  
@@ -114,7 +115,7 @@ De forma predeterminada, los permisos BACKUP DATABASE y BACKUP LOG necesarios se
   
 16. Si va a realizar copias de seguridad en una unidad de cinta (según se haya especificado en la sección **Destino** de la página **General** ), la opción **Descargar la cinta después de realizar la copia de seguridad** está activa. Al hacer clic en esta opción se activa la opción **Rebobinar la cinta antes de descargar** .  
   
-17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] y las versiones posteriores admiten la [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). De forma predeterminada, el hecho de que se comprima una copia de seguridad depende del valor de la opción de configuración del servidor **backup-compression default** . Pero, independientemente del valor predeterminado actual de nivel de servidor, puede comprimir una copia de seguridad si activa **Comprimir copia de seguridad**e impedir la compresión si activa **No comprimir copia de seguridad**.  
+17. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] y las versiones posteriores admiten la [compresión de copia de seguridad](../../relational-databases/backup-restore/backup-compression-sql-server.md). De forma predeterminada, el hecho de que se comprima una copia de seguridad depende del valor de la opción de configuración del servidor **Compresión de copia de seguridad predeterminada** . Pero, independientemente del valor predeterminado actual de nivel de servidor, puede comprimir una copia de seguridad si activa **Comprimir copia de seguridad**e impedir la compresión si activa **No comprimir copia de seguridad**.  
   
      **Para ver el valor predeterminado actual de la compresión de copia de seguridad**  
   
@@ -143,7 +144,7 @@ De forma predeterminada, los permisos BACKUP DATABASE y BACKUP LOG necesarios se
   
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
   
-> **IMPORTANTE** En este ejemplo se utiliza la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , que utiliza el modelo de recuperación simple. Con el fin de permitir copias de seguridad de registros, antes de realizar una copia de seguridad completa de la base de datos, la base de datos se ha configurado para usar el modelo de recuperación completa. Para obtener más información, vea [Ver o cambiar el modelo de recuperación de una base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
+> **IMPORTANTE** En este ejemplo se utiliza la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], que utiliza el modelo de recuperación simple. Con el fin de permitir copias de seguridad de registros, antes de realizar una copia de seguridad completa de la base de datos, la base de datos se ha configurado para usar el modelo de recuperación completa. Para obtener más información, vea [Ver o cambiar el modelo de recuperación de una base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md).  
   
  En este ejemplo se crea una copia de seguridad del registro de transacciones de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en el dispositivo de copia de seguridad creado anteriormente, `MyAdvWorks_FullRM_log1`.  
   
@@ -166,9 +167,9 @@ GO
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
--   [Proveedor de PowerShell de SQL Server](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [SQL Server PowerShell Provider](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="RelatedTasks"></a> Related tasks  
   
 -   [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

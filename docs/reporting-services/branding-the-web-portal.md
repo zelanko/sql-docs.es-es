@@ -1,6 +1,6 @@
 ---
 title: Personalización de marca del portal web | Microsoft Docs
-ms.date: 12/06/2018
+ms.date: 04/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,21 +8,21 @@ description: En este artículo obtendrá información sobre cómo modificar la a
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6e3761e7bc91a219562d46cc33f0c5bbd4ca6aa3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201045"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506512"
 ---
 # <a name="branding-the-web-portal"></a>Personalización de marca del portal web
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Puede modificar la apariencia del portal web personalizándolo con la marca de su empresa. Esto se realiza mediante un paquete de marca. El paquete de marca se ha diseñado de forma que no deba estar muy familiarizado con las hojas de estilo CSS para crearlo.  
-  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
-   
+Puede modificar la apariencia del portal web personalizándolo con la marca de su empresa. Esto se realiza mediante un paquete de marca. El paquete de marca se ha diseñado de forma que no deba estar muy familiarizado con las hojas de estilo CSS para crearlo.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA" frameborder="0" allowfullscreen></iframe>
+
 ## <a name="creating-the-brand-package"></a>Creación del paquete de marca
   
 Un paquete de marca para Reporting Services se compone de tres elementos y se empaqueta como archivo ZIP.   
@@ -243,4 +243,4 @@ También puede **descargarse** o **quitar** el paquete. Si quita el paquete, se 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services.](https://go.microsoft.com/fwlink/?LinkId=620231)

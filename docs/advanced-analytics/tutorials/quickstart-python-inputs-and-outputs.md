@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a410a6f732baf79d419405e38e7e84aed86b38dd
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046898"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583228"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Inicio rápido: Controlar las entradas y salidas con Python en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,8 +87,6 @@ Echemos un vistazo a la forma predeterminada las variables de entrada y salidas 
     ```
 
     El caso de las variables de entrada y salidas de `@input_data_1_name` y `@output_data_1_name` tiene que coincidir con el caso de los que en el código de Python `@script`, como Python distingue mayúsculas de minúsculas.
-
-    Además, el orden de los parámetros es importante. Debe especificar los parámetros obligatorios *@input_data_1* y *@output_data_1* en primer lugar para poder usar los parámetros opcionales *@input_data_1_name* y *@output_data_1_name*.
 
     Solo se puede pasar un conjunto de datos de entrada como parámetro y solo puede devolver un conjunto de datos. Sin embargo, puede llamar a otros conjuntos de datos desde dentro de su código de Python y puede devolver resultados de otros tipos además del conjunto de datos. También puede agregar la palabra clave OUTPUT a cualquier parámetro para que se devuelva con los resultados. 
 

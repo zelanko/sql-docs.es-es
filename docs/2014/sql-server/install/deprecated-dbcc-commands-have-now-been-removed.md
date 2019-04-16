@@ -13,12 +13,12 @@ ms.assetid: affb6da7-c9ba-401c-ab7f-0d2f4ab93e2d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27bbba3900203c2b812c30eb25b7476301875671
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80fb8505cfd98f4ee60ea809928a8a632d102bac
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147745"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582440"
 ---
 # <a name="deprecated-dbcc-commands-have-now-been-removed"></a>Se han quitado los comandos DBCC desusados
   La tabla siguiente enumera los comandos DBCC de los que se anunció su eliminación en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Estos comandos se quitaron de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y de las versiones posteriores. Debería actualizar las aplicaciones y los scripts para quitar todas las referencias a estos comandos desusados.  
@@ -32,6 +32,6 @@ ms.locfileid: "48147745"
   
 ## <a name="see-also"></a>Vea también  
  [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

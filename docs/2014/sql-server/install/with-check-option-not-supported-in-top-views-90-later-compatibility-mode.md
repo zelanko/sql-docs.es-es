@@ -14,12 +14,12 @@ ms.assetid: 1b9581d0-bad9-43e0-b8fc-f32d8a8a04ca
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7eeead0e22e38338baf4c24510fba5fb21aad7fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b91a4b5bb42ebc86e72d532b9f8d210fbba5506
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138766"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583218"
 ---
 # <a name="with-check-option-is-not-supported-in-views-that-contain-top-in-90-or-later-compatibility-modes"></a>WITH CHECK OPTION no se admite en vistas que contengan TOP en el modo de compatibilidad 90 o superior
   El Asesor de actualizaciones detectó una vista que utiliza WITH CHECK OPTION y una cláusula TOP en la instrucción SELECT de la vista o en una vista a la que se hace referencia. Las vistas definidas de esta manera permiten, de forma errónea, que los datos se puedan modificar a través de la vista, lo que puede producir resultados imprecisos si el modo de compatibilidad de la base de datos se ha establecido en 80 o menos. Los datos no se pueden insertar o actualizar a través de una vista que utilice WITH CHECK OPTION cuando la vista o una vista a la que se hace referencia utilizan la cláusula TOP y el modo de compatibilidad de la base de datos está establecido en 90 o superior.  
@@ -32,6 +32,6 @@ ms.locfileid: "48138766"
   
 ## <a name="see-also"></a>Vea también  
  [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

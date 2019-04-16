@@ -12,12 +12,12 @@ aauthor: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 053eb234dee34d95e0fc3372a4626b8dee02a4ab
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: e4e84dc262cd03de74433c2e713b3a7b4cda0faa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973564"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583289"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse y vistas de catálogo del almacén de datos en paralelo
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -64,6 +64,9 @@ ms.locfileid: "57973564"
 [sys.workload_management_workload_classifier_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md) (Preview)
 
 [sys.workload_management_workload_classifiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md) (Preview)
+
+> [!Note]
+> Clasificación de la carga de trabajo está disponible para vista previa en SQL Data Warehouse Gen2. Clasificación de la administración de cargas de trabajo y la importancia de vista previa es para las compilaciones con una fecha de lanzamiento de 9 de abril de 2019 o posterior.  Los usuarios deben evitar usar compilaciones anteriores a esta fecha para pruebas de carga de trabajo administración.  Para determinar si la compilación es capaz de administración de cargas de trabajo, ejecutar select @@version cuando se conecta a la instancia de SQL Data Warehouse.
  
 ## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Vistas de catálogo  
  Las vistas de catálogo siguientes se aplican a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] solo:

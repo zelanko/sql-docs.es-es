@@ -13,15 +13,15 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ecac95d4cad190133d54e73862d607a719ac9c1
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042204"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582368"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Sincronizar una suscripción mediante el Administrador de sincronización de Windows (Administrador de sincronización de Windows)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows solo se puede usar para sincronizar suscripciones con publicaciones de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si se está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo que el Administrador de sincronización (también se puede usar para sincronizar archivos y páginas web sin conexión). Para utilizar el Administrador de sincronización:  
+  El Administrador de sincronización de[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows solo se puede usar para sincronizar suscripciones con publicaciones de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si se está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo que el Administrador de sincronización (también se puede usar para sincronizar archivos y páginas web sin conexión). Para utilizar el Administrador de sincronización:  
   
 1.  Habilite la sincronización de suscripciones de extracción con el Administrador de sincronización de Windows en el cuadro de diálogo **Propiedades de suscripción - \<Suscriptor>: \<BaseDeDatosDeSuscripción>**. Para más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-pull-subscription-properties.md) (Ver y modificar las propiedades de una suscripción de extracción).  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59042204"
   
     -   **Información del servidor web** (para suscripciones de mezcla en suscriptores que ejecuten SQL Server 2005 o posterior)  
   
-    -   **Otros**  
+    -   **Otro**  
   
      Se recomienda utilizar la autenticación de Windows para todas las conexiones. Para obtener información sobre los permisos que requieren el Agente de distribución y el Agente de mezcla, vea [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
@@ -97,7 +97,7 @@ ms.locfileid: "59042204"
   
 ### <a name="to-use-the-interactive-resolver"></a>Para utilizar el Solucionador interactivo  
   
-1.  Habilite el artículo y la suscripción para utilizar la resolución interactiva. Para más información, vea [Especificar la resolución interactiva de conflictos para artículos de mezcla](../../relational-databases/replication/publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
+1.  Habilite el artículo y la suscripción para utilizar la resolución interactiva. Para más información, vea [Especificar la resolución interactiva de conflictos para artículos de mezcla](../../relational-databases/replication/publish/specify-merge-replication-properties.md#interactive-conflict-resolution).
   
 2.  Después de que la suscripción comienza la sincronización en el Administrador de sincronización, el Solucionador interactivo se inicia automáticamente si la resolución interactiva de conflictos está habilitada y hay conflictos en uno o varios artículos. El Solucionador interactivo muestra un conflicto cada vez, con una sugerencia de resolución para cada conflicto (basada en el solucionador especificado al crear la publicación y la suscripción).  
   
@@ -117,4 +117,5 @@ ms.locfileid: "59042204"
 >  Las ediciones se aplican solamente si son parte de la fila que se ha seleccionado para la resolución. Por ejemplo, si realiza ediciones en **Publicador**, y, a continuación, hace clic en **Aceptar suscriptor**, se descartan las ediciones.  
   
 ## <a name="see-also"></a>Vea también  
- [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+ [Resolución interactiva de conflictos](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+  

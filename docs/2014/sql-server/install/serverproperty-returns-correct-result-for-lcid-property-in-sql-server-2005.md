@@ -13,12 +13,12 @@ ms.assetid: 833a2fc9-b480-4697-aa7b-9677e78ee0b4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a05202e19e95e719c8518f785be7ee1a1fbd8fff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b85b15ec20579cb748cf3e09c0cded8b9e43fd9
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163105"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582221"
 ---
 # <a name="serverproperty-returns-correct-result-for-lcid-property-in-sql-server-2005"></a>SERVERPROPERTY devuelve el resultado correcto para la propiedad LCID en SQL Server 2005
   Cuando SERVERPROPERTY('LCID') se ejecuta en servidores de intercalación binaria, la función devuelve un valor de identificador regional de Windows (LCID), independientemente de la intercalación actual del servidor.  
@@ -31,6 +31,6 @@ ms.locfileid: "48163105"
   
 ## <a name="see-also"></a>Vea también  
  [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

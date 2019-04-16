@@ -13,12 +13,12 @@ ms.assetid: 10c32f06-f7e1-40e0-8f79-6d921f2bef1d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 068346ed0adb5c74d5e892d25c2cc7b93fc57871
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84e00a2111b9cfe38ca680ec6c17ada724456878
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096765"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583198"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>Las consultas FOR XML AUTO devuelven referencias a tablas derivadas en los modos de compatibilidad 90 o superiores
   Cuando el nivel de compatibilidad de la base de datos está establecido en 90 o más, las consultas FOR XML que se ejecutan en modo AUTO devuelven referencias a alias de tabla derivadas. Cuando el nivel de compatibilidad de la base de datos está establecido en 80, las consultas FOR XML AUTO devuelven referencias a las tablas base que definen una tabla derivada.  
@@ -62,6 +62,6 @@ FOR XML AUTO;
   
 ## <a name="see-also"></a>Vea también  
  [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

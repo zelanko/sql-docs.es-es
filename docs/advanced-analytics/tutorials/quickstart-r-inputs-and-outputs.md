@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 56d2eb65ca95dd4f153f3c7a6ebb00e926465687
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046859"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582688"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Inicio rápido: Controlar las entradas y salidas con R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,8 +87,6 @@ Echemos un vistazo a la forma predeterminada las variables de entrada y salidas 
     ```
 
     Tenga en cuenta que R distingue mayúsculas de minúsculas, por lo que el caso de las variables de entrada y salidas de `@input_data_1_name` y `@output_data_1_name` tiene que coincidir con los que en el código de R `@script`. 
-
-    Además, el orden de los parámetros es importante. Debe especificar los parámetros obligatorios *@input_data_1* y *@output_data_1* en primer lugar para poder usar los parámetros opcionales *@input_data_1_name* y *@output_data_1_name*.
 
     Solo se puede pasar un conjunto de datos de entrada como parámetro y solo puede devolver un conjunto de datos. Pero puede llamar a otros conjuntos de datos desde dentro de su código de R y devolver resultados de otros tipos además del conjunto de datos. También puede agregar la palabra clave OUTPUT a cualquier parámetro para que se devuelva con los resultados. 
 

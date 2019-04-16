@@ -5,17 +5,17 @@ description: Este tutorial muestra cómo introducir datos en el grupo de datos d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c29b6b942b797b5a58679d9d7f5cb91e68561123
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: 9d49cb6af93880fe1cec391e4464b813777f7109
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860676"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582758"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Introducir datos en un grupo de datos de SQL Server con trabajos de Spark
 
@@ -37,7 +37,7 @@ En este tutorial, obtendrá información sobre cómo:
 
 - [Herramientas de datos de gran tamaño](deploy-big-data-tools.md)
    - **kubectl**
-   - **Azure Data Studio **
+   - **Azure Data Studio**
    - **Extensión de SQL Server 2019**
 - [Cargar datos de ejemplo en el clúster de macrodatos](tutorial-load-sample-data.md)
 

@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_plan_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 0bef01ab6b4ecf1a9f05b1c7b40e2767aaae0db3
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: 62ddfda48429b99558b987cd06c95e96d62702fa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645357"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582102"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -64,7 +64,7 @@ El *plan_handle* puede obtenerse de los objetos de administración dinámica sig
 ## <a name="remarks"></a>Comentarios
 Esta función del sistema está disponible a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4.
 
-Esta es una característica opcional y requiere [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) PP 2451 esté habilitado.   
+Se trata de una característica opcional que requiere que la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 esté habilitada.   
 
 Esta función del sistema funciona bajo el **ligera** consultar las estadísticas de ejecución de generación de perfiles de infraestructura. Para obtener más información, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).  
 

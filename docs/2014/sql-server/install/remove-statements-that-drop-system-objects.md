@@ -13,12 +13,12 @@ ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1f355b9e13bb85f1bc91d9626e27d6ee3fafa15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68e5000e924c438a4611e2fa8c134f0dd822f930
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153729"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581549"
 ---
 # <a name="remove-statements-that-drop-system-objects"></a>Quitar instrucciones que quiten objetos del sistema
   El Asesor de actualizaciones ha detectado instrucciones que quitan objetos del sistema. Los objetos del sistema, incluidos los procedimientos almacenados extendidos, se implementan en la base de datos de **recursos** de solo lectura (mssqlsystemresource) y no se pueden quitar. Modifique las aplicaciones para revocar o denegar el permiso EXECUTE en los objetos del sistema.  
@@ -34,6 +34,6 @@ ms.locfileid: "48153729"
   
 ## <a name="see-also"></a>Vea también  
  [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

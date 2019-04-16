@@ -23,12 +23,12 @@ ms.assetid: 5c5ae453-cc5b-4898-95c7-ad34157b1f60
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b9bd5ee27d0b3ac7c331bdbe58facbc337b58a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cb9d235a02414b589735e7118bfe22f408d1d54
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148415"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581328"
 ---
 # <a name="modify-connections-that-use-banyan-vines-sequenced-packet-protocol-spp-multiprotocol-appletalk-or-nwlink-ipx-spx-network-protocols"></a>Modificar las conexiones que utilizan el protocolo de red SPP (Protocolo de paquetes secuenciados) de Banyan VINES o los protocolos Multiprotocolo, AppleTalk o NWLink IPX/SPX.
   El Asesor de actualizaciones ha detectado protocolos de conectividad cliente-servidor que no se admiten en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Las aplicaciones cliente que utilicen el protocolo de red SPP (Protocolo de paquetes secuenciados) de Banyan VINES o los protocolos de red Multiprotocolo (RPC), AppleTalk o NWLink IPX/SPX deben conectarse utilizando uno de los protocolos admitidos.  
@@ -48,6 +48,6 @@ ms.locfileid: "48148415"
   
 ## <a name="see-also"></a>Vea también  
  [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -3,18 +3,18 @@ title: 'Extensión del lenguaje Java en SQL Server 2019: SQL Server Machine Lear
 description: Instalar, configurar y validar la extensión del lenguaje Java en SQL Server 2019 para los sistemas Linux y Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9b5d5fe9a3bf3b775c9d7afb1035e09120157aac
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 725aebbcd40adf0c571dd6b99b68cf1be389af8b
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494267"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582095"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>Extensión del lenguaje Java en SQL Server 2019 
 

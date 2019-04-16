@@ -13,12 +13,12 @@ ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ddcadb1fe32c61fbab45bbdcfbc18d60d1072d23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e227e4d382dac627626b977427aae05d0295744
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078225"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582338"
 ---
 # <a name="rename-user-sys"></a>Cambiar el nombre de usuario del sistema
   El Asesor de actualizaciones ha detectado el nombre de usuario **sys** en una base de datos. Este nombre está reservado. Cambie el nombre del usuario antes de actualizar. Si no se cambia el nombre del usuario, la base de datos quedará en estado sospechoso y no estará disponible hasta que se ponga en línea.  
@@ -64,6 +64,6 @@ ms.locfileid: "48078225"
   
 ## <a name="see-also"></a>Vea también  
  [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

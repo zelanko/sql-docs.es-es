@@ -13,12 +13,12 @@ ms.assetid: 7b6fb18e-ec39-4661-88e3-977ed64e2c82
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f31308a08b177e59cad0193b6a4b15a9888d7e81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05928a02a02680acb3a2a6e32dfdf1409fad8b19
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193585"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583158"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Temas de Ayuda F1 del Administrador de configuración de Reporting Services (Modo nativo de SSRS)
   Esta sección proporciona la Ayuda F1 para el Administrador de configuración de Reporting Services.  
@@ -45,7 +45,7 @@ ms.locfileid: "48193585"
   
 -   [Dirección URL del Administrador de informes](../../../2014/sql-server/install/report-manager-url-ssrs-native-mode.md)  
   
--   [Configuración de correo electrónico](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
+-   [Configuración del correo electrónico](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
   
 -   [Cuenta de ejecución](../../../2014/sql-server/install/execution-account-ssrs-native-mode.md)  
   
@@ -58,6 +58,6 @@ ms.locfileid: "48193585"
 -   [Implementación escalada](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Administrador de configuración de Reporting Services &#40;SUPR&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  
+ [Administrador de configuración de Reporting Services &#40;SUPR&#41;](reporting-services-configuration-manager-native-mode.md)  
   
   

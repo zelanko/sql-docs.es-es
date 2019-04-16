@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo funciona la persistencia de los da
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f8cddaeca6c6bcc7eb32c28fa852566bb7dcf331
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.openlocfilehash: f527aaa18994c1d0c50acc44e0ddba159857a60e
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58860281"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582288"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistencia de datos con el clúster de macrodatos de SQL Server en Kubernetes
 

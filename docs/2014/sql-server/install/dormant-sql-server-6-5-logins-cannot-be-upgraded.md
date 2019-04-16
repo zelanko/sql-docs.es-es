@@ -17,12 +17,12 @@ ms.assetid: ebe18a74-0375-4df4-b894-239f8fdabb64
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03cfdc1e7c639c387e175829f34329344fd9e160
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0381e04ae1df53e5502c49eb17d0823fcf611e89
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227185"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582184"
 ---
 # <a name="dormant-sql-server-65-logins-cannot-be-upgraded"></a>No se pueden actualizar los inicios de sesión inactivos de SQL Server 6.5
   El Asesor de actualizaciones detectó un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuya contraseña no se puede actualizar directamente a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -44,6 +44,6 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

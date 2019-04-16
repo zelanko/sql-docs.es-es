@@ -13,12 +13,12 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9cf8109d1faa9bcd75a6150aea3959f37b79f1cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 22460851ce3136301beaf5d94e7b0a3b39f8217c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136373"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582698"
 ---
 # <a name="specify-merge-replication-properties"></a>Especifique las propiedades de replicación de mezcla
 En este tema se explica cómo especificar varias propiedades para la replicación de mezcla. 
@@ -72,7 +72,7 @@ En este tema se explica cómo especificar varias propiedades para la replicació
         > [!NOTE]  
         >  Si la tabla de origen de un artículo ya está publicada en otra publicación, el comportamiento de solo descarga debe ser el mismo para ambos artículos.  
  
-## <a name="interactive-conflict-resolution"></a>Resolución interactiva de conflictos
+## <a name="interactive-conflict-resolution">Resolución interactiva de conflictos</a>
 La replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona una Resolución interactiva que permite solucionar conflictos manualmente durante la sincronización a petición en el Administrador de sincronización de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Una vez habilitada la resolución interactiva, resuelva los conflictos interactivamente durante la sincronización, mediante el Solucionador interactivo. El Solucionador interactivo está disponible a través del Administrador de sincronización de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Para más información, vea [Sincronizar una suscripción mediante el Administrador de sincronización de Windows &#40;Administrador de sincronización de Windows&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
     
@@ -82,7 +82,7 @@ La replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLU
   
 ###  <a name="using-sql-server-management-studio"></a>Usar SQL Server Management Studio  
   
-#### <a name="enable-interactive-conflict-resolution-for-an-article"></a>Habilitar la resolución interactiva de conflictos para un artículo  
+#### <a name="enable-interactive-conflict-resolution-for-an-article"></a>Habilitación de la resolución interactiva de conflictos para un artículo  
   
 1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**, seleccione una tabla. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).    
 2.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado** o en **Establecer propiedades de todos los artículos de la tabla**.    
@@ -93,13 +93,13 @@ La replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLU
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>Para especificar que una suscripción debe utilizar la resolución interactiva de conflictos  
   
-1.  En el **propiedades de suscripción - \<suscriptor >: \<Basededatosdesuscripción >** diálogo cuadro, especifique un valor de **True** para el **resuelva los conflictos interactivamente** opción. Para obtener más información acerca de cómo obtener acceso a este cuadro de diálogo, vea [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) y [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md). 
+1.  En el cuadro de diálogo **Propiedades de la suscripción - \<Suscriptor>: \<baseDeDatosDeSuscripción>**, especifique el valor **True** para la opción **Solucionar conflictos de manera interactiva**. Para obtener más información acerca de cómo obtener acceso a este cuadro de diálogo, vea [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) y [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md). 
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="using-transact-sql"></a>Usar Transact-SQL  
  Puede especificar mediante programación que el suscriptor utilizará esta interfaz gráfica para solucionar conflictos de artículos cuando se cree una suscripción de extracción a una publicación de combinación. Solo se mostrarán en el Solucionador interactivo los conflictos de artículos que admitan esta opción.  
   
-#### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Crear una suscripción de extracción de mezcla que utiliza al solucionador interactivo  
+#### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Creación de una suscripción de extracción de mezcla que use el Solucionador interactivo  
   
 1.  En la base de datos de publicación del publicador, ejecute [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), especificando **@publication**. Tenga en cuenta el valor de **allow_interactive_resolver** para cada artículo del conjunto de resultados para el que se utilizará el Solucionador interactivo.    
     -   Si este valor es **1**, se utilizará el Solucionador interactivo.    
@@ -113,7 +113,7 @@ La replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLU
     -   La información de la cuenta de seguridad que necesita el Agente de mezcla. Para más información, consulte [Create a Pull Subscription](../create-a-pull-subscription.md).    
 4.  En la base de datos de publicación del publicador, ejecute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql).  
   
-#### <a name="define-an-article-that-supports-the-interactive-resolver"></a>Definir un artículo que admita al solucionador interactivo  
+#### <a name="define-an-article-that-supports-the-interactive-resolver"></a>Definición de un artículo que admita el Solucionador interactivo  
   
 En la base de datos de publicación del publicador, ejecute [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique el nombre de la publicación a la que pertenece el artículo para **@publication**, un nombre de artículo para **@article**, el objeto de base de datos que se está publicando para **@source_object**y el valor **true** para **@allow_interactive_resolver**. Para más información, consulte [Define an Article](define-an-article.md).  
 
@@ -130,11 +130,11 @@ Cuando se sincroniza una suscripción a una publicación de combinación, la rep
 ###  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
  Especifique seguimiento de nivel de columna o fila para los artículos de mezcla en la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo**, disponible en el Asistente para nueva publicación y el cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../publish/view-and-modify-publication-properties.md).  
   
-#### <a name="specify-row--or-column-level-tracking"></a>Especificar fila o columna-nivel de seguimiento  
+#### <a name="specify-row--or-column-level-tracking"></a>Especificación del seguimiento por fila o columna  
   
 1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**, seleccione una tabla.    
 2.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado** o en **Establecer propiedades de todos los artículos de la tabla**.   
-3.  En el **propiedades** pestaña de la **propiedades del artículo \<artículo >** cuadro de diálogo, seleccione uno de los siguientes valores para el **nivel de seguimiento** propiedad: **Seguimiento de nivel de fila** o **seguimiento por columna**.    
+3.  En la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo \<Artículo>**, seleccione uno de los valores siguientes para la propiedad **Nivel de seguimiento**: **Seguimiento por filas** o **Seguimiento por columna**.    
 4.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**, haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
   
 ###  <a name="using-transact-sql"></a>Usar Transact-SQL  
@@ -146,7 +146,7 @@ Cuando se sincroniza una suscripción a una publicación de combinación, la rep
     -   **true** : Use el seguimiento del nivel de columna para el artículo.    
     -   **falso** : Use el seguimiento de nivel de fila, que es el valor predeterminado.  
   
-#### <a name="change-conflict-tracking-options-for-a-merge-article"></a>Cambiar opciones de seguimiento para un artículo de mezcla de conflictos  
+#### <a name="change-conflict-tracking-options-for-a-merge-article"></a>Cambio de las opciones de seguimiento de conflictos para un artículo de mezcla  
   
 1.  Para determinar las opciones de seguimiento de conflictos para un artículo de mezcla, ejecute [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql). Tenga en cuenta el valor de la opción **column_tracking** en el conjunto de resultados para el artículo. Un valor de **1** indica que se está usando el seguimiento del nivel de columna y un valor de **0** indica que se está usando el seguimiento de nivel de fila.    
 2.  En la base de datos de publicación del publicador, ejecute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Especifique un valor de **column_tracking** para **@property** y uno de los valores siguientes para **@value**:
@@ -165,14 +165,14 @@ Cuando se sincroniza una suscripción a una publicación de combinación, la rep
 > [!IMPORTANT]  
 >  Al habilitar esta funcionalidad se producirá la no convergencia, lo que significa que los datos presentes en el Suscriptor no reflejarán con precisión los datos en el Publicador. Debe implementar su propio mecanismo para quitar manualmente las filas eliminadas.  
   
-### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>Especifica que se omitan las eliminaciones para un nuevo artículo de mezcla  
+### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>Especificación de la omisión de las eliminaciones para un artículo de mezcla nuevo  
   
 1.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Especifique un valor de `false` para **@delete_tracking**. Para más información, consulte [Define an Article](../publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Si la tabla de origen de un artículo ya está publicada en otra publicación, el valor de **delete_tracking** debe ser el mismo en los dos artículos.  
   
-### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>Especifica que se omitan las eliminaciones para un artículo de mezcla existente  
+### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>Especificación de la omisión de las eliminaciones para un artículo de mezcla existente  
   
 1.  Para determinar si la compensación de errores está habilitada para un artículo, ejecute [sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) y observe el valor de **delete_tracking** en el conjunto de resultados. Si este valor es **0**, ya se están omitiendo las eliminaciones.    
 2.  Si el valor del paso 1 es **1**, ejecute [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) en la base de datos de publicación del publicador. Especifique un valor de **delete_tracking** para **@property**y un valor de `false` para **@value**.  
@@ -181,7 +181,7 @@ Cuando se sincroniza una suscripción a una publicación de combinación, la rep
     >  Si la tabla de origen de un artículo ya está publicada en otra publicación, el valor de **delete_tracking** debe ser el mismo en los dos artículos.  
   
 ## <a name="processing-order"></a>Orden de procesamiento
-  La replicación de mezcla le permite especificar el orden en el que el Agente de mezcla procesa los artículos durante el proceso de sincronización. Al crear cada artículo, puede asignarle un orden mediante programación utilizando los procedimientos almacenados de replicación. Los artículos se procesan en orden desde el valor menor al mayor. Si existen dos artículos que tienen el mismo valor, se procesan al mismo tiempo. Para obtener más información, consulte [las propiedades de replicación de mezcla especificar](../publish/specify-merge-replication-properties.md).  
+  La replicación de mezcla le permite especificar el orden en el que el Agente de mezcla procesa los artículos durante el proceso de sincronización. Al crear cada artículo, puede asignarle un orden mediante programación utilizando los procedimientos almacenados de replicación. Los artículos se procesan en orden desde el valor menor al mayor. Si existen dos artículos que tienen el mismo valor, se procesan al mismo tiempo. Para más información, vea [Specify merge replication properties](../publish/specify-merge-replication-properties.md) (Especificación de propiedades de replicación de mezcla).  
 
   Desde [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], es posible invalidar el orden predeterminado del procesamiento de artículos para las publicaciones de combinación. Esto resulta útil, por ejemplo, si define la integridad referencial a través de desencadenadores que se deben activar en un orden determinado. 
 

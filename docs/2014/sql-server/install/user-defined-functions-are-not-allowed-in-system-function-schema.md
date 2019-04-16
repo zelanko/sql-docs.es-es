@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b7c21521fbdd4a4e80ed196c67c72f790341f020
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 35cc33df40c17e6dbc1935e205ed688615de0294
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254280"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583109"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>Las funciones definidas por el usuario no se permiten en system_function_schema
   El Asesor de actualizaciones detectó funciones definidas por el usuario que son propiedad del usuario no documentado **system_function_schema**. No puede crear una función del sistema definida por el usuario especificando este usuario. El **system_function_schema** no existe el nombre de usuario y el identificador de usuario que está asociado con este nombre (UID = 4) está reservado para el **sys** esquema y se restringe a solo para uso interno.  
@@ -40,7 +40,7 @@ ms.locfileid: "54254280"
   
  Estos cambios tienen el efecto siguiente sobre las funciones del sistema definidas por el usuario:  
   
--   Instrucciones de Definition Language (DDL) de datos que hacen referencia **system_function_schema** se producirá un error. Por ejemplo, la instrucción `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... no se realizará correctamente.  
+-   Instrucciones de Definition Language (DDL) de datos que hacen referencia **system_function_schema** se producirá un error. Por ejemplo, la instrucción `CREATE FUNCTION system`_`function` \_ `schema.fn` \_ `MySystemFunction` ... no tendrá éxito.  
   
 -   Después de actualizar a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], los objetos existentes que pertenecen a **system_function_schema** solo están contenidos en el **sys** esquema de la **maestro** base de datos. Dado que no se puede modificar los objetos del sistema, estas funciones nunca se pueden modificar o quitar de la **maestro** base de datos. Además, estas funciones no se pueden invocar desde otras bases de datos especificando solo un nombre de función con una parte.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "54254280"
 -   "Base de datos Resource"  
   
 ## <a name="see-also"></a>Vea también  
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)   
+ [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)   
  [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Quite las instrucciones que modifican objetos del sistema](../../../2014/sql-server/install/remove-statements-that-modify-system-objects.md)   
  [Quitar instrucciones que quiten objetos del sistema](../../../2014/sql-server/install/remove-statements-that-drop-system-objects.md)  

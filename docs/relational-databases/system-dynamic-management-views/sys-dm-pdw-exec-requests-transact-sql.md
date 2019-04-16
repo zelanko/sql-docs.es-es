@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d049833897685b7998fc1168ec09398860df233b
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 72c449ee83798a99109029fc2d0b91e2b8c1e2b6
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657750"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583323"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "58657750"
 |database_id|**int**|Identificador de base de datos usada el contexto explícito (por ejemplo, USE DB_X).|Vea el Id. de [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |comando|**nvarchar(4000)**|Contiene el texto completo de la solicitud como enviado por el usuario.|Cualquier texto de consulta o de solicitud válido. Las consultas que duran más de 4000 bytes se truncan.|  
 |resource_class|**nvarchar(20)**|La clase de recursos para esta solicitud. Consulte el artículo relacionado **concurrency_slots_used** en [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Para obtener más información sobre las clases de recursos, consulte [administración de recursos de las clases de & carga de trabajo](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Clases de recursos estáticos</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Clases de recursos dinámicos</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importancia (versión preliminar de SQL DW Gen2)|**nvarchar(32)**|La importancia de la configuración de la solicitud se envió con. Las solicitudes con una importancia menor permanecerán en cola en estado suspendido, si se envían solicitudes mayor importancia.  Las solicitudes con mayor importancia se ejecutarán antes de menor importancia las solicitudes enviadas anteriormente.  Para obtener más información sobre la importancia, consulte [importancia de la carga de trabajo](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>normal (predeterminado)</br>above_normal</br>high|
+|importancia (clasificación de la carga de trabajo está disponible para vista previa en SQL Data Warehouse Gen2. Clasificación de la administración de cargas de trabajo y la importancia de vista previa es para las compilaciones con una fecha de lanzamiento de 9 de abril de 2019 o posterior.  Los usuarios deben evitar usar compilaciones anteriores a esta fecha para pruebas de carga de trabajo administración.  Para determinar si la compilación es capaz de administración de cargas de trabajo, ejecutar select @@version cuando se conecta a la instancia de SQL Data Warehouse.)|**nvarchar(32)**|La importancia de la configuración de la solicitud se envió con. Las solicitudes con una importancia menor permanecerán en cola en estado suspendido, si se envían solicitudes mayor importancia.  Las solicitudes con mayor importancia se ejecutarán antes de menor importancia las solicitudes enviadas anteriormente.  Para obtener más información sobre la importancia, consulte [importancia de la carga de trabajo](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>normal (predeterminado)</br>above_normal</br>high|
   
  Para obtener información sobre el número máximo de filas retenidas por esta vista, consulte la sección de metadatos en el [límites de capacidad](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) tema.   
   

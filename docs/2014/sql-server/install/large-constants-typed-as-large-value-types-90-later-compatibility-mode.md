@@ -17,12 +17,12 @@ ms.assetid: 6e309fa0-5fb9-45a1-9739-f13fae525bfe
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a12a0972ee754c8f9070122902a64c3e92eb05f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c6b49beeea2039bc30081cc7cf054c3d269847a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185285"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582598"
 ---
 # <a name="large-constants-are-typed-as-large-value-types-in-90-or-later-compatibility-modes"></a>Las constantes de gran tamaño están tipificadas como tipos de valor grande en los modos de compatibilidad 90 o superiores
   El Asesor de actualizaciones ha detectado la presencia de constantes grandes. Las constantes de cadena de caracteres y las constantes binarias cuyo tamaño sea superior a 8.000 bytes se tratan como tipos de datos de objetos grandes en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y en versiones posteriores, las constantes de cadena de caracteres de gran tamaño, Unicode y binarias están tipificadas como tipos de valor grande.  
@@ -41,6 +41,6 @@ ms.locfileid: "48185285"
   
 ## <a name="see-also"></a>Vea también  
  [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

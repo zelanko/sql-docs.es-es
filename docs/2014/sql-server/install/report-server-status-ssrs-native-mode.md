@@ -13,19 +13,19 @@ ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ac754d9c27afb277701342855107d973f3f625d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 217fc6d3d5a94fb443ea262563255c10bcfc2dda
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374117"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582738"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>Estado del servidor de informes (Modo nativo de SSRS)
   Utilice esta página para ver información sobre la instancia del servidor de informes a la que está conectado actualmente. Esta página es la página de inicio para la configuración del servidor de informes. Hay páginas adicionales disponibles para configurar las direcciones URL, la cuenta de servicio, la base de datos del servidor de informes, la distribución del correo electrónico del servidor de informes, una implementación que permita una ampliación con varios servidores y las claves de cifrado.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese a la instancia del servidor de informes. Para obtener más información, consulte [Reporting Services Configuration Manager &#40;SUPR&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode).  
+ Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese a la instancia del servidor de informes. Para obtener más información, consulte [Reporting Services Configuration Manager &#40;SUPR&#41;](reporting-services-configuration-manager-native-mode.md).  
   
 > [!TIP]  
 >  El[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (RSConfigTool.exe) se instala con un nivel de privilegios "highestAvailable". Este comportamiento es así por diseño. El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] precisa la comunicación con las API WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una parte de la comunicación WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere un nivel superior o administrativo de privilegios.  
@@ -33,7 +33,7 @@ ms.locfileid: "53374117"
  Si se conecta al servidor de informes y todos los vínculos de página están deshabilitados, compruebe que se ha iniciado el servicio del servidor de informes. El **informar del estado del servicio:** Debe ser "iniciado". También puede usar la aplicación de consola Servicios en Herramientas administrativas para comprobar el estado del servicio.  
   
 ## <a name="options"></a>Opciones  
- **Instancia de SQL Server**  
+ **SQL Server Instance**  
  Muestra información sobre la instancia del servidor de informes a la que está conectado actualmente. Los nombres de instancia del servidor de informes se basan en las instancias con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La instancia predeterminada es MSSQLSERVER. Una instancia con nombre será un valor que especifique durante la instalación. Para obtener más información acerca de las instancias, vea [trabajar con varias versiones e instancias de SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
   
 > [!NOTE]  

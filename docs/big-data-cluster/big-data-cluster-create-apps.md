@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6cdedc7eac7b9faa2d266b1a32c299d8b7f5fe73
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.openlocfilehash: 40919c7b300ffed0bdc84f4214b28c8ea71b15b8
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872005"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582450"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Cómo implementar una aplicación en clúster de macrodatos de SQL Server (versión preliminar)
 
@@ -41,7 +41,7 @@ Se admiten los siguientes tipos de aplicaciones:
 ## <a name="prerequisites"></a>Requisitos previos
 
 - [Clúster de macrodatos de SQL Server 2019](deployment-guidance.md)
-- [utilidad de línea de comandos mssqlctl](deploy-install-mssqlctl.md)
+- [mssqlctl command-line utility](deploy-install-mssqlctl.md)
 
 ## <a name="capabilities"></a>Capabilities
 
@@ -111,7 +111,7 @@ Esto supone que tiene la aplicación que se almacenan en el `addpy` carpeta. Est
 
 Para implementar esta aplicación de ejemplo de aplicación, cree los siguientes archivos en un directorio llamado `addpy`:
 
-- `add.py`. Copie el siguiente código de Python en este archivo:
+- `add.py`  Copie el siguiente código de Python en este archivo:
    ```py
    #add.py
    def add(x,y):
@@ -119,7 +119,7 @@ Para implementar esta aplicación de ejemplo de aplicación, cree los siguientes
         return result
     result=add(x,y)
    ```
-- `spec.yaml`. Copie el código siguiente en este archivo:
+- `spec.yaml`  Copie el código siguiente en este archivo:
    ```yaml
    #spec.yaml
    name: add-app #name of your python script

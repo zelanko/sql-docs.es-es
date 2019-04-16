@@ -31,12 +31,12 @@ ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ade57dedae8d97cf4ab951c347e3a9ab84431017
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bad975eb6b2b2645cb31b075089c02be735b1d88
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125315"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582248"
 ---
 # <a name="resolving-upgrade-issues"></a>Resolver problemas de la actualización
   En los temas de esta sección se describen problemas de actualización que se pueden detectar, así como los que no se pueden detectar, pero que podrían afectar a la actualización o al uso de la aplicación tras su actualización. Los problemas se han organizado por componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -70,6 +70,6 @@ ms.locfileid: "48125315"
 -   [Utilizar sp_rename para cambiar el nombre de índice duplicado](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

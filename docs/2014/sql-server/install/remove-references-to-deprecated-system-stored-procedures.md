@@ -14,12 +14,12 @@ ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc0dbcc5296ad9ef0e8df6e94b1978fe10792c4e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f87cb9160925ccc813ee62737662f85f430f28b
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183365"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582868"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>Quitar referencias a procedimientos almacenados del sistema desusados
   El Asesor de actualizaciones ha detectado instrucciones que hacen referencia a procedimientos almacenados del sistema y a procedimientos almacenados extendidos no documentados que ya no están disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las instrucciones que hagan referencia a dichos objetos producirán un error. No utilice objetos de sistema o API no documentados, ya que en futuras versiones podría cambiar o quitarse esta funcionalidad sin previo aviso.  
@@ -104,6 +104,6 @@ ms.locfileid: "48183365"
   
 ## <a name="see-also"></a>Vea también  
  [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

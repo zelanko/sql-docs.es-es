@@ -13,12 +13,12 @@ ms.assetid: 197b2ecf-a1a3-4a3a-a523-a0ee919c1dde
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7318340d5bf5e5861c1a95d6fa8cc9e54679f4a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb4eb84aa500d041837c5b4c21a02755acc1f301
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137515"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582798"
 ---
 # <a name="with-rows-is-not-supported-in-create-statistics-statements-in-the-compatibility-mode-of-90-or-later"></a>No se admite WITH ROW en instrucciones CREATE STATISTICS en el modo de compatibilidad de 90 o superior
   No se admite el uso de WITH ROWS en instrucciones CREATE STATISTICS si se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el modo de compatibilidad establecido en 90 o más.  
@@ -31,6 +31,6 @@ ms.locfileid: "48137515"
   
 ## <a name="see-also"></a>Vea también  
  [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

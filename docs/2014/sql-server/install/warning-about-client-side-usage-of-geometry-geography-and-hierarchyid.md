@@ -11,12 +11,12 @@ ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9ee14c39f7fee577065de934f839f9d6c88e630
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 08b853d57068121fccb4db2341754eea0af7f734
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413775"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583138"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Advertencia sobre el uso del lado cliente de GEOMETRY, GEOGRAPHY y HIERARCHYID
   El ensamblado **Microsoft.SqlServer.Types.dll**, que contiene los tipos de datos espaciales se ha actualizado de la versión 10.0 a la versión 11.0. Cuando se cumplan determinadas condiciones, se puede producir un error en las aplicaciones personalizadas que hacen referencia a este ensamblado.  
@@ -85,6 +85,7 @@ ms.locfileid: "52413775"
   
 ## <a name="see-also"></a>Vea también  
  [Problemas de actualización de motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md
+)  
   
   

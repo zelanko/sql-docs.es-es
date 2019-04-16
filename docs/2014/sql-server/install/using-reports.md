@@ -36,12 +36,12 @@ ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0d8ec04baf292807120ed5a26360878ac7e20442
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb2537af2539854f0f66e3f6c39c3b6e5315ec6f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070905"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581930"
 ---
 # <a name="using-reports"></a>Utilizar los informes
   Se genera un informe independiente para cada componente y, cuando es necesario, para cada instancia, los cuales analiza el Asistente para análisis del Asesor de actualizaciones en un servidor. El informe proporciona detalles sobre los problemas conocidos que afectan a una actualización. También proporciona vínculos a información y acciones recomendadas para resolver los problemas identificados.  
@@ -83,10 +83,10 @@ ms.locfileid: "48070905"
  Si desea compartir la información con otras personas, puede enviarles el informe XML. O, si desea utilizar otra aplicación, puede exportar el informe en un archivo de valores separados por comas que puede utilizar para crear una hoja de cálculo, un archivo de texto o un mensaje de correo electrónico.  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo: ver un informe del Asesor de actualizaciones](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
- [Cómo: exportar informes](../../../2014/sql-server/install/how-to-export-reports.md)   
- [Cómo: filtrar informes](../../../2014/sql-server/install/how-to-filter-reports.md)   
+ [Cómo: Ver un informe del Asesor de actualizaciones](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
+ [Cómo: Exportar informes](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [Cómo: Informes de filtro](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [Resolver problemas de actualización](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Asesor de actualizaciones de SQL Server 2014 &#91;nuevo&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

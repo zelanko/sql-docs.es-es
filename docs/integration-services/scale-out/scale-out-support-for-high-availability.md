@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 43bfe4364543adee0e63e1d123680a82bb3bae39
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: cedbd1516706191980dc7817a9bc7434def30831
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578335"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241470"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Compatibilidad con la escalabilidad horizontal para una alta disponibilidad
 
@@ -43,7 +43,7 @@ Esta cuenta debe ser capaz de acceder a SSISDB en el nodo secundario del clúste
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2. Incluir el nombre de host DNS del servicio del Servicio principal de escalabilidad horizontal en los nombres comunes del certificado del servicio
 
-Este nombre de host se utilizará en el punto de conexión del Servicio principal de escalabilidad horizontal. (Asegúrese de proporcionar un nombre de host DNS y no un nombre de servidor).
+Este nombre de host es el punto de conexión principal de Escalabilidad horizontal, que se crea como un servicio genérico agrupado en el clúster de conmutación por error (consulte el paso 7).   (Asegúrese de proporcionar un nombre de host DNS y no un nombre de servidor).
 
 ![Configuración del patrón HA](media/ha-master-config.PNG)
 
@@ -112,5 +112,5 @@ Para actualizar la escalabilidad horizontal en entornos de alta disponibilidad, 
 
 ## <a name="next-steps"></a>Pasos siguientes
 Para obtener más información, vea los artículos siguientes:
--   [Servicio principal de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
--   [Trabajo de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)
+-   [Patrón de escalado horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
+-   [Trabajador de escalado horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

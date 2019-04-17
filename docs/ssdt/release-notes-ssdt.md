@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 0923e52610d5fd0c7907d3edaa061073989d582e
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 44229bbe0bd0a4df65e9dfbfe213c6a14cee0f42
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417264"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241912"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notas de la versión de SQL Server Data Tools (SSDT)
 
@@ -51,7 +51,7 @@ P.S.  There is no need to keep this large HTML comment indefinitely.
 
 _Publicado:_ &nbsp; 28 de enero de 2019  
 _Número de compilación:_ &nbsp; 14.0.16186.0  
-_SSDT para Visual Studio 2017._
+_SSDT para Visual Studio 2017._
 
 ### <a name="whats-new"></a>Novedades
 
@@ -61,7 +61,7 @@ _SSDT para Visual Studio 2017._
 | :------- | :------ |
 | Incorpora el origen de Power Query (versión preliminar) para SSIS en ADF 2017. | &nbsp; |
 | Vuelve a agregar la compatibilidad con SQL Server 2012. | &nbsp; |
-| Incorpora origen y destino de Oracle para SQL Server 2019. | &nbsp; |
+| Incorpora origen y destino de Oracle para SQL Server 2019. | SSDT ya ha instalado el servidor SQL Server 2019 de origen y destino de Oracle.<br/><br/>Para diseñar un paquete dirigido a la versión 2017 o inferior del servidor, descargue la versión correspondiente del conector Oracle del sitio de descargas de Microsoft e instálela en la máquina SSDT. <br/>[Microsoft Connector versión 5.0 para Oracle de Attunity dirigido a SQL Server 2017](https://www.microsoft.com/en-us/download/details.aspx?id=55179)<br/>[Microsoft Connector versión 4.0 para Oracle de Attunity dirigido a SQL Server 2016](https://www.microsoft.com/en-us/download/details.aspx?id=52950)<br/>[Microsoft Connector versión 3.0 para Oracle de Attunity dirigido a SQL Server 2014](https://www.microsoft.com/en-us/download/details.aspx?id=44582)<br/>[Microsoft Connector versión 2.0 para Oracle de Attunity dirigido a SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29283)|
 | Se corrige un problema por el que no se puede cargar la tarea o el componente Script al migrar desde versiones anteriores de SSIS. | &nbsp; |
 | Se corrige un problema por el que el visor de datos no funciona en Windows 7 SP1 y Windows 8.1. | &nbsp; |
 | Se corrige un problema por el que, en algunos casos, al guardar el paquete, Visual Studio se bloquea. | &nbsp; |
@@ -85,7 +85,7 @@ _SSDT para Visual Studio 2017._
 
 _Publicado:_ &nbsp; 5 de noviembre de 2018  
 _Número de compilación:_ &nbsp; 14.0.16182.0  
-_SSDT para Visual Studio 2017._
+_SSDT para Visual Studio 2017._
 
 ### <a name="whats-new"></a>Novedades
 **SSIS:**
@@ -101,7 +101,7 @@ Se ha corregido un problema que consistía en que al implementar un proyecto de 
 
 _Publicado:_ &nbsp; 27 de septiembre de 2018  
 _Número de compilación:_ &nbsp; 14.0.16179.0  
-_SSDT para Visual Studio 2017._
+_SSDT para Visual Studio 2017._
 
 ### <a name="whats-new"></a>Novedades
 
@@ -121,7 +121,7 @@ _SSDT para Visual Studio 2017._
 
 _Publicado:_ &nbsp; 5 de septiembre de 2018  
 _Número de compilación:_ &nbsp; 14.0.16174.0  
-_SSDT para Visual Studio 2017._
+_SSDT para Visual Studio 2017._
 
 ### <a name="whats-new"></a>Novedades
 
@@ -144,7 +144,7 @@ _SSDT para Visual Studio 2017._
 
 _Publicado:_ &nbsp; 2 de julio de 2018  
 _Número de compilación:_ &nbsp; 14.0.16167.0  
-_SSDT para Visual Studio 2017._
+_SSDT para Visual Studio 2017._
 
 ### <a name="whats-new"></a>Novedades
 
@@ -167,7 +167,7 @@ _SSDT para Visual Studio 2017._
 
 _Publicado:_ &nbsp; 4 de junio de 2018  
 _Número de compilación:_ &nbsp; 14.0.16165.0  
-_SSDT para Visual Studio 2017._
+_SSDT para Visual Studio 2017._
 
 ### <a name="whats-new"></a>Novedades
 
@@ -192,7 +192,7 @@ _SSDT para Visual Studio 2017._
 
 _Publicado:_ &nbsp; 10 de abril de 2018  
 _Número de compilación:_ &nbsp; 14.0.16162.0  
-_SSDT para Visual Studio 2017._
+_SSDT para Visual Studio 2017._
 
 ### <a name="whats-new"></a>Novedades
 
@@ -220,7 +220,7 @@ _SSDT para Visual Studio 2017._
 ## <a name="1552nbsp-ssdt-for-vs-2017"></a>15.5.2,&nbsp; SSDT para VS 2017
 
 _Número de compilación:_ &nbsp; 14.0.16156.0  
-_SSDT para Visual Studio 2017._
+_SSDT para Visual Studio 2017._
 
 ### <a name="whats-new"></a>Novedades
 
@@ -243,7 +243,7 @@ _SSDT para Visual Studio 2017._
 ## <a name="1551nbsp-ssdt-for-vs-2017"></a>15.5.1,&nbsp; SSDT para VS 2017
 
 _Número de compilación:_ &nbsp; 14.0.16148.0  
-_SSDT para Visual Studio 2017._
+_SSDT para Visual Studio 2017._
 
 ### <a name="whats-new"></a>Novedades
 
@@ -257,7 +257,7 @@ Además de estas dos correcciones de errores, todavía se aplican los siguientes
 ## <a name="1550nbsp-ssdt-for-vs-2017"></a>15.5.0,&nbsp; SSDT para VS 2017
 
 _Número de compilación:_ &nbsp; 14.0.16146.0  
-_SSDT para Visual Studio 2017._
+_SSDT para Visual Studio 2017._
 
 ### <a name="whats-new"></a>Novedades
 
@@ -300,7 +300,7 @@ _SSDT para Visual Studio 2015._
 
 ### <a name="bug-fixes"></a>Correcciones de errores
 
-**Proyectos de Analysis Services (AS):**
+**Proyectos de Analysis Services (AS)**
 - Se ha corregido un problema que podía provocar una excepción no controlada durante la comprobación de cambios del modelo en TFS.
 - Se ha corregido un problema que podía provocar una excepción al agregar una tabla con expresión M compleja a un modelo 1400.
 - Se ha corregido un problema que podía provocar un bloqueo en Visual Studio al buscar metadatos en la vista de diagrama de modelo.
@@ -333,7 +333,7 @@ _SSDT para Visual Studio 2015._
 ## <a name="1540-previewnbsp-ssdt-for-vs-2017"></a>15.4.0 (versión preliminar),&nbsp; SSDT para VS 2017
 
 _Número de compilación:_ &nbsp; 14.0.16134.0  
-_SSDT para Visual Studio 2017._
+_SSDT para Visual Studio 2017._
   
 ### <a name="whats-new"></a>Novedades
 
@@ -397,7 +397,7 @@ _SSDT para Visual Studio 2015._
 
 - Después de actualizar el proyecto al nuevo formato de MSBuild, se puede producir un error al guardar con un mensaje similar al siguiente:
 
-   *"El parámetro "unevaluatedValue" no puede ser nulo."*
+   *"El parámetro "unevaluatedValue" no puede ser nulo".*
 
    Para solucionar este problema, actualice las *configuraciones del proyecto* y rellene la propiedad *Plataforma*.
 
@@ -459,7 +459,7 @@ _SSDT para Visual Studio 2015._
 ## <a name="1530-previewnbsp-ssdt-for-vs-2017"></a>15.3.0 (versión preliminar),&nbsp; SSDT para VS 2017
 
 _Número de compilación:_ &nbsp; 14.0.16121.0  
-_SSDT para Visual Studio 2017._
+_SSDT para Visual Studio 2017._
   
 ### <a name="whats-new"></a>Novedades
 
@@ -477,7 +477,7 @@ Esta versión preliminar es la primera versión de SSDT para Visual Studio 2017.
 ## <a name="172nbsp-ssdt-for-vs-2015"></a>17.2,&nbsp; SSDT para VS 2015
 
 _Número de compilación:_ &nbsp; 14.0.61707.300  
-_SSDT para Visual Studio 2015._
+_SSDT para Visual Studio 2015._
 
 ### <a name="whats-new"></a>Novedades
 
@@ -526,7 +526,7 @@ _SSDT para Visual Studio 2015._
 ## <a name="1710nbsp-ssdt-for-vs-2015"></a>17.10,&nbsp; SSDT para VS 2015
 
 _Número de compilación:_ &nbsp; 14.0.61705.170  
-_SSDT para Visual Studio 2015._
+_SSDT para Visual Studio 2015._
 
 ### <a name="whats-new"></a>Novedades
 **Proyectos de AS:**
@@ -560,8 +560,8 @@ _SSDT para Visual Studio 2015._
 ## <a name="170nbsp-ssdt-for-vs-2015"></a>17.0,&nbsp; SSDT para VS 2015
 
 _Número de compilación:_ &nbsp; 14.0.61704.140  
-_SSDT para Visual Studio 2015._  
-_Admite hasta SQL Server 2017._
+_SSDT para Visual Studio 2015._  
+_Admite hasta SQL Server 2017._
 
 ### <a name="whats-new"></a>Novedades
 **Proyectos de base de datos:**
@@ -665,8 +665,8 @@ _Admite hasta SQL Server 2017._
 
 _Publicado:_ &nbsp; 20 de octubre de 2016  
 _Número de compilación:_ &nbsp; 14.0.61021.0  
-_SSDT para Visual Studio 2015._  
-_Admite hasta SQL Server 2016._
+_SSDT para Visual Studio 2015._  
+_Admite hasta SQL Server 2016._
 
 **Novedades**
 
@@ -758,7 +758,7 @@ Para obtener más información, lea la [entrada de blog de Analysis Services](ht
 
 _Publicado:_ &nbsp; 20 de septiembre de 2016  
 _Número de compilación:_ &nbsp; 14.0.60918  
-_Para SQL Server 2016._
+_Para SQL Server 2016._
 
 **Novedades**
 
@@ -797,7 +797,7 @@ SSDT Tabular ahora incluye una instancia de SSAS interna que SSDT Tabular inicia
 
 _Publicado:_ &nbsp; 15 de agosto de 2016  
 _Número de compilación:_ &nbsp; 14.0.60812.0  
-_Para SQL Server 2016._
+_Para SQL Server 2016._
 
 **Novedades**
 
@@ -835,7 +835,7 @@ _Para SQL Server 2016._
 
 _Publicado:_ &nbsp; 30 de junio de 2016  
 _Número de compilación:_ &nbsp; 14.0.60629.0  
-_Para SQL Server 2016._
+_Para SQL Server 2016._
 
 **Novedades**  
 - **Compatibilidad con Always Encrypted:** para las bases de datos que contienen columnas de Always Encrypted, en esta versión se agrega compatibilidad completa con Always Encrypted mediante nuestras API de núcleo y la herramienta de línea de comandos (SqlPackage.exe). Puede crear y publicar proyectos de base de datos con compatibilidad total con todas las características de Always Encrypted.  
@@ -879,15 +879,15 @@ _Para SQL Server 2016._
 
 _Publicado:_ &nbsp; 1 de junio de 2016  
 _Número de compilación:_ &nbsp; 14.0.60525.0  
-_Para SQL Server 2016._
+_Para SQL Server 2016._
 
 Ya se ha publicado Disponibilidad general (GA) de SSDT. La actualización de SSDT GA para junio de 2016 agrega compatibilidad con las últimas actualizaciones de SQL Server 2016 RTM y varias correcciones de errores. Para obtener más información, consulte [SQL Server Data Tools GA update for June 2016](https://blogs.msdn.microsoft.com/ssdt/2016/06/01/sql-server-data-tools-ga-update-for-june-2016/) (Actualización de SQL Server Data Tools GA para junio de 2016).
 
 ## <a name="additional-resources"></a>Recursos adicionales
   
-[Descargar SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
-[Previous releases of SQL Server Data Tools &#40;SSDT and SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md) (Versiones anteriores de SQL Server Data Tools [SSDT y SSDT-BI])  
-[Novedades de SQL Server 2016 (motor de base de datos)](https://msdn.microsoft.com/library/bb510411.aspx)  
+[Descargar SQL Server Data Tools &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
+[Versiones anteriores de SQL Server Data Tools&#40;SSDT y SSDT-BI&#41;](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
+[Novedades del Motor de base de datos](https://msdn.microsoft.com/library/bb510411.aspx)  
 [Novedades de Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
-[Novedades de Integration Services en SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
+[Novedades de Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   

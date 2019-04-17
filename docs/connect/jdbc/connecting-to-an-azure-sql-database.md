@@ -47,9 +47,9 @@ Para evitar que un componente de red elimine las conexiones inactivada, se debe 
   
 |Configuración del Registro|Valor recomendado|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parámetros \ KeepAliveTime|30000|  
-|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parámetros \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parámetros \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Reinicie el equipo para que surta efecto la configuración del Registro.  
 
@@ -81,7 +81,7 @@ Antes de la versión 4.0 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversio
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Usar el cifrado requiere establecer hostNameInCertificate
 
-Antes de la versión 7.2 de la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], al conectarse a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], debe especificar **hostNameInCertificate** si especifica **cifrar = true** (si el nombre de servidor en la conexión cadena es *shortName*. *domainName*, establezca el **hostNameInCertificate** propiedad \*. *domainName*.). Esta propiedad es opcional a partir de la versión 7.2 del controlador.
+Antes de la versión 7.2 de la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], al conectarse a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], debe especificar **hostNameInCertificate** si especifica **encrypt=true** (si el nombre de servidor en la conexión cadena es *shortName*. *domainName*, establezca el **hostNameInCertificate** propiedad \*. *domainName*.). Esta propiedad es opcional a partir de la versión 7.2 del controlador.
 
 Por ejemplo:
 

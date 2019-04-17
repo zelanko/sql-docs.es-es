@@ -1,7 +1,7 @@
 ---
 title: Configurar las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 044e52311bbdb21f1a7f144a2b6f25809ea33ade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6bcf893e719a2501fcf2084331b21de6f6a491c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610183"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241753"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurar las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +31,10 @@ ms.locfileid: "47610183"
   
 ## <a name="configure-encryption"></a>Configurar el cifrado  
  En los pasos siguientes se describe cómo especificar la configuración de cifrado mediante el procedimiento almacenado [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md).  
-  
-1.  **Determine el algoritmo de cifrado:** determine primero el nombre del algoritmo de cifrado que se usará. Seleccione uno de los algoritmos siguientes:  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+1.  **Determine el algoritmo de cifrado:** Determine primero el nombre del algoritmo de cifrado que se utiliza. Seleccione uno de los algoritmos siguientes:  
   
     -   AES_128  
   
@@ -44,7 +46,7 @@ ms.locfileid: "47610183"
   
     -   NO_ENCRYPTION  
   
-2.  **Cree una clave maestra de base de datos:** elija una contraseña para cifrar la copia de la clave maestra que se almacenará en la base de datos.  
+2.  **Cree la clave maestra de una base de datos:** Elija una contraseña para cifrar la copia de la clave maestra que se almacenará en la base de datos.  
   
     ```  
     -- Creates a database master key.  
@@ -55,7 +57,7 @@ ms.locfileid: "47610183"
     GO  
     ```  
   
-3.  **Cree un certificado de copia de seguridad o una clave asimétrica:** con el cifrado puede usar tanto un certificado como una clave asimétrica. En el ejemplo siguiente se crea un certificado de copia de seguridad que se utilizará para el cifrado.  
+3.  **Cree un certificado de copia de seguridad o clave asimétrica:** con el cifrado puede usar tanto un certificado como una clave asimétrica. En el ejemplo siguiente se crea un certificado de copia de seguridad que se utilizará para el cifrado.  
   
     ```sql  
     USE Master;  
@@ -84,17 +86,17 @@ ms.locfileid: "47610183"
 ## <a name="configure-a-custom-backup-schedule"></a>Configurar una programación de copia de seguridad personalizada  
  En los pasos siguientes se describe cómo establecer una programación personalizada con el procedimiento almacenado [managed_backup.sp_backup_config_schedule & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md).  
   
-1.  **Determine la frecuencia de las copias de seguridad completas:** determine con qué frecuencia se realizarán copias de seguridad completas de la base de datos. Puede elegir entre copias de seguridad completas diarias y semanales.  
+1.  **Determine la frecuencia de las copias de seguridad completas:** determine qué frecuencia se realizarán copias de seguridad completas de la base de datos. Puede elegir entre copias de seguridad completas diarias y semanales.  
   
-2.  **Determine la frecuencia de las copias de seguridad de registros:** determine con qué frecuencia se realizarán las copias de seguridad de registros. Este valor está en minutos u horas.  
+2.  **Determine la frecuencia de las copias de seguridad de registros:** determine con qué frecuencia se realizará una copia de seguridad de registros. Este valor está en minutos u horas.  
   
-3.  **Determine el día de la semana para las copias de seguridad semanales:** si la copia de seguridad es semanal, elija el día de la semana en que se realizará la copia de seguridad completa.  
+3.  **Determine el día de la semana para las copias de seguridad semanales:** si la copia de seguridad es semanal, elija el día de la semana para hacer la copia de seguridad completa.  
   
-4.  **Determine la hora de inicio de la copia de seguridad:** mediante la notación de 24 horas, elija una hora para iniciar la copia de seguridad.  
+4.  **Determine la hora de inicio de la copia de seguridad:** mediante la notación de 24 horas, elija una hora para iniciar la copia de seguridad.  
   
-5.  **Determine la duración permitida para la copia de seguridad:** aquí se especifica la cantidad de tiempo que puede tardar una copia de seguridad en completarse.  
+5.  **Determine el tiempo para permitir la copia de seguridad:** especifique el tiempo en que una copia de seguridad tiene que completarse.  
   
-6.  **Configure la programación de copia de seguridad personalizada:** el siguiente procedimiento almacenado define una programación personalizada para la base de datos `MyDB` . Las copias de seguridad completas se realizan cada `Monday` a las `17:30`. Las copias de seguridad de registros se realizan cada `5` minutos. Las copias de seguridad tienen dos horas para completarse.  
+6.  **Configure la programación de copia de seguridad personalizada:** el siguiente procedimiento almacenado define una programación personalizada para la base de datos `MyDB`. Las copias de seguridad completas se realizan cada `Monday` a las `17:30`. Las copias de seguridad de registros se realizan cada `5` minutos. Las copias de seguridad tienen dos horas para completarse.  
   
     ```  
     USE msdb;  
@@ -114,7 +116,7 @@ ms.locfileid: "47610183"
 ## <a name="next-steps"></a>Next Steps  
  Después de configurar las opciones avanzadas y las programaciones personalizadas, debe habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en la base de datos de destino o en la instancia de SQL Server. Para obtener más información, consulte [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

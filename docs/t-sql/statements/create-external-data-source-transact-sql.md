@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 986a658c315241e14efd6fd10b170aaf9fb17da0
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421202"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516531"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -325,6 +325,10 @@ Para asegurarse de que las consultas de PolyBase son correctas en caso de conmut
  Todos los orígenes de datos definidos en la misma ubicación de clúster de Hadoop deben usar la misma configuración de RESOURCE_MANAGER_LOCATION o JOB_TRACKER_LOCATION. Si hay incoherencias, se producirá un error en tiempo de ejecución.  
   
  Si el clúster de Hadoop se configura con un nombre y el origen de datos externo usa la dirección IP para la ubicación de clúster, PolyBase todavía debe ser capaz de resolver el nombre del clúster cuando se use el origen de datos. Para resolver el nombre, debe habilitar un reenviador DNS.  
+ 
+Actualmente, un token de SAS con el tipo `hadoop` no es compatible y solo lo es con una clave de acceso a la cuenta de almacenamiento. Si se intenta crear un origen de datos externo con el tipo `hadoop` y se utiliza una credencial SAS, es posible que aparezca un error como el siguiente:
+
+`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
   
 ## <a name="locking"></a>Bloqueo  
  Toma un bloqueo compartido en el objeto EXTERNAL DATA SOURCE.  
@@ -343,7 +347,7 @@ WITH (
 
 ```  
   
-### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>b. Creación de un origen de datos externo para hacer referencia a Hadoop con la inserción habilitada  
+### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. Creación de un origen de datos externo para hacer referencia a Hadoop con la inserción habilitada  
 Especifique la opción RESOURCE_MANAGER_LOCATION para habilitar la inserción de cálculo en Hadoop para las consultas de PolyBase. Una vez habilitada, PolyBase usa una decisión basada en costos para determinar si el cálculo de la consulta se debe aplicar en Hadoop o se deben mover todos los datos para procesar la consulta en SQL Server.
   
 ```sql  

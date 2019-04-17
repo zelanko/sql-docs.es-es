@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d7cc4c7aaf4dfc085bab1fbb3fd3335dda534a2f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: dd85274454db10b0bd3415ec41aa6cedcd629d0f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257110"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241843"
 ---
 # <a name="polybase-configuration-and-security-for-hadoop"></a>Configuración y seguridad de PolyBase para Hadoop
 
@@ -33,6 +33,8 @@ Una forma habitual de proteger la comunicación en un clúster de Hadoop consist
      <value></value>
    </property> 
 ```
+
+Para utilizar "Privacidad" o "Integridad" para hadoop.rpc.protection, SQL Server debe ser al menos SQL Server 2016 SP1 CU7, SQL Server 2016 SP2 o SQL Server 2017 CU3.
 
 ## <a name="example-xml-files-for-cdh-5x-cluster"></a>Archivos XML de ejemplo para el clúster CDH 5.X
 

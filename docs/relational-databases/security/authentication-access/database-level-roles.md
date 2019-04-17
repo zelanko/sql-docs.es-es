@@ -39,12 +39,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: a035182b6436f723abfb2a53a034ddac30fe2165
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420100"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516501"
 ---
 # <a name="database-level-roles"></a>Roles de nivel de base de datos
 
@@ -58,7 +58,7 @@ Para agregar y quitar usuarios en un rol de base de datos, use las opciones `ADD
   
  Los roles fijos de base de datos se definen en el nivel de base de datos y existen en cada una de ellas. Los miembros de los roles de base de datos **db_owner** pueden administrar la pertenencia a roles fijos de base de datos. También hay algunos roles de base de datos con fines especiales en la base de datos msdb.  
   
- Puede agregar cualquier cuenta de la base de datos y otros roles de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a los roles de nivel de base de datos. Cada miembro de un rol fijo de base de datos puede agregar otros usuarios a ese mismo rol.  
+ Puede agregar cualquier cuenta de la base de datos y otros roles de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a los roles de nivel de base de datos.
   
 > [!TIP]  
 >  No agregue roles de base de datos definidos por el usuario como miembros de los roles fijos. Esto podría habilitar un aumento de privilegios no deseado.  
@@ -74,7 +74,7 @@ Para una lista de todos los permisos, consulte el póster [Permisos del motor de
 |Nombre del rol fijo de base de datos|Descripción|  
 |-------------------------------|-----------------|  
 |**db_owner**|Los miembros del rol fijo de base de datos **db_owner** pueden realizar todas las actividades de configuración y mantenimiento en la base de datos y también pueden quitar la base de datos en [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (En [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)], algunas actividades de mantenimiento requieren permisos a nivel de servidor y los roles **db_owners**no las pueden realizar).|  
-|**db_securityadmin**|Los miembros del rol fijo de base de datos **db_securityadmin** pueden modificar la pertenencia a roles y administrar permisos. Si se agregan entidades de seguridad a este rol, podría habilitarse un aumento de privilegios no deseado.|  
+|**db_securityadmin**|Los miembros del rol fijo de base de datos **db_securityadmin** pueden modificar la pertenencia a roles únicamente para roles personalizados, crear usuarios sin inicios de sesión y administrar permisos. Si se agregan entidades de seguridad a este rol, podría habilitarse un aumento de privilegios no deseado.|  
 |**db_accessadmin**|Los miembros del rol fijo de base de datos **db_accessadmin** pueden agregar o quitar el acceso a la base de datos para inicios de sesión de Windows, grupos de Windows e inicios de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |**db_backupoperator**|Los miembros del rol fijo de base de datos **db_backupoperator** pueden crear copias de seguridad de la base de datos.|  
 |**db_ddladmin**|Los miembros del rol fijo de base de datos **db_ddladmin** pueden ejecutar cualquier comando del lenguaje de definición de datos (DDL) en una base de datos.|  

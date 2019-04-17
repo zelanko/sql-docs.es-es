@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 85e4ceb8c70d6aa11ac37a8b3e8fd28c997c03dc
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fddb5027da7d1b8e33ebcbc53ba403b866eadb8c
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493793"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506552"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -59,7 +59,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 {
      {  [ FOR SECONDARY] SET <set_options>}
 }
-| CLEAR PROCEDURE_CACHE
+| CLEAR PROCEDURE_CACHE  [plan_handle]
 | SET < set_options >
 [;]
 
@@ -94,9 +94,14 @@ FOR SECONDARY
 
 Especifica la configuración de las bases de datos secundarias (todas las bases de datos secundarias deben tener valores idénticos).
 
-CLEAR PROCEDURE_CACHE    
+CLEAR PROCEDURE_CACHE [plan_handle]
 
 Borra la memoria caché de procedimiento (plan) de la base de datos, y se puede ejecutar tanto en la principal como en las secundarias.  
+
+Especifique un identificador de plan de consulta para borrar un plan de consulta único de la caché de planes.
+
+> [!NOTE]
+> La especificación de un identificador de plan de consulta está disponible en Azure SQL Database y SQL Server 2019 o superior.
 
 MAXDOP **=** {\<valor> | PRIMARY } **\<valor>**
 
@@ -151,7 +156,7 @@ Este valor solo es válido en las bases de datos secundarias mientras la base de
 
 IDENTITY_CACHE **=** { **ON** | OFF }
 
-**Se aplica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Se aplica a**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 Habilita o deshabilita la caché de identidad en el nivel de base de datos. El valor predeterminado es **ON**. El almacenamiento en caché de la identidad se usa para mejorar el rendimiento de INSERT en tablas con columnas de identidad. Para evitar lagunas en los valores de una columna de identidad en los casos en que el servidor se reinicia inesperadamente o conmuta por error a un servidor secundario, deshabilite la opción IDENTITY_CACHE. Esta opción es similar a la [marca de seguimiento 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) existente, excepto en que se puede establecer en el nivel de base de datos, en lugar de hacerlo solo en el nivel de servidor.
 
@@ -169,7 +174,7 @@ Permite habilitar o deshabilitar la ejecución intercalada de funciones con valo
 
 BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y[!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
 Permite habilitar o deshabilitar los comentarios de concesión de memoria en modo por lotes en el ámbito de base de datos a la vez que se mantiene el nivel de compatibilidad de la base de datos 140 y superior. Los comentarios de concesión de memoria en modo por lotes son una característica que forma parte del [Procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md) incorporado en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
@@ -178,7 +183,7 @@ Permite habilitar o deshabilitar los comentarios de concesión de memoria en mod
 
 BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
-**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y[!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
 
 Permite habilitar o deshabilitar las combinaciones adaptables en modo por lotes lote en el ámbito de base de datos a la vez que se mantiene el nivel de compatibilidad de la base de datos 140 y superior. Las combinaciones adaptables en modo por lotes son una característica que forma parte del [Procesamiento de consultas inteligentes](../../relational-databases/performance/intelligent-query-processing.md) incorporado en [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
@@ -290,13 +295,13 @@ Permite la configuración de la funcionalidad para quitar automáticamente las [
 
 LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
 Permite habilitar o deshabilitar la [infraestructura ligera de generación de perfiles de consulta](../../relational-databases/performance/query-profiling-infrastructure.md). La infraestructura ligera de generación de perfiles de consulta (LWP) está habilitada de forma predeterminada y proporciona datos de rendimiento de consulta de una forma más eficaz que los mecanismos de generación de perfiles estándar.
 
 VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
-**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
 Permite habilitar o deshabilitar el nuevo mensaje de error `String or binary data would be truncated`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] presenta un mensaje de error nuevo y más específico (2628) para este escenario:  
 
@@ -406,7 +411,7 @@ En este ejemplo se establece PARAMETER_SNIFFING en OFF para una base de datos pr
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = OFF ;
 ```
 
-En este ejemplo se establece PARAMETER_SNIFFING en OFF para una base de datos principal en un escenario de replicación geográfica.
+En este ejemplo se establece PARAMETER_SNIFFING en OFF para una base de datos secundaria en un escenario de replicación geográfica.
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;
@@ -468,27 +473,34 @@ Este ejemplo establece ELEVATE_RESUMABLE en WHEN_SUPPORTED.
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
+### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>K. Borrado de un plan de consulta de la caché de planes
+En este ejemplo se borra un plan específico de la caché de procedimientos. 
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B7CD12C02000001000000000000000000000000000000000000000000000000000000;
+```
+
 ## <a name="additional-resources"></a>Recursos adicionales
 
 ### <a name="maxdop-resources"></a>Recursos de MAXDOP
 
 - [Grado de paralelismo](../../relational-databases/query-processing-architecture-guide.md#DOP)
-- [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/kb/2806535) (Recomendaciones y directrices relativas a la opción de configuración "grado máximo de paralelismo" en SQL Server)
+- [Recomendaciones y directrices para la opción de configuración "grado máximo de paralelismo" en SQL Server](https://support.microsoft.com/kb/2806535)
 
 ### <a name="legacycardinalityestimation-resources"></a>Recursos de LEGACY_CARDINALITY_ESTIMATION
 
 - [Estimación de cardinalidad (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
-- [Optimizar los planes de consulta con el estimador de cardinalidad de SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)
+- [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator (Optimización de los planes de consulta con el estimador de cardinalidad de SQL Server 2014)](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>Recursos de PARAMETER_SNIFFING
 
 - [Examen de parámetros](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
-- ["I smell a parameter!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/) ("¡Huelo un parámetro!")
+- ["I smell a parameter!" ("¡Huelo un parámetro!")](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>Recursos de QUERY_OPTIMIZER_HOTFIXES
 
 - [Marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-- [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/kb/974006) (Modelo de servicios de la marca de seguimiento 4199 de revisión del optimizador de consultas de SQL Server)
+- [SQL Server query optimizer hotfix trace flag 4199 servicing model (Modelo de servicios de la marca de seguimiento 4199 de revisión del optimizador de consultas de SQL Server)](https://support.microsoft.com/kb/974006)
 
 ### <a name="elevateonline-resources"></a>Recursos ELEVATE_ONLINE
 

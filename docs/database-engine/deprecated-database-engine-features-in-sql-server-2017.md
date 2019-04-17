@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2168c38ace8f74b46107a1dab25bc8541ac2df35
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a1cc685ac2851acb52eaedff7507bd0b7997add8
+ms.sourcegitcommit: 85a7a532f35b8ea1b45e9a83bfc8529a0abed264
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537749"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480331"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Características en desuso del motor de base de datos de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -63,14 +63,14 @@ Las siguientes características de [!INCLUDE[ssDEnoversion](../includes/ssdenove
 ## <a name="features-deprecated-in-a-future-version-of-sql-server"></a>Características en desuso en una versión futura de SQL Server  
  Las siguientes características del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] se admiten en la próxima versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], pero quedarán en desuso en una versión posterior. No se ha determinado la versión específica de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-|Categoría|Característica desusada|Sustituta|Nombre de característica|Id. de característica|  
+|Categoría|Característica desusada|Sustituta|Nombre de característica|Id. de la característica|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Niveles de compatibilidad|sp_dbcmptlevel|ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Para obtener más información, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|sp_dbcmptlevel|80|  
 |Niveles de compatibilidad|Nivel de compatibilidad de la base de datos 110 Y 120.|Planee actualizar la base de datos y la aplicación en una versión futura. Pero seguiremos dando soporte a las aplicaciones certificadas en cualquier nivel de compatibilidad de base de datos compatible, siempre que sea posible, para facilitar las actualizaciones. Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Nivel de compatibilidad de la base de datos 110<br /><br /> Nivel de compatibilidad de la base de datos 120||  
 |XML|Generación de esquemas XDR insertados|La directiva XMLDATA para la opción FOR XML ha quedado desusada. Utilice la XSD generación en los modos RAW y AUTO. No hay sustitución para la directiva XMLDATA en modo EXPLICIT.|XMLDATA|181|  
 |Copias de seguridad y restauración|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE or LOG TO TAPE|235|  
-|Copias de seguridad y restauración|sp_addumpdevice "**tape**"|sp_addumpdevice "**disk**"|ADDING TAPE DEVICE|236|  
-|Copias de seguridad y restauración|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
+|Copia de seguridad y restauración|sp_addumpdevice "**tape**"|sp_addumpdevice "**disk**"|ADDING TAPE DEVICE|236|  
+|Copia de seguridad y restauración|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
 |Intercalaciones|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|Ninguno. Estas intercalaciones existen en [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], pero no están visibles en fn_helpcollations.|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
 |Intercalaciones|Hindi<br /><br /> Macedonian|Estas intercalaciones existen en [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] y versiones posteriores, pero no están visibles en fn_helpcollations. Utilice en su lugar Macedonian_FYROM_90 e Indic_General_90.|Hindi<br /><br /> Macedonian|190<br /><br /> 193|  
 |Intercalaciones|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|Azeri_Latin_100<br /><br /> Azeri_Cyrilllic_100|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|232<br /><br /> 233|  
@@ -79,7 +79,7 @@ Las siguientes características de [!INCLUDE[ssDEnoversion](../includes/ssdenove
 |Tipos de datos|Sintaxis de**timestamp** para el tipo de datos **rowversion** |Sintaxis del tipo de datos**rowversion** |timestamp|158|  
 |Tipos de datos|Capacidad de insertar valores NULL en columnas **timestamp** .|Utilice DEFAULT en su lugar.|INSERT NULL en columnas TIMESTAMP|179|  
 |Tipos de datos|Opción de tabla 'text in row'|Use los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)**. Para obtener más información, vea [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Opción de tabla Text in row|9|  
-|Tipos de datos|Tipos de datos:<br /><br /> **texto**<br /><br /> **ntext**<br /><br /> **imagen**|Use los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)** .|Tipos de datos: **text**, **ntext** o **image**.|4|  
+|Tipos de datos|Tipos de datos:<br /><br /> **texto**<br /><br /> **ntext**<br /><br /> **imagen**|Use los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)**.|Tipos de datos: **text**, **ntext** o **image**.|4|  
 |Administración de bases de datos|sp_attach_db<br /><br /> sp_attach_single_file_db|Instrucción CREATE DATABASE con la opción FOR ATTACH. Si desea volver a generar varios archivos de registro y uno o más tienen una ubicación nueva, utilice la opción FOR ATTACH_REBUILD_LOG.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |Objetos de base de datos|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|Palabra clave DEFAULT en CREATE TABLE y ALTER TABLE.|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |Objetos de base de datos|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|Palabra clave CHECK en CREATE TABLE y ALTER TABLE.|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  
@@ -99,7 +99,7 @@ Las siguientes características de [!INCLUDE[ssDEnoversion](../includes/ssdenove
 |Programación extendida del procedimiento almacenado|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|En su lugar, use la integración con CLR.|sp_addextendedproc<br /><br /> sp_dropextendedproc<br /><br /> sp_helpextendedproc|94<br /><br /> 95<br /><br /> 96|  
 |Procedimientos almacenados extendidos|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginconfig|Use CREATE LOGIN<br /><br /> Use el argumento DROP LOGIN IsIntegratedSecurityOnly de SERVERPROPERTY|xp_grantlogin<br /><br /> xp_revokelogin<br /><br /> xp_loginconfig|44<br /><br /> 45<br /><br /> 59|  
 |Funciones|fn_get_sql|sys.dm_exec_sql_text|fn_get_sql|151|  
-|Algoritmos hash|Los algoritmos hash MD2, MD4, MD5, SHA y SHA1. No están disponibles en el nivel de compatibilidad 130.|Use SHA2_256 o SHA2_512.|Algoritmo hash en desuso||  
+|Algoritmos hash|Los algoritmos hash MD2, MD4, MD5, SHA y SHA1. No se deben utilizar.|Use SHA2_256 o SHA2_512.|Algoritmo hash en desuso||  
 |Alta disponibilidad|creación de reflejo de la base de datos|[!INCLUDE[ssHADR](../includes/sshadr-md.md)]<br /><br /> Si la edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no admite [!INCLUDE[ssHADR](../includes/sshadr-md.md)], use el trasvase de registros.|DATABASE_MIRRORING|267|  
 |Opciones de índice|sp_indexoption|ALTER INDEX|sp_indexoption|78|  
 |Opciones de índice|Sintaxis de CREATE TABLE, ALTER TABLE o CREATE INDEX sin paréntesis alrededor de las opciones.|Reescriba la instrucción para utilizar la sintaxis actual.|INDEX_OPTION|33|  
@@ -167,13 +167,13 @@ Las siguientes características de [!INCLUDE[ssDEnoversion](../includes/ssdenove
 |Otros|DB-Library<br /><br /> Embedded SQL para C|Aunque el [!INCLUDE[ssDE](../includes/ssde-md.md)] sigue admitiendo conexiones de las aplicaciones existentes que usan las API DB-Library y Embedded SQL, no incluye los archivos ni la documentación necesarios para realizar los trabajos de programación en aplicaciones que utilizan estas API. Una versión futura del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] eliminará la compatibilidad para las conexiones desde aplicaciones de DB-Library o Embedded SQL. No utilice DB-Library ni Embedded SQL para desarrollar nuevas aplicaciones. Quite las dependencias de DB-Library o Embedded SQL cuando modifique las aplicaciones existentes. En lugar de estas API, use el espacio de nombres SQLClient o una API como ODBC. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] no incluye la DLL DB-Library necesaria para ejecutar estas aplicaciones. Para ejecutar aplicaciones de DB-Library o Embedded SQL, debe estar disponible la DLL DB-Library de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versión 6.5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 o [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].|None|None|  
 |Herramientas|SQL Server Profiler para captura de seguimiento|Use el generador de perfiles de eventos extendidos integrado en SQL Server Management Studio.|SQL Server Profiler|None|  
 |Herramientas|SQL Server Profiler para reproducción de seguimiento|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)|SQL Server Profiler|None|  
-|Objetos de administración de seguimiento|Microsoft.SqlServer.Management.Trace namespace (contiene las API para Seguimiento de SQL Server y los objetos de reproducción)|Configuración de seguimiento: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> Lectura de seguimiento: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> Reproducción de seguimiento: ninguno|||  
+|Objetos de administración de seguimiento|Microsoft.SqlServer.Management.Trace namespace (contiene las API para Seguimiento de SQL Server y los objetos de reproducción)|Configuración de seguimiento: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> Lectura de seguimiento: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> Reproducción de seguimiento: None|||  
 |Procedimientos almacenados, funciones y vistas de catálogo de seguimiento de SQL|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[Eventos extendidos](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   
 > [!NOTE]  
 > El parámetro **OUTPUT** de la cookie para **sp_setapprole** está documentado actualmente como **varbinary(8000)** , que es la longitud máxima correcta. Pero la implementación actual devuelve **varbinary(50)**. Si los programadores han asignado **varbinary(50)** , es posible que la aplicación requiera cambios si el tamaño devuelto de la cookie aumenta en una versión futura. Aunque no se trate de un problema de desuso, se menciona en este tema porque los ajustes de aplicación son similares. Para obtener más información, vea [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funcionalidad del motor de base de datos no incluida en SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
 

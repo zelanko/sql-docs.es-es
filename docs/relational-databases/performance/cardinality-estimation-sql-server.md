@@ -16,14 +16,15 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2b95caa318df620d91e6508d3ca0811942063fcd
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828025"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516461"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Estimación de cardinalidad (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 El Optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un optimizador basado en el costo. Esto significa que selecciona los planes de consulta cuya ejecución tiene el menor costo de procesamiento estimado. El optimizador de consultas determina el costo de ejecución de un plan de consulta en función de dos factores principales:
@@ -53,9 +54,10 @@ Es bastante probable que el sistema de aplicaciones tenga una consulta important
 - Una consulta OLTP (procesamiento de transacciones en línea) que se ejecuta con tanta frecuencia que, a menudo, coinciden varias instancias al mismo tiempo.  
 - Una instrucción SELECT con agregaciones importantes que se ejecuta durante el horario laboral de OLTP.  
   
-Existen diversas técnicas para detectar una consulta que se ralentiza a raíz de la nueva estimación de cardinalidad. También hay diversas opciones para abordar ese problema de rendimiento.     
+Existen diversas técnicas para detectar una consulta que se ralentiza a raíz de la nueva estimación de cardinalidad. También hay diversas opciones para abordar ese problema de rendimiento.
   
-## <a name="versions-of-the-ce"></a>Versiones de la estimación de cardinalidad  
+## <a name="versions-of-the-ce"></a>Versiones de la estimación de cardinalidad
+
 En 1998, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 incorporó una actualización importante de la estimación de cardinalidad, para la que el nivel de compatibilidad fue 70. Esta versión del modelo de estimación de cardinalidad se establece sobre cuatro suposiciones básicas:
 
 -  **Independencia:** se supone que las distribuciones de datos en otras columnas de métodos son independientes entre sí, a menos que la información de correlación esté disponible y se pueda usar.
@@ -106,7 +108,7 @@ O, a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, la [sugere
  ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
+WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
@@ -293,5 +295,6 @@ WHERE s.ticket = r.ticket AND
  [Optimizar los planes de consulta con el estimador de cardinalidad de SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx)  
  [Sugerencias de consulta](../../t-sql/queries/hints-transact-sql-query.md)     
  [Sugerencias de consulta USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
+ [Actualización de bases de datos mediante el Asistente para la optimización de consultas](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md)   

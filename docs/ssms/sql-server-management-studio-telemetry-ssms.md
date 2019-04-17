@@ -11,16 +11,17 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70c044c6b674ef7b64368edfbee069cf6c6a6332
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ce4abde855b5fe6a65c3038e93eb8609f9736dc1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698904"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240393"
 ---
-# <a name="local-audit-for-ssms-usage-feedback-collection"></a>Auditoría local para colección de comentarios sobre el uso de SSMS
+# <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Auditoría local para la recopilación de datos de uso y diagnóstico de SSMS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-SQL Server Management Studio (SSMS) contiene características habilitadas para Internet que pueden recopilar y enviar datos anónimos sobre el uso de características a Microsoft. SSMS puede recopilar información estándar del equipo e información sobre el uso y el rendimiento que se podría transmitir a Microsoft y analizarse a fin de mejorar la calidad, la seguridad y la confiabilidad de SSMS. No recopilamos su nombre, dirección ni otra información de contacto. Para obtener más información, vea la [Declaración de privacidad de SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
+
+SQL Server Management Studio (SSMS) contiene características habilitadas para Internet que pueden recopilar y enviar datos anónimos sobre el uso de características a Microsoft. SSMS puede recopilar información estándar del equipo e información sobre el uso y el rendimiento que se podría transmitir a Microsoft y analizarse a fin de mejorar la calidad, la seguridad y la confiabilidad de SSMS. No recopilamos su nombre, dirección ni otra información de contacto. Para más información, consulte [Declaración de privacidad de Microsoft](https://privacy.microsoft.com/privacystatement) y [Complemento de privacidad de SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
 
 ## <a name="audit-feature-usage-data"></a>Auditar datos del uso características
 
@@ -33,8 +34,34 @@ Mientras use SSMS para interactuar con las bases de datos, la ventana **Salida**
 
 ## <a name="enable-or-disable-usage-feedback-collection-in-ssms"></a>Habilitar o deshabilitar la recopilación de comentarios sobre el uso en SSMS
 
-Para participar o no en la recopilación de datos de uso para SSMS, vea [Cómo configurar SQL Server 2016 para enviar comentarios a Microsoft](https://support.microsoft.com/help/3153756/how-to-configure-sql-server-2016-to-send-feedback-to-microsoft).
+Para optar por recibir o no recibir la recopilación de datos de uso de SSMS:
+
+- Para SQL Server Management Studio 17:
+
+  `Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0`
+
+  Nombre de RegEntry = `UserFeedbackOptIn`
+
+  Tipo de entrada `DWORD`: `0` es dejar optar por no recibir; `1` es optar por recibir
+
+  Además, SSMS 17.x se basa en el shell de Visual Studio 2015 y la instalación de Visual Studio admite los comentarios de los clientes de forma predeterminada.  
+
+  Para configurar Visual Studio para deshabilitar los comentarios de los clientes en equipos específicos, cambie el valor de la siguiente subclave del registro por la cadena `0`: `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn`
+
+  Por ejemplo, modifique la subclave así:  
+  `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM OptIn `=` 0`
+
+  La recopilación de datos de uso y diagnóstico de SQL Server 2017 respeta la directiva de grupo basada en el Registro sobre estas subclaves del Registro.
+
+- Para SQL Server Management Studio 18:
+
+  `Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell`
+
+  Nombre de RegEntry = `UserFeedbackOptIn`
+
+  Tipo de entrada `DWORD`: `0` es dejar optar por no recibir; `1` es optar por recibir
 
 ## <a name="see-also"></a>Vea también
 
-[Auditoría local para colección de comentarios sobre el uso de SQL Server](https://msdn.microsoft.com/library/mt743085.aspx)
+- [Configuración de la recopilación de datos de uso y diagnóstico para SQL Server](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
+- [Auditoría local para la recopilación de datos de uso y diagnóstico de SQL Server](http://msdn.microsoft.com/library/mt743085.aspx)

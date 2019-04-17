@@ -1,7 +1,7 @@
 ---
 title: 'Índices de almacén de columnas: Guía de carga de datos | Microsoft Docs'
 ms.custom: ''
-ms.date: 12/01/2017
+ms.date: 12/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7f41165b33bba2a04e3b8f4751377ae63b92309
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b458dc14c0a64428b5d59d7a4411327a82326d0d
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668934"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506502"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Índices de almacén de columnas: Guía de carga de datos
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 En este artículo se describen las opciones y las recomendaciones para cargar datos en un índice de almacén de columnas mediante los métodos de inserción gradual y carga masiva SQL estándar. La carga de datos en un índice de almacén de columnas es una parte esencial de cualquier proceso de almacenamiento de datos, ya que mueve la información al índice que se está preparando para el análisis.
@@ -33,19 +34,19 @@ Para realizar una carga masiva, puede usar la [utilidad bcp](../../tools/bcp-uti
 
 ![Carga en un índice agrupado de almacén de columnas](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "Carga en un índice agrupado de almacén de columnas")  
   
- Tal y como se recomienda en el diagrama, una carga masiva:  
+Tal y como se recomienda en el diagrama, una carga masiva:
   
-* No ordena los datos previamente. Los datos se insertan en grupos de filas en el orden en que se reciben.
-* Si el tamaño de lote es mayor o igual que 102400, las filas estarán directamente en el grupo de filas comprimido. Se recomienda elegir un tamaño de lote mayor o igual que 102 400 para que la importación en bloque se realice de forma eficaz, ya que puede evitar que se muevan las filas de datos a un grupo de filas delta antes de que las filas se terminen moviendo a grupos de filas comprimidos mediante el motor de tupla (TM), un subproceso en segundo plano.
-* Si el tamaño del lote o el de las filas restantes es menor que 102 400, las filas se cargarán en grupos de filas delta.
+- No ordena los datos previamente. Los datos se insertan en grupos de filas en el orden en que se reciben.
+- Si el tamaño de lote es mayor o igual que 102400, las filas estarán directamente en el grupo de filas comprimido. Se recomienda elegir un tamaño de lote mayor o igual que 102400 para que la importación en bloque se realice de forma eficaz, ya que puede evitar que se muevan las filas de datos a un grupo de filas delta antes de que las filas se terminen moviendo a grupos de filas comprimidos mediante el motor de tupla (TM), un subproceso en segundo plano.
+- Si el tamaño del lote o el de las filas restantes es menor que 102 400, las filas se cargarán en grupos de filas delta.
 
 > [!NOTE]
 > En una tabla de almacén de filas con datos de índices de almacén de columnas no agrupados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre inserta los datos en la tabla base. Nunca se insertan directamente en el índice de almacén de columnas.  
 
 La carga masiva tiene estas optimizaciones de rendimiento integradas:
--   **Cargas en paralelo**: puede hacer varias cargas masivas simultáneas (bcp o inserción masiva) y que cada una cargue un archivo de datos independiente. A diferencia de las cargas masivas del almacén de filas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no hay que especificar `TABLOCK`, ya que cada subproceso de importación en bloque cargará los datos solamente en grupos de filas independientes (grupos de filas delta o comprimidos) aplicando un bloqueo exclusivo. Al usar `TABLOCK`, se forzará un bloqueo exclusivo en la tabla y no podrá importar los datos en paralelo.  
--   **Registro mínimo:** una carga masiva usa un registro mínimo en los datos que pasan directamente a los grupos de filas comprimidos. Los datos que van a un grupo de filas delta se registran por completo, incluidos los tamaños de lote con menos de 102 400 filas. Sin embargo, el objetivo de la carga masiva es omitir la mayoría de los grupos de filas delta.  
--   **Optimización de bloqueo:** cuando se cargan datos en un grupo de filas comprimido, se obtiene el bloqueo X en el grupo de filas. Sin embargo, cuando la carga masiva se realiza en el grupo de filas delta, se obtiene un bloqueo X en el grupo de filas, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continúa bloqueando los bloqueos de página y extensión, ya que el bloqueo de grupos de filas X no forma parte de la jerarquía de bloqueo.  
+-   **Cargas en paralelo:** Puede realizar varias importaciones simultáneas masivas (bcp o inserción masiva) cargando un archivo de datos independiente. A diferencia de las cargas masivas del almacén de filas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no hay que especificar `TABLOCK`, ya que cada subproceso de importación en bloque cargará los datos solamente en grupos de filas independientes (grupos de filas delta o comprimidos) aplicando un bloqueo exclusivo. Al usar `TABLOCK`, se forzará un bloqueo exclusivo en la tabla y no podrá importar los datos en paralelo.  
+-   **Registro mínimo:** Una carga masiva utiliza un registro mínimo en los datos que pasan directamente a los grupos de filas comprimidos. Los datos que van a un grupo de filas delta se registran por completo, incluidos los tamaños de lote con menos de 102 400 filas. Sin embargo, el objetivo de la carga masiva es omitir la mayoría de los grupos de filas delta.  
+-   **Optimization de bloqueo:** Cuando se cargan datos en un grupo de filas comprimido, se obtiene el bloqueo X en el grupo de filas. Sin embargo, cuando la carga masiva se realiza en el grupo de filas delta, se obtiene un bloqueo X en el grupo de filas, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continúa bloqueando los bloqueos de página y extensión, ya que el bloqueo de grupos de filas X no forma parte de la jerarquía de bloqueo.  
   
 Si tiene un índice no agrupado de árbol B en un índice de almacén de columnas, no habrá ninguna optimización de registro ni de bloqueo para el propio índice. Sin embargo, las optimizaciones del índice agrupado de almacén de columnas seguirán estando disponibles, tal como se ha descrito anteriormente.  
   
@@ -57,9 +58,10 @@ En estos escenarios siguientes se describe cuándo las filas cargadas pasan dire
 |Filas que se cargarán de forma masiva|Filas agregadas al grupo de filas comprimido|Filas agregadas al grupo de filas delta|  
 |-----------------------|-------------------------------------------|--------------------------------------|  
 |102,000|0|102,000|  
-|145,000|145,000<br /><br /> Tamaño del grupo de filas: 145.000|0|  
-|1,048,577|1,048,576<br /><br /> Tamaño del grupo de filas: 1.048.576|1|  
-|2,252,152|2,252,152<br /><br /> Tamaños de los grupos de filas: 1.048.576, 1.048.576, 155.000|0|  
+|145,000|145,000<br /><br /> Tamaño del grupo de filas: 145,000|0|  
+|1,048,577|1,048,576<br /><br /> Tamaño del grupo de filas: 1 048 576.|1|  
+|2,252,152|2,252,152<br /><br /> Tamaños de los grupos de filas: 1 048 576, 1 048 576, 155 000.|0|  
+| &nbsp; | &nbsp; | &nbsp; |
   
  En el ejemplo siguiente se muestran los resultados de cargar 1 048 577 filas en una tabla. Los resultados muestran un grupo de filas COMPRESSED en el almacén de columnas (como segmentos de columna comprimidos) y una fila en el almacén delta.  
   
@@ -90,7 +92,7 @@ SELECT <list of columns> FROM <Staging Table>
   
  Las siguientes optimizaciones están disponibles cuando se cargan datos en índices de almacén de columnas agrupados desde tablas de almacenamiento provisional:
 -   **Optimización del registro:** se registra mínimamente cuando los datos se cargan en el grupo de filas comprimido. No existe ningún registro mínimo cuando se cargan datos en el grupo de filas delta.  
--   **Optimización de bloqueo:** cuando se cargan datos en un grupo de filas comprimido, se obtiene el bloqueo X en el grupo de filas. Sin embargo, con el grupo de filas delta, se obtiene un bloqueo X en el grupo de filas, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continúa bloqueando los bloqueos de página y extensión, ya que el bloqueo de grupos de filas X no forma parte de la jerarquía de bloqueo.  
+-   **Optimization de bloqueo:** Cuando se cargan datos en un grupo de filas comprimido, se obtiene el bloqueo X en el grupo de filas. Sin embargo, con el grupo de filas delta, se obtiene un bloqueo X en el grupo de filas, pero [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continúa bloqueando los bloqueos de página y extensión, ya que el bloqueo de grupos de filas X no forma parte de la jerarquía de bloqueo.  
   
  Si tiene uno o varios índices no agrupados, no habrá ninguna optimización de registro o bloqueo para el propio índice; sin embargo, las optimizaciones en el índice de almacén de columnas agrupado siguen estando disponibles, tal y como se describió anteriormente.  
   
@@ -120,5 +122,6 @@ ALTER INDEX <index-name> on <table-name> REORGANIZE with (COMPRESS_ALL_ROW_GROUP
 ## <a name="how-loading-into-a-partitioned-table-works"></a>Funcionamiento de la carga en una tabla con particiones  
  Para los datos con particiones, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] primero asigna cada fila a una partición y después realiza operaciones del almacén de columnas con los datos de la partición. Cada partición tiene sus propios grupos de filas y, al menos, un grupo de filas delta.  
   
- ## <a name="next-steps"></a>Pasos siguientes
- Para obtener más información sobre la carga, consulte esta [entrada de blog](https://blogs.msdn.com/b/sqlcat/archive/2015/03/11/data-loading-performance-considerations-on-tables-with-clustered-columnstore-index.aspx).  
+## <a name="next-steps"></a>Pasos siguientes
+
+Entrada de blog hospedada ahora en _techcommunity_, escrita el 11 de marzo de 2015: [Data Loading performance considerations with Clustered Columnstore indexes](https://techcommunity.microsoft.com/t5/DataCAT/Data-Loading-performance-considerations-with-Clustered/ba-p/305223) (Consideraciones de rendimiento con los índices de almacén de columnas en clúster de carga de datos).

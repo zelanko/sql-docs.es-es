@@ -19,14 +19,14 @@ ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: 725d2015a186c28b48967a8f0154a76195abba6f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/17/2019
 ms.locfileid: "59242283"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Orígenes de datos admitidos por Reporting Services (SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera datos de informe de orígenes de datos mediante un nivel de datos modular y extensible que usa extensiones de procesamiento de datos. Para recuperar datos de informe de un origen de datos, debe seleccionar una extensión de procesamiento de datos que admita el tipo de origen de datos, la versión del software que se ejecuta en el origen de datos y la plataforma del origen de datos ([!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] de 32 ó 64 bits).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera datos de informe de orígenes de datos mediante un nivel de datos modular y extensible que usa extensiones de procesamiento de datos. Para recuperar datos de informe de un origen de datos, debe seleccionar una extensión de procesamiento de datos que admita el tipo de origen de datos, la versión del software que se ejecuta en el origen de datos y la plataforma del origen de datos ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]de 32 ó 64 bits).  
   
  Al implementar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], automáticamente se instala un conjunto de extensiones de procesamiento de datos y se registra tanto en el cliente de creación de informes como en el servidor de informes para proporcionar acceso a diversos tipos de orígenes de datos. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instala los tipos de orígenes de datos siguientes:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "59242283"
  Las consideraciones sobre las plataformas para los orígenes de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] son independientes para el cliente de creación de informes y el servidor de informes.  
   
 ### <a name="on-the-report-authoring-client"></a>En el cliente de creación de informes  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] is a 32-bit application. [!INCLUDE[ss_dtbi](../../es una aplicación de 32 bits. is not supported on an Itanium-based platform. On no se admite en una plataforma basada en Itanium.nEn una plataforma x64, para editar y obtener vistas previas de los informes en el Diseñador de informes, debe tener instalados proveedores de datos de 32 bits en el directorio de la plataforma (x86).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] es una aplicación de 32 bits. [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] no se admite en una plataforma basada en Itanium. En una plataforma x64, para editar y obtener vistas previas de los informes en el Diseñador de informes, debe tener instalados proveedores de datos de 32 bits en el directorio de la plataforma (x86).  
   
 ### <a name="on-the-report-server"></a>En el servidor de informes  
  Al implementar un informe en un servidor de informes de 64 bits, el servidor de informes debe tener instalados proveedores de datos de 64 bits compilados de forma nativa. No se admite la inclusión de un proveedor de datos de 32 bits en interfaces de 64 bits. Para obtener más información, vea la documentación del proveedor de datos.  
@@ -102,8 +102,8 @@ ms.locfileid: "59242283"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos relacional|[Microsoft SQL Server](#MicrosoftSQLServer)|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Extiende System.Data.SqlClient|S|S|SQL Server 2008 y versiones posteriores.|S|S|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos relacional|OLEDB|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Extiende System.Data.OledbClient|S|S|SQL Server 2008 y versiones posteriores.|S|S|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos relacional|[ODBC](#ODBC)|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Extiende System.Data.OdbcClient|S|S|SQL Server 2008 y versiones posteriores.|S|S|  
-|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Base de datos SQL de Microsoft Azure](#Azure)|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Extiende System.Data.SqlClient|N/D|N/D|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|S|S|
-|SQL Data Warehouse|[Base de datos SQL de Microsoft Azure](#Azure)|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Extiende System.Data.SqlClient|N/D|N/D|SQL Data Warehouse|S|S| 
+|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Microsoft Azure SQL Database](#Azure)|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Extiende System.Data.SqlClient|N/D|N/D|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|S|S|
+|SQL Data Warehouse|[Microsoft Azure SQL Database](#Azure)|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Extiende System.Data.SqlClient|N/D|N/D|SQL Data Warehouse|S|S| 
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] dispositivo|[Almacenamiento de datos paralelo de Microsoft](#PWD)|Extensión de procesamiento de datos [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en desuso|N/D|N/D|N/D|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|N|N|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos multidimensional|[Microsoft SQL Server Analysis Services](#AnalysisServices)|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Usa ADOMD.NET|S|S|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y versiones posteriores|S|S|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos multidimensional|OLEDB|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Extiende System.Data.OledbClient<br /><br /> Versión 10.0|S|S|SQL Server 2008 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|S|S|   
@@ -150,7 +150,7 @@ ms.locfileid: "59242283"
   
  En [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)], el diseñador gráfico de consultas asociado a esta extensión de datos es la Interfaz de usuario del Diseñador de consultas relacionales, no el Diseñador de Visual Database Tools que se usa con el tipo de origen de datos de **Microsoft SQL Server**.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] diferencia automáticamente entre los tipos de origen de datos de **Microsoft Azure[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** y **Microsoft SQL Server**, y abre el diseñador gráfico de consultas asociado al tipo de origen de datos.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] diferencia automáticamente entre los tipos de origen de datos de **Microsoft Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** y **Microsoft SQL Server**, y abre el diseñador gráfico de consultas asociado al tipo de origen de datos.  
   
  Si usa el diseñador de consultas en el modo gráfico, la consulta se analiza y es posible que se vuelva a escribir. También se dispone de un diseñador de consultas basado en texto para escribir consultas. Use el diseñador de consultas basado en texto si quiere controlar la sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] exacta que se usa para una consulta.   
   
@@ -297,7 +297,7 @@ Para instalar las herramientas de cliente de Oracle, puede hacer lo siguiente.
  [Volver a la tabla de orígenes de datos](#DataSourcesTable)  
   
 ###  <a name="SAPBW"></a> Extensión de procesamiento de datos SAP BW  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una extensión de procesamiento de datos que permite el uso de datos de un origen de datos de SAP BW en un informe.
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una extensión de procesamiento de datos que permite el uso de datos de un origen de datos de SAP BW en un informe.
   
  [Volver a la tabla de orígenes de datos](#DataSourcesTable)  
   
@@ -313,6 +313,6 @@ Para instalar las herramientas de cliente de Oracle, puede hacer lo siguiente.
 ## <a name="see-also"></a>Consulte también  
  [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
- ¿Tiene alguna pregunta más? [Plantee sus dudas en el foro de Reporting Services.](https://go.microsoft.com/fwlink/?LinkId=620231)
+ ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).
   
   

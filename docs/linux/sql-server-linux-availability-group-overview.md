@@ -4,18 +4,18 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 11/27/2017
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cec05fbb83bf3b86babfa26df619ebc8f9a2a34d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206624"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671291"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>AlwaysOn de grupos de disponibilidad en Linux
 
@@ -57,7 +57,7 @@ La combinación de `required_synchronized_secondaries_to_commit` y el nuevo núm
 
 Hay tres valores que se pueden establecer para `required_synchronized_secondaries_to_commit`: 0, 1 o 2. Controlan el comportamiento de lo que sucede cuando una réplica deja de estar disponible. Los números corresponden al número de réplicas secundarias que deben sincronizarse con la principal. El comportamiento es así en Linux:
 
--   0 - ninguna conmutación por error automática es posible porque ninguna réplica secundaria se necesita para sincronizarse. La base de datos principal está disponible en todo momento.
+-   0 - las réplicas secundarias no es necesario estar en estado sincronizado con la principal. Sin embargo si las secundarias no están sincronizadas, no habrá ninguna conmutación por error automática. 
 -   1 - una réplica secundaria debe estar en un estado sincronizado con la principal; es posible la conmutación automática por error. La base de datos principal no está disponible hasta que una réplica secundaria sincrónica está disponible.
 -   2 - ambas réplicas secundarias en una configuración de AG de tres o más nodos deben estar sincronizadas con el servidor principal; es posible la conmutación automática por error.
 
@@ -95,7 +95,7 @@ Si se cumplen estas condiciones y se produce un error en el servidor que hospeda
 
 También como novedad en [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] a partir de CU1 es una réplica de solo configuración. Dado que Pacemaker es diferente de un WSFC, especialmente cuando se trata de quórum y la necesidad de STONITH, con solo una configuración de dos nodos no funcionará cuando se trata de un grupo de disponibilidad. Una FCI, los mecanismos de quórum proporcionados por Pacemaker pueden ser todo bien, porque todos los arbitraje de conmutación por error FCI ocurre en el nivel de clúster. Para un grupo de disponibilidad, se produce el arbitraje en Linux en [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], donde se almacenan todos los metadatos. Esto es donde la réplica de solo configuración entra en juego.
 
-Sin nada más, un tercer nodo y al menos una réplica sincronizada sería necesarios. Esto no funcionaría para [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)], ya que solo pueden tener dos réplicas que participan en un grupo de disponibilidad. La réplica de solo configuración almacena la configuración de AG en la base de datos maestra, igual que las otras réplicas en la configuración de AG. La réplica de solo configuración no tiene las bases de datos de usuario que participan en el grupo de disponibilidad. Los datos de configuración se envían de forma sincrónica desde el servidor principal. Estos datos de configuración, a continuación, se usan durante las conmutaciones por error, ya sean automática o manual.
+Sin nada más, un tercer nodo y al menos una réplica sincronizada sería necesarios. La réplica de solo configuración almacena la configuración de AG en la base de datos maestra, igual que las otras réplicas en la configuración de AG. La réplica de solo configuración no tiene las bases de datos de usuario que participan en el grupo de disponibilidad. Los datos de configuración se envían de forma sincrónica desde el servidor principal. Estos datos de configuración, a continuación, se usan durante las conmutaciones por error, ya sean automática o manual.
 
 Para que un grupo de disponibilidad mantener el cuórum y habilitar la conmutación por error automática con un tipo de clúster externo, ya sea debe:
 

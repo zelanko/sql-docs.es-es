@@ -1,7 +1,7 @@
 ---
 title: SQL Server Always On patrones de implementación del grupo de disponibilidad | Microsoft Docs
 ms.custom: sql-linux
-ms.date: 10/16/2017
+ms.date: 04/17/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: linux
@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: b0b7e735b2897f8bc942f1d4e6c151f27f588e8c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044938"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671181"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad
 
@@ -62,7 +62,7 @@ Escalado de lectura, alta disponibilidad y protección de datos, puede proporcio
 | |escalado de lectura|Alta disponibilidad & </br> protección de datos | Protección de los datos|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|Interrupción principal | Conmutación por error manual. Es posible que haya pérdida de datos. La nueva réplica principal es R / w. |Conmutación por error automática. La nueva réplica principal es R / w. |Conmutación por error automática. La nueva réplica principal no está disponible para las transacciones de usuario hasta que el objeto principal anterior se recupera y grupo de disponibilidad como la secundaria une. |
+|Interrupción principal |Conmutación por error automática. La nueva réplica principal es R / w. |Conmutación por error automática. La nueva réplica principal es R / w. |Conmutación por error automática. La nueva réplica principal no está disponible para las transacciones de usuario hasta que el objeto principal anterior se recupera y grupo de disponibilidad como la secundaria une. |
 |Interrupción de réplica secundaria  | La réplica principal es R / w. No hay conmutación automática por error si se produce un error en la principal. |La réplica principal es R / w. No hay conmutación automática por error si la principal produce un error también. | Principal no está disponible para las transacciones de usuario. |
 
 <sup>\*</sup> Valor predeterminado
@@ -71,7 +71,7 @@ Escalado de lectura, alta disponibilidad y protección de datos, puede proporcio
 
 ## <a name="two-synchronous-replicas"></a>Dos réplicas sincrónicas
 
-Esta configuración habilita la protección de datos. Al igual que las demás configuraciones de grupo disponibilidad, puede habilitar el escalado de lectura. La configuración de dos réplicas sincrónicas no proporciona alta disponibilidad automática. 
+Esta configuración habilita la protección de datos. Al igual que las demás configuraciones de grupo disponibilidad, puede habilitar el escalado de lectura. La configuración de dos réplicas sincrónicas no proporciona alta disponibilidad automática. Una configuración de dos réplicas solo es aplicable a SQL Server 2017 RTM y ya no es compatible con versiones posteriores (CU1 y versiones posteriores) las versiones de SQL Server 2017...
 
 ![Dos réplicas sincrónicas][1]
 
@@ -84,9 +84,6 @@ Un grupo de disponibilidad con dos réplicas sincrónicas proporciona protecció
 |Interrupción de réplica secundaria  |Réplica principal es de lectura/escritura, ejecución se expone a pérdida de datos. |Principal no está disponible para las transacciones de usuario hasta que se recupere la secundaria.|
 
 <sup>\*</sup> Valor predeterminado
-
-> [!NOTE]
-> El escenario anterior es el comportamiento antes de SQL Server 2017 CU 1. 
 
 <a name = "configOnly"></a>
 

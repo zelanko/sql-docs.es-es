@@ -16,12 +16,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7e8d3f735a096eeaf60ecdb376d02d046112a25
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375367"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671371"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implementar un solucionador de conflictos personalizado para un artículo de mezcla
   En este tema se describe cómo implementar el solucionador de conflictos personalizado para un artículo de mezcla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] o un [solucionador personalizado basado en COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
@@ -118,7 +118,7 @@ ms.locfileid: "53375367"
   
 #### <a name="viewing-a-sample-custom-resolver"></a>Ver un solucionador personalizado de ejemplo  
   
-1.  Hay un ejemplo disponible en los archivos de ejemplo de SQL Server 2000. Descargue el archivo **sql2000samples.cab** desde [Ejemplos actualizados para SQL Server 2000 Service Pack 3](https://www.microsoft.com/download/details.aspx?id=8560). Se descargan 8 archivos que ocupan 6,9 MB.  
+1.  Hay un ejemplo disponible en los archivos de ejemplo de SQL Server 2000. Descargue el [ **sql2000samples.zip**](https://github.com/Microsoft/sql-server-samples/blob/master/samples/tutorials/Miscellaneous/sql2000samples.zip). Esto descarga 3 archivos que ocupan 6,9 MB.  
   
 2.  Extraiga los archivos del archivo comprimido .cab descargado.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "53375367"
 6.  En la carpeta **subspres** , busque todas las repeticiones de **#include sqlres.h** en todos los archivos de origen y reemplácelas con **#import "replrec.dll" no_namespace, raw_interfaces_only**.  
   
 ## <a name="see-also"></a>Vea también  
- [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detección y resolución de conflictos de replicación de mezcla avanzada](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [COM-Based Custom Resolvers](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)   
  [Procedimientos recomendados de seguridad de replicación](security/replication-security-best-practices.md)  
   

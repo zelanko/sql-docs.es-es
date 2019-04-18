@@ -10,12 +10,12 @@ ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f47bc6b143a7afccc4dd175c23a17849ab071e7f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 682e68ede0646b9455bd9b4b759b4e3d760223d9
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581600"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670891"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>Implementar un clúster de macrodatos con compatibilidad con GPU y ejecutar TensorFlow
 
@@ -53,7 +53,7 @@ Los pasos siguientes usan la CLI de Azure para crear un clúster de AKS que admi
 1. Crear un clúster de Kubernetes en AKS con la [crear az aks](https://docs.microsoft.com/cli/azure/aks) comando. En el ejemplo siguiente se crea un clúster de Kubernetes denominado `gpucluster` en el `sqlbigdatagroupgpu` grupo de recursos.
 
    ```azurecli
-   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.7 --location eastus
+   az aks create --name gpucluster --resource-group sqlbigdatagroupgpu --generate-ssh-keys --node-vm-size Standard_NC6 --node-count 3 --node-osdisk-size 50 --kubernetes-version 1.11.9 --location eastus
    ```
 
    > [!NOTE]

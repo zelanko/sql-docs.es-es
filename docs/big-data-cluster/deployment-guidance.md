@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7a863259a3eb04aef648d98f1d8c4ac22e4a3f38
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b7ca08d7ab73cc90e90717b23d2e5b293022bb1c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582418"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671381"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes
 
@@ -120,6 +120,29 @@ La configuración del clúster puede personalizarse mediante un conjunto de vari
 >1. Asegúrese de que incluir las contraseñas en las comillas dobles si contiene algún carácter especial. Puede establecer el MSSQL_SA_PASSWORD que prefiera, pero asegúrese de que son lo suficientemente complejos y no utilizar la `!`, `&` o `'` caracteres. Tenga en cuenta que los delimitadores de comillas dobles solo funcionan en los comandos de bash.
 >1. El nombre del clúster debe ser solo alfanuméricos caracteres en minúsculas, sin espacios en blanco. Todos los artefactos de Kubernetes (contenedores, pods, conjuntos con estado, los servicios) para el clúster se creará en un espacio de nombres con el mismo nombre que el clúster de nombre especificado.
 >1. El **SA** cuenta es un administrador del sistema en la instancia maestra de SQL Server que se crea durante la instalación. Después de crear el contenedor de SQL Server, la variable de entorno MSSQL_SA_PASSWORD especificada es detectable mediante la ejecución de eco MSSQL_SA_PASSWORD $ en el contenedor. Por motivos de seguridad, cambiar la contraseña de SA según los procedimientos recomendados que se documentan [aquí](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
+
+La siguiente sección se detallan en las opciones de configuración de YARN. Nota: Estas son las configuraciones de nivel experto. El usuario no es necesario especificar ninguno de estos valores y en ese caso, los valores predeterminados surtan efecto. Yarn es el Administrador de recursos para Spark. Spark se ejecuta en los pods de almacenamiento y que puede controlarse a través de CLUSTER_STORAGE_POOL_REPLICAS.
+
+| Variable de entorno de yarn | Obligatorio | Valor predeterminado | Descripción |
+|---|---|---|---|
+| **HADOOP_HEAPSIZE** | No | 2048  | Tamaño del montón para los procesos de nodo de nombre y los datos HDFS |
+| **YARN_HEAPSIZE**   | No | 2048  | Tamaño del montón para los procesos de RM de Yarn y NM |
+| **YARN_NODEMANAGER_RESOURCE_MEMORY** | No | 18432  | Total de memoria máxima que puede usar Yarn por contenedor K8  |
+| **YARN_NODEMANAGER_RESOURCE_VCORES** | No | 6  | Núcleos virtuales Max Yarn puede usar en un nodo  |
+| **YARN_SCHEDULER_MAX_MEMORY** | No | 18432  | Memoria máxima que puede usar un contenedor de Yarn en un nodo  |
+| **YARN_SCHEDULER_MAX_VCORES** | No | 6  | Memoria máxima que puede usar un contenedor de Yarn en un nodo  |
+| **YARN_SCHEDULER_CAPACITY_MAX_AM_PERCENT** | No | 0.3  | Proporción del total de memoria que puede usar el patrón de aplicación   |
+
+Esta sección detallan en las configuraciones de Spark de opciones. Nota: Estas son las configuraciones de nivel experto. El usuario no es necesario especificar ninguno de estos valores y en ese caso, los valores predeterminados surtan efecto. En tiempo de ejecución, el usuario puede configurar cada función de la aplicación a través de %% configure en los cuadernos de spark.
+
+| Variable de entorno de Spark | Obligatorio | Valor predeterminado | Descripción |
+|---|---|---|---|
+| **SPARK_DRIVER_MEMORY** | No | 2048  | Controlador de Spark utiliza la memoria  |
+| **SPARK_DRIVER_CORES** | No | 1  | Número de núcleos usados por el controlador de Spark  |
+| **SPARK_EXECUTOR_INSTANCES** | No | 3  | Controlador de Spark utiliza la memoria  |
+| **SPARK_EXECUTOR_MEMORY** | No | 1536  | Memoria usada ejecutor de Spark |
+| **SPARK_EXECUTOR_CORES** | No | 1  | Número de núcleos usados por los ejecutores de Spark  |
+
 
 Establecer las variables de entorno necesarias para implementar un clúster de macrodatos es diferente dependiendo de si se utiliza el cliente de Windows o Linux.  Elija los pasos siguientes, dependiendo del sistema operativo que esté utilizando.
 

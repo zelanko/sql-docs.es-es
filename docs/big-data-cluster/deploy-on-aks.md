@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: b70b5672bff38c8c82dd9bfd837e267328bf6aa9
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860166"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configuración de Azure Kubernetes Service para las implementaciones de clústeres de macrodatos de SQL Server
@@ -33,10 +33,10 @@ En este artículo se describe los pasos para implementar en Kubernetes en AKS me
 ## <a name="prerequisites"></a>Requisitos previos
 
 - [Implementar las herramientas de datos de gran tamaño de SQL Server 2019](deploy-big-data-tools.md):
-   - **Kubectl**
-   - **Azure Data Studio **
+   - **kubectl**
+   - **Azure Data Studio**
    - **Extensión de SQL Server 2019**
-   - **CLI de Azure**
+   - **Azure CLI**
 
 - Versión mínima 1.10 para servidor de Kubernetes. Para AKS, deberá usar `--kubernetes-version` parámetro para especificar una versión distinta de la predeterminada.
 

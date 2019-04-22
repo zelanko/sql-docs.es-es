@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 87488f36a4b4b01181cd973a75d6e5c7f2e233d7
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860726"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
@@ -38,42 +38,42 @@ Los contadores devueltos son por operador y por subproceso. Los resultados son d
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|session_id|**SMALLINT**|Identifica la sesión en la que se ejecuta esta consulta. Hace referencia a dm_exec_sessions.session_id.|  
-|request_id|**INT**|Identifica la solicitud de destino. Hace referencia a dm_exec_sessions.request_id.|  
-|sql_handle|**varbinary (64)**|Es un símbolo (token) que identifica el lote o procedimiento almacenado que forma parte de la consulta. Hace referencia a dm_exec_query_stats.sql_handle.|  
-|plan_handle|**varbinary (64)**|Es un token que identifica de forma exclusiva un plan de ejecución de consulta para un lote que se ha ejecutado y su plan reside en la caché del plan o se está ejecutando actualmente. Hace referencia a dm_exec_query_stats.plan_handle.|  
+|session_id|**smallint**|Identifica la sesión en la que se ejecuta esta consulta. Hace referencia a dm_exec_sessions.session_id.|  
+|request_id|**int**|Identifica la solicitud de destino. Hace referencia a dm_exec_sessions.request_id.|  
+|sql_handle|**varbinary(64)**|Es un símbolo (token) que identifica el lote o procedimiento almacenado que forma parte de la consulta. Hace referencia a dm_exec_query_stats.sql_handle.|  
+|plan_handle|**varbinary(64)**|Es un token que identifica de forma exclusiva un plan de ejecución de consulta para un lote que se ha ejecutado y su plan reside en la caché del plan o se está ejecutando actualmente. Hace referencia a dm_exec_query_stats.plan_handle.|  
 |physical_operator_name|**nvarchar(256)**|Nombre del operador físico.|  
-|node_id|**INT**|Identifica un nodo de operador en el árbol de consulta.|  
-|thread_id|**INT**|Distingue los subprocesos (para una consulta en paralelo) que pertenecen al mismo nodo de operador de consulta.|  
-|task_address|**varbinary (8)**|Identifica la tarea de SQLOS que está utilizando este subproceso. Hace referencia a dm_os_tasks.task_address.|  
-|row_count|**BIGINT**|Número de filas que ha devuelto hasta ahora el operador.|  
-|rewind_count|**BIGINT**|Número de rebobinados hasta ahora.|  
-|rebind_count|**BIGINT**|Número de reenlaces hasta ahora.|  
-|end_of_scan_count|**BIGINT**|Número de finales de examen hasta ahora.|  
-|estimate_row_count|**BIGINT**|Número de filas estimado. Puede ser útil comparar estimated_row_count con el row_count real.|  
-|first_active_time|**BIGINT**|Hora, en milisegundos, a la que se llamó por primera vez al operador.|  
-|last_active_time|**BIGINT**|Hora, en milisegundos, a la que se llamó por última vez al operador.|  
-|open_time|**BIGINT**|Marca de tiempo al abrir (en milisegundos).|  
-|first_row_time|**BIGINT**|Marca de tiempo en la que se abrió la primera fila (en milisegundos).|  
-|last_row_time|**BIGINT**|Marca de tiempo en la que se abrió la última fila (en milisegundos).|  
-|close_time|**BIGINT**|Marca de tiempo al cerrar (en milisegundos).|  
-|elapsed_time_ms|**BIGINT**|Tiempo total transcurrido (en milisegundos) utilizado por las operaciones del nodo de destino hasta el momento.|  
-|cpu_time_ms|**BIGINT**|Total de hasta ahora el uso de CPU de tiempo (en milisegundos) por las operaciones del nodo de destino.|  
-|database_id|**SMALLINT**|Identificador de la base de datos que contiene el objeto en el que se efectúan las lecturas y escrituras.|  
-|object_id|**INT**|El identificador para el objeto en el que se efectúan las lecturas y escrituras. Hace referencia a sys.objects.object_id.|  
-|index_id|**INT**|El índice (si existe) en el que se abre el conjunto de filas.|  
-|scan_count|**BIGINT**|Número de exámenes de índice o tabla hasta ahora.|  
-|logical_read_count|**BIGINT**|Número de lecturas lógicas hasta ahora.|  
-|physical_read_count|**BIGINT**|Número de lecturas físicas hasta ahora.|  
-|read_ahead_count|**BIGINT**|Número de lecturas anticipadas hasta ahora.|  
-|write_page_count|**BIGINT**|Número de escrituras en páginas hasta ahora debido al rebosamiento.|  
-|lob_logical_read_count|**BIGINT**|Número de lecturas lógicas LOB hasta ahora.|  
-|lob_physical_read_count|**BIGINT**|Número de lecturas físicas LOB hasta ahora.|  
-|lob_read_ahead_count|**BIGINT**|Número de lecturas anticipadas LOB hasta ahora.|  
-|segment_read_count|**INT**|Número de lecturas anticipadas de segmento hasta ahora.|  
-|segment_skip_count|**INT**|Número de segmentos omitidos hasta ahora.| 
-|actual_read_row_count|**BIGINT**|Número de filas leídas por un operador antes de aplica el predicado residual.| 
-|estimated_read_row_count|**BIGINT**|**Se aplica a:** A partir [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número de filas estimado que leerá un operador antes de aplica el predicado residual.|  
+|node_id|**int**|Identifica un nodo de operador en el árbol de consulta.|  
+|thread_id|**int**|Distingue los subprocesos (para una consulta en paralelo) que pertenecen al mismo nodo de operador de consulta.|  
+|task_address|**varbinary(8)**|Identifica la tarea de SQLOS que está utilizando este subproceso. Hace referencia a dm_os_tasks.task_address.|  
+|row_count|**bigint**|Número de filas que ha devuelto hasta ahora el operador.|  
+|rewind_count|**bigint**|Número de rebobinados hasta ahora.|  
+|rebind_count|**bigint**|Número de reenlaces hasta ahora.|  
+|end_of_scan_count|**bigint**|Número de finales de examen hasta ahora.|  
+|estimate_row_count|**bigint**|Número de filas estimado. Puede ser útil comparar estimated_row_count con el row_count real.|  
+|first_active_time|**bigint**|Hora, en milisegundos, a la que se llamó por primera vez al operador.|  
+|last_active_time|**bigint**|Hora, en milisegundos, a la que se llamó por última vez al operador.|  
+|open_time|**bigint**|Marca de tiempo al abrir (en milisegundos).|  
+|first_row_time|**bigint**|Marca de tiempo en la que se abrió la primera fila (en milisegundos).|  
+|last_row_time|**bigint**|Marca de tiempo en la que se abrió la última fila (en milisegundos).|  
+|close_time|**bigint**|Marca de tiempo al cerrar (en milisegundos).|  
+|elapsed_time_ms|**bigint**|Tiempo total transcurrido (en milisegundos) utilizado por las operaciones del nodo de destino hasta el momento.|  
+|cpu_time_ms|**bigint**|Total de hasta ahora el uso de CPU de tiempo (en milisegundos) por las operaciones del nodo de destino.|  
+|database_id|**smallint**|Identificador de la base de datos que contiene el objeto en el que se efectúan las lecturas y escrituras.|  
+|object_id|**int**|El identificador para el objeto en el que se efectúan las lecturas y escrituras. Hace referencia a sys.objects.object_id.|  
+|index_id|**int**|El índice (si existe) en el que se abre el conjunto de filas.|  
+|scan_count|**bigint**|Número de exámenes de índice o tabla hasta ahora.|  
+|logical_read_count|**bigint**|Número de lecturas lógicas hasta ahora.|  
+|physical_read_count|**bigint**|Número de lecturas físicas hasta ahora.|  
+|read_ahead_count|**bigint**|Número de lecturas anticipadas hasta ahora.|  
+|write_page_count|**bigint**|Número de escrituras en páginas hasta ahora debido al rebosamiento.|  
+|lob_logical_read_count|**bigint**|Número de lecturas lógicas LOB hasta ahora.|  
+|lob_physical_read_count|**bigint**|Número de lecturas físicas LOB hasta ahora.|  
+|lob_read_ahead_count|**bigint**|Número de lecturas anticipadas LOB hasta ahora.|  
+|segment_read_count|**int**|Número de lecturas anticipadas de segmento hasta ahora.|  
+|segment_skip_count|**int**|Número de segmentos omitidos hasta ahora.| 
+|actual_read_row_count|**bigint**|Número de filas leídas por un operador antes de aplica el predicado residual.| 
+|estimated_read_row_count|**bigint**|**Se aplica a:** A partir [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número de filas estimado que leerá un operador antes de aplica el predicado residual.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Si el nodo del plan de consulta no tiene ninguna E/S, todos los contadores / relacionados con E/s se establecen en NULL.  
@@ -109,7 +109,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- Paso 2: registrarse en una segunda sesión que sea distinta a la sesión en la que se ejecuta la consulta.  
+ Paso 2: Inicie sesión en una segunda sesión que es diferente de la sesión en el que se está ejecutando la consulta.  
   
  La siguiente instrucción resume el progreso que ha realizado la consulta que se ejecutaba de forma simultánea en la sesión 54. Para ello, calcula el número total de filas resultantes de todos los subprocesos para cada nodo y lo compara con el número estimado de filas resultantes para ese nodo.  
   

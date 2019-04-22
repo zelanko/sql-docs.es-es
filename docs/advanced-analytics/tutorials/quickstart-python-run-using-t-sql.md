@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 6d8da3ce90e915344f2380d4cd5cc866db6715ef
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476640"
 ---
 # <a name="quickstart-hello-world-python-script-in-sql-server"></a>Inicio rápido: Script de Python "Hello world" en SQL Server 
@@ -98,4 +98,4 @@ Entradas de este procedimiento almacenado se incluyen:
 Ahora que ha ejecutado un par de scripts de Python sencillo, eche un vistazo más de cerca en estructurar las entradas y salidas.
 
 > [!div class="nextstepaction"]
-> [Inicio rápido: Control de entradas y salidas](quickstart-python-inputs-and-outputs.md)
+> [Inicio rápido: Controlar las entradas y salidas](quickstart-python-inputs-and-outputs.md)

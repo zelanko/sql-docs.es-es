@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860476"
 ---
 # <a name="mssqlctl-cluster"></a>Clúster mssqlctl
@@ -26,8 +26,8 @@ El siguiente artículo proporciona la referencia para la **clúster** comandos e
 
 |||
 |---|---|
-| [crear](#create) | Crear el clúster. |
-| [eliminar](#delete) | Eliminar el clúster. |
+| [create](#create) | Crear el clúster. |
+| [delete](#delete) | Eliminar el clúster. |
 | [config](reference-mssqlctl-cluster-config.md) | Comandos de configuración del clúster. |
 | [debug](reference-mssqlctl-cluster-debug.md) | Comandos de depuración. |
 
@@ -45,7 +45,7 @@ mssqlctl cluster create
 
 | Parámetros | Descripción |
 |---|---|
-| **: nombre - n** | Nombre del clúster, usado para el espacio de nombres de kubernetes. |
+| **--name -n** | Nombre del clúster, usado para el espacio de nombres de kubernetes. |
 | **--accept-eula -e** | ¿Acepta los términos de licencia? \[Sí/no\].  Los valores permitidos: no, sí. Requerido. |
 
 ## <a id="delete"></a> mssqlctl cluster delete
@@ -62,8 +62,8 @@ mssqlctl cluster delete
 
 | Parámetros | Descripción |
 |---|---|
-| **: nombre - n** | Nombre del clúster, usado para el espacio de nombres de kubernetes. Requerido. |
-| **--forzar -f** | Clúster de eliminación de fuerza. |
+| **--name -n** | Nombre del clúster, usado para el espacio de nombres de kubernetes. Requerido. |
+| **--force -f** | Clúster de eliminación de fuerza. |
 
 ## <a name="next-steps"></a>Pasos siguientes
 

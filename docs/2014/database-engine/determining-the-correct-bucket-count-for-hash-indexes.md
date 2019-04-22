@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241963"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinar el número correcto de depósitos para los índices hash
@@ -137,11 +137,11 @@ GO
   
  Considere los tres índices de hash en esta tabla:  
   
--   IX_Status: El 50 % de los depósitos están vacíos, lo que es un buen dato. Sin embargo, el promedio de longitud de cadena es muy elevado (65.536). Esto indica un gran número de valores duplicados. Por consiguiente, el uso de un índice de hash no clúster no es adecuado en este caso. Se debe usar un índice no clúster en su lugar.  
+-   IX_Status: 50 por ciento de los depósitos están vacíos, lo que es bueno. Sin embargo, el promedio de longitud de cadena es muy elevado (65.536). Esto indica un gran número de valores duplicados. Por consiguiente, el uso de un índice de hash no clúster no es adecuado en este caso. Se debe usar un índice no clúster en su lugar.  
   
--   IX_OrderSequence: El 0 % de los depósitos están vacíos, un dato demasiado bajo. Además, el promedio de longitud de cadena es 8. Como los valores de este índice son únicos, esto significa que por término medio están asignados 8 valores a cada cubo. El número de cubos se debe aumentar. Como la clave de índice tiene 262.144 valores únicos, el número de cubos debe ser al menos 262.144. Si se espera un aumento futuro, el número debe ser superior.  
+-   IX_OrderSequence: 0 por ciento de los depósitos están vacíos, que es demasiado bajo. Además, el promedio de longitud de cadena es 8. Como los valores de este índice son únicos, esto significa que por término medio están asignados 8 valores a cada cubo. El número de cubos se debe aumentar. Como la clave de índice tiene 262.144 valores únicos, el número de cubos debe ser al menos 262.144. Si se espera un aumento futuro, el número debe ser superior.  
   
--   Índice de clave principal (PK__SalesOrder...): El 36 % de los depósitos están vacíos, lo que es un buen dato. Además el promedio de longitud de cadena es 1, que también es bueno. No es necesario ningún cambio.  
+-   Índice de clave principal (PK__SalesOrder...): 36 por ciento de los depósitos están vacíos, lo que es bueno. Además el promedio de longitud de cadena es 1, que también es bueno. No es necesario ningún cambio.  
   
  Para obtener más información sobre problemas de solución de problemas con los índices de hash optimizados para memoria, vea [Troubleshooting Common Performance Problems with Memory-Optimized Hash Indexes](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md).  
   

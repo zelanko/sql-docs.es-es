@@ -17,10 +17,10 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242213"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Administración extensible de claves con Azure Key Vault (SQL Server)
@@ -30,17 +30,17 @@ ms.locfileid: "59242213"
   
 -   [Usos de EKM](#Uses)  
   
--   [Paso 1: configuración de Key Vault para su uso con SQL Server](#Step1)  
+-   [Paso 1: Configuración de Key Vault para su uso con SQL Server](#Step1)  
   
--   [Paso 2: instalación del conector de SQL Server](#Step2)  
+-   [Paso 2: Instalación del conector SQL Server](#Step2)  
   
--   [Paso 3: configuración de SQL Server para usar un proveedor EKM para Key Vault](#Step3)  
+-   [Paso 3: Configurar SQL Server para usar un proveedor EKM para Key Vault](#Step3)  
   
--   [Ejemplo A: cifrado de datos transparente con una clave asimétrica desde Key Vault](#ExampleA)  
+-   [Ejemplo A: Cifrado de datos transparente mediante el uso de una clave asimétrica desde el almacén de claves](#ExampleA)  
   
--   [Ejemplo B: Cifrado de copias de seguridad con una clave asimétrica desde Key Vault](#ExampleB)  
+-   [Ejemplo B: Cifrado de copias de seguridad con una clave asimétrica desde el almacén de claves](#ExampleB)  
   
--   [Ejemplo C: Cifrado de nivel de columna con una clave asimétrica desde el Almacén de claves](#ExampleC)  
+-   [Ejemplo C: Cifrado de nivel de columna mediante el uso de una clave asimétrica desde el almacén de claves](#ExampleC)  
   
 ##  <a name="Uses"></a> Usos de EKM  
  Una organización puede utilizar el cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para proteger datos confidenciales. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye cifrado [cifrado de datos transparente &#40;TDE&#41;](transparent-data-encryption.md), [cifrado de nivel de columna](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE) y [cifrado de copia de seguridad](../../backup-restore/backup-encryption.md). En todos estos casos, los datos se cifran con una clave de cifrado de datos simétrica. La clave de cifrado de datos simétrica se protege, además, cifrándose con una jerarquía de claves almacenadas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O bien, la arquitectura del proveedor EKM permite a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proteger las claves de cifrado de datos con una clave asimétrica que se almacena fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un proveedor de servicios criptográficos externo. El uso de la arquitectura de proveedor de EKM agrega un nivel de seguridad adicional y permite a las organizaciones separar la administración de claves y datos.  
@@ -73,7 +73,7 @@ ms.locfileid: "59242213"
   
      Para más información sobre cómo importar una clave en el Almacén de claves o crear una clave en el Almacén de claves (no recomendado en entornos de producción), consulte la sección sobre **cómo agregar una clave o un secreto al Almacén de claves** de la [introducción al Almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521402).  
   
-3.  **Obtenga Azure Active Directory las entidades de servicio que se usará para SQL Server:** Cuando la organización se suscribe a un servicio en la nube de Microsoft, obtiene un Azure Active Directory. Cree **entidades de servicio** en Azure Active Directory para que las use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (para autenticarse a sí mismo en Azure Active Directory) al acceder al Almacén de claves.  
+3.  **Obtenga Azure Active Directory las entidades de servicio que se usará para SQL Server:** Cuando la organización se suscribe a un servicio de nube de Microsoft, obtiene un Azure Active Directory. Cree **entidades de servicio** en Azure Active Directory para que las use [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (para autenticarse a sí mismo en Azure Active Directory) al acceder al Almacén de claves.  
   
     -   Una **entidad de servicio** será necesaria para que un administrador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] acceda al almacén mientras configura [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que use el cifrado.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "59242213"
   
     -   [¿Qué es el Almacén de claves de Azure?](https://go.microsoft.com/fwlink/?LinkId=521401)  
   
-    -   [Introducción al almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521402)  
+    -   [Introducción al Almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
     -   Referencia de [cmdlets del Almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521403) de PowerShell  
   
@@ -107,9 +107,9 @@ ms.locfileid: "59242213"
   
  Al finalizar la instalación, estarán instalados en el equipo:  
   
--   **Microsoft.AzureKeyVaultService.EKM.dll**: es la DLL del proveedor de servicios criptográficos EKM que se tiene que registrar con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con la instrucción CREATE CRYPTOGRAPHIC PROVIDER.  
+-   **Microsoft.AzureKeyVaultService.EKM.dll**: Se trata de DLL que debe estar registrada con proveedor de servicios criptográficos EKM [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la instrucción CREATE CRYPTOGRAPHIC PROVIDER.  
   
--   **Conector de SQL Server de Azure Key Vault**: es un servicio de Windows que permite al proveedor de servicios criptográficos EKM comunicarse con el Almacén de claves.  
+-   **Conector de SQL Server de Azure Key Vault**: Se trata de un servicio de Windows que permite que el proveedor de servicios criptográficos EKM comunicarse con el almacén de claves.  
   
  La instalación del conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] también le permite descargar, si quiere, los scripts de muestra del cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

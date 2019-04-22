@@ -18,10 +18,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 777b83d5021a61ea42610680d52345ad4ca001b5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240595"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Aplicar copias de seguridad de registros de transacción (SQL Server)
@@ -67,13 +67,13 @@ ms.locfileid: "59240595"
 
 [!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
- **Alternativa 1: Restaurar la base de datos mediante la copia de seguridad de la base de datos completa más reciente**  
+ **Alternativa 1: restaurar la base de datos mediante la copia de seguridad de la base de datos completa más reciente**  
   
 1.  Cree una copia del final del registro de transacciones activo actualmente como si fuera el del momento del error.  
   
 2.  No restaure la copia de seguridad completa de base de datos de las 6:00 p. m. En su lugar, restaure la copia de seguridad completa de la base de datos de las 6:00 p.m. más reciente y, a continuación, aplique la copia de seguridad de registros y la copia del final del registro de las 8:00 p. m.  
   
- **Alternativa 2: Restaurar la base de datos mediante una copia de seguridad completa de la base de datos anterior**  
+ **Alternativa 2: restaurar la base de datos mediante una copia de seguridad completa de la base de datos anterior**  
   
 > Este proceso alternativo resulta útil si un problema impide que se use la copia de seguridad completa de base de datos de las 6:00 p. m. Este proceso lleva más tiempo que restaurar a partir de la copia de seguridad completa de base de datos de las 6:00 p. m.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "59240595"
 ##  <a name="RelatedTasks"></a> Related tasks  
  **Para aplicar una copia de seguridad del registro de transacciones**  
   
--   [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
+-   [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
  **Para restaurar hasta su punto de recuperación**  
   

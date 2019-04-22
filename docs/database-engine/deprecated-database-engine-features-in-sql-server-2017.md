@@ -17,10 +17,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: a1cc685ac2851acb52eaedff7507bd0b7997add8
-ms.sourcegitcommit: 85a7a532f35b8ea1b45e9a83bfc8529a0abed264
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480331"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Características en desuso del motor de base de datos de SQL Server 2017
@@ -79,7 +79,7 @@ Las siguientes características de [!INCLUDE[ssDEnoversion](../includes/ssdenove
 |Tipos de datos|Sintaxis de**timestamp** para el tipo de datos **rowversion** |Sintaxis del tipo de datos**rowversion** |timestamp|158|  
 |Tipos de datos|Capacidad de insertar valores NULL en columnas **timestamp** .|Utilice DEFAULT en su lugar.|INSERT NULL en columnas TIMESTAMP|179|  
 |Tipos de datos|Opción de tabla 'text in row'|Use los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)**. Para obtener más información, vea [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|Opción de tabla Text in row|9|  
-|Tipos de datos|Tipos de datos:<br /><br /> **texto**<br /><br /> **ntext**<br /><br /> **imagen**|Use los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)**.|Tipos de datos: **text**, **ntext** o **image**.|4|  
+|Tipos de datos|Tipos de datos:<br /><br /> **texto**<br /><br /> **ntext**<br /><br /> **imagen**|Use los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)** .|Tipos de datos: **text**, **ntext** o **image**.|4|  
 |Administración de bases de datos|sp_attach_db<br /><br /> sp_attach_single_file_db|Instrucción CREATE DATABASE con la opción FOR ATTACH. Si desea volver a generar varios archivos de registro y uno o más tienen una ubicación nueva, utilice la opción FOR ATTACH_REBUILD_LOG.|sp_attach_db<br /><br /> sp_attach_single_file_db|81<br /><br /> 82|  
 |Objetos de base de datos|CREATE DEFAULT<br /><br /> DROP DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|Palabra clave DEFAULT en CREATE TABLE y ALTER TABLE.|CREATE_DROP_DEFAULT<br /><br /> sp_bindefault<br /><br /> sp_unbindefault|162<br /><br /> 64<br /><br /> 65|  
 |Objetos de base de datos|CREATE RULE<br /><br /> DROP RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|Palabra clave CHECK en CREATE TABLE y ALTER TABLE.|CREATE_DROP_RULE<br /><br /> sp_bindrule<br /><br /> sp_unbindrule|161<br /><br /> 66<br /><br /> 67|  

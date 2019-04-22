@@ -21,12 +21,12 @@ ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc0ce16aabdf9ea1bfdafce6f6c06cce7aa181b3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f08d44451f179d896d1c7bb9057307f5321b5c28
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203155"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583188"
 ---
 # <a name="non-sql-server-subscribers"></a>suscriptores que no son de SQL Server  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,12 @@ Información de las versiones de Oracle:
 -   Publicar datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 
 -   La publicación de datos en y desde Oracle tiene las siguientes restricciones:  
-  | |2016 o anterior |2017 o posterior |
-  |-------|-------|--------|
+
+  | Replicación|2016 o anterior |2017 o posterior |
+  |:-----------|:---------------|:-------------|
   |Replicación de Oracle |Compatibilidad solo con Oracle 10g o versiones anteriores |Compatibilidad solo con Oracle 10g o versiones anteriores |
   |Replicación en Oracle |Hasta Oracle 12c |No compatible |
+  | &nbsp; | &nbsp; | &nbsp; |
 
 
  La replicación heterogénea en suscriptores que no son SQL Server está desusada. La publicación de Oracle está desusada. Para mover datos, cree soluciones mediante captura de datos modificados y [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  

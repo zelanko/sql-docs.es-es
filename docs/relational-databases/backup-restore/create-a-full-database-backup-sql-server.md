@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 21f9be84c86e2991a600dc340347c4ca89f519e9
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+ms.openlocfilehash: 7f765607b179b9a53a32be356f1b4863c0f35988
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533343"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671331"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Crear una copia de seguridad completa de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -232,7 +232,7 @@ Se ha creado una directiva de acceso almacenada con derechos de lectura, escritu
   
   8.    Haga clic en **Aceptar**.
 
-    **D3.  No existe ninguna firma de acceso compartido**
+   **D3.  No existe ninguna firma de acceso compartido**
   5.    Haga clic en el botón **Nuevo contenedor** y se abrirá el cuadro de diálogo **Conectarse a una suscripción de Microsoft** .  
   
   6.    Complete el cuadro de diálogo **Conectarse a una suscripción de Microsoft** y haga clic en **Aceptar** para volver al cuadro de diálogo **Seleccionar destino de la copia de seguridad** .  Vea [Connect to a Microsoft Azure Subscription (Conectarse a una suscripción de Microsoft Azure)](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) para obtener más información.

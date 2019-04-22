@@ -55,10 +55,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240734"
 ---
 # <a name="log-properties"></a>Propiedades de registro
@@ -101,18 +101,18 @@ ms.locfileid: "59240734"
  **ErrorLog\KeyErrorLimitAction**  
  Especifica la acción que realiza el servidor cuando el número de errores de clave alcanza el límite superior. Entre las respuestas válidas a esta acción se incluyen:  
   
--   `StopProcessing` indica al servidor que detenga el procesamiento cuando se alcanza el límite de errores.  
+-   `StopProcessing` indica al servidor que detenga el procesamiento cuando se alcance el límite de errores.  
   
--   `StopLogging` indica al servidor que detenga el registro de errores cuando se alcanza el límite de errores, pero permitir que continúe el procesamiento.  
+-   `StopLogging` indica al servidor que detenga el registro de errores cuando se alcance el límite de errores, pero que permita que el procesamiento continúe.  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
  Especifica la acción que realiza el servidor cuando se produce un error de `KeyNotFound`. Entre las respuestas válidas a este error se incluyen:  
   
--   `IgnoreError` indica al servidor para continuar procesando sin registrar el error o contarlo de cara al límite de errores. Si se omite el error, se permite que el procesamiento continúe sin agregarlo al recuento de errores o registrarlo en la pantalla o en el archivo de registro. El registro en cuestión tiene un problema de integridad de datos y no se puede agregar a la base de datos. El registro se descartará o se agregará al Miembro desconocido, según determine la propiedad `KeyErrorAction`.  
+-   `IgnoreError` indica al servidor que continúe con el procesamiento sin registrar el error o contarlo de cara al límite de errores de clave. Si se omite el error, se permite que el procesamiento continúe sin agregarlo al recuento de errores o registrarlo en la pantalla o en el archivo de registro. El registro en cuestión tiene un problema de integridad de datos y no se puede agregar a la base de datos. El registro se descartará o se agregará al Miembro desconocido, según determine la propiedad `KeyErrorAction`.  
   
--   `ReportAndContinue` indica al servidor que registre el error, lo cuente de cara al límite de errores y continuar el procesamiento. El registro que desencadena el error se descarta o se convierte en Miembro desconocido.  
+-   `ReportAndContinue` indica al servidor que registre el error, lo cuente de cara al límite de errores de clave y continúe con el procesamiento. El registro que desencadena el error se descarta o se convierte en Miembro desconocido.  
   
--   `ReportAndStop` indica al servidor para registrar el error y detener el procesamiento inmediatamente, cualquiera que sea el límite de errores de clave. El registro que desencadena el error se descarta o se convierte en Miembro desconocido.  
+-   `ReportAndStop` indica al servidor que registre el error y detenga el procesamiento inmediatamente, cualquiera que sea el límite de errores de clave. El registro que desencadena el error se descarta o se convierte en Miembro desconocido.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
  Especifica la acción que realiza el servidor cuando se encuentra una clave duplicada. Entre los valores válidos se incluyen `IgnoreError` para continuar con el procesamiento como si el error no se hubiera producido, `ReportAndContinue` para registrar el error y continuar con el procesamiento, y `ReportAndStop` para registrar el error y detener el procesamiento inmediatamente, aunque el recuento de errores esté por debajo del límite de errores.  
@@ -172,7 +172,7 @@ ms.locfileid: "59240734"
  El valor predeterminado para esta propiedad está en blanco, que a su vez establece el valor predeterminado en FlightRecorderTraceDef.xml.  
   
 ## <a name="query-log"></a>Registro de consultas  
- **Se aplica a:** modo de servidor multidimensional  únicamente  
+ **Se aplica a:** Modo de servidor multidimensional únicamente  
   
  **QueryLog\QueryLogFileName**  
  Una propiedad de cadena que especifica el nombre del archivo de registro de consultas. Esta propiedad solo se aplica cuando se utiliza un archivo de disco para realizar el registro, a diferencia de cuando se utiliza una tabla de base de datos (comportamiento predeterminado).  
@@ -233,7 +233,7 @@ ms.locfileid: "59240734"
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar las propiedades de servidor en Analysis Services](server-properties-in-analysis-services.md)   
+ [Configurar las propiedades del servidor en Analysis Services](server-properties-in-analysis-services.md)   
  [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

@@ -12,10 +12,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89344537c53c4caf066536804557451c965e4596
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241623"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Introducción a la nube híbrida de SQL Server 2014
@@ -109,9 +109,9 @@ ms.locfileid: "59241623"
  Si va a mover los niveles de aplicación (por ejemplo, el nivel de presentación, el nivel de empresa y el nivel de base de datos) a Azure Virtual Machines, se recomienda que revise las recomendaciones proporcionadas en el [desarrollo y patrones de aplicación Estrategias para SQL Server en Azure Virtual Machines](https://msdn.microsoft.com/library/dn574746.aspx) artículo. El objetivo de este artículo es ofrecer a los desarrolladores y arquitectos de soluciones una base para aplicación buena arquitectura y diseño, que pueden seguir al migrar aplicaciones existentes a Azure, así como desarrollar nuevas aplicaciones en Azure. Para cada patrón de aplicación, el artículo describe un escenario local, su solución habilitada para la nube correspondiente y las recomendaciones técnicas relacionadas. Además, el artículo describe las estrategias de desarrollo específicas de Azure para que pueda diseñar sus aplicaciones correctamente. 
  
 ## <a name="see-also"></a>Vea también 
- [Guía del producto SQL Server 2014 CTP2](https://www.microsoft.com/download/details.aspx?id=39269)  
+ [Guía de producto SQL Server 2014 CTP2](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
- [Series de blogs de nube híbrida de Microsoft SQL Server](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
+ [Serie de blogs de en la nube híbrida de Microsoft SQL Server](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  
  [Migrar aplicaciones centradas en datos a Azure](https://azure.microsoft.com/blog/cloud-services-series-migrating-data-centric-applications-to-windows-azure/) 
  
  

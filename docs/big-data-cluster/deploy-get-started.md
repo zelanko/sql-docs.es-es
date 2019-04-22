@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860436"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Empezar a trabajar con clústeres grandes de datos de SQL Server
@@ -30,7 +30,7 @@ Los clústeres de datos de gran tamaño requieren un conjunto específico de las
 |---|---|
 | **mssqlctl** | Implementa y administra los clústeres de datos de gran tamaño. |
 | **kubectl** | Crea y administra el clúster de Kubernetes subyacente. |
-| **Azure Data Studio ** | Interfaz gráfica para el uso del clúster de macrodatos. |
+| **Azure Data Studio** | Interfaz gráfica para el uso del clúster de macrodatos. |
 | **Extensión de SQL Server 2019** | Extensión de Azure Data Studio que habilita características de clúster de macrodatos. |
 
 Otras herramientas son necesarias para diferentes escenarios. Cada artículo debe explicar las herramientas de requisitos previos para realizar una tarea específica. Para obtener una lista completa de herramientas y vínculos de instalación, consulte [herramientas de macrodatos de instalar SQL Server 2019](deploy-big-data-tools.md).

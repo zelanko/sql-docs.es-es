@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241363"
 ---
 # <a name="data-flow"></a>Flujo de datos
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different types of data flow components: sources, proporciona tres tipos de componentes de flujo de datos: orígenes, transformaciones y destinos.nLos orígenes extraen datos de almacenes de datos tales como tablas y vistas en bases de datos relacionales, archivos y bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .lLas transformaciones modifican, resumen y limpian datos.sLos destinos cargan datos en almacenes de datos o crean conjuntos de datos almacenados en la memoria.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona tres tipos de componentes de flujo de datos: orígenes, transformaciones y destinos. Los orígenes extraen datos de almacenes de datos tales como tablas y vistas en bases de datos relacionales, archivos y bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Las transformaciones modifican, resumen y limpian datos. Los destinos cargan datos en almacenes de datos o crean conjuntos de datos almacenados en la memoria.  
   
 > [!NOTE]  
 >  Cuando utiliza proveedores personalizados, necesita actualizar el archivo ProviderDescriptors.xml con los valores de la columna de metadatos.  
@@ -90,14 +90,14 @@ ms.locfileid: "59241363"
   
  Los siguientes orígenes tienen propiedades que se pueden actualizar a través de expresiones de propiedad:  
   
--   [Origen de ADO NET](ado-net-source.md)  
+-   [Origen ADO NET](ado-net-source.md)  
   
 -   [Origen XML](xml-source.md)  
   
 ### <a name="sources-available-for-download"></a>Orígenes disponibles para la descarga  
  En la tabla siguiente se indican otros orígenes que puede descargar del sitio web de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|Origen|Descripción|  
+|Source|Descripción|  
 |------------|-----------------|  
 |Origen de Oracle|El origen de Oracle es el componente de origen de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle de Attunity. El Conector de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para Oracle por Attunity incluye también un administrador de conexiones y un destino. Para obtener más información, vea la página de descarga, [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
 |Origen de SAP BI|El origen de SAP BI es el componente de origen de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI incluye también un administrador de conexiones y un destino. Para obtener más información, vea la página de descarga, [Feature Pack de Microsoft SQL Server 2008](https://www.microsoft.com/download/details.aspx?id=16978).|  
@@ -108,31 +108,31 @@ ms.locfileid: "59241363"
 ## <a name="transformations"></a>Transformaciones  
  Las capacidades de las transformaciones presentan amplias variaciones. Las transformaciones pueden realizar tareas tales como actualizar, resumir, limpiar, combinar y distribuir datos. Puede modificar valores en columnas, buscar valores en tablas, limpiar datos y agregar valores de columna.  
   
- Las entradas y salidas de una transformación definen las columnas de datos de entrada y salida. Según la operación realizada con los datos, algunas transformaciones tienen una sola entrada y varias salidas, mientras que otras transformaciones tienen varias entradas y una sola salida. Las transformaciones también pueden incluir salidas de error, que proporcionan información sobre el error ocurrido, junto con los datos que han generado errores: por ejemplo, datos de cadena que no se pueden convertir en un tipo de datos entero. El modelo de objetos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no restringe la cantidad de entradas, salidas normales y salidas de error que pueden contener las transformaciones. Puede crear transformaciones personalizadas que implementan cualquier combinación de varias entradas, salidas normales y salidas de error.  
+ Las entradas y salidas de una transformación definen las columnas de datos de entrada y salida. Según la operación realizada con los datos, algunas transformaciones tienen una sola entrada y varias salidas, mientras que otras transformaciones tienen varias entradas y una sola salida. Las transformaciones también pueden incluir salidas de error, que proporcionan información sobre el error que se ha producido, junto con los datos que no se pudo: por ejemplo, datos de cadena que no se pueden convertir en un tipo de datos entero. El modelo de objetos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no restringe la cantidad de entradas, salidas normales y salidas de error que pueden contener las transformaciones. Puede crear transformaciones personalizadas que implementan cualquier combinación de varias entradas, salidas normales y salidas de error.  
   
  La entrada de una transformación se define como una o más columnas de entrada. Algunas transformaciones de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] también pueden hacer referencia a columnas externas como entrada. Por ejemplo, la entrada de la transformación Comando de OLE DB incluye columnas externas. Una columna de salida es una columna que la transformación agrega al flujo de datos. Tanto las salidas normales como las salidas de error contienen columnas de salida. Estas columnas de salida a su vez funcionan como columnas de entrada para el siguiente componente en el flujo de datos, ya sea otra transformación o un destino.  
   
  Las siguientes transformaciones tienen propiedades que se pueden actualizar a través de expresiones de propiedad:  
   
--   [División condicional, transformación](transformations/conditional-split-transformation.md)  
+-   [Transformación División condicional](transformations/conditional-split-transformation.md)  
   
 -   [Transformación Columna derivada](transformations/derived-column-transformation.md)  
   
--   [Agrupación aproximada, transformación](transformations/fuzzy-grouping-transformation.md)  
+-   [Transformación Agrupación aproximada](transformations/fuzzy-grouping-transformation.md)  
   
--   [Búsqueda aproximada, transformación](transformations/lookup-transformation.md)  
+-   [Transformación Búsqueda aproximada](transformations/lookup-transformation.md)  
   
--   [transformación Comando de OLE DB](transformations/ole-db-command-transformation.md)  
+-   [Transformación Comando de OLE DB](transformations/ole-db-command-transformation.md)  
   
--   [Muestreo de porcentaje, transformación](transformations/percentage-sampling-transformation.md)  
+-   [Transformación Muestreo de porcentaje](transformations/percentage-sampling-transformation.md)  
   
--   [Dinámica, transformación](transformations/pivot-transformation.md)  
+-   [Transformación dinámica](transformations/pivot-transformation.md)  
   
--   [Muestreo de fila, transformación](transformations/row-sampling-transformation.md)  
+-   [Transformación Muestreo de fila](transformations/row-sampling-transformation.md)  
   
--   [Ordenar, transformación](transformations/sort-transformation.md)  
+-   [Transformación Ordenar](transformations/sort-transformation.md)  
   
--   [Anulación de dinamización, transformación](transformations/unpivot-transformation.md)  
+-   [Transformación Anulación de dinamización](transformations/unpivot-transformation.md)  
   
  Para más información, consulte [Integration Services Transformations](transformations/integration-services-transformations.md).  
   
@@ -158,7 +158,7 @@ ms.locfileid: "59241363"
 ### <a name="destinations-available-for-download"></a>Destinos disponibles para descarga  
  En la tabla siguiente se indican otros destinos que puede descargar del sitio web de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|Origen|Descripción|  
+|Source|Descripción|  
 |------------|-----------------|  
 |Destino de Oracle|El destino de Oracle es el componente de destino de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle de Attunity. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle de Attunity incluye también un administrador de conexiones y un origen. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
 |Destino de SAP BI|El destino de SAP BI es el componente de destino de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI incluye también un administrador de conexiones y un origen. Para obtener más información, vea la página de descarga, [Feature Pack de Microsoft SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=110393).|  
@@ -184,12 +184,12 @@ ms.locfileid: "59241363"
  Los orígenes y las transformaciones siempre tienen salidas. Una salida contiene una o más columnas de salida, que pueden hacer referencia a las columnas externas si el componente de flujo de datos se ha configurado para usarlas. Las salidas se pueden configurar para proporcionar información útil para el procesamiento en dirección descendente de los datos. Por ejemplo, puede indicar si se ordena la salida. También puede proporcionar una descripción para la salida o actualizar el nombre de la salida. En el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , las salidas se configuran mediante el cuadro de diálogo **Editor avanzado** .  
   
 ### <a name="error-outputs"></a>Salidas de error  
- Los orígenes, destinos y transformaciones pueden incluir salidas de error. Puede especificar de qué manera el componente de flujo de datos responde ante los errores en cada entrada o columna mediante el cuadro de diálogo **Configurar la salida de errores** . Si se produce un error o truncamiento de datos en el tiempo de ejecución y el componente de flujo de datos se configura para redirigir filas, las filas de datos con el error se envían a la salida de error. La salida de error se puede conectar a las transformaciones que aplican transformaciones adicionales o datos directos a un destino diferente. Como opción predeterminada, una salida de error contiene las columnas de salida y dos columnas de error: **ErrorCode** y **ErrorColumn**. Las columnas de salida contienen los datos de la fila que generó el error, **ErrorCode** proporciona el código de error y **ErrorColumn** identifica la columna que genera el error.  
+ Los orígenes, destinos y transformaciones pueden incluir salidas de error. Puede especificar de qué manera el componente de flujo de datos responde ante los errores en cada entrada o columna mediante el cuadro de diálogo **Configurar la salida de errores** . Si se produce un error o truncamiento de datos en el tiempo de ejecución y el componente de flujo de datos se configura para redirigir filas, las filas de datos con el error se envían a la salida de error. La salida de error se puede conectar a las transformaciones que aplican transformaciones adicionales o datos directos a un destino diferente. De forma predeterminada, una salida de error contiene las columnas de salida y dos columnas de error: **ErrorCode** y **ErrorColumn**. Las columnas de salida contienen los datos de la fila que generó el error, **ErrorCode** proporciona el código de error y **ErrorColumn** identifica la columna que genera el error.  
   
  Para más información, vea [Control de errores en los datos](error-handling-in-data.md).  
   
 ### <a name="columns"></a>Columnas  
- Las entradas, salidas y salidas de error son colecciones de columnas. Cada columna es configurable y, según el tipo de columna (de entrada, de salida o externa), [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona otras propiedades para la columna. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona tres formas diferentes de establecer las propiedades de las columnas: mediante programación, mediante cuadros de diálogo específicos del componente o mediante el cuadro de diálogo **Editor avanzado** .  
+ Las entradas, salidas y salidas de error son colecciones de columnas. Cada columna es configurable y, según el tipo de columna (de entrada, de salida o externa), [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona otras propiedades para la columna. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona tres formas diferentes de establecer las propiedades de las columnas: mediante programación, mediante cuadros de diálogo específicos del componente o mediante el cuadro de diálogo **Editor avanzado**.  
   
 ## <a name="paths"></a>Rutas  
  Las rutas conectan componentes de flujo de datos. En el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , puede ver y modificar las propiedades de ruta, ver los metadatos de salida para el punto de inicio de la ruta y adjuntar visores de datos a una ruta.  

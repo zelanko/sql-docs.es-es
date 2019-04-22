@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241743"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lección 6: Agregar grupos y totales (Reporting Services)
@@ -25,7 +25,7 @@ ms.locfileid: "59241743"
   
  **En este tema:**  
   
--   [Para agrupar datos en un informe](#bkmk_groupdata)  
+-   [Para agrupar los datos en un informe](#bkmk_groupdata)  
   
 -   [Para agregar totales a un informe](#bkmk_addtotals)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "59241743"
   
      Si ve un mensaje similar al siguiente en la ventana de salida, indica que la implementación se realiza correctamente.  
   
-    > ------ Compilación iniciada: Proyecto: tutorial, configuración: Depurar ------Omitiendo 'Sales Orders.rdl'. Elemento actualizado. Compilación completa -- 0 errores, 0 avisos------ Implementación iniciada: Proyecto: tutorial, configuración: Depuración---implementar a http://\<nombre del servidor > / /reportserverdeploying report '/ tutorial/Sales Orders'. Implementación completa--0 errores, 0 advertencias === compilar: 1 actualizado o completado con éxito, 0 con errores, 0 omitidos ==================== Implementar: 1 con éxito, 0 con errores, 0 omitidos ==========  
+    > ---Compilación iniciada: Proyecto: tutorial, configuración: Depurar---omitiendo 'Sales Orders.rdl'. Elemento está actualizado. Compilación completa--0 errores, 0 advertencias---implementar iniciada: Proyecto: tutorial, configuración: Depuración---implementar a http://\<nombre del servidor > / /reportserverdeploying report '/ tutorial/Sales Orders'. Implementación completa--0 errores, 0 advertencias === compilar: 1 correctos o actualizados, 0 incorrectos, 0 omitidos === implementar: 1 correctos, 0 incorrectos, 0 omitidos ===  
   
      Si aparece un mensaje de error similar al siguiente, compruebe que dispone de permisos en el servidor de informes y que ha iniciado [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] con privilegios de administrador.  
   

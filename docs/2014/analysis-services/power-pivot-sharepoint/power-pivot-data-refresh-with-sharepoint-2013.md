@@ -12,10 +12,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04c366bc668fe09d1ebf57d169587ec11476f707
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241943"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>Actualización de datos PowerPivot con SharePoint 2013
@@ -27,11 +27,11 @@ ms.locfileid: "59241943"
   
  **En este tema:**  
   
--   [actualización de datos interactiva](#bkmk_interactive_refresh)  
+-   [Interactive Data Refresh](#bkmk_interactive_refresh)  
   
 -   [Autenticación de Windows con conexiones de datos de libro y actualización de datos interactiva](#bkmk_windows_auth_interactive_data_refresh)  
   
--   [actualización de datos programada](#bkmk_scheduled_refresh)  
+-   [Scheduled Data Refresh](#bkmk_scheduled_refresh)  
   
 -   [Arquitectura de actualización de datos programada de SharePoint 2013](#bkmk_refresh_architecture)  
   
@@ -72,9 +72,9 @@ ms.locfileid: "59241943"
   
 -   La actualización de datos interactiva solo actualiza los datos de la sesión de usuario actual. Los datos no se vuelven a guardar automáticamente en el elemento de libro en la base de datos de contenido de SharePoint.  
   
--   **Credenciales:** La actualización de datos interactiva puede usar la identidad del usuario que ha iniciado sesión como credenciales o las credenciales almacenadas para conectarse al origen de datos. Las credenciales empleadas dependen de la configuración de autenticación de Excel Services definida para la conexión del libro al origen de datos externo.  
+-   **Credenciales:** Actualización de datos interactiva puede usar la identidad del usuario que ha iniciado sesión como credenciales o credenciales almacenadas para conectarse al origen de datos. Las credenciales empleadas dependen de la configuración de autenticación de Excel Services definida para la conexión del libro al origen de datos externo.  
   
--   **Libros admitidos:**  libros creados en Excel 2013.  
+-   **Libros admitidos:**  Libros creados en Excel 2013.  
   
  **Para actualizar datos:**  
   
@@ -86,7 +86,7 @@ ms.locfileid: "59241943"
   
 3.  Excel Services carga la base de datos de PowerPivot, la procesa y después la consulta para actualizar la caché de libros de Excel.  
   
-4.  **Nota:** El libro actualizado no se vuelve a guardar automáticamente en la biblioteca de documentos.  
+4.  **Nota:** El libro actualizado no se guarda automáticamente en la biblioteca de documentos.  
   
  ![actualización de datos interactiva](../media/as-interactive-datarefresh-sharepoint2013.gif "actualización de datos interactiva")  
   
@@ -95,21 +95,21 @@ ms.locfileid: "59241943"
   
  Experiencia de usuario típica: Cuando un cliente selecciona "Actualizar todas las conexiones" en un libro de Excel 2013 que contiene un modelo de PowerPivot, verán un mensaje de error similar al siguiente:  
   
--   **No se pudo actualizar los datos externos:** Se produjo un error mientras se trabajaba en el modelo de datos del libro. Inténtelo de nuevo. No se pueden actualizar una o más conexiones de datos del libro.  
+-   **No se pudo actualizar los datos externos:** Se produjo un error mientras se trabajaba con el modelo de datos en el libro. Inténtelo de nuevo. No se pueden actualizar una o más conexiones de datos del libro.  
   
  Según el proveedor de datos que esté usando, verá mensajes similares a los siguientes en el registro de ULS.  
   
  **Con SQL Native Client:**  
   
--   No se pudo crear una conexión externa ni ejecutar una consulta. Mensaje del proveedor: Se ha especificado el objeto fuera de línea 'DataSource', que hace referencia a los identificadores '20102481-39c8-4d21-bf63-68f583ad22bb', pero no se ha usado.  Error de OLE DB u ODBC. Se ha producido un error relacionado con la red o específico de la instancia al establecer una conexión con SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para más información, vea los libros en pantalla de SQL Server.; 08001; Proveedor de SSL: El paquete de seguridad solicitado no existe; 08001; El cliente no puede establecer conexión; 08001; Cifrado no compatible en el cliente.; 08001.  , ConnectionName: ThisWorkbookDataModel, libro: book1.xlsx.  
+-   No se pudo crear una conexión externa ni ejecutar una consulta. Mensaje del proveedor: Objeto fuera de línea 'DataSource', que hace referencia a los identificadores ' 20102481-39 8-4 d 21-bf63-68f583ad22bb', se ha especificado, pero no se ha usado.  Error de OLE DB u ODBC: Se produjo un error relacionado con la red o específico de la instancia al establecer una conexión a SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, consulte Libros en pantalla de SQL Server.; 08001; Proveedor de SSL: El paquete de seguridad solicitado no existe; 08001; Cliente no puede establecer conexión; 08001; Cifrado no admitido en el cliente.; 08001.  , ConnectionName: ThisWorkbookDataModel, libro: book1.xlsx.  
   
  **Con el proveedor Microsoft OLE DB para SQL Server:**  
   
--   No se pudo crear una conexión externa ni ejecutar una consulta. Mensaje del proveedor: Se ha especificado el objeto fuera de línea 'DataSource', que hace referencia a los identificadores '6e711bfa-b62f-4879-a177-c5dd61d9c242', pero no se ha usado. Error de OLE DB u ODBC. , ConnectionName: ThisWorkbookDataModel, libro: OLEDB Provider.xlsx.  
+-   No se pudo crear una conexión externa ni ejecutar una consulta. Mensaje del proveedor: Objeto fuera de línea 'DataSource', que hace referencia a los identificadores '6e711bfa-b62f-4879-a177-c5dd61d9c242', se ha especificado, pero no se ha usado. Error de OLE DB u ODBC. , ConnectionName: ThisWorkbookDataModel, libro: OLEDB Provider.xlsx.  
   
  **Con el proveedor de datos de .NET Framework para SQL Server:**  
   
--   No se pudo crear una conexión externa ni ejecutar una consulta. Mensaje del proveedor: Se ha especificado el objeto fuera de línea 'DataSource', que hace referencia a los identificadores 'f5fb916c-3eac-4d07-a542-531524c0d44a', pero no se ha usado.  Errores del motor relacional de alto nivel. Excepción al usar la interfaz administrada IDbConnection: No se puede cargar el archivo o ensamblado 'System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' o una de sus dependencias. No se ha proporcionado el nivel de representación necesario o el nivel de representación no es válido. (Excepción de HRESULT: 0x80070542).  , ConnectionName: ThisWorkbookDataModel, libro: NETProvider.xlsx.  
+-   No se pudo crear una conexión externa ni ejecutar una consulta. Mensaje del proveedor: Fuera de línea 'DataSource', que hace referencia a los identificadores 'f5fb916c-3eac - 4D 07-a542-531524c0d44a', del objeto se ha especificado, pero no se ha usado.  Errores del motor relacional de alto nivel. Se produjo la excepción siguiente mientras se estaba usando la interfaz administrada IDbConnection: No se pudo cargar el archivo o ensamblado ' System.Transactions, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089' o uno de sus dependencias. No se ha proporcionado el nivel de representación necesario o el nivel de representación no es válido. (Excepción de HRESULT: 0x80070542).  , ConnectionName: ThisWorkbookDataModel, libro: NETProvider.xlsx.  
   
  **Resumen de pasos de configuración** Para configurar el privilegio **Actuar como parte del sistema operativo** en el servidor local:  
   
@@ -144,7 +144,7 @@ ms.locfileid: "59241943"
   
 -   **Credenciales:** Use las credenciales almacenadas. No usa la identidad del usuario actual.  
   
--   **Libros admitidos:** libros creados mediante el complemento [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot para Excel 2010 o con Excel 2013. No se admiten los libros creados en Excel 2010 con el complemento [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot. Actualice el libro como mínimo al formato de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot. Para obtener más información sobre actualizaciones de libros, vea [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+-   **Libros admitidos:** Libros creados mediante el [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] complemento PowerPivot para Excel 2010 o con Excel 2013. No se admiten los libros creados en Excel 2010 con el complemento [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot. Actualice el libro como mínimo al formato de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot. Para obtener más información sobre actualizaciones de libros, vea [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  Para mostrar la página **Administrar actualización de datos** :  
   
@@ -189,7 +189,7 @@ ms.locfileid: "59241943"
 >  Como el servicio de sistema de PowerPivot ya no carga ni guarda modelos de PowerPivot, la mayoría de los valores para los modelos de almacenamiento en caché de un servidor de aplicaciones no se aplican a una granja de SharePoint 2013.  
   
 ## <a name="data-refresh-log-data"></a>Datos de registro de actualización de datos  
- **Datos de uso:** Puede ver los datos de uso de actualización de datos en el Panel de administración de PowerPivot. Para ver los datos de uso:  
+ **Datos de uso:** Puede ver los datos de uso en el panel de administración de PowerPivot. Para ver los datos de uso:  
   
 1.  En Administración central de SharePoint, haga clic en **Panel de administración de PowerPivot** en el grupo **Configuración de aplicación general** .  
   
@@ -212,7 +212,7 @@ ms.locfileid: "59241943"
   
 -   **Usar la cuenta de usuario autenticada**: Excel Services realiza la actualización de datos con la identidad del usuario que ha iniciado sesión actualmente.  
   
--   **Usar una cuenta almacenada**: presupone un identificador de aplicación de Servicio de almacenamiento seguro de SharePoint, que Excel Services usa para recuperar el nombre de usuario y la contraseña para autenticar la actualización de datos.  
+-   **Usar una cuenta almacenada**: Presupone un identificador de aplicación de servicio Store seguro de SharePoint, que Excel Services usa para recuperar el nombre de usuario y contraseña para autenticar la autenticación de actualización de datos.  
   
 -   **Ninguno**: Los servicios de Excel **cuenta de servicio desatendida** se utiliza. La cuenta de servicio se asocia a un proxy de almacenamiento seguro. Configure los valores de la página **Configuración de la aplicación de Excel Services** , en la sección **Datos externos** .  
   
@@ -237,6 +237,6 @@ ms.locfileid: "59241943"
   
 ## <a name="see-also"></a>Vea también  
  [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
- [PowerPivot for SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [Instalación de PowerPivot para SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

@@ -12,10 +12,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff7c6dba835d12ed8b05500f037ee0d4ed1361c3
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241813"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>Configurar o reparar PowerPivot para SharePoint 2013 (Herramienta de configuración de PowerPivot)
@@ -27,7 +27,7 @@ ms.locfileid: "59241813"
   
  [Antes de empezar](#bkmk_before)  
   
- [Para usar la Herramienta de configuración de PowerPivot para SharePoint 2013](#bkmk_using)  
+ [Para usar PowerPivot para la herramienta de configuración de SharePoint 2013](#bkmk_using)  
   
  [Pasos de configuración](#bkmk_steps)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "59241813"
   
      **Frase de contraseña** : escriba una frase de contraseña. Si la granja de SharePoint es nueva, la frase de contraseña se usa siempre que se agregan nuevos servidores o aplicaciones a la granja de servidores de SharePoint. Si la granja existe, escriba la frase de contraseña que le permite agregar una aplicación o un servidor a la granja.  
   
-5.  **Puerto:** Opcionalmente, escriba un número de puerto para conectarse a la aplicación web de Administración central o use el número generado aleatoriamente proporcionado. La herramienta de configuración comprueba que el número está disponible antes de ofrecerlo como opción.  
+5.  **Puerto:** Opcionalmente, escriba un número de puerto para conectarse a la aplicación web de Administración Central o use el número generado aleatoriamente proporcionado. La herramienta de configuración comprueba que el número está disponible antes de ofrecerlo como opción.  
   
 6.  En la página principal, escriba el nombre de un servidor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se ejecute en modo de SharePoint.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "59241813"
   
  En la tabla siguiente se describen los valores usados para configurar el servidor.  
   
-|Página|Valor de entrada|Origen|Descripción|  
+|Página|Valor de entrada|Source|Descripción|  
 |----------|-----------------|------------|-----------------|  
 |**Configurar o reparar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint**|Cuenta predeterminada|Usuario actual|La cuenta predeterminada es una cuenta de usuario de Windows de dominio que se emplea para aprovisionar servicios compartidos en la granja. Se usa para aprovisionar lo siguiente:<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Aplicación de servicio<br />Servicio de almacenamiento seguro<br />Excel Services<br />La identidad del grupo de aplicaciones web<br />El administrador de la colección de sitios<br />La cuenta de la actualización de datos desatendida de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> De forma predeterminada, usa la cuenta de dominio del usuario actual. Se recomienda que reemplace el valor predeterminado a menos que esté configurando un servidor con fines de evaluación y no de producción. Podrá cambiar las identidades de servicio posteriormente, utilizando Administración central. Opcionalmente, en la Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , especifique cuentas dedicadas para lo siguiente:<br /><br /> La aplicación web mediante la página **Crear aplicación web predeterminada** (suponiendo que la herramienta vaya a crear una aplicación web para la granja).<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] mediante la página **Crear cuenta de actualización de datos desatendida** de esta herramienta.|  
 ||Servidor de bases de datos|Instancia con nombre local de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , si está disponible|Si una instancia del motor de base de datos se ha instalado como una instancia con nombre de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , la herramienta rellena el campo del servidor de bases de datos con este nombre de instancia. Si no ha instalado el motor de base de datos, este campo está vacío.<br /><br /> **Servidor de bases de datos**  es un parámetro necesario. Puede ser cualquier versión o edición de SQL Server que se admita en granjas de servidores de SharePoint.|  
@@ -116,7 +116,7 @@ ms.locfileid: "59241813"
 ||Puerto de Administración central de SharePoint|Valor predeterminado, si es necesario|Si la granja no está configurada, la herramienta proporciona opciones para crearla, incluida la creación de un extremo HTTP en Administración central. Elige un número de puerto generado aleatoriamente que no esté en uso.|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel Services ([NombreDelServidor]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Datos proporcionados por el usuario|Para habilitar las capacidades básicas de PowerPivot se necesita el servidor [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel Services. El nombre del servidor que escriba en esta página también se agrega a la lista de la página **Configurar servidores PowerPivot** .|  
 |**Configurar una nueva granja**|Servidor de bases de datos<br /><br /> Cuenta de granja<br /><br /> Frase de contraseña<br /><br /> Puerto de Administración central de SharePoint|Valor predeterminado, si es necesario|Las configuraciones usan como valor predeterminado lo que especificó en la página principal.|  
-|**Crear una aplicación de servicio PowerPivot**|Nombre de la aplicación de servicio|Default|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Nombre de la aplicación de servicio PowerPivot. El nombre predeterminado es **Aplicación de servicio de PowerPivot predeterminada**. Podrá sustituirlo por otro valor de la herramienta.|  
+|**Crear aplicación de servicio PowerPivot**|Nombre de la aplicación de servicio|Default|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] El nombre predeterminado es el nombre de aplicación de servicio **aplicación de servicio PowerPivot predeterminada**. Podrá sustituirlo por otro valor de la herramienta.|  
 ||Servidor de bases de datos|Default|El servidor de bases de datos que va a hospedar la base de datos de aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El nombre del servidor predeterminado es el mismo servidor de bases de datos usado para la granja. Puede sustituir el nombre del servidor predeterminado por un valor diferente.|  
 ||Nombre de la base de datos|Default|Nombre de la base de datos que se va a crear para la base de datos de aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El nombre predeterminado de la base de datos se basa en el nombre de aplicación de servicio, seguido de un GUID para garantizar un nombre único. Podrá sustituirlo por otro valor de la herramienta.|  
 |**Crear aplicación web predeterminada**|Nombre de aplicación web|Valor predeterminado, si es necesario|Si no existe ninguna aplicación web, la herramienta crea una. La aplicación web se configura para la autenticación en modo clásico y escucha en el puerto 80. El tamaño máximo de carga de archivos se establece en 2047, el máximo admitido por SharePoint. El tamaño máximo de carga de archivos es para incluir los archivos grandes de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se cargarán en el servidor.|  
@@ -131,7 +131,7 @@ ms.locfileid: "59241813"
 ||Correo electrónico de contacto|Valor predeterminado, si es necesario|Si Microsoft Outlook está configurado en el servidor, la herramienta usará la dirección de correo electrónico del usuario actual. Si no, se utiliza un valor de marcador de posición.|  
 ||URL del sitio|Valor predeterminado, si es necesario|La herramienta crea la dirección URL del sitio, utilizando las mismas convenciones de nomenclatura de direcciones URL que SharePoint.|  
 ||Título del sitio|Valor predeterminado, si es necesario|La herramienta agrega **Sitio de PowerPivot** como título predeterminado.|  
-|**Activar la característica de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en una colección de sitios**|Dirección URL del sitio||Dirección URL de la colección de sitios para la que va a activar las características de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|**Activar la característica de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en una colección de sitios**|URL del sitio||Dirección URL de la colección de sitios para la que va a activar las características de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 ||Habilitar la característica premium para este sitio||Habilitar la característica "premiumsite para" del sitio de SharePoint.|  
 |**Crear una aplicación de servicio de almacenamiento seguro**|Nombre de la aplicación de servicio|Valor predeterminado, si es necesario|Escriba el nombre de la aplicación de servicio de almacenamiento seguro.|  
 ||Servidor de bases de datos|Datos proporcionados por el usuario|Escriba el nombre del servidor de bases de datos que se usará para la aplicación de servicio de almacenamiento seguro.|  
@@ -145,7 +145,7 @@ ms.locfileid: "59241813"
 ||URL del sitio|Valor predeterminado, si es necesario|Escriba la dirección URL de la colección de sitios asociada a la aplicación de destino. Para asociarla a colecciones de sitios adicionales, use Administración central de SharePoint.|  
 |**Crear nueva aplicación de servicio de Excel Services**|Nombre de la aplicación de servicio|Valor predeterminado, si es necesario|Escriba un nombre de aplicación de servicio. Se crea una base de datos de aplicación de servicio con el mismo nombre en el servidor de base de datos de la granja de SharePoint.|  
 |**Configurar servidores [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nombre de la aplicación de servicio|Valor predeterminado, si es necesario|Nombre de aplicación de servicio que escribió en la página anterior.|  
-||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Nombre del servidor||Lista de servidores [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] registrados.<br /><br /> El nombre de servidor especificado en la página principal se agrega automáticamente a esta página.|  
+||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Nombre de servidor||Lista de servidores [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] registrados.<br /><br /> El nombre de servidor especificado en la página principal se agrega automáticamente a esta página.|  
 |**Registrar complemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como herramienta de seguimiento de uso de Excel Services**|Nombre de la aplicación de servicio||Nombre de aplicación de servicio que escribió en la página anterior.|  
 |||||  
   
@@ -205,8 +205,8 @@ ms.locfileid: "59241813"
   
 ## <a name="see-also"></a>Vea también  
  [Instalar o desinstalar PowerPivot para SharePoint complemento &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)   
- [Administración y configuración del servidor PowerPivot en Administración central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
+ [Herramientas de configuración de PowerPivot](power-pivot-configuration-tools.md)   
+ [Administración de servidor de PowerPivot y la configuración en Administración Central](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

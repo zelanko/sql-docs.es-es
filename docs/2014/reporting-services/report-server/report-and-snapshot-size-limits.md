@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: b43ad109b3b64927f2e4b03ef26fc0bc648a1ec7
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240653"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Límites de tamaño de informes e instantáneas
@@ -53,7 +53,7 @@ ms.locfileid: "59240653"
  Existen límites claros para el tamaño de un informe cuando se representa en formato Excel. Las hojas de cálculo no pueden tener más de 65536 filas o 256 columnas. Los demás formatos de representación no tienen estos límites, por lo que su tamaño solamente depende de la cantidad de recursos del servidor. Para obtener más información acerca de los límites de archivo de Excel, vea [exportar un informe como otro tipo de archivo &#40;generador de informes y SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  El procesamiento y la representación de los informes se producen en memoria. Si los informes son grandes o hay muchos usuarios, asegúrese de planear la capacidad de alguna manera para garantizar que la implementación del servidor de informes funciona en un grado que sea satisfactorio para los usuarios. Para obtener más información sobre herramientas e instrucciones, consulte las siguientes publicaciones en MSDN: [Planificación de escalabilidad y rendimiento con Reporting Services](http://spmarchitecture.com/ssrs-architecture/planning-for-scalability-and-performance-reporting-services-70744/) y [mediante Visual Studio 2005 para realizar pruebas de carga en un SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
+>  El procesamiento y la representación de los informes se producen en memoria. Si los informes son grandes o hay muchos usuarios, asegúrese de planear la capacidad de alguna manera para garantizar que la implementación del servidor de informes funciona en un grado que sea satisfactorio para los usuarios. Para obtener más información sobre herramientas e instrucciones, consulte las publicaciones siguientes en MSDN: [Planificación de escalabilidad y rendimiento con Reporting Services](http://spmarchitecture.com/ssrs-architecture/planning-for-scalability-and-performance-reporting-services-70744/) y [mediante Visual Studio 2005 para realizar pruebas de carga en un SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
 ## <a name="measuring-snapshot-storage"></a>Medir el almacenamiento de instantáneas  
  El tamaño de una instantánea es directamente proporcional a la cantidad de datos del informe. Las instantáneas suelen ser mucho mayores que otros elementos que se almacenan en un servidor de informes. El tamaño de una instantánea puede ser de algunos megabytes a decenas de megabytes. Si los informes son muy grandes, es de esperar que haya instantáneas incluso mayores. En función de la frecuencia con la que se utilicen las instantáneas y de cómo se haya configurado el historial de informes, la cantidad de espacio de disco que requiere la base de datos del servidor de informes puede crecer rápidamente en poco tiempo.  

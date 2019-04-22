@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbb609a65c70cb44c8fda81feb75927060ed289b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240423"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propiedades de flujo de datos que se pueden establecer utilizando expresiones
@@ -71,8 +71,8 @@ ms.locfileid: "59240423"
 |----------------------|--------------|  
 |Destino ADO NET|Propiedad TableOrViewName<br /><br /> Propiedad BatchSize<br /><br /> Propiedad CommandTimeOut|  
 |Destino de archivo plano|Propiedad Header|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Propiedad TableName|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] destino|Propiedad BulkInsertTableName<br /><br /> Propiedad BulkInsertFirstRow<br /><br /> Propiedad BulkInsertLastRow<br /><br /> Propiedad BulkInsertOrder<br /><br /> Propiedad Tiempo de espera|  
+|Destino de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact|Propiedad TableName|  
+|Destino de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|Propiedad BulkInsertTableName<br /><br /> Propiedad BulkInsertFirstRow<br /><br /> Propiedad BulkInsertLastRow<br /><br /> Propiedad BulkInsertOrder<br /><br /> Propiedad Tiempo de espera|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

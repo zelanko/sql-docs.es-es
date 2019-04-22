@@ -12,10 +12,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 4d299f364b4d67e1f31ce7c0e70d6ba062933f37
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860546"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Consumo de una aplicación implementada en el clúster de macrodatos de SQL Server mediante un servicio web RESTful
@@ -27,7 +27,7 @@ En este artículo se describe cómo consumir una aplicación implementada en un 
 ## <a name="prerequisites"></a>Requisitos previos
 
 - [Clúster de macrodatos de SQL Server 2019](deployment-guidance.md)
-- [utilidad de línea de comandos mssqlctl](deploy-install-mssqlctl.md)
+- [mssqlctl command-line utility](deploy-install-mssqlctl.md)
 - Una aplicación implementada mediante [ `mssqlctl` ](big-data-cluster-create-apps.md) o [implementar aplicación de extensión](app-deployment-extension.md)
 
 ## <a name="capabilities"></a>Capabilities

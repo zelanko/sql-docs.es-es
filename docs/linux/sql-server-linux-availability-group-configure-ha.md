@@ -12,10 +12,10 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 95e9ae2bd77bc3042a44b0322ac9a607be3725e8
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872205"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurar SQL Server grupo de disponibilidad AlwaysOn para alta disponibilidad en Linux
@@ -72,7 +72,7 @@ Los ejemplos en esta sección explican cómo crear el grupo de disponibilidad me
 
 Para una configuración de alta disponibilidad que garantiza la conmutación automática por error, el grupo de disponibilidad requiere al menos tres réplicas. Cualquiera de las siguientes configuraciones pueda admitir alta disponibilidad:
 
-- [Tres réplicas sincrónicas](sql-server-linux-availability-group-ha.md#threeSynch)
+- [Tres réplicas sincrónicas.](sql-server-linux-availability-group-ha.md#threeSynch)
 
 - [Una réplica de la configuración más de dos réplicas sincrónicas](sql-server-linux-availability-group-ha.md#twoSynch)
 

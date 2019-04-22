@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872315"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novedades de Motor de base de datos de Microsoft SQL Server 2016
@@ -41,7 +41,7 @@ Si quiere revisar las novedades de los otros componentes de SQL Server, vea [Nov
 > Para ver las notas de la versión actual, consulte [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
--  `CREATE OR ALTER <object>` la sintaxis ahora está disponible para los [procedimientos](../t-sql/statements/create-procedure-transact-sql.md), [vistas](../t-sql/statements/create-view-transact-sql.md), [funciones](../t-sql/statements/create-function-transact-sql.md) y [desencadenadores](../t-sql/statements/create-trigger-transact-sql.md).
+-  Ahora, la sintaxis `CREATE OR ALTER <object>` está disponible para los [procedimientos](../t-sql/statements/create-procedure-transact-sql.md), [vistas](../t-sql/statements/create-view-transact-sql.md), [ funciones](../t-sql/statements/create-function-transact-sql.md) y [desencadenadores](../t-sql/statements/create-trigger-transact-sql.md).
 -   Se ha agregado compatibilidad para un modelo de sugerencias de consultas más genérico: `OPTION (USE HINT('<hint1>', '<hint2>'))`. Para obtener más información, consulte [Sugerencias de consulta (Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md).  
 - Se ha agregado la DMV [sys.dm_exec_valid_use_hints](../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) a las sugerencias de lista.  
 - Se ha agregado la DMV [sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) para devolver estadísticas transitorias de planes de presentación XML.  
@@ -60,7 +60,7 @@ Esta sección contiene las siguientes subsecciones:
 -   [Configuraciones con ámbito de base de datos](#database-scoped-configurations)
 -   [OLTP en memoria](#in-memory-oltp)
 -   [Optimizador de consultas](#query-optimizer)
--   [Estadísticas de consulta activa](#live-query-statistics)
+-   [Estadísticas de consultas activas](#live-query-statistics)
 -   [Almacén de consultas](#query-store)
 -   [Tablas temporales](#temporal-tables)
 -   [Copias de seguridad seccionadas en Microsoft Azure Blob Storage](#striped-backups-to-microsoft-azure-blob-storage)
@@ -120,7 +120,7 @@ La nueva instrucción está disponible tanto en [!INCLUDE[ssSQL15](../includes/s
 
 El formato de almacenamiento para tablas con optimización para memoria cambia entre SQL Server 2014 y 2016. Para actualizar y adjuntar o restaurar desde SQL Server 2014, el nuevo formato de almacenamiento se serializa y la base de datos se reinicia una vez durante la recuperación de la misma.
 
-- [Upgrade to SQL Server 2016](../database-engine/install-windows/upgrade-sql-server.md)
+- [Actualizar a SQL Server 2016](../database-engine/install-windows/upgrade-sql-server.md)
 
 
 ### <a name="alter-table-is-log-optimized-and-runs-in-parallel"></a>ALTER TABLE tiene optimización para registro y se ejecuta en paralelo
@@ -206,7 +206,7 @@ Para obtener información general, vea:
 
 - [Seguridad de nivel de fila en tablas con optimización para memoria](../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md#rls)
 
-- Las conexiones de [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) ahora pueden tener acceso a tablas optimizadas para memoria y a procedimientos almacenados compilados de manera nativa.
+- Las conexiones de [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) ahora pueden tener acceso a tablas con optimización para memoria y a procedimientos almacenados compilados de manera nativa.
 
 - Compatibilidad del [Cifrado de datos transparente (TDE)](../relational-databases/security/encryption/transparent-data-encryption.md). Si una base de datos está configurada para ENCRYPTION, los archivos del [grupo de archivos con optimización para memoria](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md) ahora también se cifran.
 

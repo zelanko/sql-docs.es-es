@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 629ab86b869e36ec816dc99070f11a88147a1ca8
-ms.sourcegitcommit: e6e5da19b393f30b068552a18c911495cbc32952
+ms.openlocfilehash: 2bb8afe1e20e71245beea8f9482ff0aec4b047ba
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54443701"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671142"
 ---
 # <a name="set-or-change-the-server-collation"></a>Configurar o cambiar la intercalación del servidor
 
@@ -30,7 +30,7 @@ ms.locfileid: "54443701"
   
 ## <a name="setting-the-server-collation-in-sql-server"></a>Configuración de la intercalación del servidor en SQL Server
 
-  La intercalación de servidor se especifica durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La intercalación de nivel de servidor predeterminada es **SQL_Latin1_General_CP1_CI_AS**. No se pueden especificar intercalaciones exclusivas de Unicode como intercalación de nivel de servidor. Para obtener más información, vea [Configuración del servidor - Intercalación](/sql/sql-server/install/server-configuration-collation.md).
+  La intercalación de servidor se especifica durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La intercalación de nivel de servidor predeterminada es **SQL_Latin1_General_CP1_CI_AS**. No se pueden especificar intercalaciones exclusivas de Unicode como intercalación de nivel de servidor. Para más información, consulte [Compatibilidad con la intercalación y Unicode](collation-and-unicode-support.md).
   
 ## <a name="changing-the-server-collation-in-sql-server"></a>Cambio de la intercalación del servidor en SQL Server
 

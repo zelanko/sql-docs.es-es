@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241923"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Escenarios de globalización para Analysis Services Multidimensional
@@ -45,7 +45,7 @@ ms.locfileid: "59241923"
   
 -   Los archivos de registro contienen una mezcla de mensajes en inglés y localizados, si instaló un paquete de idioma en el servidor Windows Server en el que se ejecuta Analysis Services.  
   
--   La documentación y las herramientas, como [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] y [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], se traducen a los siguientes idiomas: chino simplificado, chino tradicional, francés, alemán, italiano, japonés, coreano, portugués (Brasil), ruso y español. Para utilizar una versión de las herramientas en un idioma concreto, instale una versión de SQL Server en un idioma concreto (por ejemplo, instale la versión en alemán de SQL Server para tener Management Studio en alemán) o ejecute el programa de instalación independiente en el idioma de destino de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   Documentación y las herramientas, como [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] y [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], se traducen en estos idiomas: Chino simplificado, chino tradicional, francés, alemán, italiano, japonés, coreano, portugués (Brasil), ruso y español. Para utilizar una versión de las herramientas en un idioma concreto, instale una versión de SQL Server en un idioma concreto (por ejemplo, instale la versión en alemán de SQL Server para tener Management Studio en alemán) o ejecute el programa de instalación independiente en el idioma de destino de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
  Analysis Services le permite configurar el idioma, la intercalación y las traducciones de forma independiente en toda la jerarquía de objetos.  
   

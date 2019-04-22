@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b050638ee0ca600c5df0ecdbe5616b801f41e7a8
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860357"
 ---
 # <a name="mssqlctl"></a>mssqlctl
@@ -26,11 +26,11 @@ El siguiente artículo proporciona la referencia para la **mssqlctl** herramient
 
 |||
 |---|---|
-| [Aplicación](reference-mssqlctl-app.md) | Crear, eliminar, ejecutar y administrar aplicaciones. |
-| [clúster](reference-mssqlctl-cluster.md) | Seleccione, administrar y operar los clústeres. |
+| [app](reference-mssqlctl-app.md) | Crear, eliminar, ejecutar y administrar aplicaciones. |
+| [cluster](reference-mssqlctl-cluster.md) | Seleccione, administrar y operar los clústeres. |
 | [login](#login) | Inicie sesión en el clúster. |
-| [Cierre de sesión](#logout) | Cerrar la sesión de clúster. |
-| [almacenamiento](reference-mssqlctl-storage.md) | Administrar el almacenamiento de clúster. |
+| [logout](#logout) | Cerrar la sesión de clúster. |
+| [storage](reference-mssqlctl-storage.md) | Administrar el almacenamiento de clúster. |
 
 ## <a id="login"></a> inicio de sesión mssqlctl
 
@@ -47,9 +47,9 @@ mssqlctl login
 
 | Parámetro | Descripción |
 |---|---|
-|**--punto de conexión -e**| Clúster de host y puerto (ex) `http://host:port"`. |
-|**--contraseña -p**| Credenciales de contraseña. |
-|**-u nombre de usuario:**| Usuario de la cuenta. |
+|**--endpoint -e**| Clúster de host y puerto (ex) `http://host:port"`. |
+|**--password -p**| Credenciales de contraseña. |
+|**--username -u**| Usuario de la cuenta. |
 
 ### <a name="examples"></a>Ejemplos
 
@@ -84,7 +84,7 @@ mssqlctl logout
 
 | Parámetros | Descripción |
 |---|---|
-| **-u nombre de usuario:** | Usuario de la cuenta, si faltan, cierre de sesión la cuenta activa actual. |
+| **--username -u** | Usuario de la cuenta, si faltan, cierre de sesión la cuenta activa actual. |
 
 ### <a name="examples"></a>Ejemplos
 

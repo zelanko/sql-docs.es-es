@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: c67ed74750ac36d1a5c79503417414a9dd8ab6b5
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860106"
 ---
 # <a name="mssqlctl-app-template"></a>Plantilla de aplicación mssqlctl
@@ -26,7 +26,7 @@ El siguiente artículo proporciona la referencia para la **plantilla de aplicaci
 
 |||
 |---|---|
-| [enumerar](#list) | Obtener plantillas compatibles. |
+| [list](#list) | Obtener plantillas compatibles. |
 | [pull](#pull) | Descargue plantillas compatibles. |
 
 ## <a id="list"></a> lista de plantillas de aplicación mssqlctl
@@ -74,7 +74,7 @@ mssqlctl app template pull
 | Parámetros | Descripción |
 |---|---|
 | **--destino -d** | Dónde colocar la plantilla de aplicación esqueleto.  Valor predeterminado:. / plantillas. |
-| **: nombre - n** | Nombre de la plantilla. Para obtener una lista completa desactivar los nombres de plantilla admitidos, ejecute `mssqlctl app template list`. |
+| **--name -n** | Nombre de la plantilla. Para obtener una lista completa desactivar los nombres de plantilla admitidos, ejecute `mssqlctl app template list`. |
 | **--url -u** | Especifique una ubicación de repositorio de plantillas diferentes. Predeterminado:
 https://github.com/Microsoft/sql-server-samples.git  |
 

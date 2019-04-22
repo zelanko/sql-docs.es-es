@@ -15,22 +15,22 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 185c03ef5c5ffdd35a1d32df6fecb29568d5ab82
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657809"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774550"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la **protección ampliada** a partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protección ampliada para la autenticación** es una característica de los componentes de red que implementa el sistema operativo. La**protección ampliada** se admite en Windows 7 y Windows Server 2008 R2. **Protección ampliada** se incluye en Service packs para [!INCLUDE[msCoName](../../includes/msconame-md.md)] sistemas operativos antiguos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es más seguro cuando las conexiones se realizan con **Extended Protection**.  
   
 > [!IMPORTANT]  
->  Windows no habilita la **protección ampliada** de forma predeterminada. Para obtener información acerca de cómo habilitar la **protección ampliada** en Windows, vea [Protección ampliada para la autenticación](https://support.microsoft.com/kb/968389).  
+> Windows no habilita la **protección ampliada** de forma predeterminada. Para obtener información acerca de cómo habilitar la **protección ampliada** en Windows, vea [Protección ampliada para la autenticación](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview).
   
 ## <a name="description-of-extended-protection"></a>Descripción de la protección ampliada  
  La**protección ampliada** usa el enlace de servicio y el enlace de canal para ayudar a evitar un ataque de retransmisión de autenticación. En un ataque de retransmisión de autenticación, un cliente que puede realizar la autenticación NTLM (por ejemplo, el Explorador de Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, una aplicación .NET SqlClient, etc.) se conecta a un atacante (por ejemplo, un servidor de archivos CIFS malintencionado). El atacante usa las credenciales del cliente para hacerse pasar por este y autenticarse en un servicio (por ejemplo, una instancia del servicio [!INCLUDE[ssDE](../../includes/ssde-md.md)]).  

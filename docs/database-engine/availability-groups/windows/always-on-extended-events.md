@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860636"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configuración de eventos extendidos para grupos de disponibilidad Always On
@@ -30,7 +30,7 @@ SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'
   
  [Eventos extendidos para la depuración](always-on-extended-events.md#BKMK_Debugging)  
   
- [Referencia de eventos extendidos de grupos de disponibilidad Always On](always-on-extended-events.md#BKMK_Reference)  
+ [Referencia de eventos extendidos de grupos de disponibilidad Always On](always-on-extended-events.md#BKMK_Reference)  
   
 ##  <a name="BKMK_alwayson_health"></a> Sesión Alwayson_health  
  La sesión de eventos extendidos alwayson_health se crea automáticamente al crear el grupo de disponibilidad y captura un subconjunto de los eventos relacionados del grupo de disponibilidad. Esta sesión está preconfigurada como una útil y cómoda herramienta que ayuda a empezar a trabajar rápidamente a la vez que soluciona los problemas de un grupo de disponibilidad. El Asistente para crear un grupo de disponibilidad inicia automáticamente la sesión en cada réplica de disponibilidad participante configurada en el asistente.  

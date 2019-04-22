@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241803"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lección 1: Crear el proyecto y el paquete básico
@@ -82,7 +82,7 @@ ms.locfileid: "59241803"
   
 -   [Paso 1: Crear un nuevo proyecto de Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Paso 2: Agregar y configurar un administrador de conexiones de archivos planos](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Paso 2: Adición y configuración de un administrador de conexiones de archivos planos](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
 -   [Paso 3: Agregar y configurar un administrador de conexiones OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
@@ -94,9 +94,9 @@ ms.locfileid: "59241803"
   
 -   [Paso 7: Agregar y configurar el destino de OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Paso 8: Facilitar la comprensión del paquete de la lección 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Paso 8: Lo más fácil de entender el paquete de la lección 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Paso 9: Probar el paquete del tutorial de la lección 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Paso 9: Probar el paquete del Tutorial de la lección 1](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Iniciar la lección  
  [Paso 1: Crear un nuevo proyecto de Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3bfa37a34ae6c3010c36dfe7693bb6d569e6e63d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241474"
 ---
 # <a name="create-calculated-members"></a>Crear miembros calculados
@@ -24,7 +24,7 @@ ms.locfileid: "59241474"
   
  Los miembros calculados se crean en cubos. Para crear un miembro calculado, en el Diseñador de cubos, en la pestaña **Cálculos** , haga clic en el icono de **Nuevo miembro calculado** de la barra de herramientas. Este comando abre un formulario para especificar las siguientes opciones para el miembro calculado:  
   
- **Nombre**  
+ **Name**  
  Seleccione el nombre del miembro calculado. Este nombre aparece como encabezado de columna o de fila de los valores de miembros calculados cuando los usuarios finales examinan el cubo.  
   
  **Jerarquía primaria**  

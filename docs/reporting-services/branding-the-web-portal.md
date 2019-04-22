@@ -9,10 +9,10 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59506512"
 ---
 # <a name="branding-the-web-portal"></a>Personalización de marca del portal web
@@ -243,4 +243,4 @@ También puede **descargarse** o **quitar** el paquete. Si quita el paquete, se 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services.](https://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -42,10 +42,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042454"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -347,15 +347,15 @@ Es un valor predeterminado para el parámetro. Si se define un valor *default*, 
  Especifica el ensamblado y el método al que deberá hacer referencia el nombre de la función creada.  
   
 -   *assembly_name*: debe coincidir con un valor en la columna `name` de   
-    `SELECT * FROM sys.assemblies;`.  
+    Columnas en la tabla de origen capturadas`SELECT * FROM sys.assemblies;`  
     Este es el nombre que se utilizó en la instrucción `CREATE ASSEMBLY`.  
   
 -   *class_name*: debe coincidir con un valor en la columna `assembly_name` de  
-    `SELECT * FROM sys.assembly_modules;`.  
+    Columnas en la tabla de origen capturadas`SELECT * FROM sys.assembly_modules;`  
     A menudo el valor contiene un punto incrustado. En tales casos, la instrucción Transact-SQL sintaxis requiere que el valor se limite con un par de corchetes [] o con un par de comillas dobles "".  
   
 -   *method_name*: debe coincidir con un valor en la columna `method_name` de   
-    `SELECT * FROM sys.assembly_modules;`.  
+    Columnas en la tabla de origen capturadas`SELECT * FROM sys.assembly_modules;`  
     El método debe ser estático.  
   
 En un ejemplo típico de MyFood.DLL, en el que todos los tipos están en el espacio de nombres MyFood, el valor de `EXTERNAL NAME` podría ser:   
@@ -567,15 +567,15 @@ Si una función definida por el usuario no se crea con la cláusula `SCHEMABINDI
 
 -   Instrucciones de control de flujo excepto instrucciones `TRY...CATCH`.  
 
--   `DECLARE` instrucciones que definen variables de datos y cursores locales.  
+-   Instrucciones `DECLARE` que definen variables de datos y cursores locales.  
 
--   `SELECT` instrucciones que contienen listas de selección con expresiones que asignan valores a variables locales.  
+-   Instrucciones `SELECT` que contienen listas de selección con expresiones que asignan valores a variables locales.  
 
 -   Operaciones de cursor que hacen referencia a cursores locales que se declaran, abren, cierran y cuya asignación se cancela en la función. Solamente se permiten las instrucciones `FETCH` que asignan valores a las variables locales mediante la cláusula `INTO`; no se permiten las instrucciones `FETCH` que devuelven datos al cliente.  
 
--   `INSERT`Instrucciones `UPDATE` y `DELETE` que modifican variables de tabla locales.  
+-   Instrucciones `INSERT`, `UPDATE` y `DELETE` que modifican variables de tabla locales.  
 
--   `EXECUTE` instrucciones que llaman a procedimientos almacenados extendidos.  
+-   Instrucciones `EXECUTE` que llaman a procedimientos almacenados extendidos.  
 
 Para más información, vea [Crear funciones definidas por el usuario &#40;motor de base de datos&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
@@ -645,11 +645,11 @@ Cuando utilice la cláusula `ORDER` en funciones CLR con valores de tabla, siga 
   
     -   Consultas Insert en las que la cláusula `ORDER` es compatible con un índice.  
   
-    -   `ORDER BY` cláusulas que son compatibles con la cláusula `ORDER`.  
+    -   Cláusulas `ORDER BY` que son compatibles con la cláusula `ORDER`.  
   
     -   Agregados, donde `GROUP BY` es compatible con cláusula `ORDER`.  
   
-    -   `DISTINCT` agregados donde las columnas distintas son compatibles con la cláusula `ORDER`.  
+    -   Agregados `DISTINCT` donde las columnas distintas son compatibles con la cláusula `ORDER`.  
   
 La cláusula `ORDER` no garantiza que los resultados estén ordenados al ejecutar una consulta SELECT, a menos que también se especifique la cláusula `ORDER BY` en la consulta. Vea [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md) para más información sobre cómo consultar las columnas incluidas en el criterio de ordenación para las funciones con valores de tabla.  
   
@@ -831,7 +831,7 @@ GO
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [Funciones CLR definidas por el usuario](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
+ [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  (Funciones definidas por el usuario CLR)  
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
   

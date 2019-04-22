@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: d7965ff1f29310f39fb5b8b5994b3967b928ecde
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860247"
 ---
 # <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>¿Cuáles son los grupos de proceso en un clúster de macrodatos de SQL Server?

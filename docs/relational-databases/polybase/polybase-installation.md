@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872305"
 ---
 # <a name="install-polybase-on-windows"></a>Instalación de PolyBase en Windows
@@ -105,8 +105,8 @@ Use los valores de esta tabla para crear scripts de instalación. Los servicios 
 
 |Componente de SQL Server|Parámetro y valores|Descripción|  
 |--------------------------|--------------------------|-----------------|  
-|Control del programa de instalación de SQL Server|**Obligatorio**<br /><br /> /FEATURES=PolyBase|Selecciona la característica PolyBase.|  
-|Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica la cuenta del servicio de motor. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
+|Control del programa de instalación de SQL Server|**Necesario**<br /><br /> /FEATURES=PolyBase|Selecciona la característica PolyBase.|  
+|motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCACCOUNT|Especifica la cuenta del servicio de motor. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  
 |Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCPASSWORD|Especifica la contraseña de la cuenta del servicio de motor.|  
 |Motor de SQL Server PolyBase|**Opcional**<br /><br /> /PBENGSVCSTARTUPTYPE|Especifica el modo de inicio para el motor de PolyBase: Automático (predeterminado), Deshabilitado y Manual.|  
 |Movimiento de datos de SQL Server PolyBase |**Opcional**<br /><br /> /PBDMSSVCACCOUNT|Especifica la cuenta del servicio Movimiento de datos. El valor predeterminado es **NT Authority\NETWORK SERVICE**.|  

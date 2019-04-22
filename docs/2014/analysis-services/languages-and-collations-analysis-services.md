@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241833"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Idiomas e intercalaciones (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite los idiomas e intercalaciones que proporcionan los sistemas operativos [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. `Language` y `Collation` propiedades se establecen inicialmente en el nivel de instancia durante la instalación, pero se pueden cambiar posteriormente en diferentes niveles de la jerarquía de objetos.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite los idiomas e intercalaciones que proporcionan los sistemas operativos [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Las propiedades de `Language` y `Collation` se establecen inicialmente en el nivel de instancia durante la instalación, pero se pueden cambiar más tarde en diferentes niveles de la jerarquía de objetos.  
   
  En una solución multidimensional (solo), puede establecer estas propiedades en una base de datos o un cubo - también se puede establecer en traducciones que se crean para los objetos dentro de un cubo.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "59241833"
   
  Además, puede establecer `Language`, por sí mismo, en un **traducción** objeto.  
   
- Al agregar traducciones a un cubo o dimensión se crea un objeto de traducción. `Language` forma parte de la definición de la traducción. `Collation`, por otro lado, se establece en el cubo o versiones posteriores y comparten todas las traducciones. Esto es evidente en el XMLA de un cubo que contiene traducciones, donde se verán varias propiedades de idioma (una para cada traducción), pero solo una intercalación. Tenga en cuenta que hay una excepción en el caso de traducciones de atributo de dimensión, donde puede reemplazar la intercalación de cubo para especificar una intercalación de atributo que coincida con la columna de origen (el motor de base de datos admite la configuración de intercalación en columnas individuales y se acostumbra a configurar traducciones individuales para obtener datos de miembro de diferentes columnas de origen). Pero, en caso contrario, para las demás traducciones, `Language` se usa por sí mismo, sin un corolario de `Collation`. Vea [Translations &#40;Analysis Services&#41; (Traducciones &#40;Analysis Services&#41;)](translations-analysis-services.md) para más información.  
+ Al agregar traducciones a un cubo o dimensión se crea un objeto de traducción. `Language` forma parte de la definición de la traducción. `Collation`, sin embargo, se configura en el cubo o en un nivel superior y todas las traducciones la comparten. Esto es evidente en el XMLA de un cubo que contiene traducciones, donde se verán varias propiedades de idioma (una para cada traducción), pero solo una intercalación. Tenga en cuenta que hay una excepción en el caso de traducciones de atributo de dimensión, donde puede reemplazar la intercalación de cubo para especificar una intercalación de atributo que coincida con la columna de origen (el motor de base de datos admite la configuración de intercalación en columnas individuales y se acostumbra a configurar traducciones individuales para obtener datos de miembro de diferentes columnas de origen). Pero, en caso contrario, para las demás traducciones, `Language` se usa por sí mismo, sin un corolario de `Collation`. Vea [Translations &#40;Analysis Services&#41; (Traducciones &#40;Analysis Services&#41;)](translations-analysis-services.md) para más información.  
   
 ##  <a name="bkmk_lang"></a> Compatibilidad con idiomas en Analysis Services  
  La propiedad `Language` establece la configuración regional de un objeto, que se utiliza durante el procesamiento, las consultas y con `Captions` y `Translations` para admitir escenarios multilingües. Las configuraciones regionales se basan en un identificador de idioma (por ejemplo, inglés) y un territorio (por ejemplo, Estados Unidos o Australia) que refina aún más las representaciones de fecha y hora.  
@@ -100,7 +100,7 @@ ms.locfileid: "59241833"
 >  La propiedad `Language` no determina el idioma en el que se devuelven los mensajes del sistema ni qué cadenas aparecen en la interfaz de usuario. Los errores, las advertencias y los mensajes están localizados en todos los idiomas admitidos en Office y Office 365, y se usan automáticamente cuando la conexión de cliente especifica una de las configuraciones regionales admitidas.  
   
 ##  <a name="bkmk_collations"></a> Compatibilidad con intercalaciones en Analysis Services  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa Windows e intercalaciones binarias exclusivamente. No utiliza intercalaciones de SQL Server heredadas. Dentro de un cubo, se utiliza una única intercalación en su totalidad, a excepción de las traducciones en el nivel de atributo. Para más información sobre cómo definir traducciones de atributos, vea [Translations &#40;Analysis Services&#41; (Traducciones &#40;Analysis Services&#41;)](translations-analysis-services.md).  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utiliza intercalaciones binarias y de Windows exclusivamente. No utiliza intercalaciones de SQL Server heredadas. Dentro de un cubo, se utiliza una única intercalación en su totalidad, a excepción de las traducciones en el nivel de atributo. Para más información sobre cómo definir traducciones de atributos, vea [Translations &#40;Analysis Services&#41; (Traducciones &#40;Analysis Services&#41;)](translations-analysis-services.md).  
   
  Las intercalaciones controlan la distinción de mayúsculas y minúsculas de todas las cadenas en un alfabeto bicameral del idioma, a excepción de los identificadores de objeto. Si utiliza mayúsculas y minúsculas en un identificador de objetos, tenga en cuenta que la distinción entre mayúsculas y minúsculas de los identificadores de objetos no está determinada por la intercalación, sino por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para los identificadores de objeto compuestos en el alfabeto del inglés, los identificadores de objeto no distinguen nunca mayúsculas de minúsculas, independientemente de la intercalación. Los alfabetos bicamerales del cirílico y de otros idiomas hacen lo contrario (siempre distinguen mayúsculas de minúsculas). Para obtener información detallada, vea [Sugerencias de globalización y procedimientos recomendados &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
@@ -109,7 +109,7 @@ ms.locfileid: "59241833"
 ###  <a name="bkmk_collationtype"></a> Tipos de intercalación  
  Analysis Services admite dos tipos de intercalación:  
   
--   **intercalaciones de Windows**  
+-   **Intercalaciones de Windows**  
   
      Las intercalaciones de Windows ordenan caracteres según las características lingüísticas y culturales del idioma. En Windows, las intercalaciones superan el numero de configuraciones regionales (o idiomas) que se usan con ellas, debido a que muchos idiomas comparten alfabetos y reglas comunes de ordenación y comparación de caracteres. Por ejemplo, 33 configuraciones regionales de Windows, incluidas las configuraciones regionales de Windows para portugués e inglés, utilizan la página de códigos Latin1 (1252) y siguen un conjunto común de reglas para ordenar y comparar caracteres.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "59241833"
  GB18030 es un estándar independiente que se usa en la República Popular China para codificar caracteres chinos. En GB18030, los caracteres pueden tener una longitud de 1, 2 o 4 bytes. En Analysis Services, no se produce ninguna conversión de datos al procesar datos de orígenes externos. Los datos simplemente se almacenan como datos Unicode. En el momento de la consulta, se realiza una conversión de GB18030 a través de las bibliotecas de cliente de Analysis Services (específicamente, el proveedor OLE DB MSOLAP.dll) cuando se devuelven datos de texto en los resultados de la consulta, en función de la configuración del sistema operativo cliente. El motor de base de datos también es compatible con GB18030. Para obtener información detallada, vea [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Escenarios de globalización para Analysis Services Multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
+ [Escenarios de globalización para Analysis Services multidimensional](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Sugerencias de globalización y procedimientos recomendados &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)   
  [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3bc3c5ca8209c3b04aabdfc7fb27e7ce014121e3
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240673"
 ---
 # <a name="interoperability-and-coexistence-integration-services"></a>Interoperabilidad y coexistencia (Integration Services)
@@ -28,7 +28,7 @@ ms.locfileid: "59240673"
   
 |Característica|[!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]|[!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]|[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]|  
 |-------------|-------------------------------|---------------------------------|---------------------------------|  
-|Entorno de desarrollo|[Versiones anteriores de SQL Server Data Tools (SSDT y SSDT-BI)](/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi)<br /><br /> [SQL Server 2014 Data Tools: inteligencia empresarial para Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools para Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools: inteligencia empresarial para Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
+|Entorno de desarrollo|[Versiones anteriores de SQL Server Data Tools (SSDT y SSDT-BI)](/ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi)<br /><br /> [SQL Server 2014 Data Tools - Business Intelligence para Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=42313)|[SQL Server Data Tools para Visual Studio 2010](https://msdn.microsoft.com/library/hh500335\(v=vs.103\).aspx)<br /><br /> [SQL Server Data Tools - Business Intelligence para Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843)|Business Intelligence Development Studio ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)])|  
 |Entorno de administración|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|  
 |Tabla del sistema principal en msdb para almacenar paquetes|sysssispackages|sysssispackages|sysssispackages|  
 |Utilidad de símbolo del sistema principal para los paquetes en ejecución|**dtexec** (dtexec.exe), versión 2014|**dtexec** (dtexec.exe), versión 2012|**dtexec** (dtexec.exe), versión 2008|  
@@ -54,9 +54,9 @@ ms.locfileid: "59240673"
   
     |Formato del paquete|Base de datos|  
     |--------------------|--------------|  
-    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Integration Services|base de datos msdb de una instancia de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Integration Services|base de datos msdb de una instancia de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services|base de datos msdb de una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+    |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Servicios de integración|base de datos msdb de una instancia de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Servicios de integración|base de datos msdb de una instancia de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|  
+    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Servicios de integración|base de datos msdb de una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
   
      En una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede importar paquetes de una instancia de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], pero no puede exportar paquetes a una instancia de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   

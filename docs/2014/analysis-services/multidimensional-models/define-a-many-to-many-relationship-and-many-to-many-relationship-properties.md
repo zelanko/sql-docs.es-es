@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86582634958ded57db85c0f9e732927bb639cd6a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242483"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definir una relación de varios a varios y las propiedades de las relaciones de varios a varios
@@ -180,7 +180,7 @@ ms.locfileid: "59242483"
 ##  <a name="bkmk_Learn"></a> Learn more  
  Use los vínculos siguientes para obtener información adicional que le ayude a dominar estos conceptos.  
   
- [Definir una dimensión varios a varios en Analysis Services](../lesson-5-3-defining-a-many-to-many-relationship.md)  
+ [Cómo definir una dimensión varios a varios en Analysis Services](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
  [La revolución varios a varios 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   

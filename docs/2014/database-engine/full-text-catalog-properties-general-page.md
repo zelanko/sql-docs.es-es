@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241455"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propiedades del catálogo de texto completo (página General)
@@ -40,11 +40,11 @@ ms.locfileid: "59241455"
   
 -   **En pausa**  
   
--   **Acelerado**  
+-   **Limitado**  
   
--   **Recuperando**  
+-   **Recovering**  
   
--   **Apagar**  
+-   **Apagado**  
   
 -   **Rellenado incremental en curso**  
   
@@ -52,15 +52,15 @@ ms.locfileid: "59241455"
   
 -   **El disco está en pausa el completo**  
   
--   **seguimiento de cambios**  
+-   **Change tracking**  
   
- **Recuento de elementos**  
+ **Número de elementos**  
  Muestra el número de elementos de texto completo del catálogo.  
   
  **Tamaño del catálogo**  
  Muestra el tamaño del catálogo de texto completo en megabytes.  
   
- **Nombre**  
+ **Name**  
  Nombre del catálogo de texto completo.  
   
  **Distinguir acentos**  
@@ -85,9 +85,9 @@ ms.locfileid: "59241455"
   
 |||  
 |-|-|  
-|**None**|No realiza las operaciones **Optimizar catálogo**, **Volver a generar el catálogo**ni **Volver a llenar el catálogo** .|  
+|**Ninguno**|No realiza las operaciones **Optimizar catálogo**, **Volver a generar el catálogo**ni **Volver a llenar el catálogo** .|  
 |**Optimizar catálogo**|Optimiza el uso de espacio del catálogo y mejora el rendimiento de las consultas. También mejora la precisión de la clasificación de los aciertos de los resultados de las búsquedas.<br /><br /> Esta acción ejecuta ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE.|  
-|**Volver a generar el catálogo**|Elimina el catálogo de texto completo y lo genera de nuevo. Esta operación debe realizarse si se modifica una propiedad básica del catálogo, como la distinción de acentos.<br /><br /> Para que el catálogo se genere correctamente, el grupo de archivos en el que reside el catálogo de texto completo debe estar en línea o tener el acceso de lectura y escritura activado. Después de la regeneración, se volverá a llenar el índice de texto completo.<br /><br /> Esta acción ejecuta ALTER FULLTEXT CATALOG *catalog_name* REBUILD.|  
+|**Volver a crear catálogo**|Elimina el catálogo de texto completo y lo genera de nuevo. Esta operación debe realizarse si se modifica una propiedad básica del catálogo, como la distinción de acentos.<br /><br /> Para que el catálogo se genere correctamente, el grupo de archivos en el que reside el catálogo de texto completo debe estar en línea o tener el acceso de lectura y escritura activado. Después de la regeneración, se volverá a llenar el índice de texto completo.<br /><br /> Esta acción ejecuta ALTER FULLTEXT CATALOG *catalog_name* REBUILD.|  
 |**Volver a llenar el catálogo**|Actualiza el catálogo con los cambios recientes realizados en los datos. Para esta opción, el catálogo debe estar inactivo.|  
   
 ## <a name="see-also"></a>Vea también  

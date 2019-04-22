@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bc44d24631454e792b150750508647019411631
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+ms.openlocfilehash: 230a3cb352dca689ee891eca6c6bfd6f516b6ebc
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533363"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774580"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Procesamiento de consultas inteligente en bases de datos SQL
 
@@ -26,7 +26,7 @@ ms.locfileid: "59533363"
 
 La familia de características de procesamiento de consultas inteligentes incluye características con un gran impacto que mejoran el rendimiento de las cargas de trabajo existentes con un esfuerzo de implementación mínimo para adoptar. 
 
-![Procesamiento de consultas inteligentes](./media/3_iqpfeaturefamily.png)
+![Procesamiento de consultas inteligentes](./media/iqp-feature-family.png)
 
 Puede hacer que las cargas de trabajo sean aptas automáticamente para el procesamiento de consultas inteligentes si habilita el nivel de compatibilidad de base de datos pertinente en la base de datos. Puede establecerlo con Transact-SQL. Por ejemplo:  
 

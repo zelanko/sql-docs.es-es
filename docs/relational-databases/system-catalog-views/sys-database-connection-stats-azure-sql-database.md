@@ -21,10 +21,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242333"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
@@ -38,11 +38,11 @@ ms.locfileid: "59242333"
 |**database_name**|**sysname**|Nombre de la base de datos.|  
 |**start_time**|**datetime2**|Fecha y hora UTC del inicio del intervalo de agregación. La hora es siempre un múltiplo de 5 minutos. Por ejemplo:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Fecha y hora UTC del final del intervalo de agregación. **End_time** es siempre exactamente 5 minutos posterior a la correspondiente **start_time** en la misma fila.|  
-|**success_count**|**INT**|Número de conexiones correctas.|  
-|**total_failure_count**|**INT**|Número total de conexiones con error. Esta es la suma de **connection_failure_count**, **terminated_connection_count**, y **throttled_connection_count**y no incluye los eventos de interbloqueo.|  
-|**connection_failure_count**|**INT**|Número total de errores de inicio de sesión.|  
-|**terminated_connection_count**|**INT**|**_Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número de conexiones terminadas.|  
-|**throttled_connection_count**|**INT**|**_Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número máximo de conexiones aceleradas.|  
+|**success_count**|**int**|Número de conexiones correctas.|  
+|**total_failure_count**|**int**|Número total de conexiones con error. Esta es la suma de **connection_failure_count**, **terminated_connection_count**, y **throttled_connection_count**y no incluye los eventos de interbloqueo.|  
+|**connection_failure_count**|**int**|Número total de errores de inicio de sesión.|  
+|**terminated_connection_count**|**int**|**_Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número de conexiones terminadas.|  
+|**throttled_connection_count**|**int**|**_Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número máximo de conexiones aceleradas.|  
   
 ## <a name="remarks"></a>Comentarios  
   

@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: d5354927ff0c7e1c61bf358ad73312611c18f317
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860456"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Enviar trabajos de Spark en clústeres de macrodatos de SQL Server en Azure Data Studio
@@ -25,7 +25,7 @@ Uno de los escenarios claves para los clústeres de datos de gran tamaño es la 
 ## <a name="prerequisites"></a>Requisitos previos
 
 - [Herramientas de SQL Server 2019 macrodatos](deploy-big-data-tools.md):
-   - **Azure Data Studio **
+   - **Azure Data Studio**
    - **Extensión de SQL Server 2019**
    - **kubectl**
 

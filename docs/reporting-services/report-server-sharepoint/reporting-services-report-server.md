@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: f5f5a449fc3bf87ce6999f424957466bae49ee38
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872235"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de informes de Reporting Services
@@ -87,7 +87,7 @@ Un servidor de informes de Reporting Services se ejecuta en uno de dos modos de 
   
  El modo de SharePoint requiere:  
   
--   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
+-   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] o bien [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
 -   Una versión adecuada del Complemento de Reporting Services para productos de SharePoint 2010.  
   
@@ -155,4 +155,4 @@ Un servidor de informes de Reporting Services se ejecuta en uno de dos modos de 
 [Implementar una extensión de procesamiento de datos](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
 [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 
-¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services.](https://go.microsoft.com/fwlink/?LinkId=620231)
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

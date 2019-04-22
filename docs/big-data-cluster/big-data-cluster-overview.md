@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: e9e9cdcd63873ade4d9d828309f8b2d4b5b874e0
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860257"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>¿Qué son los clústeres de macrodatos de SQL Server?
@@ -78,8 +78,8 @@ Kubernetes es un orquestador de contenedores de código abierto, que se puede es
 
 |||
 |:--|:--|
-| **Clúster** | Un clúster de Kubernetes es un conjunto de equipos, conocidos como nodos. Un nodo controla el clúster y se designa el nodo maestro; los nodos restantes son nodos de trabajo. El maestro de Kubernetes es responsable de distribuir el trabajo entre los trabajadores y para supervisar el estado del clúster. |
-| **Nodo** | Un nodo ejecuta aplicaciones en contenedores. Puede ser una máquina física o una máquina virtual. Un clúster de Kubernetes puede contener una mezcla de los nodos físicos de máquina y la máquina virtual. |
+| **Cluster** | Un clúster de Kubernetes es un conjunto de equipos, conocidos como nodos. Un nodo controla el clúster y se designa el nodo maestro; los nodos restantes son nodos de trabajo. El maestro de Kubernetes es responsable de distribuir el trabajo entre los trabajadores y para supervisar el estado del clúster. |
+| **Node** | Un nodo ejecuta aplicaciones en contenedores. Puede ser una máquina física o una máquina virtual. Un clúster de Kubernetes puede contener una mezcla de los nodos físicos de máquina y la máquina virtual. |
 | **pod** | Un pod es la unidad atómica de implementación de Kubernetes. Un pod es un grupo lógico de uno o varios contenedores- y asociadas a los recursos necesarios para ejecutar una aplicación. Cada pod se ejecuta en un nodo; un nodo puede ejecutar uno o varios pods. El maestro de Kubernetes asigna automáticamente los pods a los nodos del clúster. |
 | &nbsp; ||
 

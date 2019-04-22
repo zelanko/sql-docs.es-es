@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241441"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
@@ -64,7 +64,7 @@ ms.locfileid: "59241441"
   
      Los valores posibles son **Activado** y **Desactivado**. Para usar el enlace de canal, **Forzar cifrado** debe estar establecido en **Activado**y todos los clientes se verán obligados a realizar el cifrado. Si es **Desactivado**, solo se garantiza el enlace de servicio. **Forzar cifrado** está en **Propiedades de Protocolos de MSSQLSERVER (pestaña Marcas)** en el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **protección ampliada**  
+-   **Protección ampliada**  
   
      Los valores posibles son **Desactivado**, **Permitido**y **Requerido**. La variable **Protección ampliada** permite a los usuarios configurar el nivel de **protección ampliada** de cada sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Protección extendida** está en **Propiedades de Protocolos de MSSQLSERVER (pestaña Avanzadas)** en el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

@@ -26,10 +26,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: 2fc7136b60dba47813b9942316ee6fdfbc64f307
-ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58899711"
 ---
 # <a name="sysfnpagerescracker-transact-sql"></a>sys.fn_PageResCracker (Transact-SQL)
@@ -52,9 +52,9 @@ Es el formato hexadecimal de 8 bytes de un recurso de página de base de datos.
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|db_id|**INT**|Id. de base de datos|  
-|file_id|**INT**|Id. de archivo|  
-|page_id|**INT**|Identificador de página|  
+|db_id|**int**|Id. de base de datos|  
+|file_id|**int**|Id. de archivo|  
+|page_id|**int**|Identificador de página|  
   
 ## <a name="remarks"></a>Comentarios  
 `sys.fn_PageResCracker` se utiliza para convertir la representación hexadecimal de 8 bytes de una página de base de datos en un conjunto de filas que contiene el identificador de la base de datos, archivo de identificador y el identificador de la página.   

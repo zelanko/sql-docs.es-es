@@ -15,10 +15,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: b336589f59bef9087392ff141a4bd64df1ed76c8
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59243509"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Descargar e instalar SQL Server Data Tools (SSDT) para Visual Studio
@@ -66,7 +66,7 @@ El instalador enumera las instancias disponibles de Visual Studio a las que se v
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT para VS 2017 (instalador independiente)
 
-[![descargar](../ssdt/media/download.png) Descarga de SSDT para Visual Studio 2017 (15.9.0)](https://go.microsoft.com/fwlink/?linkid=2052454) 
+[![descargar](../ssdt/media/download.png) Descargar SSDT para Visual Studio 2017 (15.9.0)](https://go.microsoft.com/fwlink/?linkid=2052454) 
 
 > [!IMPORTANT]
 > - Antes de instalar SSDT para Visual Studio 2017 (15.9.0), desinstale las extensiones *Proyectos de Analysis Services* y *Proyectos de Reporting Services*, si están instaladas, y cierre todas las instancias de VS.
@@ -89,9 +89,9 @@ Esta versión de **SSDT para VS 2017** puede instalarse en los idiomas siguiente
 
 - [Chino (simplificado)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x804)
 - [Chino (tradicional)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x404)
-- [Spanish (Traditional Sort) - Spain]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x409)
+- [Inglés (Estados Unidos)]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x409)
 - [Francés]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x40c)
-- [German]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x407)
+- [Alemán]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x407)
 - [Italiano]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x410)
 - [Japonés]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x411)
 - [Coreano]( https://go.microsoft.com/fwlink/?linkid=2052454&clcid=0x412)
@@ -120,9 +120,9 @@ Después de completar los pasos anteriores, se puede realizar lo siguiente mient
 1. Ejecute `vs_setup.exe --NoWeb` para instalar el shell de VS2017 y un proyecto de datos de SQL Server.
 2. Desde la carpeta de diseños, ejecute `SSDT-Setup-ENU.exe /install` y seleccione SSIS/SSRS/SSAS.
 
-   - O, si se trata de una instalación desatendida, ejecute `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`  
+   - O, si se trata de una instalación desatendida, ejecute `SSDT-Setup-ENU.exe /INSTALLALL[:vsinstances] /passive`.  
 
-Para ver las opciones disponibles, ejecute `SSDT-Setup-ENU.exe /help`
+Para ver las opciones disponibles, ejecute `SSDT-Setup-ENU.exe /help`.
 
 > [!NOTE]
 > Si usa una versión completa de Visual Studio 2017, cree una carpeta sin conexión exclusiva para SSDT y ejecute `SSDT-Setup-ENU.exe` desde la carpeta recién creada (no agregue SSDT a otro diseño sin conexión de Visual Studio 2017). Si agrega el diseño SSDT a un diseño sin conexión de Visual Studio existente, no se crearán los componentes de tiempo de ejecución (.exe) necesarios.

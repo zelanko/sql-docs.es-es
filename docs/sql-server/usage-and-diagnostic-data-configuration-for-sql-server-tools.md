@@ -12,10 +12,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6c60eb8cac357fba523196385e72a1b05a2c36f4
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59243519"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools"></a>Configuración de la recopilación de datos de uso y diagnóstico para herramientas de SQL Server
@@ -37,7 +37,7 @@ Obtenga información sobre el modo en que el Programa para la mejora de la exper
   
  En las versiones preliminares de SQL Server 2017, el CEIP está activado de forma predeterminada. Puede desactivarlo o volver a activarlo con las instrucciones siguientes.  
   
- **En Visual Studio (se aplica a las instalaciones de idioma completo de Visual Studio 2017)**  
+ **En Visual Studio (se aplica a las instalaciones de idioma completo de Visual Studio 2017)**  
   
  Si ejecuta el programa de instalación de SSDT en un equipo que ya tiene Visual Studio, solo se agregan las plantillas de proyecto de SQL Server y Business Intelligence. En este escenario se pueden usar las opciones de comentarios del cliente que proporciona Visual Studio para participar o no en el CEIP.  
   
@@ -47,7 +47,7 @@ Obtenga información sobre el modo en que el Programa para la mejora de la exper
   
 3.  Para desactivar el CEIP, haga clic en **No, no deseo participar**, y, a continuación, haga clic en **Aceptar**.  
   
-     Para activar el CEIP, haga clic en **Sí, deseo participar** y, a continuación, haga clic en **Aceptar**.  
+     Para activar el CEIP, haga clic en **Sí, deseo participar**y, a continuación, haga clic en **Aceptar**.  
   
 
   
@@ -91,7 +91,7 @@ Valor = (DWORD)
   
 3.  Para desactivar el CEIP, haga clic en **No, no deseo participar**, y, a continuación, haga clic en **Aceptar**.  
   
-     Para activar el CEIP, haga clic en **Sí, deseo participar** y, a continuación, haga clic en **Aceptar**.  
+     Para activar el CEIP, haga clic en **Sí, deseo participar**y, a continuación, haga clic en **Aceptar**.  
   
 
   

@@ -18,16 +18,17 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current||>= sql-server-2016||=azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 8c283fd85aedec31f8774145155fe3b1d7ac9c10
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: 932d1a8be595bedf9ccdbddae854a17c4578e64a
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342937"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670841"
 ---
 # <a name="stringescape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Aplica caracteres de escape a caracteres especiales en textos y devuelve texto con caracteres de escape. **STRING_ESCAPE** es una función determinista.  
   
@@ -35,18 +36,20 @@ ms.locfileid: "58342937"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```sql
 STRING_ESCAPE( text , type )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Argumentos
+
  *texto*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) **nvarchar** que representa el objeto que se debe escapar.  
   
  *Tipo*  
  Reglas de escape que se aplicarán. Actualmente el valor admitido es `'json'`.  
   
-## <a name="return-types"></a>Tipos devueltos  
+## <a name="return-types"></a>Tipos devueltos
+
  Texto **nvarchar(max)** con caracteres especiales y de control de escape. Actualmente **STRING_ESCAPE** solo puede aplicar caracteres de escape a los caracteres especiales de JSON que se muestran en las tablas siguientes.  
   
 |Carácter especial|Secuencia codificada|  
@@ -71,31 +74,34 @@ STRING_ESCAPE( text , type )
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  Aplicar carácter de escape a texto según las reglas de formato de JSON  
+### <a name="a--escape-text-according-to-the-json-formatting-rules"></a>A.  Aplicar carácter de escape a texto según las reglas de formato de JSON
+
  En esta consulta se aplican caracteres de escape a caracteres especiales mediante las reglas de JSON y se devuelve texto de escape.  
   
-```  
+```sql
 SELECT STRING_ESCAPE('\   /  
 \\    "     ', 'json') AS escapedText;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```
+```
 escapedText  
 -------------------------------------------------------------  
 \\\t\/\n\\\\\t\"\t
 ```  
   
-### <a name="b-format-json-object"></a>b. Aplicar formato a objeto de JSON  
+### <a name="b-format-json-object"></a>B. Aplicar formato a objeto de JSON
+
  En esta consulta se crea texto de JSON a partir de variables de cadena y número, y se aplica un carácter de escape a cualquier carácter especial de JSON en variables.  
   
-```  
-SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',   
+```
+SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',
     17, STRING_ESCAPE(@name,'json'), STRING_ESCAPE(@surname,'json') );  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Consulte también
+
  [CONCAT &#40;Transact-SQL&#41;](../../t-sql/functions/concat-transact-sql.md)  
  [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
  [FORMATMESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
@@ -105,6 +111,4 @@ SET @json = FORMATMESSAGE('{ "id": %d,"name": "%s", "surname": "%s" }',
  [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
-  
-  
+ [Funciones de cadena &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

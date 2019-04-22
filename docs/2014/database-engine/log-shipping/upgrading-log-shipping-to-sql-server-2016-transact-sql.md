@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042434"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Actualizar el trasvase de registros a SQL Server 2014 (Transact-SQL)
@@ -193,7 +193,7 @@ ms.locfileid: "59042434"
 > [!IMPORTANT]  
 >  Actualice siempre todas las instancias de los servidores secundarios antes de actualizar el servidor principal.  
   
- **Para actualizar con una conmutación por error y volver al servidor principal original.**  
+ **Para actualizar mediante una conmutación por error y volver al servidor principal original**  
   
 1.  Actualice todas las instancias de los servidores secundarios (servidor B y servidor C).  
   
@@ -222,6 +222,6 @@ ms.locfileid: "59042434"
  Para obtener información acerca de cómo habilitar el trasvase de registros, vea [configuración del trasvase de registros &#40;SQL Server&#41;](configure-log-shipping-sql-server.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Copias de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
+ [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
+ [Tablas y procedimientos almacenados de trasvase de registros](log-shipping-tables-and-stored-procedures.md)  

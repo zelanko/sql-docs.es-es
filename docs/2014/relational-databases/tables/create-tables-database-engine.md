@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241673"
 ---
 # <a name="create-tables-database-engine"></a>Crear tablas (motor de base de datos)
@@ -31,7 +31,7 @@ ms.locfileid: "59241673"
   
      [Seguridad](#Security)  
   
--   **Para crear una tabla con:**  
+-   **Para crear una tabla, utilizando:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   

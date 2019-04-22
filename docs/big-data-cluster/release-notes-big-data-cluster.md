@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 3c999d82df4e8b73e290456ad5d3601712747ef9
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860536"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas de la versión para los clústeres de datos de gran tamaño en SQL Server
@@ -33,12 +33,12 @@ Las secciones siguientes describen las nuevas características y problemas conoc
 
 | Nueva característica o la actualización | Detalles |
 |:---|:---|
-| Admite la orientación en GPU para la ejecución de TensorFlow en Spark de aprendizaje profundo. | [Implementar un clúster de macrodatos con compatibilidad con GPU y ejecutar TensorFlow](spark-gpu-tensorflow.md). |
+| Orientación sobre la compatibilidad de GPU para la ejecución de aprendizaje profundo con TensorFlow en Spark. | [Implementar un clúster de macrodatos con compatibilidad con GPU y ejecutar TensorFlow](spark-gpu-tensorflow.md). |
 | **SqlDataPool** y **SqlStoragePool** orígenes de datos ya no se crean de forma predeterminada. | Cree manualmente según sea necesario. Consulte la [problemas conocidos](#externaltablesctp24). |
-| `INSERT INTO SELECT` soporte técnico para el grupo de datos. | Para obtener un ejemplo, vea [Tutorial: Introducir datos en un grupo de datos de SQL Server con Transact-SQL](tutorial-data-pool-ingest-sql.md). |
+| Compatibilidad de `INSERT INTO SELECT` con el grupo de datos. | Para obtener un ejemplo, vea [Tutorial: Introducir datos en un grupo de datos de SQL Server con Transact-SQL](tutorial-data-pool-ingest-sql.md). |
 | `FORCE SCALEOUTEXECUTION` y `DISABLE SCALEOUTEXECUTION` opción. | Fuerza o deshabilita el uso de la agrupación de proceso para las consultas en las tablas externas. Por ejemplo, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
 | Recomendaciones de implementación de AKS actualizadas. | Al evaluar los clústeres de macrodatos en AKS, ahora se recomienda utilizar un único nodo del tamaño **Standard_L8s**. |
-| Actualización del runtime de Spark a Spark 2.4. | |
+| Actualización del entorno de ejecución de Spark a Spark 2.4. | |
 
 ### <a name="known-issues"></a>Problemas conocidos
 
@@ -135,7 +135,7 @@ Un nuevo cliente de Python Kubernetes (versión 9.0.0) puede cambiar los espacio
 
 - Si va a crear una tabla externa a Oracle que usan tipos de datos de caracteres, el Asistente para la virtualización de Azure Data Studio interpreta estas columnas como VARCHAR en la definición de tabla externa. Esto provocará un error en el DDL de tabla externa. Modifique el esquema de Oracle para usar el tipo NVARCHAR2, o crear manualmente las instrucciones de la tabla externa y especificar NVARCHAR en lugar de usar al asistente.
 
-#### <a name="application-deployment"></a>Implementación de aplicaciones
+#### <a name="application-deployment"></a>Implementación de la aplicación
 
 - Al llamar a una aplicación de R, Python o MLeap desde la API de REST, la llamada a veces horizontal en 5 minutos.
 
@@ -176,7 +176,7 @@ Las secciones siguientes describen las nuevas características y problemas conoc
 | Extensión de VS Code para implementar aplicaciones en un clúster de macrodatos. | [Cómo utilizar VS Code para implementar aplicaciones en clústeres de macrodatos de SQL Server](app-deployment-extension.md) |
 | Cambia a la **mssqlctl** herramienta de uso del comando. | Para obtener más información, consulte el [los problemas conocidos de mssqlctl](#mssqlctlctp23). |
 | Usar Sparklyr en clúster de macrodatos | [Usar Sparklyr en clúster de macrodatos de SQL Server 2019](sparklyr-from-RStudio.md) |
-| Monte almacenamiento compatible con HDFS externo en el clúster de macrodatos con **HDFS niveles**. | Consulte [HDFS niveles](hdfs-tiering.md). |
+| Montaje de almacenamiento externo compatible con HDFS en clústeres de macrodatos con **niveles de HDFS**. | Consulte [HDFS niveles](hdfs-tiering.md). |
 | Nueva experiencia de conexión unificado para la instancia principal de SQL Server y la puerta de enlace de Spark o HDFS. | Consulte [instancia principal de SQL Server y la puerta de enlace de Spark o HDFS](connect-to-big-data-cluster.md). |
 | Al eliminar un clúster con **mssqlctl clúster delete** ahora elimina sólo los objetos en el espacio de nombres que formaban parte del clúster de macrodatos. | No se elimina el espacio de nombres. Sin embargo, en versiones anteriores, este comando elimina todo el espacio de nombres. |
 | _Seguridad_ se han cambiado los nombres de extremo y consolidados. | **servicio-seguridad-lb** y **service-seguridad-nodeport** se han consolidado en la **endpoint security** punto de conexión. |
@@ -257,7 +257,7 @@ Si usa kubeadm para implementación de Kubernetes en varios equipos, el portal d
 
 - Si va a crear una tabla externa a Oracle que usan tipos de datos de caracteres, el Asistente para la virtualización de Azure Data Studio interpreta estas columnas como VARCHAR en la definición de tabla externa. Esto provocará un error en el DDL de tabla externa. Modifique el esquema de Oracle para usar el tipo NVARCHAR2, o crear manualmente las instrucciones de la tabla externa y especificar NVARCHAR en lugar de usar al asistente.
 
-#### <a name="application-deployment"></a>Implementación de aplicaciones
+#### <a name="application-deployment"></a>Implementación de la aplicación
 
 - Al llamar a una aplicación de R, Python o MLeap desde la API de REST, la llamada a veces horizontal en 5 minutos.
 

@@ -24,10 +24,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872335"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guía de diseño y de arquitectura de índices de SQL Server
@@ -896,7 +896,7 @@ Al consultar una tabla optimizada para memoria con predicados de desigualdad, el
 [Creación de una clave principal](../relational-databases/tables/create-primary-keys.md)    
 [Índices de tablas con optimización para memoria](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
 [Introducción a los índices de almacén de columnas](../relational-databases/indexes/columnstore-indexes-overview.md)  
-[Solución de problemas de índices de hash para tablas optimizadas para memoria](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
+[Solución de problemas de índices de hash de tablas optimizadas para memoria](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
 [Vistas de administración dinámica de tablas optimizadas para memoria &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [Funciones y vistas de administración dinámica relacionadas con índices &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [Índices en columnas calculadas](../relational-databases/indexes/indexes-on-computed-columns.md)   

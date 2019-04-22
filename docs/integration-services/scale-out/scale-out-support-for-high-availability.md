@@ -12,10 +12,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: cedbd1516706191980dc7817a9bc7434def30831
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241470"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Compatibilidad con la escalabilidad horizontal para una alta disponibilidad
@@ -112,5 +112,5 @@ Para actualizar la escalabilidad horizontal en entornos de alta disponibilidad, 
 
 ## <a name="next-steps"></a>Pasos siguientes
 Para obtener más información, vea los artículos siguientes:
--   [Patrón de escalado horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
--   [Trabajador de escalado horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)
+-   [Servicio principal de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-master.md)
+-   [Trabajo de escalabilidad horizontal de Integration Services (SSIS)](integration-services-ssis-scale-out-worker.md)

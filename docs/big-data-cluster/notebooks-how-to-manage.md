@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: ab731e3f657a629dbb1b4058bd94b32677c2def0
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860516"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Administración de blocs de notas en Azure Data Studio
@@ -29,7 +29,7 @@ En este artículo se da por supuesto que ya tiene un bloc de notas que desea usa
 
 - [Implementar un clúster de macrodatos](quickstart-big-data-cluster-deploy.md).
 - [Herramientas de SQL Server 2019 macrodatos](deploy-big-data-tools.md):
-   - **Azure Data Studio **
+   - **Azure Data Studio**
    - **Extensión de SQL Server 2019**
    - **kubectl**
 

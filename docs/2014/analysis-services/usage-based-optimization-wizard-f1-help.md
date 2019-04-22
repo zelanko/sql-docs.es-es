@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240403"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Asistente para optimización basada en el uso (Ayuda F1)
@@ -48,24 +48,24 @@ ms.locfileid: "59240403"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Seleccionar particiones para modificar &#40;Asistente para optimización basada en el uso&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [Seleccionar particiones para modificar &#40;Asistente para optimización basada en uso&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [Especificar los criterios de consulta &#40;Asistente para optimización basada en el uso&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [Especifique los criterios de consulta &#40;Asistente para optimización basada en uso&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
--   [Revisar las consultas que se optimizarán &#40;Asistente para optimización basada en el uso&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
+-   [Revisar las consultas que se optimizarán &#40;Asistente para optimización basada en uso&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [Revisar el uso de agregaciones &#40;Asistente para optimización basada en el uso&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [Revise el uso de agregaciones &#40;Asistente para optimización basada en uso&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [Especificar recuentos de objetos &#40;Asistente para optimización basada en el uso&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [Especificar recuentos de objetos &#40;Asistente para optimización basada en uso&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [Establecer las opciones de agregaciones &#40;Asistente para optimización basada en el uso&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [Establecer las opciones de agregaciones &#40;Asistente para optimización basada en uso&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [Finalización del asistente &#40;Asistente para optimización basada en el uso&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [Finalización del asistente &#40;Asistente para optimización basada en uso&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Agregaciones y diseños de agregaciones](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
+ [Las agregaciones y diseños de agregaciones](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Cubos en modelos multidimensionales](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Asistente para diseñar agregaciones (Ayuda F1, SSAS)](aggregation-design-wizard-f1-help.md)   
- [Asistentes de Analysis Services &#40;Datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
+ [Ayuda de F1 del Asistente de diseño de agregación](aggregation-design-wizard-f1-help.md)   
+ [Asistentes de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

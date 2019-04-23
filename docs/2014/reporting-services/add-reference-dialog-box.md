@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Edit References dialog box
 ms.assetid: 7bdd2eee-195a-4a2f-a0aa-56f7e90c1fb4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 72c14cba8580e926eff05dbb5b7644d64e517913
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 99094f6e0edc60dfa6ce77474c52f1cf9dfc50fa
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009489"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948081"
 ---
 # <a name="add-reference-dialog-box"></a>Agregar referencia (cuadro de diálogo)
   Utilice el cuadro de diálogo **Agregar referencia** para agregar al informe referencias a un ensamblado o componente de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] personalizado. Después de agregar una referencia de ensamblado, puede escribir expresiones o código personalizado incrustado que incluya referencias completas a clases o métodos en el ensamblado o componente. Para más información, vea [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) o [Agregar una referencia de ensamblado a un informe &#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md).  

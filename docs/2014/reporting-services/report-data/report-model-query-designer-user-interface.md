@@ -15,15 +15,15 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 34ae0dfd8786d1c8c99d9a256f8ad8236055828e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9b5b63ddc613135015027eb549212a8cafb35f7c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037036"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963171"
 ---
 # <a name="report-model-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas de modelo de informe
   El Diseñador de informes proporciona dos diseñadores de consultas; éstos le ayudan a especificar los datos de un origen de datos del modelo de servidor de informes que desea usar en un informe. Utilice el diseñador gráfico de consultas para explorar y elegir las entidades de modelo y los campos de entidad. Use el diseñador de consultas basado en texto para trabajar directamente con una especificación del Lenguaje de definición de modelos semánticos (SMDL) en formato XML.  

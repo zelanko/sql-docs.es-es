@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c436b578bc1e277dbcb196e25a1a391fb74f5efc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e9d03ee424f9e192a7218f289bfe133456789d7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290393"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950468"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Listas (Generador de informes y SSRS)
   Una región de datos de lista se repite con cada grupo o fila del conjunto de datos de informe. Las listas se pueden utilizar para crear informes o formularios de forma libre, por ejemplo facturas, o conjuntamente con otras regiones de datos. Puede definir listas que contengan cualquier número de elementos de informe. Además, las listas pueden anidarse en otras listas a fin de conseguir varios grupos de datos.  
@@ -24,7 +24,7 @@ ms.locfileid: "56290393"
 > [!NOTE]  
 >  Puede publicar listas por separado de un informe como elementos de informe. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
- Para empezar rápidamente con listas, vea [Tutorial: Creación de un informe de forma libre &#40;generador de informes&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Para obtener información acerca de las listas, vea [Tutorial: Creación de un informe de forma libre &#40;Generador de informes&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
  Los informes de ejemplo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluyen un informe que utiliza una lista. Puede obtener conocimientos sobre las listas explorando la definición del informe de ejemplo en el Generador de informes o el Diseñador de informes, u obteniendo una vista previa del informe representado en el Generador de informes o el Diseñador de informes. Para obtener más información sobre la descarga de los informes de ejemplo, vea el tema sobre [ejemplos de Reporting Services (SSRS)](https://go.microsoft.com/fwlink/?LinkID=198283).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "56290393"
 ##  <a name="DisplayingLayout"></a> Mostrar datos en un diseño de forma libre  
  Para organizar los datos del informe en un diseño de forma libre en lugar de en una cuadrícula, puede agregar una lista a la superficie de diseño. Arrastre los campos desde el panel Datos de informe hasta la celda. De forma predeterminada, la celda contiene un rectángulo que actúa como contenedor. Mueva cada campo en el contenedor hasta que tenga el diseño que desea. Use las líneas de ajuste que aparecen al arrastrar los cuadros de texto en el contenedor de rectángulo para alinear los bordes vertical y horizontalmente. Quite el espacio en blanco no deseado ajustando el tamaño de la celda. Para más información, vea [Cambiar el alto de fila o el ancho de columna &#40;Generador de informes y SSRS&#41;](change-row-height-or-column-width-report-builder-and-ssrs.md).  
   
- En la siguiente ilustración se muestra una lista que muestra información sobre un pedido, incluyendo estos campos: Fecha, Order, Qty, Product, LineTotal y una imagen.  
+ En la ilustración siguiente aparece una lista con información sobre un pedido, incluyendo estos campos: Date, Order, Qty, Product, LineTotal y una imagen.  
   
  ![Lista en vista de diseño, 4 campos y una imagen](../media/rs-basiclistformdesign.gif "Lista en vista de diseño, 4 campos y una imagen")  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10021"
 ms.assetid: 75c7e54a-3d20-4c9a-88da-ab36dce2ce42
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6f79a72033039babf117d69330e452ffc47d75b1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a5c8e5f256ae762989d6112cb09f846febecc4dd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298100"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936537"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>Propiedades del conjunto de datos (cuadro de diálogo), Campos (Generador de informes)
   Seleccione **Campos** en el cuadro de diálogo **Propiedades del conjunto de datos** para cambiar la colección de campos para el conjunto de datos del informe. La lista de campos se rellena automáticamente, pero puede utilizar **Campos** para agregar, editar y eliminar campos calculados y de consulta.  

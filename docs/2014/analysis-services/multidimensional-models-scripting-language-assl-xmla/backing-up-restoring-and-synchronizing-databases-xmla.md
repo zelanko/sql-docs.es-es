@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
@@ -18,12 +16,12 @@ ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f3b9c0ce529927e088e9f2153fadc3470dc36b7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6163a538c4e8872016f7ec572e4c177cfe92de94
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146090"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158811"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Restaurar, sincronizar y realizar copias de seguridad de bases de datos (XMLA)
   En XML for Analysis, hay tres comandos que sirven para restaurar, sincronizar y realizar copias de seguridad de las bases de datos:  
@@ -63,7 +61,7 @@ ms.locfileid: "50146090"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|*skipMembership*|Incluye las definiciones de seguridad en el archivo de copia de seguridad, pero excluye la información de pertenencia.|  
+|*SkipMembership*|Incluye las definiciones de seguridad en el archivo de copia de seguridad, pero excluye la información de pertenencia.|  
 |*CopyAll*|Incluye las definiciones de seguridad y la información de pertenencia en el archivo de copia de seguridad.|  
 |*IgnoreSecurity*|Excluye las definiciones de seguridad del archivo de copia de seguridad.|  
   
@@ -93,7 +91,7 @@ ms.locfileid: "50146090"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|*skipMembership*|Incluye las definiciones de seguridad en la base de datos, pero excluye la información de suscripción.|  
+|*SkipMembership*|Incluye las definiciones de seguridad en la base de datos, pero excluye la información de suscripción.|  
 |*CopyAll*|Incluye las definiciones de seguridad y la información de pertenencia en la base de datos.|  
 |*IgnoreSecurity*|Excluye las definiciones de seguridad de la base de datos.|  
   
@@ -131,7 +129,7 @@ ms.locfileid: "50146090"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|*skipMembership*|Incluye las definiciones de seguridad en la base de datos de destino, pero excluye la información de suscripción.|  
+|*SkipMembership*|Incluye las definiciones de seguridad en la base de datos de destino, pero excluye la información de suscripción.|  
 |*CopyAll*|Incluye las definiciones de seguridad y la información de pertenencia en la base de datos de destino.|  
 |*IgnoreSecurity*|Excluye las definiciones de seguridad de la base de datos de destino.|  
   

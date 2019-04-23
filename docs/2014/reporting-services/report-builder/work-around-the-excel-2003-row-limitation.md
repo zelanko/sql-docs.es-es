@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a4c8700b-bef5-4440-a99c-bba5dcc46bfd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 37c20a59efa741b5ca768cd6b63773ad7aa15afe
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d78406155e9d2fb808664ce1377d0aba9d52dc84
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287983"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951781"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Solución alternativa de la limitación de filas de Excel
   En este tema se explica cómo resolver la limitación de filas de Excel 2003 al exportar informes a Excel. La solución alternativa es para un informe que solo contiene una tabla.  

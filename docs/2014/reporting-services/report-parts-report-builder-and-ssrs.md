@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 771c43f8100dd5e9dc45172f6173e8fa32d2d74e
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: bf1d75ce7f0bb99b84b59eba27934f8bd848ab55
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657779"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953731"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Elementos de informe (Generador de informes y SSRS)
   Las tablas, las matrices, los gráficos y las imágenes que se incluyen en los informes, se pueden publicar como *elementos de informe*. Se trata de elementos de informe que se han publicado por separado en un servidor de informes y se pueden volver a utilizar en otros informes. Los elementos de informe tienen una extensión de archivo .rsc.  

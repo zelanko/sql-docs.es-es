@@ -18,15 +18,15 @@ f1_keywords:
 - "10531"
 - "10536"
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41187abb5ca3cfaf030497c787da470ebfe4dea6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fc596a1075a2795f9db622bc2cdecc1e7885c0da
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294543"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969301"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Variar la presentación de polígonos, líneas y puntos usando reglas y datos analíticos (Generador de informes y SSRS)
   Las opciones de presentación de polígonos, líneas y puntos en una capa de mapa se controlan estableciendo las opciones de la capa y las reglas para los elementos de mapa de la capa, o invalidando las opciones de elementos de mapa insertados concretos de una capa.  
@@ -101,7 +101,7 @@ ms.locfileid: "56294543"
 ##  <a name="Distribution"></a> Descripción de las opciones de distribución  
  Para crear una distribución de valores, puede dividir los datos en intervalos. Especifique el tipo de distribución, el número de subintervalos y los valores mínimo y máximo del intervalo.  
   
- En la lista siguiente, supongamos que tiene tres elementos de mapa y seis valores analíticos relacionados que van del 1 al 9999 con los valores siguientes: 1, 10, 200, 2000, 4777, 8999.  
+ En la lista siguiente, suponga que tiene tres elementos de mapa y seis valores analíticos relacionados que estar comprendido entre 1 y 9999 con los siguientes valores: 1, 10, 200, 2000, 4777, 8999.  
   
 -   **EqualInterval** . Cree intervalos que dividan los datos en intervalos de rangos iguales. En el ejemplo, los tres intervalos serían 0-2999, 3000-5999, 6000-8999. Subintervalo 1: 1, 10, 200, 500. Subintervalo 2: 4777. Subintervalo 3: 8999. Este método no tiene en cuenta cómo se distribuyen los datos. Los valores muy grandes o muy pequeños pueden sesgar los resultados de la distribución.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "56294543"
   
 -   **Óptimo** . Cree intervalos que ajusten automáticamente la distribución para crear subintervalos equilibrados. El algoritmo determina el número de subintervalos.  
   
--   **Personalizado.** Especifique su propio número de intervalos para controlar la distribución de valores. Para los datos del ejemplo, puede especificar tres intervalos: 1-2, 3-8, 9.  
+-   **Personalizado.** Especifique su propio número de intervalos para controlar la distribución de valores. Para los datos de ejemplo, puede especificar intervalos de 3: 1-2, 3-8, 9.  
   
  Las reglas utilizan los valores de distribución para variar los valores de presentación de los elementos de mapa.  
   

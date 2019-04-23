@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - snapshots [Reporting Services], creating
 ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: acf439342cb1f24a8356e51a1a0c3f339a3a36ab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eb3edf70f1823017b1c155c085044a2432f332b3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042986"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955621"
 ---
 # <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Establecer opciones de procesamiento (Reporting Services en el modo integrado de SharePoint)
   Puede establecer opciones de procesamiento en un informe [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para determinar cuándo debe tener lugar el procesamiento de datos. También puede establecer un valor de tiempo de espera para el procesamiento de informes, así como opciones que determinen si debe habilitarse el historial de informes para el informe actual.  

@@ -1,31 +1,32 @@
 ---
 title: Informe Historial de página (Administrador de informes) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb6d9de69656d40b3a5fd87c5353c6d0b8f0ef5f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/13/2017
+ms.openlocfilehash: e7c39ebb4d42fbb03560b99d6e191cb0c69bb73f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033866"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945141"
 ---
 # <a name="report-history-page-report-manager"></a>Historial del informe (página del Administrador de informes)
-  Use la página Historial de informes para ver las instantáneas de informe que se generan y almacenan a lo largo del tiempo. Dependiendo de las opciones que se configuren en el servidor de informes, es posible que el historial de informe solamente contenga las instantáneas más recientes.  
+
+Use la página Historial de informes para ver las instantáneas de informe que se generan y almacenan a lo largo del tiempo. Dependiendo de las opciones que se configuren en el servidor de informes, es posible que el historial de informe solamente contenga las instantáneas más recientes.  
   
- El historial del informe siempre se ve en el contexto del informe desde el que se origina. No se puede ver el historial de todos los informes de un servidor de informes en un solo lugar.  
+
+El historial del informe siempre se ve en el contexto del informe desde el que se origina. No se puede ver el historial de todos los informes de un servidor de informes en un solo lugar.  
   
- Para generar el historial de un informe, el informe debe poder ejecutarse en modo desatendido, es decir, debe utilizar credenciales almacenadas; los informes parametrizados deben contener valores predeterminados para todos los parámetros. Un historial de informe se puede generar manualmente o como una operación programada. Las propiedades del historial en el informe determinan las formas en que se puede crear el historial.  
+Para generar el historial de un informe, el informe debe poder ejecutarse en modo desatendido, es decir, debe utilizar credenciales almacenadas; los informes parametrizados deben contener valores predeterminados para todos los parámetros. Un historial de informe se puede generar manualmente o como una operación programada. Las propiedades del historial en el informe determinan las formas en que se puede crear el historial.  
   
- Puede hacer clic en una instantánea del historial de un informe para verla. Las instantáneas que aparecen en un historial de informe solamente se distinguen por la fecha y la hora en que fueron creadas. No hay manera de distinguir visualmente si una instantánea se generó como respuesta a una operación programada o manual.  
+Puede hacer clic en una instantánea del historial de un informe para verla. Las instantáneas que aparecen en un historial de informe solamente se distinguen por la fecha y la hora en que fueron creadas. No hay manera de distinguir visualmente si una instantánea se generó como respuesta a una operación programada o manual.  
   
 > [!NOTE]  
 >  Esta característica no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -59,6 +60,4 @@ ms.locfileid: "56033866"
  [Agregar una instantánea al historial de informes &#40;Administrador de informes&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Página de propiedades generales, informes &#40;Administrador de informes&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [El Administrador de informes (Ayuda F1)](../../2014/reporting-services/report-manager-f1-help.md)   
- [Página de propiedades Opciones de instantánea &#40;el Administrador de informes&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
-  
-  
+ [Página de propiedades Opciones de instantánea &#40;el Administrador de informes&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

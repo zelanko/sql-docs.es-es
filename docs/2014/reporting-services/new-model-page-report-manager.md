@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: df14375ad8ae54377f7dbbd599d0bcc7b50aa2d6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b0d571210c44026fc34ab43cb07e18bbd8526ed5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010796"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948581"
 ---
 # <a name="new-model-page-report-manager"></a>Página Nuevo modelo (Administrador de informes)
   Use esta página para generar un modelo de informe predeterminado desde un origen de datos compartido. Solo puede generar modelos de informe desde orígenes de datos multidimensionales de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , orígenes de datos relacionales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y orígenes de datos relacionales de Oracle.  

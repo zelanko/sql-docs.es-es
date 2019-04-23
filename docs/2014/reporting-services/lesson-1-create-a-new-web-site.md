@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a956ec3ea8aca78b87b1a728c55e878540d909e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95bd0257deae9d06870ccb75abd8f4f8b41910bb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036966"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967411"
 ---
-# <a name="lesson-1-create-a-new-web-site"></a>Lección 1: Crear un nuevo sitio Web
+# <a name="lesson-1-create-a-new-web-site"></a>Lección 1: Creación de un sitio web
   En esta lección aprenderá a crear un proyecto de sitio web mediante la plantilla de sitio web de ASP.NET para Visual C#.  
   
 ### <a name="to-create-a-new-website"></a>Para crear un sitio Web nuevo  
@@ -34,6 +34,6 @@ ms.locfileid: "56036966"
  El proyecto del sitio Web se abre.  
   
 ## <a name="next-task"></a>Tarea siguiente  
- Ha creado correctamente un proyecto de sitio web. A continuación, creará una conexión de datos y una tabla de datos para el informe primario. Consulte [lección 2: Definir una conexión de datos y una tabla de datos para el informe primario](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+ Ha creado correctamente un proyecto de sitio web. A continuación, creará una conexión de datos y una tabla de datos para el informe primario. Consulte [Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
   
   

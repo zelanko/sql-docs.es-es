@@ -13,15 +13,15 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2a05787e4e06c7cf178c2618e2fbfbac4de596cd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1a08fccd5b6739dd27fc25c87e8b6ff3facfd62e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035066"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970951"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes
   En este tema se proporciona una referencia de los permisos de SharePoint que se pueden usar para conceder acceso a las operaciones del servidor de informes para un servidor de informes que se ejecuta en el modo integrado de SharePoint. Si va a crear niveles de permisos personalizados, este tema puede ayudarle a elegir qué permisos usar.  

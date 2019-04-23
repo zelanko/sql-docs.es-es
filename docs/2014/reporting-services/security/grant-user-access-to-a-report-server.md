@@ -14,20 +14,20 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1859d70c0ee0c10571897c4695eb64179b313168
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ebb42ac44d26e9ad8a091795eb3f8ab7283f6bcb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024856"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935861"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>Conceder a un usuario acceso a un servidor de informes (Administrador de informes)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la seguridad basada en roles para conceder a un usuario acceso a un servidor de informes. En una nueva instalación del servidor de informes, solo los usuarios que son miembros del grupo local de administradores tienen los permisos para acceder a las operaciones y al contenido del servidor de informes. Para hacer que el servidor de informes esté disponible para otros usuarios, debe crear asignaciones de roles que asignen cuentas de usuario o de grupo a un rol predefinido que especifique una recopilación de tareas.  
   
- **Servidores de informes de modo de SharePoint:** Para un servidor de informes que esté configurado para el modo integrado de SharePoint, el acceso se configura desde un sitio de SharePoint mediante los permisos de SharePoint. Los niveles de permisos del sitio de SharePoint determinan el acceso a las operaciones y el contenido del servidor de informes. Debe ser un administrador de sitio para conceder permisos en un sitio de SharePoint. Para obtener más información, vea [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
+ **Servidores de informes de modo de SharePoint:** Para un servidor de informes está configurado para modo integrado de SharePoint, configurar acceso desde un sitio de SharePoint mediante los permisos de SharePoint. Los niveles de permisos del sitio de SharePoint determinan el acceso a las operaciones y el contenido del servidor de informes. Debe ser un administrador de sitio para conceder permisos en un sitio de SharePoint. Para obtener más información, vea [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md).  
   
  **Servidores de informes de modo nativo:** En este tema se centra en un servidor de informes está configurado para modo nativo y el uso del Administrador de informes para asignar a usuarios a un rol. Hay dos tipos de roles:  
   

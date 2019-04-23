@@ -13,15 +13,15 @@ helpviewer_keywords:
 - report processing [Reporting Services], time-outs
 - report execution time-outs [Reporting Services]
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 790e512beed24295e7ca31dd471905ab814a7d1d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a9dcd637feae0160636de6ec1430a232a91c67b3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028570"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948021"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos (SSRS)
   La especificación de valores de tiempo de espera permite establecer límites relativos al empleo de los recursos del sistema. El servidor de informes admite dos valores de tiempo de espera:  

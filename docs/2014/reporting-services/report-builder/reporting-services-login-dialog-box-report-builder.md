@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10059"
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ce767793dc0994c30bba1301a193f0736c7e2e14
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e82aefb411f35e5eb8ad33cb16650e6963a461d1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030426"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949642"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Inicio de sesión de Reporting Services (cuadro de diálogo del Generador de informes)
   Utilice el cuadro de diálogo **Inicio de sesión de Reporting Services** para proporcionar credenciales para publicar informes en el servidor de informes. Para obtener ayuda con estos credenciales, póngase en contacto con el administrador del servidor de informes.  

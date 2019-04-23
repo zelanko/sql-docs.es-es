@@ -11,15 +11,15 @@ helpviewer_keywords:
 - report models [Reporting Services], creating
 - Report Manager [Reporting Services], model creation
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: adbcaf8bdbae605941422a4e5b6d3df9ed7031f2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 07865f96b0e4086af346ffc076b1df6d07cda6cd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010448"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955161"
 ---
 # <a name="create-a-model-using-report-manager"></a>Crear un modelo con el Administrador de informes
   Puede generar modelos a partir de un cubo de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o una base de datos de Oracle mediante el Administrador de informes. Los modelos de informe se generan a partir de orígenes de datos compartidos que se han publicado en el servidor de informes. Si no tiene un origen de datos compartido, deberá crearlo.  

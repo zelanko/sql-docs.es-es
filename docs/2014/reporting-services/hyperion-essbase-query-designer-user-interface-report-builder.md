@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Hyperion Essbase query designer
 - query designers, Hyperion
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 78edb97c624cab763aeb1153d6f905bba7362b2b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 098d44191563ee78cd80a1b2d6d1c7ee216eee73
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293867"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945961"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas de Hyperion Essbase (Generador de informes)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona un diseñador gráfico de consultas que permite crear consultas MDX (expresiones multidimensionales) para un origen de datos de [!INCLUDE[extEssbase](../includes/extessbase-md.md)] . El diseñador gráfico de consultas MDX tiene dos modos: Modo de diseño y modo de consulta. Cada modo proporciona un panel de metadatos desde el que puede arrastrar miembros de un cubo definido en el origen de datos para crear una consulta MDX que recupere datos cuando se procese el informe.  

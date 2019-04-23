@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Web Parts [Reporting Services]
 - Report Viewer Web Part [Reporting Services]
 ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 46873ce2a5a8ad006fafb2c0311e895c6305cd6a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b9bbccd4abf5636cb777d69b64268ffea6632e65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017967"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947761"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Personalizar el elemento web Visor de informes
   Puede usar el elemento web Visor de informes para ver informes que se ejecutan en un servidor de informes configurado para la integración de SharePoint. Entre los informes que puede mostrar se incluyen archivos de definición de informe (.rdl) e informes del Generador de informes. Los informes se abren automáticamente en el elemento web Visor de informes en una página nueva, aunque también puede agregar un elemento web Visor de informes a una página o un sitio web existentes si desea que un informe concreto esté siempre visible en la página.  

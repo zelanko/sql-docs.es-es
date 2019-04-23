@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 11e1f02ebe6c1d8965d7f42b76dc6057824c59c5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a7d077ffdddaf88a004e5b1fc7e35c08fb3e2562
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291563"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957201"
 ---
 # <a name="tutorials-report-builder"></a>Tutoriales (Generador de informes)
   Consulte los siguientes tutoriales del Generador de informes para obtener información sobre cómo crear informes básicos.  
@@ -29,40 +29,40 @@ ms.locfileid: "56291563"
  [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](alternative-ways-to-get-a-data-connection-report-builder.md)  
  La mayor parte de estos tutoriales usan orígenes de datos incrustados. Si tiene acceso a orígenes de datos compartidos, puede utilizarlos en su lugar. En este tema se proporciona el procedimiento para utilizar orígenes de datos compartidos.  
   
- [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
+ [Tutorial: Creación de un informe de tabla básico &#40;Generador de informes&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
  Siga los pasos de este tutorial para aprender a crear su primer informe. Este tutorial le muestra cómo trabajar con el Generador de informes para crear una conexión a un origen de datos, definir una consulta simple, generar un diseño para contener sus datos, dar formato a su informe y agregar agrupación y totales.  
   
- [Tutorial: Crear un informe de matriz &#40;generador de informes&#41;](tutorial-creating-a-matrix-report-report-builder.md)  
+ [Tutorial: Crear un informe de matriz &#40;Generador de informes&#41;](tutorial-creating-a-matrix-report-report-builder.md)  
  Siga los pasos de este tutorial para aprender a agregar y configurar una matriz. Utilizará el Asistente para tablas o matrices a fin de crear el origen de datos de informe, el conjunto de datos y el diseño, y a continuación mejorará la matriz dentro de la vista **Diseño** del Generador de informes.  
   
- [Tutorial: Creación de un informe de forma libre &#40;generador de informes&#41;](tutorial-creating-a-free-form-report-report-builder.md)  
+ [Tutorial: Creación de un informe de forma libre &#40;Generador de informes&#41;](tutorial-creating-a-free-form-report-report-builder.md)  
  Siga los pasos de este tutorial para aprender a crear informes de forma libre desde el principio. Este informe se parece a un boletín.  
   
- [Tutorial: Dar formato al texto &#40;generador de informes&#41;](tutorial-format-text-report-builder.md)  
+ [Tutorial: Aplicación de formato a texto &#40;Generador de informes&#41;](tutorial-format-text-report-builder.md).  
  Siga los pasos de este tutorial para obtener información acerca de las numerosas maneras en que puede dar formato al texto de los informes.  
   
- [Tutorial: Agregar un gráfico de columnas al informe &#40;generador de informes&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
+ [Tutorial: Agregar un gráfico de columnas a un informe &#40;Generador de informes&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
  Siga los pasos de este tutorial para aprender a agregar un gráfico de columnas con una media móvil a un informe.  
   
- [Tutorial: Agregar un gráfico circular al informe &#40;generador de informes&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
+ [Tutorial: Agregar un gráfico circular a un informe &#40;Generador de informes&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
  Siga los pasos de este tutorial para aprender a agregar un gráfico circular a un informe.  
   
- [Tutorial: Agregar un gráfico de barras a un informe &#40;generador de informes&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Tutorial: Agregar un gráfico de barras a un informe &#40;Generador de informes&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
  Siga los pasos de este tutorial para aprender a agregar un gráfico de barras a un informe.  
   
- [Tutorial: Agregar un minigráfico a un informe &#40;generador de informes&#41;](tutorial-add-a-sparkline-to-your-report-report-builder.md)  
+ [Tutorial: Agregar un minigráfico a un informe &#40;Generador de informes&#41;](tutorial-add-a-sparkline-to-your-report-report-builder.md)  
  Siga los pasos de este tutorial para obtener información acerca de cómo crear una matriz y, a continuación, agregar un conjunto de minigráficos a la matriz.  
   
- [Tutorial: Agregar un KPI a un informe &#40;generador de informes&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
+ [Tutorial: Agregar un KPI a un informe &#40;Generador de informes&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
  Siga los pasos de este tutorial para aprender a agregar un indicador clave de rendimiento (KPI) a un informe.  
   
- [Tutorial: Informe de mapa &#40;generador de informes&#41;](tutorial-map-report-report-builder.md)  
+ [Tutorial: informe de asignaciones &#40;Generador de informes&#41;](tutorial-map-report-report-builder.md)  
  Siga los pasos de este tutorial para aprender a agregar un mapa a un informe.  
   
  [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
  Siga los pasos de este tutorial para aprender a personalizar la apariencia y el contenido de un informe mediante el uso de parámetros.  
   
- [Tutorial: Crear informes principales y obtención de detalles &#40;generador de informes&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
+ [Tutorial: Crear informes principales y de obtención de detalles &#40;Generador de informes&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
  Siga los pasos de este tutorial para obtener información sobre cómo crear los informes para un escenario de obtención de detalles basado en un cubo de Analysis Services. Creará el informe principal y lo habilitará para la obtención de detalles y para el informe que es el destino de la acción de obtención de detalles.  
   
  [Tutorial: Introducción a las expresiones](tutorial-introducing-expressions.md)  

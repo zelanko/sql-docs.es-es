@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 92872f29600bc380025e76933ef8a1aab2879e51
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 684ee8c4738b2cc46cb847820a2408365c1a5cd1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285883"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962161"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Usar referencias a la colección ReportItems (Generador de informes y SSRS)
   La colección integrada `ReportItems` es el conjunto de los cuadros de texto de los elementos de informe, como las filas de una región de datos o los cuadros de texto de la superficie de diseño del informe. La colección `ReportItems` incluye los cuadros de texto que están en el ámbito actual de un encabezado de página, un pie de página o el cuerpo del informe. Esta colección la determinan en tiempo de ejecución el procesador de informes y el representador de informes. El ámbito actual va cambiando mientras el procesador de informes va combinando consecutivamente los datos del informe y los elementos de diseño de los elementos del informe a medida que el usuario visualiza las páginas de un informe. Puede usar la colección integrada `ReportItems` para generar encabezados de página de estilo diccionario que muestren el primer y el último elemento de cada página.  
@@ -25,7 +25,7 @@ ms.locfileid: "56285883"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>Usar la propiedad Value de ReportItems  
- Los elementos de la `ReportItems` colección solo tienen una propiedad: Valor. El valor de un elemento de `ReportItems` puede usarse para mostrar o calcular datos de otro campo del informe. Para acceder al valor del cuadro de texto actual, puede usar el valor global integrado Me.Value o simplemente Value de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . En las funciones de informe, como First y las funciones de agregado, use la sintaxis completa.  
+ Los elementos de la `ReportItems` colección solo tienen una propiedad: Value. El valor de un elemento de `ReportItems` puede usarse para mostrar o calcular datos de otro campo del informe. Para acceder al valor del cuadro de texto actual, puede usar el valor global integrado Me.Value o simplemente Value de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . En las funciones de informe, como First y las funciones de agregado, use la sintaxis completa.  
   
  Por ejemplo:  
   

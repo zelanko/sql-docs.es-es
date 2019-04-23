@@ -14,15 +14,15 @@ helpviewer_keywords:
 - text-based query designer [Reporting Services]
 - query designers [Reporting Services], text-based
 ms.assetid: 44b7c664-03aa-494e-a484-052b318e810c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 114b73bf2e15c55669dacea6456dfd9666a485d6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 2bfadd99be58b3b81ef9f0b321914305bf8dc5b5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288263"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958771"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas basado en texto
   Use el diseñador de consultas basado en texto para especificar una consulta mediante el lenguaje de consulta admitido por el origen de datos, para ejecutar la consulta y para ver los resultados en tiempo de diseño. Puede especificar varias sintaxis de consulta, comandos o instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] para extensiones de procesamiento de datos personalizadas, y consultas que se especifican como expresiones. Dado que el generador de consultas basado en texto no procesa previamente la consulta y puede acomodar todo tipo de sintaxis de consulta, es la herramienta de generación de consultas predeterminada para varios tipos de orígenes de datos.  
@@ -52,7 +52,7 @@ ms.locfileid: "56288263"
   
 |Panel|Función|  
 |----------|--------------|  
-|Consulta|Muestra el texto de consulta de [!INCLUDE[tsql](../includes/tsql-md.md)] . Use este panel para escribir o editar una consulta [!INCLUDE[tsql](../includes/tsql-md.md)] .|  
+|Consultar|Muestra el texto de consulta de [!INCLUDE[tsql](../includes/tsql-md.md)] . Use este panel para escribir o editar una consulta [!INCLUDE[tsql](../includes/tsql-md.md)] .|  
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|  
   
 #### <a name="example"></a>Ejemplo  

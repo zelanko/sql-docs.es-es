@@ -15,15 +15,15 @@ helpviewer_keywords:
 - folders [Reporting Services], deleting
 - folders [Reporting Services], modifying
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61f1decb93244bfd2b52718dd448ac3eb016499f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b5db8ffafa6697f085d9594939d80140865efe5a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016617"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964741"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Crear, eliminar o modificar una carpeta (Administrador de informes)
   Puede crear carpetas para organizar y administrar los elementos que publica en un servidor de informes. La creación de carpetas puede ayudar a los usuarios a buscar informes de su interés. Para administradores de contenido, las carpetas proporcionan un marco para aplicar permisos. Puede crear asignaciones de roles en carpetas concretas para restringir el acceso a los informes que se están desarrollando o que no se deberían distribuir de manera amplia.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9138f2b27518a3b271bd14628b753ba5f729b3f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1b958a1552bf979abfcebd16345768ea2f7f5fed
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026536"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957161"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Ejemplos de dirección URL para los elementos de informe publicados en un servidor de informes en modo de SharePoint (SSRS)
   Para publicar informes y elementos relacionados en una biblioteca de SharePoint, puede publicar el contenido con las herramientas de creación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , como, por ejemplo, el Diseñador de informes o puede cargar el contenido mediante acciones del sitio de SharePoint.  
@@ -32,7 +32,7 @@ ms.locfileid: "56026536"
   
  Pueden utilizarse los siguientes elementos de la jerarquía web para obtener acceso y proteger el contenido del servidor de informes. No se usan otros objetos, como listas y páginas, para obtener acceso al contenido del servidor de informes y, por lo tanto, no se describen en la siguiente tabla.  
   
-|Objeto|Descripción|  
+|Object|Descripción|  
 |------------|-----------------|  
 |Aplicación web de SharePoint|Una aplicación web de SharePoint puede instalarse como un servidor independiente o en un grupo de servidores que contenga una colección de servidores virtuales. Una aplicación web tiene una dirección URL (por ejemplo, http:*//nombreDeServidor*) y puede contener varios sitios.|  
 |Sitio|Un sitio es un sitio primario para una aplicación web o un subsitio.|  

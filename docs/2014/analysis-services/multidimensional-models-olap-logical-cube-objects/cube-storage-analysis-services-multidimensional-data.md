@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - measure groups [Analysis Services], cubes
@@ -19,12 +17,12 @@ ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88bd86cad9eaf3884b19c6a74f6594d8c71ca25d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177865"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154341"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Almacenamiento de cubos (Analysis Services - Datos multidimensionales)
   Puede que el almacenamiento solamente incluya metadatos del cubo o puede que incluya todos los datos de origen de la tabla de hechos y las agregaciones definidas por dimensiones relacionadas con el grupo de medida. La cantidad de datos almacenados varía en función del modo de almacenamiento seleccionado y el número de agregaciones. La cantidad de datos almacenados afecta directamente al rendimiento de las consultas. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa varias técnicas para minimizar el espacio necesario para el almacenamiento de datos del cubo y las agregaciones:  

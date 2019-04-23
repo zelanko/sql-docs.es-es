@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b4d473958e17fd67c1685e206fc02a5f5feca60
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fe7194c8a6f54da50eeef21891bc1049735ddd1e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298013"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968243"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Propiedades del conjunto de datos (cuadro de diálogo), Parámetros (Generador de informes)
   Seleccione **parámetros** en el **las propiedades del conjunto de datos** cuadro de diálogo para agregar, cambiar y eliminar parámetros de consulta.  
@@ -80,7 +80,7 @@ ms.locfileid: "56298013"
  [Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Cuadro de diálogo de propiedades de conjunto de datos, la consulta &#40;generador de informes&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [Tutorial: Agregar un parámetro a un informe &#40;generador de informes&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Diseñadores de consultas &#40;Generador de informes&#41;](../../2014/reporting-services/query-designers-report-builder.md)   

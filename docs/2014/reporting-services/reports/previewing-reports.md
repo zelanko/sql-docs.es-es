@@ -1,7 +1,7 @@
 ---
 title: Obtener una vista previa de los informes
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 7746263fc015f7cf1d398c821ce94e49c134ba0f
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: af45559f2eccfc718aa1d4ba3e986ecd3144c847
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553237"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946951"
 ---
-# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Vista previa de informes en SQL Server Reporting Services (SSRS)
+# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Vista previa de los informes en SQL Server Reporting Services (SSRS)
 
   Después de diseñar un informe, puede que desee verlo antes de publicarlo en un entorno de producción. Existen varias maneras de verlo: cambiar al modo de vista previa del Diseñador de informes, usar la ventana de vista previa del Diseñador de informes y publicar el informe en un servidor de informes en un entorno de prueba.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "53553237"
   
  Para cambiar la vista de manera que represente un informe impreso, cambie al modo de vista previa de impresión. Haga clic en el botón **Vista previa de impresión** de la barra de herramientas de la vista previa. El informe se mostrará como si estuviera en una página física. Esta vista se asemeja a la salida que se obtiene mediante las extensiones de representación en imágenes y en PDF. La vista previa de impresión no es un archivo de imagen ni un archivo PDF, pero el diseño y la paginación del informe son similares a la salida con estos formatos.  
   
-## <a name="publish-to-a-test-server"></a>Publicar en un servidor de prueba
+## <a name="publish-to-a-test-server"></a>Publicación en un servidor de pruebas
 
  También puede probar los informes publicándolos en un servidor de pruebas. Publicar un informe en un servidor de pruebas es lo mismo que publicarlo en un servidor de producción. Para más información sobre cómo publicar un informe, vea [Publicar informes en un servidor de informes](publishing-reports-to-a-report-server.md).  
   

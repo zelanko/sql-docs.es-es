@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 98e98c3908735d53777ed425b26c2f229c830f92
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 9c89de031408d222caa030900cececb97d8aa2db
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658049"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941651"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Minigráficos y barras de datos (Generador de informes y SSRS)
   Los minigráficos y las barras de datos son gráficos simples y pequeños que contienen mucha información en poco espacio, a menudo conjuntamente con texto. Los minigráficos y las barras de datos se utilizan a menudo en las tablas y matrices. Su importancia radica en que permiten ver muchos datos juntos y compararlos rápidamente uno encima de otro, en lugar de verlos de forma individual. Facilitan la visualización de los valores atípicos, las filas que no se muestran como las demás. Aunque son pequeños, cada minigráfico suele representar varios puntos de datos, con frecuencia, a lo largo del tiempo. Las barras de datos representan varios puntos de datos, pero normalmente solo muestran uno. Cada minigráfico suele presentar una única serie. No puede agregar un minigráfico a un grupo de detalles en una tabla. Dado que los minigráficos presentan los datos agregados, deben estar en una celda que esté asociada a un grupo. Los minigráficos y las barras de datos tienen los mismos elementos de gráfico básicos de las categorías, series y valores, pero carecen de leyendas, líneas de eje, etiquetas o marcas de graduación.  
@@ -37,15 +37,15 @@ ms.locfileid: "58658049"
 ##  <a name="KindsofSparklines"></a> Tipos de minigráficos  
  Puede crear casi tantos tipos de minigráficos como gráficos normales. En general, no puede crear minigráfico 3D. Puede crear versiones de minigráfico de estos gráficos completos:  
   
--   [Gráficos de columnas &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md): los gráficos de columnas básicas, apiladas y 100 % apiladas.  
+-   [Gráficos de columnas &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md): Los gráficos de columnas básicas, apiladas y 100% apiladas.  
   
--   [Gráficos de líneas &#40;Generador de informes y SSRS&#41;](line-charts-report-builder-and-ssrs.md): todos los gráficos de líneas excepto el de 3D.  
+-   [Gráficos de líneas &#40;Generador de informes y SSRS&#41;](line-charts-report-builder-and-ssrs.md): Todos excepto el de 3D gráficos de líneas.  
   
--   [Gráficos de áreas &#40;Generador de informes y SSRS&#41;](area-charts-report-builder-and-ssrs.md): todos los gráficos de áreas excepto el de 3D.  
+-   [Gráficos de áreas &#40;Generador de informes y SSRS&#41;](area-charts-report-builder-and-ssrs.md): Todo excepto los gráficos de área 3D  
   
--   [Gráficos circulares &#40;Generador de informes y SSRS&#41;](pie-charts-report-builder-and-ssrs.md): gráficos de anillos, planos y 3D, pero no las demás formas, por ejemplo gráficos de embudo y de pirámide.  
+-   [Gráficos circulares &#40;Generador de informes y SSRS&#41;](pie-charts-report-builder-and-ssrs.md): Y los gráficos de anillos, planos y 3D, pero no las demás formas, como gráficos de embudo y piramidal.  
   
--   [Rangos de intervalos &#40;Generador de informes y SSRS&#41;](range-charts-report-builder-and-ssrs.md): los gráficos de cotizaciones, de vela, de barras de error y los diagramas de caja.  
+-   [Rangos de intervalos &#40;Generador de informes y SSRS&#41;](range-charts-report-builder-and-ssrs.md): Stock, vela japonesa, barras de error y los diagramas de caja.  
   
 ##  <a name="DataBars"></a> Barras de datos  
  Las barras de datos suelen representar un único punto de datos, aunque pueden representar varios, al igual que los gráficos de barras normales. A menudo contienen varias series sin categoría o tienen agrupaciones de serie.  
@@ -56,9 +56,9 @@ ms.locfileid: "58658049"
   
  Puede crear versiones de barras de datos de estos gráficos completos:  
   
--   [Gráficos de barras &#40;Generador de informes y SSRS&#41;](bar-charts-report-builder-and-ssrs.md): gráficos de barras básicas, apiladas y 100 % a piladas.  
+-   [Gráficos de barras &#40;Generador de informes y SSRS&#41;](bar-charts-report-builder-and-ssrs.md): Gráficos de barras apiladas de básicas, apilada y 100%.  
   
--   [Gráficos de columnas &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md): gráficos de columnas básicas, apiladas y 100 % apiladas. Los gráficos de columnas pueden ser minigráficos o barras de datos.  
+-   [Gráficos de columnas &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md): Gráficos de columnas básicas, apiladas y 100% apiladas. Los gráficos de columnas pueden ser minigráficos o barras de datos.  
 
 ##  <a name="AlignDatainTableMatrix"></a> Alinear los datos de minigráficos en una tabla o matriz  
  Al insertar un minigráfico en una tabla o matriz, suele ser importante que los puntos de datos de cada minigráfico se alineen con los puntos de datos de los demás minigráficos de esa columna. De lo contrario, es difícil comparar los datos de las distintas filas. Por ejemplo, al comparar los datos de ventas por mes para distintos vendedores de la empresa, sería aconsejable que los meses estuvieran alineados. Si un empleado no trabajó durante el mes de abril, no habría datos para ese empleado durante ese mes. Desearía ver un hueco durante ese mes y vería los datos de los meses subsiguientes alineados con los datos de los demás empleados. Puede hacer esto alineando el eje horizontal. Para más información, vea la sección sobre minigráficos en [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md) y también [Alinear los datos en un gráfico en una tabla o una matriz &#40;Generador de informes y SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  

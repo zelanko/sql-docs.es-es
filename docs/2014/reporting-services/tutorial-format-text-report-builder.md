@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Dar formato al texto (generador de informes) | Microsoft Docs'
+title: 'Tutorial: Aplicación de formato a texto (Generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c4b9edce95b37417c031c8af06887f0933528038
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297293"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961341"
 ---
-# <a name="tutorial-format-text-report-builder"></a>Tutorial: Dar formato al texto (generador de informes)
+# <a name="tutorial-format-text-report-builder"></a>Tutorial: Aplicación de formato a un texto (Generador de informes)
   En este tutorial, puede practicar el proceso de dar formato al texto de varias maneras. Después de configurar el informe en blanco con el origen de datos y el conjunto de datos, puede escoger y elegir los pasos que desea explorar.  
   
  En la siguiente ilustración se muestra un informe similar al que creará.  

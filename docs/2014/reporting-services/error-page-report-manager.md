@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 43a591e8fa9f590550b53a16891f8c1880cbcf99
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0b5e8c919b496ea739b6152a6159b5ffae62dfbd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029236"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944931"
 ---
 # <a name="error-page-report-manager"></a>Página Error (Administrador de informes)
   Use la página Error para ver detalles acerca de una condición de error. Basado en sesión o servidor errores aparecen en esta página. Los errores de validación relacionados con controles específicos de la página se muestran insertados junto al control que corresponda.  

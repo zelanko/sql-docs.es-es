@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f0881341cc899ac010de68b873e3fe7628a664b
-ms.sourcegitcommit: 85a7a532f35b8ea1b45e9a83bfc8529a0abed264
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480291"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950422"
 ---
 # <a name="remove-sql-server-failover-cluster-node"></a>Eliminar un nodo de clúster de conmutación por error de SQL Server
   Use la página Eliminar un nodo de clúster de conmutación por error para identificar el equipo que se va a quitar como nodo de clúster de conmutación por error de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

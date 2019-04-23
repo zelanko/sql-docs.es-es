@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 408d86a821d2596172570f513ee8398e43298f91
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c44bc306aaa1e55aa5005663ecfcfbf261576593
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030276"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940307"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Página d propiedades generales, informes (Administrador de informes)
   Use la página de propiedades General de informes para cambiar de nombre, eliminar, mover o reemplazar una definición de informe. Esta página se puede utilizar también para crear un informe vinculado. En la parte superior de la página, se incluye información detallada sobre quién creó o modificó el informe, y cuándo tuvieron lugar los cambios.  

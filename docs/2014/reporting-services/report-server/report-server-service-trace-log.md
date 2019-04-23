@@ -13,15 +13,15 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1c04e3d642b267660b8527502a248a386c8ba93d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bbe16cf43b546c0b4eb0c6f0c59c695dff6c7ad8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010676"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948141"
 ---
 # <a name="report-server-service-trace-log"></a>Registro de seguimiento del servicio del servidor de informes
   El registro de seguimiento del servidor de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] es un archivo de texto ASCII que contiene información detallada de las operaciones del servicio del servidor de informes, incluidas las operaciones realizadas por el servicio web del servidor de informes, el Administrador de informes y el procesamiento en segundo plano. El archivo de registro de seguimiento incluye información redundante que contienen otros archivos de registro, así como información adicional que no está disponible en ningún otro archivo. La información del registro de seguimiento resulta útil si se está depurando una aplicación que incluye un servidor de informes o se investiga un problema específico que se incluyó en el registro de eventos o de ejecución.  
@@ -89,7 +89,7 @@ ms.locfileid: "56010676"
 |`Components`|Especifica los componentes para los cuales se genera la información de registro de seguimiento y el nivel de seguimiento en este formato.<br /><br /> \<categoría de componente>:\<tracelevel><br /><br /> Las categorías de componentes se pueden establecer en:<br />`All` se utiliza para realizar un seguimiento de la actividad general del servidor de informes para todos los procesos que no están divididos en las categorías específicas.<br />`RunningJobs` se utiliza para realizar un seguimiento de una operación de suscripción o informe en curso.<br />`SemanticQueryEngine` se utiliza para realizar un seguimiento de una consulta semántica procesada cuando un usuario realiza una exploración de datos ad hoc en un informe basado en modelo.<br />`SemanticModelGenerator` se utiliza para realizar un seguimiento de generación de modelos.<br />`http` se utiliza para habilitar el archivo de registro HTTP del servidor de informes. Para obtener más información, vea [Report Server HTTP Log](report-server-http-log.md).<br /><br /> <br /><br /> Los valores válidos del nivel de seguimiento son:<br /><br /> 0= Deshabilita la traza<br /><br /> 1= Excepciones y reinicios<br /><br /> 2= Excepciones, reinicios y advertencias<br /><br /> 3= Excepciones, reinicios, advertencias y mensajes de estado (predeterminado)<br /><br /> 4= Modo detallado<br /><br /> El valor predeterminado del servidor de informes es "todo:3"<br /><br /> Puede especificar todos o algunos de los componentes (`all`, `RunningJobs`, `SemanticQueryEngine`, `SemanticModelGenerator`). Si no desea generar información para un componente específico, puede deshabilitar el seguimiento para el mismo (por ejemplo, "SemanticModelGenerator:0"). No deshabilite el seguimiento para `all`.<br /><br /> Si no anexa un nivel de seguimiento al componente, se utiliza el valor especificado para `DefaultTraceSwitch`. Por ejemplo, si especifica "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", todos los componentes utilizan el nivel de seguimiento predeterminado.<br /><br /> Puede establecer "SemanticQueryEngine:4" si desea ver las instrucciones Transact-SQL generadas para cada consulta semántica. Las instrucciones Transact-SQL se registran en el registro de seguimiento. El ejemplo siguiente muestra el valor de configuración que agrega las instrucciones Transact-SQL al registro:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
   
 ##  <a name="bkmk_add_custom"></a> Agregar un valor de configuración personalizado para especificar una ubicación del archivo de volcado  
- Puede agregar una configuración personalizada para establecer la ubicación que utiliza la herramienta Dr. Watson para Windows para almacenar archivos de volcado. El valor predeterminado es `Directory`. El ejemplo siguiente muestra cómo se especifica esta configuración en la sección `RStrace`:  
+ Puede agregar una configuración personalizada para establecer la ubicación que utiliza la herramienta Dr. Herramienta de Watson para Windows se usa para almacenar los archivos de volcado de memoria. El valor predeterminado es `Directory`. El ejemplo siguiente muestra cómo se especifica esta configuración en la sección `RStrace`:  
   
 ```  
 <add name="Directory" value="U:\logs\" />  

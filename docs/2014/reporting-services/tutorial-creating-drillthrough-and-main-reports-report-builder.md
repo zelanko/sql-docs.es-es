@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear informes principales (generador de informes) y obtención de detalles | Microsoft Docs'
+title: 'Tutorial: Crear informes principales y de obtención de detalles (Generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b150ff5fd1e69a9c6ac8ea7e2f2ef2b60d32ffb8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289873"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961241"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales (generador de informes) y obtención de detalles
   Este tutorial le enseña cómo crear dos tipos de informes: un informe detallado y un informe principal. Los datos de ventas de ejemplo utilizados en estos informes se recuperan de un cubo de Analysis Services. En la siguiente ilustración se muestran los informes que creará.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
@@ -168,7 +168,7 @@ ms.locfileid: "56289873"
   
 5.  En la lista de expresiones de filtro, expanda **Todos los canales**, haga clic en **En línea**, en **Distribuidor**y, después, en **Aceptar**.  
   
-     La consulta contiene ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
+     La consulta incluye ahora un filtro para incluir solo estos canales: En línea y distribuidor.  
   
 6.  Expanda la dimensión Territorio de ventas y arrastre el Grupo del territorio de ventas a la columna **Jerarquía** (bajo **Nombre de canal**).  
   
@@ -390,7 +390,7 @@ ms.locfileid: "56289873"
   
 7.  Haga clic en **Guardar**.  
   
-##  <a name="MMatrixAndDataset"></a> 1. Crear un nuevo informe desde el Asistente para tabla o matriz  
+##  <a name="MMatrixAndDataset"></a> 1. Crear un nuevo informe de la tabla o el Asistente para matrices  
  En el cuadro de diálogo **Introducción** , cree un informe de matriz usando el **Asistente para tabla o matriz**.  
   
 #### <a name="to-create-a-new-report"></a>Para crear un informe nuevo  
@@ -462,7 +462,7 @@ ms.locfileid: "56289873"
   
 5.  En la lista de expresiones de filtro, expanda **Todos los canales**, haga clic en **En línea** y en **Distribuidor**y, después, en **Aceptar**.  
   
-     La consulta contiene ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
+     La consulta incluye ahora un filtro para incluir solo estos canales: En línea y distribuidor.  
   
 6.  Expanda la dimensión Territorio de ventas y arrastre el Grupo del territorio de ventas a la columna **Jerarquía** (bajo **Nombre de canal**).  
   
@@ -562,7 +562,7 @@ ms.locfileid: "56289873"
   
 1.  En la página **Elegir el diseño** , en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
-     El panel Vista previa del asistente muestra una matriz con cuatro filas.  Al ejecutar el informe, cada fila se mostrará de la siguiente forma: La primera fila es el grupo de columnas, la segunda fila contiene los encabezados de columna, la tercera fila contiene los datos de categoría de producto (`[Sum(Net_ QTY)]` y `[Sum(Net_Sales)]`) y la cuarta fila contiene los totales.  
+     El panel Vista previa del asistente muestra una matriz con cuatro filas.  Al ejecutar el informe, cada fila se mostrará de la siguiente forma: La primera fila es el grupo de columnas, la segunda fila contiene los encabezados de columna, la tercera fila contiene los datos de categoría de producto (`[Sum(Net_ QTY)]` y `[Sum(Net_Sales)]`, y la cuarta fila contiene los totales.  
   
 2.  Haga clic en **Siguiente**.  
   
@@ -685,7 +685,7 @@ ms.locfileid: "56289873"
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Tipo **ventas por categoría de producto de 2009: En línea y distribuidor categoría:**.  
+2.  Escriba **Ventas por categoría de producto de 2009: categoría En línea y Distribuidor:**.  
   
 3.  Seleccione el texto que escribió.  
   

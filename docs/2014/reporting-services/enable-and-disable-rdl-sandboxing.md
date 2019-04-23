@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2db60863c1ae8c21e391d62182cb27a52558a1e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c4bbf82d1bea70659b839405141dc7194d99951e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013186"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956991"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Habilitar y deshabilitar el espacio seguro para RDL
   La característica de espacio aislado del lenguaje RDL (Report Definition Language) permite detectar y restringir el uso de tipos específicos de uso de recursos por parte de inquilinos individuales en un entorno donde varios inquilinos usan una única granja web de servidores de informes. Un ejemplo de esto es un escenario de servicios de hospedaje en el que podría mantener una única granja web de servidores de informes que utilicen varios inquilinos, y quizás compañías diferentes. Como administrador del servidor de informes, puede habilitar esta característica para alcanzar los siguientes objetivos:  
@@ -35,10 +35,10 @@ ms.locfileid: "56013186"
   
 -   Parámetros con nombre en expresiones.  
   
- En este tema se describe cada elemento del elemento <`RDLSandboxing`> del archivo RSReportServer.Config. Para más información sobre cómo modificar este archivo, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Un registro de seguimiento del servidor guarda la actividad relacionada con la característica de espacio aislado de RDL. Para más información sobre los registros de seguimiento, vea [Registro de seguimiento del servicio del servidor de informes](report-server/report-server-service-trace-log.md).  
+ En este tema se describe cada elemento en el <`RDLSandboxing`> elemento en el archivo RSReportServer.Config. Para más información sobre cómo modificar este archivo, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Un registro de seguimiento del servidor guarda la actividad relacionada con la característica de espacio aislado de RDL. Para más información sobre los registros de seguimiento, vea [Registro de seguimiento del servicio del servidor de informes](report-server/report-server-service-trace-log.md).  
   
 ## <a name="example-configuration"></a>Ejemplo de configuración  
- En el siguiente ejemplo se muestra la configuración y los valores de ejemplo para el elemento <`RDLSandboxing`> del archivo RSReportServer.Config.  
+ El ejemplo siguiente muestra la configuración y los valores de ejemplo para el <`RDLSandboxing`> elemento en el archivo RSReportServer.Config.  
   
 ```  
 <RDLSandboxing>  

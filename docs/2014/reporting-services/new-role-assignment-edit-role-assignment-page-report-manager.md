@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fc92d5e8bba2200bb1a88739cd83c12b2f0bdd12
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fc4dd805faffb9fcf172f372f48d497a037fd16c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025556"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950161"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Nueva asignación de roles: Editar página de asignación de roles (Administrador de informes)
   Utilice la página Nueva Asignación de roles o Editar asignación de roles para conceder permisos a operaciones y elementos del servidor de informes. Cada usuario que requiere acceso a un servidor de informes debe poseer una asignación de roles que define el nivel de acceso. Puede crear las asignaciones de roles en el nodo raíz o en un determinado informe, modelo, carpeta, recurso u origen de datos compartido. La seguridad de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se establece a través de asignaciones de roles que se aplican a elementos. Una asignación de roles asocia grupos o usuarios a una definición de roles; cada definición de roles identifica las tareas que los grupos o usuarios pueden realizar respecto a un elemento específico.  

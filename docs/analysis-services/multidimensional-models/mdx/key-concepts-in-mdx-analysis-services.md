@@ -1,6 +1,6 @@
 ---
 title: Conceptos clave para MDX (Analysis Services) | Microsoft Docs
-ms.date: 05/02/2018
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb527f78b886154372092c128e2c2a33e1eac75c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b00478a739796d27b44899aa72099583b1d9a113
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527821"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962171"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Conceptos clave de MDX (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "52527821"
   
  ![Tabla dinámica con todos los miembros que se mencionan](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "tabla dinámica con todos los miembros que se mencionan")  
   
- Vaya expandiendo la jerarquía y llegará al nivel más bajo. Es lo que se conoce como el **miembro "hoja"**. Un miembro hoja es un miembro de una jerarquía que no posee miembros secundarios. En este ejemplo, Australia es el miembro hoja.  
+ Vaya expandiendo la jerarquía y llegará al nivel más bajo. Es lo que se conoce como el **miembro "hoja"**. Un miembro hoja es un miembro de una jerarquía que no posee miembros secundarios. En este ejemplo, suroeste es el miembro hoja.  
   
  ![Tabla dinámica con documentos de calle de miembro hoja](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.PNG "tabla dinámica con documentos de calle de miembro hoja")  
   
- Todo lo que está por encima se denomina **miembro "primario"**. Pacífico es el miembro primario de Australia.  
+ Todo lo que está por encima se denomina **miembro "primario"**. Estados Unidos es el elemento primario de suroeste.  
   
  **Los componentes de una jerarquía de atributo**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52527821"
 ## <a name="key-attributes"></a>Atributos clave  
  Los modelos son una colección de objetos relacionados que requieren claves e índices para establecer las asociaciones. Los modelos de Analysis Services no son diferentes. Para cada dimensión (recuerde que es equivalente a una tabla en un modelo relacional), hay un atributo clave. El **atributo clave** se usa en relaciones de clave externa con la tabla de hechos (grupo de medidas). Todos los atributos sin clave de la dimensión están enlazados (directa o indirectamente) con el atributo clave.  
   
- Con frecuencia, aunque no siempre, el atributo clave es también el **Atributo de granularidad**. Granularidad significa el nivel de detalle o precisión dentro de los datos. También en esta ocasión poner un ejemplo común es la mejor forma de entenderlo. Piense en los valores de fecha: Para las ventas diarias, necesita valores de fecha que especifiquen el día. En el caso de las cuotas, quizás sea suficiente hablar de trimestres, pero si los datos analíticos hacen referencia a los resultados de una carrera en un evento deportivo, será necesario que el "grano" sea de milisegundos. El nivel de precisión en los valores de datos se conoce como grano.  
+ Con frecuencia, aunque no siempre, el atributo clave es también el **Atributo de granularidad**. Granularidad significa el nivel de detalle o precisión dentro de los datos. También en esta ocasión poner un ejemplo común es la mejor forma de entenderlo. Tenga en cuenta los valores de fecha: Para las ventas diarias, se necesita valores de fecha especificados para el día. las cuotas, trimestralmente podría ser suficiente, pero si los datos analíticos constan de los resultados de un evento deportivo carrera, el nivel de detalle necesario que sea de milisegundos. El nivel de precisión en los valores de datos se conoce como grano.  
   
  Moneda es otro ejemplo: una aplicación financiera puede realizar un seguimiento de los valores monetarios hasta muchas posiciones decimales, mientras que el captador de fondos de tu escuela local es posible que solo necesitará valores próximos al euro. Comprender el concepto de grano es importante para evitar el almacenamiento de datos innecesarios. Recortar los milisegundos de una marca de tiempo o céntimos del importe de ventas puede ahorrar espacio de almacenamiento y tiempo de procesamiento cuando el nivel de detalle no es importante para el análisis que se hará.  
   

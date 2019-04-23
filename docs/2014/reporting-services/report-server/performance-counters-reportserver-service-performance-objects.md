@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e63f964d61fa5f7402244186f292d6d0543b9304
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7fb15529a9547edc64ffe1a0a53d69e16a0618f4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037616"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944553"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service
   En este tema se describen los contadores de rendimiento para los siguientes objetos de rendimiento [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] :  
@@ -68,7 +68,7 @@ ms.locfileid: "56037616"
 |`Logon Attempts/sec`|La tasa de intentos de inicio de sesión.|  
 |`Logon Successes Total`|El número de inicios de sesión correctos para los tipos de autenticación de RSWindows. Los tipos de autenticación de RSWindows incluyen RSWindowsNegotiate, RSWindowsNTLM, RSWindowsKerberos y RSWindowsB asic. El valor cero (0) representa la autenticación personalizada.|  
 |`Logon Successes/sec`|La tasa de inicio de sesión correctos.|  
-|`Memory Pressure State`|Uno de los números siguientes, del 1 al 5, que indican el estado de la memoria actual del servidor:<br /><br /> 1: Ninguna presión<br /><br /> 2: Baja presión<br /><br /> 3: Presión media<br /><br /> 4: Alta presión<br /><br /> 5: Presión superada|  
+|`Memory Pressure State`|Uno de los números siguientes, del 1 al 5, que indican el estado de la memoria actual del servidor:<br /><br /> 1: Ninguna presión<br /><br /> 2: Baja presión<br /><br /> 3: Presión Media<br /><br /> 4: Alta presión<br /><br /> 5: Presión superada|  
 |`Memory Shrink Amount`|El número de bytes que el servidor solicitó reducir la memoria en uso.|  
 |`Memory Shrink Notifications/sec`|El número de notificaciones que el servidor emitió en el último segundo para reducir la memoria en uso. Este valor indica la frecuencia con la que el servidor experimenta la presión de memoria.|  
 |`Requests Disconnected`|El número de solicitudes que se han desconectado debido a errores en la comunicación.|  

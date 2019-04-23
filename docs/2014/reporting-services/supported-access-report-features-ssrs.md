@@ -16,15 +16,15 @@ helpviewer_keywords:
 - importing reports
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f50d98eaa44d3e323fb72097bc78e9969a30bad
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ae982257f0be29103803a7d036142f58a50f1a04
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294273"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933107"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Compatibilidad con características de informes de Access (SSRS)
   Cuando se importa un informe al Diseñador de informes, el proceso de importación convierte el informe de [!INCLUDE[msCoName](../includes/msconame-md.md)] Access en un archivo RDL (Report Definition Language) de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite varias características de Access; no obstante, debido a las diferencias entre Access y [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], algunos elementos deben modificarse ligeramente para que sean admitidos. En este tema, se describe cómo se convierten las características de informes de Access a RDL.  
@@ -57,7 +57,7 @@ ms.locfileid: "56294273"
   
 |||||  
 |-|-|-|-|  
-|Imagen|Etiqueta|Línea|Rectángulo|  
+|Image|Etiqueta|Línea|Rectángulo|  
 |SubForm|SubReport<br /><br /> **Tenga en cuenta** mientras que un control SubReport se convierte en el informe principal, el subinforme propiamente dicho se convierte de forma independiente.|TextBox||  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no admite los controles siguientes:  

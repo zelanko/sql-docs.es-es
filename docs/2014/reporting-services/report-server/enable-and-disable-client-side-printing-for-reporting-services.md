@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b5353afae9a07be7dcf5b5df3f1a2ec5442378a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 838c48ec4c15d1e89a571e5cb84cf1add613a045
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041286"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936591"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Habilitar y deshabilitar la impresión del lado cliente para Reporting Services
   El [!INCLUDE[msCoName](../../includes/msconame-md.md)] control ActiveX, **RSClientPrint**, proporciona impresión del lado cliente para los informes mostrados en un explorador. El control muestra un cuadro de diálogo personalizado de impresión que admite características comunes a otros cuadros de diálogo de impresión. Entre estas características se incluyen vista previa de impresión, selecciones de página para especificar páginas e intervalos específicos, márgenes de página y orientación. Aunque la impresión del lado cliente está habilitada de manera predeterminada, puede deshabilitar esta característica para impedir que sea utilizada.  

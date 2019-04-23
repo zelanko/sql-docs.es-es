@@ -3,7 +3,7 @@ title: Notas de la versión
 titleSuffix: Azure Data Studio
 description: Notas de la versión de Data Studio Azure
 ms.custom: seodec18
-ms.date: 03/22/2019
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,30 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 5497a2d70c32763d765888235f694b89dd0bb340
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381593"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963791"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión para Azure Data Studio
 
 **[Descargue e instale la versión más reciente.](download.md)**
+
+## <a name="april-2019"></a>April de 2019
+
+18 de abril de 2019 &nbsp;  /  &nbsp; versión: 1.6.0 
+
+&nbsp;
+
+| Cambiar | Detalles |
+| :----- | :------ |
+| Cambiar el nombre **servidores** tabulador para ir a **conexiones** | |
+| Mueve el Explorador de recursos de Azure como una viewlet en conexiones de Azure | Los usuarios ahora pueden ver sus instancias de SQL Azure a través de Azure viewlet en la vista de las conexiones y expanda para ver objetos en cada servidor o base de datos.|
+| Mejoras del Bloc de notas SQL | &bull; &nbsp; Botón agregado en la barra de herramientas para borrar la salida de todas las celdas <br/>&bull; &nbsp; Ha agregado el botón de barra de herramientas para ejecutar todas las celdas <br/>&bull; &nbsp; Nombre de conexión fijo en lugar del nombre del servidor (si establece) en la asociación en la lista desplegable <br/>&bull; &nbsp; Corrección para las imágenes en markdown no representa al usar rutas de acceso relativa a las imágenes <br/>&bull; &nbsp; Haga doble clic en cambiar el tamaño automáticamente tamaño de la columna de una funcionalidad mejorada en las cuadrículas de Bloc de notas mediante la adición de y mejorado la compatibilidad con la rueda del mouse <br/>&bull; &nbsp; Mejoras en el control de errores y python instalación resistencia al instalar python a través de los blocs de notas <br/>&bull; &nbsp; Mejoras en la funcionalidad "Seleccionar todo" al seleccionar las celdas del Bloc de notas <br/>&bull; &nbsp; Mejoras en las conexiones de Bloc de notas para evitar el cierre de un bloc de notas y que afectan a una conexión de explorador de objetos <br/>&bull; &nbsp; Experiencia mejorada del Bloc de notas para mostrar un mensaje al usuario al Bloc de notas se desconecta y necesita una conexión para ejecutar las celdas<br/>&bull; &nbsp; Compatibilidad mejorada para equipos portátiles que no haya guardado rehidratar en los anuncios cuando se vuelva a iniciar ADS |
+| Resolver errores y problemas. | Consulte [errores y problemas en GitHub](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1). |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019-hotfix"></a>Marzo de 2019 (revisión)
 

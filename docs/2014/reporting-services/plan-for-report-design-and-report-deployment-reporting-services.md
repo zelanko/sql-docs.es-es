@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 59b1574f7c302a5cf3adc3bee04881eefd176080
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4347854a56e0d6cb021a3958203d94c28cb96d22
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032016"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936831"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Planear el diseño y la implementación de informes (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varios enfoques para la creación e implementación de informes. Use este tema como ayuda para planear un entorno de creación de informes y un servidor de informes que operen juntos. En este tema se proporciona información general sobre la compatibilidad de definición de informe por componentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Una definición de informe es un archivo XML que se escribe en lenguaje RDL (Report Definition Language) o RDLC (Report Definition Language for Clients). Cada definición de informe cumple una versión de esquema específica que aparece al comienzo del archivo.  
@@ -56,15 +56,15 @@ ms.locfileid: "56032016"
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Compatibilidad del servidor de informes y el esquema RDL  
  Un archivo de definición de informe se puede implementar en un servidor de informes de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] de las maneras siguientes:  
   
--   **Diseñador de informes:** Implemente un informe desde el Diseñador de informes de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   **Diseñador de informes:** Implemente un informe desde el Diseñador de informes en [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
--   **Generador de informes:** Guarde un informe en el servidor de informes desde el Generador de informes.  
+-   **Generador de informes:** Guardar un informe en el servidor de informes del generador de informes.  
   
--   **Administrador de informes:** Cargue un informe en un servidor de informes en modo nativo desde el Administrador de informes.  
+-   **Administrador de informes:** Cargue un informe en un servidor de informes de modo nativo del Administrador de informes.  
   
--   **SharePoint:** Cargue un informe en un sitio de SharePoint que esté configurado con un servidor de informes en modo de SharePoint.  
+-   **SharePoint:** Cargue un informe en un sitio de SharePoint que esté configurado con un servidor de informes de modo de SharePoint.  
   
--   **Mediante programación:** Publique un informe mediante programación usando las interfaces de API SOAP en un servidor de informes. Para obtener más información, vea [Report Server Web Service](report-server-web-service/report-server-web-service.md).  
+-   **Mediante programación:** Publique un informe mediante programación usando las interfaces API SOAP en un servidor de informes. Para obtener más información, vea [Report Server Web Service](report-server-web-service/report-server-web-service.md).  
   
  En la tabla siguiente se indica la versión de esquema rdl admitida según la versión del servidor de informes.  
   

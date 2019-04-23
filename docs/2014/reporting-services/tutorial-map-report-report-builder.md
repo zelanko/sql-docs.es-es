@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Asignar informes (generador de informes) | Microsoft Docs'
+title: 'Tutorial: Informe de asignaciones (Generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5522f24dbb7b930b69b2656f7c2c5b53954f16ca
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8fe9eaf39f101e6f64946e7c60a04765e4099d5a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290923"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946941"
 ---
-# <a name="tutorial-map-report-report-builder"></a>Tutorial: informe de asignaciones (Generador de informes)
+# <a name="tutorial-map-report-report-builder"></a>Tutorial: Informe de mapa (generador de informes)
   Este tutorial le ayudará a obtener información sobre las características de mapa que puede utilizar para mostrar los datos de informe sobre un fondo geográfico.  
   
  Los mapas están basados en datos espaciales que normalmente está compuestos de puntos, líneas y polígonos. Por ejemplo, un polígono puede representar el perfil de un condado, una línea puede representar una carretera y un punto puede representar la ubicación de una ciudad. Cada tipo de datos espaciales se muestra en una capa de mapa independiente, como un conjunto de elementos de mapa.  
@@ -63,7 +63,7 @@ ms.locfileid: "56290923"
 10. [Guardar el informe](#Save)  
   
 > [!NOTE]  
->  En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para obtener instrucciones detalladas sobre cómo ir hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar al asistente, vea el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar el asistente, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tiempo estimado para completar este tutorial: 30 minutos.  
   

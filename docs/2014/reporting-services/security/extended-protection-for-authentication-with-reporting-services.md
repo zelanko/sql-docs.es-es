@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d071000fa25a732465deb9c1020ed6365a9fc58e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 48e798aeb8309060a6f56a8a2ffcdbe0e0166fb9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017937"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958481"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protección ampliada para la autenticación con Reporting Services
   En versiones recientes del sistema operativo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, la protección ampliada es un conjunto de mejoras. La protección ampliada mejora cómo protegen las aplicaciones las credenciales y la autenticación. La propia característica no proporciona directamente protección contra ataques específicos como el reenvío de credenciales, sino que proporciona una infraestructura para aplicaciones como [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] con el fin de aplicar la protección ampliada para la autenticación.  
@@ -44,7 +44,7 @@ ms.locfileid: "56017937"
 > 
 >  La documentación de una tecnología de acceso a datos debe tener información sobre la compatibilidad con la protección ampliada.  
   
-### <a name="upgrade"></a>UPGRADE  
+### <a name="upgrade"></a>Actualizar  
   
 -   La actualización de un servidor de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] agrega opciones de configuración con valores predeterminados al archivo `rsreportserver.config`. Si la configuración ya se hubiera realizado, la [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] instalación conservará en el `rsreportserver.config` archivo.  
   
@@ -113,8 +113,8 @@ ms.locfileid: "56017937"
   
 |Parámetro|Descripción|  
 |-------------|-----------------|  
-|`RSWindowsExtendedProtectionLevel`|Especifica el grado de aplicación de la protección ampliada. Los valores válidos son `Off`, `Allow` y `Require`.<br /><br /> El valor predeterminado es `Off`.<br /><br /> El valor `Off` especifica que no existe comprobación de enlace de canal ni de enlace de servicio.<br /><br /> El valor `Allow` admite la protección ampliada pero no la necesita. El valor Allow especifica:<br /><br /> La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan. La forma de aplicar la protección la determina la opción `RsWindowsExtendedProtectionScenario`.<br /><br /> Se permitirá la autenticación en aplicaciones que se ejecuten en sistemas operativos que no sean compatibles con la protección ampliada.<br /><br /> El valor `Require` especifica:<br /><br /> La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan.<br /><br /> **No** se permitirá la autenticación en aplicaciones que se ejecuten en sistemas operativos que no sean compatibles con la protección ampliada.|  
-|`RsWindowsExtendedProtectionScenario`|Especifica qué formas de protección ampliada se validan: Enlace de canales, enlace de servicios o ambos. Los valores válidos son `Any`, `Proxy` y `Direct`.<br /><br /> El valor predeterminado es `Proxy`.<br /><br /> El valor `Any` especifica:<br /><br /> -No se necesitan la autenticación de Windows NTLM, Kerberos ni Negotiate, ni ningún enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> El valor `Proxy` especifica:<br /><br /> -Si está presente, la autenticación de Windows NTLM, Kerberos y Negotiate cuando está presente un token de enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> El valor `Direct` especifica:<br /><br /> -La autenticación de Windows NTLM, Kerberos y Negotiate cuando están presentes un CBT y una conexión SSL al servicio actual, y el CBT para que la conexión SSL coincida con el CBT del token de NTLM, Kerberos o Negotiate.<br /><br /> -No se aplica el enlace de servicio.<br /><br /> <br /><br /> Nota: Se ignora la configuración si `RsWindowsExtendedProtectionLevel` se establece en `OFF`.|  
+|`RSWindowsExtendedProtectionLevel`|Especifica el grado de aplicación de la protección ampliada. Valores válidos son `Off`, `Allow` y `Require`.<br /><br /> El valor predeterminado es `Off`.<br /><br /> El valor `Off` especifica que no existe comprobación de enlace de canal ni de enlace de servicio.<br /><br /> El valor `Allow` admite la protección ampliada pero no la necesita. El valor Allow especifica:<br /><br /> La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan. La forma de aplicar la protección la determina la opción `RsWindowsExtendedProtectionScenario`.<br /><br /> Se permitirá la autenticación en aplicaciones que se ejecuten en sistemas operativos que no sean compatibles con la protección ampliada.<br /><br /> El valor `Require` especifica:<br /><br /> La protección ampliada se aplicará en las aplicaciones cliente que se ejecuten en sistemas operativos que la admitan.<br /><br /> **No** se permitirá la autenticación en aplicaciones que se ejecuten en sistemas operativos que no sean compatibles con la protección ampliada.|  
+|`RsWindowsExtendedProtectionScenario`|Especifica qué formas de la protección ampliada se validan: Enlace de canal, enlace de servicio o ambos. Valores válidos son `Any`, `Proxy` y `Direct`.<br /><br /> El valor predeterminado es `Proxy`.<br /><br /> El valor `Any` especifica:<br /><br /> -No se necesitan la autenticación de Windows NTLM, Kerberos ni Negotiate, ni ningún enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> El valor `Proxy` especifica:<br /><br /> -Si está presente, la autenticación de Windows NTLM, Kerberos y Negotiate cuando está presente un token de enlace de canal.<br /><br /> -Se aplica el enlace de servicio.<br /><br /> El valor `Direct` especifica:<br /><br /> -La autenticación de Windows NTLM, Kerberos y Negotiate cuando están presentes un CBT y una conexión SSL al servicio actual, y el CBT para que la conexión SSL coincida con el CBT del token de NTLM, Kerberos o Negotiate.<br /><br /> -No se aplica el enlace de servicio.<br /><br /> <br /><br /> Nota: Este valor se omite si `RsWindowsExtendedProtectionLevel` está establecido en `OFF`.|  
   
  Entradas del ejemplo en el archivo de configuración `rsreportserver.config`:  
   

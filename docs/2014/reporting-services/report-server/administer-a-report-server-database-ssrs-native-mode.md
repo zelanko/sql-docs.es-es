@@ -15,15 +15,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6870e52124d303b2e04e85158adb98872b78085f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bc152d3130d903f4b098a495451d2918abcd7329
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041256"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961141"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrar una base de datos del servidor de informes (Modo nativo de SSRS)
   Una implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa dos bases de datos relacionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenamiento interno. De manera predeterminada, las bases de datos tienen los nombres ReportServer y ReportServerTempdb. ReportServerTempdb se crea con la base de datos principal del servidor de informes y se usa para almacenar datos temporales, información de sesión e informes almacenados en caché.  
@@ -59,7 +59,7 @@ ms.locfileid: "56041256"
  Este error se debe a que el nombre ReportServerTempdb se almacena internamente y lo utilizan los procedimientos almacenados para realizar operaciones internas. Si se cambia el nombre de la base de datos temporal, no funcionarán correctamente los procedimientos almacenados.  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>Habilitar el aislamiento de instantánea en la base de datos del servidor de informes  
- No puede habilitar el aislamiento de instantánea en la base de datos del servidor de informes. Si está activado el aislamiento de instantánea, se producirá el siguiente error: "El informe seleccionado no está listo para verlo. Aún se está representando o no hay disponible una instantánea de informe".  
+ No puede habilitar el aislamiento de instantánea en la base de datos del servidor de informes. Si está activado el aislamiento de instantánea, se producirá el error siguiente: "El informe seleccionado no está preparado para verlo. Aún se está representando o no hay disponible una instantánea de informe".  
   
  Si no habilitó explícitamente el aislamiento de instantánea, puede que el atributo lo estableciera otra aplicación o que la base de datos **modelo** tenga el aislamiento de instantánea habilitado, haciendo que todas las bases de datos nuevas heredaran el valor.  
   

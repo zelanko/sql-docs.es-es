@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b1292fffcbfbce4ba92775737eeda4326b50fdbc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 80b5920bdcf3aa3f1db9c649115613f6dca34ab5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290463"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949351"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>Imprimir informes (Generador de informes y SSRS)
   Después de guardar un informe en un servidor de informes, puede ver e imprimir el informe desde un explorador, el Administrador de informes o cualquier aplicación que use para ver un informe exportado. Antes de guardar un informe, puede imprimirlo desde su vista previa.  
@@ -47,7 +47,7 @@ ms.locfileid: "56290463"
  Describe cómo imprimir informes exportados a otra aplicación.  
   
  [Imprimir un informe &#40;Generador de informes y SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
- Proporciona instrucciones paso a paso sobre cómo imprimir un informe, cómo controlar los márgenes de una página y sobre cómo especificar el tamaño del papel para los informes que se representarán mediante representadores de saltos de página duros: PDF, Image o Print.  
+ Proporciona instrucciones paso a paso sobre cómo imprimir informes, cómo controlar los márgenes de una página y cómo especificar el tamaño del papel para los informes que se representarán mediante representadores de saltos de página manuales: PDF, Image o Print.  
   
 ## <a name="see-also"></a>Vea también  
  [Exportar informes &#40;generador de informes y SSRS&#41;](export-reports-report-builder-and-ssrs.md)   

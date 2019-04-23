@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a605117b6d2b1011d9285c0fb02275e5abeb35ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 34ef8153b717c13b6fc5fdf2147b90339f8640e4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019336"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942741"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurar la autenticación básica en el servidor de informes
   De forma predeterminada, Reporting Services acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si su implementación incluye aplicaciones cliente o exploradores que utilizan la autenticación básica, debe agregar esta autenticación a la lista de tipos admitidos. Además, si desea utilizar el Generador de informes, debe permitir el acceso anónimo a los archivos del Generador de informes.  
@@ -41,7 +41,7 @@ ms.locfileid: "56019336"
   
      El archivo se encuentra en  *\<unidad >:* \Program Files\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer.  
   
-2.  Buscar <`Authentication`>.  
+2.  Busque <`Authentication`>.  
   
 3.  De las estructuras XML siguientes, copie la que mejor se ajuste a sus necesidades. La primera estructura XML proporciona marcadores de posición para especificar todos los elementos, que se describen en la sección siguiente:  
   
@@ -74,7 +74,7 @@ ms.locfileid: "56019336"
   
      Observe que no puede utilizar `Custom` con otros tipos de autenticación.  
   
-5.  Reemplace los valores vacíos para <`Realm`> o <`DefaultDomain`> por valores que sean válidos para su entorno.  
+5.  Reemplace los valores vacíos para <`Realm`> o <`DefaultDomain`> cuyos valores son válidos para su entorno.  
   
 6.  Guarde el archivo.  
   

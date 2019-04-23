@@ -1,28 +1,26 @@
 ---
-title: 'Cómo: Implementar una extensión de procesamiento de datos en un servidor de informes | Microsoft Docs'
+title: 'Procedimientos: Implementar una extensión de procesamiento de datos en un servidor de informes | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - data processing extensions [Reporting Services], deploying
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: db03408b8ed7909f534b5dad09dbb742f7edc6c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017977"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154221"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Cómo: Implementar una extensión de procesamiento de datos en un servidor de informes
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Procedimientos: Implementar una extensión de procesamiento de datos en un servidor de informes
   Los servidores de informes utilizan las extensiones de procesamiento de datos para recuperar y procesar los datos en informes representados. Debería implementar el ensamblado de extensión de procesamiento de datos en un servidor de informes como un ensamblado privado. También tiene que realizar una entrada en el archivo de configuración del servidor de informes, RSReportServer.config.  
   
 ## <a name="procedures"></a>Procedimientos  

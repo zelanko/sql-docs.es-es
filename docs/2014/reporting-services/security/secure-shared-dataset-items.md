@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 12f37232f9f108a2764123d1bce567e9048a8b6d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4ff23adeb5d5a73e309bc3cd64e95fa820fa2404
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035016"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968001"
 ---
 # <a name="secure-shared-dataset-items"></a>Proteger los elementos de un conjunto de datos compartido
   En un servidor de informes, los elementos de un conjunto de datos compartido se pueden usar en varios informes. Puede proteger los conjuntos de datos compartidos para controlar el grado de acceso que los usuarios tienen. De forma predeterminada, solo los usuarios que son miembros del grupo integrado **Administradores** pueden ver los conjuntos de datos compartidos, modificar las propiedades, habilitar el almacenamiento en caché, crear planes de actualización de caché y eliminar elementos. Para todos los demás usuarios se deben crear asignaciones de roles que permitan el acceso a un conjunto de datos compartido.  

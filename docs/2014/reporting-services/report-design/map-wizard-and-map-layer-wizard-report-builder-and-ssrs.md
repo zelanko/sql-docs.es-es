@@ -12,15 +12,15 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f005ac1a727b375d7c0796a9f30bfed388dccfbd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: aa0ccc9d3b2ca01e1b2279f71ef2815c81e060e3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290763"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962991"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Asistente para mapas y Asistente para capas de mapa (Generador de informes y SSRS)
   El Asistente para mapas y el Asistente para capas de mapa automatizan la tarea de creación de un mapa, incorporación de una capa a un mapa o modificación de las opciones de capas de mapa en una capa existente.  
@@ -53,7 +53,7 @@ ms.locfileid: "56290763"
   
  Haga clic en el título de la página del asistente correspondiente al contenido de la Ayuda. Las páginas que se pueden ver cambian en función de las opciones de tipo de mapa, el origen de datos espaciales, y el origen de datos analíticos.  
   
-1.  [Elegir un origen de datos espaciales](#SpatialDataSource). Los datos espaciales pueden proceder de la galería de mapas, de un archivo de forma de Environmental Systems Research Institute, Inc. o de los datos espaciales de una base de datos relacional de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  [Elegir un origen de datos espaciales](#SpatialDataSource). Datos espaciales pueden proceder de la Galería de mapas, un entorno, Systems Research Institute, Inc. o de los datos espaciales de una base de datos relacional de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
     -   [¿Qué son los datos espaciales?](#SpatialData)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56290763"
   
  Después de agregar un mapa o una capa de mapa, y obtener una vista previa del informe, puede cambiar las opciones del mapa y de la capa de mapa que estableció en los asistentes. Para más información, vea [Personalizar los datos y la presentación de un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Para más información sobre los mapas, vea [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md). Para que obtener instrucciones paso a paso Agregar un mapa a un informe, vea [Tutorial: Informe de mapa &#40;generador de informes&#41;](../tutorial-map-report-report-builder.md).  
+ Para más información sobre los mapas, vea [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md). Para obtener instrucciones paso a paso para agregar un mapa a un informe, vea [Tutorial: informe de asignaciones &#40;Generador de informes&#41;](../tutorial-map-report-report-builder.md)  
   
  ![Icono de flecha usado con el vínculo Volver al principio](../../2014-toc/media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio")[Volver al principio](#BackToTop)  
   
@@ -125,7 +125,7 @@ ms.locfileid: "56290763"
  La galería de mapas contiene mapas de los informes que se encuentran en la carpeta de la galería de mapas del entorno de creación de informes. Los mapas de la galería permiten comenzar rápidamente a agregar un mapa a un informe. Un proveedor de mapas proporciona los mapas predefinidos de la galería.  
   
 > [!NOTE]  
->  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([http://www.census.gov/](http://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para obtener más información acerca de los archivos de forma TIGER/Line, visite [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  
+>  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([http://www.census.gov/](http://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Archivos de forma TIGER/Line están disponibles sin cargo alguno de los Estados Unidos. Census Bureau. Para obtener más información acerca de los archivos de forma TIGER/Line, visite [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER y TIGER/Line son marcas registradas de los Estados Unidos. del censo estadounidense.  
   
  Para extender la galería de mapas, puede agregar o quitar informes del directorio de la galería de mapas, y agregar carpetas para organizar los mapas. Para más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
@@ -198,7 +198,7 @@ ms.locfileid: "56290763"
   
  Para obtener más información acerca de los mosaicos, vea [Sistema de mosaicos de Bing Maps](https://go.microsoft.com/fwlink/?LinkId=147315). Para obtener más información sobre el uso de mosaicos de Bing Maps en un informe, vea [Condiciones adicionales de uso](https://go.microsoft.com/fwlink/?LinkId=151371) y [Declaración de privacidad](https://go.microsoft.com/fwlink/?LinkId=151372).  
   
- Para ver un fondo de mosaico en la vista de diseño, debe tener acceso a Internet. Para ver el fondo de mosaico en una vista previa de un informe en un servidor de informes, el servidor de informes se debe configurar para ser compatible con los mosaicos de Bing Maps. Para obtener más información, consulte [solucionar problemas de informes: Informes de mapa &#40;generador de informes y SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) y "Cómo preparar los mapas" en el [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en libros en pantalla de SQL Server.  
+ Para ver un fondo de mosaico en la vista de diseño, debe tener acceso a Internet. Para ver el fondo de mosaico en una vista previa de un informe en un servidor de informes, el servidor de informes se debe configurar para ser compatible con los mosaicos de Bing Maps. Para obtener más información, consulte [Informes de solución de problemas: Informes de mapa &#40;generador de informes y SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md) y "Cómo preparar los mapas" en el [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en libros en pantalla de SQL Server.  
   
  Para más información sobre otras formas de personalizar una capa de mosaico, vea [Agregar, cambiar o eliminar un mapa o una capa de mapa &#40;Generador de informes y SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   

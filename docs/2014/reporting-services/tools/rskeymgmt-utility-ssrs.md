@@ -19,15 +19,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cdd2e2bd7d668ca276cdc62d988f7334a6709e6b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4135236979beb320c201f635ad353cbe83a261bd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038266"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941201"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt (utilidad) (SSRS)
   Extrae, restaura, crea y elimina la clave simétrica usada para proteger contra el acceso no autorizado los datos importantes del servidor de informes. Esta utilidad también se usa para unir instancias del servidor de informes en una implementación de ampliación horizontal. Una *implementación escalada del servidor de informes* se refiere a varias instancias del servidor de informes que comparten una sola base de datos de servidor de informes.  
@@ -148,9 +148,9 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  Implementación de ampliación horizontal del servidor de informes se refiere a un modelo de implementación en el que varias instancias del servidor de informes comparten la misma base de datos del servidor de informes. Una base de datos del servidor de informes la puede usar cualquier instancia del servidor de informes que almacene sus claves simétricas en la base de datos. Por ejemplo, si una base de datos del servidor de informes contiene información de clave para tres instancias del servidor de informes, las tres instancias se consideran miembros de la misma implementación de ampliación horizontal.  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>Combinar instancias del servidor de informes en el mismo equipo  
- Puede crear una implementación escalada a partir de varias instancias del servidor de informes que estén instaladas en el mismo equipo. No establezca los argumentos `-u` y `-v` si va a combinar instancias del servidor de informes que estén instaladas en el equipo local. Los argumentos `-u` y `-v` se utilizan exclusivamente para combinar instancias desde un equipo remoto. Si especifica los argumentos, obtendrá el siguiente error: "No se pueden usar las credenciales de usuario para conexiones locales".  
+ Puede crear una implementación escalada a partir de varias instancias del servidor de informes que estén instaladas en el mismo equipo. No establezca los argumentos `-u` y `-v` si va a combinar instancias del servidor de informes que estén instaladas en el equipo local. Los argumentos `-u` y `-v` se utilizan exclusivamente para combinar instancias desde un equipo remoto. Si especifica los argumentos, obtendrá el siguiente error: "Las credenciales de usuario no pueden utilizarse para las conexiones locales."  
   
- El ejemplo siguiente muestra la sintaxis para crear una implementación escalada con varias instancias locales. En este ejemplo, <`initializedinstance`> es el nombre de una instancia que ya está inicializada para usar la base de datos del servidor de informes y <`newinstance`> es el nombre de la instancia que desea agregar a la implementación:  
+ El ejemplo siguiente muestra la sintaxis para crear una implementación escalada con varias instancias locales. En este ejemplo, <`initializedinstance`> es el nombre de una instancia que ya está inicializada para usar la base de datos del servidor de informes, y <`newinstance`> es el nombre de la instancia que desea agregar a la implementación:  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - snapshots [Reporting Services]
 - report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c607291cd2675e454861aa4c79da608d8bcaba1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8232f701a8702965b35277ffab4f92459f32c063
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010967"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947891"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Crear, modificar y eliminar instantáneas del historial de informes
   El historial de informe es un conjunto de instantáneas de informe. Puede mantener el historial del informe agregando y eliminando instantáneas, o bien modificando las propiedades correspondientes al almacenamiento del historial. Es posible crear el historial del informe de manera manual o programada.  

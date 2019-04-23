@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 54082236bed728d81d060b73ecdc03fb53d82825
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e51660f2b357b0ae1101b47f73ec0f66c7555265
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016607"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935691"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>Usar una conexión de datos de Office (.odc) con informes (Reporting Services en el modo integrado de SharePoint)
   En escenarios limitados, puede usar un archivo de conexión de datos de Office (.odc) existente para proporcionar información de conexión a un informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Al crear un origen de datos compartido, puede usarse un archivo .odc en lugar de un archivo .rsds. El servidor de informes usa un archivo .odc de la misma forma que usa un archivo .rsds; lee el archivo para el tipo de origen de datos, una cadena de conexión y la información de credenciales.  

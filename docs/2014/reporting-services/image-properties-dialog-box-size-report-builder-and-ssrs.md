@@ -11,15 +11,15 @@ f1_keywords:
 - "10054"
 - sql12.rtp.rptdesigner.pictureproperties.size.f1
 ms.assetid: 144a5da4-a3c3-4856-942e-7b7c60e2f6fa
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb37b9da0e0bd51d6fed187abfe870b26603f8e3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 450d800a474d00cf2ac5692d9994fce5d73861f2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287083"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938891"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Cuadro de diálogo de Propiedades de la imagen, Tamaño (Generador de informes y SSRS)
   Seleccione **Tamaño** en el cuadro de diálogo **Propiedades de la imagen** para configurar el tamaño de las imágenes mostradas en un campo o en el área de diseño, o para cambiar la cantidad de espacio adicional entre el borde de una celda o un cuadro de texto y la imagen o el valor contenido dentro de la celda o el cuadro de texto.  

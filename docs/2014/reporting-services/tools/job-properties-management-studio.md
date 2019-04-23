@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9a6538366883ea6feee2234b524a21d97110d177
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 90a5bba8daa52bee13c0bb4d42554c4b30680c2d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027936"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947201"
 ---
 # <a name="job-properties-management-studio"></a>Propiedades del trabajo (Management Studio)
   Use la página **Propiedades del trabajo** para ver información sobre una suscripción o un informe en curso antes de cancelarlo.  

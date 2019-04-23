@@ -15,15 +15,15 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f036d86b7bcdef97de03a80c0b9b615f08eda82
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 38547a2d48ecbe1887702d7be9b45b3166d75243
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012467"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952441"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Eliminar y volver a crear claves de cifrado (Administrador de configuración de SSRS)
   Las actividades de eliminación y nueva creación de claves de cifrado quedan fuera del mantenimiento rutinario de las claves de cifrado. Estas tareas se realizan en respuesta a una amenaza específica al servidor de informes o como último recurso cuando ya no se tiene acceso a una base de datos del servidor de informes.  

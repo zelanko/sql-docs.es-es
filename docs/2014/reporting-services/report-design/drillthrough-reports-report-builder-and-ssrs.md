@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a53b1340891d539ca9aef224c7bdbbdcba9bf45d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3381439af3f5393b51fdcd88ce13f04ae4160690
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298161"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959843"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Informes detallados (Generador de informes y SSRS)
   Un informe detallado es un informe que los usuarios abren al hacer clic en un vínculo de otro informe. Este tipo de informes suele incluir información detallada acerca de los elementos del informe de resumen original. Por ejemplo, en esta ilustración, el informe de resumen de ventas enumera los pedidos de ventas y los totales. Cuando el usuario hace clic en un número de pedido de la lista resumida, se abre otro informe con los detalles del pedido en cuestión.  
@@ -28,7 +28,7 @@ ms.locfileid: "56298161"
 > [!NOTE]  
 >  Cuando trabaja con el Generador de informes, para ver el informe detallado que se abre al hacer clic en el vínculo de obtención de detalles del informe principal, debe estar conectado a un servidor de informes.  
   
- Para empezar a trabajar rápidamente con informes de obtención de detalles, consulte [Tutorial: Crear informes principales y obtención de detalles &#40;generador de informes&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Informe de obtención de detalles también se incluye en dos soluciones de business intelligence, [informes de BI: Escenario de informes y suscripciones](https://technet.microsoft.com/bi/ff769487.aspx) y [paneles corporativos: Solución de ventas](https://technet.microsoft.com/bi/ff643005.aspx)  
+ Para empezar a usar rápidamente los informes detallados, consulte el [Tutorial: Crear informes principales y de obtención de detalles &#40;Generador de informes&#41;](../tutorial-creating-drillthrough-and-main-reports-report-builder.md). Informe de obtención de detalles también se incluye en dos soluciones de business intelligence, [informes de BI: Escenario de informes y suscripciones](https://technet.microsoft.com/bi/ff769487.aspx) y [paneles corporativos: Solución de ventas](https://technet.microsoft.com/bi/ff643005.aspx)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a12d538f034f4a3d96726ced32b74f02ec6e73c3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 20d800cc906a3953fe2f5143e980fd2e869ec318
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023526"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964421"
 ---
 # <a name="secure-reports-and-resources"></a>Proteger informes y recursos
   Puede establecer la seguridad para informes y recursos individuales a fin de controlar el grado de acceso de los usuarios a estos elementos. De manera predeterminada, solo los usuarios que pertenezcan al grupo integrado **Administradores** pueden ejecutar informes, ver recursos, modificar propiedades y eliminar elementos. Para los demás usuarios se deben crear asignaciones de roles que concedan acceso a un informe o recurso.  

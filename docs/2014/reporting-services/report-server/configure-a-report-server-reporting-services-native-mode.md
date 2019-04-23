@@ -11,15 +11,15 @@ helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2097ea745bd9ddb359347ddbbaa41976e636ed4e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 12695fbbaf796097f7273134dbc5db4e294ce508
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010926"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944401"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurar un servidor de informes (modo nativo de Reporting Services)
   Según las opciones que seleccione durante la instalación, podría requerirse una configuración adicional para poder utilizar el servidor de informes. Como mínimo, una configuración del servidor de informes consta de lo siguiente:  
@@ -30,7 +30,7 @@ ms.locfileid: "56010926"
   
 -   Una base de datos del servidor de informes que almacena los datos de la aplicación, los informes y otros elementos.  
   
- El programa de instalación configura los valores mínimos si selecciona alguna de las siguientes opciones de instalación: La configuración predeterminada del modo nativo o la configuración predeterminada del modo integrado de SharePoint. Si ha instalado el servidor de informes en modo de solo archivos (esta es la opción **Instalar pero no configurar** del asistente para la instalación), solo se configura la cuenta de servicio. La dirección URL del servicio web y la base de datos del servidor de informes se deben configurar una vez finalizada la instalación.  
+ El programa de instalación configura los valores mínimos si selecciona alguna de las siguientes opciones de instalación: Configuración predeterminada del modo nativo o la configuración predeterminada de modo integrado de SharePoint. Si ha instalado el servidor de informes en modo de solo archivos (esta es la opción **Instalar pero no configurar** del asistente para la instalación), solo se configura la cuenta de servicio. La dirección URL del servicio web y la base de datos del servidor de informes se deben configurar una vez finalizada la instalación.  
   
  El Administrador de informes es una característica opcional de un servidor de informes en modo nativo, pero se recomienda que la configure para poder conceder acceso de usuario al servidor de informes y administrar su contenido. Si implementa un servidor de informes en modo integrado de SharePoint, utilice el front-end web de un servidor de SharePoint para conceder el acceso.  
   

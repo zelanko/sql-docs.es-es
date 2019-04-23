@@ -4,26 +4,39 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom report items, creating
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cfaaa8504a018bad1740c1fb381471e9b4b82878
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 719e7a24efa2b0c68d4984d8b16f957a268fdafb
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011047"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156911"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Crear un componente de tiempo de ejecución de elemento de informe personalizado
   El componente de tiempo de ejecución de elemento de informe personalizado se implementa como un componente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] mediante cualquier lenguaje compatible con CLS y el procesador de informes lo llama en tiempo de ejecución. Las propiedades para el componente de tiempo de ejecución en el entorno de diseño se definen modificando el componente de tiempo de diseño correspondiente del elemento de informe personalizado.  
-  
+
+<!--
+Replacing the following multiValue.....
+
+ms.technology: 
+  - "docset-sql-devref"
+  - "reporting-services-native"
+
+.....with the following single value.....
+
+ms.technology: reporting-services
+.
+
+(GeneMi = MightyPen  ,  2019-04-20  ,  DevO= 1515083)
+-->
+
  Para obtener un ejemplo de un elemento de informe personalizado totalmente implementado, vea [Ejemplos del producto SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="definition-and-instance-objects"></a>Objetos de definición e instancia  

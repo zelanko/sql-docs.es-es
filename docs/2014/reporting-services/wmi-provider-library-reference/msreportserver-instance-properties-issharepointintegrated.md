@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - IsSharePointIntegrated property
 ms.assetid: e21d00ad-5d9a-4290-8d74-7eeeda39e1ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 692cd915c893b9f2f0d2d7d83ce17e41f20d070a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e7052284e69c374d4c46fa4fe78d68bf870662e8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029166"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957971"
 ---
 # <a name="issharepointintegrated-property-wmi-msreportserverinstance"></a>Propiedad IsSharePointIntegrated (WMI MSReportServer_Instance)
   Especifica si el servidor de informes está en modo integrado de SharePoint. A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], esta propiedad siempre devuelve `False`, porque en modo de SharePoint las instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] son servicios compartidos de SharePoint y los proveedores WMI no las controlan.  

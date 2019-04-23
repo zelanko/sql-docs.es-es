@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1be357ab864a0d7249a2f9d4529591813b4a01ed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e7442847c4c96148635320335956a02cec2bad87
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028016"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945401"
 ---
 # <a name="xml-connection-type-ssrs"></a>Tipo de conexión XML (SSRS)
   Para incluir los datos de un origen de datos XML en el informe, deberá tener un conjunto de datos basado en un origen de datos de informe de tipo XML. Este tipo de origen de datos integrado se basa en la extensión de datos XML. Utilice este tipo de origen de datos para conectarse y recuperar datos de documentos XML, servicios web o XML incrustado en la consulta.  
@@ -115,7 +115,7 @@ ms.locfileid: "56028016"
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Requisitos para recuperar datos del servicio web XML  
  La extensión de procesamiento de datos XML no detecta el esquema de forma automática. Por tanto, debe tener alguna manera de determinar los métodos SOAP que recuperarán los datos que desea. También debe comprender el esquema de direcciones o el espacio de nombres que utiliza el servicio web para sus datos.  
   
- Para un servicio web, se puede proporcionar un elemento <`Query`> que especifique un método al que se debe llamar o una acción SOAP. Es posible dejar la consulta vacía y utilizar la consulta predeterminada si el origen de datos XML tiene una estructura jerárquica que genera los datos que se desea utilizar en el informe. Los valores y los atributos de los nodos de elemento XML recuperados cuando se ejecuta la consulta se asignan a los campos de conjunto de datos que se usan en el informe.  
+ Para un servicio Web, puede proporcionar una <`Query`> elemento que especifica un método a llamada o una acción SOAP. Es posible dejar la consulta vacía y utilizar la consulta predeterminada si el origen de datos XML tiene una estructura jerárquica que genera los datos que se desea utilizar en el informe. Los valores y los atributos de los nodos de elemento XML recuperados cuando se ejecuta la consulta se asignan a los campos de conjunto de datos que se usan en el informe.  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>Requisitos para recuperar datos de un documento XML  
  El servidor debe devolver los datos XML mediante el protocolo HTTP o los datos XML deben estar incrustados en el elemento XML `Query`. Si se hace referencia directa a un documento XML mediante el protocolo HTTP, la extensión debe ser .xml.  

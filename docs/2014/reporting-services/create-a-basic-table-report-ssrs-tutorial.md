@@ -12,15 +12,15 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 83046be3fc713768d4dffd8dc2ef22f37496858e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1f8dcab2a07aca7971ea8c799660b075fe0bcfd2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286683"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944912"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Crear un informe de tabla básico (Tutorial de SSRS)
   Este tutorial está diseñado para ayudarle a crear un informe de tabla básico basado en la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] mediante el Diseñador de informes de la base de datos. También puede crear informes con el Generador de informes o con el Asistente para informes. En este tutorial, creará un proyecto de informes, configurará la información de conexión, definirá una consulta, agregará una región de datos de tabla, agrupará y calculará los totales de varios campos, y obtendrá una vista previa del informe.  

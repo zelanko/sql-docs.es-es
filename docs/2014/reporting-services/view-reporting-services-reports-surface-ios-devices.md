@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Report Viewer [Reporting Services]
 - iOS
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5bedfa3c06a760baccd460915f313bb1bc6dcd79
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1453d381b38d01cca5b531661714dbbce1693d1b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293133"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947972"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Ver informes de Reporting Services en dispositivos de Microsoft Surface y de Apple iOS
   En este artículo se describen las características y los flujos de trabajo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admitidos para dispositivos de Microsoft Surface, y para dispositivos con Apple iOS 6 y Apple Safari como el iPad.  
@@ -49,16 +49,16 @@ Vea una demostración de cómo ver informes en un iPad.
   
 2.  Abra el informe realizando una de las acciones siguientes.  
   
-    -   **Iniciar desde correo electrónico:** Desde un correo electrónico creado por una suscripción de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], puntee en la dirección URL del informe. El informe se abrirá en el explorador.  
+    -   **Iniciar desde correo electrónico:** Desde un correo electrónico creado por un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suscripción, puntee en la dirección URL del informe. El informe se abrirá en el explorador.  
   
-    -   **Iniciar desde el servidor de informes:** Busque el directorio en el servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y pulse en el nombre del informe para abrirlo.  
+    -   **Iniciar desde el servidor de informes:** Busque el directorio en el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de informes y, a continuación, puntee en el nombre del informe para abrir el informe.  
   
-    -   **Iniciar desde una biblioteca de documentos de SharePoint:** Vaya a una biblioteca de documentos de SharePoint que contenga informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y después pulse en el nombre del informe. Puede ver e interactuar con el informe.  
+    -   **Iniciar desde una biblioteca de documentos de SharePoint:** Vaya a una biblioteca de documentos de SharePoint que contiene [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] informes y, a continuación, puntee en el nombre del informe. Puede ver e interactuar con el informe.  
   
         > [!IMPORTANT]  
         >  Para el iPad, asegúrese de que la propiedad **Exploración privada** de Safari esté desactivada.  
   
-    -   **Elemento web de SharePoint:** Si el elemento web se agregó a una página de SharePoint, puede ver informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+    -   **Elemento web de SharePoint:** Si se ha agregado el elemento web a una página de SharePoint, puede ver [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] informes.  
   
 3.  También puede abrir el informe en el dispositivo de Microsoft Surface utilizando el Administrador de informes. Busque el directorio en el Administrador de informes [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y, a continuación, puntee en el nombre del informe para abrirlo.  
   

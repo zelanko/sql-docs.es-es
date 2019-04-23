@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e7cbe523d7edb8872814c3280c8e7c8a06cbf84a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 98f949d064c866842c49837e5f6058f6f8705689
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016627"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941921"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Mover las bases de datos del servidor de informes a otro equipo (Modo nativo de SSRS)
   Las bases de datos del servidor de informes que se emplean en una instalación se pueden mover a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se encuentre en un equipo diferente. Las bases de datos reportserver y reportservertempdb se deben mover o copiar en conjunto. Una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere las dos bases de datos; la base de datos reportservertempdb debe estar relacionada por nombre con la base de datos reportserver principal que se vaya a mover.  

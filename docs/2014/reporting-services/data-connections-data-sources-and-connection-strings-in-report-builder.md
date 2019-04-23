@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13edc28a739af6a40ab47766c1909be3a8105ee5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5e5fe086d16728a95b9ee8f2a52878d5a2c4bad4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288873"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962131"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes
   Para incluir datos en un informe, debe crear conexiones de datos y conjuntos de datos. Una conexión de datos contiene información acerca de cómo tener acceso a un origen de datos externo. Un conjunto de datos contiene un comando de consulta que especifique los datos que se van a incluir mediante la conexión de datos.  

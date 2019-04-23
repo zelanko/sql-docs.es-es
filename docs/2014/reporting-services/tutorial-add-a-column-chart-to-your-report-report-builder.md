@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Agregar un gráfico de columnas al informe (generador de informes) | Microsoft Docs'
+title: 'Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: feff14049b3fa7a00d3d73bbe493aaded3748d2a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287093"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936861"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de columnas al informe (generador de informes)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)
   Un gráfico de columnas muestra una serie como un conjunto de barras verticales agrupadas por categorías. Un gráfico de columnas puede ser útil para:  
   
 -   Mostrar los cambios realizados en los datos a lo largo de un período de tiempo.  
@@ -53,7 +53,7 @@ ms.locfileid: "56287093"
 9. [Guardar el informe](#Save)  
   
 > [!NOTE]  
->  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones detalladas sobre cómo ir hasta un servidor de informes, elija un origen de datos y crear un conjunto de datos, vea el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tiempo estimado para completar este tutorial: 15 minutos.  
   

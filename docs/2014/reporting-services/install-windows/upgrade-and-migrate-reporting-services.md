@@ -9,26 +9,26 @@ helpviewer_keywords:
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 77bc8ae2bb029218d79025cb97d9fb1ed281fe6c
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 2ef6c53e1cb9fd11eb8cba6bb788de9b9b1fe10a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583078"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952851"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
 Este tema ofrece información general de las opciones de actualización y migración para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Hay dos enfoques generales para actualizar una implementación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
--   **Actualización:** se actualizan los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los servidores y las instancias donde están instalados actualmente. Habitualmente se denomina actualización "en contexto". No se admite la actualización en contexto de un modo de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a otro. Por ejemplo, no puede actualizar un servidor de informes en modo nativo a un servidor de informes en modo de SharePoint. Puede migrar los elementos de informe de un modo a otro. Para obtener más información, consulte la sección 'Nativo para la migración de SharePoint' más adelante en este documento y el tema relacionado [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+-   **Actualización:** Actualizar el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] componentes en los servidores y las instancias donde están instalados actualmente. Habitualmente se denomina actualización "en contexto". No se admite la actualización en contexto de un modo de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a otro. Por ejemplo, no puede actualizar un servidor de informes en modo nativo a un servidor de informes en modo de SharePoint. Puede migrar los elementos de informe de un modo a otro. Para obtener más información, consulte la sección 'Nativo para la migración de SharePoint' más adelante en este documento y el tema relacionado [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
--   **Migrar**: se instala y configura un nuevo entorno de SharePoint, se copian los elementos de informe y los recursos al nuevo entorno, y se configura el nuevo entorno para usar contenido existente. Una forma de nivel inferior de migración es copiar bases de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , los archivos de configuración y, si se usa el modo de SharePoint, las bases de datos de contenido de SharePoint.  
+-   **Migrar**: Instalar y configurar un nuevo entorno de SharePoint, copiar los elementos de informe y los recursos en el nuevo entorno y configura el nuevo entorno para usar contenido existente. Una forma de nivel inferior de migración es copiar bases de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , los archivos de configuración y, si se usa el modo de SharePoint, las bases de datos de contenido de SharePoint.  
   
 ||  
 |-|  
@@ -135,7 +135,7 @@ Este tema ofrece información general de las opciones de actualización y migrac
  ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "icono de flecha usado con el vínculo volver al principio") [en este tema:](#bkmk_top)  
   
 ##  <a name="bkmk_native_scenarios"></a> Escenarios de actualización y migración en modo nativo  
- **Actualización:** la actualización en contexto para el modo nativo es el mismo proceso para cada una de las versiones admitidas mencionadas anteriormente en este tema. Ejecute el Asistente para la instalación de SQL Server o una instalación desde la línea de comandos. Después de la instalación, la base de datos del servidor de informes se actualizará automáticamente al nuevo esquema de la base de datos del servidor de informes. Para obtener más información, vea la sección [In-place upgrade](#bkmk_inplace_upgrade) en este tema.  
+ **Actualización:** Actualización en contexto para el modo nativo es el mismo proceso para cada una de las versiones admitidas enumeradas anteriormente en este tema. Ejecute el Asistente para la instalación de SQL Server o una instalación desde la línea de comandos. Después de la instalación, la base de datos del servidor de informes se actualizará automáticamente al nuevo esquema de la base de datos del servidor de informes. Para obtener más información, vea la sección [In-place upgrade](#bkmk_inplace_upgrade) en este tema.  
   
  El proceso de actualización comienza al seleccionar una instancia del servidor de informes existente para actualizar.  
   
@@ -165,7 +165,7 @@ Este tema ofrece información general de las opciones de actualización y migrac
   
 9. El programa de instalación combina los valores de los archivos de configuración. Utilizando como base los archivos de configuración de instalación de la instalación actual, se agregan las nuevas entradas. No se quitan las entradas desusadas, pero el servidor de informes dejará de leerlas una vez finalizada la actualización. La actualización no eliminará los archivos de registro anteriores, el archivo RSWebApplication.config obsoleto o la configuración de directorios virtuales en IIS. La actualización no quitará el Diseñador de informes de SQL Server 2005, Management Studio u otras herramientas de cliente. Si ya no los necesita, asegúrese de quitar estos archivos y herramientas una vez finalizada la actualización.  
   
- **Migración:** la migración de una versión anterior de una instalación en modo nativo a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consta de los mismos pasos para todas las versiones admitidas enumeradas anteriormente en este tema. Para obtener más información, vea [Migrar una instalación de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
+ **Migración:** Migración de una versión anterior de una instalación en modo nativo a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consta de los mismos pasos para todas las versiones admitidas que aparecen anteriormente en este tema. Para obtener más información, vea [Migrar una instalación de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
  ![Icono de flecha usado con el vínculo volver al principio](../../2014-toc/media/uparrow16x16.gif "icono de flecha usado con el vínculo volver al principio") [en este tema:](#bkmk_top)  
   
@@ -204,7 +204,7 @@ Este tema ofrece información general de las opciones de actualización y migrac
   
  **Entorno final:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SQL Server 2010 o SharePoint 2013.  
   
--   **SharePoint 2010:** la actualización en contexto de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se admite, pero el escenario de actualización requiere un tiempo de inactividad en el entorno de SharePoint.  
+-   **SharePoint 2010:** Actualización de local [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es compatible, pero el escenario de actualización requiere un tiempo de inactividad del entorno de SharePoint.  
   
      Si también desea que el entorno final ejecute SharePoint 2013, debe completar una operación de actualizar y adjuntar la base de datos de SharePoint 2010 a SharePoint 2013.  
   

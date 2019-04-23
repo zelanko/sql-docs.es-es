@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 327932f82ddee445c7e15f53f02edd39ba0b28bf
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e3bae5d7a41d87cf07fab455b434b935636375f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288633"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957591"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expresiones (Generador de informes y SSRS)
   Las expresiones se utilizan ampliamente a lo largo de un informe para recuperar, calcular, mostrar, agrupar, ordenar, filtrar y parametrizar datos y darles formato. Muchas propiedades de elementos de informe pueden establecerse en una expresión. Las expresiones le ayudan a controlar el contenido, el diseño y la interactividad de un informe. Las expresiones se escriben en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], se guardan en la definición de informe y son evaluadas por el procesador de informes al ejecutar el informe.  

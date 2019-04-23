@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Report Manager [Reporting Services]
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a505bb3f4647fa98e7cc2bccfbd64b5c3545c0e7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 31e64dfe871fa38daee266814006468a8ea32e65
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289023"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940671"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Administrador de informes (Modo nativo de SSRS)
   El Administrador de informes es una herramienta basada en Web para el acceso a informes y su administración que se utiliza para administrar una única instancia de servidor de informes desde una ubicación remota a través de una conexión HTTP. También puede utilizar el Administrador de informes por su visor de informes y sus características de navegación. En este tema:  

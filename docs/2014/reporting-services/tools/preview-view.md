@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e3644de6d5a11e801e2b41d7d7aa517bad771714
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6a9b3f472d05c8d50a351323a0af794595c83f46
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033266"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954641"
 ---
 # <a name="preview-view"></a>Vista previa, vista
   Use la **Vista previa** para mostrar el informe representado. Antes de abrir un informe en Vista previa, el Diseñador de informes lo ejecuta localmente. En el modo de vista previa, el informe se procesa por completo. Si el informe tiene una consulta compleja o una gran cantidad de datos, es posible que se necesiten algunos minutos para que se complete la vista previa la primera vez que la muestre. Para los cambios posteriores que solo afectan al formato del informe, la vista previa utiliza datos en caché.  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b6b6c414804a6e95f4d310a86e2573ba17bb8f2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8e5f34ac12dd76de22e53be72e04d51d0cef8be1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019586"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946731"
 ---
 # <a name="html-device-information-settings"></a>Configuración de la información del dispositivo HTML
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato HTML.  

@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eaf7f68cb2658b50bf21ea188324f5208acd488a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286805"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951251"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Crear un informe de forma libre (Generador de informes)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Creación de un informe de forma libre (generador de informes)
   Este tutorial le enseña a crear un informe de forma libre de SSRS que se asemeja a una carta de formularios. Puede organizar los elementos de informe para crear un formulario con cuadros de texto, imágenes y otras regiones de datos.  
   
  El informe que creará en este tutorial se basa en los datos de ventas de ejemplo que se incluyen en el tutorial. El informe agrupa la información por territorio y muestra el nombre del administrador de ventas del territorio, así como una información de ventas detallada y sumaria. Utilizará la región de datos de la lista como la base para el informe de la forma libre y, a continuación, agregará un panel decorativo con una imagen, texto estático con datos insertados, una tabla para mostrar información detallada y, opcionalmente, gráficos circulares y de columnas que muestren la información resumida.  
@@ -224,7 +224,7 @@ ms.locfileid: "56286805"
   
 2.  En la pestaña **Insertar** de la cinta de opciones, haga clic en **Cuadro de texto**y, después, arrastre un cuadro de texto hacia la esquina superior izquierda de la lista, pero dentro del rectángulo que agregó previamente. Haga el cuadro de texto de unas 3 pulgadas de alto y 5 de ancho.  
   
-3.  Coloque el cursor en la parte superior del cuadro de texto y después escriba: **Boletín para** .  
+3.  Coloque el cursor en la parte superior del cuadro de texto y, a continuación, escriba: **Boletín para** .  
   
      ![Agregar un texto de encabezado del boletín](../../2014/tutorials/media/tutorial-newsletterfor.png "Agregar un texto de encabezado del boletín")  
   
@@ -279,7 +279,7 @@ ms.locfileid: "56286805"
   
      ![Añadir texto al boletín](../../2014/tutorials/media/tutorial-newslettertext.png "añadir texto al boletín")  
   
-20. Coloque el cursor debajo del texto que pegó en el paso 15 y luego escriba: **Felicidades por sus ventas totales de** .  
+20. Coloque el cursor debajo del texto que pegó en el paso 15 y, a continuación, escriba: **Felicidades por sus ventas totales de** .  
   
     > [!NOTE]  
     >  Asegúrese de incluir el espacio adicional después de la palabra "de". El espacio separa el texto y el campo que agregará en el paso siguiente.  
@@ -431,7 +431,7 @@ ms.locfileid: "56286805"
   
      ![Añadir línea al informe](../../2014/tutorials/media/tutorial-reportwithline.png "añadir línea al informe")  
   
-##  <a name="Visualization"></a> 9. (Opcional) Agregar visualización de datos resumidos  
+##  <a name="Visualization"></a> 9. (Opcional) Agregar visualización de datos de resumen  
  Los rectángulos le ayudan a controlar cómo se representa el informe. Coloque un grafo circular y de columnas dentro de un rectángulo para asegurarse de que el informe se representa del modo que desea.  
   
 #### <a name="to-add-a-rectangle"></a>Para agregar un rectángulo  

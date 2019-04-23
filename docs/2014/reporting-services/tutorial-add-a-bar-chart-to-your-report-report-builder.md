@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Agregar un gráfico de barras a un informe (generador de informes) | Microsoft Docs'
+title: 'Tutorial: Agregar un gráfico de barras a un informe (Generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6bd2d801c4f6aae8d87764bdefbe153f3d9743f8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295993"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938161"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de barras a un informe (generador de informes)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Incorporación de un gráfico de barras a un informe (Generador de informes)
   Un gráfico de barras muestra los datos de categoría horizontalmente. Esto puede ayudar a:  
   
 -   Mejorar la legibilidad de los nombres de categoría largos.  
@@ -55,7 +55,7 @@ ms.locfileid: "56295993"
 10. [Guardar el informe](#Save)  
   
 > [!NOTE]  
->  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, crear un conjunto de datos y elija un origen de datos, vea el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo desplazarse a un servidor de informes, crear un conjunto de datos y elegir un origen de datos, vea el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tiempo estimado para completar este tutorial: 15 minutos.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "56295993"
   
 2.  Haga clic en **Barras**y después en **Siguiente**.  
   
-     En el **organizar campos del gráfico** página, hay cuatro campos en el **campos disponibles** panel: FirstName, LastName, SalesYear2009 y SalesYear2008.  
+     En la página **Organizar campos del gráfico** hay cuatro campos en el panel **Campos disponibles**: FirstName, LastName, SalesYear2009 y SalesYear2008.  
   
 3.  Arrastre LastName hasta el panel Categorías.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "56295993"
   
  El informe muestra el gráfico de barras de ventas correspondiente a cada vendedor para los años 2008 y 2009. La longitud de la barra corresponde al total de ventas.  
   
-##  <a name="AllValues"></a> 3. Modificar la presentación de nombres en el eje vertical  
+##  <a name="AllValues"></a> 3. Modificar la presentación de nombres en el eje Vertical  
  De forma predeterminada, solo aparecen algunos de los valores del eje vertical. Puede cambiar el gráfico para mostrar todas las categorías.  
   
 #### <a name="to-display-all-sales-persons-along-the-category-axis-of-a-bar-chart"></a>Mostrar todos los vendedores en el eje de categorías de un gráfico de barras  
@@ -194,7 +194,7 @@ ms.locfileid: "56295993"
 > [!NOTE]  
 >  Si no se leen los nombres de vendedor en el eje vertical, puede hacer más alto el gráfico o cambiar las opciones de formato para las etiquetas del eje.  
   
-##  <a name="Sort"></a> 4. Cambiar el criterio de ordenación para los nombres en del eje vertical  
+##  <a name="Sort"></a> 4. Cambiar el criterio de ordenación para los nombres en el eje Vertical  
  Al ordenar los datos en un gráfico, está cambiando el orden de valores en el eje de categoría.  
   
 #### <a name="to-sort-the-names-in-alphabetical-order-on-the-bar-chart"></a>Ordenar los nombres alfabéticamente en el gráfico de barras  
@@ -213,7 +213,7 @@ ms.locfileid: "56295993"
   
 7.  Haga clic en **Aceptar**.  
   
-8.  En el **propiedades del grupo de categorías** página, en el **orden** lista desplegable, seleccione **Z a**. De este modo se selecciona el orden alfabético inverso para que los nombres aparezcan ordenados de arriba abajo.  
+8.  En el **propiedades del grupo de categorías** página, en el **orden** lista desplegable, seleccione **Z a**. Este comando selecciona el orden alfabético inverso para que los nombres aparecen en orden de arriba a abajo.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

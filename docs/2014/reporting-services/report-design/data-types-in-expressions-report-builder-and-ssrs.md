@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 694afd46c2b04a09bffc951cba82af91edf9b6a5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5b0af16c21cb9fdf2c8ab41a931f955b46c29352
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290733"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956111"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de datos en expresiones (Generador de informes y SSRS)
   La finalidad de los tipos de datos es permitir el almacenamiento y el procesamiento de los datos de manera eficaz. Los tipos de datos más comunes incluyen texto (también conocido como cadenas), números (con y sin decimales), fechas y horas, e imágenes. Los valores de un informe deben ser del tipo de datos de lenguaje RDL (Report Definition Language). Puede dar formato a un valor según sus preferencias al mostrarlo en un informe. Por ejemplo, un campo que representa valores de moneda se almacena en la definición del como un número de punto flotante y mostrarse en uno y otro formato en función de la propiedad de formato elegida.  
@@ -34,7 +34,7 @@ ms.locfileid: "56290733"
 |String|Predeterminado: String<br /><br /> Chart, GUID, Timespan|  
 |Boolean|Predeterminado: Boolean|  
 |Integer|Predeterminado: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Predeterminado: DateTime<br /><br /> DateTimeOffset|  
+|Datetime|Predeterminado: Datetime<br /><br /> DateTimeOffset|  
 |float|Predeterminado: Doble<br /><br /> Single, Decimal|  
 |Binario|Predeterminado: Byte[]|  
 |Variant|Cualquiera de los anteriores excepto Byte []|  
@@ -69,7 +69,7 @@ ms.locfileid: "56290733"
 -   Compruebe si la extensión de procesamiento de datos que está usando incluye metadatos para recuperar datos que ya tienen asignado un formato. Por ejemplo, una consulta MDX de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye la propiedad extendida FORMATTED_VALUE para los valores de cubo a los que se dio formato al procesar el cubo. Para obtener más información, vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Descripción de los tipos de datos de los parámetros  
- Los parámetros de informe deben ser uno de los cinco tipos de datos: Un valor booleano, DateTime, Integer, Float o Text (también conocido como cadena). Si la consulta de conjunto de datos incluye parámetros de consulta, automáticamente se crean parámetros de informe que se vinculan a dichos parámetros de consulta. El tipo de datos predeterminado para un parámetro de informe es String. Para cambiar el tipo de datos predeterminado de un parámetro de informe, seleccione el valor adecuado en la lista desplegable **Tipo de datos** de la página **General** del cuadro de diálogo **Propiedades de parámetro de informe** .  
+ Los parámetros de informe deben pertenecer a uno de los cinco tipos de datos: Boolean, DateTime, Integer, Float o Text (también conocido como String). Si la consulta de conjunto de datos incluye parámetros de consulta, automáticamente se crean parámetros de informe que se vinculan a dichos parámetros de consulta. El tipo de datos predeterminado para un parámetro de informe es String. Para cambiar el tipo de datos predeterminado de un parámetro de informe, seleccione el valor adecuado en la lista desplegable **Tipo de datos** de la página **General** del cuadro de diálogo **Propiedades de parámetro de informe** .  
   
 > [!NOTE]  
 >  Los parámetros de informe cuyo tipo de datos es DateTime no admiten milisegundos. Aunque sí puede crear un parámetro basado en valores que incluyen milisegundos, no puede seleccionar un valor con milisegundos en una lista desplegable de valores disponibles que contiene valores de fecha o de hora.  
@@ -117,7 +117,7 @@ ms.locfileid: "56290733"
   
     -   La expresión siguiente convierte la cadena en un valor de fecha y hora: `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         Si la cadena `MyDateTime.Value` tiene un ajuste UTC, la función `DateTime.Parse` primero ajusta de acuerdo con el ajuste UTC (7 a.m. - [`+08:00`] a la hora UTC de las 11 p.m. de la noche anterior). A continuación, la función `DateTime.Parse` aplica el ajuste UTC del servidor de informes local y, si fuera necesario, vuelve a ajustar la hora para adaptarla al horario de verano. Por ejemplo, en Redmond, Washington, el ajuste de la hora local adaptado al horario de verano es `[-07:00]`o 7 horas antes de las 11 p.m. El resultado es el siguiente `DateTime` valor: `2007-07-06 04:07:07 PM` (6 de julio de 2007 a 4:07 P.M.).  
+         Si la cadena `MyDateTime.Value` tiene un ajuste UTC, la función `DateTime.Parse` primero ajusta de acuerdo con el ajuste UTC (7 a.m. - [`+08:00`] a la hora UTC de las 11 p.m. de la noche anterior). A continuación, la función `DateTime.Parse` aplica el ajuste UTC del servidor de informes local y, si fuera necesario, vuelve a ajustar la hora para adaptarla al horario de verano. Por ejemplo, en Redmond, Washington, el ajuste de la hora local adaptado al horario de verano es `[-07:00]`o 7 horas antes de las 11 p.m. El resultado es el siguiente `DateTime` valor: `2007-07-06 04:07:07 PM` (6 de julio de 2007 a las 4:07 p.m.).  
   
  Para obtener más información sobre cómo convertir cadenas a `DateTime` tipos de datos, vea [analizar cadenas de fecha y hora](https://go.microsoft.com/fwlink/?LinkId=89703), [aplicar formato de fecha y hora para una referencia cultural concreta](https://go.microsoft.com/fwlink/?LinkId=89704), y [elección Entre DateTime, DateTimeOffset y TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) en MSDN.  
   

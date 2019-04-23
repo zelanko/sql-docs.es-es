@@ -13,15 +13,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], content management
 - content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 11cf069257a0f851794341820994fbb453cb0052
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 25ee10bbda10329a3f28171eb0027df9769e9fde
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026106"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951669"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Administración de contenido del servidor de informes (Modo nativo de SSRS)
   En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], la administración de contenido hace referencia a la administración de elementos del servidor de informes. Es posible administrar todos los elementos de un modo independiente mediante la configuración de las propiedades y de la seguridad. Cualquier elemento puede moverse a una ubicación diferente en el espacio de nombres de carpetas del servidor de informes. Para administrar estos elementos de un modo eficaz, necesita saber las tareas que realiza un administrador de contenido.  
@@ -95,7 +95,7 @@ ms.locfileid: "56026106"
   
  En la siguiente tabla, se describen las carpetas predefinidas que fijan la jerarquía de carpetas y proporcionan un marco para varias características.  
   
-|Carpeta|Propósito|  
+|Carpeta|Finalidad|  
 |------------|-------------|  
 |Inicio|Nodo raíz de la jerarquía de carpetas.|  
 |Usuarios|Esta carpeta aparece cuando se habilita la característica Mis informes. Contiene subcarpetas para todos los usuarios que utilizan la característica Mis informes, y solo los administradores del servidor de informes tienen acceso a ella. El nombre de cada subcarpeta coincide con el de un usuario.|  

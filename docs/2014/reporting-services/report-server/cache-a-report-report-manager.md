@@ -14,15 +14,15 @@ helpviewer_keywords:
 - schedules [Reporting Services], report expiration
 - expiration [Reporting Services]
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4269c5219dc52df82f46f1d495d895321fc6f276
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 085294763f9e950070ebe1468f3af1b4b9049aad
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023596"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954661"
 ---
 # <a name="cache-a-report-report-manager"></a>Almacenar en caché un informe (Administrador de informes)
   Una manera de mejorar el rendimiento es configurar las propiedades de almacenamiento en caché para un informe. Cuando un informe se almacena en memoria caché, se guarda una copia del informe representado durante un breve período de tiempo. El primer usuario que solicita el informe debe esperar para que se complete todo el procesamiento antes de ver el informe. Los usuarios posteriores que soliciten el informe dentro del período de almacenamiento en caché pueden verlo de forma inmediata porque el procesamiento ya se ha producido.  
@@ -43,7 +43,7 @@ ms.locfileid: "56023596"
   
 6.  Seleccione una de las siguientes dos opciones de caché y configure la expiración como se indica a continuación:  
   
-    -   Para configurar que una copia en caché expire después de un período determinado, haga clic en **Almacenar en caché una copia temporal del informe. La copia expira transcurrido un número determinado de minutos**. Escriba el número de minutos para la expiración del informe.  
+    -   Para configurar una copia en caché expire después de un período de tiempo determinado, haga clic en **almacenar en caché una copia temporal del informe. La copia expira transcurrido un número determinado de minutos**. Escriba el número de minutos para la expiración del informe.  
   
     -   Para configurar que una copia en caché expire de acuerdo con una programación, haga clic en **Guardar en caché una copia temporal del informe. La copia del informe debe expirar según la siguiente programación.** Haga clic en **Configurar**, o seleccione una programación compartida para controlar la expiración del informe.  
   

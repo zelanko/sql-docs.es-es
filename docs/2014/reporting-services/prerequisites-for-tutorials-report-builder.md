@@ -8,20 +8,20 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 78976d3fa150fb64f3b0fe7c81a8e7591f34ad46
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5c964a2cfe70eafd08bbd1ba73373a9d7acee34e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289022"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942199"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Requisitos previos para los tutoriales (Generador de informes)
   Los tutoriales del Generador de informes tienen como objetivo que pueda ver y guardar los informes en un servidor de informes o un sitio de SharePoint que esté integrado con un servidor de informes. Por lo que se refiere a los datos, todos los tutoriales utilizan consultas literales que deben ser procesadas por una instancia de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
- Si no tiene acceso a un servidor de informes, un sitio o un origen de datos de informes, puede obtener información acerca del Generador de informes generando un informe sin conexión. Consulte [Tutorial: Crear un informe de gráfico rápido sin conexión &#40;generador de informes&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Si no tiene acceso a un servidor de informes, un sitio o un origen de datos de informes, puede obtener información acerca del Generador de informes generando un informe sin conexión. Consulte [Tutorial: Crear un informe de gráfico rápido sin conexión &#40;Generador de informes&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 ## <a name="requirements"></a>Requisitos  
  Debe disponer de los siguientes requisitos previos para poder completar los tutoriales relativos al generador de informes:  

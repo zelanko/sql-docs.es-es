@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Crear un informe de matriz (generador de informes) | Microsoft Docs'
+title: 'Tutorial: Crear un informe de matriz (Generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b1f3226d196354dbbe6a959822534342a92f818
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288423"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965701"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Crear un informe de matriz (generador de informes)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Crear un informe de matriz [Generador de informes]
   Este tutorial enseña a crear un informe de matriz básico de acuerdo con los datos de ventas de ejemplo. La matriz ha anidado en grupos de filas y de columnas, así como en un grupos de columnas adyacente. También aprenderá a dar formato a las columnas y a girar el texto. En la siguiente ilustración se muestra un informe similar al que creará.  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
@@ -117,7 +117,7 @@ ms.locfileid: "56288423"
   
 10. Haga clic en **Siguiente**.  
   
-##  <a name="Groups"></a> 2. Organizar datos y elegir el diseño y el estilo desde el nuevo Asistente para tablas o matrices  
+##  <a name="Groups"></a> 2. Organizar datos y elegir el diseño y estilo de la nueva tabla o el Asistente para matrices  
  Utilice el asistente para proporcionar un diseño inicial en el que mostrar los datos. El panel de vista previa del asistente le ayudará a visualizar el resultado de las agrupaciones de datos antes de completar el diseño de la matriz.  
   
 #### <a name="to-organize-data-into-groups-and-choose-a-layout-and-style"></a>Para organizar los datos en grupos y elegir un diseño y un estilo  
@@ -160,7 +160,7 @@ ms.locfileid: "56288423"
   
 13. Haga clic en **Finalizar**.  
   
-     La matriz se agrega a la superficie de diseño. El panel de grupos de filas muestra dos grupos de filas: Territory y SalesDate. El panel de grupos de columnas muestra dos grupos de columnas: Subcategoría y producto. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
+     La matriz se agrega a la superficie de diseño. El panel Grupos de filas muestra dos grupos de filas: Territory y SalesDate. El panel Grupos de columnas muestra dos grupos de columnas: Subcategory y Product. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
   
 14. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8f1d0a76-afed-480f-98fb-89e2d4eb09b1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 62c824c7192053655a928874877baea32dedc5cc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ce182fda15373e15baffcda73cc777c2cf154065
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292167"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935211"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Agregar datos a una región de datos Tablix (Generador de informes y SSRS)
   Para mostrar los datos de un conjunto de datos de informe en una tabla o una matriz, especifique en cada celda de datos el nombre del campo de conjunto de datos que se debe mostrar. Puede mostrar datos detallados o datos agrupados. Si agrega grupos a una tabla o matriz, las filas y las columnas para los valores y los datos de grupo se agregan automáticamente. A continuación, puede agregar subtotales y totales para los datos.  

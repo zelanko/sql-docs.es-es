@@ -21,15 +21,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapgroupproperties.general.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2b2290b738a7433fa1cc67bfd08079790f3029d3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d3bd3ef7205591d0353d7e8ee75e2d0ec49a221d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289553"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954991"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>Personalizar los datos y la presentación de un mapa o una capa de mapa (Generador de informes y SSRS)
   Después de agregar un mapa o una capa de mapa a un informe utilizando un asistente, puede que desee cambiar el aspecto del mapa en el informe. Puede realizar mejoras considerando las ideas siguientes:  
@@ -130,7 +130,7 @@ ms.locfileid: "56289553"
   
  La expresión de grupo especifica cómo se agregan los datos analíticos que tienen relación con los datos espaciales para cada elemento de mapa de la capa. De forma predeterminada, la expresión de grupo es el conjunto de campos coincidentes que se especificó para la relación entre los datos espaciales y los datos analíticos. Por ejemplo, en un mapa de burbujas que muestra las ubicaciones de las ciudades y el tamaño de la población de un país o región, los campos coincidentes incluyen el nombre de la ciudad [City] y el nombre de la región [Region] porque puede haber varias ciudades con el mismo nombre. La expresión de grupo correspondiente incluye dos campos: [City ] y [Region].  
   
- Para obtener más información, consulte [sugerencias sobre mapas: Cómo importar archivos de forma en SQL Server y agregar datos espaciales](https://go.microsoft.com/fwlink/?LinkID=214991).  
+ Para obtener más información, consulte [Sugerencias sobre mapas: Cómo importar archivos de forma en SQL Server y agregar datos espaciales](https://go.microsoft.com/fwlink/?LinkID=214991).  
   
  
   

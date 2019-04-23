@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e949a8610c7320830b33d21674f0fda79d281073
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0053228f5d52f2a1dad8e41e2406d34fdaf9b2b2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292593"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940411"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Vista de diseño de conjunto de datos compartidos (Generador de informes)
   La ventana de diseño de conjunto de datos compartido le ayuda a crear una consulta de conjunto de datos que puede compartir con otros usuarios. La ventana permite seleccionar un origen de datos compartido, especificar las propiedades del conjunto de datos compartido y crear una consulta en el diseñador de consultas.  
@@ -26,7 +26,7 @@ ms.locfileid: "56292593"
  Para obtener más información sobre cómo trabajar con datos en un informe, vea [agregar datos a un informe &#40;generador de informes y SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
 ##  <a name="Ribbon"></a> Cinta de opciones  
- La cinta de opciones le ayuda a buscar rápidamente los comandos que necesita para completar una tarea. Los comandos se organizan en los siguientes grupos lógicos: Conexión, conjunto de datos y diseñador de consultas.  
+ La cinta de opciones le ayuda a buscar rápidamente los comandos que necesita para completar una tarea. Los comandos están organizados en los siguientes grupos lógicos: Conexión, conjunto de datos y Diseñador de consultas.  
   
 ### <a name="connection"></a>Conexión  
  Utilice el botón **Seleccionar** del grupo Conexión para seleccionar un origen de datos compartido en el informe o vaya a un origen de datos compartido en el servidor de informes.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 005c9fe0ff5ba3f998e80a93ea19d85c87331403
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8bea75455bca695baa949d70bcef3909ac729cb7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028587"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953261"
 ---
 # <a name="configure-report-manager-native-mode"></a>Configurar el Administrador de informes (modo nativo)
   El Administrador de informes es una aplicación front-end web que se usa para ver informes, administrar el contenido del servidor de informes y conceder acceso de usuario a un servidor de informes en modo nativo. El Administrador de informes se instala con el servicio web del servidor de informes en la misma instancia del servidor de informes y, opcionalmente, se configura si se selecciona la opción **Instalar la configuración predeterminada del modo nativo** en el programa de instalación. También puede configurar el Administrador de informes después de haber realizado la instalación. En este tema se proporciona información sobre los siguientes escenarios de configuración del Administrador de informes:  

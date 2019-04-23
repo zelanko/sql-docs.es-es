@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ee23e7f2382ca84ad609b3c150f77b4f9530725b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0613234749c2bf419f3013226b3935782833e65e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033836"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971901"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Copias de seguridad y restauración de aplicaciones de servicio de SharePoint para Reporting Services
   Este tema se describe cómo hacer una copia de seguridad y restaurar una aplicación de servicio de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] mediante Administración central de SharePoint o PowerShell. El tema contiene:  
@@ -74,7 +74,7 @@ ms.locfileid: "56033836"
  [Copia de seguridad de una aplicación de servicio (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Comprobación de la cuenta de ejecución y autenticación de la base de datos  
- **Cuenta de ejecución:** para comprobar si la aplicación de servicio utiliza una cuenta de ejecución:  
+ **Cuenta de ejecución:** Para comprobar si la aplicación de servicio se utiliza una cuenta de ejecución:  
   
 1.  En Administración central de SharePoint, en el grupo **Administración de aplicaciones** , haga clic en **Administrar aplicaciones de servicio** .  
   
@@ -84,7 +84,7 @@ ms.locfileid: "56033836"
   
 4.  Si se configura una cuenta de ejecución, tendrá que conocer las credenciales cuando llegue el momento de restaurar una copia de seguridad de la aplicación de servicio. No realice el procedimiento de copia de seguridad y restauración hasta que sepa cuáles son las credenciales correctas.  
   
- **Autenticación de base de datos:** para comprobar si la aplicación de servicio utiliza la Autenticación de Windows para la autenticación de la base de datos:  
+ **Autenticación de base de datos:** Para comprobar si la aplicación de servicio utiliza la autenticación de Windows para la autenticación de base de datos:  
   
 1.  En Administración central de SharePoint, en el grupo **Administración de aplicaciones** , haga clic en **Administrar aplicaciones de servicio** .  
   
@@ -129,7 +129,7 @@ ms.locfileid: "56033836"
  Para obtener más información sobre la restauración de las claves de cifrado de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea la sección "Claves de cifrado" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>Configurar la cuenta de ejecución y la autenticación de la base de datos  
- **Cuenta de ejecución:** si la aplicación de servicio utilizaba una cuenta de ejecución, realice el procedimiento siguiente para configurarla:  
+ **Cuenta de ejecución:** Si la aplicación de servicio utilizaba una cuenta de ejecución, realice los pasos siguientes para configurarla:  
   
 1.  En Administración central de SharePoint, en el grupo **Administración de aplicaciones** , haga clic en **Administrar aplicaciones de servicio** .  
   
@@ -141,7 +141,7 @@ ms.locfileid: "56033836"
   
 5.  Haga clic en **Aceptar**.  
   
- **Autenticación de base de datos:** si la aplicación de servicio utilizaba la autenticación de Windows para la autenticación de la base de datos, realice el procedimiento siguiente:  
+ **Autenticación de base de datos:** Si la aplicación de servicio utilizaba la autenticación de Windows para la autenticación de base de datos completa los pasos siguientes:  
   
 1.  En Administración central de SharePoint, en el grupo **Administración de aplicaciones** , haga clic en **Administrar aplicaciones de servicio** .  
   

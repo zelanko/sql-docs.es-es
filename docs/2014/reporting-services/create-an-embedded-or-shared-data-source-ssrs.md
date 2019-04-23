@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff7f9c94aded21d70ea4b6ef6b31d2f8094f2592
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e464af6b057465aec03a611ac741549c10de0638
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289813"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960943"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>Crear un origen de datos incrustado o compartido (SSRS)
   Un origen de datos de informe especifica la información de nombre y cadena de conexión. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite dos tipos de orígenes de datos: incrustados y compartidos. Un origen de datos incrustado se define en una definición de informe y se usa solamente en ese informe. Un origen de datos compartido se define como un elemento independiente y se puede usar en varios informes. Para obtener más información, consulte [incrustados y compartidos conexiones de datos u orígenes de datos &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  

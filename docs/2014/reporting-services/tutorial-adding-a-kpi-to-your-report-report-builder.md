@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Agregar un KPI a un informe (generador de informes) | Microsoft Docs'
+title: 'Tutorial: Agregar un KPI a un informe (Generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5e00afd4954a328e767ccb2d991338d9dffb1dff
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296453"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946026"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (generador de informes)
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (Generador de informes)
   Un indicador clave de rendimiento (KPI) es un valor medible que tiene importancia para la empresa. Este tutorial lo enseñará a incluir un KPI en un informe. En este escenario, el resumen de ventas por subcategorías de producto es el KPI. El estado actual del KPI se muestra mediante colores, medidores e indicadores.  
   
  En la siguiente ilustración se muestra el informe que creará.  
@@ -45,7 +45,7 @@ ms.locfileid: "56296453"
 7.  [Guardar el informe](#Save)  
   
 > [!NOTE]  
->  En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para obtener instrucciones detalladas sobre cómo ir hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar al asistente, vea el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar el asistente, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tiempo estimado para completar este tutorial: 15 minutos.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "56296453"
   
 5.  Haga clic en **Siguiente**.  
   
-6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no está disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen del datos incrustados en su lugar. Para obtener más información, consulte [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no está disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen del datos incrustados en su lugar. Para más información, consulte el [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
   
 7.  Haga clic en **Siguiente**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "56296453"
   
 10. Haga clic en **Siguiente**.  
   
-##  <a name="CompleteWizard"></a> 2. Organizar datos, elegir el diseño y el estilo con el asistente para tablas o matrices  
+##  <a name="CompleteWizard"></a> 2. Organizar los datos, elegir el diseño y el estilo de la tabla o el Asistente para matrices  
  Utilice el asistente para proporcionar un diseño inicial en el que mostrar los datos. El panel de vista previa del asistente le ayudará a visualizar el resultado de las agrupaciones de datos antes de completar la tabla o el diseño de la matriz.  
   
 #### <a name="to-organize-data-into-groups-choose-a-layout-and-a-style"></a>Para organizar los datos en grupos, elija un diseño y un estilo  
@@ -159,7 +159,7 @@ ms.locfileid: "56296453"
   
 12. Haga clic en **Finalizar**.  
   
-     La tabla se agrega a la superficie de diseño. La tabla tiene cinco columnas y cinco filas. El panel de grupos de filas muestra tres grupos de filas: SalesDate, Subcategory y Details. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
+     La tabla se agrega a la superficie de diseño. La tabla tiene cinco columnas y cinco filas. El panel Grupos de filas muestra tres grupos de filas: SalesDate, Subcategory y Details. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
   
 13. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "56296453"
   
 1.  En la tabla, haga clic en dos celdas hacia abajo desde la `[Sum(Sales)]` celda (la fila de subtotal que muestra las ventas de una subcategoría) y, a continuación, haga clic en **propiedades de cuadro de texto**.  
   
-2.  En **rellenar**, haga clic en el **fx** situado junto a la **color de relleno** opción y escriba la siguiente expresión en el **Establecer expresión para: BackgroundColor** field:  
+2.  En **rellenar**, haga clic en el **fx** situado junto a la **color de relleno** opción y escriba la siguiente expresión en el **Establecer expresión para: BackgroundColor**:  
   
  `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   

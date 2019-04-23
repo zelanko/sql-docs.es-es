@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - logins [Reporting Services]
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3323683075b99ce2ab8cbcb456240bc24323762f
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: f2b49a645866f310a7a0ff006b47cce2ff32f3c3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658128"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954161"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   Para incluir datos en un informe de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , es preciso que antes cree *orígenes de datos* y *conjuntos de datos*. En este tema, se describe el tipo de orígenes de datos y cómo crear orígenes de datos, además se ofrece información importante relacionada con las credenciales de los orígenes de datos. Un origen de datos incluye el tipo de origen de datos, la información de conexión y el tipo de credenciales que se han de usar. Hay dos tipos de orígenes de datos: incrustados y compartidos. Un origen de datos incrustado se define en el informe y se usa solo en ese informe. Un origen de datos compartido se define independientemente de un informe y se puede usar en varios informes. Para obtener más información, vea [Conexiones de datos u orígenes de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) y [Conjuntos de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -77,7 +77,7 @@ ms.locfileid: "58658128"
   
 -   ODBC  
   
--   Modelo semántico de Microsoft BI para Power View: en un sitio de SharePoint que se haya configurado para una Galería de PowerPivot y [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], está disponible este tipo de origen de datos. Este tipo de origen de datos solo se usa para presentaciones de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para obtener más información, vea [compilar el Perfect BI Semantic Tabular Models para Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
+-   Modelo semántico de BI de Microsoft para Power View: En un sitio de SharePoint que se ha configurado para una galería de PowerPivot y [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], este tipo de origen de datos está disponible. Este tipo de origen de datos solo se usa para presentaciones de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para obtener más información, vea [compilar el Perfect BI Semantic Tabular Models para Power View](https://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx).  
   
  Para obtener una lista completa de los orígenes de datos y las versiones que admite [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   

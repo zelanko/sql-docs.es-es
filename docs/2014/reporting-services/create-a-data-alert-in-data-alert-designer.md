@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: adabb736dd34b35ee98f4ed46b84fd9205d504b5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f2dd3739d481162e7685b7021a120dd5d48e844a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012136"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963981"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Crear una alerta de datos en el Diseñador de alertas de datos
   Las definiciones de alertas de datos se crean en el Diseñador de alertas de datos. Una vez guardadas las definiciones de alertas, es posible volver a abrirlas, modificarlas y volver a guardarlas en el Diseñador de alertas de datos. Para más información sobre cómo editar definiciones de alertas, vea [Administrar mis alertas de datos en el Administrador de alertas de datos](manage-my-data-alerts-in-data-alert-manager.md) y [Editar una alerta de datos en el Diseñador de alertas](edit-a-data-alert-in-alert-designer.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "56012136"
   
      Se muestran distintos operadores de comparación en función del tipo de datos de la columna seleccionada. Si la columna tiene un tipo de datos de fecha, se muestra un icono de calendario junto al valor del umbral de la regla. Puede especificar una fecha haciendo clic en una fecha en el calendario o escribiendo la fecha.  
   
-     Diseñador de alertas de datos proporciona dos modos de comparación: **Modo de entrada de valor** y **modo de selección de campo**. El modo predeterminado es **Modo de entrada de valores**. Solo puede agregar cláusulas OR cuando se encuentre en el **Modo de entrada de valores** y utilice la comparación **is** .  
+     El Diseñador de alertas de datos proporciona dos modos de comparación: **Modo de entrada de valores** y **Modo de selección de campos**. El modo predeterminado es **Modo de entrada de valores**. Solo puede agregar cláusulas OR cuando se encuentre en el **Modo de entrada de valores** y utilice la comparación **is** .  
   
 9. Para agregar una cláusula OR, haga clic en la flecha abajo y, después, haga clic en **Modo de entrada de valores**.  
   

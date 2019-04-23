@@ -23,15 +23,15 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aacc2369857783043f2c114b9c0382895a118acb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3d3f42053a7bfe4c0a0d01b93a371b56321b1f7d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286624"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943091"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Ejemplos de expresiones (Generador de informes y SSRS)
   Las expresiones se usan con frecuencia en los informes para controlar el contenido y la apariencia de los mismos. Las expresiones se escriben en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]y pueden usar funciones integradas, código personalizado, variables de informe y de grupo, y variables definidas por el usuario. Las expresiones comienzan con un signo igual (=). Para más información sobre el editor de expresiones y los tipos de referencias que se pueden incluir, vea [Usar expresiones en informes &#40;Generador de informes y SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) y [Agregar una expresión &#40;Generador de informes y SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "56286624"
   
  Para más información sobre las expresiones simples y complejas, dónde se pueden usar las expresiones y los tipos de referencias que se pueden incluir en una expresión, vea los temas en [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md). Para más información sobre el contexto donde se evalúan las expresiones para calcular agregados, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
- Para obtener información sobre cómo escribir expresiones que usan muchas de las funciones y operadores también se usan en los ejemplos de expresiones en este tema, pero en el contexto de escritura de un informe, vea [Tutorial: Introducción a las expresiones](../tutorial-introducing-expressions.md).  
+ Para aprender a escribir expresiones que usan muchas de las funciones y operadores que también se usan en los ejemplos de expresiones de este tema, pero en el contexto de la escritura de un informe, consulte el [Tutorial: Introducción a las expresiones](../tutorial-introducing-expressions.md).  
   
  El editor de expresiones incluye también una vista jerárquica de funciones integradas. Cuando se selecciona una función, aparece un ejemplo de código en el panel de valores. Para obtener más información, consulte el [cuadro de diálogo expresión](../expression-dialog-box.md) o [cuadro de diálogo expresión &#40;Report Builder&#41;](../expression-dialog-box-report-builder.md).  
   

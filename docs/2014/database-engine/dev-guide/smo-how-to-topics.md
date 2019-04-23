@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 201c83af-47b3-413a-8909-3c7cc5142be5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 94f810fd3c20d76dd689b6f37b3e7c745ea4db97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b100c23c1600a9c5fe4af9a39e16f8bd861656f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120488"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158851"
 ---
 # <a name="smo-how-to-topics"></a>Temas de procedimientos de SMO
   Los temas de procedimientos SMO proporcionan información acerca de cómo preparar el entorno de programación de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET para crear programas en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] o en C#.  

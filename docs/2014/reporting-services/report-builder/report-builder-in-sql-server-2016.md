@@ -13,15 +13,15 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb8120b9ba413ce6f1a59667c136b1580eb5b675
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290443"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948271"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Generador de informes en SQL Server 2014
   El Generador de informes es un entorno de creación de informes destinado a los usuarios empresariales que prefieren trabajar en el entorno de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office. Al diseñar un informe, especifica dónde obtener los datos, qué datos obtener y cómo mostrar los datos. Al ejecutar el informe, el procesador de informes toma toda la información especificada, recupera los datos y los combina con el diseño del informe para generar el informe. Puede obtener una vista previa de los informes en el Generador de informes o publicar el informe en un servidor de informes o en un servidor de informes en el modo integrado de SharePoint, donde otros usuarios podrán ejecutarlo.  
@@ -38,7 +38,7 @@ ms.locfileid: "56290443"
   
 -   **Comience con la tabla, la matriz o el Asistente para gráficos**. Elija una conexión de origen de datos, arrastre y coloque campos para crear una consulta de conjunto de datos, seleccione un diseño y un estilo y personalice el informe.  
   
--   **Comience con el Asistente para mapas** para crear informes que muestren datos agregados con un fondo geográfico o geométrico. Los datos de mapa pueden ser datos espaciales de una consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] o un archivo de forma del Environmental Systems Research Institute, Inc. (ESRI). También puede agregar un fondo de mosaico de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing Maps.  
+-   **Comience con el Asistente para mapas** para crear informes que muestren datos agregados con un fondo geográfico o geométrico. Datos del mapa pueden ser datos espaciales de un [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta o un medio ambiente, Systems Research Institute, Inc. De forma (ESRI). También puede agregar un fondo de mosaico de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing Maps.  
   
 
   
@@ -79,7 +79,7 @@ ms.locfileid: "56290443"
  [Novedades en el Generador de informes para SQL Server 2014](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  Describe las nuevas características de esta versión del Generador de informes, incluidos los mapas.  
   
- [Tutorial: Creación de un informe de gráfico rápido sin conexión](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Tutorial: Crear un informe de gráfico rápido sin conexión](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Presenta el Generador de informes y los asistentes disponibles para ayudarle a crear los informes. El tutorial proporciona un conjunto de datos para que los use de modo que no tenga que conectarse a un origen de datos para empezar.  
   
  [Planear un informe &#40;Generador de informes&#41;](../report-design/planning-a-report-report-builder.md)  

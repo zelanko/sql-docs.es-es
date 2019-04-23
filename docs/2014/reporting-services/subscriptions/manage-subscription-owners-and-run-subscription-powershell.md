@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ccd079eeda467e77c8fb8daa1d95533a5e8532b2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 53fc7b585edf852d04256c9e85fa0bd96aa7eced
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029476"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960901"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell para cambiar y enumerar a los propietarios de una suscripción de Reporting Services y ejecutar una suscripción
   A partir de [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , se puede transferir mediante programación la propiedad de una suscripción a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] de un usuario a otro. En este tema se proporcionan varios scripts de Windows PowerShell que puede utilizar para cambiar o simplemente presentar la propiedad de la suscripción. Cada ejemplo incluye sintaxis de ejemplo para el modo nativo y para el modo SharePoint. Después de cambiar el propietario de la suscripción, la suscripción se ejecutará en el contexto de seguridad del nuevo propietario, y el campo User!UserID del informe mostrará el valor del nuevo propietario. Para obtener más información sobre el modelo de objetos al que llaman los ejemplos de PowerShell, vea <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
@@ -58,21 +58,21 @@ ms.locfileid: "56029476"
   
  **Modo nativo:**  
   
--   Presentar suscripciones: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription en el informe y el usuario es propietario de la suscripción) o ReadAnySubscription  
+-   Mostrar suscripciones: (HYPERLINK "https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx" ReadSubscription en el informe y el usuario es propietario de la suscripción) o ReadAnySubscription  
   
 -   Cambiar suscripciones: El usuario debe ser miembro del grupo BUILTIN\Administrators  
   
--   Presentar elementos secundarios: ReadProperties en el elemento  
+-   Mostrar elementos secundarios: ReadProperties en elemento  
   
--   Desencadenar evento: GenerateEvents (Sistema)  
+-   Desencadenar evento: GenerateEvents (sistema)  
   
  **Modo SharePoint:**  
   
--   Presentar suscripciones: ManageAlerts o (HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts en el informe y el usuario es propietario de la suscripción y la suscripción es una suscripción programada).  
+-   Mostrar suscripciones: ManageAlerts o (HYPERLINK "https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx" CreateAlerts en el informe y el usuario es propietario de la suscripción y la suscripción es una suscripción programada).  
   
 -   Cambiar suscripciones: ManageWeb  
   
--   Presentar elementos secundarios: ViewListItems  
+-   Mostrar elementos secundarios: ViewListItems  
   
 -   Desencadenar evento: ManageWeb  
   
@@ -99,7 +99,7 @@ ms.locfileid: "56029476"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
-##  <a name="bkmk_list_ownership_all"></a> Secuencia de comandos: Presenta la propiedad de todas las suscripciones  
+##  <a name="bkmk_list_ownership_all"></a> Secuencia de comandos: Mostrar la propiedad de todas las suscripciones  
  Este script presenta todas las suscripciones de un sitio. Puede utilizarlo para probar su conexión o para comprobar la ruta de acceso del informe y el identificador de la suscripción para su uso en los demás scripts. Además, es un script útil para verificar qué suscripciones existen y quién las posee.  
   
  **Sintaxis de modo nativo:**  
@@ -136,7 +136,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 >  Para comprobar las direcciones URL de los sitios en modo de SharePoint, use el cmdlet de SharePoint **Get-SPSite**. Para obtener más información, vea [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
-##  <a name="bkmk_list_all_one_user"></a> Secuencia de comandos: Presenta todas las suscripciones poseídas por un usuario específico  
+##  <a name="bkmk_list_all_one_user"></a> Secuencia de comandos: Mostrar todas las suscripciones poseídas por un usuario específico  
  Este script presenta todas las suscripciones poseídas por un usuario específico. Puede utilizarlo para probar su conexión o para comprobar la ruta de acceso del informe y el identificador de la suscripción para su uso en los demás scripts. Este script es útil si desea comprobar qué suscripciones poseía una persona que abandona su organización, para cambiar el propietario o eliminar la suscripción.  
   
  **Sintaxis de modo nativo:**  
@@ -173,7 +173,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-##  <a name="bkmk_change_all"></a> Secuencia de comandos: Cambia la propiedad de todas las suscripciones poseídas por un usuario específico  
+##  <a name="bkmk_change_all"></a> Secuencia de comandos: Cambiar la propiedad de todas las suscripciones poseídas por un usuario específico  
  Este script cambia la propiedad de todas las suscripciones poseídas por un usuario específico al nuevo parámetro de propietario.  
   
  **Sintaxis de modo nativo:**  
@@ -243,7 +243,7 @@ ForEach ($item in $items)
 }  
 ```  
   
-##  <a name="bkmk_list_for_1_report"></a> Secuencia de comandos: Presenta todas las suscripciones asociadas a un informe específico  
+##  <a name="bkmk_list_for_1_report"></a> Secuencia de comandos: Lista de todas las suscripciones asociadas a un informe específico  
  Este script presenta todas las suscripciones asociadas a un informe específico. La sintaxis de la ruta de acceso del informe es un modo SharePoint diferente que requiere una dirección URL completa. En los ejemplos de sintaxis, el nombre del informe es "title only", que contiene un espacio, lo que obliga a usar comillas en el nombre del informe.  
   
  **Sintaxis de modo nativo:**  
@@ -281,7 +281,7 @@ Write-Host "----- $reportpath 's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.path -eq $reportpath}  
 ```  
   
-##  <a name="bkmk_change_all_1_subscription"></a> Secuencia de comandos: Cambia la propiedad de una suscripción específica  
+##  <a name="bkmk_change_all_1_subscription"></a> Secuencia de comandos: Cambiar la propiedad de una suscripción específica  
  Este script cambia la propiedad de una suscripción específica. La suscripción está identificada por el SubscriptionID que pasa al script. Puede utilizar uno de los scripts para presentar suscripciones para determinar el SubscriptionID correcto.  
   
  **Sintaxis de modo nativo:**  
@@ -327,7 +327,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-##  <a name="bkmk_run_1_subscription"></a> Secuencia de comandos: Ejecuta (desencadena) una sola suscripción  
+##  <a name="bkmk_run_1_subscription"></a> Secuencia de comandos: Ejecutar (desencadenar) una sola suscripción  
  Este script ejecuta una suscripción específica mediante el método FireEvent. El script ejecuta inmediatamente la suscripción independientemente de la programación configurada para la suscripción. Se compara EventType con el conjunto de eventos conocido que se ha definido en el archivo de configurador del servidor de informes **rsreportserver.config** . El script utiliza el siguiente tipo de eventos para las suscripciones estándar:  
   
  `<Event>`  

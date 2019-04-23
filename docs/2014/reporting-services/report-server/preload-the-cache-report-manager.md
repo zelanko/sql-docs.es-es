@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7813470269697b0df65715c6f114b5df635888c1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035086"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949111"
 ---
 # <a name="preload-the-cache-report-manager"></a>Cargar previamente la memoria caché (Administrador de informes)
   Puede cargar previamente la memoria caché para un conjunto de datos compartido creando un plan de actualización de caché para él.  
@@ -114,7 +114,7 @@ ms.locfileid: "56035086"
   
 17. Elija una de las dos opciones de caché siguientes y configure la expiración como se indica a continuación:  
   
-    -   Para lograr que la copia en caché expire después de un período de tiempo concreto, haga clic en **Almacenar en caché una copia temporal del informe. La copia expirará después de un número determinado de minutos.** Escriba el número de minutos para la expiración del informe.  
+    -   Para lograr que la copia en caché expire después de un período de tiempo determinado, haga clic en **almacenar en caché una copia temporal del informe. La copia expirará después de un número determinado de minutos.** Escriba el número de minutos para la expiración del informe.  
   
     -   Para lograr que la copia en caché expire según una programación, haga clic en **Guardar en caché una copia temporal del informe. La copia del informe debe expirar según la siguiente programación.** Haga clic en **Configurar**o seleccione una programación compartida para establecer una programación para la expiración del informe.  
   

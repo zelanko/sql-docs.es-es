@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapparallelproperties.labels.f1
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8f274d544162b7fa9f5cf8321c246477311cbbf2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3d00e2180f1d1e49caf7c5680fe8fa2d87579d85
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298000"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968271"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Cuadro de diálogo Propiedades de paralelo de mapa, Etiquetas
   Use la **MapParallel propiedades** cuadro de diálogo para cambiar las opciones de etiqueta de la cuadrícula horizontal en la ventanilla del mapa. Un paralelo representa el valor siguiente en función del sistema de coordenadas especificado para la ventanilla:  

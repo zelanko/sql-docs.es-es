@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: adbe8e9271ad3f8d71c3463222c5970f367e1286
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0c84c1c87aa492ebc0643a72de863504eec883c6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292613"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959051"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Mostrar la vista previa de informes en el Generador de informes
   Mientras se crea un informe, es útil obtener una vista previa del mismo a menudo para comprobar que muestra lo que se desea. Para obtener una vista previa de un informe, haga clic en **Ejecutar**. El informe se representa en el modo de vista previa.  

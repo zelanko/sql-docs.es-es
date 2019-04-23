@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - MSReportServer_Instance class
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 50e89bfa0ec9f8d4d792ed655eef40d9f4d47dcb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0d9493824a6a4f34293ea56c2652b7f450ede4dc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023016"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971821"
 ---
 # <a name="msreportserverinstance-properties"></a>Propiedades de MSReportServer_Instance
   La clase MSReportServer_Instance proporciona la información básica necesaria para que un cliente se conecte a un servidor de informes instalado.  

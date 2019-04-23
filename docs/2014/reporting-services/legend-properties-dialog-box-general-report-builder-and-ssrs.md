@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.legendproperties.general.f1
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 76577b8623639d2fa9bffb5b83d65604a5afdcbe
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ae9d8c9b156b2b7b1655c0b854a4615264e56b3c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287903"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970008"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Cuadro de diálogo de Propiedades de la leyenda, General (Generador de informes y SSRS)
   Use el cuadro de diálogo **Leyenda** para definir el aspecto y el diseño de la leyenda del gráfico. Para obtener más información, consulte [aplicar formato a la leyenda en un gráfico &#40;generador de informes y SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  

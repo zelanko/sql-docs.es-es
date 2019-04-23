@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 590b8f44e1d3ba064176bf8944c4011fbf52ab53
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 552ca2c2d53ae073ab50c8db64c185a5d0bd1675
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297973"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937703"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Especificar las rutas de acceso a los elementos externos (Generador de informes y SSRS)
   Especifique rutas de acceso en las propiedades de los elementos de informe para hacer referencia a elementos tales como informes detallados, subinformes y archivos de imagen que son externos al archivo de definición de informe y se guardan en un servidor de informes.  
@@ -40,9 +40,9 @@ ms.locfileid: "56297973"
   
 -   **Una ruta de acceso completa al elemento.**  
   
-    -   **En un servidor de informes:** La ruta de acceso se inicia desde **/**, la carpeta Inicio. Por ejemplo, /Informes/TodosLosSubinformes/Subinforme1.  
+    -   **En un servidor de informes:** la ruta de acceso completa se inicia en **/**, la carpeta Inicio. Por ejemplo, /Informes/TodosLosSubinformes/Subinforme1.  
   
-    -   **En un sitio de SharePoint:** Debe especificar el nombre del informe en una expresión, con la dirección URL completa del elemento y la extensión de archivo .rdl. Por ejemplo, `="http://server/site/library/folder/Report1.rdl"`.  
+    -   **En un sitio de SharePoint:** debe especificar el nombre del informe en una expresión, con la dirección URL completa del elemento y la extensión de archivo .rdl. Por ejemplo, `="http://server/site/library/folder/Report1.rdl"`.  
   
 ## <a name="see-also"></a>Vea también  
  [Agregar una imagen externa &#40;Generador de informes y SSRS&#41;](add-an-external-image-report-builder-and-ssrs.md)   

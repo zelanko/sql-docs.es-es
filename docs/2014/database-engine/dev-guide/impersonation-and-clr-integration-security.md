@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - impersonation [CLR integration]
@@ -18,12 +16,12 @@ ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2695445caee79ee2248a6855bb36349b6ff5f644
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088065"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158701"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Suplantación y seguridad de la integración CLR
   Cuando el código administrado obtiene acceso a recursos externos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no suplanta automáticamente el contexto de ejecución actual en el que se ejecuta la rutina. El código de los ensamblados `EXTERNAL_ACCESS` y `UNSAFE` puede suplantar explícitamente el contexto de ejecución actual.  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 88c864b3e3243ab7cb380b4af5b092757585115d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2f22a5af8401a0cf16c508f805dbb38ee9970780
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023746"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932802"
 ---
 # <a name="create-and-manage-role-assignments"></a>Crear y administrar asignaciones de roles
   Una *asignación de roles* es una directiva de seguridad que determina si un usuario o un grupo pueden tener acceso a un elemento de servidor de informes específico o realizar una operación. Una asignación de roles consiste en un nombre de cuenta de usuario o de grupo y una o más definiciones de roles.  

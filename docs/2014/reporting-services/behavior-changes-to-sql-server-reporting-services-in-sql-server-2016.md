@@ -21,15 +21,15 @@ helpviewer_keywords:
 - initializing installations [Reporting Services]
 - behavior changes [Reporting Services]
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b845480863facf66ff33c5d976531118edb2d4a9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6722c72c8d6ac152697c65b2c910e1f8d29139c9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033196"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937361"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>Cambios de comportamiento de SQL Server Reporting Services en SQL Server 2014
   En este tema se describen los cambios de comportamiento en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Los cambios de comportamiento afectan al modo en que las características funcionan o interactúan en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] en comparación con las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -63,17 +63,17 @@ ms.locfileid: "56033196"
 ### <a name="getserverconfiginfo-soap-api-is-no-longer-supported-sharepoint-mode"></a>La API SOAP GetServerConfigInfo ya no se admite (Modo de SharePoint)  
  **Nuevo comportamiento**: Use el cmdlet de PowerShell "Get-SPRSServiceApplicationServers"  
   
- **Comportamiento anterior:** Los clientes podían desarrollar código de cliente SOAP para comunicarse directamente con el extremo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y llamar a GetReportServerConfigInfo ().  
+ **Comportamiento anterior:** Los clientes podían desarrollar código de cliente SOAP para comunicarse directamente con el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] final y llamar a getreportserverconfiginfo ().  
   
 ### <a name="report-server-configuration-and-management-tools"></a>Herramientas de administración y Configuración del servidor de informes  
   
 #### <a name="configuration-manager-is-not-used-for-sharepoint-mode"></a>El Administrador de configuración no se usa en modo de SharePoint  
- **Nuevo comportamiento:** El Administrador de configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ya no admite servidores de informes en modo de SharePoint. La configuración del modo de SharePoint de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ahora se puede completar con Administración central de SharePoint; por tanto, el Administrador de configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ya no admite el modo de SharePoint. Ahora el Administrador de configuración se utiliza solo con los servidores de informes en modo nativo.  
+ **Nuevo comportamiento:** El [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager ya no es compatible con servidores de informes en modo de SharePoint. La configuración del modo de SharePoint de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ahora se puede completar con Administración central de SharePoint; por tanto, el Administrador de configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ya no admite el modo de SharePoint. Ahora el Administrador de configuración se utiliza solo con los servidores de informes en modo nativo.  
   
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>No se puede cambiar el servidor de un modo a otro  
- **Nuevo comportamiento:** No puede cambiar los modos de servidor. Si se instala un servidor de informes en modo nativo, no podrá cambiarlo o volver a configurarlo para estar en modo de SharePoint. Si lo instala en modo de SharePoint, no podrá cambiarlo al modo nativo.  
+ **Nuevo comportamiento:** No se puede cambiar los modos de servidor. Si se instala un servidor de informes en modo nativo, no podrá cambiarlo o volver a configurarlo para estar en modo de SharePoint. Si lo instala en modo de SharePoint, no podrá cambiarlo al modo nativo.  
   
- **Comportamiento anterior:** El cliente instala un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint. Si el cliente desea cambiar el servidor de informes al modo nativo, puede abrir el administrador de configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y cambiar al modo nativo creando una base de datos nueva o conectándose a una existente en modo nativo. El cliente puede utilizar también el Administrador de configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para cambiar desde el modo de SharePoint al modo nativo.  
+ **Comportamiento anterior:** Cliente instala un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de informes en modo de SharePoint. Si el cliente desea cambiar el servidor de informes al modo nativo, puede abrir el administrador de configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y cambiar al modo nativo creando una base de datos nueva o conectándose a una existente en modo nativo. El cliente puede utilizar también el Administrador de configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para cambiar desde el modo de SharePoint al modo nativo.  
   
 ##  <a name="bkmk_kj"></a> Los cambios de comportamiento de SQL Server 2008 R2 Reporting Services  
  En esta sección se describen los cambios de comportamiento en [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

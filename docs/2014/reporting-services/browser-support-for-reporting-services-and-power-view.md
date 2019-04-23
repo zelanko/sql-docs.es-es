@@ -1,7 +1,7 @@
 ---
 title: Planear la compatibilidad del explorador de Reporting Services y Power View (Reporting Services 2014)
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: sql-server-2014
@@ -9,12 +9,12 @@ ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 0f385bbdbec1072896c0b248257ef9b82d439ab2
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100940"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953961"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planear la compatibilidad del explorador de Reporting Services y Power View (Reporting Services 2014)
   En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], se puede usar un explorador web para ver informes y ejecutar el Administrador de informes. No todos los exploradores admiten toda la funcionalidad de informes. En este tema se describe la compatibilidad y los requisitos de las características de administración del Administrador de informes, cómo ver informes y los controles del visor de informes en Visual Studio. En el tema también se resume la disponibilidad de características para los exploradores compatibles, los requisitos de autenticación y los requisitos de script.  
@@ -51,7 +51,7 @@ ms.locfileid: "54100940"
   
 - Para obtener más información sobre la compatibilidad con exploradores de SharePoint 2010, consulte [planear la compatibilidad con exploradores (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
-|**Browser**|**Windows 8 y 8.1**|**Windows 7**|**Windows Server 2012 y 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
+|**Browser**|**Windows 8 y 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (para el escritorio)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|No compatible|No compatible|  
 |**Internet Explorer 10 (para el escritorio)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|No compatible|No compatible|  
@@ -73,7 +73,7 @@ ms.locfileid: "54100940"
   
 -   Para obtener más información sobre la compatibilidad con exploradores de SharePoint 2013, consulte [planear la compatibilidad con exploradores en SharePoint 2013](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
-|**Browser**|**Windows 8 y 8.1**|**Windows 7**|**Windows Server 2012 y 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|  
+|**Browser**|**Windows 8 y 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (para el escritorio)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|No compatible|No compatible|  
 |**Internet Explorer 10 (para el escritorio)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|No compatible|No compatible|  
@@ -100,7 +100,7 @@ ms.locfileid: "54100940"
 
  A continuación se ofrece la lista actual de exploradores y características compatibles con el visor de informes. El visor de informes admite ver informes desde el administrador de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y bibliotecas de SharePoint.  
   
-|**Browser**|**Windows 8 y 8.1**|**Windows 7**|**Windows Server 2012 y 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 10.9**|**iOS 6 -7 para iPad**|  
+|**Browser**|**Windows 8 y 8.1**|**Windows 7**|**Windows Server 2012 and 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 - 10.9**|**iOS 6 -7 para iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (para el escritorio)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|No compatible|No compatible|No compatible|No compatible|  
 |**Internet Explorer 10 (para el escritorio)**|32 bits, 64 bits|32 bits, 64 bits|32 bits, 64 bits|No compatible|No compatible|No compatible|No compatible|  
@@ -146,7 +146,7 @@ ms.locfileid: "54100940"
   
  Si el scripting no está habilitado, verá un mensaje de error similar al siguiente al abrir un informe:  
   
-- **Su explorador no admite secuencias de comandos o está configurado para no admitir su ejecución. Haga clic aquí para ver este informe sin scripts**.  
+- **El explorador no admite secuencias de comandos o se ha configurado para no permitir la ejecución de scripts. Haga clic aquí para ver este informe sin scripts**.  
   
  Si decide ver el informe prescindiendo de la compatibilidad con script, se representará en formato HTML y no incorporará funcionalidad del Visor de informes, como la barra de herramientas Informes y el mapa del documento.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "54100940"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**Browser**|**Windows 8** y **Windows 8.1**|**Windows 7**|**Windows Server 2012** y **2012 R2**|**Windows Server 2008** y **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 10.9**|**Notas**|  
+|**Browser**|**Windows 8** y **Windows 8.1**|**Windows 7**|**Windows Server 2012** y **2012 R2**|**Windows Server 2008** y **2008 R2**|**Windows Server 2003**|**Mac OS X 10.6 - 10.9**|**Notas**|  
 |**Internet Explorer 11 (para el escritorio**|Sí|Sí|Sí|No compatible|No compatible|No compatible|Internet Explorer admite el conjunto completo de características de ReportViewer.|  
 |**Internet Explorer 10 (para el escritorio)**|Sí|Sí|Sí|No compatible|No compatible|No compatible|Internet Explorer admite el conjunto completo de características de ReportViewer.|  
 |**Internet Explorer 9**|No compatible|Sí|No compatible|Sí|Sí|Sí|Internet Explorer admite el conjunto completo de características de ReportViewer.|  

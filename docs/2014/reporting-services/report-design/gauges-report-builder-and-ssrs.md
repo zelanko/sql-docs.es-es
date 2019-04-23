@@ -156,15 +156,15 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c27f8438d0576f06fb071b4073035a5885a2606e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297393"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954261"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Medidores (Generador de informes y SSRS)
   La región de datos de medidor es una región de datos unidimensional que muestra un solo valor del conjunto de datos. Los medidores siempre se sitúan dentro de un panel de medidores, en el que pueden agregarse medidores secundarios o adyacentes. En el mismo panel de medidores, puede crear varios medidores que comparten funciones comunes como el filtrado, la agrupación o la ordenación.  
@@ -181,7 +181,7 @@ ms.locfileid: "56297393"
   
  ![Diagrama de elementos de medidor](../media/gauge-elements-diagram.gif "Diagrama de elementos de medidor")  
   
- Para obtener más información sobre el uso de medidores como KPI, vea [Tutorial: Agregar un KPI a un informe &#40;generador de informes&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Para más información sobre el uso de medidores como KPI, consulte el [Tutorial: Agregar un KPI a un informe &#40;Generador de informes&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)  
   
 > [!NOTE]  
 >  Puede publicar medidores por separado de un informe como elementos de informe. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -204,13 +204,13 @@ ms.locfileid: "56297393"
   
  ![rs_RadialGauge](../media/rs-radialgauge.gif "rs_RadialGauge")  
   
- Opciones de medidor radial: Radial, Radial con medidor Mini, dos escalas, 90 grados noreste, 90 grados noroeste, 90 grados suroeste, 90 grados sureste, 180 grados Norte, 180 grados sur, 180 grados West180 grados este e indicador.  
+ Opciones de medidor radial: Radial, Radial con medidor mini, Dos escalas, 90 grados Noreste, 90 grados Noroeste, 90 grados Suroeste, 90 grados Sureste, 180 grados Norte, 180 grados Sur, 180 grados Oeste, 180 grados Este y Medidor.  
   
  **Medidor lineal**  
   
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Opciones de medidor lineal: Horizontal, Vertical, barra de varios punteros, dos escalas, rango de tres colores, logarítmico, termómetro, termómetro Fahrenheit/Celsius y gráfico de viñetas.  
+ Opciones de medidor lineal: Horizontal, Vertical, Varios punteros de barra, Dos escalas, Rango de tres colores, Logarítmico, Termómetro, Termómetro fahrenheit/celsius y Gráfico de viñetas.  
   
   
 ##  <a name="AddingData"></a> Agregar datos a un medidor  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a2a6d21b49d22a5017eecb0b559be19a2844a8a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 17f63e9c4f6d1e560e6945a1ae6f01100d59703a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292263"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956601"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generar fuentes de distribución de datos a partir de informes (Generador de informes y SSRS)
   La extensión de representación de Atom de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] genera un documento de servicio de Atom que enumera las fuentes de distribución de datos disponibles en un informe y las fuentes de distribución de datos de las regiones de datos de un informe. Esta extensión se usa para generar las fuentes de distribución de datos compatibles con Atom que son legibles y se pueden intercambiar con las aplicaciones que pueden usar las fuentes de distribución de datos generadas en los informes. Por ejemplo, puede utilizar la extensión de representación Atom para las fuentes de distribución de datos generadas que después puede utilizar en el cliente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -80,13 +80,13 @@ ms.locfileid: "56292263"
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
 ### <a name="data-section"></a>Sección de datos  
- La sección de datos de las fuentes de distribución de datos contiene un elemento <`entry`> para cada fila del conjunto de filas planas generado por la extensión de representación de Atom.  
+ La sección de datos de las fuentes de distribución de datos contiene uno <`entry`> (elemento) para cada fila del conjunto de filas planas generado por la extensión de representación de Atom.  
   
  El diagrama siguiente muestra un informe que utiliza grupos y totales.  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- El código XML siguiente muestra un elemento <`entry`> de ese informe en una fuente de distribución de datos. Observe que el elemento <`entry`> incluye los totales de las ventas y pedidos del grupo y los totales de ventas y pedidos de todos los grupos. El elemento <`entry`> incluye todos los valores en el informe.  
+ El siguiente XML muestra un <`entry`> elemento de ese informe en una fuente de datos. Tenga en cuenta que el <`entry`> elemento incluye los totales de ventas y pedidos para el grupo y los totales de ventas y pedidos de todos los grupos. El <`entry`> elemento incluye todos los valores en el informe.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   

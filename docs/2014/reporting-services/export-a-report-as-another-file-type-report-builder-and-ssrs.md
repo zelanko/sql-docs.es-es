@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: b577568b-ecbd-44c3-be88-31dab6fc38a2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 009cce23aff5d3b3755b4eb8086bd1560a5be487
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a26b183d3024333f5792203e180df395c0301892
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289099"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948911"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Exportar un informe como otro tipo de archivo (Generador de informes y SSRS)
   Puede representar el informe en otro formato de archivo, como CSV, Imagen, PDF, [!INCLUDE[ofprword](../includes/ofprword-md.md)]o [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)]mientras obtiene una vista previa del mismo en el Generador de informes o el Diseñador de informes, o puede representar el informe mientras lo ve en el servidor de informes. Representar el informe en un formato concreto resulta útil si se desea guardar el informe de manera inmediata como otro tipo de archivo sin publicarlo en el servidor de informes o si se desea ver el aspecto que presentará su diseño cuando se entregue a los lectores en un formato determinado. Representar el informe en el servidor de informes resulta útil si se configuran suscripciones o se entregan informes a través del correo electrónico o si se desea guardar un informe que está disponible en el servidor de informes. Para obtener más información, vea [Suscripciones y entrega &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md).  

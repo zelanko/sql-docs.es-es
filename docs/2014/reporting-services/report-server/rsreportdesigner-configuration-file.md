@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8c979e7ee3d3dcb2f4dba96e73b1d38c526bcb7a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b29e5020cbe552fac66f7bb4e621ce0eda6779a5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012896"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946081"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>archivo de configuración RSReportDesigner
   En el archivo RSReportDesigner.config se almacenan las configuraciones de las extensiones de representación y procesamiento de datos disponibles para el Diseñador de informes. La información de la extensión de procesamiento de datos se almacena en el elemento `Data`. La información de la extensión de representación se almacena en el elemento `Render`. El elemento `Designer` enumera los generadores de consultas que se utilizan en el Diseñador de informes.  

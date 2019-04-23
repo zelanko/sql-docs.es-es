@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b759391592a84d0509a8036277ccb6e0cc92a279
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 05f2cdfc40c8677bfa38c821cfd849c3ce483c31
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011508"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964201"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Opciones de actualización de memoria caché (Administrador de informes)
   Utilice la página Opciones de actualización de caché a fin de crear las programaciones para cargar previamente la memoria caché con copias temporales de datos para un informe o un conjunto de datos compartido. Un plan de actualización incluye una programación y la opción para especificar o invalidar los valores de los parámetros. Para un conjunto de datos compartido, no puede invalidar los valores para los parámetros que estén marcados como de solo lectura. Puede crear y utilizar más de un plan de actualización como parte de la página de opciones de actualización.  

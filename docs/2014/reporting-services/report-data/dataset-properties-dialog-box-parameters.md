@@ -11,15 +11,15 @@ f1_keywords:
 - "10150"
 - sql12.rtp.rptdesigner.datasetproperties.parameters.f1
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d792081d7554aefe4684b5a2e491aac875de49d0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4b756349acfc55a85c67e3a24921061bb1173e97
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038446"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958961"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>Propiedades del conjunto de datos (cuadro de diálogo), Parámetros
   Seleccione **Parámetros** en el cuadro de diálogo **Propiedades del conjunto de datos** para agregar, cambiar y eliminar parámetros de la consulta, incluso los que vinculan a los parámetros de informe.  

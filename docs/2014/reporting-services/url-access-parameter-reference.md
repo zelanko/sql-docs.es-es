@@ -11,15 +11,15 @@ helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fcbf2d23dc543edbd6fc6fc20136f0ff4e81bd90
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d57d3a1b50b88bfd2ec27641cca4f7058f9639f1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031736"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955891"
 ---
 # <a name="url-access-parameter-reference"></a>Referencia de parámetros de acceso URL
   Puede utilizar los parámetros siguientes como parte de una dirección URL para configurar la apariencia de los informes. Los parámetros más comunes se muestran en esta sección. Los parámetros distinguen entre mayúsculas y minúsculas y empiezan con el prefijo de parámetro *rs:* si se dirige al servidor de informes y *rc:* si se dirige a un Visor HTML. También puede especificar parámetros que son específicos de dispositivos o extensiones de representación. Para obtener más información sobre parámetros específicos del dispositivo, vea [Especificar la configuración de la información del dispositivo en una dirección URL](specify-device-information-settings-in-a-url.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "56031736"
 |*PersistStreams*|Representa un informe en un flujo almacenado único. El procesador de imagen utiliza este parámetro para transmitir el informe representado fragmento por fragmento. Después de utilizar este parámetro en una cadena de acceso de dirección URL, utilice la misma cadena de acceso de dirección URL con el parámetro *GetNextStream* en lugar del parámetro *PersistStreams* para obtener el fragmento siguiente en el flujo almacenado. Este comando de dirección URL devolverá a la larga un flujo de cero bytes para indicar el fin del flujo almacenado. El valor predeterminado es `false`.|  
 |*GetNextStream*|Obtiene el siguiente grupo de datos en una transmisión persistente a la que se tiene acceso con el parámetro *PersistStreams* . Para obtener más información, vea la descripción de *PersistStreams*. El valor predeterminado es `false`.|  
 |*SessionID*|Especifica una sesión de informe activa establecida entre la aplicación cliente y el servidor de informes. El valor de este parámetro se establece en el identificador de la sesión.<br /><br /> Puede especificar el identificador de sesión como una cookie o como parte de la dirección URL. Cuando el servidor de informes se ha configurado para no usar las cookies de sesión, la primera solicitud sin un identificador de sesión especificado resulta en una redirección con un identificador de sesión. Para obtener más información sobre las sesiones del servidor de informes, vea [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).|  
-|*ClearSession*|Un valor de `true` indica al servidor de informes que quite un informe de la sesión de informe. Todas las instancias del informe asociadas a un usuario autenticado se quitan de la sesión de informe. (Una instancia del informe se define como el mismo informe ejecutado varias veces con diferentes valores de parámetro de informe). El valor predeterminado es `false`.|  
+|*ClearSession*|Un valor de `true` indica al servidor de informes que quite un informe de la sesión de informe. Todas las instancias del informe asociadas a un usuario autenticado se quitan de la sesión de informe. (Una instancia de informe se define como el mismo informe ejecutado varias veces con valores de parámetro de informe diferente). El valor predeterminado es `false`.|  
 |*ResetSession*|Un valor de `true` indica al servidor de informes que restablezca la sesión del informe y que quite la asociación de la sesión del informe con todas las instantáneas de informe. El valor predeterminado es `false`.|  
 |*ShowHideToggle*|Alterna el estado de mostrar u ocultar de una sección del informe. Especifique un entero positivo para representar la sección que desea alternar.|  
   

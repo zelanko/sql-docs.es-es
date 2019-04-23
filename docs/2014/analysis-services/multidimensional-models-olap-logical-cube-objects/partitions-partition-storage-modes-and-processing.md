@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -23,12 +21,12 @@ ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ffb6331f3e02c0974320d8d9c71df9aff7602874
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507791"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157602"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Procesamiento y modos de almacenamiento de particiones
   El modo de almacenamiento de una partición afecta al rendimiento de las consultas y el procesamiento, a los requisitos de almacenamiento y a las ubicaciones de almacenamiento de la partición y de su grupo de medida y cubo primario.  La elección del modo de almacenamiento afecta también a las opciones de procesamiento.  
@@ -78,7 +76,7 @@ ms.locfileid: "52507791"
   
 -   La sesión que crea la vista indizada debe tener las siguientes opciones establecidas en ON: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING y ANSI_WARNING. Esta configuración puede crearse en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   La sesión que crea la vista indizada debe tener la siguiente opción establecida en OFF NUMERIC_ROUNDABORT. Esta configuración puede crearse en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   La sesión que crea la vista indizada debe tener la siguiente opción establecida en OFF: NUMERIC_ROUNDABORT. Esta configuración puede crearse en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="holap"></a>HOLAP  
  El modo de almacenamiento HOLAP combina atributos de los modos MOLAP y ROLAP. Al igual que MOLAP, HOLAP hace que las agregaciones de la partición se almacenen en una estructura multidimensional en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia. HOLAP no hace que se almacene una copia de los datos de origen. HOLAP es el equivalente de MOLAP para las consultas que solo tienen acceso a los datos de resumen de las agregaciones de una partición. Las consultas que tienen acceso a datos de origen: por ejemplo, si desea profundizar en una celda de cubo atómico para que no hay ninguna agregación de datos, debe recuperar datos de la base de datos relacional y no será tan rápido como lo serían si los datos de origen se almacenaron en el structur MOLAP e. Con el modo de almacenamiento HOLAP, los usuarios suelen experimentar notables diferencias en cuanto a los tiempos de las consultas según si la consulta se puede resolver desde la caché o las agregaciones frente a los propios datos de origen.  

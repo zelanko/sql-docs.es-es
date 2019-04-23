@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.datasetproperties.fields.f1
 - "10140"
 ms.assetid: e1367556-736e-4a6b-b9e7-10432a3e50b5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f4c0f4f06dd9d61b7a53b39f2ebcf3085029b233
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3b1c49beb22a3a91e3d42aa7ce4ed99b5e107b4d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291863"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956931"
 ---
 # <a name="dataset-properties-dialog-box-fields"></a>Propiedades del conjunto de datos (cuadro de diálogo), Campos
   Seleccione **Campos** en el cuadro de diálogo **Propiedades del conjunto de datos** para cambiar la colección de campos para el conjunto de datos del informe. La lista de campos se rellena automáticamente, pero puede utilizar **Campos** para agregar, editar y eliminar campos calculados y de consulta.  

@@ -21,15 +21,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bc62428aafdb3d3ec252c0b10cbe5a7c2db515cd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9dfeb15d58f34759da6c340f66ce5935c0b71e41
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292304"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966991"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Encabezados y pies de página (Generador de informes y SSRS)
   Un informe puede contener un encabezado y un pie de página que aparecen en la parte superior e inferior de cada página, respectivamente. Los encabezados y pies de página pueden contener texto estático, imágenes, líneas, rectángulos, bordes, color de fondo, imágenes de fondo y expresiones. Las expresiones incluyen referencias a campos de conjunto de datos para informes que tienen un conjunto de datos y llamadas a funciones de agregado que incluyen el conjunto de datos como ámbito.  

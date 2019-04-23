@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 144cce158e6b4f8814392a996699ddbe214ca628
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8cbe5a25ef6ca87c2ffa5fd83c8ff1ca0796fdae
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016036"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939851"
 ---
 # <a name="reporting-services-tools"></a>Herramientas de Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contiene un conjunto de herramientas gráficas y de scripting que admiten el desarrollo y la utilización de informes completos en un entorno administrado. El conjunto de herramientas incluye herramientas de desarrollo, herramientas de configuración y administración, y herramientas de visualización de informes. Este tema proporciona una breve información general de cada herramienta de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y cómo se puede obtener acceso a ella.  
@@ -39,7 +39,7 @@ ms.locfileid: "56016036"
   
 |Herramienta|Descripción|Cómo obtener acceso|  
 |----------|-----------------|-------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|Una exploración interactiva de los datos y una experiencia de presentación visual diseñadas para permitirle crear e interactuar con los informes basados en modelos tabulares de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Nota: Requiere [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo integrado de SharePoint.|Explorador con Silverlight.|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|Una exploración interactiva de los datos y una experiencia de presentación visual diseñadas para permitirle crear e interactuar con los informes basados en modelos tabulares de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Nota: Requiere [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint.|Explorador con Silverlight.|  
 |Diseñador de informes|Use esta herramienta para diseñar informes e implementarlos en un servidor de informes en modo nativo o en modo de SharePoint.<br /><br /> Se hospeda en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> Panel Datos de informe para organizar los datos usados en el informe<br /><br /> Vistas con pestañas Diseño y Vista previa para el diseño de informe interactivo<br /><br /> Diseñadores de consultas asociados con los tipos de origen de datos en [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)para ayudar a especificar qué datos se deben recuperar de los orígenes de datos<br /><br /> Editor de expresiones con IntelliSense para generar expresiones de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] que personalizan el contenido y el aspecto del informe<br /><br /> Admite elementos de informe personalizados y diseñadores de consultas personalizados<br /><br /> <br /><br /> Para obtener más información, vea [Reporting Services en SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
 |Generador de informes|Use esta herramienta para diseñar informes e implementarlos en un servidor de informes en modo nativo o en modo de SharePoint.<br /><br /> Entorno de creación parecido a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office<br /><br /> Capacidad de guardar los elementos de informe como tales<br /><br /> Un asistente para crear mapas<br /><br /> Agregados de agregados<br /><br /> Compatibilidad mejorada para las expresiones<br /><br /> Diseñadores de consultas para ayudar a especificar los datos que deben recuperarse de una selección de tipos de orígenes de datos integrados<br /><br /> <br /><br /> Para obtener más información, consulte [Report Builder &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md).|Descargue MSI o ábralo desde el Administrador de informes o SharePoint|  
   

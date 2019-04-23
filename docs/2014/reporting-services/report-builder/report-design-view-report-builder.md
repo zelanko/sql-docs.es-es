@@ -19,15 +19,15 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d1a9e3264ce3580ec5b1c6d110ce745236accff1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287023"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953301"
 ---
 # <a name="report-design-view-report-builder"></a>Vista de diseño de informe (Generador de informes)
   La ventana del Generador de informes está diseñada para ayudarle a organizar con facilidad sus recursos de informes y a generar rápidamente los informes que necesita. La superficie de diseño está en el centro de la ventana, con la Cinta de opciones arriba y los paneles Datos de informe, Agrupación y Propiedades y la Galería de elementos de informe a la izquierda, abajo y a la derecha. La superficie de diseño es donde agrega y organiza sus elementos de informe. La Cinta de opciones organiza los elementos de menú tradicionales en categorías que puede buscar y utilizar con facilidad. Los paneles le ayudan a agregar, seleccionar y organizar sus recursos de informe y a cambiar las propiedades de los elementos de informe.  
@@ -42,7 +42,7 @@ ms.locfileid: "56287023"
  En modo de ejecución, la cinta de opciones tiene solo una pestaña, **ejecutar**.  
   
 ### <a name="home-tab"></a>Pestaña Inicio  
- La pestaña Inicio es una colección de comandos de uso frecuente, centrados en la apariencia de los elementos dentro del informe. En la pestaña Inicio, puede tener acceso a los comandos ejecutar, fuente, párrafo, borde, número y diseño. Al hacer clic en un elemento en la pestaña, cambia el elemento seleccionado en la superficie de diseño. Al hacer clic en **ejecutar**, el informe se representa en HTML para que pueda ver cómo aparecerá el contenido del informe cuando publica y vea la pestaña ejecutar en lugar de la pestaña Inicio. La pestaña Inicio es la pestaña predeterminada que se muestra al crear un informe por primera vez.  
+ La pestaña Inicio es una colección de comandos de uso frecuente, centrados en la apariencia de los elementos dentro del informe. En la pestaña Inicio, puede tener acceso a los comandos ejecutar, fuente, párrafo, borde, número y diseño. Al hacer clic en un elemento en la pestaña, cambia el elemento seleccionado en la superficie de diseño. Al hacer clic en **ejecutar**, el informe se representa en HTML para que pueda ver cómo aparecerá el contenido del informe cuando publica y vea la pestaña ejecutar en lugar de la pestaña Inicio. La pestaña Inicio es la pestaña predeterminada que se muestra al crear un informe.  
   
 ### <a name="insert-tab"></a>Pestaña Insertar  
  La pestaña Insertar es una colección de comandos usados con frecuencia para agregar elementos al informe. En la pestaña Insertar, puede usar un los asistentes para agregar una tabla, una matriz, un gráfico o un mapa. También puede agregar estos elementos sin usar un asistente, y agregar otros elementos de informe como minigráficos, indicadores, cuadros de texto, imágenes, líneas, rectángulos, subinformes, encabezados del informe y pies de página.  
@@ -146,17 +146,17 @@ ms.locfileid: "56287023"
 ### <a name="changing-the-properties-pane-view"></a>Cambiar la vista del panel de propiedades  
  De manera predeterminada, las propiedades que se muestran en el panel de propiedades se organizan en amplias categorías como Acción, Borde, Relleno, Fuente y General. Cada una de esas categorías cuenta con un conjunto de propiedades asociadas. Por ejemplo, las siguientes propiedades se muestran dentro de la categoría fuente: Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight y TextDecoration. Si lo prefiere, puede ordenar alfabéticamente todas las propiedades enumeradas en el panel. De esta manera se quitan las categorías y se enumeran todas las propiedades en orden alfabético independientemente de la categoría.  
   
- El panel de propiedades tiene tres botones en la parte superior del panel: Categoría, ordenar alfabéticamente y las páginas de propiedades. Haga clic en los botones de categoría y alfabetización para cambiar entre las diferentes vistas del panel de propiedades. Haga clic en el botón de **páginas de propiedades** para abrir el cuadro de diálogo de propiedades de un elemento de informe seleccionado.  
+ El panel de propiedades tiene tres botones en la parte superior: Categoría, Alfabetización y Páginas de propiedades. Haga clic en los botones de categoría y alfabetización para cambiar entre las diferentes vistas del panel de propiedades. Haga clic en el botón de **páginas de propiedades** para abrir el cuadro de diálogo de propiedades de un elemento de informe seleccionado.  
   
   
 ##  <a name="GroupPane"></a> Panel Agrupación (Generador de informes)  
- Los grupos se utilizan para organizar los datos del informe en una jerarquía visual y calcular los totales. Puede ver los grupos de filas y columnas dentro de una región de datos en la superficie de diseño y también en el Panel de agrupación. El panel de agrupación tiene dos paneles: Grupos de filas y grupos de columnas. Al seleccionar una región de datos, el panel Agrupación muestra todos los grupos dentro de dicha región de datos como una lista jerárquica: Los grupos secundarios aparecen con sangría aplicados bajo los grupos primarios.  
+ Los grupos se utilizan para organizar los datos del informe en una jerarquía visual y calcular los totales. Puede ver los grupos de filas y columnas dentro de una región de datos en la superficie de diseño y también en el Panel de agrupación. El panel Agrupación tiene dos paneles: Grupos de filas y Grupos de columnas. Al seleccionar una región de datos, el panel Agrupación muestra todos los grupos dentro de dicha región de datos como una lista jerárquica: los grupos secundarios aparecen con sangría aplicada bajo los grupos principales.  
   
  ![Panel de agrupación para grupos de filas y columnas anidadas](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Panel de agrupación para grupos de filas y columnas anidadas")  
   
  Para crear grupos, arrastre los campos desde el panel Datos de informe y suéltelos en la superficie de diseño o en el Panel de agrupación. En el Panel de agrupación, puede agregar grupos primarios, adyacentes o secundarios, cambiar propiedades de grupo y eliminar grupos.  
   
- El Panel de agrupación se muestra de manera predeterminada, pero puede cerrarlo si deshabilita la casilla del panel en la pestaña Vista. El panel de agrupación no está disponible para las regiones de datos Gráfico o Medidor.  
+ El panel de agrupación se muestra de forma predeterminada, pero puede cerrar el panel desactivando la casilla de verificación del panel de agrupación en la pestaña de vista. El panel de agrupación no está disponible para las regiones de datos Gráfico o Medidor.  
   
  Para obtener más información, vea [Panel de agrupación &#40;Generador de informes&#41;](../report-design/grouping-pane-report-builder.md) y [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aace9882e358bcd5e5626cc625ed3dbbe4495cce
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aae7a7ed873a86096f1f203cc20b2bfecd379db6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017046"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946581"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Crear una base de datos del servidor de informes de modo nativo (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de modo nativo usa una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el almacenamiento interno. La base de datos es un componente necesario y se utiliza para almacenar los informes publicados, modelos, orígenes de datos compartidos, datos de sesión, recursos y metadatos del servidor.  

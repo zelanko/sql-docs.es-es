@@ -16,15 +16,15 @@ topic_type:
 helpviewer_keywords:
 - GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6cf6ca9eae9fe1239987dbd284728776b4900ea9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d9f27779115d510e9f11c0ec54c844ba17a391cb
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014776"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950751"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserverconfigurationsetting"></a>Método GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
   Genera un script SQL que se puede usar para conceder derechos a un usuario sobre la base de datos del servidor de informes y otras bases de datos necesarias para el funcionamiento de un servidor de informes. Se espera que el autor de la llamada se conecte al servidor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecute el script.  

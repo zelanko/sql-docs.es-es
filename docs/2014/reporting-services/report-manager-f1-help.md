@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ca003e937f5e9547fa1bda0243967a8ff1d8331a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f1437ee34eded7b9bec88ed9f8e8f64184f5a8d9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019326"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967961"
 ---
 # <a name="report-manager-f1-help"></a>Administrador de informes (Ayuda F1)
   Los temas siguientes ofrecen ayuda para las páginas del Administrador de informes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Hay un tema para cada página de la aplicación. Puede que no todas las páginas estén disponibles. La configuración de seguridad determina las páginas a las que se puede obtener acceso. Para obtener acceso a estos temas desde el Administrador de informes, haga clic en **Ayuda** en la barra de herramientas principal.  

@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Agregar un minigráfico a un informe (generador de informes) | Microsoft Docs'
+title: 'Tutorial: Agregar un minigráfico a un informe (Generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1fddfc39b7f6e5764dbe11bf6b069136fba8420d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294733"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951241"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Agregar un minigráfico a un informe (Generador de informes)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Agregar un minigráfico a un informe (generador de informes)
   En este tutorial, crea un informe de la tabla básico basado en datos de ventas de ejemplo y, a continuación, agrega un minigráfico a una celda de la tabla.  
   
  Una versión mejorada del informe que creará en este tutorial está disponible como informe de ejemplo del Generador de informes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener más información acerca de cómo descargar este ejemplo y otros informes, vea [informe del generador de informes de ejemplo](https://go.microsoft.com/fwlink/?LinkId=184851). La siguiente ilustración muestra un informe de ejemplo similar al que creará.  
@@ -183,7 +183,7 @@ ms.locfileid: "56294733"
   
 14. La tabla se agrega a la superficie de diseño. La tabla tiene tres columnas y tres filas.  
   
-     Busque en el panel Agrupación. Si no ve el panel Agrupación, en el menú **Vista** , haga clic en **Agrupación**. El panel Grupos de filas muestra un grupo de filas: **Producto**. El panel Grupos de columnas muestra un grupo de columnas: **SalesDate**. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
+     Busque en el panel Agrupación. Si no ve el panel Agrupación, en el menú **Vista** , haga clic en **Agrupación**. El panel de grupos de filas muestra un grupo de filas: **Product**. El panel de grupos de columnas muestra un grupo de columnas: **SalesDate**. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
   
 15. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
@@ -244,7 +244,7 @@ ms.locfileid: "56294733"
   
  Observe que todas las barras están ahora alineadas con las barras de las demás filas.  
   
-##  <a name="FormatCurrency"></a> 5. (Opcional) Dar formato a los datos como moneda  
+##  <a name="FormatCurrency"></a> 5. (Opcional) Formato de datos como moneda  
  De manera predeterminada, los datos de resumen del campo **Sales** se muestran en forma de número general. Aplíquele el formato adecuado para mostrar el número como moneda. Alterne **Estilos de marcador de posición** para mostrar los cuadros de texto con formato y el texto de marcador de posición como valores de ejemplo.  
   
 #### <a name="to-format-a-currency-field"></a>Para dar formato a un campo de moneda  

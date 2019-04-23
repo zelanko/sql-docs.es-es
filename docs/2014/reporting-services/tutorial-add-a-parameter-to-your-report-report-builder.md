@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Agregar un parámetro a un informe (generador de informes) | Microsoft Docs'
+title: 'Tutorial: Agregar un parámetro a un informe (Generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6545812b60732d07881a17dba57cc36066d2f8b5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298663"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966521"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Agregar un parámetro a un informe (Generador de informes)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Agregar un parámetro a un informe (generador de informes)
   Agregue un parámetro a un informe para permitir que los usuarios filtren los datos del informe desde el origen de datos o el informe. Los parámetros del informe se crean automáticamente para cada parámetro de la consulta que incluya en una consulta del conjunto de datos. El tipo de datos de parámetro determina cómo aparece en la barra de herramientas de visualización de informe.  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
@@ -55,14 +55,14 @@ ms.locfileid: "56298663"
 10. [Guardar el informe](#Save)  
   
 > [!NOTE]  
->  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones detalladas sobre cómo ir hasta un servidor de informes, elija un origen de datos y crear un conjunto de datos, vea el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Tiempo estimado para completar este tutorial: 25 minutos.  
   
 ## <a name="requirements"></a>Requisitos  
  Para obtener información sobre los requisitos, vea [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Setup"></a> 1. Crear un informe de matriz y un conjunto de datos con el asistente para tablas o matrices  
+##  <a name="Setup"></a> 1. Crear un informe de matriz y un conjunto de datos de la tabla o el Asistente para matrices  
  Cree un informe de matriz, un origen de datos y un conjunto de datos.  
   
 > [!NOTE]  
@@ -123,7 +123,7 @@ ms.locfileid: "56298663"
   
 12. Haga clic en **Siguiente**.  
   
-##  <a name="CompleteWizard"></a> 2. Organizar datos, elegir el diseño y el estilo con el asistente para tablas o matrices  
+##  <a name="CompleteWizard"></a> 2. Organizar los datos, elegir el diseño y el estilo de la tabla o el Asistente para matrices  
  Utilice el asistente para proporcionar un diseño inicial en el que mostrar los datos. El panel de vista previa del asistente le ayudará a visualizar el resultado de las agrupaciones de datos antes de completar la tabla o el diseño de la matriz.  
   
 #### <a name="to-organize-data-into-groups"></a>Para organizar los datos en grupos  
@@ -327,7 +327,7 @@ ms.locfileid: "56298663"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     El encabezado de columna del almacén contiene el texto para mostrar una expresión compleja: **<\<Expr>>**.  
+     El encabezado de columna de almacén contiene el texto para mostrar de una expresión compleja: **<\<Expr>>**.  
   
 8.  Obtenga una vista previa del informe.  
   
@@ -422,7 +422,7 @@ ms.locfileid: "56298663"
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-15. Haga clic en el cuadro de texto que hay delante de la expresión que acaba de crear y, a continuación, escriba lo siguiente: Parameter Values Selected:.  
+15. Haga clic en el cuadro de texto que hay delante de la expresión que acaba de crear y, a continuación, escriba lo siguiente: Valores de parámetro seleccionados:.  
   
 16. Obtenga una vista previa del informe.  
   

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb175df8d775150bb8ec7ffbbaf26866b1c07629
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1350c25450dfae5ed02b9761ed79182ccac817d5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290933"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958221"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Función Multilookup (Generador de informes y SSRS)
   Devuelve el conjunto de valores de primera coincidencia para el conjunto especificado de nombres a partir de un conjunto de datos que contiene pares nombre/valor.  
@@ -91,7 +91,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  El conjunto de datos CategoryNames contiene el identificador y el nombre de la categoría, tal como se muestra en la siguiente tabla.  
   
-|Id.|Nombre|  
+|Id.|Name|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  

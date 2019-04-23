@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - query designers
 ms.assetid: 553f0d4e-8b1d-4148-9321-8b41a1e8e1b9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cf13d793f9cfc4aa0e1bdf5fa3ae7862bf8d1719
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3cfaca7dcd5e72eb5ca540debac6c6723246354d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296563"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963771"
 ---
 # <a name="query-designers-report-builder"></a>Diseñadores de consultas (Generador de informes)
   El Generador de informes proporciona diseñadores gráficos de consultas y diseñadores de consultas basados en texto para ayudarle a generar consultas para los informes. Cada tipo de origen de datos tiene un diseñador de consultas asociado. Algunos orígenes de datos admiten diseñadores gráficos que permiten generar las consultas de forma interactiva. Otros orígenes de datos usan un diseñador de consultas basado en texto. Los orígenes de datos de SQL Server admiten ambos tipos de diseñadores de consultas.  

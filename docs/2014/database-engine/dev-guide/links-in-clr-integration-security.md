@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - table-access links [CLR integration]
@@ -17,12 +15,12 @@ ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32974fc138cb5bcd444af18d0854c7a07d8fdcad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067207"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156782"
 ---
 # <a name="links-in-clr-integration-security"></a>Vínculos en el ámbito de seguridad de la integración CLR
   En esta sección se describe cómo los distintos fragmentos de código del usuario pueden llamarse entre sí en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ya sea en [!INCLUDE[tsql](../../includes/tsql-md.md)] o en uno de los lenguajes administrados. Estas relaciones entre objetos reciben el nombre de vínculos.  
@@ -38,7 +36,7 @@ ms.locfileid: "48067207"
   
  Los vínculos canalizados siempre se usan junto con una dependencia de metadatos entre dos objetos. Esta dependencia de metadatos es una relación establecida en catálogos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que impide que se quite un objeto siempre que haya otro objeto que dependa de él.  
   
- Los vínculos canalizados son muy útiles cuando resulta adecuado o sencillo conceder permisos a muchos objetos dependientes. Los vínculos canalizados se introducen entre los objetos que definen los puntos de entrada de [!INCLUDE[tsql](../../includes/tsql-md.md)] en los ensamblados CLR (por ejemplo, los agregados, tipos, funciones, desencadenadores y procedimientos CLR) y los ensamblados a partir de los cuales se definen. La seguridad canalizada en estos objetos implica que, para invocar un punto de entrada [!INCLUDE[tsql](../../includes/tsql-md.md)] definido en un ensamblado CLR, el autor de las llamadas solamente necesita un permiso adecuado en ese punto de entrada [!INCLUDE[tsql](../../includes/tsql-md.md)]. No es necesario que el autor de las llamadas tenga permisos en ese ensamblado o en cualquier otro ensamblado al que haga referencia de forma estática. Los permisos en el ensamblado se comprueban en el momento de creación del punto de entrada [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Los vínculos canalizados son muy útiles cuando resulta adecuado o sencillo conceder permisos a muchos objetos dependientes. Los vínculos canalizados se introducen entre los objetos que definen los puntos de entrada de [!INCLUDE[tsql](../../includes/tsql-md.md)] en los ensamblados CLR (por ejemplo, los agregados, tipos, funciones, desencadenadores y procedimientos CLR) y los ensamblados a partir de los cuales se definen. La seguridad canalizada en estos objetos implica que, para invocar un punto de entrada [!INCLUDE[tsql](../../includes/tsql-md.md)] definido en un ensamblado CLR, el autor de las llamadas solamente necesita un permiso adecuado en ese punto de entrada [!INCLUDE[tsql](../../includes/tsql-md.md)] . No es necesario que el autor de las llamadas tenga permisos en ese ensamblado o en cualquier otro ensamblado al que haga referencia de forma estática. Los permisos en el ensamblado se comprueban en el momento de creación del punto de entrada [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ## <a name="sql-server-authorization-based-security"></a>Seguridad basada en autorizaciones de SQL Server  
  A continuación se muestran las reglas básicas subyacentes a las comprobaciones de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las invocaciones de y entre objetos de base de datos basados en CLR; las primeras tres reglas definen qué permisos deben comprobarse y en qué objeto; la cuarta regla define en qué contexto de ejecución debe comprobarse el permiso.  

@@ -4,17 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- analysis-services/multidimensional-tabular
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- replication
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: sql
 ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
@@ -24,16 +14,32 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 9b565fb16621760a69e2462680444db5f0ea3916
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 334735c2ec9fc0573ed08bcc76b214a093394b6c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519485"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157121"
 ---
 # <a name="glossary"></a>Glosario
-  
-  
+
+<!--
+Metadata 'ms.technology:' is restricted to a maximum of one value.
+So I am erasing all the values shown below.  (GeneMi , 2019/04/19)
+
+ms.technology:
+  - "analysis-services"
+  - "analysis-services/data-mining"
+  - "analysis-services/multidimensional-tabular"
+  - "data-quality-services"
+  - "database-engine"
+  - "integration-services"
+  - "master-data-services"
+  - "replication"
+  - "reporting-services-native"
+  - "reporting-services-sharepoint"
+-->
+
 ## <a name="terms"></a>Términos  
   
 |Término|Definición|  
@@ -469,7 +475,7 @@ ms.locfileid: "52519485"
 |diacrítico|Marca colocada sobre, debajo o a través de un carácter, normalmente para indicar un cambio en el valor fonético desde el estado sin marcar.|  
 |marca diacrítica|Marca colocada sobre, debajo o a través de un carácter, normalmente para indicar un cambio en el valor fonético desde el estado sin marcar.|  
 |dialecto|Reglas de sintaxis y generales usadas para analizar una cadena o una instrucción de consulta.|  
-|relación en forma de rombo|Cadena de relaciones de atributo que divide y vuelve a unir pero que no contiene relaciones redundantes. Por ejemplo, Día->Mes->Año y Día ->Trimestre->Año tienen los mismos puntos inicial y final pero no tienen ninguna relación común.|  
+|relación en forma de rombo|Cadena de relaciones de atributo que divide y vuelve a unir pero que no contiene relaciones redundantes. Por ejemplo, día -> mes -> año y día -> trimestre -> año tienen los mismos puntos inicial y final, pero no tiene ninguna relación común.|  
 |diferenciador|Interfaz a una herramienta que crea un objeto DifferencingService.|  
 |copia de seguridad diferencial|Copia de seguridad que contiene solo los cambios realizados en la base de datos desde la copia de seguridad de los datos anterior en la que se basa la copia de seguridad diferencial.|  
 |base diferencial|Copia de seguridad más reciente de todos los datos de una base de datos o de un subconjunto de archivos o grupos de archivos de la base de datos.|  
@@ -543,7 +549,7 @@ ms.locfileid: "52519485"
 |volcado|Duplicado de un programa, un disco o datos, realizado con fines de almacenamiento o para proteger archivos.|  
 |dispositivo de volcado|Unidad de cinta o disco que contiene un medio de copia de seguridad.|  
 |cursor dinámico|Cursor que refleja las modificaciones de datos realizadas en los datos subyacentes mientras el cursor está abierto.|  
-|filtro dinámico|Filtro de fila disponible con la replicación de mezcla que permite restringir los datos replicados a un suscriptor basándose en una función del sistema o en una función definida por el usuario (por ejemplo: SUSER_SNAME()).|  
+|filtro dinámico|Filtro de fila disponible con la replicación de mezcla que permite restringir los datos replicados a un suscriptor basándose en una función del sistema o definida por el usuario (por ejemplo: SUSER_SNAME()).|  
 |bloqueo dinámico|Proceso que usa SQL Server para determinar los bloqueos más rentables que se van a usar en un momento determinado.|  
 |función de administración dinámica|Uno de un conjunto de funciones integradas que devuelve información de estado de servidor sobre valores, objetos y configuraciones de SQL Server.|  
 |vista de administración dinámica|Conjunto de vistas integradas que devuelven información de estado de servidor sobre valores, objetos y configuraciones de SQL Server.|  
@@ -737,7 +743,7 @@ ms.locfileid: "52519485"
 |valor máximo|Valor máximo que no es un valor atípico en un diagrama de caja.|  
 |sugerencia|Opción o estrategia especificada para que el procesador de consultas de SQL Server las aplique en instrucciones SELECT, INSERT, UPDATE o DELETE. La sugerencia invalida cualquier plan de ejecución que pueda seleccionar el optimizador de consultas para una consulta.|  
 |historial|Lista de las acciones del usuario dentro de un programa, como los comandos escritos en un shell del sistema operativo, los menús que se pasan a través mediante Gopher o los vínculos seguidos mediante un explorador web.|  
-|capacidad de alojamiento|Hace referencia a la posibilidad de dejar abiertos ("en espera") los conjuntos de resultados que se han procesado y permanecen normalmente cerrados después de esta operación. Por ejemplo:  "SQL Server solo admite capacidad de alojamiento en el nivel de conexión".|  
+|capacidad de alojamiento|Hace referencia a la posibilidad de dejar abiertos ("en espera") los conjuntos de resultados que se han procesado y permanecen normalmente cerrados después de esta operación. Por ejemplo:  "SQL Server admite la capacidad de alojamiento en el nivel de conexión solo".|  
 |exclusión|Porcentaje de los datos de aprendizaje que se reserva para su uso en la medición de la precisión de la estructura del modelo de minería de datos.|  
 |datos de exclusión|Porcentaje de los datos de aprendizaje que se reserva para su uso en la medición de la precisión de la estructura del modelo de minería de datos.|  
 |almacén de datos de exclusión|Estructura de minería de datos que se usa para almacenar en caché los datos de exclusión. Contiene referencias a los datos de exclusión.|  
@@ -969,7 +975,7 @@ ms.locfileid: "52519485"
 |Microsoft SQL Server|Familia de sistemas de análisis y administración de bases de datos relacionales de Microsoft para soluciones de comercio electrónico, línea de negocio y almacenamiento de datos.|  
 |Microsoft SQL Server 2008 Express|Versión ligera e incrustable de Microsoft SQL Server 2008.|  
 |Microsoft SQL Server 2008 Express con Advanced Services|Sistema de diseño y administración de bases de datos relacionales de Microsoft para soluciones de comercio electrónico, línea de negocio y almacenamiento de datos.|  
-|Microsoft SQL Server 2008 Express with Tools|Versión gratuita fácil de usar de la plataforma de datos SQL Server Express que incluye la herramienta de administración gráfica: SQL Server Management Studio (SMSS) Express.|  
+|Microsoft SQL Server 2008 Express with Tools|Una versión gratuita, fácil de usar de la plataforma de datos de SQL Server Express que incluye la herramienta de administración gráfica: SQL Server Management Studio (SMSS) Express.|  
 |Libros en pantalla de Microsoft SQL Server|Colección de documentación electrónica que incluye la documentación completa que se distribuye con Microsoft SQL Server.|  
 |Microsoft SQL Server Business Intelligence|Infraestructura de datos basada en Microsoft SQL Server y plataforma de Business Intelligence que consta de Microsoft SQL Server Integration Services, Relational Engine, Master Data Services, Reporting Services y Analysis Services.|  
 |Microsoft SQL Server Compact|Sistema de administración y análisis de bases de datos relacionales de Microsoft para soluciones de comercio electrónico, línea de negocio y almacenamiento de datos.|  
@@ -1091,7 +1097,7 @@ ms.locfileid: "52519485"
 |en paralelo, procesar|Método de procesamiento que se puede ejecutar solo en un equipo que contiene dos o más procesadores que se ejecutan simultáneamente. El procesamiento paralelo difiere del multiproceso en la manera en que una tarea se distribuye en los procesadores disponibles. En el multiproceso, un proceso puede dividirse en bloques secuenciales, con un procesador que administra el acceso a una base de datos, otro que analiza los datos y un tercero que controla el resultado gráfico en la pantalla. Los programadores que trabajan con sistemas que realizan el procesamiento paralelo deben encontrar maneras de dividir una tarea de modo que se distribuya lo más uniformemente posible entre los procesadores disponibles.|  
 |consulta parametrizada|Consulta que acepta valores de entrada mediante parámetros.|  
 |informe con parámetros|Informe publicado que acepta valores de entrada mediante parámetros.|  
-|filtro de fila con parámetros|Filtro de fila disponible con la replicación de mezcla que permite restringir los datos replicados a un suscriptor basándose en una función del sistema o en una función definida por el usuario (por ejemplo: SUSER_SNAME()).|  
+|filtro de fila con parámetros|Filtro de fila disponible con la replicación de mezcla que permite restringir los datos replicados a un suscriptor basándose en una función del sistema o definida por el usuario (por ejemplo: SUSER_SNAME()).|  
 |copia de seguridad parcial|Copia de seguridad de todos los datos del grupo de archivos principal, todos los grupos de archivos de lectura-escritura y, opcionalmente, cualquier archivo especificado. Una copia de seguridad parcial de una base de datos de solo lectura contiene únicamente el grupo de archivos principal.|  
 |restauración parcial de la base de datos|Restauración de solo una parte de una base de datos formada por su grupo de archivos principal y uno o más grupos de archivos secundarios. Los otros grupos de archivos siguen estando permanentemente sin conexión, aunque se pueden restaurar más adelante.|  
 |copia de seguridad diferencial parcial|Copia de seguridad parcial que es diferencial con respecto a una copia de seguridad parcial anterior (la copia de seguridad de base). En el caso de una base de datos de solo lectura, una copia de seguridad diferencial parcial contiene únicamente el grupo de archivos principal.|  
@@ -1785,7 +1791,7 @@ ms.locfileid: "52519485"
 |eje X|Línea de referencia horizontal en una cuadrícula o un gráfico que tiene dimensiones horizontal y vertical.|  
 |XML for Analysis|Especificación que describe un estándar abierto que admite el acceso a datos a orígenes de datos que residen en World Wide Web.|  
 |XMLA|Especificación que describe un estándar abierto que admite el acceso a datos a orígenes de datos que residen en World Wide Web.|  
-|XQuery|Lenguaje de consulta funcional que se aplica ampliamente a una variedad de tipos de datos XML derivados de Quilt, XPath y XQL. Tanto Ipedo como Software AG implementan sus propias versiones de la especificación propuesta de W3C para el lenguaje XQuery También llamado consulta XML, XQL.|  
+|XQuery|Lenguaje de consulta funcional que se aplica ampliamente a una variedad de tipos de datos XML derivados de Quilt, XPath y XQL. Tanto Ipedo como Software AG implementan sus propias versiones de la especificación propuesta de W3C para el lenguaje XQuery También se denomina: Consulta XML, XQL.|  
 |XSL|Vocabulario XML usado para transformar los datos XML a otro formato, como HTML, mediante una hoja de estilos que define las reglas de presentación.|  
 |Transformación XSL|Lenguaje basado en XML declarativo que se usa para presentar o transformar datos XML.|  
 |XSLT|Lenguaje basado en XML declarativo que se usa para presentar o transformar datos XML.|  

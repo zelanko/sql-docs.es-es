@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 847fc357ecd8b62279827f05b5aa08d4f5e6f068
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d155dd77380b202938476e7a34fdb51d212b4330
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579605"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938331"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
   Las expresiones ayudan a crear informes eficaces y flexibles. Este tutorial enseña a crear e implementar expresiones que usen operadores y funciones comunes. Usará el **expresión** cuadro de diálogo para escribir expresiones que concatenan valores de nombres, buscan valores en un conjunto de datos independiente, mostrar diferentes imágenes según los valores de campo y así sucesivamente.  

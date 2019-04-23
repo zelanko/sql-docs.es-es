@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.general.f1
 - "10248"
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c23a01244e75abe7df4bedc62ec3a19246474b45
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c85c464c6ebf32d81c08c319999aa2c6d8b1514c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296883"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940711"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a los puntos de datos de un gráfico (Generador de informes y SSRS)
   Un punto de datos es la entidad individual más pequeña del gráfico. En los gráficos que no son de formas, los puntos de datos se representan en función del tipo de gráfico. Por ejemplo, una serie de líneas está formada por uno o más puntos de datos conectados. En los gráficos de formas, los puntos de datos se representan por sectores o segmentos individuales que se agregan al gráfico. Por ejemplo, en un gráfico circular, cada sector es un punto de datos. Para más información, vea [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](chart-types-report-builder-and-ssrs.md).  
@@ -44,7 +44,7 @@ ms.locfileid: "56296883"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>Colocar etiquetas de puntos de datos en un gráfico  
  Para mostrar etiquetas de punto de datos en cualquier tipo de gráfico, haga clic con el botón derecho en el gráfico y seleccione **Mostrar etiquetas de datos**. La posición de las etiquetas de puntos de datos se especifica en función del tipo de gráfico:  
   
--   En un gráfico de barras, puede cambiar la posición de la etiqueta de punto de datos usando el atributo personalizado **BarLabelStyle** . Hay cuatro posiciones posibles: Externa, izquierda, centro y derecha. Si el estilo de la etiqueta de la barra se establece en Externa, la etiqueta se colocará fuera de la barra, siempre y cuando quepa en el área del gráfico. Si la etiqueta no se puede colocar fuera de la barra ni dentro del área de gráfico, la etiqueta se situará dentro de la barra.  
+-   En un gráfico de barras, puede cambiar la posición de la etiqueta de punto de datos usando el atributo personalizado **BarLabelStyle** . Hay cuatro posiciones posibles: Externa, Izquierda, Centro y Derecha. Si el estilo de la etiqueta de la barra se establece en Externa, la etiqueta se colocará fuera de la barra, siempre y cuando quepa en el área del gráfico. Si la etiqueta no se puede colocar fuera de la barra ni dentro del área de gráfico, la etiqueta se situará dentro de la barra.  
   
 -   En un gráfico circular, puede cambiar la posición de la etiqueta de punto de datos usando el atributo personalizado **PieLabelStyle** . Hay muchas consideraciones que se deben tener en cuenta al colocar etiquetas de puntos de datos alrededor de un gráfico circular, entre las que se incluyen el tamaño del gráfico, el espacio disponible entre el gráfico y su leyenda correspondiente, y el tamaño de las etiquetas. Para más información, vea [Mostrar las etiquetas de los puntos de datos fuera de un gráfico circular &#40;Generador de informes y SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md).  
   
@@ -101,7 +101,7 @@ ms.locfileid: "56296883"
  [Aplicar formato a las etiquetas de los ejes de un gráfico &#40;Generador de informes y SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Aplicar formato de fecha o de moneda a las etiquetas de los ejes &#40;Generador de informes y SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Tutorial: Agregar un gráfico circular al informe &#40;generador de informes&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Tutorial: Agregar un gráfico circular a un informe &#40;Generador de informes&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   

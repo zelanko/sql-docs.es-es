@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - expressions
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6f6a205c6ec89ca1cf17699e6e5a4b8cfe7b6bf3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 119ed4044fa3613e0544f0c9ee60189342bd0a63
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295783"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953561"
 ---
 # <a name="expression-dialog-box-report-builder"></a>Expresión (cuadro de diálogo del Generador de informes)
   Use el cuadro de diálogo **Expresión** para escribir expresiones de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] para las propiedades de los elementos de informe. Puede usar expresiones para establecer muchas propiedades, como el color, la fuente y los bordes. En tiempo de ejecución, el procesador de informes evalúa las expresiones y usa el resultado como valor de la propiedad.  

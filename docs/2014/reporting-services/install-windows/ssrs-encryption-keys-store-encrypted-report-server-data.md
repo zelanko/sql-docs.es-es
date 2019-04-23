@@ -15,15 +15,15 @@ helpviewer_keywords:
 - encryption [Reporting Services]
 - databases [Reporting Services], encryption
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ef44bd8ee92bb293aac06aa28b56dc23e8ca9602
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 851895180e3fc6595646543b339f9cc7f857c15e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027926"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967451"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>Almacenar datos cifrados del servidor de informes (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena valores cifrados en la base de datos del servidor de informes y en archivos de configuración. La mayoría de los valores cifrados son credenciales que se utilizan para obtener acceso a orígenes de datos externos que proporcionan datos para informes. En este tema se describen los valores que se cifran, la funcionalidad de cifrado usada en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y otros tipos de datos confidenciales almacenados que debe conocer.  

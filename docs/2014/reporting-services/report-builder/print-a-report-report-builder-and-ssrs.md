@@ -8,20 +8,20 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5938bb79f24601fa9f83ffea9f181955f6893a85
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 312fdd9defc0cbc0f19c312e32e0eb8038cbc918
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290373"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971881"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Imprimir un informe (Generador de informes y SSRS)
   Después de guardar un informe en un servidor de informes, puede ver e imprimir el informe desde un explorador, el Administrador de informes o cualquier aplicación que use para ver un informe exportado. Antes de guardar un informe, puede imprimirlo desde su vista previa.  
   
- Cuando imprime un informe, puede especificar el tamaño del papel que se va a usar. El tamaño del papel determina el número de páginas de un informe y los datos del informe que caben en cada página. Tamaño de papel afecta a solo los informes que se representan con representaciones de saltos de página: PDF, imagen e imprimir. El establecimiento del tamaño del papel no tiene ningún efecto en otros representadores. Para más información, vea [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md).  
+ Cuando imprime un informe, puede especificar el tamaño del papel que se va a usar. El tamaño del papel determina el número de páginas de un informe y los datos del informe que caben en cada página. El tamaño del papel solamente afecta a los informes representados con representadores de saltos de página forzados: PDF, Imagen e Imprimir. El establecimiento del tamaño del papel no tiene ningún efecto en otros representadores. Para más información, vea [Comportamientos de la representación &#40;Generador de informes y SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
  Desde la barra de herramientas del visor de informes del Administrador de informes o en la vista previa del Generador de informes, puede exportar un informe a un representador de saltos de página duros o hacer clic en el botón Imprimir para imprimir una copia del informe. Es posible que necesite establecer el tamaño del papel u otras propiedades de configuración de página. Use el cuadro de diálogo **Propiedades del informe** para cambiar las propiedades de configuración de página, incluyendo el tamaño del papel.  
   

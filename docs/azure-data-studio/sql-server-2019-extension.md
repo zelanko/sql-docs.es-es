@@ -3,7 +3,7 @@ title: Extensión de SQL Server 2019 (versión preliminar)
 titleSuffix: Azure Data Studio
 description: Extensión de la versión preliminar de SQL Server de 2019 para Azure Data Studio
 ms.custom: seodec18
-ms.date: 03/18/2019
+ms.date: 04/19/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: dfa49b1611c7fd9b196e57ea08575388aa90329b
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 11dee99f7d0648a4c7fc701234796e6d552d47a9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161553"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934131"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensión de SQL Server 2019 (versión preliminar)
 
@@ -30,9 +30,9 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar), descargue 
 
    |Plataforma|Descargar|Fecha de la versión|Versión
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|18 de marzo de 2019 |0.11.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|18 de marzo de 2019 |0.11.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|18 de marzo de 2019 |0.11.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|18 de abril de 2019 |0.12.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|18 de abril de 2019 |0.12.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|18 de abril de 2019 |0.12.0
 
 1. En Azure Data Studio elija **la extensión de instalación de paquete VSIX** desde el **archivo** menú y seleccione el archivo .vsix descargado.
 
@@ -44,12 +44,27 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar), descargue 
 
 1. Las dependencias después de finalizar la instalación, cierre y vuelva a abrir Azure Data Studio. El **clúster de SQL Server macrodatos** tipo de conexión no está disponible hasta que reinicie Azure Data Studio.
 
+## <a name="changes-in-release-012"></a>Cambios en la versión 0.12
+
+* El **clúster de SQL Server macrodatos** tipo de conexión se ha quitado en esta versión. Toda la funcionalidad disponible anteriormente desde la conexión del clúster de macrodatos de SQL Server ahora está disponible en la conexión de SQL Server.
+* Exploración de HDFS se puede encontrar en el **Data Services** carpeta
+* Para equipos portátiles el el PySpark y kernels macrodatos funcionan cuando se conecta a la instancia principal de SQL Server en el clúster de macrodatos de SQL Server.
+* Crear a Asistente para la tabla externa:
+  * Compatibilidad para crear la tabla externa mediante el origen de datos externo existente.
+  * Mejoras de rendimiento en el asistente.
+  * Mejora del tratamiento de nombres de objeto con caracteres especiales. En algunos casos ocasionados producirá un error en el Asistente
+  * Mejoras de confiabilidad de la página de asignación de objeto.
+  * Sistema quita las bases de datos - ': DWConfiguration', 'DWDiagnostics', 'DWQueue' - en la lista desplegable de bases de datos.
+  * Soporte técnico para establecer el nombre del objeto de formato de archivo externo el **Create External Table desde archivos CSV** asistente.
+  * Agrega un botón de actualización a la primera página de la **Create External Table desde archivos CSV** asistente.
+
 ## <a name="release-notes-v0110"></a>Notas de la versión (v0.11.0)
-  * Compatibilidad con Jupyter Notebook, específicamente el soporte técnico para los kernels de Python3 y Spark, se ha movido a Azure Data Studio. Esta extensión ya no es necesaria para poder usar los blocs de notas.
-  * Varias correcciones de errores en los asistentes para datos externos:
-    * Se actualizaron las asignaciones de tipos de Oracle para que coincida con los cambios que se incluye en SQL Server 2019 CTP 2.3.
-    * Se corrigió un problema donde estaban que se pierdan nuevos esquemas escritos en los controles de la asignación de tabla.
-    * Se ha corregido un problema donde la comprobación de un nodo de base de datos en las asignaciones de tabla no se ha producido en todas las tablas y vistas que se está comprueba.
+
+* Compatibilidad con Jupyter Notebook, específicamente el soporte técnico para los kernels de Python3 y Spark, se ha movido a Azure Data Studio. Esta extensión ya no es necesaria para poder usar los blocs de notas.
+* Varias correcciones de errores en los asistentes para datos externos:
+  * Se actualizaron las asignaciones de tipos de Oracle para que coincida con los cambios que se incluye en SQL Server 2019 CTP 2.3.
+  * Se corrigió un problema donde estaban que se pierdan nuevos esquemas escritos en los controles de la asignación de tabla.
+  * Se ha corregido un problema donde la comprobación de un nodo de base de datos en las asignaciones de tabla no se ha producido en todas las tablas y vistas que se está comprueba.
 
 
 ## <a name="release-notes-v0102"></a>Notas de la versión (v0.10.2)

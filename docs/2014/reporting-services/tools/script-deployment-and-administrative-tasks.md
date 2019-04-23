@@ -20,15 +20,15 @@ helpviewer_keywords:
 - transferrng reports
 - reports [Reporting Services], migrating
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bf378f94e8a3a010f2959a2c8ce1bd5e69f005bb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 033e1852f076dde631a3ea1e9be1c8918eab042a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013706"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59940451"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>Script para tareas administrativas y de implementación
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite el uso de scripts para automatizar las tareas rutinarias de instalación, implementación y administración. La implementación de un servidor de informes es un proceso de varios pasos en el que deben usarse varias herramientas y procedimientos de configuración: no existe ningún programa o método que automatice todas las tareas.  

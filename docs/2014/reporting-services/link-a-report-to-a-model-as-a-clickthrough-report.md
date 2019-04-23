@@ -12,15 +12,15 @@ helpviewer_keywords:
 - clickthrough reports, customizing
 - clickthrough reports, templates
 ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7d0ec49168e4a23a019eb91fc708e286bf0e1ac4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 90b21c6fa21322afe1d9351e73460fce1a4592f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037046"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944161"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Vincular un informe a un modelo como informe click-through
   En lugar de utilizar las plantillas del informe click-through predeterminadas, puede crear un informe del Generador de informes y, a continuación, hacer clic en una entidad específica en el modelo de informe. Cuando la persona que ve el informe hace clic en los datos interactivos del informe principal, éste se muestra como un informe click-through. Para vincular un informe a una entidad, utilice el Administrador de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  

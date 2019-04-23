@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 148449f05d1fb36cfbebd299f2f3c7c0cb5eac54
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 848eb1bc39b45d76e1e1ffd97fbd05d557a740a0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296618"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943211"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Incluir indicadores y medidores en un panel de medidores (Generador de informes y SSRS)
   El panel de medidores es el contenedor de nivel superior que contiene uno o más medidores e indicadores. Los indicadores se pueden incrustar en los medidores o colocar a su lado en el panel de medidores.  

@@ -8,22 +8,22 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0724a68097b2730cf00fc80098f03d4bc5675061
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e8776cb0c1f0db206274ff7d766f31ba1c446f51
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298573"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961161"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>Agregar un gráfico a un informe (Generador de informes y SSRS)
   Si desea resumir datos y presentarlos con un formato visual, use una región de datos Gráfico. Es importante elegir el tipo de gráfico adecuado para el tipo de datos que se va a presentar. Esto determinará en qué medida se podrán interpretar correctamente los datos cuando se trasladen al gráfico. Para más información, vea [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  La manera más simple de agregar una región de datos de Gráfico a su informe es ejecutar el Asistente para nuevo gráfico. El asistente proporciona gráficos de columna, línea, circular, barra y área. Para éstos y otros tipos de gráfico, puede agregar también un gráfico manualmente.  
   
- Después de agregar una región de datos Gráfico a la superficie de diseño, puede arrastrar los campos de conjunto de datos de informe para los datos numéricos y no numéricos hasta el panel de Datos del gráfico en el gráfico. Haga clic en el gráfico para mostrar el panel de datos del gráfico con sus tres áreas: Grupos de series, grupos de categorías y valores.  
+ Después de agregar una región de datos Gráfico a la superficie de diseño, puede arrastrar los campos de conjunto de datos de informe para los datos numéricos y no numéricos hasta el panel de Datos del gráfico en el gráfico. Haga clic en el gráfico para mostrar el panel Datos del gráfico con estas tres áreas: grupos de series, grupos de categorías y valores.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -71,9 +71,9 @@ ms.locfileid: "56298573"
  [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Tipos de gráficos &#40;Generador de informes y SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [Puntos de datos vacíos y nulos en los gráficos &#40;Generador de informes y SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Tutorial: Agregar un gráfico de barras a un informe (generador de informes)](https://go.microsoft.com/fwlink/?LinkId=198052)   
+ [Tutorial: Incorporación de un gráfico de barras a un informe (Generador de informes)](https://go.microsoft.com/fwlink/?LinkId=198052)   
  [Tutorial: Agregar un gráfico de barras a un informe (Diseñador de informes)](https://go.microsoft.com/fwlink/?LinkId=198042)   
- [Tutorial: Agregar un gráfico circular al informe (generador de informes)](https://go.microsoft.com/fwlink/?LinkId=198051)   
+ [Tutorial: Incorporación de un gráfico circular a un informe (Generador de informes)](https://go.microsoft.com/fwlink/?LinkId=198051)   
  [Tutorial: Agregar un gráfico circular a un informe (Diseñador de informes)](https://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

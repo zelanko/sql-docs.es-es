@@ -8,22 +8,22 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 17706542014f3835cb0a100d7dbf3e579b47aa65
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 77a18098a80686fcb12aca64f5b7d1452fbff452
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010666"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964961"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Ver y explorar los informes en modo nativo usando elementos web de SharePoint (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona varios elementos web que funcionan con versiones específicas de un servidor de informes y en determinados modos de implementación.  
   
--   **Modo nativo:** si desea acceder al contenido del servidor de informes en un sitio de SharePoint desde un servidor de informes en modo nativo, use el Explorador de informes de los elementos web de SharePoint 2.0 incluidos con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En este tema se proporcionan instrucciones para instalar y usar los elementos web de la versión 2.0.  
+-   **Modo nativo:** Si desea tener acceso a contenido de servidor de informes en un sitio de SharePoint desde un servidor de informes de modo nativo, utilice el Explorador de informes de elementos Web de SharePoint 2.0 y el Visor de informes que se incluyen con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. En este tema se proporcionan instrucciones para instalar y usar los elementos web de la versión 2.0.  
   
--   **Modo SharePoint:** si desea acceder a un servidor de informes que se ejecuta en modo de SharePoint, use los elementos web que instala el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para los productos de SharePoint. Para más información sobre el complemento, vea [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   **Modo SharePoint:** Si desea obtener acceso a un servidor de informes que se ejecuta en modo de SharePoint, use los elementos web que se instalan de forma el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] complemento para productos de SharePoint. Para más información sobre el complemento, vea [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 -   > [!NOTE]  
     >  El elemento web del visor de informes para el modo nativo (SPViewer.dwp) es un elemento web diferente del que instala el complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint (ReportViewer.dwp). Los elementos web tienen implementaciones y esquemas diferentes pero ambos pueden instalarse en la misma granja de SharePoint. Visualmente, puede distinguir los dos elementos web mediante la siguiente característica: el elemento web Visor de informes que se instala mediante el complemento tiene el menú **Acciones** en la barra de herramientas.  

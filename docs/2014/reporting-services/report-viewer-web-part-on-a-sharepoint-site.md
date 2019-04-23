@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], Web Parts
 - Report Viewer Web Part [Reporting Services]
 ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c71070aa63716efd9773b00d304346935c635000
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1b63b7d6591e7296b5b45349351620595c2b5d02
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028316"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960821"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Elemento web Visor de informes en un sitio de SharePoint
   El elemento web del Visor de informes es un elemento web personalizado que se instala mediante el complemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para productos de SharePoint. Puede usar el elemento web para ver, navegar, imprimir y exportar informes en un servidor de informes configurado para ejecutarse en el modo integrado de SharePoint. El elemento web Visor de informes está asociado a archivos de definición de informe (.rdl) que procesa el servidor de informes de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . No puede usarlo con otros documentos de informe creados en otros productos de software.  

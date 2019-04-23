@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b1b083ab1da347d3aa90b1eff8480b14bac8350c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9a48a4dfa0689e4ee30036c41980c1f4ad929108
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027546"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954191"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Tipo de conexión de Oracle (SSRS)
   Para utilizar en el informe los datos de una base de datos de Oracle, debe tener un conjunto de datos basado en un origen de datos de informe de tipo Oracle. Este tipo de origen de datos integrado está basado en el proveedor administrado de .NET Framework para Oracle y requiere un componente de software del cliente Oracle.  

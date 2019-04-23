@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8ae3948d019467590b885c706e6b2c8d1c186da2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: efa4c0758ed85008ccb04b30a8dcd8e24ed54208
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031546"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948901"
 ---
 # <a name="subscriptions-page-report-manager"></a>Suscripciones (página del Administrador de informes)
   Use la página Suscripciones para mostrar todas las suscripciones del informe u origen de datos compartido actual. Si tiene permisos suficientes, concedidos por la tarea "Administrar todas las suscripciones", puede ver las suscripciones de todos los usuarios. En caso contrario, esta página solo muestra las suscripciones que le pertenecen.  

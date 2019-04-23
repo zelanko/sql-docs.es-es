@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f7c364708f3d574f5096210a94fc33174b3eb2c2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3f9826e22c617bbcae2630121ce1be23b2511a35
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021560"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59932691"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Error de Reporting Services
     
@@ -56,7 +56,7 @@ ms.locfileid: "56021560"
   
 -   Un parámetro que tiene la propiedad que acepta valores NULL en `False` ha detectado un valor null en el parámetro.  
   
--   Una expresión para la propiedad Hidden de una región de datos contiene un error: Referencia de objeto no definida a una instancia de un objeto.  
+-   Una expresión para la propiedad Hidden de una región de datos contiene un error: Referencia de objeto no establecida como una instancia de un objeto.  
   
 -   Una expresión incluía una llamada de función no válida o un error de sintaxis.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "56021560"
  Los parámetros de varios valores no pueden ser NULL. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>No se puede procesar el informe principal con subinforme  
- La misma versión del procesador de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] debe procesar un informe con subinformes. Al actualizar los informes a la versión actual del esquema de definición de informe, el informe principal y los subinformes pueden actualizarse o no al mismo tiempo. Si la versión no es compatible entre un informe y sus subinformes, se muestra el mensaje siguiente: "No se pudo procesar el subinforme".  
+ La misma versión del procesador de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] debe procesar un informe con subinformes. Al actualizar los informes a la versión actual del esquema de definición de informe, el informe principal y los subinformes pueden actualizarse o no al mismo tiempo. Si la versión no es compatible entre un informe y sus subinformes, se muestra el mensaje siguiente: "No se pudo procesar subinforme."  
   
  Debe cambiar el informe principal o los subinformes para que todos los informes se puedan procesar con la misma versión del procesador de informes. Para obtener información sobre los motivos por los que no se puede actualizar un informe, vea [Actualizar informes](../install-windows/upgrade-reports.md).  
   

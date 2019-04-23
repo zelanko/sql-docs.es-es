@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 22810ae8acf19782997245a3746c70f95628fd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2d79a28204600adbe247864df68853b24bf8cf51
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012076"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946931"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una cuenta especial que se utiliza para el procesamiento de informes en modo desatendido y para enviar solicitudes de conexión a través de la red. La cuenta se utiliza de las formas siguientes:  
@@ -36,7 +36,7 @@ ms.locfileid: "56012076"
  El procesamiento de informes en modo desatendido hace referencia a cualquier proceso de ejecución de informe activado por un evento (sea un evento controlado por programación o de actualización de datos) y no por la solicitud de un usuario. El servidor de informes utiliza la cuenta de procesamiento de informes en modo desatendido para iniciar una sesión en el equipo que hospeda el origen de datos externo. Esta cuenta es necesaria porque las credenciales de la cuenta del servicio del servidor de informes no se han utilizado nunca para conectarse a otros equipos.  
   
 > [!IMPORTANT]  
->  La configuración de esta cuenta es opcional. No obstante, si no la configura, limitará sus opciones para conectarse a algunos orígenes de datos y es posible que no pueda recuperar archivos de imagen desde equipos remotos. Si configura la cuenta, debe mantenerla actualizada. En concreto, si permite que una contraseña expire o se cambie la información de cuenta en Active Directory, se producirá el siguiente error la próxima vez que se procese un informe: "Error de inicio de sesión (rsLogonFailed) Error de inicio de sesión: nombre de usuario desconocido o contraseña incorrecta". Resulta esencial el mantenimiento adecuado de la cuenta de procesamiento de informes en modo desatendido, aunque no recupere nunca imágenes externas o no envíe nunca solicitudes de conexión a equipos externos. Si configura la cuenta pero se da cuenta de que no la está utilizando, puede eliminarla para evitar las tareas rutinarias de mantenimiento de la cuenta.  
+>  La configuración de esta cuenta es opcional. No obstante, si no la configura, limitará sus opciones para conectarse a algunos orígenes de datos y es posible que no pueda recuperar archivos de imagen desde equipos remotos. Si configura la cuenta, debe mantenerla actualizada. En concreto, si permite que una contraseña expire o se cambia la información de cuenta en Active Directory, se producirá el siguiente error la próxima vez que se procesa un informe: "Error de inicio de sesión (rsLogonFailed) Error al iniciar sesión: nombre de usuario desconocido o contraseña incorrecta." Resulta esencial el mantenimiento adecuado de la cuenta de procesamiento de informes en modo desatendido, aunque no recupere nunca imágenes externas o no envíe nunca solicitudes de conexión a equipos externos. Si configura la cuenta pero se da cuenta de que no la está utilizando, puede eliminarla para evitar las tareas rutinarias de mantenimiento de la cuenta.  
   
 ## <a name="how-to-configure-the-account"></a>Cómo configurar la cuenta  
  Debe usar una cuenta de usuario de dominio. Para cumplir su propósito específico, esta cuenta debería ser distinta de la que se utiliza para ejecutar el servicio del servidor de informes. Asegúrese de utilizar una cuenta que tenga permisos mínimos (son suficientes los permisos de acceso de solo lectura con conexión de red) y acceso limitado a aquellos equipos que proporcionan los orígenes de datos y los recursos al servidor de informes. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  

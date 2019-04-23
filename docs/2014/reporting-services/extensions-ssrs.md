@@ -1,7 +1,7 @@
 ---
 title: Extensiones
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 13c3ac54ba2c9713789c131a2bc1cee4ebe4c809
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 6a702f7a78c3377651e544757789e7a7034f2923
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553107"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938421"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>Extensiones para SQL Server Reporting Services (SSRS)
 
@@ -56,7 +56,7 @@ Algunas extensiones también pueden realizar las siguientes tareas:
   
 ## <a name="rendering-extensions"></a>Extensiones de representación
 
- Las extensiones de representación transforman los datos y la información de diseño del procesador de informes en un formato específico del dispositivo. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye siete extensiones de representación: HTML, Excel, CSV, XML, imagen, PDF y [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
+ Las extensiones de representación transforman los datos y la información de diseño del procesador de informes en un formato específico del dispositivo. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] incluye siete extensiones de representación: HTML, Excel, CSV, XML, Image, PDF, y [!INCLUDE[msCoName](../includes/msconame-md.md)] Word.  
   
 - **Extensión de representación en HTML** Cuando se solicita un informe del servidor de informes a través de un explorador web, el servidor de informes utiliza la extensión de representación en HTML para representar el informe. La extensión de representación en HTML genera todo el lenguaje HTML mediante codificación UTF-8. Para obtener más información, consulte [representar en HTML &#40;generador de informes y SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md) y [planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
@@ -66,7 +66,7 @@ Algunas extensiones también pueden realizar las siguientes tareas:
   
 - **Extensión de representación en XML** La extensión de representación en XML representa informes en archivos XML. Otros programas pueden almacenar o leer estos archivos XML. También se puede utilizar una transformación XSLT para convertir el informe en otro esquema XML y poder utilizarlo con otra aplicación. El lenguaje XML que genera la extensión de representación en XML tiene la codificación UTF-8. Para obtener más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
--   **Extensión de representación en imágenes** La extensión de representación en imágenes representa informes en mapas de bits o metarchivos. La extensión puede representar informes en los siguientes formatos: BMP, EMF, GIF, JPEG, PNG, TIFF y WMF. De forma predeterminada, la imagen se representa en formato TIFF, que se puede mostrar en el visor de imágenes predeterminado del sistema operativo (por ejemplo, Visor de imágenes y fax de Windows). Desde el visor, puede enviar la imagen a una impresora. Al usar la extensión de representación en imágenes para representar informes se asegura de que el informe tenga la misma apariencia en todos los clientes. Si un usuario ve un informe en HTML, su apariencia puede variar dependiendo de la versión del explorador de la que disponga el usuario, la configuración del explorador y las fuentes disponibles. La extensión de representación de imágenes representa el informe en el servidor, de forma que todos los usuarios vean la misma imagen. Puesto que el informe se representa en el servidor, todas las fuentes utilizadas en el informe tienen que estar instaladas en el servidor. Para obtener más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).  
+-   **Extensión de representación en imágenes** La extensión de representación en imágenes representa informes en mapas de bits o metarchivos. La extensión puede representar informes en los siguientes formatos: BMP, EMF, GIF, JPEG, PNG, TIFF y WMF. De forma predeterminada, la imagen se representa en formato TIFF, que se puede mostrar en el visor de imágenes predeterminado del sistema operativo (por ejemplo, Visor de imágenes y fax de Windows). Desde el visor, puede enviar la imagen a una impresora. Al usar la extensión de representación en imágenes para representar informes se asegura de que el informe tenga la misma apariencia en todos los clientes. (Cuando un usuario ve un informe en HTML, la apariencia de dicho informe puede variar según la versión de explorador del usuario, la configuración del explorador y las fuentes que están disponibles). La extensión de representación de imágenes representa el informe en el servidor, de forma que todos los usuarios vean la misma imagen. Puesto que el informe se representa en el servidor, todas las fuentes utilizadas en el informe tienen que estar instaladas en el servidor. Para obtener más información, vea [Exportar a Microsoft Excel &#40;Generador de informes y SSRS&#41;](report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md).  
   
 - **Extensión de representación en PDF** La extensión de representación en PDF representa informes en archivos PDF que pueden abrirse y visualizarse con Adobe Acrobat 6.0 o posterior. Para obtener más información, vea [Exportar a un archivo PDF &#40;Generador de informes y SSRS&#41;](report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).  
   

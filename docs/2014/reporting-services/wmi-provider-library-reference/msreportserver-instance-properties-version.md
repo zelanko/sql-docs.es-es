@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Version property
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 800358195b5c9d76485626cd3d4b6ca981a2de2e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ff82109bc54fb1360df0f9280a196c547e53039b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038566"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953671"
 ---
 # <a name="version-property-wmi-msreportserverinstance"></a>Propiedad Version (MSReportServer_Instance de WMI)
   Devuelve la versión del servidor de informes en formato Major.Minor.Build.Revision. Solo lectura.  

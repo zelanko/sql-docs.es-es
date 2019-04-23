@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 656569ccf0e0d93c7a8b20f9862c44c502f3f51d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 75998722f773685e419f0618dc75864ae5fece16
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288593"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954461"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>Permitir que un cuadro de texto aumente o se reduzca (Generador de informes y SSRS)
   De manera predeterminada, los cuadros de texto tienen un tamaño fijo. Puede establecer las opciones que permiten que el cuadro de texto se expanda o se reduzca según su contenido. Estas opciones corresponden a las propiedades `CanGrow` o `CanShrink` del panel de propiedades.  

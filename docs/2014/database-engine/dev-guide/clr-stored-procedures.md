@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -23,12 +21,12 @@ ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 99fd0d558fccab09f0c73ddd47ef5b4b22d303c3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9f509b2a2544c67c9113bc700b7d98bfd4a24024
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511500"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157911"
 ---
 # <a name="clr-stored-procedures"></a>Procedimientos almacenados de CLR
   Los procedimientos almacenados son rutinas que no pueden usarse en expresiones escalares. A diferencia de las funciones escalares, pueden devolver mensajes y resultados tabulares al cliente, invocar instrucciones del lenguaje de definición de datos (DDL) e instrucciones del lenguaje de manipulación de datos (DML), así como devolver parámetros de salida. Para obtener información acerca de las ventajas de la integración de CLR y elegir entre código administrado y [!INCLUDE[tsql](../../includes/tsql-md.md)], consulte [información general de la integración CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  

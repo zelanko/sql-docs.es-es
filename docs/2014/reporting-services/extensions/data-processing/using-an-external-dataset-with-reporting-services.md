@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e7f5cdd32104a9477dddb2620b749b647ad775d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c912d6ac343bbcb3f908596a8ea804ad8f21dd82
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023486"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158951"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Usar un conjunto de datos externo con Reporting Services
   El objeto **DataSet** es esencial para admitir escenarios de datos desconectados y distribuidos con [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. El objeto **DataSet** es una representación residente en memoria de los datos que proporciona un modelo de programación relacional coherente independiente del origen de datos. Se puede utilizar con varios orígenes de datos diferentes, con datos XML, o para administrar los datos local de la aplicación. El objeto **DataSet** representa un conjunto completo de datos, incluidas las tablas relacionadas, las restricciones y las relaciones entre las tablas. Debido a la versatilidad del objeto **DataSet** para almacenar y exponer los datos, estos se pueden procesar y transformar a menudo en un objeto **DataSet** antes de que se produzca cualquier notificación en ellos.  

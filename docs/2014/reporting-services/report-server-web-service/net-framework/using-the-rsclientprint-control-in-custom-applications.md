@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - RSPrintClient control
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0cddac844ac9603da32a4fabc47fa71a8ddcd226
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036606"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157717"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usar el control RSClientPrint en aplicaciones personalizadas
   El control ActiveX de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] **RSPrintClient** proporciona impresión del lado cliente para los informes mostrados en el Visor HTML. Proporciona un cuadro de diálogo **Imprimir** para que un usuario pueda iniciar un trabajo de impresión, obtener una vista previa de un informe, especificar las páginas que se van a imprimir y cambiar los márgenes. Durante una operación de impresión del lado cliente, el servidor de informes representa el informe en la extensión de representación en imágenes (EMF) y utiliza las capacidades de impresión del sistema operativo para crear el trabajo de impresión y enviarlo a una impresora.  
@@ -107,7 +105,7 @@ ms.locfileid: "56036606"
 |Argumento|E/S|Tipo|Descripción|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|Entrada|String|Especifica el directorio virtual del servidor de informes (por ejemplo, https://adventure-works/reportserver).|  
-|ReportPathParameters|Entrada|String|Especifica el nombre completo para obtener acceso al informe en el espacio de nombres de carpetas del servidor de informes, incluidos los parámetros. Los informes se recuperan mediante el acceso a una dirección URL. Por ejemplo, "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
+|ReportPathParameters|Entrada|String|Especifica el nombre completo para obtener acceso al informe en el espacio de nombres de carpetas del servidor de informes, incluidos los parámetros. Los informes se recuperan mediante el acceso a una dirección URL. Por ejemplo: "/ de ejemplo AdventureWorks Reports/Employee Sales Summary & EmpID = 1234"|  
 |ReportName|Entrada|String|Nombre corto del informe (en el ejemplo anterior, el nombre corto es Employee Sales Summary). Aparece en el cuadro de diálogo Imprimir y en la cola de impresión.|  
   
 ### <a name="example"></a>Ejemplo  

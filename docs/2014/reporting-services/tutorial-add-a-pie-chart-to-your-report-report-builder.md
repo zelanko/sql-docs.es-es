@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Agregar un gráfico circular a un informe (generador de informes) | Microsoft Docs'
+title: 'Tutorial: Agregar un gráfico circular a un informe (Generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 65a0db21f0334c6782c7888e7484f91058424cd1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 30966fc1ccc592539e543869aef03f555ca59b2d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290453"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959511"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico circular a un informe (generador de informes)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Incorporación de un gráfico circular a un informe (Generador de informes)
   Los gráficos circulares y los gráficos de anillos muestran los datos como una proporción del total. Los gráficos circulares se usan normalmente para realizar comparaciones entre grupos. Los gráficos circulares y de anillos, junto con los gráficos de pirámide y embudo, forman un grupo de gráficos conocidos como gráficos de formas. Los gráficos de formas no tienen ejes. Cuando se coloca un campo numérico en un gráfico de formas, el gráfico calcula el porcentaje de cada valor en relación con el total.  
   
  Si hay demasiados puntos de datos en un gráfico circular, es posible que las etiquetas de los puntos de datos estén demasiado amontonadas y no puedan leerse. En ese caso, considere la posibilidad de usar un gráfico de líneas. Considere usar únicamente gráficos circulares después de haber agregado los datos en algunos puntos de datos.  

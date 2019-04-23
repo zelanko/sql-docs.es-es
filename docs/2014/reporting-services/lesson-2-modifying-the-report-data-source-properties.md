@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f7f1df9e5b5ee885af3e7a0fe462faeafd2d6b7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 41746f2938afd17e59dc4a9f2278179e4ccc1695
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026426"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964801"
 ---
-# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lección 2: Modificar las propiedades del origen de datos de informe
+# <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lección 2: Modificación de las propiedades del origen de datos de informe
   En esta lección, usará el Administrador de informes para seleccionar un informe que se entregará a los destinatarios. La suscripción controlada por datos que va a definir distribuirá el informe **Sales Order** creado en el tutorial [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). En los pasos siguientes, modificará la información de conexión del origen de datos que el informe utiliza para obtener los datos. Solo los informes que usan **credenciales almacenadas** para obtener acceso a un origen de datos del informe se pueden distribuir a través de una suscripción controlada por datos. Las credenciales almacenadas son necesarias para el procesamiento desatendido de informes.  
   
  También modificará el conjunto de datos y el informe para usar un parámetro que filtrar el informe en `[Order]` de modo que la suscripción pueda dar como resultado diferentes instancias del informe para pedidos concretos y formatos de representación.  
@@ -114,16 +114,16 @@ ms.locfileid: "56026426"
   
          ![Visor de informes con área de parámetros visible](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "Visor de informes con área de parámetros visible")  
   
-8.  Volver a implementar el informe de modo que la configuración de la suscripción de la lección siguiente pueda usar los cambios efectuados en esta lección. Para obtener más información sobre las propiedades del proyecto usado en el tutorial de la tabla, vea la sección ' Para publicar el informe en el servidor de informes (opcional)' de [lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+8.  Volver a implementar el informe de modo que la configuración de la suscripción de la lección siguiente pueda usar los cambios efectuados en esta lección. Para obtener más información sobre las propiedades del proyecto usado en el tutorial de la tabla, vea la sección ' Para publicar el informe en el servidor de informes (opcional)' de [lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 ##  <a name="bkmk_redeploy"></a> Para volver a implementar el informe  
   
-1.  Volver a implementar el informe de modo que la configuración de la suscripción de la lección siguiente pueda usar los cambios efectuados en esta lección. Para obtener más información sobre las propiedades del proyecto usado en el tutorial de la tabla, vea la sección ' Para publicar el informe en el servidor de informes (opcional)' de [lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Volver a implementar el informe de modo que la configuración de la suscripción de la lección siguiente pueda usar los cambios efectuados en esta lección. Para obtener más información sobre las propiedades del proyecto usado en el tutorial de la tabla, vea la sección ' Para publicar el informe en el servidor de informes (opcional)' de [lección 6: Agregar grupos y totales &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)  
   
 2.  En la barra de herramientas, haga clic en **Generar** y, a continuación, haga clic en **Tutorial de implementación**.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Ha configurado correctamente el informe para obtener datos utilizando credenciales almacenadas. A continuación, especifica la suscripción usando las páginas de suscripción controlada por datos en el Administrador de informes. Consulte [lección 3: Definir una suscripción controlada por datos](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
+ Ha configurado correctamente el informe para obtener datos utilizando credenciales almacenadas. A continuación, especifica la suscripción usando las páginas de suscripción controlada por datos en el Administrador de informes. Consulte [Lección 3: Definir una suscripción controlada por datos](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Administrar orígenes de datos de informe](report-data/manage-report-data-sources.md)   

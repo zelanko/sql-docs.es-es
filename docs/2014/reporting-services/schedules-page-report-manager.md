@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3dc1cfa85fde084327567e36fea728d9c76ef3f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3c232740598e1c9d1f8911c5fa5662d4ef82d5b2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028256"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948801"
 ---
 # <a name="schedules-page-report-manager"></a>Página de Programaciones (Administrador de informes)
   Use la página Programaciones para crear, modificar, eliminar, pausar o reanudar programaciones compartidas. Una programación compartida es una programación con nombre que se puede crear y administrar independientemente de los informes, las suscripciones y los demás procesos que utilizan información de programación. Los usuarios pueden seleccionar las programaciones compartidas que proporcione.  

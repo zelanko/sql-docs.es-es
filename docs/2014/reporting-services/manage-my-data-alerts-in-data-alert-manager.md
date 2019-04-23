@@ -11,15 +11,15 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a79771080b1b9c2b7009e7d6228e943e48edbc04
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 37ca741b57be38108407b52ed5e626f80466aea6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027106"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971851"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Administrar mis alertas de datos en el Administrador de alertas de datos
   Los usuarios de SharePoint pueden ver una lista de las alertas de datos que han creado e información acerca de las alertas. También pueden eliminar sus alertas, abrir las definiciones de las alertas para modificarlas en el Diseñador de alertas de datos y ejecutar sus alertas. En la imagen siguiente se muestran las características disponibles en el Administrador de alertas de datos para los usuarios.  

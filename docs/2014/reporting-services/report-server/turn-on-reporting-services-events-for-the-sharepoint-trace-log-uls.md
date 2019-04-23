@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e062d516b929f436c6a255a9dfb28e69568133e5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: df69bfef4b82aa9451fb47f6169f5966090f633a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025146"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954972"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activar eventos de Reporting Services para el registro de seguimiento de SharePoint (ULS)
   A partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], los servidores de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en modo de SharePoint pueden escribir los eventos de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en el registro de seguimiento del Servicio de creación de registros unificado (ULS). [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] están disponibles en la página Supervisión de Administración central de SharePoint.  
@@ -40,7 +40,7 @@ ms.locfileid: "56025146"
 ##  <a name="bkmk_general"></a> Recomendaciones generales para el registro ULS  
  En la tabla siguiente se enumeran los niveles y categorías de eventos que se recomiendan para supervisar un entorno de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Cuando se registra un evento, cada entrada incluye el momento en que se registró, el nombre del proceso y el identificador de subproceso.  
   
-|Categoría|Nivel|Descripción|  
+|Category|Nivel|Descripción|  
 |--------------|-----------|-----------------|  
 |Base de datos|Verbose|Registra eventos que implican el acceso a bases de datos.|  
 |General|Verbose|Registra eventos que implican el acceso a los elementos siguientes:<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] páginas Web<br /><br /> Controlador HTTP del visor de informes<br /><br /> Acceso a informes (archivos .rdl)<br /><br /> Orígenes de datos (archivos .rsds)<br /><br /> Direcciones URL en el sitio de SharePoint (archivos .smdl)|  

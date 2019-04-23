@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e0040fec-e2b7-4099-ae01-3b9bb9128bbd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b2e6997afd52c8b999d981c5c15b782ad9a56407
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 14708d286ea11a872a3260f41cae44e05e7fb30c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031076"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967404"
 ---
 # <a name="reporting-services-site-settings-and-site-featuressharepoint-mode"></a>Valores de configuración del sitio de Reporting Services y características del sitio (modo de SharePoint)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tiene varias características personalizadas de nivel de sitio y una característica de sitio que se pueden administrar desde la página de configuración del sitio de SharePoint. Los valores de configuración se aplican a todo el sitio y afectan a todas las aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Debe tener permisos de Administrador de contenido y Administrador del sistema para ver esta página.  

@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - initializing custom assemblies [Reporting Services]
 - custom assemblies [Reporting Services], initializing
 - OnInit method
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2b3f2f6fc33a5722fdae20e3b3b351ab23c61f45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 97ee8e554fa246848b64ebafb0961f35d65f15c9
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034136"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155696"
 ---
 # <a name="initializing-custom-assembly-objects"></a>Inicializar objetos de ensamblados personalizados
   En algunos casos, puede que tenga que inicializar valores de campos y propiedades en las clases de ensamblados personalizados al crear instancias de ellos. Probablemente tendrá que inicializar las clases personalizadas con los valores de que disponga en las colecciones de objetos globales del informe. Para ello, se reemplaza el método **OnInit** del objeto **Code** de un informe. Para acceder a **OnInit**, use el elemento **Code** de la definición de informe. Hay dos técnicas para la propiedad de inicialización o valores de campo de las clases en un ensamblado personalizado que se va a usar en el informe: Puede declarar y crear una nueva instancia de la clase mediante **OnInit**, o bien puede llamar un método disponible públicamente con **OnInit**.  

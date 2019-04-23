@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - dimensions [Analysis Services], about dimensions
@@ -18,12 +16,12 @@ ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 807e02a03ada37b17a8c351ed9e535835755e6df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d60d86a333c38b1fe122d72f55ccba25653256c5
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117245"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154331"
 ---
 # <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>Introducción a las dimensiones (Analysis Services - Datos multidimensionales)
   Todos los Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dimensiones son grupos de atributos basados en columnas de tablas o vistas en una vista del origen de datos. Las dimensiones son independientes de un cubo, se pueden utilizar en varios cubos, se pueden emplear varias veces en un único cubo y pueden vincularse entre instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Una dimensión independiente de un cubo se denomina dimensión de base de datos, mientras que una instancia de una dimensión de base de datos de un cubo se denomina dimensión de cubo.  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5a80b6bd9ef469d6711f7d6d019935fbfa1a581
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218035"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155221"
 ---
 # <a name="imdembedded-interface"></a>Interfaz IMDEmbedded
   La interfaz IMDEmbedded es una interfaz pública utilizada para administrar una base de datos incrustada de PowerPivot o una base de datos de modelo tabular. La interfaz hereda de la interfaz `IPersistStream`. La interfaz permite las siguientes operaciones:  
@@ -105,7 +103,7 @@ HRESULT GetStreamIdentifier (
   
  Los valores posibles de DBPROP_MSMD_EMBEDDED_DATA son:  
   
-|Nombre|Valor|Definición|  
+|Name|Valor|Definición|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|No hay ninguna base de datos incrustada|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|La aplicación actual contiene la base de datos incrustada|  

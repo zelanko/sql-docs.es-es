@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - report servers [Reporting Services], properties
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], properties
 - properties [Reporting Services]
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b2bd9ad5f828072985817b6ee3eb78897bab0b97
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 61f1f50ea7a49acc616a36a4eaf1d3d5fcdf269a
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014976"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60153675"
 ---
 # <a name="reporting-services-properties"></a>Propiedades de Reporting Services
   El servidor de informes define un conjunto de propiedades del sistema que son globales al servidor de informes y un conjunto de propiedades de elementos que están asociadas a un elemento individual almacenado en la base de datos del servidor de informes. Las propiedades definidas por el servidor de informes no se pueden eliminar y en algunos casos son de solo lectura. Una aplicación puede extender las propiedades del sistema y las propiedades de los elementos agregando propiedades definidas por el usuario adicionales a las propiedades de los elementos y del sistema.  

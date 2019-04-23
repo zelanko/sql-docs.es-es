@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - custom attributes [CLR integration]
@@ -18,12 +16,12 @@ ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0dbc881f565d48510c55af8f9887bdb05cbef7b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063195"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154211"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Información general de los atributos personalizados de la integración CLR
   El Common Language Runtime (CLR) de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] permite el uso de palabras clave descriptivas, llamadas atributos. Estos atributos proporcionan información adicional para muchos elementos, tales como métodos y clases. Los atributos se guardan en el ensamblado con los metadatos del objeto y se pueden utilizar para describir el código a otras herramientas de desarrollo, o para alterar el comportamiento en tiempo de ejecución dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - multiple language support [Analysis Services]
@@ -19,12 +17,12 @@ ms.assetid: 4e4fd6a4-d324-4508-b75a-2a57de9ab8ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c32010135b534975f5ddabc86dcf23591d2d457f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c34024f61f5c7b42030e0acb848783e1acae3d6e
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126005"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154072"
 ---
 # <a name="cube-translations"></a>Traducciones de cubo
   Una traducción es un mecanismo simple para cambiar las etiquetas y títulos mostrados de un idioma a otro. Cada traducción se define como un par de valores: una cadena con el texto traducido y un número con el identificador de idioma. Todos los objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] disponen de traducción. Las dimensiones también pueden tener los valores de atributo traducidos. La aplicación cliente es responsable de localizar la configuración de idioma que el usuario ha definido y efectuar el cambio para mostrar todos los títulos y etiquetas en dicho idioma. Un objeto puede tener tantas traducciones como se desee.  

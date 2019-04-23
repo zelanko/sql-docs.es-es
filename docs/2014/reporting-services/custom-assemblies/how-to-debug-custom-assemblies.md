@@ -1,29 +1,27 @@
 ---
-title: 'Cómo: Depurar ensamblados personalizados | Microsoft Docs'
+title: 'Procedimientos: Depurar ensamblados personalizados | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom assemblies [Reporting Services], debugging
 - debugging custom assemblies [Reporting Services]
 - troubleshooting [Reporting Services], custom assemblies
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: da4171b624fd4caf4eabae5cec50c4b6c19578b7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 64a61e044c7ff6efe051eb316cb9f653f0993b68
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011497"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154201"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>Cómo: Depurar ensamblados personalizados
+# <a name="how-to-debug-custom-assemblies"></a>Procedimientos: Depuración de ensamblados personalizados
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona varias herramientas de depuración que pueden ayudar a analizar el código de ensamblado personalizado y a detectar errores en él. La mejor herramienta para utilizar dependerá de lo que intente llevar a cabo. Este ejemplo usa [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
   
  La manera recomendada de diseñar, desarrollar y probar los ensamblados personalizados para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es crear una solución que contenga tanto los informes de prueba como el ensamblado personalizado.  

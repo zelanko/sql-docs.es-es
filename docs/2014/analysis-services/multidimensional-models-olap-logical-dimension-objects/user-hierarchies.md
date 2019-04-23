@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - members [Analysis Services], hierarchies
@@ -27,12 +25,12 @@ ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c9e5b2be2d3c6c83e91fd735f3e32c826e2f50c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e06a332823c593468c73fce635e1eac3040c6b6f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152785"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155151"
 ---
 # <a name="user-hierarchies"></a>Jerarquías de usuario
   Jerarquías definidas por el usuario son jerarquías definidas por el usuario de atributos que se usan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar los miembros de una dimensión en estructuras jerárquicas y proporcionar rutas de navegación de un cubo. Por ejemplo, en la tabla siguiente se define una tabla de dimensiones para una dimensión de tiempo. La tabla de dimensiones admite tres atributos denominados Year, Quarter y Month.  
@@ -96,7 +94,7 @@ ms.locfileid: "48152785"
   
 ## <a name="see-also"></a>Vea también  
  [Crear jerarquías definidas por el usuario](../multidimensional-models/user-defined-hierarchies-create.md)   
- [Propiedades de la jerarquía de usuario](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
+ [Propiedades de jerarquía de usuario](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
  [Referencia de las propiedades de los atributos de dimensión](../multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

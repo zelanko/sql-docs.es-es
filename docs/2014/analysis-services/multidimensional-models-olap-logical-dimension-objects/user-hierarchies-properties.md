@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - properties [Analysis Services], multilevel hierarchy
@@ -16,12 +14,12 @@ ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1dc6f8e30be172089db234ddcc010ced24340de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 413272be4ac4ce913704494a26e9642666deeb92
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060177"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154992"
 ---
 # <a name="user-hierarchy-properties"></a>Propiedades de jerarquía de usuario
   En la siguiente tabla se describen las propiedades de una jerarquía definida por el usuario.  

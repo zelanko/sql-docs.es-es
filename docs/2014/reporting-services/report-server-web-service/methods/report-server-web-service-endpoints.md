@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - management endpoints [Reporting Services]
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - execution endpoints [Reporting Services]
 - Report Server Web service, endpoints
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 75123271b73c166f87be0ab1a83242736fa966ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 976e8452e50d293fb8125bfbdde1bd17a8f3be07
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009709"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60153854"
 ---
 # <a name="report-server-web-service-endpoints"></a>Extremos de servicios web del servidor de informes
   El servicio web del servidor de informes proporciona varios extremos para administrar un servidor de informes además de ejecutar los informes y navegar por ellos.  
@@ -67,7 +65,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
   
 |Extremo proxy|Descripción|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|Proporciona las API para administrar un servidor de informes que se configura para el modo integrado de SharePoint. **Nota:**  Este extremo está desusado en [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
+|<xref:ReportService2006>|Proporciona las API para administrar un servidor de informes que se configura para el modo integrado de SharePoint. **Nota:**  Este punto de conexión está en desuso en [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
 |<xref:ReportService2010>|Proporciona las API para administrar un servidor de informes que se configura para el modo nativo o para el modo integrado de SharePoint.|  
 |<xref:ReportExecution2005>|Proporciona las API para ejecutar los informes y navegar por ellos.|  
 |<xref:ReportServiceAuthentication>|Proporciona las API para autenticar a los usuarios con un servidor de informes cuando la aplicación web de SharePoint se configura para la autenticación de formularios.|  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - Web service [Reporting Services], SOAP
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - Report Server Web service, SOAP
 - XML Web service [Reporting Services], SOAP
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 02328b46cb9741a26d3e6b9b2d320ab28a879d55
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4e0b418e44436912b5ed1368ad7a316951872266
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038066"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60153741"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>El rol de SOAP en Reporting Services
   El servicio web del servidor de informes utiliza la mensajería del Protocolo simple de acceso a objetos (SOAP, Simple Object Access Protocol) para enviar comandos basados en texto a través de una red. Estos comandos adoptan la forma de texto XML que se envía a través de World Wide Web utilizando HTTP. Al usar SOAP como protocolo de comunicaciones, el servicio web del servidor de informes permite a las aplicaciones y componentes intercambiar datos con el servidor de informes utilizando una infraestructura abierta y ampliamente aceptada. El estándar SOAP se define en www.w3.org/TR/SOAP.  

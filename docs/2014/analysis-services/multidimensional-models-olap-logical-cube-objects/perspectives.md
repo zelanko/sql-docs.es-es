@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - ready-only cube view
@@ -20,12 +18,12 @@ ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 81e6fa2e6331c254d2748fd919878e6f1b98eb0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2856bca26e8a49ffdb2ed5187479434c7762015b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131685"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154903"
 ---
 # <a name="perspectives"></a>perspectivas
   Una perspectiva es una definición que permite a los usuarios ver un cubo de una manera más fácil. Una perspectiva es un subconjunto de las características de un cubo. La perspectiva permite a los administradores crear vistas de un cubo, lo que ayuda a los usuarios a centrarse en los datos más pertinentes para ellos. Una perspectiva contiene subconjuntos de todos los objetos de un cubo. No puede incluir elementos que no están definidos en el cubo primario.  

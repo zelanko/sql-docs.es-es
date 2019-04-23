@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - scenarios [CLR integration]
@@ -19,19 +17,19 @@ ms.assetid: 33aac25f-abb4-4f29-af88-4a0dacd80ae7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 550483f71344a790225a2d22b1caf09cee16b9f3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360477"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155022"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Escenarios de uso y ejemplos para la integración de Common Language Runtime (CLR)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye aplicaciones de ejemplo, ejemplos de paquete y numerosos ejemplos de código que se pueden usar para aprender las características de programación de la integración con Common Language Runtime (CLR).  
   
  Para proyectos de Visual Studio completados implementan estos ejemplos y materiales adicionales, visite [Microsoft SQL Server Community Projects & Samples de CodePlex](https://go.microsoft.com/fwlink/?LinkID=193935).  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[Acceso a código nativo desde una UDF de CLR](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|Muestra cómo invocar una función en código C++ nativo (no administrado) desde una función definida por el usuario en un ensamblado, en la base de datos.|  
 |[Ejemplo de parámetro de matriz](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|Muestra cómo crear, actualizar o eliminar un conjunto de filas en una base de datos pasando una matriz de información desde un cliente a un procedimiento almacenado de integración con CLR en el servidor. Para ello se utiliza un UDT.|  

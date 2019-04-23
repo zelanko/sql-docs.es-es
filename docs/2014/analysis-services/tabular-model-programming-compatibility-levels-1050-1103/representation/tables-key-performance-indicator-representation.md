@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1af16003b73b76ea0d899ecacb19dda42aa867d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538692"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154187"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>Representación de indicadores de rendimiento clave (tabular)
   Los KPI se usan para medir el rendimiento de un valor, definido por una medida base, con respecto a un valor de destino.  
@@ -223,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>Ejemplo AMO2Tabular  
- Para obtener una descripción acerca de cómo se usa AMO para crear y manipular representaciones de indicadores clave de rendimiento, vea el código fuente del ejemplo AMO a tabular. Revise específicamente el siguiente archivo de código fuente: AddKPIs.cs. El ejemplo está disponible en Codeplex. Nota importante sobre el código: el código se proporciona solo como apoyo de los conceptos lógicos explicados aquí y no debe utilizarse en un entorno de producción; no debe usarse para otros fines excepto el pedagógico.  
+ Para obtener una descripción de cómo usar AMO para crear y manipular el indicador clave de rendimiento representaciones, vea el código fuente de la del ejemplo AMO a Tabular; en concreto, compruebe en el siguiente archivo fuente: AddKPIs.cs. El ejemplo está disponible en Codeplex. Nota importante sobre el código: el código se proporciona solo como apoyo de los conceptos lógicos explicados aquí y no debe utilizarse en un entorno de producción; no debe usarse para otros fines excepto el pedagógico.  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - sample applications [SMO]
@@ -16,19 +14,19 @@ ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 90dc94e906ff9b8e99e14bef4b6b0bd158d38f37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 933274c4e5084d50d530b1d90377648b793a6f86
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136995"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154013"
 ---
 # <a name="link-to-programming-samples"></a>Vínculo a ejemplos de programación
   En la tabla siguiente se muestra una lista de ejemplos de programación de objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO) que están disponibles en el directorio [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO. Estos ejemplos están disponibles tanto en [!INCLUDE[csprcs](../../includes/csprcs-md.md)] y [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . NET.  
   
  Para obtener más información acerca de cómo instalar ejemplos, vea [AdventureWorks para SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330).  
   
-|Title|Descripción|  
+|Título|Descripción|  
 |-----------|-----------------|  
 |BackRest|Muestra cómo realizar una copia de seguridad de una base de datos y cómo restaurarla.|  
 |ChangeTableOwner|Muestra cómo cambiar la propiedad de todas las tablas que no son dbo a dbo.|  

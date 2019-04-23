@@ -1,12 +1,10 @@
 ---
-title: Metadatos (ODBC) | Microsoft Docs
+title: Metadata (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, metadata
@@ -15,12 +13,12 @@ ms.assetid: 99133efc-b1f2-46e9-8203-d90c324a8e4c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0a67c418891316c82165a5ad042b5259ac0ec10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48f2fde8280a4b309c43e292bda452091d46ee02
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178595"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155661"
 ---
 # <a name="metadata-odbc"></a>Metadatos (ODBC)
   En esta sección se describen los parámetros, resultados de la columna y metadatos del catálogo.  

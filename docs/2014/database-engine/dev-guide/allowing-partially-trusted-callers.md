@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - AllowPartiallyTrustedCallers attribute
@@ -17,12 +15,12 @@ ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f16cadbb06d1d25000aefada172a783a5a19c79c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368107"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154641"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Permitir llamadores de confianza parcial
   Compartir bibliotecas de código es un escenario común con la integración con Common Language Runtime (CLR), donde a menudo un ensamblado o una aplicación obtienen acceso a un ensamblado que contiene un tipo definido por el usuario, un procedimiento almacenado, una función definida por el usuario, un agregado definido por el usuario, un desencadenador o una clase de utilidad. Las bibliotecas de código que se van a compartir entre varias aplicaciones se deben firmar con un nombre seguro.  

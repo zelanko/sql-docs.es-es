@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 4b410b16-d36e-4185-bb20-922e66e5e2b7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7656ef997ae7cd05816a24813566e8c58510719
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffd99068db329ea8e9066c6bd9508dc13f239690
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152855"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154942"
 ---
 # <a name="connection-representation-tabular"></a>Representación de conexión (tabular)
   El objeto de conexión define el origen de datos que rellena el modelo tabular.  
@@ -70,6 +68,6 @@ newDatasource.Update();
 ```  
   
 ## <a name="tabular-amo-2012-sample"></a>Ejemplo de AMO 2012 tabular  
- Para comprender mejor cómo se usa AMO para crear y manipular representaciones de conexión, vea el código fuente del ejemplo AMO 2012 tabular; en concreto, examine el siguiente archivo de código fuente: Database.cs. El ejemplo está disponible en Codeplex. El código de ejemplo se proporciona únicamente como apoyo a los conceptos lógicos explicados aquí y no se debe usar en un entorno de producción.  
+ Para obtener una mejor comprensión acerca de cómo se usa AMO para crear y manipular representaciones de conexión, vea el código fuente del ejemplo AMO 2012 Tabular; en concreto, compruebe en el siguiente archivo fuente: Database.cs. El ejemplo está disponible en Codeplex. El código de ejemplo se proporciona únicamente como apoyo a los conceptos lógicos explicados aquí y no se debe usar en un entorno de producción.  
   
   

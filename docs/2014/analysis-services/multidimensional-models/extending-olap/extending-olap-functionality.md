@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 49a17ff3-94e9-4969-84fc-37d49e63933b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34e900268c42f1bc4541b1ddf6aad5901fc35480
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d4d08795351b93615954ad64e004482745f768d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212965"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154291"
 ---
 # <a name="extending-olap-functionality"></a>Extender la funcionalidad de OLAP
   Como programador, puede ampliar Analysis Services escribiendo ensamblados, extensiones personalizadas y procedimientos almacenados que proporcionen la funcionalidad que desea usar y cambiar la finalidad en aplicaciones de base de datos. Los ensamblados se usan para ampliar la funcionalidad de los modelos multidimensionales mediante la adición de nuevos procedimientos y funciones al lenguaje MDX o mediante el complemento de personalización.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], authentication
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2ce82cc9bfb8b3f88934499db4e9295903b67702
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c4fc4d98eb32fb07def2fd317ebb7f5a6f6332cb
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043206"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154131"
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticación de Windows en Reporting Services
   La autenticación es el proceso de establecer el derecho de un usuario en una identidad. Hay muchas técnicas que puede utilizar para autenticar a un usuario. La manera más común es mediante contraseñas. Por ejemplo, al implementar la autenticación de formularios, desea una implementación que consulte las credenciales (normalmente con alguna interfaz que solicita un nombre de inicio de sesión y una contraseña) de los usuarios y, a continuación, valida los usuarios con un almacén de datos, como una tabla de base de datos o un archivo de configuración. Si no se pueden validar las credenciales, se produce un error en el proceso de autenticación y el usuario asumirá una identidad anónima.  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 820e418e9de194c038ca8b9fcd0dbed2db18bab7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 48017f32b5c010498dc089982900b60f03371830
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364297"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60153906"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Ejemplo de manipulación de cadenas que detectan caracteres complementarios
   Este ejemplo para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra el procesamiento de cadenas de caracteres complementarios. En este ejemplo se muestra la implementación de cinco funciones de cadena de Transact-SQL que proporcionan las mismas funciones de manipulación de cadenas que las funciones integradas, pero con una función adicional que reconoce caracteres complementarios para controlar cadenas de caracteres Unicode y complementarios. Las cinco funciones son lens(), `lefts(), rights(), subs()` y `replace_s()` que son equivalentes a las funciones integradas `LEN(), LEFT(), RIGHT(), SUBSTRING()` y `REPLACE()` funciones de cadena.  

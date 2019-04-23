@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - code groups [Reporting Services]
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 90a41365f249c112b7ac1c0a07bdfd1186c6a97b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ee7ba55e48f4704c912e92a4d8352e7c891c06b6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032485"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154773"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Usar los archivos de directivas de seguridad de Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] almacena la información de los componentes de directiva de seguridad en tres archivos de configuración que se copian en el sistema de archivos durante la instalación. Estos archivos de configuración pueden contener una combinación de uso interno y las directivas de seguridad definidas por el usuario para los ensamblados de código en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Los tres archivos de configuración corresponden a tres componentes protegibles de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: El servidor de informes y servicio de Windows, la aplicación Web de administrador de informes y el Diseñador de informes de vista previa de ventana.  

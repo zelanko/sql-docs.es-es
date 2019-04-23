@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - delivery extensions [Reporting Services], notifications
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - retry queues
 - Nofication class
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1beb87fd647ccf033b40764d40cb8a3349d00fe3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: db6467b21f84a80bb14a5e6ccad30e16d7cfb584
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019666"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155441"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>Usar una clase Notification para una extensión de entrega
   La clase <xref:Microsoft.ReportingServices.Interfaces.Notification> se encuentra en el espacio de nombres <xref:Microsoft.ReportingServices.Interfaces> y representa información de suscripción que las extensiones de entrega utilizan para entregar los informes. La clase <xref:Microsoft.ReportingServices.Interfaces.Notification> proporciona varias propiedades que se pueden utilizar para representar los informes para la entrega, determinar el estado de la notificación y establecer los datos de usuario.  

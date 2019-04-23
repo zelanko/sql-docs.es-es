@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 3550e17c8f4d6384ceafabb77aa9ca70cd80c44b
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042334"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Instalación de Microsoft ODBC Driver for SQL Server en Linux y macOS
@@ -501,7 +501,7 @@ Para obtener más información sobre cómo resolver errores de conexión, consul
   
 -   [Solucionador de problemas de autenticación de SQL Server](https://blogs.msdn.com/b/sqlsecurity/archive/2010/03/29/sql-server-authentication-troubleshooter.aspx)  
   
--   [Detalles del error (https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
+-   [Detalles del error: https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=11001)](https://www.microsoft.com/products/ee/transform.aspx?ProdName=Microsoft+SQL+Server&EvtSrc=MSSQLServer&EvtID=001)  
   
     El número de error especificado en la dirección URL (11001) debe cambiarse para que coincida con el error que se muestra.  
   
@@ -513,7 +513,7 @@ El controlador ODBC en Linux y MacOS consta de los siguientes componentes:
 |Componente|Descripción|  
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X o libmsodbcsql-13.X.so.X.X|El archivo de biblioteca dinámica del objeto compartido (`so`) que contiene toda la funcionalidad del controlador. Este archivo se instala en `/opt/microsoft/msodbcsql17/lib64/` para el controlador 17 y en `/opt/microsoft/msodbcsql/lib64/` para el controlador 13.|  
-|`msodbcsqlr17.rll` o Administrador de configuración de `msodbcsqlr13.rll`|El archivo de recursos asociado de la biblioteca de controladores. Este archivo se instala en `[driver .so directory]../share/resources/en_US/`| 
+|`msodbcsqlr17.rll` o `msodbcsqlr13.rll`|El archivo de recursos asociado de la biblioteca de controladores. Este archivo se instala en `[driver .so directory]../share/resources/en_US/`.| 
 |msodbcsql.h|El archivo de encabezado que contiene todas las definiciones nuevas necesarias para utilizar el controlador.<br /><br /> **Nota:**  No se puede hacer referencia a msodbcsql.h y odbcss.h en el mismo programa.<br /><br /> msodbcsql.h se instala en `/opt/microsoft/msodbcsql17/include/` para el controlador 17 y en `/opt/microsoft/msodbcsql/include/` para el controlador 13. |
 |LICENSE.txt|El archivo de texto que contiene los términos del Contrato de licencia del usuario final. Este archivo se coloca en `/usr/share/doc/msodbcsql17/` para el controlador 17 y en `/usr/share/doc/msodbcsql/` para el controlador 13.|
 |RELEASE_NOTES|El archivo de texto que contiene las notas de la versión. Este archivo se coloca en `/usr/share/doc/msodbcsql17/` para el controlador 17 y en `/usr/share/doc/msodbcsql/` para el controlador 13.|
@@ -524,7 +524,7 @@ El controlador ODBC en Linux y MacOS consta de los siguientes componentes:
 |Componente|Descripción|  
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib o libmsodbcsql.13.dylib|El archivo de biblioteca dinámica (`dylib`) que contiene toda la funcionalidad del controlador. Este archivo se instala en `/usr/local/lib/`.|  
-|`msodbcsqlr17.rll` o Administrador de configuración de `msodbcsqlr13.rll`|El archivo de recursos asociado de la biblioteca de controladores. Este archivo se instala en `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` para el controlador 17 y en `[driver .dylib directory]../share/msodbcsql/resources/en_US/` para el controlador 13. | 
+|`msodbcsqlr17.rll` o `msodbcsqlr13.rll`|El archivo de recursos asociado de la biblioteca de controladores. Este archivo se instala en `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` para el controlador 17 y en `[driver .dylib directory]../share/msodbcsql/resources/en_US/` para el controlador 13. | 
 |msodbcsql.h|El archivo de encabezado que contiene todas las definiciones nuevas necesarias para utilizar el controlador.<br /><br /> **Nota:**  No se puede hacer referencia a msodbcsql.h y odbcss.h en el mismo programa.<br /><br /> msodbcsql.h se instala en `/usr/local/include/msodbcsql17/` para el controlador 17 y en `/usr/local/include/msodbcsql/` para el controlador 13. |
 |LICENSE.txt|El archivo de texto que contiene los términos del Contrato de licencia del usuario final. Este archivo se coloca en `/usr/local/share/doc/msodbcsql17/` para el controlador 17 y en `/usr/local/share/doc/msodbcsql/` para el controlador 13. |
 |RELEASE_NOTES|El archivo de texto que contiene las notas de la versión. Este archivo se coloca en `/usr/local/share/doc/msodbcsql17/` para el controlador 17 y en `/usr/local/share/doc/msodbcsql/` para el controlador 13. |

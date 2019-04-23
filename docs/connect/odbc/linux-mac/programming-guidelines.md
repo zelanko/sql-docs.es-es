@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 591c0cc47a4f807172cbfd24b91f465144faae09
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042374"
 ---
 # <a name="programming-guidelines"></a>Instrucciones de programación
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Las características de programación de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en macOS y Linux se basan en ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client se basa en el controlador ODBC de los Componentes de Windows Data Access ([Referencia del programador de ODBC](https://go.microsoft.com/fwlink/?LinkID=45250)).  
+Las características de programación de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en macOS y Linux se basan en ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client se basa en ODBC de los Componentes de Windows Data Access ([Referencia del programador de ODBC](https://go.microsoft.com/fwlink/?LinkID=45250)).  
 
 Una aplicación de ODBC puede utilizar conjuntos de resultados activos múltiples (MARS) y otras [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]características específicas incluyendo `/usr/local/include/msodbcsql.h` después de agregar los encabezados de unixODBC (`sql.h`, `sqlext.h`, `sqltypes.h` y `sqlucode.h`). Luego use los mismos nombres simbólicos para los elementos específicos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que usaría en las aplicaciones de ODBC para Windows.
 
@@ -37,7 +37,7 @@ Las siguientes secciones de la documentación de [!INCLUDE[ssNoVersion](../../..
 -   [Autenticación Kerberos](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
 -   [Tipos CLR grandes definidos por el usuario (ODBC)](https://msdn.microsoft.com/library/bb677316.aspx)  
 -   [Realización de transacciones (ODBC) (excepto las transacciones distribuidas)](https://msdn.microsoft.com/library/ms131706.aspx)  
--   [Procesar los resultados (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
+-   [Procesar resultados (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
 -   [Ejecutar procedimientos almacenados](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [Compatibilidad con columnas dispersas (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
 -   [Cifrado SSL](../../../relational-databases/native-client/features/using-encryption-without-validation.md)

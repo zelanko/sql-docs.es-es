@@ -12,10 +12,10 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: f74d5a70325fdceb311bb3a45ba6824e64242ff0
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872015"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Notas de la versión de ODBC a SQL Server en Windows
@@ -98,7 +98,7 @@ Esta versión es compatible con Instancia administrada de Azure SQL (versión p
 > - No es posible crear el UDT desde la ruta de acceso local.
 > - No se admite la Autenticación integrada de Windows.
 > - No se admite DTC.
-> - `sa` la cuenta no está presente (la cuenta predeterminada se denomina `cloudSA`).
+> - La cuenta `sa` no está presente (la cuenta predeterminada se denomina `cloudSA`).
 > - El ERROR de token TDS (0xAA) devuelve un nombre de servidor incorrecto.
 > - No se admiten caracteres especiales en el nombre de la base de datos.
 > - No se admite ALTER DATABASE [dbname1] MODIFY NAME = [dbname2].

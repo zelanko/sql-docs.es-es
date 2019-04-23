@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 834ec3118685da8059999b3986af3edb39dc3e58
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042254"
 ---
 # <a name="using-integrated-authentication"></a>Uso de la autenticación integrada
@@ -83,7 +83,7 @@ Los desarrolladores pueden implementar una aplicación que utilice un servidor v
   
 -   El servidor de aplicaciones se autentica como una base de datos distinta y se conecta a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se autentica como un usuario de bases de datos en otra base de datos ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se autentica como un usuario de base de datos en otra base de datos ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 Tras configurar la autenticación integrada, las credenciales se transmiten al servidor vinculado.  
   

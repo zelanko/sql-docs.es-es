@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 15513348d4a747b0335bca8dd6345070e2c84ef0
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618182"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60159011"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluar una empresa y consolidar los informes de evaluación con DMA
 
@@ -71,18 +71,22 @@ Este inventario puede estar en uno de dos formas:
 - Tabla de SQL Server
 
 ### <a name="if-using-a-csv-file"></a>Si usa un archivo CSV
+
 > [!IMPORTANT]
->
 > Asegúrese de que el archivo de inventario se guarda como archivo separados por comas (CSV).
 >
 > Para las instancias predeterminadas, establezca el nombre de instancia MSSQLServer.
->
+
 
 Cuando se usa un archivo csv para importar los datos, asegúrese de que hay solo dos columnas de datos - **nombre de instancia** y **nombre de base de datos**, y que las columnas no tienen filas de encabezado.
  
  ![contenido del archivo CSV](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
 
-### <a name="if-using-sql-server-table"></a>Si usa la tabla de SQL Server
+### <a name="if-using-a-sql-server-table"></a>Si usa una tabla de SQL Server
+
+> [!IMPORTANT]
+> Para las instancias predeterminadas, establezca el nombre de instancia MSSQLServer.
+
 Crear una base de datos denominada **EstateInventory** y una tabla denominada **DatabaseInventory**. La tabla que contiene estos datos de inventario puede tener cualquier número de columnas, siempre que existan cuatro columnas siguientes:
 - ServerName
 - InstanceName
@@ -161,8 +165,8 @@ También puede usar la secuencia de comandos LoadWarehouse para proporcionar las
 
 1. Abra la plantilla de DMA informes Power BI en Power BI Desktop.
 2. Escriba los detalles del servidor que señalan a su **DMAWarehouse** de base de datos y, a continuación, seleccione **carga**.
-   
-      ![Carga plantilla de DMA informes Power BI](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
+
+   ![Carga plantilla de DMA informes Power BI](../dma/media//dma-consolidatereports/dma-reports-powerbi-template-loaded.png)
 
    Después de que el informe actualice los datos de la **DMAWarehouse** base de datos, se le presentará un informe similar al siguiente.
 

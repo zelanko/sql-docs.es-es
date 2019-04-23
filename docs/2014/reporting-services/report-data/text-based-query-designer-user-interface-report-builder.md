@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 42be2520e6961dcf990635a18fcc7d237876b869
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9c0ec55435c54b1281473e98d137cd8cc86ef4da
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010346"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955501"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas basado en texto (Generador de informes)
   Use el diseñador de consultas basado en texto para especificar una consulta mediante el lenguaje de consulta admitido por el origen de datos, para ejecutar la consulta y para ver los resultados en tiempo de diseño. Puede especificar varias sintaxis de consulta, comandos o instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] para extensiones de procesamiento de datos personalizadas, y consultas que se especifican como expresiones. Dado que el generador de consultas basado en texto no procesa previamente la consulta y puede acomodar todo tipo de sintaxis de consulta, es la herramienta de generación de consultas predeterminada para varios tipos de orígenes de datos.  
@@ -53,7 +53,7 @@ ms.locfileid: "56010346"
   
 |Panel|Función|  
 |----------|--------------|  
-|Consulta|Muestra el texto de consulta de [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Use este panel para escribir o editar una consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] .|  
+|Consultar|Muestra el texto de consulta de [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Use este panel para escribir o editar una consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)] .|  
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|  
   
 #### <a name="example"></a>Ejemplo  
@@ -76,7 +76,7 @@ SELECT Name FROM Person.ContactType
   
 |Panel|Función|  
 |----------|--------------|  
-|Consulta|Muestra el nombre del procedimiento almacenado y de los parámetros de entrada.|  
+|Consultar|Muestra el nombre del procedimiento almacenado y de los parámetros de entrada.|  
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|  
   
 #### <a name="example"></a>Ejemplo  

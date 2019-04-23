@@ -14,11 +14,11 @@ ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
 ms.openlocfilehash: 7630aee7ab39f98f372af7c33f277e7272042f43
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58872245"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963281"
 ---
 # <a name="get-started-with-database-experimentation-assistant"></a>Empezar a trabajar con el Asistente para experimentación de base de datos
 

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63668ecb4ece28c27948ec3cca7991039090ec26
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041924"
 ---
 # <a name="installing-the-driver-manager"></a>Instalación del Administrador de controladores
@@ -44,7 +44,7 @@ Siga estos pasos para instalar el Administrador de controladores:
   
 1.  Asegúrese de que tiene permisos de raíz.  
   
-2.  Vaya al directorio donde la descarga de [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ODBC Driver ha colocado el archivo denominado `msodbcsql-11.0.2270.0.tar.gz`. Asegúrese de que dispone del archivo \*.tar.gz que coincida con la versión de Linux. Para extraer los archivos, ejecute el comando siguiente: **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
+2.  Vaya al directorio donde la descarga de [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Driver ha colocado el archivo denominado `msodbcsql-11.0.2270.0.tar.gz`. Asegúrese de que dispone del archivo \*.tar.gz que coincida con la versión de Linux. Para extraer los archivos, ejecute el comando siguiente: **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
 
 3.  Cambie al directorio `msodbcsql-11.0.2270.0`; allí verá un archivo llamado `build_dm.sh`. Puede ejecutar `build_dm.sh` para instalar el Administrador de controladores unixODBC.
 
@@ -84,7 +84,7 @@ Si el script de instalación no se puede completar, configure y compile manualme
 
 De esta forma, estará preparado para instalar el controlador. Para obtener más información, consulte [instalación Microsoft ODBC Driver for SQL Server en Linux y macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).  
   
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Ver también
 [Instalación de Microsoft ODBC Driver for SQL Server en Linux y macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 
 [Problemas conocidos en esta versión del controlador](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)

@@ -1,7 +1,7 @@
 ---
 title: Preguntas más frecuentes (P+F) sobre el controlador JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb6212f5088a94788c366bb8d1fc61938610ea0f
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: c60b0c86d1356dd4d15d2854184d0116316b823c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154877"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671261"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Preguntas más frecuentes (P+F) sobre el controlador JDBC
 
@@ -26,69 +26,69 @@ En esta página se ofrecen respuestas a las preguntas más frecuentes sobre Micr
 
 ## <a name="frequently-asked-questions"></a>Preguntas más frecuentes
 
-**¿Cómo puedo ayudar a mejorar el controlador JDBC?**  
-El controlador JDBC es código abierto y el código fuente puede encontrarse en [GitHub](https://github.com/microsoft/mssql-jdbc). Puede ayudar a mejorar el controlador del problema y que contribuyen a la base de código.
+**¿Cómo puedo ayudar a mejorar el controlador JDBC Driver?**  
+El controlador JDBC Driver es de código abierto, y el código fuente puede encontrarse en [GitHub](https://github.com/microsoft/mssql-jdbc). Puede ayudar a mejorar el controlador notificando problemas y contribuyendo a la base del código.
 
 **¿Qué versiones de SQL Server y Java admite el controlador?**  
 Consulte la página [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) para más información.
 
-**¿Qué es la diferencia entre los paquetes de controladores JDBC disponibles en Microsoft Download Center y el controlador JDBC disponible en GitHub?**  
-JDBC driver archivos disponibles en el repositorio de GitHub para el controlador JDBC de Microsoft son el núcleo del controlador JDBC y están bajo la licencia de código abierto que aparece en el repositorio. Los paquetes de controladores de Microsoft Download Center incluyen bibliotecas adicionales para la autenticación integrada de Windows y habilitar transacciones XA con el controlador JDBC. Esas bibliotecas adicionales están bajo la licencia incluida con el paquete descargable.
+**¿Cuál es la diferencia entre los paquetes del controlador JDBC Driver disponibles en el Centro de descarga de Microsoft y el controlador JDBC Driver disponible en GitHub?**  
+Los archivos del controlador JDBC Driver disponibles en el repositorio GitHub para el controlador JDBC Driver de Microsoft son el núcleo del controlador JDBC Driver y están bajo la licencia de código abierto que se encuentra en el repositorio. Los paquetes del controlador del Centro de descarga de Microsoft incluyen bibliotecas adicionales para la autenticación integrada de Windows y la habilitación de transacciones XA con el controlador JDBC Driver. Esas bibliotecas adicionales están bajo la licencia incluida con el paquete descargable.
 
 **¿Qué debo saber al actualizar el controlador?**
-El 7.2 de controlador JDBC de Microsoft admite el JDBC 4.2 y 4.3 especificaciones (parcialmente) e incluye dos bibliotecas de clases JAR en el paquete de instalación como sigue:
+El controlador Microsoft JDBC Driver 7.2 admite especificaciones de JDBC 4.2 y 4.3 (parcialmente) e incluye dos bibliotecas de clases de archivo JAR en el paquete de instalación, tal y como se muestra a continuación:
 
 | JAR                        | Especificación de JDBC            | Versión JDK |
 | -------------------------- | ----------------------------- | ----------- |
-| mssql-jdbc-7.2.1.jre11.jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 11.0    |
-| mssql-jdbc-7.2.1.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
+| mssql-jdbc-7.2.2.jre11.jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 11.0    |
+| mssql-jdbc-7.2.2.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 
- El Microsoft JDBC Driver 7.0 admite el JDBC 4.2 y 4.3 especificaciones (parcialmente) e incluye dos bibliotecas de clases JAR en el paquete de instalación como sigue:
+ El controlador Microsoft JDBC Driver 7.0 admite especificaciones de JDBC 4.2 y 4.3 (parcialmente) e incluye dos bibliotecas de clases de archivo JAR en el paquete de instalación, tal y como se muestra a continuación:
 
 | JAR                        | Especificación de JDBC            | Versión JDK |
 | -------------------------- | ----------------------------- | ----------- |
 | mssql-jdbc-7.0.0.jre10.jar | JDBC 4.3 (parcialmente) y 4.2 | JDK 10.0    |
 | mssql-jdbc-7.0.0.jre8.jar  | JDBC 4.2                      | JDK 8.0     |
 
-El admite Microsoft JDBC Driver 6.4 el JDBC 4.1, 4.2 y 4.3 (parcialmente) especificaciones e incluye tres bibliotecas de clases JAR en el paquete de instalación como sigue:
+El controlador Microsoft JDBC Driver 6.4 admite especificaciones de JDBC 4.1, 4.2 y 4.3 (parcialmente) e incluye tres bibliotecas de clases de archivo JAR en el paquete de instalación, tal y como se muestra a continuación:
 
 | JAR                       | Especificación de JDBC                 | Versión JDK |
 | ------------------------- | ---------------------------------- | ----------- |
-| mssql-jdbc-6.4.0.jre9.jar | JDBC 4.1 y 4.2 (parcialmente) 4.3 | JDK 9.0     |
+| mssql-jdbc-6.4.0.jre9.jar | JDBC 4.3 (parcialmente), 4.2 y 4.1 | JDK 9.0     |
 | mssql-jdbc-6.4.0.jre8.jar | JDBC 4.2 y 4.1                  | JDK 8.0     |
 | mssql-jdbc-6.4.0.jre7.jar | JDBC 4.1                           | JDK 7.0     |
 
-Microsoft JDBC Driver 6.2 admite las especificaciones de JDBC 4.0, 4.1 y 4.2 e incluye dos bibliotecas de clases JAR en el paquete de instalación como sigue:
+El controlador Microsoft JDBC Driver 6.2 admite especificaciones de JDBC 4.0, 4.1 y 4.2 e incluye dos bibliotecas de clases de archivo JAR en el paquete de instalación, tal y como se muestra a continuación:
 
 | JAR                       | Especificación de JDBC     | Versión JDK |
 | ------------------------- | ---------------------- | ----------- |
 | mssql-jdbc-6.2.2.jre8.jar | JDBC 4.0, 4.1 y 4.2 | JDK 8.0     |
 | mssql-jdbc-6.2.2.jre7.jar | JDBC 4.1 y 4.0       | JDK 7.0     |
 
-Microsoft JDBC Drivers 6.0 y 4.2 para SQL Server es compatible con las especificaciones de JDBC 4.0, 4.1 y 4.2 e incluyen dos bibliotecas de clases JAR en el paquete de instalación como sigue:
+Los controladores Microsoft JDBC Driver 6.0 y 4.2 para SQL Server admiten especificaciones de JDBC 4.0, 4.1 y 4.2 e incluyen dos bibliotecas de clases de archivo JAR en el paquete de instalación, tal y como se muestra a continuación:
 
 | JAR           | Especificación de JDBC     | Versión JDK |
 | ------------- | ---------------------- | ----------- |
 | sqljdbc42.jar | JDBC 4.0, 4.1 y 4.2 | JDK 8.0     |
 | sqljdbc41.jar | JDBC 4.1 y 4.0       | JDK 7.0     |
 
-Microsoft JDBC Driver 4.1 para SQL Server admite la especificación de JDBC 4.0 y se incluye una biblioteca de clases JAR en el paquete de instalación como sigue:
+El controlador Microsoft JDBC Driver 4.1 para SQL Server admite la especificación de JDBC 4.0 e incluye una biblioteca de clases de archivo JAR en el paquete de instalación, tal y como se muestra a continuación:
 
 | JAR           | Especificación de JDBC | Versión JDK     |
 | ------------- | ------------------ | --------------- |
 | sqljdbc41.jar | JDBC 4.0           | JDK 7.0 y 6.0 |
 
 **¿Necesito realizar cambios de código en mi aplicación para poder usar el controlador más reciente con la versión de SQL Server que tengo actualmente?**  
-Por lo general, el controlador se diseña para que sea compatible con versiones anteriores, así que no es necesario cambiar las aplicaciones existentes al actualizar el controlador. En caso de que una nueva versión del controlador incluye un cambio importante, el [notas de la versión para el controlador JDBC](../../connect/jdbc/release-notes-for-the-jdbc-driver.md) sección proporciona detalles claros sobre el cambio y el impacto en las aplicaciones existentes. Además, puede consultar las notas de la versión incluidas con el controlador para obtener una lista de errores corregidos en esa versión y problemas conocidos.
+Por lo general, el controlador se diseña para que sea compatible con versiones anteriores, así que no es necesario cambiar las aplicaciones existentes al actualizar el controlador. En caso de que una nueva versión del controlador presente un cambio importante, puede consultar la sección [Notas de la versión para el controlador JDBC de Microsoft](../../connect/jdbc/release-notes-for-the-jdbc-driver.md) para saber con claridad qué cambios se han realizado y el impacto que tendrán en las aplicaciones existentes. Además, puede consultar las notas de la versión incluidas con el controlador para obtener una lista de errores corregidos en esa versión y problemas conocidos.
 
 **¿Cuánto cuesta el controlador?**  
 Microsoft JDBC Driver for SQL Server está disponible sin ningún coste adicional.
 
 **¿Se puede redistribuir el controlador?**
-Los controladores JDBC 4.1, 4.2, 6.0, 6.2, 6.4 y 7.0 son redistribuibles. Revise la cláusula "Código distribuible" en los contratos de licencia.
+Los controladores JDBC Driver 4.1, 4.2, 6.0, 6.2, 6.4 y 7.0 son redistribuibles. Revise la cláusula "Código distribuible" en los contratos de licencia.
 
 **¿Puedo usar el controlador para acceder a Microsoft SQL Server desde un equipo Linux?**
-Sí. Puede utilizar el controlador para acceder a SQL Server desde otras plataformas distintas de Windows, Unix y Linux. Para obtener más información, consulte [Microsoft JDBC Driver para SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
+Sí. Puede utilizar el controlador para acceder a SQL Server desde otras plataformas distintas de Windows, Unix y Linux. Para obtener más información, consulte [Matriz de compatibilidad de Microsoft JDBC Driver para SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
 
 **¿El controlador admite el cifrado de Capa de sockets seguros (SSL)?**
 A partir de la versión 1.2, el controlador admite el cifrado de capa de sockets seguros (SSL). Para más información, consulte [Usar el cifrado SSL](../../connect/jdbc/using-ssl-encryption.md).
@@ -109,16 +109,16 @@ En la tabla siguiente se muestran las opciones de autenticación disponibles. La
 | Windows     | Autenticación de Azure Active Directory |
 
 **¿El controlador es compatible con las direcciones de la versión 6 del protocolo de Internet (IPv6)?**  
-Sí. El controlador admite el uso de direcciones IPv6. Use la colección de propiedades de conexión y la propiedad de cadena de conexión serverName. Para más información, consulte [Generar URL de conexión](../../connect/jdbc/building-the-connection-url.md).
+Sí. El controlador admite el uso de direcciones IPv6. Use la colección de las propiedades de conexión y la propiedad de la cadena de conexión serverName. Para más información, consulte [Generar URL de conexión](../../connect/jdbc/building-the-connection-url.md).
 
 **¿Qué es el almacenamiento en búfer adaptable?**  
-Almacenamiento en búfer adaptable se introdujo a partir de Microsoft SQL Server 2005 JDBC Driver versión 1.2. Se diseña para recuperar cualquier tipo de datos de valores grandes sin sufrir la sobrecarga de los cursores de servidor. La característica de almacenamiento en búfer adaptable de Microsoft SQL Server JDBC Driver proporciona una propiedad de cadena de conexión, responseBuffering, cuyos valores puede establecerse en "adaptive" o "full". En la versión 1.2, el modo del almacenamiento en búfer es "full" de manera predeterminada y la aplicación debe establecer el modo de almacenamiento en búfer adaptable explícitamente. A partir de Microsoft JDBC Driver 2.0, el comportamiento predeterminado del controlador es "adaptive". Por tanto, la aplicación no tiene que solicitar explícitamente el comportamiento adaptable para obtener dicho comportamiento. Para obtener más información, vea [Usar el almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md) y la entrada de blog [What is adaptive response buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575) (¿Qué es el almacenamiento en búfer adaptable y por qué se debe usar?).
+El almacenamiento en búfer adaptable se introdujo a partir de la versión 1.2 del controlador JDBC Driver de Microsoft SQL Server 2005. Se diseña para recuperar cualquier tipo de datos de valores grandes sin sufrir la sobrecarga de los cursores de servidor. La característica de almacenamiento en búfer adaptable de Microsoft SQL Server JDBC Driver proporciona una propiedad de cadena de conexión, responseBuffering, cuyos valores puede establecerse en "adaptive" o "full". En la versión 1.2, el modo del almacenamiento en búfer es "full" de manera predeterminada y la aplicación debe establecer el modo de almacenamiento en búfer adaptable explícitamente. A partir de Microsoft JDBC Driver 2.0, el comportamiento predeterminado del controlador es "adaptive". Por tanto, la aplicación no tiene que solicitar explícitamente el comportamiento adaptable para obtener dicho comportamiento. Para obtener más información, vea [Usar el almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md) y la entrada de blog [What is adaptive response buffering and why should I use it?](https://go.microsoft.com/fwlink/?LinkId=111575) (¿Qué es el almacenamiento en búfer adaptable y por qué se debe usar?).
 
 **¿El controlador es compatible con la agrupación de conexiones?**  
 El controlador proporciona compatibilidad con la agrupación de conexiones de Java Platform, Enterprise Edition 5 (Java EE 5). El controlador implementa las interfaces necesarias de JDBC 3.0 para que pueda participar en la implementación de la agrupación de conexiones de los proveedores de servidores de aplicaciones de software intermedio. El controlador participa en las conexiones agrupadas en estos entornos. Para obtener más información, consulte [Using Connection Pooling](../../connect/jdbc/using-connection-pooling.md). El controlador no proporciona su propia implementación de agrupación, sino que se basa en servidores de aplicaciones Java de terceros.
 
 **¿Hay servicios de soporte disponibles para el controlador?**  
-Existen varias opciones de soporte. Es posible que publique su pregunta o problema a nuestro [repositorio de GitHub](https://github.com/microsoft/mssql-jdbc) que está supervisado por Microsoft. [Foros](https://go.microsoft.com/fwlink/?LinkID=246673) supervisados por Microsoft, MVP y la Comunidad. También puede ponerse en contacto con el equipo de asistencia al cliente de Microsoft. El equipo de desarrollo puede pedirle que reproduzca el problema fuera de los servidores de aplicaciones de terceros. Si el problema no se puede reproducir fuera del entorno de contenedor host de Java, tendrá que ponerse en contacto con el tercero relacionado para que el equipo pueda seguir ayudándolo. El equipo también puede pedirle que reproduzca el problema en un sistema operativo como Windows, por lo que puede admitirse mejor el problema.
+Existen varias opciones de soporte. Puede publicar su pregunta o problema en nuestro [repositorio de GitHub](https://github.com/microsoft/mssql-jdbc), que supervisa Microsoft. Los [foros](https://go.microsoft.com/fwlink/?LinkID=246673) se supervisan por Microsoft, los MVP y la comunidad. También puede ponerse en contacto con el equipo de asistencia al cliente de Microsoft. El equipo de desarrollo puede pedirle que reproduzca el problema fuera de los servidores de aplicaciones de terceros. Si el problema no se puede reproducir fuera del entorno de contenedor host de Java, tendrá que ponerse en contacto con el tercero relacionado para que el equipo pueda seguir ayudándolo. También puede que el equipo le pida que reproduzca el problema en un sistema operativo concreto, como Windows, para que podamos ofrecerle la mejor ayuda posible.
 
 **¿Está el controlador certificado para usarse con servidores de aplicaciones de terceros?**
 El controlador se ha probado con los principales servidores de aplicaciones, incluidos IBM WebSphere y SAP NetWeaver.

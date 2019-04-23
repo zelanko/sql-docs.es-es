@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.modelitemsecurity.f1
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a89e2e627b297d5d6dc9795217b727aeb20d7c74
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 10aa1c7132126dd705986a55d5dc02d78a5263ef
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025796"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955551"
 ---
 # <a name="model-item-security-page-report-manager"></a>Página Seguridad de elemento de modelo (Administrador de informes)
   Use esta página para proteger partes de un modelo concediendo o revocando permisos de solo lectura en elementos concretos. La seguridad del elemento de modelo afecta a la exploración de datos ad hoc en tiempo de ejecución y a la capacidad de usar partes de un modelo publicado cuando se crean informes en el Generador de informes. Para usar esta característica, debe tener permisos de Administrador de contenido.  

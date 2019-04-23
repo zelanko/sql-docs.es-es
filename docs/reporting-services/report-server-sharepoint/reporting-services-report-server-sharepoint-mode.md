@@ -7,13 +7,14 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
+manager: kfile
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05964630691537411c54bcd74b040a5d27301134
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529739"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583358"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Servidor de informes de Reporting Services (modo de SharePoint)
 
@@ -114,11 +115,11 @@ ms.locfileid: "52529739"
   
  Cuando configure un servidor de informes para que se ejecute en una implementación de un producto de SharePoint, es probable que vea una combinación de idiomas. La interfaz de usuario, la documentación y los mensajes se mostrarán en los siguientes idiomas:  
   
--   Todas las páginas de aplicación, herramientas, errores, advertencias y mensajes que se originan en Reporting Services se muestran en el idioma usado por la instancia de Reporting Services en uno de los idiomas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+- Todas las páginas de aplicación, herramientas, errores, advertencias y mensajes que se originan en Reporting Services se muestran en el idioma usado por la instancia de Reporting Services en uno de los idiomas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Las páginas de aplicación que abra en un sitio de SharePoint, el elemento web Visor de informes y el Generador de informes aparecen en uno de los idiomas compatibles con el complemento Reporting Services. Para ver la lista de idiomas compatibles, vaya a la página de [descargas de SQL Server](https://msdn.microsoft.com/sql/downloads/) y busque la página de descarga del complemento SQL Server 2016 Reporting Services.  
+- Las páginas de aplicación que abra en un sitio de SharePoint, el elemento web Visor de informes y el Generador de informes aparecen en uno de los idiomas compatibles con el complemento Reporting Services. Para ver la lista de idiomas compatibles, vaya a la página de [descargas de SQL Server](https://msdn.microsoft.com/sql/downloads/) y busque la página de descarga del complemento SQL Server 2016 Reporting Services.  
   
--   Los sitios de SharePoint, la Administración central de SharePoint, la Ayuda en pantalla y los mensajes están disponibles en los idiomas compatibles con los productos Office Server.  
+- Los sitios de SharePoint, la Administración central de SharePoint, la Ayuda en pantalla y los mensajes están disponibles en los idiomas compatibles con los productos Office Server.  
   
  Si el idioma de su producto o tecnología de SharePoint difiere del idioma del servidor de informes, Reporting Services intenta usar el idioma que más se aproxime de la misma familia de idiomas. Si no hay ningún idioma sustituto que se aproxime, el servidor de informes utilizará el inglés.  
   
@@ -136,8 +137,7 @@ ms.locfileid: "52529739"
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Instalar o desinstalar el complemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[Elemento web Visor de informes en un sitio de SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[Cuestionario: Configurar SSRS 2012 para la integración de SharePoint](https://go.microsoft.com/fwlink/?LinkId=306443)  
+[Instalar o desinstalar el complemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+[Elemento web Visor de informes en un sitio de SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

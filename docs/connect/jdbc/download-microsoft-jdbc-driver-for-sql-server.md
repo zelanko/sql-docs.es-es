@@ -1,7 +1,7 @@
 ---
 title: Descarga del controlador Microsoft JDBC para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,28 +11,28 @@ ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27ff741558f45b775a517fbab960163dfe20bbf8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: ea9eade200b31b532d3970b19a21477ee7d66d65
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802481"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670993"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Descarga de Microsoft JDBC Driver para SQL Server
 
 
-## <a name="using-the-jdbc-driver-with-maven-central"></a>Usar el controlador JDBC con Maven Central
-El controlador JDBC puede agregarse a un proyecto de Maven, éste se agrega como una dependencia en el archivo POM.xml con el código siguiente:
+## <a name="using-the-jdbc-driver-with-maven-central"></a>Uso del controlador JDBC Driver con Maven Central
+El controlador JDBC Driver se puede agregar a un proyecto de Maven agregándolo como una dependencia en el archivo POM.xml con el siguiente código:
 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.1.jre11</version>
+    <version>7.2.2.jre11</version>
 </dependency>
 ```  
 
-## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>Descargas disponibles de JDBC Driver para SQL Server
+## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>Descargas disponibles del controlador JDBC Driver para SQL Server
  * [Microsoft JDBC Driver 7.2 para SQL Server](https://go.microsoft.com/fwlink/?linkid=2063159)
  * [Microsoft JDBC Driver 7.0 para SQL Server](https://go.microsoft.com/fwlink/?linkid=2005972) 
  * [Microsoft JDBC Driver 6.4 para SQL Server](https://go.microsoft.com/fwlink/?linkid=868290) 

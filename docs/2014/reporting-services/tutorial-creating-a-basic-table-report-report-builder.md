@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Creación de un informe de tabla básico (generador de informes) | Microsoft Docs'
+title: 'Tutorial: Crear un informe de tabla básico (Generador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f6d835c7f600264f91303046cb35d52424978861
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295373"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959551"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Creación de un informe de tabla básico (generador de informes)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Crear un informe de tabla básico (Generador de informes)
   Este tutorial muestra cómo crear un informe de tabla básico basado en datos de ventas de ejemplo. En la siguiente ilustración se muestra el informe que va a crear.  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
@@ -55,7 +55,7 @@ ms.locfileid: "56295373"
 ## <a name="requirements"></a>Requisitos  
  Para obtener más información sobre los requisitos, consulte [Requisitos previos para los tutoriales &#40;Generador de informes&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateTable"></a> 1. Crear un informe desde Introducción  
+##  <a name="CreateTable"></a> 1. Crear un nuevo informe desde Introducción  
  Crear un informe de tabla desde el **Introducción** cuadro de diálogo. Existen dos modos: diseño de informe y el diseño de conjunto de datos compartido. En el modo de diseño de informe, los datos se especifican en el panel Datos de informe y el diseño del informe se especifica en la superficie de diseño. En modo de diseño de conjunto de datos compartido, se crean consultas de conjunto de datos para compartir con otros usuarios. En este tutorial, utilizará el modo de diseño de informe.  
   
 #### <a name="to-create-a-new-report"></a>Para crear un informe nuevo  
@@ -229,7 +229,7 @@ ms.locfileid: "56295373"
   
 3.  Haga clic en **Finalizar**.  
   
- La tabla se agrega a la superficie de diseño. La tabla tiene 5 columnas y 5 filas. El panel de grupos de filas muestra tres grupos de filas: SalesDate, Subcategory y Details. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
+ La tabla se agrega a la superficie de diseño. La tabla tiene 5 columnas y 5 filas. El panel Row Groups (Grupos de filas) muestra tres grupos de filas: SalesDate, Subcategory y Details. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
   
 ##  <a name="FormatCurrency"></a> 2. Dar formato a los datos como moneda  
  De forma predeterminada, los datos de resumen del campo Sales se muestran en forma de número general. Aplíquele el formato adecuado para mostrar el número como moneda. Alterne **Estilos de marcador de posición** para mostrar los cuadros de texto con formato y el texto de marcador de posición como valores de ejemplo.  

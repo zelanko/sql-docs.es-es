@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b12b925f0059224cf016c6987845535311e5eb0d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7debd6d28ef938a5bde777067824b39b9b55a914
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286363"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947651"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>Vincular varias regiones de datos al mismo conjunto de datos (Generador de informes y SSRS)
   Puede agregar varias regiones de datos a un informe para proporcionar vistas diferentes de los datos a partir del mismo conjunto de datos de informe. Por ejemplo, es posible que le interese mostrar los datos en una tabla y, además, representarlos visualmente en un gráfico. Para ello, debe usar expresiones y ámbitos idénticos para las expresiones de filtro, las expresiones de ordenación y las expresiones de grupo correspondientes.  

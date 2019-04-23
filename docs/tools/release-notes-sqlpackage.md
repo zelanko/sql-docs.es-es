@@ -1,6 +1,6 @@
 ---
 title: Notas de la versión de DacFx y SqlPackage | Microsoft Docs
-description: Notas de la versión Microsoft sqlpackage.
+description: Notas de la versión de sqlpackage de Microsoft.
 ms.custom: tools|sos
 ms.date: 02/02/2019
 ms.prod: sql
@@ -10,18 +10,18 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: de45add2b02686f990d68f7c1c23eec385848751
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 411a2cf4c9a3170e9fb3a3dc7709d8b3882f066b
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538781"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670871"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notas de la versión de SqlPackage.exe
 
 **[Descargar la última versión](sqlpackage-download.md)**
 
-En este artículo se enumera las características y correcciones entregadas por las versiones publicadas de SqlPackage.exe.
+En este artículo se enumeran las características y correcciones que ofrecen las versiones publicadas de SqlPackage.exe.
 
 <!--
 TODO:
@@ -35,6 +35,30 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## <a name="182-sqlpackage"></a>sqlpackage 18.2
+
+Fecha de publicación: &nbsp; 15 de abril de 2019  
+Compilación: &nbsp; 15.0.4384.2 
+
+### <a name="features"></a>Características
+
+| Característica | Detalles |
+| :------ | :------ |
+| Agregue compatibilidad con la tabla de grafos para las restricciones perimetrales y las cláusulas de restricciones perimetrales. | &nbsp; |
+| Regla de validación de modelo habilitada para admitir 32 columnas de claves de índice para SQL Server 2016 y superiores. | &nbsp; |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>Correcciones
+
+| Fix | Detalles |
+| :-- | :------ |
+| Se corrigió la ingeniería inversa de una base de datos RTM de SQL Server 2016 debido a una sugerencia de consulta no compatible que se está utilizando. | &nbsp; |
+| Se corrigió el orden de implementación de las instrucciones de alteración de cierre automático para que se produzcan antes de crear instrucciones de grupo de archivos. | &nbsp; |
+| Se corrigió la regresión de análisis de ScriptDom donde la cadena "URL" se interpretaba como un token de nivel superior. | &nbsp; |
+| Se corrigió una excepción de referencia nula al analizar una instrucción de índice de adición de tabla de alteración. | &nbsp; |
+| Se corrigió la comparación de esquemas para las columnas calculadas persistentes que aceptan valores NULL que siempre se muestran diferentes.| &nbsp; |
+| &nbsp; | &nbsp; |
+
 ## <a name="181-sqlpackage"></a>18.1 sqlpackage
 
 Fecha de la versión: &nbsp; 1 de febrero de 2019  
@@ -45,59 +69,59 @@ Versión preliminar.
 
 | Característica | Detalles |
 | :------ | :------ |
-| Se agregó compatibilidad para las intercalaciones de UTF8. | &nbsp; |
-| Habilitar los índices de almacén de columnas no agrupado en una vista indizada. | &nbsp; |
-| Mover a .NET Core 2.2. | &nbsp; |
-| Utilice el almacenamiento de seguridad de memoria para la comparación de esquemas en .NET Core. | &nbsp; |
+| Se agregó compatibilidad con intercalaciones UTF8. | &nbsp; |
+| Se habilitaron los índices de almacén de columnas no en clúster en una vista indexada. | &nbsp; |
+| Se movió a .NET Core 2.2. | &nbsp; |
+| Utilice el almacenamiento con copia de seguridad de memoria para la comparación de esquemas en .NET Core. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>Correcciones
 
 | Fix | Detalles |
 | :-- | :------ |
-| Corrección del rendimiento que se usará el Estimador de cardinalidad heredada para las consultas de ingeniería inversas. | &nbsp; |
-| Se ha corregido un problema de rendimiento de la comparación de esquema importantes cuando se genera una secuencia de comandos. | &nbsp; |
-| Se ha corregido la lógica de detección del desfase de esquema para omitir ciertas sesiones de eventos extendidos (xevent). | &nbsp; |
-| Importación fija de ordenación de las tablas de graph. | &nbsp; |
-| Se ha corregido la exportación de tablas externas con permisos de objeto. | &nbsp; |
+| Corrección de rendimiento para utilizar el estimador de cardinalidad heredado para consultas de ingeniería inversa. | &nbsp; |
+| Se corrigió un problema de rendimiento de comparación de esquema significativo al generar un script. | &nbsp; |
+| Se corrigió la lógica de detección de desviación del esquema para ignorar ciertas sesiones de evento extendido (xevent). | &nbsp; |
+| Se corrigió el orden de importación para las tablas de grafos. | &nbsp; |
+| Se corrigió la exportación de tablas externas con permisos de objeto. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemas conocidos
 
-Esta versión incluye las compilaciones de versión preliminar de multiplataforma de sqlpackage que tienen como destino .NET Core 2.2. Puede ejecutar el sqlpackage en macOS y Linux.
+Esta versión incluye las compilaciones de versión preliminar multiplataforma de sqlpackage que tienen como destino .NET Core 2.2. El sqlpackage puede ejecutarse en macOS y Linux.
 
 | Problema conocido | Detalles |
 | :---------- | :------ |
-| No se admiten los colaboradores de compilación e implementación. | &nbsp; |
-| No se admiten archivos de dacpac y bacpac antiguos que utilizan la serialización de datos de json. | &nbsp; |
-| No se puede solucionar .dacpacs que se hace referencia (por ejemplo master.dacpac) debido a problemas con los sistemas de archivos distingue mayúsculas de minúsculas. | Una solución consiste en poner en mayúsculas del nombre del archivo de referencia (por ejemplo maestra. BACPAC). |
+| Los colaboradores de compilación y de implementación no se admiten. | &nbsp; |
+| No se admiten archivos .dacpac y .bacpac antiguos que utilizan la serialización de datos de json. | &nbsp; |
+| Es posible que los archivos .dacpac a los que se hace referencia (por ejemplo, master.dacpac) no se resuelvan debido a problemas con sistemas de archivos que distinguen entre mayúsculas y minúsculas. | Una solución consiste en poner en mayúscula el nombre del archivo de referencia (por ejemplo MASTER.BACPAC). |
 | &nbsp; | &nbsp; |
 
 ## <a name="180-sqlpackage"></a>18.0 sqlpackage
 
-Fecha de lanzamiento: &nbsp; 24 de octubre de 2018  
+Fecha de publicación: &nbsp; 24 de octubre de 2018  
 Compilación: &nbsp; 15.0.4200.1
 
 ### <a name="features"></a>Características
 
 | Característica | Detalles |
 | :------ | :------ |
-| Se agregó compatibilidad para el nivel de compatibilidad de base de datos 150. | &nbsp; |
+| Se agregó compatibilidad para el nivel de compatibilidad de la base de datos 150. | &nbsp; |
 | Se agregó compatibilidad para instancias administradas. | &nbsp; |
-| Se ha agregado el parámetro de línea de comandos del MaxParallelism para especificar el grado de paralelismo para las operaciones de base de datos. | &nbsp; |
-| Se ha agregado el parámetro de línea de comandos del AccessToken para especificar un token de autenticación al conectarse a SQL Server. | &nbsp; |
-| Se agregó compatibilidad para tipos de datos BLOB y CLOB secuencia para la importación. | &nbsp; |
-| Ha agregado compatibilidad con UDF escalar opción "INLINE". | &nbsp; |
-| Se ha agregado compatibilidad con la sintaxis 'MERGE' de tabla de gráfico. | &nbsp; |
+| Se agregó el parámetro de línea de comandos MaxParallelism para especificar el grado de paralelismo para las operaciones de base de datos. | &nbsp; |
+| Se agregó el parámetro de línea de comandos AccessToken para especificar un token de autenticación al conectarse a SQL Server. | &nbsp; |
+| Se agregó compatibilidad para tipos de datos BLOB y CLOB en secuencia para las importaciones. | &nbsp; |
+| Se agregó compatibilidad con la opción escalar "INLINE" de UDF. | &nbsp; |
+| Se agregó compatibilidad con la sintaxis "MERGE" de la tabla de grafos. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>Correcciones
 
 | Fix | Detalles |
 | :-- | :------ |
-| Columna pseudo sin resolver fijo para las tablas de graph. | &nbsp; |
-| Se ha corregido la creación de una base de datos con el archivo optimizado de memoria se usan grupos de tablas optimizadas para memoria. | &nbsp; |
-| Se ha corregido, incluidas las propiedades extendidas en tablas externas. | &nbsp; |
+| Se corrigió la pseudocolumna no resuelta para las tablas de grafos. | &nbsp; |
+| Se corrigió la creación de una base de datos con grupos de archivos optimizados de memoria cuando se usan tablas optimizadas de memoria. | &nbsp; |
+| Se corrigió la inclusión de propiedades extendidas en tablas externas. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## <a name="178-sqlpackage"></a>17.8 sqlpackage
@@ -109,38 +133,38 @@ Compilación: &nbsp; 14.0.4079.2
 
 | Característica | Detalles |
 | :------ | :------ |
-| Mejorado los mensajes de error para errores de conexión, incluidos el mensaje de excepción de SqlClient. | &nbsp; |
-| Admite la compresión de índice en los índices de partición única para import/export. | &nbsp; |
+| Se mejoraron los mensajes de error para errores de conexión, incluido el mensaje de excepción SqlClient. | &nbsp; |
+| Compatibilidad con compresión de índices en índices de partición única para importación/exportación. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>Correcciones
 
 | Fix | Detalles |
 | :-- | :------ |
-| Se ha corregido un problema de ingeniería inverso para conjuntos de columnas XML con SQL 2017 y versiones posteriores. | &nbsp; |
-| Se ha corregido un problema donde se omitió el scripting en el nivel de compatibilidad 140 para Azure SQL Database. | &nbsp; |
+| Se corrigió un problema de ingeniería inversa para conjuntos de columnas XML con SQL 2017 y versiones posteriores. | &nbsp; |
+| Se corrigió un problema donde se omitió el scripting en el nivel de compatibilidad de base de datos 140 para Azure SQL Database. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## <a name="1741-sqlpackage"></a>17.4.1 sqlpackage
 
-Fecha de lanzamiento: &nbsp; 25 de enero de 2018  
+Fecha de publicación: &nbsp; 25 de enero de 2018  
 Compilación: &nbsp; 14.0.3917.1
 
 ### <a name="features"></a>Características
 
 | Característica | Detalles |
 | :------ | :------ |
-| Agregado el parámetro de línea de comandos del ThreadMaxStackSize a analizar Transact-SQL con un gran número de instrucciones anidadas. | &nbsp; |
-| Compatibilidad con la intercalación del catálogo de base de datos. | &nbsp; |
+| Se agregó el parámetro de línea de comandos ThreadMaxStackSize para analizar Transact-SQL con una gran cantidad de instrucciones anidadas. | &nbsp; |
+| Compatibilidad con intercalación del catálogo de base de datos. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>Correcciones
 
 | Fix | Detalles |
 | :-- | :------ |
-| Al importar un bacpac de Azure SQL Database a una instancia local, se han corregido errores debido a _claves maestras de base de datos sin la contraseña no se admiten en esta versión de SQL Server_. | &nbsp; |
-| Se ha corregido un error de la columna pseudo sin resolver para las tablas de graph. | &nbsp; |
-| Se ha corregido utilizando el SchemaCompareDataModel con autenticación de SQL para comparar los esquemas. | &nbsp; |
+| Al importar un archivo .bacpac de Azure SQL Database en una instancia local, se corrigieron los errores debidos a que las _claves maestras de base de datos sin la contraseña no se admiten en esta versión de SQL Server_. | &nbsp; |
+| Se corrigió el error de pseudocolumna no resuelta para las tablas de grafos. | &nbsp; |
+| Se corrigió el uso de SchemaCompareDataModel con autenticación SQL para comparar esquemas. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ## <a name="1740-sqlpackage"></a>17.4.0 sqlpackage
@@ -152,14 +176,14 @@ Compilación: &nbsp; 14.0.3881.1
 
 | Característica | Detalles |
 | :------ | :------ |
-| Ha agregado compatibilidad con _directiva de retención temporal_ en SQL 2017 + y Azure SQL Database. | &nbsp; |
-| Se agregó /DiagnosticsFile:"C:\Temp\sqlpackage.log" parámetro de línea de comandos para especificar una ruta de acceso de archivo para guardar la información de diagnóstico. | &nbsp; |
-| Se ha agregado el parámetro de línea de comandos del /Diagnostics para registrar información de diagnóstico en la consola. | &nbsp; |
+| Se agregó soporte para la _directiva de retención temporal_ en SQL 2017+ y Azure SQL Database. | &nbsp; |
+| Se agregó el parámetro de línea de comandos /DiagnosticsFile:"C:\Temp\sqlpackage.log "para especificar una ruta de archivo para guardar la información de diagnóstico. | &nbsp; |
+| Se agregó el parámetro de línea de comandos /Diagnostics para registrar información de diagnóstico en la consola. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixes"></a>Correcciones
 
 | Fix | Detalles |
 | :-- | :------ |
-| No se bloquean al encontrar un nivel de compatibilidad de base de datos que no entienda. | En su lugar, se supone que la plataforma más reciente de Azure SQL Database o en el entorno local. |
+| No bloquear cuando se encuentre un nivel de compatibilidad de base de datos que no entienda. | En su lugar, se asumirá la versión más reciente de Azure SQL Database o la plataforma local. |
 | &nbsp; | &nbsp; |

@@ -1,7 +1,7 @@
 ---
 title: sqlsrv_prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 04/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bae6521aa7348bcafca86a5efa54c605fc887a28
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: 8716f57c208eeb38992cf6122509a36b29b858aa
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676153"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582898"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,19 +62,19 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |Elemento|Descripción|  
     |-----------|---------------|  
     |*&$value*|Un valor literal o una referencia a una variable PHP.|  
-    |*$direction*[opcional]|Una de las siguientes constantes **SQLSRV_PARAM_\*** usadas para indicar la dirección del parámetro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. El valor predeterminado es **SQLSRV_PARAM_IN**.<br /><br />Para obtener más información sobre las constantes de PHP, vea [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$direction*[OPCIONAL]|Una de las siguientes constantes **SQLSRV_PARAM_\*** usadas para indicar la dirección del parámetro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. El valor predeterminado es **SQLSRV_PARAM_IN**.<br /><br />Para obtener más información sobre las constantes de PHP, vea [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$phpType*[OPCIONAL]|Constante **SQLSRV_PHPTYPE_\*** que especifica el tipo de datos PHP del valor devuelto.|  
     |*$sqlType*[OPCIONAL]|Constante **SQLSRV_SQLTYPE_\*** que especifica el tipo de datos de SQL Server del valor de entrada.|  
   
-*$options* [OPCIONAL]: matriz asociativa que establece propiedades de consulta. En la siguiente tabla se indican las claves admitidas y los valores correspondientes:  
-  
+*$options* [OPCIONAL]: matriz asociativa que establece <a name="properties">propiedades de consulta</a>. En la siguiente tabla se indican las claves admitidas y los valores correspondientes:
+
 |Key|Valores admitidos|Descripción|  
 |-------|--------------------|---------------|  
-|ClientBufferMaxKBSize|Un entero positivo|Configura el tamaño de búfer que contiene el conjunto de resultados de un cursor de cliente.<br /><br />El valor predeterminado es 10240 KB. Para obtener más información, lea [especificando un tipo de Cursor y selección de filas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
-|DecimalPlaces|Un entero entre 0 y 4 (inclusive)|Especifica las posiciones decimales cuando se da formato capturan valores de moneda.<br /><br />Se omitirá cualquier entero negativo o un valor mayor que 4.<br /><br />Esta opción funciona sólo cuando es FormatDecimals **true**.|
-|FormatDecimals|**True** o **False**<br /><br />El valor predeterminado es **false**.|Especifica si se debe agregar líderes en ceros para cadenas decimales cuando sea apropiado y habilita el `DecimalPlaces` opción para aplicar formato a tipos de dinero.<br /><br />Para obtener más información, consulte [dar formato a cadenas decimales y valores de moneda (controlador SQLSRV)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
+|ClientBufferMaxKBSize|Un entero positivo|Configura el tamaño de búfer que contiene el conjunto de resultados de un cursor de cliente.<br /><br />El valor predeterminado es 10240 KB. Para obtener más información, vea [Especificación de un tipo de cursor y selección de filas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
+|DecimalPlaces|Un número entero comprendido entre 0 y 4, ambos incluidos|Especifica los lugares decimales al dar formato a los valores de moneda obtenidos.<br /><br />Se omitirá cualquier entero negativo o un valor mayor que 4.<br /><br />Esta opción funciona sólo cuando es FormatDecimals es **true**.|
+|FormatDecimals|**True** o **False**<br /><br />El valor predeterminado es **false**.|Especifica si se agregan ceros iniciales a las cadenas decimales cuando sea apropiado y habilita la opción `DecimalPlaces` para dar formato a los tipos de moneda.<br /><br />Para obtener más información, consulte [Aplicación de formato a cadenas decimales y valores de moneda (controlador SQLSRV)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
 |QueryTimeout|Un entero positivo|Establece el tiempo de espera de consulta en segundos. De manera predeterminada, el controlador espera indefinidamente los resultados.|  
-|ReturnDatesAsStrings|**True** o **False**<br /><br />El valor predeterminado es **false**.|Configura la instrucción para recuperar tipos de fecha y hora como cadenas (**true**). Para más información, consulte [Recuperación de los tipos de fecha y hora como cadenas con el controlador SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
+|ReturnDatesAsStrings|**True** o **False**<br /><br />El valor predeterminado es **false**.|Configura la instrucción para recuperar los tipos de fecha y hora como cadenas (**true**). Para más información, consulte [Recuperación de los tipos de fecha y hora como cadenas con el controlador SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
 |De desplazamiento|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Para obtener más información sobre estos valores, vea [Especificación de un tipo de cursor y selección de filas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
 |SendStreamParamsAtExec|**True** o **False**<br /><br />El valor predeterminado es **true**.|Configura el controlador para enviar todos los datos de flujo en el momento de la ejecución (**true**) o para enviar los datos de flujo en fragmentos (**false**). De manera predeterminada, este valor se establece como **True**. Para obtener más información, consulte [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
   
@@ -223,7 +223,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> Se recomienda usar cadenas como entradas al enlazar los valores para un [columna decimal o numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) para garantizar la precisión y la precisión PHP tiene limitada la precisión para [números de punto flotante](https://php.net/manual/en/language.types.float.php). Lo mismo se aplica a las columnas de tipo bigint, especialmente cuando los valores que están fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> Se recomienda utilizar cadenas como entradas cuando se vinculen valores a una [columna decimal o numérica](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) para garantizar la precisión y la exactitud, ya que PHP tiene una precisión limitada para [números de punto flotante](https://php.net/manual/en/language.types.float.php). Lo mismo se aplica a las columnas de tipo bigint, especialmente cuando los valores están fuera del intervalo de un [entero](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Ejemplo  
 Este ejemplo de código muestra cómo enlazar un valor decimal como un parámetro de entrada.  

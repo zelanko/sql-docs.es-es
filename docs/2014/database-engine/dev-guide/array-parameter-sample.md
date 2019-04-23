@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4eead93b1c2254ee9634ef5a05b1cd5d60ce079f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 24babe845d204f2938d86fc8fa70d747bbc92f36
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375387"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158681"
 ---
 # <a name="array-parameter-sample"></a>Ejemplo de parámetro de matriz
   A veces resulta útil crear, actualizar o eliminar un conjunto de filas en una base de datos. Este objetivo puede conseguirse mediante distintos enfoques. Uno de ellos es pasar una matriz de información de un cliente a un procedimiento almacenado de integración CLR (Common Language Runtime) del servidor mediante un tipo CLR de datos de integración definido por el usuario. La naturaleza de los tipos de datos definidos por el usuario de este tipo limita el tamaño de los datos proporcionados al servidor a 8.000 bytes. Por lo tanto, este enfoque no resulta satisfactorio para datos grandes o complejos. Si los datos que se tratan son pequeños y sencillos, este enfoque puede ser mucho más eficaz que llamar a un procedimiento almacenado para cada fila. Al pasar una matriz, el orden de los datos se conserva en las aplicaciones donde es significativo. Este ejemplo contiene lo siguiente:  

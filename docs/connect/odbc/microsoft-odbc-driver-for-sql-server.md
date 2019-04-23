@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e991ad5b1b88798604f4c8ba6486af3d739c96c1
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041884"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Controlador ODBC de Microsoft para SQL Server
@@ -51,7 +51,7 @@ El siguiente ejemplo de C++ muestra cómo usar las API de ODBC para conectarse y
 ### <a name="linux-and-macos"></a>Linux y macOS
 
 - [Instalación del controlador](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [Conectarse a SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
+- [Conexión a SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [Conexión con **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [Conexión con **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
 - [Seguimiento de acceso a datos](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
@@ -69,7 +69,7 @@ El siguiente ejemplo de C++ muestra cómo usar las API de ODBC para conectarse y
 - [Resistencia de conexión en el controlador Windows ODBC](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
 - [Agrupación de conexiones dependientes del controlador](../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
 - [Características y cambios de comportamiento](../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
-- [Notas de la versión de ODBC a SQL Server en Windows](windows/release-notes-odbc-sql-server-windows.md)
+- [Notas de la versión de ODBC para SQL Server en Windows](windows/release-notes-odbc-sql-server-windows.md)
 - [Requisitos del sistema, instalación y archivos del controlador](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
 

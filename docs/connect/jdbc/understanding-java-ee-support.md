@@ -1,7 +1,7 @@
 ---
 title: Descripción de la compatibilidad con Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae55a5bc677c70d2a1f998e235031ac9bafd5aba
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 7d7d1867c8c6d9311736124cf74e30b748a9de68
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154620"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671231"
 ---
 # <a name="understanding-java-ee-support"></a>Descripción de la compatibilidad con Java EE
 
@@ -30,19 +30,19 @@ Primero, asegúrese de que el entorno de Java (JDK, JRE) incluye el paquete java
 
 El nombre de clase del controlador es **com.microsoft.sqlserver.jdbc.SQLServerDriver**. Para JDBC Driver 4.1, 4.2 y 6.0, el controlador se encuentra en el archivo **sqljdbc.jar**, **sqljdbc4.jar**, **sqljdbc41.jar** o **sqljdbc42.jar**.
 
-Para JDBC Driver 6.2, el controlador se encuentra en **mssql-jdbc-6.2.2.jre7.jar** o **mssql-jdbc-6.2.2.jre8.jar**.
+Para el controlador JDBC Driver 6.2, el controlador se encuentra en **mssql-jdbc-6.2.2.jre7.jar** o **mssql-jdbc-6.2.2.jre8.jar**.
 
-Para JDBC Driver 6.4, el controlador se encuentra en **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, o **mssql-jdbc-6.4.0.jre9.jar**.
+Para el controlador JDBC Driver 6.4, el controlador se encuentra en **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** o **mssql-jdbc-6.4.0.jre9.jar**.
 
-Para JDBC Driver 7.0, el controlador se encuentra en **mssql-jdbc-7.0.0.jre8.jar**, o **mssql-jdbc-7.0.0.jre10.jar**.
+Para el controlador JDBC Driver 7.0, el controlador se encuentra en **mssql-jdbc-7.0.0.jre8.jar** o **mssql-jdbc-7.0.0.jre10.jar**.
 
-Para 7.2 de controlador JDBC, el controlador se encuentra en **mssql-jdbc-7.2.1.jre8.jar**, o **mssql-jdbc-7.2.1.jre11.jar**.
+Para el controlador JDBC Driver 7.2, el controlador se encuentra en **mssql-jdbc-7.2.2.jre8.jar** o **mssql-jdbc-7.2.2.jre11.jar**.
   
 El nombre de clase se usa cada vez que se carga el controlador con la clase DriverManager de JDBC. Se usa también cada vez que se deba especificar el nombre de clase del controlador en la configuración de cualquier controlador. Por ejemplo, configurar un origen de datos dentro de un servidor de aplicaciones de Java EE podría requerir que se escribiera el nombre de clase del controlador.  
   
 ## <a name="data-sources"></a>Orígenes de datos
 
-El controlador JDBC proporciona compatibilidad con los orígenes de datos de Java EE / JDBC 3.0. El controlador JDBC [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) implementa la clase `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
+El controlador JDBC proporciona compatibilidad con los orígenes de datos de Java EE / JDBC 3.0. La clase [SQLServerXADataSource ](../../connect/jdbc/reference/sqlserverxadatasource-class.md) del controlador JDBC Driver se implementa por `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
   
 ### <a name="datasource-names"></a>Nombre de los orígenes de datos
 
@@ -73,7 +73,7 @@ DataSource ds = (DataSource) ctx.lookup("MyDataSource");
 Connection c = ds.getConnection("user", "pwd");  
 ```
 
-Para obtener más información acerca de las propiedades del origen de datos, vea [establecer las propiedades del origen de datos](../../connect/jdbc/setting-the-data-source-properties.md).  
+Para obtener más información acerca de las propiedades del origen de datos, vea [Establecer las propiedades de los orígenes de datos](../../connect/jdbc/setting-the-data-source-properties.md).  
   
 ## <a name="see-also"></a>Consulte también
 

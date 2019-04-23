@@ -1,7 +1,7 @@
 ---
 title: Matriz de compatibilidad de Microsoft JDBC Driver para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31c5829322a4c3d2bc6266a6a0ddd3a1f86f505a
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: c5afea07126f93937a46254682b163407db6f75d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154920"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671311"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matriz de compatibilidad de Microsoft JDBC Driver para SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "56154920"
     
  Se admiten los siguientes controladores Microsoft JDBC Driver hasta la fecha de finalización del soporte.  
   
-|Nombre del controlador|Versión del paquete de controladores|JAR(s) aplicable|Finalización de soporte técnico|
+|Nombre del controlador|Versión del paquete de controladores|Archivos JAR aplicables|Finalización del soporte estándar|
 |-|-|-|-|  
-|Microsoft JDBC Driver 7.2 para SQL Server|7.2|mssql-jdbc-7.2.1.jre11.jar<br> mssql-jdbc-7.2.1.jre8.jar|11 de febrero de 2024|
+|Microsoft JDBC Driver 7.2 para SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|16 de abril de 2024|
 |Microsoft JDBC Driver 7.0 para SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 de julio de 2023|  
 |Microsoft JDBC Driver 6.4 para SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 de febrero de 2023|    
 |Microsoft JDBC Driver 6.2 para SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 de junio de 2022|    
@@ -42,7 +42,7 @@ ms.locfileid: "56154920"
   
  Ya no se admiten los siguientes controladores Microsoft JDBC Driver.  
  
-|Nombre del controlador|Versión del paquete de controladores|Finalización de soporte técnico|  
+|Nombre del controlador|Versión del paquete de controladores|Finalización del soporte estándar|  
 |-|-|-|
 |Microsoft JDBC Driver 4.0 para SQL Server|4.0|6 de marzo de 2017|  
 |Controlador JDBC de Microsoft SQL Server 3.0|3.0|23 de abril de 2015|  
@@ -54,7 +54,7 @@ ms.locfileid: "56154920"
   
 ## <a name="sql-version-compatibility"></a>Compatibilidad con versiones de SQL  
   
-|Versión del controlador|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Base de datos SQL de Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Instancia (extendida versión preliminar privada) administrada de SQL Azure|  
+|Versión del controlador|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Base de datos SQL de Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Instancia administrada de Azure SQL (versión preliminar privada ampliada)|  
 |-|-|-|-|-|-|-|-|-|-|
 |7.2|N|S|S|S|S|S|S|S|S|  
 |7.0|N|S|S|S|S|S|S|S|S|  

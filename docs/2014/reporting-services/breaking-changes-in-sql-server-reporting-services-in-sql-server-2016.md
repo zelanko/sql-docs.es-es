@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Reporting Services, backward compatibility
 - breaking changes [Reporting Services]
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 00b787d9fbeebd04b81ec608bf23745ddd733a0a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e779a88940db2883846168535e7823c1723f4b4e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040176"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947661"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Cambios recientes de SQL Server Reporting Services en SQL Server 2014
   En este tema se describen los principales cambios realizados en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Estos cambios pueden provocar errores en las aplicaciones, en los scripts o en las funcionalidades basados en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Podría encontrarlos al actualizar, o en scripts o informes personalizados. Para obtener más información, vea [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "56040176"
   
 -   El administrador de configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , rskeymgmt.exe y rsconfig.exe. En lugar de utilizar estas herramientas para configurar el modo de SharePoint de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , use Administración central de SharePoint y PowerShell.  
   
--   SQL Server Management Studio: Los clientes no pueden hacer referencia a un servidor con una sintaxis similar a <nombre_máquina>/<nombre_instancia>. A partir de la versión de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , el método recomendado era utilizar la dirección URL del sitio SharePoint. Por ejemplo, **http://<sharepoint_server>/<sharePoint_site>**. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], las direcciones URL de sitios de SharePoint son la única sintaxis compatible.  
+-   SQL Server Management Studio: Los clientes no pueden hacer referencia a un servidor con una sintaxis similar a < nombreDeEquipo > / < nombre_instancia >. A partir de la versión de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , el método recomendado era utilizar la dirección URL del sitio SharePoint. Por ejemplo, **http://<sharepoint_server>/<sharePoint_site>**. A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], las direcciones URL de sitios de SharePoint son la única sintaxis compatible.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>El diseñador de modelos de informe no está disponible en las herramientas de datos de SQL Server  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ya no admite proyectos del modelo de informes. El Diseñador de modelos de informe no está disponible en [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. No puede crear nuevos proyectos de modelos de informe ni abrir proyectos existentes en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y no puede crear ni actualizar los modelos de informe. Para actualizar los modelos de informe, puede usar [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] o herramientas anteriores. Puede seguir utilizando modelos de informe como orígenes de datos en los informes creados en las herramientas de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] como el Generador de informes y el Diseñador de informes. Sigue estando disponible en el Diseñador de consultas que usa para crear consultas para extraer datos de informe de los modelos de informe [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

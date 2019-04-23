@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bbbb50000f88e35b03f5a006c4a50708f10b05b7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 184e8a987455f181d2fe631abb6189e745bd95e2
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366877"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156211"
 ---
 # <a name="hello-world-ready-sample"></a>Ejemplo de Hola a todos preparado
   El ejemplo Hello World Ready muestra las operaciones básicas relacionadas con la creación, implementación y prueba de un procedimiento almacenado de integración con CLR (Common Language Runtime) simple internacionalizado. Un componente internacionalizado se puede localizar fácilmente a distintos idiomas para diferentes mercados del mundo entero sin cambiar el código fuente del componente. Este ejemplo también muestra cómo devolver datos al cliente a través de un parámetro de salida y a través de un registro que el procedimiento almacenado crea dinámicamente. Este ejemplo es casi idéntico al descrito en Hello World, salvo que es mucho más fácil y seguro localizar esta aplicación. Para cambiar el texto localizado se requiere lo siguiente:  

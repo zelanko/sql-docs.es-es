@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 - report data [Report Builder], accessing
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fdbd49f103727d877efa3cefd4551666666b40ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5ac00587321f3a328cb9927e5ed28c26d3a8d0d2
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041766"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969571"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Extensiones de procesamiento de datos y proveedores de datos de .NET Framework (SSRS)
   Una extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es un componente instalado con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], diseñado para recuperar datos de un tipo de origen de datos específico y proporcionar una funcionalidad adicional para admitir el diseño y el procesamiento de informes. Una extensión de procesamiento de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] es un componente disponible de [!INCLUDE[msCoName](../../includes/msconame-md.md)] o de terceros que admite interfaces <xref:System.Data> que permiten recuperar y modificar datos de un tipo de origen de datos específico.  

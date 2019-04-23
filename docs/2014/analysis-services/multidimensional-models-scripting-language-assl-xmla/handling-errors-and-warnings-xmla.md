@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - errors [XML for Analysis]
@@ -22,12 +20,12 @@ ms.assetid: ab895282-098d-468e-9460-032598961f45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a41e9cedf8a2a19aea0cf8a374bc71f520ff52f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 856886a5edfa5dcae604b44f5c2dca356ba0addb
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147750"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156392"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Controlar errores y advertencias (XMLA)
   Control de errores es necesario cuando un documento de XML for Analysis (XMLA) [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) o [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) llamada al método no se ejecuta, se ejecuta correctamente, pero genera errores o advertencias, o se ejecuta correctamente pero devuelve resultados que contienen errores.  
@@ -54,7 +52,7 @@ ms.locfileid: "50147750"
   
 |Nombre de columna|Tipo|Descripción|Permitida NULL<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|`ErrorCode`|`UnsignedInt`|Código de retorno que indica la ejecución correcta o el error del método. El valor hexadecimal debe convertirse en un valor `UnsignedInt`.|no|  
+|`ErrorCode`|`UnsignedInt`|Código de retorno que indica la ejecución correcta o el error del método. El valor hexadecimal debe convertirse en un valor `UnsignedInt`.|No|  
 |`WarningCode`|`UnsignedInt`|Código de retorno que indica una condición de advertencia. El valor hexadecimal debe convertirse en un valor `UnsignedInt`.|Sí|  
 |`Description`|`String`|Texto y descripción del error o la advertencia devueltos por el componente que generó el error.|Sí|  
 |`Source`|`String`|Nombre del componente que generó el error o la advertencia.|Sí|  

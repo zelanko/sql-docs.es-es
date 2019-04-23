@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - Url property
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 06a5ec6ec02544354307f426534d583b0cfe8150
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4036e38a0d0eb5e76934fa119b3bcc37342062a7
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016246"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158491"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Establecer la propiedad Url del servicio web
   En las aplicaciones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], puede modificar en cualquier momento la dirección URL base del servicio web del servidor de informes a la que se dirige la aplicación. Para ello, basta con establecer la propiedad **Url** del objeto de servicio. Por ejemplo:  

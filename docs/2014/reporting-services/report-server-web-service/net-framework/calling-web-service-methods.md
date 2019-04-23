@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - Web service [Reporting Services], SOAP
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], SOAP
 - SOAP [Reporting Services], calls
 ms.assetid: f6f0c6e3-8bb5-4c44-9d19-1872edc72746
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3930eb35a5e145b44accc099087a41239b06a4b0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 87f1485b4e3c0ed064e42bb3b411fece96eba8d2
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026116"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158471"
 ---
 # <a name="calling-web-service-methods"></a>Llamar a métodos de servicio web
   Al utilizar una clase de proxy de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] para llamar a las operaciones de servicio web, se usan los métodos de esa clase. Estos métodos responden como cualquier otro de una clase de la biblioteca de clases de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Todos los métodos de servicio web tienen acceso público y necesitan que se proporcione el número y tipos adecuados de argumentos. Después de crear una instancia de la clase de proxy en el proyecto, puede llamar a los métodos para realizar las operaciones del informe de errores a través del servidor de informes. En el código de C# siguiente se ilustra el uso del método <xref:ReportService2010.ReportingService2010.ListChildren%2A> de la clase de proxy de <xref:ReportService2010.ReportingService2010>. El código se utiliza para realizar una llamada recursiva al servicio web que devuelve una matriz de objetos <xref:ReportService2010.CatalogItem> que contiene una lista de todos los elementos de la base de datos del servidor de informes:  

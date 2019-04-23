@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - SQL11.rsconfigtool.emailsettings.F1
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1340e42824aabd3e4d32cc844f3061be90f97e52
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ca24685a8a13158efdf5e854efbbd92943c0348d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031996"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965521"
 ---
 # <a name="e-mail-settings---configuration-manager-ssrs-native-mode"></a>Configuración de correo electrónico - Administrador de configuración (Modo nativo de SSRS)
   Utilice esta página para especificar la configuración del Protocolo simple de transferencia de correo (SMTP) que habilita la entrega de correo electrónico del servidor de informes desde este. Puede utilizar la extensión de entrega por correo electrónico del servidor de informes para distribuir informes o notificaciones de procesamiento de informes a través de suscripciones por correo electrónico. La extensión de entrega por correo electrónico del servidor de informes requiere un servidor SMTP y una dirección de correo electrónico para el campo De:.  

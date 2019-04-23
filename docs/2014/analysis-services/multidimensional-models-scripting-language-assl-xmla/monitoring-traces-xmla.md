@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - XML for Analysis, traces
@@ -17,12 +15,12 @@ ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24af6f2ff33235321ef49732721042ab2227ca5f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146470"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156418"
 ---
 # <a name="monitoring-traces-xmla"></a>Supervisar los seguimientos (XMLA)
   Puede usar el [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) XML for Analysis (XMLA) para supervisar un seguimiento existente definido en una instancia de comando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El comando `Subscribe` devuelve los resultados de un seguimiento como conjunto de filas.  
@@ -39,9 +37,9 @@ ms.locfileid: "50146470"
 |------------|---------------|-----------------|  
 |EventClass|Integer|Clase del evento que recibe el seguimiento.|  
 |EventSubclass|Entero largo|Subclase del evento que recibe el seguimiento.|  
-|CurrentTime|DATETIME|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|StartTime|DATETIME|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
-|EndTime|DATETIME|Hora a la que finalizó el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".<br /><br /> Esta columna no se rellena para las clases de eventos que describen el inicio de un proceso o acción.|  
+|CurrentTime|Datetime|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
+|StartTime|Datetime|Hora a la que se inició el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".|  
+|EndTime|Datetime|Hora a la que finalizó el evento, si está disponible. Para filtrar, los formatos esperados son "AAAA-MM-DD" y "AAAA-MM-DD HH:MM:SS".<br /><br /> Esta columna no se rellena para las clases de eventos que describen el inicio de un proceso o acción.|  
 |Duration|Entero largo|Tiempo total transcurrido (en milisegundos) para el evento.|  
 |CPUTime|Entero largo|Tiempo de procesador transcurrido (en milisegundos) para el evento.|  
 |JobID|Entero largo|Identificador de trabajo para el proceso.|  
@@ -56,7 +54,7 @@ ms.locfileid: "50146470"
 |ObjectReference|String|Representación XML de la referencia de objeto para el objeto especificado en ObjectName.|  
 |NestLevel|Integer|Nivel de la transacción para la que se produjo el evento.|  
 |NumSegments|Entero largo|Número de segmentos de datos afectados por el comando para el que se produjo el evento o a los que éste tuvo acceso.|  
-|Severity|Integer|Nivel de gravedad de una excepción del evento La columna puede contener uno de los siguientes valores:<br /><br /> Valor: 0 = correcto<br /><br /> Valor: 1 = la información<br /><br /> Valor: 2 = advertencia<br /><br /> Valor: 3 = Error|  
+|Severity|Integer|Nivel de gravedad de una excepción del evento La columna puede contener uno de los siguientes valores:<br /><br /> Valor: 0 = Correcto.<br /><br /> Valor: 1 = la información<br /><br /> Valor: 2 = Advertencia<br /><br /> Valor: 3 = Error|  
 |Correcto|Boolean|Indica si un comando se ha ejecutado correctamente o no.|  
 |Error|Entero largo|Número de error del evento, si procede.|  
 |ConnectionID|String|Identificador de la conexión para la que se produjo el evento.|  

@@ -4,25 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0652a2545f0b1e9d591777f0bcabe6395cf4feaa
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f23c3ff4d5bf55609e1dab2462b19a5fa273986f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802659"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158011"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Características compatibles con las ediciones de SQL Server 2014
 
@@ -31,7 +24,7 @@ ms.locfileid: "56802659"
 
  > **Nota:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponible en una edición de evaluación durante un período de prueba de 180 días. Para obtener más información, consulte el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [sitio Web de Software de prueba](https://go.microsoft.com/fwlink/?LinkId=190955).  
 > 
-> **NOTA:** Para saber las características admitidas por las ediciones Evaluation y Developer, vea el conjunto de características de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise.  
+> **NOTA:** Para las características compatibles con las ediciones Evaluation y Developer, consulte el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] conjunto de características de Enterprise.  
   
  Para navegar hasta la tabla de una tecnología de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , haga clic en su vínculo:  
   
@@ -381,13 +374,13 @@ ms.locfileid: "56802659"
 |Herramientas de minería de datos (asistentes, editores, generadores de consultas)|Sí|Sí|Sí|||||  
 |Validación cruzada|Sí|Sí||||||  
 |Modelos de subconjuntos filtrados de datos de estructura de minería de datos|Sí|Sí||||||  
-|Serie temporal: mezcla personalizada entre los métodos ARTXP y ARIMA|Sí|Sí||||||  
-|Serie temporal: predicción con datos nuevos|Sí|Sí||||||  
+|Series temporales: Mezcla personalizada entre métodos ARIMA y ARTXP|Sí|Sí||||||  
+|Series temporales: Predicción con nuevos datos|Sí|Sí||||||  
 |Consultas de minería de datos simultáneas ilimitadas|Sí|Sí||||||  
 |Configuración avanzada y opciones de optimización de algoritmos de minería de datos|Sí|Sí||||||  
 |Compatibilidad con algoritmos de complemento|Sí|Sí||||||  
 |Procesamiento de modelos en paralelo|Sí|Sí||||||  
-|Serie temporal: predicción para series cruzadas|Sí|Sí||||||  
+|Series temporales: Predicción de Series cruzadas|Sí|Sí||||||  
 |Atributos ilimitados para reglas de asociación|Sí|Sí||||||  
 |Predicción de secuencias|Sí|Sí||||||  
 |Varios destinos de predicción para Bayes naive, red neuronal y regresión logística|Sí|Sí||||||  

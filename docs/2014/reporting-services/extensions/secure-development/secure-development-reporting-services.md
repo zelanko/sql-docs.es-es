@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - development security [Reporting Services]
 - security [Reporting Services], development
 - security [Reporting Services], strategies
 ms.assetid: 12161a6c-b93b-4312-9d27-0c922561eb9b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d2e6e4ea444a243baf06b96448621d4f189d5efa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7ba284b9013c5da6b03cce06ec72deccb045cfad
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027066"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156171"
 ---
 # <a name="secure-development-reporting-services"></a>Desarrollo seguro (Reporting Services)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] proporciona un sistema de seguridad sólido que puede ejecutar código en contextos de seguridad rigurosamente restringidos y definidos por el administrador. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza el sistema de seguridad [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], conocido como seguridad de acceso del código (o seguridad basada en evidencia). En seguridad de acceso del código, el usuario puede ser de confianza para tener acceso a un recurso, pero si el código que ejecuta no lo es, el acceso al recurso será denegado.  

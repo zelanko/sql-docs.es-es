@@ -14,15 +14,15 @@ helpviewer_keywords:
 - MDX [Reporting Services], creating datasets
 - query designers [Reporting Services]
 ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 490b81e30833a8572ff7ce8bd51c72b5314c3bf7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 624b18425a631f54b3de0aef85b48b8c6ec36a3d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030629"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969422"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas MDX de Analysis Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] proporciona diseñadores gráficos de consultas para crear consultas MDX (Expresiones multidimensionales) y consultas DMX (Expresiones de minería de datos) para un origen de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . En este tema se describe el diseñador de consultas MDX. Para más información sobre el diseñador de consultas DMX, vea [Tipo de conexión de Analysis Services para DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md).  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 83a9816afeae77036616bec4e850c09f613f0f74
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b704f24379a0d56f738b28f9553cf03d214b9e3c
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531317"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158271"
 ---
 # <a name="string-utility-functions-sample"></a>Ejemplo de funciones de la utilidad String
   El ejemplo de funciones de la utilidad String contiene una función con valores de tabla de transmisión de datos, escrita en Visual C# y Visual Basic, que divide una cadena delimitada por comas en una tabla con una columna. También contiene una función de agregado que convierte una columna de cadenas en una cadena delimitada por comas.  Además, se implementan una función escalar y una función con valores de tabla que permiten reemplazar y buscar expresiones regulares.  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22ca1fe2ace8ef3b04adaf8323e0edaac2a07af6
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: 760e90c34c84bd4b44af90cbbb78aec7e025689a
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246784"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158173"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>Anotaciones de CSDL para Business Intelligence (CSDLBI)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la presentación de la definición de un modelo tabular en un formato XML denominado Lenguaje de definición de esquemas conceptuales con anotaciones Business Intelligence (CSDLBI).  
@@ -49,7 +47,7 @@ ms.locfileid: "53246784"
 ### <a name="csdlbi-versions"></a>Versiones de CSDLBI  
  La especificación CSDL original (de Entity Data Framework) es suficiente para la mayor parte de las entidades y propiedades necesarias para el modelado. Las anotaciones BI admiten requisitos especiales de modelos tabulares, propiedades de informes requeridas por clientes como [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] y metadatos adicionales requeridos por modelos multidimensionales. En esta sección se describen las actualizaciones de cada versión.  
   
- **1.0 DE CSDLBI**  
+ **CSDLBI 1.0**  
   
  El conjunto inicial de adiciones al esquema CSDL para admitir los modelos tabulares de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contenía anotaciones que permitían el uso del modelado de datos, los cálculos personalizados y las presentaciones mejoradas:  
   
@@ -59,7 +57,7 @@ ms.locfileid: "53246784"
   
 -   Propiedades de visualización y navegación. Por ejemplo, se agregaron propiedades para admitir campos de ordenación personalizados e imágenes predeterminadas.  
   
- **1.1 DE CSDLBI**  
+ **CSDLBI 1.1**  
   
  Esta versión del esquema CSDLBI incluye adiciones para admitir el uso de bases de datos multidimensionales (como los cubos OLAP). Los nuevos elementos y propiedades son los siguientes:  
   

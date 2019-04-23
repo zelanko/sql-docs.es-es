@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b0806dc4001331523c1ee5aa400d0198f3799238
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: c628f8c853879a4c601e1c9529f97fd7877551df
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657641"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969321"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Tipo de conexión Almacenamiento de datos paralelo de SQL Server (SSRS)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] es un dispositivo de almacenamiento de datos escalable que ofrece rendimiento y escalabilidad mediante un procesamiento paralelo masivo. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] utiliza bases de datos de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para el procesamiento distribuido y el almacenamiento de datos.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19b4922446f564435970fbb7f0422a3c98de48df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c17508b14ba8352e8dd17e2e0c1322c0c1856ed6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151965"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156201"
 ---
-# <a name="task-8-creating-a-composite-domain-rule"></a>Tarea 8: crear una regla de dominio compuesto
+# <a name="task-8-creating-a-composite-domain-rule"></a>Tarea 8: Crear una regla de dominio compuesto
   En esta tarea, creará una regla para el **validación de direcciones** dominio compuesto. Definir una regla entre dominios: si **Ciudad** es **Los Ángeles**, **estado** debe ser **CA** donde **Ciudad** y **estado** son dos dominios.  
   
 1.  En el panel derecho, cambie a la **reglas de CD** ficha.  

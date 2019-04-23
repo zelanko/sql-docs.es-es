@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - style sheets [Reporting Services]
 ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 45b7973dd7711f09b6bf187f7c2798e44e91c375
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d9c4a57413db37c8f93b1a311542398417bfeff0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017957"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969531"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Personalizar hojas de estilos para el Visor HTML y el Administrador de informes
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ofrece estilos en cascada de forma predeterminada los archivos de hoja (.css) que definen estilos para el **informe** barra de herramientas en el Visor de HTML y para el Administrador de informes. Si es un programador web o tiene experiencia creando hojas de estilos en cascada, puede modificar los estilos predeterminados bajo su responsabilidad para cambiar los colores, las fuentes y el diseño de la barra de herramientas o el Administrador de informes. En esta versión no se documentan las hojas de estilos predeterminadas ni las instrucciones para modificarlas.  
@@ -46,12 +46,12 @@ ms.locfileid: "56017957"
   
  Para utilizar una hoja de estilos predeterminada para el Visor HTML en tiempo de ejecución, puede elegir los siguientes enfoques:  
   
--   Agregue el valor <`HTMLViewerStyleSheet`> al archivo de configuración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+-   Agregue el <`HTMLViewerStyleSheet`> Si se establece en el [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] archivo de configuración.  
   
 -   Especifique la hoja de estilos en una dirección URL de informe.  
   
 ### <a name="modifying-the-rsreportserverconfig-file"></a>Modificar el archivo RSReportServer.config  
- Puede modificar el archivo RSReportServer.config de modo que especifique una hoja de estilos personalizada para el Visor HTML. La configuración <`HTMLViewerStyleSheet`> no se incluye de forma predeterminada en el archivo. Debe escribirla en la selección <`Configuration`> del archivo RSReportServer.config y, posteriormente, especificar la hoja de estilos que desea utilizar. No incluya la extensión de archivo .css al especificar la hoja de estilos.  
+ Puede modificar el archivo RSReportServer.config de modo que especifique una hoja de estilos personalizada para el Visor HTML. El <`HTMLViewerStyleSheet`> configuración no se incluye en el archivo de forma predeterminada. Debe escribirla en el <`Configuration`> selección de RSReportServer.config archivo y, a continuación, especifique la hoja de estilos que desea usar. No incluya la extensión de archivo .css al especificar la hoja de estilos.  
   
  El ejemplo siguiente ilustra cómo debe especificar la hoja de estilos:  
   

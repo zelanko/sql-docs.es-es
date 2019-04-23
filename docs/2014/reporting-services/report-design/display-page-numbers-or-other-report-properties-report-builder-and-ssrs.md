@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b6330f18f63caaf1e5c497dec8b87741030a0480
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0aa360b52f6928db53a473712c38bbfc2d05de78
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287814"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961791"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Mostrar números de página u otras propiedades del informe (Generador de informes y SSRS)
   Es fácil agregar números de página, un título del informe, nombre de archivo y otras propiedades del informe a los encabezados o pies de página de su informe. Estas propiedades se almacenan como campos en la carpeta Campos integrados del panel Datos de informe:  
@@ -63,7 +63,7 @@ ms.locfileid: "56287814"
   
 1.  Haga clic con el botón derecho en el cuadro de texto que contiene [&PageNumber] y haga clic en **Expresiones**.  
   
-     El **Establecer expresión para: Valor** cuadro de texto contiene la expresión = Globals! PageNumber.  
+     El cuadro de texto **Establecer expresión para: Valor** contiene la expresión =Globals!PageNumber.  
   
 2.  Coloque el cursor después del signo = y escriba `"Page " &`.  
   

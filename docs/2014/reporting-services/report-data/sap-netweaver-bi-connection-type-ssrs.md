@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ace0ffeea6d268768b4e846bbb2d75d1377fdab4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bd5201b32342734258a729de9ba474ac6cdf1be9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033425"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969511"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Tipo de conexión de SAP NetWeaver BI (SSRS)
   Para incluir en un informe datos de un origen de datos de SAP NetWeaver® Business Intelligence externo, debe tener un conjunto de datos basado en un origen de datos de informe de tipo [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Este tipo de origen de datos integrado está basado en la extensión de datos del proveedor de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 para [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  

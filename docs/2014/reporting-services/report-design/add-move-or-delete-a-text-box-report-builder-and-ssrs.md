@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2736c28c69491f18abd6c999cc3ac22071698da1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d75b32b9b1e25c23855d35e0f8e77bbf78c24688
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294473"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966081"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Agregar, mover o eliminar un cuadro de texto (Generador de informes y SSRS)
   Los cuadros de texto son los elementos de informe más usados en los informes. Puede agregar un cuadro de texto al cuerpo del informe para mostrar información como títulos, opciones de parámetros, campos integrados y fechas.  

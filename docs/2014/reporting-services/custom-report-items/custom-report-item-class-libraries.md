@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom report items, RDL
 - RDL [Reporting Services], custom report items
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5a5586ac74b77a6019d83a451a0b94fa2aa1bca2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012546"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156091"
 ---
 # <a name="custom-report-item-class-libraries"></a>Bibliotecas de clases de elemento de informe personalizado
   Los elementos de informe personalizados utilizan las clases del espacio de nombres `Microsoft.ReportDesigner`. Las clases utilizadas para implementar un elemento de informe personalizado pueden estar agrupadas en dos categorías principales: las clases únicas diseñadas para admitir la infraestructura del elemento de informe personalizado y las clases contenedora administradas que encapsulan la funcionalidad de los elementos del lenguaje RDL (Report Definition Language) pertinentes. Para obtener un ejemplo de código que ilustre cómo se usan estas clases, vea [Muestras de productos de SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
@@ -65,7 +63,7 @@ ms.locfileid: "56012546"
 |`OnPaint`|Se le llama como respuesta al evento `Paint`.|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- Este es el atributo utilizado para identificar el tipo del elemento de informe personalizado. El nombre debe coincidir con el valor del atributo <`Name`> del elemento `ReportItem` en el archivo de configuración del diseñador de informes.  
+ Este es el atributo utilizado para identificar el tipo del elemento de informe personalizado. El nombre debe coincidir con el valor de la <`Name`> atributo de la `ReportItem` elemento en el archivo de configuración del Diseñador de informes.  
   
 #### <a name="public-methods"></a>Métodos públicos  
   
@@ -123,7 +121,7 @@ ms.locfileid: "56012546"
 |`EditValue`|Invoca el editor de expresiones, inicializado con el valor del objeto determinado.|  
   
 ### <a name="microsoftreportdesignerifieldsdataobject"></a>Microsoft.ReportDesigner.IFieldsDataObject  
- Esta clase es una colección de campos [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y se utiliza para admitir los eventos arrastrar y colocar en el entorno de diseño. Hereda de `IReportItemDataObject`.  
+ Esta clase es una colección de campos [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y se utiliza para admitir los eventos arrastrar y colocar en el entorno de diseño. Se hereda de `IReportItemDataObject`.  
   
 #### <a name="public-properties"></a>Propiedades públicas  
   

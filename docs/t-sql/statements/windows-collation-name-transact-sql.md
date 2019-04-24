@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 089c6d25d7c899db03d67a6f7d1b8c9d495c94e6
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974354"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671391"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nombre de intercalación de Windows (Transact-SQL)
 
@@ -37,7 +37,6 @@ Especifica el nombre de intercalación de Windows en la cláusula COLLATE en [!I
 ## <a name="syntax"></a>Sintaxis
 
 ```
-
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -50,7 +49,8 @@ CollationDesignator_<ComparisonStyle>
 
 ## <a name="arguments"></a>Argumentos
 
-*CollationDesignator* Especifica las reglas de intercalación base utilizadas por la intercalación de Windows. Las reglas de intercalación base abarcan lo siguiente:
+*CollationDesignator*   
+Especifica las reglas de intercalación base utilizadas por la intercalación de Windows. Las reglas de intercalación base abarcan lo siguiente:
 
 - Las reglas de ordenación y comparación que se aplican cuando se especifica la ordenación del diccionario. Las reglas de ordenación se basan en el alfabeto o en el idioma.
 - La página de códigos que se usa para almacenar datos **varchar**.
@@ -67,20 +67,20 @@ He aquí algunos ejemplos:
 **AI** especifica que no se distinguen acentos, **AS** especifica que se distinguen acentos.
 
 *KanatypeSensitive*  
-**Omitted** especifica que no se distinguen tipos de kana, **KS** especifica que se distinguen tipos de kana.
+Al omitir esta opción se especifica que no se distinguen tipos de kana, **KS** especifica que se distinguen tipos de kana.
 
 *WidthSensitivity*  
-**Omitted** especifica que no se distingue el ancho, **WS** especifica que se distingue el ancho.
+Al omitir esta opción se especifica que no se distinguen tipos de ancho, **KS** especifica que se distinguen tipos de ancho.
 
 *VariationSelectorSensitivity*  
-**Se aplica a**: A partir de [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Se aplica a**: A partir de [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**Omitted** especifica que no se distingue el selector de variación, **VSS** especifica que se distingue el selector de variación.
+- Al omitir esta opción se especifica que no se distingue el selector de variación, **VSS** especifica que se distingue el selector de variación.
 
 **UTF8**  
-**Se aplica a**: A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Se aplica a**: A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
-Especifica la codificación UTF-8 que se usará para los tipos de datos aptos. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
+- Especifica la codificación UTF-8 que se usará para los tipos de datos aptos. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Especifica el criterio de ordenación binario compatible con versiones anteriores que se va a utilizar.
@@ -197,7 +197,7 @@ En la tabla siguiente se muestran todas las intercalaciones de Windows admitidas
 |Quechua (Perú)|Latin1_General_100_|No disponible|
 |Romanche (Suiza)|Romansh_100_|No disponible|
 |Sami (inari, Finlandia)|Sami_Sweden_Finland_100_|No disponible|
-|Sami (lule, Noruega)|Sami_Norway_100_|No disponible|
+|Sami (Lule, Noruega)|Sami_Norway_100_|No disponible|
 |Sami (lule, Suecia)|Sami_Sweden_Finland_100_|No disponible|
 |Sami (septentrional, Finlandia)|Sami_Sweden_Finland_100_|No disponible|
 |Sami (septentrional, Noruega)|Sami_Norway_100_|No disponible|

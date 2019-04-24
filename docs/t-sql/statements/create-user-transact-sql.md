@@ -31,10 +31,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042175"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -249,7 +249,7 @@ ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = [ ON | **OFF** ]
   
  El esquema predeterminado será el primer esquema donde buscará el servidor cuando resuelva los nombres de objetos de este usuario de base de datos. A menos que se especifique lo contrario, el esquema predeterminado será el propietario de los objetos creados por este usuario de base de datos.  
   
- Si el usuario tiene un esquema predeterminado, se utilizará dicho esquema. Si el usuario no tiene un esquema predeterminado pero es miembro de un grupo con un esquema predeterminado, se utilizará el esquema predeterminado del grupo. Si el usuario no tiene un esquema predeterminado y es miembro de varios grupos, el esquema predeterminado para el usuario será el del grupo de Windows con el principal_id mínimo y un esquema predeterminado establecido explícitamente. No es posible seleccionar explícitamente uno de los esquemas predeterminados disponibles como esquema preferido. Si no se puede determinar ningún esquema predeterminado para un usuario, se utilizará el esquema **dbo**.  
+ Si el usuario tiene un esquema predeterminado, se utilizará dicho esquema. Si el usuario no tiene un esquema predeterminado pero es miembro de un grupo con un esquema predeterminado, se utilizará el esquema predeterminado del grupo. Si el usuario no tiene un esquema predeterminado y es miembro de varios grupos, el esquema predeterminado para el usuario será el del grupo de Windows con el principal_id mínimo y un esquema predeterminado establecido explícitamente. (No es posible seleccionar explícitamente uno de los esquemas predeterminados disponibles como esquema preferido). Si no se puede determinar ningún esquema predeterminado para un usuario, se utilizará el esquema **dbo**.  
   
  DEFAULT_SCHEMA puede establecerse antes de crear el esquema que lo señala.  
   
@@ -337,7 +337,7 @@ Al crear el usuario en la base de datos de Instancia administrada de SQL Databas
   
  En una base de datos independiente, la creación de usuarios ayuda a separar la base de datos de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que la base de datos se pueda mover fácilmente a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Bases de datos independientes](../../relational-databases/databases/contained-databases.md) y [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Para cambiar un usuario de base de datos de un usuario basado en un inicio de sesión de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un usuario de base de datos independiente con contraseña, vea [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- En una base de datos independiente, los usuarios no deben disponer de inicios de sesión en la base de datos **maestra**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] los administradores deben comprender que el acceso a una base de datos independiente se puede conceder en el nivel de base de datos, en vez de en el nivel de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para más información, vea [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ En una base de datos independiente, los usuarios no deben disponer de inicios de sesión en la base de datos **maestra**. Los administradores del [!INCLUDE[ssDE](../../includes/ssde-md.md)] deben comprender que el acceso a una base de datos independiente se puede conceder en el nivel de base de datos, en vez de en el nivel de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para más información, vea [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  Al usar los usuarios de la base de datos independiente de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configure el acceso con una regla de firewall de nivel de base de datos en lugar de una regla de firewall de nivel de servidor. Para obtener más información, vea [sp_set_database_firewall_rule &#40;Base de datos SQL de Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
@@ -514,5 +514,5 @@ También puede interesarle [otorgar permisos de objeto](../../t-sql/statements/g
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)   
- [Conexión a Base de datos SQL mediante autenticación de Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
+ [Uso de la autenticación de Azure Active Directory con SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
  [Introducción a los permisos de los motores de bases de datos](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  

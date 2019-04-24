@@ -26,10 +26,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: dcdae3ff107ad1e1e3a7bc58fde4248bb5330223
-ms.sourcegitcommit: bf23b81af45eddaa3c8bb87135c5ad0e1b42fbc2
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59367391"
 ---
 # <a name="currenttimezone-transact-sql"></a>CURRENT_TIMEZONE (Transact-SQL)
@@ -57,7 +57,7 @@ Esta función no toma ningún argumento.
   
 ## <a name="remarks"></a>Notas  
 
-`CURRENT_TIMEZONE` Es una función no determinista. Las vistas y las expresiones que hacen referencia a esta columna no se pueden indizar.
+`CURRENT_TIMEZONE` es una función no determinista. Las vistas y las expresiones que hacen referencia a esta columna no se pueden indizar.
   
 ## <a name="example"></a>Ejemplo
 

@@ -1,6 +1,6 @@
 ---
 title: Novedades de SQL Server 2019 | Microsoft Docs
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c36b85b210cf10a3d35e5708b123a30e85e3c39
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 4e2e29a3b473ca94ff203e99c9e4a76c803d69fc
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042424"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774610"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -39,8 +39,8 @@ Community Technology Preview (CTP) 2.4 es la versión pública más reciente de
 - [Clúster de macrodatos](#bigdatacluster)
   - Orientación sobre la compatibilidad de GPU para la ejecución de aprendizaje profundo con TensorFlow en Spark.
   - Actualización del entorno de ejecución de Spark a Spark 2.4.
-  - `INSERT INTO SELECT` compatibilidad con el grupo de datos.
-  - `FORCE SCALEOUTEXECUTION` y la cláusula de opción `DISABLE SCALEOUTEXECUTION` para las consultas de tabla externa.
+  - Compatibilidad de `INSERT INTO SELECT` con el grupo de datos.
+  - Cláusula de opción `FORCE SCALEOUTEXECUTION` y `DISABLE SCALEOUTEXECUTION` para las consultas de tabla externa.
 
 - [Motor de base de datos](#databaseengine)
   - Valores predeterminados del mensaje de error de truncamiento para incluir los nombres de tabla y columna, así como el valor truncado. Vea [Truncamiento](#truncation).
@@ -55,12 +55,12 @@ Las secciones siguientes describen las nuevas características que se han introd
 
 ## <a id="bigdatacluster"></a>Clústeres de macrodatos
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Los [clústeres de macrodatos](../big-data-cluster/big-data-cluster-overview.md) habilitan nuevos escenarios, como los siguientes:
+Los [clústeres de macrodatos](../big-data-cluster/big-data-cluster-overview.md) de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] habilitan nuevos escenarios, como los siguientes:
 
 - [Compatibilidad de GPU para la ejecución de aprendizaje profundo con TensorFlow en Spark.](../big-data-cluster/spark-gpu-tensorflow.md) (CTP 2.4)
 - Actualización del entorno de ejecución de Spark a Spark 2.4. (CTP 2.4)
-- `INSERT INTO SELECT` compatibilidad con el grupo de datos.
-- `FORCE SCALEOUTEXECUTION` y la cláusula de opción `DISABLE SCALEOUTEXECUTION` para las consultas de tabla externa.
+- Compatibilidad de `INSERT INTO SELECT` con el grupo de datos.
+- Cláusula de opción `FORCE SCALEOUTEXECUTION` y `DISABLE SCALEOUTEXECUTION` para las consultas de tabla externa.
 - [Envío de trabajos de Spark en clústeres de macrodatos de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] en IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md). (CTP 2.3)
 - [Experiencia de administración e implementación de aplicaciones](../big-data-cluster/big-data-cluster-create-apps.md) para diversas aplicaciones relacionadas con los datos, incluida la operacionalización de modelos de aprendizaje automático mediante R y Python, la ejecución de trabajos de SQL Server Integration Services (SSIS) y mucho más. (CTP 2.3)
 - [Uso de Sparklyr en clústeres de macrodatos de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](../big-data-cluster/sparklyr-from-RStudio.md). (CTP 2.3)
@@ -152,7 +152,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> Esta sintaxis no es obligatoria para aprovechar las ventajas de esta característica en Azure SQL DB, donde está activada de forma predeterminada.
+> Esta sintaxis no es necesaria para aprovechar las ventajas de esta característica de Azure SQL DB, donde se [habilita por solicitud durante la versión preliminar pública](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period). Una vez habilitada, la característica está activada de forma predeterminada.
 
 Si tiene bases de datos críticas propensas a transacciones de gran tamaño, experimente con esta característica durante la versión preliminar. Proporcione comentarios al [equipo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](<https://aka.ms/sqlfeedback>).
 
@@ -171,7 +171,7 @@ El resultado final es una reducción de las recompilaciones extrañas y la sobre
 
 ### <a name="improved-indirect-checkpoint-scalability-ctp-23"></a>Escalabilidad mejorada de puntos de control indirectos (CTP 2.3)
 
-En versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], es posible que los usuarios experimenten errores de programador que no rinde cuando hay una base de datos que genera un gran número de páginas desfasadas, como tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se presenta una mejor escalabilidad para los puntos de control indirectos, lo que debería evitar estos errores en las bases de datos con una gran carga de trabajo de operaciones UPDATE o INSERT.
+En versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], es posible que los usuarios experimenten errores de programador que no rinde cuando hay una base de datos que genera un gran número de páginas desfasadas, como tempdb. En [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se presenta una mejor escalabilidad para los puntos de control indirectos, lo que debería evitar estos errores en las bases de datos con una gran carga de trabajo de operaciones UPDATE o INSERT.
 
 ### <a name="utf-8-support-ctp-23"></a>Compatibilidad con UTF-8 (CTP 2.3)
 
@@ -330,9 +330,9 @@ Para usar el procesamiento de consultas inteligentes, establezca la base datos `
 
 - Establezca estos valores predeterminados mediante las opciones de configuración de ámbito de base de datos `ELEVATE_ONLINE` y `ELEVATE_RESUMABLE`. Ambas opciones harán que el motor eleve automáticamente las operaciones compatibles a la ejecución de índices ONLINE o RESUMABLE. Puede habilitar los siguientes comportamientos con estas opciones:
 
-  - `FAIL_UNSUPPORTED` opción permite todas las operaciones de índices en línea o reanudables y las operaciones de índices con errores que no se admiten para las opciones en línea o reanudables.
-  - `WHEN_SUPPPORTED` opción permite las operaciones admitidas en línea o reanudables y ejecutan operaciones no admitidas de índices sin conexión o no reanudables.
-  - `OFF` opción permite el comportamiento actual de la ejecución de todas las operaciones de índices sin conexión y no reanudables, salvo que se especifique explícitamente lo contrario en la instrucción DDL.
+  - La opción `FAIL_UNSUPPORTED` permite todas las operaciones de índices en línea o reanudables y las operaciones de índices con errores que no se admiten para las opciones en línea o reanudables.
+  - La opción `WHEN_SUPPPORTED` permite las operaciones admitidas en línea o reanudables y ejecutan operaciones no admitidas de índices sin conexión o no reanudables.
+  - La opción `OFF` permite el comportamiento actual de la ejecución de todas las operaciones de índices sin conexión y no reanudables, salvo que se especifique explícitamente lo contrario en la instrucción DDL.
 
 Para invalidar la configuración predeterminada, incluya la opción `ONLINE` o `RESUMABLE` en los comandos de recompilación y creación de índices. 
 
@@ -524,11 +524,11 @@ Los grupos de cálculo resuelven un problema común de los modelos complejos, do
 
 Un grupo de cálculo puede tener cualquier número de elementos de cálculo. Cada elemento de cálculo se define mediante una expresión DAX. Se han introducido tres funciones DAX nuevas para trabajar con los grupos de cálculo: 
 
-- `SELECTEDMEASURE()` : devuelve una referencia a la medida en el contexto actual.  
+- `SELECTEDMEASURE()`: devuelve una referencia a la medida en el contexto actual.  
 
-- `SELECTEDMEASURENAME()` : devuelve una cadena que contiene el nombre de la medida en el contexto actual.  
+- `SELECTEDMEASURENAME()`: devuelve una cadena que contiene el nombre de la medida en el contexto actual.  
 
-- `ISSELECTEDMEASURE(M1, M2, …)` : devuelve un valor booleano que indica si la medida en el contexto actual es una de las que se han especificado como argumento.
+- `ISSELECTEDMEASURE(M1, M2, …)`: devuelve un valor booleano que indica si la medida en el contexto actual es una de las que se han especificado como argumento.
 
 Además de las funciones DAX nuevas, se han presentado dos nuevas vistas de administración dinámica:
 

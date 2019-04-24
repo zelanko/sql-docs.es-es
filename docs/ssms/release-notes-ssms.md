@@ -12,10 +12,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0bb422177cc0908a8cf5d274dc0b0d0332dcbc95
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042504"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notas de la versión de SQL Server Management Studio (SSMS)
@@ -202,7 +202,7 @@ La ausencia de una etiqueta *versión preliminar 5*, *versión preliminar 6*, *v
   - [Novedad de la versión preliminar 7] Se ha eliminado la opción de selección de columnas de forma masiva en la interfaz de usuario de configuración para evitar un comportamiento inesperado.
   - [Novedad de la versión preliminar 7] Se ha mejorado la lógica de reintento interna para los errores de conexión y comandos.
  
-- **AlwaysOn**
+- **Always On**
   - Se recombinan RTO (tiempo de recuperación estimado) y RPO (pérdida de datos estimada) en el panel Always On de SSMS. Se está actualizando la documentación en https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.
 
 - **Archivos de auditoría**
@@ -242,7 +242,7 @@ La ausencia de una etiqueta *versión preliminar 5*, *versión preliminar 6*, *v
 - **Asistente para aplicaciones de capa de datos**
   - [Novedad de la versión preliminar 7] Se ha agregado compatibilidad para importar o exportar la aplicación de capa de datos con tablas de grafos.
 
-- **Instancia administrada de Azure SQL**
+- **Instancia administrada de Azure SQL**
   - [Novedad de la versión preliminar 7] Se han agregado **inicios de sesión de AAD** como nuevo tipo de inicio de sesión de SMO y SSMS cuando se conecta a una instancia administrada de Azure SQL.
 
 - **Visor de XEvent**
@@ -404,7 +404,7 @@ La ausencia de una etiqueta *versión preliminar 5*, *versión preliminar 6*, *v
   - [Novedad de la versión preliminar 7] Se ha corregido un problema que provocaba que el scripting de la instrucción `ALTER DB ADD FILE` de SMO generara un script T-SQL vacío.
   - [Novedad de RC1] Se ha mejorado la visualización de las propiedades específicas de las instancias de servidor administradas (generación de hardware, nivel de servicio, almacenamiento utilizado y reservado).
 
-- **Base de datos SQL de Azure**
+- **Azure SQL Database**
   - Se ha corregido un problema por el que la lista de bases de datos no se rellenaba correctamente en la ventana de consulta de Azure SQL DB cuando se estaba conectado a una base de datos de usuario de Azure SQL DB en lugar de a una base de datos maestra.
   - Se ha corregido un problema por el que no era posible agregar una "tabla temporal" a una base de datos de Azure SQL.
   - [Novedad de la versión preliminar 6] Se ha habilitado la opción de submenú de propiedades de Estadísticas en el menú Estadísticas de Azure, porque desde hace bastante tiempo se admite de forma completa.
@@ -438,7 +438,7 @@ La ausencia de una etiqueta *versión preliminar 5*, *versión preliminar 6*, *v
   - [Novedad de la versión preliminar 6] Los asistentes para copiar bases de datos y para la tarea Transferir bases de datos se han interrumpido en SQL 2017 y SQL 2019.
   - [Novedad de la versión preliminar 6] Los asistentes para copiar bases de datos, para generar scripts y para transferencias incluyen en un script la creación de la tabla antes de crear el origen de datos externo asociado.
 
-- **Profiler**
+- **Generador de perfiles**
   - [Novedad de la versión preliminar 6] Se ha agregado el evento "Consulta de reescritura de tabla de agregado" a los eventos del generador de perfiles.
   - [Novedad de RC1] Se ha corregido un problema que impedía que SQL Profiler se iniciara en Windows 7 SP1.
 

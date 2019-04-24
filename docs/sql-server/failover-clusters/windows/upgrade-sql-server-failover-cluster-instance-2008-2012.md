@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872255"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012
@@ -285,7 +285,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
 ### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>e[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 
--   **trabajos**
+-   **Jobs**
 
     Se realizará correctamente la migración de los trabajos junto con las bases de datos del sistema. Cualquier usuario que ejecute un trabajo del agente de SQL o el propio agente tendrá los mismos permisos en el equipo de destino, tal como se especifica en los requisitos previos.
 
@@ -309,7 +309,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
 ### <a name="integration-services"></a>Integration Services
 
--   **SSIS, proyectos**
+-   **Proyectos de SSIS**
 
     Los proyectos de SSIS se incluyen en migraciones junto con la base de datos de SSIS. Una vez que se mueva la base de datos de SSIS, los paquetes serán ejecutables inmediatamente antes de mover las tablas del sistema.
 

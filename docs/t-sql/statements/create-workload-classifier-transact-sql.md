@@ -21,14 +21,17 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: b925917c7d8ef55d687372e0854b136d365de0ac
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dd10a628e5a60487ceaf11a6dd39f781fbc41596
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538217"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581219"
 ---
 # <a name="create-workload-classifier-transact-sql-preview"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL) (versión preliminar)
+
+> [!Note]
+> La clasificación de la carga de trabajo está disponible para versión preliminar en SQL Data Warehouse Gen2. La versión preliminar de clasificación e importancia de la administración de la carga de trabajo es para las compilaciones con una fecha de lanzamiento del 9 de abril de 2019 o posterior.  Los usuarios deben evitar usar compilaciones anteriores a esta fecha para pruebas de administración de la carga de trabajo.  Para determinar si la compilación es compatible con la administración de la carga de trabajo, ejecute @@version cuando se conecte a la instancia de SQL Data Warehouse.
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 

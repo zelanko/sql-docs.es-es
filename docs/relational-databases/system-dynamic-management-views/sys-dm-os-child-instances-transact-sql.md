@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_child_instances (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_child_instances (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a57719becab0c7dda9d684e4de3218e29418b6a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62504979"
 ---
 # <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53203456"
   
  La información devuelta de **sys.dm_os_child_instances** puede utilizarse para determinar el estado de cada instancia de usuario (heart_beat) y obtener el nombre de canalización (instance_pipe_name) que puede usarse para crear una conexión con el usuario Instancia mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o SQLCmd. Solo se puede conectar con una instancia de usuario después de que la inicie un proceso externo, como por ejemplo una aplicación cliente. Las herramientas de administración de SQL no pueden iniciar instancias de usuario.  
   
-> **NOTA:** Las instancias de usuario son una característica exclusiva de [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)].  
+> **NOTA:** Las instancias de usuario son una característica de [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] solo.  
 > 
 > **Tenga en cuenta** para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_child_instances**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "53203456"
 |**instance_pipe_name**|**nvarchar(260)**|Cuando se crea una instancia de usuario, se crea una canalización con nombre para que las aplicaciones se conecten a ella. Este nombre se puede utilizar en una cadena de conexión para conectarse a esta instancia de usuario.|  
 |**os_process_id**|**Int**|Número del proceso de Windows para esta instancia de usuario.|  
 |**os_process_creation_date**|**Fecha y hora**|Fecha y hora de la última vez que se inició el proceso de esta instancia de usuario.|  
-|**heart_beat**|**nvarchar (5)**|Estado actual de esta instancia de usuario; puede ser ALIVE o DEAD.|  
+|**heart_beat**|**nvarchar(5)**|Estado actual de esta instancia de usuario; puede ser ALIVE o DEAD.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
 ## <a name="permissions"></a>Permisos  

@@ -1,5 +1,5 @@
 ---
-title: 'Paso 5: Probar los paquetes actualizados | Microsoft Docs'
+title: 'Paso 5: Prueba de los paquetes actualizados | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 979c2b792d7c56dcdb9fadde112c7e6bff789c15
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767630"
 ---
 # <a name="step-5-testing-the-updated-packages"></a>Paso 5: Probar los paquetes actualizados
   Antes de ir a la siguiente lección, en la que creará el paquete de implementación que se utilizará para instalar los paquetes del tutorial en el equipo de destino, debe probar los paquetes. En esta tarea, ejecutará los paquetes, DataTransfer.dtsx y LoadXMLData, que ha agregado al proyecto Deployment Tutorial y ha ampliado con configuraciones.  

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bd1404868213820d3ba3fc6d2715f7a8ae1c6716
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59972121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511094"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Crear, modificar, y eliminar suscripciones estándar (Reporting Services en modo nativo)
   Una suscripción estándar es la que crean usuarios individuales que desean recibir un informe por correo electrónico o en una carpeta compartida. Una suscripción estándar siempre se define a través del informe en el que se basa.  

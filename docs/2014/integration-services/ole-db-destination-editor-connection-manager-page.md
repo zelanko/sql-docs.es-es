@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 986813601be89e201978e50b76085752e4f34356
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767157"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Editor de destino de OLE DB (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de OLE DB** para seleccionar la conexión OLE DB del destino. Esta página también permite seleccionar una tabla o vista de la base de datos.  
@@ -44,7 +44,7 @@ ms.locfileid: "58381173"
 |------------|-----------------|  
 |Tabla o vista|Carga los datos en una tabla o vista del destino OLE DB.|  
 |Carga rápida de tabla o vista|Carga los datos en una tabla o vista del destino OLE DB y utiliza la opción de carga rápida. Para obtener más información acerca de los modos de acceso a datos de carga rápida, optimizados para inserciones masivas, vea [OLE DB Destination](data-flow/ole-db-destination.md).|  
-|Variable de nombre de tabla o nombre de vista|Especifique el nombre de la tabla o vista de una variable.<br /><br /> **Información relacionada con**: [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable de nombre de tabla o nombre de vista|Especifique el nombre de la tabla o vista de una variable.<br /><br /> **Información relacionada**: [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md)|  
 |Carga rápida de variable de nombre de tabla o nombre de vista|Especifica el nombre de la tabla o la vista en una variable y utiliza la opción de carga rápida para cargar los datos. Para obtener más información acerca de los modos de acceso a datos de carga rápida, optimizados para inserciones masivas, vea [OLE DB Destination](data-flow/ole-db-destination.md).|  
 |Comando SQL|Carga los datos en el destino OLE DB mediante una consulta SQL.|  
   

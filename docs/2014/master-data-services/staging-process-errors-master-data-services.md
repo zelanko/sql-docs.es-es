@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8b32a8e9b6b61c2d108d3a9b8e63242854d0a63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763276"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Errores del proceso de almacenamiento provisional (Master Data Services)
   Cuando el proceso de ensayo ha finalizado, todos los registros procesados en las tablas de ensayo tienen un valor en la columna ErrorCode. Los valores se muestran en la tabla siguiente.  
@@ -33,7 +33,7 @@ ms.locfileid: "52822359"
 |210041|"ROOT" no es un código de miembro válido.|El valor de **MemberCode** contiene la palabra "ROOT".|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
 |210042|"MDMUNUSED" no es un código de miembro válido.|El valor de **MemberCode** contiene la palabra "MDMUNUSED".|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
 |210052|MemberCode no puede estar desactivado porque se utiliza como valor de atributo basado en dominio.|Cuando **ImportType** = **3** o **4**, el almacenamiento provisional produce un error si se usa el miembro como valor de atributo para otros miembros. Use **ImportType5** o **6** para establecer el valor en NULL o cambiar los valores antes de ejecutar el proceso de almacenamiento provisional.|Hoja<br /><br /> Consolidado|  
-|300002|El código de miembro no es válido.|Relaciones: Código del miembro principal o secundario no existe.<br /><br /> Hoja o consolidado: **ImportType** = **3** o **4** y el código de miembro no existe.|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
+|300002|El código de miembro no es válido.|Relaciones: el código de miembro primario o secundario no existe.<br /><br /> Hoja o Consolidado: **ImportType** = **3** o **4**, y el código de miembro no existe.|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
 |300004|El código de miembro ya existe.|**ImportType** = **1** y ha usado un código de miembro que ya existe en la entidad.|Hoja<br /><br /> Consolidado|  
 |210011|Cuando **RelationshipType** es **1**, **ParentCode** no puede ser un miembro hoja.|Asegúrese de que el valor de **ParentCode** sea un código de miembro consolidado.|Relación|  
 |210015|El código de miembro existe varias veces en la tabla de ensayo para una jerarquía y un lote.|Para una jerarquía explícita, especificó la ubicación del mismo miembro varias veces en el mismo lote.|Relación|  

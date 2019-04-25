@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a028c880d87e21e1fcc63ffc605e7d375619dbf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767867"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Proporcionar una consulta de origen (Asistente para importación y exportación de SQL Server)
   Use la **proporcionar una consulta de origen** página para escribir la instrucción SQL que generará los datos que se va a copiar desde el origen de datos al destino.  

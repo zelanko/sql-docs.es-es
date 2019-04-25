@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3edbd41bc5361d864abcc7d631a90521af98ef01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632670"
 ---
 # <a name="updating-data-overview"></a>Información general sobre actualización de datos
 Las aplicaciones pueden actualizar datos mediante la ejecución de instrucciones SQL o mediante una llamada a **SQLSetPos** o **SQLBulkOperations**. **ACTUALIZACIÓN**, **eliminar**, y **insertar** instrucciones actuar directamente en el origen de datos y normalmente son compatibles con los controladores. Buscar actualizaciones y las instrucciones delete contienen una especificación de las filas que se va a cambiar. Coloca la actualización y eliminación de instrucciones y **SQLSetPos** actuar en el origen de datos a través de un cursor y apenas se admiten.  

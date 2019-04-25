@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468278"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscribir una instancia de SQL Server (Utilidad de SQL Server)
   Inscriba una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente para supervisar su rendimiento y configuración como una instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El punto de control de la utilidad (UCP) recopila información de configuración y rendimiento de las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cada 15 minutos. Esta información se almacena en el almacén de administración de datos de la utilidad (UMDW) en el UCP; el nombre del archivo UMDW es sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comparan con directivas para ayudar a identificar cuellos de botella en el uso de recursos y oportunidades de consolidación.  
@@ -147,7 +147,7 @@ ms.locfileid: "52762487"
   
 -   Nombre de instancia SQL Server: Nombredeequipo\nombredeinstancia  
   
--   Conjunto de recopilación de utilidad: Nombredominio\nombreusuario  
+-   Conjunto de recopilación de utilidad: DomainName\UserName  
   
  Para continuar, haga clic en **Siguiente**.  
   

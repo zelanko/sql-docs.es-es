@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: f1497b40fbf3462228af6b0ef9ce964c7212df64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630887"
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>Configuración del proyecto (cargar objetos del sistema) (OracleToSQL)
 La página cargar objetos del sistema de la **configuración del proyecto** cuadro de diálogo le permite especificar qué objetos del sistema Oracle SSMA convierte y se carga en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -29,21 +29,21 @@ Está disponible en el panel de objetos del sistema al cargar el **configuració
 ## <a name="default-settings"></a>Configuración predeterminada  
 Convertir los objetos del sistema consume recursos del sistema y lleva tiempo. Para mejorar el rendimiento, SSMA selecciona sólo los objetos del sistema utilizadas con frecuencia, como se muestra en la lista siguiente:  
   
--   SYS. DBMS_OUTPUT  
+-   SYS.DBMS_OUTPUT  
   
--   SYS. DBMS_PIPE  
+-   SYS.DBMS_PIPE  
   
--   SYS. DBMS_UTILITY  
+-   SYS.DBMS_UTILITY  
   
 -   SYS. ESTÁNDAR  
   
--   SYS. UTL_FILE  
+-   SYS.UTL_FILE  
   
 -   SYS.DBMS_LOB  
   
 -   SYS.DBMS_SQL  
   
--   SYS. DBMS_SESSION  
+-   SYS.DBMS_SESSION  
   
 Si los objetos de Oracle hace referencia a objetos del sistema adicionales, debe seleccionar esos objetos. Si no selecciona los objetos del sistema que hacen referencia los objetos de base de datos de Oracle, SSMA va a notificar errores de conversión. Si recibe errores de conversión que se debe a que faltan los objetos del sistema, seleccione los objetos que faltan en este cuadro de diálogo. A continuación, puede repetir la conversión según sea necesario.  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27a8ff70a995ab24dcf762d0ada731e0de6fa92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472287"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Detectar y resolver conflictos
 Si está trabajando con el conjunto de registros en el modo inmediato, hay mucho menos posibilidades de que se produzcan los problemas de simultaneidad. Por otro lado, si la aplicación utiliza la actualización de modo por lotes, puede haber una buena oportunidad de que un usuario cambie un registro antes de guardarán los cambios realizados por otro usuario modifica el mismo registro. En tal caso, le interesará la aplicación para controlar correctamente el conflicto. Es posible que prefiera que sea la última persona que envíe una actualización en el servidor "gana". ¿O desea permitir que el usuario más reciente para decidir qué actualizaciones deben tener prioridad, permitiéndole elegir entre los dos valores en conflicto.  

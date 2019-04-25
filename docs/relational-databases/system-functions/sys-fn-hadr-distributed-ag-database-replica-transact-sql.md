@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_hadr_distributed_ag_database_replica (Transact-SQL) | Microsoft Docs
+title: sys.fn_hadr_distributed_ag_database_replica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2016
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ff99c2b63ad3f104b5bae4f6378af2e4fe0575bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640327"
 ---
 # <a name="sysfnhadrdistributedagdatabasereplica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 22d30e389c61a66d417ad5baec99a8834a754047
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642522"
 ---
 # <a name="willconnect-event-ado"></a>Evento WillConnect (ADO)
 El **WillConnect** se llama al evento antes de iniciar una conexión.  
   
- **Se aplica a:** [el objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **Se aplica a:** [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -40,7 +40,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *ConnectionString*  
  Un **cadena** que contiene información de conexión para la conexión pendiente.  
   
- *Identificador de usuario*  
+ *UserID*  
  Un **cadena** que contiene un nombre de usuario para la conexión pendiente.  
   
  *Contraseña*  

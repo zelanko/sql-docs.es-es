@@ -1,5 +1,5 @@
 ---
-title: Propiedades de miembro (MDX) definido por el usuario | Documentos de Microsoft
+title: Propiedades de miembro (MDX) definido por el usuario | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ae7cf92c9384b2be79048c860ef6a8b0476535
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740235"
 ---
-# <a name="mdx-member-properties---user-defined-member-properties"></a>Propiedades de miembro MDX - propiedades de miembro definidas por el usuario
+# <a name="mdx-member-properties---user-defined-member-properties"></a>Propiedades de miembro MDX: propiedades de miembro definidas por el usuario
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Las propiedades de miembro definidas por el usuario se pueden agregar a un nivel con nombre específico de una dimensión como relaciones de atributo. Las propiedades de miembro definidas por el usuario no se pueden agregar al nivel **(Todos)** de una jerarquía ni a la propia jerarquía.  
   
@@ -65,7 +65,7 @@ FROM [Adventure Works]
  Para obtener más información sobre la creación de miembros calculados, vea [Generar miembros calculados en MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Mediante las propiedades de miembro & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Propiedades & #40; MDX & #41;](../../../mdx/properties-mdx.md)  
+ [Usar las propiedades de miembro &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Properties &#40;MDX&#41;](../../../mdx/properties-mdx.md)  
   
   

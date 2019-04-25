@@ -19,24 +19,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759946"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una fila por cada mensaje de Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelto por el sistema del Correo electrónico de base de datos. El término "mensaje" en el contexto de esta frase hace referencia por ejemplo a un mensaje de error, no de correo de electrónico. Configurar la **Logging Level** parámetro mediante el uso de la **configurar parámetros del sistema** cuadro de diálogo del Asistente para configuración de correo electrónico de base de datos, o la [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)procedimiento almacenado para determinar qué mensajes se devuelven.  
+  Contiene una fila por cada mensaje de Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelto por el sistema del Correo electrónico de base de datos. (Mensaje en este contexto hace referencia a un mensaje como un mensaje de error, no un mensaje de correo electrónico). Configurar la **Logging Level** parámetro mediante el uso de la **configurar parámetros del sistema** cuadro de diálogo del Asistente para configuración de correo electrónico de base de datos, o la [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)procedimiento almacenado para determinar qué mensajes se devuelven.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Log_id**|**int**|Identificador de elementos del registro.|  
-|**event_type**|**varchar (11)**|Tipo de aviso insertado en el registro. Los valores posibles son errores, advertencias, mensajes informativos, mensajes de operación correcta y otros mensajes internos.|  
+|**event_type**|**varchar(11)**|Tipo de aviso insertado en el registro. Los valores posibles son errores, advertencias, mensajes informativos, mensajes de operación correcta y otros mensajes internos.|  
 |**log_date**|**datetime**|Fecha y hora en que se realiza la entrada de registro.|  
-|**Descripción**|**nvarchar(max)**|Texto del mensaje que se registra.|  
-|**Id**|**int**|Id. de proceso del programa externo del Correo electrónico de base de datos. Suele cambiar cada vez que se inicia el programa externo del Correo electrónico de base de datos.|  
+|**description**|**nvarchar(max)**|Texto del mensaje que se registra.|  
+|**process_id**|**int**|Id. de proceso del programa externo del Correo electrónico de base de datos. Suele cambiar cada vez que se inicia el programa externo del Correo electrónico de base de datos.|  
 |**mailitem_id**|**int**|Identificador del elemento de correo en la cola de correo electrónico. Su valor será NULL si el mensaje no está relacionado con un elemento de correo electrónico determinado.|  
 |**account_id**|**int**|El **account_id** de la cuenta relacionada con el evento. Su valor será NULL si el mensaje no está relacionado con una cuenta de correo electrónico determinada.|  
 |**last_mod_date**|**datetime**|Fecha y hora de la modificación más reciente de la fila.|  

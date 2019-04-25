@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b2a9e7d7600af11cbf9ab0cbb61f7049064b79e8
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642721"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Compatibilidad con versiones anteriores de Reporting Services
   En esta sección se describen los cambios de comportamiento entre las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Incluye características que ya no están disponibles o cuya eliminación está prevista para una versión posterior. También se describen cambios fundamentales en el producto que afectan a aplicaciones personalizadas que incluyen funcionalidad de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

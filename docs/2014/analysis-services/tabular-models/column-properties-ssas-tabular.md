@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bb076297af4e666513a0c5b86d6783b7c245c00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757607"
 ---
 # <a name="column-properties-ssas-tabular"></a>Pestaña Propiedades de columna (SSAS tabular)
   En este tema se describen las propiedades de columna del modelo tabular.  
@@ -38,7 +38,7 @@ ms.locfileid: "48072425"
 |**Formato de datos**|Se determina automáticamente durante la importación.|Especifica el formato de presentación que se debe utilizar para los datos de esta columna. Después de establecer un formato de datos, puede establecer propiedades que son específicas de cada formato. Por ejemplo, si elige el formato de **Moneda** , puede establecer el número de posiciones decimales visibles, elegir el separador de miles y seleccionar el símbolo de moneda. Esta propiedad tiene las opciones siguientes:<br /><br /> **General**<br /><br /> **Decimal Number**<br /><br /> **Whole Number**<br /><br /> **Moneda**<br /><br /> **Porcentaje**<br /><br /> **Científico**<br /><br /> Si los valores de columna contienen imágenes, vea **Imagen representativa**.|  
 |**Tipo de datos**|Se determina automáticamente durante la importación.|Especifica el tipo de datos de todos los valores de la columna.|  
 |**Descripción**||Una descripción de texto de la columna.<br /><br /> En determinados clientes de informes, si un usuario final coloca el cursor sobre esta columna en la lista de campos, aparece la descripción como una información sobre herramientas.|  
-|**Oculto**|False|Especifica si la columna se oculta en las listas de campos del cliente de informes.<br /><br /> Establezca esta propiedad en **True** para ocultar esta columna de la presentación. Por ejemplo, las columnas que contienen identificadores o claves normalmente no son útiles para el usuario final.<br /><br /> Si oculta una columna del cliente de informes, el campo no se suprime en los datos del modelo. El campo todavía está visible si crea una consulta en el modelo. Una columna oculta todavía se puede utilizar para agrupar u ordenar.<br /><br /> La propiedad **Hidden** no proporciona ningún método de seguridad para los datos. Para proteger los datos, utilice filtros de fila en roles. Para obtener más información, vea [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md).|  
+|**Oculto**|False|Especifica si la columna se oculta en las listas de campos del cliente de informes.<br /><br /> Establezca esta propiedad en **True** para ocultar esta columna de la presentación. Por ejemplo, las columnas que contienen identificadores o claves normalmente no son útiles para el usuario final.<br /><br /> Si oculta una columna del cliente de informes, el campo no se suprime en los datos del modelo. El campo todavía está visible si crea una consulta en el modelo. Una columna oculta todavía se puede utilizar para agrupar u ordenar.<br /><br /> La propiedad **Hidden** no proporciona ningún método de seguridad para los datos. Para proteger los datos, utilice filtros de fila en roles. Para obtener más información, vea [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md).|  
 |**Ordenar por columna**||Especifica otra columna por la que ordenar los valores de esta columna. Debe existir una relación entre las dos columnas.<br /><br /> Este valor debe ser el nombre de una columna existente. No puede especificar ninguna fórmula o medida.|  
   
  **Propiedades de informes**  
@@ -62,8 +62,8 @@ ms.locfileid: "48072425"
 2.  En la ventana **Propiedades** , haga clic en una propiedad y, a continuación, escriba un valor o haga clic en la flecha abajo para seleccionar una opción de configuración.  
   
 ## <a name="see-also"></a>Vea también  
- [Power ver propiedades de informes &#40;Tabular de SSAS&#41;](properties-ssas-tabular.md)   
- [Ocultar o Inmovilizar columnas &#40;Tabular de SSAS&#41;](hide-or-freeze-columns-ssas-tabular.md)   
- [Agregar columnas a una tabla &#40;Tabular de SSAS&#41;](add-columns-to-a-table-ssas-tabular.md)  
+ [Propiedades de informes de Vista avanzada &#40;SSAS tabular&#41;](properties-ssas-tabular.md)   
+ [Ocultar o inmovilizar columnas &#40;SSAS tabular&#41;](hide-or-freeze-columns-ssas-tabular.md)   
+ [Agregar columnas a una tabla &#40;SSAS tabular&#41;](add-columns-to-a-table-ssas-tabular.md)  
   
   

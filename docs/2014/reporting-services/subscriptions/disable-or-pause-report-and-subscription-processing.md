@@ -23,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 41b44df5fd990927c7b5a2e2a71698086a2bce61
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510632"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Pausar el procesamiento de informes y suscripciones
   No es posible pausar un informe o una suscripción directamente. No obstante, se puede interrumpir su procesamiento antes del inicio del proceso o cuando se realiza una conexión al origen de datos. También es posible impedir el procesamiento de un informe o una suscripción haciendo que los usuarios no puedan obtener acceso a los mismos.  

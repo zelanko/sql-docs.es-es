@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 841f2383b47a40ffd4b8a5d5357b08a9504a30c2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764936"
 ---
 # <a name="master-data-services"></a>Master Data Services
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) es la solución de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para la administración de datos maestros. La administración de datos maestros (MDM) describe los esfuerzos que realiza una organización para detectar y definir listas no transaccionales de datos con el objetivo de compilar listas maestras que se puedan mantener. Un proyecto de MDM generalmente incluye la evaluación y reestructuración de los procesos corporativos internos junto con la implementación de tecnología MDM. El resultado de una solución MDM correcta es la existencia de datos confiables y centralizados que se pueden analizar, lo que permite que las decisiones corporativas sean más inteligentes.  

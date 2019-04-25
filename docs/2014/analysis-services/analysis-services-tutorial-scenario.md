@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7dddb6aec8d55a2a0495900b87661a431f8de9d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643352"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Escenario de Tutorial de Analysis Services
   Este tutorial se basa en [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], una compañía ficticia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una multinacional dedicada a la fabricación y distribución de bicicletas de metal y de metal compuesto en mercados de Norteamérica, Europa y Asia. Las oficinas centrales de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] se encuentran en Bothell, Washington, donde la compañía tiene 500 trabajadores. Además, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] tiene contratados a varios equipos de ventas regionales en toda su base de mercado.  
@@ -61,9 +61,9 @@ ms.locfileid: "48106755"
   
 -   Presentar una versión traducida a los usuarios de la compañía que se encuentran fuera de Estados Unidos.  
   
- Las lecciones del tutorial de Analysis Services proporcionan instrucciones para crear una base de datos de cubo que satisfaga todos estos objetivos. Para empezar, vaya a la primera lección: [Lesson 1: Create a New Tabular Model Project](lesson-1-create-a-new-tabular-model-project.md).  
+ Las lecciones del tutorial de Analysis Services proporcionan instrucciones para crear una base de datos de cubo que satisfaga todos estos objetivos. Para empezar, vaya a la primera lección: [Lección 1: Cree un nuevo proyecto de modelo Tabular](lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Modelado multidimensional &#40;Tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
+ [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

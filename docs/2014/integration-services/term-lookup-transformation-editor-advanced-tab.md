@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c8f5dd315e7a6a7122768d4ebc893d8d7ad5ec90
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766282"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>Editor de transformación Búsqueda de términos (pestaña Avanzadas)
   Use la pestaña **Avanzadas** del cuadro de diálogo **Editor de transformación Búsqueda de términos** para especificar si en la búsqueda es necesario distinguir mayúsculas de minúsculas.  

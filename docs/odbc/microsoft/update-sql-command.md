@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632562"
 ---
 # <a name="update---sql-command"></a>Comando de SQL de actualización
 Actualiza los registros en una tabla con nuevos valores.  
@@ -39,12 +39,12 @@ SET Column_Name1 = eExpression1
  UPDATE [ *DatabaseName1!*] *TableName1*  
  Especifica la tabla en la que se actualizan los registros con los nuevos valores.  
   
- *¡DatabaseName1!* Especifica el nombre de una base de datos distinta de la base de datos especificado con el origen de datos que contiene la tabla. Debe incluir el nombre de la base de datos que contiene la tabla si la base de datos no es actual. Incluir el delimitador de signo de exclamación (!) después del nombre de la base de datos y antes del nombre de tabla.  
+ *DatabaseName1!* Especifica el nombre de una base de datos distinta de la base de datos especificado con el origen de datos que contiene la tabla. Debe incluir el nombre de la base de datos que contiene la tabla si la base de datos no es actual. Incluir el delimitador de signo de exclamación (!) después del nombre de la base de datos y antes del nombre de tabla.  
   
- ESTABLECER *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
+ SET *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
  Especifica las columnas que se actualizan y sus valores nuevos. Si se omite la cláusula WHERE, se actualiza cada fila de la columna con el mismo valor.  
   
- DONDE *FilterCondition1*[AND &#124; o *FilterCondition2*...]  
+ WHERE *FilterCondition1*[AND &#124; OR *FilterCondition2*...]  
  Especifica los registros que se actualizan con nuevos valores.  
   
  *FilterCondition* especifica los criterios que los registros deben cumplir para que se actualice con nuevos valores. Puede incluir como muchas condiciones de filtro como desee, conectan con AND u operador OR. También puede usar el operador NOT para anular el valor de una expresión lógica, o puede usar **vacía**() para comprobar si un campo vacío.  

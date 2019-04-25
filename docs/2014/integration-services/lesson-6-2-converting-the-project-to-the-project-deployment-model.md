@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767357"
 ---
 # <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>Paso 2: Convertir el proyecto al modelo de implementación del proyectos
   En esta tarea, usará al Asistente para conversión de proyectos de Integration Services para convertir el proyecto en el modelo de implementación del proyecto.  

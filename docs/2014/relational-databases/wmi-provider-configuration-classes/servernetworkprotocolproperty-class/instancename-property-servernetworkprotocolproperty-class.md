@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8bf094914e087379ac72f23afcbf034a8248b30e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643092"
 ---
 # <a name="instancename-property-servernetworkprotocolproperty-class"></a>Propiedad InstanceName (clase ServerNetworkProtocolProperty)
   Obtiene el nombre de una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la que se instala el protocolo de red del servidor.  

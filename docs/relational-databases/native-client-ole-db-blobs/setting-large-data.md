@@ -19,11 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a73e1cc51cade93183af1fe4e98e59c3c65d474
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62738266"
 ---
 # <a name="setting-large-data"></a>Definir datos grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47816023"
   
 2.  Establezca las propiedades en el grupo de propiedades DBPROPSET_ROWSET de modo que el conjunto de filas sea actualizable.  
   
-3.  Cree un conjunto de enlaces (uno de cada columna) utilizando una matriz de estructuras DBBINDING. Establezca el elemento *wType* de la estructura DBBINDING en DBTYPE_IUNKNOWN y el elemento *pObject* para que señale a la estructura DBOBJECT creada.  
+3.  Cree un conjunto de enlaces (uno de cada columna) utilizando una matriz de estructuras DBBINDING. Establezca el elemento *wType* de la estructura DBBINDING en DBTYPE_IUNKNOWN y el elemento *pObject* que señale a la estructura DBOBJECT creada.  
   
 4.  Cree un descriptor de acceso utilizando la información de enlace de la matriz de estructuras DBBINDINGS.  
   

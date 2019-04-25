@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e677a4a0c36f52ae62dfc06cd597ad5401fc8e3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768701"
 ---
 # <a name="year-ssis-expression"></a>YEAR (expresión de SSIS)
   Devuelve un entero que representa la parte del año de una fecha.  
@@ -43,7 +43,7 @@ YEAR(date)
  Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 > [!NOTE]  
->  La expresión no puede validarse cuando un literal de fecha se convierte explícitamente a uno de estos tipos de datos de fecha: DT_DBTIMESTAMPOFFSET y DT_DBTIMESTAMP2.  
+>  La expresión no puede validarse cuando un literal de fecha se convierte explícitamente en uno de estos tipos de datos de fecha: DT_DBTIMESTAMPOFFSET y DT_DBTIMESTAMP2.  
   
  Utilizar la función YEAR es más sencillo pero equivalente a utilizar la función DATEPART("Year", date).  
   

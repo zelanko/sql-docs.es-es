@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_broker_queue_monitors (Transact-SQL) | Microsoft Docs
+title: sys.dm_broker_queue_monitors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fed9d261f692e9c9e1eee4f7078ca69e8c74594e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760121"
 ---
 # <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47779863"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Identificador del objeto de la base de datos que contiene la cola que supervisa el monitor. QUE ACEPTA VALORES NULL.|  
 |**queue_id**|**int**|Identificador del objeto de la cola que supervisa el monitor. QUE ACEPTA VALORES NULL.|  
-|**state**|**nvarchar(32)**|Estado del monitor. QUE ACEPTA VALORES NULL. Es uno de los siguientes:<br /><br /> **INACTIVO**<br /><br /> **UNA NOTIFICACIÓN**<br /><br /> **RECEIVES_OCCURRING**|  
+|**state**|**nvarchar(32)**|Estado del monitor. QUE ACEPTA VALORES NULL. Es uno de los siguientes:<br /><br /> **INACTIVE**<br /><br /> **UNA NOTIFICACIÓN**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|Última vez que una instrucción RECEIVE de la cola devolvió un resultado vacío. QUE ACEPTA VALORES NULL.|  
 |**last_activated_time**|**datetime**|Última vez que este monitor de cola activó un procedimiento almacenado. QUE ACEPTA VALORES NULL.|  
 |**tasks_waiting**|**int**|Número de sesiones que esperan actualmente en una instrucción RECEIVE de esta cola. QUE ACEPTA VALORES NULL.<br /><br /> Nota: Este número incluye las sesiones que ejecutan una instrucción receive, independientemente de si el monitor de cola inicia la sesión. Es así si usa WAITFOR junto con RECEIVE. Básicamente, estas tareas esperan que lleguen mensajes a la cola.|  

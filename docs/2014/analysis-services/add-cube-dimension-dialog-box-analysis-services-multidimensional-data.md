@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2115fe7f5faf5c68f72b9eaaef452961da3d02fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626072"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Agregar dimensión de cubo (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Agregar dimensión de cubo** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para agregar una referencia a una dimensión de base de datos a un cubo. Para visualizar el cuadro de diálogo **Agregar dimensión de cubo** , puede realizar una de estas acciones:  

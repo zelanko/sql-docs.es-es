@@ -1,5 +1,5 @@
 ---
-title: Crear ámbito de sesión (MDX) de conjuntos con nombre | Documentos de Microsoft
+title: Crear ámbito de sesión (MDX) de conjuntos con nombre | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fdf177cedcd73069e73c1ec7b4c7db5cfb497969
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62739995"
 ---
-# <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>Conjuntos con nombre MDX conjuntos - crear ámbito de sesión con nombre
+# <a name="mdx-named-sets---creating-session-scoped-named-sets"></a>Conjuntos con nombre MDX conjuntos con nombre: creación de ámbito de sesión
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Para crear un conjunto con nombre que esté disponible en una sesión de expresiones multidimensionales (MDX), se usa la instrucción [CREATE SET](../../../mdx/mdx-data-definition-create-set.md). Un conjunto con nombre creado mediante la instrucción CREATE SET no se quitará hasta que se cierre la sesión MDX.  
+  Para crear un conjunto con nombre que esté disponible en una sesión de expresiones multidimensionales (MDX), se usa la instrucción [CREATE SET](../../../mdx/mdx-data-definition-create-set.md) . Un conjunto con nombre creado mediante la instrucción CREATE SET no se quitará hasta que se cierre la sesión MDX.  
   
  Como se indica en este tema, la sintaxis de la palabra clave WITH es muy simple y fácil de usar.  
   
@@ -50,6 +50,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Crear ámbito de consulta con nombre conjuntos & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [Crear conjuntos con nombre del ámbito de consulta &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

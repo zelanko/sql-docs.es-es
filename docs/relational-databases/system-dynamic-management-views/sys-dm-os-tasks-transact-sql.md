@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6737242e5cf6cf39e846dba5e3d4b61168d8c694
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62627923"
 ---
 # <a name="sysdmostasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "47785343"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**task_address**|**varbinary (8)**|Dirección de memoria del objeto.|  
-|**task_state**|**nvarchar(60)**|Estado de la tarea. Puede ser uno de los siguientes:<br /><br /> PENDING: esperando un subproceso de trabajo.<br /><br /> RUNNABLE: se puede ejecutar, pero está esperando a recibir un cuanto.<br /><br /> RUNNING: ejecutándose actualmente en el programador.<br /><br /> SUSPENDED: tiene un trabajador, pero está esperando un evento.<br /><br /> DONE: completado.<br /><br /> SPINLOOP: atrapado en un subproceso.|  
+|**task_address**|**varbinary(8)**|Dirección de memoria del objeto.|  
+|**task_state**|**nvarchar(60)**|Estado de la tarea. Puede ser uno de los siguientes:<br /><br /> PENDIENTE: Esperando un subproceso de trabajo.<br /><br /> RUNNABLE: Runnable, pero se espera recibir un cuanto.<br /><br /> EJECUTANDO: Ejecutándose actualmente en el programador.<br /><br /> SUSPENDIDO: Tiene un trabajador, pero está esperando un evento.<br /><br /> HECHO: Puede completar.<br /><br /> SPINLOOP: Atrapado en un subproceso.|  
 |**context_switches_count**|**int**|Número de cambios de contexto del programador que esta tarea ha completado.|  
 |**pending_io_count**|**int**|Número de entradas y salidas físicas realizadas por esta tarea.|  
 |**pending_io_byte_count**|**bigint**|Recuento total de bytes de las entradas y salidas realizadas por esta tarea.|  
@@ -48,9 +48,9 @@ ms.locfileid: "47785343"
 |**session_id**|**smallint**|Id. de la sesión que está asociada a la tarea.|  
 |**exec_context_id**|**int**|Id. del contexto de ejecución que está asociado a la tarea.|  
 |**request_id**|**int**|Id. de la solicitud de la tarea. Para obtener más información, consulte [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|**worker_address**|**varbinary (8)**|Dirección de memoria del trabajador que ejecuta la tarea.<br /><br /> NULL = La tarea espera un trabajador que pueda ejecutarla o la tarea acaba de finalizar la ejecución.<br /><br /> Para obtener más información, consulte [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
-|**host_address**|**varbinary (8)**|Dirección de memoria del host.<br /><br /> 0 = No se ha usado el hospedaje para crear la tarea. Esto ayuda a identificar el host que se ha utilizado para crear esta tarea.<br /><br /> Para obtener más información, consulte [sys.dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
-|**parent_task_address**|**varbinary (8)**|Dirección de memoria de la tarea que es el elemento primario del objeto.|  
+|**worker_address**|**varbinary(8)**|Dirección de memoria del trabajador que ejecuta la tarea.<br /><br /> NULL = La tarea espera un trabajador que pueda ejecutarla o la tarea acaba de finalizar la ejecución.<br /><br /> Para obtener más información, consulte [sys.dm_os_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
+|**host_address**|**varbinary(8)**|Dirección de memoria del host.<br /><br /> 0 = No se ha usado el hospedaje para crear la tarea. Esto ayuda a identificar el host que se ha utilizado para crear esta tarea.<br /><br /> Para obtener más información, consulte [sys.dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md).|  
+|**parent_task_address**|**varbinary(8)**|Dirección de memoria de la tarea que es el elemento primario del objeto.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
 ## <a name="permissions"></a>Permisos
@@ -84,7 +84,7 @@ SELECT
   ORDER BY session_id, request_id;  
 ```  
   
-### <a name="b-associating-session-ids-with-windows-threads"></a>B. Asociar identificadores de sesión con subprocesos de Windows  
+### <a name="b-associating-session-ids-with-windows-threads"></a>b. Asociar identificadores de sesión con subprocesos de Windows  
  Puede utilizar la siguiente consulta para asociar un valor de identificador de sesión a un identificador de subproceso de Windows. A continuación, puede supervisar el rendimiento del subproceso en el Monitor de rendimiento de Windows. La siguiente consulta no devuelve información para sesiones en espera.  
   
 ```  

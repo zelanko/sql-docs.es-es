@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cec0a0378acceef269b17c93cdc0e2f5e816e437
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765594"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>Descripción del código XML de flujo de trabajo personalizado (Master Data Services)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], el servicio de integración de flujos de trabajo MDS de SQL Server llama al método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> cuando se inicia un flujo de trabajo. Este método recibe los metadatos y los datos del elemento que desencadenó la regla de negocio del flujo de trabajo como un bloque de XML. Para ver un código de ejemplo que implemente un controlador de flujo de trabajo, vea [Ejemplo de flujo de trabajo personalizado &#40;Master Data Services&#41;](create-a-custom-workflow-example.md).  

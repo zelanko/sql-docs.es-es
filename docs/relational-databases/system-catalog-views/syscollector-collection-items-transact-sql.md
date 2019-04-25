@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 53f978bf7914776e8596a89b0ee9b62770cd6866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760217"
 ---
 # <a name="syscollectorcollectionitems-transact-sql"></a>syscollector_collection_items (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47714368"
 |**collection_item_id**|**int**|Identifica un elemento en el conjunto de recopilación. No admite valores NULL.|  
 |**collector_type_uid**|**uniqueidentifier**|GUID utilizado para identificar el tipo de recopilador. No admite valores NULL.|  
 |**Nombre**|**nvarchar(4000)**|Nombre del conjunto de recopilación. Acepta valores NULL.|  
-|**Frecuencia**|**int**|Frecuencia con que un elemento de recopilación recopila datos. No admite valores NULL.|  
+|**frequency**|**int**|Frecuencia con que un elemento de recopilación recopila datos. No admite valores NULL.|  
 |**parameters**|**xml**|Describe la parametrización para el tipo de recopilador asociado al elemento de recopilación. El esquema XML para este elemento de recopilación se valida con los esquemas XML (XSD) almacenado en el **parameter_schema** para un tipo de recopilador determinado. Acepta valores NULL. Para obtener más información, consulte [syscollector_collector_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md).|  
   
 ## <a name="permissions"></a>Permisos  

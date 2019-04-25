@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38c16d837dd886785479e1e2994b5b0f19372cfe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760873"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Examen de la estructura actual de la tabla Empleado
   La base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] contiene una tabla llamada **Employee** en el esquema **HumanResources** . Para evitar cambiar la tabla original, este paso realiza una copia de la tabla **Employee** denominada **EmployeeDemo**. Para simplificar el ejemplo, copie solo cinco columnas de la tabla original. A continuación, consulte el **HumanResources.EmployeeDemo** tabla para revisar cómo se estructuran los datos en una tabla sin utilizar el `hierarchyid` tipo de datos.  

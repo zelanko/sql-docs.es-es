@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52746928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642580"
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>Lección 2: Configurar permisos en objetos de base de datos
   La concesión de acceso de usuario a una base de datos implica tres pasos. Primero, debe crear un inicio de sesión. El inicio de sesión permite al usuario conectarse a [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Luego, debe configurar el inicio de sesión como un usuario de una base de datos determinada. Y, por último, debe conceder al usuario permiso a objetos de la base de datos. En esta lección se muestran estos tres pasos y cómo crear una vista y un procedimiento almacenado como el objeto.  

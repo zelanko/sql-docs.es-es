@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65c96ade0964146e1d8ff9cfa52f99938d290712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759863"
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "47824853"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificador del elemento de correo en la cola de correo electrónico.|  
 |**profile_id**|**int**|Identificador del perfil utilizado para enviar el mensaje.|  
-|**destinatarios**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
+|**recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
 |**copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje.|  
 |**blind_copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje pero cuyos nombres no aparecen en el encabezado del mensaje.|  
-|**Asunto**|**nvarchar(510)**|Línea de asunto del mensaje.|  
-|**Cuerpo**|**ntext**|El cuerpo del mensaje.|  
-|**body_format**|**varchar (20)**|El formato del cuerpo del mensaje. Los valores posibles son TEXT y HTML.|  
-|**Importancia**|**varchar(6)**|El **importancia** parámetro del mensaje.|  
-|**Sensibilidad**|**varchar (12)**|El **sensibilidad** parámetro del mensaje.|  
+|**subject**|**nvarchar(510)**|Línea de asunto del mensaje.|  
+|**body**|**ntext**|El cuerpo del mensaje.|  
+|**body_format**|**varchar(20)**|El formato del cuerpo del mensaje. Los valores posibles son TEXT y HTML.|  
+|**importance**|**varchar(6)**|El **importancia** parámetro del mensaje.|  
+|**sensitivity**|**varchar(12)**|El **sensibilidad** parámetro del mensaje.|  
 |**file_attachments**|**ntext**|Una lista delimitada por punto y coma de nombres de archivo adjuntado al mensaje de correo electrónico.|  
-|**attachment_encoding**|**varchar (20)**|Tipo de datos adjuntos.|  
-|**Consulta**|**ntext**|Consulta ejecutada por el programa de correo.|  
+|**attachment_encoding**|**varchar(20)**|Tipo de datos adjuntos.|  
+|**query**|**ntext**|Consulta ejecutada por el programa de correo.|  
 |**execute_query_database**|**sysname**|Contexto de base de datos en el cual el programa de correo ejecutó la consulta.|  
 |**attach_query_result_as_file**|**bit**|Si el valor es 0, los resultados de la consulta se incluyeron en el cuerpo del mensaje de correo electrónico, después del contenido del cuerpo. Si el valor es 1, los resultados se devolvieron como datos adjuntos.|  
 |**query_result_header**|**bit**|Si el valor es 1, los resultados de la consulta contenían encabezados de columna. Si el valor es 0, los resultados de la consulta no contenían encabezados de columna.|  
@@ -57,7 +57,7 @@ ms.locfileid: "47824853"
 |**send_request_date**|**datetime**|Fecha y hora en que se colocó el mensaje en la cola de correo electrónico.|  
 |**send_request_user**|**sysname**|Usuario que envió el mensaje. Se trata del contexto de usuario del procedimiento del Correo electrónico de base de datos, no del campo De: del mensaje.|  
 |**sent_account_id**|**int**|Identificador de la cuenta del Correo electrónico de base de datos utilizada para enviar el mensaje.|  
-|**sent_status**|**varchar (8)**|Estado del mensaje. Los valores posibles son:<br /><br /> **envía** -se envió el correo electrónico.<br /><br /> **no enviado** -correo electrónico de base de datos todavía está intentando enviar el mensaje.<br /><br /> **Reintentando** -no se pudo enviar el mensaje de correo electrónico de base de datos pero está intentando enviarlo de nuevo.<br /><br /> **no se pudo** -no pudo enviar el mensaje de correo electrónico de base de datos.|  
+|**sent_status**|**varchar(8)**|Estado del mensaje. Los valores posibles son:<br /><br /> **envía** -se envió el correo electrónico.<br /><br /> **no enviado** -correo electrónico de base de datos todavía está intentando enviar el mensaje.<br /><br /> **Reintentando** -no se pudo enviar el mensaje de correo electrónico de base de datos pero está intentando enviarlo de nuevo.<br /><br /> **no se pudo** -no pudo enviar el mensaje de correo electrónico de base de datos.|  
 |**sent_date**|**datetime**|Fecha y hora en que se envió el mensaje.|  
 |**last_mod_date**|**datetime**|Fecha y hora de la modificación más reciente de la fila.|  
 |**last_mod_user**|**sysname**|Usuario que realizó la modificación más reciente de la fila.|  

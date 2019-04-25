@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757902"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Herramientas de análisis de tabla para Excel
   Las herramientas de minería de datos en el **analizar** barra de herramientas son la manera más fácil empezar a trabajar con minería de datos. Cada una de estas herramientas analiza automáticamente la distribución y el tipo de los datos, y establece los parámetros para asegurarse de que los resultados son válidos. No tiene que seleccionar un algoritmo ni configurar parámetros complejos.  

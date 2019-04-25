@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 70cc046320d978779016bae7277cdb2b26c2431e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766458"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>Editor del administrador de conexiones con SQL Server Compact Edition (página Todo)
   Use el cuadro de diálogo **Administrador de conexiones con SQL Server Compact Edition** para especificar las propiedades de conexiones a una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  

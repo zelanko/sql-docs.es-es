@@ -1,5 +1,5 @@
 ---
-title: Conceder permisos de base de datos de procesamiento | Documentos de Microsoft
+title: Conceder permisos de base de datos de proceso | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d7777d2bb3a69a2f42c5ee25adbc77e0f07a0b3e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467756"
 ---
-# <a name="lesson-10---granting-process-database-permissions"></a>Lección 10 - conceder permisos de base de datos de proceso
+# <a name="lesson-10---granting-process-database-permissions"></a>Lección 10: conceder permisos de base de datos de proceso
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Después de instalar una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], todos los miembros del rol de administrador de servidor [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de dicha instancia tienen permisos en el servidor para llevar a cabo cualquier tarea dentro de la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. De manera predeterminada, ningún otro usuario tiene permiso para administrar o ver objetos en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -43,7 +43,7 @@ En las tareas de este tema definirá un rol de seguridad Procesar objetos de bas
   
     Observe que los miembros de este rol tienen permisos para procesar esta base de datos, pero no tienen permiso para obtener acceso a los datos del cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial y no tienen acceso a obtención de detalles o cubo local, como se muestra en la siguiente imagen.  
   
-    ![Pestaña cubos del Diseñador de roles](../analysis-services/media/l10-security-2.png "ficha cubos del Diseñador de roles")  
+    ![Pestaña cubos del Diseñador de roles](../analysis-services/media/l10-security-2.png "pestaña cubos del Diseñador de roles")  
   
 7.  Vaya a la pestaña **Dimensiones** del Diseñador de roles.  
   
@@ -57,7 +57,7 @@ En las tareas de este tema definirá un rol de seguridad Procesar objetos de bas
 > Para disponer de un proyecto completado de la Lección 10, descargue e instale los ejemplos. Para más información, consulte [Instalar los datos y proyectos de ejemplo para el tutorial de modelado multidimensional de Analysis Services](../analysis-services/install-sample-data-and-projects.md).  
   
 ## <a name="see-also"></a>Vea también  
-[Roles y permisos & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+[Roles y permisos &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
   

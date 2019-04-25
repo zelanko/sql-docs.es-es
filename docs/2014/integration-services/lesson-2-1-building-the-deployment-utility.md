@@ -1,5 +1,5 @@
 ---
-title: 'Paso 1: Creación de la utilidad de implementación | Microsoft Docs'
+title: 'Paso 1: Generar la utilidad de implementación | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767587"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>Paso 1: Generar la utilidad de implementación
+# <a name="step-1-building-the-deployment-utility"></a>Paso 1: Creación de la utilidad de implementación
   En esta tarea, configurará y generará una utilidad de implementación para el proyecto Deployment Tutorial.  
   
  Antes de generar la utilidad de implementación, debe modificar las propiedades del proyecto Deployment Tutorial. Usará el cuadro de diálogo **Deployment Tutorial Property Pages** (Páginas de propiedades de Deployment Tutorial) para configurar estas propiedades. En este cuadro de diálogo, debe habilitar la capacidad de actualizar configuraciones durante la implementación y especificar que el proceso de creación crea una utilidad de implementación. Después de establecer las propiedades, generará el proyecto.  
@@ -48,7 +48,7 @@ ms.locfileid: "58381203"
   
 4.  En la ventana de resultados, compruebe la siguiente información:  
   
-     Compilación iniciada: Proyecto de SQL Integration Services: Incremental...  
+     Compilación iniciada: Proyecto de SQL Integration Services: Incremental ...  
   
      Creando la utilidad de implementación...  
   
@@ -56,12 +56,12 @@ ms.locfileid: "58381203"
   
      Generación completa -- 0 errores, 0 advertencias  
   
-     ========== Build: 0 correctos, 0 incorrectos, 1 actualizados, 0 omitidos ===  
+     ========== Build: 0 correcto, 0 errores, 1 actualizados, 0 omitidos ==========  
   
 5.  En el menú **Archivo** , haga clic en **Salir**. Si se le pregunta si quiere guardar los cambios en los elementos de Deployment Tutorial, haga clic en **Sí**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Paso 2: Comprobar el paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+ [Paso 2: Comprobación del paquete de implementación](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ![Icono de Integration Services (pequeño)](media/dts-16.gif "icono de Integration Services (pequeño)")**mantenerse actualizado con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.  
   

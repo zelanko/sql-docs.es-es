@@ -1,5 +1,5 @@
 ---
-title: Crear conjuntos con nombre en MDX (MDX) | Documentos de Microsoft
+title: Crear conjuntos con nombre en MDX (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b893dcd86ffcfa68c55057796c431e694903c46a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740065"
 ---
-# <a name="mdx-named-sets---building-named-sets"></a>MDX denominado conjuntos: crear conjuntos con nombre
+# <a name="mdx-named-sets---building-named-sets"></a>Conjuntos con nombre MDX: crear conjuntos con nombre
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Una expresión de conjunto puede ser una declaración extensa, compleja y, por tanto, difícil de seguir o entender. O bien, una expresión de conjunto puede utilizarse con tanta frecuencia que definir repetidamente el conjunto sea fatigoso. Para facilitar el trabajo con una expresión larga, compleja o de uso habitual, las expresiones multidimensionales (MDX) permiten expresiones como un *conjunto con nombre*.  
   
@@ -33,8 +33,8 @@ ms.locfileid: "34021282"
      Para más información sobre cómo usar la instrucción CREATE SET para crear conjuntos de nombre en una sesión, vea [Crear conjuntos con nombre del ámbito de consulta &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Instrucción SELECT & #40; MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)   
- [CREAR la instrucción SET & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-set.md)   
- [Aspectos básicos de consulta MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [SELECT &#40;Instrucción, MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [CREATE SET &#40;Instrucción, MDX&#41;](../../../mdx/mdx-data-definition-create-set.md)   
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

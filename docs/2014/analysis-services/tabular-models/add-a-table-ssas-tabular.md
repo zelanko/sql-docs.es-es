@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 065cec0c70d0b98131dc4cdc5b477b11115091f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757647"
 ---
 # <a name="add-a-table-ssas-tabular"></a>Agregar una tabla (SSAS tabular)
   En este tema se describe cómo agregar una tabla de un origen de datos del que ha importado datos previamente en el modelo. Para agregar una tabla del mismo origen de datos, puede usar la conexión de origen de datos existente. Se recomienda usar siempre una conexión única al importar cualquier número de tablas de un origen de datos único.  
@@ -40,7 +40,7 @@ ms.locfileid: "48146515"
 >  Cuando se importan varias tablas al mismo tiempo desde un único origen de datos, las relaciones entre dichas tablas en el origen se crean automáticamente en el modelo. Sin embargo, cuando posteriormente agregue una tabla, es posible que tenga que crear las relaciones manualmente en el modelo entre las tablas recién agregadas y las tablas que se importaron previamente.  
   
 ## <a name="see-also"></a>Vea también  
- [Importar datos &#40;Tabular de SSAS&#41;](../import-data-ssas-tabular.md)   
- [Eliminar una tabla &#40;Tabular de SSAS&#41;](delete-a-table-ssas-tabular.md)  
+ [Importar datos &#40;SSAS tabular&#41;](../import-data-ssas-tabular.md)   
+ [Eliminar una tabla &#40;SSAS tabular&#41;](delete-a-table-ssas-tabular.md)  
   
   

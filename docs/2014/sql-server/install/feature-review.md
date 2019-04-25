@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d9d6407d98bccb62f54443a8a8d1f5b61a093c7c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761123"
 ---
 # <a name="feature-review"></a>Revisión de características
   La página Revisión de características es una lista de solo lectura de las características que se han preparado y se configurarán y completarán al final del paso para completar la imagen. La lista de características está seleccionada durante el paso de preparación de la imagen y no se puede modificar durante el paso de compleción de imagen. Además de las características mostradas, una instancia preparada también incluye [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -27,7 +27,7 @@ ms.locfileid: "48182665"
   
 |Grupo de componentes|Componentes y características|  
 |---------------------|-----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Servicios|[!INCLUDE[ssDE](../../includes/ssde-md.md)] es el servicio principal para almacenar, procesar y proteger los datos. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] incluye los siguientes componentes:<br /><br /> Replicación: (opcional) la replicación es un conjunto de tecnologías destinadas a la copia y distribución de datos y objetos de base de datos desde una base de datos a otra, para luego sincronizar ambas bases de datos y mantener su coherencia.<br /><br /> Búsqueda de texto completo: (opcional) la búsqueda de texto completo proporciona la funcionalidad necesaria para realizar consultas de texto completo en datos formados por caracteres sin formato contenidos en tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (Opcional): [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) es una solución de limpieza de datos que permite detectar datos incoherentes e incorrectos en el origen de datos y proporciona formas automatizadas e interactivas de limpiar los datos.|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Servicios|[!INCLUDE[ssDE](../../includes/ssde-md.md)] es el servicio principal para almacenar, procesar y proteger los datos. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] incluye los siguientes componentes:<br /><br /> Replicación: (Opcional) La replicación es un conjunto de tecnologías para copiar y distribuir los objetos de base de datos y los datos desde una base de datos a otro y, a continuación, sincronizar ambas bases de datos para mantener la coherencia.<br /><br /> Búsqueda de texto completo: (Opcional) Búsqueda de texto completo proporciona funcionalidad para emitir consultas de texto completo en datos basados en caracteres sin formato en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tablas.<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (Opcional): [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) es una solución de limpieza de datos que permite detectar datos incoherentes e incorrectos en el origen de datos y proporciona formas automatizadas e interactivas de limpiar los datos.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye componentes de servidor y de cliente para crear, administrar e implementar informes tabulares, matriciales, gráficos y de forma libre. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es también una plataforma extensible que se puede usar para desarrollar aplicaciones de informes.|  
   
 ## <a name="see-also"></a>Vea también  

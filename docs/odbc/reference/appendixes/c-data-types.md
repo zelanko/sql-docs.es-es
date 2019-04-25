@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f948b50fae0995e16024ac41d8dd891630d1dbe
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447544"
 ---
 # <a name="c-data-types"></a>Tipos de datos C
 Tipos de datos ODBC C indican el tipo de datos de los búferes de C que se utiliza para almacenar datos en la aplicación.  
@@ -36,19 +36,19 @@ Tipos de datos ODBC C indican el tipo de datos de los búferes de C que se utili
 |-----------------------|--------------------|------------|  
 |SQL_C_CHAR|SQLCHAR *|unsigned char *|  
 |SQL_C_WCHAR|SQLWCHAR *|wchar_t *|  
-|SQL_C_SSHORT [j]|SQLSMALLINT|short int|  
-|SQL_C_USHORT [j]|SQLUSMALLINT|int short sin signo|  
-|SQL_C_SLONG [j]|SQLINTEGER|long int|  
-|SQL_C_ULONG [j]|SQLUINTEGER|int long sin signo|  
+|SQL_C_SSHORT[j]|SQLSMALLINT|short int|  
+|SQL_C_USHORT[j]|SQLUSMALLINT|int short sin signo|  
+|SQL_C_SLONG[j]|SQLINTEGER|long int|  
+|SQL_C_ULONG[j]|SQLUINTEGER|int long sin signo|  
 |SQL_C_FLOAT|SQLREAL|FLOAT|  
 |SQL_C_DOUBLE|SQLDOUBLE, SQLFLOAT|double|  
 |SQL_C_BIT|SQLCHAR|char sin signo|  
-|SQL_C_STINYINT [j]|SQLSCHAR|carácter con signo|  
-|SQL_C_UTINYINT [j]|SQLCHAR|char sin signo|  
-|SQL_C_SBIGINT|SQLBIGINT|_int64 [h]|  
-|SQL_C_UBIGINT|SQLUBIGINT|__int64 sin signo [h]|  
+|SQL_C_STINYINT[j]|SQLSCHAR|carácter con signo|  
+|SQL_C_UTINYINT[j]|SQLCHAR|char sin signo|  
+|SQL_C_SBIGINT|SQLBIGINT|_int64[h]|  
+|SQL_C_UBIGINT|SQLUBIGINT|unsigned _int64[h]|  
 |SQL_C_BINARY|SQLCHAR *|unsigned char *|  
-|SQL_C_BOOKMARK [i]|MARCADOR|int long sin signo [d]|  
+|SQL_C_BOOKMARK[i]|MARCADOR|int long sin signo [d]|  
 |SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
 |Todos los tipos de datos de intervalo de C|SQL_INTERVAL_STRUCT|Consulte la [estructura de intervalo de C](../../../odbc/reference/appendixes/c-interval-structure.md) sección más adelante en este apéndice.|  
   

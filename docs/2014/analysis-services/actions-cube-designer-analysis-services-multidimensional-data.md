@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c2f29259028ad15605f3f71e1eba87f353e795b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512517"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>Acciones (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use la pestaña **Acciones** en el Diseñador de cubos para ver y editar acciones, incluso acciones de obtención de detalles y acciones de informes, para el cubo seleccionado.  
@@ -44,7 +44,7 @@ ms.locfileid: "48067585"
   
 ## <a name="see-also"></a>Vea también  
  [Acciones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
- [Aspectos básicos de Scripting de MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Aspectos básicos de scripting MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Barra de herramientas &#40;pestaña acciones, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Organizador de acciones &#40;pestaña acciones, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [Herramientas de cálculo &#40;pestaña acciones, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   

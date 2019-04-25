@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: baf066638eb8c42dbf4ba7f488c9b0c1ca9acdb2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769402"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (Condicional) (expresión de SSIS)
   Devuelve una de dos expresiones en función del resultado de la evaluación de una expresión booleana. Si la evaluación de la expresión booleana devuelve TRUE, se evalúa la primera expresión y el resultado es el resultado de la expresión. Si devuelve FALSE, se evalúa la segunda expresión y el resultado es el resultado de la expresión.  
@@ -57,9 +57,9 @@ boolean_expression?expression1:expression2
   
 -   **Numeric**   *expression1* y *expression2* deben ser un tipo de datos numérico. La intersección de los tipos de datos debe ser un tipo de datos numérico, tal como se especifica en las reglas para las conversiones numéricas implícitas que realiza el evaluador de expresiones. La intersección de dos tipos de datos numéricos no puede ser NULL. Para más información, consulte [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
   
--   **Cadena** ambos *expression1* y *expression2* debe ser un tipo de datos de cadena: DT_STR o DT_WSTR. Las dos expresiones pueden tener tipos de datos de cadena distintos. El resultado tiene el tipo de datos DT_WSTR con la longitud del argumento más largo.  
+-   **Cadena** Tanto *expression1* como *expression2* deben tener un tipo de datos de cadena: DT_STR o DT_WSTR. Las dos expresiones pueden tener tipos de datos de cadena distintos. El resultado tiene el tipo de datos DT_WSTR con la longitud del argumento más largo.  
   
--   **Fecha, hora o fecha y hora** ambos *expression1* y *expression2* deben devolver uno de los siguientes tipos de datos: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET o DT_FILETIME.  
+-   **Fecha, hora o fecha y hora** Tanto *expression1* como *expression2* se deben evaluar con uno de los siguientes tipos de datos: DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET o DT_FILETIME.  
   
     > [!NOTE]  
     >  El sistema no admite comparaciones entre una expresión que devuelve un tipo de datos de hora y una expresión que devuelve un tipo de datos de fecha o de fecha/hora. El sistema genera un error.  

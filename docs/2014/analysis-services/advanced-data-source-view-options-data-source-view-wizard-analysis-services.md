@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee7ee9cf4ba8b7caa0085f0f792173b1f2856857
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635601"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Cuadro de diálogo Opciones avanzadas de la vista del origen de datos (Asistente para vistas del origen de datos) (Analysis Services)
   El cuadro de diálogo **Opciones avanzadas de la vista del origen de datos** le proporciona control adicional sobre cómo la vista del origen de datos extrae esquemas y relaciones del origen de datos para generar la vista.  

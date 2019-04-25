@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8225039ece914c461af34f5344350227d6a39cdc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761142"
 ---
 # <a name="delete-unique-constraints"></a>Eliminar restricciones UNIQUE
   Puede eliminar una restricción UNIQUE en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al eliminar una restricción UNIQUE, se quita el requisito de unicidad para los valores escritos en una columna o una combinación de columnas incluidas en la expresión de la restricción y se elimina el índice único correspondiente.  
@@ -42,7 +42,7 @@ ms.locfileid: "54132435"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  

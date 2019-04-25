@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630806"
 ---
 # <a name="specify-synchronization-schedules"></a>Especificar programaciones de sincronización
   En este tema se describe cómo especificar programaciones de sincronización en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO). Al crear una suscripción, puede definir una programación de sincronización que controla cuándo se ejecutará el agente de replicación para la suscripción. Si no especifica parámetros de programación, la suscripción usará la programación predeterminada.  
@@ -326,7 +326,7 @@ ms.locfileid: "52788689"
   
 ## <a name="see-also"></a>Vea también  
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [Suscribirse a publicaciones](subscribe-to-publications.md)   
  [Sincronizar una suscripción de inserción](synchronize-a-push-subscription.md)   
  [Sincronizar una suscripción de extracción](synchronize-a-pull-subscription.md)   
  [Sincronizar datos](synchronize-data.md)  

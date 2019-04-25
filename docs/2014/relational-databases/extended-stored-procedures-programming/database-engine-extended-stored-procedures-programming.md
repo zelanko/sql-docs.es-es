@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bc740b25f875b451168a8c051e6f32bd984fbfe6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62514460"
 ---
 # <a name="programming-extended-stored-procedures"></a>Programación de procedimientos almacenados extendidos
     
@@ -34,7 +34,7 @@ ms.locfileid: "52804217"
 > [!NOTE]  
 >  Si tiene aplicaciones de puerta de enlace existentes, no puede utilizar opends60.dll que se distribuye con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar las aplicaciones. Ya no se admiten las aplicaciones de puerta de enlace.  
   
-## <a name="extended-stored-procedures-vs-clr-integration"></a>Procedimientos almacenados extendidos frente a Integración CLR  
+## <a name="extended-stored-procedures-vs-clr-integration"></a>Frente a procedimientos almacenados extendidos Integración CLR  
  En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los procedimientos almacenados extendidos (XP) proporcionaban el único mecanismo disponible para que los programadores de aplicaciones de base de datos escribieran la lógica del servidor, que era difícil de expresar o imposible de escribir en [!INCLUDE[tsql](../../includes/tsql-md.md)]. La integración CLR es una alternativa más consolidada para escribir tales procedimientos almacenados. Además, con la integración CLR, la lógica que se solía escribir en forma de procedimientos almacenados generalmente se expresa mejor como funciones con valores de tabla, que permiten que los resultados generados por la función se consulten en las instrucciones SELECT incrustándolos en la cláusula FROM.  
   
 ## <a name="see-also"></a>Vea también  

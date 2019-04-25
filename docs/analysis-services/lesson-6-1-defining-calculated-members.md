@@ -1,5 +1,5 @@
 ---
-title: Definir miembros calculados | Documentos de Microsoft
+title: Definir miembros calculados | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3b91737e62a4a4f0d55bfded58631d36327a567
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523705"
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Lección 6-1: definir miembros calculados
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
   
     La siguiente imagen muestra el formulario que aparece en el panel de las **expresiones de cálculo** al hacer clic en **Nuevo miembro calculado**.  
   
-    ![Formulario del panel de expresiones de cálculo](../analysis-services/media/l6-calculatedmembers-02.gif "formulario del panel de expresiones de cálculo")  
+    ![Formulario de panel de expresiones de cálculo](../analysis-services/media/l6-calculatedmembers-02.gif "formulario del panel de expresiones de cálculo")  
   
 3.  En el cuadro **Nombre** , cambie el nombre de la medida calculada a **[Total Sales Amount]**.  
   
@@ -70,7 +70,7 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
   
     La siguiente imagen muestra el panel de las **expresiones de cálculo** llenado con la configuración especificada en los pasos anteriores.  
   
-    ![Panel de expresiones de cálculo de Populated](../analysis-services/media/l6-calculatedmembers-03.gif "panel rellena expresiones de cálculo")  
+    ![Panel de expresiones de cálculo Populated](../analysis-services/media/l6-calculatedmembers-03.gif "panel rellena las expresiones de cálculo")  
   
 10. En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Vista de script**y revise el script de cálculo en el panel de las **expresiones de cálculo** .  
   
@@ -84,7 +84,7 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
   
     La siguiente imagen muestra los scripts de cálculo tal como deberían aparecer en el panel de las **expresiones de cálculo** en este punto del tutorial.  
   
-    ![Las secuencias de comandos en el panel de expresiones de cálculo](../analysis-services/media/l6-calculatedmembers-04.gif "Scripts en el panel de expresiones de cálculo")  
+    ![Los scripts en el panel de expresiones de cálculo](../analysis-services/media/l6-calculatedmembers-04.gif "secuencias de comandos en el panel de expresiones de cálculo")  
   
 12. En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Vista de formulario**, compruebe que está seleccionado **[Total Sales Amount]** en el panel **Organizador de scripts** y haga clic en **Nuevo miembro calculado**.  
   
@@ -273,7 +273,7 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
   
     Observe que el margen de beneficio bruto para la venta del distribuidor es notablemente inferior al de las ventas a través de Internet, como se muestra en la imagen siguiente.  
   
-    ![Panel de datos que muestre las ventas de distribuidor](../analysis-services/media/l6-calculatedmembers-7b.gif "panel de datos que muestre las ventas de distribuidor")  
+    ![Panel de datos que muestra las ventas de distribuidor](../analysis-services/media/l6-calculatedmembers-7b.gif "panel de datos que muestra las ventas de distribuidor")  
   
 9. Agregue las medidas **Total Sales Ratio to All Products**, **Internet Sales Ratio to All Products**y **Reseller Sales Ratio to All Products** al área Valores.  
   

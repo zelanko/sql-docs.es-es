@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7efc711e97abde1d33a7dd4194bd2953b959ef6a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769181"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (expresión de SSIS)
   Devuelve la ubicación de la repetición especificada de una cadena en una expresión de caracteres. El resultado devuelto es el índice de base uno de la repetición. El parámetro string debe devolver una expresión de caracteres y el parámetro occurrence debe devolver un entero. Si no se encuentra la cadena, el valor devuelto es 0. Si la cadena aparece menos veces de las que especifica el argumento de repetición, el valor devuelto es 0.  

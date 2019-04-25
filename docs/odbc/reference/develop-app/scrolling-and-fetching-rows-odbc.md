@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 884c798e14964fbcaaf3ca9ba6656f4d62738fe8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445996"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Desplazamiento y captura filas (ODBC)
 Cuando se usa un cursor desplazable, las aplicaciones llaman a **SQLFetchScroll** para colocar las filas del cursor y fetch. **SQLFetchScroll** admite el desplazamiento relativo (siguiente, anterior y relative *n* filas), desplazamiento absoluto (, apellidos y de fila *n*) y el posicionamiento por marcador. El *FetchOrientation* y *FetchOffset* argumentos en **SQLFetchScroll** especificar qué conjunto de filas para capturar, como se muestra en los diagramas siguientes.  
@@ -41,4 +41,4 @@ Cuando se usa un cursor desplazable, las aplicaciones llaman a **SQLFetchScroll*
  Después de recuperar el conjunto de filas, la aplicación puede llamar a **SQLSetPos** para situarse en una fila determinada en las filas del conjunto de filas o la actualización del conjunto de filas. Para obtener más información sobre el uso de **SQLSetPos**, consulte [actualizar los datos con SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
   
 > [!NOTE]  
->  El desplazamiento es compatible con ODBC 2. *x* controladores por **SQLExtendedFetch**. Para obtener más información, consulte [cursores de bloque, cursores desplazables y compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)en Apéndice G: directrices de controlador para la compatibilidad con versiones anteriores.
+>  El desplazamiento es compatible con ODBC 2. *x* controladores por **SQLExtendedFetch**. Para obtener más información, consulte [cursores de bloque, cursores desplazables y compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)en Apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores.

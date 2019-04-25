@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767567"
 ---
 # <a name="lesson-2-adding-looping"></a>Lección 2: Agregar bucles
   En la [Lección 1: Crear el proyecto y el paquete básico](lesson-1-create-a-project-and-basic-package-with-ssis.md), creó un paquete que extraía datos de origen de un único archivo plano, transformó los datos mediante transformaciones de búsqueda y, por último, cargó los datos en el **FactCurrency** tabla de hechos de la **AdventureWorksDW2012** base de datos de ejemplo.  

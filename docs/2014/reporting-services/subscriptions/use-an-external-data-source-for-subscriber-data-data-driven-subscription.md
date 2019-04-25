@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8314a1d0bdf16a7a320c8a5a7e06558a2bec62c4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631848"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Usar un origen de datos externo para obtener información de los suscriptores (suscripción controlada por datos)
   En una suscripción controlada por datos, los datos de suscripción dinámica se proporcionan mediante una consulta o un comando que recupera los datos desde un origen de datos externo. Los datos de suscripción se pueden recuperar desde cualquier origen de datos compatible que satisfaga los requisitos del procesamiento de suscripciones controladas por datos. La sintaxis de la consulta o el comando debe ser válida para una extensión de procesamiento de datos instalada en el servidor de informes.  

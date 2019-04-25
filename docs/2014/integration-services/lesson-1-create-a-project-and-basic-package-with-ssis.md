@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767507"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Lección 1: Crear el proyecto y el paquete básico
   En esta lección, creará un paquete ETL simple que extrae datos de un único origen de archivo plano, transforma los datos usando dos componentes de la transformación de búsqueda y escribe dichos datos en la tabla de hechos **FactCurrency** de **AdventureWorksDW2012**. Como parte de esta lección, aprenderá a crear paquetes nuevos, agregar y configurar orígenes de datos y conexiones de destino, y trabajar con nuevos componentes de flujo de control y flujo de datos.  
@@ -74,7 +74,7 @@ ms.locfileid: "59241803"
 |----------------------|----------------|-----------------|---------------|  
 |0|FactCurrency|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
-|2|DimDate|FullDateAlternateKey|Date|  
+|2|DimDate|FullDateAlternateKey|date|  
 |3|FactCurrency|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>Tareas de la lección  

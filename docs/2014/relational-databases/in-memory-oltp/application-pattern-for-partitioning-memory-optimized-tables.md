@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f3296d0162136a441d141d32089a674a67e7b5b0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466097"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Patrón de aplicación para crear particiones de tablas con optimización para memoria
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] admite un patrón en el que una cantidad limitada de datos activos se conserva en una tabla optimizada para memoria, mientras que los datos a los que se tiene acceso con menor frecuencia se procesan en disco. Por lo general, esto sería un escenario donde se almacenan datos en función de una clave `datetime`.  

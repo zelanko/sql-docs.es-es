@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d72d7868d0e19719ea7992bdb8ccd1f61f3718d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633170"
 ---
 # <a name="table-names"></a>Nombres de tabla
 Cuando dBASE, Microsoft Excel, Paradox, o texto que se usa el controlador, los nombres de tabla que se producen en la cláusula FROM de SELECT o DELETE, después de la cláusula INTO en INSERT y UPDATE, CREATE TABLE y DROP TABLE pueden contener una ruta de acceso válida, nombre principal y archivo de extensión de nombre .  

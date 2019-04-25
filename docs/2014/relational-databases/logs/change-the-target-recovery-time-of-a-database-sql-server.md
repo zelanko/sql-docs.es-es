@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743221"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Cambiar el tiempo de recuperación de destino de una base de datos (SQL Server)
   En este tema se describe cómo establecer el cambio el tiempo de recuperación de destino de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. De forma predeterminada, el tiempo de recuperación de destino es 0 y la base de datos utiliza *puntos de comprobación automáticos* (que se controlan mediante la opción de servidor **intervalo de recuperación** ). Establecer el tiempo de recuperación de destino en un valor mayor que 0 hace que la base de datos utilice *puntos de comprobación indirectos* y establece un límite superior en el tiempo de recuperación de esta base de datos.  
@@ -23,9 +23,9 @@ ms.locfileid: "54131455"
 > [!NOTE]  
 >  El límite superior especificado para una base de datos determinada por el valor de tiempo de recuperación de destino se puede superar si una transacción de larga duración provoca tiempos de UNDO excesivos.  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [seguridad](#Security)  
+-   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Seguridad](#Security)  
   
--   **Para cambiar el destino de recuperación de tiempo, mediante:**  [SQL Server Management Studio](#SSMSProcedure) o [Transact-SQL](#TsqlProcedure)  
+-   **Para cambiar el tiempo de recuperación de destino con:**  [SQL Server Management Studio](#SSMSProcedure) o [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54131455"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  

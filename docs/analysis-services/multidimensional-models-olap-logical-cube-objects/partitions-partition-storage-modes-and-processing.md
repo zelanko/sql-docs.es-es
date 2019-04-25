@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57c73e3ae9661058277a377b7d17b6a4af393ba0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640464"
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Particiones: Procesamiento y modos de almacenamiento de particiones
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "52545651"
   
 -   La sesión que crea la vista indizada debe tener las siguientes opciones establecidas en ON: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING y ANSI_WARNING. Esta configuración puede crearse en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   La sesión que crea la vista indizada debe tener la siguiente opción establecida en OFF NUMERIC_ROUNDABORT. Esta configuración puede crearse en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   La sesión que crea la vista indizada debe tener la siguiente opción establecida en OFF: NUMERIC_ROUNDABORT. Esta configuración puede crearse en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="holap"></a>HOLAP  
  El modo de almacenamiento HOLAP combina atributos de los modos MOLAP y ROLAP. Al igual que MOLAP, HOLAP hace que las agregaciones de la partición se almacenen en una estructura multidimensional en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia. HOLAP no hace que se almacene una copia de los datos de origen. HOLAP es el equivalente de MOLAP para las consultas que solo tienen acceso a los datos de resumen de las agregaciones de una partición. Las consultas que tienen acceso a datos de origen: por ejemplo, si desea profundizar en una celda de cubo atómico para que no hay ninguna agregación de datos, debe recuperar datos de la base de datos relacional y no será tan rápido como lo serían si los datos de origen se almacenaron en el structur MOLAP e. Con el modo de almacenamiento HOLAP, los usuarios suelen experimentar notables diferencias en cuanto a los tiempos de las consultas según si la consulta se puede resolver desde la caché o las agregaciones frente a los propios datos de origen.  

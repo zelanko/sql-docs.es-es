@@ -1,5 +1,5 @@
 ---
-title: 'Error al intentar establecer una conexión con el origen de datos externo. No se pudieron actualizar las siguientes conexiones: datos PowerPivot | Microsoft Docs'
+title: 'Error al intentar establecer una conexión con el origen de datos externo. No se pudieron actualizar las siguientes conexiones: Los datos PowerPivot | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c808e39a208e81e2869efd389044a70f1af9052a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743421"
 ---
-# <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>Error al intentar establecer una conexión con el origen de datos externo. No se pudieron actualizar las siguientes conexiones: datos PowerPivot
+# <a name="an-error-occurred-during-an-attempt-to-establish-a-connection-to-the-external-data-source-the-following-connections-failed-to-refresh-powerpivot-data"></a>Error al intentar establecer una conexión con el origen de datos externo. No se pudieron actualizar las siguientes conexiones: Datos PowerPivot
   Este error se produce si consulta los datos PowerPivot en un servidor que no tiene instalado PowerPivot para SharePoint. También se produce si se detiene el servicio SQL Server Analysis Services (PowerPivot) o si se intenta ver los datos PowerPivot de una versión anterior.  
   
 ## <a name="details"></a>Detalles  
@@ -28,7 +28,7 @@ ms.locfileid: "48198605"
 |Se aplica a|PowerPivot para SharePoint|  
 |Versión del producto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Causa|Error en la conexión de datos.|  
-|Texto del mensaje|Error al intentar establecer una conexión con el origen de datos externo. No se pudieron actualizar las siguientes conexiones: datos PowerPivot|  
+|Texto del mensaje|Error al intentar establecer una conexión con el origen de datos externo. No se pudieron actualizar las siguientes conexiones: Datos PowerPivot|  
   
 ## <a name="explanation"></a>Explicación  
  Excel Services devuelve este error al consultar los datos PowerPivot en un libro de Excel que está publicado en SharePoint si el entorno de SharePoint no tiene un servidor PowerPivot para SharePoint o si se detiene la instancia del servicio SQL Server Analysis Services (PowerPivot).  
@@ -43,6 +43,6 @@ ms.locfileid: "48198605"
  Para los libros PowerPivot que se crearon en una versión SQL Server 2008 R2 de PowerPivot para Excel, se debe instalar la versión SQL Server 2008 R2 del proveedor OLE DB de Analysis Services. Este error se producirá si ha instalado el proveedor, pero no registró el archivo Microsoft.AnalysisServices.ChannelTransport.dll. Para más información sobre el registro de archivo, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
 ## <a name="see-also"></a>Vea también  
- [La conexión de datos utiliza la autenticación de Windows y las credenciales del usuario no se pudieron delegar No se pudieron actualizar las siguientes conexiones: datos PowerPivot](the-data-connection-user-could-not-be-delegated.md)  
+ [La conexión de datos utiliza la autenticación de Windows y las credenciales del usuario no se pudieron delegar No se pudieron actualizar las siguientes conexiones: Datos PowerPivot](the-data-connection-user-could-not-be-delegated.md)  
   
   

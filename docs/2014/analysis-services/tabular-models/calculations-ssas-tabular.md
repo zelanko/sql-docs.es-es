@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b19dce00f95559aec77c8d02c86631faadc466b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757567"
 ---
 # <a name="calculations-ssas-tabular"></a>Cálculos (SSAS tabular)
   Después de importar datos en el modelo, puede agregar cálculos para agregar, filtrar, ampliar, combinar y proteger esos datos. Los modelos tabulares utilizan Expresiones de análisis de datos (DAX), un lenguaje de fórmulas para crear cálculos personalizados. En los modelos tabulares, los cálculos que crea mediante fórmulas DAX se utilizan en *Columnas calculadas*, *Medidas*y *Filtros de fila*.  
@@ -25,7 +25,7 @@ ms.locfileid: "48100485"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Descripción de DAX en modelos tabulares &#40;Tabular de SSAS&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|Describe el lenguaje de fórmulas Expresiones de análisis de datos (DAX) que se utiliza para crear cálculos para columnas calculadas, medidas y filtros de fila en modelos tabulares.|  
+|[Descripción de DAX en modelos tabulares &#40;SSAS tabular&#41;](understanding-dax-in-tabular-models-ssas-tabular.md)|Describe el lenguaje de fórmulas Expresiones de análisis de datos (DAX) que se utiliza para crear cálculos para columnas calculadas, medidas y filtros de fila en modelos tabulares.|  
 |[Compatibilidad de las fórmulas en el modo DirectQuery](../dax-formula-compatibility-in-directquery-mode-ssas-2014.md)|Se describen las diferencias, se enumeran las funciones que no se admiten en el modo DirectQuery y se enumeran las funciones que sí se admiten pero pueden devolver resultados distintos.|  
 |[Expresiones de análisis de datos &#40;DAX&#41; referencia](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)|En esta sección se proporcionan descripciones detalladas de sintaxis, operadores, y funciones de DAX.|  
   

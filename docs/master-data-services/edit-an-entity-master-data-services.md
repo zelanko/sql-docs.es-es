@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cbf39fc0f0988a624d5a472b8938e47e4aa78a48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517802"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Edición de una entidad (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52819297"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede editar una entidad.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -72,7 +72,7 @@ ms.locfileid: "52819297"
   
  ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto")  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Jerarquías explícitas &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Eliminar una entidad &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
  [Entidades &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  

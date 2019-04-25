@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472850"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Predecir asociaciones (Tutorial intermedio de minería de datos)
   Una vez procesados los modelos, puede utilizar la información sobre las asociaciones almacenada en el modelo para crear predicciones. En la tarea final de esta lección, aprenderá a generar consultas de predicción a partir de los modelos de asociación que creó. En esta lección se presupone que sabe cómo se utiliza el Generador de consultas de predicción y desea obtener información acerca de cómo se generan consultas de predicción a partir de modelos de asociación. Para obtener más información cómo usar el generador de consultas de predicción, vea [Interfaces de consultas de minería de datos](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  

@@ -10,11 +10,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: e93f85302417674b31de0129650dbb85092f8962
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634173"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurar la instancia de clúster de conmutación por error: SMB: SQL Server en Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "52532003"
 
 En este artículo se explica cómo configurar el almacenamiento SMB para una instancia de clúster de conmutación por error (FCI) en Linux. 
  
-En el mundo que no sean Windows, SMB a menudo se conoce para compartir como un sistema de archivos de Internet común (CIFS) y se implementa a través de Samba. En el mundo de Windows, el acceso a un recurso compartido SMB se realiza de este modo: \\NOMBRESERVIDOR\NOMBRERECURSOCOMPARTIDO. Para las instalaciones de SQL Server basada en Linux, se debe montar el recurso compartido SMB como una carpeta.
+En el mundo que no sean Windows, SMB a menudo se conoce para compartir como un sistema de archivos de Internet común (CIFS) y se implementa a través de Samba. En el mundo de Windows, el acceso a un recurso compartido SMB se realiza de este modo: \\SERVERNAME\SHARENAME. Para las instalaciones de SQL Server basada en Linux, se debe montar el recurso compartido SMB como una carpeta.
 
 ## <a name="important-source-and-server-information"></a>Información importante de origen y el servidor
 

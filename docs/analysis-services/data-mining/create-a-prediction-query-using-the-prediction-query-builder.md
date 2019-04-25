@@ -1,5 +1,5 @@
 ---
-title: Crear una consulta de predicción mediante el generador de consultas de predicción | Documentos de Microsoft
+title: Crear una consulta de predicción mediante el generador de consultas de predicción | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8a112efd8fdfe2b8108d2b6005028f10abf4a706
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740215"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Crear una consulta de predicción con el Generador de consultas de predicción
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "34014692"
 8.  Ejecute la consulta haciendo clic en el primer botón de la barra de herramientas de la pestaña **Predicción de modelo de minería de datos** y seleccione **Resultado**.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear una consulta Singleton en el Diseñador de minería de datos](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
+ [Crear una consulta singleton en el Diseñador de minería de datos](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
  [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

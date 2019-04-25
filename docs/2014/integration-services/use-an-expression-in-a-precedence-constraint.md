@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b2491a03e0d0121f3aa3b31f354f71b36088e5d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766128"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>Usar una expresión en una restricción de precedencia
   Este procedimiento describe cómo agregar una expresión a una restricción de precedencia mediante el cuadro de diálogo **Editor de restricciones de precedencia** . Antes de poder agregar una expresión a una restricción de precedencia, el paquete debe incluir por lo menos dos ejecutables, ya sean tareas o contenedores, y deben estar conectados por una restricción de precedencia.  

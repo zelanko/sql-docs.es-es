@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761604"
 ---
 # <a name="create-tables-database-engine"></a>Crear tablas (motor de base de datos)
   Puede crear una nueva tabla, asignarle un nombre y agregarla a una base de datos existente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  

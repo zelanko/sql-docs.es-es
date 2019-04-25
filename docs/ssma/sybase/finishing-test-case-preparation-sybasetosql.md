@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: b31739bb4db23ccd2159ec8146ef857d7a5d66e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631555"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>Finalización de la preparación del caso de prueba (SybaseToSQL)
 Página final del asistente muestra la descripción del caso de prueba y la información acerca de los objetos que participan en la prueba. Además, en esta página se pueden establecer la prueba de las opciones de ejecución.  

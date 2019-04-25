@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 22a181aec3eaeeb50f1958f9de1380de7a8a85f7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765208"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisitos de la aplicación web (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] es una aplicación web hospedada por Internet Information Services (IIS). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] funciona únicamente en Internet Explorer (IE) 7 o posterior. No se admiten IE 7 ni versiones anteriores, así como tampoco Microsoft Edge ni Chrome.  
@@ -57,7 +57,7 @@ ms.locfileid: "53361297"
   
 ||  
 |-|  
-|Internet Information Services<br /><br /> Herramientas de administración web<br /><br /> Consola de administración de IIS<br /><br /> Servicios de World Wide Web<br /><br /> Desarrollo de aplicaciones<br /><br /> Extensibilidad de .NET<br /><br /> Extensibilidad de .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensiones ISAPI<br /><br /> Filtros ISAPI<br /><br /> Características HTTP comunes<br /><br /> Documento predeterminado<br /><br /> Examen de directorios<br /><br /> Errores HTTP<br /><br /> Contenido estático<br /><br /> [Nota: No instale Publicación en WebDAV]<br /><br /> Estado y diagnóstico<br /><br /> Registrar HTTP<br /><br /> Monitor de solicitudes<br /><br /> Rendimiento<br /><br /> Compresión de contenido estático<br /><br /> Seguridad<br /><br /> Filtro de solicitudes<br /><br /> Autenticación de Windows|  
+|Internet Information Services<br /><br /> Herramientas de administración web<br /><br /> Consola de administración de IIS<br /><br /> Servicios de World Wide Web<br /><br /> Desarrollo de aplicaciones<br /><br /> Extensibilidad de .NET<br /><br /> Extensibilidad de .NET 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Extensiones ISAPI<br /><br /> Filtros ISAPI<br /><br /> Características HTTP comunes<br /><br /> Documento predeterminado<br /><br /> Examen de directorios<br /><br /> Errores HTTP<br /><br /> Contenido estático<br /><br /> [Nota: No instale publicación en WebDAV]<br /><br /> Estado y diagnóstico<br /><br /> Registrar HTTP<br /><br /> Monitor de solicitudes<br /><br /> Rendimiento<br /><br /> Compresión de contenido estático<br /><br /> Seguridad<br /><br /> Filtro de solicitudes<br /><br /> Autenticación de Windows|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>Características (sistemas operativos Windows Server 2008 o Windows Server 2008 R2, Windows 7)  
  En [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] o en Windows Server 2008 R2, puede usar **Administrador del servidor** para instalar las siguientes características necesarias.  
@@ -77,7 +77,7 @@ ms.locfileid: "53361297"
   
 ||  
 |-|  
-|.NET Framework 3.5 (incluye .NET 2.0 y 3.0)<br /><br /> Servicios avanzados de .NET Framework 4.5<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> Activación HTTP [Nota: Esto es obligatorio].<br /><br /> Uso compartido de puertos TCP<br /><br /> Servicio WAS (Windows Process Activation Service)<br /><br /> Modelo de proceso<br /><br /> Entorno .NET<br /><br /> API de configuración|  
+|.NET Framework 3.5 (incluye .NET 2.0 y 3.0)<br /><br /> Servicios avanzados de .NET Framework 4.5<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> Activación HTTP [Nota: Esto es necesario.]<br /><br /> Uso compartido de puertos TCP<br /><br /> Servicio WAS (Windows Process Activation Service)<br /><br /> Modelo de proceso<br /><br /> Entorno .NET<br /><br /> API de configuración|  
   
 ### <a name="accounts-and-permissions"></a>Cuentas y permisos  
   

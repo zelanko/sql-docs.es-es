@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0a075b96e7a29cef4a10f034147732bf03f64b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761773"
 ---
 # <a name="sqlallochandle-function"></a>Función SQLAllocHandle
 **Conformidad**  
- Versión de introducción: Compatibilidad de ODBC 3.0 estándares: 92 ISO  
+ Versión de introducción: Compatibilidad de ODBC 3.0 estándares: ISO 92  
   
  **Resumen**  
  **SQLAllocHandle** asigna un identificador de entorno, conexión, instrucción o descriptor.  
@@ -95,7 +95,7 @@ SQLRETURN SQLAllocHandle(
 |HY009|Uso no válido del puntero nulo|(DM) el *OutputHandlePtr* argumento era un puntero nulo.|  
 |HY010|Error de secuencia de función|(DM) el *HandleType* argumento era SQL_HANDLE_DBC, y **SQLSetEnvAttr** no se ha llamado para establecer el atributo de entorno SQL_ODBC_VERSION.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para la **InputHandle** y aún se estaba ejecutando cuando el **SQLAllocHandle** llamada a función con **HandleType** establecido SQL_HANDLE_STMT o SQL_HANDLE_DESC.|  
 |HY013|Error de administración de memoria|El *HandleType* argumento era SQL_HANDLE_DBC, SQL_HANDLE_STMT o SQL_HANDLE_DESC; y no se pudo procesar la llamada de función porque los objetos de memoria subyacente no se podrían tener acceso, posiblemente debido a memoria insuficiente condiciones.|  
-|HY014 SE|El límite de número de identificadores superado|El límite definido por el controlador para el número de identificadores que se pueden asignar para el tipo de identificador indicado por el *HandleType* se ha alcanzado el argumento.|  
+|HY014|El límite de número de identificadores superado|El límite definido por el controlador para el número de identificadores que se pueden asignar para el tipo de identificador indicado por el *HandleType* se ha alcanzado el argumento.|  
 |HY092|Identificador de opción o atributo no válido|(DM) el *HandleType* argumento no era: SQL_HANDLE_ENV, SQL_HANDLE_DBC, SQL_HANDLE_STMT o SQL_HANDLE_DESC.|  
 |HY117|Conexión está suspendida debido al estado de transacción desconocido. Solo se desconecte y se permiten funciones de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYC00|Característica opcional no implementada|El *HandleType* argumento era SQL_HANDLE_DESC y el controlador era un ODBC 2. *x* controlador.|  

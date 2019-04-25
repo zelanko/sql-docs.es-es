@@ -16,11 +16,11 @@ ms.author: genemi
 ms.reviewer: ''
 manager: craigg
 ms.openlocfilehash: e1f1097927f61355cf4a50f4287397d823fd3177
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632418"
 ---
 # <a name="parameter-data-types"></a>Tipos de datos de parámetro
 Aunque cada parámetro especificado con **SQLBindParameter** se definen mediante un tipo de datos SQL, los parámetros en una instrucción SQL tener ningún intrínsecos tipo de datos. Por lo tanto, los marcadores de parámetros pueden incluirse en una instrucción SQL sólo si sus tipos de datos se pueden inferir de otro operando en la instrucción. ¿Por ejemplo, en una expresión aritmética, como? + COLUMN1, el tipo de datos del parámetro se puede inferir el tipo de datos de la columna con nombre representado por COLUMN1. Una aplicación no puede usar un marcador de parámetro si no se puede determinar el tipo de datos.  

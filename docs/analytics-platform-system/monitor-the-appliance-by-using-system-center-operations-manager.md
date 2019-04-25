@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639851"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Supervisión con System Center Operations Manager: Analytics Platform System
 Use System Center Operations Manager (SCOM) para supervisar la aplicación Analytics Platform System (APS).
@@ -44,12 +44,12 @@ Después de configurar los módulos de administración de SCOM, haga clic en el 
 ### <a name="alerts"></a>Alertas  
 Las alertas son donde puede encontrar las alertas actuales para administrar.  
   
-![Alertas](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>Dispositivos  
 Los dispositivos son donde encontrará los dispositivos detectados y supervisados actualmente SQL Server PDW en su entorno. Si un dispositivo no se muestra aquí y que ha creado la conexión de ODBC para ella, a continuación, puede haber algún problema con su cuenta PDWWatcher. Si muestra como "Sin supervisión", puede haber algún problema con su cuenta PDWMonitor. Tenga paciencia, puesto que SCOM no realiza cambios en tiempo real, pero comprueba periódicamente nuevos dispositivos supervisar y envía periódicamente las consultas a dispositivos para la supervisión.  
   
-![Dispositivos](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
+![Appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   
 ### <a name="appliances-diagram"></a>Diagrama de dispositivos  
 La página de diagrama de dispositivos es donde puede obtener un vistazo el estado de su dispositivo con una vista de árbol:  
@@ -59,7 +59,7 @@ La página de diagrama de dispositivos es donde puede obtener un vistazo el esta
 ### <a name="nodes"></a>Nodos  
 Por último, la vista de nodos permite ver el estado del dispositivo a través de cada nodo:  
   
-![Nodos](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
+![Nodes](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  
   
 ## <a name="see-also"></a>Vea también  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636241"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Desarrollar el conocimiento de la agrupación de conexiones en un controlador ODBC
 En este tema se trata los detalles del desarrollo de un controlador ODBC que contiene información sobre cómo el controlador debe proporcionar servicios de agrupación de conexiones.  

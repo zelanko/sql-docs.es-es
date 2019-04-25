@@ -1,5 +1,5 @@
 ---
-title: Algoritmo de serie temporal de Microsoft | Documentos de Microsoft
+title: Algoritmo de serie temporal de Microsoft | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 390ff54485e92e28736424048e5aaedbbee31181
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758078"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo de serie temporal de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "34018542"
 ### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Ejemplo 1: Conjunto de datos de serie temporal con serie representada como valores de columna  
  En este ejemplo se utiliza la siguiente tabla de escenarios de entrada:  
   
-|TimeID|Product|Sales|Volume|  
+|TimeID|Producto|Sales|Volume|  
 |------------|-------------|-----------|------------|  
 |1/2001|A|1000|600|  
 |2/2001|A|1100|500|  
@@ -113,7 +113,7 @@ ms.locfileid: "34018542"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- En esta tabla, la columna TimeID contiene todavía la serie de casos para el modelo de la serie temporal que fue designada como la columna de clave temporal. Sin embargo, las antiguas columnas de ventas y volumen están ahora divididas en dos columnas, cada una de las cuales va precedida por el nombre del producto. Como resultado, solo existe una única entrada para cada día en la columna TimeID. Se crea así un modelo de serie temporal que contendría cuatro columnas predecibles: A_Sales, A_Volume, B_Sales y B_Volume.  
+ En esta tabla, la columna TimeID contiene todavía la serie de casos para el modelo de la serie temporal que fue designada como la columna de clave temporal. Sin embargo, las antiguas columnas de ventas y volumen están ahora divididas en dos columnas, cada una de las cuales va precedida por el nombre del producto. Como resultado, solo existe una única entrada para cada día en la columna TimeID. Esto crea un modelo de serie temporal que contendría cuatro columnas de predicción: A_Sales, A_Volume, B_Sales y B_Volume.  
   
  Además, puesto que los productos se han distribuido en columnas diferentes, no es preciso especificar una columna de clave de serie adicional. Todas las columnas del modelo son o una columna de serie de casos o bien una columna predecible.  
   
@@ -144,10 +144,10 @@ ms.locfileid: "34018542"
 -   Admite la obtención de detalles.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Examinar un modelo usando el Visor de Series temporales de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Referencia técnica del algoritmo de serie temporal de Microsoft](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Ejemplos de consultas de modelo de serie temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Contenido del modelo de minería de datos para modelos de serie temporal & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Examinar un modelo usando el Visor de serie temporal de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Microsoft Time Series Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Ejemplos de consultas de modelos de serie temporal](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Contenido del modelo de minería de datos para los modelos de serie temporal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

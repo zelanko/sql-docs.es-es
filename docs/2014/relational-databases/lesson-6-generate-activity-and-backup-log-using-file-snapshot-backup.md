@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 45004f8544efc0f0cc02292dbe28fdd75d6dc1de
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743261"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>Lección 7: Mover los archivos de datos a Azure Storage
   En esta lección, aprenderá a mover los archivos de datos a Azure Storage (pero no la instancia de SQL Server). Para seguir esta lección, no es necesario completar las lecciones 4, 5 y 6.  
@@ -64,7 +64,7 @@ ms.locfileid: "58534077"
   
     ```  
   
-3.  Cuando ejecute este código, verá este mensaje: "El archivo"TestDB1Alter"se ha modificado en el catálogo del sistema. La nueva ruta se usará la próxima vez que se inicie la base de datos."  
+3.  Al hacer esto, verá este mensaje: "El archivo"TestDB1Alter"se ha modificado en el catálogo del sistema. La nueva ruta se usará la próxima vez que se inicie la base de datos."  
   
 4.  Después, establezca la base de datos sin conexión.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "58534077"
   
 5.  Ahora, debe copiar los archivos de datos a Azure Storage mediante uno de los métodos siguientes: [Herramienta AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [referencia de biblioteca de cliente de almacenamiento](https://msdn.microsoft.com/library/azure/dn261237.aspx), o una herramienta de exploración de almacenamiento de terceros.  
   
-     **Importante:** al utilizar esta nueva mejora, asegúrese de crear siempre un blob de página y no un blob de bloque.  
+     **Importante:** Cuando se usa esta nueva mejora, asegúrese siempre de que crear un blob en páginas no un blob en bloques.  
   
 6.  Después, establezca la base de datos con conexión.  
   

@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3aa085cc0a098f557ca7a8cbddcd787a178b79d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760770"
 ---
 # <a name="descriptor-handles"></a>Identificadores de descriptor
 Un *descriptor* es una colección de metadatos que describen los parámetros de una instrucción SQL o las columnas del conjunto de resultados, tal como se muestra la aplicación o controlador (también conocido como el *implementación*). Por lo tanto, puede rellenar un descriptor de cualquiera de las cuatro funciones:  

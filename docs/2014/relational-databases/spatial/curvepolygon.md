@@ -10,11 +10,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 21b3e52c39cb2e1412a7bba468ffc1017a2438ed
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524221"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   Un `CurvePolygon` es una superficie cerrada topológicamente definida por un anillo de límite exterior y cero o más anillos interiores  

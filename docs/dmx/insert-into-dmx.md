@@ -1,5 +1,5 @@
 ---
-title: INSERTAR (DMX) | Microsoft Docs
+title: INSERT INTO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62505162"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  Identificador de modelo.  
   
- *estructura*  
+ *structure*  
  Identificador de estructura.  
   
  *columnas del modelo asignada*  
@@ -44,7 +44,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *consulta de origen de datos*  
  Consulta de origen en el formato definido por el proveedor.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si no especifica **MINING MODEL** o **MINING STRUCTURE**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] busca el tipo de objeto según el nombre y procesa el objeto correcto. Si el servidor contiene una estructura y un modelo de minería de datos con el mismo nombre, se devuelve un error.  
   
  Mediante el uso de la segunda forma de sintaxis, INSERT INTO*\<objeto >*. COLUMN_VALUES, puede insertar datos directamente en las columnas del modelo sin entrenar el modelo. Este método proporciona datos de columna al modelo de forma concisa y ordenada que resultan útiles a la hora de trabajar con conjuntos de datos que contienen jerarquías o columnas ordenadas.  
@@ -87,7 +87,7 @@ INSERT INTO [MINING MODEL] <model>
   
 -   **OPENROWSET**  
   
--   **FORMA**  
+-   **SHAPE**  
   
 -   Cualquier consulta de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que devuelva un conjunto de filas  
   

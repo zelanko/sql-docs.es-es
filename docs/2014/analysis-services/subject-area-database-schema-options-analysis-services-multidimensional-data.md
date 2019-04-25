@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e608f6ca210f1d86a58b469145a9840f7c25ba2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758494"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>Opciones de esquema de la base de datos del área de asunto (Asistente para generar esquemas) (Analysis Services - Datos multidimensionales)
   Use la página **Opciones de esquema de la base de datos del área de asunto** para controlar cómo se genera el esquema y definir cómo se mantienen los datos.  

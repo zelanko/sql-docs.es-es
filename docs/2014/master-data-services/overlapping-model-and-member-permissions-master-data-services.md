@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e70b6dab6399026606382396bded3a467a9b639c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764226"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Superponer permisos de modelo y de miembro (Master Data Services)
   El permiso que se asigne a un miembro puede solaparse con el permiso asignado a un objeto del modelo. Cuando se producen las superposiciones, el permiso más restrictivo será el que surta efecto.  
@@ -41,7 +41,7 @@ ms.locfileid: "52814567"
   
  En la pestaña **Miembros de la jerarquía** , el nodo de subcategoría de bicicletas de montaña de una jerarquía derivada tiene asignado el permiso **Actualizar** .  
   
- Resultado: En **Explorer**, el usuario tiene **actualización** permiso a todos los valores de atributo para todos los miembros en el nodo de bicicletas de montaña. Se ocultan todos los demás miembros y atributos.  
+ Resultado: En **Explorador**, el usuario tiene el permiso **Actualizar** para todos los valores de atributo de todos los miembros del nodo Mountain Bikes. Se ocultan todos los demás miembros y atributos.  
   
  ![mds_conc_overlap_model_example_1](../../2014/master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   

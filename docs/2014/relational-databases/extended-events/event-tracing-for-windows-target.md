@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62519309"
 ---
 # <a name="event-tracing-for-windows-target"></a>seguimiento de eventos para Windows de destino
   Antes de utilizar el Seguimiento de eventos para Windows (ETW) como destino, se recomienda tener conocimientos prácticos de ETW. El Seguimiento de eventos para Windows (ETW) se utiliza junto a Extended Events o como un consumidor de eventos de Extended Events. Los vínculos externos siguientes proporcionan un punto de inicio para obtener información general sobre ETW:  

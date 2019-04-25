@@ -21,21 +21,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84d4a72577af04750d4f1735e84a5e71d3501e8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760789"
 ---
 # <a name="sqlallocstmt-function"></a>Función SQLAllocStmt
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: desusado  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: Obsoleto  
   
  **Resumen**  
  En ODBC 3. *x*, ODBC 2. *x* función **SQLAllocStmt** ha sido reemplazado por **SQLAllocHandle**. Para obtener más información, consulte [función SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md).  
   
 > [!NOTE]  
->  Para obtener más información sobre lo que el Administrador de controladores asigna esta función cuando un ODBC 2. *x* aplicación funciona con una aplicación ODBC 3. *x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en Apéndice G: directrices de controlador para la compatibilidad con versiones anteriores.  
+>  Para obtener más información sobre lo que el Administrador de controladores asigna esta función cuando un ODBC 2. *x* aplicación funciona con una aplicación ODBC 3. *x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en Apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores.  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

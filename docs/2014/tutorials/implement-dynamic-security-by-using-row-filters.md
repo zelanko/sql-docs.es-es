@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5a26f9c950dd09b8e47c83089415bd2b3d47458f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740385"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementar seguridad dinámica utilizando filtros de filas
   En esta lección complementaria, creará un rol adicional que implemente seguridad dinámica. La seguridad dinámica proporciona seguridad de nivel de fila basada en el nombre de usuario o el identificador de inicio de sesión del usuario que ha iniciado sesión actualmente. Para obtener más información, consulte [Roles &#40;SSAS tabular&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f046a3a33e05228ab5e49116bc46eb9451f43129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642454"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>Eventos WillChangeField y FieldChangeComplete (ADO)
 El **WillChangeField** se llama al evento antes de que una operación pendiente cambie el valor de uno o varios [campo](../../../ado/reference/ado-api/field-object.md) objetos en el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). El **FieldChangeComplete** se llama al evento posterior al valor de uno o varios **campo** objetos ha cambiado.  

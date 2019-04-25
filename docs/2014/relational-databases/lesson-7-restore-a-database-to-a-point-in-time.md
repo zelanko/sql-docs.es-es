@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e0841c3473baf73033f298cfd3c8402ffc3aa19
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743363"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>Lección 8: Restaurar una base de datos en Azure Storage
   En esta lección, aprenderá a crear un archivo de copia de seguridad local y a restaurarlo en Azure Storage. Tenga en cuenta que puede tener la base de datos en local o en una máquina virtual de Windows Azure. Para seguir esta lección, no es necesario completar las lecciones 4, 5, 6 y 7.  

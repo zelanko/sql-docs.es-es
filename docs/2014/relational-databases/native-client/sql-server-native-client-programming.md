@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ef03fd5a9332e1c14a8c0eadf0730ccd5609c87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638202"
 ---
 # <a name="sql-server-native-client-programming"></a>Programación de SQL Server Native Client
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client es una interfaz de programación de aplicaciones (API) de acceso a datos independiente que se introdujo en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y que se utiliza tanto para OLE DB como para ODBC. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client combina el proveedor OLE DB de SQL y el controlador ODBC de SQL en una biblioteca de vínculos dinámicos (DLL) nativa. También ofrece muchas más funciones nuevas de las que se proporcionaban en Data Access Components para Windows (DAC para Windows, anteriormente Microsoft Data Access Components o MDAC). Puede utilizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para crear nuevas aplicaciones o mejorar las existentes incorporando las características introducidas en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], como la compatibilidad con conjuntos de resultados activos múltiples (MARS), los tipos de datos definidos por el usuario (UDT), las notificaciones de consulta, el aislamiento de instantánea y el tipo de datos XML.  

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f2c5a0f655a258492866d934d20bd8573f38757
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766248"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Herramientas para solucionar problemas con la ejecución de paquetes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye características y herramientas que puede utilizar para solucionar problemas de los paquetes durante su ejecución, después de que los paquetes se hayan completado e implementado.  
@@ -85,7 +85,7 @@ ms.locfileid: "58374931"
   
     3.  **Posibilidad de capturar datos de recuento de filas**. Tenga en cuenta la posibilidad de crear una tabla independiente para almacenar información de recuento de filas, donde cada instancia de ejecución del paquete se identifique mediante su ExecutionID. Utilice la transformación Recuento de filas para guardar el recuento de filas en una serie de variables en puntos clave del flujo de datos. Tras finalizar el flujo de datos, utilice una tarea Ejecutar SQL para insertar la serie de valores en una fila de la tabla para permitir realizar análisis y generar informes posteriormente.  
   
-     Para obtener más información acerca de este enfoque, vea la sección "Auditoría y registro del ETL," en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] notas del producto, [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+     Para más información sobre este enfoque, consulte la sección sobre auditoría y registro del ETL, en las notas del producto de [!INCLUDE[msCoName](../../includes/msconame-md.md)], [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Solución de problemas de ejecución de paquetes utilizando archivos de volcado de depuración  
  En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede crear archivos de volcado de depuración que proporcionen información sobre la ejecución de un paquete. Para obtener más información, consulte [Generating Dump Files for Package Execution](generating-dump-files-for-package-execution.md).  

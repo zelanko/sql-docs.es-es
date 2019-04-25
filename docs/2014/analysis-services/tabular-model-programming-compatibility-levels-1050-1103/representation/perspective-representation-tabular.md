@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4704fc56ae1eacfb8481533c9d743afff80e923
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757753"
 ---
 # <a name="perspective-representation-tabular"></a>Representación de perspectiva (tabular)
   Una perspectiva es un mecanismo para simplificar o centrar el modelo en una parte menor de él para la aplicación cliente.  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1258594b9f80dcbae84a3df8f711eb594108cb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468182"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Compatibilidad con la transmisión por secuencias de parámetros de salida BLOB
   Este tema contiene un ejemplo que muestra la compatibilidad de la transmisión por secuencias con los parámetros de salida BLOB, que enlaza los parámetros de salida BLOB como ISequentialStreams.  
@@ -26,7 +26,7 @@ ms.locfileid: "48076651"
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 // blob_out_param.cpp  

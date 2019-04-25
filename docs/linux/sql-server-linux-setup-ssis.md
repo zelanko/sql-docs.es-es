@@ -11,11 +11,11 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: c9d18e948a415a1d549c21a7c78e0117c6ab819c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634143"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Instalar SQL Server Integration Services (SSIS) en Linux
 

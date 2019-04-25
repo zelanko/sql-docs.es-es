@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 44e89e7c6ab10df13927247222e1f8564500fb8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759873"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Introducción a SSMA para la consola de acceso (AccessToSQL)
 En esta sección se describe el procedimiento para iniciar y empezar a trabajar con la aplicación de consola de acceso. También se enumeran en este documento, se utilizan las convenciones en una ventana de salida de la consola SSMA típica.  

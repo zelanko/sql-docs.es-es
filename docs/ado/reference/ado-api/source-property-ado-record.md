@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b053fdeae5016d7a1b489133b3a26067da7eab2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740405"
 ---
 # <a name="source-property-ado-record"></a>Propiedad Source (Record ADO)
 Indica el origen de datos o el objeto representado por la [registro](../../../ado/reference/ado-api/record-object-ado.md).  

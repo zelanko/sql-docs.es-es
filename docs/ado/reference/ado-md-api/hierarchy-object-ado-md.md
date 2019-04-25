@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4f1ccb441da92c19b15a7e84b0fc0e451844d0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740285"
 ---
 # <a name="hierarchy-object-ado-md"></a>Objeto Hierarchy (ADO MD)
 Representa una forma en que los miembros de un [dimensión](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) puede agregar o "acumular." Una dimensión puede agregarse a una o más jerarquías.  
@@ -39,7 +39,7 @@ Representa una forma en que los miembros de un [dimensión](../../../ado/referen
   
  El **propiedades** colección contiene las propiedades proporcionadas por el proveedor. En la tabla siguiente se enumera las propiedades que podrían estar disponibles. La lista de propiedades reales puede variar en función de la implementación del proveedor. Consulte la documentación del proveedor para obtener una lista completa de las propiedades disponibles.  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |AllMember|El miembro en el nivel superior del resumen de la jerarquía.|  
 |CatalogName|El nombre del catálogo al que pertenece este cubo.|  

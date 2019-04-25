@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ea890e0e2d49781f06f38f606a6c92582dc44d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472194"
 ---
 # <a name="transaction-processing"></a>Procesamiento de transacciones
 Un *transacciones* delimita el principio y al final de una serie de operaciones de acceso a datos que se ejecuta a través de una conexión. Sujeto a las capacidades transaccionales del origen de datos, el **conexión** objeto también le permite crear y administrar las transacciones. Por ejemplo, mediante el proveedor Microsoft OLE DB para SQL Server para tener acceso a una base de datos en Microsoft SQL Server, puede crear varias transacciones anidadas para los comandos que ejecute.  
@@ -30,7 +30,7 @@ Un *transacciones* delimita el principio y al final de una serie de operaciones 
   
  Si cancela la transacción, o si se produce un error en uno de sus operaciones, el resultado será como si ninguna de las operaciones en la transacción se ha producido. El origen de datos permanecerá tal como estaba antes del comienzo de la transacción.  
   
- ADO proporciona los siguientes métodos para controlar las transacciones: **BeginTrans**, **CommitTrans**, y **RollbackTrans**. Utilice estos métodos con un **conexión** objeto cuando desea guardar o cancelar una serie de cambios realizados en los datos de origen como una sola unidad. Por ejemplo, para transferir dinero entre cuentas, resta una cantidad de uno y agregue la misma cantidad a las demás. Si se produce un error, actualice las cuentas ya no están equilibradas. Realizar estos cambios en una transacción abierta, se garantiza que todos o ninguno de los cambios se pasen a través.  
+ ADO proporciona los métodos siguientes para controlar las transacciones: **BeginTrans**, **CommitTrans**, y **RollbackTrans**. Utilice estos métodos con un **conexión** objeto cuando desea guardar o cancelar una serie de cambios realizados en los datos de origen como una sola unidad. Por ejemplo, para transferir dinero entre cuentas, resta una cantidad de uno y agregue la misma cantidad a las demás. Si se produce un error, actualice las cuentas ya no están equilibradas. Realizar estos cambios en una transacción abierta, se garantiza que todos o ninguno de los cambios se pasen a través.  
   
 > [!NOTE]
 >  No todos los proveedores admiten transacciones. Compruebe que la propiedad definida por el proveedor "**DDL de transacción**" aparece en el **conexión** del objeto [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección, que indica que el proveedor admite transacciones. Si el proveedor no admite transacciones, al llamar a uno de estos métodos, devolverá un error.  

@@ -15,11 +15,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f8b291344939bcbafa7f91080837d2302efb1d0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62738561"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Enlace y transferencia de datos de valores de columnas y parámetros con valores de tabla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52521919"
 |*ValueType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE en APD.|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE en APD.<br /><br /> Debe ser SQL_C_DEFAULT o SQL_C_BINARY.|  
 |*ParameterType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE en IPD.|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE en IPD.<br /><br /> Debe ser SQL_SS_TABLE.|  
 |*ColumnSize*|SQL_DESC_LENGTH o SQL_DESC_PRECISION en IPD.<br /><br /> Esto depende del valor de *ParameterType*.|SQL_DESC_ARRAY_SIZE<br /><br /> También puede establecerse mediante el uso de SQL_ATTR_PARAM_SET_SIZE cuando el foco del parámetro está establecido en el parámetro con valores de tabla.<br /><br /> En el caso de un parámetro con valores de tabla, se trata del número de filas de los búferes de columna del parámetro con valores de tabla.|  
-|*ColumnSize*|SQL_DESC_PRECISION o SQL_DESC_SCALE en IPD.|Sin usar. Esto debe ser 0.<br /><br /> Si este parámetro será no 0, SQLBindParameter generará retorno SQL_ERROR y un registro de diagnóstico con SQLSTATE = HY104 y el mensaje "no válida precisión o escala".|  
+|*DecimalDigits*|SQL_DESC_PRECISION o SQL_DESC_SCALE en IPD.|Sin usar. Esto debe ser 0.<br /><br /> Si este parámetro será no 0, SQLBindParameter generará retorno SQL_ERROR y un registro de diagnóstico con SQLSTATE = HY104 y el mensaje "no válida precisión o escala".|  
 |*ParameterValuePtr*|SQL_DESC_DATA_PTR en APD.|SQL_CA_SS_TYPE_NAME.<br /><br /> Es opcional para las llamadas a procedimientos almacenados y puede especificarse NULL si no se requiere. Debe especificarse para las instrucciones SQL que no sean llamadas a procedimientos.<br /><br /> Este parámetro también actúa como un valor único que la aplicación puede usar para identificar este parámetro con valores de tabla cuando se usa el enlace de filas variable. Para obtener más información, consulte la sección "Enlace de filas variable de parámetros con valores de tabla" más adelante en este mismo tema.<br /><br /> Cuando se especifica un nombre de tipo de parámetro con valores de tabla en una llamada a SQLBindParameter, se debe especificar como un valor Unicode, incluso en las aplicaciones que se crean como aplicaciones ANSI. El valor utilizado para el parámetro *StrLen_or_IndPtr* debería ser SQL_NTS o la longitud de cadena del nombre multiplicada por sizeof (WCHAR).|  
 |*BufferLength*|SQL_DESC_OCTET_LENGTH en APD.|Longitud en bytes del nombre de tipo de parámetro con valores de tabla.<br /><br /> Puede ser SQL_NTS si el nombre de tipo termina en NULL, o 0 si no se requiere el nombre de tipo de parámetro con valores de tabla.|  
 |*StrLen_or_IndPtr*|SQL_DESC_OCTET_LENGTH_PTR en APD.|SQL_DESC_OCTET_LENGTH_PTR en APD.<br /><br /> En el caso de los parámetros con valores de tabla, es un recuento de filas en lugar de una longitud de datos.|  

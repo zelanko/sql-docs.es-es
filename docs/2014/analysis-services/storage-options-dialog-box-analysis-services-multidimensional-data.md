@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ad155eb0a7893b7c48fabb0ef7b8ba97373122e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758470"
 ---
 # <a name="storage-options-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Opciones de almacenamiento (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Opciones de almacenamiento** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para especificar el modo de almacenamiento personalizado, el almacenamiento en caché automático y las opciones de notificación para las dimensiones, los cubos, los grupos de medida y las particiones. Para ver el cuadro de diálogo **Opciones de almacenamiento** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , haga clic en **Opciones** en el cuadro de diálogo **Configuración de almacenamiento** . Para más información sobre el cuadro de diálogo **Opciones de almacenamiento**, vea [Cuadro de diálogo Configuración de almacenamiento&#40;Analysis Services - Datos multidimensionales&#41;](storage-settings-dialog-box-analysis-services-multidimensional-data.md).  

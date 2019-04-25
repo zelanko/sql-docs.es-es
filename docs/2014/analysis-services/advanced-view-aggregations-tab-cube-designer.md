@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12fcc899eb4cb60b6616949c51c44419cc5a20ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635447"
 ---
 # <a name="advanced-view-aggregations-tab-cube-designer"></a>Vista avanzada (pestaña Agregaciones, Diseñador de cubos)
   Utilice la **Vista avanzada** del diseñador de agregaciones para crear y modificar manualmente diseños de agregaciones y agregaciones individuales. Únicamente los usuarios avanzados deben utilizar esta vista.  

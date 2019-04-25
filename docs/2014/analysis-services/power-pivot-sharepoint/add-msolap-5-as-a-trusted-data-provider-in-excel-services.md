@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 354ca92c8ed66c7669863cc234fe4999ab95e662
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743301"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services
   MSOLAP.5 hace referencia al proveedor OLE DB de Analysis Services para SQL Server 2012. Excel Services debe confiar en este proveedor para que pueda realizar la solicitud de conexión que tiene como resultado la disponibilidad de los datos de PowerPivot en un servidor.  
@@ -25,7 +25,7 @@ ms.locfileid: "48051190"
   
  Solo necesita realizar este paso una vez para cada aplicación de servicios de Excel Services.  
   
- Cada servidor físico que controla una solicitud de datos PowerPivot, como un servidor PowerPivot para SharePoint o un servidor de Excel Services, debe tener instalado el proveedor OLE DB en el equipo. Una instalación de PowerPivot para SharePoint incluye siempre el proveedor OLE DB, pero si Excel Services se ejecuta en un equipo que no dispone de PowerPivot para SharePoint, debe instalar el proveedor manualmente. Para obtener más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
+ Cada servidor físico que controla una solicitud de datos PowerPivot, como un servidor PowerPivot para SharePoint o un servidor de Excel Services, debe tener instalado el proveedor OLE DB en el equipo. Una instalación de PowerPivot para SharePoint incluye siempre el proveedor OLE DB, pero si Excel Services se ejecuta en un equipo que no dispone de PowerPivot para SharePoint, debe instalar el proveedor manualmente. Para más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
 ## <a name="add-a-trusted-provider-to-excel-services"></a>Agregue un proveedor de confianza en Excel Services  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48051190"
   
 4.  Si no aparece, haga clic en **Agregar proveedor de datos de confianza**.  
   
-5.  Identificador de proveedor, escriba `MSOLAP.5`.  
+5.  En el identificador del proveedor, escriba `MSOLAP.5`.  
   
 6.  En Tipo de proveedor, asegúrese de que está seleccionado OLE DB.  
   

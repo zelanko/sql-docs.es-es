@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 05855af1bf6809c6977b22bfdb3915e4e6dbbe03
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469821"
 ---
 # <a name="lesson-6-create-measures"></a>Lección 6: Crear medidas
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -30,7 +30,7 @@ En esta lección, creará medidas escribiendo una fórmula DAX en la barra de f�
 Tiempo estimado para completar esta lección: **30 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
-Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 5: crear columnas calculadas](../analysis-services/lesson-5-create-calculated-columns.md).  
+Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 5: Crear columnas calculadas](../analysis-services/lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Crear medidas  
   
@@ -48,7 +48,7 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
   
     Observe que la celda superior izquierda ahora contiene un nombre de medida, **DaysCurrentQuarterToDate**, seguido del resultado, **92**.
     
-      ![como-tabular-lesson6-newmeasure](../analysis-services/media/as-tabular-lesson6-newmeasure.png) 
+      ![as-tabular-lesson6-newmeasure](../analysis-services/media/as-tabular-lesson6-newmeasure.png) 
     
     A diferencia de las columnas calculadas, con las fórmulas de medidas puede escribir el nombre de medida, seguido por una coma, seguida por la expresión de la fórmula.
 
@@ -75,7 +75,7 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
   
     La característica de autosuma crea automáticamente una medida para la columna seleccionada usando la fórmula estándar de agregación DistinctCount.  
     
-       ![como-tabular-lesson6-newmeasure2](../analysis-services/media/as-tabular-lesson6-newmeasure2.png)
+       ![as-tabular-lesson6-newmeasure2](../analysis-services/media/as-tabular-lesson6-newmeasure2.png)
   
 4.  En la cuadrícula de medidas, haga clic en la nueva medida y, a continuación, en el **propiedades** ventana, en **nombre de medida**, cambiar el nombre de la medida a **InternetDistinctCountSalesOrder**. 
  
@@ -86,14 +86,14 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
   
     |Nombre de medida|columna|Autosuma (∑)|Fórmula|  
     |----------------|----------|-----------------|-----------|  
-    |InternetOrderLinesCount|SalesOrderLineNumber|Count|=CountA([SalesOrderLineNumber])|  
-    |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
-    |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |InternetTotalSales|SalesAmount|SUM|=SUM([SalesAmount])|  
-    |InternetTotalMargin|Margen|SUM|=SUM([Margen])|  
-    |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
-    |InternetTotalFreight|Freight|SUM|=SUM([Cargos])|  
+    |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
+    |InternetTotalUnits|OrderQuantity|Sum|=SUM([OrderQuantity])|  
+    |InternetTotalDiscountAmount|DiscountAmount|Sum|=SUM([DiscountAmount])|  
+    |InternetTotalProductCost|TotalProductCost|Sum|=SUM([TotalProductCost])|  
+    |InternetTotalSales|SalesAmount|Sum|=SUM([SalesAmount])|  
+    |InternetTotalMargin|Margen|Sum|=SUM([Margen])|  
+    |InternetTotalTaxAmt|TaxAmt|Sum|=SUM([TaxAmt])|  
+    |InternetTotalFreight|Freight|Sum|=SUM([Cargos])|  
   
 2.  Al hacer clic en una celda vacía de la cuadrícula de medidas y mediante el uso de la barra de fórmulas, cree y asigne el nombre de las siguientes medidas en orden:  
   
@@ -124,6 +124,6 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
 Las medidas creadas para la tabla FactInternetSales pueden utilizarse para analizar datos financieros críticos como ventas, costos y margen de beneficio de los elementos definidos por el filtro seleccionado del usuario.  
   
 ## <a name="whats-next"></a>¿Qué sigue?
-Vaya a la siguiente lección: [lección 7: crear indicadores clave de rendimiento](../analysis-services/lesson-7-create-key-performance-indicators.md).  
+Vaya a la lección siguiente: [Lección 7: Creación de indicadores clave de rendimiento](../analysis-services/lesson-7-create-key-performance-indicators.md).  
 
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510324"
 ---
 # <a name="save-as"></a>Guardar como
   Utilice este cuadro de diálogo para guardar una instancia del elemento actual en una ubicación especificada y en un formato de archivo determinado. Para mostrar este cuadro de diálogo, haga clic en **guardar**  *\<archivo >* **como** en el **archivo** menú (donde  *\<archivo >* es el nombre del elemento actual), o bien presione ALT+F, A en el Editor de código.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bff71bc42e77a1f5a0f55875b7fdddb13a3e3964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468772"
 ---
 # <a name="odbc-component-files"></a>Archivos de componentes ODBC
 Cada componente de base de datos de escritorio de ODBC Drivers 4.0 requiere los archivos del controlador ODBC.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757966"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurar las propiedades de notificación para informes de Power View
   En esta lección complementaria, verá las propiedades de informes del proyecto Adventure Works Internet Sales Model. Las propiedades de informe facilitan a los usuarios finales la selección y presentación de datos del modelo en Power View. También establecerá las propiedades para ocultar ciertas columnas y tablas, y creará nuevos datos para usar en gráficos.  
@@ -161,7 +161,7 @@ ms.locfileid: "53363467"
      **Date**  
   
     > [!NOTE]  
-    >  Dado que la tabla Date se seleccionó como tabla de fechas de modelos con la opción Marcar como tabla de fechas, en la lección 7: Marcar como tabla de fechas y la columna Date de la tabla Date como la columna que se usa como identificador único, la propiedad Identificador de fila de la columna Date se establecerá automáticamente en True y no se puede cambiar. Cuando se usan funciones de inteligencia temporal en fórmulas DAX, debe especificar una tabla de fechas. En este modelo, creó una serie de medidas con las funciones de inteligencia temporal para calcular los datos de ventas para varios periodos como los trimestres anteriores y actuales y también para usarse en KPI. Para obtener más información sobre cómo especificar una tabla de fechas, vea [Especificar Marcar como tabla de fechas con inteligencia de tiempo &#40;SSAS tabular&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) en los Libros en pantalla de SQL Server.  
+    >  Dado que la tabla Date se seleccionó como tabla de fechas de los modelos mediante el uso de la marca como valor de la tabla de fecha, en la lección 7: Marcar como tabla de fechas y la columna de fecha en la tabla Date como la columna que se usará como el identificador único, la propiedad de identificador de fila de la columna Date se establecerá automáticamente en True y no se puede cambiar. Cuando se usan funciones de inteligencia temporal en fórmulas DAX, debe especificar una tabla de fechas. En este modelo, creó una serie de medidas con las funciones de inteligencia temporal para calcular los datos de ventas para varios periodos como los trimestres anteriores y actuales y también para usarse en KPI. Para obtener más información sobre cómo especificar una tabla de fechas, vea [Especificar Marcar como tabla de fechas con inteligencia de tiempo &#40;SSAS tabular&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) en los Libros en pantalla de SQL Server.  
   
     |columna|Property|Valor|  
     |------------|--------------|-----------|  

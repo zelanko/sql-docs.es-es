@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1f81429c6abc8ba1c3cb0936c5107cbf2d49bf11
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: MT
+ms.openlocfilehash: 92412bbde8a1032b34264ca254560f31704281e8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287303"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946661"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>Crear grupos de jerarquía recursiva (Generador de informes y SSRS)
   Para mostrar datos recursivos donde la relación entre elemento primario y secundario se representa mediante campos del conjunto de datos, puede establecer la expresión de grupo de región de datos basada en el campo secundario y establezca la propiedad Parent según el campo primario.  
@@ -34,7 +34,7 @@ ms.locfileid: "56287303"
  Para más información, vea [Agregar o eliminar un grupo en una región de datos &#40;Generador de informes y SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) y [Crear un grupo de jerarquía recursiva &#40;Generador de informes y SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md).  
   
 ### <a name="aggregate-functions-that-support-recursion"></a>Funciones de agregado que admiten recursividad  
- Puede usar funciones de agregado de Reporting Services que aceptan el parámetro *Recursive* para calcular los datos de resumen para una jerarquía recursiva. Las funciones siguientes aceptan `Recursive` como un parámetro: [Suma](report-builder-functions-sum-function.md), [Avg](report-builder-functions-avg-function.md), [recuento](report-builder-functions-count-function.md), [CountDistinct](report-builder-functions-countdistinct-function.md), [CountRows](report-builder-functions-countrows-function.md), [Max](report-builder-functions-max-function.md), [Min](report-builder-functions-min-function.md), [StDev](report-builder-functions-stdev-function.md), [StDevP](report-builder-functions-stdevp-function.md), [suma](report-builder-functions-sum-function.md), [Var](report-builder-functions-var-function.md), y [VarP](report-builder-functions-varp-function.md) . Para más información, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
+ Puede usar funciones de agregado de Reporting Services que aceptan el parámetro *Recursive* para calcular los datos de resumen para una jerarquía recursiva. Las funciones siguientes aceptan `Recursive` como un parámetro: ](report-builder-functions-sum-function.md)Sum[, ](report-builder-functions-avg-function.md)Avg[, ](report-builder-functions-count-function.md)Count[, ](report-builder-functions-countdistinct-function.md)CountDistinct[, ](report-builder-functions-countrows-function.md)CountRows[, ](report-builder-functions-max-function.md)Max[, ](report-builder-functions-min-function.md)Min[, ](report-builder-functions-stdev-function.md)StDev[, ](report-builder-functions-stdevp-function.md)StDevP[, ](report-builder-functions-sum-function.md)Sum[, ](report-builder-functions-var-function.md)Var[ y ](report-builder-functions-varp-function.md)VarP. Para más información, vea [Referencia a las funciones de agregado &#40;Generador de informes y SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Tablas, matrices y listas &#40;Generador de informes y SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   

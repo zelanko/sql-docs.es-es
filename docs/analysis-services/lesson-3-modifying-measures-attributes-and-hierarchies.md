@@ -1,5 +1,5 @@
 ---
-title: 'Lección 3: Modificar medidas, atributos y jerarquías | Documentos de Microsoft'
+title: 'Lección 3: Modificar medidas, atributos y jerarquías | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1a75fc19b3e6fca6520a1257cc979bf8f194cfa9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469472"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lección 3: Modificar medidas, atributos y jerarquías
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ En esta tarea, debe explorar los datos del cubo usando el explorador del Diseña
   
 ## <a name="see-also"></a>Vea también  
 [Escenario de Tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modelado multidimensional & #40; Tutorial de Adventure Works & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446692"
 ---
 # <a name="interface-conformance-levels"></a>Niveles de compatibilidad de interfaz
 El propósito de la redistribución es informar a la aplicación qué características están disponibles a él desde el controlador. Un esquema de nivelación de basadas en funciones no lo suficientemente lograr este objetivo. En ODBC 3. *x*, los controladores se clasifican según las características que poseen. Compatibilidad con la característica puede incluir compatibilidad con la función; También puede incluir compatibilidad con un campo descriptor, un atributo de instrucción, un valor "Y" para un tipo de información devolviendo por **SQLGetInfo**, y así sucesivamente.  

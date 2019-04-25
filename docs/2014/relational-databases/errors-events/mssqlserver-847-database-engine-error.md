@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bd85b72fc786d4aa807d73e57a69193b515067d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762805"
 ---
 # <a name="mssqlserver847"></a>MSSQLSERVER_847
     
@@ -29,7 +29,7 @@ ms.locfileid: "48135925"
 |Identificador del evento|847|  
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
-|Nombre simbólico|N/A|  
+|Nombre simbólico|N/D|  
 |Texto del mensaje|Se agotó el tiempo de espera mientras se esperaba el bloqueo temporal: clase '%ls', id. %p, tipo %d, Tarea 0x%p : %d, tiempo de espera %d, marcas 0x%I64x, tarea propietaria 0x%p. Esperando.|  
   
 ## <a name="explanation"></a>Explicación  

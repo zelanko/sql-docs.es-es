@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8eb98d7c17663894e1bacdc27e431d6a54f45d3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468672"
 ---
 # <a name="retrieving-results-basic"></a>Al recuperar los resultados (Basic)
 Un *conjunto de resultados* es un conjunto de filas del origen de datos que coincida con determinados criterios. Es una tabla conceptual que da como resultado de una consulta y que está disponible para una aplicación en formato tabular. **Seleccione** instrucciones, funciones de catálogo y algunos procedimientos para crear conjuntos de resultados. En el ejemplo siguiente, la primera instrucción SQL crea un conjunto que contiene todas las filas y todas las columnas de la tabla Orders de resultados y la segunda instrucción SQL crea un conjunto que contiene las columnas OrderID, vendedor y el estado de las filas de la tabla Orders de resultados en el que el estado es pendiente:  

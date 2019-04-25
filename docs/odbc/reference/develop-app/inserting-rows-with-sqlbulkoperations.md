@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b5dac8ae14f01dd464aab42eaed42480f1e715c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446806"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>Insertar filas con SQLBulkOperations
 Insertar datos con **SQLBulkOperations** es similar a la actualización de datos con **SQLBulkOperations** porque utiliza datos de los búferes de aplicación enlazadas.  

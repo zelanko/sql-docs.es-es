@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80be6994c7094b365bc24dd135bdda6ec4e561ab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468391"
 ---
 # <a name="scrollable-cursors"></a>Cursores desplazables
 En las aplicaciones modernas basadas en pantalla, el usuario se desplaza hacia atrás y hacia delante a través de los datos. Para tales aplicaciones, devolver a una fila capturada anteriormente es un problema. Una posibilidad consiste en Cerrar y volver a abrir el cursor y, a continuación, recuperar las filas hasta que llega a la fila requiere el cursor. Otra posibilidad consiste en leer el conjunto de resultados, lo almacena en caché localmente e implementar el desplazamiento en la aplicación. Ambas posibilidades bien solo funcionan con conjuntos de resultados pequeños y la posibilidad de este última es difícil de implementar. Una solución mejor es usar un *cursor desplazable,* que puede avanzar y retroceder en el conjunto de resultados.  

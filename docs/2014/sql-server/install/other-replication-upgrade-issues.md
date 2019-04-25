@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5ffde063d94f0e08ea0e82e6b5998a6d23cfaac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473186"
 ---
 # <a name="other-replication-upgrade-issues"></a>Otros problemas de actualización de replicación
   En este tema se analiza una serie de problemas de actualización que el Asesor de actualizaciones no notifica.  
@@ -50,7 +50,7 @@ ms.locfileid: "48200735"
   
 -   Todos los controles ActiveX están marcados como no seguros para scriptings e inicialización.  
   
--   Se ha quitado el control ActiveX de instantáneas. Puede crear y administrar instantáneas utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o mediante programación usando procedimientos almacenados de replicación. Para obtener más información, vea los temas "Cómo crear y aplicar la instantánea inicial ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])" y "Cómo crear la instantánea inicial (programación de la replicación con Transact-SQL)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Se ha quitado el control ActiveX de instantáneas. Puede crear y administrar instantáneas utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o mediante programación usando procedimientos almacenados de replicación. Para obtener más información, vea los temas "Cómo: Crear y aplicar la instantánea inicial ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) "y" Cómo: Crear la instantánea inicial (programación de replicación Transact-SQL) "en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
   
 -   El control ActiveX de distribución y el control ActiveX de mezcla han quedado desusados. Se proporciona una funcionalidad similar para las aplicaciones de código administrado mediante Replication Management Objects (RMO). Para obtener más información, vea "Sincronizar suscripciones (Programación con RMO)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

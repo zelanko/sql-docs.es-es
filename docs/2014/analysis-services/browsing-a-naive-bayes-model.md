@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 91d39b174a0febed1aa6fd57140412828adc843b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466197"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Examinar un modelo Bayes naive
   Al abrir un modelo de Naïve Bayes con **examinar**, el modelo se muestra en un visor interactivo con cuatro paneles diferentes. El visor se usa para explorar las correlaciones y obtener información sobre el modelo y los datos subyacentes.  

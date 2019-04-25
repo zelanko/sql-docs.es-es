@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c42a45ec20edbde61a2f1b7c5b026f3467cd2371
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468445"
 ---
 # <a name="lesson-12-analyze-in-excel"></a>Lección 12: Analizar en Excel
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -26,7 +26,7 @@ Para completar esta lección, Excel debe instalarse en el mismo equipo que SSDT.
 Tiempo estimado para completar esta lección: **20 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
-Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 11: crear Roles](../analysis-services/lesson-11-create-roles.md).  
+Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 11: Crear Roles](../analysis-services/lesson-11-create-roles.md).  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Examinar utilizando las perspectivas Predeterminada y Venta por Internet  
 En estas primeras tareas, examinará su modelo mediante el uso de ambos la perspectiva predeterminada, que incluye todos los objetos del modelo, y también mediante el uso de la perspectiva venta por Internet que anteriormente. La perspectiva Venta por Internet excluye el objeto de tabla Cliente.  
@@ -49,11 +49,11 @@ En estas primeras tareas, examinará su modelo mediante el uso de ambos la persp
   
 2.  En el cuadro de diálogo **Analizar en Excel** , mantenga seleccionado **Usuario de Windows actual** y, después, en el cuadro de lista desplegable **Perspectiva** , seleccione **Venta por Internet**y haga clic en **Aceptar**. 
     
-    ![como-tabular-lección 12-perspectiva](../analysis-services/media/as-tabular-lesson12-perspective.png)
+    ![as-tabular-lesson12-perspective](../analysis-services/media/as-tabular-lesson12-perspective.png)
     
 3.  En Excel, en **PivotTable Fields**, tenga en cuenta la tabla DimCustomer se excluye de la lista de campos.  
     
-    ![como tabulares-lección 12-campos](../analysis-services/media/as-tabular-lesson12-fields.png)
+    ![as-tabular-lesson12-fields](../analysis-services/media/as-tabular-lesson12-fields.png)
     
 4.  Cierre Excel sin guardar el libro.  
   
@@ -71,7 +71,7 @@ Los roles son una parte integral de cualquier modelo tabular. Sin al menos un ro
 3.  Cierre Excel sin guardar el libro.  
   
 ## <a name="whats-next"></a>¿Qué sigue?
-Vaya a la siguiente lección: [lección 13: implementar](../analysis-services/lesson-13-deploy.md).
+Vaya a la lección siguiente: [Lección 13: Implementar](../analysis-services/lesson-13-deploy.md).
 
   
   

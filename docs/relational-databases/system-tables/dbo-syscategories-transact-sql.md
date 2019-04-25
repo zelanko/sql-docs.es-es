@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ee0509469f7a9bddca066a6e05416a13685ad9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470929"
 ---
 # <a name="dbosyscategories-transact-sql"></a>dbo.syscategories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47703523"
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Id. de la categoría.|  
 |**category_class**|**int**|Tipo de elemento en la categoría:<br /><br /> **1** = trabajo<br /><br /> **2** = alerta<br /><br /> **3** = (operador)|  
-|**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = local<br /><br /> **2** = multiservidor<br /><br /> **3** = ninguno|  
+|**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = Local<br /><br /> **2** = multiservidor<br /><br /> **3** = ninguno|  
 |**Nombre**|**sysname**|Nombre de la categoría|  
   
   

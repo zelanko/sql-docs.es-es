@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6472ff165894937d31366e47651ada64af38ae1b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767947"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Revisar asignación de tipos de datos (Asistente para importación y exportación de SQL Server)
   Use la **Revisar asignación de tipos de datos** página para revisar información detallada sobre las conversiones de tipos de datos que el asistente tiene que realizar para hacer que los datos de origen sean compatibles con el destino. Esta información incluye indicaciones visuales para distinguir las conversiones que se espera que sean correctas de las que podrían producir errores o truncamientos. En cada conversión puede decidir si aceptar la conversión que el asistente sugiere, y especificar cómo administrar los errores que se produzcan.  

@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467285"
 ---
 # <a name="atomic-blocks"></a>Bloques atomic
   `BEGIN ATOMIC` es parte del estándar ANSI SQL. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los bloques atomic solo en el nivel superior de los procedimientos almacenados compilados de forma nativa.  
@@ -123,7 +123,7 @@ ORDER BY c1
 GO  
 ```  
   
- Los mensajes de error siguientes específicos de las tablas optimizadas para memoria invalidan las transacciones. Si se producen en el ámbito de un bloque ATOMIC, harán que la transacción se interrumpa: 10772, 41301, 41302, 41305, 41325, 41332 y 41333.  
+ Los mensajes de error siguientes específicos de las tablas optimizadas para memoria invalidan las transacciones. Si se producen en el ámbito de un bloque atomic, hará que la transacción se anule: 10772, 41301, 41302, 41305, 41325, 41332 y 41333.  
   
 ## <a name="session-settings"></a>Configuración de la sesión  
  Los parámetros de configuración de sesión de los bloques atomic son fijos cuando se compila el procedimiento almacenado. Algunos parámetros se pueden especificar con `BEGIN ATOMIC`, mientras que otros están fijos siempre en el mismo valor.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a2f507e9f22e4d090407b0b0849f69a8e7914e8d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469147"
 ---
 # <a name="lesson-11-create-roles"></a>Lección 11: Crear roles
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -51,7 +51,7 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
   
 4.  En la columna **Permisos** , haga clic en la lista desplegable y, después, seleccione el permiso **Lectura** . 
 
-    ![como-tabular-lesson11-nueva-role](../analysis-services/media/as-tabular-lesson11-new-role.png) 
+    ![as-tabular-lesson11-new-role](../analysis-services/media/as-tabular-lesson11-new-role.png) 
   
 5.  Opcional: Haga clic en el **miembros** pestaña y, a continuación, haga clic en **agregar**. En el cuadro de diálogo **Seleccionar usuario o grupo** , especifique los usuarios o grupos de Windows de su organización que quiera incluir en el rol.  
   
@@ -70,7 +70,7 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
     ```
     
     Una fórmula de filtro de fila se debe resolver como un valor booleano (TRUE o FALSE). Con esta fórmula, está especificando que solo las filas con el valor del código de región del país "US" sea visible para el usuario.  
-    ![como-tabular-lesson11-rol-filter](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
+    ![as-tabular-lesson11-role-filter](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
   
 6.  Opcional: Haga clic en la pestaña **Miembros** y luego en **Agregar**. En el cuadro de diálogo **Seleccionar usuario o grupo** , especifique los usuarios o grupos de Windows de su organización que quiera incluir en el rol.  
   

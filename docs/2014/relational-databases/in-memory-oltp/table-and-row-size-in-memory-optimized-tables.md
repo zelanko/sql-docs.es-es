@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4d8fc3b59d3296a2996d37a190dc5c8e075744a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466057"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamaño de tabla y fila de las tablas con optimización para memoria
   Una tabla optimizada para memoria consta de una colección de filas e índices que contienen punteros a las filas. En una tabla optimizada para memoria, las filas no pueden ser mayores de 8060 bytes. Conocer el tamaño de una tabla optimizada para memoria le ayudará a saber si el equipo tiene memoria suficiente.  

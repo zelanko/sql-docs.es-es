@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dce19cfa521bcf14c2d42ef932083de8deea72fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465769"
 ---
 # <a name="lock-a-version-master-data-services"></a>Bloquear una versión (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52757767"
 > [!NOTE]  
 >  Aunque se bloquee una versión, los superusuarios y administradores del modelo pueden continuar agregando, modificando y quitando miembros. Otros usuarios con permiso en el modelo solo pueden ver los miembros.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
@@ -49,13 +49,13 @@ ms.locfileid: "52757767"
   
 4.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   [Validar una versión con las reglas de negocios &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 -   [Confirmar una versión &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Versiones &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [Desbloquear una versión &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)  
   

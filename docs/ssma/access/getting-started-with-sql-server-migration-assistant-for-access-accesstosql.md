@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759924"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Introducción a SQL Server Migration Assistant para Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para el acceso, podrá convertir rápidamente objetos de base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o los objetos de base de datos de SQL Azure, cargue los objetos resultantes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL DB, y migrar datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL DB. Si es necesario, también puede vincular las tablas de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en las tablas de base de datos de SQL Azure para que pueda continuar usar las aplicaciones de front-end de Access existentes con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL DB.  
@@ -88,7 +88,7 @@ Puede usar SQL Server o el Explorador de metadatos de base de datos de SQL Azure
 Para obtener más información, consulte [cargar objetos de base de datos para convertir a SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md).  
   
 ### <a name="metadata"></a>Metadatos  
-A la derecha de cada explorador de metadatos son las pestañas que describen el objeto seleccionado. Por ejemplo, si selecciona una tabla en el Explorador de metadatos de acceso, aparecen cuatro pestañas: **tabla**, **Type Mapping**, **propiedades**, y **datos** . Si selecciona una tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparecen tres pestañas de explorador de metadatos: **tabla**, **SQL**, y **datos**.  
+A la derecha de cada explorador de metadatos son las pestañas que describen el objeto seleccionado. Por ejemplo, si selecciona una tabla en el Explorador de metadatos de acceso, aparecen cuatro pestañas: **Tabla**, **asignación de tipos de**, **propiedades**, y **datos**. Si selecciona una tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparecen tres pestañas de explorador de metadatos: **Tabla**, **SQL**, y **datos**.  
   
 La mayoría de los metadatos configuración es de solo lectura. Sin embargo, puede modificar los metadatos siguientes:  
   
@@ -120,7 +120,7 @@ SSMA contiene los siguientes menús:
 |--------|---------------|  
 |**Archivo**|Contiene comandos para el Asistente para migración, trabajar con proyectos, agregar y quitar el acceso a los archivos de base de datos y conectar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL DB.|  
 |**Editar**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] desde el panel de detalles SQL. Para abrir el **administrar marcadores** cuadro de diálogo, en el menú Edición, haga clic en Administrar marcadores. En el cuadro de diálogo, verá una lista de los marcadores existentes. Puede usar los botones en el lado derecho del cuadro de diálogo para administrar los marcadores.|  
-|**Ver**|Contiene el **sincronizar metadatos Explorers** comando. Esto sincroniza los objetos entre el Explorador de metadatos de acceso y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el Explorador de metadatos de base de datos de SQL Azure. También contiene comandos para mostrar y ocultar el **salida** y **lista de errores** paneles y una opción **diseños** para administrar con los diseños.|  
+|**Vista**|Contiene el **sincronizar metadatos Explorers** comando. Esto sincroniza los objetos entre el Explorador de metadatos de acceso y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el Explorador de metadatos de base de datos de SQL Azure. También contiene comandos para mostrar y ocultar el **salida** y **lista de errores** paneles y una opción **diseños** para administrar con los diseños.|  
 |**Herramientas**|Contiene comandos para crear informes, exportar datos, migración de datos y objetos, vincular tablas y proporciona acceso global y la configuración del proyecto de cuadros de diálogo.|  
 |**Ayuda**|Proporciona acceso para ayudar a SSMA y a la **sobre** cuadro de diálogo.|  
   

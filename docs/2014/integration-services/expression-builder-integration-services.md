@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b0b6aa04e1e4fd9d578a60a1f821e91b0f02131
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769711"
 ---
 # <a name="expression-builder-integration-services"></a>Generador de expresiones (Integration Services)
   El cuadro de diálogo **Generador de expresiones** proporciona una interfaz gráfica de usuario para generar las expresiones usadas por las expresiones de propiedades. Puede tener acceso al cuadro de diálogo **Generador de expresiones** desde los cuadros de diálogo de tareas personalizadas del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] y desde la ventana **Propiedades** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

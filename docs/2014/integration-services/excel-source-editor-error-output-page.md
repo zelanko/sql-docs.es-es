@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a8dd63e2e3d75c1d56c7c930fe5dfc53cf67228
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769581"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Editor de origen de Excel (página Salida de error)
   Utilice la página **Salida de error** del cuadro de diálogo **Editor de origen de Excel** para seleccionar opciones de control de errores y establecer las propiedades en las columnas de salida de errores.  

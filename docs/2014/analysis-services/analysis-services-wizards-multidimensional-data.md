@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d86c15a57b296572d42ef4ac6122e69d271e7e2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643719"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Asistentes de Analysis Services (Datos multidimensionales)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona asistentes para usarlos en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. En la tabla siguiente se describen los asistentes disponibles.  
@@ -38,7 +38,7 @@ ms.locfileid: "48189755"
 |[Asistente para objetos vinculados (Ayuda F1)](linked-object-wizard-f1-help.md)|Use el Asistente para objetos vinculados para definir una dimensión vinculada o un grupo de medida y, opcionalmente, importar objetos relacionados.|  
 |[Partición de la Ayuda F1 del Asistente para &#40;Analysis Services - datos multidimensionales&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)|Use el Asistente para particiones para definir una partición o una partición remota.|  
 |[Ayuda F1 de Asistente para generación de esquema &#40;Analysis Services - datos multidimensionales&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)|Use el Asistente para generar esquemas para definir una vista del origen de datos y, opcionalmente, generar el script del esquema relacional de la vista del origen de datos para un origen de datos, a partir de un objeto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] existente.|  
-|[Asistente para optimización basada en el uso (Ayuda F1)](usage-based-optimization-wizard-f1-help.md)|Use el Asistente para optimización basada en el uso para definir agregaciones a un diseño de agregaciones basado en consultas almacenadas en el registro de consultas de una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|[Asistente para optimización basada en el uso (Ayuda F1)](usage-based-optimization-wizard-f1-help.md)|Use el Asistente para optimización basada en el uso para definir agregaciones a un diseño de agregaciones basado en consultas almacenadas en el registro de consultas de una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Vea también  
  [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

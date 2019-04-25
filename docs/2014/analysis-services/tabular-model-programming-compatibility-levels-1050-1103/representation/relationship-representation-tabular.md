@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5acdc8b4e265ee2ebf6d6ffa4e3cc3e65a9b73b6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757733"
 ---
 # <a name="relationship-representation-tabular"></a>Representación de relaciones (tabular)
   Una relación es una conexión entre dos tablas de datos. La relación establece cómo se deben relacionar los datos de las dos tablas.  

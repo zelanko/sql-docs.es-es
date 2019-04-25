@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633020"
 ---
 # <a name="text-file-format-text-file-driver"></a>Formato de archivo de texto (controlador de archivo de texto)
 El controlador de texto de ODBC admite tanto archivos de texto de ancho fijo y delimitado. Un archivo de texto consta de una línea de encabezado opcional y cero o más líneas de texto.  
@@ -41,8 +41,8 @@ El controlador de texto de ODBC admite tanto archivos de texto de ancho fijo y d
 |Formato|Representación|  
 |------------|--------------------|  
 |No cursiva|Caracteres que deben escribirse tal como se muestra|  
-|*Cursiva*|Argumentos que se definen en otro lugar en la gramática|  
-|corchetes ([])|Elementos opcionales|  
+|*italics*|Argumentos que se definen en otro lugar en la gramática|  
+|brackets ([])|Elementos opcionales|  
 |las llaves ({})|Una lista de opciones mutuamente exclusivas|  
 |barras verticales (&#124;)|Opciones mutuamente excluyentes independientes|  
 |botón de puntos suspensivos (...)|Elementos que se pueden repetir una o más veces|  

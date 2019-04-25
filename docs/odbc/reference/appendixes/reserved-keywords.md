@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628900"
 ---
 # <a name="reserved-keywords"></a>Palabras clave reservadas
 Las siguientes palabras están reservadas para su uso en llamadas a funciones de ODBC. Estas palabras no restringen la gramática mínima de SQL; Sin embargo, para garantizar la compatibilidad con controladores que admiten la gramática básica de SQL, las aplicaciones deben evitar el uso de cualquiera de estas palabras clave. El número**definir** valor SQL_ODBC_KEYWORDS contiene una lista separada por comas de estas palabras clave.  
@@ -79,7 +79,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|real|  
+|CURSOR|REAL|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -89,7 +89,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|Delete|SECOND|  
+|SUPRIMIR|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
@@ -98,7 +98,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |DISTINCT|SIZE|  
 |DOMAIN|SMALLINT|  
 |DOUBLE|SOME|  
-|DROP|ESPACIO|  
+|DROP|SPACE|  
 |ELSE|SQL|  
 |END|SQLCA|  
 |END-EXEC|SQLCODE|  

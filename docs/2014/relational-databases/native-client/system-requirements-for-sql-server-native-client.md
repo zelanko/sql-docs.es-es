@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad87b38ade044414062eba03e94dee415c53fc7e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637838"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Requisitos del sistema para SQL Server Native Client
   Para utilizar las características de acceso a datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como MARS, debe tener instalado el software siguiente:  
@@ -67,12 +67,12 @@ ms.locfileid: "53365127"
 |Tipo de datos|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC y<br /><br /> aplicaciones OLE DB de SQL Server Native Client con DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|Imagen|  
-|ntext|varchar|varchar|Texto|  
+|varbinary(max)|varbinary|varbinary|Image|  
+|ntext|varchar|varchar|Text|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
-|xml|xml|xml|Ntext|  
-|CLR UDT (> 8Kb)|udt|varbinary|Imagen|  
-|Date|Date|varchar|Varchar|  
+|Xml|Xml|Xml|Ntext|  
+|UDT de CLR (> 8Kb)|udt|varbinary|Image|  
+|date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  

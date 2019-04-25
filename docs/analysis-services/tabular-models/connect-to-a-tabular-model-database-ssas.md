@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 239559dc7d5bfdabe3a3f9060bc92059982c8dae
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469497"
 ---
 # <a name="connect-to-a-tabular-model-database"></a>Conectarse a una base de datos de modelo tabular  
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -91,11 +91,11 @@ ms.locfileid: "53072422"
   
  Al importar datos, este error de Microsoft Excel se produce al intentar usar el Asistente para conectarse a una base de datos de modelo tabular en un servidor remoto de Analysis Services, y no tiene permisos suficientes. Para resolver este error, debe tener derechos de acceso de usuario en la base de datos. Consulte las instrucciones proporcionadas anteriormente en este tema para conceder al usuario acceso a los datos.  
   
- **Error al intentar establecer una conexión con el origen de datos externo. No se pudieron actualizar las siguientes conexiones: \<nombre de modelo > espacio aislado**  
+ **Se produjo un error durante un intento para establecer una conexión al origen de datos externo. No se pudieron actualizar las siguientes conexiones: \<nombre de modelo > espacio aislado**  
   
  En SharePoint, este error de Microsoft Excel tiene lugar cuando se intenta llevar a cabo una interacción con los datos, por ejemplo filtrar los datos, en una tabla dinámica que utilice datos del modelo. El error se produce porque no tiene los permisos necesarios en el servidor de Analysis Services remoto. Para resolver este error, debe tener derechos de acceso de usuario en la base de datos. Consulte las instrucciones proporcionadas anteriormente en este tema para conceder al usuario acceso a los datos.  
   
- **Error al intentar realizar esta operación. Volver a cargar el libro y, a continuación, intente realizar de nuevo la operación.**  
+ **Se produjo un error al intentar realizar esta operación. Volver a cargar el libro y, a continuación, intente realizar de nuevo la operación.**  
   
  En SharePoint, este error de Microsoft Excel tiene lugar cuando se intenta llevar a cabo una interacción con los datos, por ejemplo filtrar los datos, en una tabla dinámica que utilice datos del modelo. El error se produce porque Excel Services no es de confianza para la instancia de Analysis Services en la que se implementan los datos del modelo. Para resolver este error, conceda a Excel Services permisos administrativos en la instancia de Analysis Services. Consulte las instrucciones proporcionadas anteriormente en este tema para conceder permisos de administrador. Si el error persiste, recicle el grupo de aplicaciones de Excel Services.  
   

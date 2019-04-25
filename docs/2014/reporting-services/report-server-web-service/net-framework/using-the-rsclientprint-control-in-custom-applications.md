@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62519125"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usar el control RSClientPrint en aplicaciones personalizadas
   El control ActiveX de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] **RSPrintClient** proporciona impresión del lado cliente para los informes mostrados en el Visor HTML. Proporciona un cuadro de diálogo **Imprimir** para que un usuario pueda iniciar un trabajo de impresión, obtener una vista previa de un informe, especificar las páginas que se van a imprimir y cambiar los márgenes. Durante una operación de impresión del lado cliente, el servidor de informes representa el informe en la extensión de representación en imágenes (EMF) y utiliza las capacidades de impresión del sistema operativo para crear el trabajo de impresión y enviarlo a una impresora.  

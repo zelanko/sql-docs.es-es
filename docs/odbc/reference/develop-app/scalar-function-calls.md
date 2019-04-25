@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468802"
 ---
 # <a name="scalar-function-calls"></a>Llamadas a funciones escalares
 Funciones escalares devuelven un valor para cada fila. Por ejemplo, la función escalar del valor absoluto toma una columna numérica como argumento y devuelve el valor absoluto de cada valor de la columna. Es la secuencia de escape para llamar a una función escalar  
   
- **{fn**_función escalar_ **}**  
+ **{fn**  _scalar-function_ **}**  
   
  donde *función escalar* es una de las funciones enumeradas en [Apéndice E: Funciones escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Para obtener más información acerca de la secuencia de escape de la función escalar, vea [secuencia de Escape de función escalar](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) en el apéndice C: Gramática de SQL.  
   
@@ -43,7 +43,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  Para obtener la máxima interoperatividad, las aplicaciones deben usar el **convertir** función escalar para asegurarse de que el resultado de una función escalar es el tipo requerido. El **convertir** función convierte los datos de un tipo de datos SQL en el tipo de datos SQL especificado. La sintaxis de la **convertir** es la función  
   
- **CONVERTIR (** _value_exp_ **,** _data_type_**)**  
+ **CONVERT(** _value_exp_ **,** _data_type_**)**  
   
  donde *value_exp* es un nombre de columna, el resultado de otra función escalar o un valor literal, y *data_type* es una palabra clave que coincida con el **#define** nombre utilizado por un Identificador de tipo de datos SQL tal como se define en [apéndice D: Tipos de datos](../../../odbc/reference/appendixes/appendix-d-data-types.md). Por ejemplo, la siguiente instrucción SQL utiliza el **convertir** función para asegurarse de que la salida de la **CURDATE** función es una fecha, en lugar de una marca de tiempo o caracteres de datos:  
   

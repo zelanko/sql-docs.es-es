@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27e16c4c353aecb14e29e590bf42241078e0cf11
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469350"
 ---
 # <a name="set-domain-properties"></a>Establecer las propiedades de dominio
 
@@ -33,7 +33,7 @@ ms.locfileid: "56030006"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para establecer las propiedades de un dominio.  
   
 ##  <a name="Set"></a> Establecer las propiedades de dominio  

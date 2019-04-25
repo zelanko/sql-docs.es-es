@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: fdac0b6ed211e223c3fad7ba15ac79a282c61303
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509527"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>Configurar el almacenamiento de datos paralelos para copias de la tabla remota
 Describe cómo configurar SQL Server PDW para usar la característica de copia de la tabla remota para copiar tablas de bases de datos de SQL Server de SMP en servidores que no sea de dispositivo.  

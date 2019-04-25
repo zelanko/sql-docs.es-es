@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 939342a85ed657faa645c593018cbf39042031c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625832"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>Uso de repositorios de prueba (SybaseToSQL)
 Los almacenes de repositorio de pruebas de SSMA SSMA evaluador casos de prueba y los resultados de pruebas para su uso posterior. Los datos del repositorio se guardan en las tablas de SQL Server **TestCaseRepository** y **RunTestCaseResultRepository** en el esquema **ssma_sybase_utilities** de **ssmatesterdb_syb** base de datos.  

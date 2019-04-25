@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 409a541929e27a8076f2ab56cb95d928915c6eb7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631289"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de cuadro de texto, Alineación (Generador de informes y SSRS)
   Seleccione **Alineación** en el cuadro de diálogo **Propiedades de cuadro de texto** para situar los valores dentro de la celda o región de datos seleccionada.  

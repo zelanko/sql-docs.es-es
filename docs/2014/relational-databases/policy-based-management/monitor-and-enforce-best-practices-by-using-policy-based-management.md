@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626052"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas
   La administración basada en directivas permite supervisar los procedimientos recomendados para el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Proporciona un conjunto de archivos de directivas que puede importar como mejor las directivas de prácticas y, a continuación, evalúa las directivas con un conjunto de destinos que incluye instancias, objetos de instancia, bases de datos u objetos de base de datos. Puede evaluar manualmente las directivas y establecer directivas para evaluar un conjunto de destinos según una programación o para evaluar un conjunto de destinos según un evento. Para obtener más información sobre la administración basada en directivas, vea [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md).  

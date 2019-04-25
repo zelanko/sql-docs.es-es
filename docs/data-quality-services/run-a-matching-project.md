@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 72d0d4c0af1b09c8cad4ab6ab5ab6636fd302e4f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469413"
 ---
 # <a name="run-a-matching-project"></a>Ejecutar un proyecto de coincidencia
 
@@ -42,10 +42,10 @@ ms.locfileid: "56015436"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para ejecutar un proyecto de búsqueda de coincidencias.  
   
-##  <a name="StartingaMatchingProject"></a> Primer paso: Iniciar un proyecto de búsqueda de coincidencias  
+##  <a name="StartingaMatchingProject"></a> Primer paso: A partir de un proyecto de coincidencia  
  Realizará la actividad de búsqueda de coincidencias en un proyecto de calidad de datos que creará en la aplicación cliente DQS.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -183,11 +183,11 @@ ms.locfileid: "56015436"
   
 -   **Valores totales**: número total de valores existentes en los campos.  
   
--   **Nuevos valores**: número total de valores que son nuevos desde la ejecución anterior y su porcentaje del total.  
+-   **Nuevos valores**: número total de valores que son nuevos desde la ejecución anterior y su porcentaje del total  
   
--   **Valores únicos**: número total de valores únicos existentes en los campos y su porcentaje del total.  
+-   **Valores únicos**: número total de valores únicos existentes en los campos y su porcentaje del total  
   
--   **Nuevos valores únicos**: número total de valores únicos que son nuevos en los campos y su porcentaje del total.  
+-   **Nuevos valores únicos**: número total de valores únicos que son nuevos en los campos y su porcentaje del total  
   
  Las estadísticas del campo incluyen las siguientes:  
   

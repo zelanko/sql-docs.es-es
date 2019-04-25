@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfbe388f6320ba81dd2be38bf315f05326008235
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632348"
 ---
 # <a name="filestream-support-odbc"></a>Compatibilidad con FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47637753"
  Si se llama a SQLFetch en una columna enlazada, recibirá una advertencia "datos truncados" si el búfer no es suficientemente grande como para contener el valor completo. Omita esta advertencia y actualizar los datos en esta columna enlazada con llamadas SQLParamData y SQLPutData. Puede actualizar los datos FILESTREAM mediante el uso de SQLSetPos si está enlazada con SQLBindCol.  
   
 ## <a name="example"></a>Ejemplo  
- Las columnas FILESTREAM se comportan exactamente igual que **varbinary (max)** columnas, pero sin un tamaño límite. Se enlazan como SQL_VARBINARY. (SQL_LONGVARBINARY se utiliza con columnas de imagen y hay restricciones en este tipo. Por ejemplo, SQL_LONGVARBINARY no se puede utilizar como un parámetro de salida.) En los ejemplos siguientes se muestra el acceso NTFS directo para las columnas FILESTREAM. En estos ejemplos se entiende que se ha ejecutado el siguiente código [!INCLUDE[tsql](../../../includes/tsql-md.md)] en la base de datos:  
+ Las columnas FILESTREAM se comportan exactamente igual que **varbinary (max)** columnas, pero sin un tamaño límite. Se enlazan como SQL_VARBINARY. (SQL_LONGVARBINARY se utiliza con columnas de imagen y hay restricciones en este tipo. Por ejemplo, SQL_LONGVARBINARY no se puede utilizar como un parámetro de salida.) Los ejemplos siguientes muestran el acceso NTFS directo para las columnas FILESTREAM. En estos ejemplos se entiende que se ha ejecutado el siguiente código [!INCLUDE[tsql](../../../includes/tsql-md.md)] en la base de datos:  
   
 ```  
 CREATE TABLE fileStreamDocs(  

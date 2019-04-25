@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43ef41affecd131626da17ec7d608249437abed6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626519"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>Metadatos de parámetros con valores de tabla para instrucciones preparadas
   Una aplicación puede obtener los metadatos de una llamada a procedimiento preparada a través de SQLNumParams y SQLDescribeParam. Para los parámetros con valores de tabla, *DataTypePtr* está establecido en SQL_SS_TABLE. Metadatos adicionales están disponible a través de SQLGetDescField para SQL_CA_SS_TYPE_NAME, SQL_CA_SS_CATALOG_NAME y SQL_CA_SS_SCHEMA_NAME.  

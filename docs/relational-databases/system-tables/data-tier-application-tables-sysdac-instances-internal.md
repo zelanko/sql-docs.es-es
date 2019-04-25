@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1e30db7b31a0a29a5e78e7fc5876f43764d66a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471120"
 ---
 # <a name="data-tier-application-tables---sysdacinstancesinternal"></a>Tablas de aplicación de capa de datos: sysdac_instances_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47827383"
 |instance_id|**uniqueidentifier**|Identificador de la instancia de DAC.|  
 |nombre_instancia|**sysname**|Nombre de la instancia de DAC especificada cuando se implementó la instancia.|  
 |type_name|**sysname**|Nombre de la DAC especificada cuando se creó el paquete DAC.|  
-|type_version|**Nvarchar (64)**|Versión de la DAC especificada cuando se creó el paquete DAC.|  
+|type_version|**nvarchar(64)**|Versión de la DAC especificada cuando se creó el paquete DAC.|  
 |description|**nvarchar(4000)**|Descripción de la DAC escrita cuando se creó el paquete DAC.|  
 |type_stream|**varbinary(max)**|Flujo de bits que contiene la representación codificada de los objetos lógicos, como tablas y vistas, contenidos en la DAC.|  
 |date_created|**datetime**|Fecha y hora en que se creó la instancia de DAC.|  

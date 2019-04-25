@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54cf9a13396674c2ac9dd43845c94d7ac657f008
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506356"
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_dbmmonitorresults database_name
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nombre de una base de datos reflejada.|  
-|**Rol**|**int**|Rol de creación de reflejos actual de la instancia del servidor:<br /><br /> 1 = Entidad de seguridad<br /><br /> 2 = Reflejo|  
+|**role**|**int**|Rol de creación de reflejos actual de la instancia del servidor:<br /><br /> 1 = Entidad de seguridad<br /><br /> 2 = Reflejo|  
 |**mirroring_state**|**int**|Estado de la base de datos:<br /><br /> 0 = suspensión<br /><br /> 1 = desconectada<br /><br /> 2 = En proceso de sincronización<br /><br /> 3 = Pendiente de conmutación por error<br /><br /> 4 = Sincronizada|  
 |**witness_status**|**int**|El estado de conexión del testigo en la sesión de creación de reflejo de la base de datos puede ser:<br /><br /> 0 = Desconocido<br /><br /> 1 = Conectado<br /><br /> 2 = Desconectado|  
 |**log_generation_rate**|**int**|Cantidad (en kilobytes/seg.) de registro generado desde la actualización anterior del estado de la creación de reflejos de esta base de datos.|  

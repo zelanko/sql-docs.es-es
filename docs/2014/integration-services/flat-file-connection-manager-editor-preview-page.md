@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5069000307f1cc677437cd1313e493015a774664
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768311"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>Editor del administrador de conexiones de archivos planos (página Vista previa)
   Utilice el nodo **Vista previa** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** para ver el contenido del archivo de origen en formato tabular.  

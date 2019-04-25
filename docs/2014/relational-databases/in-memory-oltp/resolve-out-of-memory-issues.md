@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468361"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memoria insuficiente
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] usa más memoria y de maneras diferentes que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es posible que la cantidad de memoria que instaló y asignó para [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no sea suficiente para sus necesidades en crecimiento. En ese caso, podría quedarse sin memoria. En este tema se describe cómo recuperarse de una situación de OOM (memoria insuficiente). Vea [Supervisar y solucionar problemas del uso de la memoria](monitor-and-troubleshoot-memory-usage.md) para obtener instrucciones específicas que pueden ayudarle a evitar muchas situaciones de memoria insuficiente.  
@@ -29,7 +29,7 @@ ms.locfileid: "58527897"
 | [Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Se indica lo que debe hacer si aparece el mensaje de error "No se permiten asignaciones de páginas para la base de datos "*\<nombreDeBaseDeDatos>*" debido a memoria insuficiente en el grupo de recursos "*\<nombreDeGrupoDeRecursos>*". ..." cuando hay suficiente memoria disponible para la operación.|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>Resolver errores de restauración de bases de datos debidos a memoria insuficiente  
- Cuando intenta restaurar una base de datos, es posible que obtenga el mensaje de error: "Error de base de datos de la operación de restauración '*\<databaseName >*'debido a memoria insuficiente en el grupo de recursos'*\<Nombredegrupoderecursos >*'." Antes de poder restaurar correctamente la base de datos, debe resolver el problema de memoria insuficiente aumentando la memoria disponible.  
+ Cuando se intenta restaurar una base de datos obtendrá el mensaje de error: "Error de base de datos de la operación de restauración '*\<databaseName >*'debido a memoria insuficiente en el grupo de recursos'*\<Nombredegrupoderecursos >*'." Antes de poder restaurar correctamente la base de datos, debe resolver el problema de memoria insuficiente aumentando la memoria disponible.  
   
  Para resolver el error de recuperación debido a memoria insuficiente, aumente la memoria disponible mediante alguno de estos medios (o todos ellos) para incrementar temporalmente la memoria disponible para la operación de recuperación.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "58527897"
   
     > [!IMPORTANT]  
     >  Si el servidor se está ejecutando en una máquina virtual y no está dedicado, establezca el valor de MIN_MEMORY_PERCENT en el mismo valor que MAX_MEMORY_PERCENT.   
-    > Vea el tema [Prácticas recomendadas: Usar OLTP en memoria en un entorno de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información.  
+    > Vea el tema [prácticas recomendadas: Usar OLTP en memoria en un entorno de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información.  
   
     ```sql  
   
@@ -105,7 +105,7 @@ Este fragmento de código cambia el valor MAX_MEMORY_PERCENT para el grupo de re
   
 > [!IMPORTANT]  
 >  Si el servidor se está ejecutando en una máquina virtual y no está dedicado, establezca el valor de MIN_MEMORY_PERCENT en el mismo valor que MAX_MEMORY_PERCENT.   
-> Vea el tema [Prácticas recomendadas: Usar OLTP en memoria en un entorno de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información.  
+> Vea el tema [prácticas recomendadas: Usar OLTP en memoria en un entorno de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información.  
   
 ```sql  
   
@@ -132,7 +132,7 @@ GO
   
 > [!IMPORTANT]  
 >  Si el servidor se está ejecutando en una máquina virtual y no está dedicado, establezca el valor de MIN_MEMORY_PERCENT en el mismo valor que MAX_MEMORY_PERCENT.   
-> Vea el tema [Prácticas recomendadas: Usar OLTP en memoria en un entorno de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información.  
+> Vea el tema [prácticas recomendadas: Usar OLTP en memoria en un entorno de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información.  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible  
  Si recibe el mensaje de error "no se permiten asignaciones de página de base de datos '*\<databaseName >*'debido a memoria insuficiente en el grupo de recursos'*\<Nombredegrupoderecursos >*'. Consulte '<https://go.microsoft.com/fwlink/?LinkId=330673>' para obtener más información. " en el registro de errores cuando hay suficiente memoria física disponible para asignar la página, puede ser debido a un regulador de recursos deshabilitado. Cuando el Regulador de recursos está deshabilitado, MEMORYBROKER_FOR_RESERVE induce una presión de memoria artificial.  

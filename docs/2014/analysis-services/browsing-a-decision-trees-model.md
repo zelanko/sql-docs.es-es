@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468756"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Examinar un modelo de árboles de decisión
   Al abrir un modelo de clasificación con **examinar**, el modelo se muestra en un visor de árbol de decisión interactivo, similar a la [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de árboles de decisión de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El visor muestra los resultados de clasificación en forma de gráfico, que se ha diseñado para resaltar los criterios que distinguen un grupo de datos de otro. También puede explorar en profundidad los subconjuntos individuales del árbol y recuperar los datos subyacentes.  

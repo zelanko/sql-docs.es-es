@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3731fbb15abe51d010ed2d20a705f5a13c2878d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643228"
 ---
 # <a name="assign-aggregation-design-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Asignar diseño de agregaciones (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Asignar diseño de agregaciones** situado en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para asignar los diseños de agregaciones a una o varias particiones de destino. Puede mostrar el cuadro de diálogo **Asignar diseño de agregaciones** si hace clic con el botón derecho en un diseño de particiones o de agregaciones en el **Explorador de objetos** y selecciona **Asignar diseño de agregaciones**.  
@@ -28,7 +28,7 @@ ms.locfileid: "48160535"
 |Término|Definición|  
 |----------|----------------|  
 |**Diseños de agregaciones**|Seleccione un diseño de agregaciones para asignarlo a una o varias particiones de destino.|  
-|**Particiones de destino**|Seleccione las particiones a las que se debe asignar el diseño de agregaciones. La siguiente cuadrícula se utiliza para especificar particiones de destino:<br /><br /> \<casilla de verificación >: Active o desactive la casilla de verificación en el encabezado de columna para incluir o excluir todas las particiones enumeradas como particiones de destino. Active o desactive la casilla de una partición para incluir o excluir esa partición como partición de destino.<br /><br /> **Partición**: muestra el nombre de la partición.<br /><br /> **Origen**: muestra la tabla de origen o la consulta para la partición.<br /><br /> **Diseño de agregaciones**: muestra el nombre del diseño de agregaciones existente para la partición.|  
+|**Particiones de destino**|Seleccione las particiones a las que se debe asignar el diseño de agregaciones. La siguiente cuadrícula se utiliza para especificar particiones de destino:<br /><br /> \<casilla de verificación >: Active o desactive la casilla de verificación en el encabezado de columna para incluir o excluir todas las particiones enumeradas como particiones de destino. Active o desactive la casilla de una partición para incluir o excluir esa partición como partición de destino.<br /><br /> **Partición**: Muestra el nombre de la partición.<br /><br /> **Origen**: Muestra la tabla o la consulta de origen de la partición.<br /><br /> **Diseño de agregaciones**: Muestra el nombre del diseño de agregaciones existente para la partición.|  
 |**Ocultar particiones con diseños de agregaciones**|Seleccione esta opción para mostrar únicamente las particiones que no tienen asignados diseños de agregaciones.|  
   
 ## <a name="see-also"></a>Vea también  

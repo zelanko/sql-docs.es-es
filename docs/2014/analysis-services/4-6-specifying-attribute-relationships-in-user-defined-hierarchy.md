@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c6fd010dbf16468343b15eb383a5308d94b255da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512629"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Especificar relaciones de atributo entre los atributos de una jerarquía definida por el usuario
   Como ya ha visto en este tutorial, es posible organizar jerarquías de atributo en niveles dentro de jerarquías de usuario para proporcionar rutas de navegación a los usuarios de un cubo. Una jerarquía de usuario puede representar una jerarquía natural, como una ciudad, un estado o un país, o simplemente representar una ruta de navegación, como el nombre de un empleado, su cargo y el nombre de departamento. Para el usuario que navega por una jerarquía, estos dos tipos de jerarquía de usuario son el mismo.  

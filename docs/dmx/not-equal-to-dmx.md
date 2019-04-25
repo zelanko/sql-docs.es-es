@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58675993b909c439b402a64ba77b8511466eaa68
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62502046"
 ---
 # <a name="ltgt-not-equal-to-dmx"></a>&lt;&gt; (No es igual a) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,6 +38,6 @@ DMX_Expression <> DMX_Expression
 ## <a name="see-also"></a>Vea también  
  [Operadores de comparación &#40;DMX&#41;](../dmx/operators-comparison.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

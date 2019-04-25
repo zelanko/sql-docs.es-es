@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634281"
 ---
 # <a name="change-the-environment-layout"></a>Cambiar el diseño del entorno
   Los componentes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] compiten por tener espacio en la pantalla. Para aprovechar mejor el espacio, puede cerrar, ocultar o mover los componentes de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Las prácticas de esta página muestran cómo mover los componentes a ubicaciones diferentes.  

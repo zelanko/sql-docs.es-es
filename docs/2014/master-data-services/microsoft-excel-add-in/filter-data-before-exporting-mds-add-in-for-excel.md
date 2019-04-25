@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c3bbbc189df4a004f18e8b23dba22a6a9469e3a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765698"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>Filtrar datos antes de cargarlos (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], filtrar los datos cuando desee limitar el tamaño o el ámbito de los datos que se va a cargar en Excel.  

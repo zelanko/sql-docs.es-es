@@ -1,5 +1,5 @@
 ---
-title: Estructura tareas y procedimientos de minería de datos | Documentos de Microsoft
+title: Procedimientos y tareas de la estructura de minería de datos | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f2b76018c66b1aa72aada859be2901e356c4ae34
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509863"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Tareas y procedimientos de las estructuras de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "34015792"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Crear una nueva estructura de minería de datos relacional](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)  
+-   [Crear una estructura de minería de datos relacional](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)  
   
--   [Crear una nueva estructura de minería de datos OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)  
+-   [Crear una estructura de minería de datos OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)  
   
 -   [Agregar columnas a una estructura de minería de datos](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)  
   
@@ -34,7 +34,7 @@ ms.locfileid: "34015792"
   
 -   [Cambiar las propiedades de una estructura de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
--   [Editar la vista del origen de datos utilizada para una estructura de minería de datos](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Editar la vista del origen de datos usada para una estructura de minería de datos](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Procesar una estructura de minería de datos](../../analysis-services/data-mining/process-a-mining-structure.md)  
   

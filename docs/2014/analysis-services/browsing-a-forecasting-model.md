@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5176d4e40f0f99810a14ad5ce4298e3a7167d770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640272"
 ---
 # <a name="browsing-a-forecasting-model"></a>Examinar un modelo de pronóstico
   Al abrir un modelo de previsión con **examinar**, el modelo se muestra en un visor interactivo, similar al Visor de modelos de serie de tiempo en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El visor sirve para explorar las tendencias, comparar series, crear predicciones y obtener información sobre el modelo y los datos subyacentes.  

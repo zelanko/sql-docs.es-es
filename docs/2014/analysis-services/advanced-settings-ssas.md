@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84bb1214991c26880a75409783cf40157fce2449
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635238"
 ---
 # <a name="advanced-settings-ssas"></a>Configuración avanzada (SSAS)
   Este cuadro de diálogo del **Asistente para la importación de tablas** le permite especificar la codificación y la configuración regional del archivo plano con el que se está conectando. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
@@ -28,7 +28,7 @@ ms.locfileid: "48054885"
 |||  
 |-|-|  
 |Término|Definición|  
-|**Codificación**|Especifique el tipo de codificación que va a usar: ANSI o Unicode.<br /><br /> El valor **Unicode** corresponde a la codificación UTF-16.|  
+|**Codificación**|Especifique el tipo de codificación para usar: ANSI o Unicode.<br /><br /> El valor **Unicode** corresponde a la codificación UTF-16.|  
 |**Configuración regional**|Especifique la configuración regional, que proporciona información específica del idioma para la ordenación y los formatos de fecha y hora.|  
   
   

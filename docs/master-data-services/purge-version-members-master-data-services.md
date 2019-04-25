@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b681d06ab2ebb7c26d57fcef3bc34b070d30269e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639702"
 ---
 # <a name="purge-version-members-master-data-services"></a>Purga de miembros de versión (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52753207"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], la eliminación de un miembro solo lo desactiva, es decir, lo elimina de forma temporal. Los datos aún residen en la base de datos. En este tema se describe cómo purgar (eliminar de forma permanente) todos los miembros eliminados temporalmente en una versión de modelo.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento.  
   
 -   Debe disponer del permiso para tener acceso al área funcional de Administración de versiones.  

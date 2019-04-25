@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 771e9a4553679ae2afa0dd58d83b1d15ccf0fd62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626062"
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Pruebas con objetos de base de datos migrados (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant para Oracle evaluador (SSMA evaluador) comprueba automáticamente la conversión del objeto de base de datos y la migración de datos realizadas por SSMA. Una vez finalizados todos los pasos de migración de SSMA, use el evaluador de SSMA para comprobar que los objetos convertidos funcionan del mismo modo, y que todos los datos se transfirió correctamente.  

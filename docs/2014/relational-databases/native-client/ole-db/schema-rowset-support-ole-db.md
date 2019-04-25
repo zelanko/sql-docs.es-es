@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83b6ea8594d22527f2f9b87a77d70671c5724111
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625966"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Compatibilidad con conjuntos de filas de esquema (OLE DB)
   El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client también admite devolver información del esquema de un servidor vinculado al procesar [!INCLUDE[tsql](../../../includes/tsql-md.md)] consultas distribuidas.  
@@ -52,7 +52,7 @@ ms.locfileid: "48203465"
 ## <a name="in-this-section"></a>En esta sección  
  [Compatibilidad con consultas distribuidas en conjuntos de filas de esquema](schema-rowsets-distributed-query-support.md)  
   
- [Conjunto de filas LINKEDSERVERS &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS Rowset &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Vea también  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)   

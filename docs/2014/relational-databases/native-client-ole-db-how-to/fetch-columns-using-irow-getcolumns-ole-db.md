@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468501"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Capturar columnas mediante IRow::GetColumns (OLE DB)
   La interfaz `IRow` permite el acceso directo a las columnas de una fila única del conjunto de resultados. Así, `IRow` supone una manera eficaz de recuperar las columnas de un conjunto de resultados con una fila.  
@@ -48,7 +48,7 @@ ms.locfileid: "53372967"
   
 -   Cómo acceder dos veces a una columna - la primera vez se obtiene el ancho de columna real y, a continuación, se obtiene acceso a los datos reales.  
   
- En la estructura DBCOLUMNACCESS, si pData es NULL y cbMaxLen es 0, la llamada a IRow->GetColumns devuelve solo la longitud de columna real. En este caso, se puede llamar a IRow->GetColumns de nuevo sobre la misma columna para recuperar los datos reales. Este ejemplo no es compatible con IA64.  
+ En la estructura DBCOLUMNACCESS, si pData es NULL y cbMaxLen es 0, la llamada a IRow -> GetColumns devuelve solo la longitud real de la columna. En este caso IRow -> GetColumns puede llamar de nuevo en la misma columna para recuperar los datos reales. Este ejemplo no es compatible con IA64.  
   
  Este ejemplo requiere la base de datos de ejemplo AdventureWorks que se puede descargar de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   

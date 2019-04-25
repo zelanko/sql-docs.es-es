@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509954"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Ver el Historial de actualización de datos (Power Pivot para SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,12 +57,12 @@ ms.locfileid: "50099686"
   
 |Elemento|Descripción|  
 |----------|-----------------|  
-|Nombre|Especifica el nombre de archivo del libro de Excel que contiene los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|Name|Especifica el nombre de archivo del libro de Excel que contiene los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |Estado actual|Los valores son **Programado**, **Actualizando**, **Correcto**o **Error**.<br /><br /> **Programado** aparece cuando se crea por primera vez la programación. Después de que la actualización de datos se ejecuta la primera vez, este mensaje de estado ya no aparece.<br /><br /> **Actualizando** indica que la actualización de datos está en curso. Una solicitud está en la cola de procesos o ejecutándose activamente en el servidor.<br /><br /> **Correcto** indica que la última operación de actualización de datos se completó y que el libro actualizado se vuelve a poner en la biblioteca de SharePoint.<br /><br /> **Error** indica que la última operación de actualización de datos no tuvo éxito. Los datos actualizados no se guardaron. El libro contiene los mismos datos que tenía antes de que la actualización de datos comenzara.|  
 |Última actualización correcta|Especifica la fecha en la que la última actualización de datos se completó correctamente.|  
 |Siguiente actualización de programación|Especifica la fecha en la que la siguiente actualización de datos está programada para que se produzca.<br /><br /> El vínculo **Configurar programación** le lleva a la página de definición de la programación. Si tiene permisos de contribución en el libro, puede hacer clic en el vínculo para ver y modificar la información de programación que controla la actualización de datos desatendida de los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] del libro.|  
 |Iniciado|Dentro de la sección de detalles del historial, **Iniciado** indica el tiempo de proceso real. El tiempo de procesamiento real podría ser diferente de lo que programó. El procesamiento comenzará cuando haya memoria suficiente disponible en el servidor. Si el servidor está muy ocupado, el procesamiento podría comenzar varias horas después de la hora de inicio que especificó.|  
-|Completado|Dentro de la sección de detalles del historial, **Completado** indica cuándo finalizó la operación de la actualización de datos. La fecha y hora indica cuándo se volvió a incluir el libro en la biblioteca.<br /><br /> Si se produce un error en la actualización de los datos, uno o más mensajes de error explican su causa. Puede expandir cada registro para ver el estado detallado. Cada origen de datos se enumera individualmente, junto con los mensajes de éxito o de error que explican por qué la actualización de datos no se completó.|  
+|Completada|Dentro de la sección de detalles del historial, **Completado** indica cuándo finalizó la operación de la actualización de datos. La fecha y hora indica cuándo se volvió a incluir el libro en la biblioteca.<br /><br /> Si se produce un error en la actualización de los datos, uno o más mensajes de error explican su causa. Puede expandir cada registro para ver el estado detallado. Cada origen de datos se enumera individualmente, junto con los mensajes de éxito o de error que explican por qué la actualización de datos no se completó.|  
 |Time|Proporciona el tiempo acumulado desde el momento en que se inició la actualización de datos hasta que se completó.|  
 |Estado|Proporciona un registro histórico de si una operación de actualización se realizó correctamente o no.|  
   

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a37300ad1bf16ac76fbcbd0c6e77870077f7f631
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470604"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47846413"
 |**Nombre**|**sysname**|Nombre de la cuenta de proxy.|  
 |**credential_id**|**int**|Id. de la credencial que utiliza la cuenta de proxy.|  
 |**enabled**|**tinyint**|Estado de la cuenta de proxy:<br /><br /> **0** = disabled. **1** = habilitado.|  
-|**Descripción**|**nvarchar(512)**|Descripción proporcionada por el usuario cuando se creó la cuenta de proxy.|  
+|**description**|**nvarchar(512)**|Descripción proporcionada por el usuario cuando se creó la cuenta de proxy.|  
 |**user_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* del usuario o grupo asociado con la credencial del proxy.|  
 |**credential_date_created**|**datetime**|Es la fecha y hora en que se creó la credencial.|  
   

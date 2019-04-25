@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 537f40f96b70478833105d84960830469703565b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470770"
 ---
 # <a name="dbosysjobstepslogs-transact-sql"></a>dbo.sysjobstepslogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47700793"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**log_id**|**int**|Id. del registro de pasos de trabajo.|  
-|**registro**|**nvarchar(max)**|Contenido del registro de pasos de trabajo.|  
+|**log**|**nvarchar(max)**|Contenido del registro de pasos de trabajo.|  
 |**date_created**|**datetime**|Fecha y hora en que se creó el registro de pasos de trabajo.|  
 |**date_modified**|**datetime**|Fecha y hora en que se modificó por última vez el registro de pasos de trabajo.|  
 |**log_size**|**int**|Tamaño del registro de pasos de trabajo, en bytes.|  

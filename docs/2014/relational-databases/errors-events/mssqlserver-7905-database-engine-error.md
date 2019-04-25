@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 94edb9dad26037834ed54441b72480eb54cd9683
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762379"
 ---
 # <a name="mssqlserver7905"></a>MSSQLSERVER_7905
     
@@ -30,7 +30,7 @@ ms.locfileid: "48143055"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|Texto del mensaje|Error de base de datos: el directorio "DIRECTORY" no es un directorio de Filestream válido.|  
+|Texto del mensaje|Error de base de datos: El directorio 'Directorio' no es un directorio de Filestream válido.|  
   
 ## <a name="explanation"></a>Explicación  
  El nombre de un directorio de conjunto de filas es el Id. de la partición, excepto para los nombres de directorios de conjunto de filas especiales como 'ghost'. Si un nombre de directorio de conjunto de filas no se puede convertir en un Id. de partición, el directorio no es un directorio de conjunto de filas válido.  

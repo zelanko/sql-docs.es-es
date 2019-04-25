@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472204"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Tipos de datos admitidos en los modelos tabulares
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ Cuando se importan datos o se usa un valor en una fórmula, incluso si el origen
 |Whole Number|Valor entero de 64 bits (ocho bytes)*<br /><br /> Nota:<br />         Las fórmulas DAX no admiten tipos de datos que son demasiado pequeños para contener el valor mínimo que aparece en la descripción.|Números que no tienen posiciones decimales. Los enteros pueden ser números positivos o negativos, pero deben ser números enteros comprendidos entre -9.223.372.036.854.775.808 (-2^63) y 9.223.372.036.854.775.807 (2^63-1).|  
 |Decimal Number|Número real de 64 bits (ocho bytes)*<br /><br /> Nota:<br />         Las fórmulas DAX no admiten tipos de datos que son demasiado pequeños para contener el valor mínimo que aparece en la descripción.|Los números reales son aquellos que pueden tener posiciones decimales. Abarcan un amplio intervalo de valores:<br /><br /> Valores negativos de -1,79E +308 a -2,23E -308<br /><br /> Cero<br /><br /> Valores positivos desde 2,23E -308 hasta 1,79E + 308<br /><br /> Sin embargo, el número de dígitos significativos se limita a 17 dígitos decimales.|  
 |Boolean|Boolean|Valor True o False.|  
-|Texto|String|Cadena de datos de carácter Unicode. Pueden ser cadenas, números o fechas representados en un formato de texto.|  
+|Text|String|Cadena de datos de carácter Unicode. Pueden ser cadenas, números o fechas representados en un formato de texto.|  
 |date|Fecha y hora|Fechas y horas en una representación de fecha y hora aceptada.<br /><br /> Las fechas válidas son todas las fechas posteriores al 1 de marzo de 1900.|  
 |Moneda|Moneda|El tipo de datos de moneda permite los valores comprendidos entre -922.337.203.685.477,5808 y 922.337.203.685.477,5807 con cuatro dígitos decimales de precisión fija.|  
 |N/D|En blanco|Un tipo en blanco es un tipo de datos de DAX que representa y reemplaza los valores NULL de SQL. Un valor en blanco se puede crear con la función BLANK y se puede comprobar si es tal con la función lógica ISBLANK.|  
@@ -87,10 +87,10 @@ Cuando se importan datos o se usa un valor en una fórmula, incluso si el origen
   
 ||||||  
 |-|-|-|-|-|  
-|Operador (+)|INTEGER|Moneda|real|Fecha y hora|  
-|INTEGER|INTEGER|Moneda|real|Fecha y hora|  
-|Moneda|Moneda|Moneda|real|Fecha y hora|  
-|real|real|real|real|Fecha y hora|  
+|Operador (+)|INTEGER|Moneda|REAL|Fecha y hora|  
+|INTEGER|INTEGER|Moneda|REAL|Fecha y hora|  
+|Moneda|Moneda|Moneda|REAL|Fecha y hora|  
+|REAL|REAL|REAL|REAL|Fecha y hora|  
 |Fecha y hora|Fecha y hora|Fecha y hora|Fecha y hora|Fecha y hora|  
   
  Por ejemplo, si se usa un número real en una operación de suma en combinación con datos de moneda, ambos valores se convierten en REAL y el resultado se devuelve como REAL.  
@@ -100,10 +100,10 @@ Cuando se importan datos o se usa un valor en una fórmula, incluso si el origen
   
 ||||||  
 |-|-|-|-|-|  
-|Operador (-)|INTEGER|Moneda|real|Fecha y hora|  
-|INTEGER|INTEGER|Moneda|real|real|  
-|Moneda|Moneda|Moneda|real|real|  
-|real|real|real|real|real|  
+|Operador (-)|INTEGER|Moneda|REAL|Fecha y hora|  
+|INTEGER|INTEGER|Moneda|REAL|REAL|  
+|Moneda|Moneda|Moneda|REAL|REAL|  
+|REAL|REAL|REAL|REAL|REAL|  
 |Fecha y hora|Fecha y hora|Fecha y hora|Fecha y hora|Fecha y hora|  
   
  Por ejemplo, si se usa una fecha en una operación de resta con otro tipo de datos, ambos valores se convierten en fechas y el valor devuelto también es una fecha.  
@@ -115,10 +115,10 @@ Cuando se importan datos o se usa un valor en una fórmula, incluso si el origen
   
 ||||||  
 |-|-|-|-|-|  
-|Operador (*)|INTEGER|Moneda|real|Fecha y hora|  
-|INTEGER|INTEGER|Moneda|real|INTEGER|  
-|Moneda|Moneda|real|Moneda|Moneda|  
-|real|real|Moneda|real|real|  
+|Operador (*)|INTEGER|Moneda|REAL|Fecha y hora|  
+|INTEGER|INTEGER|Moneda|REAL|INTEGER|  
+|Moneda|Moneda|REAL|Moneda|Moneda|  
+|REAL|REAL|Moneda|REAL|REAL|  
   
  Por ejemplo, si un entero se combina con un número real en una operación de multiplicación, ambos números se convierten a números reales y el valor devuelto también es REAL.  
   
@@ -127,11 +127,11 @@ Cuando se importan datos o se usa un valor en una fórmula, incluso si el origen
   
 ||||||  
 |-|-|-|-|-|  
-|Operador (/)<br /><br /> (Fila/Columna)|INTEGER|Moneda|real|Fecha y hora|  
-|INTEGER|real|Moneda|real|real|  
-|Moneda|Moneda|real|Moneda|real|  
-|real|real|real|real|real|  
-|Fecha y hora|real|real|real|real|  
+|Operador (/)<br /><br /> (Fila/Columna)|INTEGER|Moneda|REAL|Fecha y hora|  
+|INTEGER|REAL|Moneda|REAL|REAL|  
+|Moneda|Moneda|REAL|Moneda|REAL|  
+|REAL|REAL|REAL|REAL|REAL|  
+|Fecha y hora|REAL|REAL|REAL|REAL|  
   
  Por ejemplo, si un entero se combina con un valor de moneda en una operación de división, ambos valores se convierten a números reales y el resultado también es un número real.  
   

@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: f19c99786a1b3bd6e219c0b2fd8c0d8258294b91
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524574"
 ---
 # <a name="geometrycollection"></a>Colección Geometry
   Un `GeometryCollection` es una colección de cero o más `geometry` o `geography` instancias. Un `GeometryCollection` puede estar vacío.  

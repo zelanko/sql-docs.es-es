@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473628"
 ---
 # <a name="full-text-search"></a>Búsqueda de texto completo
   La búsqueda de texto completo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permite a los usuarios y aplicaciones ejecutar consultas de texto completo en datos basados en caracteres en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para que las consultas de texto completo se puedan ejecutar en una tabla determinada, el administrador de bases de datos debe crear un índice de texto completo en la tabla. El índice de texto completo incluye una o varias columnas de caracteres en la tabla. Estas columnas pueden tener cualquiera de los siguientes tipos de datos: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` o `varbinary(max)`, y FILESTREAM. Cada índice de texto completo indiza una o varias columnas de la tabla base y cada columna puede usar un idioma concreto.  

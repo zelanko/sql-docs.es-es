@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3202b607f3971dd1fcad2c3ae5e0ed83a667e923
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472806"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Llamar a un procedimiento almacenado como un método en un objeto de conexión
 Puede llamar a un procedimiento almacenado como si fuese un método nativo en la apertura asociado **conexión** objeto. Esto es similar a llamar a un comando con nombre en el **conexión** objeto.  

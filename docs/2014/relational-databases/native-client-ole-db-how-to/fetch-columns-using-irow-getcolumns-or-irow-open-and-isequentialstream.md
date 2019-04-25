@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467588"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Capturar columnas mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
   Los datos grandes pueden enlazarse o recuperarse mediante la interfaz `ISequentialStream`. En el caso de las columnas enlazadas, la marca de estado DBSTATUS_S_TRUNCATED indica que se truncan los datos.  

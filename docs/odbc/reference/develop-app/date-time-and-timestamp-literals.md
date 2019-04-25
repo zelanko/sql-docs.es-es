@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641026"
 ---
 # <a name="date-time-and-timestamp-literals"></a>Fecha, hora y marca de tiempo literales
 Es la secuencia de escape para literales de fecha, hora y marca de tiempo  
@@ -27,11 +27,11 @@ Es la secuencia de escape para literales de fecha, hora y marca de tiempo
   
  donde *literal de tipo* es uno de los valores enumerados en la tabla siguiente.  
   
-|*tipo de literal*|Significado|Formato de *valor*|  
+|*literal-type*|Significado|Formato de *valor*|  
 |---------------------|-------------|-----------------------|  
 |**d**|date|*aaaa*-*mm*-*dd*|  
 |**t**|Hora *|*hh*:*mm*:*ss*[1]|  
-|**TS**|Timestamp|*aaaa*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*] [1]|  
+|**ts**|Timestamp|*aaaa*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*] [1]|  
   
  [1] el número de dígitos a la derecha del separador decimal en un intervalo de hora o marca de tiempo que contiene un componente de segundos de literal es dependiente de la precisión en segundos, la medida indicada en el campo de descriptor SQL_DESC_PRECISION. (Para obtener más información, consulte [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45e72fe3c163f05f283965beb5fb3cf6ce62c50e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510949"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Entrega por correo electrónico en Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una extensión de entrega de correo electrónico que permite enviar por correo electrónico un informe a grupos o usuarios individuales. La extensión de entrega de correo electrónico se configura con el Administrador de configuración de Reporting Services y mediante la edición de los archivos de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

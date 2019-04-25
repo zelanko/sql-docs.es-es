@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2bfa3fdf09dea1b088fb519b9782999bd20296b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768441"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Descripción del modelo de objetos del componente de script
   Como se describe en [codificar y depurar el componente de Script] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, el proyecto de componente de Script contiene tres elementos de proyecto:  
@@ -135,7 +135,7 @@ public override void PreExecute()
   
 -   Invalide **\<inputbuffer>_ProcessInputRow** para procesar los datos de cada fila de entrada cuando el código pase por ellos.  
   
--   Invalide **\<inputbuffer>_ProcessInput** solamente si es necesaria alguna acción adicional mientras se recorren en bucle las filas de entrada. (Por ejemplo, si tiene que comprobar `EndOfRowset` para realizar alguna otra acción una vez procesadas todas las filas.) Llame a **\<inputbuffer>_ProcessInputRow** para realizar el procesamiento de filas.  
+-   Invalide **\<inputbuffer>_ProcessInput** solamente si es necesaria alguna acción adicional mientras se recorren en bucle las filas de entrada. (Por ejemplo, deberá comprobar `EndOfRowset` para realizar alguna otra acción después de todo se han procesado las filas.) Llame a **\<inputbuffer>_ProcessInputRow** para realizar el procesamiento de filas.  
   
 -   Invalide `FinishOutputs` si es necesaria alguna acción adicional en las salidas antes de cerrarlas.  
   

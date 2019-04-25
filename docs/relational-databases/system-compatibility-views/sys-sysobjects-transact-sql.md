@@ -1,5 +1,5 @@
 ---
-title: Sys.sysobjects (Transact-SQL) | Microsoft Docs
+title: sys.sysobjects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e822f034ff4af30fc2d8c6992544b65aaea865e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632315"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47672593"
 |ftcatid|**smallint**|Identificador del catálogo de texto completo de todas las tablas de usuario registradas para la indización de texto completo y 0 para todas las tablas de usuario no registradas.|  
 |schema_ver|**int**|Número de versión que se incrementa cada vez que cambia el esquema de una tabla. Siempre devuelve 0.|  
 |stats_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|Tipo|**char(2)**|Tipo de objeto. Puede ser uno de los siguientes valores:<br /><br /> AF = Función de agregado (CLR)<br /><br /> C = restricción CHECK<br /><br /> D = Valor predeterminado o restricción DEFAULT<br /><br /> F = Restricción FOREIGN KEY<br /><br /> FN = Función escalar<br /><br /> FS = Función escalar del ensamblado (CLR)<br /><br /> FT = Función con valores de tabla de ensamblado (CLR) IF = Función de tabla en línea<br /><br /> IT = Tabla interna<br /><br /> K = Restricción PRIMARY KEY o UNIQUE<br /><br /> L = Registro<br /><br /> P = Procedimiento almacenado<br /><br /> PC = Procedimiento almacenado del ensamblado (CLR)<br /><br /> R = Regla<br /><br /> RF = Procedimiento almacenado de filtro de replicación<br /><br /> S = Tabla del sistema<br /><br /> SN = Sinónimo<br /><br /> SQ = Cola de servicio<br /><br /> TA = Desencadenador DML del ensamblado (CLR)<br /><br /> TF = Función de tabla<br /><br /> TR = desencadenador DML SQL<br /><br /> TT = Tipo de tabla<br /><br /> U = Tabla de usuario<br /><br /> V = Vista<br /><br /> X = Procedimiento almacenado extendido|  
+|type|**char(2)**|Tipo de objeto. Puede presentar uno de los siguientes valores:<br /><br /> AF = Función de agregado (CLR)<br /><br /> C = restricción CHECK<br /><br /> D = Valor predeterminado o restricción DEFAULT<br /><br /> F = Restricción FOREIGN KEY<br /><br /> FN = Función escalar<br /><br /> FS = Función escalar del ensamblado (CLR)<br /><br /> FT = Función con valores de tabla de ensamblado (CLR) IF = Función de tabla en línea<br /><br /> IT = Tabla interna<br /><br /> K = Restricción PRIMARY KEY o UNIQUE<br /><br /> L = Registro<br /><br /> P = Procedimiento almacenado<br /><br /> PC = Procedimiento almacenado del ensamblado (CLR)<br /><br /> R = Regla<br /><br /> RF = Procedimiento almacenado de filtro de replicación<br /><br /> S = Tabla del sistema<br /><br /> SN = Sinónimo<br /><br /> SQ = Cola de servicio<br /><br /> TA = Desencadenador DML del ensamblado (CLR)<br /><br /> TF = Función de tabla<br /><br /> TR = desencadenador DML SQL<br /><br /> TT = Tipo de tabla<br /><br /> U = Tabla de usuario<br /><br /> V = Vista<br /><br /> X = Procedimiento almacenado extendido|  
 |userstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |sysstat|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |indexdel|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

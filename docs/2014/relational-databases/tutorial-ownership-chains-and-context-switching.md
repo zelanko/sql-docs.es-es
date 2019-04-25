@@ -14,13 +14,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524371"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Cadenas de propiedad y cambio de contexto
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Las cadenas de propiedad y cambio de contexto
   En este tutorial se usa un escenario para ilustrar los conceptos de seguridad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relacionados con las cadenas de propiedad y el cambio de contexto de usuario.  
   
 > [!NOTE]  

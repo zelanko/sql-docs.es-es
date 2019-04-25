@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8d858e8b7ab62ac22902a15159163f8d6d01889
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630557"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>Suscripción, Historial de Distribuidor a suscriptor (Suscripción transaccional)
   La pestaña **Historial de Distribuidor a suscriptor** muestra información detallada sobre el Agente de distribución, incluidos el estado, el historial, los mensajes informativos y cualquier mensaje de error.  
@@ -62,7 +62,7 @@ ms.locfileid: "54133517"
   
 ## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
- [Ver información y realizar tareas con el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Visualización de información y realización de tareas mediante el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoring Replication](monitoring-replication.md)  (Supervisar la replicación)  
  [Información general sobre los agentes de replicación](agents/replication-agents-overview.md)  
   

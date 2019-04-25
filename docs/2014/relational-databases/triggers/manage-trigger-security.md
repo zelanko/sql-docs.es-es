@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bcdc2af7f67c1ea4bda49e09cfe92eda43c9dea3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524131"
 ---
 # <a name="manage-trigger-security"></a>Administrar la seguridad de los desencadenadores
   De forma predeterminada, los desencadenadores DML y DDL se ejecutan en el contexto del usuario que llama al desencadenador. El autor de la llamada a un desencadenador es el usuario que ejecuta la instrucción que hace que el desencadenador se ejecute. Por ejemplo, si el usuario **Mary** ejecuta una instrucción DELETE que hace que el desencadenador DML **DML_trigMary** se ejecute, el código incluido en **DML_trigMary** se ejecutará en el contexto de los privilegios de usuario de **Mary**. Este comportamiento predeterminado podría ser utilizado por usuarios que deseen introducir código dañino en la base de datos o la instancia de servidor. Por ejemplo, el usuario `JohnDoe`crea el siguiente desencadenador DDL:  

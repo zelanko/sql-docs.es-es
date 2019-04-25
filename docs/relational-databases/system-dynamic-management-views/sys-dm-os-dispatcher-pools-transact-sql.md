@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_dispatcher_pools (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_dispatcher_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a7a03063ad61c380f72e9a52b71f268b06d822d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62505998"
 ---
 # <a name="sysdmosdispatcherpools-transact-sql"></a>sys.dm_os_dispatcher_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "47756513"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|dispatcher_pool_address|**varbinary (8)**|Dirección del grupo de distribuidores. dispatcher_pool_address es exclusivo. No admite valores NULL.|  
-|Tipo|**nvarchar(256)**|El tipo del grupo de distribuidores. No admite valores NULL. Hay dos tipos de grupos de distribuidores:<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> La DMV para ver la lista completa de la consulta|  
+|dispatcher_pool_address|**varbinary(8)**|Dirección del grupo de distribuidores. dispatcher_pool_address es exclusivo. No admite valores NULL.|  
+|type|**nvarchar(256)**|El tipo del grupo de distribuidores. No admite valores NULL. Hay dos tipos de grupos de distribuidores:<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> La DMV para ver la lista completa de la consulta|  
 |NAME|**nvarchar(256)**|El nombre del grupo de distribuidores. No admite valores NULL.|  
 |dispatcher_count|**int**|El número de subprocesos de distribución activos. No admite valores NULL.|  
 |dispatcher_ideal_count|**int**|El número de subprocesos de distribución que el grupo de distribuidores puede incrementar. No admite valores NULL.|  

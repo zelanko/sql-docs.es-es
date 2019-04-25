@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f73e3e55045dd4ea9d4c2476540d2f7223d16eb0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62502079"
 ---
 # <a name="-multiply-dmx"></a>* (Multiplicar) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,18 +29,18 @@ Numeric_Expression * Numeric_Expression
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expresión DMX (Extensiones de minería de datos) válida que devuelve un valor numérico.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Valor cuyo tipo de datos es el del parámetro con la mayor precedencia.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Ambas expresiones deben ser del mismo tipo de datos o una se debe poder convertir implícitamente en el tipo de datos de la otra. Si una expresión se evalúa como un valor NULL, el operador devuelve un valor NULL.  
   
 ## <a name="see-also"></a>Vea también  
  [Operadores aritméticos &#40;DMX&#41;](../dmx/operators-arithmetic.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

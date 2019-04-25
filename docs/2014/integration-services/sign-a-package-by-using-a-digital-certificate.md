@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6da9652c18bd6e8093a38d337b61171bc448341
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766607"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Firmar un paquete mediante un certificado digital
   En este tema se describe cómo firmar un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con un certificado digital. Puede utilizar una firma digital, junto con otros valores de configuración, para evitar que se cargue y se ejecute un paquete que no es válido.  

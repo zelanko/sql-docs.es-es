@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 945c403a44f2b0c2cf2d691a1bcfda6cc96d422b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523751"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
   En este tema se describe cómo eliminar un registro de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -46,7 +46,7 @@ ms.locfileid: "53377557"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modificar los trabajos de su propiedad.  
   
 ##  <a name="SSMS"></a> Usar SQL Server Management Studio  

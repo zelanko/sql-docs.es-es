@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 442d0865ede4819ea3413d662411295daa5b48bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62501116"
 ---
 # <a name="using-length-and-indicator-values"></a>Uso de longitud y valores de indicador
 El búfer de longitud/indicador se usa para pasar la longitud de bytes de los datos en el búfer de datos o un indicador especial como SQL_NULL_DATA, lo que indica que los datos son NULL. Dependiendo de la función en el que se utiliza, un búfer de longitud/indicador se define como un SQLINTEGER o un SQLSMALLINT. Por lo tanto, se necesita un único argumento para describirlo. Si el búfer de datos es un búfer de entrada nondeferred, este argumento contiene la longitud de bytes de los propios datos o un valor de indicador. A menudo se denomina *StrLen_or_Ind* o un nombre similar. Por ejemplo, el siguiente código llama a **SQLPutData** para pasar un búfer lleno de datos; la longitud de bytes (*ValueLen*) se pasa directamente porque el búfer de datos (*ValuePtr*) es un búfer de entrada.  

@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 82713725dc8b4bf0d2214e2ba79121c2b330b697
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469709"
 ---
 # <a name="perform-knowledge-discovery"></a>Realizar la detección de conocimiento
 
@@ -38,7 +38,7 @@ ms.locfileid: "56038326"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para crear una base de conocimiento, debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN.  
   
 ##  <a name="FirstStep"></a> Primer paso: iniciar detección de conocimiento  

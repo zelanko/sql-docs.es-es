@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f5d485aec6d3056022ea55f1cb2bc8ee29a4e314
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765768"
 ---
 # <a name="database-object-security-master-data-services"></a>Seguridad de objetos de base de datos (Master Data Services)
   En la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , los datos están almacenados en varias tablas de base de datos y se ven en las vistas. La información que pueda haber protegido en la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] está visible para los usuarios con acceso a la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -46,11 +46,11 @@ ms.locfileid: "52822239"
   
 |Acción|Elementos protegibles|Permisos|  
 |------------|----------------|-----------------|  
-|Cargar miembros hoja y sus atributos en la tabla de ensayo.|stg.name_Leaf|Obligatorio: INSERT<br /><br /> Opcional: SELECT y UPDATE|  
+|Cargar miembros hoja y sus atributos en la tabla de ensayo.|stg.name_Leaf|Requerido: INSERT<br /><br /> Opcional: SELECT y UPDATE|  
 |Cargar datos de la tabla de ensayo Leaf en las tablas adecuadas de la base de datos de MDS.|stg.udp_name_Leaf|Ejecute|  
-|Cargar miembros consolidados y sus atributos en la tabla de ensayo.|stg.name_Consolidated|Obligatorio: INSERT<br /><br /> Opcional: SELECT y UPDATE|  
+|Cargar miembros consolidados y sus atributos en la tabla de ensayo.|stg.name_Consolidated|Requerido: INSERT<br /><br /> Opcional: SELECT y UPDATE|  
 |Cargar los datos de la tabla de ensayo Consolidated en las tablas adecuadas de la base de datos de MDS.|stg.udp_name_Consolidated|Ejecute|  
-|Cargar hoja y las relaciones de los miembros consolidados entre sí en una jerarquía explícita en la tabla de ensayo.|stg.name_Relationship|Obligatorio: INSERT<br /><br /> Opcional: SELECT y UPDATE|  
+|Cargar hoja y las relaciones de los miembros consolidados entre sí en una jerarquía explícita en la tabla de ensayo.|stg.name_Relationship|Requerido: INSERT<br /><br /> Opcional: SELECT y UPDATE|  
 |Cargar los datos de la tabla de ensayo Relationship en las tablas adecuadas de la base de datos de MDS.|stg.udp_name_Relationship|Ejecute|  
 |Ver los errores producidos cuando se insertaban datos de las tablas de ensayo en tablas de la base de datos de MDS.|stg.udp_name_Relationship|SELECT|  
   

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467421"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Restricción de atribución de partículas exclusivas
   En XSD, los modelos de contenido complejos están restringidos por la regla de restricción de atribución de partículas exclusivas (UPA). Esta regla requiere que cada elemento de un documento de una instancia se corresponda sin ambigüedades exactamente con una partícula `<xsd:element>` o `<xsd:any>` en el modelo de contenido de su elemento principal. Cualquier esquema que contenga un tipo con un modelo de contenido potencialmente ambiguo se rechaza.  
@@ -80,11 +80,11 @@ ms.locfileid: "58538527"
 ## <a name="finding-more-information"></a>Buscar más información  
  El World Wide Web Consortium (W3C) publica el siguiente documento, que contiene la descripción técnica de la restricción de atribución de partículas exclusivas:  
   
- "XML Schema Part 1: Segunda edición de estructuras, recomendación editada propuesta por la W3C":  
+ "XML Schema Part 1: Structures Second Edition, W3C Proposed Edited Recommendation":  
   
--   Sección 3.8.6: Restricciones en los componentes del esquema de grupo de modelos  
+-   Sección 3.8.6: Restricciones en los componentes de esquema del grupo de modelos  
   
--   Apéndice H: Análisis de la restricción de la atribución de partículas únicas (no normativa)  
+-   Apéndice H: Análisis de la restricción de atribución de partículas únicas (no normativa)  
   
  Para ver el documento, visite [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   

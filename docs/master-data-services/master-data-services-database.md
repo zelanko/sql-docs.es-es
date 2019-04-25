@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a49361846ffcb309c39e816d5f7a62418db87d6e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465530"
 ---
 # <a name="master-data-services-database"></a>Base de datos de Master Data Services
 
@@ -47,7 +47,7 @@ ms.locfileid: "52794837"
   
 -   [Errores del proceso de almacenamiento provisional &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Crea una base de datos de Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Seguridad de objetos de base de datos &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)   
  [Inicios de sesión, usuarios y roles en bases de datos &#40;Master Data Services&#41;](../master-data-services/database-logins-users-and-roles-master-data-services.md)  

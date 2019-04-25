@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19a757f82c2fa2ff2e78453ddf0fea1fbebda3c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626220"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>Atributos de instrucción que afectan a parámetros con valores de tabla
   En la tabla siguiente se describen los atributos de un campo descriptor.  

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7bad6fbd9229547318a060f08eeb102b21cda9bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470893"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "47855048"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. de la alerta.|  
 |**Nombre**|**sysname**|Nombre de la alerta.|  
-|**event_source**|**Nvarchar (100)**|Origen del evento: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**event_source**|**nvarchar(100)**|Origen del evento: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**event_category_id**|**int**|Reservado para uso futuro.|  
-|**valor de event_id**|**int**|Reservado para uso futuro.|  
+|**event_id**|**int**|Reservado para uso futuro.|  
 |**message_id**|**int**|Definido por el usuario Id. de mensaje o una referencia a **sysmessages** mensaje que desencadena esta alerta.|  
 |**severity**|**int**|Gravedad que desencadena esta alerta.|  
 |**enabled**|**tinyint**|Estado de la alerta:<br /><br /> **0** = disabled.<br /><br /> **1** = habilitado.|  
@@ -50,7 +50,7 @@ ms.locfileid: "47855048"
 |**notification_message**|**nvarchar(512)**|Información adicional enviada con la alerta.|  
 |**include_event_description**|**tinyint**|Máscara de bits que representa si la descripción del evento se envía por correo electrónico, buscapersonas o Net send. Consulte el gráfico siguiente para los valores.|  
 |**database_name**|**nvarchar(512)**|Base de datos en la que se debe producir el evento para que se desencadene esta alerta.|  
-|**event_description_keyword**|**Nvarchar (100)**|Patrón al que se debe ajustar el error para que se desencadene la alerta.|  
+|**event_description_keyword**|**nvarchar(100)**|Patrón al que se debe ajustar el error para que se desencadene la alerta.|  
 |**occurrence_count**|**int**|Número de repeticiones de esta alerta.|  
 |**count_reset_date**|**int**|Número de días (fecha) se restablecerá a **0**.|  
 |**count_reset_time**|**int**|Número de horas se restablecerá a **0**.|  

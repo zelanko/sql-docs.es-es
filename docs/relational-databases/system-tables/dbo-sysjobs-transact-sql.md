@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7735873fcad0447099c97171a940d570354552d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471107"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47796033"
 |**originating_server_id**|**int**|Id. del servidor del que proviene el trabajo.|  
 |**Nombre**|**sysname**|Nombre del trabajo.|  
 |**enabled**|**tinyint**|Indica si el trabajo está habilitado para su ejecución.|  
-|**Descripción**|**nvarchar(512)**|Descripción del trabajo.|  
+|**description**|**nvarchar(512)**|Descripción del trabajo.|  
 |**start_step_id**|**int**|Id. del paso del trabajo en el que debe comenzar la ejecución.|  
 |**category_id**|**int**|Id. de la categoría del trabajo.|  
 |**owner_sid**|**varbinary(85)**|Número identificador de seguridad (SID) del propietario del trabajo.|  

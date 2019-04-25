@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 35cc33df40c17e6dbc1935e205ed688615de0294
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506209"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>Las funciones definidas por el usuario no se permiten en system_function_schema
   El Asesor de actualizaciones detectó funciones definidas por el usuario que son propiedad del usuario no documentado **system_function_schema**. No puede crear una función del sistema definida por el usuario especificando este usuario. El **system_function_schema** no existe el nombre de usuario y el identificador de usuario que está asociado con este nombre (UID = 4) está reservado para el **sys** esquema y se restringe a solo para uso interno.  

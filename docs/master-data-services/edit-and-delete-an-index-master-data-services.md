@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b4683e1cb859617481f235bbebcc128e812c7cf5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517575"
 ---
 # <a name="edit-and-delete-an-index-master-data-services"></a>Editar y eliminar un índice (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52752047"
 
   Puede editar y eliminar un índice que haya creado en los atributos.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de Administración del sistema. Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "52752047"
   
 5.  En los cuadros de mensaje de confirmación, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Creación de un índice personalizado &#40;Master Data Services&#41;](../master-data-services/create-an-index-master-data-services.md)   
  [Índice personalizado &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
   

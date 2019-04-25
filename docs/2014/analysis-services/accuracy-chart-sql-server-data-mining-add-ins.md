@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 328ce6c6474beb68d14edd26779d868142a29fd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520261"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Gráfico de precisión (Complementos de minería de datos de SQL Server)
   ![Botón gráfico de precisión en la cinta de opciones minería de datos](media/dmc-accchart.gif "botón gráfico de precisión en la cinta de opciones minería de datos")  
@@ -73,7 +73,7 @@ ms.locfileid: "48136805"
      El asistente crea un informe que incluye el gráfico de elevación y los datos subyacentes.  
   
 ### <a name="requirements"></a>Requisitos  
- Si se va a predecir un valor discreto, es necesario seleccionar el valor de destino que se desea predecir. Por ejemplo, si los datos se han clasificado con una respuesta "Yes: Buy" como 1 y "No: Do Not Buy" como 2, es necesario especificar 1 ó 2 como valores de predicción. Sin embargo, si se desea predecir un intervalo de valores, sólo es posible comparar dos valores a la vez. Por ejemplo, si se desea predecir una puntuación superior a 5, quizás sea necesario cambiar las etiquetas de los datos de origen y crear un nuevo modelo que separe los resultados en dos conjuntos: aquellos mayores que 5 y aquellos menores que 5. A continuación, puede comparar la precisión de esos dos grupos.  
+ Si se va a predecir un valor discreto, es necesario seleccionar el valor de destino que se desea predecir. Por ejemplo, si los datos se han clasificado con una respuesta "Sí: Buy"como 1 y la respuesta" No: Do Not Buy"como 2, debe especificar 1 ó 2 como valores de predicción. Sin embargo, si se desea predecir un intervalo de valores, sólo es posible comparar dos valores a la vez. Por ejemplo, si se desea predecir una puntuación superior a 5, quizás sea necesario cambiar las etiquetas de los datos de origen y crear un nuevo modelo que separe los resultados en dos conjuntos: aquellos mayores que 5 y aquellos menores que 5. A continuación, puede comparar la precisión de esos dos grupos.  
   
 ## <a name="understanding-accuracy"></a>Descripción de la precisión  
  Puede crear dos tipos de gráficos, uno en el que especifique un estado de la columna de predicción y otro en el que no especifique el estado.  

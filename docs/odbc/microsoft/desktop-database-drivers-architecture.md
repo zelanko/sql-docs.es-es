@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7487d073b95190418ee7f6900390a2d60ce42e13
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629057"
 ---
 # <a name="desktop-database-drivers-architecture"></a>Arquitectura de controladores de escritorio de la base de datos
 Estos controladores están diseñados para uso en Microsoft Windows 95 o versiones posteriores, o Windows NT 4.0 y Windows 2000. Las aplicaciones de 32 bits sola se admiten en Windows 95 o versiones posteriores; se admiten las aplicaciones de 16 bits y 32 bits en Windows NT 4.0 y Windows 2000.  

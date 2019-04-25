@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3acf5ed94993d50c3c81813cd9ea09db2c231a08
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472214"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>El proveedor OLE DB para la publicación en Internet
 ADO [registro](../../../ado/reference/ado-api/record-object-ado.md) y [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objetos pueden utilizarse con el proveedor Microsoft OLE DB para la publicación en Internet (Internet Publishing Provider) para obtener acceso y manipular los recursos, como archivos o carpetas de Web proporcionados por Microsoft FrontPage. Con ADO, puede especificar el origen de un **registro**, **Stream**, o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sea una dirección URL. Puede, a continuación, cargar, descargar, mover, copiar y eliminar recursos o manipular directamente las propiedades de recursos.  
@@ -55,4 +55,4 @@ ADO [registro](../../../ado/reference/ado-api/record-object-ado.md) y [Stream](.
 > [!NOTE]
 >  Si se especifica explícitamente Msdaipp.dso como valor del proveedor, ya sea con la *proveedor* palabra clave de cadena de conexión o la **proveedor** propiedad, no se puede usar "URL =" en la cadena de conexión. Si lo hace, se producirá un error. En su lugar, simplemente especifique la dirección URL como se mostró anteriormente.  
   
- Para obtener información más específica acerca del proveedor de publicación en Internet, consulte [proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), o la documentación del proveedor proporcionada con la aplicación de origen con la que el proveedor OLE DB para Se instaló Internet Publishing: Windows 2000, Office 2000 o Internet Explorer 5.0.
+ Para obtener información más específica acerca del proveedor de publicación en Internet, consulte [proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md), o la documentación del proveedor proporcionada con la aplicación de origen con la que el proveedor OLE DB para Se instaló la publicación en Internet: Windows 2000, Office 2000 o Internet Explorer 5.0.

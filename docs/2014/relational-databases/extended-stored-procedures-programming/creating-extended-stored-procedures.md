@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0d0343113b350c48cbc42ec5b79bbd0b849f2860
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512639"
 ---
 # <a name="creating-extended-stored-procedures"></a>Crear procedimientos almacenados extendidos
     
@@ -29,7 +29,7 @@ ms.locfileid: "52749077"
   
  Un procedimiento almacenado extendido es una función con un prototipo:  
   
- SRVRETCODE *xp_extendedProcName* **(** SRVPROC  **\*);**  
+ SRVRETCODE *xp_extendedProcName* **(** SRVPROC **\*);**  
   
  El uso del prefijo xp_ es opcional. Los nombres de procedimiento almacenado extendido distinguen mayúsculas de minúsculas cuando se hace referencia a ellos en instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)], independientemente de la página de códigos o criterio de ordenación que se haya instalado en el servidor. Cuando genere un archivo DLL:  
   

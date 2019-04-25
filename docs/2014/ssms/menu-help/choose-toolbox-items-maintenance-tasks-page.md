@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24dfd1f587db8d652390be27fa2307a8500c3145
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470052"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Elegir elementos del cuadro de herramientas (página Tareas de mantenimiento)
   Esta pestaña del cuadro de diálogo **Personalizar el cuadro de herramientas** muestra una lista de todos los componentes de tareas de mantenimiento registrados en el equipo y permite cambiar los que muestra el cuadro de herramientas. Puede abrir el cuadro de diálogo **Personalizar el cuadro de herramientas** en el menú **Herramientas** . Para ordenar la lista de componentes, seleccione un encabezado de columna.  

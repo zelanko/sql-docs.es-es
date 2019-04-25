@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c7f93c1aeb0cfd4de81f95d728d0bc075e9de751
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517101"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>Excluir una regla de negocios (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52749339"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], excluya una regla de negocios cuando no desee eliminar la regla permanentemente, pero no desee validar los datos con ella.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -55,7 +55,7 @@ ms.locfileid: "52749339"
   
 10. En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. El valor de la columna **Business Rule Status** (Estado de regla de negocios) es **Excluida** y la columna **Excluida** es **Sí**.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Eliminar una regla de negocios &#40;Master Data Services&#41;](../master-data-services/delete-a-business-rule-master-data-services.md)   
  [Crear y publicar una regla de negocios &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  

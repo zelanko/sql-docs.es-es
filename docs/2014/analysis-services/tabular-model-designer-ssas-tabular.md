@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 091f6d49c4cccbcba47d50bbde3b395d8ce9d260
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758560"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Diseñador de modelos tabulares (SSAS tabular)
   El diseñador de modelos tabulares forma parte de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], integrado con Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 o posterior, con plantillas adicionales de tipo de proyecto específicamente para desarrollar soluciones de modelos tabulares profesionales.  

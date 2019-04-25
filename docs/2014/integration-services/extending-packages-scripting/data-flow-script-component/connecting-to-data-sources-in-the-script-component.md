@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96041fa9b632be0162259d72cd4001e9d7defdd5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768461"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Conectarse a orígenes de datos del componente de script
   Un administrador de conexiones es una unidad práctica que encapsula y almacena la información necesaria para conectarse a un origen de datos de un tipo determinado. Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](../../connection-manager/integration-services-ssis-connections.md).  

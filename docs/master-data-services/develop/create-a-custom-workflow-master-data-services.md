@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffee06e8a6372f146996673c425a89000eda0a1d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518643"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Crear un flujo de trabajo personalizado (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52420666"
 5.  El servicio de integración de flujos de trabajo MDS de SQL Server enruta los datos al ensamblado controlador del flujo de trabajo.  
   
 > [!NOTE]  
->  Nota: el servicio de integración de flujos de trabajo MDS de SQL Server está diseñado para desencadenar procesos simples. Si su código personalizado requiere un procesamiento complejo, realice el procesamiento en un subproceso distinto o fuera del proceso de flujo de trabajo.  
+>  Nota: Servicio de integración de flujo de trabajo MDS de SQL Server está diseñado para desencadenar procesos simples. Si su código personalizado requiere un procesamiento complejo, realice el procesamiento en un subproceso distinto o fuera del proceso de flujo de trabajo.  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>Configurar Master Data Services para flujos de trabajo personalizados  
  Crear un flujo de trabajo personalizado requiere escribir código personalizado y configurar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para que pase los datos del flujo de trabajo al controlador de flujo de trabajo. Para habilitar el procesamiento del flujo de trabajo personalizado, siga estos pasos:  
@@ -64,7 +64,7 @@ ms.locfileid: "52420666"
   
 3.  Agregue "using Microsoft.MasterDataServices.Core.Workflow;" al archivo de código de C#.  
   
-4.  Herede de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> en la declaración de clase. La declaración de clase debe ser similar a: "public class WorkflowTester : IWorkflowTypeExtender".  
+4.  Herede de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> en la declaración de clase. La declaración de clase debe ser similar a: ' public class WorkflowTester: IWorkflowTypeExtender'.  
   
 5.  Implemente la interfaz <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. El servicio de integración de flujos de trabajo MDS de SQL Server llama al método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> para iniciar el flujo de trabajo.  
   
@@ -145,14 +145,14 @@ ms.locfileid: "52420666"
   
 1.  Utilice el complemento Servicios para detener el servicio.  
   
-2.  Abra un símbolo del sistema, vaya a la ubicación del servicio y ejecute el servicio en modo de consola especificando: Microsoft.MasterDataServices.Workflow.exe -console.  
+2.  Abra un símbolo del sistema, navegue hasta la ubicación del servicio y ejecutar el servicio en modo de consola, escriba: Microsoft.MasterDataServices.Workflow.exe -console.  
   
 3.  En [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], actualice el miembro y aplique de nuevo las reglas de negocio. En la ventana de la consola se muestran registros detallados.  
   
 ### <a name="view-the-service-broker-queue"></a>Examinar la cola de Service Broker  
  La cola de Service Broker que contiene los datos maestros pasados como parte del flujo de trabajo es: mdm.microsoft/mdm/queue/externalaction. Las colas se encuentran en el **Explorador de objetos** de SQL Management Studio bajo el nodo Service Broker de la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Tenga en cuenta que si el servicio borró la cola correctamente, la cola estará vacía.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Ejemplo de flujo de trabajo personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
  [Descripción del código XML de flujo de trabajo personalizado &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   

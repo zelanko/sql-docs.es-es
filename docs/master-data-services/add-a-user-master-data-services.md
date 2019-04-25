@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 286647785defdb2391f2c9e7be4d1fc4c6d5599b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634655"
 ---
 # <a name="add-a-user-master-data-services"></a>Agregar un usuario (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52796517"
 
   Agregue un usuario a la lista **Usuarios** en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] a fin de comenzar el proceso para asignar el permiso a la aplicación web. Para que un usuario de la lista pueda tener acceso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], debe conceder el permiso de usuario a una o más áreas funcionales y objetos de modelo.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional **Permisos de usuario y de grupo** .  
@@ -44,11 +44,11 @@ ms.locfileid: "52796517"
   
 5.  Haga clic en **Aceptar**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   [Asignar permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Seguridad &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

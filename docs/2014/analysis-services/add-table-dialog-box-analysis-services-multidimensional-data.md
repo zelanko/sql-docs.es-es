@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 111453302bd72396e9bc44d357851cccf2f30e74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635375"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Agregar tabla (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Agregar tabla** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para agregar una tabla mientras crea una consulta en el cuadro de diálogo **Crear consulta con nombre** , **Crear consulta de sondeo** o **Crear consulta de procesamiento** . Para mostrar el cuadro de diálogo **Agregar tabla** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , haga clic en **Agregar tabla** en el panel **Barra de herramientas** del cuadro de diálogo **Crear consulta con nombre** , **Crear consulta de sondeo** o **Crear consulta de procesamiento** .  
@@ -34,7 +34,7 @@ ms.locfileid: "48209716"
 |**Funciones**|Use la pestaña **Funciones** para mostrar y seleccionar la función o procedimiento almacenado que desea agregar.|  
 |**Sinónimos**|Use la pestaña **Sinónimos** para mostrar y seleccionar el sinónimo que desea agregar.|  
 |**Actualizar**|Haga clic para volver a cargar todas las pestañas en el cuadro de diálogo.|  
-|**Agregar**|Haga clic para agregar el elemento seleccionado. **Nota:** esta opción está habilitada sólo si se selecciona un elemento.|  
+|**Agregar**|Haga clic para agregar el elemento seleccionado. **Nota:**  Esta opción está habilitada sólo si se selecciona un elemento.|  
   
 ## <a name="see-also"></a>Vea también  
  [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

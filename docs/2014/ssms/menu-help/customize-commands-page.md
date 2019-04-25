@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470022"
 ---
 # <a name="customize-commands-page"></a>Personalizar (página Comandos)
   Este cuadro de diálogo permite agregar comandos en las barras de herramientas y menús, y eliminarlos de éstos; también permite cambiar las imágenes que se utilizan para los botones de barra de herramientas o los comandos de los menús. Para tener acceso a la página **Comandos** , haga clic en **Personalizar** en el menú **Herramientas** y, a continuación, haga clic en **Comandos**.  

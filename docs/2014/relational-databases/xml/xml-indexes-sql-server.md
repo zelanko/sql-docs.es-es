@@ -34,11 +34,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631366"
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
   Es posible crear índices XML en columnas del tipo de datos `xml`. Se indizan todas las etiquetas, los valores y las rutas de acceso de las instancias XML de la columna y se mejora el rendimiento de las consultas. Un índice XML puede afectar positivamente a una aplicación en estas situaciones:  
@@ -53,7 +53,7 @@ ms.locfileid: "58533977"
   
 -   Índice XML secundario  
   
- El primer índice de la columna de tipo `xml` debe ser el índice XML principal. Con el índice XML principal, se admiten los siguientes tipos de índices secundarios: Ruta de acceso, valor y propiedad. Dependiendo del tipo de consulta, los índices secundarios pueden contribuir a mejorar el rendimiento.  
+ El primer índice de la columna de tipo `xml` debe ser el índice XML principal. Con el índice XML principal, se admiten los siguientes tipos de índices secundarios: PATH, VALUE y PROPERTY. Dependiendo del tipo de consulta, los índices secundarios pueden contribuir a mejorar el rendimiento.  
   
 > [!NOTE]  
 >  No puede crear o modificar un índice XML si las opciones de base de datos no están establecidas correctamente para trabajar con el tipo de datos `xml`. Para obtener más información, vea [Usar la búsqueda de texto completo con columnas XML](use-full-text-search-with-xml-columns.md).  

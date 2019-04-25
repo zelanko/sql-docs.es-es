@@ -15,11 +15,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 35e2af3f371d66ce38df5cb376516d40d01006bf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62515490"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent, clase
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,11 @@ class SQLErrorLogEvent
   
 |||  
 |-|-|  
-|FileName|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> El nombre del archivo de registro de errores.|  
-|InstanceName|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde reside el archivo de registro.|  
-|LogDate|Tipo de datos: **datetime**<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> <br /><br /> Fecha y hora en que el evento se grabó en el archivo de registro.|  
-|de mensaje|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Mensaje del evento.|  
-|ProcessInfo|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Información sobre el identificador del proceso del servidor de origen (SPID) para el evento.|  
+|FileName|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> <br /><br /> El nombre del archivo de registro de errores.|  
+|InstanceName|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> Calificadores: Key<br /><br /> El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde reside el archivo de registro.|  
+|LogDate|Tipo de datos: **datetime**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> Calificadores: Key<br /><br /> <br /><br /> Fecha y hora en que el evento se grabó en el archivo de registro.|  
+|de mensaje|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> <br /><br /> Mensaje del evento.|  
+|ProcessInfo|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> <br /><br /> Información sobre el identificador del proceso del servidor de origen (SPID) para el evento.|  
   
 ## <a name="remarks"></a>Comentarios  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e009c9e498c28ee0b7f0efbd4571d9e50cb061a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640217"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Características y tareas de Analysis Services
   La documentación básica de Analysis Services está organizada por modelado y modo de servidor para que pueda centrarse únicamente en las herramientas, tareas y características disponibles en el modo que tiene instalado. Las tareas de administración de servidores que abarcan varios modos se encuentran en instancias de servidor.  
@@ -26,7 +26,7 @@ ms.locfileid: "48172841"
   
  [Herramientas y aplicaciones utilizadas en Analysis Services](tools-and-applications-used-in-analysis-services.md)  
   
- [Administración de instancias de Analysis Services](instances/analysis-services-instance-management.md)  
+ [Administración de una instancia de Analysis Services](instances/analysis-services-instance-management.md)  
   
  [Modelado tabular &#40;Tabular de SSAS&#41;](tabular-models/tabular-models-ssas.md)  
   

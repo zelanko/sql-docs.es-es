@@ -16,23 +16,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769021"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analizar formatos de archivo de texto no estándar con el componente de script
   Cuando los datos de origen están organizados en un formato no estándar, puede resultar más cómodo consolidar toda la lógica de análisis en un único script que encadenar varias transformaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para lograr el mismo resultado.  
   
- [Ejemplo 1: Analizar registros delimitados por fila](#example1)  
+ [Ejemplo 1: Análisis de los registros delimitados por filas](#example1)  
   
- [Ejemplo 2: Dividir registros primarios y secundarios](#example2)  
+ [Ejemplo 2: División de los registros primarios y secundarios](#example2)  
   
 > [!NOTE]  
 >  Si desea crear un componente que pueda reutilizar más fácilmente en varias tareas de flujo de datos y varios paquetes, puede utilizar el código de este ejemplo de componente de script como punto de inicio para el componente de flujo de datos personalizado. Para obtener más información, vea [Desarrollar un componente de flujo de datos personalizado](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
-##  <a name="example1"></a> Ejemplo 1: Analizar registros delimitados por fila  
+##  <a name="example1"></a> Ejemplo 1: Análisis de los registros delimitados por filas  
  En este ejemplo se muestra cómo tomar un archivo de texto en el que cada columna de datos aparece en una línea independiente y analizarlo en una tabla de destino utilizando el componente de script.  
   
  Para obtener más información acerca de cómo configurar el componente de Script para su uso como una transformación del flujo de datos, vea [crear una transformación sincrónica con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)y [creando una asincrónica Transformación con el componente de Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
@@ -187,7 +187,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> Ejemplo 2: Dividir registros primarios y secundarios  
+##  <a name="example2"></a> Ejemplo 2: División de los registros primarios y secundarios  
  Este ejemplo muestra cómo tomar un archivo de texto, en el que una fila de separación precede a una fila de registro primario a la que siguen un número indefinido de filas de registro secundario, y cómo analizarlo en tablas de destino primarias y secundarias correctamente normalizadas mediante el componente de script. Este sencillo ejemplo se puede adaptar fácilmente a archivos de origen que utilizan más de una fila o columna para cada registro primario y secundario, siempre que exista una forma de identificar el principio y el final de cada registro.  
   
 > [!CAUTION]  

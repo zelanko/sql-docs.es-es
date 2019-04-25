@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43c1c932565ae3df666be10a1b89794ecd720135
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766677"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Roles de Integration Services (servicio SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye los tres roles fijos de nivel de base de datos, `db_ssisadmin`, **db_ssisltduser**, y **db_ssisoperator**, para controlar el acceso a los paquetes. Los roles se pueden implementar solo en los paquetes que se guardan en el `msdb` en la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para asignar roles a un paquete se utiliza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Las asignaciones de roles se guardan en el `msdb` base de datos.  

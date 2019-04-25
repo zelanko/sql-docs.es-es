@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba249d99c991fafc377aee019d666b9fa11df8b2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629925"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Detectar y solucionar conflictos en registros lógicos
   En este tema se tratan las diferentes combinaciones de opciones de detección y resolución de conflictos posibles al utilizar registros lógicos. Los conflictos en la replicación de mezcla se producen cuando más de un nodo cambia los mismos datos o, al replicar cambios, la replicación de mezcla encuentra determinados tipos de errores, por ejemplo una infracción de restricción. Para obtener más información acerca de la detección y resolución de conflictos, vea [Detección y resolución de conflictos de replicación de mezcla avanzada](advanced-merge-replication-conflict-detection-and-resolution.md).  

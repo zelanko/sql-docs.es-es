@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cabfb4cd21de54dad2be1323fd29d8bb3bf076
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629720"
 ---
 # <a name="administer-a-peer-to-peer-topology-replication-transact-sql-programming"></a>Administrar una topología punto a punto (programación de la replicación con Transact-SQL)
   Administrar una topología punto a punto es parecido a administrar una topología de replicación transaccional típica, pero hay varios aspectos que requieren una consideración especial. La diferencia principal cuando se administra una topología punto a punto es que algunos cambios requieren que el sistema esté *detenido*. Para poner el sistema en modo inactivo, hay que detener la actividad de las tablas publicadas en todos los nodos y asegurarse de que cada nodo haya recibido todos los cambios de los demás nodos. Para más información, vea [Poner en modo inactivo una topología de replicación &#40;programación de la replicación con Transact-SQL&#41;](quiesce-a-replication-topology-replication-transact-sql-programming.md).  
@@ -62,7 +62,7 @@ ms.locfileid: "54126855"
  [!code-sql[HowTo#sp_addp2particle_createarticle](../../../snippets/tsql/SQL15/replication/howto/tsql/addp2particle.sql#sp_addp2particle_createarticle)]  
   
 ## <a name="see-also"></a>Vea también  
- [Preguntas más frecuentes sobre la administración de replicación](frequently-asked-questions-for-replication-administrators.md)   
+ [Preguntas más frecuentes para administradores de replicación](frequently-asked-questions-for-replication-administrators.md)   
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Replicación transaccional punto a punto](../transactional/peer-to-peer-transactional-replication.md)  
   

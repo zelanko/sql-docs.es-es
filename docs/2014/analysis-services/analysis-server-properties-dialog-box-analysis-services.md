@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636784"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Cuadro de diálogo Propiedades de Analysis Server (Analysis Services)
   Use el cuadro de diálogo **Propiedades de Analysis Server** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para establecer la configuración general, de idioma o intercalación, y de seguridad para una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para mostrar el cuadro de diálogo **Propiedades de Analysis Server**, haga clic con el botón derecho en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el **Explorador de objetos** y seleccione **Propiedades** en el menú contextual. El cuadro de diálogo **Propiedades de Analysis Server** contiene las propiedades siguientes.  
@@ -84,7 +84,7 @@ ms.locfileid: "50145100"
   
      Si no selecciona esta opción, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que las letras acentuadas y las no acentuadas son versiones de letras iguales.  
   
--   **Distinguir kana** se usa para ordenar y comparar datos según las reglas de diccionario proporcionadas para el idioma o el alfabeto asociado y para distinguir entre los dos tipos de caracteres kana japoneses: hiragana y katakana.  
+-   **Distinguir Kana** se usa para y comparar datos según las reglas de diccionario proporcionadas para el idioma o alfabeto asociado y distinguir entre los dos tipos de caracteres kana japoneses: Hiragana y Katakana.  
   
      Si no selecciona esta opción, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que los caracteres hiragana y katakana son iguales.  
   

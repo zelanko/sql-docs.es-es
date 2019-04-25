@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 48f1cbdf3d19ce7937df9fc2d6bb1454c65891e3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62501987"
 ---
 # <a name="-positive-dmx"></a>+ (Positivo) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "38023883"
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expresión DMX (Extensiones de minería de datos) válida que devuelve un valor numérico.  
   
 ## <a name="return-value"></a>Valor devuelto  
@@ -37,7 +37,7 @@ ms.locfileid: "38023883"
   
 ## <a name="see-also"></a>Vea también  
  [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)   
  [Operadores unarios &#40;DMX&#41;](../dmx/operators-unary.md)  
   
   

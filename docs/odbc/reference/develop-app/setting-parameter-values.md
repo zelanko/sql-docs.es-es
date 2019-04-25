@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66811d2364db546c3bddd787c1e0794f936f97c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445957"
 ---
 # <a name="setting-parameter-values"></a>Establecer valores de parámetro
 Para establecer el valor de un parámetro, la aplicación simplemente establece el valor de la variable enlazada al parámetro. No es importante cuando se establece este valor, siempre y cuando se establece antes de que se ejecuta la instrucción. La aplicación puede establecer el valor antes o después de enlazar la variable y puede cambiar el valor tantas veces como desee. Cuando se ejecuta la instrucción, el controlador simplemente recupera el valor actual de la variable. Esto es especialmente útil cuando se ejecuta una instrucción preparada de más de una vez; la aplicación establece nuevos valores para algunas o todas las variables de cada vez que se ejecuta la instrucción. Para obtener un ejemplo de esto, consulte [ejecución preparada](../../../odbc/reference/develop-app/prepared-execution-odbc.md), anteriormente en esta sección.  
@@ -37,11 +37,11 @@ Para establecer el valor de un parámetro, la aplicación simplemente establece 
   
 |Parámetro<br /><br /> value|Parámetro<br /><br /> (SQL)<br /><br /> tipo de datos|Variable (C)<br /><br /> tipo de datos|Valor de<br /><br /> enlazadas<br /><br /> variable|Valor de<br /><br /> indicador de longitud<br /><br /> búferes [d]|  
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
-|"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0 [a]|SQL_NTS o 3|  
+|"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0[a]|SQL_NTS o 3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  
-|10|SQL_INTEGER|SQL_C_CHAR|10\0 [a]|SQL_NTS o 2|  
+|10|SQL_INTEGER|SQL_C_CHAR|10\0[a]|SQL_NTS o 2|  
 |1 P.M.|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0 [b]|--|  
-|1 P.M.|SQL_TYPE_TIME|SQL_C_CHAR|{t ' 13: 00:00'} \0 [a], [c]|SQL_NTS o 14|  
+|1 P.M.|SQL_TYPE_TIME|SQL_C_CHAR|{t '13:00:00'}\0[a], [c]|SQL_NTS o 14|  
 |NULL|SQL_SMALLINT|SQL_C_SSHORT|--|SQL_NULL_DATA|  
   
  [a] "\0" representa un carácter de terminación null. El carácter de terminación null solo es necesario si el valor en el búfer de longitud/indicador es SQL_NTS.  

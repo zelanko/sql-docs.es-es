@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26d4be96ca4dabebd93ee96e2888e18d39257412
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471830"
 ---
 # <a name="insert-statement-limitations"></a>Limitaciones de la instrucción de INSERCIÓN
 Los datos insertados se truncan a la derecha sin previo aviso si es demasiado largo para caber en la columna.  

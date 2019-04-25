@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b8095d7358e86007abaead1887f4f8cb8bf5b4a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766837"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>Editor del administrador de conexiones SAP BW
   Use el **Editor del administrador de conexiones de SAP BW** para especificar las propiedades que se van a usar para establecer una conexión con la versión 7 del sistema SAP Netweaver BW.  

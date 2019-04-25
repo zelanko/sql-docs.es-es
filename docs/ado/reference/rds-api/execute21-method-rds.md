@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1b4608dde67f31067ed34f7c552ba866a2095ed
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469327"
 ---
 # <a name="execute21-method-rds"></a>Método Execute21 (RDS)
 Ejecuta la solicitud y crea un conjunto de registros ADO para su uso en ADO 2.1.  
@@ -41,7 +41,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *HandlerString*  
  La cadena identifica el controlador que se usará con esta ejecución. La cadena contiene dos partes. La primera parte contiene el nombre (ProgID) del controlador que se usará. La segunda parte de la cadena contiene argumentos que se pasarán al controlador. Cómo se interpreta la cadena de argumentos es específico del controlador. Las dos partes se separan con la primera instancia de una coma en la cadena (aunque puede contener comas adicionales en la cadena de argumentos). Los argumentos son opcionales.  
   
- *Cadena de consulta*  
+ *QueryString*  
  Un comando en el lenguaje de comandos admitido por el proveedor OLE DB identificado en la cadena de conexión. Para los proveedores basados en SQL, es posible que contenga un [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción de comando, pero para los proveedores que no son de SQL (por ejemplo, MSDataShape) no puede ser un [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción de consulta.  
   
  Además, si se está usando un controlador (y se recomienda encarecidamente que se utiliza un controlador), el controlador puede modificar o reemplazar el valor especificado aquí. Por ejemplo, el controlador normalmente reemplaza *QueryString* con una cadena de consulta mediante el archivo. ini. De forma predeterminada, se usa el archivo Msdfmap.ini.  

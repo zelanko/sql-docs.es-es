@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92e34de1b9fd675570527f9a28f8476a51597f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472562"
 ---
 # <a name="data-shaping-example"></a>Ejemplo de la forma de datos
 El siguientes comando de la forma de datos muestra cómo generar un jerárquica **Recordset** desde el **clientes** y **pedidos** tablas en la base de datos Northwind.  
@@ -38,7 +38,7 @@ RELATE customerID TO customerID)
 |ALFKI|Maria Ander|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
 |ANATR|Ana Trujillo|10308<br /><br /> 10625<br /><br /> 10759<br /><br /> 10926|1996-09-18<br /><br /> 1997-08-08<br /><br /> 1997-11-28<br /><br /> 1998-03-04|ANATR<br /><br /> ANATR<br /><br /> ANATR<br /><br /> ANATR|  
   
- En un comando SHAPE, APPEND se utiliza para crear un elemento secundario **Recordset** relacionados con el elemento primario **Recordset** (tal como lo devuelve el comando específico del proveedor inmediatamente después de la palabra clave de forma que se ha analizado más adelante) mediante la cláusula RELATE. Los primarios y secundarios suelen tengan al menos una columna en común: el valor de la columna en una fila del elemento primario es el mismo que el valor de la columna en todas las filas del elemento secundario.  
+ En un comando SHAPE, APPEND se utiliza para crear un elemento secundario **Recordset** relacionados con el elemento primario **Recordset** (tal como lo devuelve el comando específico del proveedor inmediatamente después de la palabra clave de forma que se ha analizado más adelante) mediante la cláusula RELATE. Los primarios y secundarios normalmente tienen al menos una columna en común: El valor de la columna en una fila del elemento primario es el mismo que el valor de la columna en todas las filas del elemento secundario.  
   
  Hay una segunda forma de usar comandos de forma: es decir, para generar un elemento primario **Recordset** desde un elemento secundario **Recordset**. Los registros en el elemento secundario **Recordset** se agrupan, normalmente mediante la cláusula BY y una fila se agrega al elemento primario **Recordset** para cada grupo resultante en el elemento secundario. Si se omite la cláusula BY, el elemento secundario **Recordset** le formulario de un solo grupo y el elemento primario **Recordset** contendrá exactamente una fila. Esto es útil para calcular agregados de "total general" en todo el secundario **Recordset**.  
   

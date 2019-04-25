@@ -1,5 +1,5 @@
 ---
-title: Reemplazar una tabla o una consulta con nombre en una vista del origen de datos (Analysis Services) | Documentos de Microsoft
+title: Reemplazar una tabla o una consulta con nombre en una vista del origen de datos (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a171eafc35446f588d64c74457792912dcebe75a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641119"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>Reemplazar una tabla o una consulta con nombre en una vista del origen de datos (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

@@ -1,5 +1,5 @@
 ---
-title: 'Lección 13: Implementación | Microsoft Docs'
+title: 'Lección 13: Implementar | Microsoft Docs'
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6b2ed8149cef9e9886398feebf43329f962b9537
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467647"
 ---
 # <a name="lesson-13-deploy"></a>Lección 13: Implementar
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -24,7 +24,7 @@ En esta lección, configurará propiedades de implementación; especificar una l
 Tiempo estimado para completar esta lección: **5 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
-Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 12: analizar en Excel](../analysis-services/lesson-12-analyze-in-excel.md).  
+Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 12: Analizar en Excel](../analysis-services/lesson-12-analyze-in-excel.md).  
   
 ## <a name="deploy-the-model"></a>Implementar el modelo  
   
@@ -34,7 +34,7 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
   
 2.  En el **AW Internet Sales Property Pages** cuadro de diálogo **servidor de implementación**, en el **Server** propiedad, escriba el nombre de un servidor de Azure Analysis Services o un instancia del servidor local que se ejecuta en modo Tabular. Se trata de la instancia del servidor al que se va a implementar el modelo.  
 
-    ![AAS-implementar--server-propiedades de la implementación](../analysis-services/media/aas-deploy-deployment-server-property.png)
+    ![aas-deploy-deployment-server-property](../analysis-services/media/aas-deploy-deployment-server-property.png)
  
     > [!IMPORTANT]  
     > Debe tener permisos de administrador en el remoto Analysis Services instancia poder implementar en él.  
@@ -55,14 +55,14 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
   
     Aparece el cuadro de diálogo Implementar en el que se muestra el estado de implementación de los metadatos y las tablas incluidas en el modelo.  
     
-    ![AAS-implementar-status](../analysis-services/media/aas-deploy-status.png)
+    ![aas-deploy-status](../analysis-services/media/aas-deploy-status.png)
   
 3. Cuando se complete correctamente la implementación, continúe y haga clic en **Cerrar**.  
   
 ## <a name="conclusion"></a>Conclusión  
 ¡Enhorabuena! Ha terminado de crear e implementar su primer modelo Tabular de Analysis Services. Este tutorial le ha guiado por las tareas más comunes para crear un modelo tabular. Ahora que su modelo Ventas por Internet de Adventure Works está implementado, puede utilizar el SQL Server Management Studio para administrarlo, crear scripts de proceso y realizar un plan de copia de seguridad. Los usuarios ahora también pueden conectarse al modelo mediante una aplicación cliente de informes como Microsoft Excel o Power BI.  
 
-![como-tabular-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
+![as-tabular-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
   
   
 ## <a name="see-also"></a>Vea también  

@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bd1440e5ce0649d31f0ae6c0577c61e9e081a800
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509937"
 ---
 # <a name="data-mining-properties"></a>Propiedades de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor de minería de datos descritas en las siguientes tablas. Para obtener más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Se aplica a:** modo de servidor multidimensional  únicamente  
+ **Se aplica a:** Modo de servidor multidimensional únicamente  
   
 ## <a name="non-specific-category"></a>Categoría no específica  
  **AllowSessionMiningModels**  

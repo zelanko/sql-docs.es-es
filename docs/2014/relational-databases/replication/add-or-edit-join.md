@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625936"
 ---
 # <a name="add-or-edit-join"></a>Agregar o editar combinaciones
   Los cuadros de diálogo **Agregar combinación** y **Editar combinación** permiten agregar y editar filtros de combinación en publicaciones de combinación.  

@@ -17,21 +17,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f548e1496ce45d9fdb4677fd9659de349e5c5cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636110"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Controladores ODBC 3.x de escritura
 En la tabla siguiente se muestra la compatibilidad de la función en una aplicación ODBC 3. *x* controlador y una aplicación ODBC y la asignación que se realiza mediante el Administrador de controladores cuando se llaman las funciones en una aplicación ODBC 3. *x* controlador.  
   
-|Función|Admitida<br /><br /> por un<br /><br /> ODBC 3. *x*<br /><br /> ¿controlador?|Admitida<br /><br /> por un<br /><br /> ODBC 3. *x*<br /><br /> ¿aplicación?|Compatible o asignado<br /><br /> por ODBC 3. *x*<br /><br /> Administrador de controladores para<br /><br /> una aplicación ODBC 3. ¿ *x* controlador?|  
+|Función|Admitida<br /><br /> por un<br /><br /> ODBC 3.*x*<br /><br /> ¿controlador?|Admitida<br /><br /> por un<br /><br /> ODBC 3.*x*<br /><br /> ¿aplicación?|Compatible o asignado<br /><br /> por ODBC 3. *x*<br /><br /> Administrador de controladores para<br /><br /> una aplicación ODBC 3. ¿ *x* controlador?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|No|No hay [1]|Sí|  
-|**SQLAllocEnv**|No|No hay [1]|Sí|  
+|**SQLAllocConnect**|No|No[1]|Sí|  
+|**SQLAllocEnv**|No|No[1]|Sí|  
 |**SQLAllocHandle**|Sí|Sí|No|  
-|**SQLAllocStmt**|No|No hay [1]|Sí|  
+|**SQLAllocStmt**|No|No[1]|Sí|  
 |**SQLBindCol**|Sí|Sí|No|  
 |**SQLBindParam**|No|Sí [2]|Sí|  
 |**SQLBindParameter**|Sí|Sí|No|  
@@ -40,7 +40,7 @@ En la tabla siguiente se muestra la compatibilidad de la función en una aplicac
 |**SQLCancel**|Sí|Sí|No|  
 |**SQLCloseCursor**|Sí|Sí|No|  
 |**SQLColAttribute**|Sí|Sí|No|  
-|**SQLColAttributes**|No hay [3]|No|Sí|  
+|**SQLColAttributes**|No[3]|No|Sí|  
 |**SQLColumnPrivileges**|Sí|Sí|No|  
 |**SQLColumns**|Sí|Sí|No|  
 |**SQLConnect**|Sí|Sí|No|  
@@ -52,7 +52,7 @@ En la tabla siguiente se muestra la compatibilidad de la función en una aplicac
 |**SQLDriverConnect**|Sí|Sí|No|  
 |**SQLDrivers**|No|Sí|Sí|  
 |**SQLEndTran**|Sí|Sí|No|  
-|**SQLError**|No|No hay [1]|Sí|  
+|**SQLError**|No|No[1]|Sí|  
 |**SQLExecDirect**|Sí|Sí|No|  
 |**SQLExecute**|Sí|Sí|No|  
 |**SQLExtendedFetch**|Sí|No|No|  
@@ -64,7 +64,7 @@ En la tabla siguiente se muestra la compatibilidad de la función en una aplicac
 |**SQLFreeHandle**|Sí|Sí|No|  
 |**SQLFreeStmt**|Sí|Sí|No|  
 |**SQLGetConnectAttr**|Sí|Sí|No|  
-|**SQLGetConnectOption**|No hay [5]|No hay [1]|Sí|  
+|**SQLGetConnectOption**|No[5]|No[1]|Sí|  
 |**SQLGetCursorName**|Sí|Sí|No|  
 |**SQLGetData**|Sí|Sí|No|  
 |**SQLGetDescField**|Sí|Sí|No|  
@@ -72,10 +72,10 @@ En la tabla siguiente se muestra la compatibilidad de la función en una aplicac
 |**SQLGetDiagField**|Sí|Sí|No|  
 |**SQLGetDiagRec**|Sí|Sí|No|  
 |**SQLGetEnvAttr**|Sí|Sí|No|  
-|**SQLGetFunctions**|No hay [6]|Sí|Sí|  
+|**SQLGetFunctions**|No[6]|Sí|Sí|  
 |**SQLGetInfo**|Sí|Sí|No|  
 |**SQLGetStmtAttr**|Sí|Sí|No|  
-|**SQLGetStmtOption**|No hay [5]|No hay [1]|Sí|  
+|**SQLGetStmtOption**|No[5]|No[1]|Sí|  
 |**SQLGetTypeInfo**|Sí|Sí|No|  
 |**SQLMoreResults**|Sí|Sí|No|  
 |**SQLNativeSql**|Sí|Sí|No|  
@@ -90,7 +90,7 @@ En la tabla siguiente se muestra la compatibilidad de la función en una aplicac
 |**SQLPutData**|Sí|Sí|No|  
 |**SQLRowCount**|Sí|Sí|No|  
 |**SQLSetConnectAttr**|Sí|Sí|No|  
-|**SQLSetConnectOption**|No hay [5]|No hay [1]|Sí|  
+|**SQLSetConnectOption**|No[5]|No[1]|Sí|  
 |**SQLSetCursorName**|Sí|Sí|No|  
 |**SQLSetDescField**|Sí|Sí|No|  
 |**SQLSetDescRec**|Sí|Sí|No|  
@@ -99,12 +99,12 @@ En la tabla siguiente se muestra la compatibilidad de la función en una aplicac
 |**SQLSetParam**|No|No|Sí|  
 |**SQLSetScrollOption**|Sí|Sí|No|  
 |**SQLSetStmtAttr**|Sí|Sí|No|  
-|**SQLSetStmtOption**|No hay [5]|No hay [1]|Sí|  
+|**SQLSetStmtOption**|No[5]|No[1]|Sí|  
 |**SQLSpecialColumns**|Sí|Sí|No|  
 |**SQLStatistics**|Sí|Sí|No|  
 |**SQLTablePrivileges**|Sí|Sí|No|  
 |**SQLTables**|Sí|Sí|No|  
-|**SQLTransact**|No|No hay [1]|Sí|  
+|**SQLTransact**|No|No[1]|Sí|  
   
  [1] esta función está en desuso en ODBC 3. *x*. ODBC 3. *x* aplicaciones no deben utilizar esta función. Sin embargo, un grupo de abierto o aplicación compatible con ISO CLI puede llamar a esta función.  
   

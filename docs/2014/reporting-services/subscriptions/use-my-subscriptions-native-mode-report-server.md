@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45c66f4092304d804f5e5401aceba1fcefc135e9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632212"
 ---
 # <a name="use-my-subscriptions"></a>Usar Mis suscripciones
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] El Administrador de informes incluye un **Mis suscripciones** página que organiza todas las suscripciones en un solo lugar. Puede utilizar Mis suscripciones para ver, modificar y eliminar suscripciones existentes. Sin embargo, no puede utilizar esta página para crear suscripciones.  

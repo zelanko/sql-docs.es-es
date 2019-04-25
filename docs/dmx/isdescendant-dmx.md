@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c33a607587ee19de0f47942cd2c1e5b350229a88
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503807"
 ---
 # <a name="isdescendant-dmx"></a>IsDescendant (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ IsDescendant(<NodeID>)
 ## <a name="return-type"></a>Tipo devuelto  
  Un tipo booleano.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  **IsDescendant** solo se usa en [SELECT FROM &#60;modelo&#62;. CONTENIDO &#40;DMX&#41; ](../dmx/select-from-model-content-dmx.md) y [SELECT FROM &#60;modelo&#62;. DIMENSION_CONTENT &#40;DMX&#41; ](../dmx/select-from-model-dimension-content-dmx.md) las consultas.  
   
 ## <a name="examples"></a>Ejemplos  

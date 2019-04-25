@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a2f7e59f10b7a54e46e259fff8a4f60b42803a19
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769952"
 ---
 # <a name="date-and-time-formats"></a>Formatos de fecha y hora
   El análisis rápido ofrece un conjunto rápido y simple de rutinas para analizar datos. El análisis rápido admite los siguientes formatos para los tipos de datos de fecha y hora.  

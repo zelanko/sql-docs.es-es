@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5de911200c7fbe91c912c7ac7a321f79226b6452
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768511"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>Supervisar los contadores de rendimiento con la tarea Script
   Los administradores quizá tengan que supervisar el rendimiento de los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realizan transformaciones complejas en grandes volúmenes de datos. El espacio de nombres **System.Diagnostics** de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona las clases para utilizar los contadores de rendimiento existentes y para crear sus propios contadores de rendimiento.  

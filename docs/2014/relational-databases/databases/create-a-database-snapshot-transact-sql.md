@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762342"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Crear una instantánea de base de datos (Transact-SQL)
   El único modo de crear una instantánea de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste en usar [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no admite la creación de instantáneas de base de datos.  
@@ -28,7 +28,7 @@ ms.locfileid: "52768337"
   
      [Seguridad](#Security)  
   
-     [Procedimiento recomendado: Nomenclatura de las instantáneas de base de datos](#Naming)  
+     [Procedimiento recomendado: Asignar nombres a instantáneas de base de datos](#Naming)  
   
 -   **Para crear una base de datos de instantánea, utilizando:**  [Transact-SQL](#TsqlProcedure)  
   
@@ -51,13 +51,13 @@ ms.locfileid: "52768337"
 ###  <a name="Recommendations"></a> Recomendaciones  
  En esta sección se describen los procedimientos recomendados siguientes:  
   
--   [Procedimiento recomendado: Nomenclatura de las instantáneas de base de datos](#Naming)  
+-   [Procedimiento recomendado: Asignar nombres a instantáneas de base de datos](#Naming)  
   
 -   [Procedimiento recomendado: Limitar el número de instantáneas de base de datos](#Limiting_Number)  
   
--   [Procedimiento recomendado: Conexiones de cliente a una instantánea de base de datos](#Client_Connections)  
+-   [Procedimiento recomendado: Conexiones de cliente con una instantánea de base de datos](#Client_Connections)  
   
-####  <a name="Naming"></a> Procedimiento recomendado: Asignar nombres a instantáneas de base de datos  
+####  <a name="Naming"></a> Procedimiento recomendado: Nomenclatura de las instantáneas de base de datos  
  Antes de crear instantáneas, es importante pensar cómo asignarles un nombre. Cada instantánea de base de datos necesita un nombre de base de datos único. Para facilitar la administración, el nombre de una instantánea puede incorporar información que identifique la base de datos, por ejemplo:  
   
 -   Nombre de la base de datos de origen.  
@@ -88,12 +88,12 @@ AdventureWorks_snapshot_evening
 > [!NOTE]  
 >  Si desea volver a una instantánea de base de datos, debe eliminar cualquier otra instantánea de esa base de datos.  
   
-####  <a name="Client_Connections"></a> Procedimiento recomendado: Conexiones de clientes con una instantánea de base de datos  
+####  <a name="Client_Connections"></a> Procedimiento recomendado: Conexiones de cliente a una instantánea de base de datos  
  Para usar una instantánea de base de datos, los clientes deben saber dónde encontrarla. Los usuarios pueden leer de una instantánea de base de datos mientras se crea o elimina otra. Sin embargo, si sustituye una nueva instantánea por otra ya existente, debe redirigir a los clientes a la nueva instantánea. Los usuarios pueden conectarse manualmente a una instantánea de base de datos mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Sin embargo, para admitir un entorno de producción, debe crear una solución programática que dirija de un modo transparente a los clientes de escritura de informes a la instantánea de base de datos más reciente de la base de datos.  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Todos los usuarios que pueden crear una base de datos pueden crear una instantánea de base de datos; sin embargo, para crear una instantánea de una base de datos reflejada, es necesario ser miembro del rol fijo de servidor **sysadmin** .  
   
 ##  <a name="TsqlProcedure"></a> Cómo crear una instantánea de base de datos (con Transact-SQL)  

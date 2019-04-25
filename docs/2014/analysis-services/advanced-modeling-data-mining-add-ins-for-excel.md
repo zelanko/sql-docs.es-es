@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bad97bf517bee9f8c2545d5a48acc02830dc5f58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637023"
 ---
 # <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>Modelado avanzado (Complementos de minería de datos para Excel)
   Puede usar el **avanzadas** opciones para crear modelos y estructuras de minería de datos personalizadas con parámetros diferentes de las creadas por los asistentes de modelado de datos. Los dos asistentes descritos en esta sección le ayudan a crear una estructura de minería de datos completamente nueva y un nuevo modelo de minería de datos para aplicarlos a una estructura de minería de datos existente.  

@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a66f0cd3a17baa9a09a5eeef2ade3d730f0a206b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636665"
 ---
 # <a name="sqlparamoptions-visual-foxpro-odbc-driver"></a>SQLParamOptions (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
 >  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: completo  
+ Soporte técnico: Completo  
   
- Conformidad de ODBC API: Nivel 1  
+ Conformidad de la API de ODBC: Nivel 1  
   
  Permite que una aplicación especificar varios valores para el conjunto de parámetros asignado por [SQLBindParameter](../../odbc/microsoft/sqlbindparameter-visual-foxpro-odbc-driver.md). La capacidad de especificar varios valores para un conjunto de parámetros es útil para inserciones masivas y otro trabajo que requiera el origen de datos para procesar la misma instrucción SQL varias veces con distintos valores de parámetro. Por ejemplo, una aplicación puede especificar tres conjuntos de valores para el conjunto de parámetros asociados con un **insertar** instrucción y, a continuación, ejecute el **insertar** instrucción una vez para realizar las tres insertar operaciones.  
   

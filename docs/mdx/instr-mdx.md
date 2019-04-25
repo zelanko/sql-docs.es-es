@@ -1,5 +1,5 @@
 ---
-title: InStr (MDX) | Documentos de Microsoft
+title: Instr (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f4bfab3bc18958a51bb05c68e90c17a1359d046
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629098"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -41,7 +41,7 @@ InStr([start, ]searched_string, search_string[, compare])
  (opcional) Valor entero. Este argumento siempre se pasa por alto. Se define para la compatibilidad con otras **Instr** funciones en otros lenguajes.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un valor entero con la posición inicial de *String2* en *String1*.  
+ Un valor entero con la posición inicial de *cadena2* en *String1*.  
   
  Además, **InStr** función devuelve los valores enumerados en la tabla siguiente según la condición:  
   
@@ -54,13 +54,13 @@ InStr([start, ]searched_string, search_string[, compare])
 |String2 no se encuentra|cero (0)|  
 |start es mayor que Len(String2)|cero (0)|  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
   
 > [!WARNING]  
 >  **InStr** siempre realiza una comparación entre mayúsculas y minúsculas.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra el uso de la **Instr** función y se muestran diversos escenarios de resultado.  
+ El ejemplo siguiente muestra el uso de la **Instr** función y se muestran diversos escenarios de resultado.  
   
 ```  
 with   

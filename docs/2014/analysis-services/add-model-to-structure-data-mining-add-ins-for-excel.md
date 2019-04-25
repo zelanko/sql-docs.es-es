@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1aa72d2c9e2fcf953e8c34d7fdddd656c76b0685
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632948"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Agregar modelo a estructura (Complementos de minería de datos para Excel)
   ![Agregar modelo a botón estructura](media/dmc-addmodel.gif "Agregar modelo a botón estructura")  

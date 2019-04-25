@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633375"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>No compatible de Visual FoxPro comandos y funciones (controlador ODBC de Visual FoxPro)
 En la tabla siguiente se enumera FoxPro comandos y funciones que no son compatibles con el controlador ODBC de Visual FoxPro, pero son compatibles con Microsoft® Visual FoxPro.  
@@ -33,7 +33,7 @@ En la tabla siguiente se enumera FoxPro comandos y funciones que no son compatib
   
 ||||  
 |-|-|-|  
-|#DEFINEN... #UNDEF|#IF... #ENDIF directiva de preprocesador|#IFDEF &AMP;#124; #IFNDEF|  
+|#DEFINEN... #UNDEF|#IF... #ENDIF directiva de preprocesador|#IFDEF &#124; #IFNDEF|  
 |#INCLUDE preprocesador (directiva)|:: Operador de resolución de ámbito|! Comando (vea ejecutar &#124; ! Comando)|  
 |? &#124; ?? Comando|??? Comando|\ &#124; \\\ Comando|  
 |@ ... Comando del cuadro|@ ... Comando de la clase|@ ... Comando CLEAR|  
@@ -254,7 +254,7 @@ En la tabla siguiente se enumera FoxPro comandos y funciones que no son compatib
 |Comando CLEAR conjunto|CONJUNTO de comandos de RELOJ|ESTABLECER el COLOR del comando|  
 |ESTABLECER el COLOR del comando de esquema|Comando de conjunto de conjunto de COLOR|ESTABLECER el COLOR al comando|  
 |Comando de conjunto COMPATIBLE|Comando de confirmación de SET|CONJUNTO de comandos de consola|  
-|CONJUNTO CPCOMPILE|CONJUNTO CPDIALOG|CONJUNTO de comandos de moneda|  
+|CONJUNTO CPCOMPILE|SET CPDIALOG|CONJUNTO de comandos de moneda|  
 |SET CURSOR (comando)|Comando DATASESSION Set.|CONJUNTO de comandos de depuración|  
 |CONJUNTO de comandos de decimales|Comando de conjunto de DELIMITADORES|CONJUNTO de comandos de desarrollo|  
 |CONJUNTO de comandos de dispositivo|CONJUNTO de comandos de visualización|Comando DOHISTORY Set.|  

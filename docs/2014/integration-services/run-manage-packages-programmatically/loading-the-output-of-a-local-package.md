@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 57b318ac8062203bd11a0717a4c8077bca9880d3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766957"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Cargar la salida de un paquete local
   Las aplicaciones cliente pueden leer la salida de los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cuando se guarda la salida en destinos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o cuando se guarda en un destino de archivo plano usando las clases del espacio de nombres **System.IO**. Sin embargo, una aplicación cliente también puede leer la salida de un paquete directamente de la memoria, sin tener que efectuar un paso intermedio para conservar los datos. La clave para esta solución es la `Microsoft.SqlServer.Dts.DtsClient` espacio de nombres que contiene implementaciones especializadas de los `IDbConnection`, `IDbCommand`, y **IDbDataParameter** interfaces desde el **System.Data** espacio de nombres. El ensamblado Microsoft.SqlServer.Dts.DtsClient.dll se instala de forma predeterminada en la carpeta **%Archivos de programa%\Microsoft SQL Server\100\DTS\Binn**.  
@@ -45,7 +45,7 @@ ms.locfileid: "58382053"
   
 4.  Cree un objeto de tipo `DtsClient.DtsCommand` que utiliza el objeto `DtsConnection` creado anteriormente y establezca la propiedad `CommandText` en el nombre del destino DataReader del paquete. A continuación, llame al método `ExecuteReader` del objeto de comando para cargar los resultados del paquete en un nuevo DataReader.  
   
-5.  Opcionalmente, puede parametrizar indirectamente la salida del paquete utilizando la colección de objetos `DtsDataParameter` en el objeto `DtsCommand` para pasar los valores a las variables definidas en el paquete. Dentro del paquete, puede usar estas variables como parámetros de consulta o en expresiones para influir en los resultados devueltos al destino DataReader. Debe definir estas variables en el paquete en el **DtsClient** espacio de nombres antes de usarlos con el `DtsDataParameter` objeto desde una aplicación cliente. (Quizá tenga que hacer clic en el botón de la barra de herramientas **Elegir columnas de variables** de la ventana **Variables** para mostrar la columna **Espacio de nombres**). En el código de cliente, al agregar `DtsDataParameter` a la colección `Parameters` de `DtsCommand`, omita la referencia al espacio de nombres DtsClient en el nombre de variable. Por ejemplo:  
+5.  Opcionalmente, puede parametrizar indirectamente la salida del paquete utilizando la colección de objetos `DtsDataParameter` en el objeto `DtsCommand` para pasar los valores a las variables definidas en el paquete. Dentro del paquete, puede usar estas variables como parámetros de consulta o en expresiones para influir en los resultados devueltos al destino DataReader. Debe definir estas variables en el paquete en el **DtsClient** espacio de nombres antes de usarlos con el `DtsDataParameter` objeto desde una aplicación cliente. (Quizá tenga que hacer clic en el botón de la barra de herramientas **Elegir columnas de variables** de la ventana **Variables** para mostrar la columna **Espacio de nombres**). En el código de cliente, cuando se agrega un `DtsDataParameter` a la `Parameters` colección de la `DtsCommand`, omita la referencia al espacio de nombres DtsClient en el nombre de variable. Por ejemplo:  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: da65bc5c3879a20ff178e27747a9bf5b267ff2c9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631943"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda
   En este tema se explica cómo obtener los valores necesarios para poder agregar una propiedad a una lista de propiedades de búsqueda y hacer que se pueda buscar en ella mediante la búsqueda de texto completo. Estos valores incluyen el GUID de conjunto de propiedades y el identificador entero de propiedad de una propiedad de documento.  

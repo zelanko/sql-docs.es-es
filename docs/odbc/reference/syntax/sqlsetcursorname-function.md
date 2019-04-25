@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742251"
 ---
 # <a name="sqlsetcursorname-function"></a>Función SQLSetCursorName
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ISO 92  
   
  **Resumen**  
  **SQLSetCursorName** asocia un nombre de cursor con una instrucción activa. Si una aplicación no llama a **SQLSetCursorName**, el controlador generará los nombres de cursor según sea necesario para procesar una instrucción SQL.  
@@ -48,10 +48,10 @@ SQLRETURN SQLSetCursorName(
  *StatementHandle*  
  [Entrada] Identificador de instrucción.  
   
- *cursorName*  
+ *CursorName*  
  [Entrada] Nombre del cursor. Para un procesamiento eficaz, el nombre del cursor no debe incluir los espacios iniciales o finales en el nombre del cursor y, si el nombre del cursor incluye un identificador delimitado, debe colocarse el delimitador como primer carácter en el nombre del cursor.  
   
- *Longituddenombre*  
+ *NameLength*  
  [Entrada] Longitud en caracteres de **CursorName*.  
   
 ## <a name="returns"></a>Devuelve  

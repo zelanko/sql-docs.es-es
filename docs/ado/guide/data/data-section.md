@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472552"
 ---
 # <a name="data-section"></a>Sección de datos
 La sección de datos define los datos del conjunto de filas junto con el pendiente actualizaciones, inserciones o eliminaciones. La sección de datos puede contener cero o más filas. Solo puede contener datos de un conjunto de filas donde la fila se define el esquema. Además, como se indicó antes, se pueden omitir columnas sin datos. Si se utiliza un atributo o un subelemento en la sección de datos y esa construcción no se ha definido en la sección de esquema, se omite en modo silencioso.  
@@ -35,7 +35,7 @@ La sección de datos define los datos del conjunto de filas junto con el pendien
 ## <a name="binary"></a>Binario  
  Datos binarios están bin.hex codificado (es decir, un byte se asigna a dos caracteres, un carácter por nibble).  
   
-## <a name="datetime"></a>DateTime  
+## <a name="datetime"></a>Datetime  
  El formato VT_DATE variant no es directamente compatible con tipos de datos XML. El formato correcto para las fechas con el componente de fecha y de hora es aaaa-mm-ddThh.  
   
  Para obtener más información acerca de los formatos de fecha especificados mediante XML, vea el [especificación W3C XML-Data](https://go.microsoft.com/fwlink/?LinkId=5692).  

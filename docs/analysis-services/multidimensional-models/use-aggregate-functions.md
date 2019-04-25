@@ -1,5 +1,5 @@
 ---
-title: Usar funciones de agregado | Documentos de Microsoft
+title: Usar funciones de agregado | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4e30b5670e7a9a02fdfa9f3bbfad6889e83b562
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743091"
 ---
 # <a name="use-aggregate-functions"></a>Usar funciones de agregado
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -65,8 +65,8 @@ ms.locfileid: "34026042"
  Una medida de recuento distintiva que cuenta miembros se basa en una columna de clave externa de la tabla de hechos. (Es decir, la propiedad **Source Column** de la medida identifica esta columna). Esta columna se combina con la columna de la tabla de dimensiones que identifica a los miembros que cuenta la medida de recuento distintiva.  
   
 ## <a name="see-also"></a>Vea también  
- [Las medidas y grupos de medida](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
- [Referencia de funciones MDX & #40; MDX & #41;](../../mdx/mdx-function-reference-mdx.md)   
- [Definir el comportamiento de suma parcial](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
+ [Medidas y grupos de medida](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)   
+ [Referencia de funciones MDX &#40;MDX&#41;](../../mdx/mdx-function-reference-mdx.md)   
+ [Define Semiadditive Behavior](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)  
   
   

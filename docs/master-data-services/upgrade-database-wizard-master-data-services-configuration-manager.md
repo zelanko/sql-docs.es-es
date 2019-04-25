@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd7ac0496532ca0cd034d34fa44d922700c045a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630731"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Asistente para actualizar base de datos (Administrador de configuración de Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52782187"
 ## <a name="progress-and-finish"></a>Progreso y Finalizar  
  Muestra el progreso del proceso de actualización. Una vez actualizada la base de datos, haga clic en el vínculo al archivo de registro para ver información detallada sobre la actualización o haga clic en **Finalizar** para cerrar el asistente de base de datos y volver a la página **Bases de datos** . La base de datos actualizada se ha seleccionado y podrá ver y modificar la configuración del sistema.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Página Configuración de base de datos &#40;Administrador de configuración de Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Instalación y configuración de Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Actualizar Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  

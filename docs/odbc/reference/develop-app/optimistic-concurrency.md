@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa80ff3359e3bbbed9e28044cce7514006c40f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446217"
 ---
 # <a name="optimistic-concurrency"></a>Simultaneidad optimista
 *Simultaneidad optimista* deriva su nombre de la suposición optimista que no se suele producir colisiones entre transacciones; una colisión por haberse producido cuando otra transacción actualiza o elimina una fila de datos entre el momento en se lee por la transacción actual y la hora se actualiza o elimina. Es el opuesto de *simultaneidad pesimista,* o bloqueo, en que el desarrollador de aplicaciones cree que dichos conflictos son un lugar común.  

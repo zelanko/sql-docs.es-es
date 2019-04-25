@@ -1,5 +1,5 @@
 ---
-title: Crear y administrar particiones de modelos tabulares | Documentos de Microsoft
+title: Crear y administrar particiones de modelos tabulares | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7067449c0de9958e98a7a9dc5cc09c7f89f33fa9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472297"
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>Crear y administrar particiones de modelos tabulares
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34039900"
   Las particiones dividen una tabla en partes lógicas. A continuación, cada partición se puede procesar (actualizar) de forma independiente de las demás particiones. Las particiones definidas para un modelo durante la creación de modelos se duplican en un modelo implementado. Una vez realizada la implementación, puede administrar esas particiones mediante el cuadro de diálogo **Particiones** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o mediante un script. Las tareas proporcionadas en este tema describen cómo crear y administrar particiones en un modelo implementado.  
   
   > [!NOTE]  
->  Particiones en modelos tabulares creados en el nivel de compatibilidad de 1400 se definen mediante una instrucción de consulta M. Para obtener más información, consulte [M referencia](https://msdn.microsoft.com/library/mt211003.aspx). 
+>  Las particiones en modelos tabulares creados en el nivel de compatibilidad 1400 se definen mediante una instrucción de consulta M. Para obtener más información, consulte [M referencia](https://msdn.microsoft.com/library/mt211003.aspx). 
 >
   
 ## <a name="tasks"></a>Tareas  
@@ -51,7 +51,7 @@ ms.locfileid: "34039900"
 -   En el cuadro de diálogo **Particiones** , en la lista **Particiones** , use Ctrl+clic para seleccionar las particiones que quiere combinar y, después, haga clic en el botón **Combinar** .  
   
 > [!IMPORTANT]  
->  Al combinar las particiones no se actualizan los metadatos de la partición. Debe modificar la instrucción SQL o M para la partición resultante para asegurarse de que las operaciones de procesamiento procesan todos los datos de la partición combinada.  
+>  Al combinar las particiones no se actualizan los metadatos de la partición. Debe editar la instrucción SQL o M para la partición resultante para asegurarse de que las operaciones de procesamiento procesan todos los datos de la partición combinada.  
   
 ###  <a name="bkmk_delete"></a> Para eliminar una partición  
   

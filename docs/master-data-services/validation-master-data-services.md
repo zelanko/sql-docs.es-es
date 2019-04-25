@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0755bca5dedf23dd86dd736a3e6fcff9a9d76ebc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629430"
 ---
 # <a name="validation-master-data-services"></a>Validación (Master Data Services)
 
@@ -42,7 +42,7 @@ ms.locfileid: "52758137"
 |Validar subconjuntos específicos de datos según las reglas de negocios. Todos los usuarios con permiso en el área funcional **Explorador** .|[Validar miembros específicos con las reglas de negocios &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)|  
 |Validar subconjuntos específicos de datos según las reglas de negocios. Todos los usuarios con permiso en el área funcional **Explorador** que usen [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].|[Aplicar reglas de negocios &#40;complemento MDS para Excel&#41;](../master-data-services/microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

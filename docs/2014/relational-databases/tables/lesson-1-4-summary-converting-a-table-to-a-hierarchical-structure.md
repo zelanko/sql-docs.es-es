@@ -1,5 +1,5 @@
 ---
-title: 'Resumen: Conversión de una tabla en una estructura jerárquica | Microsoft Docs'
+title: 'Resumen: Convertir una tabla en una estructura jerárquica | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc38ad1ed2ab29660ea7caade8a56c7fec042540
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760879"
 ---
 # <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>Resumen: Conversión de una tabla en una estructura jerárquica
   El tipo de datos `hierarchyid` puede almacenar una relación jerárquica en un formato simple y compacto. Los índices apropiados pueden devolver eficazmente los datos por el nivel de la jerarquía, por subárboles de la jerarquía, o por búsquedas singleton tradicionales.  
@@ -26,7 +26,7 @@ ms.locfileid: "48057075"
  En esta lección, se utilizaron dos de los métodos jerárquicos. La lección siguiente mostrará cómo utilizar algunos otros métodos para consultar y manipular datos jerárquicos.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Crear y administrar los datos de una tabla jerárquica](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+ [Lección 2: Creación y administración de datos en una tabla jerárquica](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Datos jerárquicos &#40;SQL Server&#41;](../hierarchical-data-sql-server.md)  

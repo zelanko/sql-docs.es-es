@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629637"
 ---
 # <a name="best-practices-for-replication-administration"></a>Prácticas recomendadas para la administración de replicación
-  Después de configurar la replicación, es importante entender cómo administrar una topología de replicación. En este tema se proporciona una guía básica de prácticas recomendadas en varias áreas con vínculos a más información de cada área. Además de seguir las instrucciones de prácticas recomendadas presentadas en este tema, considere la posibilidad de leer el tema de preguntas más frecuentes para familiarizarse con los problemas y preguntas comunes: [Preguntas para administradores de replicación más](frequently-asked-questions-for-replication-administrators.md).  
+  Después de configurar la replicación, es importante entender cómo administrar una topología de replicación. En este tema se proporciona una guía básica de prácticas recomendadas en varias áreas con vínculos a más información de cada área. Además de seguir las instrucciones de procedimientos recomendados que se presentan en este tema, puede leer el tema de preguntas más frecuentes para familiarizarse con preguntas y problemas comunes: [Preguntas más frecuentes para administradores de replicación](frequently-asked-questions-for-replication-administrators.md).  
   
  Es útil dividir la guía de prácticas recomendadas en dos áreas:  
   
@@ -148,6 +148,6 @@ ms.locfileid: "54134748"
  Para obtener más información, vea [Make Schema Changes on Publication Databases](../publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).  
   
 ## <a name="see-also"></a>Vea también  
- [Preguntas más frecuentes sobre la administración de replicación](frequently-asked-questions-for-replication-administrators.md)  
+ [Preguntas más frecuentes para administradores de replicación](frequently-asked-questions-for-replication-administrators.md)  
   
   

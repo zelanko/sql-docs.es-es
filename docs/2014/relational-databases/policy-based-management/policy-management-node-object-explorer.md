@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: febf8ce34e93f4efffaea1d9a9925ab5c8206652
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625906"
 ---
 # <a name="policy-management-node-object-explorer"></a>Nodo Administración de directivas (Explorador de objetos)
   Esta sección contiene los siguientes temas de la Ayuda F1 para el nodo **PolicyManagement** del Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

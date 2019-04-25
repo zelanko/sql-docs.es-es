@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4036e38a0d0eb5e76934fa119b3bcc37342062a7
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520291"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Establecer la propiedad Url del servicio web
   En las aplicaciones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], puede modificar en cualquier momento la dirección URL base del servicio web del servidor de informes a la que se dirige la aplicación. Para ello, basta con establecer la propiedad **Url** del objeto de servicio. Por ejemplo:  

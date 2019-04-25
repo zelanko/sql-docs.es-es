@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 733b958ee883aa62034b4acc1eec67100b35a74d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628458"
 ---
 # <a name="file-data-sources"></a>Orígenes de datos de archivo
 *Orígenes de datos de archivo* se almacenan en un archivo y permitir que se usan repetidamente un único usuario o compartir entre varios usuarios la información de conexión. Cuando se usa un origen de datos de archivo, el Administrador de controladores hace que la conexión al origen de datos con la información de un archivo DSN. Este archivo se puede manipular como cualquier otro archivo. Un origen de datos de archivo no tiene un nombre de origen de datos, como hace un origen de datos de la máquina y no está registrado en cualquier máquina o un usuario.  

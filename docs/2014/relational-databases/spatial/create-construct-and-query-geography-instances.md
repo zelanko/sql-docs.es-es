@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 0224f32fde76aa406d90c98fe7280237d09a04e5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524477"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Crear, construir y consultar instancias de Geography
   El tipo de datos espacial geography, `geography`, representa los datos en un sistema de coordenadas de tierra redonda. Se implementa como un tipo de datos de .NET CLR (Common Language Runtime) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` tipo de datos almacena datos elípticos (tierra redonda), como coordenadas de latitud y longitud GPS.  
@@ -105,7 +105,7 @@ ms.locfileid: "53369497"
 ###  <a name="gml"></a> Para construir una instancia de geography a partir de datos de texto GML  
  El `geography` tipo de datos proporciona un método que genera un `geography` instancia a partir de GML, una representación XML de un `geography` instancia. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un subconjunto de GML.  
   
- Para obtener más información sobre el lenguaje de marcado de geografía, vea las especificaciones de OGC: [Especificaciones de OGC, lenguaje de marcado de geografía.](https://go.microsoft.com/fwlink/?LinkId=93629)  
+ Para más información sobre el lenguaje de marcado de geografía, vea la especificación de OGC: [Especificaciones de OGC, Lenguaje de marcado de geografía](https://go.microsoft.com/fwlink/?LinkId=93629).  
   
  **Para construir cualquier tipo de instancia de geography a partir de datos de GML**  
  [GeomFromGML &#40;tipo de datos geography&#41;](/sql/t-sql/spatial-geography/geomfromgml-geography-data-type)  

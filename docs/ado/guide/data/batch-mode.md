@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c25cd688b5d74e4514e1af645f7917059ce4d445
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472839"
 ---
 # <a name="batch-mode"></a>Modo por lotes
 Modo por lotes está en vigor cuando el **LockType** propiedad está establecida en **adLockBatchOptimistic** y actualización por lotes es compatible con el proveedor. Determinadas opciones de tipo de bloqueo no están disponibles dependiendo de la ubicación del cursor. Por ejemplo, un tipo de bloqueo pesimista no está disponible cuando el **CursorLocation** está establecido en **adUseClient**. Por el contrario, un proveedor no admite un bloqueo optimista por lotes cuando la ubicación del cursor está en el servidor. Debe usar la actualización por lotes con un conjunto de claves o un cursor estático solo.  
@@ -29,7 +29,7 @@ Modo por lotes está en vigor cuando el **LockType** propiedad está establecida
   
  Esta sección contiene los siguientes temas:  
   
--   [Enviar actualizaciones: método UpdateBatch](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
+-   [Enviar actualizaciones: Método UpdateBatch](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
   
 -   [Filtrar registros actualizados](../../../ado/guide/data/filtering-for-updated-records.md)  
   

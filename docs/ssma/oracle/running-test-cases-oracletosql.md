@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625799"
 ---
 # <a name="running-test-cases-oracletosql"></a>Ejecución de casos de prueba (OracleToSQL)
 Cuando el evaluador de SSMA se ejecuta un caso de prueba, los objetos seleccionados para las pruebas se ejecuta y crea un informe sobre los resultados de la comprobación. Si los resultados son idénticos en ambas plataformas, la prueba fue correcta. La correspondencia de objetos entre Oracle y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se determina según la configuración de asignación de esquema para el proyecto SSMA actual.  
@@ -43,32 +43,32 @@ Suponga que la tabla comprobada se denomina USER_TABLE. Para este tipo de tabla,
   
 ||||  
 |-|-|-|  
-|Nombre|Tipo|Descripción|  
-|USER_TABLE$ Trg|desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
-|USER_TABLE$ AUD|table|Tabla donde se guardan las filas eliminadas y sobrescribir.|  
-|USER_TABLE$ AUDID|table|Tabla donde se guardan las filas nuevas y modificadas.|  
+|Name|Tipo|Descripción|  
+|USER_TABLE$Trg|desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
+|USER_TABLE$AUD|table|Tabla donde se guardan las filas eliminadas y sobrescribir.|  
+|USER_TABLE$AUDID|table|Tabla donde se guardan las filas nuevas y modificadas.|  
 |USER_TABLE|ver|Representación simplificada de las modificaciones de tabla.|  
-|USER_TABLE$ NUEVO|ver|Representación simplificada de las filas insertadas y sobrescribir.|  
-|USER_TABLE$ NEW_ID|ver|Identificación de las filas insertadas y modificadas.|  
+|USER_TABLE$NEW|ver|Representación simplificada de las filas insertadas y sobrescribir.|  
+|USER_TABLE$NEW_ID|ver|Identificación de las filas insertadas y modificadas.|  
 |USER_TABLE$ ANTIGUO|ver|Representación simplificada de las filas eliminadas y sobrescribir.|  
   
 Se crea el siguiente objeto en el esquema de tabla comprobado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ||||  
 |-|-|-|  
-|Nombre|Tipo|Descripción|  
-|USER_TABLE$ Trg|desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
+|Name|Tipo|Descripción|  
+|USER_TABLE$Trg|desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
   
 Y los siguientes objetos se crean en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en la base de datos ssmatesterdb.  
   
 ||||  
 |-|-|-|  
-|Nombre|Tipo|Descripción|  
-|USER_TABLE$ Aud|table|Tabla donde se guardan las filas eliminadas y sobrescribir.|  
-|USER_TABLE$ AudID|table|Tabla donde se guardan las filas nuevas y modificadas.|  
+|Name|Tipo|Descripción|  
+|USER_TABLE$Aud|table|Tabla donde se guardan las filas eliminadas y sobrescribir.|  
+|USER_TABLE$AudID|table|Tabla donde se guardan las filas nuevas y modificadas.|  
 |USER_TABLE|ver|Representación simplificada de las modificaciones de tabla.|  
-|USER_TABLE$ nuevo|ver|Representación simplificada de las filas insertadas y sobrescribir.|  
-|USER_TABLE$ new_id|ver|Identificación de las filas insertadas y modificadas.|  
+|USER_TABLE$new|ver|Representación simplificada de las filas insertadas y sobrescribir.|  
+|USER_TABLE$new_id|ver|Identificación de las filas insertadas y modificadas.|  
 |USER_TABLE$ antiguo|ver|Representación simplificada de las filas eliminadas y sobrescribir.|  
   
 ### <a name="test-object-calls"></a>Llamadas de objeto de prueba  

@@ -1,5 +1,5 @@
 ---
-title: Interfaz IMDEmbeddedData | Documentos de Microsoft
+title: Interfaz IMDEmbeddedData | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 203eae4b3660aaf5d1f2ed3a92ba844e88a518ff
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467786"
 ---
 # <a name="imdembeddeddata-interface"></a>Interfaz IMDEmbeddedData
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  La interfaz de IMDEmbeddedData es una interfaz pública que se utiliza para administrar un incrustado [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] base de datos o una base de datos de modelo tabular. La interfaz hereda de la **IPersistStream** interfaz. La interfaz permite las siguientes operaciones:  
+  La interfaz IMDEmbeddedData es una interfaz pública que se usa para administrar un embedded [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] base de datos o una base de datos de modelo tabular. La interfaz hereda de la **IPersistStream** interfaz. La interfaz permite las siguientes operaciones:  
   
 -   Obtenga un identificador para el flujo incrustado en el documento contenedor.  
   
@@ -81,7 +81,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descripción  
  Obtiene el identificador que usa la aplicación host para el flujo incrustado en el documento contenedor.  
   
 #### <a name="parameters"></a>Parámetros  
@@ -103,13 +103,13 @@ HRESULT GetStreamIdentifier (
   
  Los valores posibles de DBPROP_MSMD_EMBEDDED_DATA son:  
   
-|Nombre|Value|Definición|  
+|Nombre|Valor|Definición|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|No hay ninguna base de datos incrustada|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|La aplicación actual contiene la base de datos incrustada|  
 |DBPROPVAL_EMBED_LINKED|0x02|La base de datos incrustada se hospeda en una aplicación remota (es decir, el servidor de SharePoint)|  
   
-#### <a name="source"></a>Origen  
+#### <a name="source"></a>Source  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -125,7 +125,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descripción  
  Establece la dirección URL del archivo que contiene el flujo incrustado.  
   
 #### <a name="parameters"></a>Parámetros  
@@ -139,7 +139,7 @@ HRESULT SetContainerURL (
  **E_FAIL**  
  Se produjo un error al establecer la dirección URL del elemento contenedor.  
   
-#### <a name="source"></a>Origen  
+#### <a name="source"></a>Source  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -155,7 +155,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descripción  
  Establezca una marca para indicar si la aplicación de incrustación está en un entorno hospedado.  
   
 #### <a name="parameters"></a>Parámetros  
@@ -169,7 +169,7 @@ HRESULT SetHosted (
  **E_FAIL**  
  Se produjo un error al establecer la marca.  
   
-#### <a name="source"></a>Origen  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -185,7 +185,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descripción  
  Establezca la ruta de acceso a los archivos temporales que usa la aplicación de incrustación.  
   
 #### <a name="parameters"></a>Parámetros  
@@ -199,7 +199,7 @@ HRESULT SetTempDirPath (
  **E_FAIL**  
  Se produjo un error al establecer la ruta de acceso.  
   
-#### <a name="source"></a>Origen  
+#### <a name="source"></a>Source  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -213,7 +213,7 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descripción  
  Cancela la operación de base de datos incrustada actual  
   
 #### <a name="parameters"></a>Parámetros  
@@ -229,7 +229,7 @@ HRESULT Cancel ( void )
  **E_FAIL**  
  Se produjo un error al cancelar la operación incrustada.  
   
-#### <a name="source"></a>Origen  
+#### <a name="source"></a>Source  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   
@@ -244,7 +244,7 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descripción  
  Obtiene el tamaño calculado (en bytes) del flujo para guardar el objeto incrustado. Se hereda de **IPersistStream**.  
   
 #### <a name="parameters"></a>Parámetros  
@@ -264,7 +264,7 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descripción  
  Comprueba si la base de datos incrustada ha cambiado desde que se guardó por última vez. Se hereda de **IPersistStream**.  
   
 #### <a name="parameters"></a>Parámetros  
@@ -288,7 +288,7 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descripción  
  Carga la base de datos incrustada en el motor local o en proceso. Se hereda de **IPersistStream**.  
   
 #### <a name="parameters"></a>Parámetros  
@@ -314,7 +314,7 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>Descripción  
  Guarda la base de datos local o en proceso en el flujo incrustado en el documento contenedor. Se hereda de **IPersistStream**.  
   
 #### <a name="parameters"></a>Parámetros  
@@ -329,7 +329,7 @@ HRESULT Save (
  La base de datos se guardó correctamente.  
   
  **STG_E_CANTSAVE**  
- Se produjo un error al guardar la base de datos diferente **STG_E_MEDIUMFULL**.  
+ Se produjo un error al guardar la base de datos diferente de **STG_E_MEDIUMFULL**.  
   
  **STG_E_MEDIUMFULL**  
  La base de datos no se pudo guardar porque no queda ningún espacio en el dispositivo de almacenamiento.  

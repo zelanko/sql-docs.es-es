@@ -1,5 +1,5 @@
 ---
-title: Implementación de soluciones de minería de datos | Documentos de Microsoft
+title: Implementación de soluciones de minería de datos | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b42d01b097483d9088bd76257cd30ac37158f889
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467411"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Implementación de soluciones de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34015222"
  [Recursos relacionados](#bkmk_Resources)  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Implementar una solución de minería de datos en versiones anteriores de SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
+ [Implementar soluciones de minería de datos para versiones anteriores de SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
  [Exportar e importar objetos de minería de datos](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
@@ -71,13 +71,13 @@ ms.locfileid: "34015222"
   
  Cuando los modelos utilizan un cubo como origen de datos, consulte este tema para obtener más información sobre cómo mover los modelos y sus datos de cubo correspondientes.  
   
- [Implementar proyectos de Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Implementar proyectos de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
  Proporciona información general sobre la implementación de los proyectos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y describe las propiedades que puede establecer como parte de la configuración del proyecto.  
   
 ## <a name="see-also"></a>Vea también  
  [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Herramientas de consulta de minería de datos](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Procesamiento de requisitos y consideraciones & #40; minería de datos & #41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

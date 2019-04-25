@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: 5beff15b746c26520c8d95048a9849fe2f710aca
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265786"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -88,7 +88,7 @@ ms.locfileid: "56319296"
                         <ul class="cardsD panelContent singlePanelContent" id="products1" style="margin-top: 0px; display: flex;">
                             <li class="fullSpan">
                                 <div class="container intro">
-                                <h2>Administración</h2>
+                                <h2>Administrar</h2>
                             </li>
                             <li>
                                 <a href="/sql/relational-databases/database-lifecycle-management/">
@@ -286,7 +286,7 @@ ms.locfileid: "56319296"
                             </li>
                             <li class="fullSpan">
                                 <div class="container intro">
-                                <h2>Optimización</h2>
+                                <h2>Ajustar</h2>
                             </li>
                             <li>
                                 <a href="/sql/relational-databases/automatic-tuning/automatic-tuning/">

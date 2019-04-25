@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: 8d0ffb00e47f24fdd8ba85b7dee03119b67c9d0f
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265007"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -173,7 +173,7 @@ ms.locfileid: "56319096"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Copias de seguridad y restauración</h3>
+                                                    <h3>Copia de seguridad y restauración</h3>
                                                     <p>Un componente que ofrece una protección esencial para los datos críticos almacenados en SQL Server.</p>
                                                 </div>
                                             </div>

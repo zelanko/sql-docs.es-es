@@ -309,7 +309,7 @@
       href: ../../native-client-odbc-how-to/support-for-large-udts.md
     - name: Llamar a SQLColumns sobre una tabla con columnas dispersas
       href: ../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md
-    - name: Insertar filas en la columna Geography (ODBC)
+    - name: 'Procedimientos: Inserción de filas en la columna Geography (ODBC)'
       href: ../../native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
     - name: Obtener la autenticación mutua de Kerberos
       href: ../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md

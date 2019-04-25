@@ -11,11 +11,11 @@ ms.prod: sql
 ms.technology: release-landing
 ms.date: 12/15/2018
 ms.openlocfilehash: 2cafca919cc7592b9b7c6998b1f20910e9be7d4e
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206668"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -407,7 +407,7 @@ ms.locfileid: "57334762"
                                             <div class="cardPadding">
                                                 <div class="card">
                                                   <div class="cardText">
-                                                        <h3>IA y aprendizaje automático</h3>
+                                                        <h3>IA y Machine Learning</h3>
                                                         <ul class="noBullet">
                                                             <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">SQL Server Machine Learning Services (R y Python)</a></li>
                                                             <li><a class="barLink" href="/sql/advanced-analytics/r/sql-server-r-services">SQL Server R Services</a></li>

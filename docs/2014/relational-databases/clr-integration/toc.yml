@@ -33,7 +33,7 @@
       href: assemblies-getting-information.md
     - name: Propiedades del ensamblado (página General)
       href: assemblies-properties.md
-- name: Crear objetos de base de datos con la integración de Common Language Runtime (CLR)
+- name: Generar objetos de base de datos con la integración de Common Language Runtime (CLR)
   href: database-objects/building-database-objects-with-common-language-runtime-clr-integration.md
   items:
     - name: Bibliotecas de .NET Framework admitidas

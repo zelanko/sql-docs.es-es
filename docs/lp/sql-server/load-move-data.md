@@ -12,11 +12,11 @@ ms.date: 12/15/2018
 featureFlags:
 - clicktale
 ms.openlocfilehash: 601bf4bdfae6b896c218d30c9b943bd1e97ba70c
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265230"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -257,7 +257,7 @@ ms.locfileid: "56319236"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>REPLICATION</h3>
+                                                    <h3>Replicación</h3>
                                                     <p> Un conjunto de tecnologías destinadas a la copia y distribución de datos y objetos de base de datos de una base de datos a otra, para luego sincronizar ambas bases de datos con el fin de mantener su coherencia.</p>
                                                 </div>
                                             </div>

@@ -480,7 +480,7 @@
       href: ../profit-chart-sql-server-data-mining-add-ins.md
     - name: Validación cruzada
       href: ../cross-validation-sql-server-data-mining-add-ins.md
-    - name: Consulta
+    - name: Consultar
       href: ../query-sql-server-data-mining-add-ins.md
     - name: Editor de consultas avanzadas de minería de datos
       href: ../advanced-data-mining-query-editor.md

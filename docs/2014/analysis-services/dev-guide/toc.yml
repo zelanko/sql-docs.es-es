@@ -1,255 +1,248 @@
-items:
 - name: Guía del desarrollador (Analysis Services)
   href: analysis-services-dev-guide.md
 - name: Programación de minería de datos
   href: data-mining-programming.md
   items:
-  - name: OLE DB para minería de datos
-    href: ole-db-for-data-mining.md
+    - name: OLE DB para minería de datos
+      href: ole-db-for-data-mining.md
 - name: Programación de modelo tabular
   href: ../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
 - name: Conjuntos de filas de esquema de Analysis Services +
-  href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
+  href: 'https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets'
 - name: Referencia de ASSL
-  href: https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+  href: 'https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla'
 - name: Referencia de XMLA
-  href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
+  href: 'https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference'
 - name: Programación de modelos multidimensionales
   href: ../multidimensional-models/multidimensional-model-programming.md
   items:
-  - name: Descripción de la arquitectura OLAP de Microsoft
-    href: ../multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md
-  - name: Arquitectura lógica
-    href: ../multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md
-    items:
-    - name: Información general de arquitectura lógica
-      href: ../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md
-    - name: Objetos Server
-      href: ../multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md
-    - name: Objetos de base de datos
-      href: ../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
-    - name: Objetos Dimension
-      href: ../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md
-    - name: Dimensions
-      href: ../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md
+    - name: Descripción de la arquitectura OLAP de Microsoft
+      href: ../multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md
+    - name: Arquitectura lógica
+      href: ../multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md
       items:
-      - name: Introducción a las dimensiones (SSAS)
-        href: ../multidimensional-models-olap-logical-dimension-objects/introduction-to-dimensions-analysis-services-multidimensional-data.md
-      - name: Almacenamiento de dimensiones
-        href: ../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
-    - name: Atributos y jerarquías de atributos
-      href: ../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
-    - name: Relaciones de atributo
-      href: ../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
-    - name: Jerarquías de usuario
-      href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
+        - name: Información general de arquitectura lógica
+          href: ../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md
+        - name: Objetos Server
+          href: ../multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md
+        - name: Objetos de base de datos
+          href: ../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
+        - name: Objetos Dimension
+          href: ../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md
+        - name: Dimensions
+          href: ../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md
+          items:
+            - name: Introducción a las dimensiones (SSAS)
+              href: ../multidimensional-models-olap-logical-dimension-objects/introduction-to-dimensions-analysis-services-multidimensional-data.md
+            - name: Almacenamiento de dimensiones
+              href: ../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
+        - name: Atributos y jerarquías de atributos
+          href: ../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
+        - name: Relaciones de atributo
+          href: ../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
+        - name: Jerarquías de usuario
+          href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
+          items:
+            - name: Propiedades de jerarquía de usuario
+              href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md
+            - name: Propiedades del nivel
+              href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md
+        - name: Dimensiones habilitadas para escritura
+          href: ../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md
+        - name: Traducciones de dimensiones
+          href: ../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md
+        - name: Propiedades de la dimensión de base de datos
+          href: ../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md
+          items:
+            - name: Tipos de dimensiones
+              href: ../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md
+        - name: Almacenamiento en caché automático (Dimensiones)
+          href: ../multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md
+        - name: Objetos de cubo
+          href: ../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md
+        - name: Propiedades del cubo
+          href: ../multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
+        - name: Relaciones de dimensión
+          href: ../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
+        - name: Cálculos
+          href: ../multidimensional-models-olap-logical-cube-objects/calculations.md
+        - name: Particiones
+          href: ../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
+          items:
+            - name: Procesamiento y modos de almacenamiento de particiones
+              href: ../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
+            - name: Almacenamiento en caché automático (Particiones)
+              href: ../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
+            - name: Particiones remotas
+              href: ../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
+            - name: Particiones habilitadas para escritura
+              href: ../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
+        - name: perspectivas
+          href: ../multidimensional-models-olap-logical-cube-objects/perspectives.md
+        - name: Traducciones de cubo
+          href: ../multidimensional-models-olap-logical-cube-objects/cube-translations.md
+        - name: Celdas de cubos
+          href: ../multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
+        - name: Almacenamiento de cubos
+          href: ../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
+        - name: Agregaciones y diseños de agregaciones
+          href: ../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
+        - name: Roles de seguridad
+          href: ../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md
+    - name: Arquitectura física
+      href: ../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md
       items:
-      - name: Propiedades de jerarquía de usuario
-        href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md
-      - name: Propiedades del nivel
-        href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md
-    - name: Dimensiones habilitadas para escritura
-      href: ../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md
-    - name: Traducciones de dimensiones
-      href: ../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md
-    - name: Propiedades de la dimensión de base de datos
-      href: ../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md
+        - name: Componentes de servidor del motor OLAP
+          href: ../multidimensional-models/olap-physical/olap-engine-server-components.md
+        - name: Normas de nomenclatura de objetos
+          href: ../multidimensional-models/olap-physical/object-naming-rules-analysis-services.md
+        - name: Especificaciones de capacidad máxima
+          href: ../multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md
+        - name: Tipos de datos en Analysis Services
+          href: ../multidimensional-models/olap-physical/data-types-in-analysis-services.md
+        - name: Cubos locales
+          href: ../multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md
+        - name: Requisitos de la arquitectura de cliente
+          href: ../multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
+    - name: Desarrollar con ADOMD.NET
+      href: 'https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net'
+    - name: Programación del cliente ADOMD.NET
+      href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming'
       items:
-      - name: Tipos de dimensiones
-        href: ../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md
-    - name: Almacenamiento en caché automático (Dimensiones)
-      href: ../multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md
-    - name: Objetos de cubo
-      href: ../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md
-    - name: Propiedades del cubo
-      href: ../multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
-    - name: Relaciones de dimensión
-      href: ../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
-    - name: Cálculos
-      href: ../multidimensional-models-olap-logical-cube-objects/calculations.md
-    - name: Particiones
-      href: ../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
+        - name: Funcionalidad de cliente de ADOMD.NET
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-functionality'
+        - name: Migrar de ADO MD a ADOMD.NET
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/migrating-from-ado-md-to-adomd-net'
+        - name: Establecer conexiones en ADOMD.NET
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net'
+        - name: Establecer conexiones seguras en ADOMD.NET
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections'
+        - name: Trabajar con conexiones y sesiones en ADOMD.NET
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions'
+        - name: Realizar transacciones en ADOMD.NET
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-performing-transactions'
+        - name: Recuperar metadatos de un origen de datos analíticos
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source'
+        - name: Trabajar con el modelo de objetos ADOMD.NET
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-adomd-net-object-model'
+        - name: Trabajar con conjuntos de filas de esquema en ADOMD.NET
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets'
+        - name: Ejecutar comandos en un origen de datos analíticos
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source'
+        - name: Recuperar datos de un origen de datos analíticos
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source'
+        - name: Recuperar datos mediante el objeto CellSet
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset'
+        - name: Recuperar datos mediante AdomdDataReader
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-using-the-adomddatareader'
+        - name: Recuperar datos mediante XmlReader
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader'
+    - name: Programación del servidor ADOMD.NET
+      href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming'
       items:
-      - name: Procesamiento y modos de almacenamiento de particiones
-        href: ../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
-      - name: Almacenamiento en caché automático (Particiones)
-        href: ../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
-      - name: Particiones remotas
-        href: ../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
-      - name: Particiones habilitadas para escritura
-        href: ../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
-    - name: perspectivas
-      href: ../multidimensional-models-olap-logical-cube-objects/perspectives.md
-    - name: Traducciones de cubo
-      href: ../multidimensional-models-olap-logical-cube-objects/cube-translations.md
-    - name: Celdas de cubos
-      href: ../multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
-    - name: Almacenamiento de cubos
-      href: ../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
-    - name: Agregaciones y diseños de agregaciones
-      href: ../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
-    - name: Roles de seguridad
-      href: ../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md
-  - name: Arquitectura física
-    href: ../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md
-    items:
-    - name: Componentes de servidor del motor OLAP
-      href: ../multidimensional-models/olap-physical/olap-engine-server-components.md
-    - name: Normas de nomenclatura de objetos
-      href: ../multidimensional-models/olap-physical/object-naming-rules-analysis-services.md
-    - name: Especificaciones de capacidad máxima
-      href: ../multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md
-    - name: Tipos de datos en Analysis Services
-      href: ../multidimensional-models/olap-physical/data-types-in-analysis-services.md
-    - name: Cubos locales
-      href: ../multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md
-    - name: Requisitos de la arquitectura de cliente
-      href: ../multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
-  - name: Desarrollar con ADOMD.NET
-    href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
-  - name: Programación del cliente ADOMD.NET
-    href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming
-    items:
-    - name: Funcionalidad de cliente de ADOMD.NET
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-functionality
-    - name: Migrar de ADO MD a ADOMD.NET
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/migrating-from-ado-md-to-adomd-net
-    - name: Establecer conexiones en ADOMD.NET
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net
-    - name: Establecer conexiones seguras en ADOMD.NET
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections
-    - name: Trabajar con conexiones y sesiones en ADOMD.NET
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions
-    - name: Realizar transacciones en ADOMD.NET
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-performing-transactions
-    - name: Recuperar metadatos de un origen de datos analíticos
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source
-    - name: Trabajar con el modelo de objetos ADOMD.NET
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-adomd-net-object-model
-    - name: Trabajar con conjuntos de filas de esquema en ADOMD.NET
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets
-    - name: Ejecutar comandos en un origen de datos analíticos
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source
-    - name: Recuperar datos de un origen de datos analíticos
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source
-    - name: Recuperar datos mediante el objeto CellSet
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset
-    - name: Recuperar datos mediante AdomdDataReader
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-using-the-adomddatareader
-    - name: Recuperar datos mediante XmlReader
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader
-  - name: Programación del servidor ADOMD.NET
-    href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming
-    items:
-    - name: Funcionalidad del servidor de ADOMD.NET
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality
-    - name: Arquitectura de objetos de servidor ADOMD.NET
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture
-    - name: Funciones definidas por el usuario y procedimientos almacenados
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures
-  - name: Redistribuir ADOMD.NET
-    href: https://docs.microsoft.com/bi-reference/adomd/redistributing-adomd-net
-  - name: Desarrollar con Objetos de administración de análisis (AMO)
-    href: https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo
-  - name: Modelo de objetos y conceptos de AMO
-    href: https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model
-  - name: Introducción a las clases AMO
-    href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
-    items:
-    - name: Clases fundamentales de AMO
-      href: https://docs.microsoft.com/bi-reference/amo/amo-fundamental-classes
-    - name: Clases de OLAP en AMO
-      href: https://docs.microsoft.com/bi-reference/amo/amo-olap-classes
-    - name: Clases de minería de datos de AMO
-      href: https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes
-    - name: Clases Security de AMO
-      href: https://docs.microsoft.com/bi-reference/amo/amo-security-classes
-    - name: Otras clases y métodos de AMO
-      href: https://docs.microsoft.com/bi-reference/amo/amo-other-classes-and-methods
-  - name: Programar tareas administrativas con AMO
-    href: https://docs.microsoft.com/bi-reference/amo/programming-administrative-tasks-with-amo
-    items:
-    - name: Programar objetos fundamentales de AMO
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects
-    - name: Programar objetos básicos OLAP en AMO
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects
-    - name: Programar objetos avanzados OLAP en AMO
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects
-    - name: Programar objetos de minería de datos con AMO
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-data-mining-objects
-    - name: Programar objetos de seguridad AMO
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-security-objects
-    - name: Programar clases y métodos complementarios de AMO
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-complementary-classes-and-methods
-  - name: Desarrollar aplicaciones con Analysis Services Scripting Language (ASSL)
-    href: ../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
-  - name: Objetos y características de objetos ASSL
-    href: ../multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-  - name: Convenciones XML de ASSL
-    href: ../multidimensional-models/scripting-language-assl/assl-xml-conventions.md
-  - name: Conceptos de XMLA
-    href: ../multidimensional-models/scripting-language-assl/xmla-concepts.md
-  - name: Desarrollar con XMLA en Analysis Services
-    href: ../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md
-    items:
-    - name: Administrar conexiones y sesiones
-      href: ../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md
-    - name: Controlar errores y advertencias
-      href: ../multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md
-    - name: Definir e identificar objetos
-      href: ../multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md
-    - name: Administrar transacciones
-      href: ../multidimensional-models-scripting-language-assl-xmla/managing-transactions-xmla.md
-    - name: Cancelar comandos
-      href: ../multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md
-    - name: Realizar operaciones por lotes
-      href: ../multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md
-    - name: Crear y modificar objetos
-      href: ../multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md
-    - name: Bloquear y desbloquear bases de datos
-      href: ../multidimensional-models-scripting-language-assl-xmla/locking-and-unlocking-databases-xmla.md
-    - name: Procesar objetos
-      href: ../multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md
-    - name: Mezclar particiones
-      href: ../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md
-    - name: Diseñar agregaciones
-      href: ../multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md
-    - name: Restaurar, sincronizar y realizar copias de seguridad de bases de datos
-      href: ../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
-    - name: Insertar, actualizar y quitar miembros
-      href: ../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md
-    - name: Actualizar celdas
-      href: ../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
-    - name: Administrar cachés
-      href: ../multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md
-    - name: Supervisar los seguimientos
-      href: ../multidimensional-models-scripting-language-assl-xmla/monitoring-traces-xmla.md
-  - name: Extender la funcionalidad de OLAP
-    href: ../multidimensional-models/extending-olap/extending-olap-functionality.md
-  - name: Extender OLAP mediante personalizaciones
-    href: ../multidimensional-models/extending-olap/extending-olap-through-personalizations.md
-  - name: Definir extensiones de personalización de Analysis Services
-    href: ../multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
-  - name: Definir procedimientos almacenados
-    href: ../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md
-    items:
-    - name: Diseñar procedimientos almacenados
-      href: ../multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md
-    - name: Creación de procedimientos almacenados
-      href: ../multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md
-    - name: Llamar a procedimientos almacenados
-      href: ../multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md
-    - name: Acceder al contexto de la consulta en los procedimientos almacenados
-      href: ../multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
-    - name: Configurar la seguridad para procedimientos almacenados
-      href: ../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md
-    - name: Depurar procedimientos almacenados
-      href: ../multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md
-  - name: Proveedor OLE DB de Analysis Services
-    href: analysis-services-ole-db-provider-analysis-services-multidimensional-data.md
-ms.openlocfilehash: 9ef7bffc68cb6a3986a1cf56c671cbfbadff291a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145140"
+        - name: Funcionalidad del servidor de ADOMD.NET
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality'
+        - name: Arquitectura de objetos de servidor ADOMD.NET
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture'
+        - name: Funciones definidas por el usuario y procedimientos almacenados
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures'
+    - name: Redistribuir ADOMD.NET
+      href: 'https://docs.microsoft.com/bi-reference/adomd/redistributing-adomd-net'
+    - name: Desarrollar con Objetos de administración de análisis (AMO)
+      href: 'https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo'
+    - name: Modelo de objetos y conceptos de AMO
+      href: 'https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model'
+    - name: Introducción a las clases AMO
+      href: 'https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction'
+      items:
+        - name: Clases fundamentales de AMO
+          href: 'https://docs.microsoft.com/bi-reference/amo/amo-fundamental-classes'
+        - name: Clases de OLAP en AMO
+          href: 'https://docs.microsoft.com/bi-reference/amo/amo-olap-classes'
+        - name: Clases de minería de datos de AMO
+          href: 'https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes'
+        - name: Clases Security de AMO
+          href: 'https://docs.microsoft.com/bi-reference/amo/amo-security-classes'
+        - name: Otras clases y métodos de AMO
+          href: 'https://docs.microsoft.com/bi-reference/amo/amo-other-classes-and-methods'
+    - name: Programar tareas administrativas con AMO
+      href: 'https://docs.microsoft.com/bi-reference/amo/programming-administrative-tasks-with-amo'
+      items:
+        - name: Programar objetos fundamentales de AMO
+          href: 'https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects'
+        - name: Programar objetos básicos OLAP en AMO
+          href: 'https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects'
+        - name: Programar objetos avanzados OLAP en AMO
+          href: 'https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects'
+        - name: Programar objetos de minería de datos con AMO
+          href: 'https://docs.microsoft.com/bi-reference/amo/programming-amo-data-mining-objects'
+        - name: Programar objetos de seguridad AMO
+          href: 'https://docs.microsoft.com/bi-reference/amo/programming-amo-security-objects'
+        - name: Programar clases y métodos complementarios de AMO
+          href: 'https://docs.microsoft.com/bi-reference/amo/programming-amo-complementary-classes-and-methods'
+    - name: Desarrollar aplicaciones con Analysis Services Scripting Language (ASSL)
+      href: ../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+    - name: Objetos y características de objetos ASSL
+      href: ../multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+    - name: Convenciones XML de ASSL
+      href: ../multidimensional-models/scripting-language-assl/assl-xml-conventions.md
+    - name: Conceptos de XMLA
+      href: ../multidimensional-models/scripting-language-assl/xmla-concepts.md
+    - name: Desarrollar con XMLA en Analysis Services
+      href: ../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md
+      items:
+        - name: Administrar conexiones y sesiones
+          href: ../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md
+        - name: Controlar errores y advertencias
+          href: ../multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md
+        - name: Definir e identificar objetos
+          href: ../multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md
+        - name: Administrar transacciones
+          href: ../multidimensional-models-scripting-language-assl-xmla/managing-transactions-xmla.md
+        - name: Cancelar comandos
+          href: ../multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md
+        - name: Realizar operaciones por lotes
+          href: ../multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md
+        - name: Crear y modificar objetos
+          href: ../multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md
+        - name: Bloquear y desbloquear bases de datos
+          href: ../multidimensional-models-scripting-language-assl-xmla/locking-and-unlocking-databases-xmla.md
+        - name: Procesar objetos
+          href: ../multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md
+        - name: Mezclar particiones
+          href: ../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md
+        - name: Diseñar agregaciones
+          href: ../multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md
+        - name: 'Restaurar, sincronizar y realizar copias de seguridad de bases de datos'
+          href: ../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
+        - name: 'Insertar, actualizar y quitar miembros'
+          href: ../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md
+        - name: Actualizar celdas
+          href: ../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
+        - name: Administrar cachés
+          href: ../multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md
+        - name: Supervisar los seguimientos
+          href: ../multidimensional-models-scripting-language-assl-xmla/monitoring-traces-xmla.md
+    - name: Extender la funcionalidad de OLAP
+      href: ../multidimensional-models/extending-olap/extending-olap-functionality.md
+    - name: Extender OLAP mediante personalizaciones
+      href: ../multidimensional-models/extending-olap/extending-olap-through-personalizations.md
+    - name: Definir extensiones de personalización de Analysis Services
+      href: ../multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
+    - name: Definir procedimientos almacenados
+      href: ../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md
+      items:
+        - name: Diseñar procedimientos almacenados
+          href: ../multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md
+        - name: Creación de procedimientos almacenados
+          href: ../multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md
+        - name: Llamar a procedimientos almacenados
+          href: ../multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md
+        - name: Acceder al contexto de la consulta en los procedimientos almacenados
+          href: ../multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
+        - name: Configurar la seguridad para procedimientos almacenados
+          href: ../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md
+        - name: Depurar procedimientos almacenados
+          href: ../multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md
+    - name: Proveedor OLE DB de Analysis Services
+      href: analysis-services-ole-db-provider-analysis-services-multidimensional-data.md

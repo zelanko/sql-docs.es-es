@@ -79,7 +79,7 @@
       href: what-s-new-in-report-builder-for-sql-server-2014.md
     - name: Iniciar el Generador de informes
       href: report-builder/start-report-builder.md
-    - name: 'Tutorial: Crear un informe de gráfico rápido sin conexión'
+    - name: 'Tutorial: Creación de un informe de gráfico rápido sin conexión'
       href: report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
     - name: Planear un informe
       href: report-design/planning-a-report-report-builder.md

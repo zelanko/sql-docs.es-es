@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d43432a53eb2321c3707f4034e244752a5c368ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468668"
 ---
 # <a name="lesson-10-create-partitions"></a>Lección 10: Crear particiones
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -135,13 +135,13 @@ En el Administrador de particiones, tenga en cuenta la **procesado por última v
   
 4.  Active la casilla de la columna **Procesar** para cada una de las cinco particiones que ha creado y haga clic en **Aceptar**.  
 
-    ![como-tabular-lesson10-procesar-particiones](../analysis-services/media/as-tabular-lesson10-process-partitions.png)
+    ![as-tabular-lesson10-process-partitions](../analysis-services/media/as-tabular-lesson10-process-partitions.png)
   
     Si se le pidan las credenciales de suplantación, escriba el nombre de usuario de Windows y la contraseña que especificó en la lección 2.  
   
     Aparece el cuadro de diálogo **Procesamiento de datos** con los detalles del proceso de cada partición. Observe que se ha transferido un número diferente de filas para cada partición. Esto es porque cada partición incluye solamente las filas del año especificado en la cláusula WHERE de la instrucción SQL. Cuando finalice el procesamiento, continúe y cierre el cuadro de diálogo Procesamiento de datos.  
   
-    ![como tabulares-lesson10-proceso-completo](../analysis-services/media/as-tabular-lesson10-process-complete.png)
+    ![as-tabular-lesson10-process-complete](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>¿Qué sigue?
 Vaya a la lección siguiente: [Lección 11: Crear Roles](../analysis-services/lesson-11-create-roles.md). 

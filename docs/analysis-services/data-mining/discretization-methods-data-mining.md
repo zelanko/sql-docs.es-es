@@ -1,5 +1,5 @@
 ---
-title: Métodos de discretización (minería de datos) | Documentos de Microsoft
+title: Métodos de discretización (minería de datos) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 610108ce4edb6e3beb5c13398d0a79eca200bdba
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467766"
 ---
 # <a name="discretization-methods-data-mining"></a>Métodos de discretización (minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34016982"
   
  La siguiente tabla describe los métodos que puede utilizar para discretizar datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Método de discretización|Description|  
+|Método de discretización|Descripción|  
 |---------------------------|-----------------|  
 |**AUTOMATIC**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] determina el método de discretización que se va a utilizar.|  
 |**CLUSTERS**|El algoritmo divide los datos en grupos mediante el muestreo de los datos de entrenamiento, inicializa en un número de puntos aleatorios y, a continuación, ejecuta varias iteraciones del algoritmo de clústeres de Microsoft utilizando el método de agrupación en clústeres EM (Expectation Maximization). El método **CLUSTERS** resulta útil porque funciona en cualquier curva de distribución. Sin embargo, requiere más tiempo de procesamiento que otros métodos de discretización.<br /><br /> Este método solo puede utilizarse con columnas numéricas.|  
@@ -47,12 +47,12 @@ ms.locfileid: "34016982"
   
   
 ## <a name="see-also"></a>Vea también  
- [Contenido tipos & #40; minería de datos & #41;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [Contenido tipos & #40; DMX & #41;](../../dmx/content-types-dmx.md)   
- [Algoritmos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Estructuras de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Tipos de datos & #40; minería de datos & #41;](../../analysis-services/data-mining/data-types-data-mining.md)   
- [Columnas de estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)   
+ [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [Tipos de contenido &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Tipos de datos &#40;minería de datos&#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [Columnas de la estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Distribuciones de columnas &#40;minería de datos&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md)  
   
   

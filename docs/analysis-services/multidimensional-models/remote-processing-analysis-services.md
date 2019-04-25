@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4860a890ba0443b66f9568edd05257eff7ad70b2
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472432"
 ---
 # <a name="remote-processing-analysis-services"></a>Procesamiento remoto (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "40393758"
 2.  Como paso final, modifique el trabajo para que se ejecute según una programación definida y agregue las alertas o las notificaciones necesarias para administrar el trabajo. También podría ser conveniente ajustar el script de procesamiento o crear varios pasos en el trabajo para procesar objetos de forma independiente.  
   
 ## <a name="see-also"></a>Vea también  
- [Componentes del Agente SQL Server](../../ssms/agent/sql-server-agent.md)   
+ [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md)   
  [Programar tareas administrativas de SSAS con el Agente SQL Server](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Procesamiento por lotes &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   

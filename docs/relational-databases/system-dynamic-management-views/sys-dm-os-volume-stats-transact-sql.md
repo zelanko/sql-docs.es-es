@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_volume_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_volume_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f599084d70903ae3d74c04795ddb60d473b6002
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628100"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ FROM sys.master_files AS f
 CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id);  
 ```  
   
-### <a name="b-return-total-space-and-available-space-for-the-current-database"></a>B. Devolver el espacio total y el espacio disponible de la base de datos actual  
+### <a name="b-return-total-space-and-available-space-for-the-current-database"></a>b. Devolver el espacio total y el espacio disponible de la base de datos actual  
  El ejemplo siguiente devuelve el espacio total y el espacio disponible (en bytes) de los archivos de base de datos de la base de datos actual.  
   
 ```  

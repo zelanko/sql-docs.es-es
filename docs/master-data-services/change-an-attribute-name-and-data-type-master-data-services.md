@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: 6348cc9a2b64501f7a639d480a7112bf28923585
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637633"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>Cambiar el nombre y el tipo de datos de un atributo (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52785285"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede cambiar el nombre de un atributo.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -59,7 +59,7 @@ ms.locfileid: "52785285"
   
 9. Haga clic en **Guardar**.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Crear un atributo de texto &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [Eliminar un atributo &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  

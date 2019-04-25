@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4b1706f81808d90e02df32df7e56828b054bd05
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638110"
 ---
 # <a name="drop-xml-indexes"></a>Quitar índices XML
   La instrucción [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] se puede usar para quitar índices XML y no XML principales y secundarios existentes. No obstante, ninguna opción de DROP INDEX se aplica a los índices XML. Si se quita el índice XML principal, también se eliminarán todos los índices secundarios existentes.  
   
  La sintaxis de DROP con *TableName.IndexName* está desapareciendo y no es compatible con los índices XML.  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Ejemplo: Crear y quitar un índice XML principal  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Ejemplo: Creación y eliminación de un índice XML principal  
  En el ejemplo siguiente se muestra cómo crear un índice XML en una columna de tipo `xml`.  
   
 ```  
@@ -68,7 +68,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Ejemplo: Crear un índice XML con la opción de índice DROP_EXISTING  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Ejemplo: Creación de un índice XML con la opción de índice DROP_EXISTING  
  El ejemplo siguiente muestra cómo crear un índice XML en una columna (`XmlColx`). A continuación, se creará otro índice XML con el mismo nombre en una columna diferente (`XmlColy`). Dado que se ha especificado la opción `DROP_EXISTING` , el índice XML existente en (`XmlColx)` se quita y se crea un índice XML en (`XmlColy`).  
   
 ```  

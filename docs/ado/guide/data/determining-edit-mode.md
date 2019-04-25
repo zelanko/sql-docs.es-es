@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e638cda03d7dc0f0bd580c3ca29c126568d1595a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472346"
 ---
 # <a name="determining-edit-mode"></a>Determinar el modo de edición
 ADO mantiene un búfer de edición asociado con el registro actual. El **EditMode** propiedad indica si se han realizado cambios a este búfer, o si se ha creado un nuevo registro. Use **EditMode** para determinar el estado de edición del registro actual. Puede probar cambios pendientes si un proceso de edición se ha interrumpido y determinar si necesita usar el **actualización** o **CancelUpdate** método.  

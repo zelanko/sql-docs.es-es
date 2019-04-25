@@ -22,11 +22,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 54702cd96ba9327fe8bba8e4c82275dbdaef1bf8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767737"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Controladores de eventos de Integration Services (SSIS)
   En el tiempo de ejecución, los ejecutables (paquetes y contenedores de bucles Foreach, bucles For, de secuencia y de host de tarea) producen eventos. Por ejemplo un evento OnError se produce cuando se genera un error. Puede crear controladores de eventos personalizados para estos eventos con el fin de ampliar la funcionalidad de paquetes y facilitar la administración de paquetes en el tiempo de ejecución. Los controladores de eventos pueden realizar tareas tales como las siguientes:  

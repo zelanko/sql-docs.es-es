@@ -19,11 +19,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9e7f4785eb5b5d52d5271397e0be927180e53aea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762029"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración de SSRS)
   Cada instancia del servidor de informes requiere una conexión a la base de datos del servidor de informes que almacena informes, modelos de informe, orígenes de datos compartidos, recursos y metadatos administrados por el servidor. La conexión inicial se puede crear durante la instalación de un servidor de informes si va a instalar la configuración predeterminada. En la mayoría de los casos, también puede utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar la conexión una vez completada la instalación. Puede modificar la conexión en cualquier momento para cambiar el tipo de cuenta o restablecer las credenciales. Para obtener instrucciones paso a paso sobre cómo crear la base de datos y configurar la conexión, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
@@ -36,10 +36,10 @@ ms.locfileid: "48202659"
   
 -   Cambiar la cuenta o contraseña de usuario que se utiliza para la conexión a la base de datos. Solo tiene que actualizar la conexión a la base de datos cuando la información de la cuenta esté almacenada en el archivo RSReportServer.config. Si utiliza la cuenta de servicio para la conexión (que utiliza la seguridad integrada de Windows como tipo de credenciales), la contraseña no se almacena, por lo que no es necesario actualizar la información de conexión. Para obtener más información sobre cómo cambiar cuentas, vea [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
--   Configurar una implementación escalada de un servidor de informes. Configurar una implementación de ampliación requiere crear varias conexiones a una base de datos del servidor de informes. Para más información sobre cómo llevar a cabo esta operación compuesta de varios pasos, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+-   Configurar una implementación escalada de un servidor de informes. Configurar una implementación de ampliación requiere crear varias conexiones a una base de datos del servidor de informes. Para obtener más información sobre cómo llevar a cabo esta operación compuesta de varios pasos, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="how-reporting-services-connects-to-the-database-engine"></a>Cómo se conecta Reporting Services al motor de base de datos  
- El acceso del servidor de informes a la base de datos de un servidor de informes depende de las credenciales y de la información de conexión, así como de las claves de cifrado que son válidas para la instancia del servidor de informes que utiliza esa base de datos. Es necesario tener claves de cifrado válidas para almacenar y recuperar datos confidenciales. Las claves de cifrado se crean automáticamente al configurar la base de datos por primera vez. Una vez creadas las claves, debe actualizarlas si cambia la identidad del servicio Servidor de informes. Para más información sobre cómo trabajar con las claves de cifrado, vea [Configurar y administrar las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+ El acceso del servidor de informes a la base de datos de un servidor de informes depende de las credenciales y de la información de conexión, así como de las claves de cifrado que son válidas para la instancia del servidor de informes que utiliza esa base de datos. Es necesario tener claves de cifrado válidas para almacenar y recuperar datos confidenciales. Las claves de cifrado se crean automáticamente al configurar la base de datos por primera vez. Una vez creadas las claves, debe actualizarlas si cambia la identidad del servicio Servidor de informes. Para obtener más información sobre cómo trabajar con las claves de cifrado, vea [Configurar y administrar las claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
   
  La base de datos del servidor de informes es un componente interno, al que solo tiene acceso el servidor de informes. El servidor de informes utiliza exclusivamente las credenciales y la información de conexión que se especifique para la base de datos del servidor de informes. Los usuarios que solicitan los informes no requieren permisos de bases de datos o un inicio de sesión de base de datos para la base de datos del servidor de informes.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48202659"
   
 -   Nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda la base de datos del servidor de informes.  
   
--   Nombre de la base de datos del servidor de informes. Cuando se crea una conexión por primera vez, puede crear una base de datos del servidor de informes nueva o seleccionar una existente. Para obtener más información, consulte [crear una base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md).  
+-   Nombre de la base de datos del servidor de informes. Cuando se crea una conexión por primera vez, puede crear una base de datos del servidor de informes nueva o seleccionar una existente. Para obtener más información, vea [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md).  
   
 -   Tipo de credencial. Puede utilizar cuentas de servicio, una cuenta de dominio de Windows o un inicio de sesión de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48202659"
 ### <a name="storing-database-connection-information"></a>Almacenar información de conexión a la base de datos  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena y cifra la información de conexión en los siguientes valores del archivo RSreportserver.config. Debe utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o la utilidad rsconfig para crear valores cifrados para esta configuración.  
   
- No todos los valores se establecen para todos los tipos de conexión. Si configura la conexión utilizando los valores predeterminados (es decir, utilizando las cuentas de servicio para realizar la conexión), <`LogonUser`>, <`LogonDomain`> y <`LogonCred`> estarán en blanco, como se muestra a continuación.  
+ No todos los valores se establecen para todos los tipos de conexión. Si configura la conexión con los valores predeterminados (es decir, con las cuentas de servicio para realizar la conexión), <`LogonUser`>, <`LogonDomain`>, y <`LogonCred`> estarán vacíos, como se indica a continuación:  
   
 ```  
 <Dsn></Dsn>  

@@ -1,5 +1,5 @@
 ---
-title: Mover objetos de minería de datos | Documentos de Microsoft
+title: Mover objetos de minería de datos | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: edbceb50dd1532e427c3bf5738dfe183223afc2d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509877"
 ---
 # <a name="moving-data-mining-objects"></a>Mover objetos de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "34016632"
  Para más información sobre cómo implementar soluciones de Analysis Services, vea [Implementar proyectos de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
 ### <a name="scripting"></a>Scripting  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]proporciona varios lenguajes que puede usar para crear scripts de objetos.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varios lenguajes que puede utilizar para crear scripts de objetos.  
   
--   **XMLA**: puede incluir objetos con XMLA si hace clic con el botón derecho en objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para ejecutar el script, ábralo en una ventana de **Consulta XMLA** en el servidor de destino.  
+-   **XMLA**: Puede incluir objetos con XMLA haciendo clic en los objetos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para ejecutar el script, ábralo en una ventana de **Consulta XMLA** en el servidor de destino.  
   
--   **DMX**: puede crear scripts mediante plantillas o uno de los generadores de consultas que se proporcionan en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   **DMX**: Puede crear scripts mediante plantillas o uno de los generadores de consultas se proporcionan en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Tenga en cuenta, no obstante, que existen diferencias en las tareas que puede realizar con cada lenguaje de scripting:  
   
@@ -60,16 +60,16 @@ ms.locfileid: "34016632"
  Para más información, vea [Desarrollar aplicaciones con Analysis Services Scripting Language &#40;ASSL&#41;](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).  
   
 ### <a name="backup-and-restore"></a>Copias de seguridad y restauración  
- La copia de seguridad y restauración de una base de datos de Analysis Services completa es el mejor método si la solución de minería de datos se basa en objetos OLAP. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]proporciona la funcionalidad de copia de seguridad y restauración que realiza copias de seguridad de base de datos más rápidas y sencilla.  
+ La copia de seguridad y restauración de una base de datos de Analysis Services completa es el mejor método si la solución de minería de datos se basa en objetos OLAP. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona una funcionalidad de copia de seguridad y restauración que realiza copias de seguridad de bases de datos con más rapidez y facilidad.  
   
  Para más información sobre las copias de seguridad, vea [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md).  
   
 ### <a name="exporting-and-importing"></a>Exportación e importación  
  Exportar y volver a importar después modelos y estructuras de minería de datos utilizando instrucciones DMX es la forma más fácil de mover o hacer copias de seguridad de objetos de minería de datos relacionales individuales. Para obtener más información sobre la sintaxis DMX para estas operaciones, vea los temas siguientes:  
   
--   [EXPORTAR & #40; DMX & #41;](../../dmx/export-dmx.md)  
+-   [EXPORT &#40;DMX&#41;](../../dmx/export-dmx.md)  
   
--   [IMPORTAR & #40; DMX & #41;](../../dmx/import-dmx.md)  
+-   [IMPORT &#40;DMX&#41;](../../dmx/import-dmx.md)  
   
  Si especifica la opción INCLUDE DEPENDENCIES, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también exportará la definición de las vistas del origen de datos necesarias y, al importar el modelo o la estructura, volverá a crear la vista del origen de datos en el servidor de destino. Cuando termine de importar el modelo, asegúrese de establecer los permisos de minería de datos necesarios en el objeto.  
   
@@ -77,6 +77,6 @@ ms.locfileid: "34016632"
 >  No se pueden exportar e importar modelos OLAP utilizando DMX. Si el modelo de minería de datos se basa en un cubo OLAP, debe utilizar la funcionalidad proporcionada por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para hacer una copia de seguridad y restaurar una base de datos completa, o vuelva a implementar el cubo y sus modelos.  
   
 ## <a name="see-also"></a>Vea también  
- [Administración de soluciones de minería de datos y objetos](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Administración de las soluciones y los objetos de minería de datos](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

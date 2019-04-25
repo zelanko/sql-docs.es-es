@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f984e50b2c6a800a66f689d88b21dfcb487e282
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62503552"
 ---
 # <a name="lag-dmx"></a>Lag (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ Lag()
 ## <a name="return-type"></a>Tipo devuelto  
  Un valor escalar del tipo integer.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si el **Lag** función se utiliza en un modelo donde la columna KEY TIME se encuentra dentro de una tabla anidada, la función debe encontrarse dentro de la subselección de la instrucción.  
   
 ## <a name="examples"></a>Ejemplos  

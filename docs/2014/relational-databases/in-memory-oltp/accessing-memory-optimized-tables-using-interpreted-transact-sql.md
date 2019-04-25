@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468612"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Acceso a tablas con optimización para memoria mediante Transact-SQL interpretado
   Salvo unas pocas excepciones, puede acceder a las tablas optimizadas para memoria con cualquier consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] u operación DML (SELECT, INSERT, UPDATE o DELETE), lotes ad hoc y módulos de SQL como, por ejemplo, procedimientos almacenados, funciones con valores de tabla, desencadenadores y vistas.  

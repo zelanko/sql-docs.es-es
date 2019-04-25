@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468341"
 ---
 # <a name="application-level-partitioning"></a>Creación de particiones en el nivel de aplicación
   Este ejemplo muestra la creación de particiones de nivel de aplicación donde se almacenan los datos en una tabla optimizada en memoria o en una tabla basada en disco dependiendo de si el pedido se encuentra antes o después de una fecha específica. Todos los pedidos posteriores o iguales a *hotDate* se encuentran en la tabla optimizada en memoria y todos los pedidos antes de *hotDate* se encuentran en la tabla basada en disco. Suponga que hay un carga de trabajo de OLTP extrema con muchas transacciones simultáneas. Esta regla de negocios (pedidos recientes en una tabla optimizada para memoria) se debe aplicar incluso si varias transacciones simultáneas intentan cambiar *hotDate*.  

@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524065"
 ---
 # <a name="create-clr-functions"></a>Crear funciones CLR
   Es posible crear un objeto de base de datos dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programada en un ensamblado creado en Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Los objetos de bases de datos capaces de aprovechar el modelo enriquecido de programación suministrado por Common Language Runtime son las funciones de agregado, las funciones, los procedimientos almacenados, los desencadenadores y los tipos.  

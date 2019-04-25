@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524276"
 ---
 # <a name="use-the-eventdata-function"></a>Usar la función EVENTDATA
   La información acerca de un evento que activa un desencadenador DDL se captura mediante la función EVENTDATA. Esta función devuelve un valor `xml`. El esquema XML incluye información acerca de lo siguiente:  
@@ -127,7 +127,7 @@ GO
 > [!NOTE]  
 >  Para devolver datos de eventos, se recomienda usar el método XQuery `value()` en lugar del método `query()`. El método `query()` devuelve XML e instancias de retorno de carro y avance de línea (CRLF) con caracteres de escape de Y comercial en el resultado, mientras que en el método `value()` las instancias CRLF no están visibles en el resultado.  
   
- Un ejemplo de desencadenador DDL parecido se proporciona con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para obtener el ejemplo, localice la carpeta Database Triggers mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta carpeta se encuentra en la carpeta **Programación** de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Haga clic en **ddlDatabaseTriggerLog** y seleccione **incluir desencadenador de base de datos como**. De forma predeterminada, el desencadenador DDL **ddlDatabaseTriggerLog** está deshabilitado.  
+ Un ejemplo de desencadenador DDL parecido se proporciona con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para obtener el ejemplo, localice la carpeta Database Triggers mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Esta carpeta se encuentra en la carpeta **Programación** de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Haga clic con el botón derecho en **ddlDatabaseTriggerLog** y seleccione **Script Database Trigger as** (desencadenador de base de datos de script como). De forma predeterminada, el desencadenador DDL **ddlDatabaseTriggerLog** está deshabilitado.  
   
 ## <a name="see-also"></a>Vea también  
  [Eventos DDL](../triggers/ddl-events.md)   

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bb54250b1be15916055dd59a3f2e6d37330d5d93
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765548"
 ---
 # <a name="entities-master-data-services"></a>Entidades (Master Data Services)
   Las entidades son objetos contenidos en modelos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Cada entidad contiene miembros, que son las filas de datos maestros que administra.  
@@ -49,7 +49,7 @@ ms.locfileid: "52800917"
  Puede proporcionar a los usuarios permiso en una entidad, que incluye objetos del modelo relacionados. Para obtener más información, consulte [Permisos de entidad &#40;Master Data Services&#41;](../../2014/master-data-services/entity-permissions-master-data-services.md).  
   
 ## <a name="entity-examples"></a>Ejemplos de entidad  
- El ejemplo siguiente muestra una entidad que tiene estos atributos: Nombre, código, Subcategory, StandardCost, ListPrice y FilePhoto. Estos atributos describen los miembros. Cada miembro está representado por una fila única de valores de atributo.  
+ En el ejemplo siguiente se muestra una entidad que tiene estos atributos: Name, Code, Subcategory, StandardCost, ListPrice y FilePhoto. Estos atributos describen los miembros. Cada miembro está representado por una fila única de valores de atributo.  
   
  ![Tabla de entidades de producto de bicicleta](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Tabla de entidades de producto de bicicleta")  
   

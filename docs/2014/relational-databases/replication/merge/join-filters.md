@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bfb1bf3cd43bac47dfb06e4f24c74dc4835709b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629738"
 ---
 # <a name="join-filters"></a>filtros de combinación
   Un filtro de combinación permite filtrar una tabla en función de cómo se haya filtrado una tabla relacionada en la publicación. Normalmente, una tabla primaria se filtra utilizando un filtro con parámetros; por tanto, los filtros de combinación se definen de manera muy similar a como se define una combinación entre tablas. Los filtros de combinación amplían el filtro con parámetros de modo que los datos de las tablas relacionadas solo se replican si coinciden con la cláusula del filtro de combinación.  

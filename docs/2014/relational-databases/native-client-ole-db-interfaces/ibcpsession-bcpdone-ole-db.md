@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743201"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   Confirma las filas restantes que van a enviarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -34,7 +34,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Comentarios  
- No se puede llamar a ninguna otra operación en la interfaz [IBCPSession](ibcpsession-ole-db.md) después de llamar al método **BCPDone**. La única posibilidad es llamar al método [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) para iniciar una nueva operación de copia masiva. Esto es similar a llamar al método [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md).  
+ No se puede llamar a ninguna otra operación en la interfaz [IBCPSession](ibcpsession-ole-db.md) después de llamar al método **BCPDone**. La única posibilidad es llamar al método [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) para iniciar una nueva operación de copia masiva. Esto es similar a llamar al método [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  S_OK  

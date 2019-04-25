@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa25e99c5bc0b0a5799cfac479e97bd9b89db338
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62447239"
 ---
 # <a name="implicitly-allocated-descriptors"></a>Descriptores implícitamente asignados
 Cuando se asigna un identificador de instrucción, la aplicación asigna implícitamente un conjunto de descriptores de cuatro. La aplicación puede obtener los identificadores de estos se asignan implícitamente descriptores como atributos de identificador de la instrucción. Cuando la aplicación libera el identificador de instrucción, el controlador libera todos los descriptores implícitamente asignados en ese identificador.

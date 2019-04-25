@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bbbf4f080696d41360e7fd654ef4b6878df268a6
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472138"
 ---
 # <a name="roles"></a>Roles
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "53072172"
   
  De forma predeterminada, cuando se crea un proyecto de modelos tabulares, el proyecto no tiene ningún rol. Los roles se pueden definir mediante el cuadro de diálogo Administrador de roles en SSDT. Si los roles se definen durante la creación del modelo, se aplican a la base de datos del área de trabajo del modelo. Cuando se implementa el modelo, se le aplican los mismos roles. Una vez implementado un modelo, los miembros del rol de servidor ([Administrador de Analysis Services) y los administradores de base de datos pueden administrar los roles asociados con el modelo y los miembros asociados a cada rol con SSMS.  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> Permisos  
  Cada rol tiene un único permiso de base de datos definido (excepto en el caso del permiso de lectura y procesamiento combinado). De forma predeterminada, los roles tienen el permiso Ninguno. Es decir, una vez que se agreguen los miembros al rol con el permiso Ninguno, estos no podrán modificar la base de datos, ejecutar una operación de proceso, consultar los datos ni ver la base de datos a menos que se conceda un permiso diferente.  
   
  Un usuario o grupo puede ser un miembro de varios roles, cada rol con un permiso diferente. Cuando un usuario es miembro de varios roles, los permisos definidos para cada uno de ellos son acumulativos. Por ejemplo, si un usuario es miembro de un rol que tiene el permiso de lectura y de otro que tiene el permiso Ninguno, dicho usuario tendrá permisos de lectura.  
@@ -69,8 +69,8 @@ ms.locfileid: "53072172"
   
 |Table|DAX expression|  
 |-----------|--------------------|  
-|Region|= Región [Country] = "USA"|  
-|ProductCategory|= ProductCategory [nombre] = "Bicicletas"|  
+|Region|=Region[Country]="USA"|  
+|ProductCategory|=ProductCategory[Name]="Bicycles"|  
 |Transactions|=Transactions[Year]=2008|  
   
  El efecto neto de estos permisos en la tabla Transactions es que los miembros podrán consultar las filas de datos en las que el cliente sea de los EE. UU., la categoría de producto sea bicycles y el año sea 2008. Los usuarios no podrán consultar ninguna de las transacciones que no cumplan las tres condiciones anteriores, a menos que sean miembros de otro rol que les conceda estos permisos.  

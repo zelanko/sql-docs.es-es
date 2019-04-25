@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f94cc014a04c3392fefb61f4fa291a8f5a44ad8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638456"
 ---
 # <a name="executing-a-command"></a>Ejecutar un comando
   Una vez establecida la conexión a un origen de datos, el consumidor llama a la **IDBCreateSession** método para crear una sesión. La sesión actúa como un comando, conjunto de filas o fábrica de transacciones.  

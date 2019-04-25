@@ -8,11 +8,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642669"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Rendimiento de R Services: los resultados y los recursos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

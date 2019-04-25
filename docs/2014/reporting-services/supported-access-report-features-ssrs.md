@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae982257f0be29103803a7d036142f58a50f1a04
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631323"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Compatibilidad con características de informes de Access (SSRS)
   Cuando se importa un informe al Diseñador de informes, el proceso de importación convierte el informe de [!INCLUDE[msCoName](../includes/msconame-md.md)] Access en un archivo RDL (Report Definition Language) de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] admite varias características de Access; no obstante, debido a las diferencias entre Access y [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], algunos elementos deben modificarse ligeramente para que sean admitidos. En este tema, se describe cómo se convierten las características de informes de Access a RDL.  

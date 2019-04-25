@@ -1,5 +1,5 @@
 ---
-title: Sys.database_principals (Transact-SQL) | Microsoft Docs
+title: sys.database_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 512994ada852ea7807cc14ecd5b25d9acff56ffc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632703"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,10 +43,10 @@ ms.locfileid: "47643163"
 |**create_date**|**datetime**|Hora en que se creó la entidad de seguridad.|  
 |**modify_date**|**datetime**|Hora en que se modificó por última vez la entidad de seguridad.|  
 |**owning_principal_id**|**int**|Id. de la entidad de seguridad propietaria de esta entidad de seguridad. Todas las entidades de seguridad excepto Roles de base de datos deben pertenecer a **dbo**.|  
-|**SID**|**varbinary(85)**|SID (identificador de seguridad) de la entidad de seguridad.  NULL para SYS e INFORMATION SCHEMAS.|  
+|**sid**|**varbinary(85)**|SID (identificador de seguridad) de la entidad de seguridad.  NULL para SYS e INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Si es 1, esta fila representa una entrada para uno de los roles fijos de base de datos: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
-|**authentication_type**|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Tipo de autenticación. Los siguientes son los valores posibles y sus descripciones.<br /><br /> 0: sin autenticación<br />1: autenticación de instancias<br />2: autenticación de base de datos<br />3: autenticación de Windows|  
-|**authentication_type_desc definida**|**nvarchar(60)**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descripción del tipo de autenticación. Los siguientes son los valores posibles y sus descripciones.<br /><br /> NONE: Sin autenticación<br />INSTANCIA: Autenticación de la instancia<br />Base de datos: Autenticación de base de datos de<br />WINDOWS: Autenticación de Windows|  
+|**authentication_type**|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Tipo de autenticación. Los siguientes son los valores posibles y sus descripciones.<br /><br /> 0 : Sin autenticación<br />1 : Autenticación de instancias<br />2 : Autenticación de base de datos<br />3 : Autenticación de Windows|  
+|**authentication_type_desc**|**nvarchar(60)**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descripción del tipo de autenticación. Los siguientes son los valores posibles y sus descripciones.<br /><br /> NINGUNO: Sin autenticación<br />INSTANCIA: Autenticación de instancias<br />BASE DE DATOS: Autenticación de base de datos<br />WINDOWS: Autenticación de Windows|  
 |**default_language_name**|**sysname**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Idioma predeterminado para esta entidad de seguridad.|  
 |**default_language_lcid**|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LCID predeterminado para esta entidad de seguridad.|  
 |**allow_encrypted_value_modifications**|**bit**|**Se aplica a**: de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Suprime las comprobaciones de metadatos criptográficos en el servidor en operaciones de copia masiva. Esto permite al usuario a la copia masiva de datos cifrado con Always Encrypted, entre las tablas o bases de datos, sin descifrar los datos. El valor predeterminado es OFF. |      
@@ -59,7 +59,7 @@ ms.locfileid: "47643163"
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-listing-all-the-permissions-of-database-principals"></a>A: Enumerar todos los permisos de entidades de seguridad de base de datos  
+### <a name="a-listing-all-the-permissions-of-database-principals"></a>R: Enumerar todos los permisos de las entidades de seguridad de base de datos  
  La consulta siguiente enumera los permisos que se otorgan o deniegan específicamente a las entidades de seguridad de base de datos.  
   
 > [!IMPORTANT]  
@@ -73,7 +73,7 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>B: Enumerar permisos para objetos de esquema en una base de datos  
+### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>B: Enumerar los permisos de objetos de esquema dentro de una base de datos  
  La consulta siguiente se combina con sys.database_principals y sys.database_permissions para que sys.objects y sys.schemas enumeren los permisos otorgados o denegados a objetos de esquema específicos.  
   
 ```  
@@ -91,7 +91,7 @@ JOIN sys.schemas AS s
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: enumerar todos los permisos de las entidades de seguridad de base de datos  
+### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: Enumerar todos los permisos de las entidades de seguridad de base de datos  
  La consulta siguiente enumera los permisos que se otorgan o deniegan específicamente a las entidades de seguridad de base de datos.  
   
 > [!IMPORTANT]  
@@ -105,7 +105,7 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D: enumerar los permisos de objetos de esquema dentro de una base de datos  
+### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D: Enumerar los permisos de objetos de esquema dentro de una base de datos  
  La siguiente consulta combinaciones `sys.database_principals` y `sys.database_permissions` a `sys.objects` y `sys.schemas` enumerar los permisos concedidos o denegados a objetos de esquema específico.  
   
 ```  

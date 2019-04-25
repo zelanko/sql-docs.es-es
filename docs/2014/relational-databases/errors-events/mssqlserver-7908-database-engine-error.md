@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b2d8a9218c5cb654f3343a7475d17630d7b49e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762245"
 ---
 # <a name="mssqlserver7908"></a>MSSQLSERVER_7908
     
@@ -30,7 +30,7 @@ ms.locfileid: "48074105"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|Texto del mensaje|Error de tabla: el archivo "FILE" de la partición con Id. PN_ID no es un archivo de FileStream válido.|  
+|Texto del mensaje|Error de tabla: El archivo 'Archivo' en la partición PN_ID no es un archivo de Filestream válido.|  
   
 ## <a name="explanation"></a>Explicación  
  El nombre de un archivo de Filestream en un directorio de columna es un ROWGUID. Si el nombre de un archivo en un directorio de columna no puede convertirse en un ROWGUID, el archivo no será válido.  

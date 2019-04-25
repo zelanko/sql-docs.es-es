@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637623"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML con tipo y XML sin tipo
   Se pueden crear variables, parámetros y columnas del tipo de datos `xml`. Opcionalmente, se puede asociar una colección de esquemas XML a una variable, a un parámetro o a una columna de tipo `xml`. En este caso, el `xml` se llama a la instancia de tipo de datos *escrito*. En los demás casos, se dice que la instancia XML es una instancia *sin tipo*.  
@@ -67,14 +67,14 @@ ms.locfileid: "58538447"
   
  En los ejemplos siguientes se usa una convención de nomenclatura de dos partes para especificar el nombre de la recopilación de esquemas XML. La primera parte corresponde al nombre de esquema y la segunda al nombre de la colección de esquemas XML.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Ejemplo: Asociar una colección de esquemas con una Variable de tipo xml  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Ejemplo: Asociación de una colección de esquemas con una variable de tipo XML  
  En el ejemplo siguiente se crea un`xml` variable de tipo y la asocia una colección de esquemas. La colección de esquemas especificada en el ejemplo ya se ha importado a la base de datos **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Ejemplo: Especificar un esquema para una columna de tipo xml  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Ejemplo: Especificación de un esquema para una columna de tipo XML  
  En el ejemplo siguiente se crea una tabla con una columna de tipo `xml` y se especifica un esquema para la columna:  
   
 ```  
@@ -83,7 +83,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Ejemplo: Pasar un parámetro de tipo xml a un procedimiento almacenado  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Ejemplo: Cómo pasar un parámetro de tipo XML a un procedimiento almacenado  
  En el ejemplo siguiente se pasa un parámetro de tipo `xml` a un procedimiento almacenado y se especifica un esquema para la variable:  
   
 ```  
@@ -105,7 +105,7 @@ AS
   
  En la jerarquía de tipos de datos, el tipo de datos `xml` aparece por debajo de `sql_variant` y los tipos definidos por el usuario, pero por encima de los tipos integrados.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Ejemplo: Especificar facetas para restringir una columna de xml con tipo  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Ejemplo: Especificación de facetas para restringir una columna XML con tipo  
  En las columnas `xml` con tipo se puede restringir la columna para permitir que solo se almacene en ella un único elemento de nivel superior para cada instancia. Para ello, se especifica la faceta opcional `DOCUMENT` cuando se crea una tabla, como se muestra en el ejemplo siguiente:  
   
 ```  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cc27106e3aa749f9462659190f006bcc8f5627b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766138"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Actualizar los paquetes (Asistente para actualización del paquete SSIS)
   Utilice la página **Actualizando los paquetes** para ver e interrumpir el progreso de la actualización de paquetes. El Asistente para actualización del paquete [!INCLUDE[ssIS](../includes/ssis-md.md)] actualiza los paquetes seleccionados uno a uno.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80b2705920b7793f7f89b323a16fa2f3618e4d1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635637"
 ---
 # <a name="advanced-data-mining-query-editor"></a>Editor de consultas avanzadas de minería de datos
   El **Data Mining Editor de consultas avanzadas** es una herramienta que le ayudarán a crear consultas y modelos personalizados.  
@@ -37,7 +37,7 @@ ms.locfileid: "48072805"
  Use este botón para cambiar el editor entre un editor de texto, donde puede escribir instrucciones DMX directamente; y el **generador de consultas**, lo que ayuda a compilar una instrucción DMX.  
   
 > [!NOTE]  
->  **Advertencia:** si cambia las vistas antes de que se ha ejecutado la consulta, aparece un mensaje que indica que podría perder algunos cambios. Si la instrucción DMX es válida, en muchos casos el **generador de consultas** puede convertir correctamente estos cambios. Sin embargo, si ha creado una instrucción DMX muy compleja, debe guardar el trabajo antes de cambiar de vista.  
+>  **Advertencia:** Si cambia las vistas antes de que se ha ejecutado la consulta, aparecerá un mensaje indicando que podrían perderse algunos cambios. Si la instrucción DMX es válida, en muchos casos el **generador de consultas** puede convertir correctamente estos cambios. Sin embargo, si ha creado una instrucción DMX muy compleja, debe guardar el trabajo antes de cambiar de vista.  
   
  **Plantillas DMX**  
  Haga clic en esta opción y seleccione en la lista una de las plantillas que contienen los ejemplos DMX. Las plantillas proporcionan información solo sobre cada tipo de consulta de modelo o de predicción que puede necesitar, incluidas las consultas que usan tablas anidadas, e instrucciones DMX para administrar los modelos. Aunque tenga conocimientos de DMX, las plantillas pueden ahorrarle tiempo al mostrar la sintaxis correcta.  

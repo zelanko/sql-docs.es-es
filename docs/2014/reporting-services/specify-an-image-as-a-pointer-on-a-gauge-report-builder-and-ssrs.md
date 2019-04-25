@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0bc4168d6e6cf786b3137713d44441be0bd3a13f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511401"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>Especificar una imagen como puntero en un medidor (Generador de informes y SSRS)
   El medidor contiene tres estilos integrados que se pueden usar para personalizar la apariencia del puntero. Para un medidor radial, los estilos integrados son: Aguja, marcador y barra. En el caso de un medidor lineal, los estilos integrados son: marcador, barra y termómetro. Si se requiere un puntero único, el usuario puede crear y especificar una imagen que se puede usar como un puntero totalmente funcional.  

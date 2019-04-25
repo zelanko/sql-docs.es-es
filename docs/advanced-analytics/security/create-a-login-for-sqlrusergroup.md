@@ -9,13 +9,13 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 62dd1ddf61c3cc2e1340619566ad9f4dcce062b7
-ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55147050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642095"
 ---
-# <a name="create-a-login-for-sqlrusergroup"></a>Crear un inicio de sesión para SQLRUserGroup
+# <a name="create-a-login-for-sqlrusergroup"></a>Creación de un inicio de sesión para SQLRUserGroup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Crear un [inicio de sesión en SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) para [SQLRUserGroup](../concepts/security.md#sqlrusergroup) cuando un [bucle de espera de conexión](../../advanced-analytics/concepts/security.md#implied-authentication) en el script especifica un *conexión de confianza*, y la identidad utilizada para ejecutar un objeto que contiene el código es una cuenta de usuario de Windows.
@@ -27,7 +27,7 @@ Puede solucionar el error de conexión mediante la creación de un inicio de ses
 > [!Note]
 > Asegúrese de que **SQLRUserGroup** tiene permisos "Permitir inicio de sesión localmente". De forma predeterminada, este permiso se concede a todos los nuevos usuarios locales, pero algunas directivas de grupo más estrictas a las organizaciones podrían deshabilitar este derecho.
 
-## <a name="create-a-login"></a>Crea un inicio de sesión
+## <a name="create-a-login"></a>Creación de un inicio de sesión
 
 1. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en el Explorador de objetos, expanda **Seguridad**, haga clic con el botón derecho en **Inicios de sesión**y seleccione **Nuevo inicio de sesión**.
 

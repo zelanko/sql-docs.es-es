@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760132"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Vinculación de aplicaciones de acceso a SQL Server: Azure SQL DB (AccessToSQL)
 Si desea usar las aplicaciones de Access existentes con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede vincular las tablas de Access originales a la que se migrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tablas de SQL Azure. Vinculación modifica la base de datos de acceso para que las páginas de acceso a las consultas, formularios, informes y datos usan los datos en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o base de datos de SQL Azure en lugar de los datos de la base de datos de Access.  
@@ -101,22 +101,22 @@ Si el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o se modifican l
 Las siguientes secciones de problemas de la lista que se produzcan en aplicaciones de Access existentes después de migrar las bases de datos de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure y, a continuación, vincular las tablas, junto con las causas y las resoluciones.  
   
 ### <a name="slow-performance-with-linked-tables"></a>Rendimiento lento con tablas vinculadas  
-**Causa:** algunas consultas podrían ser lentos después de convertir a SQL Server por las razones siguientes:  
+**Causa:** Algunas consultas podrían ser lento después de convertir a SQL Server por las razones siguientes:  
   
 -   La aplicación depende de las funciones que no existen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, lo que hace que Jet que desplegar tablas localmente para ejecutar una consulta SELECT.  
   
 -   Las consultas que actualizan o eliminan el número de filas se envían por Jet como una consulta parametrizada para cada fila.  
   
-**Solución:** convertir las consultas de ejecución lenta en vistas, procedimientos almacenados o consultas de paso a través. Convertir en consultas de paso tiene los siguientes problemas:  
+**Solución:** Convertir las consultas de ejecución lenta en vistas, procedimientos almacenados o consultas de paso a través. Convertir en consultas de paso tiene los siguientes problemas:  
   
 -   No se puede modificar las consultas de paso a través. Modificar el resultado de la consulta o agregar nuevos registros debe realizarse en un procedimiento alternativo, como al tener explícita **modificar** o **agregar** botones en el formulario que está enlazado a la consulta.  
   
 -   Algunas consultas requieren la intervención del usuario, pero las consultas de paso a través no admiten la entrada del usuario. Entrada del usuario se puede obtener Visual Basic para aplicaciones (VBA) que el código solicite los parámetros, o bien un formulario que se utiliza como un control de entrada. En ambos casos, el código de VBA envía la consulta con la entrada del usuario en el servidor.  
   
 ### <a name="auto-increment-columns-are-not-updated-until-the-record-is-updated"></a>Columnas de incremento automático no se actualizan hasta que se actualiza el registro  
-**Causa:** después de llamar a RecordSet.AddNew de Jet, la columna de incremento automático está disponible antes de actualiza el registro. Esto no es cierto en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. El nuevo valor del valor de columna de identidad nueva está disponible solo después de guardar el nuevo registro.  
+**Causa:** Después de llamar a RecordSet.AddNew de Jet, la columna de incremento automático está disponible antes de actualiza el registro. Esto no es cierto en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. El nuevo valor del valor de columna de identidad nueva está disponible solo después de guardar el nuevo registro.  
   
-**Solución:** ejecute el siguiente código Visual Basic para aplicaciones (VBA) antes de obtener acceso al campo de identidad:  
+**Solución:** Ejecute el siguiente código Visual Basic para aplicaciones (VBA) antes de obtener acceso al campo de identidad:  
   
 ```  
 Recordset.Update  
@@ -125,33 +125,33 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>No hay disponibles nuevos registros  
-**Causa:** al agregar un registro a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una tabla de SQL Azure mediante el uso de VBA, si el campo de índice único de la tabla tiene un valor predeterminado y no asigna un valor para ese campo, el nuevo registro no aparece hasta que vuelva a la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o S SQL Azure. Si se intenta obtener un valor desde el nuevo registro, recibirá el mensaje de error siguiente:  
+**Causa:** Al agregar un registro a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una tabla de SQL Azure mediante el uso de VBA, si el campo de índice único de la tabla tiene un valor predeterminado y no asigna un valor para ese campo, el nuevo registro no aparece hasta que vuelva a la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Si se intenta obtener un valor desde el nuevo registro, recibirá el mensaje de error siguiente:  
   
 `Run-time error '3167' Record is deleted.`  
   
-**Solución:** al abrir el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure de la tabla mediante el uso de código de VBA, incluya el `dbSeeChanges` opción, como en el ejemplo siguiente:  
+**Solución:** Al abrir el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure de la tabla mediante el uso de código de VBA, incluya el `dbSeeChanges` opción, como en el ejemplo siguiente:  
   
 `Set rs = db.OpenRecordset("TestTable", dbOpenDynaset, dbSeeChanges)`  
   
 ### <a name="after-migration-some-queries-will-not-allow-the-user-to-add-a-new-record"></a>Tras la migración, algunas consultas no permitirá al usuario agregar un nuevo registro  
-**Causa:** si una consulta no incluye todas las columnas que se incluyen en un índice único, no se puede agregar nuevos valores mediante el uso de la consulta.  
+**Causa:** Si una consulta no incluye todas las columnas que se incluyen en un índice único, no se puede agregar nuevos valores mediante el uso de la consulta.  
   
-**Solución:** asegurarse de que todas las columnas incluidas en al menos un índice único forman parte de la consulta.  
+**Solución:** Asegúrese de que todas las columnas incluidas en al menos un índice único forman parte de la consulta.  
   
 ### <a name="you-cannot-modify-a-linked-table-schema-with-access"></a>No se puede modificar un esquema de tabla vinculada con acceso  
-**Causa:** después de la migración de datos y tablas de vinculación, el usuario no puede modificar el esquema de una tabla de Access.  
+**Causa:** Después de migrar los datos y tablas de vinculación, el usuario no puede modificar el esquema de una tabla de Access.  
   
-**Solución:** modificar el esquema de tabla mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, actualice el vínculo de acceso.  
+**Solución:** Modificar el esquema de tabla mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, actualice el vínculo de acceso.  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>Se pierde la funcionalidad de hipervínculo después de migrar datos  
-**Causa:** después de migrar datos, los hipervínculos en columnas pierden su funcionalidad y se convierten en simple **nvarchar (max)** columnas.  
+**Causa:** Después de migrar datos, los hipervínculos en columnas pierden su funcionalidad y se convierten en simple **nvarchar (max)** columnas.  
   
-**Solución:** ninguno.  
+**Solución:** Ninguno.  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>No se admiten algunos tipos de datos de SQL Server por acceso  
-**Causa:** si más tarde actualiza su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tablas de SQL Azure para que contenga los tipos de datos que no son compatibles con el acceso, no se puede abrir la tabla en Access.  
+**Causa:** Si más tarde actualiza su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tablas de SQL Azure para que contenga los tipos de datos que no son compatibles con el acceso, no se puede abrir la tabla en Access.  
   
-**Solución:** puede definir una consulta de acceso que devuelve solo aquellas filas que contienen tipos de datos admitidos.  
+**Solución:** Puede definir una consulta de acceso que devuelve solo aquellas filas que contienen tipos de datos admitidos.  
   
 ## <a name="see-also"></a>Vea también  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

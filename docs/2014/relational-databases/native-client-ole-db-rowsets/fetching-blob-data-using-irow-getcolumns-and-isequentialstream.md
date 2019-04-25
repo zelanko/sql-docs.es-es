@@ -1,5 +1,5 @@
 ---
-title: 'Capturar datos BLOB mediante IRow:: GetColumns e ISequentialStream | Microsoft Docs'
+title: Captura de datos BLOB mediante IRow::GetColumns e ISequentialStream | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 04eb0e01b1c98552c0364c5b60d918608ae23faa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511380"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>Capturar datos BLOB mediante IRow::GetColumns e ISequentialStream
-  La función siguiente utiliza **IRow:: GetColumns** y **ISequentialStream** para capturar datos grandes:  
+  La función siguiente utiliza **IRow::GetColumns** e **ISequentialStream** para capturar datos grandes:  
   
 ```  
 void InitializeAndExecuteCommand()  

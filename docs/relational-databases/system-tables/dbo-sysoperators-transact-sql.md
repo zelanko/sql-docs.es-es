@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3796714cbdfb55900447bf23904136ac5abefa9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470667"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +37,10 @@ ms.locfileid: "47678923"
 |**id**|**int**|Id. del operador.|  
 |**Nombre**|**sysname**|Nombre del operador.|  
 |**enabled**|**tinyint**|Estado de las notificaciones de alerta (booleano). Si **1**, este operador puede recibir notificaciones cuando se produce una alerta.|  
-|**email_address**|**Nvarchar (100)**|Dirección de correo electrónico para este operador.|  
+|**email_address**|**nvarchar(100)**|Dirección de correo electrónico para este operador.|  
 |**last_email_date**|**int**|Fecha en que el operador recibió por última vez una alerta por correo electrónico.|  
 |**last_email_time**|**int**|Hora a la que el operador recibió por última vez una alerta por correo electrónico.|  
-|**pager_address**|**Nvarchar (100)**|Dirección de buscapersonas del operador.|  
+|**pager_address**|**nvarchar(100)**|Dirección de buscapersonas del operador.|  
 |**last_pager_date**|**int**|Fecha en que el operador recibió por última vez una notificación de alerta por buscapersonas.|  
 |**last_pager_time**|**int**|Hora a la que el operario recibió por última vez una notificación de alerta por buscapersonas.|  
 |**weekday_pager_start_time**|**int**|Hora de día laborable (de lunes a viernes) a partir de la cual el operador puede recibir una notificación de alerta por buscapersonas.|  
@@ -50,7 +50,7 @@ ms.locfileid: "47678923"
 |**sunday_pager_start_time**|**int**|Hora del domingo a partir de la cual el operador puede recibir una notificación de alerta por buscapersonas.|  
 |**sunday_pager_end_time**|**int**|Hora del domingo a partir de la cual el operador no puede recibir una notificación de alerta por buscapersonas.|  
 |**pager_days**|**tinyint**|Máscara de bits que indica los días de la semana en que el operador puede recibir notificaciones de alerta por buscapersonas.|  
-|**netsend_address**|**Nvarchar (100)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**netsend_address**|**nvarchar(100)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**last_netsend_date**|**int**|Fecha en que se envió el mensaje de red más reciente al Id. de operador especificado.|  
 |**last_netsend_time**|**int**|Hora a la que se envió el mensaje de red más reciente al Id. de operador especificado.|  
 |**category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

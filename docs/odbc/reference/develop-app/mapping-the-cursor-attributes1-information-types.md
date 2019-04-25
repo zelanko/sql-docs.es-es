@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e9549c442e301f3a6ed8d3da9c73d52177adf01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628899"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>Asignar los tipos de información de Cursor Attributes1
 Cuando un ODBC 3. *x* aplicación llama a **SQLGetInfo** en un 2 de ODBC *.x* controlador con el tipo de información SQL_XXXX_CURSOR_ATTRIBUTES1 (para dinámico, solo avance, de los cursores, o cursores estáticos), la configuración de los bits devueltos por el Administrador de controladores depende de qué el 2 de ODBC. *x* controlador devuelve el 2 de ODBC correspondiente. *x* tipos de información. Los bits se establecen como se muestra en la tabla siguiente.  
   
-|Bit en<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|Tipo de cursor|ODBC 2. *x* información<br /><br /> Tipo|  
+|Bit en<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|Tipo de cursor|ODBC 2. *x* información<br /><br /> type|  
 |-----------------------------------------------|-----------------|-------------------------------------|  
 |SQL_CA1_NEXT|All|SQL_FETCH_DIRECTION|  
 |SQL_CA1_ABSOLUTE SQL_CA1_RELATIVE SQL_CA1_BOOKMARK|Dinámico, de los cursores, estático|SQL_FETCH_DIRECTION|  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e6a5e9581a2a236eab869e74825ee97e7e289d44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472701"
 ---
 # <a name="command-streams"></a>Secuencias de comandos
 ADO siempre ha admitido la entrada del comando en el formato de cadena especificado por el **CommandText** propiedad. Como alternativa, con ADO 2.7 o posterior, también puede usar una secuencia de información para la entrada de comando mediante la asignación de la secuencia de la **CommandStream** propiedad. Puede asignar un ADO **Stream** objeto, o cualquier objeto que admite el COM **IStream** interfaz.  

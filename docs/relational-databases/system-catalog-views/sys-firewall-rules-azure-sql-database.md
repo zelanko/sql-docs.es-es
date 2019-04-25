@@ -20,11 +20,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 5127dacf628231199c5ce5ac49fdb2377c82f270
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631641"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "58494038"
 |NAME|**NVARCHAR(128)**|El nombre que eligió para describir y distinguir la configuración del firewall de nivel de servidor.|  
 |start_ip_address|**VARCHAR(45)**|La dirección IP más baja en el intervalo de la configuración del firewall de nivel de servidor. Las direcciones IP iguales o superiores a esta pueden intentar conectarse con el servidor [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La dirección IP más baja posible es `0.0.0.0`.|  
 |end_ip_address|**VARCHAR(45)**|La dirección IP más alta en el intervalo de la configuración del firewall de nivel de servidor. Las direcciones IP iguales o inferiores a esta pueden intentar conectarse con el servidor [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La dirección IP más alta posible es `255.255.255.255`.<br /><br /> Nota: Se permiten los intentos de conexión de Windows Azure cuando este campo y el **start_ip_address** campo equals `0.0.0.0`.|  
-|create_date|**FECHA Y HORA**|Fecha y hora UTC en la que se creó la configuración del firewall de nivel de servidor.<br /><br /> Nota: UTC es el acrónimo de hora universal coordinada.|  
+|create_date|**FECHA Y HORA**|Fecha y hora UTC en la que se creó la configuración del firewall de nivel de servidor.<br /><br /> Nota: UTC es el acrónimo de hora Universal coordinada.|  
 |modify_date|**FECHA Y HORA**|Fecha y hora UTC en la que se modificó por última vez la configuración del firewall de nivel de servidor.|  
   
 ## <a name="remarks"></a>Comentarios

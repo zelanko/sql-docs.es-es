@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 54da54a63fb1234478a3161cd46e7143258d2d65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468682"
 ---
 # <a name="rowset-size"></a>Tamaño del conjunto de filas
 Qué tamaño del conjunto de filas que se usará depende de la aplicación. Normalmente, las aplicaciones basadas en la pantalla siguen uno de dos estrategias. La primera consiste en establecer el tamaño del conjunto de filas en el número de filas que se muestran en la pantalla; Si el usuario cambia el tamaño de la pantalla, la aplicación cambia el tamaño del conjunto de filas según corresponda. El segundo es establecer el tamaño del conjunto de filas en un número mayor, como 100, lo que reduce el número de llamadas al origen de datos. La aplicación se desplaza localmente en el conjunto de filas cuando sea posible y recupera nuevas filas solo cuando desplaza fuera del conjunto de filas.  

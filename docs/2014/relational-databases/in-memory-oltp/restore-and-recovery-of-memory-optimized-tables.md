@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9560249e07cbd360914b5dab21eb68dc8e7f013f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467249"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restaurar y recuperar tablas con optimización para memoria
   El mecanismo básico para recuperar o restaurar una base de datos con tablas optimizadas para memoria es similar al de las bases de datos con solo tablas basadas en disco. Pero a diferencia de las tablas basadas en disco, las tablas optimizadas para memoria deben cargarse en memoria antes de que la base de datos esté disponible para el acceso de usuario. Esto agrega un nuevo paso en la recuperación de la base de datos. Los pasos modificados en la recuperación de base de datos cambian de este modo:  

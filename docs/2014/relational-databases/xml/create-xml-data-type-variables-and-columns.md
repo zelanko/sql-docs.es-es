@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637998"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Crear variables y columnas del tipo de datos XML
   El tipo de datos `xml` es un tipo de datos integrado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y es similar a otros tipos integrados como `int` y `varchar`. Igual que con otros tipos integrados, puede usar el `xml` tipo de datos como un tipo de columna cuando crea una tabla como un tipo de variable, tipo de parámetro, un tipo de devolución de función, o en [CAST y CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql).  

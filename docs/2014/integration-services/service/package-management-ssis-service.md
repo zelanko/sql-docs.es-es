@@ -25,11 +25,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766635"
 ---
 # <a name="package-management-ssis-service"></a>Administración de paquetes (servicio SSIS)
   La administración de paquetes implica tareas entre las que se incluyen las siguientes:  
@@ -56,7 +56,7 @@ ms.locfileid: "58375353"
   
  La carpeta **Paquetes en ejecución** no contiene subcarpetas y no es extensible.  
   
- De forma predeterminada, el **paquetes almacenados** carpeta contiene dos carpetas: **Sistema de archivos** y **MSDB**. En la carpeta **Sistema de archivos** se enumeran los paquetes que se guardan en el sistema de archivos. La ubicación de estos archivos se especifica en el archivo de configuración del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La carpeta predeterminada es la carpeta Paquetes, ubicada en %Archivos de programa%\Microsoft SQL Server\100\DTS. En la carpeta **MSDB** se muestran los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] guardados en la base de datos msdb de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el servidor. La tabla sysssispackages contiene los paquetes que se guardan en msdb.  
+ De forma predeterminada, la carpeta **Paquetes almacenados** contiene dos carpetas: **Sistema de archivos** y **MSDB**. En la carpeta **Sistema de archivos** se enumeran los paquetes que se guardan en el sistema de archivos. La ubicación de estos archivos se especifica en el archivo de configuración del servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La carpeta predeterminada es la carpeta Paquetes, ubicada en %Archivos de programa%\Microsoft SQL Server\100\DTS. En la carpeta **MSDB** se muestran los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] guardados en la base de datos msdb de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el servidor. La tabla sysssispackages contiene los paquetes que se guardan en msdb.  
   
  Para ver la lista de paquetes del almacén de paquetes, debe abrir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y conectarse a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información, vea [View Integration Services Packages in SQL Server Management Studio &#40;SSIS Service&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md).  
   

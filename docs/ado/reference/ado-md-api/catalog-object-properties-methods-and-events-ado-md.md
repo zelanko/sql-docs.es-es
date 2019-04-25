@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41eb6c43a0ddd7e9babf948bbb6135694deadc40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469584"
 ---
 # <a name="catalog-object-properties-methods-and-events-ado-md"></a>Propiedades de objeto de catálogo, métodos y eventos (ADO MD)
 ## <a name="propertiescollections"></a>Propiedades y colecciones  

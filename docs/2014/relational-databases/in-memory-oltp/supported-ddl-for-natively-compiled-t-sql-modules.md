@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467879"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>Construcciones admitidas en procedimientos almacenados compilados de forma nativa
   En este tema se enumeran las construcciones admitidas en procedimientos almacenados compilados de forma nativa.  
@@ -40,7 +40,7 @@ ms.locfileid: "48113215"
 ## <a name="security"></a>Seguridad  
  Se admite lo siguiente:  
   
--   Para procedimientos: EXECUTE AS OWNER, SELF y usuario.  
+-   Para conocer los procedimientos: EXECUTE AS OWNER, SELF y usuario.  
   
 -   GRANT (conceda) y DENY (deniegue) permisos a las tablas y los procedimientos.  
   

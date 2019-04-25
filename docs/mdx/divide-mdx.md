@@ -1,5 +1,5 @@
 ---
-title: Dividir (MDX) | Documentos de Microsoft
+title: Divide (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 86b4d8c97996733396e3062e134b2e31d2819ec0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471316"
 ---
 # <a name="divide-mdx"></a>Divide (MDX)
 
@@ -29,16 +29,16 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Numerador*  
+ *numerator*  
  Dividendo o número que se divide.  
   
- *denominador*  
- Divisor o número que se divide por.  
+ *denominator*  
+ El divisor o número dividir por.  
   
  *alternateresult*  
  (Opcional) El valor devuelto cuando la división entre cero da como resultado un error. Cuando no se proporciona, el valor predeterminado es BLANK().  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El resultado alternativo al dividir entre 0 debe ser una constante.  
   
 ## <a name="see-also"></a>Vea también  

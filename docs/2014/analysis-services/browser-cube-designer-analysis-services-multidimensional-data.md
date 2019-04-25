@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b15f077132fcc50c89dd93a38525316bf112f0a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465500"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Explorador (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Utilice la pestaña **Explorador** del Diseñador de cubos para explorar las dimensiones, medidas y KPI de un cubo. En [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], el explorador de cubo de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] se ha integrado con el diseñador de consultas MDX, y proporciona una interfaz gráfica de usuario para ayudar a crear consultas MDX, filtrar y segmentar cubos y explorar en profundidad jerarquías.  
   
- La pestaña **Explorador** tiene dos modos: **Modo de diseño** y **Modo de consulta**. En cualquiera de los modos, puede utilizar los objetos del panel **Metadatos** para explorar el cubo, o puede arrastrar miembros del panel **Metadatos** al área de consulta, para crear una consulta MDX que recupere los datos que desee usar.  
+ El **explorador** pestaña tiene dos modos: **El modo de diseño** y **modo de consulta**. En cualquiera de los modos, puede utilizar los objetos del panel **Metadatos** para explorar el cubo, o puede arrastrar miembros del panel **Metadatos** al área de consulta, para crear una consulta MDX que recupere los datos que desee usar.  
   
  **Examinar y consultar mediante el modo de diseño gráfico**  
   

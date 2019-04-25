@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743171"
 ---
 # <a name="control-transaction-durability"></a>Controlar la durabilidad de las transacciones
   Las confirmaciones de transacciones de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden ser totalmente durables (el valor predeterminado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) o durables diferidas (conocidas también como confirmaciones diferidas).  
@@ -131,7 +131,7 @@ AS BEGIN ATOMIC WITH
 END  
 ```  
   
-### <a name="table-1-durability-in-atomic-blocks"></a>Tabla 1: Durabilidad en bloques ATOMIC  
+### <a name="table-1-durability-in-atomic-blocks"></a>Tabla 1: Durabilidad en bloques Atomic  
   
 |Opción de durabilidad de bloque ATOMIC|Ninguna transacción existente|Transacción en proceso (totalmente durable o durable diferida)|  
 |------------------------------------|-----------------------------|---------------------------------------------------------|  

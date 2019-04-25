@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c542edcd14da08ab58770d7706139762c9735902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757342"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Implementar con SQL Server Data Tools (SSAS tabular)
   Utilice las tareas de este tema para implementar una solución de modelo tabular mediante el comando Implementar en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -49,7 +49,7 @@ ms.locfileid: "48054145"
 3.  En **Servidor de implementación**, especifique la configuración de las propiedades **Servidor** (nombre), **Edición**, **Base de datos** (nombre) y **Nombre del cubo** si difiere de la predeterminada y, después, haga clic en **Aceptar**.  
   
 > [!NOTE]  
->  También puede especificar el valor de la propiedad Servidor de implementación predeterminado de modo que los proyectos que se creen se implementen automáticamente en el servidor especificado. Para obtener más información, vea [Configure Default Data Modeling and Deployment Properties &#40;SSAS Tabular&#41;](properties-ssas-tabular.md).  
+>  También puede especificar el valor de la propiedad Servidor de implementación predeterminado de modo que los proyectos que se creen se implementen automáticamente en el servidor especificado. Para obtener más información, vea [Configurar las propiedades predeterminadas de modelado de datos y de implementación &#40;SSAS tabular&#41;](properties-ssas-tabular.md).  
   
 ##  <a name="bkmk_deploy_proc"></a> Implementar una solución de modelo tabular  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48054145"
  Haga clic en esta opción para detener la operación de implementación. Esta opción resulta útil si la operación de implementación tarda demasiado o hay demasiados errores.  
   
 ## <a name="see-also"></a>Vea también  
- [Implementación de la solución de modelo tabular &#40;Tabular de SSAS&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
- [Configurar las propiedades de implementación y modelado de datos predeterminada &#40;Tabular de SSAS&#41;](properties-ssas-tabular.md)  
+ [Implementación de soluciones de modelos tabulares &#40;SSAS tabular&#41;](tabular-model-solution-deployment-ssas-tabular.md)   
+ [Configurar las propiedades predeterminadas de modelado de datos y de implementación &#40;SSAS tabular&#41;](properties-ssas-tabular.md)  
   
   

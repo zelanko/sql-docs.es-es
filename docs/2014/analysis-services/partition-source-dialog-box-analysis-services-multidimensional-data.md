@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f88f307f9cbace833a83603e0f24382b7e82e62f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743571"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Origen de la partición (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Origen de la partición** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para especificar el origen de los datos de la tabla de hechos para una partición. Para mostrar el cuadro de diálogo **Origen de la partición** :  
@@ -31,7 +31,7 @@ ms.locfileid: "48203185"
   
 |Opción|Definición|  
 |------------|----------------|  
-|**Tipo de enlace**|Seleccione el tipo de enlace que desea utilizar como origen de la partición especificada. Las siguientes opciones están disponibles:<br /><br /> **Enlace de tablas**: seleccione esta opción para mostrar el **detalle del enlace de tablas** panel e indique que la partición está enlazada al contenido de una tabla en una vista del origen de datos o de origen de datos. Para más información sobre el panel **Detalle del enlace de tablas**, vea [Detalle del enlace de tablas &#40;cuadro de diálogo Origen de la partición&#41; &#40;Analysis Services - Datos multidimensionales&#41;](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md).<br /><br /> **Detalle**: seleccione esta opción para mostrar el **detalle del enlace de consulta** panel e indique que la partición está enlazada al contenido de una consulta ejecutada en un origen de datos. Para más información sobre el panel **Detalle del enlace de consultas**, vea [Detalle del enlace de consultas &#40;cuadro de diálogo Origen de la partición&#41; &#40;Analysis Services - Datos multidimensionales&#41;](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md).|  
+|**Tipo de enlace**|Seleccione el tipo de enlace que desea utilizar como origen de la partición especificada. Las siguientes opciones están disponibles:<br /><br /> **Enlace de tablas**: Seleccione esta opción para mostrar el panel **Detalle del enlace de tablas** e indique que la partición está enlazada al contenido de una tabla en un origen de datos o vista del origen de datos. Para más información sobre el panel **Detalle del enlace de tablas**, vea [Detalle del enlace de tablas &#40;cuadro de diálogo Origen de la partición&#41; &#40;Analysis Services - Datos multidimensionales&#41;](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md).<br /><br /> **Detalles**: Seleccione esta opción para mostrar el panel **Detalle del enlace de consultas** e indique que la partición está enlazada al contenido de una consulta ejecutada en un origen de datos. Para más información sobre el panel **Detalle del enlace de consultas**, vea [Detalle del enlace de consultas &#40;cuadro de diálogo Origen de la partición&#41; &#40;Analysis Services - Datos multidimensionales&#41;](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md).|  
 |**Detail**|Muestra el cuadro de diálogo **Detalle del enlace de tablas** o el cuadro de diálogo **Detalle del enlace de consultas** , según el valor de la opción **Tipo de enlace** .|  
   
 ## <a name="see-also"></a>Vea también  

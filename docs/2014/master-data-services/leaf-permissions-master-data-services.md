@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b2f0bac42ce0fb2ae814b48cd21e0cffb84128b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764884"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permisos de hoja (Master Data Services)
   Los permisos de hoja se aplican a los valores de atributo de todos los miembros hoja de una entidad.  
@@ -47,15 +47,15 @@ ms.locfileid: "52812107"
 |----------------|-----------------|  
 |**Solo lectura**|Se muestra el atributo, pero el usuario no puede cambiar los valores de atributo.|  
 |**Update**|Se muestra el atributo y el usuario puede cambiar los valores de atributo.|  
-|**Denegar**|No se muestra el atributo.<br /><br /> Nota: No puede denegar explícitamente el acceso a los atributos Code y Name.|  
+|**Denegar**|No se muestra el atributo.<br /><br /> Nota: No puede denegar explícitamente el acceso a los atributos Name y Code.|  
   
 ### <a name="example"></a>Ejemplo  
  Para la entidad Product, asigne el permiso **Actualizar** al atributo Subcategory. Deniegue el permiso al resto de los atributos.  
   
 |Nombre|Código|Subcategory (actualizar)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain Bikes|  
-|Mountain-100|BK-M201|{5} Mountain Bikes|  
+|Mountain-100|BK-M101|{5} Bicicletas de montaña|  
+|Mountain-100|BK-M201|{5} Bicicletas de montaña|  
   
  En el **Explorador**, puede actualizar cualquier valor de atributo en la columna Subcategory. Si no dispone del permiso para un atributo, este no se mostrará.  
   

@@ -1,5 +1,5 @@
 ---
-title: Crear ámbito de consulta (MDX) de conjuntos con nombre | Documentos de Microsoft
+title: Crear ámbito de consulta (MDX) de conjuntos con nombre | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9b30ba12d229f0c045d7a08a71c97a98de67a2bd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62739985"
 ---
-# <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>Conjuntos con nombre denominado conjuntos: crear ámbito de consulta MDX
+# <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>Conjuntos con nombre MDX conjuntos con nombre: creación de ámbito de consulta
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Si un conjunto con nombre solo es necesario para una consulta de Expresiones multidimensionales (MDX) única, puede definir ese conjunto con nombre mediante la palabra clave WITH. Un conjunto con nombre que se ha creado con la palabra clave WITH deja de existir cuando cesa la ejecución de la consulta.  
   
@@ -90,7 +90,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Instrucción SELECT & #40; MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)   
- [Crear ámbito de sesión denominado conjuntos & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [SELECT &#40;Instrucción, MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [Crear conjuntos con nombre de ámbito de sesión &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

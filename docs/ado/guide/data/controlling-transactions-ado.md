@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8059df4275a336d084144a73910cdef99abf9467
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472661"
 ---
 # <a name="controlling-transactions-ado"></a>Control de transacciones (ADO)
 ADO admite procesamiento de transacciones en una conexión con la Ayuda de la **BeginTrans**, **CommitTrans**, y **RollbackTrans** métodos en un  **Conexión** objeto. La idea general de la implementación de procesamiento de transacciones en ADO se ilustra en el siguiente fragmento de código simple.  

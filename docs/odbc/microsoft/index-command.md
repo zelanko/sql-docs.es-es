@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 864f6fa78ab1ef23b7db3a0be4c85738b95ea72d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471263"
 ---
 # <a name="index-command"></a>Comando de índice
 Crea un archivo de índice para mostrar y obtener acceso a registros de la tabla en un orden lógico.  

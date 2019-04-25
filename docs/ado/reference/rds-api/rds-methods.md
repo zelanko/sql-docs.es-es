@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4913009226232f1359fbba25d50bcaf0d095da17
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642482"
 ---
 # <a name="rds-methods"></a>Métodos RDS
 > [!IMPORTANT]

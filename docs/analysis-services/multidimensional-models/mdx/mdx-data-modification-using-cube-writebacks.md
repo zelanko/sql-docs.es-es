@@ -1,5 +1,5 @@
 ---
-title: Usar reescrituras de cubos (MDX) | Documentos de Microsoft
+title: Usar reescrituras de cubos (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc950c69a25ff976b8cdf1cd7cb4252c2584e0af
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740131"
 ---
-# <a name="mdx-data-modification---using-cube-writebacks"></a>Modificación de datos MDX - usar reescrituras de cubos
+# <a name="mdx-data-modification---using-cube-writebacks"></a>Modificación de datos MDX: uso de escrituras diferidas de cubos
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Los cubos pueden actualizarse mediante la instrucción [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) . Esta instrucción permite actualizar una tupla con un valor específico. Para utilizar de forma eficaz la instrucción UPDATE CUBE a fin de actualizar, un cubo es preciso comprender la sintaxis de la instrucción, las condiciones de error que pueden generarse y el efecto de las actualizaciones en el cubo.  
   
@@ -111,6 +111,6 @@ USE_EQUAL_ALLOCATION
 -   Cambiar la granularidad de dimensión de una dimensión incluida en la reescritura.  
   
 ## <a name="see-also"></a>Vea también  
- [Modificación de datos & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+ [Modificar datos &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

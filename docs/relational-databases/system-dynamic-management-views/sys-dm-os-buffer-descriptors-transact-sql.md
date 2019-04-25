@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 29449905da888d0f7c85b66d3731eed381dc582c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506051"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47704713"
   
  Cuando se lee una página de datos del disco, esta se copia en el grupo de búferes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se almacena en caché para volver a utilizarla. Cada página de datos almacenada en caché tiene un descriptor de búfer. Los descriptores de búfer únicamente identifican cada página de datos que está almacenada actualmente en memoria caché en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors devuelve páginas en memoria caché para todas las bases de datos de usuario y de sistema. Esto incluye las páginas que están asociadas a la base de datos Resource.  
   
-> **Nota:** para llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_buffer_descriptors**.  
+> **NOTA:** Al llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_os_buffer_descriptors**.  
 
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -44,14 +44,14 @@ ms.locfileid: "47704713"
 |page_id|**int**|Identificador de la página dentro del archivo. Acepta valores NULL.|  
 |page_level|**int**|Nivel de índice de la página. Acepta valores NULL.|  
 |allocation_unit_id|**bigint**|Identificador de la unidad de asignación de la página. Este valor se puede utilizar para combinar sys.allocation_units. Acepta valores NULL.|  
-|page_type|**nvarchar(60)**|Tipo de la página, como: página de datos o página de índice. Acepta valores NULL.|  
+|page_type|**nvarchar(60)**|Tipo de la página, como: Página de datos o página de índice. Acepta valores NULL.|  
 |row_count|**int**|Número de filas de la página. Acepta valores NULL.|  
 |free_space_in_bytes|**int**|Cantidad, en bytes, de espacio disponible en la página. Acepta valores NULL.|  
 |is_modified|**bit**|1 = La página se ha modificado después de leerse en el disco. Acepta valores NULL.|  
 |numa_node|**int**|Nodo de acceso no uniforme a memoria para el búfer. Acepta valores NULL.|  
-|read_microsec|**bigint**|El tiempo real (en microsegundos) necesario para leer la página en el búfer. Este número se restablece cuando se reutiliza el búfer. Acepta valores NULL.|  
-|is_in_bpool_extension|**bit**|1 = página está en la extensión del grupo de búferes. Acepta valores NULL.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
+|read_microsec|**bigint**|El tiempo real (en microsegundos) necesario para leer la página en el búfer. Este número se restablece cuando se reutiliza el búfer. Acepta valores NULL.|  
+|is_in_bpool_extension|**bit**|1 = página está en la extensión del grupo de búferes. Acepta valores NULL.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
 ## <a name="permissions"></a>Permisos  
 
@@ -61,10 +61,10 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE 
 ## <a name="remarks"></a>Comentarios  
  Sys.dm_os_buffer_descriptors devuelve páginas que están siendo utilizadas por la base de datos de recursos. Sys.dm_os_buffer_descriptors no devuelve información sobre páginas descartadas ni disponibles, ni sobre páginas con errores durante su lectura.  
   
-|De|En|El|Relación|  
+|De|En|Activado|Relación|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|varios a uno|  
-|sys.dm_os_buffer_descriptors|\<UserDB >. sys.allocation_units|allocation_unit_id|varios a uno|  
+|sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|varios a uno|  
 |sys.dm_os_buffer_descriptors|\<userdb>.sys.database_files|file_id|varios a uno|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|varios a uno|  
   
@@ -84,7 +84,7 @@ GROUP BY DB_NAME(database_id) ,database_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-### <a name="b-returning-cached-page-count-for-each-object-in-the-current-database"></a>B. Devolver el recuento de páginas almacenadas en caché para cada objeto de la base de datos actual  
+### <a name="b-returning-cached-page-count-for-each-object-in-the-current-database"></a>b. Devolver el recuento de páginas almacenadas en caché para cada objeto de la base de datos actual  
  En el ejemplo siguiente se devuelve el recuento de páginas cargadas para cada objeto en la base de datos actual.  
   
 ```  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7375dff31cb9cd0f092315b9a53e57e2f0ecd1a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632295"
 ---
 # <a name="syssubscriptions-transact-sql"></a>syssubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "52748257"
 |**sync_type**|**tinyint**|El tipo de sincronización inicial:<br /><br /> **1** = automatic.<br /><br /> **2** = ninguno|  
 |**login_name**|**sysname**|El nombre de inicio de sesión utilizado al agregar la suscripción.|  
 |**subscription_type**|**int**|El tipo de suscripción:<br /><br /> 0 = Inserción. El agente de distribución se ejecuta en el distribuidor.<br /><br /> 1 = Extracción. El agente de distribución se ejecuta en el suscriptor.|  
-|**distribution_jobid**|**binary (16)**|Id. de trabajo del Agente de distribución.|  
+|**distribution_jobid**|**binary(16)**|Id. de trabajo del Agente de distribución.|  
 |**timestamp**|**timestamp**|Marca de tiempo.|  
 |**update_mode**|**tinyint**|Modo de actualización:<br /><br /> **0** = solo lectura.<br /><br /> **1** = actualización inmediata.|  
 |**loopback_detection**|**bit**|Se aplica a las suscripciones que forman parte de una topología de replicación transaccional bidireccional. La detección de bucles de retorno determina si el Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor:<br /><br /> **0** = las envía.<br /><br /> **1** = no no volver a enviar.|  
 |**queued_reinit**|**bit**|Especifica si el artículo está marcado para inicialización o reinicialización. Un valor de **1** especifica que el artículo suscrito está marcado para inicialización o reinicialización.|  
 |**nosync_type**|**tinyint**|Tipo de inicialización de la suscripción:<br /><br /> **0** = automático (instantánea)<br /><br /> **1** = solo admite replicación<br /><br /> **2** = inicializar con copia de seguridad<br /><br /> **3** = inicializar del número de secuencia de registro (LSN)<br /><br /> Para obtener más información, consulte el **@sync_type** parámetro de [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).|  
-|**SRVNAME**|**sysname**|Nombre del suscriptor.|  
+|**srvname**|**sysname**|Nombre del suscriptor.|  
   
 ## <a name="see-also"></a>Vea también  
  [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

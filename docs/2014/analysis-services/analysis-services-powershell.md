@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cec716534e6cffa7cc44aafb96ec0541e49d6e48
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643532"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] incluye cmdlets y un proveedor de Analysis Services PowerShell (SQLAS) que permite usar Windows PowerShell para navegar, administrar y consultar objetos de Analysis Services.  
@@ -147,7 +147,7 @@ PS SQLSERVER:\SQLAS\Localhost\default> Remove-Variable -Name pwd
     ```  
   
 ###  <a name="bkmk_remote"></a> Habilitar la administración remota  
- Para poder utilizar Analysis Services PowerShell con una instancia remota de Analysis Services, primero debe habilitar la administración remota y el uso compartido de archivos. El siguiente error indica un problema de configuración de firewall: "El servidor de RPC no está disponible. (Excepción de HRESULT: 0x800706ba) ".  
+ Para poder utilizar Analysis Services PowerShell con una instancia remota de Analysis Services, primero debe habilitar la administración remota y el uso compartido de archivos. El siguiente error indica un problema de configuración de firewall: "El servidor de RPC no está disponible. (Excepción de HRESULT: 0x800706BA)".  
   
 1.  Compruebe que el equipo local y los equipos remotos tienen las versiones de [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] de las herramientas de servidor y de cliente.  
   

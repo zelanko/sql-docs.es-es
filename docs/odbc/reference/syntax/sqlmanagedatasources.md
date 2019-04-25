@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f22fc952f0394f9e59ca8d67c76d0b00594b0759
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466021"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Conformidad**  
@@ -43,7 +43,7 @@ BOOL SQLManageDataSources(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HWND*  
+ *hwnd*  
  [Entrada] Identificador de la ventana primaria.  
   
 ## <a name="returns"></a>Devuelve  
@@ -94,7 +94,7 @@ BOOL SQLManageDataSources(
   
  Un DSN de sistema se registra en la entrada HKEY_LOCAL_MACHINE en la información del sistema en lugar de la entrada HKEY_CURRENT_USER. No está asociado a un usuario que inicia sesión con su nombre de usuario en particular y su contraseña, pero se puede usar cualquier usuario de la máquina o un servicio automático para todo el sistema. Sin embargo, es, vincular el DSN de sistema a una máquina. No se admite la capacidad de utilizar el DSN remotos entre equipos. Los DSN del sistema se registran como sigue en la información del sistema:  
   
- HKEY_LOCAL_MACHINE SOFTWARE ODBC Odbc.ini  
+ HKEY_LOCAL_MACHINE    SOFTWARE       ODBC          Odbc.ini  
   
 ## <a name="file-dsns"></a>DSN de archivo  
  Un origen de datos de archivo no tiene un nombre de origen de datos, como hace un origen de datos de la máquina y no está registrado en cualquier máquina o un usuario. La información de conexión para ese origen de datos se encuentra en un archivo de DSN que se puede copiar en cualquier equipo. Un origen de datos de archivo puede ser que se pueda compartir, en cuyo caso el archivo .dsn reside en una red y se puede utilizar simultáneamente varios usuarios en la red siempre y cuando el usuario tiene instalado el controlador apropiado. Un origen de datos de archivo también puede ser no se puede compartir, en cuyo caso puede utilizarse únicamente en una sola máquina.  

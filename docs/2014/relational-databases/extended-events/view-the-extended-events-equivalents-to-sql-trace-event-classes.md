@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0dd90613851184ad7fcff16ecf0a89875433dbfd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62512387"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server
   Si desea utilizar los eventos extendidos para recopilar datos de evento que son equivalentes a clases de eventos de Seguimiento de SQL y columnas, es útil saber cómo los eventos de Seguimiento de SQL se asignan a eventos y acciones de eventos extendidos.  

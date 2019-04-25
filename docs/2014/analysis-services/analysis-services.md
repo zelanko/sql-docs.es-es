@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b18efaacb7ab891402e84b851735870c4c47e883
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638810"
 ---
 # <a name="analysis-services"></a>Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] es un motor de datos analíticos en línea que se usa en soluciones de ayuda a la toma de decisiones y Business Intelligence (BI), y proporciona los datos analíticos para informes empresariales y aplicaciones cliente como Excel, informes de Reporting Services y otras herramientas de BI de terceros. Un flujo de trabajo típico para [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] incluye la creación de un modelo de datos OLAP o tabular, la implementación del modelo como base de datos en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], el procesamiento de la base de datos para cargarla con datos y, a continuación, la asignación de permisos para permitir el acceso a datos. Cuando esté listo, se puede obtener acceso a este modelo de datos con varios fines desde cualquier aplicación cliente que admita [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] como origen de datos.  
@@ -67,7 +67,7 @@ ms.locfileid: "53360517"
  [Tutoriales de Analysis Services &#40;SSAS&#41;](analysis-services-tutorials-ssas.md)   
  [Instalación de SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)   
  [Guía del desarrollador &#40;Analysis Services&#41;](analysis-services-developer-documentation.md)   
- [Centro de recursos de SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)   
+ [SQL Server Resource Center](https://go.microsoft.com/fwlink/?linkID=219676)   
  [SQLCat.com](https://go.microsoft.com/fwlink/?linkID=220963)  
   
   

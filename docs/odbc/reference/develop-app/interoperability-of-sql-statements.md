@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4ead7cf96ada6d6055bc676ecf4610f2cf4c8f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62446665"
 ---
 # <a name="interoperability-of-sql-statements"></a>Interoperabilidad de instrucciones SQL
 Igual que el resto de una aplicación, pueden ser instrucciones SQL interoperable o específicos para DBMS. Y como el resto de la aplicación, la elección de instrucciones SQL interoperables cómo deben ser depende del tipo de aplicación. Están menos probable que use instrucciones SQL interoperables porque normalmente están diseñadas para aprovechar las capacidades del DBMS de uno o dos, posiblemente, las aplicaciones personalizadas. Aplicaciones genéricas usar instrucciones SQL interoperables porque están diseñadas para funcionar con una variedad de DBMS. Y aplicaciones verticales suelen clasificarse en algún lugar entre ambos, exigir un cierto nivel de funcionalidad, pero en caso contrario, usar instrucciones SQL interoperables.  

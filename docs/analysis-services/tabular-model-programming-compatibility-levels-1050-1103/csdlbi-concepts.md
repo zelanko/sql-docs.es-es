@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 486bbe240656bb2719ad4ce8f1ec51b226bec30b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466912"
 ---
 # <a name="csdlbi-concepts"></a>Conceptos de CSDLBI
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -123,27 +123,27 @@ ms.locfileid: "50146270"
 ## <a name="additions-to-support-multidimensional-models"></a>Adiciones para admitir modelos multidimensionales  
  La versión 1.0 de las anotaciones CSDLBI solo admitía modelos tabulares. En la versión 1.1 se agregó compatibilidad con los modelos multidimensionales (cubos OLAP) creados mediante herramientas tradicionales de desarrollo de BI. Por consiguiente, ahora se puede emitir una solicitud XML a un modelo multidimensional y recibir una definición CSDLBI del modelo, para su uso en los informes.  
   
- **Cubos:** un servidor SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos tabular puede contener solo un modo. En cambio, cada base de datos multidimensional puede contener varios cubos y cada base de datos está asociada a un cubo predeterminado. Por lo tanto, al emitir una solicitud XML en un servidor multidimensional, es necesario especificar el cubo; en caso contrario, se devolverá el XML del cubo predeterminado.  
+ **Cubos:** Un servidor SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos tabular puede contener solo un modo. En cambio, cada base de datos multidimensional puede contener varios cubos y cada base de datos está asociada a un cubo predeterminado. Por lo tanto, al emitir una solicitud XML en un servidor multidimensional, es necesario especificar el cubo; en caso contrario, se devolverá el XML del cubo predeterminado.  
   
  Por lo demás, la representación de un cubo es muy similar a la de una base de datos de modelo tabular. El nombre del cubo y el cubo corresponden al nombre de la base de datos tabular y al identificador de la base de datos.  
   
- **Dimensiones:** una dimensión se representa en CSDLBI como una entidad (tabla) con columnas y propiedades. Tenga en cuenta que incluso si no se incluye en una perspectiva, una dimensión que se incluye en el modelo se representará en la salida CSDL, marcada como **Hidden**.  
+ **Dimensiones:** Una dimensión se representa en CSDLBI como una entidad (tabla) con columnas y propiedades. Tenga en cuenta que incluso si no se incluye en una perspectiva, una dimensión que se incluye en el modelo se representará en la salida CSDL, marcada como **Hidden**.  
   
- **Perspectivas:** un cliente puede solicitar CSDL para perspectivas individuales. Para obtener más información, consulte [conjunto de filas DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
+ **Perspectivas:** Un cliente puede solicitar CSDL para perspectivas individuales. Para obtener más información, consulte [conjunto de filas DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
- **Jerarquías:** se admiten y se representan en CSDLBI como un conjunto de niveles de jerarquías.  
+ **Jerarquías:** Se admiten y se representan en CSDLBI como un conjunto de niveles de jerarquías.  
   
- **Miembros:** la compatibilidad con el miembro predeterminado se ha agregado y los valores predeterminados se agregan automáticamente a la salida CSDLBI.  
+ **Miembros:** Se ha agregado compatibilidad para el miembro predeterminado y los valores predeterminados se agregan automáticamente a la salida CSDLBI.  
   
- **Los miembros calculados:** modelos multidimensionales admiten miembros calculados para el elemento secundario de **todas** con un único miembro real.  
+ **Miembros calculados:** Los modelos multidimensionales admiten miembros calculados para el elemento secundario de **todas** con un único miembro real.  
   
- **Atributos de dimensión:** en la salida CSDLBI, se admiten los atributos de dimensión y se marcan automáticamente como no agregable.  
+ **Atributos de dimensión:** En la salida CSDLBI, se admiten los atributos de dimensión y se marcan automáticamente como no agregable.  
   
- **KPI:** KPI se admitían en la versión 1.1 de CSDLBI, pero la representación ha cambiado. Antes, un KPI era una propiedad de una medida. En la versión 1.1, el elemento KPI puede agregarse a una medida  
+ **KPI:** Los KPI se admitían en la versión 1.1 de CSDLBI, pero la representación ha cambiado. Antes, un KPI era una propiedad de una medida. En la versión 1.1, el elemento KPI puede agregarse a una medida  
   
- **Nuevas propiedades:** se han agregado atributos adicionales para admitir los modelos DirectQuery.  
+ **Propiedades nuevas:** Se han agregado atributos adicionales para admitir los modelos DirectQuery.  
   
- **Limitaciones:** no se admite la seguridad de celda.  
+ **Limitaciones:** No se admite la seguridad de celda.  
   
 ## <a name="see-also"></a>Vea también  
  [Anotaciones de CSDL para Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a18e523c8d839cc6ec9e0c64c94ad648b1c1d0c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511509"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Página de propiedades de opciones de instantánea (Administrador de informes)
   Use la página de propiedades Opciones de instantánea para programar las instantáneas de informe que se van a agregar al historial del informe, y para establecer los límites del número de ellas que se almacenarán en el historial.  

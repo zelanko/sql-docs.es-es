@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8b807f92b40a772762bf09edd83a129aabd91cad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638133"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>Cambiar el nombre de marca de una versión (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52781827"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se puede cambiar el nombre de una marca de versión.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de versiones** .  
@@ -49,7 +49,7 @@ ms.locfileid: "52781827"
   
 6.  Presione ENTRAR.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Versiones &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [Asignar una marca a una versión &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

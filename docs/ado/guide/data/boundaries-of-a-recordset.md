@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c9e05a45b5f035a500e210c991a33216be318ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472830"
 ---
 # <a name="boundaries-of-a-recordset"></a>Límites de un conjunto de registros
 **Conjunto de registros** admite el **BOF** y **EOF** propiedades para delinear el principio y al final, respectivamente, del conjunto de datos. Puede pensar en **BOF** y **EOF** como registros "fantasmas" situados al principio y al final de la **Recordset**. Recuento **BOF** y **EOF**, nuestro ejemplo **Recordset** ahora tendría el aspecto siguiente:  
@@ -30,7 +30,7 @@ ms.locfileid: "47633453"
 |BOF|||  
 |7|Peras secos orgánicos de Bob tío|30.0000|  
 |14|Tofu|23.2500|  
-|28|Rssle chucrut|45.6000|  
+|28|Rssle Sauerkraut|45.6000|  
 |51|Manzanas secas Manjimup|53.0000|  
 |74|Longlife Tofu|10.0000|  
 |EOF|||  

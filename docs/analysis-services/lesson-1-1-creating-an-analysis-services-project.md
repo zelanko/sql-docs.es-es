@@ -1,5 +1,5 @@
 ---
-title: Proyecto de servicios de creación de un análisis | Documentos de Microsoft
+title: Creación de un análisis Services proyecto | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8968b56e235b4f95f8106e17daff506b13ca7b7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636459"
 ---
-# <a name="lesson-1-1---creating-an-analysis-services-project"></a>Lección 1: 1: crear un proyecto de Analysis Services
+# <a name="lesson-1-1---creating-an-analysis-services-project"></a>Lección 1-1: crear un proyecto de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 En la tarea siguiente, debe usar [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear un nuevo proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] denominado **Tutorial de Analysis Services**, basado en la plantilla del proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Un *proyecto* es una colección de objetos relacionados. Los proyectos existen en una solución, que incluye uno o más proyectos. Para obtener más información, vea [Crear un proyecto de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
@@ -39,7 +39,7 @@ Ha creado correctamente el proyecto **Tutorial de Analysis Services** , basado e
   
 ## <a name="see-also"></a>Vea también  
 [Crear modelos multidimensionales utilizando las herramientas de datos de SQL Server &#40;SSDT&#41;](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
-[Crear un proyecto de Analysis Services & #40; SSDT & #41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+[Crear un proyecto de Analysis Services &#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   
   

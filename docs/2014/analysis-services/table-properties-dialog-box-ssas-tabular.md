@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 783bd1ba103e97e442e61891138090198a5cdd0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757839"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>Cuadro de diálogo Propiedades de tabla (SSAS - tabular)
   Use el cuadro de diálogo **Propiedades de tabla** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ver las propiedades de una tabla de una base de datos de modelo tabular. Todas las propiedades son de solo lectura.  
@@ -29,12 +29,12 @@ ms.locfileid: "48104495"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Nombre**|Muestra el nombre de la tabla.|  
+|**Name**|Muestra el nombre de la tabla.|  
 |**ID**|Muestra el identificador de la tabla.|  
 |**Descripción**|Muestra la descripción de la tabla.|  
 |**Marca de tiempo de creación**|Muestra la fecha y la hora de creación de la tabla.|  
 |**Última actualización de esquema**|Muestra la fecha y la hora en que se actualizaron por última vez los metadatos de la tabla.|  
-|**State**|Muestra el estado de procesamiento de la tabla. Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**Estado**|Muestra el estado de procesamiento de la tabla. Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Procesado por última vez**|Muestra la fecha y la hora en que se procesó la tabla por última vez.|  
 |**Modo de almacenamiento actual**|Muestra el modo de almacenamiento actual de la tabla. El modo de almacenamiento se establece en el nivel de base de datos y lo heredan todas las tablas. No puede usar modos de almacenamiento distintos en el nivel de tabla. Los valores válidos son InMemory (predeterminado), InMemoryWithDirectQuery, DirectQuery, DirectQueryWithinMemory.|  
   

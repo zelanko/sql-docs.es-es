@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e67507aa23e29f7a0f6d675538f254fbf41f76d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767287"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>Editor del administrador de conexiones de varios archivos planos (página Avanzadas)
   Use la página **Avanzadas** del cuadro de diálogo **Editor del Administrador de conexiones de varios archivos planos** para establecer propiedades como el tipo de datos y los delimitadores de cada columna en los archivos de texto a los que se conecta el administrador de conexiones de archivos planos.  
@@ -44,7 +44,7 @@ ms.locfileid: "58391743"
 |**ColumnType**|Denota si la columna es delimitada, de ancho fijo o derecho irregular. Esta propiedad es de solo lectura. Los archivos de derecho irregular son archivos en los que todas las columnas tienen un ancho fijo, a excepción de la última, que se termina con el delimitador de filas.|  
 |**OutputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, aparecerá como recuento de caracteres. En la tarea Flujo de datos este valor se utiliza para establecer el ancho de la columna de salida para el origen del archivo plano.<br /><br /> Nota: En el modelo de objetos, el nombre de esta propiedad es MaximumWidth.|  
 |**DataType**|Seleccione los tipos de datos disponibles en la lista. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
-|**TextQualified**|Indica si los datos de texto se han calificado mediante un carácter calificador de texto. Los valores válidos son:<br /><br /> **True**: Se califican los datos de texto del archivo plano.<br /><br /> **False**: No se califican los datos de texto del archivo plano.|  
+|**TextQualified**|Indica si los datos de texto se han calificado mediante un carácter calificador de texto. Los valores válidos son:<br /><br /> **True**: Se califican los datos de texto en el archivo plano.<br /><br /> **False**: No se califican los datos de texto en el archivo plano.|  
 |**Name**|Proporcione un nombre de columna. Una lista numerada de columnas es el valor predeterminado; sin embargo, puede elegir un nombre único y descriptivo.|  
 |**DataScale**|Especifique la escala de los datos numéricos. La escala hace referencia al número de posiciones decimales. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
 |**ColumnDelimiter**|Seleccione los delimitadores de columna disponibles en la lista. Elija delimitadores que no sea probable encontrar en el texto. Este valor se omite para las columnas de ancho fijo.<br /><br /> **{CR}{LF}**: las columnas se delimitan con una combinación de retorno de carro y avance de línea.<br /><br /> **{CR}**: las columnas se delimitan mediante un retorno de carro.<br /><br /> **{LF}**: las columnas se delimitan mediante un avance de línea.<br /><br /> **Punto y coma {;}**: las columnas se delimitan mediante un punto y coma.<br /><br /> **Colon {:}**: las columnas se delimitan mediante dos puntos.<br /><br /> **Coma {,}**: las columnas se delimitan mediante una coma.<br /><br /> **Pestaña {t}**: las columnas se delimitan mediante un tabulador.<br /><br /> **Barra vertical {&#124;}**: las columnas se delimitan con una barra vertical.|  

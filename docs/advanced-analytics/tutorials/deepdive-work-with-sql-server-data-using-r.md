@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 2ed5d6e7ef3b0d6e8ac5ebaa3533c6bebce5e856
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641100"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Crear una base de datos y permisos (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,7 +37,7 @@ Este tutorial requiere una base de datos para almacenar datos y el código. Si n
 2. Escriba un nombre para la nueva base de datos: RevoDeepDive.
   
 
-## <a name="create-a-login"></a>Crea un inicio de sesión
+## <a name="create-a-login"></a>Creación de un inicio de sesión
   
 1. Haga clic en **Nueva consulta**y cambie el contexto de la base de datos a la base de datos maestra.
   

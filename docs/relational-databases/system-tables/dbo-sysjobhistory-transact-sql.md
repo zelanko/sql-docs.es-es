@@ -21,25 +21,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1797fb6183863bb0249bd0cda6024d0e95914e82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470853"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene información acerca de la ejecución de los trabajos programados por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta tabla se almacena en el **msdb** base de datos.  
   
-> **Nota:** datos se actualizan solo una vez se complete el paso de trabajo.  
+> **NOTA:** Datos se actualizan solo una vez se complete el paso de trabajo.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Identificador único de la fila.|  
 |**job_id**|**uniqueidentifier**|Id. del trabajo.|  
 |**step_id**|**int**|Id. del paso en el trabajo.|  
-|**Step_name**|**sysname**|Nombre del paso.|  
+|**step_name**|**sysname**|Nombre del paso.|  
 |**sql_message_id**|**int**|Id. de los mensajes de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devueltos si el trabajo genera algún error.|  
 |**sql_severity**|**int**|Gravedad de cualquier error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**message**|**nvarchar(4000)**|Texto de un error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si existe.|  

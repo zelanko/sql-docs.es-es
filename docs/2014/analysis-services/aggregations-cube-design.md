@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 027422aaad1954afb4e30f29f924f2f30b77d31c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473507"
 ---
 # <a name="aggregations-cube-design"></a>Agregaciones (diseño de cubos)
   Puede usar la pestaña **Agregaciones** del Diseñador de cubos para crear y modificar los diseños de agregaciones.  

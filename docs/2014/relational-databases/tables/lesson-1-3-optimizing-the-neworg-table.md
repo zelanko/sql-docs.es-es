@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a031466e35fef90104ab81fec17010725f8f5c0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761734"
 ---
 # <a name="optimizing-the-neworg-table"></a>Optimizar la tabla NewOrg
   El **NewOrd** tabla que creó en el [rellenar una tabla con datos jerárquicos existentes](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) tarea contiene toda la información de empleado y representa la estructura jerárquica mediante un `hierarchyid`tipo de datos. Esta tarea agrega los nuevos índices que admiten las búsquedas en la columna `hierarchyid`.  
@@ -72,7 +72,7 @@ ms.locfileid: "48146985"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     Índice con prioridad a la profundidad: los registros del empleado se almacenan junto a su administrador.  
+     Índice de prioridad de profundidad: Los registros de empleados se almacenan junto a su administrador.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48146985"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     El índice con prioridad a **EmployeeID**: las filas se almacenan en secuencia de **EmployeeID**.  
+     **EmployeeID**-índice con prioridad: Las filas se almacenan en **EmployeeID** secuencia.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -160,6 +160,6 @@ ms.locfileid: "48146985"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Resumen: Conversión de una tabla en una estructura jerárquica](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
+ [Resumen: Convertir una tabla en una estructura jerárquica](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
   

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 49c5772404e212629a97c89bf23475ab893bd069
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740295"
 ---
 # <a name="formattedvalue-property-ado-md"></a>FormattedValue (propiedad, ADO MD)
 Indica la visualización con formato de un [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md) valor.  

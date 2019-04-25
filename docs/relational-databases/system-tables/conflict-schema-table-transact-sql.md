@@ -1,5 +1,5 @@
 ---
-title: conflict_&lt;esquema&gt;_&lt;tabla&gt; (Transact-SQL) | Microsoft Docs
+title: conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2016
 ms.prod: sql
@@ -19,13 +19,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471084"
 ---
-# <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;esquema&gt;_&lt;tabla&gt; (Transact-SQL)
+# <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   El conflict_\<esquema > _\<tabla > contiene información acerca de las filas conflictivas en la replicación punto a punto. En una publicación, cada tabla replicada posee una tabla de conflictos; el nombre de esta tabla de conflictos se anexa al nombre del artículo y esquema. Estas tablas de conflictos específicas del artículo existen en cada base de datos de publicación.  

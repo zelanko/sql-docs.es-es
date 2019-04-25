@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0850fb7b6be85f8052781ca70f97477d5cb3e403
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743311"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>Lección 5. (Opcional) Cifrar la base de datos mediante TDE
   Como paso opcional, puede cifrar la base de datos creada recientemente. El cifrado de datos transparente (TDE) realiza el cifrado y descifrado de E/S en tiempo real de los datos y los archivos de registro. Este tipo de cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. Para obtener más información, consulte [cifrado de datos transparente &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md) y [mover una base de datos protegida de TDE a otra de SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
@@ -92,6 +92,6 @@ GO
   
  **Lección siguiente:**  
   
- [Lección 6: Migrar una base de datos de una máquina de origen local a un equipo de destino de Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [Lección 6: Migrar una base de datos desde un origen de máquina local a un equipo de destino de Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

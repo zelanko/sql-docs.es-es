@@ -1,8 +1,9 @@
 ---
 title: Eliminar paquetes | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/01/2017
+ms.prod: sql
+ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
@@ -11,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8afb1169749bc80177fcab89402479c66fe423d9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770211"
 ---
 # <a name="delete-packages"></a>Eliminar paquetes
   En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], puede eliminar paquetes guardados en el sistema de archivos. Si elimina un paquete, se elimina de forma permanente y no puede restaurarse en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

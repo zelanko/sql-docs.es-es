@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b02eab5b0b2d6f6010df51151929c71188290b9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743611"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>Nuevo modelo de minería de datos (vista Estructura de minería de datos, cuadro de diálogo)
   Utilice el cuadro de diálogo **Nuevo modelo de minería de datos** para agregar un nuevo modelo de minería de datos a la estructura de minería de datos.  

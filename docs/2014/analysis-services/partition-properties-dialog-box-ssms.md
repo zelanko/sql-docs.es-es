@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d70903f580d55d674b099312c04a24632ac1d701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743591"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>Propiedades de la partición (cuadro de diálogo, SSMS)
   Use el cuadro de diálogo **Propiedades de la partición** de SQL Server Management Studio para definir las propiedades de una partición para un cubo de una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -37,7 +37,7 @@ ms.locfileid: "48113205"
 |**Configuración de errores**|Use la página **Configuración de errores** para mostrar y modificar la configuración de errores para procesar la partición seleccionada en la página **Selección** . Para más información sobre esta página, vea [Configuración de errores para el procesamiento de cubos, particiones y dimensiones &#40;SSAS - multidimensional&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
   
 ## <a name="see-also"></a>Vea también  
- [Las particiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Particiones remotas](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

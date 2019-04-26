@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fee544578a24f47e662645a0d5cd576a74fb0496
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768896"
 ---
 # <a name="developing-a-custom-connection-manager"></a>Desarrollar un administrador de conexiones personalizado
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] usa administradores de conexión para encapsular la información necesaria para conectarse a un origen de datos externo. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye diversos administradores de conexión que admiten conexiones a los orígenes de datos usados con más frecuencia, desde bases de datos empresariales hasta archivos de texto y hojas de cálculo de Excel. Si [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] admite administradores de conexiones y orígenes de datos externos que no cumplen completamente sus requisitos, puede crear un administrador de conexiones personalizado.  

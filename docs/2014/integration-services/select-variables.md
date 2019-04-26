@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: afae34484d4513c9ef6a33435fb023dbb8190fd4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766538"
 ---
 # <a name="select-variables"></a>Seleccionar variables
   Utilice el cuadro de diálogo **Seleccionar variables** para especificar las variables que se van a utilizar en una operación de envío de mensaje en la tarea Cola de mensajes. La lista **Variables disponibles** incluye las variables definidas por el usuario y de sistema que se encuentran en el ámbito de la tarea Cola de mensaje o en su contenedor principal. La tarea utiliza las variables de la lista **Variables seleccionadas** .  

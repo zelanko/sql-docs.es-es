@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 163dbfecd4605c6c9624d94c047b1c7e893d8fcd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768881"
 ---
 # <a name="modulo-ssis-expression"></a>(Módulo) (expresión de SSIS)
   Proporciona el resto entero después de dividir la primera expresión numérica por la segunda.  

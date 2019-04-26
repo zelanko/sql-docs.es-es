@@ -18,7 +18,7 @@
   items:
     - name: Configurar Copia de seguridad administrada de SQL Server para Microsoft Azure
       href: enable-sql-server-managed-backup-to-microsoft-azure.md
-    - name: 'Copia de seguridad administrada de SQL Server en Microsoft Azure: interoperabilidad y coexistencia'
+    - name: 'Copia de seguridad administrada de SQL Server en Windows Azure: Interoperabilidad y coexistencia'
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
     - name: Copia de seguridad administrada de SQL Server para Microsoft Azure - Configuración de la retención y el almacenamiento
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
@@ -204,11 +204,11 @@
       href: remove-defunct-filegroups-sql-server.md
     - name: 'Ejemplo: Restauración en línea de un archivo de lectura/escritura (modelo de recuperación completa)'
       href: example-online-restore-of-a-read-write-file-full-recovery-model.md
-    - name: 'Ejemplo: restauración en línea de un archivo de solo lectura (modelo de recuperación completa)'
+    - name: 'Ejemplo: Restauración en línea de un archivo de solo lectura (modelo de recuperación completa)'
       href: example-online-restore-of-a-read-only-file-full-recovery-model.md
-    - name: 'Ejemplo: restauración en línea de un archivo de solo lectura (modelo de recuperación simple)'
+    - name: 'Ejemplo: Restauración en línea de un archivo de solo lectura (modelo de recuperación simple)'
       href: example-online-restore-of-a-read-only-file-simple-recovery-model.md
-    - name: 'Ejemplo: restauración sin conexión del grupo de archivo principal y de otro grupo de archivos (modelo de recuperación completa)'
+    - name: 'Ejemplo: Restauración sin conexión del grupo de archivo principal y de otro grupo de archivos (modelo de recuperación completa)'
       href: example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md
 - name: Restaurar páginas
   href: restore-pages-sql-server.md
@@ -218,13 +218,13 @@
 - name: Restauraciones por etapas
   href: piecemeal-restores-sql-server.md
   items:
-    - name: 'Ejemplo: restauración por etapas de la base de datos (modelo de recuperación completa)'
+    - name: 'Ejemplo: Restauración por etapas de la base de datos (modelo de recuperación completa)'
       href: example-piecemeal-restore-of-database-full-recovery-model.md
-    - name: 'Ejemplo: restauración por etapas de base de datos (modelo de recuperación simple)'
+    - name: 'Ejemplo: Restauración por etapas de base de datos (modelo de recuperación simple)'
       href: example-piecemeal-restore-of-database-simple-recovery-model.md
-    - name: 'Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos (modelo de recuperación completa)'
+    - name: 'Ejemplo: Restauración por etapas exclusiva para algunos grupos de archivos (modelo de recuperación completa)'
       href: example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
-    - name: 'Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos (modelo de recuperación simple)'
+    - name: 'Ejemplo: Restauración por etapas exclusiva para algunos grupos de archivos (modelo de recuperación simple)'
       href: example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md
 - name: Recuperar una base de datos sin restaurar los datos (Transact-SQL)
   href: recover-a-database-without-restoring-data-transact-sql.md
@@ -233,5 +233,5 @@
   items:
     - name: Restaurar la base de datos maestra (Transact-SQL)
       href: restore-the-master-database-transact-sql.md
-- name: 'Copias de seguridad y restauración: interoperabilidad y coexistencia'
+- name: 'Copia de seguridad y restauración: Interoperabilidad y coexistencia'
   href: backup-and-restore-interoperability-and-coexistence-sql-server.md

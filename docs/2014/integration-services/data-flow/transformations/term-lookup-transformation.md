@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770321"
 ---
 # <a name="term-lookup-transformation"></a>Búsqueda de términos, transformación
   La transformación Búsqueda de términos compara los términos extraídos del texto en una columna de entrada de transformación con los términos de una tabla de referencia. A continuación, cuenta la cantidad de veces que un término aparece en la tabla de búsqueda en el conjunto de datos de entrada y escribe el recuento junto con el término de la tabla de referencia en columnas en la salida de transformación. Esta transformación resulta útil para crear una lista personalizada de palabras basada en el texto de entrada, que incluye estadísticas de frecuencia de aparición de palabras.  

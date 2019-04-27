@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774509"
 ---
 # <a name="new-search-property-list"></a>Nueva lista de propiedades de búsqueda
   Utilice este cuadro de diálogo para crear una lista de propiedades de búsqueda.  
@@ -48,7 +48,7 @@ ms.locfileid: "48195235"
  Consulte [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>Para usar SQL Server Management Studio con el fin de administrar listas de propiedades de búsqueda  
- Para obtener información acerca de cómo crear, ver, cambiar o eliminar una lista de propiedades de búsqueda y sobre cómo configurar un índice de texto completo para búsqueda de propiedades, vea [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Para obtener información sobre cómo crear, ver, cambiar o eliminar una lista de propiedades de búsqueda, y sobre cómo configurar un índice de texto completo para la búsqueda de propiedades, vea [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="see-also"></a>Vea también  
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   

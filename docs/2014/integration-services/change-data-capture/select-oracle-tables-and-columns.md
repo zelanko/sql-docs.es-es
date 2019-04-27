@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe951cb7811bb8cc92414564fda466657d2fae8c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771061"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Seleccionar tablas y columnas de Oracle
   Use la página Seleccionar tablas y columnas de Oracle para seleccionar las tablas de la base de datos de origen de Oracle donde se capturan cambios. Esta página contiene los elementos siguientes:  
@@ -26,15 +26,15 @@ ms.locfileid: "58384763"
  **Lista de tablas**  
  La lista de tablas tiene tres columnas:  
   
--   **Nombre de la tabla de Oracle**: El nombre de la tabla, incluido el esquema de tabla.  
+-   **Nombre de la tabla de Oracle**: nombre de la tabla, incluido el esquema de tabla.  
   
--   **Instancia de captura**: El nombre de la instancia de captura que se usan como nombres de objetos de captura de datos modificados específicos de una instancia. La instancia de captura no puede ser NULL.  
+-   **Instancia de captura**: el nombre de la instancia de captura que se usa para denominar los objetos de captura de datos modificados específicos de una instancia. La instancia de captura no puede ser NULL.  
   
      Si no se especifica, el nombre se obtiene del nombre del esquema de origen al que se agrega el nombre de la tabla de origen en el formato `<schema-name>_<table-name>`. El nombre de la instancia de captura no puede tener más de 100 caracteres y debe ser único dentro de la base de datos.  
   
      Puede hacer clic en cualquier celda de esta columna para editar manualmente **capture_instance**.  
   
--   **Rol de seguridad**: El nombre de la base de datos que se usa para controlar el acceso para cambiar los datos de rol de acceso.  
+-   **Rol de seguridad**: nombre del rol de acceso de base de datos usado para controlar el acceso a los datos modificados.  
   
      Puede hacer clic en cualquier celda de esta columna para editar manualmente **security_role**.  
   

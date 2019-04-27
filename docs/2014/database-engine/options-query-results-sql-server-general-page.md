@@ -18,14 +18,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 32c476b904e52229a48b20c1a0ebc599d49a93b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775025"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>Opciones (consulta resultados de SQL Server página General)
-  Utilice esta página para determinar el comportamiento predeterminado del panel de resultados de la consulta. Para ver estos valores de configuración, en el menú **Herramientas**, haga clic en **Opciones**, expanda la carpeta **Resultados de la consulta**, seleccione **SQL Server** y haga clic en **General**. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **Consulta** o, en una ventana de consulta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], haga clic con el botón derecho y seleccione **Opciones de consulta**.  
+  Utilice esta página para determinar el comportamiento predeterminado del panel de resultados de la consulta. Para ver estos valores de configuración, en el menú **Herramientas**, haga clic en **Opciones**, expanda la carpeta **Resultados de la consulta**, seleccione **SQL Server** y haga clic en **General**. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **Consulta** o, en una ventana de consulta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], haga clic con el botón derecho y seleccione **Opciones de consulta**.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  **Destino predeterminado de los resultados**  

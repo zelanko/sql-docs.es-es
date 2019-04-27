@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 184e8a987455f181d2fe631abb6189e745bd95e2
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781176"
 ---
 # <a name="hello-world-ready-sample"></a>Ejemplo de Hola a todos preparado
   El ejemplo Hello World Ready muestra las operaciones básicas relacionadas con la creación, implementación y prueba de un procedimiento almacenado de integración con CLR (Common Language Runtime) simple internacionalizado. Un componente internacionalizado se puede localizar fácilmente a distintos idiomas para diferentes mercados del mundo entero sin cambiar el código fuente del componente. Este ejemplo también muestra cómo devolver datos al cliente a través de un parámetro de salida y a través de un registro que el procedimiento almacenado crea dinámicamente. Este ejemplo es casi idéntico al descrito en Hello World, salvo que es mucho más fácil y seguro localizar esta aplicación. Para cambiar el texto localizado se requiere lo siguiente:  

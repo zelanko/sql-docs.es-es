@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775288"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>Instalar SQL Server 2014 mediante un archivo de configuración
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación permite generar un archivo de configuración basado en las entradas de tiempo de ejecución y en la configuración predeterminada del sistema. Puede usar el archivo de configuración para implementar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en toda la empresa con la misma configuración. También puede normalizar las instalaciones manuales en toda la empresa mediante la creación de un archivo por lotes que inicie Setup.exe.  

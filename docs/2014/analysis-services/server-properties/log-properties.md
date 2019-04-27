@@ -55,11 +55,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746877"
 ---
 # <a name="log-properties"></a>Propiedades de registro
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor de registro descritas en las siguientes tablas. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  

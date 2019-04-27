@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746737"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Especificar tipo de dimensión (Asistente para dimensiones)
   Use la página **Especificar tipo de dimensión** para definir el tipo de dimensión y agregar a la dimensión tipos de atributo especiales asociados con el tipo de dimensión seleccionado.  
@@ -53,7 +53,7 @@ ms.locfileid: "50145590"
 > [!NOTE]  
 >  Las opciones de esta sección están disponibles solo si el **Tipo de dimensión** seleccionado tiene tipos de atributo especiales asociados. No todas las dimensiones tienen tipos de atributo especiales asociados.  
   
- **incluir**  
+ **Include**  
  Seleccione esta opción para incluir el tipo de atributo en la dimensión.  
   
  **Tipo de atributo**  

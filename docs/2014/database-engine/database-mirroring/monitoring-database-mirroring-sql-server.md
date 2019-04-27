@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755365"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Supervisar la creación de reflejo de la base de datos (SQL Server)
   En esta sección se presentan el Monitor de creación de reflejo de la base de datos y los procedimientos almacenados del sistema **sp_dbmmonitor** , se explica el funcionamiento de la supervisión de la creación de reflejo de la base de datos (incluido el **Trabajo del Monitor de creación de reflejo de la base de datos**) y se resume la información que se puede supervisar sobre las sesiones de creación de reflejo de la base de datos. Además, en esta sección se describe cómo definir umbrales de advertencia para un conjunto de eventos de creación de reflejo de la base de datos predefinidos y cómo configurar alertas sobre cualquier evento de creación de reflejo de la base de datos.  

@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 688357b2357cba8fa868eca18b5c100cfff1722d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756446"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>Seguimiento (Cliente de minería de datos para Excel)
   ![Botón seguimiento](media/misc-trace.gif "botón seguimiento")  
   
- El **seguimiento** cuadro de diálogo le ayuda a supervisar las instrucciones que se envían a la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que está usando para la minería de datos. Después de haber creado una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], todas las interacciones entre el cliente y el servidor se registran en el **seguimiento** panel, incluidas las instrucciones que crean estructuras, agregar modelos de minería de datos y realizan las predicciones, así como algunos mensajes que devuelve el servidor.  
+ El cuadro de diálogo **Seguimiento** le ayuda a supervisar las instrucciones que se envían a la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que está usando para la minería de datos. Después de crear una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], todas las interacciones entre el cliente y el servidor se registran en el panel **Seguimiento** , incluidas las instrucciones que crean estructuras, agregan modelos de minería de datos y realizan predicciones, así como algunos mensajes que devuelve el servidor.  
   
  Dependiendo de la acción que se solicita, la instrucción puede ser una consulta de definición de datos o una consulta de manipulación de datos de Extensiones de Minería de Datos (DMX), un paquete de Analysis Services Scripting Language (ASSL), o una llamada a un procedimiento almacenado de Analysis Services. Sin embargo, no se muestran resultados numéricos ni valores de datos reales.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48161315"
  Si desea conservar el trabajo cuando use una de las Herramientas de análisis de tabla, puede anular la selección de la opción **Usar modelos de sesión**para que los modelos se guarden permanentemente en el servidor. También puede copiar las instrucciones del panel **Seguimiento** en un archivo para que pueda volver a crear su trabajo posteriormente.  
   
 ## <a name="understanding-sessions"></a>Descripción de las sesiones  
- Cuando se conecta a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], el complemento de minería de datos inicia una sesión. Cada sesión recibe un identificador de sesión que identifica una sesión existente en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. No obstante, un identificador de sesión no garantiza que una sesión continúe siendo válida. La sesión puede caducar si supera el tiempo de espera o se interrumpe la conexión asociada a la sesión. Si la sesión caduca y deja de ser válida, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] la finaliza y revierte cualquier transacción que esté en curso. Si se envía un mensaje con un identificador de sesión que ya no es válido, el mensaje emite un error que indica que no se puede encontrar la sesión especificada.  
+ Cuando se conecta a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], el complemento de minería de datos inicia una sesión. Cada sesión recibe un identificador de sesión que identifica una sesión existente en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . No obstante, un identificador de sesión no garantiza que una sesión continúe siendo válida. La sesión puede caducar si supera el tiempo de espera o se interrumpe la conexión asociada a la sesión. Si la sesión caduca y deja de ser válida, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] la finaliza y revierte cualquier transacción que esté en curso. Si se envía un mensaje con un identificador de sesión que ya no es válido, el mensaje emite un error que indica que no se puede encontrar la sesión especificada.  
   
  Aunque algunos modelos de minería de datos se almacenan explícitamente en el servidor, los modelos y estructuras de minería de datos de sesión no lo hacen, y no se conserva ningún registro de la actividad de minería de datos de sesión. Como los modelos y estructuras de minería de datos temporales se eliminan en cuanto finaliza la sesión, no debe cerrar su libro de Excel hasta que haya guardado cualquier trabajo que desee conservar.  
   
@@ -62,16 +62,16 @@ ms.locfileid: "48161315"
  Si cambia de conexión mientras trabaja en un libro de Excel, el cambio no se registra en el panel **Seguimiento** . Para mostrar de manera explícita el nombre y el estado de la conexión actual, debe hacer clic en **Conexión actual**.  
   
 ## <a name="understanding-statements-in-the-tracer"></a>Descripción de las instrucciones de seguimiento  
- DMX es un lenguaje que puede usar para crear modelos de minería de datos en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y trabajar con ellos. Puede usar DMX para crear la estructura de nuevos modelos de minería de datos, para entrenar esos modelos, y para explorar, administrar y realizar predicciones con ellos. DMX se compone de instrucciones de lenguaje de definición de datos (DDL), instrucciones de lenguaje de manipulación de datos (DML), y funciones y operadores.  
+ DMX es un lenguaje que puede usar para crear modelos de minería de datos en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]y trabajar con ellos. Puede usar DMX para crear la estructura de nuevos modelos de minería de datos, para entrenar esos modelos, y para explorar, administrar y realizar predicciones con ellos. DMX se compone de instrucciones de lenguaje de definición de datos (DDL), instrucciones de lenguaje de manipulación de datos (DML), y funciones y operadores.  
   
- Una discusión completa de las instrucciones DMX y su sintaxis queda fuera del ámbito de este tema. Sin embargo, puede usar la información del panel **Seguimiento** para buscar información detallada sobre el comportamiento de una instrucción DMX. Los Complementos de minería de datos para Excel también le permiten compilar instrucciones DMX complejas e interactuar con un servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Para obtener más información, consulte [consulta &#40;complementos de minería de datos de SQL Server&#41;](query-sql-server-data-mining-add-ins.md).  
+ Una discusión completa de las instrucciones DMX y su sintaxis queda fuera del ámbito de este tema. Sin embargo, puede usar la información del panel **Seguimiento** para buscar información detallada sobre el comportamiento de una instrucción DMX. Los Complementos de minería de datos para Excel también le permiten compilar instrucciones DMX complejas e interactuar con un servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obtener más información, consulte [consulta &#40;complementos de minería de datos de SQL Server&#41;](query-sql-server-data-mining-add-ins.md).  
   
 > [!NOTE]  
 >  Muchas instrucciones DMX tienen parámetros. Para los tipos simples, los valores de los parámetros aparecen bajo la instrucción. Sin embargo, para los tipos complejos, solo se indica el tipo de parámetro.  
   
  SQL Server Analysis Services también usa el protocolo XML for Analysis (XMLA) para controlar todas las comunicaciones entre aplicaciones cliente, como el Cliente de minería de datos para Excel, y una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- Para obtener más información sobre la sintaxis DMX, y los comandos y elementos de XMLA, vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Para obtener más información sobre la sintaxis DMX, y los comandos y elementos de XMLA, vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Algunas de las instrucciones enviadas al servidor pueden incluir consultas que llaman a los procedimientos almacenados en el sistema de Analysis Services. Para obtener más información, vea Libros en pantalla de SQL Server.  
   

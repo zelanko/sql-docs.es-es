@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771581"
 ---
 # <a name="ssis-catalog"></a>Catálogo de SSIS
   El `SSISDB` catálogo es el punto central para trabajar con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS), proyectos que han implementado en el [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Por ejemplo, establece los parámetros del proyecto y del paquete, configura entornos para especificar los valores en tiempo de ejecución para los paquetes, ejecuta paquetes y soluciona los problemas de los mismos, y administra las operaciones del servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8672fc9932dd18f73424f83a81299421186aec9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778893"
 ---
 # <a name="histogram-target"></a>Destino del histograma
   El destino del histograma agrupa las generaciones de un tipo de evento concreto en datos del evento. El recuento de las agrupaciones de eventos se realiza tomando como base una acción o columna de evento especificada. Puede utilizar el destino del histograma para solucionar problemas de rendimiento. Mediante la identificación de los eventos que se producen con más frecuencia, puede buscar "zonas activas" que indiquen la causa posible de un problema de rendimiento.  
@@ -76,7 +76,7 @@ ADD TARGET package0.histogram
 (SET slots = 32, filtering_event_name = 'sqlserver.checkpoint_end', source_type = 0, source = 'database_id')  
 ```  
   
- Para obtener más información, consulte [buscar los objetos que han obtenido más bloqueos en ellos](../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md), y [Monitor de sistema de actividad mediante eventos extendidos](../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
+ Para obtener más información, vea [Buscar los objetos que han obtenido más bloqueos](../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)y [Supervisar la actividad del sistema mediante eventos extendidos](../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
   
 ## <a name="reviewing-the-target-output"></a>Revisar la salida del destino  
  El destino del histograma serializa los datos a un procedimiento o programa que realiza la llamada en formato XML. La salida de destino no sigue ningún esquema.  

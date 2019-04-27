@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b711562d966e0a28349b666505dff9542098fd4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771971"
 ---
 # <a name="add-ssis-connection-manager"></a>Agregar administrador de conexiones SSIS
   Utilice el cuadro de diálogo **Agregar administrador de conexiones SSIS** para seleccionar el tipo de conexión que se va a agregar a un paquete.  

@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754112"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Detalles de la aplicación de capa de datos implementada (Utilidad de SQL Server)
   La información en la vista de aplicaciones de capa de datos implementadas del explorador de Utilidad facilita datos de utilización para las aplicaciones de capa de datos individuales, el historial de la utilización de la CPU, los detalles de la utilización del almacenamiento de nivel de archivo, y la capacidad para ver y actualizar los umbrales de directivas. Los umbrales de directivas se pueden supervisar en el nivel de la aplicación de capa de datos para la utilización de la CPU y para los archivos de datos y de registro de la base de datos. También puede ver los detalles de propiedades para las aplicaciones de capa de datos individuales.  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 24ab4d509638b3195c7105602c663c04fb47a411
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771132"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Procesar inserciones, actualizaciones y eliminaciones
   En el flujo de datos de un paquete de Integration Services que realiza una carga incremental de datos modificados, la segunda tarea consiste en separar las inserciones, las actualizaciones y las eliminaciones. A continuación, puede utilizar los comandos adecuados para aplicarlos en el destino.  

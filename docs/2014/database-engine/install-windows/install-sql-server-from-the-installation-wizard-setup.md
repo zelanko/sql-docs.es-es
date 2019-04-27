@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0e0af29d348ff55b415d22d44bc8e8e48a35d290
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775755"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>Instalar SQL Server 2014 desde el Asistente para la instalación (programa de instalación)
   En este tema se proporciona un procedimiento paso a paso para instalar una nueva instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizando el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un único árbol de características para la instalación de todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; de este modo, no tendrá que instalarlos individualmente: Para obtener más información sobre los diversos componentes que se pueden instalar, consulte [instalación de SQL Server 2014](installation-for-sql-server.md).  Para obtener más información sobre cómo instalar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes por separado, consulte [instalar SQL Server 2014](install-sql-server.md).  

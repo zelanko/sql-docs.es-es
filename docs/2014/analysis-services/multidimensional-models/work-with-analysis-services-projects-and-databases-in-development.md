@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05ec77f2a7c4224b06e764997b6c01ee18ac0579
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740809"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-during-the-development-phase"></a>Trabajar con bases de datos y proyectos de Analysis Services durante la fase de desarrollo
   Puede desarrollar una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] en modo de proyecto o en modo en línea.  

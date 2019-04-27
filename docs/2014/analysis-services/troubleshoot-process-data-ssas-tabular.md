@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756266"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Solucionar problemas del procesamiento de datos (SSAS tabular)
   Este tema incluye información sobre el procesamiento (actualización) de los datos de un modelo cuando este se crea con [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]; no incluye información sobre el procesamiento de datos de modelos implementados en una instancia de servidor de Analysis Services. Para obtener más información sobre el procesamiento de los datos de un modelo implementado, vea [Crear scripts para tareas administrativas en Analysis Services](script-administrative-tasks-in-analysis-services.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "48174705"
   
  Por lo tanto, antes de modificar los orígenes de datos o de procesar los datos que se obtienen del origen de datos, siempre hay que tener en cuenta los posibles efectos y consecuencias:  
   
--   Algunas partes de los datos del modelo pueden dejar de funcionar como consecuencia de los cambios realizados en el origen de datos. Si no se pueden recuperar todas las columnas del origen de datos (por ejemplo, si se han eliminado o han cambiado), se producirá un error en el procesamiento y deberá actualizar las asignaciones entre el origen de datos y los datos del modelo. Para obtener más información, consulte [editar una conexión de origen de datos existente &#40;Tabular de SSAS&#41;](edit-an-existing-data-source-connection-ssas-tabular.md).  
+-   Algunas partes de los datos del modelo pueden dejar de funcionar como consecuencia de los cambios realizados en el origen de datos. Si no se pueden recuperar todas las columnas del origen de datos (por ejemplo, si se han eliminado o han cambiado), se producirá un error en el procesamiento y deberá actualizar las asignaciones entre el origen de datos y los datos del modelo. Para obtener más información, vea [Editar una conexión de origen de datos existente &#40;SSAS tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md);  
   
 -   Después del procesamiento, algunas columnas podrían aparecer marcadas para indicar que contienen un error. Esto puede ocurrir porque la fórmula DAX de la columna usa datos que dejaron de estar disponibles durante el procesamiento, porque el tipo de datos de una columna cambió, o porque se agregó un valor no válido a los datos externos. Para resolver el problema, puede editar la fórmula o eliminar la columna si está basada en datos que ya no están disponibles.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48174705"
 -   No se pueden seleccionar varias columnas de distintas tablas y cambiar las propiedades de las columnas. Solo se puede trabajar con tablas o vistas de una en una.  
   
 ## <a name="see-also"></a>Vea también  
- [Procesar manualmente los datos &#40;Tabular de SSAS&#41;](manually-process-data-ssas-tabular.md)   
- [Editar una conexión de origen de datos existente &#40;Tabular de SSAS&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
+ [Procesar manualmente los datos &#40;SSAS tabular&#41;](manually-process-data-ssas-tabular.md)   
+ [Editar una conexión de origen de datos existente &#40;SSAS tabular&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

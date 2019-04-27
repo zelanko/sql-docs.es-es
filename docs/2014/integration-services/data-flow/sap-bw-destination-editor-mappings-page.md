@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0af079eaa96fd7925ef361b398cd628641c55a3c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770881"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>Editor de destino de SAP BW (página Asignaciones)
   Use la página **Asignaciones** del cuadro de diálogo **Editor de destino de SAP BW** para asignar columnas de entrada a columnas de destino.  

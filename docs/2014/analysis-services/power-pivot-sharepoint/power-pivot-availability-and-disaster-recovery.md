@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f64fa8d79f3f44a1f7c62dfe13c931509408d42
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749765"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Disponibilidad y recuperación ante desastres de PowerPivot (SQL Server 2014)
   Los planes de disponibilidad y de recuperación ante desastres de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dependen principalmente del diseño de la granja de servidores de SharePoint, el tiempo de inactividad aceptable para los diferentes componentes, y las herramientas y las prácticas recomendadas que se implementan para la disponibilidad de SharePoint. En este tema se resumen las tecnologías y se incluyen diagramas de topología de ejemplo que hay que tener en cuenta al planear la disponibilidad y la recuperación ante desastres para una implementación de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 27ec5fcac246c9907d38d8e0eff4e82befb0a04e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771311"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>Cómo administrar un servicio CDC local
   En este procedimiento se describe cómo usar la Consola de configuración del servicio CDC para administrar servicios CDC concretos.  
@@ -44,7 +44,7 @@ ms.locfileid: "58380113"
   
          También puede hacer clic con el botón derecho en el servicio CDC que quiera eliminar y seleccionar **Eliminar**.  
   
-         **Nota**: Si el servicio se ejecuta cuando se elimina el servicio, el servicio está detenido antes de eliminarse.  
+         **Tenga en cuenta**: Si cuando se elimina el servicio, este está en ejecución, se detiene antes de eliminarse.  
   
          Para eliminar una definición del servicio de Windows CDC de Oracle, el programa necesita acceso de actualización a la base de datos MSXDBCDC en la instancia asociada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al hacer clic en **Aceptar** para eliminar el servicio, el programa intenta eliminar el registro del servicio CDC de Oracle en la base de datos MSXDBCDC. Si se produce un error debido a la falta de permisos, aparecerá un cuadro de diálogo que pedirá al usuario que especifique un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con acceso de actualización para la base de datos MSXDBCDC.  
   

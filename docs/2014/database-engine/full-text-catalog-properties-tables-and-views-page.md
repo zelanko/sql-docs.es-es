@@ -13,18 +13,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779196"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Propiedades del catálogo de texto completo (Tablas/página Vistas)
   Utilice esta página de diálogo para ver o modificar las tablas y vistas asignadas al catálogo de texto completo.  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  **Todos los objetos de tabla o vista elegibles en esta base de datos**  
- Muestra las tablas y vistas que disponen de un único índice definido, pero que todavía no forman parte del catálogo de texto completo. Para seleccionar una tabla o vista y asignársela al catálogo, seleccione los elementos en el cuadro de lista y presione el botón "->".  
+ Muestra las tablas y vistas que disponen de un único índice definido, pero que todavía no forman parte del catálogo de texto completo. Para seleccionar una tabla o vista y asignarla al catálogo, seleccione los elementos en el cuadro de lista y presione el botón "->".  
   
  **Objetos de tabla o vista asignados al catálogo**  
  Muestra las tablas y vistas actualmente asignadas al catálogo de texto completo  
@@ -53,7 +53,7 @@ ms.locfileid: "48202095"
 |||  
 |-|-|  
 |**Automático**|El índice de texto completo se actualiza automáticamente cuando los datos de la tabla subyacente se modifican, se agregan o se eliminan.|  
-|**Manual**|Cuando se modifica, agregan o eliminan en los datos indizados, datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] realiza un seguimiento de los cambios. Cuando está activado el seguimiento de cambios **Manual** , el índice no se actualiza automáticamente con estos cambios. En su lugar, un administrador puede aplicar los cambios manualmente utilizando una [ALTER FULLTEXT INDEX... START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) instrucción.|  
+|**Manual**|Cuando se modifican, se agregan o se eliminan datos en los datos indizados, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] realiza un seguimiento de los cambios. Cuando está activado el seguimiento de cambios **Manual** , el índice no se actualiza automáticamente con estos cambios. En su lugar, un administrador puede aplicar los cambios manualmente utilizando una [ALTER FULLTEXT INDEX... START UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) instrucción.|  
 |**No realizar seguimiento de cambios**|Con esta opción activa, no se registran los cambios realizados en los datos indizados del catálogo. Un administrador debe generar el índice utilizando FULLTEXT del ALTER INDICE con POBLACIÓN COMPLETA o la POBLACIÓN INCREMENTAL.|  
   
 ## <a name="see-also"></a>Vea también  

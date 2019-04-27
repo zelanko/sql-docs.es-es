@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 379cb1ab2ed12ad8d5d835068bb68008fd6ca9af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773827"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>Analizador SQL Server (Configuración de reproducción/página Opciones básicas de reproducción)
   En el cuadro de diálogo **Configuración de reproducción** , utilice la página **Opciones básicas de reproducción** para especificar cómo reproducir una tabla o un archivo de seguimiento.  
@@ -35,7 +35,7 @@ ms.locfileid: "48088305"
  Inicia el cuadro de diálogo **Conectar al servidor** para conectarse a otro servidor.  
   
  **Guardar en el archivo**  
- Guarda los resultados de la reproducción en un archivo. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] Muestra el cuadro de diálogo de archivo estándar, donde puede especificar la ubicación para guardar el archivo.  
+ Guarda los resultados de la reproducción en un archivo. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] muestra el cuadro de diálogo de archivo estándar, en el puede especificar la ubicación en la que se guarda el archivo.  
   
  **Guardar en la tabla**  
  Guarda los resultados de la reproducción en una tabla. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] muestra el cuadro de diálogo de selección de tabla, en el puede especificar la ubicación en la que se guarda la tabla.  

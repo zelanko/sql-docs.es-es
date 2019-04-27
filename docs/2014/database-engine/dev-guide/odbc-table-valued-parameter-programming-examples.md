@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 93a664baaa81a56e45a54aa36c5f4e8e57375124
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780856"
 ---
 # <a name="odbc-table-valued-parameter-programming-examples"></a>Ejemplos de programación de parámetros con valores de tabla ODBC
   En esta sección se describe cómo realizar tareas comunes con ODBC y parámetros con valores de tabla. Para obtener otro ejemplo que muestra los parámetros con valores de tabla, vea [usar parámetros &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  

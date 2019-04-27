@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767897"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS
   Puede actualizar los paquetes que se crearon en versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al formato de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utiliza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona el Asistente para actualización del paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] para ayudar en este proceso. Como puede configurar el asistente para realizar una copia de seguridad de los paquetes originales, puede continuar utilizando los paquetes originales si experimenta dificultades en la actualización.  

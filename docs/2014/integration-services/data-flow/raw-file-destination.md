@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770865"
 ---
 # <a name="raw-file-destination"></a>destino de archivo sin formato
   El destino de archivo sin formato escribe datos sin procesar en un archivo. Como el formato de los datos es el nativo del destino, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Esto significa que el destino de archivo sin formato puede escribir datos más rápidamente que otros destinos, como el destino de archivo plano o los destinos de OLE DB.  

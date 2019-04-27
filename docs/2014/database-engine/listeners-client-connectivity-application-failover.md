@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dccbdee0e7db72a9946e92229d06dce519ca94a1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774798"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación (SQL Server)
   Este tema contiene información acerca de las consideraciones de conectividad del cliente de [!INCLUDE[ssHADR](../includes/sshadr-md.md)] y la funcionalidad de conmutación por error de aplicaciones.  

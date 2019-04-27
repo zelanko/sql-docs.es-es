@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 546f001ac4809a4fb8c455e37bf10f975d84dce8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771511"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Agregar tablas a una instancia CDC
   Use el cuadro de diálogo Selección de tablas para agregar tablas adicionales del origen de Oracle a la instancia CDC. Las tablas seleccionadas se agregarán a la lista de la pestaña **Tablas** del editor de propiedades.  
@@ -27,14 +27,14 @@ ms.locfileid: "58388273"
  **Para buscar tablas específicas**  
  Escriba los criterios de búsqueda como se indica aquí y, después, haga clic en **Buscar**:  
   
--   **Esquema**: Seleccione un esquema de base de datos de la lista. En la lista solo se incluirán las tablas que tengan dicho esquema.  
+-   **Esquema**: seleccione un esquema de base de datos de la lista. En la lista solo se incluirán las tablas que tengan dicho esquema.  
   
--   **Patrón de nombre de tabla**: Escriba cualquier cadena de caracteres. Solo se mostrarán las tablas que incluyan la cadena de caracteres especificada.  
+-   **Patrón de nombre de tabla**: escriba cualquier cadena de caracteres. Solo se mostrarán las tablas que incluyan la cadena de caracteres especificada.  
   
 > [!NOTE]  
 >  Puede especificar criterios en uno o ambos campos.  
   
--   **Mostrar las 1000 primeras tablas coincidentes**: De forma predeterminada, se selecciona esta casilla de verificación. Limita la presentación a las 1000 primeras tablas coincidentes. Si se desactiva la casilla, se mostrarán todas las tablas que cumplan los criterios. Si hay un gran número de tablas, se puede tardar mucho tiempo en mostrar la lista.  
+-   **Mostrar las 1000 primeras tablas coincidentes**: esta casilla está activada de forma predeterminada. Limita la presentación a las 1000 primeras tablas coincidentes. Si se desactiva la casilla, se mostrarán todas las tablas que cumplan los criterios. Si hay un gran número de tablas, se puede tardar mucho tiempo en mostrar la lista.  
   
  **Para seleccionar las tablas que se van a incluir en la instancia CDC**  
  Haga clic en la casilla situada junto a cualquiera de las tablas que quiera incluir y, después, haga clic en **Agregar**. Las tablas se agregarán a la lista de la página **Seleccionar tablas y columnas** del Asistente para nueva instancia.  

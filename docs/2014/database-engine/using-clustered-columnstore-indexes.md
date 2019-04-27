@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773747"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Usar índices clúster de almacén de columnas
   Tareas para utilizar índices clúster de almacén de columnas en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -60,7 +60,7 @@ GO
  Use la [DROP INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql) instrucción para quitar un índice de almacén de columnas agrupado. Esta operación quitará el índice y convertirá la tabla de almacén de columnas en un montón de almacenes de filas.  
   
 ##  <a name="load"></a> Cargar datos en un índice agrupado de almacén de columnas  
- Puede agregar datos a un índice clúster de almacén de columnas existente mediante cualquiera de los métodos estándar de carga.  Por ejemplo, la carga masiva bcp herramienta, los servicios de integración e INSERT... SELECT puede cargar todos los datos en un índice de almacén de columnas en clúster.  
+ Puede agregar datos a un índice clúster de almacén de columnas existente mediante cualquiera de los métodos estándar de carga.  Por ejemplo, la carga masiva bcp herramienta, los servicios de integración e INSERT... SELECT puede cargar todos los datos en un índice agrupado.  
   
  Los índices clúster de almacén de columnas aprovechan el almacén delta para evitar la fragmentación de segmentos de columna en el almacén de columnas.  
   
@@ -84,8 +84,8 @@ GO
 |-----------------------|-----------------------------------|----------------------------------|  
 |102,000|0|102,000|  
 |145,000|145,000<br /><br /> Tamaño del grupo de filas: 145,000|0|  
-|1,048,577|1,048,576<br /><br /> Tamaño del grupo de filas: 1,048,576.|1|  
-|2,252,152|2,252,152<br /><br /> Tamaños de los grupos de filas: 1,048,576, 1,048,576, 155,000.|0|  
+|1,048,577|1,048,576<br /><br /> Tamaño del grupo de filas: 1 048 576.|1|  
+|2,252,152|2,252,152<br /><br /> Tamaños de los grupos de filas: 1 048 576, 1 048 576, 155 000.|0|  
   
  En el ejemplo siguiente se muestran los resultados de cargar 1.048.577 filas en una partición. Los resultados muestran un grupo de filas COMPRESSED en el almacén de columnas (como segmentos de columna comprimidos) y una fila en el almacén delta.  
   

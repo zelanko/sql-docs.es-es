@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8134b7a69df7254ce3609ddce24a15293c47efd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779738"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurar SQL Server en una instalación Server Core
   En este tema se trata información detallada sobre la configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instalación Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. 
@@ -44,7 +44,7 @@ ms.locfileid: "58528517"
   
 -   [Administración de una instalación Server Core](https://go.microsoft.com/fwlink/?LinkId=245963) ()https://go.microsoft.com/fwlink/?LinkId=245963)  
   
-##  <a name="install-updates"></a>Instalar actualizaciones de  
+##  <a name="install-updates"></a>Instalar actualizaciones  
  En esta sección se proporciona información sobre la instalación de actualizaciones para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en un equipo con Windows Server Core. Se recomienda que los clientes evalúen e instalen las últimas actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puntualmente para asegurarse de que los sistemas están al día con las actualizaciones de seguridad más recientes. Para obtener más información acerca de cómo instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en un equipo Windows Server Core, vea [instalar SQL Server 2014 en Server Core](install-sql-server-on-server-core.md).  
   
  Los siguientes son los dos escenarios para la instalación de actualizaciones del producto:  
@@ -238,7 +238,7 @@ $Tcp
 ##  <a name="use-troubleshooting-tools"></a>Usar herramientas para la solución de problemas  
  Puede usar [SQLdiag Utility](../../tools/sqldiag-utility.md) para recopilar los archivos de datos y de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y otros tipos de servidores, y para supervisar los servidores a lo largo del tiempo o solucionar problemas específicos de los mismos. SQLdiag tiene como fin acelerar y simplificar la recopilación de información de diagnóstico para los Servicios de soporte técnico de Microsoft.  
   
- Puede iniciar la utilidad en el símbolo del sistema del administrador en Server Core mediante la sintaxis especificada en el tema: [SQLdiag (utilidad)](../../tools/sqldiag-utility.md).  
+ Puede iniciar la utilidad en el símbolo del sistema de administrador en Server Core, mediante la sintaxis especificada en el tema: [SQLdiag (utilidad)](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Instalar a SQL Server 2014 en Server Core](install-sql-server-on-server-core.md)   

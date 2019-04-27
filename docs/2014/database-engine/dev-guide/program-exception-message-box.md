@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780705"
 ---
 # <a name="program-exception-message-box"></a>Programar cuadros de mensajes de excepción
   Puede usar el cuadro de mensajes de excepción en sus aplicaciones para proporcionar un control considerablemente mayor sobre la experiencia de mensajería que el que se proporciona con la clase <xref:System.Windows.Forms.MessageBox>. Para obtener más información, consulte [programación de cuadro de mensaje de excepción](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Para obtener información sobre la forma de obtener e implementar el archivo .dll del cuadro de mensajes de excepción, vea [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  

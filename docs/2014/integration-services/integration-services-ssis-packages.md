@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dccae9216609e80b0eb87582a78b94cd6e7b2f0c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767697"
 ---
 # <a name="integration-services-ssis-packages"></a>paquetes de Integration Services (SSIS)
   Un paquete es una colección organizada de conexiones, elementos de flujo de control, elementos de flujo de datos, controladores de eventos, variables, parámetros y configuraciones que se pueden ensamblar con la ayuda de las herramientas gráficas de diseño proporcionadas por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o mediante programación.  A continuación guarda el paquete completado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el Almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] o el sistema de archivos, o puede implementar el proyecto de ssISnoversion en el servidor [!INCLUDE[ssIS](../includes/ssis-md.md)] . El paquete es la unidad de trabajo que se recupera, ejecuta y guarda.  

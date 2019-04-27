@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9acdc193b608d42b21c69c380fb21db23ec3b89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748909"
 ---
 # <a name="powerpivot-usage-data-collection"></a>Recopilación de datos de uso de PowerPivot
   La recopilación de datos de uso es una característica propia de SharePoint para las granjas. PowerPivot para SharePoint usa y extiende este sistema para proporcionar informes en el panel de administración de PowerPivot que muestran cómo se usan los datos y servicios PowerPivot. Según cómo haya instalado SharePoint, la recopilación de datos de uso podría estar desactivada para la granja. El administrador de una granja debe habilitar el registro de uso para crear los datos de uso que aparecen en el Panel de administración de PowerPivot. Para obtener más información sobre cómo habilitar y configurar la recopilación de datos de uso para PowerPivot vea eventos [configurar la recolección de datos de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
- Para obtener información sobre los datos de uso en el panel de administración de PowerPivot, vea [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Para obtener información sobre los datos de uso en el Panel de administración de PowerPivot, vea [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **En este tema:**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48187485"
   
  En el sistema de recopilación de datos de uso, la información de los eventos se introduce en el sistema de recopilación de datos de uso en el servidor de aplicaciones o front-end web. Los datos de uso se mueven a través del sistema como respuesta a los trabajos del temporizador que hacen que los datos se pasen de los archivos de datos temporales del servidor físico a un almacenamiento persistente en un servidor de bases de datos. El siguiente diagrama muestra los componentes y procesos que mueven los datos de uso a través del sistema de informes y recopilación de datos.  
   
- **Nota** : compruebe que la recopilación de datos de uso esté habilitada. Para ello, vaya a **Supervisión** en Administración central de SharePoint. Para obtener más información, consulte [configurar la recolección de datos de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+ **Nota:** Comprobar el uso de la recopilación de datos está habilitada. Para ello, vaya a **Supervisión** en Administración central de SharePoint. Para obtener más información, consulte [configurar la recolección de datos de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  ![Componentes y procesos de recopilación de datos de uso. ](../media/gmni-usagedata.gif "Componentes y procesos de recopilación de datos de uso.")  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48187485"
 |Carga de datos|Las operaciones de carga de datos del [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Los eventos de carga de datos identifican qué orígenes de datos se usan con mayor frecuencia.|Puede habilitar y deshabilitar [configurar la recolección de datos de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
 |Descarga de datos|Las operaciones de descarga de datos de las aplicaciones de servicio PowerPivot. Un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] descarga los orígenes de datos PowerPivot inactivos si no se usan o cuando el servidor está sufriendo presión de memoria o necesita memoria adicional para ejecutar los trabajos de actualización de datos.|Puede habilitar y deshabilitar [configurar la recolección de datos de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
 |Estado del servidor|Las operaciones de servidor que indican el estado del servidor, medidas en función de la utilización de la memoria y la CPU. Estos datos son históricos. No proporciona información de tiempo real acerca de la carga de procesamiento actual en el servidor.|No. Siempre se recopilan datos de uso para este evento.|  
-|Actualización de datos|Las operaciones de actualización de datos iniciadas por el servicio PowerPivot para las actualizaciones de datos programadas. El historial de uso para la actualización de datos se recopila en el nivel de aplicación para los informes de operaciones y se refleja en las páginas de Administrar actualización de datos para los libros individuales.<br /><br /> **Nota** : para [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] y las implementaciones de SharePoint 2013, la actualización de datos la administra Excel Services, no el servidor de Analysis Services.|No. Los datos de uso siempre se recopilan si habilita la actualización de datos para la aplicación de servicio PowerPivot.|  
+|Actualización de datos|Las operaciones de actualización de datos iniciadas por el servicio PowerPivot para las actualizaciones de datos programadas. El historial de uso para la actualización de datos se recopila en el nivel de aplicación para los informes de operaciones y se refleja en las páginas de Administrar actualización de datos para los libros individuales.<br /><br /> **Nota:** Para [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] y las implementaciones de SharePoint 2013, actualización de datos administra Excel Services y no el servidor de Analysis Services.|No. Los datos de uso siempre se recopilan si habilita la actualización de datos para la aplicación de servicio PowerPivot.|  
   
 ##  <a name="servicesjobs"></a> Servicios y trabajos del temporizador  
  La siguiente tabla describe los servicios y los almacenes de recopilación de datos en el sistema de recopilación de datos de uso. Para que obtener instrucciones sobre cómo invalidar las programaciones de trabajos de temporizador forzar una actualización de datos de los datos de uso y estado de servidor en los informes del panel de administración de PowerPivot, vea [actualización de datos de PowerPivot con SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md). Puede ver los trabajos de temporizador en Administración central de SharePoint. Vaya a **Supervisión**y haga clic en **Comprobar estado de trabajo**. Haga clic en **Revisar definiciones de trabajo**.  
@@ -75,7 +75,7 @@ ms.locfileid: "48187485"
 ##  <a name="reporting"></a> Informes sobre los datos de uso  
  Para ver los datos de uso de PowerPivot, puede ver los informes integrados en el Panel de administración de PowerPivot. Los informes integrados consolidan los datos de uso que se recuperan de las estructuras de datos de informes en la base de datos de aplicación del servicio. Dado que los datos de informes subyacentes se actualizan diariamente, los informes de uso integrados solo mostrarán la información actualizada cuando el trabajo de temporizador de procesamiento de datos de uso de Microsoft SharePoint Foundation copie los datos en una base de datos de aplicación de servicio PowerPivot. De forma predeterminada, esto se produce una vez al día.  
   
- Para obtener más información sobre cómo ver los informes, vea [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Para obtener más información acerca de cómo ver los informes, vea [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
 ## <a name="see-also"></a>Vea también  
  [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)   

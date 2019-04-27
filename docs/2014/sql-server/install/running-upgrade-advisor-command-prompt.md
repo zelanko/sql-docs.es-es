@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753287"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Ejecutar el Asesor de actualizaciones (símbolo del sistema)
   Use la **UpgradeAdvisorWizardCmd** utilidad para ejecutar el Asesor de actualizaciones desde el símbolo del sistema. Puede elegir recibir los resultados en formato XML o en un archivo con valores separados por comas.  
@@ -43,30 +43,30 @@ where <server_info> is any combination of the following:
  **-?**  
  Muestra la sintaxis del comando.  
   
- **-ConfigFile** _nombre de archivo_  
+ **-ConfigFile** _filename_  
  Es el nombre de ruta de acceso y nombre de archivo de un archivo XML que contiene valores que se va a usar al ejecutar el **UpgradeAdvisorWizardCmd** utilidad.  
   
- *< informacióndeservidor >*  
+ *<server_info>*  
  Especifica qué equipo e instancia se deben analizar. Use estas opciones si no usa un archivo de configuración.  
   
  *< informacióndeservidor >* puede ser cualquier combinación de los cuatro argumentos siguientes:  
   
- **-Servidor** _nombreDeServidor_  
+ **-Server** _server_name_  
  Especifica el nombre del equipo que se va a analizar. Éste puede ser el equipo local, que es el valor predeterminado, o un equipo remoto.  
   
  **-Instancia** _instance_name_  
  Especifica el nombre de la instancia que se va a analizar. No existe ningún valor predeterminado. Si no especifica este parámetro, [!INCLUDE[ssDE](../../includes/ssde-md.md)] no se examina. El valor para una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es MSSQLSERVER. Para una instancia con nombre, utilice el nombre de la instancia.  
   
- **-ASInstance**_nombredeinstanciaas_   
+ **-ASInstance**  _AS_instance_name_  
  Especifica el nombre de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se va a analizar. No existe ningún valor predeterminado. Si no especifica este valor, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no se examina. El valor para la instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es MSSQLServerOLAPService. Para una instancia con nombre, utilice el nombre de la instancia.  
   
- **-RSInstance**_nombredeinstanciars_   
+ **-RSInstance**  _RS_instance_name_  
  Especifica el nombre de la instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se va a analizar. No existe ningún valor predeterminado. Si no especifica este valor, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no se examina. El valor para una instancia predeterminada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es ReportServer. Para una instancia con nombre, utilice el nombre de la instancia.  
   
  **-SqlUser** _login_id_  
  Si está utilizando la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este valor representa el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que utilizará el Asesor de actualizaciones para conectarse con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si no especifica un inicio de sesión, se utilizará el sistema de autenticación de Windows para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **-SqlPassword** _contraseña_  
+ **-SqlPassword** _password_  
  Si usas el **- SqlUser** argumento, use este argumento para especificar la contraseña para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión.  
   
  **-CSV**  

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754674"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Quitar el testigo de una sesión de creación de reflejo de la base de datos (SQL Server)
   En este tema se describe cómo quitar un testigo de una sesión de creación de reflejo de una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. En cualquier momento durante una sesión de creación de reflejo de la base de datos, el propietario de la base de datos puede desactivar el testigo.  
@@ -36,13 +36,13 @@ ms.locfileid: "48205515"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [después de quitar el testigo](#FollowUp)  
+-   **Seguimiento:**  [Después de quitar el testigo](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -80,7 +80,7 @@ ms.locfileid: "48205515"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a> Seguimiento: después de quitar el testigo  
+##  <a name="FollowUp"></a> Seguimiento: Después de quitar el testigo  
  Al desactivar el testigo cambia el [modo de funcionamiento](database-mirroring-operating-modes.md)de acuerdo con la configuración de la seguridad de las transacciones:  
   
 -   Si la seguridad de las transacciones está configurada en FULL (el valor predeterminado), la sesión utiliza el modo sincrónico de alta seguridad sin conmutación automática por error.  
@@ -88,7 +88,7 @@ ms.locfileid: "48205515"
 -   Si la seguridad de las transacciones está configurada en OFF, el funcionamiento de la sesión es asincrónico (en modo de alto rendimiento) sin requerir quórum. Siempre que la seguridad de las transacciones se desactive, recomendamos desactivar también el testigo.  
   
 > [!TIP]  
->  La configuración de seguridad de las transacciones de la base de datos está registrada en cada asociado de la vista de catálogo [sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) en las columnas **mirroring_safety_level** y **mirroring_safety_level_desc**.  
+>  La configuración de seguridad de las transacciones de la base de datos está registrada en cada asociado de la vista de catálogo [sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql) en las columnas **mirroring_safety_level** y **mirroring_safety_level_desc** .  
   
 ##  <a name="RelatedTasks"></a> Tareas relacionadas  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d1b59b0e279d016d2fcaee9b0fcae6742c4ff87b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756898"
 ---
 # <a name="roles-ssas-tabular"></a>Roles (SSAS tabular)
   Los roles, en los modelos tabulares, definen los permisos de los miembros para un modelo. Cada rol contiene miembros, por nombre de usuario de Windows o por grupo de Windows, y permisos (de lectura, de procesamiento, de administrador). Los miembros del rol pueden realizar en el modelo las acciones definidas por el permiso de rol. Los roles que se han definido con permisos de lectura también pueden proporcionar seguridad adicional en el nivel de fila mediante filtros de fila.  
@@ -56,7 +56,7 @@ ms.locfileid: "52419856"
 > [!NOTE]  
 >  Los roles definidos para un modelo configurado para el modo DirectQuery no pueden usar filtros de fila; sin embargo, se aplicarán los permisos definidos para cada rol.  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> Permisos  
  Cada rol tiene un único permiso de base de datos definido (excepto en el caso del permiso de lectura y procesamiento combinado). De forma predeterminada, los roles tienen el permiso Ninguno. Es decir, una vez que se agreguen los miembros al rol con el permiso Ninguno, estos no podrán modificar la base de datos, ejecutar una operación de proceso, consultar los datos ni ver la base de datos a menos que se conceda un permiso diferente.  
   
  Un grupo o usuario de Windows puede ser miembro de varios roles, cada uno de ellos con un permiso distinto. Cuando un usuario es miembro de varios roles, los permisos definidos para cada uno de ellos son acumulativos. Por ejemplo, si un usuario es miembro de un rol que tiene el permiso de lectura y de otro que tiene el permiso Ninguno, dicho usuario tendrá permisos de lectura.  
@@ -82,8 +82,8 @@ ms.locfileid: "52419856"
   
 |Table|DAX expression|  
 |-----------|--------------------|  
-|Region|= Región [Country] = "USA"|  
-|ProductCategory|= ProductCategory [nombre] = "Bicicletas"|  
+|Region|=Region[Country]="USA"|  
+|ProductCategory|=ProductCategory[Name]="Bicycles"|  
 |Transactions|=Transactions[Year]=2008|  
   
  El efecto neto de estos permisos en la tabla Transactions es que los miembros podrán consultar las filas de datos en las que el cliente sea de los EE. UU., la categoría de producto sea bicycles y el año sea 2008. Los usuarios no podrán consultar ninguna de las transacciones que no cumplan las tres condiciones anteriores, a menos que sean miembros de otro rol que les conceda estos permisos.  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe555d94eb8e00cddd147c2424d0cf60e1d47b34
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771621"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Aplicar los cambios al destino
   En el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la tercera y última tarea consiste en aplicar los cambios al destino. Necesitará un componente para aplicar las inserciones, otro para aplicar las actualizaciones y otro más para aplicar las eliminaciones.  

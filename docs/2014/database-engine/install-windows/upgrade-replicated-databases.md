@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775331"
 ---
 # <a name="upgrade-replicated-databases"></a>Actualizar bases de datos replicadas
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite la actualización de bases de datos replicadas desde versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; no es necesario detener la actividad en otros nodos mientras se actualiza un nodo. Asegúrese de cumplir las reglas relativas a la versión admitida en una topología:  
@@ -89,7 +89,7 @@ ms.locfileid: "54132405"
  Para asegurarse de que la configuración de replicación se conserva al restaurar una copia de seguridad de una base de datos replicada a partir de una versión anterior, restaure en un servidor y una base de datos con los mismos nombres que el servidor y la base de datos donde se realizó la copia de seguridad.  
   
 ## <a name="see-also"></a>Vea también  
- [Preguntas más frecuentes sobre la administración de replicación](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Preguntas más frecuentes para administradores de replicación](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Compatibilidad con versiones anteriores de replicación](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [Actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Actualizar a SQL Server 2014](upgrade-sql-server.md)  

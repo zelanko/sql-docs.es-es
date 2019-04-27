@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755597"
 ---
 # <a name="connect-to-server-analysis-services"></a>Conectar al servidor (Analysis Services)
   Use este cuadro de diálogo para ver o especificar opciones cuando se conecte a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "48140161"
  Seleccione la instancia de servidor a la que va a conectarse. De forma predeterminada, aparecerá la instancia de servidor a la que se ha conectado por última vez.  
   
  **Autenticación**  
- Cuando se conecta a una instancia de Analysis Services, se admiten los siguientes modos de autenticación: autenticación de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
+ Se admiten los siguientes modos de autenticación al conectarse a una instancia de Analysis Services: [!INCLUDE[msCoName](../includes/msconame-md.md)] Autenticación de Windows.  
   
  **Modo de autenticación de Windows (autenticación de Windows)**  
  El modo de**autenticación de Windows** permite al usuario conectarse mediante una cuenta de usuario de Windows.  

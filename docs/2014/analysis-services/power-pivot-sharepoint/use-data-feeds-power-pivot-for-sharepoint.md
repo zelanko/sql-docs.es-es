@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748990"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Usar fuentes de distribución de datos (PowerPivot para SharePoint)
   Las fuentes de distribución de datos son una o varias secuencias de datos que se generan en un origen de datos en línea y se difunden en un documento o aplicación de destino. Si está utilizando PowerPivot para Excel, las fuentes de distribución de datos pueden ayudarle a poner los datos empresariales o corporativos existentes de orígenes de datos arbitrarios en la ventana de PowerPivot de un libro de Excel 2010. Después de importar una fuente de distribución de datos en un libro, puede hacer referencia a ella posteriormente en cualquier operación de actualización de datos que programe en un servidor de SharePoint.  

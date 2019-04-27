@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b741f98dec0b2f6233f4c51c1c809c1a7baf4d81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778936"
 ---
 # <a name="get-the-fields-for-all-events"></a>Obtener los campos de todos los eventos
   Esta tarea se lleva a cabo con el Editor de consultas en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "48154315"
   
 -   column_type  
   
- Puede utilizar la información anterior al configurar sesiones de evento que utilizan el destino de creación de depósitos. Para obtener más información, vea [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md).  
+ Puede utilizar la información anterior al configurar sesiones de evento que utilizan el destino de creación de depósitos. Para más información, consulte [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md).  
   
 ## <a name="before-you-begin"></a>Antes de empezar  
  Antes de crear una sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events, resulta útil obtener información sobre los campos asociados a los eventos.  

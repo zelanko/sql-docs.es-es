@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 384d1cd437947e23f571cf30b6ec7fad84704942
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746947"
 ---
 # <a name="thread-pool-properties"></a>Propiedades de grupos de subprocesos
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa el subprocesamiento múltiple para realizar muchas operaciones, mejorando el rendimiento global del servidor al ejecutar varios trabajos en paralelo. Para administrar los subprocesos de manera más eficaz, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza grupos de subprocesos para preasignar subprocesos y facilitar la disponibilidad de subprocesos para el trabajo siguiente.  
@@ -88,7 +88,7 @@ ms.locfileid: "55087904"
   
  Las propiedades se muestran en orden alfabético.  
   
-|Nombre|Tipo|Descripción|Default|Instrucciones|  
+|Name|Tipo|Descripción|Default|Instrucciones|  
 |----------|----------|-----------------|-------------|--------------|  
 |`IOProcess` \ `Concurrency`|double|Valor de punto flotante de doble precisión que determina el algoritmo para establecer un destino en el número de subprocesos que se pueden poner en cola al mismo tiempo.|2.0|Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .<br /><br /> Se utiliza simultaneidad para inicializar grupos de subprocesos, que se implementan utilizando puertos de terminación de E/S en Windows. Vea [I/O Completion Ports (Puertos de terminación de E/S)](https://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) para obtener más detalles.<br /><br /> Se aplica solo a modelos multidimensionales.|  
 |`IOProcess` \ `GroupAffinity`|string|Matriz de valores hexadecimales correspondientes a los grupos de procesadores en el sistema, que se usa para establecer la afinidad de los subprocesos en el grupo de subprocesos IOProcess y los procesadores lógicos de cada grupo de procesadores.|none|Puede utilizar esta propiedad para crear afinidades personalizadas. La propiedad está vacía de forma predeterminada.<br /><br /> Vea [Configurar GroupAffinity para establecer afinidad entre subprocesos y procesadores en un grupo de procesadores](#bkmk_groupaffinity) para obtener más detalles.<br /><br /> Se aplica solo a modelos multidimensionales.|  
@@ -251,7 +251,7 @@ ms.locfileid: "55087904"
   
  `"10/28/2013 9:20:52 AM) Message: The Query thread pool now has 1 minimum threads, 16 maximum threads, and a concurrency of 16.  Its thread pool affinity mask is 0x00000000000000ff. (Source: \\?\C:\Program Files\Microsoft SQL Server\MSAS11.MSSQLSERVER\OLAP\Log\msmdsrv.log, Type: 1, Category: 289, Event ID: 0x4121000A)"`  
   
- Recuerde que el algoritmo para establecer **MinThread** y **MaxThread** incorpora la configuración del sistema, especialmente el número de procesadores. La entrada de blog siguiente proporciona información sobre el cálculo de los valores: [Analysis Services 2012 configuración (Blog de Wordpress)](https://go.microsoft.com/fwlink/?LinkId=330387). Tenga en cuenta que estos valores y comportamientos están sujetos a ajustes en versiones posteriores.  
+ Recuerde que el algoritmo para establecer **MinThread** y **MaxThread** incorpora la configuración del sistema, especialmente el número de procesadores. Entrada de blog siguiente ofrece información sobre cómo se calculan los valores: [Analysis Services 2012 configuración (Blog de Wordpress)](https://go.microsoft.com/fwlink/?LinkId=330387). Tenga en cuenta que estos valores y comportamientos están sujetos a ajustes en versiones posteriores.  
   
  La lista siguiente muestra ejemplos de otros valores de máscara de afinidad para distintas combinaciones de procesadores:  
   

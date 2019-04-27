@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c4c8938944401ad03e2bcbf1188b21c67bdf7654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756499"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña KPI) (Analysis Services - Datos multidimensionales)
   Utilice el panel **Barra de herramientas** para llevar a cabo acciones comunes de la pestaña **KPI** del Diseñador de cubos.  
@@ -28,7 +28,7 @@ ms.locfileid: "48198775"
  **Procesar**  
  Haga clic en esta opción para mostrar el cuadro de diálogo **Procesar** y procesar el cubo.  
   
- **Volver a conectar**  
+ **Reconnect**  
  Haga clic en esta opción para volver a conectar la pestaña **KPI** a la instancia y base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene el cubo si la sesión de la pestaña **KPI** se ha desconectado debido a una pérdida de conexión o se ha excedido el tiempo de espera.  
   
  **Nuevo KPI**  

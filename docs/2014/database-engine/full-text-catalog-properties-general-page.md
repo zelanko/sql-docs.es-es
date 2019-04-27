@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779668"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propiedades del catálogo de texto completo (página General)
   En esta sección se muestran las opciones y funciones disponibles en la página **General** del cuadro de diálogo **Propiedades del catálogo de texto completo** .  

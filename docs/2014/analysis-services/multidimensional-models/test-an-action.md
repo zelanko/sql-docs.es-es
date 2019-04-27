@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7cf922fb0182c2905ac855daef0f90cd80ddf55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740973"
 ---
 # <a name="test-an-action"></a>Probar una acción
   Para probar una acción, use la vista Explorador del Diseñador de cubos. Se puede obtener acceso al Diseñador de cubos desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Una vez creada la acción, debe procesar el cubo para poder probarla. Para obtener más información, consulte [procesamiento del objeto de modelo Multidimensional](processing-a-multidimensional-model-analysis-services.md).  

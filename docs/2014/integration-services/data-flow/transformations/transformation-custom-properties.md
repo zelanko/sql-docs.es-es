@@ -42,11 +42,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770743"
 ---
 # <a name="transformation-custom-properties"></a>Propiedades personalizadas de transformación
   Además de las propiedades que son comunes a la mayoría de los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , muchos objetos de flujo de datos tienen propiedades personalizadas que son específicas del objeto. Estas propiedades personalizadas solo están disponibles en tiempo de ejecución y no se incluyen en la documentación de referencia de la programación administrada de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -70,7 +70,7 @@ ms.locfileid: "58387653"
 |[Columna derivada](#derived)|[Dinamización](#pivot)||  
   
 ### <a name="transformations-without-custom-properties"></a>Transformaciones sin propiedades personalizadas  
- Las transformaciones siguientes no tienen ninguna propiedad personalizada en la entrada, el componente o niveles de salida: [Transformación mezclar](merge-transformation.md), [transformación multidifusión](multicast-transformation.md), y [unión transformación todo](union-all-transformation.md). Utilizan solo las propiedades comunes a todos los componentes de flujo de datos.  
+ Las transformaciones siguientes no tienen ninguna propiedad personalizada en los niveles de componente, entrada o salida: [Transformación Mezclar](merge-transformation.md), [Transformación Multidifusión](multicast-transformation.md), y [Transformación Unión de todo](union-all-transformation.md). Utilizan solo las propiedades comunes a todos los componentes de flujo de datos.  
   
 ##  <a name="aggregate"></a> Propiedades personalizadas de la transformación Agregado  
  La transformación Agregado tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  
@@ -183,7 +183,7 @@ ms.locfileid: "58387653"
   
 |Property|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
-|FastParse|Boolean|Valor que indica si la columna usa las rutinas de análisis más rápidas que no distinguen la configuración regional y permiten un análisis rápido que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona, o las rutinas de análisis estándar, que sí distinguen la configuración regional. El valor predeterminado de esta propiedad es `False`. Para obtener más información, consulte [Fast Parse](../../fast-parse.md) y [Standard Parse](../../standard-parse.md). .<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación conversión de datos**, pero se puede establecer utilizando la **Editor avanzado**.|  
+|FastParse|Boolean|Valor que indica si la columna usa las rutinas de análisis más rápidas que no distinguen la configuración regional y permiten un análisis rápido que [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona, o las rutinas de análisis estándar, que sí distinguen la configuración regional. El valor predeterminado de esta propiedad es `False`. Para obtener más información, consulte [Fast Parse](../../fast-parse.md) y [Standard Parse](../../standard-parse.md). .<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Conversión de datos**, pero se puede definir con el **Editor avanzado**.|  
 |SourceInputColumnLineageId|Integer|`LineageID` de la columna de entrada que es el origen de la columna de resultados.|  
   
  La entrada, las columnas de entrada y la salida de transformación Conversión de datos no tienen ninguna propiedad personalizada.  
@@ -261,8 +261,8 @@ ms.locfileid: "58387653"
 |Property|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |Delimiters|String|Los delimitadores de token que la transformación utiliza. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), mayor que (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;), signo de número (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
-|Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de `True` está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es `False`.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Agrupación aproximada**, pero se puede establecer utilizando la **Editor avanzado**.|  
-|MaxMemoryUsage|Integer|Cantidad de memoria máxima que puede usar la transformación. El valor predeterminado de esta propiedad es **0**, que habilita el uso de la memoria dinámica.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Agrupación aproximada**, pero se puede establecer utilizando la **Editor avanzado**.|  
+|Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de `True` está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es `False`.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede definir con el **Editor avanzado**.|  
+|MaxMemoryUsage|Integer|Cantidad de memoria máxima que puede usar la transformación. El valor predeterminado de esta propiedad es **0**, que habilita el uso de la memoria dinámica.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede definir con el **Editor avanzado**.|  
 |MinSimilarity|Doble|Umbral de similitud que la transformación utiliza para identificar los duplicados, expresado como un valor entre 0 y 1.  El valor predeterminado de esta propiedad es 0.8.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de entrada de la transformación Agrupación aproximada. Todas las propiedades son de lectura y escritura.  
@@ -296,11 +296,11 @@ ms.locfileid: "58387653"
 |CopyReferenceTable|Boolean|Especifica si se debería crear una copia de la tabla de referencia para la construcción del índice de búsqueda aproximada y las búsquedas subsiguientes. El valor predeterminado de esta propiedad es `True`.|  
 |Delimiters|String|Delimitadores que la transformación utilizará para dividir en tokens los valores de las columnas. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), mayor que (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;). almohadilla (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
 |DropExistingMatchIndex|Boolean|Valor que especifica si el índice de coincidencia especificado en MatchIndexName se elimina cuando MatchIndexOptions no se establece en ReuseExistingIndex. El valor predeterminado de esta propiedad es `True`.|  
-|Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de `True` está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es `False`.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede establecer utilizando la **Editor avanzado**.|  
+|Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de `True` está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es `False`.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede definir con el **Editor avanzado**.|  
 |MatchIndexName|String|Nombre del índice de coincidencia. El índice de coincidencia es la tabla en la que la transformación crea y guarda el índice que utiliza. Si se reutiliza el índice de coincidencia, MatchIndexName especifica el índice que se reutilizará. MatchIndexName debe ser un nombre de identificador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] válido. Por ejemplo, si el nombre contiene espacios, debe escribirse entre corchetes.|  
 |MatchIndexOptions|Integer (enumeración)|Valor que especifica cómo administra la transformación el índice de coincidencia. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> `ReuseExistingIndex` (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
-|MaxMemoryUsage|Integer|Tamaño máximo permitido de la caché para la tabla de búsqueda. El valor predeterminado de esta propiedad es **0**, lo que significa que el tamaño de la memoria caché no tiene límite.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede establecer utilizando la **Editor avanzado**.|  
-|MaxOutputMatchesPerInput|Integer|Número máximo de coincidencias que la transformación puede devolver para cada fila de entrada. El valor predeterminado de esta propiedad es **1**.<br /><br /> Nota: Los valores mayores que 100 solo se puede especificar mediante el uso de la **Editor avanzado**.|  
+|MaxMemoryUsage|Integer|Tamaño máximo permitido de la caché para la tabla de búsqueda. El valor predeterminado de esta propiedad es **0**, lo que significa que el tamaño de la memoria caché no tiene límite.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede definir con el **Editor avanzado**.|  
+|MaxOutputMatchesPerInput|Integer|Número máximo de coincidencias que la transformación puede devolver para cada fila de entrada. El valor predeterminado de esta propiedad es **1**.<br /><br /> Nota: Los valores mayores que 100 solo se pueden especificar con el **Editor avanzado**.|  
 |MinSimilarity|Integer|El umbral de similitud que la transformación usa en el nivel de componente, especificado como un valor entre 0 y 1. Solo las filas mayores que el umbral se consideran coincidencias.|  
 |ReferenceMetadataXML|String|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
 |ReferenceTableName|String|Nombre de la tabla de búsqueda. El nombre debe ser un nombre de identificador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] válido. Por ejemplo, si el nombre contiene espacios, debe escribirse entre corchetes.|  
@@ -523,7 +523,7 @@ ms.locfileid: "58387653"
   
 |Property|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
-|ColumnType|Integer (enumeración)|Tipo de actualización de la columna. Los valores son: **Cambiar el atributo** (2), **se ha corregido el atributo** (4), **atributo histórico** (3), **clave** (1), y **otros** (0).|  
+|ColumnType|Integer (enumeración)|Tipo de actualización de la columna. Los valores son: **Atributo variable** (2), **Atributo fijo** (4), **Atributo histórico** (3), **Clave** (1) y **Otro** (0).|  
   
  La entrada, las salidas y las columnas de resultados de la transformación Dimensión de variación lenta no tienen ninguna propiedad personalizada.  
   
@@ -569,7 +569,7 @@ ms.locfileid: "58387653"
 |NeedRefenceData|Boolean|Valor que especifica si la transformación utiliza una lista de condiciones de exclusión almacenada en una tabla de referencia. El valor predeterminado de esta propiedad es `False`.|  
 |OutTermColumn|String|Nombre de la columna que contiene las condiciones de la exclusión.|  
 |OutTermTable|String|Nombre de la tabla que contiene la columna con las condiciones de la exclusión.|  
-|ScoreType|Integer|Valor que especifica el tipo de cuenta que asociar al término. Los valores válidos son 0, que indica la frecuencia, y 1, que indica una puntuación TFIDF. La puntuación TFIDF es el producto de término y frecuencia inversa de documento, definido como: TFIDF de un término T = (frecuencia de T) \* log ((#rows de entrada) / (#rows con T)). El valor predeterminado de esta propiedad es **0**.|  
+|ScoreType|Integer|Valor que especifica el tipo de cuenta que asociar al término. Los valores válidos son 0, que indica la frecuencia, y 1, que indica una puntuación TFIDF. La puntuación TFIDF es el producto de la frecuencia del término y la frecuencia inversa del documento, tal y como se define a continuación: TFIDF de un término T = (frecuencia de T) \* log ((#filas en entrada)/(#filas con T)). El valor predeterminado de esta propiedad es **0**.|  
 |WordOrPhrase|Integer|Valor que especifica el tipo de término. Los valores válidos son 0, que solamente indica palabras; 1, que solamente indica sintagmas nominales; y 2, que indica palabras y sintagmas nominales. El valor predeterminado de esta propiedad es **0**.|  
   
  La entrada, las columnas de entrada, la salida y las columnas de salida de transformación Extracción de términos no tienen ninguna propiedad personalizada.  

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 254e1209a8198a6021222edc0b9b8abc72210884
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755895"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Adjuntar un dominio o un dominio compuesto a datos de referencia
   En este tema se describe cómo adjuntar dominios o dominios compuestos de una base de conocimiento de calidad de datos a un servicio de datos de referencia en Windows Azure Marketplace para generar conocimiento con los datos de referencia de alta calidad. Cada servicio de datos de referencia contiene un esquema (columnas de datos). Después de adjuntar un dominio o un dominio compuesto a un servicio de datos de referencia, debe asignar el dominio adjunto o los dominios individuales dentro del dominio compuesto adjunto a las columnas adecuadas de un esquema del servicio de datos de referencia. Adjuntar un dominio compuesto a un servicio de datos de referencia permite adjuntar solo un dominio a un servicio de datos de referencia y, a continuación, asignar los dominios individuales incluidos en el dominio compuesto a las columnas adecuadas del esquema del servicio de datos de referencia.  
@@ -28,7 +28,7 @@ ms.locfileid: "56024266"
   
  Un esquema del servicio de datos de referencia puede tener una columna obligatoria que se debe asignar al dominio apropiado si decide usar el servicio de datos de referencia. La columna obligatoria de un esquema de datos de referencia se identifica mediante "(M)" en el nombre de columna. Por ejemplo, **AddressLine** es la columna de esquema obligatoria en **Melissa Data - Address Data** y **CompanyName** es la columna de esquema obligatoria en **Digital Trowel Inc. - Us companies and professional data for SQL users**.  
   
- En este tema, crearemos cuatro dominios: **Línea de dirección**, **Ciudad**, **estado**, y **Zip**, en un dominio compuesto, **Address Verification**, adjunte el un dominio compuesto a los **Melissa Data - Address Check** al servicio de datos de referencia y, a continuación, asignar los dominios individuales dentro del dominio compuesto a las columnas adecuadas en el esquema de servicio de datos de referencia.  
+ En este tema, crearemos cuatro dominios: **Línea de dirección**, **Ciudad**, **Estado** y **Código postal** bajo un dominio compuesto, **Verificación de direcciones**; después, se adjuntará el dominio compuesto al servicio de datos de referencia **Datos de Melissa Data: comprobación de dirección** y, por último, se asignarán los dominios individuales dentro del dominio compuesto a las columnas adecuadas del esquema del servicio de datos de referencia.  
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
@@ -48,7 +48,7 @@ ms.locfileid: "56024266"
   
 3.  En la pantalla **Nueva base de conocimiento** , escriba un nombre para la nueva base de conocimiento, haga clic en la actividad **Administración de dominios** y, por último, haga clic en **Crear**.  
   
-4.  En la pantalla **Administración de dominios** , haga clic en el icono **Crear un dominio** para crear un dominio. Cree los cuatro dominios siguientes: **Línea de dirección**, **Ciudad**, **estado**, y **Zip**.  
+4.  En la pantalla **Administración de dominios** , haga clic en el icono **Crear un dominio** para crear un dominio. Cree estos cuatro dominios: **Línea de dirección**, **Ciudad**, **Estado** y **Código postal**.  
   
 5.  Haga clic en el icono **Crear un dominio compuesto** para crear un dominio compuesto. En el cuadro de diálogo **Crear un dominio compuesto** , escriba **Address Verification** en el cuadro **Nombre de dominio compuesto** e incluya en el dominio compuesto todos los dominios creados en el paso 3. Haga clic en **Aceptar**.  
   
@@ -71,17 +71,17 @@ ms.locfileid: "56024266"
   
 9. Regresará a la pestaña **Datos de referencia** . En el área **Configuración de proveedores**, cambie los valores de los cuadros siguientes, si es necesario:  
   
-    -   **Umbral de corrección automática**: Correcciones del servicio de datos de referencia con el nivel de confianza por encima de estos valores de umbral se hará automáticamente. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,9 para un porcentaje del 90%.  
+    -   **Umbral de corrección automática**: las correcciones del servicio de datos de referencia con un nivel de confianza por encima de estos valores de umbral se ejecutan automáticamente. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,9 para un porcentaje del 90%.  
   
-    -   **Candidatos sugeridos**: Número de candidatos sugeridos para mostrar del servicio de datos de referencia.  
+    -   **Candidatos sugeridos**: número de candidatos sugeridos que se van a mostrar del servicio de datos de referencia.  
   
-    -   **Confianza mínima**: Sugerencias del servicio de datos de referencia con un nivel de confianza inferior a este valor se omitirá. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,6 para un porcentaje del 60 %.  
+    -   **Confianza mínima**: se omitirán las sugerencias del servicio de datos de referencia con un nivel de confianza por debajo de este valor. Escriba un valor en la notación decimal del valor de porcentaje correspondiente. Por ejemplo, escriba 0,6 para un porcentaje del 60 %.  
   
 10. Haga clic en **Finalizar** para publicar la base de conocimiento. Aparecerá un mensaje de confirmación una vez que la base de conocimiento se haya publicado correctamente.  
   
  Ahora puede utilizar esta base de conocimiento para la actividad de limpieza en un proyecto de calidad de datos con objeto de normalizar y limpiar direcciones de EE. UU. en los datos de origen de acuerdo con el conocimiento proporcionado por Melissa Data a través de Windows Azure Marketplace.  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de asignar un dominio a datos de referencia  
+##  <a name="FollowUp"></a> Seguimiento: después de asignar un dominio a datos de referencia  
  Cree un proyecto de calidad de datos y ejecute la actividad de limpieza en los datos de origen que incluyan direcciones de EE. UU., comparándolos con la base de conocimiento creada en este tema. Vea [Limpiar datos mediante el conocimiento de datos de referencia &#40;externo&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
 ## <a name="see-also"></a>Vea también  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64040ce6a938f2456d3d655aad6dfbcd4abf3e29
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647048"
 ---
 # <a name="view-page-resources-report-manager"></a>Página Ver, recursos (Administrador de informes)
   Use la página Ver para ver un recurso. Un recurso es un elemento que se almacena y administra en un servidor de informes, pero no se procesa allí (un servidor de informes procesa informes y modelos). Los recursos se pueden utilizar cuando se deseen almacenar documentos arbitrarios, imágenes u otros archivos que el servidor no procesa. La mayoría de los archivos de imagen, como JPG, GIF y PNG, se pueden ver en la página Ver del Administrador de informes. Los demás recursos se abren en una ventana de aplicación distinta.  

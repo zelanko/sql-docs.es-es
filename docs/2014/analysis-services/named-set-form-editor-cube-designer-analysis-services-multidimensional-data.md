@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32f384889a8d68bc4683bd8773ea4618329ea44a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743651"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de conjuntos con nombres (pestaña Cálculo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Utilice el panel del **Editor de Formulario de conjuntos con nombres** que se encuentra en la pestaña **Cálculos** del Diseñador de cubos para crear o modificar un conjunto con nombre.  
@@ -27,7 +27,7 @@ ms.locfileid: "48119750"
 >  Este panel solo se muestra en la vista de formulario.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba el nombre del conjunto con nombre.  
   
  **Expresión**  

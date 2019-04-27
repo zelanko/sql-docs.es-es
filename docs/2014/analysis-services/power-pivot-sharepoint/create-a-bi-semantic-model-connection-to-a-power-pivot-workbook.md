@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ad60799fa8590609cabd2e1e1fdfd8d7493c282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749566"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Creación de una conexión de modelo semántico de BI a un libro de PowerPivot
   Utilice la información de este tema para configurar una conexión de modelo semántico de BI que redirija a un libro PowerPivot de la misma granja.  

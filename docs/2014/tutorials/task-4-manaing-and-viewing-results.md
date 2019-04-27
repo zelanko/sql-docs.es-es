@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c719b7d4bcd9b792beaa59fdbcf69783d7d3259d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745636"
 ---
-# <a name="task-4-manaing-and-viewing-results"></a>Tarea 4: administrar y ver los resultados
+# <a name="task-4-manaing-and-viewing-results"></a>Tarea 4: Administrar y ver resultados
   En esta tarea, revisará los resultados de la limpieza asistida por PC y realizará la limpieza interactiva de los datos de proveedor. Consulte [fase de limpieza interactiva](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) para obtener más detalles.  
   
 1.  Seleccione **correo electrónico de contacto** dominio en la lista de dominios.  

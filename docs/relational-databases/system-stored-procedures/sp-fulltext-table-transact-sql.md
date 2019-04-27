@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743996"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_fulltext_table
   
  Si se vuelve a activar la tabla y no se vuelve a llenar el índice, el índice antiguo sigue disponible para las consultas que se realizan sobre las columnas restantes habilitadas para texto completo, pero no sobre las nuevas. Las consultas que especifican una búsqueda en todas las columnas de texto completo encuentran datos de columnas eliminadas.  
   
- Tras definir una tabla para indización de texto completo, la modificación del tipo de datos de la columna de clave única de texto completo a otro tipo, ya sea mediante la modificación del tipo de datos de la columna o de la clave única de texto completo de una columna a otra, sin volver a realizar un rellenado completo, puede dar lugar a que una consulta posterior no se ejecute correctamente y se devuelva el mensaje de error: "La conversión al tipo *data_type* error para el valor de clave de búsqueda de texto completo *key_value*." Para evitar esto, quite la definición de texto completo de esta tabla utilizando la **drop** acción de **sp_fulltext_table** y definirla con **sp_fulltext_table** y **sp_fulltext_column**.  
+ Después de una tabla se ha definido para la indización de texto completo, cambiar el texto columna de clave única de un tipo de datos a otro, ya sea cambiando el tipo de datos de esa columna o cambiando la clave única de texto completo de una columna a otro, sin volver a llenar completamente puede producir un error que se produzca durante una consulta posterior y devolver el mensaje de error: "La conversión al tipo *data_type* error para el valor de clave de búsqueda de texto completo *key_value*." Para evitar esto, quite la definición de texto completo de esta tabla utilizando la **drop** acción de **sp_fulltext_table** y definirla con **sp_fulltext_table** y **sp_fulltext_column**.  
   
  La columna de clave de texto completo se debe definir para que tenga 900 bytes o menos. Se recomienda que el tamaño de la columna de clave sea lo más reducido posible por razones de rendimiento.  
   

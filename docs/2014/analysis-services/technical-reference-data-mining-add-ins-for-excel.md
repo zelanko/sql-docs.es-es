@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c657fc64bcc844d7c17153f83489a35594027ffc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756542"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>Referencia técnica (Complementos de minería de datos para Excel)
   Los Complementos de minería de datos para Office contienen características útiles para los programadores y los usuarios avanzados de minería de datos.  
@@ -35,7 +35,7 @@ ms.locfileid: "48157565"
   
  **Ayuda del Asistente para configuración**  
   
- El Asistente para configuración se ejecuta la primera vez que abre los complementos para ayudarle a conectarse a un servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Si tiene problemas con cualquiera de los pasos, vea este tema para obtener Ayuda adicional.  
+ El Asistente para configuración se ejecuta la primera vez que abre los complementos para ayudarle a conectarse a un servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Si tiene problemas con cualquiera de los pasos, vea este tema para obtener Ayuda adicional.  
   
 -   [Utilidad de configuración del servidor &#40;datos complementos de minería de datos para Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   

@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a88d312d2764d04d1766371463a1735737973164
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740978"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Orígenes de datos admitidos (SSAS Multidimensional)
   En este tema se describen los tipos de orígenes de datos que puede usar en un modelo multidimensional.  
@@ -35,7 +35,7 @@ ms.locfileid: "53349743"
   
 |||||  
 |-|-|-|-|  
-|Origen|Versiones|Tipo de archivo|Proveedores <sup>1</sup>|  
+|Source|Versiones|Tipo de archivo|Proveedores <sup>1</sup>|  
 |Bases de datos de Access|Microsoft Access 2007, 2010, 2013.|.accdb o .mdb|Proveedor Microsoft Jet 4.0 OLE DB|  
 |Bases de datos relacionales de SQL Server <sup>5</sup>|Microsoft SQL Server 2005, 2008, 2008 R2, 2012, 2014 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] <sup>2</sup>, almacenamiento de datos paralelos de SQL Server (PDW) <sup>3</sup>|(no aplicable)|Proveedor OLE DB para SQL Server<br /><br /> Proveedor OLE DB de SQL Server Native Client<br /><br /> Proveedor OLE DB de SQL Server 11.0 Native Client<br /><br /> Proveedor de datos de .NET Framework para SQL Client|  
 |Bases de datos relacionales de Oracle|Oracle 9i, 10g, 11g.|(no aplicable)|Proveedor OLE DB de Oracle<br /><br /> Proveedor de datos de .NET Framework para cliente de Oracle<br /><br /> Proveedor de datos de .NET Framework para SQL Server<br /><br /> Proveedor OLE DB MSDAORA <sup>4</sup><br /><br /> OraOLEDB<br /><br /> MSDASQL|  

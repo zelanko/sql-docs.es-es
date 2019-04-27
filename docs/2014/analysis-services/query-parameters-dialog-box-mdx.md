@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a1d9e03f71f1dbcf2f00cce5185ec0e2b237b4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748509"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>Cuadro de diálogo Parámetros de consulta (MDX)
   Utilice el cuadro de diálogo **Parámetros de consulta** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para agregar parámetros a las consultas MDX que se usan para definir los conjuntos, dimensiones y subcubos. Puede mostrar el cuadro de diálogo **Parámetros de consulta** haciendo clic en el icono **Parámetros** en el cuadro de diálogo **Generador de consultas MDX** .  

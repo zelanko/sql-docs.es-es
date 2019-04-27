@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779229"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Directrices para usar índices en las tablas con optimización para memoria
   Los índices se utilizan para tener acceso a los datos de forma eficaz en las tablas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar los índices adecuados puede mejorar drásticamente el rendimiento de las consultas. Considere, por ejemplo, la consulta:  
@@ -28,7 +28,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  Si no hay ningún índice en la columna c1, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necesitará examinar toda la tabla t y, a continuación, filtrar en las filas que cumplen la condición c1=1. Sin embargo, si tiene un índice en la columna c1, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede buscar directamente en el valor 1 y recuperar las filas.  
   
- Para buscar los registros que tienen un valor específico o un intervalo de valores para una o varias columnas de la tabla, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede utilizar un índice en dichas columnas para buscar rápidamente los registros correspondientes. Tanto las tablas optimizadas para memoria como las basadas en disco se benefician de los índices. Sin embargo, hay algunas diferencias entre las estructuras de índice que deben tenerse en cuenta al utilizar las tablas optimizadas para memoria. (Los índices de las tablas optimizadas para memoria se denominan también índices optimizados para memoria.) Algunas de las diferencias clave son:  
+ Para buscar los registros que tienen un valor específico o un intervalo de valores para una o varias columnas de la tabla, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede utilizar un índice en dichas columnas para buscar rápidamente los registros correspondientes. Tanto las tablas optimizadas para memoria como las basadas en disco se benefician de los índices. Sin embargo, hay algunas diferencias entre las estructuras de índice que deben tenerse en cuenta al utilizar las tablas optimizadas para memoria. (Los índices en tablas optimizadas para memoria se denominan índices optimizados para memoria.) Algunas de las principales diferencias son:  
   
 -   Los índices optimizados para memoria deben crearse con [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql). Los índices basados en disco se pueden crear con `CREATE TABLE` y `CREATE INDEX`.  
   
@@ -90,7 +90,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      La recolección de elementos no utilizados funciona mejor si todos los índices de la tabla se utilizan con frecuencia. Los índices que se usan poco pueden hacer que el sistema de recopilación de elementos no utilizados no se comporten de forma óptimo en las versiones de fila anteriores.  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>Crear un índice con optimización para memoria: Ejemplos de código  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>Crear un índice optimizado para memoria: Ejemplos de código  
  Índice hash de nivel de columna:  
   
 ```sql  

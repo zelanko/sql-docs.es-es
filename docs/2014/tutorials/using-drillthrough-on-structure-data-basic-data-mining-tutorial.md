@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745546"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Usar la obtención de detalles en datos de estructura (Tutorial básico de minería de datos)
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] está enviando un formulario a los clientes potenciales de entre 34 y 40 años de edad como parte de su campaña de publicidad. El departamento de marketing ha decidido que quieren enviar también el formulario a los clientes que compraron bicicletas de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] hace más de cinco años. En esta lección, identificará los clientes con bicicletas anteriores y recuperará su información de contacto. Esta información no está incluida en el modelo, pero se incluye en la estructura. Para recuperar la información de contacto, primero se asegurará de que la obtención de detalles está habilitada para la estructura y, a continuación, la utilizará para revelar los nombres y direcciones de los clientes objetivo.  

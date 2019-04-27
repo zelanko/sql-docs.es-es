@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acf4484f9a868556ce998e39ff417c50b1ca3304
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749441"
 ---
 # <a name="health-rules-reference-powerpivot-for-sharepoint"></a>Referencia de reglas de mantenimiento (PowerPivot para SharePoint)
   Este tema de referencia se describen las reglas de estado de SharePoint que se agregan a una instalación de PowerPivot para SharePoint. Estas reglas se usan para notificar problemas con el mantenimiento, la disponibilidad o la configuración del servidor de una aplicación de servicio [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] o su instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] asociada.  

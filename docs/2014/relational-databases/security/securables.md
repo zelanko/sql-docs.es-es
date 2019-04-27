@@ -19,16 +19,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745724"
 ---
 # <a name="securables"></a>Elementos protegibles
   Los elementos protegibles son los recursos cuyo acceso es regulado por el sistema de autorización del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Por ejemplo, una tabla es un elemento protegible. Algunos elementos protegibles pueden estar incluidos en otros, con lo que se crean jerarquías anidadas denominadas "ámbitos" que a su vez se pueden proteger. Los ámbitos protegibles son **servidor**, **base de datos**y **esquema**.  
   
-## <a name="securable-scope-server"></a>Ámbito protegible: Servidor  
+## <a name="securable-scope-server"></a>Ámbito asegurable: Servidor  
  El ámbito protegible **servidor** contiene los siguientes valores que puede proteger:  
   
 -   grupo de disponibilidad  
@@ -41,7 +41,7 @@ ms.locfileid: "52532473"
   
 -   Base de datos  
   
-## <a name="securable-scope-database"></a>Ámbito protegible: Base de datos  
+## <a name="securable-scope-database"></a>Ámbito asegurable: Base de datos  
  El ámbito protegible **base de datos** contiene los siguientes valores que puede proteger:  
   
 -   Rol de aplicación  
@@ -76,7 +76,7 @@ ms.locfileid: "52532473"
   
 -   Usuario  
   
-## <a name="securable-scope-schema"></a>Ámbito protegible: esquema  
+## <a name="securable-scope-schema"></a>Ámbito asegurable: esquema  
  El ámbito protegible **esquema** contiene los siguientes valores que se pueden proteger:  
   
 -   Tipo  

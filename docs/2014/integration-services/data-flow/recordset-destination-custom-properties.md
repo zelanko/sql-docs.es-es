@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6010c87de750c3c23fbd03564887624064286dbd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770781"
 ---
 # <a name="recordset-destination-custom-properties"></a>Propiedades personalizadas del destino de conjunto de registros
   El destino Conjunto de registros tiene propiedades personalizadas y propiedades comunes a todos los componentes de flujo de datos.  

@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bb8659f916fa32c7b5c944bb525e64cf0551b0d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748387"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de acción de informe (pestaña Acciones, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Editor de Formulario de acción de informe** en la pestaña **Acciones** del Diseñador de cubos para modificar la acción de informe seleccionada en el panel **Organizador de acciones** .  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba el nombre de la acción.  
   
  **Destino de la acción**  
@@ -35,9 +35,9 @@ ms.locfileid: "48196595"
   
 |Valor|Objeto seleccionado|  
 |-----------|---------------------|  
-|Miembros del atributo|Se seleccionará un miembro de un nivel según el atributo del **Objeto de destino**.<br /><br /> Nota: Otras jerarquías de usuarios que utilizan el atributo seleccionado heredan la acción del informe.|  
+|Miembros del atributo|Se seleccionará un miembro de un nivel según el atributo del **Objeto de destino**.<br /><br /> Nota: Otras jerarquías de usuarios que utilizan el atributo seleccionado heredan la acción de informe.|  
 |Celdas|Se seleccionará el conjunto con nombre en **Objeto de destino** . Seleccione **Todas las celdas** para seleccionar todas las celdas del cubo.|  
-|Cube|Se seleccionará el cubo en **Objeto de destino** . Seleccione CURRENTCUBE para utilizar el cubo actual.<br /><br /> Nota: Si usa CURRENTCUBE, obtendrá una portabilidad adicional en aquellos casos en que se cambie el nombre del cubo o se copie la acción a otros cubos. Se recomienda utilizar CURRENTCUBE para representar el cubo actual.|  
+|Cube|Se seleccionará el cubo en **Objeto de destino** . Seleccione CURRENTCUBE para utilizar el cubo actual.<br /><br /> Nota: Usa CurrentCube, obtendrá proporciona una portabilidad adicional en aquellos casos en que se cambie el nombre de cubo o copie la acción a otros cubos. Se recomienda utilizar CURRENTCUBE para representar el cubo actual.|  
 |miembros de dimensión|Se seleccionará un miembro de la dimensión en **Objeto de destino** .|  
 |Hierarchy|Se seleccionará la jerarquía en **Objeto de destino** .|  
 |Miembros de la jerarquía|Se seleccionará un miembro de la jerarquía en **Objeto de destino** .|  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753957"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>Características desusadas de las herramientas de administración de SQL Server 2014
   En este tema se describen las características desusadas de las herramientas de administración que siguen estando disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
@@ -26,10 +26,10 @@ ms.locfileid: "48083875"
 |sqlps.exe|Advertencia|  
 |osql.exe|Advertencia|  
 |SQLMail|Advertencia|  
-|Clase SMO: clase Microsoft.SQLServer.Management.Smo.Information|Anuncio|  
-|Clase SMO: clase Microsoft.SQLServer.Management.Smo.Settings|Anuncio|  
-|Clase SMO: clase Microsoft.SQLServer.Management.Smo.DatabaseOptions|Anuncio|  
-|Clase SMO: propiedad Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication|Anuncio|  
+|Clase SMO: Clase Microsoft.SQLServer.Management.Smo.Information|Anuncio|  
+|Clase SMO: Clase Microsoft.SQLServer.Management.Smo.Settings|Anuncio|  
+|Clase SMO: Clase Microsoft.SQLServer.Management.Smo.DatabaseOptions|Anuncio|  
+|Clase SMO: Propiedad Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication|Anuncio|  
 |El sistema del proyecto de base de datos, incluida la integración del control de código fuente, en SSMS|Anuncio|  
 |Notificaciones NET SEND (Agente[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )|Anuncio|  
 |Notificaciones mediante buscapersonas (Agente[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] )|Anuncio|  

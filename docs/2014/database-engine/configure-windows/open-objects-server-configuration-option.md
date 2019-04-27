@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8795d9ea157857c38f1c9a6aa452114947fa5760
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781798"
 ---
 # <a name="open-objects-server-configuration-option"></a>open objects (opción de configuración del servidor)
   Esta opción sigue presente en **sp_configure**, si bien su funcionalidad se ha deshabilitado en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La opción no tiene ningún efecto. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el número de objetos de bases de datos abiertos se administra dinámicamente y solo está limitado por la memoria disponible. La opción **open objects** está disponible en **sp_configure** por razones de compatibilidad con versiones anteriores de los scripts existentes.  

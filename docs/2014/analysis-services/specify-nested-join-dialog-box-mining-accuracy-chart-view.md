@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cab25b1e9501cf1081d0885fa2bf81a9b1065012
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746478"
 ---
 # <a name="specify-nested-join-dialog-box-mining-accuracy-chart-view"></a>Especificar combinación anidada (cuadro de diálogo de la vista Gráfico de precisión de minería de datos)
   El cuadro de diálogo **Especificar combinación anidada** crea una relación entre la tabla anidada y la tabla de casos. Para abrir el cuadro de diálogo **Especificar combinación anidada** seleccione la tabla anidada y haga clic en **Modificar combinación**.  

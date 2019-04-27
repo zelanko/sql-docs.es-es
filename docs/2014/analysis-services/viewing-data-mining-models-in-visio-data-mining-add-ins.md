@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7461464f1e55c9a762dd663e4c770663c10bb1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756021"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Ver los modelos de minería de datos en Visio (Complementos de minería de datos)
   Las formas de Visio para minería de datos le permiten conectarse a un servidor y crear un diagrama que represente un modelo de minería de datos existente. Posteriormente, se pueden personalizar los diagramas mediante los controles de Visio, pero también puede explorar en profundidad datos, exponer algunas de las estadísticas subyacentes y trabajar con el modelo subyacente.  
@@ -40,7 +40,7 @@ ms.locfileid: "48050645"
 |Forma de Visio|Modelos admitidos|  
 |-----------------|----------------------|  
 |Árbol de decisión|Esta forma se usa para modelos basados en los algoritmos de árboles de decisión o de regresión linear.|  
-|Red de dependencias|Esta forma se usa para modelos basados en cualquiera de los algoritmos siguientes: Bayes naive, Árboles de decisión o Reglas de asociación.|  
+|Red de dependencias|Esta forma se usa para modelos basados en cualquiera de los algoritmos siguientes: Bayes naive, árboles de decisión o reglas de asociación.|  
 |Clúster|Esta forma se usa para modelos basados en algoritmos de clústeres.|  
   
  El asistente puede ofrecer distintas opciones en función del tipo de datos del modelo de minería de datos. Por ejemplo, las columnas que contienen números continuos se visualizan de forma diferente que las variables de categorías.  

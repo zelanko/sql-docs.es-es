@@ -97,16 +97,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e89743de546afbc331259dbe3ff18a0344a4e420
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746727"
 ---
 # <a name="olap-properties"></a>Propiedades OLAP
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor OLAP enumeradas en las tablas siguientes. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Se aplica a:** modo de servidor multidimensional únicamente  
+ **Se aplica a:** Modo de servidor multidimensional únicamente  
   
 ## <a name="memory"></a>Memoria  
  `DefaultPageSizeForData`  
@@ -288,7 +288,7 @@ ms.locfileid: "48122145"
  `ROLAPDimensionProcessingEffort`  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="query"></a>Consulta  
+## <a name="query"></a>Consultar  
  `AggregationsUseEnabled`  
  Una propiedad booleana que define si se utilizan agregaciones almacenadas en el tiempo de ejecución. Esta propiedad permite deshabilitar las agregaciones sin cambiar el diseño de la agregación y sin necesidad de repetir el procesamiento. Sirve para realizar pruebas comparativas y con fines informativos.  
   

@@ -14,14 +14,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753307"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Implementación escalada horizontalmente (servidor de informes en modo nativo)
-  Use la **implementación escalada** página [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para ver el estado de inicialización para una implementación escalada o para unir un servidor de informes a una implementación escalada. *Implementación escalada* se refiere a dos o más instancias de un servidor de informes que comparten una sola base de datos de servidor de informes.  
+  Use la página **Implementación escalada** del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para ver el estado de inicialización de una implementación escalada o para unir un servidor de informes a una implementación escalada. *Implementación escalada* se refiere a dos o más instancias de un servidor de informes que comparten una sola base de datos de servidor de informes.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -35,11 +35,11 @@ ms.locfileid: "48099945"
   
  Para configurar una implementación escalada, comience conectando una o más instancias del servidor de informes a la misma base de datos. Una vez instaladas todas las instancias, conéctese al primer servidor de informes y, a continuación, use la página Implementación escalada para unir cada instancia adicional. Solo un servidor de informes que ya se haya inicializado para utilizar una base de datos puede inicializar nodos adicionales.  
   
- Para abrir esta página, inicie el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager y seleccione **implementación escalada** en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y seleccione **Implementación escalada** en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Opciones  
  **Nombre de SQL Server**  
- Especifique el nombre de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instancia que hospeda la base de datos del servidor de informes.  
+ Especifique el nombre de la sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] que hospeda la base de datos del servidor de informes.  
   
  **Database Name**  
  Especifica el nombre de la base de datos a la que está conectada actualmente la instancia del servidor de informes.  
@@ -51,7 +51,7 @@ ms.locfileid: "48099945"
  Muestra el nombre del servidor de informes. En la mayor parte de los casos, éste es el nombre del equipo en el que se instala el servidor de informes.  
   
  **Instancia**  
- Muestra el nombre de la instancia del servidor de informes. Las instancias del servidor de informes se basan en las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Muestra el nombre de la instancia del servidor de informes. Las instancias del servidor de informes se basan en las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Estado**  
  Indica si el servidor de informes está inicializado o esperando para unirse a una implementación escalada:  

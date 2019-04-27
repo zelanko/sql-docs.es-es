@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 099af3115af33301277ca2cac153578978af8a37
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646143"
 ---
 # <a name="iswebserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>Propiedad IsWebServiceEnabled (MSReportServer_ConfigurationSetting de WMI)
   Indica si el servicio web del servidor de informes está habilitado. Solo lectura.  

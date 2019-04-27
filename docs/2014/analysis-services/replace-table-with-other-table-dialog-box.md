@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748307"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Reemplazar tabla por otra tabla (cuadro de diálogo)
   Use el cuadro de diálogo **Reemplazar tabla por otra tabla** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para reemplazar una tabla existente en una vista del origen de datos por otra tabla del origen de datos subyacente que no se haya incluido aún en la vista del origen de datos. Para mostrar el cuadro de diálogo **Reemplazar tabla por otra tabla** , haga clic con el botón derecho en el nombre de una tabla del panel **Diagrama** o **Tablas** del **Diseñador de vistas del origen de datos** y seleccione **Por otra tabla** desde **Reemplazar tabla**.  
@@ -29,7 +29,7 @@ ms.locfileid: "48173765"
  **Origen de datos**  
  Seleccione el origen de datos del que se recuperará la tabla.  
   
- **Cuadrícula**  
+ **Grid**  
  Muestra los objetos y el tipo de objetos disponibles en el origen de datos seleccionado que no se han incluido en la vista del origen de datos.  
   
  **Filter**  
@@ -40,6 +40,6 @@ ms.locfileid: "48173765"
   
 ## <a name="see-also"></a>Vea también  
  [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Diseñador de vistas del origen de datos &#40;Analysis Services - datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

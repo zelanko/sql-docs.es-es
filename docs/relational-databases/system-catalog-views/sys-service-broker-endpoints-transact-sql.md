@@ -1,5 +1,5 @@
 ---
-title: Sys.service_broker_endpoints (Transact-SQL) | Microsoft Docs
+title: sys.service_broker_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f93ac0b4a11e10d3db952fd850f4c83668a97d3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855266"
 ---
 # <a name="sysservicebrokerendpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "47736053"
 |**\<hereda columnas >**|**--**|Hereda columnas de [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**is_message_forwarding_enabled**|**bit**|El extremo admite el reenvío de mensajes. Esto se establece inicialmente en **0** (deshabilitado). No acepta valores NULL.|  
 |**message_forwarding_size**|**int**|El número máximo de megabytes de **tempdb** permite el espacio que se usará para la que se va a reenviar mensajes. Esto se establece inicialmente en **10**. No acepta valores NULL.|  
-|**connection_auth**|**tinyint**|Tipo de autenticación de la conexión necesario para las conexiones con este extremo; uno de los siguientes:<br /><br /> **1** -NTLM<br /><br /> **2** -KERBEROS<br /><br /> **3** -NEGOCIAR<br /><br /> **4** -CERTIFICADO<br /><br /> **5** -NTLM, EL CERTIFICADO<br /><br /> **6** -KERBEROS, CERTIFICADO<br /><br /> **7** -NEGOTIATE, CERTIFICADOS<br /><br /> **8** -CERTIFICADO, NTLM<br /><br /> **9** -CERTIFICADO, KERBEROS<br /><br /> **10** -CERTIFICADO, NEGOTIATE<br /><br /> No acepta valores NULL.|  
+|**connection_auth**|**tinyint**|Tipo de autenticación de la conexión necesario para las conexiones con este extremo; uno de los siguientes:<br /><br /> **1** - NTLM<br /><br /> **2** - KERBEROS<br /><br /> **3** -NEGOCIAR<br /><br /> **4** - CERTIFICATE<br /><br /> **5** -NTLM, EL CERTIFICADO<br /><br /> **6** -KERBEROS, CERTIFICADO<br /><br /> **7** -NEGOTIATE, CERTIFICADOS<br /><br /> **8** -CERTIFICADO, NTLM<br /><br /> **9** - CERTIFICATE, KERBEROS<br /><br /> **10** -CERTIFICADO, NEGOTIATE<br /><br /> No acepta valores NULL.|  
 |**connection_auth_desc**|**nvarchar(60)**|Descripción del tipo de autenticación de conexión requerido para conexiones a este extremo. Es una de las opciones siguientes:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICATE<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE<br /><br /> QUE ACEPTA VALORES NULL.|  
 |**certificate_id**|**int**|Identificador del certificado utilizado para la autenticación, si lo hay.<br /><br /> 0 = Se está utilizando la Autenticación de Windows.|  
-|**encryption_algorithm**|**tinyint**|Algoritmo de cifrado. Los siguientes son los valores posibles con sus descripciones y las opciones correspondientes de DDL.<br /><br /> **0** : NINGUNO. Opción DDL correspondiente: deshabilitado.<br /><br /> **1** : RC4. Opción DDL correspondiente: {necesario &#124; necesita el algoritmo RC4}.<br /><br /> **2** : AES. Opción DDL correspondiente: requiere el algoritmo AES.<br /><br /> **3** : NONE, RC4. Opción DDL correspondiente: {admitidas &#124; admite el algoritmo RC4}.<br /><br /> **4** : NINGUNO, AES. Opción DDL correspondiente: admite el algoritmo AES.<br /><br /> **5** : RC4, AES. Opción DDL correspondiente: requiere el algoritmo RC4 AES.<br /><br /> **6** : AES, RC4. Opción DDL correspondiente: requiere el algoritmo AES RC4.<br /><br /> **7** : NONE, RC4, AES. Opción DDL correspondiente: admite el algoritmo RC4 AES.<br /><br /> **8** : NINGUNO, AES, RC4. Opción DDL correspondiente: admite el algoritmo AES RC4.<br /><br /> No acepta valores NULL.|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|Descripción del algoritmo de cifrado. Los valores posibles y sus opciones correspondientes de DDL se enumeran a continuación:<br /><br /> Ninguno: deshabilitado<br /><br /> RC4: {necesario &#124; requiere el algoritmo RC4}<br /><br /> AES: Se necesita el algoritmo AES<br /><br /> NONE, RC4: {admite &#124; admite el algoritmo RC4}<br /><br /> Ninguno, AES: Admite el algoritmo AES<br /><br /> RC4, AES: Requiere el algoritmo RC4 AES<br /><br /> AES, RC4: Se necesita el algoritmo AES RC4<br /><br /> NONE, RC4, AES: Admite el algoritmo RC4 AES<br /><br /> Ninguno, AES, RC4: Admite el algoritmo AES RC4<br /><br /> QUE ACEPTA VALORES NULL.|  
+|**encryption_algorithm**|**tinyint**|Algoritmo de cifrado. Los siguientes son los valores posibles con sus descripciones y las opciones correspondientes de DDL.<br /><br /> **0** : NONE. Opción DDL correspondiente: Deshabilitado.<br /><br /> **1** :  RC4. Opción DDL correspondiente: {necesario &#124; necesita el algoritmo RC4}.<br /><br /> **2** : AES. Opción DDL correspondiente: Necesita el algoritmo AES.<br /><br /> **3** : NONE, RC4. Opción DDL correspondiente: {admitidas &#124; admite el algoritmo RC4}.<br /><br /> **4** : NINGUNO, AES. Opción DDL correspondiente: Se admite el algoritmo AES.<br /><br /> **5** : RC4, AES. Opción DDL correspondiente: Requiere el algoritmo RC4 AES.<br /><br /> **6** : AES, RC4. Opción DDL correspondiente: Se necesita el algoritmo AES RC4.<br /><br /> **7** : NONE, RC4, AES. Opción DDL correspondiente: Admite el algoritmo RC4 AES.<br /><br /> **8** : NONE, AES, RC4. Opción DDL correspondiente: Se admite el algoritmo AES RC4.<br /><br /> No acepta valores NULL.|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|Descripción del algoritmo de cifrado. Los valores posibles y sus opciones correspondientes de DDL se enumeran a continuación:<br /><br /> NINGUNO: Deshabilitado<br /><br /> RC4: {necesario &#124; requiere el algoritmo RC4}<br /><br /> AES: Necesita el algoritmo AES<br /><br /> NONE, RC4: {admite &#124; admite el algoritmo RC4}<br /><br /> NINGUNO, AES: Se admite el algoritmo AES<br /><br /> RC4, AES : Requiere el algoritmo RC4 AES<br /><br /> AES, RC4: Se necesita el algoritmo AES RC4<br /><br /> NONE, RC4, AES: Admite el algoritmo RC4 AES<br /><br /> NINGUNO, AES, RC4: Se admite el algoritmo AES RC4<br /><br /> QUE ACEPTA VALORES NULL.|  
   
 ## <a name="remarks"></a>Comentarios  
   

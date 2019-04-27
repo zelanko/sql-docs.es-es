@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 554f226c3b6ca1fa3a753947b08a3fea3d6946c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740757"
 ---
 # <a name="understanding-the-database-schemas"></a>Descripción de esquemas de base de datos
   El Asistente para generar esquemas genera un esquema relacional sin normalizar para la base de datos del área de asunto basado en las dimensiones y grupos de medida de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El asistente genera una tabla relacional por dimensión para almacenar los datos de dimensión que se denomina tabla de dimensión y una tabla relacional por grupo de medida para almacenar los datos de hechos que se denomina tabla de hechos. Al generar las tablas relacionales, el asistente omite las dimensiones vinculadas, los grupos de medida vinculados y las dimensiones de tiempo de servidor.  
@@ -45,7 +45,7 @@ ms.locfileid: "48133435"
  En cada dimensión, el Asistente para generar esquemas genera una tabla de dimensión que debe incluirse en la base de datos del área de asunto. La estructura de una tabla de dimensión depende de las selecciones realizadas al diseñar la dimensión en la que se basa.  
   
  Columnas  
- El asistente genera una columna para los enlaces asociados a cada atributo de la dimensión en el que se basa la tabla de dimensiones, como los enlaces para el `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn`y `UnaryOperatorColumn`propiedades de cada atributo.  
+ El asistente genera una columna para los enlaces asociados a cada atributo de la dimensión en la que se basa la tabla de dimensiones, como los enlaces para las propiedades `KeyColumns`, `NameColumn`, `ValueColumn`, `CustomRollupColumn`, `CustomRollupPropertiesColumn` y `UnaryOperatorColumn` de cada atributo.  
   
  Relaciones  
  El asistente genera una relación entre la columna de cada atributo primario y la clave principal de la tabla de dimensión.  
@@ -65,7 +65,7 @@ ms.locfileid: "48133435"
  En cada grupo de medida de un cubo, el Asistente para generar esquemas genera una tabla de hechos que debe incluirse en la base de datos del área de asunto. La estructura de la tabla de hechos depende de las selecciones realizadas al diseñar el grupo de medida en el que se basa y las relaciones establecidas entre el grupo de medida y las dimensiones incluidas.  
   
  Columnas  
- El asistente genera una columna para cada medida, excepto para las medidas que usan el `Count` función de agregación. Dichas medidas no precisan una columna correspondiente en la tabla de hechos.  
+ El asistente genera una columna por medida, excepto para las medidas que utilizan la función de agregación `Count`. Dichas medidas no precisan una columna correspondiente en la tabla de hechos.  
   
  El asistente también genera una columna para cada columna de atributo de granularidad de cada relación de dimensión normal en el grupo de medida y una o más columnas para los enlaces asociados a cada atributo de una dimensión que tiene una relación de dimensión de hechos con el grupo de medida en el que se basa la tabla, si procede.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48133435"
  El asistente genera una tabla independiente para contener los valores traducidos de las propiedades en el grupo de medida que requieran una columna de traducción. El asistente también crea una columna independiente para cada idioma necesario.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Conversión de tipo de datos y longitudes predeterminadas  
- Asistente para generar esquemas omite los tipos de datos en todos los casos excepto las columnas que usan el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tipo de datos. El `wchar` tamaño de los datos se traduce directamente en el `nvarchar` tipo de datos. Sin embargo, si la longitud especificada de una columna que utiliza el tamaño `wchar` es superior a 4.000 bytes, el Asistente para generar esquemas registrará un error.  
+ Asistente para generar esquemas omite los tipos de datos en todos los casos excepto las columnas que usan el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `wchar` tipo de datos. El tamaño de datos `wchar` traduce directamente al tipo de datos `nvarchar`. Sin embargo, si la longitud especificada de una columna que utiliza el tamaño `wchar` es superior a 4.000 bytes, el Asistente para generar esquemas registrará un error.  
   
  Si un elemento de datos, como el enlace de un atributo, no posee una longitud especificada, se utilizará en la columna la longitud predeterminada que se muestra en la siguiente tabla.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48133435"
 |UnaryOperatorColumn|1|  
   
 ## <a name="see-also"></a>Vea también  
- [Descripción de la generación Incremental](understanding-incremental-generation.md)   
+ [Descripción de la generación incremental](understanding-incremental-generation.md)   
  [Administrar los cambios de las vistas del origen de datos y los orígenes de datos](manage-changes-to-data-source-views-and-data-sources.md)  
   
   

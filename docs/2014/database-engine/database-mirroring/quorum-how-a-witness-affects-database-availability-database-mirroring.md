@@ -1,5 +1,5 @@
 ---
-title: 'Quórum: Cómo un testigo afecta a la disponibilidad de la base de datos (creación de reflejo de base de datos) | Microsoft Docs'
+title: 'Cuórum: Cómo un testigo afecta a la disponibilidad de la base de datos (creación de reflejo de base de datos) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,13 +22,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754418"
 ---
-# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quórum: Cómo un testigo afecta a la disponibilidad de la base de datos (creación de reflejo de base de datos)
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Cuórum: Cómo un testigo afecta a la disponibilidad de la base de datos (creación de reflejo de base de datos)
   Siempre que se establece un testigo para una sesión de creación de reflejo de la base de datos, es necesario disponer de *quórum* . Quórum es una relación que existe cuando dos o más instancias de servidor en una sesión de creación de reflejo de la base de datos están conectadas entre sí. Normalmente, el quórum implica a tres instancias de servidor interconectadas. Cuando se establece un testigo, se requiere quórum para que la base de datos esté disponible. El quórum se ha diseñado para sesiones en modo de alta seguridad con conmutación automática por error y garantiza que una base de datos pertenezca a un solo asociado cada vez.  
   
  Si una instancia concreta de servidor se desconecta de una sesión de creación de reflejo, esa instancia pierde el quórum. Si no hay instancias de servidor conectadas, la sesión pierde el quórum y la base de datos no está disponible. Hay tres tipos de quórum posibles:  

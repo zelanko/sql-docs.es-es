@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2d15a32302aa5d7a4ee3ca087944effc017ce8c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747518"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>Seleccionar miembros (Asistente de Business Intelligence)
   Utilice la página **Seleccionar miembros** para determinar a qué miembros del Asistente de Business Intelligence se debe aplicar la función de conversión de moneda especificada en la página **Establecer las opciones de conversión de moneda** .  
@@ -48,7 +48,7 @@ ms.locfileid: "48105154"
 |**Medidas**|Seleccione la medida del grupo de medida de tarifas que contiene la tasa de cambio que se va a utilizar cuando se conviertan las medidas correspondientes al miembro seleccionado en **Miembro de la cuenta** .|  
   
  **Según el tipo de jerarquía de cuentas**  
- Seleccione esta opción para aplicar la función de conversión de moneda a todos los miembros de los atributos de la jerarquía de cuentas cuya `Type` propiedad está establecida en un tipo de cuenta especificado.  
+ Seleccione esta opción para aplicar la función de conversión de moneda a todos los miembros de los atributos de la jerarquía de cuentas, cuya propiedad `Type` esté establecida en un tipo de cuenta especificado.  
   
  Si está seleccionada, la cuadrícula muestra las opciones enumeradas en la siguiente tabla.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48105154"
 |**Medidas**|Seleccione la medida del grupo de medida de tarifas que contiene la tasa de cambio que se va a utilizar cuando se conviertan los miembros de los atributos utilizando el tipo de cuenta seleccionado en **Tipo de cuenta** .|  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de Business Intelligence F1 Ayuda](business-intelligence-wizard-f1-help.md)   
+ [Asistente de Business Intelligence (Ayuda F1)](business-intelligence-wizard-f1-help.md)   
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

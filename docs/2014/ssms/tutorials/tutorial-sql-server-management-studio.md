@@ -23,11 +23,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753467"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Tutorial: SQL Server Management Studio
   El tutorial [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] le muestra el entorno integrado para administrar la infraestructura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presenta una interfaz gráfica para configurar, supervisar y administrar instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También permite implementar, supervisar y actualizar los componentes de capa de datos usados por las aplicaciones, como bases de datos y almacenamientos de datos. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] también proporciona editores de lenguaje de [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX y XML para editar y depurar scripts.  
@@ -45,7 +45,7 @@ ms.locfileid: "48167315"
  [Lección 2: Escribir Transact-SQL](lesson-2-writing-transact-sql.md)  
  En esta lección, aprenderá a abrir el Editor de consultas, a administrar código y a utilizar otras características nuevas del editor.  
   
- [Lección 3: Trabajar con plantillas, soluciones, proyectos de script](lesson-3-working-with-templates-solutions-and-script-projects.md)  
+ [Lección 3: Trabajar con plantillas, soluciones y proyectos de Script](lesson-3-working-with-templates-solutions-and-script-projects.md)  
  En esta lección, aprenderá a usar las plantillas y a organizar los scripts en soluciones y proyectos.  
   
 ## <a name="requirements"></a>Requisitos  

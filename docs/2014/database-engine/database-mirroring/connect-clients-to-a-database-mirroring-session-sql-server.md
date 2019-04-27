@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755337"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a una sesión de creación de reflejo de la base de datos (SQL Server)
   Para conectarse a una sesión de creación de reflejo de la base de datos, un cliente puede usar SQL Native Client de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos proveedores de acceso a datos son totalmente compatibles con la creación de reflejo de la base de datos cuando se configuran para una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obtener información acerca de las consideraciones de programación para el uso de una base de datos reflejada, vea [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Además, la instancia del servidor principal actual debe estar disponible y el inicio de sesión del cliente se debe haber creado en la instancia del servidor. Para obtener más información, vea [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Las conexiones de cliente a una sesión de creación de reflejo de la base de datos no tienen relación con la instancia del servidor testigo, si existe alguno.  
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  El tiempo de reintento se calcula mediante la siguiente fórmula:  
   
- _RetryTime_ **=** _PreviousRetryTime_ **+ (** 0,08 **&#42;**  _LoginTimeout_**)**  
+ _TiempoDeReintento_ **=** _TiempoDeReintentoAnterior_ **+(** 0,08 **&#42;**_TiempoDeEsperaDeInicioDeSesión_**)**  
   
  Donde *PreviousRetryTime* es inicialmente 0.  
   
@@ -174,10 +174,10 @@ Server=123.34.45.56,4724;
   
 |Redondear|Cálculo de*RetryTime* |Tiempo de reintento por intento|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+ (** 0,08 **&#42;** 15 **)**|1,2 segundos|  
-|2|1.2 **+ (** 0,08 **&#42;** 15 **)**|2,4 segundos|  
-|3|2.4 **+ (** 0,08 **&#42;** 15 **)**|3,6 segundos|  
-|4|3.6 **+ (** 0,08 **&#42;** 15 **)**|4,8 segundos|   
+|1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 segundos|  
+|2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 segundos|  
+|3|2,4 **+(** 0,08 **&#42;** 15 **)**|3,6 segundos|  
+|4|3,6 **+(** 0,08 **&#42;** 15 **)**|4,8 segundos|   
   
  En la siguiente ilustración se muestran los tiempos de reintento para intentos de conexión sucesivos, cada uno de los cuales se agota.  
   

@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745486"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Especificar la profundidad en relaciones recursivas utilizando sql:max-depth
   En las bases de datos relacionales, cuando una tabla se relaciona consigo misma, este tipo de relación recibe el nombre de relación recursiva. Por ejemplo, en una relación supervisor-supervisado, una tabla que almacena los registros de empleados se relaciona consigo misma. En este caso, la tabla de empleados desempeña un rol de supervisor en uno de los lados de la relación y un rol de supervisado en el otro lado.  
@@ -96,7 +96,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Dado que la relación es recursiva, necesita algún modo de especificar la profundidad de recursión del esquema. De lo contrario, el resultado será una recursión sin fin (empleado subordinado directo de empleado subordinado directo de empleado, etc.). La anotación `sql:max-depth` permite especificar la profundidad de la recursión. En este ejemplo en concreto, para especificar un valor para `sql:max-depth`, debe conocer la profundidad de la jerarquía de dirección de la compañía.  
   
 > [!NOTE]  
->  El esquema especifica la anotación `sql:limit-field`, pero no especifica la anotación `sql:limit-value`. Esto limita el nodo superior de la jerarquía resultante únicamente a los empleados que no son subordinados directos de nadie. (ReportsTo es NULL.) Para hacerlo, hay que especificar la notación `sql:limit-field` pero no hay que especificar la notación `sql:limit-value` (cuyo valor predeterminado es NULL). Si desea que el código XML resultante incluya todos los árboles de informes posibles (el árbol de informes de cada empleado de la tabla), quite la anotación `sql:limit-field` del esquema.  
+>  El esquema especifica la anotación `sql:limit-field`, pero no especifica la anotación `sql:limit-value`. Esto limita el nodo superior de la jerarquía resultante únicamente a los empleados que no son subordinados directos de nadie. (ReportsTo es NULL). Especificar `sql:limit-field` y no especificar `sql:limit-value` (cuyo valor predeterminado es null) anotación lleva a cabo. Si desea que el código XML resultante incluya todos los árboles de informes posibles (el árbol de informes de cada empleado de la tabla), quite la anotación `sql:limit-field` del esquema.  
   
 > [!NOTE]  
 >  El siguiente procedimiento usa la base de datos tempdb.  
@@ -232,7 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Use la anotación `sql:max-depth` en el esquema para especificar la profundidad de recursión de una relación recursiva que se describa en el esquema. El valor de la `sql:max-depth` anotación es un entero positivo (de 1 a 50) que indica el número de recursiones:  Un valor de 1 detiene la recursión en el elemento para el que el `sql:max-depth` anotación se especifica; un valor de 2 detiene la recursión en el siguiente nivel del elemento en el que `sql:max-depth` se especifica; y así sucesivamente.  
   
 > [!NOTE]  
->  En la implementación subyacente, una consulta XPath que se especifique en un esquema de asignación se convierte en una consulta SELECT ... Consulta FOR XML EXPLICIT. Esta consulta exige que se especifique una profundidad finita de recursión. Cuanto mayor sea el valor que especifique para `sql:max-depth`, mayor será la consulta FOR XML EXPLICIT que se genere. Esto puede ralentizar el tiempo de recuperación.  
+>  En la implementación subyacente, una consulta XPath que se especifica en un esquema de asignación se convierte en una instrucción SELECT... Consulta FOR XML EXPLICIT. Esta consulta exige que se especifique una profundidad finita de recursión. Cuanto mayor sea el valor que especifique para `sql:max-depth`, mayor será la consulta FOR XML EXPLICIT que se genere. Esto puede ralentizar el tiempo de recuperación.  
   
 > [!NOTE]  
 >  Los diagramas de actualización y la carga masiva XML omiten la anotación max-depth. Esto significa que se llevarán a cabo inserciones o actualizaciones recursivas independientemente del valor que se especifique para max-depth.  

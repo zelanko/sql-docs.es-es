@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771441"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Crear la función para recuperar los datos modificados
   Después de completar el flujo de control para un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la tarea siguiente es crear una función con valores de tabla que recupere los datos modificados. Solo tiene que crear esta función una vez antes de la primera carga incremental.  
@@ -132,7 +132,7 @@ deallocate #hfunctions
   
 -   Todas las columnas de datos modificados solicitadas.  
   
--   Una columna denominada __CDC_OPERATION que usa un campo de uno o dos caracteres para identificar la operación que está asociada a la fila. Los valores válidos para este campo son como sigue: 'I' para insertar, d ' para la eliminación, 'UO' para actualizar valores antiguos y ' un ' para actualizar valores nuevos.  
+-   Una columna denominada __CDC_OPERATION que usa un campo de uno o dos caracteres para identificar la operación que está asociada a la fila. Los valores válidos para este campo son los siguientes: "I" para insertar, "D" para eliminar, "UO" para actualizar valores antiguos y "UN" para actualizar valores nuevos.  
   
 -   Marcas de actualización, si las pide, que aparecen como columnas de bits después del código de operación y en el orden especificado en el parámetro *@update_flag_list* . El nombre de estas columnas se obtiene anexando “_uflag” al nombre de columna asociado.  
   

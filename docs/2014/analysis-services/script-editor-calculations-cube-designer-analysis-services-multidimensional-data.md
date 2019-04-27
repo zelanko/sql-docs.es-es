@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7e1e411b8a4bb6b8b6d70bbacd783933958c70e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747829"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de script (pestaña Cálculo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Editor de script** de la pestaña **Cálculos** del Diseñador de cubos para modificar la expresión de un comando del script (en vista de formulario) o para modificar todo el script del cubo (en la Vista de script).  
@@ -30,7 +30,7 @@ ms.locfileid: "48197795"
 |**Expresión**|Escriba las expresiones MDX (Expresiones multidimensionales) y las instrucciones para el comando del script que ha seleccionado en el panel **Metadatos** (en la Vista de formulario) o para todo el script del cubo (en la Vista de script).<br /><br /> Arrastre los elementos seleccionados del panel **Herramientas de cálculo** hasta esta opción para incluir la sintaxis MDX para el elemento seleccionado.|  
   
 ## <a name="see-also"></a>Vea también  
- [Expresiones multidimensionales &#40;MDX&#41; referencia](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Referencia de expresiones multidimensionales &#40;MDX&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Barra de herramientas &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Organizador de script &#40;pestaña cálculos, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   

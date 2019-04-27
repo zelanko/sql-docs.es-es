@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 72719595ac4a5de901c6a470f4639631cb08b10c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774360"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>Temas de procedimientos de administración de servicios (Administrador de configuración de SQL Server)
   El [!INCLUDE[ssDE](../includes/ssde-md.md)] y el Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se ejecutan en los sistemas operativos [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows como servicios. Para obtener más información acerca de los servicios, vea [Manage the Database Engine Services](configure-windows/manage-the-database-engine-services.md).  

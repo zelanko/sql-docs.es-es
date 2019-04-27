@@ -25,18 +25,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea5ccba5686c9f3716fd6931909ec28a79e00b8a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747467"
 ---
 # <a name="memory-properties"></a>Propiedades de memoria
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de memoria de servidor que aparecen en la siguiente tabla. Para obtener información orientativa acerca de estas propiedades, vea la [Guía de operaciones de SQL Server 2008 R2 Analysis Services](https://go.microsoft.com/fwlink/?LinkID=225539).  
   
  Los valores comprendidos entre 1 y 100 representan porcentajes de **Memoria física total** o de **Espacio de direcciones virtuales**, lo que sea menor. Los valores superiores a 100 representan límites de memoria en bytes.  
   
- **Se aplica a:** modo de servidor multidimensional y tabular, a menos que se especifique lo contrario.  
+ **Se aplica a:** Modo de servidor multidimensional y Tabular, a menos que se indique lo contrario.  
   
 ## <a name="properties"></a>Propiedades  
  `LowMemoryLimit`  

@@ -12,18 +12,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e7a40b0cbcab787b6aa29abaa828aedcce8f5c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746807"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Utilidad de configuración del servidor (Complementos de minería de datos para Excel)
-  Al instalar los Complementos de minería de datos para Excel, también se instala una Utilidad de configuración del servidor, que se ejecuta la primera vez que se abren los complementos. En este tema se describe cómo emplear la utilidad para conectarse a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y configurar una base de datos para trabajar con modelos de minería de datos.  
+  Al instalar los complementos de minería de datos para Excel, una utilidad de configuración del servidor también se instala y se ejecutará la primera vez que abra los complementos. En este tema se describe cómo usar la utilidad para conectarse a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y configurar una base de datos para trabajar con modelos de minería de datos.  
   
 
   
-##  <a name="bkmk_step1"></a> Paso 1: Conectarse a Analysis Services  
+##  <a name="bkmk_step1"></a> Paso 1: Conectar a Analysis Services  
  Elija el servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que proporciona los algoritmos de minería de datos y almacena los modelos de minería de datos.  
   
  Cuando cree una conexión para habilitar la minería de datos, debe elegir un servidor en el que pueda probar con los modelos de minería de datos. Se recomienda crear una nueva base de datos en el servidor y dedicar la nueva base de datos a la minería de datos; o bien, pida al administrador que le prepare un servidor de minería de datos. De esa forma puede crear modelos sin afectar al rendimiento de otros servicios.  
@@ -45,7 +45,7 @@ ms.locfileid: "48069638"
   
  En primer lugar, el asistente detecta la configuración en el servidor que especificó. Si el servidor ya permite modelos de minería de datos temporales, haga clic en **siguiente** para continuar. El asistente también proporciona instrucciones sobre cómo habilitar modelos de minería de datos temporales en el servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] especificado o cómo realizar una solicitud al administrador de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-##  <a name="bkmk_step3"></a> Paso 3: Crear la base de datos para los usuarios:  
+##  <a name="bkmk_step3"></a> Paso 3: Crear base de datos para los usuarios:  
  En esta página del asistente para instalación y configuración, puede crear una base de datos nueva dedicada a la minería de datos o puede seleccionar una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] existente.  
   
 > [!WARNING]  
@@ -67,7 +67,7 @@ ms.locfileid: "48069638"
  **Base de datos**  
  Si eligió la opción para usar una base de datos existente, debe seleccionar el nombre de la base de datos en la lista.  
   
-##  <a name="bkmk_step4"></a> Paso 4: Conceder los permisos adecuados en Agregar usuarios  
+##  <a name="bkmk_step4"></a> Paso 4: Conceder los permisos adecuados de complemento de usuarios  
  Debe asegurarse de que tanto usted como los demás usuarios que van a emplear los complementos tienen los permisos necesarios para examinar, editar, procesar o crear estructuras y modelos de minería de datos.  
   
  De forma predeterminada, para usar los complementos se requiere la autenticación integrada de Windows.  

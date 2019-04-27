@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746278"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Especificar convenciones de nomenclatura (Asistente para generar esquemas) (Analysis Services - Datos multidimensionales)
   Utilice la página **Especificar convenciones de nomenclatura** para definir las convenciones de nomenclatura que el Asistente para generar esquemas utiliza al crear objetos de esquemas.  
@@ -29,7 +29,7 @@ ms.locfileid: "48226255"
   
 |Opción|Descripción|  
 |------------|-----------------|  
-|**Separador**|Especifica el carácter que separa las palabras en el nombre de un objeto. En la columna **Valor** , seleccione **Carácter de subrayado**, **Espacio**o **Ninguno**. El valor predeterminado es **Carácter de subrayado**.|  
+|**Separator**|Especifica el carácter que separa las palabras en el nombre de un objeto. En la columna **Valor** , seleccione **Carácter de subrayado**, **Espacio**o **Ninguno**. El valor predeterminado es **Carácter de subrayado**.|  
 |**Prefijo de columna de clave principal**|Especifica la cadena del prefijo correspondiente al nombre de cada columna de clave principal. El valor predeterminado es **PK**.|  
 |**Prefijo de columna de clave externa**|Especifica la cadena del prefijo correspondiente al nombre de cada columna de clave externa. El valor predeterminado es **FK**.|  
 |**Sufijo de nombre de atributo**|Especifica la cadena que se debe anexar al nombre de cada columna de atributos. El valor predeterminado es **Nombre**.|  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 142a775415da489e67bc00b048651209a2a30179
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757242"
 ---
 # <a name="delete-a-table-ssas-tabular"></a>Eliminar una tabla (SSAS tabular)
   En el diseñador de modelos, puede eliminar las tablas de la base de datos del área de trabajo del modelo que no necesite. Eliminar una tabla no afecta a los datos de origen originales, solo a los datos que importó y con los que trabajó. No puede deshacer la eliminación de una tabla.  
@@ -34,6 +34,6 @@ ms.locfileid: "48224765"
 -   Si creó alguna columna calculada usando esa tabla, también se eliminan las columnas de esa tabla; cualquier columna calculada de otras tablas que usen columnas de la tabla eliminada mostrará un error.  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas y columnas &#40;Tabular de SSAS&#41;](tables-and-columns-ssas-tabular.md)  
+ [Definir tablas y columnas &#40;SSAS tabular&#41;](tables-and-columns-ssas-tabular.md)  
   
   

@@ -16,11 +16,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98d595be891fbae75cfe90d06ceccec232e7e53e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772294"
 ---
 # <a name="sql-server-2014-product-specifications"></a>Especificaciones de producto de SQL Server 2014
   Los temas de la tabla siguiente proporcionan detalles de especificaciones de producto para esta versión:  

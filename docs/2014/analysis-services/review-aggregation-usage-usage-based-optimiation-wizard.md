@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a50c241bc70d48577b558827a278d5423ee8344b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748257"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>Revisar el uso de agregaciones (Asistente para optimización basada en el uso)
   Utilice la página **Revisar el uso de agregaciones** para configurar el uso de agregaciones.  
@@ -33,7 +33,7 @@ ms.locfileid: "48164055"
  **Ninguno**  
  Seleccione esta opción para establecer la configuración del uso de agregaciones del atributo en None. Con esta configuración ninguna agregación del cubo puede incluir el atributo.  
   
- **Sin restricciones**  
+ **Unrestricted**  
  Seleccione esta opción para establecer la configuración del uso de agregaciones del atributo en Unrestricted. Esta configuración impide que se coloquen las restricciones en el diseñador de agregaciones. Sin embargo, el atributo todavía se tiene que evaluar para determinar si es un candidato importante de la agregación.  
   
  **Establezca todas en la configuración predeterminada**  

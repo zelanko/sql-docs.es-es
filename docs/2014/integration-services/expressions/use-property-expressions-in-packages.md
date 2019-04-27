@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768861"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expresiones de propiedad en paquetes
   Una expresión de propiedad es una expresión asignada a una propiedad para permitir la actualización dinámica de la propiedad en tiempo de ejecución. Por ejemplo, una expresión de propiedad puede actualizar la línea Para que utiliza una tarea Enviar correo, insertando una dirección de correo electrónico almacenada en una variable.  
@@ -125,7 +125,7 @@ ms.locfileid: "58376047"
   
  Si el nombre del paquete es EmailRowCountPP, se ejecutó el 4 de marzo de 2005 y la duración de la ejecución fue de 9 segundos, la expresión se evalúa como la cadena siguiente.  
   
- PExpression--> paquete: (EmailRowCountPP) Iniciado: 3/4/2005 segundos de duración: 9 de 11:06:18 A.M.  
+ PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Expresión de propiedad para el cuerpo de un mensaje de correo electrónico  
  Se puede usar la siguiente expresión de propiedad para establecer la propiedad MessageSource de una tarea Enviar correo. La expresión utiliza una combinación de literales de cadena, variables definidas por el usuario y el operador de concatenación (+). Las variables definidas por el usuario se denominan `nasdaqrawrows`, `nyserawrows`y `amexrawrows`. La cadena "\n" indica un retorno de carro.  

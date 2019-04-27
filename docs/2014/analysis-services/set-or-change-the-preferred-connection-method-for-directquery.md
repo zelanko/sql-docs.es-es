@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5c4e2c19fb768849c3418874b4f1a831fae858c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746617"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Establecer o cambiar el método de conexión preferido para DirectQuery
   Al crear un modelo para utilizarlo en el modo DirectQuery, primero debe configurar el entorno de diseño para que admita el uso de DirectQuery. Para ello, consulte [habilitar el modo de diseño de DirectQuery &#40;Tabular de SSAS&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
@@ -33,17 +33,17 @@ ms.locfileid: "48186695"
   
 ### <a name="to-set-the-preferred-connection-method-for-a-directquery-model"></a>Para establecer el método de conexión preferido para un modelo DirectQuery  
   
-1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el archivo de solución para el modelo de DirectQuery.  
+1.  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], abra el archivo de solución para el modelo DirectQuery.  
   
 2.  En el menú **Proyecto** de Visual Studio, seleccione **Propiedades**.  
   
 3.  En el panel **Propiedades** , cambie la propiedad **DirectQueryMode**a uno de los valores que admita el uso de DirectQuery:  
   
-    -   **InMemory con DirectQuery**: si utiliza esta opción, el modelo se implementará, pero deberá procesar la memoria caché para poder ejecutar consultas en él.  
+    -   **InMemory con DirectQuery**: Si usa esta opción, se implementa el modelo, pero debe procesar la memoria caché antes de poder ejecutar consultas en el modelo.  
   
-    -   **DirectQuery con InMemory**: si utiliza esta opción, la caché estará disponible para los clientes si ya se ha procesado. Si implementa el modelo con esta configuración y no procesa la caché, algunos clientes obtendrán un error al intentar conectarse con el modelo.  
+    -   **DirectQuery con InMemory**: Si usa esta opción, la caché estará disponible para los clientes si ya se ha procesado. Si implementa el modelo con esta configuración y no procesa la caché, algunos clientes obtendrán un error al intentar conectarse con el modelo.  
   
-    -   **Solo DirectQuery**: si utiliza esta opción, los metadatos se implementarán pero el modelo no contendrá ningún dato. Los clientes que intenten conectarse mediante el modo en memoria obtendrán un error que indicará que el modelo no existe o que no se ha procesado.  
+    -   **Solo DirectQuery**: Si usa esta opción, los metadatos se implementarán pero el modelo no tiene datos en ella. Los clientes que intenten conectarse mediante el modo en memoria obtendrán un error que indicará que el modelo no existe o que no se ha procesado.  
   
 4.  Si hay errores, abra la **Lista de errores** en Visual Studio y solucione los problemas que impiden que el modelo se implemente en el modo DirectQuery.  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b3d122ba2c23202e44db7b0677062135ab7ba5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743650"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Coincidencia de nombres (Asistente para vistas del origen de datos) (Analysis Services)
   Use la página **Coincidencia de nombres** para seleccionar el criterio que desea utilizar para detectar las posibles relaciones entre las tablas seleccionadas para la vista del origen de datos y las demás tablas del esquema. Si no existen relaciones de claves externas físicas entre las tablas, este criterio le permitirá identificar y agregar las tablas relacionadas a la vista del origen de datos. Las relaciones lógicas identificadas por la coincidencia de nombres también se agregan a la vista del origen de datos.  

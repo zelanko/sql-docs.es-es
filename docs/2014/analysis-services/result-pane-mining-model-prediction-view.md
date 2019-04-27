@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30393fd4233e0e6b1707de36fb881e97b626d1f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748217"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>Panel de resultados (Vista Predicción de modelo de minería de datos)
   En el panel de **resultados** se muestran los resultados de la consulta de predicciones de minería de datos diseñada en la vista **Diseño** del Generador de consultas de predicción. Puede copiar una selección de la cuadrícula o la cuadrícula completa de resultados en el Portapapeles.  
@@ -37,7 +37,7 @@ ms.locfileid: "48071185"
  Vuelve a procesar la consulta de predicción.  
   
 ## <a name="see-also"></a>Vea también  
- [Generador de consultas de predicción &#40;minería de datos&#41;](prediction-query-builder-data-mining.md)   
+ [Generador de consultas de predicción &#40;Minería de datos&#41;](prediction-query-builder-data-mining.md)   
  [Interfaces de consultas de minería de datos](data-mining/data-mining-query-tools.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)  
   

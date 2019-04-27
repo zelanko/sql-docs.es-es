@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d5545d6a6d0deca345207ec73a039e7abe841ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746508"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>Análisis de la cesta de compras (Herramientas de análisis de tabla para Excel)
   ![Herramienta cesta](media/tat-shopbskt.gif "herramienta cesta de la compra")  
@@ -76,9 +76,9 @@ ms.locfileid: "48049755"
 ### <a name="minimum-support"></a>Compatibilidad mínima  
  *Soporte mínimo* significa el número de transacciones que debe contener un conjunto de elementos determinado para el conjunto de elementos que se consideran significativas. Por ejemplo, puede no estar interesado en un conjunto de elementos a menos que se haya comprado en al menos 10 transacciones diferentes. Hay dos maneras de controlar el umbral de importancia del conjunto de elementos, y ambas usan el **soporte mínimo** parámetro.  
   
- **Como un valor absoluto:** escriba un número que representa el recuento de transacciones que contienen los elementos de destino. Por ejemplo, si escribe 10, cualquier conjunto de elementos que aparezca en al menos 10 cestas de la compra estará incluido en los resultados.  
+ **Como un valor absoluto:** Escriba un número que representa el recuento de transacciones que contienen los elementos de destino. Por ejemplo, si escribe 10, cualquier conjunto de elementos que aparezca en al menos 10 cestas de la compra estará incluido en los resultados.  
   
- **Como un porcentaje:** escriba un número que representa un porcentaje de toda la colección de conjuntos de elementos. Por ejemplo, si especifica 10, se cuentan todos los conjuntos de elementos y el conjunto de elementos de destino debe constituir al menos el 10 por ciento del número total de conjuntos de elementos. Si tiene un conjunto de datos de gran tamaño, el uso de porcentajes en lugar de recuentos puede ayudarle a centrarse en las agrupaciones de elementos más importantes.  
+ **Como un porcentaje:** Escriba un número que representa un porcentaje de toda la colección de conjuntos de elementos. Por ejemplo, si especifica 10, se cuentan todos los conjuntos de elementos y el conjunto de elementos de destino debe constituir al menos el 10 por ciento del número total de conjuntos de elementos. Si tiene un conjunto de datos de gran tamaño, el uso de porcentajes en lugar de recuentos puede ayudarle a centrarse en las agrupaciones de elementos más importantes.  
   
 > [!NOTE]  
 >  No olvide que el número de conjuntos de elementos es distinto del número de transacciones de los datos. Cada transacción puede contener varios conjuntos de elementos; sin embargo, la mayoría de éstos se repiten varias veces en el conjunto de datos.  

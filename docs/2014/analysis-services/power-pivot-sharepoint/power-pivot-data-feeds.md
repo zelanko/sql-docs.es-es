@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a3d1c457d44edac0fbc4c09060eb6c33a0353f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749246"
 ---
 # <a name="powerpivot-data-feeds"></a>Fuentes de distribución de datos de PowerPivot
   Una fuente de distribución de datos proporciona una flujo de datos a petición de un origen de datos con conexión a una aplicación cliente. En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar las fuentes de datos para agregar datos desde un servicio Web preparados para Atom o una aplicación a un origen de datos de PowerPivot en un libro de Excel.  

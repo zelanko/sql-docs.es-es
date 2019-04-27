@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: deae929c1e01939d6caeb4d9fa49b3c7fe73fd0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756477"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Cálculos, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Barra de herramientas** para realizar operaciones comunes en la pestaña **Cálculos** del Diseñador de cubos.  
@@ -27,7 +27,7 @@ ms.locfileid: "48090865"
 |------------|-----------------|  
 |**Agregar Business Intelligence**|Haga clic en esta opción para mostrar el **Asistente de Business Intelligence** y agregar características de Business Intelligence al cubo.|  
 |**Procesar**|Haga clic en esta opción para mostrar el cuadro de diálogo **Procesar** y procesar el cubo.|  
-|**Volver a conectar**|Haga clic para volver a conectar la pestaña **Cálculos** a la instancia y base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene el cubo si se desconecta la sesión de la pestaña **Cálculos** por pérdida de conexión o exceso de tiempo de espera.|  
+|**Reconnect**|Haga clic para volver a conectar la pestaña **Cálculos** a la instancia y base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene el cubo si se desconecta la sesión de la pestaña **Cálculos** por pérdida de conexión o exceso de tiempo de espera.|  
 |**Nuevo miembro calculado**|Haga clic para mostrar el **Editor de Formulario de miembro calculado** y crear un nuevo miembro calculado. Esta opción solamente se habilita en la vista de formulario.|  
 |**Nuevo conjunto con nombre**|Haga clic para mostrar el **Editor de Formulario de conjuntos con nombres** y crear un nuevo conjunto con nombre. Esta opción solamente se habilita en la vista de formulario.|  
 |**Nuevo comando de Script**|Haga clic para mostrar el **Editor de script** y crear un nuevo comando de script. Esta opción solamente se habilita en la vista de formulario.|  

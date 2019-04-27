@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5e23ca8ccf344ec9f250eac032946ac074a735d
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752532"
 ---
 # <a name="lesson-5-create-calculated-columns"></a>Lección 5: Crear columnas calculadas
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -26,7 +26,7 @@ Creará cinco columnas calculadas nuevas en tres tablas diferentes. Los pasos so
 Tiempo estimado para completar esta lección: **15 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
-Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 4: crear relaciones](../analysis-services/lesson-4-create-relationships.md). 
+Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 4: Crear relaciones](../analysis-services/lesson-4-create-relationships.md). 
   
 ## <a name="create-calculated-columns"></a>Crear columnas calculadas  
   
@@ -52,7 +52,7 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
   
 5.  Cambiar el nombre de esta columna a **MonthCalendar**. 
 
-    ![como-tabular-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
+    ![as-tabular-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
   
 La columna calculada MonthCalendar proporciona un nombre ordenable del mes.  
   
@@ -122,12 +122,12 @@ La columna calculada ProductCategoryName se usa para crear una jerarquía en la 
   
 5.  Arrastre la columna entre la **SalesAmount** columna y el **TaxAmt** columna. 
  
-      ![como-tabular-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
+      ![as-tabular-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
       
     La columna calculada margen se utiliza para analizar los márgenes de beneficios de cada venta.  
   
 ## <a name="whats-next"></a>¿Qué sigue?
-Vaya a la siguiente lección: [lección 6: crear medidas](../analysis-services/lesson-6-create-measures.md).
+Vaya a la lección siguiente: [Lección 6: Crear medidas](../analysis-services/lesson-6-create-measures.md).
   
   
   

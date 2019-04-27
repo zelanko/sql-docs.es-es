@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773501"
 ---
 # <a name="view-project-history"></a>Ver el historial del proyecto
   El historial de un proyecto de [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe (VSS) incluye una lista de todas las acciones realizadas en cada uno de los archivos de ese proyecto, incluida la creación, la adición, la eliminación y la recuperación de un archivo.  

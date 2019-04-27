@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 050be457b1b7915e4354e8a0edf2fe79fabf8d67
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756821"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Explorador, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Utilice las características de la **Barra de herramientas** del Diseñador de cubos para realizar operaciones comunes al diseñar o examinar un cubo o su objeto, o al crear una consulta MDX. Entre las operaciones comunes en tiempo de diseño y a la vista de consulta se halla la configuración del contexto de usuario, el procesamiento de objetos y la configuración del idioma predeterminado.  
@@ -29,11 +29,11 @@ ms.locfileid: "48126475"
 |**Importar**|Importa una consulta existente desde un archivo de definición de informe (.rdl) del sistema de archivos.|  
 |![Cambiar a la vista de la consulta MDX](media/rsqdicon-commandtypemdx.gif "Cambiar a la vista de la consulta MDX")|Cambia al tipo de comando MDX.|  
 |![Actualizar datos de resultados](media/rsqdicon-refresh.gif "Actualizar datos de resultados")|Actualiza los metadatos desde el origen de datos.|  
-|![Agregar un miembro calculado](media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado")|Muestra el cuadro de diálogo **Generador de miembros calculados** .|  
+|![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member")|Muestra el cuadro de diálogo **Generador de miembros calculados** .|  
 |![Alternar para mostrar celdas vacías](media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías")|Muestra y oculta las celdas vacías del panel Datos. Esto equivale a utilizar la cláusula NON EMPTY en MDX.|  
 |![Ejecutar la consulta automáticamente](media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente")|Ejecuta automáticamente la consulta y muestra el resultado cada vez que se realiza un cambio. Los resultados se mostrarán en el panel Datos.|  
 |![Botón Mostrar agregaciones](media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones")|Muestra agregaciones en el panel Datos.|  
-|![Eliminar](media/rsqdicon-delete.gif "eliminar")|Elimina la columna seleccionada en el panel Datos de la consulta.|  
+|![Eliminar](media/rsqdicon-delete.gif "Eliminar")|Elimina la columna seleccionada en el panel Datos de la consulta.|  
 |![Icono del cuadro de diálogo Parámetros de consulta](media/iconqueryparameter.gif "Icono del cuadro de diálogo Parámetros de consulta")|Muestra el cuadro de diálogo **Parámetros de consulta** . Al especificar valores para un parámetro de consulta, se crea automáticamente un parámetro con el mismo nombre.|  
 |![Botón Preparar consulta](media/rsqdicon-preparequery.gif "Botón Preparar consulta")|Prepara la consulta.|  
 |![Ejecutar la consulta](media/rsqdicon-run.gif "Ejecutar la consulta")|Ejecuta la consulta y muestra los resultados en el panel Datos.|  
@@ -44,7 +44,7 @@ ms.locfileid: "48126475"
   
 -   **Editar como texto**  
   
--   **Agregar miembro calculado** (![Agregar miembro calculado](media/rsqdicon-addcalculatedmember.gif "Agregar miembro calculado"))  
+-   **Agregar miembro calculado** (![Add calculated member](media/rsqdicon-addcalculatedmember.gif "Add calculated member"))  
   
 -   **Mostrar celdas vacías** (![Alternar para mostrar celdas vacías](media/rsqdicon-showemptycells.gif "Alternar para mostrar celdas vacías"))  
   
@@ -58,10 +58,10 @@ ms.locfileid: "48126475"
 |------------|-----------------|  
 |**Procesar**|Haga clic en esta opción para mostrar el cuadro de diálogo **Procesar** y procesar el cubo. Para obtener más información sobre el cuadro de diálogo **Proceso**, vea [Cuadro de diálogo Proceso &#40;Analysis Services - Datos multidimensionales&#41;](process-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Cambiar usuario**|Haga clic para mostrar el cuadro de diálogo **Contexto de seguridad** y cambiar el usuario y el rol usados en la pestaña **Explorador** . Para obtener más información sobre el cuadro de diálogo **Contexto de seguridad**, vea [Cuadro de diálogo Contexto de seguridad &#40;Analysis Services - Datos multidimensionales&#41;](security-context-dialog-box-analysis-services-multidimensional-data.md).|  
-|**Volver a conectar**|Haga clic para volver a conectar la pestaña **Cálculos** a la instancia y base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene el cubo si se desconecta la sesión de la pestaña **Explorador** por pérdida de conexión o exceso de tiempo de espera.|  
+|**Reconnect**|Haga clic para volver a conectar la pestaña **Cálculos** a la instancia y base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene el cubo si se desconecta la sesión de la pestaña **Explorador** por pérdida de conexión o exceso de tiempo de espera.|  
 |**Actualizar**|Haga clic para actualizar los paneles **Metadatos** e **Informes** .|  
 |**Orden ascendente**|Haga clic para ordenar los elementos del mismo nivel de la fila seleccionada en el panel **Informe** en orden ascendente para el idioma especificado en **Idioma**.<br /><br /> **Nota** Solo se habilitará esta opción si se selecciona una celda en el panel **Informes**.|  
-|**Orden descendente**|Haga clic para ordenar los elementos del mismo nivel de la fila seleccionada en el panel **Informe** en orden descendente para el idioma especificado en **Idioma**.<br /><br /> Nota: Solo se habilitará esta opción si se selecciona una celda en el panel **Informes** .|  
+|**Orden descendente**|Haga clic para ordenar los elementos del mismo nivel de la fila seleccionada en el panel **Informe** en orden descendente para el idioma especificado en **Idioma**.<br /><br /> Nota: Esta opción está habilitada sólo si una celda de la **informes** panel está seleccionado.|  
 |**Autofiltro**|Haga clic para filtrar automáticamente los resultados en el panel **Resultado** .|  
 |**Mostrar sólo superior o inferior**|Seleccione un valor o porcentaje para mostrar solamente el número o porcentaje máximo o mínimo de celdas en el panel **Informe** según la medida seleccionada.<br /><br /> Para obtener más información sobre esta opción, vea [TopCount &#40;MDX&#41;](/sql/mdx/topcount-mdx), [TopPercent &#40;MDX&#41;](/sql/mdx/toppercent-mdx), [BottomCount &#40;MDX&#41;](/sql/mdx/bottomcount-mdx) y [BottomPercent &#40;MDX&#41;](/sql/mdx/bottompercent-mdx).|  
 |**Subtotal**|Haga clic para mostrar los subtotales.|  

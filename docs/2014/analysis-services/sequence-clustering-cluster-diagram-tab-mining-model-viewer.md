@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95763dca9e5a617e3fdc1c4d1d69b45e6679a392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746787"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>Pestaña Diagrama de agrupación en clústeres de secuencia (Visor de modelos de minería de datos)
   La pestaña **Diagrama del clúster** del **Visor de agrupación en clústeres de secuencia de Microsoft** proporciona una vista gráfica de todos los clústeres que contiene el modelo de agrupación en clústeres de secuencia.  
   
  Utilice esta vista de un modelo de agrupación en clústeres de secuencia para obtener detalles de cada clúster para llegar a los casos de apoyo, si la obtención de detalles se ha habilitado. También puede asignar nombres descriptivos a los clústeres y cambiar la variable de sombreado para evaluar la distribución de valores de un vistazo  
   
- **Para más información:** [Algoritmo de clústeres de secuencia de Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md), [Examinar un modelo usando el Visor de clústeres de secuencia de Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Para obtener más información:** [Algoritmo de clústeres de secuencia de Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md), [examinar un modelo usando el Visor de clústeres de secuencia de Microsoft](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del Visor**  
@@ -34,7 +34,7 @@ ms.locfileid: "48174205"
  **Modelo de minería de datos**  
  Elija esta opción para ver un modelo de minería de datos que se encuentra en la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Visor**  
+ **Viewer**  
  Elija un visor que desee usar para explorar el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado o el **Visor de árbol de contenido genérico de Microsoft**. También puede utilizar visores de complemento si están disponibles.  
   
  **Acercar**  
@@ -70,14 +70,14 @@ ms.locfileid: "48174205"
  **Variable de sombreado**  
  Seleccione un atributo del modelo de minería de datos para utilizar para sombrear el diagrama del clúster.  
   
- **State**  
+ **Estado**  
  Seleccione un estado que se corresponda con la **Variable de sombreado**. Por ejemplo, si quiere ver las secuencias en las que se incluye un producto determinado, seleccione la columna [Product] como el atributo de **Variable de sombreado**y seleccione el nombre del producto concreto como el valor de **Estado** .  
   
- **Vínculos**  
+ **Links**  
  Las líneas del diagrama indican las asociaciones entre los clústeres de secuencia. Puede ajustar el número de vínculos que muestra el visor ajustando el control deslizante situado a la derecha de los clústeres. Si desplaza el control deslizante hacia abajo, sólo se verán los vínculos más similares.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b704f24379a0d56f738b28f9553cf03d214b9e3c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780590"
 ---
 # <a name="string-utility-functions-sample"></a>Ejemplo de funciones de la utilidad String
   El ejemplo de funciones de la utilidad String contiene una función con valores de tabla de transmisión de datos, escrita en Visual C# y Visual Basic, que divide una cadena delimitada por comas en una tabla con una columna. También contiene una función de agregado que convierte una columna de cadenas en una cadena delimitada por comas.  Además, se implementan una función escalar y una función con valores de tabla que permiten reemplazar y buscar expresiones regulares.  

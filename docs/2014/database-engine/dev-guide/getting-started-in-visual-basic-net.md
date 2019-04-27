@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bfaf73d82eaa61753d958941cb1b633f8098e975
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781573"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Introducción a Visual Basic .NET
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET en uno de los lenguajes de programación administrados compatibles con la biblioteca en tiempo de ejecución común en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Muchos de los ejemplos en esta documentación se escriben [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Puede utilizar [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] y [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] para desarrollar aplicaciones SMO.  

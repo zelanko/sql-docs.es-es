@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eb0d8dc1c8a60a3546c24e6d7bcd0faa600769bc
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58383118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771071"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Cargar datos mediante el destino de ODBC
   Este procedimiento muestra cómo cargar datos mediante el destino ODBC. Para agregar y configurar un destino ODBC el paquete ya debe incluir al menos una tarea Flujo de datos y un origen.  
@@ -34,9 +34,9 @@ ms.locfileid: "58383118"
   
 6.  Seleccione el método de acceso de datos.  
   
-    -   **Nombre de tabla - lote**: Seleccione esta opción para configurar el destino de ODBC de manera que funcione en modo por lotes. Al seleccionar esta opción, puede establecer el **Tamaño de lote**.  
+    -   **Nombre de la tabla: Lote** Seleccione esta opción para configurar el destino de ODBC de manera que funcione en modo por lotes. Al seleccionar esta opción, puede establecer el **Tamaño de lote**.  
   
-    -   **Nombre de tabla: fila por fila**: Seleccione esta opción para configurar el destino de ODBC de manera que se inserte cada una de las filas en la tabla de destino de una en una. Al seleccionar esta opción, los datos se cargan en la tabla una fila cada vez.  
+    -   **Nombre de la tabla: Fila a fila**: Seleccione esta opción para configurar el destino de ODBC de manera que se inserte cada una de las filas en la tabla de destino de una en una. Al seleccionar esta opción, los datos se cargan en la tabla una fila cada vez.  
   
 7.  En el campo **Nombre de la tabla o la vista** , seleccione una tabla o vista disponible desde la base de datos de la lista o escriba una expresión regular para identificar la tabla. Esta lista contiene solo las 1000 primeras tablas. Si la base de datos contiene más de 1000 tablas, puede escribir el principio de un nombre de tabla o usar el comodín (*) para escribir cualquier parte del nombre con el fin de mostrar la tabla o las tablas que desea usar.  
   

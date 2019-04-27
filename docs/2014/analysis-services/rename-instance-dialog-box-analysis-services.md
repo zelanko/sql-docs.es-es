@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1434ae3750a76ecffc029d618ce32acea982b035
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748337"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>Cambiar nombre de instancia (cuadro de diálogo de Analysis Services)
   Use el cuadro de diálogo **Cambiar nombre de instancia** para cambiar el nombre de una instancia existente de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El cuadro de diálogo **Cambiar nombre de instancia** se puede mostrar iniciando la herramienta **Cambiar nombre de instancia** (asinstancerename.exe) desde C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE.  

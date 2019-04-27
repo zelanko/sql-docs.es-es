@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e50d43bc030ad3267076422b8f6610b68e447ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746518"
 ---
 # <a name="specify-a-unary-operator-business-intelligence-wizard"></a>Especificar un operador unario (Asistente de Business Intelligence)
   Use la página **Especificar un operador unario** para identificar la relación de elementos primarios y secundarios de la columna que contiene un operador unario (para agregaciones normales) o un valor que representa un factor de ponderación (para agregaciones ponderadas). Para más información sobre las agregaciones normales y ponderadas, vea [Agregaciones y diseños de agregaciones](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "48066925"
  Seleccione la columna de origen que contiene el operador unario o el factor de peso.  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de Business Intelligence F1 Ayuda](business-intelligence-wizard-f1-help.md)   
+ [Asistente de Business Intelligence (Ayuda F1)](business-intelligence-wizard-f1-help.md)   
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

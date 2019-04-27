@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b8328c060d7096cb43edcbc31206a8b55e82e7e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749530"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>No se pudo cargar el archivo o ensamblado &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39;
   En entornos de SharePoint 2010 que tienen PowerPivot para SharePoint, este error se producirá si la solución del nivel de aplicación para PowerPivot no se implementó correctamente.  

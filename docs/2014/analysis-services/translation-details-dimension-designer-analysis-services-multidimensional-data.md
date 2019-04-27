@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbeaebfc7eab6041bb547f18dacfc01aef3d5117
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756325"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Detalles de la traducción (pestaña Traducciones, Diseñador de dimensiones) (Analysis Services – Datos multidimensionales)
   Use el panel de **Detalles de la traducción** de la pestaña **Traducciones** del Diseñador de dimensiones para definir y administrar traducciones para la dimensión seleccionada actualmente.  
@@ -38,31 +38,31 @@ ms.locfileid: "48179025"
   
 -   Dimensión  
   
-     `Caption` y `AttributeAllMember` propiedades  
+     Propiedades `Caption` y `AttributeAllMember`  
   
 -   Attribute  
   
-     `Caption`, `AttributeHierarchyDisplayFolder`, y `NamingTemplate` propiedades  
+     Propiedades `Caption`, `AttributeHierarchyDisplayFolder` y `NamingTemplate`.  
   
     > [!NOTE]  
     >  La propiedad `NamingTemplate` solo está disponible para atributos primarios.  
   
 -   Hierarchy  
   
-     `Caption` y `AllMemberName` propiedades  
+     Propiedades `Caption` y `AllMemberName`  
   
 -   Nivel  
   
-     `Caption` Propiedad  
+     Propiedad `Caption`  
   
- **\<Lenguaje >**  
+ **\<Language>**  
  Escriba o seleccione el valor de la propiedad del objeto de la dimensión en el idioma seleccionado. Si hace clic en el botón de puntos suspensivos (**…**), se abrirán otros cuadros de diálogo, según la propiedad que edite:  
   
--   `NamingTemplate` Propiedad  
+-   Propiedad `NamingTemplate`  
   
      Muestra el [Cuadro de diálogo Plantilla de asignación de nombres de nivel &#40;Analysis Services - Datos multidimensionales&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md).  
   
--   `Caption` propiedad (para atributos)  
+-   Propiedad `Caption` (para atributos)  
   
      Muestra el [Cuadro de diálogo Traducción de datos de atributos &#40;Analysis Services - Datos multidimensionales&#41;](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
   

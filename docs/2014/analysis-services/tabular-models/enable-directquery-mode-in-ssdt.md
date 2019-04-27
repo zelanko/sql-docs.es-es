@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da44ae47d7e6eaea78a1d14736367ed5cc41d311
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757258"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>Habilitar el modo de diseño de DirectQuery (SSAS tabular)
   Para crear un modelo en el modo DirectQuery, primero debe cambiar el entorno de tiempo de diseño para que admita al usuario del modo DirectQuery. Al hacerlo, el diseñador también hará lo siguiente:  
@@ -42,6 +42,6 @@ ms.locfileid: "48172587"
 4.  Si hay errores, abra la **Lista de errores** en Visual Studio y solucione los problemas que impiden que el modelo se cambie al modo DirectQuery.  
   
 ## <a name="see-also"></a>Vea también  
- [El modo DirectQuery &#40;Tabular de SSAS&#41;](directquery-mode-ssas-tabular.md)  
+ [Modo DirectQuery &#40;SSAS tabular&#41;](directquery-mode-ssas-tabular.md)  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a58daa6e66f591dee73f823b3a401ae9ac45d80a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748027"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Guardar archivo como (Analysis Services - Datos multidimensionales)
   El cuadro de diálogo **Guardar archivo como** muestra una lista de archivos disponibles en las carpetas de datos y de registro definidas para una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Puede seleccionar un archivo de la lista o especificar una carpeta o archivo distintos si fuese necesario. El cuadro de diálogo **Guardar archivo como** puede mostrarse de diferentes maneras:  

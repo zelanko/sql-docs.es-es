@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b09e8e689f090feb2d823a13ac9329bee9bc3f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747097"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>Selección (cuadro de diálogo Propiedades de la partición, SSMS)
   Use la página **Selección** del cuadro de diálogo **Propiedades de la partición** en SQL Server Management Studio para seleccionar una partición de un grupo de medida del que desea ver o modificar las propiedades en el panel **General**, **Almacenamiento en caché automático**o **Configuración de errores** .  
   
 ## <a name="options"></a>Opciones  
- **Cuadrícula**  
+ **Grid**  
  Muestra las particiones del grupo de medida que contiene la partición seleccionada.  
   
  Seleccione la partición cuyas propiedades desea ver en la página **General**, **Almacenamiento en caché automático**o **Configuración de errores** .  
@@ -33,7 +33,7 @@ ms.locfileid: "48149355"
   
 |columna|Descripción|  
 |------------|-----------------|  
-|**Nombre**|Muestra el nombre de la partición.|  
+|**Name**|Muestra el nombre de la partición.|  
 |**Source**|Muestra la tabla o consulta utilizada para proporcionar datos de origen para la partición.|  
 |**Agregaciones**|Muestra una cadena que describe el diseño de agregaciones utilizado por la partición.|  
   

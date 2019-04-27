@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7eaccd916ee401ad1b6b82a155e50688b2ff57a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747717"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>Seleccione una columna de clave de tabla anidada (cuadro de diálogo de la vista Estructura de minería de datos)
   Utilice el cuadro de diálogo **Seleccione una columna de clave de tabla anidada** para designar una columna que actuará como la clave para la nueva tabla anidada. Cuando salga del cuadro de diálogo, se agrega una nueva tabla a la estructura de minería de datos que contiene la columna de clave designada. Puede agregar columnas adicionales a la tabla anidada haciendo clic con el botón derecho en la estructura y seleccionando **Agregar una columna**. El cuadro de diálogo contiene diferentes opciones dependiendo de si está trabajando con un modelo de minería OLAP o un modelo de minería relacional.  

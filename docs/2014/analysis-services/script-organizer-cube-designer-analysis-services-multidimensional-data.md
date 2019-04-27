@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ca134e0e06e5197c680830d67e8220e5c9bf5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747819"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Organizador de script (pestaña Cálculo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Organizador de script** de la pestaña **Cálculos** del Diseñador de cubos para reordenar y tener acceso a los miembros calculados, los conjuntos con nombre y los comandos de script contenidos en el script del cubo especificado.  
@@ -48,8 +48,8 @@ ms.locfileid: "48069195"
 |**Nuevo miembro calculado**|Seleccione esta opción si desea mostrar el **Editor de Formulario de miembro calculado** y crear un nuevo miembro calculado. Para obtener más información sobre el **Editor de Formulario de miembro calculado**, vea [Editor de Formulario de miembro calculado &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Nuevo conjunto con nombre**|Seleccione esta opción si desea mostrar el **Editor de Formulario de conjunto con nombre** y crear un nuevo conjunto con nombre. Para obtener más información sobre el **Editor de Formulario de conjunto con nombre**, vea [Editor de Formulario de conjunto con nombre &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Nuevo comando de Script**|Seleccione esta opción si desea mostrar el **Editor de script** y crear un nuevo comando de script. Para obtener más información sobre el **Editor de script**, vea [Editor de script &#40;Calculations Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Subir**|Seleccione esta opción si desea subir el cálculo seleccionado una posición.<br /><br /> Nota: Esta opción estará deshabilitada si el cálculo seleccionado no puede desplazarse más.|  
-|**Bajar**|Seleccione esta opción si desea bajar el cálculo seleccionado una posición.<br /><br /> Nota: Esta opción estará deshabilitada si el cálculo seleccionado no puede desplazarse más.|  
+|**Subir**|Seleccione esta opción si desea subir el cálculo seleccionado una posición.<br /><br /> Nota: Esta opción está deshabilitada si el cálculo seleccionado no puede desplazarse más.|  
+|**Bajar**|Seleccione esta opción si desea bajar el cálculo seleccionado una posición.<br /><br /> Nota: Esta opción está deshabilitada si el cálculo seleccionado no puede desplazarse más.|  
 |**Eliminar**|Seleccione esta opción si desea eliminar el cálculo seleccionado.|  
   
 ## <a name="see-also"></a>Vea también  

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33e64636e195a9f7048b21f2fd5ad7d37e03f9db
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752991"
 ---
 # <a name="exception-message-box-reference"></a>Referencia de cuadros de mensajes de excepción
   La clase <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> implementa el cuadro de mensaje de excepción en el ensamblado Microsoft.ExceptionMessageBox.dll. La carpeta de instalación predeterminada de este ensamblado es [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. El cuadro de mensaje de excepción se describe en la documentación de referencia del espacio de nombres <xref:Microsoft.SqlServer.MessageBox>. En los ejemplo siguientes se usa el objeto <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> durante el control de excepciones.  

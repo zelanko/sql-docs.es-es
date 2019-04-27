@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6761a6c8e028ed5c589608886f763aed6455c520
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746238"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>Especificar el uso de las columnas del modelo de minería de datos (Asistente para minería de datos)
   Utilice la página **Especificar el uso de las columnas del modelo de minería de datos** para especificar cómo se utilizarán las columnas del modelo de minería de datos y para agregar tablas anidadas.  
@@ -26,7 +26,7 @@ ms.locfileid: "48175635"
 > [!NOTE]  
 >  Esta página aparecerá solo si ha seleccionado **A partir de un cubo existente** en la página **Seleccionar el método de definición** del asistente.  
   
- **Para obtener más información:** [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md).  
+ **Para obtener más información:** [Asistente para minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opciones  
  **Las tablas y columnas**  

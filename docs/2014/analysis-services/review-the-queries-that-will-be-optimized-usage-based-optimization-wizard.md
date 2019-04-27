@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: caa9e0f98df874ec7da9525fd361b67bf5331b41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748177"
 ---
 # <a name="review-the-queries-that-will-be-optimized-usage-based-optimization-wizard"></a>Revisar las consultas que se optimizarán (Asistente para optimización basada en el uso)
   Use la página **Revisar las consultas que se optimizarán** para mostrar y seleccionar las consultas recuperadas del registro de consultas que usará el Asistente para optimización basada en el uso para diseñar agregaciones para las particiones seleccionadas.  
   
 ## <a name="options"></a>Opciones  
- **(Seleccionar)**  
+ **(Select)**  
  Active la casilla de la consulta para la que desea diseñar agregaciones.  
   
  **Solicitud de cliente**  

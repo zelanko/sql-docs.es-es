@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 763561a3b13917c290794db145c6309267f9dc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756588"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Bases de datos de modelo tabular (SSAS tabular)
   Una base de datos de modelo tabular es una base de datos de Analysis Services que se crea en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] mediante la plantilla de proyecto de modelo tabular de Analysis Services, donde las tablas y las relaciones son las estructuras principales para la representación de datos.  
@@ -25,20 +25,20 @@ ms.locfileid: "48190705"
  Las bases de datos de modelo tabular son más fáciles de generar que las bases de datos multidimensionales, especialmente si tiene un fondo de base de datos relacional. De lo contrario, las tareas administrativas son similares, si no idénticas, a la administración de base de datos de una base de datos multidimensional. Se aplican las mismas herramientas y enfoques.  
   
 ## <a name="related-content"></a>Contenido relacionado  
- [Soluciones de modelos tabulares &#40;Tabular de SSAS&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [Soluciones de modelos tabulares &#40;SSAS tabular&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
  [Acceso a datos de modelos tabulares](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Procesar base de datos, tabla o partición](process-database-table-or-partition-analysis-services.md)  
   
- [Roles de modelos tabulares &#40;Tabular de SSAS&#41;](tabular-model-roles-ssas-tabular.md)  
+ [Roles de modelos tabulares &#40;SSAS tabular&#41;](tabular-model-roles-ssas-tabular.md)  
   
- [Particiones de modelos tabulares &#40;Tabular de SSAS&#41;](tabular-model-partitions-ssas-tabular.md)  
+ [Particiones de modelos tabulares &#40;SSAS tabular&#41;](tabular-model-partitions-ssas-tabular.md)  
   
  [Configurar el acceso In-Memory o DirectQuery para una base de datos modelo tabular](enable-directquery-mode-in-ssms.md)  
   
- [Conectarse a una base de datos de modelo Tabular &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
+ [Conectar a una base de datos de modelo tabular &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
  [Restaurar desde PowerPivot](restore-from-power-pivot.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48190705"
   
  [Sincronizar bases de datos de Analysis Services](../multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [Cambiar una base de datos de Analysis Services entre los modos ReadOnly y ReadWrite](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  [Modificar o eliminar una base de datos de Analysis Services](../multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   

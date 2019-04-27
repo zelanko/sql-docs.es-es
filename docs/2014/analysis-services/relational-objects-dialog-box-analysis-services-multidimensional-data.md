@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fbb162851b1906ffaf42d5fdda943fea4fc6133f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748367"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Objetos relacionales (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Objetos relacionales** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para seleccionar tablas, vistas u otros objetos de un origen de datos en el cual desea establecer el almacenamiento en caché automático. Puede visualizar este cuadro de diálogo en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] haciendo clic en el botón de puntos suspensivos (**…**) de cualquiera de las opciones de **Especificar tablas de seguimiento** de la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento** .  

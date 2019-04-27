@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84946cd0dadd467e7998106f89868a5e9d401f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746347"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Especificar tipos de tablas (Asistente para minería de datos)
   Utilice la página **Especificar tipos de tablas** para identificar las tablas que se van a utilizar para definir la estructura de minería de datos. Si una tabla no está seleccionada, ésta no se utilizará para definir la estructura de minería de datos.  
@@ -26,7 +26,7 @@ ms.locfileid: "48202645"
 > [!NOTE]  
 >  Puede agregar tablas posteriormente desde la pestaña **Estructura de minería de datos** del **Diseñador de minería de datos**.  
   
- **Para más información:** [Tablas anidadas &#40;Analysis Services - Minería de datos&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obtener más información:** [Tablas anidadas &#40;Analysis Services - minería de datos&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [Asistente para minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opciones  
  **Tablas**  
@@ -35,7 +35,7 @@ ms.locfileid: "48202645"
  **Caso**  
  Seleccione una tabla para utilizar como la tabla de casos.  
   
- **Anidados**  
+ **Nested**  
  Seleccione las tablas que se van a utilizar como tablas anidadas.  
   
 > [!NOTE]  

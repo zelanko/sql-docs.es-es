@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 47ef01538368dcbfdd235d649fdb3b2c805a59dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780298"
 ---
 # <a name="discontinued-full-text-search-features-in-sql-server-2014"></a>Características de la búsqueda de texto completo no incluidas en SQL Server 2014
   No se ha dejado de utilizar ninguna característica de búsqueda de texto completo en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], aunque algunas han quedado en desuso. Para obtener más información, consulte [en desuso características de búsqueda de texto completo de SQL Server 2014](../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md).  

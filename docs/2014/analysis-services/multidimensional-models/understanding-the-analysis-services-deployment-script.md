@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84bc0e699a0fb47b78b1b0d075a0ef87c8a4dcc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741115"
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>Descripción del script de implementación de Analysis Services
   El script de implementación XMLA generado por el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] está formado por dos secciones:  
@@ -36,7 +36,7 @@ ms.locfileid: "48099299"
 >  El Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solamente implementa los objetos en una sola base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . No implementa ningún objeto o datos en el nivel de servidor.  
   
 ## <a name="see-also"></a>Vea también  
- [Ejecute al Asistente para la implementación de Analysis Services](running-the-analysis-services-deployment-wizard.md)   
- [Comprender los archivos de entrada usados para crear el script de implementación](deployment-script-files-input-used-to-create-deployment-script.md)  
+ [Ejecutar el Asistente para la implementación de Analysis Services](running-the-analysis-services-deployment-wizard.md)   
+ [Comprender los archivos de entrada utilizados para crear el script de implementación](deployment-script-files-input-used-to-create-deployment-script.md)  
   
   

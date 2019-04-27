@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/04/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f725ca776fcc65828c7f72b4e3c2b042d0203b71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742051"
 ---
 # <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "52510849"
 |**transition_to_compressed_state**|TINYINT|Muestra cómo se ha movido este grupo de filas del almacén delta en estado comprimido en el almacén de columnas.<br /><br /> 1 - NOT_APPLICABLE<br /><br /> 2 - INDEX_BUILD<br /><br /> 3 - TUPLE_MOVER<br /><br /> 4 - REORG_NORMAL<br /><br /> 5 - REORG_FORCED<br /><br /> 6 - CARGA MASIVA<br /><br /> 7 - MERGE|  
 |**transition_to_compressed_state_desc**|nvarchar(60)|NOT_APPLICABLE: la operación no se aplica al almacén delta. O bien, el grupo de filas se comprime antes de actualizar a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] en cuyo caso no se conserva el historial.<br /><br /> Crear un índice INDEX_BUILD - o regeneración de índice comprime el grupo de filas.<br /><br /> TUPLE_MOVER: el motor de tupla que se ejecuta en segundo plano comprime el grupo de filas. Esto sucede después de que el grupo de filas cambia el estado de abierto a cerrado.<br /><br /> REORG_NORMAL: la operación de reorganización, ALTER INDEX... REORG, mueve el grupo de filas cerrado desde el almacén delta al almacén de columnas. Esto ocurrió antes de que el motor de tupla tenido tiempo para mover el grupo de filas.<br /><br /> REORG_FORCED: este grupo de filas estaba abierto en el almacén delta y ha tenido en el almacén de columnas antes de que tenía un número total de filas.<br /><br /> Carga masiva: una operación de carga masiva comprime el grupo de filas directamente sin usar el almacén delta.<br /><br /> COMBINACIÓN - consolidado de uno o varios grupos de filas en este grupo de filas de una operación de combinación y, a continuación, realiza la compresión de almacén de columnas.|  
 |**has_vertipaq_optimization**|bit|Optimización de Vertipaq mejora la compresión columnstore reorganizar el orden de las filas en el grupo de filas para lograr una compresión mayor. Esta optimización se produce automáticamente en la mayoría de los casos. Hay dos casos no se utiliza la optimización de Vertipaq:<br/>  a. Cuando mueve un grupo de filas delta al almacén de columnas y hay uno o varios índices no agrupados en el índice de almacén de columnas - en este caso se omite la optimización de Vertipaq a minimiza los cambios realizados en el índice de asignación;<br/> b. para los índices de almacén de columnas en tablas optimizadas para memoria. <br /><br /> 0 = No<br /><br /> 1 = Sí|  
-|**generación**|BIGINT|Generación de grupo de filas asociada a este grupo de filas.|  
+|**generation**|BIGINT|Generación de grupo de filas asociada a este grupo de filas.|  
 |**created_time**|datetime2|Hora del reloj para cuando se creó este grupo de filas.<br /><br /> NULL - para un índice de almacén de columnas en una tabla en memoria.|  
 |**closed_time**|datetime2|Hora del reloj para cuando se ha cerrado este grupo de filas.<br /><br /> NULL - para un índice de almacén de columnas en una tabla en memoria.|  
   
@@ -93,7 +93,7 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Consultar el catálogo del sistema SQL Server preguntas más frecuentes](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [Sys.ALL_COLUMNS &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Guía de índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-overview.md)   
  [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)   

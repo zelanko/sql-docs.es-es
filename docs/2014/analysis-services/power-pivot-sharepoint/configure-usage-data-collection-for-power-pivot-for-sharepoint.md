@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749470"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurar la recolección de datos de uso para PowerPivot para SharePoint
   La recopilación de datos de uso es una característica propia de SharePoint para las granjas. PowerPivot para SharePoint usa y extiende este sistema para proporcionar informes en el panel de administración de PowerPivot que muestran cómo se usan los datos y servicios PowerPivot. Según cómo haya instalado SharePoint, la recopilación de datos de uso podría estar desactivada para la granja. El administrador de una granja debe habilitar el registro de uso para crear los datos de uso que aparecen en el Panel de administración de PowerPivot.  
@@ -129,7 +129,7 @@ ms.locfileid: "52411282"
  Para obtener más información acerca de cómo se recopilan y almacenan los datos de uso, consulte [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Definir las categorías de respuesta a las consultas rápida, media y lenta a efectos de los informes  
- El rendimiento del procesamiento de las consultas se mide con las categorías predefinidas que definen un ciclo de solicitud-respuesta con el tiempo que se tarda en completarse. Las categorías predefinidas son: Trivial, Rápida, Esperada, Larga ejecución y Superado. Cada solicitud para un servidor de PowerPivot pertenecerá a una de las categorías en función del tiempo que tarde en completarse.  
+ El rendimiento del procesamiento de las consultas se mide con las categorías predefinidas que definen un ciclo de solicitud-respuesta con el tiempo que se tarda en completarse. Las categorías predefinidas son: Trivial, rápida, esperada, larga ejecución y ha superado. Cada solicitud para un servidor de PowerPivot pertenecerá a una de las categorías en función del tiempo que tarde en completarse.  
   
  La información de las respuestas a las consultas se utiliza en los informes de actividad. Dentro de los informes, cada categoría se utiliza de manera diferente para revelar mejor las tendencias de rendimiento del sistema de PowerPivot. Las solicitudes triviales se excluyen completamente, por ejemplo, porque de ese modo se quita el ruido en los datos y se muestran las tendencias más significativas mediante las categorías restantes. Por el contrario, las estadísticas de solicitudes de ejecución prolongada o superadas se destacan en el informe para que los administradores o los propietarios de los libros puedan emprender la acción correctora inmediatamente.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "52411282"
   
 |Parámetro|Valor predeterminado|Tipo|Intervalo válido|  
 |-------------|-------------------|----------|-----------------|  
-|**Eventos de uso de Analysis Services** (Conexión, Carga, Descarga, Solicitudes)|\<habilitado >|Boolean|Estos valores están habilitados o deshabilitados.|  
+|**Eventos de uso de Analysis Services** (Conexión, Carga, Descarga, Solicitudes)|\<enabled>|Boolean|Estos valores están habilitados o deshabilitados.|  
 |**Query Reporting interval**|300 (en segundos)|Integer|De 1 a cualquier entero positivo. El valor predeterminado es 5 minutos.|  
 |**Usage data history**|365 (en días)|Integer|0 especifica ilimitado, pero también puede establecer un límite superior para que los datos históricos expiren y que se eliminen automáticamente. Los valores válidos para un período de retención limitado abarcan de 1 a 5000 (en días).|  
 |Límite superior de respuesta trivial|500 (en milisegundos)|Integer|Establece un límite superior que define un intercambio de solicitudes y respuestas trivial. Cualquier solicitud que se complete entre 0 y 500 milisegundos es una solicitud trivial y se omite a los efectos del informe de errores.|  

@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3fcd41e9fafe72e0d7d87378f7cc8746a51ad28f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740735"
 ---
 # <a name="use-aggregate-functions"></a>Usar funciones de agregado
   Al usar una dimensión para segmentar una medida, la medida se resume en las jerarquías contenidas en la dimensión. El comportamiento de suma depende de la función de agregado especificada en la medida. Para la mayoría de las medidas que contienen datos numéricos, la función de agregado es `Sum`. El valor de la medida se suma a cantidades diferentes dependiendo del nivel de la jerarquía que esté activo.  
   
  En Analysis Services, todas las medidas que se crean están respaldadas por una función de agregación que determina la operación de la medida. Incluyen tipos predefinidos de agregación `Sum`, `Min`, `Max`, `Count`, **Distinct Count**y muchas otras más funciones especializadas. O bien, si necesita agregaciones basadas en fórmulas complejas o personalizadas, puede crear un cálculo MDX en vez de usar una función de agregación creada previamente. Por ejemplo, si quiere definir una medida para un valor de porcentaje, lo haría en MDX con una medida calculada. Vea, [CREATE MEMBER &#40;instrucción MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
   
- A las medidas que se crean mediante el Asistente para cubos se les asigna un tipo de agregación como parte de la definición de la medida. El tipo de agregación es siempre `Sum`, suponiendo que la columna de origen contiene datos numéricos. `Sum` se asigna independientemente del tipo de datos de la columna de origen. Por ejemplo, si usó el Asistente para cubos para crear medidas y extrajo todas las columnas de una tabla de hechos, notará que todas las medidas resultantes tienen una agregación de `Sum`, incluso si el origen es una columna de fecha y hora. Debe revisar siempre los métodos de agregación asignados previamente para las medidas creadas mediante el asistente para asegurarse de que la función de agregación sea la adecuada.  
+ A las medidas que se crean mediante el Asistente para cubos se les asigna un tipo de agregación como parte de la definición de la medida. El tipo de agregación es siempre `Sum`, asumiendo que la columna de origen contiene datos numéricos. `Sum` se asigna independientemente del tipo de datos de la columna de origen. Por ejemplo, si usó el Asistente para cubos para crear medidas y extrajo todas las columnas de una tabla de hechos, notará que todas las medidas resultantes tienen una agregación de `Sum`, incluso si el origen es una columna de fecha y hora. Debe revisar siempre los métodos de agregación asignados previamente para las medidas creadas mediante el asistente para asegurarse de que la función de agregación sea la adecuada.  
   
  Puede asignar o cambiar el método de agregación en la definición del cubo, a través de [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]o por medio de MDX. Vea [Crear medidas y grupos de medida en modelos multidimensionales](create-measures-and-measure-groups-in-multidimensional-models.md) o [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx) para obtener más instrucciones.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48199584"
 |`Max`|Semiaditiva|Recupera el valor más alto para todos los miembros secundarios.|  
 |`DistinctCount`|No aditiva|Recupera el recuento de todos los miembros secundarios únicos. Para más detalles, vea [About Distinct Count Measures](use-aggregate-functions.md#bkmk_distinct) en la próxima sección.|  
 |`None`|No aditiva|No se realiza una agregación y todos los valores para los miembros hoja y no hoja de una dimensión se suministran directamente desde la tabla de hechos para el grupo de medida que contiene la medida. Si no se puede leer ningún valor desde la tabla de hechos para un miembro, se establece el valor para dicho miembro en null.|  
-|`ByAccount`|Semiaditiva|Calcula la agregación según la función de agregación asignada al tipo de cuenta para un miembro en una dimensión de cuenta. Si no existe ninguna dimensión de tipo de cuenta en el grupo de medida, se trata el `None` función de agregación.<br /><br /> Para más información sobre las dimensiones de cuenta, vea [Crear una cuenta financiera de una dimensión de tipo primario-secundario](database-dimensions-finance-account-of-parent-child-type.md).|  
+|`ByAccount`|Semiaditiva|Calcula la agregación según la función de agregación asignada al tipo de cuenta para un miembro en una dimensión de cuenta. Si no existe ninguna dimensión de tipo de cuenta en el grupo de medida, se trata como la función de agregación `None`.<br /><br /> Para más información sobre las dimensiones de cuenta, vea [Crear una cuenta financiera de una dimensión de tipo primario-secundario](database-dimensions-finance-account-of-parent-child-type.md).|  
 |`AverageOfChildren`|Semiaditiva|Calcula el promedio de los valores de todos los miembros secundarios no vacíos.|  
 |`FirstChild`|Semiaditiva|Recupera el valor del primer miembro secundario.|  
 |`LastChild`|Semiaditiva|Recupera el valor del último miembro secundario.|  
@@ -68,8 +68,8 @@ ms.locfileid: "48199584"
  Una medida de recuento distintiva que cuenta miembros se basa en una columna de clave externa de la tabla de hechos. (Es decir, la propiedad **Source Column** de la medida identifica esta columna). Esta columna se combina con la columna de la tabla de dimensiones que identifica a los miembros que cuenta la medida de recuento distintiva.  
   
 ## <a name="see-also"></a>Vea también  
- [Las medidas y grupos de medida](measures-and-measure-groups.md)   
+ [Medidas y grupos de medida](measures-and-measure-groups.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [Definir el comportamiento de suma parcial](define-semiadditive-behavior.md)  
+ [Define Semiadditive Behavior](define-semiadditive-behavior.md)  
   
   

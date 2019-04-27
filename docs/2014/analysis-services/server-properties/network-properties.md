@@ -37,16 +37,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b000357da2bfa2dac698bef0b500b2193c5f62e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746717"
 ---
 # <a name="network-properties"></a>Propiedades de red
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor descritas en las siguientes tablas. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Se aplica a:** modo de servidor multidimensional y tabular  
+ **Se aplica a:** Modo de servidor multidimensional y Tabular  
   
 ## <a name="general"></a>General  
  `ListenOnlyOnLocalConnections`  

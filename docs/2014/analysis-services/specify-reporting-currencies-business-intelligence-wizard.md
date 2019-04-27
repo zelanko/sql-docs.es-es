@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a66e94a9cdafc327737c71cd710847033011dcfa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746548"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>Especificar monedas del informe (Asistente de Business Intelligence)
   Use la página **Define Reporting Currencies (Definir monedas del informe)** para definir las monedas del informe para la funcionalidad de conversión de moneda que cubre el tipo de conversión de varios a varios o de uno a varios especificado en la página **Seleccionar el tipo de conversión**. (Una moneda de informe es la moneda en que se convierten los valores de medida seleccionados en la página **Seleccionar medidas**). Los miembros seleccionados de la dimensión de moneda definen una dimensión de moneda del informe para la conversión generada por el Asistente de Business Intelligence.  
@@ -33,7 +33,7 @@ ms.locfileid: "48156525"
  Seleccione un miembro determinado para incluirlo en la dimensión de moneda del informe. Desactive un miembro determinado para excluirlo.  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de Business Intelligence F1 Ayuda](business-intelligence-wizard-f1-help.md)   
+ [Asistente de Business Intelligence (Ayuda F1)](business-intelligence-wizard-f1-help.md)   
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

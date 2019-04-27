@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773401"
 ---
 # <a name="undo-checkouts"></a>Deshacer desprotecciones
   El comando **Deshacer desprotección** se puede utilizar para cancelar una desprotección existente. Resulta muy útil cuando se ha modificado y guardado un archivo y, posteriormente, es necesario revertir los cambios.  
@@ -42,7 +42,7 @@ ms.locfileid: "48078325"
      **Vista plana**  
      Muestra los elementos como listas planas en su conexión de control de código fuente.  
   
-     **Nombre**  
+     **Name**  
      Muestra los nombres de los elementos en los que se deshará la desprotección. Los elementos aparecen con las casillas que se encuentran junto a ellos activadas. Si no desea deshacer la desprotección de un elemento, desactive su casilla.  
   
      **Opciones**  

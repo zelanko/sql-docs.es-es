@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773371"
 ---
 # <a name="view-file-status"></a>Ver el estado de archivo
   El control de código fuente conserva información detallada del estado de cada elemento controlado por código fuente. Puede utilizar esta información para identificar el estado actual del archivo, así como para crear un informe de estado del mismo.  

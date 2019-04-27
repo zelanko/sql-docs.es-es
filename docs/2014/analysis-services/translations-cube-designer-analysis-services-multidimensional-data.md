@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06982cef71c23936cef25ad273e6230e4780c8b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756258"
 ---
 # <a name="translations-cube-designer-analysis-services---multidimensional-data"></a>Traducciones (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use la pestaña **Traducciones** en el Diseñador de cubos para crear y modificar perspectivas para el cubo seleccionado.  

@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778976"
 ---
 # <a name="full-text-search-f1-help"></a>Búsqueda de texto completo (Ayuda F1)
   En esta sección se incluyen temas sobre los cuadros de diálogo de Búsqueda de texto completo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para obtener acceso a un tema de la interfaz de usuario, presione F1 o haga clic en **Ayuda** cuando esté abierto el cuadro de diálogo.  

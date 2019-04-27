@@ -1,5 +1,5 @@
 ---
-title: Agrupar miembros de atributo automáticamente | Documentos de Microsoft
+title: Agrupar miembros de atributo automáticamente | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b36977f4f55049c5e2c34f2f43f405194bac790e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737725"
 ---
-# <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lección 4: 3: Agrupar automáticamente los miembros de atributo
+# <a name="lesson-4-3---automatically-grouping-attribute-members"></a>Lección 4-3: Agrupar automáticamente los miembros de atributo
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Cuando se examina un cubo, generalmente se dimensionan los miembros de una jerarquía de atributo según los miembros de otra jerarquía de atributo. Por ejemplo, puede agrupar las ventas de cliente por ciudad, producto comprado o género. No obstante, con determinados tipos de atributo, resulta útil hacer que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cree automáticamente grupos de miembros de atributos en función de la distribución de los miembros en una jerarquía de atributo. Por ejemplo, puede hacer que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cree grupos de valores de ingresos anuales de los clientes. Al hacerlo, los usuarios que examinen la jerarquía de atributo verán los nombres y los valores de los grupos en lugar de los miembros propiamente dichos. Esto limita el número de niveles que se presentan a los usuarios, lo que puede resultar más útil para el análisis.  
@@ -27,7 +27,7 @@ La propiedad **DiscretizationMethod** determina si [!INCLUDE[ssASnoversion](../i
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea intervalos de grupos de modo que la población total de los miembros de dimensión quede distribuida de forma homogénea en los grupos.  
   
 **Clusters**  
-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea grupos realizando una agrupación en clústeres unidimensionales en los valores de entrada mediante el método de agrupación en clústeres mediana-K con distribuciones gausianas. Esta opción solo es válida para columnas numéricas.  
+[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea grupos realizando una agrupación en clústeres unidimensionales en los valores de entrada mediante el método de agrupación en clústeres k-means con distribuciones gausianas. Esta opción solo es válida para columnas numéricas.  
   
 Una vez que haya especificado un método de agrupación, debe especificar el número de grupos mediante la propiedad **DiscretizationBucketCount** . Para obtener más información, consulte [Agrupar miembros de atributos &#40;discretización&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
@@ -49,7 +49,7 @@ En las tareas de este tema, habilitará distintos tipos de agrupaciones para lo 
   
     En la imagen siguiente se muestran las propiedades modificadas para **Yearly Income**.  
   
-    ![Las propiedades modificadas de Yearly Income](../analysis-services/media/l4-discretizationmethod-1.gif "modificar propiedades para los ingresos anuales")  
+    ![Las propiedades modificadas de Yearly Income](../analysis-services/media/l4-discretizationmethod-1.gif "propiedades modificadas de Yearly Income")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Agrupar miembros de la jerarquía de atributo en la dimensión Employee  
   
@@ -95,7 +95,7 @@ En las tareas de este tema, habilitará distintos tipos de agrupaciones para lo 
   
     En la imagen siguiente se muestran las ventas dimensionadas por horas de baja por enfermedad de los empleados.  
   
-    ![Horas de baja de ventas dimensionadas por baja por enfermedad del empleado](../analysis-services/media/l4-discretizationmethod-2.gif "Sales con dimensión por baja por enfermedad del empleado deje horas")  
+    ![Horas de baja Sales con dimensión por baja por enfermedad del empleado](../analysis-services/media/l4-discretizationmethod-2.gif "Sales con dimensión por baja por enfermedad del empleado deje horas")  
   
 10. Elimine la jerarquía de atributo **Sick Leave Hours** del área de columnas del panel **Datos** .  
   
@@ -127,7 +127,7 @@ En las tareas de este tema, habilitará distintos tipos de agrupaciones para lo 
 [Ocultar y deshabilitar jerarquías de atributo](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Agrupar miembros de atributo & #40; discretización & #41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
+[Agrupar miembros de atributos &#40;discretización&#41;](../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   
   

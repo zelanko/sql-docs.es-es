@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3124f6f173a0e232ad7943188baae0cbbb1bfcd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743671"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Nueva medida (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Nueva medida** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para agregar una nueva medida a un grupo de medida en el Diseñador de cubos. Puede abrir el cuadro de diálogo **Nueva medida** de distintas maneras:  

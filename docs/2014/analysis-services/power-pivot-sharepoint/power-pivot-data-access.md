@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 75da2776f867ae89da049ba31a9180d21922cd84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749363"
 ---
 # <a name="powerpivot-data-access"></a>Acceso a datos PowerPivot
   En este tema se describen las diferentes formar de recuperar datos de un libro PowerPivot publicado en una biblioteca de SharePoint.  
@@ -41,7 +41,7 @@ ms.locfileid: "48164095"
  No todos los datos de un libro PowerPivot se administran en PowerPivot para SharePoint. Excel Services procesa las tablas y los datos de la celda en una hoja de cálculo. El servicio PowerPivot administra únicamente las tablas dinámicas, los gráficos dinámicos y las segmentaciones que tienen que ver con los datos PowerPivot para SharePoint.  
   
 ## <a name="see-also"></a>Vea también  
- [Conectarse a Analysis Services](../instances/connect-to-analysis-services.md)   
+ [Conectar a Analysis Services](../instances/connect-to-analysis-services.md)   
  [Acceso a datos de modelos tabulares](../tabular-models/tabular-model-data-access.md)  
   
   

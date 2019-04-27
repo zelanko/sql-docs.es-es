@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97ab8896d13bfb19790148fb6f01bb8e054ab270
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748087"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>Seleccionar el tipo de conversión (Asistente de Business Intelligence)
   Use la página **Seleccionar el tipo de conversión** para definir la relación entre las monedas locales y las monedas del informe en las transacciones almacenadas en varias monedas. La moneda local es la moneda en que se almacenan las transacciones de medidas seleccionadas en la página **Seleccionar medidas** . La moneda del informe es la moneda en que se convierten las transacciones seleccionadas en la página **Seleccionar medidas** .  
@@ -49,7 +49,7 @@ ms.locfileid: "48092332"
  Por ejemplo, la moneda dinámica puede definirse como dólares norteamericanos (USD) y la tabla de hechos puede almacenar las transacciones en USD. Al seleccionar esta opción se convierten estas transacciones de la moneda dinámica en las monedas del informe especificadas. El resultado es que las transacciones se pueden almacenar en la moneda dinámica y verse en la moneda dinámica especificada o en cualquiera de las monedas del informe especificadas en la página **Especificar monedas del informe** .  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de Business Intelligence F1 Ayuda](business-intelligence-wizard-f1-help.md)   
+ [Asistente de Business Intelligence (Ayuda F1)](business-intelligence-wizard-f1-help.md)   
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

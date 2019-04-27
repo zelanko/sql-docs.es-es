@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43be2214ce811b8b0a0855221823fa6f1bdf5984
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740795"
 ---
 # <a name="use-a-template-to-create-an-action"></a>Usar una plantilla para crear una acción
   La vista **Acciones** del Diseñador de cubos contiene varias plantillas que puede usar para crear acciones comunes. Se puede obtener acceso al Diseñador de cubos desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -33,6 +33,6 @@ ms.locfileid: "48154506"
 -   Rellene la información necesaria para completar la creación de la acción basándose en la plantilla.  
   
 ## <a name="see-also"></a>Vea también  
- [Acciones &#40;Analysis Services - datos multidimensionales&#41;](actions-analysis-services-multidimensional-data.md)  
+ [Acciones &#40;Analysis Services - Datos multidimensionales&#41;](actions-analysis-services-multidimensional-data.md)  
   
   

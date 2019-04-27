@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 156bd83662b9b6fa42eb99e8e5810bb4fc71d51a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747276"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>Pestaña Características de la agrupación en clústeres de secuencia (Visor de modelos de minería de datos)
   La pestaña **Características del clúster** en el **Visor de agrupación en clústeres de secuencia de Microsoft** proporciona una lista detallada de las características que definen un clúster de secuencia. Esas características pueden incluir pares de atributo-valor simples, así como transiciones entre los estados.  
@@ -34,7 +34,7 @@ ms.locfileid: "52414857"
  **Modelo de minería de datos**  
  Elija esta opción para ver un modelo de minería de datos que se encuentra en la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Visor**  
+ **Viewer**  
  Elija un visor que desee usar para explorar el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado o el **Visor de árbol de contenido genérico de Microsoft**. También puede utilizar visores de complemento si están disponibles.  
   
  **Cluster**  

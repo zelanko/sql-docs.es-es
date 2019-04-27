@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f67f8d818b38387aef5723b5c6d15dc1958e145c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748187"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Filtros de fila (Diseñador de roles) (Modelo tabular)
   Use la página **Filtros de fila** del Diseñador de roles para definir filtros de nivel de fila para el rol asociado. Los filtros de fila solo se pueden definir para los roles que tengan permisos de lectura y de lectura y procesamiento.  
@@ -38,6 +38,6 @@ ms.locfileid: "48061225"
   
 ## <a name="see-also"></a>Vea también  
  [Roles de modelos tabulares &#40;Tabular de SSAS&#41;](tabular-models/roles-ssas-tabular.md)   
- [Administrar Roles utilizando SSMS &#40;Tabular de SSAS&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
+ [Administrar roles utilizando SSMS &#40;SSAS tabular&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   
   

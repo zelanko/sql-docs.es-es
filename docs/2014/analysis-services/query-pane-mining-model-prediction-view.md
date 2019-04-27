@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 316b82f15c28a13a2a04bdd81683d2fdf83707bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748377"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Panel de consulta (Vista Predicción de modelo de minería de datos)
   En el panel **Consulta** se muestran las instrucciones DMX (Extensiones de minería de datos) creadas por el Generador de consultas de predicción. Puede modificar las instrucciones y, a continuación, hacer clic en el botón **Cambiar a vista de resultado de consulta** para devolver los resultados. Si cambia a la vista **Diseño** , se perderán los cambios realizados a la instrucción.  
   
- **Para más información:** [Instrucciones de manipulación de datos de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/dmx-statements-data-manipulation), [Crear una consulta DMX en SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ **Para obtener más información:** [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](/sql/dmx/dmx-statements-data-manipulation), [crear una consulta DMX en SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="options"></a>Opciones  
  **Cambiar a vista de resultado de consulta**  

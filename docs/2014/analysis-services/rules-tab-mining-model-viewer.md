@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 999ea0b432733fc3458cb6f50e964209c1313b54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748017"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>Pestaña Reglas (Visor de modelos de minería de datos)
   Utilice el panel **Reglas** en un modelo de asociación para ver las reglas que el algoritmo extrajo de los datos. Las reglas describen cómo se relacionan los elementos entre sí, y se pueden utilizar para crear recomendaciones.  
@@ -26,9 +26,9 @@ ms.locfileid: "48059605"
  Puede utilizar las opciones del visor para filtrar el número de reglas que se muestra en el visor.  
   
 > [!WARNING]  
->  De forma predeterminada, solo las reglas que están por encima del umbral de probabilidad definidas en **Probabilidad mínima** se muestran en el visor. No puede reducir más este valor utilizando el visor, porque el umbral de probabilidad del resultado de la regla se determina cuando se crea el modelo. Para obtener más información, vea [Referencia técnica del algoritmo de asociación de Microsoft](data-mining/microsoft-association-algorithm-technical-reference.md).  
+>  De forma predeterminada, solo las reglas que están por encima del umbral de probabilidad definidas en **Probabilidad mínima** se muestran en el visor. No puede reducir más este valor utilizando el visor, porque el umbral de probabilidad del resultado de la regla se determina cuando se crea el modelo. Para más información, vea [Referencia técnica del algoritmo de asociación de Microsoft](data-mining/microsoft-association-algorithm-technical-reference.md).  
   
- **Para obtener más información:** [Algoritmo de asociación de Microsoft](data-mining/microsoft-association-algorithm.md), [Examinar un modelo usando el Visor de reglas de asociación de Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Para obtener más información:** [Algoritmo de asociación de Microsoft](data-mining/microsoft-association-algorithm.md), [examinar un modelo usando el Visor de reglas de asociación de Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del Visor**  
@@ -37,7 +37,7 @@ ms.locfileid: "48059605"
  **Modelo de minería de datos**  
  Elija esta opción para ver un modelo de minería de datos que se encuentra en la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Visor**  
+ **Viewer**  
  Elija un visor para ver el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado de cada modelo de minería de datos o el **Visor de árbol de contenido genérico de Microsoft**. También puede utilizar visores de complemento si están disponibles.  
   
  **Probabilidad mínima**  
@@ -82,13 +82,13 @@ ms.locfileid: "48059605"
   
  Puede hacer clic en el encabezado de columna para ordenar por importancia.  
   
- **Regla**  
+ **Rule**  
  Esta columna del gráfico muestra la descripción de texto de cada regla, según el formato especificado mediante las opciones **Mostrar** y **Mostrar nombre largo**.  
   
  Puede hacer clic en el encabezado de columna para ordenar por el texto de la regla.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Microsoft Docs
+title: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 049fb28c9d49dcfe359363e0be8d78ba8a4bca8d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744492"
 ---
-# <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>Sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
+# <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Obtiene el **stmt_sql_handle** para un [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción en el tipo de parametrización (simple o forzada) dado. Esto permite hacer referencia a las consultas almacenadas en el Store de la consulta mediante el uso de sus **stmt_sql_handle** cuando conoce su texto.  
@@ -60,7 +60,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 |Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
-|**statement_sql_handle**|**varbinary (64)**|El identificador SQL.|  
+|**statement_sql_handle**|**varbinary(64)**|El identificador SQL.|  
 |**query_sql_text**|**nvarchar(max)**|El texto de la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción.|  
 |**query_parameterization_type**|**tinyint**|El tipo de parametrización de consultas.|  
   

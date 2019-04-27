@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748906"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Panel de administración de PowerPivot y datos de uso
   El Panel de administración de PowerPivot es una colección de informes predefinidos y elementos web de Administración central de SharePoint que ayudan a administrar una implementación de SQL Server PowerPivot para SharePoint. El Panel de administración proporciona información relacionada con el estado del servidor, la actividad de los libros y la actualización de datos. El panel usa datos de la recopilación de datos de uso de SharePoint.  
@@ -93,7 +93,7 @@ ms.locfileid: "55087716"
  Para ayudarle a empezar a trabajar rápidamente con informes personalizados, el Panel de administración de PowerPivot proporciona un archivo de conexión de datos de Office (.odc) para conectar con el libro de origen. Por ejemplo, puede usar el archivo .odc en Excel para crear informes adicionales.  
   
 > [!NOTE]  
->  Edite el archivo para evitar el error siguiente al intentar usar el archivo .odc en Excel: "Error al inicializarse el origen de datos". El archivo .odc generado automáticamente incluye un parámetro que el proveedor OLE DB MSOLAP no admite. Las siguientes instrucciones proporcionan la solución alternativa para quitar los parámetros.  
+>  Edite el archivo para evitar el error siguiente al intentar usar el archivo .odc en Excel: "Error de inicialización del origen de datos". El archivo .odc generado automáticamente incluye un parámetro que el proveedor OLE DB MSOLAP no admite. Las siguientes instrucciones proporcionan la solución alternativa para quitar los parámetros.  
   
  Debe ser un administrador de granja o de servicio para compilar informes que estén basados en el libro PowerPivot en la administración central.  
   

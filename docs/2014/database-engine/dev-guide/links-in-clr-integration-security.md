@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781074"
 ---
 # <a name="links-in-clr-integration-security"></a>Vínculos en el ámbito de seguridad de la integración CLR
   En esta sección se describe cómo los distintos fragmentos de código del usuario pueden llamarse entre sí en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ya sea en [!INCLUDE[tsql](../../includes/tsql-md.md)] o en uno de los lenguajes administrados. Estas relaciones entre objetos reciben el nombre de vínculos.  

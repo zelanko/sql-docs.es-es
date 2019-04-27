@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778946"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propiedades del índice de texto completo (página General)
   **Para ver o cambiar las propiedades modificables de un índice de texto completo**  
@@ -65,7 +65,7 @@ ms.locfileid: "48072465"
  Grupo de archivos al que pertenece el índice de texto completo.  
   
  **Lista de palabras irrelevantes de índice de texto completo**  
- Lista de palabras irrelevantes asociada al índice de texto completo. Una lista de palabras irrelevantes es una lista de [las palabras irrelevantes](../relational-databases/search/full-text-search.md). La lista de palabras irrelevantes asociada a un índice de texto completo, si existe, se aplica a las consultas de texto completo en ese índice. Puede quitar la lista de palabras irrelevantes del índice seleccionando  **\<OFF >** en la lista, o bien puede seleccionar una lista de palabras irrelevantes diferente;  **\<SYSTEM >** indica la lista de palabras irrelevantes del sistema.  
+ Lista de palabras irrelevantes asociada al índice de texto completo. Una lista de [palabras irrelevantes](../relational-databases/search/full-text-search.md)es sinónimo de una lista de palabras sin trascendencia. La lista de palabras irrelevantes asociada a un índice de texto completo, si existe, se aplica a las consultas de texto completo en ese índice. Puede quitar la lista de palabras irrelevantes del índice seleccionando  **\<OFF >** en la lista, o bien puede seleccionar una lista de palabras irrelevantes diferente;  **\<SYSTEM >** indica la lista de palabras irrelevantes del sistema.  
   
  **Para crear una lista de palabras irrelevantes**  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48072465"
  **Recuento de elementos de texto completo de tabla**  
  Indica el número de filas que se han indizado con índice de texto completo correctamente.  
   
- Esta propiedad se corresponde con el `TableFulltextItemCount` propiedad devuelta por la OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)] función.  
+ Esta propiedad corresponde a la propiedad `TableFulltextItemCount` devuelta por la función OBJECTPROPERTYEX de [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **Documentos de texto completo de tabla procesados**  
  Muestra el número de filas que se han procesado desde el comienzo de la indización de texto completo. En una tabla que se indiza para búsquedas en texto completo, todas las columnas de una fila se consideran como parte de un documento que se va a indizar. No se cuentan las filas eliminadas.  
@@ -119,7 +119,7 @@ ms.locfileid: "48072465"
   
 |||  
 |-|-|  
-|**True**|Habilitado|  
+|**True**|Enabled|  
 |**False**|Deshabilitado|  
   
  **Seguimiento de los cambios**  
@@ -129,7 +129,7 @@ ms.locfileid: "48072465"
   
 |||  
 |-|-|  
-|**Desactivar**|El índice de texto completo no se actualiza con los cambios en los datos subyacentes.|  
+|**Off**|El índice de texto completo no se actualiza con los cambios en los datos subyacentes.|  
 |**Manual**|El índice de texto completo no se actualiza automáticamente cuando se producen cambios en los datos subyacentes. Sin embargo, estos cambios se mantienen y puede propagarlos al índice de texto completo según una programación usando el Agente SQL Server o de forma manual.|  
 |**Automático**|El índice de texto completo se actualiza automáticamente cuando se producen cambios en los datos subyacentes de la tabla base.|  
   
@@ -139,7 +139,7 @@ ms.locfileid: "48072465"
 |||  
 |-|-|  
 |**Completa**|Durante el rellenado completo de una tabla, se crean entradas de índice para todas las filas.|  
-|**Incremental**|El rellenado incremental actualiza el índice de texto completo de las filas que se hayan agregado, eliminado o modificado desde el último rellenado o en su transcurso. Realizar un rellenado incremental requiere que la tabla base contenga una columna de la `timestamp` tipo de datos.|  
+|**Incremental**|El rellenado incremental actualiza el índice de texto completo de las filas que se hayan agregado, eliminado o modificado desde el último rellenado o en su transcurso. Realizar un rellenado incremental requiere que la tabla base contenga una columna del tipo de datos `timestamp`.|  
 |**Update**|El índice de texto completo se actualiza siempre que se modifican los datos de la tabla base.|  
   
 ## <a name="see-also"></a>Vea también  

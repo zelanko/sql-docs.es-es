@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a698ddb598c4de51d4c30dde717176027f67e6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757189"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>Importar desde Analysis Services (SSAS tabular)
   Este tema explica cómo crear un proyecto de modelos tabulares importando los metadatos de un modelo tabular existente mediante la plantilla de proyecto Importar del servidor de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -37,6 +37,6 @@ ms.locfileid: "48130515"
 5.  En **Nombre de la base de datos**, seleccione la base de datos del modelo tabular que contiene los metadatos del modelo que desea importar y, a continuación, haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Las propiedades del proyecto &#40;Tabular de SSAS&#41;](properties-ssas-tabular.md)  
+ [Propiedades del proyecto &#40;SSAS tabular&#41;](properties-ssas-tabular.md)  
   
   

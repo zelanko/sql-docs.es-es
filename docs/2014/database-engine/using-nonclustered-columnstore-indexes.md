@@ -11,18 +11,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773797"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Usar índices no clúster de almacén de columnas
-  Describe las tareas clave para utilizar un índice no clúster de almacén de columnas en una tabla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Describe las tareas clave para utilizar un índice no clúster de almacén de columnas en una tabla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Para obtener información general de los índices de almacén de columnas, vea [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
+ Para obtener información general acerca de los índices de almacén de columnas, vea [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
   
- Para obtener información acerca de los índices de almacén de columnas agrupado, vea [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
+ Para obtener información acerca de los índices clúster de almacén de columnas, vea [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
 ## <a name="contents"></a>Contenido  
   

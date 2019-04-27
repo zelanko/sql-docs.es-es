@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756991"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` es un modo de ejecución de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] destinado a los desarrolladores de programa. `LocalDB` instalación copia un conjunto mínimo de archivos necesarios para iniciar el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Una vez `LocalDB` está instalado, los desarrolladores inician una conexión mediante el uso de una cadena de conexión especial. Cuando se realiza la conexión, se crea y se inicia automáticamente la infraestructura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesaria, permitiendo que la aplicación use la base de datos sin tareas de configuración complejas o prolongadas en el tiempo. Las herramientas de desarrollo pueden proporcionar a los desarrolladores de software un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que les permite escribir y probar el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] sin tener que administrar una instancia de servidor completa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] `LocalDB` se administra mediante el `SqlLocalDB.exe` utilidad. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` debe usarse en lugar de la [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] característica de instancia de usuario que está en desuso.  
@@ -50,7 +50,7 @@ ms.locfileid: "53368307"
  Una instancia de `LocalDB` pertenecen a las cuentas integradas como NT AUTHORITY\SYSTEM puede presentar problemas de administrabilidad debido a la redirección del sistema de archivos de windows. En su lugar, use una cuenta de windows normal como propietario.  
   
 ### <a name="automatic-and-named-instances"></a>Instancias automáticas y con nombre  
- `LocalDB` admite dos tipos de instancias: las instancias automáticas y las instancias con nombre.  
+ `LocalDB` admite dos tipos de instancias: instancias automáticas e instancias con nombre.  
   
 -   Las instancias automáticas de `LocalDB` son públicos. Se crean y se administran automáticamente para el usuario y se pueden utilizar en cualquier aplicación. Una instancia automática de `LocalDB` en cada versión de `LocalDB` instalado en el equipo del usuario. Las instancias automáticas de `LocalDB` proporcionar una administración agilizada de la instancia. No hay ninguna necesidad de crear la instancia; solo funciona. Esto permite la instalación y migración fáciles de las aplicaciones en un equipo diferente. Si la máquina de destino tiene la versión especificada de `LocalDB` instalada, la instancia automática de `LocalDB` de esa versión también estará disponible en la máquina de destino. Las instancias automáticas de `LocalDB` cuentan con un patrón especial para el nombre de instancia que pertenece a un espacio de nombres reservado. Esto evita conflictos de nombres con las instancias con nombre de `LocalDB`. El nombre de la instancia automática es **MSSQLLocalDB**.  
   

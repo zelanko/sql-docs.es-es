@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b75d3a772bfdb9b0d938691cd5bc92e3292a1e79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749003"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>Iniciar o detener un servidor de PowerPivot para SharePoint
-  Servicio de sistema de PowerPivot y una [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] instancia operan conjuntamente en el mismo servidor de aplicaciones local para admitir solicitudes coordinado y procesamiento de datos en una granja de SharePoint.  
+  El Servicio de sistema de PowerPivot y una instancia de [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] operan conjuntamente en el mismo servidor de aplicaciones local para admitir el procesamiento de solicitudes y datos coordinado en una granja de servidores de SharePoint.  
   
  Este tema contiene las siguientes secciones:  
   

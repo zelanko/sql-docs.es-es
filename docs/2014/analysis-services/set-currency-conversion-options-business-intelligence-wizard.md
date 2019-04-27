@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ca50d2c29bcc1a4394561b4b5106e4da65afa93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746827"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>Establecer las opciones de conversión de moneda (Asistente de Business Intelligence)
   Use la página **Definir la conversión de moneda** para definir los cálculos de conversión de moneda para un grupo de medida que incluye tasas de cambio.  
@@ -43,7 +43,7 @@ ms.locfileid: "48205735"
  Seleccione esta opción para indicar que las tasas de cambio del grupo de medida de tarifas representan un multiplicador para la moneda de ejemplo especificada.  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de Business Intelligence F1 Ayuda](business-intelligence-wizard-f1-help.md)   
+ [Asistente de Business Intelligence (Ayuda F1)](business-intelligence-wizard-f1-help.md)   
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

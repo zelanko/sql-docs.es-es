@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 800326d3255180087cb7603435e2d0e1a8c8e029
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755737"
 ---
 # <a name="create-a-linked-domain"></a>Crear dominio vinculado
   En este tema se describe cómo crear un dominio vinculado en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Los dominios vinculados se crean a partir de otros dominios previamente existentes, y heredan todos los valores, reglas y propiedades de los dominios a los que están vinculados, con la excepción del nombre y la descripción. Es posible administrar un conjunto de dominios vinculados como si fuera un único dominio. Al vincular un dominio al otro, se crea un dominio que hereda su contenido de otro dominio.  
@@ -31,7 +31,7 @@ ms.locfileid: "56033656"
 ### <a name="controlling-data-flow-to-composite-domains"></a>Controlar el flujo de datos a los dominios compuestos  
  Los dominios vinculados le permiten controlar el flujo de datos entre los campos y los dominios compuestos. Gracias a ellos, es posible diferenciar cuándo los datos de un campo fluyen en un dominio compuesto, y cuándo los datos de otro campo muy similar no lo hacen. Para conseguirlo, es necesario especificar que, de los dos dominios vinculados, uno forma parte de un dominio compuesto y el otro no. Desde una perspectiva de dominio, los dominios vinculados son idénticos. Ambos contienen el mismo conocimiento. Sin embargo, desde una perspectiva de dominio compuesto, los dominios vinculados son diferentes. Uno de ellos participa en el dominio compuesto, pero el otro no.  
   
- Un ejemplo es un registro que contiene los campos siguientes: Nombre del cliente, el apellido del cliente y del padre nombre. Imagine que asigna el nombre del cliente y el nombre del padre a un dominio Nombre, y que incluye tanto este como el dominio Apellidos en el dominio compuesto Nombre completo. El problema es que el nombre del padre se agregará al dominio compuesto sin apellidos. Pero si vincula cada uno de los dos campos de nombre a un dominio y vincula ambos dominios, podrá agregar el dominio Nombre del cliente al dominio compuesto Nombre completo, y no agregar el campo Nombre del padre a ese dominio, con lo que evitará que el Nombre del padre se agregue al dominio compuesto.  
+ Un ejemplo es un registro que contiene los campos siguientes: Nombre del cliente, Apellidos del cliente y Nombre del padre. Imagine que asigna el nombre del cliente y el nombre del padre a un dominio Nombre, y que incluye tanto este como el dominio Apellidos en el dominio compuesto Nombre completo. El problema es que el nombre del padre se agregará al dominio compuesto sin apellidos. Pero si vincula cada uno de los dos campos de nombre a un dominio y vincula ambos dominios, podrá agregar el dominio Nombre del cliente al dominio compuesto Nombre completo, y no agregar el campo Nombre del padre a ese dominio, con lo que evitará que el Nombre del padre se agregue al dominio compuesto.  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -40,7 +40,7 @@ ms.locfileid: "56033656"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear un dominio vinculado.  
   
 ##  <a name="Create"></a> Crear dominio vinculado  
@@ -72,7 +72,7 @@ ms.locfileid: "56033656"
   
 4.  En el cuadro de diálogo Crear dominio, escriba un nombre de dominio y una descripción; a continuación, haga clic en Aceptar.  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de crear un dominio vinculado  
+##  <a name="FollowUp"></a> Seguimiento: después de crear un dominio vinculado  
  Una vez creado el dominio vinculado, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Behavior"></a> Comportamiento de un dominio vinculado  

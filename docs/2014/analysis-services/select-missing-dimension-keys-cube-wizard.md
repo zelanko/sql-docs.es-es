@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec9597bdac9afbbb9d6fc4d19bbfd5cd96f72a70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747305"
 ---
 # <a name="select-missing-dimension-keys-cube-wizard"></a>Seleccionar claves de dimensiones ausentes (Asistente para cubos)
   Use la página **Seleccionar claves de dimensiones ausentes** para seleccionar las columnas de clave que se van a utilizar cuando una nueva dimensión no tenga una clave definida para su tabla principal.  

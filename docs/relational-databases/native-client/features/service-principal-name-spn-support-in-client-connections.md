@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 415e1a46734eeed97457a6235a0d9912b17e232b
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745277"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Compatibilidad con Nombre de la entidad de seguridad del servicio (SPN) en conexiones cliente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,18 +73,18 @@ ms.locfileid: "53979971"
  El nuevo comportamiento de conexión lo implementa el cliente; por lo tanto, no es específico de una versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Servidores vinculados y delegación  
- Cuando se crean servidores vinculados, el parámetro **@provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) puede usarse para especificar los SPN del servidor y del asociado de conmutación por error. Las ventajas de hacerlo son lo mismo que especificar los SPN en cadenas de conexión de cliente: Es más sencillo y confiable establecer conexiones que usen la autenticación Kerberos.  
+ Cuando se crean servidores vinculados, el parámetro **@provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) puede usarse para especificar los SPN del servidor y del asociado de conmutación por error. Las ventajas de hacer esto son las mismas de especificar los SPN en las cadenas de conexión de cliente: Es más sencillo y confiable establecer conexiones que usan la autenticación Kerberos.  
   
  La delegación con servidores vinculados requiere la autenticación Kerberos.  
   
 ## <a name="management-aspects-of-spns-specified-by-applications"></a>Aspectos de la administración de los SPN especificados por aplicaciones  
  A la hora de decidir si debe especificar los SPN en una aplicación (a través de cadenas de conexión) o mediante programación a través de propiedades de conexión (en lugar de confiar en el proveedor predeterminado que generó los SPN), tenga en cuenta los factores siguientes:  
   
--   Seguridad: ¿revela el SPN especificado información protegida?  
+-   Seguridad: ¿El SPN especificado revela información protegida?  
   
--   Confiabilidad: para habilitar el uso de SPN predeterminados, la cuenta de servicio en la que se ejecuta la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe tener suficientes privilegios para actualizar Active Directory en el KDC.  
+-   Confiabilidad: Para habilitar el uso de los SPN de forma predeterminada, la cuenta de servicio en la que el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ejecuta la instancia debe tener suficientes privilegios para actualizar Active Directory en el KDC.  
   
--   Comodidad y transparencia de ubicación: ¿cómo afectará a los SPN de una aplicación que su base de datos se mueva a una instancia distinta de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]? Esto se aplica tanto al servidor principal como a su asociado de conmutación por error si se usa la creación de reflejo de la base de datos. Si un servidor cambia, ¿significa que deben modificarse los SPN?, ¿cómo afectará esto a las aplicaciones?, ¿se administrarán los cambios?  
+-   Comodidad y transparencia de ubicación: ¿Cómo de la aplicación afectará a los SPN si su base de datos se mueve a otro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia? Esto se aplica tanto al servidor principal como a su asociado de conmutación por error si se usa la creación de reflejo de la base de datos. Si un servidor cambia, ¿significa que deben modificarse los SPN?, ¿cómo afectará esto a las aplicaciones?, ¿se administrarán los cambios?  
   
 ## <a name="specifying-the-spn"></a>Especificar el SPN  
  Un SPN puede especificarse en cuadros de diálogo y en el código. En esta sección se muestra cómo especificar un SPN.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755923"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>¿Qué&#39;incluido en los datos a los complementos de minería de datos para Office
   Al instalar los Complementos de minería de datos para Office 2013 y seleccionar todas las opciones de instalación, se agregarán las barras de herramientas y las plantillas siguientes:  
@@ -47,7 +47,7 @@ ms.locfileid: "52519088"
   
      Para el análisis de datos es fundamental saber qué datos hay que utilizar y cómo prepararlos. En este tema se proporcionan sugerencias sobre cómo preparar los datos para conseguir el mejor modelo posible.  
   
-     Si no está familiarizado con la minería de datos y solo desea probar las herramientas, se recomienda utilizar el libro de datos de ejemplo que se instala junto con los complementos. Examinando estos datos puede ver también ejemplos de cómo preparar los datos para los modelos de serie temporal o de asociación.  
+     Si está familiarizado con la minería de datos y simplemente quiere experimentar con las herramientas, se recomienda que utilice el libro de datos de ejemplo que se instalan junto con los complementos. Si examina estos datos también puede ver ejemplos de cómo preparar los datos para los modelos de asociación o modelos de serie temporal.  
   
      **Datos de ejemplo**  
   

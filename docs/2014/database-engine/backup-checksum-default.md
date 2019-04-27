@@ -10,11 +10,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788804"
 ---
 # <a name="backup-checksum-default"></a>Valor predeterminado de la suma de comprobación de copia de seguridad
   Use el ajuste del valor predeterminado de la suma de comprobación de copia de seguridad para habilitar o deshabilitar dicha suma de comprobación durante la creación de copias de seguridad y la restauración.  
@@ -25,7 +25,7 @@ ms.locfileid: "48126744"
 |-|-|  
 |**Valor**|**Significado**|  
 |0|Deshabilitado. Esta es la configuración predeterminada.|  
-|1|Habilitado|  
+|1|Enabled|  
   
  La configuración surte efecto de forma inmediata.  
   

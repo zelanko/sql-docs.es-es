@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de9045d445142428810679fc5452e7627760145b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747757"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>Seleccionar una columna (Vista Estructura de minería de datos, cuadro de diálogo)
   Utilice el cuadro de diálogo **Seleccionar una columna** para agregar columnas a la estructura de minería de datos. El cuadro de diálogo contiene distintas opciones en función de si está trabajando con un modelo de minería de datos OLAP o un modelo de minería de datos relacional.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf954178516cef633dbe34c1b8b01579c8f3e4ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749048"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Actualización de datos programada y orígenes de datos no compatibles con la Autenticación de Windows (PowerPivot para SharePoint)
   En este tema se describe un flujo de trabajo de nuevos datos de programación de PowerPivot para SharePoint que pueden usar orígenes de datos que **NO** admiten la autenticación de Windows. Por ejemplo, orígenes de datos Oracle o IBM DB2. Las ilustraciones y los pasos de este tema hacen referencia a orígenes de datos Oracle, pero se aplica el mismo flujo de trabajo a otros orígenes de datos.  
@@ -25,13 +25,13 @@ ms.locfileid: "53374867"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 &#124; SharePoint 2013.|  
   
- **Información general:** cree dos aplicaciones de destino de almacenamiento seguro Configure la primera aplicación de destino (PowerPivotDataRefresh) para usar las credenciales de Windows. Configure la segunda aplicación de destino con las credenciales para un origen de datos que no admita la autenticación de Windows, por ejemplo, una base de datos Oracle. La segunda aplicación de destino también usa la primera aplicación de destino para la cuenta de actualización de datos desatendida.  
+ **Información general:** Cree dos aplicaciones de destino Store seguro. Configure la primera aplicación de destino (PowerPivotDataRefresh) para usar las credenciales de Windows. Configure la segunda aplicación de destino con las credenciales para un origen de datos que no admita la autenticación de Windows, por ejemplo, una base de datos Oracle. La segunda aplicación de destino también usa la primera aplicación de destino para la cuenta de actualización de datos desatendida.  
   
  ![as_powerpivot_refresh_no_windows_auth](../media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh:** un identificador de aplicación de destino de almacén seguro que se establece con la autenticación de Windows.  
+-   **(1) PowerPivotDatarefresh:** Un identificador aplicación seguro Store destino que se establece con autenticación de windows.  
   
--   **(2) OracleAuthentication:** un identificador de aplicación de destino de almacén seguro que se establece con las credenciales de Oracle.  
+-   **(2) OracleAuthentication:** Un identificador aplicación seguro Store destino que se establece con las credenciales de Oracle.  
   
 -   **(3)**  Aplicaciones el servicio de PowerPivot está configurada para usar la aplicación de destino "PowerPivotDataRefresh" para el **cuenta de actualización de datos desatendida**.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "53374867"
   
     -   **Correo electrónico de contacto:** ?  
   
-    -   **Tipo de aplicación de destino:** Grupo.  
+    -   **Tipo de aplicación de destino:** grupo.  
   
     -   **Dirección URL de la página de aplicación de destino:** Ninguno.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "53374867"
   
     -   **Correo electrónico de contacto:** ?  
   
-    -   **Tipo de aplicación de destino:** Grupo.  
+    -   **Tipo de aplicación de destino:** grupo.  
   
     -   **Dirección URL de la página de aplicación de destino:** Ninguno.  
   

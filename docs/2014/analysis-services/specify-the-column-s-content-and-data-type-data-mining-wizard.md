@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc0fa58c45a49c6a2f09ca3e42df395cbaf20660
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745835"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Especificar la columna&#39;contenido y el tipo de datos (Asistente para minería de datos)
   Utilice la página **Especificar el contenido y el tipo de datos de las columnas** para modificar la columna y los tipos de contenido que ya ha especificado mediante el asistente. El asistente utiliza los tipos de datos de las columnas de origen y las capacidades del algoritmo seleccionado para determinar los datos y los tipos de contenido predeterminados para cada columna.  
   
- **Para más información:** [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obtener más información:** [Asistente para minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opciones  
  **Columnas**  

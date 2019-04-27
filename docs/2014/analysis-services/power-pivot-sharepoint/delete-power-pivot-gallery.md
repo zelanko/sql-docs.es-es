@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bfba4b1432f22c176c2504a771be81f2f6e053bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749465"
 ---
 # <a name="delete-powerpivot-gallery"></a>Eliminar la Galería de PowerPivot
   Al eliminar una Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , también se eliminan todos sus elementos, incluido el historial de la actualización de datos para los libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que está configurada para la actualización de datos programada.  

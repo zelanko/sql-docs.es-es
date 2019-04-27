@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bef06da3e6e1702a713aa2b4ca2e448e7ee461af
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771275"
 ---
 # <a name="prepare-sql-server-for-oracle-cdc-view-script"></a>Preparar SQL Server para CDC de Oracle (Ver script)
   Este cuadro de diálogo muestra el script SQL de preparación que crea la base de datos MSXDBCDC. Esta base de datos debe estar en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que se pueda usar con CDC de Oracle para SQL Server.  

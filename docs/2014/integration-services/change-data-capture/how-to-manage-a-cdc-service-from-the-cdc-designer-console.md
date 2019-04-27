@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd284d3657a94e9c002ec252812e010e7014cd4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771245"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Cómo administrar un servicio CDC desde la Consola del diseñador CDC
   En este procedimiento se describe cómo usar la Consola del diseñador CDC para administrar un servicio CDC.  
@@ -28,7 +28,7 @@ ms.locfileid: "58381503"
   
 3.  Seleccione el servicio que desea administrar.  
   
-     **Nota**: Si no hay ningún servicio aparece en la consola del diseñador CDC, debe crear nuevas instancias mediante la consola de configuración del servicio CDC. Para obtener información acerca de cómo crear un nuevo servicio, vea la Ayuda en pantalla incluida en la consola de configuración del servicio.  
+     **Tenga en cuenta**: si no se muestra ningún servicio en la Consola de CDC Designer, debe crear instancias mediante la Consola de configuración del servicio CDC. Para obtener información acerca de cómo crear un nuevo servicio, vea la Ayuda en pantalla incluida en la consola de configuración del servicio.  
   
 4.  Puede realizar las siguientes tareas para un servicio CDC:  
   

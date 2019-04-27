@@ -17,16 +17,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe860a52cb847aec473763c02f24348701766478
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772212"
 ---
 # <a name="advanced-editor"></a>Editor avanzado
   Use el cuadro de diálogo **Editor avanzado** para configurar las propiedades del objeto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] seleccionado.  
   
- El **Editor avanzado** está disponible para la mayor parte de los objetos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que tienen propiedades que pueden configurarse. Es el único editor disponible para aquellos objetos que no muestran una interfaz de usuario personalizada.  
+ El **Editor avanzado** está disponible para la mayor parte de los objetos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que tienen propiedades que pueden configurarse. Es el único editor disponible para aquellos objetos que no muestran una interfaz de usuario personalizada.   
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tienen propiedades que se pueden establecer en el nivel de componente, en el nivel de entrada y salida, y en el nivel de columna de entrada y salida. El **Editor avanzado** enumera todas las propiedades comunes y personalizadas del objeto seleccionado y las muestra, según corresponda, en un máximo de cuatro de las cinco pestañas siguientes:  
   

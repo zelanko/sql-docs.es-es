@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774748"
 ---
 # <a name="password-expired"></a>Contraseña expirada
   Aparece cuando se conecta a un servidor con [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] mediante la autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y la contraseña que ha indicado es correcta pero ha expirado. También aparece cuando se conecta a un servidor utilizando una cuenta nueva, creada con la opción **El usuario debe cambiar la contraseña en el siguiente inicio de sesión** . Utilice el cuadro de diálogo **Contraseña expirada** para cambiar la contraseña de este inicio de sesión de autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

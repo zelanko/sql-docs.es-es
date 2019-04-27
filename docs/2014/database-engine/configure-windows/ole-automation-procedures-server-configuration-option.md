@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f00c238dfb32089261c51936b3937b0657c58b08
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782033"
 ---
 # <a name="ole-automation-procedures-server-configuration-option"></a>Ole Automation Procedures (opción de configuración del servidor)
   Utilice la opción `Ole Automation Procedures` para especificar si se pueden crear instancias de los objetos de OLE Automation en lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esta opción también se puede configurar usando la administración basada en directivas o el procedimiento almacenado **sp_configure** . Para obtener más información, vea [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  

@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779599"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Instalar un Service Pack en un sistema con un tiempo de inactividad mínimo para bases de datos reflejadas
   En este tema se describe cómo minimizar el tiempo de inactividad de las bases de datos reflejadas cuando instale los Service Pack o las revisiones. Este proceso conlleva la actualización secuencial de las instancias de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] que forman parte de la creación de reflejo de la base de datos. Este formulario de actualización, que se conoce como un *actualización gradual*, reduce el tiempo de inactividad a solo una conmutación por error único. Tenga en cuenta que para las sesiones de modo de alto rendimiento en el que el servidor reflejado está geográficamente distante del servidor principal, una actualización gradual podría ser inadecuada.  
@@ -34,7 +34,7 @@ ms.locfileid: "52520381"
 -   Si la sesión incluye un testigo, recomendamos que lo quite. Si no lo hace, al actualizar la instancia del servidor reflejado, la disponibilidad de la base de datos depende del testigo que sigue estando conectado a la instancia del servidor principal. Después de quitar un testigo, puede actualizarlo en cualquier momento durante el proceso de actualización gradual sin aumentar el tiempo de inactividad de la base de datos.  
   
     > [!NOTE]  
-    >  Para obtener más información, consulte [quórum: Cómo un testigo afecta a la disponibilidad de la base de datos &#40;la creación de reflejo de base de datos&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Para más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   Si una sesión se está ejecutando en modo de alto rendimiento, cambie el modo de funcionamiento al modo de alta seguridad.  
   

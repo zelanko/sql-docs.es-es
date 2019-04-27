@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d966c4602a870a51c64dc7cf86e5363b99a4e76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747927"
 ---
 # <a name="select-a-data-source-linked-object-wizard"></a>Seleccionar un origen de datos (Asistente para objetos vinculados)
   Use la página **Seleccionar un origen de datos** para seleccionar el origen de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene los objetos desde los que se vinculará o importará.  

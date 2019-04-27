@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781133"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Suplantación y seguridad de la integración CLR
   Cuando el código administrado obtiene acceso a recursos externos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no suplanta automáticamente el contexto de ejecución actual en el que se ejecuta la rutina. El código de los ensamblados `EXTERNAL_ACCESS` y `UNSAFE` puede suplantar explícitamente el contexto de ejecución actual.  

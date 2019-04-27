@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f9a869b4a280f8df44fce4c506c5f77afc7e8f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756628"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Cambiar el nombre de una tabla o una columna (SSAS tabular)
   Puede cambiar el nombre de una tabla durante el proceso de importación si escribe un **Nombre descriptivo** en la página **Seleccionar tablas y vistas** del **Asistente para importación de tablas**. También puede cambiar los nombres de tabla y de columna si importa los datos especificando una consulta en la página **Especificar una consulta SQL** del **Asistente para la importación de tablas**.  
@@ -57,8 +57,8 @@ ms.locfileid: "48085588"
  Además, cualquier cálculo que utilice la tabla con el nombre cambiado o que use columnas de dicha tabla también debe actualizarse, así como los datos derivados de esos cálculos. Esto puede tardar un tiempo que depende de cuántas tablas y cálculos se vean afectados. Por consiguiente, el mejor momento para cambiar el nombre de las tablas es bien durante el proceso de importación o antes de empezar a generar relaciones y cálculos complejos.  
   
 ## <a name="see-also"></a>Vea también  
- [Tablas y columnas &#40;Tabular de SSAS&#41;](tables-and-columns-ssas-tabular.md)   
+ [Definir tablas y columnas &#40;SSAS tabular&#41;](tables-and-columns-ssas-tabular.md)   
  [Importar desde PowerPivot &#40;Tabular de SSAS&#41;](import-from-power-pivot-ssas-tabular.md)   
- [Importar desde Analysis Services &#40;Tabular de SSAS&#41;](import-from-analysis-services-ssas-tabular.md)  
+ [Importación desde Analysis Services &#40;SSAS tabular&#41;](import-from-analysis-services-ssas-tabular.md)  
   
   

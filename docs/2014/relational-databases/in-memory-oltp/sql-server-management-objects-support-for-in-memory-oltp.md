@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7591cff38ac08d9fd36d7b39f180613fbdd12961
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63066443"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Compatibilidad de Objetos de administración de SQL Server con OLTP en memoria
   En este tema se describen los cambios de los Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO) para OLTP en memoria.  

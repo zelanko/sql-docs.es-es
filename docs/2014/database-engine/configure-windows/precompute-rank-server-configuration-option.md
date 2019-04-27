@@ -1,8 +1,9 @@
 ---
 title: precompute rank (opción de configuración del servidor) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/02/2017
+ms.prod: sql
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
@@ -14,13 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6d58db4361acd5a97a58c01d17b1f9a78b20916e
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781487"
 ---
 # <a name="precompute-rank-server-configuration-option"></a>precompute rank (opción de configuración del servidor)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
   Esta opción no se implementa en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Éste es un cambio importante. Modifique las aplicaciones que actualmente utilizan esta característica lo antes posible.  
   
   

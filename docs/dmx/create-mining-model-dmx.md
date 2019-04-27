@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853470"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *lista de definiciones de columna*  
  Lista delimitada por comas de definiciones de columna.  
   
- *algoritmo*  
+ *algorithm*  
  Nombre de un algoritmo de minería de datos definido por el proveedor actual.  
   
 > [!NOTE]  
@@ -54,7 +54,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Opcional. Lista delimitada por comas de parámetros definidos por el proveedor para el algoritmo.  
   
  *Cadena XML*  
- (Solo para usuarios expertos.) Modelo XML codificado (PMML). La cadena debe estar entre comillas simples (').  
+ (Sólo para uso avanzado.) Un modelo XML codificado (PMML). La cadena debe estar entre comillas simples (').  
   
  El **sesión** cláusula le permite crear un modelo de minería de datos que se quita automáticamente del servidor cuando se cierra la conexión o la sesión agota el tiempo. **SESIÓN** modelos de minería de datos son útiles porque no requieren que el usuario sea un administrador de base de datos, y sólo usan espacio en disco mientras la conexión está abierta.  
   

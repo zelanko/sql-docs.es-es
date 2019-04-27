@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774195"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Abrir el Diseñador de tablas (Visual Database Tools)
   El Diseñador de tablas es una herramienta visual que permite diseñar y visualizar tablas de bases de datos a las que se está conectado. Puede utilizar el Diseñador de tablas para crear, editar o eliminar tablas, columnas, claves, índices, relaciones y restricciones.  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bf74ad2591fd7ed745648b29a60674431310ba0c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787109"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>Establecer la opción de configuración del servidor Tiempo de espera de consulta remota
   En este tema se describe cómo establecer la opción de configuración del servidor **tiempo de espera de consultas remotas** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **tiempo de espera de consultas remotas** especifica cuánto tiempo, en segundos, puede tardar una operación remota antes de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supere el tiempo de espera. El valor predeterminado de esta opción es 600, lo que permite una espera de 10 minutos. Este valor se aplica a una conexión saliente iniciada por el [!INCLUDE[ssDE](../../includes/ssde-md.md)] como una consulta remota. Este valor no afecta a las consultas recibidas por el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para deshabilitar el tiempo de espera, establezca el valor en 0. Una consulta esperará hasta que finalice.  

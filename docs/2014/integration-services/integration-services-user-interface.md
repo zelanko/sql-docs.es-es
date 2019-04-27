@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55b09057927fa9c5102b8d816c42e1741bc0883a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767677"
 ---
 # <a name="integration-services-user-interface"></a>Interfaz de usuario de Integration Services
   Además de las superficies de diseño de las pestañas del Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , la interfaz de usuario proporciona acceso a las siguientes ventanas y cuadros de diálogo para agregar características a paquetes y configurar las propiedades de los objetos de paquete:  
@@ -39,7 +39,7 @@ ms.locfileid: "58388993"
   
  La tabla enumera los cuadros de diálogo disponibles en el menú **SSIS** y las superficies de diseño del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-|Cuadro de diálogo|Propósito|Acceso|  
+|Cuadro de diálogo|Finalidad|Acceso|  
 |----------------|-------------|------------|  
 |**Introducción**|Tener acceso a ejemplos, tutoriales y vídeos.|En la superficie de diseño de la pestaña **Flujo de control** o de la pestaña **Flujo de datos** , haga clic con el botón derecho y elija **Introducción**.<br /><br /> Para mostrar automáticamente la ventana **Introducción** cada vez que cree un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , seleccione **Mostrar siempre en los proyectos nuevos** en la parte inferior de la ventana.|  
 |**Configurar registros SSIS**|Configurar el registro de un paquete y sus tareas agregando registros y configurando detalles de registro.|En el menú **SSIS** , haga clic en **Registro**.<br /><br /> - O bien -<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Registro**.|  
@@ -67,7 +67,7 @@ ms.locfileid: "58388993"
   
  En esta tabla se enumeran las ventanas disponibles desde los menús **SSIS** y **Ver** , y las superficies de diseño del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-|Ventana|Propósito|Acceso|  
+|Ventana|Finalidad|Acceso|  
 |------------|-------------|------------|  
 |**Variables**|Agregar y administrar variables personalizadas.|En el menú **SSIS** , haga clic en **Variables**.<br /><br /> -o bien-<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de las pestañas **Flujo de control** y **Flujo de datos** y, luego, haga clic en **Variables**.<br /><br /> -o bien-<br /><br /> En el menú **Ver** , seleccione **Otras ventanas**y haga clic en **Variables**.|  
 |**Registrar eventos**|Ver entradas del registro en tiempo de ejecución.|En el menú **SSIS** , haga clic en **Registrar eventos**.<br /><br /> -o bien-<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de las pestañas **Flujo de control** y **Flujo de datos** y, luego, haga clic en **Registrar eventos**.<br /><br /> -o bien-<br /><br /> En el menú **Ver** , seleccione **Otras ventanas**y haga clic en **Registrar eventos**.|  

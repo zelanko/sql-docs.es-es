@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779412"
 ---
 # <a name="full-text-stoplist-properties"></a>Propiedades de lista de palabras irrelevantes de texto completo
   Use este cuadro de diálogo para agregar o eliminar palabras irrelevantes individuales, eliminar todas las palabras irrelevantes para un idioma concreto o borrar la lista de palabras irrelevantes actual. Una palabra irrelevante es una palabra de uso frecuente que se incluye en una lista de palabras irrelevantes. Las palabras irrelevantes de una lista de palabras irrelevantes se omiten en la indización de texto completo para las tablas que usan dicha lista. Para obtener más información, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../relational-databases/search/full-text-search.md).  
@@ -43,10 +43,10 @@ ms.locfileid: "48072525"
  **Borrar lista de palabras irrelevantes**  
  Borra la lista de palabras irrelevantes eliminando todas las palabras irrelevantes para todos los idiomas.  
   
- **palabra irrelevante**  
+ **Stopword**  
  Si seleccionó **Agregar palabra irrelevante** o **Eliminar palabra irrelevante**, escriba la palabra irrelevante en el campo **Palabra irrelevante** . Una nueva palabra irrelevante debe ser única; es decir, no debe estar todavía en esta lista de palabras irrelevantes para el idioma que seleccione.  
   
- **Idioma de texto completo**  
+ **Full-text language**  
  Si seleccionó **Agregar palabra irrelevante**, **Eliminar palabra irrelevante**o **Eliminar todas las palabras irrelevantes**, seleccione el idioma de la palabra o palabras irrelevantes en el cuadro de lista. Este cuadro incluye todos los idiomas de texto completo compatibles con la instancia de servidor.  
   
 ## <a name="see-also"></a>Vea también  

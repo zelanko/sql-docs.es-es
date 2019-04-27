@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b9fbcb4aa054d261d47bea61edf1d1815cba27f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756727"
 ---
 # <a name="table-properties-ssas-tabular"></a>Propiedades de la tabla (SSAS tabular)
   En este tema se describen las propiedades de la tabla del modelo. Las propiedades que se describen aquí son diferentes de las del cuadro de diálogo Editar propiedades de tabla, que definen qué columnas del origen se importan.  
@@ -35,7 +35,7 @@ ms.locfileid: "52401038"
 |Property|Valor predeterminado|Descripción|  
 |--------------|---------------------|-----------------|  
 |**Nombre de conexión**|\<nombre de la conexión >|El nombre de la conexión al origen de datos de la tabla.<br /><br /> Para modificar la conexión, haga clic en el botón.|  
-|**Oculto**|False|Especifica si la tabla se oculta en las listas de campos del cliente de informes.|  
+|**Hidden**|False|Especifica si la tabla se oculta en las listas de campos del cliente de informes.|  
 |**Particiones**||Las particiones de la tabla no se muestran en la ventana **Propiedades** . Para ver, crear o modificar las particiones, haga clic en el botón para abrir el Administrador de particiones.|  
 |**Datos de origen**||El origen de datos de la tabla no se pueden mostrar en la ventana **Propiedades** . Para ver o modificar los datos de origen, haga clic en el botón para abrir el cuadro de diálogo Editar propiedades de tabla.|  
 |**Descripción de tabla**||Descripción de la tabla.<br /><br /> En [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], si un usuario final coloca el cursor sobre esta tabla en la lista de campos, aparece la descripción como una información sobre herramientas.|  

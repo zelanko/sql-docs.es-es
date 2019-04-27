@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7053c5cd9780e578697c1bc08e6bb1b0c32ca1f9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828881"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>Crear paquetes en herramientas de datos de SQL Server
   Los paquetes que creó en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mediante el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] se guardan en el sistema de archivos. Para guardar un paquete en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o en el almacén de paquetes, necesita guardar una copia del paquete. Para más información, vea [Guardar una copia de un paquete](../../2014/integration-services/save-a-copy-of-a-package.md).  

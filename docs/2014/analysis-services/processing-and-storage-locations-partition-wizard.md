@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a1462a2cc1338e973df3d0fd84641aa24d0bc41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748587"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>Ubicaciones de procesamiento y almacenamiento (Asistente para particiones)
   Use la página **Ubicaciones de procesamiento y almacenamiento** para especificar la instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] del cubo propietario de la partición, así como la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que almacena los datos para la partición. Puede definir una partición como remota si especifica una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] remota o una ubicación de almacenamiento distinta de la ubicación de almacenamiento predeterminada. Para más información sobre las particiones remotas, vea [Particiones remotas](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "48198625"
   
 ## <a name="see-also"></a>Vea también  
  [Partición de la Ayuda F1 del Asistente para &#40;Analysis Services - datos multidimensionales&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Las particiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Busque el cuadro de diálogo de la carpeta remota &#40;Analysis Services - datos multidimensionales&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
   

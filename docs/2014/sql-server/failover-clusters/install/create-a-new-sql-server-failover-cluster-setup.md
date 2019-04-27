@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 696d8becd23f7a7136011a5e1c61eb9669c58e12
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740615"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Crear un nuevo clúster de conmutación por error de SQL Server (programa de instalación)
   Para instalar o actualizar un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe ejecutar el programa de instalación en cada nodo de los clústeres de conmutación por error. Para agregar un nodo a un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente, debe ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el nodo que se va a agregar a la instancia del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No ejecute el programa de instalación en el nodo activo para administrar los demás nodos.  
@@ -234,7 +234,7 @@ ms.locfileid: "53359387"
   
 ##  <a name="prepare"></a> Preparar  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Paso 1 de la instalación de clústeres de conmutación por error de Advanced/Enterprise: Preparar  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Paso de instalación de clústeres de conmutación por error de Advanced/Enterprise 1: Preparar  
   
 1.  Inserte el disco de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, en la carpeta raíz, haga doble clic en Setup.exe. Para realizar la instalación desde un recurso compartido de red, desplácese a la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe. Para obtener más información acerca de cómo instalar los requisitos previos, vea [Before Installing Failover Clustering](before-installing-failover-clustering.md). Puede que se le solicite que instale los requisitos previos si no se han instalado previamente.  
   
@@ -328,7 +328,7 @@ ms.locfileid: "53359387"
   
 ## <a name="complete"></a>Operación completada  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Paso 2 de la instalación de clústeres de conmutación por error de Advanced/Enterprise: Operación completada  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Paso de instalación de clústeres de conmutación por error de Advanced/Enterprise 2: Operación completada  
   
 1.  Después de preparar todos los nodos como se describe en el [paso de preparación](#prepare), ejecute el programa de instalación en uno de los nodos preparados, preferiblemente el que posee el disco compartido. En la página **Opciones avanzadas** del Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Finalización avanzada de clúster**.  
   

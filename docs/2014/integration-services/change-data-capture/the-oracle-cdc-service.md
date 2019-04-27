@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3f3967b31331471d1ad0a886cc9eda853a25931
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771081"
 ---
 # <a name="the-oracle-cdc-service"></a>El servicio CDC de Oracle
   El servicio CDC de Oracle es un servicio de Windows que ejecuta el programa xdbcdcsvc.exe. El servicio CDC de Oracle se puede configurar para ejecutar varios servicios de Windows en el mismo equipo, cada uno de ellos con un nombre de servicio de Windows diferente. Se suelen crear varios servicios de Windows CDC de Oracle en un único equipo para obtener una mejor separación entre ellos o cuando cada uno de ellos debe trabajar con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferente.  

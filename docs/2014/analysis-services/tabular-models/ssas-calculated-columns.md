@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6360770c57660ec62493b8ecd6c2aaea695289f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756576"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Columnas calculadas (SSAS tabular)
   En los modelos tabulares, las columnas calculadas le permiten agregar nuevos datos al modelo. En lugar de pegar o importar los valores en la columna, cree una fórmula DAX que define los valores de nivel de fila de la columna. A continuación, la columna calculada se puede utilizar en un informe, una tabla dinámica o un gráfico dinámico como cualquier otra columna.  

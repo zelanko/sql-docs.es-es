@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770641"
 ---
 # <a name="aggregate-transformation"></a>Transformación Agregado
   La transformación Agregado aplica funciones de agregado, como Average, a los valores de columnas y copia los resultados en la salida de transformación. Además de las funciones de agregado, la transformación proporciona la cláusula GROUP BY, que se puede usar para especificar los grupos en los que se debe realizar el agregado.  
@@ -100,7 +100,7 @@ ms.locfileid: "58384883"
   
  La transformación Agregado es asincrónica, lo que significa que no utiliza ni publica datos fila por fila. En lugar de ello, utiliza todo el conjunto de filas, realiza sus agrupaciones y agregaciones, y, seguidamente, publica los resultados.  
   
- Esta transformación no pasa por ninguna columna, sino que crea nuevas columnas en el flujo de datos para los datos que publica. Solo las columnas de entrada a las que se aplican las funciones de agregado o las columnas de entrada que usa la transformación para agrupar se copian en la salida de transformación. Por ejemplo, una entrada de transformación agregado puede tener tres columnas: **CountryRegion**, **Ciudad**, y **rellenado**. La transformación agrupa de acuerdo con la columna **CountryRegion** y aplica la función Sum a la columna **Population** . Por tanto, la salida no incluye la columna **City** .  
+ Esta transformación no pasa por ninguna columna, sino que crea nuevas columnas en el flujo de datos para los datos que publica. Solo las columnas de entrada a las que se aplican las funciones de agregado o las columnas de entrada que usa la transformación para agrupar se copian en la salida de transformación. Por ejemplo, una entrada de transformación Agregado puede tener tres columnas: **PaísRegión**, **Ciudad** y **Población**. La transformación agrupa de acuerdo con la columna **CountryRegion** y aplica la función Sum a la columna **Population** . Por tanto, la salida no incluye la columna **City** .  
   
  Puede también agregar varias salidas a la transformación Agregado y dirigir cada agregación a una salida diferente. Por ejemplo, si la transformación Agregado aplica las funciones Sum y Average, cada agregación se puede dirigir a una salida diferente.  
   

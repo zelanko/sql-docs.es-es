@@ -1,5 +1,5 @@
 ---
-title: 'Las siguientes características no son compatibles con Excel Services y no se muestren o que se muestren solo parcialmente: comentarios, formas u otros objetos | Microsoft Docs'
+title: 'Servicios de Excel no admite las siguientes características y puede que no se muestren o se muestren solo parcialmente: Los comentarios, formas u otros objetos | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16269f5c0d7b3d64c9639862995dee44146efb9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743937"
 ---
-# <a name="the-following-features-are-not-supported-by-excel-services-and-may-not-display-or-may-display-only-partially-comments-shapes-or-other-objects"></a>Las siguientes características no se admiten en Servicios de Excel y puede que no se muestren o que se muestren solo parcialmente: comentarios, formas u otros objetos
+# <a name="the-following-features-are-not-supported-by-excel-services-and-may-not-display-or-may-display-only-partially-comments-shapes-or-other-objects"></a>Servicios de Excel no admite las siguientes características y puede que no se muestren o se muestren solo parcialmente: Comentarios, formas o otros objetos
   Este error se produce al agregar segmentaciones a un libro PowerPivot desde una lista de campos de PowerPivot.  
   
 ## <a name="details"></a>Detalles  

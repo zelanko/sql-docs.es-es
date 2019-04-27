@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774300"
 ---
 # <a name="manage-checkins"></a>Administrar protecciones
   Para realizar cambios en un archivo controlado por código fuente que está a disposición de otros usuarios, es necesario protegerlo. Al proteger un archivo, la versión creada se copia en el proveedor de control de código fuente, se convierte en la última versión del archivo y se suele poner a disposición de otros usuarios que disponen de los permisos adecuados.  

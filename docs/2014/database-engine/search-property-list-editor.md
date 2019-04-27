@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773673"
 ---
 # <a name="search-property-list-editor"></a>Editor de lista de propiedades de búsqueda
   Use este cuadro de diálogo para agregar o eliminar propiedades de búsqueda en una lista de propiedades de búsqueda.  
@@ -29,7 +29,7 @@ ms.locfileid: "48148945"
  **Nombre de propiedad**  
  Especifique el nombre que se va a usar para identificar la propiedad en consultas de texto completo. El nombre de una propiedad puede contener espacios internos. La longitud máxima del atributo **Property Name** es de 256 caracteres. Este nombre puede ser un nombre descriptivo, como "Autor" o "Dirección particular", o bien el nombre canónico de Windows de la propiedad, como `System.Author` o `System.Contact.HomeAddress`. **Nombre de propiedad** debe identificar exclusivamente la propiedad en el conjunto de propiedades.  
   
- Los desarrolladores usar el nombre de propiedad para identificar la propiedad en el [CONTAINS](/sql/t-sql/queries/contains-transact-sql) predicado. Por tanto, cuando se agregue una propiedad es importante especificar un valor que represente significativamente la propiedad.  
+ Los desarrolladores usan el nombre de propiedad para identificar la propiedad en el predicado [CONTAINS](/sql/t-sql/queries/contains-transact-sql) . Por tanto, cuando se agregue una propiedad es importante especificar un valor que represente significativamente la propiedad.  
   
  **GUID del conjunto de propiedades**  
  Especifique el identificador del conjunto de propiedades al que pertenece la propiedad. Se trata de un identificador único global (GUID). Un conjunto de propiedades es un grupo de propiedades relacionadas lógicamente. Para obtener más información cómo obtener este valor, vea la sección "Comentarios" más adelante en este tema.  

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4a038fcc9db891b2c0a0155ffa2aba39d2f3759
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768671"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Crear un origen con el componente de script
   Los componentes de origen del flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se usan para cargar datos de un origen de datos y pasarlos a transformaciones y destinos de nivel inferior. Normalmente la conexión al origen de datos se realiza a través de un administrador de conexiones existente.  
@@ -134,7 +134,7 @@ ms.locfileid: "58381183"
   
 5.  En la página **Script**, haga clic en **Editar script** y escriba el script que se indica a continuación. A continuación, cierre el entorno de desarrollo de script y el **Editor de transformación Script**.  
   
-6.  Cree y configure un componente de destino, como un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el componente de destino de ejemplo que se muestra en [Creating a Destination with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) (Crear un destino con el componente de script), que espere las columnas **AddressID** y **City**. A continuación, conecte el componente de origen al destino. (Puede conectar directamente un origen a un destino sin ninguna transformación.) Puede crear una tabla de destino ejecutando el comando [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente en la base de datos `AdventureWorks`:  
+6.  Cree y configure un componente de destino, como un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el componente de destino de ejemplo que se muestra en [Creating a Destination with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) (Crear un destino con el componente de script), que espere las columnas **AddressID** y **City**. A continuación, conecte el componente de origen al destino. (Un origen puede conectarse directamente a un destino sin ninguna transformación.) Puede crear una tabla de destino ejecutando el comando [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente en la base de datos `AdventureWorks`:  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
@@ -267,7 +267,7 @@ ms.locfileid: "58381183"
   
 6.  En la página **Script**, haga clic en **Editar script** y escriba el script que se indica a continuación. A continuación, cierre el entorno de desarrollo de script y el **Editor de transformación Script**.  
   
-7.  Cree y configure un componente de destino, como un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el componente de destino de ejemplo que se muestra en [Creating a Destination with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) (Crear un destino con el componente de script). A continuación, conecte el componente de origen al destino. (Puede conectar directamente un origen a un destino sin ninguna transformación.) Puede crear una tabla de destino ejecutando el comando [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente en la base de datos `AdventureWorks`:  
+7.  Cree y configure un componente de destino, como un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el componente de destino de ejemplo que se muestra en [Creating a Destination with the Script Component](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) (Crear un destino con el componente de script). A continuación, conecte el componente de origen al destino. (Un origen puede conectarse directamente a un destino sin ninguna transformación.) Puede crear una tabla de destino ejecutando el comando [!INCLUDE[tsql](../../includes/tsql-md.md)] siguiente en la base de datos `AdventureWorks`:  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 722c2ae62376d30076b5cf5cf582ff80be311e50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748489"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Actualizar vista del origen de datos (cuadro de diálogo)
   Use el cuadro de diálogo **Actualizar vista del origen de datos** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para aceptar o cancelar los cambios que se producirán como resultado de actualizar la vista del origen de datos. El cuadro de diálogo muestra los cambios que se van a realizar en la vista del origen de datos como resultado de los cambios realizados en el origen de datos subyacente. Haga clic en **Aceptar** para aceptar los cambios y actualizar la vista del origen de datos, o haga clic en **Cancelar** para ignorar los cambios y dejar la vista del origen de datos sin modificaciones. Puede mostrar el cuadro de diálogo **Actualizar vista del origen de datos** de uno de estos modos:  
@@ -38,6 +38,6 @@ ms.locfileid: "48119625"
   
 ## <a name="see-also"></a>Vea también  
  [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Diseñador de vistas del origen de datos &#40;Analysis Services - datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

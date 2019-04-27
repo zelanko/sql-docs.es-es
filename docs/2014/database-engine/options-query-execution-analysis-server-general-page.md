@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8fc2fd14849661a3467bf1c7f401df2b19caf009
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774768"
 ---
 # <a name="options-query-execution-analysis-server-general-page"></a>Opciones (consulta ejecución Analysis Server página General)
   Utilice esta página para especificar las opciones de ejecución de las consultas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para mostrar esta configuración, en el menú **Herramientas** , haga clic en **Opciones**. En **Ejecución de la consulta** , expanda la carpeta **Analysis Server** y haga clic en **General**.  

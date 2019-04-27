@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af3b98aab31aeaa3a01b1026eca8b3098ce97bef
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749252"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Implementar las soluciones de PowerPivot en SharePoint
   Use las instrucciones siguientes para implementar manualmente dos paquetes de soluciones que agregan características de PowerPivot a un entorno de SharePoint Server 2010. La implementación de soluciones es un paso necesario para configurar PowerPivot para SharePoint en un servidor SharePoint 2010. Para ver una lista completa de los pasos necesarios, consulte [configuración en Administración Central y administración de servidores PowerPivot](power-pivot-server-administration-and-configuration-in-central-administration.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "52515968"
   
  [Acerca de las soluciones de PowerPivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Requisito previo: Compruebe que la aplicación Web usa el Modo clásico de autenticación.  
+##  <a name="bkmk_classic"></a> Requisito previo: Compruebe que la aplicación Web usa autenticación de modo clásico  
  PowerPivot para SharePoint solo se admite en las aplicaciones Web que usan el modo clásico de autenticación de Windows. Para comprobar si la aplicación usa el modo clásico, ejecute el siguiente cmdlet de PowerShell desde la **SharePoint 2010 Management Shell**, reemplazando `http://<top-level site name>` con el nombre del sitio de SharePoint:  
   
 ```  

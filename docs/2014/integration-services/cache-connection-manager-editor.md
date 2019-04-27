@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af7696c1d5194af721b6ff803736193db0285b8b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771733"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor del administrador de conexiones de caché
   El administrador de conexiones de caché lee un conjunto de datos de referencia a partir de la transformación de caché o de un archivo caché (.caw) y puede guardar los datos en un archivo caché. Los datos siempre se almacenan en memoria.  

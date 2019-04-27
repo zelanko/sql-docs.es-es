@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774579"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Actualizar a una edición diferente de SQL Server 2014 (programa de instalación)
   La instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la actualización de edición entre las diferentes ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener información sobre rutas de actualización de ediciones admitidas, vea [Actualizaciones de ediciones y versiones admitidas](supported-version-and-edition-upgrades.md). Antes de que se inicie la actualización de edición de una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte los temas siguientes:  
@@ -29,7 +29,7 @@ ms.locfileid: "51019050"
 -   [Requisitos de hardware y software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un entorno en clúster:** basta con actualizar la edición en uno de los nodos del clúster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este nodo puede ser activo o pasivo, y el motor no pone los recursos sin conexión durante la actualización de la edición. Después de actualizar la edición, es necesario reiniciar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o conmutar por error a otro nodo diferente.  
+>  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un entorno en clúster:** Ejecutar actualización de edición en uno de los nodos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clúster es suficiente. Este nodo puede ser activo o pasivo, y el motor no pone los recursos sin conexión durante la actualización de la edición. Después de actualizar la edición, es necesario reiniciar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o conmutar por error a otro nodo diferente.  
   
 ## <a name="prerequisites"></a>Requisitos previos  
  En instalaciones locales, debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, deberá usar una cuenta de dominio que tenga permisos de lectura para dicho recurso.  

@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70f9bc727ba86d10a48dbc9265c9c2d3655d9fe0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754641"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Posibles errores durante la creación de reflejo de la base de datos
   Los problemas físicos, del sistema operativo o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden provocar un error en una sesión de creación de reflejo de la base de datos. La creación de reflejo de la base de datos no comprueba regularmente los componentes de los que depende Sqlservr.exe para comprobar si están funcionando de forma correcta o si se ha producido un error. Sin embargo, en algunos tipos de errores, el componente afectado informa a Sqlservr.exe. Cuando otro componente informa del error, éste se denomina *error de hardware*. Para detectar otros errores que pudieran pasar desapercibidos, la creación de reflejo de la base de datos implementa su propio mecanismo de tiempo de espera. Si se agota el tiempo de espera de la creación de reflejo, la creación de reflejo de la base de datos supone que se ha producido un error y declara un *error de software*. Sin embargo, algunos errores que se producen en el nivel de instancia de SQL Server no ocasionan que se agote el tiempo de espera de la creación de reflejo y pueden no ser detectados.  
@@ -109,7 +109,7 @@ ms.locfileid: "48179075"
   
 ## <a name="see-also"></a>Vea también  
  [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring-operating-modes.md)   
+ [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   

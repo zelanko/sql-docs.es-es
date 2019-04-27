@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 22f47a80a73efc8d462ef8f26f2e6b0fb5b3f3c7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787609"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>Establecer la opción de configuración del servidor Bloqueos
   En este tema se describe cómo establecer la opción de configuración del servidor **bloqueos** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **bloqueos** establece el número máximo de bloqueos disponibles, limitando de este modo la cantidad de memoria que el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usa para ellos. El valor predeterminado es 0, lo que permite al [!INCLUDE[ssDE](../../includes/ssde-md.md)] asignar y cancelar la asignación de estructuras de bloqueo de manera dinámica a partir de los requisitos variables del sistema.  

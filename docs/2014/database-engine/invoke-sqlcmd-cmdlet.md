@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774599"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>cmdlet Invoke-Sqlcmd
   **Invoke-Sqlcmd** es un cmdlet de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que ejecuta scripts que contienen instrucciones de los lenguajes ([!INCLUDE[tsql](../includes/tsql-md.md)] y XQuery) y comandos admitidos por la utilidad **sqlcmd**.  
@@ -118,7 +118,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Deshabilitar comandos interactivos, script de inicio y variables de entorno.|-X|-DisableCommands|  
 |Deshabilitar la sustitución de variables.|-X|-DisableVariables|  
 |Nivel de gravedad mínimo que se ha de notificar.|-v|-SeverityLevel|  
-|Nivel de error mínimo que se ha de notificar.|-m|-ErrorLevel|  
+|Nivel de error mínimo que se ha de notificar.|-M|-ErrorLevel|  
 |Intervalo de tiempo de espera de inicio de sesión.|-l|-ConnectionTimeout|  
 |Nombre de host.|-H|-HostName|  
 |Cambiar contraseña y salir.|-Z|-NewPassword|  
@@ -132,8 +132,8 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Ejecutar la consulta especificada y continuar la ejecución.|-Q|Ningún parámetro.|  
 |Página de códigos que se ha de utilizar para los datos de salida.|-f|Ningún parámetro.|  
 |Cambiar una contraseña y continuar la ejecución.|-Z|Ningún parámetro.|  
-|Tamaño del paquete|-a|Ningún parámetro.|  
-|Delimitador de columnas.|-s|Ningún parámetro.|  
+|Tamaño del paquete|-A|Ningún parámetro.|  
+|Delimitador de columnas.|-S|Ningún parámetro.|  
 |Controlar los encabezados de salida|-H|Ningún parámetro.|  
 |Especificar los caracteres de control.|-k|Ningún parámetro.|  
 |Ancho de presentación de longitud fija.|-Y|Ningún parámetro.|  
@@ -142,8 +142,8 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Habilitar los identificadores entre comillas.|-i|Ningún parámetro.|  
 |Quitar los espacios finales.|-w|Ningún parámetro.|  
 |Enumerar instancias.|-l|Ningún parámetro.|  
-|Dar formato al resultado como Unicode.|-U|Ningún parámetro.|  
-|Imprimir las estadísticas.|-p|Ningún parámetro.|  
+|Dar formato al resultado como Unicode.|-u|Ningún parámetro.|  
+|Imprimir las estadísticas.|-P|Ningún parámetro.|  
 |Fin del comando.|-c|Ningún parámetro.|  
 |Conectar con la autenticación de Windows.|-E|Ningún parámetro.|  
   

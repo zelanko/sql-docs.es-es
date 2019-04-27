@@ -34,11 +34,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779882"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Funcionalidad del motor de base de datos no incluida en SQL Server 2014
   En este tema se describen las características del [!INCLUDE[ssDE](../includes/ssde-md.md)] que ya no están disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -46,17 +46,17 @@ ms.locfileid: "54132623"
 ## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Características no incluidas en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  En la tabla siguiente se enumeran las características que se quitaron en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-|Categoría|Característica no incluida|Sustituta|  
+|Category|Característica no incluida|Sustituta|  
 |--------------|--------------------------|-----------------|  
 |Nivel de compatibilidad|Nivel de compatibilidad 90|Las bases de datos se deben establecer en el nivel de compatibilidad 100 como mínimo. Cuando se actualiza una base de datos con un nivel de compatibilidad inferior a 100 a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], el nivel de compatibilidad de la base de datos se establece en 100 durante la operación de actualización.|  
   
 ## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>Características no incluidas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  En la tabla siguiente se enumeran las características que se quitaron en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
-|Categoría|Característica no incluida|Sustituta|  
+|Category|Característica no incluida|Sustituta|  
 |--------------|--------------------------|-----------------|  
 |Copias de seguridad y restauración|**Copia de seguridad {base de datos &#124; LOG} WITH PASSWORD** y **copia de seguridad de {base de datos &#124; LOG} WITH MEDIAPASSWORD** se suspenden. **RESTORE {DATABASE &#124; registro} con [MEDIA] PASSWORD**sigue en desuso.|None|  
-|Copias de seguridad y restauración|**RESTORE {DATABASE &AMP;#124; REGISTRO}... WITH DBO_ONLY**|**RESTORE {DATABASE &AMP;#124; LOG} … … CON RESTRICTED_USER**|  
+|Copias de seguridad y restauración|**RESTORE { DATABASE &#124; LOG } ... WITH DBO_ONLY**|**RESTORE { DATABASE &#124; LOG } ... ... WITH RESTRICTED_USER**|  
 |Nivel de compatibilidad|Nivel de compatibilidad 80|Las bases de datos se deben establecer en el nivel de compatibilidad 90 como mínimo.|  
 |Opciones de configuración|`sp_configure 'user instance timeout'` y `'user instances enabled'`|Utilice la característica Local Database. Para obtener más información, consulte [SqlLocalDB (utilidad)](../tools/sqllocaldb-utility.md)|  
 |Protocolos de conexión|Se suspende la compatibilidad para el protocolo VIA.|Utilice TCP en su lugar.|  

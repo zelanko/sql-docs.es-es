@@ -14,27 +14,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b511f5d241216c2586870adadeb3c8586ee803be
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752962"
 ---
 # <a name="rds-programming-model-in-detail"></a>Modelo detallado de programación de RDS
 Estos son los elementos clave del modelo de programación de RDS:  
   
--   RDS. Espacio de datos  
+-   RDS.DataSpace  
   
 -   RDSServer.DataFactory  
   
--   RDS. Control de datos  
+-   RDS.DataControl  
   
 -   Evento  
   
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-## <a name="rdsdataspace"></a>RDS. Espacio de datos  
+## <a name="rdsdataspace"></a>RDS.DataSpace  
  La aplicación cliente debe especificar el servidor y el programa de servidor para invocar. En cambio, la aplicación recibe una referencia al programa de servidor y puede tratar la referencia como si fuera el propio programa de servidor.  
   
  El modelo de objetos RDS incluye esta funcionalidad con el [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objeto.  
@@ -54,7 +54,7 @@ Estos son los elementos clave del modelo de programación de RDS:
   
  El programa de servidor se denomina a veces un *objeto comercial*. Puede escribir su propio objeto de negocios personalizada que puede realizar el acceso a datos complicadas, comprobaciones de validez y así sucesivamente. Incluso al escribir un objeto comercial personalizado, puede crear una instancia de un **RDSServer.DataFactory** de objetos y usar algunas de sus métodos para realizar sus propias tareas.  
   
-## <a name="rdsdatacontrol"></a>RDS. Control de datos  
+## <a name="rdsdatacontrol"></a>RDS.DataControl  
  RDS proporciona un medio para combinar la funcionalidad de la **RDS. DataSpace** y **RDSServer.DataFactory**y también permiten controles visuales utilizar fácilmente la **Recordset** objeto devuelto por una consulta desde un origen de datos. Intentos de RDS, para que el caso más común para realizar tanto como sea posible para obtener acceso a información en un servidor y mostrarlos en un control visual automáticamente.  
   
  El modelo de objetos RDS incluye esta funcionalidad con el [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  

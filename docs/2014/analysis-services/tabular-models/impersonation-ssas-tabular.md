@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757254"
 ---
 # <a name="impersonation-ssas-tabular"></a>Suplantación (SSAS tabular)
   Este tema proporciona a los autores de modelos tabulares una descripción de cómo usa Analysis Services las credenciales de inicio de sesión al conectarse a un origen de datos para importar y procesar (actualizar) datos.  
@@ -66,7 +66,7 @@ ms.locfileid: "52391868"
 ##  <a name="bkmk_imp_info_options"></a> Opciones  
  Al configurar la suplantación, o al modificar las propiedades de una conexión de origen de datos existente en Analysis Services, puede especificar una de las opciones siguientes:  
   
-|Opción|Elemento ImpersonationMode<sup>1</sup>|Descripción|  
+|Opción|ImpersonationMode<sup>1</sup>|Descripción|  
 |------------|-----------------------------------|-----------------|  
 |**Nombre de usuario de Windows específico y la contraseña** <sup>2</sup>|ImpersonateWindowsUserAccount|Esta opción especifica que el modelo usa una cuenta de usuario de Windows para importar o procesar datos del origen de datos. El dominio y el nombre de la cuenta de usuario tienen el siguiente formato:**\<nombre de dominio >\\< nombre de la cuenta de usuario\>**. Esta es la opción predeterminada al crear un modelo nuevo mediante el Asistente para la importación de tablas.|  
 |**Cuenta de servicio**|ImpersonateServiceAccount|Esta opción especifica que el modelo usa las credenciales de seguridad asociadas a la instancia de servicio de Analysis Services que administra el modelo.|  

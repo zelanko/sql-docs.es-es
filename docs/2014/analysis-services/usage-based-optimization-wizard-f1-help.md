@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756150"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Asistente para optimización basada en el uso (Ayuda F1)
   El Asistente para optimización basada en el uso es parecido en su resultado al Asistente para diseñar agregaciones, y se utiliza para diseñar agregaciones para una partición. No obstante, el Asistente para optimización basada en el uso diseña agregaciones en función de patrones de uso específicos de consultas registradas en un registro de consultas de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Las agregaciones proporcionan mejoras de rendimiento al permitir que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recupere los totales calculados previamente de forma directa desde el almacenamiento del cubo en vez de tener que volver a calcular datos de un origen de datos subyacente para cada consulta.  

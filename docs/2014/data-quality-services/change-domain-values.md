@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ea3b91f72b3fdd836d0b5cdb3e73122570bdbfcf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755820"
 ---
 # <a name="change-domain-values"></a>Cambiar valores de dominio
   En este tema se describe cómo cambiar y aumentar los metadatos de una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una vez que haya generado conocimiento mediante la detección de conocimiento, haya importado conocimiento en la base de conocimiento o en los dominios, o haya basado una base de conocimiento en otra, podrá cambiar los valores de los datos de forma interactiva. La generación de la base de conocimiento no solo aprovecha los procesos asistidos por PC, sino que además pone a su disposición los medios necesarios para que pueda usar su propio conocimiento para comprobar los valores de los datos y cambiarlos de las formas siguientes:  
@@ -39,7 +39,7 @@ ms.locfileid: "56017236"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para cambiar valores de dominio.  
   
 ##  <a name="Change"></a> Cambiar valores de dominio  
@@ -66,51 +66,51 @@ ms.locfileid: "56017236"
   
 5.  Para cambiar el estado de un valor, siga estos pasos:  
   
-    -   **Establecer como corregidos los valores de dominio seleccionado**: Para cambiar el estado de un valor de Error o no válido a correcto, seleccione el valor y, a continuación, haga clic en el **establecer como corregidos seleccionados los valores de dominio** (comprobar) en la flecha hacia abajo en la barra de iconos o en la lista desplegable de tipo. Si el valor erróneo o no válido está agrupado con un valor correcto, elimine ese valor después de la operación.  
+    -   **Establecer como corregidos los valores de dominio seleccionados**: para cambiar el estado de un valor de "Error" o "No válido" a "Correcto", seleccione el valor y, después, haga clic en el icono de **Establecer como corregidos los valores de dominio seleccionados** (marca de comprobación) desde la flecha abajo de la barra de iconos o en la lista desplegable Tipo. Si el valor erróneo o no válido está agrupado con un valor correcto, elimine ese valor después de la operación.  
   
-    -   **Establecer como errores los valores de dominio seleccionado**: Para cambiar el estado de un valor de correcto o no válido a Error, seleccione el valor y, a continuación, haga clic en el **establecer como errores los valores de dominio seleccionados** (cruz) icono de la flecha hacia abajo en la barra de iconos o en la lista desplegable de tipo. Si lo desea, puede escribir una corrección en la columna **Corregir a** , o dejarla en blanco.  
+    -   **Establecer como errores los valores de dominio seleccionados**: para cambiar el estado de un valor de "Correcto" o "No válido" a "Error", seleccione el valor y, después, haga clic en el icono de **Establecer como errores los valores de dominio seleccionados** (cruz) desde la flecha abajo de la barra de iconos o en la lista desplegable Tipo. Si lo desea, puede escribir una corrección en la columna **Corregir a** , o dejarla en blanco.  
   
-    -   **Establecer los valores del dominio seleccionado como no válidos**: Para cambiar el estado de un valor de correcto o Error a no válido, seleccione el valor y, a continuación, haga clic en el **conjunto seleccionado de los valores de dominio como no válidos** icono de (triángulo) en la flecha hacia abajo en la barra de iconos o en la lista desplegable de tipo. Si lo desea, puede escribir una corrección en la columna **Corregir a** , o dejarla en blanco.  
+    -   **Establecer como no válidos los valores de dominio seleccionados**: para cambiar el estado de un valor de "Correcto" o "Error" a "No válido", seleccione el valor y, después, haga clic en el icono de **Establecer como no válidos los valores de dominio seleccionados** (triángulo) en la flecha abajo de la barra de iconos o en la lista desplegable Tipo. Si lo desea, puede escribir una corrección en la columna **Corregir a** , o dejarla en blanco.  
   
-    -   **Correcto para**: Después de establecer un valor como erróneo o no válido, escriba un nuevo valor en el **corregir a** columna. DQS agregará una nueva fila para el valor de reemplazo, lo designará como correcto y, a continuación, agrupará los dos valores. El nuevo valor se mostrará como el valor inicial, con el valor inicial en negrita y el valor erróneo o no válido con una sangría aplicada.  
+    -   **Corregir a**: después de establecer un valor como erróneo o no válido, escriba un nuevo valor en la columna **Corregir a**. DQS agregará una nueva fila para el valor de reemplazo, lo designará como correcto y, a continuación, agrupará los dos valores. El nuevo valor se mostrará como el valor inicial, con el valor inicial en negrita y el valor erróneo o no válido con una sangría aplicada.  
   
 6.  Para designar valores como un grupo de sinónimos, seleccione varios valores que sean correctos y haga lo siguiente:  
   
-    -   **Establecer como sinónimos los valores de dominio seleccionado**: Para establecer sinónimos, seleccione varios valores que sean correctos y, a continuación, haga clic en el **establecer como sinónimos los valores de dominio seleccionados** icono. DQS agrupará los valores y designará uno de ellos como el valor inicial por el que se reemplazarán los demás valores. Tenga en cuenta que si se agrupan dos valores, pero uno de ellos es erróneo o no válido, los valores no son sinónimos.  
+    -   **Establecer como sinónimos los valores de dominio seleccionados**: para establecer sinónimos, seleccione varios valores que sean correctos y, después, haga clic en el icono de **Establecer como sinónimos los valores de dominio seleccionados**. DQS agrupará los valores y designará uno de ellos como el valor inicial por el que se reemplazarán los demás valores. Tenga en cuenta que si se agrupan dos valores, pero uno de ellos es erróneo o no válido, los valores no son sinónimos.  
   
         > [!NOTE]  
         >  Si selecciona dos o más valores de un grupo y otro valor fuera de este y, a continuación, los establece como sinónimos, obtendrá un mensaje de error. Después de cerrar el cuadro emergente del mensaje de error, los valores se establecerán correctamente como sinónimos.  
   
-    -   **Romper la relación entre los sinónimos seleccionados**: Para deshacer la designación de sinónimos para dos o más valores, seleccione los valores y, a continuación, haga clic en el **romper la relación entre los sinónimos seleccionados** icono. Para que la desagrupación de sinónimos funcione, los valores deben estar agrupados y ser correctos.  
+    -   **Romper la relación entre los sinónimos seleccionados**: para deshacer la designación de sinónimos para dos o más valores, seleccione los valores y haga clic en el icono de **Romper la relación entre los sinónimos seleccionados**. Para que la desagrupación de sinónimos funcione, los valores deben estar agrupados y ser correctos.  
   
-    -   **Establecer el valor de dominio seleccionado como valor principal de su grupo**: Para cambiar el valor inicial del grupo, seleccione un valor en el grupo que no se haya designado como valor inicial y, a continuación, haga clic en el **establecer el valor de dominio seleccionado como valor inicial de su grupo** botón. De este modo, establecerá el valor inicial que sustituirá al otro valor. Esta operación solo funciona si tiene un grupo con dos o más valores y desea que el valor inicial sea uno distinto del valor designado por DQS. Tenga en cuenta que el valor inicial se muestra en negrita en una fila de color azul.  
+    -   **Establecer el valor de dominio seleccionado como valor principal de su grupo**: para cambiar el valor inicial del grupo, seleccione un valor del grupo que no se haya designado como valor inicial y, después, haga clic en el botón **Establecer el valor de dominio seleccionado como valor principal de su grupo**. De este modo, establecerá el valor inicial que sustituirá al otro valor. Esta operación solo funciona si tiene un grupo con dos o más valores y desea que el valor inicial sea uno distinto del valor designado por DQS. Tenga en cuenta que el valor inicial se muestra en negrita en una fila de color azul.  
   
-7.  **Speller**: Si un valor con un carácter de subrayado rojo ondulado, el corrector ortográfico está sugiriendo una corrección al valor. Haga clic con el botón secundario en el valor subrayado y seleccione una corrección si es necesario. El tipo de valor pasará a ser (o permanecerá como) erróneo, y la corrección se agregará a la columna **Corregir a** . Haga clic en la flecha abajo para ver correcciones propuestas adicionales. Escriba manualmente una corrección para agregarla al diccionario del corrector ortográfico y poder seleccionarla como corrección. Para obtener más información, consulte [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) y [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
+7.  **Corrector ortográfico**: si un valor aparece subrayado con una línea ondulada de color rojo, significa que el corrector ortográfico está sugiriendo una corrección. Haga clic con el botón secundario en el valor subrayado y seleccione una corrección si es necesario. El tipo de valor pasará a ser (o permanecerá como) erróneo, y la corrección se agregará a la columna **Corregir a** . Haga clic en la flecha abajo para ver correcciones propuestas adicionales. Escriba manualmente una corrección para agregarla al diccionario del corrector ortográfico y poder seleccionarla como corrección. Para obtener más información, consulte [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) y [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Para utilizar el corrector ortográfico, puede habilitarlo en la página **Propiedades del dominio** o, si está deshabilitado en la página **Propiedades del dominio** , puede hacer clic en el icono **Habilitar o deshabilitar el corrector ortográfico** de la página **Valores del dominio** para habilitarlo en esta página.  
   
-8.  **Agregar un nuevo valor de dominio**: Haga clic para agregar una fila al final de la tabla. Después de especificar un valor, la fila se volverá a colocar en orden alfabético e irá precedida por un símbolo de estrella.  
+8.  **Agregar un nuevo valor de dominio**: haga clic para agregar una fila al final de la tabla. Después de especificar un valor, la fila se volverá a colocar en orden alfabético e irá precedida por un símbolo de estrella.  
   
-9. **Importar valores de dominio desde Excel**: Para agregar nuevos valores desde una hoja de cálculo de Excel, haga clic en la flecha abajo de la **importar valores** icono y, a continuación, seleccione **importar valores de dominio desde Excel**. Escriba el nombre del archivo, seleccione **Usar la primera fila como encabezado** si procede y, a continuación, haga clic en **Aceptar**. Para obtener más información, consulte [Importar valores desde un archivo de Excel a un dominio](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
+9. **Importar valores de dominio desde Excel**: para agregar nuevos valores desde una hoja de cálculo de Excel, haga clic en la flecha abajo del icono de **Importar valores** y, después, seleccione **Importar valores de dominio desde Excel**. Escriba el nombre del archivo, seleccione **Usar la primera fila como encabezado** si procede y, a continuación, haga clic en **Aceptar**. Para obtener más información, consulte [Importar valores desde un archivo de Excel a un dominio](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
   
-10. **Importar valores de proyecto**: Para agregar nuevos valores desde un proyecto de calidad de datos, haga clic en la flecha abajo de la **importar valores** icono y seleccione **importar valores de proyecto**. Escriba el nombre del archivo, seleccione **Usar la primera fila como encabezado** si procede y, a continuación, haga clic en **Aceptar**. Seleccione el proyecto del que desee importar los valores y, a continuación, haga clic en **Aceptar**. Se mostrarán los valores importados. Haga clic en **Finalizar**. Para obtener más información, vea Importar valores de un proyecto de limpieza en un dominio.  
+10. **Importar valores de proyecto**: para agregar nuevos valores desde un proyecto de calidad de datos, haga clic en la flecha abajo del icono de **Importar valores** y, después, seleccione **Importar valores de proyecto**. Escriba el nombre del archivo, seleccione **Usar la primera fila como encabezado** si procede y, a continuación, haga clic en **Aceptar**. Seleccione el proyecto del que desee importar los valores y, a continuación, haga clic en **Aceptar**. Se mostrarán los valores importados. Haga clic en **Finalizar**. Para obtener más información, vea Importar valores de un proyecto de limpieza en un dominio.  
   
-11. **Eliminar los valores de dominio seleccionado**: Para quitar uno o más valores del dominio, seleccione los valores en la tabla valor y, a continuación, haga clic en el **eliminar los valores de dominio seleccionados** icono. Las entradas de DQS_NULL no se pueden eliminar, por lo que si opta por eliminar varios valores entre los que hay una de estas entradas, se producirá un error en la operación.  
+11. **Eliminar los valores de dominio seleccionados**: para eliminar uno o varios valores existentes en el dominio, selecciónelos en la tabla Valor y, después, haga clic en el icono de **Eliminar los valores de dominio seleccionados**. Las entradas de DQS_NULL no se pueden eliminar, por lo que si opta por eliminar varios valores entre los que hay una de estas entradas, se producirá un error en la operación.  
   
 12. Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de cambiar los valores de dominio  
+##  <a name="FollowUp"></a> Seguimiento: después de cambiar valores de dominio  
  Una vez cambiados los valores de dominio, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Meaning"></a> El significado de los valores Correcto, Error y No válido  
  A cada valor de la tabla **Valor** de la página **Valores del dominio** se le asigna un **Tipo** : **Correcto**, **Error**o **No válido**. La actividad de detección de conocimiento es la que genera inicialmente el tipo del valor, y puede cambiarlo de acuerdo con sus necesidades. La actividad de limpieza es la que genera el tipo final, en función de los cambios interactivos y de detección. Estos valores tienen los significados siguientes:  
   
--   **Corregir:** Se trata de un valor que pertenece al dominio y no tiene ningún error de sintaxis. Por ejemplo, "Chicago" en un dominio City es un valor correcto.  
+-   **Correcto:** es un valor que pertenece al dominio y no tiene ningún error de sintaxis. Por ejemplo, "Chicago" en un dominio City es un valor correcto.  
   
--   **Error:** Se trata de un valor que pertenece al dominio, pero es un valor incorrecto. Por ejemplo, "Shicago" en lugar de "Chicago" en un dominio City es un valor erróneo. DQS designa un valor como erróneo si detecta un error de sintaxis y una corrección asociada en el proceso de detección. Los errores de sintaxis incluyen los errores de ortografía.  
+-   **Error:** es un valor que pertenece al dominio, pero es incorrecto. Por ejemplo, "Shicago" en lugar de "Chicago" en un dominio City es un valor erróneo. DQS designa un valor como erróneo si detecta un error de sintaxis y una corrección asociada en el proceso de detección. Los errores de sintaxis incluyen los errores de ortografía.  
   
--   **No válido:** Se trata de un valor que no pertenece al dominio y no tiene una corrección. Por ejemplo, el valor "12345" en un dominio City es un valor no válido. DQS designa un valor como no válido cuando no cumple una regla de dominio.  
+-   **No válido:** es un valor que no pertenece al dominio y que no tiene ninguna corrección. Por ejemplo, el valor "12345" en un dominio City es un valor no válido. DQS designa un valor como no válido cuando no cumple una regla de dominio.  
   
  Puede cambiar manualmente el tipo de un valor a cualquiera de los otros dos valores. DQS no aplica la semántica de errores y de validez en las operaciones manuales. Puede especificar una corrección para un valor no válido sin cambiar su estado. Puede designar un valor como no válido aunque haya cumplido las reglas de dominio. Puede designar un valor como erróneo aunque el proceso de detección no haya indicado que tiene un error de sintaxis. También puede quitar una corrección de un valor de error, que está marcado como correcto, sin cambiar su estado.  
   

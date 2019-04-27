@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8645cf56a37e41d681daed2c05c3db9bf34c98e8
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780990"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>Temas de procedimientos de administración de columnas de texto e imagen (ODBC)
   El controlador ODBC de Microsoft® SQL Server™ permite utilizar parámetros de texto e imágenes y recuperar datos de columnas de texto, ntext e imagen en los conjuntos de resultados.  

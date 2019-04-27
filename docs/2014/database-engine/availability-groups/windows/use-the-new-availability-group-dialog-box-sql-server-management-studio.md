@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fda7911dc9e62741ba846e8a166bb0e3312f3425
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788067"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Usar el cuadro de diálogo Nuevo grupo de disponibilidad (SQL Server Management Studio)
   Este tema contiene información sobre cómo usar el cuadro de diálogo **Nuevo grupo de disponibilidad** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para crear un grupo de disponibilidad AlwaysOn en las instancias de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] habilitadas para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Un *grupo de disponibilidad* define un conjunto de bases de datos de usuario que realizarán la conmutación por error como una sola unidad y un conjunto de asociados de conmutación por error, conocido como *réplicas de disponibilidad*, que admiten la conmutación por error.  
@@ -54,7 +54,7 @@ ms.locfileid: "53373177"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Se requiere la pertenencia al rol fijo de servidor **sysadmin** y el permiso de servidor CREATE AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Usar el cuadro de diálogo Nuevo grupo de disponibilidad (SQL Server Management Studio)  
@@ -83,7 +83,7 @@ ms.locfileid: "53373177"
   
      Para salir del cuadro de diálogo sin crear el grupo de disponibilidad, haga clic en **Cancelar**.  
   
-##  <a name="FollowUp"></a> Sigue: Después de usar el cuadro de diálogo nuevo grupo de disponibilidad para crear un grupo de disponibilidad  
+##  <a name="FollowUp"></a> Seguimiento: Después de usar el cuadro de diálogo nuevo grupo de disponibilidad para crear un grupo de disponibilidad  
   
 -   Deberá conectarse, a su vez, a cada instancia de servidor que hospeda una réplica secundaria del grupo de disponibilidad y completar los pasos siguientes:  
   

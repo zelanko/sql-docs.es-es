@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779035"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Propiedades del índice de texto completo (página Programaciones)
-  Utilice esta página con el fin de ver y crear calendarios para ejecutar un trabajo del Agente SQL Server que inicia un rellenado incremental de actualizaciones en la tabla base del índice de texto completo. Si la tabla base o vista no contiene una columna de la `timestamp` tipo de datos, se realiza un rellenado completo.  
+  Utilice esta página con el fin de ver y crear calendarios para ejecutar un trabajo del Agente SQL Server que inicia un rellenado incremental de actualizaciones en la tabla base del índice de texto completo. Si la tabla base o la vista no contienen ninguna columna del tipo de datos `timestamp`, se realiza un rellenado completo.  
   
  **Para ver o cambiar las propiedades de un índice de texto completo**  
   
@@ -30,7 +30,7 @@ ms.locfileid: "48059825"
  **Programaciones**  
  Enumera cada rellenado incremental programado, si lo hay, en la tabla base para el índice de texto completo.  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre de cada rellenado programado.  
   
  **Tipo de rellenado**  

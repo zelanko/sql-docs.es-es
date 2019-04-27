@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4efcddfb4c8cb53603614f3ffbdc3cb088990ff
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782912"
 ---
 # <a name="contained-database-authentication-server-configuration-option"></a>contained database authentication (opción de configuración del servidor)
   Utilice la opción **autenticación de base de datos independiente** para habilitar las bases de datos independientes en la instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

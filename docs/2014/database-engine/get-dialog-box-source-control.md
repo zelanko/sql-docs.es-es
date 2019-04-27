@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779012"
 ---
 # <a name="get-dialog-box-source-control"></a>Cuadro de diálogo Obtener (Control de código fuente)
   Recupera una copia de solo lectura del elemento seleccionado de la base de datos de control de código fuente a la carpeta de trabajo, o bien a otra carpeta que especifique.  
@@ -43,7 +43,7 @@ ms.locfileid: "48048795"
  **Hora de modificación**  
  Muestra la hora a la que se modificó el elemento.  
   
- **Nombre**  
+ **Name**  
  Muestra los nombres de los elementos que se van a recuperar. Los elementos aparecen con las casillas que se encuentran junto a ellos activadas. Si no desea recuperar un elemento en concreto, desactive su casilla.  
   
  **Opciones**  

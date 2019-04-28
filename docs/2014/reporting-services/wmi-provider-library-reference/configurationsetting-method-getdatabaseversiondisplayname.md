@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05f7e8818f5300ee1c7e391ad1345b696eb08154
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647138"
 ---
 # <a name="getdatabaseversiondisplayname-method-wmi"></a>Método GetDatabaseVersionDisplayName (WMI)
   Obtiene el nombre para mostrar para una cadena de versión de base de datos del servidor de informes determinada.  

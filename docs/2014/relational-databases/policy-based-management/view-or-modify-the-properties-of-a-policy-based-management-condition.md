@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 340423e23037ae401b1e5749fbed38b1822cfb41
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677022"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Ver o modificar las propiedades de una condición de administración basada en directivas
   En este tema se describe cómo ver o modificar las propiedades de una condición de administración basada en directivas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -39,7 +39,7 @@ ms.locfileid: "54100590"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -54,7 +54,7 @@ ms.locfileid: "54100590"
   
 4.  Haga clic en el signo más para expandir la carpeta **Condiciones** .  
   
-5.  Haga clic con el botón derecho en la condición que quiere ver o editar y seleccione **Propiedades**. Para obtener más información sobre las opciones disponibles en el **abrir condición -**_condition_name_ cuadro de diálogo, vea [crear nueva condición o cuadro de diálogo de abrir condición, página General](../../integration-services/general-page-of-integration-services-designers-options.md), [Abrir el cuadro de diálogo condición, página directivas dependientes](open-condition-dialog-box-dependent-policies-page.md), [crear nueva condición o cuadro de diálogo Abrir condición, página Descripción](create-new-condition-or-open-condition-dialog-box-description-page.md), y [Advanced Edit &#40; Condición&#41; cuadro de diálogo](advanced-edit-condition-dialog-box.md).  
+5.  Haga clic con el botón derecho en la condición que quiere ver o editar y seleccione **Propiedades**. Para más información sobre las opciones disponibles en el cuadro de diálogo **Abrir condición: -**_nombre_de_condición_, vea [Cuadro de diálogo Crear nueva condición o Abrir condición, página General](../../integration-services/general-page-of-integration-services-designers-options.md), [Cuadro de diálogo Abrir condición, página Directivas dependientes](open-condition-dialog-box-dependent-policies-page.md), [Cuadro de diálogo Crear nueva condición o Abrir condición, página Descripción](create-new-condition-or-open-condition-dialog-box-description-page.md) y [Cuadro de diálogo Edición avanzada &#40;condición&#41;](advanced-edit-condition-dialog-box.md).  
   
 6.  Cuando termine, haga clic en **Aceptar**.  
   

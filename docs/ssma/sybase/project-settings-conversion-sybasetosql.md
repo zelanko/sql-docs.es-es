@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 4d7f290459e1da736605acad941602399ec3ea53
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664667"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Configuración del proyecto (conversión) (SybaseToSQL)
 La página de conversión de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte la sintaxis de Sybase Adaptive Server Enterprise (ASE) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o sintaxis de SQL Azure.  
@@ -183,7 +183,7 @@ Cuando encuentra SSMA un *format_string* argumento, puede generar una cadena lit
   
 -   Para crear una nueva variable para cada instrucción RAISERROR y PRINT y, a continuación, usar esa variable para el valor de cadena SSMA, seleccione **crear nueva variable**.  
   
-    En este modo, si una instrucción PRINT o RAISERROR no usa marcadores de posición y las variables locales, SSMA reemplaza todos los caracteres de porcentaje doble (%) por caracteres de porcentaje individuales para cumplir con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o sintaxis de SQL Azure.  
+    En este modo, si una instrucción PRINT o RAISERROR no usa marcadores de posición y las variables locales, SSMA reemplaza todos los caracteres de porcentaje doble (%) con solo caracteres de porcentaje para cumplir con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o sintaxis de SQL Azure.  
   
     Si una instrucción PRINT o RAISERROR usa marcadores de posición y uno o más variables locales, como se muestra en el ejemplo siguiente:  
   
@@ -446,5 +446,5 @@ Crea una nueva clave principal en la [!INCLUDE[ssNoVersion](../../includes/ssnov
 > Cuando se conecta a SQL Azure, es True de forma predeterminada.  
   
 ## <a name="see-also"></a>Vea también  
-[Referencia de la interfaz de usuario &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+[User Interface Reference &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
   

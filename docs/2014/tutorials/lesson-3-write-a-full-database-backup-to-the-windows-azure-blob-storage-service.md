@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 242e32b08ec6346c39e149628e773b33554c95d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653690"
 ---
-# <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Lección 3: Escribir una copia de seguridad de base de datos completa en el servicio de Windows Azure Blob Storage
+# <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Lección 3: Escritura de una copia de seguridad completa de la base de datos en el servicio Azure Blob Storage de Windows
   En esta lección se muestra el uso de una instrucción tsql para realizar una copia de seguridad completa de la base de datos en el servicio de almacenamiento Blob de Windows Azure.  
   
 ## <a name="perform-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Realizar una copia de seguridad completa de la base de datos en el servicio de almacenamiento Blob de Windows Azure  

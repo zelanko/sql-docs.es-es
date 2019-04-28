@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc79564bfd71ae46ef25092294c624f67b51e42c
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670405"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>Guía del programador de ADO para el uso de objetos ADO
 Esta documentación proporciona información general sobre cómo usar los objetos ADO para trabajar con datos de varios orígenes de datos. En primer lugar, la introducción resume las nuevas características y los requisitos para instalar, usar y redistribuir el componente de ADO. Las secciones siguientes describen el uso de los distintos tipos de objetos ADO. Por último, los apéndices tratan diversos datos proporcionados por Microsoft y proveedores de servicios, los mensajes de error y sugerencias sobre cómo usar ADO en varios lenguajes de programación, además de ejemplos y un glosario.

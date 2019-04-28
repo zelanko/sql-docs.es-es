@@ -1,5 +1,5 @@
 ---
-title: 'Opciones (Editor de texto: pestaña Editor y página barra de estado) | Microsoft Docs'
+title: 'Opciones (Editor de texto: Pestaña Editor y página barra de estado) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 241a74861a7f634389324276daf9b03a8590e64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844277"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opciones (Editor de texto: pestaña Editor y página Barra de estado)
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opciones (Editor de texto: pestaña Editor y página de la barra de estado)
   La **página Barra de estado y pestaña de editor** permite personalizar la información mostrada por los editores de consultas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Puede especificar el nivel de información que se muestra en la pestaña y en la barra de estado de la ventana del editor de consultas y si la barra de estado debe aparecer en la parte superior o inferior de la ventana del editor.  
   
 ## <a name="option-settings-by-editor"></a>Configuración de las opciones de editor  
@@ -93,7 +93,7 @@ ms.locfileid: "48055455"
  Incluye el nombre del servidor. Para las conexiones locales, es el nombre de instancia. Para las conexiones remotas, es el nombre del equipo remoto y el nombre de instancia.  
   
 ## <a name="see-also"></a>Vea también  
- [Opciones de &#40;entorno: página fuentes y colores&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
+ [Opciones de &#40;entorno: Página fuentes y colores&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [Codificación de colores en el Editor de consultas](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

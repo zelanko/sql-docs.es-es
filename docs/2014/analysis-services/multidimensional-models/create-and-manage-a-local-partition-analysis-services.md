@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5665db92828c5a6ea6a6d94587414dc6b411a01b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726809"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Crear y administrar una partición local (Analysis Services)
   Puede crear particiones adicionales para un grupo de medida con el fin de mejorar el rendimiento de procesamiento. Tener varias particiones permite asignar datos de hechos en un número correspondiente de archivos de datos físicos tanto en servidores locales como en servidores remotos. En Analysis Services, las particiones se pueden procesar independientemente y en paralelo, lo que permite tener más control sobre las cargas de trabajo de procesamiento del servidor.  
@@ -45,7 +45,7 @@ ms.locfileid: "48091305"
 |Usar consultas SQL para segmentar datos de hechos|Las particiones pueden proceder de consultas SQL. Durante el procesamiento, la consulta SQL sirve para recuperar los datos. La cláusula WHERE de la consulta proporciona el filtro que segmenta los datos para cada partición. Analysis Services genera la consulta automáticamente, pero usted debe completar la cláusula WHERE para segmentar los datos correctamente.<br /><br /> La ventaja principal de este enfoque es la facilidad con la que se pueden crear particiones de los datos a partir de una única tabla de origen. Si todos los datos de origen proceden de una tabla de hechos grande, puede generar consultas que filtren los datos en particiones discretas, sin tener que crear estructuras de datos adicionales en la vista del origen de datos (DSV).<br /><br /> Una desventaja es que el uso de consultas interrumpirá el enlace entre la partición y la DSV. Si más tarde actualiza la DSV en el proyecto de Analysis Services, por ejemplo si agrega columnas a la tabla de hechos, debe editar manualmente las consultas para cada partición de manera que incluyan la nueva columna. El segundo método, que se describe más adelante, no presenta este inconveniente.|  
 |Usar tablas en la DSV para segmenta datos de hechos|Puede enlazar una partición a una tabla, consulta con nombre o vista en la DSV. Como base de una partición, las tres son funcionalmente equivalentes. Toda la tabla, la consulta con nombre o la vista proporciona todos los datos para una sola partición.<br /><br /> El uso de una tabla, vista o consulta con nombre pone toda la lógica de selección de los datos en la DSV, lo que puede ser más fácil de administrar y mantener con el tiempo. Una ventaja importante de este método es que los enlaces de tabla se conservan. Si actualiza la tabla de origen más adelante, no es necesario modificar las particiones que la usan. En segundo lugar, todas las tablas, consultas con nombre y vistas existen en un espacio de trabajo común, por lo que es más cómodo realizar actualizaciones: no es necesario abrir y editar consultas de partición individualmente.|  
   
-## <a name="option-1-filter-a-fact-table-for-multiple-partitions"></a>Opción 1: filtrar una tabla de hechos para varias particiones  
+## <a name="option-1-filter-a-fact-table-for-multiple-partitions"></a>Opción 1: Filtrar una tabla de hechos para varias particiones  
  Para crear varias particiones, empiece modificando la propiedad **Origen** de la partición predeterminada. De forma predeterminada, un grupo de medida se crea con una sola partición que está enlazada a una única tabla en la DSV. Antes de poder agregar más particiones, debe modificar primero la partición original para que solo contenga una parte de los datos de hechos. Después puede crear particiones adicionales para almacenar los datos restantes.  
   
  Cree los filtros de forma que los datos no estén duplicados entre las particiones. Un filtro de partición especifica qué datos de la tabla de hechos se utilizarán en la partición. Es importante que los filtros de todas las particiones de un cubo extraigan de la tabla de hechos conjuntos de datos que se excluyan mutuamente. Los mismos datos de hechos pueden estar duplicados si aparecen en varias particiones.  
@@ -85,7 +85,7 @@ ms.locfileid: "48091305"
 > [!NOTE]  
 >  En lugar de filtrar datos en una partición, puede usar la misma consulta para crear una consulta con nombre en la DSV y después basar la partición en esa consulta.  
   
-## <a name="option-2-use-tables-views-or-named-queries"></a>Opción 2: usar tablas, vistas o consultas con nombre  
+## <a name="option-2-use-tables-views-or-named-queries"></a>Opción 2: Usar tablas, vistas o consultas con nombre  
  Si la DSV ya organiza los hechos en tablas individuales (por ejemplo, por año o trimestre), puede crear particiones basadas en una tabla individual, donde cada partición tiene su propia tabla de origen de datos. Básicamente así es como se crean particiones para los grupos de medida de forma predeterminada, pero en el caso de varias particiones se divide la partición original en varias particiones y se asigna cada partición nueva a la tabla de origen de datos que proporciona los datos.  
   
  Las vistas y las consultas con nombre son equivalentes funcionalmente a las tablas en el sentido de que los tres objetos se definen en la DSV y se enlazan a una partición mediante la opción Enlace de tablas del cuadro de diálogo Origen de la partición. Puede crear una vista o una consulta con nombre para generar el segmento de datos necesario para cada partición. Para más información, vea [Definir consultas con nombre en una vista del origen de datos &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md).  
@@ -123,8 +123,8 @@ ms.locfileid: "48091305"
  Como último paso, normalmente deseará quitar la partición predeterminada basada en la propia tabla (si todavía existe); de lo contrario, las particiones basadas en consultas se superpondrán a la consulta basada en la tabla completa.  
   
 ## <a name="see-also"></a>Vea también  
- [Las particiones &#40;Analysis Services - datos multidimensionales&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Particiones remotas](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Mezclar particiones en Analysis Services &#40;SSAS - multidimensionales&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Mezclar particiones en Analysis Services &#40;SSAS - Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

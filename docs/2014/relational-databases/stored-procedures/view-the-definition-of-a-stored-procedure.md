@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856511"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Ver la definición de un procedimiento almacenado
     
@@ -28,18 +28,18 @@ ms.locfileid: "48063855"
   
 -   **Antes de empezar:**  [Seguridad](#Security)  
   
--   **Para ver la definición de un procedimiento con:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Para ver la definición de un procedimiento, utilizando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Procedimiento almacenado del sistema: `sp_helptext`  
- Debe pertenecer al rol **public** . Las definiciones de los objetos del sistema están visibles públicamente. La definición de los objetos de usuario está visible para el propietario del objeto o los receptores de los permisos siguientes: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  
+ Debe pertenecer al rol **public** . Las definiciones de los objetos del sistema están visibles públicamente. La definición de objetos de usuario es visible para el propietario del objeto o los receptores que dispongan de uno de los siguientes permisos: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION.  
   
  Función del sistema: `OBJECT_DEFINITION`  
- Las definiciones de los objetos del sistema están visibles públicamente. La definición de los objetos de usuario está visible para el propietario del objeto o los receptores de los permisos siguientes: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Estos permisos corresponden implícitamente a los miembros de los roles fijos de base de datos **db_owner**, **db_ddladmin**y **db_securityadmin** .  
+ Las definiciones de los objetos del sistema están visibles públicamente. La definición de objetos de usuario es visible para el propietario del objeto o los receptores que dispongan de uno de los siguientes permisos: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Estos permisos corresponden implícitamente a los miembros de los roles fijos de base de datos **db_owner**, **db_ddladmin**y **db_securityadmin** .  
   
  Vista de catálogo de objetos: `sys.sql_modules`  
  La visibilidad de los metadatos en las vistas de catálogo se limita a los elementos protegibles y que son propiedad de un usuario o sobre los que el usuario tiene algún permiso. Para obtener más información, consulte [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "48063855"
   
 2.  Expanda **Bases de datos**, expanda la base de datos a la que pertenece el procedimiento y, a continuación, expanda **Programación**.  
   
-3.  Expanda **Procedimientos almacenados**, haga clic con el botón derecho en el procedimiento; luego, haga clic en **Incluir procedimiento almacenado como**y, por último, haga clic en una de las opciones siguientes: **Create To**, **Alter To**o **Drop and Create To**.  
+3.  Expanda **Stored Procedures**, haga clic en el procedimiento y, a continuación, haga clic en **incluir procedimiento almacenado como**y, a continuación, haga clic en uno de los siguientes: **Crear a**, **Alter a**, o **anular y crear en**.  
   
 4.  Seleccione **Nueva ventana del Editor de consultas**. Se mostrará la definición del procedimiento.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48063855"
   
 2.  En la barra de herramientas, haga clic en **Nueva consulta**.  
   
-3.  En la ventana de consulta, escriba la siguiente instrucción que usa el `sp_helptext` procedimiento almacenado del sistema. Cambie el nombre de la base de datos y el nombre del procedimiento almacenado de forma que hagan referencia a la base de datos y al procedimiento almacenado que desee.  
+3.  En la ventana de consulta, escriba la siguiente instrucción que usa el procedimiento almacenado del sistema `sp_helptext`. Cambie el nombre de la base de datos y el nombre del procedimiento almacenado de forma que hagan referencia a la base de datos y al procedimiento almacenado que desee.  
   
     ```  
     USE AdventureWorks2012;  
@@ -96,7 +96,7 @@ ms.locfileid: "48063855"
   
 2.  En la barra de herramientas, haga clic en **Nueva consulta**.  
   
-3.  En la ventana de consulta, escriba las instrucciones siguientes que usan el `sys.sql_modules` vista de catálogo. Cambie el nombre de la base de datos y el nombre del procedimiento almacenado de forma que hagan referencia a la base de datos y al procedimiento almacenado que desee.  
+3.  En la ventana de consulta, escriba las siguientes instrucciones que usan la vista de catálogo `sys.sql_modules`. Cambie el nombre de la base de datos y el nombre del procedimiento almacenado de forma que hagan referencia a la base de datos y al procedimiento almacenado que desee.  
   
     ```  
     USE AdventureWorks2012;  

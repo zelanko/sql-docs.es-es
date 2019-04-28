@@ -43,11 +43,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62838008"
 ---
 # <a name="getting-sql-server-assistance"></a>Obtener ayuda sobre SQL Server
   Hay tres fuentes principales de información de [!INCLUDE[msCoName](../includes/msconame-md.md)] acerca de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -82,7 +82,7 @@ ms.locfileid: "53355111"
 |--------------|--------------|  
 |[Centro para desarrolladores de SQL Server](https://msdn.microsoft.com/sqlserver/)|Programadores que generan bases de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], sistemas de informes y soluciones de Business Intelligence, y que habilitan sus aplicaciones y sitios web para que utilicen estos sistemas.|  
 |[Centro para desarrolladores de XML](https://go.microsoft.com/fwlink/?LinkId=42458)|Creadores de sitios web y programadores de aplicaciones cuyos sitios y aplicaciones utilicen XML para la manipulación y el almacenamiento de datos.|  
-|[Sitio de TechNet SQL Server](https://technet.microsoft.com/sqlserver/dn135309)|Los administradores y operadores que planean, implementan, administran y prestan soporte a sistemas que utilizan [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|[SQL Server TechNet Site](https://technet.microsoft.com/sqlserver/dn135309)|Los administradores y operadores que planean, implementan, administran y prestan soporte a sistemas que utilizan [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
 ## <a name="additional-online-information"></a>Información adicional en línea  
  Hay disponible información adicional de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en estos sitios web de [!INCLUDE[msCoName](../includes/msconame-md.md)].  

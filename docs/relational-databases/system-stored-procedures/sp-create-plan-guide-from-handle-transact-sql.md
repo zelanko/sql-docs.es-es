@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724500"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  [ @name =] N'*plan_guide_name*'  
  Es el nombre de la guía de plan. Los nombres de guía de plan se encuentran en el ámbito de la base de datos actual. *plan_guide_name* debe cumplir las reglas para [identificadores](../../relational-databases/databases/database-identifiers.md) y no puede comenzar con el signo de número (#). La longitud máxima de *plan_guide_name* es de 124 caracteres.  
   
- [ @plan_handle =] *plan_handle*  
+ [ @plan_handle = ] *plan_handle*  
  Identifica un lote en la memoria caché del plan. *plan_handle* es **varbinary (64)**. *plan_handle* puede obtenerse a partir del [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) vista de administración dinámica.  
   
- [ @statement_start_offset =] { *statement_start_offset* | NULL}]  
+ [ @statement_start_offset = ] { *statement_start_offset* | NULL } ]  
  Identifica la posición inicial de la instrucción dentro del lote especificado *plan_handle*. *statement_start_offset* es **int**, su valor predeterminado es null.  
   
  El desplazamiento de la instrucción corresponde a la columna statement_start_offset de la [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) vista de administración dinámica.  
@@ -116,7 +116,7 @@ WHERE scope_batch LIKE N'SELECT WorkOrderID, p.Name, OrderQty, DueDate%';
 GO  
 ```  
   
-### <a name="b-creating-multiple-plan-guides-for-a-multistatement-batch"></a>B. Crear varias guías de plan para un lote de varias instrucciones  
+### <a name="b-creating-multiple-plan-guides-for-a-multistatement-batch"></a>b. Crear varias guías de plan para un lote de varias instrucciones  
  El ejemplo siguiente crea una guía de plan para dos instrucciones dentro de un lote de varias instrucciones. Las guías de plan se crean dentro de una transacción explícita de modo que el plan de consulta para el lote no se quite de la caché del plan una vez creada la primera guía de plan. El ejemplo comienza ejecutando un lote de varias instrucciones. El plan para el lote se examina mediante las vistas de administración dinámica. Observe que se devuelve una fila por cada instrucción del lote. A continuación, se crea una guía de plan para la primera y tercera instrucciones del lote mediante el parámetro `@statement_start_offset`. La última instrucción del ejemplo comprueba que las guías de plan existen.  
   
  [!code-sql[PlanGuides#Create_From_Handle2](../../relational-databases/system-stored-procedures/codesnippet/tsql/sp-create-plan-guide-fro_1.sql)]  
@@ -127,7 +127,7 @@ GO
  [Guías de plan](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [Sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
+ [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

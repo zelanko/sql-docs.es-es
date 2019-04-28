@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: dd5309a335f637ae205993d930fde7ad25fdf21f
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844166"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Opciones (Editor de texto - Página Extensión de archivo)
   Use el cuadro de diálogo **Opciones** para especificar cómo [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] administra todos los archivos con determinadas extensiones. Puede seleccionar un editor para cada extensión que escriba. De este modo, puede elegir el editor de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para abrir los documentos de un tipo determinado. Para abrir las opciones de extensión de archivo, haga clic en **Opciones** en el menú **Herramientas**, expanda el **Editor de texto** y haga clic en **Extensión de archivo**.  
@@ -27,7 +27,7 @@ ms.locfileid: "51031792"
  **Extensión**  
  Escriba una extensión de archivo.  
   
- **Editor de**  
+ **Editor**  
  Seleccione el editor de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] que quiera usar para abrir los documentos con la extensión de archivo que ha escrito en el cuadro **Extensión**. Cuando seleccione una opción "con codificación", aparecerá un cuadro de diálogo siempre que abra un documento de este tipo, donde podrá seleccionar un esquema de codificación.  
   
  **Agregar**  

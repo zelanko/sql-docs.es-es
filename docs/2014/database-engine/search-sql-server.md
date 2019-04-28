@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843733"
 ---
 # <a name="search-sql-server"></a>Buscar (SQL Server)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona características de búsqueda de texto y documentos que van más allá de la funcionalidad de la [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` palabra clave.  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 13afa5437c0628092ee5c0d09f1fc61e0298bb29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722187"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Ejemplos de consultas de modelos de regresión logística
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles de los patrones detectados durante el análisis, o de una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones con los nuevos datos.  
@@ -41,7 +41,7 @@ ms.locfileid: "48094685"
 ##  <a name="bkmk_top"></a> Obtener información sobre el modelo de regresión logística  
  Los modelos de regresión logística se crean utilizando el algoritmo de red neuronal de Microsoft con un conjunto especial de parámetros; por consiguiente, contienen parte de la misma información que los modelos de redes neuronales, pero son menos complejos. Para entender la estructura del contenido del modelo, así como qué tipos de nodo almacenan qué clase de información, vea [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
   
- Para poder continuar en los escenarios de consulta, puede crear un modelo de regresión logística como se describe en la siguiente sección del Tutorial intermedio de minería de datos: [lección 5: creación de red neuronal y modelos de regresión logística &#40; Tutorial de minería de datos de datos intermedio&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+ Para poder continuar en los escenarios de consulta, puede crear un modelo de regresión logística como se describe en la siguiente sección del Tutorial intermedio de minería de datos: [Lección 5: Creación de modelos de regresión logística y Red neuronal &#40;intermedio de Tutorial de minería de datos&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
  También puede usar la estructura de minería de datos, correo dirigido, desde el [Tutorial básico de minería de datos](../../tutorials/basic-data-mining-tutorial.md).  
   
@@ -65,7 +65,7 @@ Gender,
 USING Microsoft_Logistic_Regression  
 ```  
   
-###  <a name="bkmk_Query1"></a> Consulta de ejemplo 1: recuperar parámetros del modelo utilizando el conjunto de filas de esquema de minería de datos  
+###  <a name="bkmk_Query1"></a> Consulta de ejemplo 1: Recuperar parámetros del modelo utilizando el conjunto de filas de esquema de minería de datos  
  Al consultar el conjunto de filas de esquema de minería de datos, se pueden encontrar metadatos sobre el modelo, como cuándo se creó, cuándo se procesó por última vez, el nombre de la estructura de minería de datos en que se basa el modelo, y el nombre de la columna que se usa como atributo de predicción. El ejemplo siguiente devuelve los parámetros que se utilizaron cuando se creó por primera vez el modelo, junto con el nombre y el tipo del modelo, y la fecha en que se creó.  
   
 ```  
@@ -80,7 +80,7 @@ WHERE MODEL_NAME = 'Call Center_LR'
 |-----------------|-------------------|-------------------|------------------------|  
 |Call Center_LR|Microsoft_Logistic_Regression|04/07/2009 20:38:33|HOLDOUT_PERCENTAGE=30, HOLDOUT_SEED=1, MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_OUTPUT_ATTRIBUTES=255, MAXIMUM_STATES=100, SAMPLE_SIZE=10000|  
   
-###  <a name="bkmk_Query2"></a> Consulta de ejemplo 2: buscar información adicional sobre el modelo utilizando DMX  
+###  <a name="bkmk_Query2"></a> Consulta de ejemplo 2: Buscar información adicional sobre el modelo utilizando DMX  
  La consulta siguiente devuelve información básica sobre el modelo de regresión logística. Un modelo de regresión logística es similar a un modelo de red neuronal en muchos sentidos, por ejemplo en la presencia de un nodo estadístico marginal (NODE_TYPE = 24) que describe los valores que se usan como entradas. En esta consulta de ejemplo se utiliza el modelo de distribución de correo directo y se obtienen los valores de todas las entradas recuperándolos de la tabla anidada NODE_DISTRIBUTION.  
   
 ```  
@@ -108,7 +108,7 @@ FROM [TM_Logistic Regression].CONTENT
 ## <a name="prediction-queries-on-a-logistic-regression-model"></a>Consultas de predicción en un modelo de regresión logística  
  Puede usar la función [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx) con cada tipo de modelo de minería de datos para proporcionar nuevos datos al modelo y realizar predicciones basadas en los nuevos valores. También puede utilizar funciones para devolver información adicional sobre la predicción, como la probabilidad de que una predicción sea correcta. En esta sección se proporcionan algunos ejemplos de consultas de predicción en un modelo de regresión logística.  
   
-###  <a name="bkmk_Query3"></a> Ejemplo de consulta 3: realizar predicciones para un valor continuo  
+###  <a name="bkmk_Query3"></a> Consulta de ejemplo 3: Realizar predicciones para un valor continuo  
  Dado que la regresión logística admite el uso de atributos continuos para entrada y predicción, resulta fácil crear modelos que pongan en correlación varios factores de los datos. Puede utilizar las consultas de predicción para explorar la relación entre estos factores.  
   
  La siguiente consulta de ejemplo se basa en el modelo de centro de llamadas del tutorial intermedio. En ella se crea una consulta singleton que predice el nivel del servicio del turno de la mañana del viernes. La función [PredictHistogram (DMX)](/sql/dmx/predicthistogram-dmx) devuelve una tabla anidada que proporciona las estadísticas pertinentes para conocer la validez del valor predicho.  
@@ -135,9 +135,9 @@ NATURAL PREDICTION JOIN
 |0.102601830123659|83.0232558139535|0.988372093023256|0|0.00120552660600087|0.034720694203902|  
 ||0.976744186046512|0.0116279069767442|0.0116279069767442|0|0|  
   
- Para más información sobre los valores de probabilidad, soporte y desviación estándar de la tabla anidada NODE_DISTRIBUTION, vea [Mining Model Content for Logistic Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
+ Para más información sobre los valores de probabilidad, soporte y desviación estándar de la tabla anidada NODE_DISTRIBUTION, vea [Contenido del modelo de minería de datos para los modelos de regresión logística &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-logistic-regression-models.md).  
   
-###  <a name="bkmk_Query4"></a> Ejemplo de consulta 4: realizar predicciones para un valor discreto  
+###  <a name="bkmk_Query4"></a> Consulta de ejemplo 4: Realizar predicciones para un valor discreto  
  La regresión logística se suele usar en los escenarios en los que se desea analizar los factores que contribuyen a un resultado binario. Aunque el modelo usado en el tutorial predice un valor continuo, **ServiceGrade**, en la vida real es posible que quiera configurar el modelo para predecir si el nivel de servicio cumplió un valor esperado de datos discretos. También podría generar las predicciones mediante un valor continuo pero, posteriormente, agrupar los resultados en **Bueno**, **Aceptable**o **Malo**.  
   
  En el siguiente ejemplo se muestra cómo cambiar la manera en que se agrupa el atributo predecible. Para hacerlo, debe crear una copia de la estructura de minería de datos y, a continuación, cambiar el método de discretization de la columna de destino para que los valores sean agrupados en lugar de continuos.  
@@ -212,7 +212,7 @@ NATURAL PREDICTION JOIN
  [Consultas de minería de datos](data-mining-queries.md)   
  [Algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm.md)   
  [Referencia técnica del algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm-technical-reference.md)   
- [Contenido del modelo para los modelos de regresión logística de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-logistic-regression-models.md)   
- [Lección 5: Generar modelos de regresión logística y Red neuronal &#40;intermedio de Tutorial de minería de datos&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Contenido del modelo de minería de datos para los modelos de regresión logística &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Lección 5: Creación de modelos de regresión logística y Red neuronal &#40;intermedio de Tutorial de minería de datos&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

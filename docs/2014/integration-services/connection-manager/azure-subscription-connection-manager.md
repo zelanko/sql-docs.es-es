@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6ea90d10a0228321d33a4c55076e9ed46a14c80c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58373817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833500"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure Subscription Connection Manager (Administrador de conexiones de suscripciones de Azure)
-  El Administrador de conexiones de Azure HDInsight permite que un paquete SSIS para conectarse a una suscripción de Azure mediante el uso de los valores especificados para las propiedades: Id. de suscripción de Azure y certificado de administración.  
+  El Administrador de conexiones de Azure HDInsight permite que un paquete SSIS para conectarse a una suscripción de Azure mediante el uso de los valores especificados para las propiedades: Id. de suscripción de Azure y Certificado de administración.  
   
 1.  En el cuadro de diálogo **Agregar administrador de conexiones SSIS** que se muestra arriba, seleccione **Suscripción de Azure**y haga clic en **Agregar**.  Debería aparecer el cuadro de diálogo **Azure Subscription Connection Manager Editor** (Editor de administrador de conexiones de suscripciones de Azure).  
   

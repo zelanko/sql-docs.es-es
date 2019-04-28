@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7c598ca2dc2e1fd79e221c0c3d3fc1a5c3592dcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844176"
 ---
 # <a name="query-options-execution-advanced-page"></a>Opciones de ejecución de consulta (página Avanzadas)
   Al utilizar la instrucción **SET** están disponibles una variedad de opciones. Utilice esta página para especificar una opción **set** para la ejecución de consultas de Microsoft SQL Server. Para obtener información detallada de cada una de estas opciones, vea los Libros en pantalla de SQL Server.  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 618a155390d8719e639d0e12d241b2f824e5375d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835995"
 ---
 # <a name="edit-the-table-properties"></a>Editar las propiedades de tabla
   Use este cuadro de diálogo para editar las columnas específicas de la tabla seleccionada donde se están capturando cambios. También puede editar la información de **Rol de seguridad** y de **Instancia de captura** .  
@@ -40,13 +40,13 @@ ms.locfileid: "58390942"
   
 2.  Guarde la instancia de captura de una de las maneras siguientes:  
   
-    -   **Nueva instancia de captura**: En este caso se guarda una nueva instancia de captura y la antigua instancia de captura no se elimina.  
+    -   **New Capture Instance** (Nueva instancia de captura): en este caso se guarda una nueva instancia de captura y la antigua no se elimina.  
   
-         **Nota**: Puede tener no más de dos instancias de captura por tabla. Si ya hay dos instancias de captura, esta opción no estará disponible.  
+         **Tenga en cuenta**: No puede tener más de dos instancias de captura por tabla. Si ya hay dos instancias de captura, esta opción no estará disponible.  
   
-    -   **Reemplace**: En este caso la instancia de captura actual se elimina y reemplaza con la instancia de captura que creó. Si hay dos instancias de captura definidas para esta tabla, debe seleccionar una para reemplazar.  
+    -   **Replace Existing** (Reemplazar existente): en este caso, la instancia de captura actual se elimina y se reemplaza por la instancia de captura que ha creado. Si hay dos instancias de captura definidas para esta tabla, debe seleccionar una para reemplazar.  
   
- **Nota**: Puede quitar una instancia de captura en la lista de tablas en el **tabla** ficha.  
+ **Tenga en cuenta**: Puede quitar una instancia de captura de la lista de tablas en la pestaña **Tabla**.  
   
  Cuando termine de especificar la información en este cuadro de diálogo, haga clic en **Aceptar** para aceptar los cambios.  
   

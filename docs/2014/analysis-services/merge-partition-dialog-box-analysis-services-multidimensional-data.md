@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c18ffdaa50c6ee48896f2d2e6e65db46c8fe3349
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727911"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Partición de mezcla (Analysis Services - Datos multidimensionales)
   Utilice el cuadro de diálogo **Partición de mezcla** de **SQL Server Management Studio** para mezclar las particiones de un grupo de medida en un cubo. Para mostrar el cuadro de diálogo **Partición de mezcla** , haga clic con el botón derecho en la carpeta Particiones o en una partición del **Explorador de objetos** y seleccione **Partición de mezcla** en el menú contextual.  
@@ -27,7 +27,7 @@ ms.locfileid: "48117435"
  **Server**  
  Seleccione el nombre de la instancia de Analysis Services que contiene la partición de destino.  
   
- **Nombre**  
+ **Name**  
  Seleccione el nombre de la partición existente que se utilizará como partición de destino.  
   
  **Carpeta**  
@@ -48,7 +48,7 @@ ms.locfileid: "48117435"
 |**Procesado por última vez**|Muestra la fecha y la hora en que la partición de origen se procesó por última vez.|  
   
 ## <a name="see-also"></a>Vea también  
- [Las particiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Mezclar particiones en Analysis Services &#40;SSAS - multidimensionales&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Mezclar particiones en Analysis Services &#40;SSAS - Multidimensional&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

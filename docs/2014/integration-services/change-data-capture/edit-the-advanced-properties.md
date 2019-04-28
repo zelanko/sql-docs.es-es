@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 320530eeb7bad37f7fd40bab5df9a9af8e9b1d82
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835694"
 ---
 # <a name="edit-the-advanced-properties"></a>Editar las propiedades avanzadas
   Use la pestaña **Avanzadas** para agregar propiedades especiales a la instancia CDC.  

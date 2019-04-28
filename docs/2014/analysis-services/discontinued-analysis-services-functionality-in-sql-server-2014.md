@@ -18,18 +18,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8dbeb94f9d6b4fea97a99544ed4a0bf358851acf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731625"
 ---
 # <a name="discontinued-analysis-services-functionality-in-sql-server-2014"></a>Funcionalidad de Analysis Services no incluida en SQL Server 2014
   Este tema describe las características de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que ya no están disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 ## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Características no incluidas en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
-|Categoría|Característica desusada|Sustituta|  
+|Category|Característica desusada|Sustituta|  
 |--------------|------------------------|-----------------|  
 |Cubos locales|Propiedad de la cadena de conexión InsertInto|La sintaxis original de la cadena de conexión para rellenar cubos locales se sustituye por la instrucción Create Global Cube. Para obtener más información, consulte [instrucción CREATE GLOBAL CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube).|  
 |Cubos locales|Propiedad de la cadena de conexión CreateCube|La sintaxis original de la cadena de conexión para rellenar cubos locales se sustituye por la instrucción Create Global Cube. Para obtener más información, consulte [instrucción CREATE GLOBAL CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube).|  

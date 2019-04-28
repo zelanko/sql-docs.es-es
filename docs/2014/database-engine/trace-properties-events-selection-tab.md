@@ -16,18 +16,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d86ae88fba4cb817ea7966daa60932238c7f0460
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842434"
 ---
 # <a name="trace-properties-events-selection-tab"></a>Propiedades de seguimiento (pestaña Selección de eventos)
   Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades de seguimiento** para ver o especificar columnas de datos y eventos de seguimiento.  
   
 ## <a name="options"></a>Opciones  
  Columna**Eventos**   
- Especifique los eventos de seguimiento seleccionando o desactivando la casilla de la columna de eventos. Los**eventos** se organizan por categoría. Las clases de evento especificadas en la plantilla se seleccionan automáticamente. Para obtener más información, consulte [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Especifique los eventos de seguimiento seleccionando o desactivando la casilla de la columna de eventos. Los**eventos** se organizan por categoría. Las clases de evento especificadas en la plantilla se seleccionan automáticamente. Para obtener más información, consulte [Referencia de las clase de eventos de SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Columnas de datos  
  Especifique las columnas de datos de seguimiento activando la casilla que se corresponda con el evento y la columna de datos necesarios. Todas las columnas de eventos importantes se activan de manera predeterminada en cada evento incluido en el seguimiento.  

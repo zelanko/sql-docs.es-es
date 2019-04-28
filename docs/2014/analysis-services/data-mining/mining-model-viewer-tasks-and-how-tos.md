@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1454e6d0644b8eed74cf9328e2068d91e7c8e8ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733413"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tareas y procedimientos del Visor de modelos de minería de datos
   El Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene varias herramientas que pueden usarse para explorar modelos de minería de datos. Los temas siguientes proporcionan instrucciones paso a paso para completar las tareas específicas del uso de la pestaña **Visor de modelos de minería de datos** en el diseñador.  
@@ -42,12 +42,12 @@ ms.locfileid: "48189679"
   
 -   [Obtener detalles de datos de caso a partir de un modelo de minería de datos](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [Ver la fórmula de serie temporal de un modelo &#40;minería de datos&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Ver la fórmula de un modelo de serie temporal &#40;Minería de datos&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [Cambiar los colores usados en los visores de minería de datos](change-the-colors-used-in-the-data-mining-viewer.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Tutorial de minería de datos básicos](../../tutorials/basic-data-mining-tutorial.md)   
+ [Tutorial básico de minería de datos](../../tutorials/basic-data-mining-tutorial.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50549b10793346331d2e5cb8668243db615a443b
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719514"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sys.dm_db_log_info ( database_id )
 ``` 
 
 ## <a name="arguments"></a>Argumentos  
- *database_id* | NULL | VALOR PREDETERMINADO  
+ *database_id* | NULL | DEFAULT  
  Es el identificador de la base de datos. *database_id* es **int**. Las entradas válidas son el número de Id. de una base de datos, NULL o de forma predeterminada. El valor predeterminado es NULL. NULL y DEFAULT son valores equivalentes en el contexto de base de datos actual.
  
  Especifique NULL para devolver información de VLF de la base de datos actual.
@@ -81,7 +81,7 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. Determinar la posición del último `VLF` en el registro de transacciones antes de reducir el archivo de registro
+### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>b. Determinar la posición del último `VLF` en el registro de transacciones antes de reducir el archivo de registro
 
 La consulta siguiente puede utilizarse para determinar la posición del último VLF activo antes de ejecutar shrinkfile en el registro de transacciones para determinar si puede reducir el registro de transacciones.
 

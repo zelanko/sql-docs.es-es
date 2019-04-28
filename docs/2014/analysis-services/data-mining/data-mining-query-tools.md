@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b5d5ab4c6b62dd9afd4ac922b0604c6ffdbd075
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722918"
 ---
 # <a name="data-mining-query-interfaces"></a>Interfaces de consultas de minería de datos
   Las consultas de minería de datos se basan en el lenguaje DMX (Extensiones de minería de datos). DMX se usa para todas las tareas de predicción y modelado, incluida la clasificación, el análisis de riesgos, la generación de recomendaciones y la regresión lineal. También puede recuperar los patrones y estadísticas que se generaron al procesar el modelo.  

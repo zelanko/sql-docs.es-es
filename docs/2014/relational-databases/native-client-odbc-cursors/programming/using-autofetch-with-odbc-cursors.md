@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 343975c2c6ad39c67dcd10c0d55886d21e69f3f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711563"
 ---
 # <a name="using-autofetch-with-odbc-cursors"></a>Usar la captura automática con cursores ODBC
   Cuando se conecta a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite una opción de captura automática cuando se utiliza cualquier tipo de cursor de servidor. Con captura automática, el **SQLExecute** o **SQLExecDirect** función que se abre el cursor tiene también un implícita [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)función (SQL_FIRST). Las filas que componen el primer conjunto de filas se devuelven a las variables de aplicación enlazadas como parte de la ejecución de la instrucción y se ahorra un viaje de ida y vuelta (round trip) de la red al servidor. [SQLGetData](../../native-client-odbc-api/sqlgetdata.md) no se admite cuando está habilitada la opción de captura automática; se deben enlazar las columnas del conjunto de resultados a variables de programa.  

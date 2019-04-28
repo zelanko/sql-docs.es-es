@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8ed248a0ef05dbff3f0cc906adc946d6dd58e2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732818"
 ---
 # <a name="data-source-wizard-f1-help-analysis-services"></a>Asistente para orígenes de datos (Ayuda F1) (Analysis Services)
   Use el Asistente para orígenes de datos para crear un origen de datos y usarlo en los siguientes proyectos de Business Intelligence de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  

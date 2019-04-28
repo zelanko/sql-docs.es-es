@@ -1,5 +1,5 @@
 ---
-title: 'Lección 8: Crear indicadores clave de rendimiento | Microsoft Docs'
+title: 'Lección 8: Creación de indicadores clave de rendimiento | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62b4102ba7a8b1ff2d5c833001b90dd74707fdc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728141"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>Lección 8: Crear indicadores clave de rendimiento
   En esta lección, creará indicadores clave de rendimiento (KPI). Los KPI miden el rendimiento de un valor, definido por una medida *base* , con respecto a un valor de *destino* , también definido por una medida o por un valor absoluto. En aplicaciones cliente de informes, los KPI pueden proporcionar a los profesionales del negocio una manera rápida y sencilla de identificar un resumen de logros empresariales o tendencias. Para obtener más información, consulte [KPI &#40;SSAS tabular&#41;](tabular-models/kpis-ssas-tabular.md).  
@@ -24,7 +24,7 @@ ms.locfileid: "48120672"
  Tiempo estimado para completar esta lección: **15 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 7: Crear medidas](lesson-6-create-measures.md).  
+ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 7: Crear medidas](lesson-6-create-measures.md).  
   
 ## <a name="create-key-performance-indicators"></a>Crear indicadores clave de rendimiento  
   

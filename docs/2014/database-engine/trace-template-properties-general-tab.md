@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f9e78216d333303cfacaf49ed85b7ac2c6c8f1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844413"
 ---
 # <a name="trace-template-properties-general-tab"></a>Propiedades de la plantilla de seguimiento (pestaña General)
   Utilice la pestaña **General** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para crear nuevas plantillas de seguimiento mediante las siguientes opciones. Para tener acceso a este cuadro de diálogo, en el menú [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **de** , elija **Plantillas**y haga clic en **Nueva plantilla**.  

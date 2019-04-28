@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d5cf669883ce81528adbe1fbd8faeff2ed716218
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735143"
 ---
 # <a name="sqltransact-mapping"></a>Asignación de SQLTransact
 **SQLTransact** ahora se reemplaza por **SQLEndTran**. Es la principal diferencia entre las dos funciones que **SQLEndTran** contiene un argumento *HandleType*, que especifica el ámbito de la que se realice el trabajo. El *HandleType* argumento puede especificar el entorno o el identificador de conexión. La siguiente llamada a **SQLTransact**:  

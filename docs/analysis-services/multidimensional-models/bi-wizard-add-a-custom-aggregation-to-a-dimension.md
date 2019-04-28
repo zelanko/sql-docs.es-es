@@ -1,5 +1,5 @@
 ---
-title: Agregar una agregación personalizada a una dimensión | Documentos de Microsoft
+title: Agregar una agregación personalizada a una dimensión | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbe5c4a1f043ccc8e7f442213b8b024a3920663e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717382"
 ---
-# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>Asistente de BI - agregar una agregación personalizada a una dimensión
+# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>Asistente de BI: Agregar una agregación personalizada a una dimensión
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Agregue una mejora de agregación personalizada a un cubo o dimensión para reemplazar las agregaciones predeterminadas asociadas a un miembro de dimensión con un operador unario diferente. Esta mejora especifica una columna de operador unario en la tabla de dimensión que define el resumen de los miembros de una jerarquía de elementos primarios y secundarios. El operador unario actúa sobre el atributo primario en una jerarquía de elementos primarios y secundarios.  
   

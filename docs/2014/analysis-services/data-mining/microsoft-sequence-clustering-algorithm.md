@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733705"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algoritmo de clústeres de secuencia de Microsoft
   El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de clústeres de secuencia es un algoritmo de clústeres de secuencia proporcionado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Puede utilizar este algoritmo para explorar los datos que contiene los eventos que se pueden vincular siguiendo rutas o *secuencias*. El algoritmo encuentra las secuencias más comunes mediante la agrupación, o agrupación en clústeres, de las secuencias que son idénticas. A continuación se incluyen algunos ejemplos de datos que contienen secuencias que se podrían utilizar para la minería de datos, para ofrecer una visión general de problemas comunes o escenarios empresariales:  
@@ -78,9 +78,9 @@ ms.locfileid: "48190785"
 -   Admite el uso de modelos de minería de datos OLAP y la creación de dimensiones de minería de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Referencia técnica del algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Ejemplos de consultas de modelo de clústeres de secuencia](clustering-model-query-examples.md)   
- [Examinar un modelo usando el Visor de clústeres de secuencia de Microsoft](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Ejemplos de consultas de modelos de clústeres de secuencia](clustering-model-query-examples.md)   
+ [Examinar un modelo usando el Visor de clústeres de Microsoft](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

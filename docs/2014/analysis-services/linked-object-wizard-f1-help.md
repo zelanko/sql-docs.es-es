@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6d1cb71991f8fd45d4cad0de48e7dbd266a6032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728381"
 ---
 # <a name="linked-object-wizard-f1-help"></a>Asistente para objetos vinculados (Ayuda F1)
   Use el Asistente para objetos vinculados para vincular o importar objetos de otras bases de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] desde la misma instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , o desde otra instancia, al proyecto actual de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Los objetos vinculados reflejan los cambios en la base de datos de origen de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , mientras que los objetos importados no reflejan los cambios realizados en la base de datos de origen. Es posible vincular dimensiones y grupos de medida, incluidas las medidas asociadas. Es posible importar acciones, indicadores clave de rendimiento (KPI) y cálculos.  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 603b1d22370a32808460aa3e725e5f26e0f62dc0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62718212"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Crear una estructura de minería de datos OLAP
   Puede usar el Asistente para minería de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear una estructura de minería de datos que utilice datos de un modelo multidimensional. Los modelos de minería de datos basados en los cubos OLAP pueden utilizar las columnas y los valores de las tablas de hechos, las dimensiones y los grupos de medida como atributos para el análisis.  
@@ -98,7 +98,7 @@ ms.locfileid: "52404190"
   
     -   **Dimensión**: Elija una dimensión relacionada en la lista desplegable.  
   
-    -   **Jerarquía**:  Seleccione el nivel de la jerarquía de dimensión a la que desea aplicar el filtro. Por ejemplo, si realiza la segmentación por la dimensión [Geography], seleccionará un nivel de jerarquía como [Region Country Name].  
+    -   **Hierarchy**:  Seleccione el nivel de la jerarquía de dimensión a la que desea aplicar el filtro. Por ejemplo, si realiza la segmentación por la dimensión [Geography], seleccionará un nivel de jerarquía como [Region Country Name].  
   
     -   **Operador**: Elija un operador en la lista.  
   

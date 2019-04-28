@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876868"
 ---
 # <a name="back-up-database-backup-options-page"></a>Copia de seguridad de la base de datos (página Opciones de copia de seguridad)
   Utilice la página  **Opciones de copia de seguridad** del cuadro de diálogo **Copia de seguridad de base de datos** para ver o modificar las opciones de copia de seguridad de la base de datos.  
@@ -40,7 +40,7 @@ ms.locfileid: "48060356"
 ### <a name="backup-set"></a>Conjunto de copia de seguridad  
  Las opciones del panel **Conjunto de copia de seguridad** permiten especificar información adicional acerca del conjunto de copia de seguridad creado en la operación de copia de seguridad.  
   
- **Nombre**  
+ **Name**  
  Especifique el nombre del conjunto de copia de seguridad. El sistema sugiere automáticamente un nombre predeterminado basándose en el nombre de la base de datos y el tipo de copia de seguridad.  
   
  Para obtener más información sobre los conjuntos de copia de seguridad, vea [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  

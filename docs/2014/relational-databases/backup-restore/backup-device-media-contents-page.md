@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 524e6d8e5ec987a20d693cb1f7e06b30bc27c0b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876698"
 ---
 # <a name="backup-device-media-contents-page"></a>Dispositivo de copia de seguridad (página Contenido de los medios)
   Utilice el cuadro de diálogo **Dispositivo de copia de seguridad** para ver la información acerca de la copia de seguridad. Esta información describe el dispositivo, el medio, el conjunto de medios y los conjuntos de copias de seguridad.  
@@ -43,7 +43,7 @@ ms.locfileid: "48130511"
  **Conjunto de medios**  
  Un conjunto de medios es una colección ordenada de medios de copia de seguridad en la que se han grabado una o más operaciones de copia de seguridad mediante un número constante de dispositivos pertinentes.  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre del conjunto de medios, si existe alguno.  
   
  **Descripción**  
@@ -57,9 +57,9 @@ ms.locfileid: "48130511"
   
 |Encabezado|Valores|  
 |------------|------------|  
-|**Nombre**|Nombre del conjunto de copia de seguridad.|  
-|**Tipo**|Objeto del que se realizó una copia de seguridad: Base de datos, Archivo o *en blanco>\<* (para registros de transacciones).|  
-|**Componente**|Tipo de copia de seguridad realizada: Completa, Diferencial o Registro de transacciones.|  
+|**Name**|Nombre del conjunto de copia de seguridad.|  
+|**Tipo**|El objeto de copia de seguridad: Base de datos, archivo, o  *\<en blanco >* (para registros de transacciones).|  
+|**Componente**|El tipo de copia de seguridad realizada: Completa, diferencial o registro de transacciones.|  
 |**Server**|Nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizó la operación de copia de seguridad.|  
 |**Base de datos**|Nombre de la base de datos de la que se realizó la copia de seguridad.|  
 |**Posición**|Posición del conjunto de copias de seguridad en el volumen.|  

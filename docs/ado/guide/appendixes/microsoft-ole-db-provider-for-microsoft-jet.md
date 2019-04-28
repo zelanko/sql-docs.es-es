@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 986c1bf7f604f531180a14a4456325ce01702b94
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855489"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Proveedor Microsoft OLE DB para Microsoft Jet Introducción
 El proveedor OLE DB para Microsoft Jet permite ADO tener acceso a bases de datos Microsoft Jet.
@@ -64,7 +64,7 @@ Microsoft.Jet.OLEDB.4.0
 |Control de Jet OLEDB: Connection (DBPROP_JETOLEDB_CONNECTIONCONTROL)|Indica si los usuarios pueden conectarse a la base de datos.|
 |Jet OLEDB: crear base de datos del sistema (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|Indica si se debe crear una base de datos del sistema al crear un nuevo origen de datos.|
 |Modo de bloqueo de Jet OLEDB: Database (DBPROP_JETOLEDB_DATABASELOCKMODE)|Indica el modo de bloqueo para esta base de datos. El primer usuario para abrir la base de datos determina el modo utilizado mientras la base de datos está abierto.|
-|Jet OLEDB: Database Password (DBPROP_JETOLEDB_DATABASEPASSWORD)|Indica la contraseña de la base de datos.|
+|Jet OLEDB:Database Password (DBPROP_JETOLEDB_DATABASEPASSWORD)|Indica la contraseña de la base de datos.|
 |Jet OLEDB: no copiar la configuración regional en Compact (DBPROP_JETOLEDB_COMPACT_DONTCOPYLOCALE)|Indica si Jet debe copiar información de configuración regional cuando se compacta una base de datos.|
 |Jet OLEDB: cifrar la base de datos (DBPROP_JETOLEDB_ENCRYPTDATABASE)|Indica si se debe cifrar una base de datos compactado. Si no se establece esta propiedad, se cifrará la base de datos compactado si también se cifró la base de datos original.|
 |Tipo de Jet OLEDB:Engine (DBPROP_JETOLEDB_ENGINE)|Indica que el motor de almacenamiento usado para tener acceso al almacén de datos actual.|
@@ -74,7 +74,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: Ops Global masiva parcial (DBPROP_JETOLEDB_GLOBALBULKPARTIAL)|Indica la contraseña utilizada para abrir la base de datos.|
 |Jet OLEDB: sincronización Commit implícito (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC)|Indica si los cambios realizados en las transacciones implícitas internas se escriben en modo sincrónico o asincrónico.|
 |Retraso de Jet OLEDB:Lock (DBPROP_JETOLEDB_LOCKDELAY)|Indica el número de milisegundos que transcurrirán antes de intentar adquirir un bloqueo después de un error anterior.|
-|Reintento de Jet OLEDB:Lock (DBPROP_JETOLEDB_LOCKRETRY)|Indica cuántas veces se repite un intento de acceder a una página bloqueada.|
+|Jet OLEDB:Lock Retry (DBPROP_JETOLEDB_LOCKRETRY)|Indica cuántas veces se repite un intento de acceder a una página bloqueada.|
 |Tamaño del búfer Jet OLEDB:Max (DBPROP_JETOLEDB_MAXBUFFERSIZE)|Indica la cantidad máxima de memoria, en kilobytes, Jet puede usar antes de empezar a vaciar los cambios en el disco.|
 |Jet OLEDB:Max bloqueos por archivo (DBPROP_JETOLEDB_MAXLOCKSPERFILE)|Indica el número máximo de bloqueos de que Jet puede colocar en una base de datos. El valor predeterminado es 9.500.|
 |Jet OLEDB: nueva contraseña de base de datos (DBPROP_JETOLEDB_NEWDATABASEPASSWORD)|Indica la nueva contraseña que se establezca para esta base de datos. La contraseña antigua se almacena en **Jet OLEDB: Database Password**.|
@@ -92,7 +92,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>Conjunto de registros específicos del proveedor y las propiedades de comando
  El proveedor de Jet también admite varias específica del proveedor **Recordset** y **comando** propiedades. Se tiene acceso a estas propiedades y se establece a través del **propiedades** colección de la **Recordset** o **comando** objeto. La tabla muestra el nombre de la propiedad ADO y su nombre de propiedad de OLE DB correspondiente entre paréntesis.
 
-|Nombre de propiedad|Descripción|
+|Nombre de la propiedad|Descripción|
 |-------------------|-----------------|
 |Transacciones de Jet OLEDB:Bulk (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Indica si se negocian operaciones masivas de SQL. Las operaciones masivas de gran tamaño pueden producir un error cuando la transacción debido a retrasos de recursos.|
 |Jet OLEDB: Enable Fat Cursors (DBPROP_JETOLEDB_ENABLEFATCURSOR)|Indica si Jet debe almacenar en caché varias filas al rellenar un conjunto de registros para los orígenes de filas remoto.|
@@ -147,7 +147,7 @@ Microsoft.Jet.OLEDB.4.0
 |Tamaño máximo de fila|DBPROP_MAXROWSIZE|
 |Tamaño máximo de fila incluye BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Número máximo de tablas en SELECT|DBPROP_MAXTABLESINSELECT|
-|Mode|DBPROP_INIT_MODE|
+|Modo|DBPROP_INIT_MODE|
 |Varios conjuntos de parámetros|DBPROP_MULTIPLEPARAMSETS|
 |Varios resultados|DBPROP_MULTIPLERESULTS|
 |Varios objetos de almacenamiento|DBPROP_MULTIPLESTORAGEOBJECTS|

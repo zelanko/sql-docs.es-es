@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4071bee5e13f415be90328bb7ff0b55ff91087c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877134"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Copia de seguridad administrada de SQL Server en Windows Azure
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] administra y automatiza las copias de seguridad de SQL Server en el servicio de almacenamiento Blob de Windows Azure. La estrategia de copia de seguridad que usa [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] se basa en el período de retención y en la carga de trabajo de transacciones en la base de datos. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] admite la restauración a un momento dado para el período de retención especificado.   
@@ -50,7 +50,7 @@ ms.locfileid: "52416400"
 ##  <a name="Concepts"></a> Los requisitos, conceptos y componentes  
   
   
-###  <a name="Security"></a> Permissions  
+###  <a name="Security"></a> Permisos  
  Transact-SQL es la interfaz principal que se utiliza para configurar y supervisar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. En general ejecutar la configuración de procedimientos almacenados, **db_backupoperator** rol de base de datos con **ALTER ANY CREDENTIAL** permisos, y `EXECUTE` permisos **sp_delete_ backuphistory** se requiere un procedimiento almacenado.  Los procedimientos almacenados y las funciones que se usan para revisar la información normalmente requieren permisos `Execute` en el procedimiento almacenado y `Select` en la función, respectivamente.  
   
 ###  <a name="Prereqs"></a> Requisitos previos  
@@ -95,7 +95,7 @@ ms.locfileid: "52416400"
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] asigna nombre al contenedor de almacenamiento de Windows Azure usando el nombre de instancia de SQL Server para todas las bases de datos excepto las de disponibilidad.  Para las bases de datos de disponibilidad, se usa el GUID del Grupo de disponibilidad para asignar nombre al contenedor de almacenamiento de Windows Azure.  
   
- El archivo de copia de seguridad para bases de datos sin disponibilidad recibe un nombre de acuerdo a la siguiente convención: El nombre se crea con los primeros 40 caracteres del nombre de base de datos, el GUID de la base de datos sin el '-' y la marca de tiempo. El carácter de subrayado se inserta entre los segmentos como separadores. La extensión de archivo **.bak** se usa en el caso de que la copia de seguridad sea completa y **.log** se usa para las copias de seguridad de registros. En las bases de datos del grupo de disponibilidad, además de la convención de nomenclatura de archivos descrita anteriormente, se agrega el GUID de la base de datos del grupo de disponibilidad después de los 40 caracteres del nombre de la base de datos. El GUID de la base de datos del grupo de disponibilidad es el valor de group_database_id de sys.databases.  
+ El archivo de copia de seguridad para las bases de datos de disponibilidad no se denominan mediante la convención siguiente: El nombre se crea con los primeros 40 caracteres del nombre de base de datos, el GUID de la base de datos sin el '-' y la marca de tiempo. El carácter de subrayado se inserta entre los segmentos como separadores. La extensión de archivo **.bak** se usa en el caso de que la copia de seguridad sea completa y **.log** se usa para las copias de seguridad de registros. En las bases de datos del grupo de disponibilidad, además de la convención de nomenclatura de archivos descrita anteriormente, se agrega el GUID de la base de datos del grupo de disponibilidad después de los 40 caracteres del nombre de la base de datos. El GUID de la base de datos del grupo de disponibilidad es el valor de group_database_id de sys.databases.  
   
  **Copia de seguridad de base de datos completa:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] programa una copia de seguridad completa de la base de datos si se cumple alguna de las siguientes acciones.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52416400"
 -   En cualquier momento, la copia de seguridad del registro de transacciones se retrasa después de una copia de seguridad completa de la base de datos. El objetivo es mantener la cadena de registros por delante de la copia de seguridad completa.  
   
 #### <a name="retention-period-settings"></a>Configuración del período de retención  
- Cuando se habilita la copia de seguridad debe establecer el periodo de retención en días: el mínimo es 1 día y el máximo 30 días.  
+ Al habilitar la copia de seguridad, debe establecer el período de retención en días: El mínimo es 1 día, y el máximo es 30 días.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] según la configuración del período de retención evalúa la capacidad de recuperar a un momento dado en el tiempo especificado para determinar qué archivos de copia de seguridad mantener e identificar los que hay que eliminar. El backup_finish_date de la copia de seguridad se utiliza para determinar y hacer coincidir el tiempo especificado por la configuración del período de retención.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "52416400"
 ###  <a name="support_limits"></a> Limitaciones de compatibilidad  
  A continuación se indican algunas limitaciones específicas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]:  
   
--   El agente [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] admite solamente copias de seguridad de bases de datos: copias de seguridad completas y de registros.  La automatización de la copia de seguridad de archivos no se admite.  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] agente es compatible con las copias de seguridad: copias de seguridad completas y de registros.  La automatización de la copia de seguridad de archivos no se admite.  
   
 -   Las operaciones de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] se admiten actualmente mediante Transact-SQL. La supervisión y la solución de problemas se puede llevar a cabo con Eventos extendidos. El soporte técnico de SMO y PowerShell se limita a la configuración del almacenamiento, a la configuración predeterminada del periodo de retención para una instancia de SQL Server y a la supervisión del estado de la copia de seguridad y del estado general según las directivas de administración basada en directivas de SQL Server.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "52416400"
   
 -   Actualmente, el tamaño de archivo máximo permitido para un blob de páginas de Azure Storage es 1 TB. Los archivos de copia de seguridad mayores que 1 TB mayor producirán un error. Para evitar esta situación, se recomienda usar la compresión para las bases de datos grandes y se pruebe el tamaño del archivo de copia de seguridad antes de configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Puede probar haciendo la copia de seguridad en un disco local o manualmente en Almacenamiento de Windows Azure con la instrucción Transact-SQL `BACKUP TO URL`. Para más información, consulte [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
--   Modelos de recuperación: solo se admiten las bases de datos establecidas para el modelo de registro masivo o completo.  Las bases de datos establecidas en el modelo de recuperación simple no se admiten.  
+-   Modelos de recuperación: Se admiten solo las bases de datos establecidas en el modelo de registro masivo o completo.  Las bases de datos establecidas en el modelo de recuperación simple no se admiten.  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] puede tener algunas limitaciones cuando se configura con otras tecnologías que admiten la copia de seguridad, la alta disponibilidad o la recuperación de desastres. Para obtener más información, consulte [SQL Server Managed Backup to Windows Azure: Interoperabilidad y coexistencia](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md).  
   
@@ -153,7 +153,7 @@ ms.locfileid: "52416400"
 |**Descripciones de tareas**|**Tema**|  
 |Las tareas básicas como la configuración de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para una base de datos, la configuración predeterminada en el nivel de instancia, la deshabilitación de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en la instancia o base de datos, la pausa y el reinicio de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Copia de seguridad administrada de SQL Server para Microsoft Azure - Configuración de la retención y el almacenamiento](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|  
 |**Tutorial:** Instrucciones paso a paso para configurar y supervisar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Configurar Copia de seguridad administrada de SQL Server para Microsoft Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
-|**Tutorial:** Instrucciones paso a paso para configurar y supervisar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para las bases de datos de un grupo de disponibilidad.|[Configurar Copia de seguridad administrada de SQL Server para Microsoft Azure para grupos de disponibilidad](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
+|**Tutorial:** Instrucciones paso a paso para configurar y supervisar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para bases de datos en el grupo de disponibilidad.|[Configurar Copia de seguridad administrada de SQL Server para Microsoft Azure para grupos de disponibilidad](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
 |Herramientas, conceptos y tareas relacionadas con la supervisión de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Supervisar la Copia de seguridad administrada de SQL Server para Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md)|  
 |Herramientas y pasos para solucionar problemas de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Solucionar problemas de la Copia de seguridad administrada de SQL Server para Microsoft Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   

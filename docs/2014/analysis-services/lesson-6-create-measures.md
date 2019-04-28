@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7fdd611d1757712baa13e58ba31d78a2081f3d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728111"
 ---
 # <a name="lesson-7-create-measures"></a>Lección 7: Crear medidas
   En esta lección, creará medidas para incluirlas en su modelo. Al igual que las columnas calculadas que creó en la lección anterior, una medida es esencialmente un cálculo creado usando una fórmula DAX. Sin embargo, a diferencia de las columnas calculadas, las medidas se evalúan en función de un *filtro*seleccionado por el usuario; por ejemplo, una columna o una segmentación de datos determinada agregada al campo Etiquetas de filas en una tabla dinámica.   A continuación, la medida aplicada calcula un valor para cada celda del filtro. Las medidas son cálculos eficaces y flexibles que deseará incluir en casi todos los modelos tabulares para realizar cálculos dinámicos sobre datos numéricos. Para obtener más información, vea [Medidas &#40;SSAS tabular&#41;](tabular-models/measures-ssas-tabular.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "48213245"
  Tiempo estimado para completar esta lección: **30 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 6: Crear columnas calculadas](lesson-5-create-calculated-columns.md).  
+ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 6: Crear columnas calculadas](lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Crear medidas  
   
@@ -92,13 +92,13 @@ ms.locfileid: "48213245"
     |Nombre de medida|columna|Autosuma (∑)|Fórmula|  
     |------------------|------------|-------------------|-------------|  
     |Recuento de líneas de pedido por Internet|Número de líneas del pedido de venta|Count|=COUNT ([Número de líneas del pedido de venta])|  
-    |Unidades totales de Internet|Cantidad del pedido|SUM|=SUM([Cantidad del pedido])|  
-    |Importe de descuento total por Internet|Importe de descuento|SUM|=SUM([Importe de descuento])|  
-    |Costo total del producto por Internet|Costo total del producto|SUM|=SUM([Costo total del producto])|  
-    |Ventas totales por Internet|Importe de ventas|SUM|=SUM([Importe de ventas])|  
-    |Margen total por Internet|Margen|SUM|=SUM([Margen])|  
-    |Importe de impuesto total por Internet|Importe de impuesto|SUM|=SUM([Importe de impuesto])|  
-    |Cargos totales por Internet|Cargos|SUM|=SUM([Cargos])|  
+    |Unidades totales de Internet|Cantidad del pedido|Sum|=SUM([Cantidad del pedido])|  
+    |Importe de descuento total por Internet|Importe de descuento|Sum|=SUM([Importe de descuento])|  
+    |Costo total del producto por Internet|Costo total del producto|Sum|=SUM([Costo total del producto])|  
+    |Ventas totales por Internet|Importe de ventas|Sum|=SUM([Importe de ventas])|  
+    |Margen total por Internet|Margen|Sum|=SUM([Margen])|  
+    |Importe de impuesto total por Internet|Importe de impuesto|Sum|=SUM([Importe de impuesto])|  
+    |Cargos totales por Internet|Cargos|Sum|=SUM([Cargos])|  
   
 2.  Haciendo clic en una celda vacía de la cuadrícula de medidas y usando la barra de fórmulas, cree y asigne un nombre a las medidas siguientes:  
   
@@ -117,6 +117,6 @@ ms.locfileid: "48213245"
  Las medidas creadas para la tabla Ventas por Internet se pueden utilizar para analizar datos financieros críticos como ventas, costos y margen de beneficios para los elementos definidos por el filtro seleccionado por el usuario.  
   
 ## <a name="next-step"></a>Paso siguiente  
- Para continuar este tutorial, vaya a la lección siguiente: [Lección 8: Crear indicadores clave de rendimiento](lesson-7-create-key-performance-indicators.md).  
+ Para continuar este tutorial, vaya a la lección siguiente: [Lección 8: Creación de indicadores clave de rendimiento](lesson-7-create-key-performance-indicators.md).  
   
   

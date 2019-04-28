@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724220"
 ---
 # <a name="hard-coded-sql-statements"></a>Instrucciones SQL codificadas de forma rígida
 Las aplicaciones que realizan una tarea fija normalmente contienen las instrucciones SQL codificadas de forma rígida. Por ejemplo, un sistema de entrada de pedidos podría usar la siguiente llamada a pedidos de venta abiertos de lista:  
@@ -29,7 +29,7 @@ Las aplicaciones que realizan una tarea fija normalmente contienen las instrucci
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- Hay varias ventajas a las instrucciones SQL codificadas de forma rígida: puede probarse cuando se escribe la aplicación; son más fáciles de implementar que las instrucciones creadas en tiempo de ejecución; y simplifican la aplicación.  
+ Hay varias ventajas a las instrucciones SQL codificadas de forma rígida: Puede probar cuando se escribe la aplicación; son más fáciles de implementar que las instrucciones creadas en tiempo de ejecución; y simplifican la aplicación.  
   
  Usar parámetros de instrucciones y preparar las instrucciones proporcionan aún mejores formas de usar las instrucciones SQL codificadas de forma rígida. Por ejemplo, suponga que la tabla Parts contiene las columnas PartID, descripción y precio. Sería una manera de insertar una nueva fila en esta tabla crear y ejecutar un **insertar** instrucción:  
   

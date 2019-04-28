@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6a27cfbbe4a499f6ac2c598e80f30409a37ba2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728221"
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Lección 7: Definir indicadores clave de rendimiento (KPI)
   En esta lección, aprenderá a definir indicadores clave de rendimiento (KPI) en su proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Los KPI proporcionan un marco para definir cálculos del servidor que midan su negocio y estandarizar la forma en que aparezca la información resultante. Los KPI pueden aparecer en informes, portales y paneles, mediante las API de acceso a datos, y mediante herramientas de [!INCLUDE[msCoName](../includes/msconame-md.md)] y herramientas de terceros. Los KPI son contenedores de metadatos alrededor de medidas normales y otras expresiones de Expresiones multidimensionales (MDX). Para obtener más información, consulte [Indicadores clave de rendimiento &#40;KPIs&#41; en modelos multidimensionales](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  

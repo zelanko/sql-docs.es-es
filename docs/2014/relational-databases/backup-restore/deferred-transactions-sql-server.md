@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e36b6c114e7e5f2f95c0747d6e36e4dabc118daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876223"
 ---
 # <a name="deferred-transactions-sql-server"></a>Transacciones diferidas (SQL Server)
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise, una transacción dañada puede ser diferida si los datos necesarios para la reversión se encuentran sin conexión durante el inicio de la base de datos. Una *transacción diferida* es aquella que está sin confirmar cuando termina la fase de puesta al día y que se encuentra con un error que impide que se revierta. Si la transacción no se puede revertir, se convierte en una transacción diferida.  
@@ -39,7 +39,7 @@ ms.locfileid: "48074195"
 |Acción|Resolución (si se producen problemas de E/S o los datos necesarios están sin conexión)|  
 |------------|-----------------------------------------------------------------------|  
 |Iniciar el servidor|transacción diferida|  
-|Restaurar|Transacción diferida|  
+|Restaurar|transacción diferida|  
 |Adjuntar|Error en la operación de adjuntar|  
 |Reinicio automático|transacción diferida|  
 |Crear una base de datos o una instantánea de base de datos|Error en la creación|  
@@ -84,7 +84,7 @@ ms.locfileid: "48074195"
   
          Para obtener información acerca del modo de emergencia, vea [Database States](../databases/database-states.md).  
   
-    -   Después, repare la base de datos mediante la opción DBCC REPAIR_ALLOW_DATA_LOSS de una de las siguientes instrucciones DBCC: [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)o [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql).  
+    -   A continuación, repare la base de datos mediante la opción DBCC REPAIR_ALLOW_DATA_LOSS de una de las siguientes instrucciones DBCC: [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql), [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql), o [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql).  
   
          Cuando encuentre la página dañada, DBCC la desasignará y reparará cualquier error relacionado. Este enfoque permite volver a poner en línea la base de datos en un estado físicamente coherente. Sin embargo, también podrían perderse otros datos, por lo que este enfoque debe ser el último recurso.  
   

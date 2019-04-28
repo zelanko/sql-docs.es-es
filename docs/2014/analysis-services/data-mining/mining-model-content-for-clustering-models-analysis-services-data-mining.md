@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3d93d564dedbb5a08cf403d771a6f8e794fb498
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733469"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de agrupación en clústeres (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de clústeres de Microsoft. Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "48190285"
 > [!NOTE]  
 >  La varianza representa la varianza total para el clúster. Cuando el valor para la varianza es pequeño, indica que la mayoría de los valores de la columna se hallaban bastante cerca de la media. Para obtener la desviación estándar, calcule la raíz cuadrada de la varianza.  
   
- Tenga en cuenta que para cada atributo hay un `Missing` tipo de valor que indica cuántos casos carecían de datos para ese atributo. Los datos ausentes pueden ser relevantes y afectar a los cálculos de varias maneras, dependiendo del tipo de datos. Para más información, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
+ Observe que para cada atributo hay un tipo de valor `Missing` que indica cuántos casos carecían de datos para ese atributo. Los datos ausentes pueden ser relevantes y afectar a los cálculos de varias maneras, dependiendo del tipo de datos. Para más información, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## <a name="model-content-for-a-clustering-model"></a>Contenido del modelo para un modelo de agrupación en clústeres  
  Esta sección solo proporciona detalles y ejemplos para las columnas del contenido del modelo de minería de datos que son relevantes para los modelos de agrupación en clústeres.  
@@ -149,9 +149,9 @@ ms.locfileid: "48190285"
  MSOLAP_NODE_SHORT_CAPTION  
  Etiqueta que se utiliza para la visualización. Este título no se puede cambiar.  
   
- **Nodo primario** : el tipo de modelo, modelo de clústeres.  
+ **Nodo primario** el tipo de modelo: Modelo de clúster  
   
- **Nodos de clúster** : el nombre del clúster. Por ejemplo, Clúster 1.  
+ **Nodos de clúster** : el nombre del clúster. Ejemplo: Clúster 1.  
   
 ## <a name="remarks"></a>Comentarios  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varios métodos para crear un modelo de agrupación en clústeres. Si desconoce el método utilizado para crear el modelo con el que está trabajando, puede recuperar los metadatos del modelo mediante programación, utilizando un cliente ADOMD o AMO, o consultando el conjunto de filas de esquema de minería de datos. Para más información, vea [Consultar los parámetros usados para crear un modelo de minería de datos](query-the-parameters-used-to-create-a-mining-model.md).  
@@ -160,7 +160,7 @@ ms.locfileid: "48190285"
 >  La estructura y el contenido del modelo permanecen invariables, independientemente del método de agrupación en clústeres o de los parámetros utilizados.  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)   
  [Algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm.md)   
  [Consultas de minería de datos](data-mining-queries.md)  

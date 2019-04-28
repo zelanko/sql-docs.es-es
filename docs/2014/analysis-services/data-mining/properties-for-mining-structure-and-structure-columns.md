@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61573352407d883df91327a1d27f3968ad1d1708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732973"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propiedades de estructuras de minería de datos y columnas de estructuras
   Puede establecer o cambiar las propiedades de una estructura de minería de datos, y de sus columnas y tablas anidadas asociadas, mediante la pestaña **Estructura de minería de datos** del Diseñador de minería de datos. Las propiedades que se configuran en esta pestaña se propagan a todos los modelos de minería de datos asociados con la estructura.  
@@ -59,8 +59,8 @@ ms.locfileid: "48190015"
 |**ClassifiedColumns**|Identifica la columna que describe una columna clasificada.|  
 |**Contenido**|El tipo de contenido de la columna.|  
 |**Descripción**|Describe la columna. Como práctica recomendada, la descripción de la columna debería proporcionar información sobre cómo se han obtenido los datos de la columna o se han modificado para la minería de datos.|  
-|**DiscretizationBucketCount**|Muestra el número de cubos de la columna de datos discretos.<br /><br /> Habilita sólo si el tipo de contenido se establece en `Discretized`.<br /><br /> Esta propiedad es de solo lectura.|  
-|**DiscretizationMethod**|Muestra el método usado para discretizar la columna.<br /><br /> Habilita sólo si el tipo de contenido se establece en `Discretized`.<br /><br /> Esta propiedad es de solo lectura.|  
+|**DiscretizationBucketCount**|Muestra el número de cubos de la columna de datos discretos.<br /><br /> Se habilita solo si el tipo de contenido se establece en `Discretized`.<br /><br /> Esta propiedad es de solo lectura.|  
+|**DiscretizationMethod**|Muestra el método usado para discretizar la columna.<br /><br /> Se habilita solo si el tipo de contenido se establece en `Discretized`.<br /><br /> Esta propiedad es de solo lectura.|  
 |**Distribución**|Especifica la distribución del contenido de la columna.|  
 |**ID**|Muestra el identificador de la columna.<br /><br /> Si cambia el valor de la propiedad Name de la columna, no afecta al valor de la propiedad ID.|  
 |**IsKey**|Indica si la columna es una columna de clave.|  

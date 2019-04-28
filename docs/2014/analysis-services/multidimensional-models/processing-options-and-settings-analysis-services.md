@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b832da95e823966af1c8d259087721119eed85e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736964"
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Opciones y valores de procesamiento (Analysis Services)
   Cuando procesa objetos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede seleccionar una opción de procesamiento para controlar el tipo de procesamiento que se produce para cada objeto. Los tipos de procesamiento difieren entre objetos y por los cambios producidos en el objeto debido a su último procesamiento. Si habilita [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para seleccionar automáticamente un método de procesamiento, el programa utilizará el método que devuelve el objeto a un estado totalmente procesado en el menor tiempo posible.  
@@ -40,7 +40,7 @@ ms.locfileid: "48049505"
 ## <a name="processing-options"></a>Opciones de procesamiento  
  En la siguiente tabla se describen los métodos de procesamiento disponibles en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]y se identifican los objetos compatibles con cada método.  
   
-|Mode|Se aplica a|Descripción|  
+|Modo|Se aplica a|Descripción|  
 |----------|----------------|-----------------|  
 |**Proceso predeterminado**|Cubos, bases de datos, dimensiones, grupos de medida, modelos de minería de datos, estructuras de minería de datos y particiones.|Detecta el estado de proceso de los objetos de base de datos y realiza el procesamiento necesario para devolver objetos sin procesar o procesados parcialmente a un estado de procesamiento completo. Si cambia un enlace de datos, el Proceso predeterminado realizará un Proceso completo en el objeto afectado.|  
 |**Proceso completo**|Cubos, bases de datos, dimensiones, grupos de medida, modelos de minería de datos, estructuras de minería de datos y particiones.|Procesa un objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y todos los objetos que contiene. Cuando se ejecuta Proceso completo en un objeto que ya se ha procesado, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quita todos los datos del objeto y, a continuación, lo procesa. Este tipo de procesamiento es necesario cuando se ha realizado un cambio estructural en un objeto; por ejemplo, cuando se agrega, se elimina o se cambia el nombre de una jerarquía de atributo.|  

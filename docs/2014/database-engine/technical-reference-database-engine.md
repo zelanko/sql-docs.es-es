@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: de3e5f300c5e0c955989d8282a3a1c000c615299
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843087"
 ---
 # <a name="technical-reference-database-engine"></a>Referencia técnica (motor de base de datos)
   Encontrará la documentación de referencia de programación de herramientas, lenguajes y administración de [!INCLUDE[ssDE](../includes/ssde-md.md)] en Microsoft [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

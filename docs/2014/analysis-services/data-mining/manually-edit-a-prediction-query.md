@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8b561e7bfd1e791dee90d8076fef68f81d2ca8f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722027"
 ---
 # <a name="manually-edit-a-prediction-query"></a>Modificar manualmente una consulta de predicción
   Después de diseñar una consulta mediante el Generador de consultas de predicción, puede modificarla cambiando a la vista Texto de consulta en la pestaña **Predicción de modelo de minería de datos** del Diseñador de minería de datos. Un editor de texto aparece en la parte inferior de la pantalla donde se muestra la consulta creada por el generador de consultas.  
@@ -45,7 +45,7 @@ ms.locfileid: "48065545"
   
 ## <a name="see-also"></a>Vea también  
  [Consultas de minería de datos](data-mining-queries.md)   
- [Generador de consultas de predicción &#40;minería de datos&#41;](../prediction-query-builder-data-mining.md)   
+ [Generador de consultas de predicción &#40;Minería de datos&#41;](../prediction-query-builder-data-mining.md)   
  [Lección 6: Crear y trabajar con predicciones &#40;Tutorial de minería de datos básicos&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

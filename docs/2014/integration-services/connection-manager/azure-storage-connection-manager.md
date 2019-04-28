@@ -14,14 +14,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833563"
 ---
 # <a name="azure-storage-connection-manager"></a>Administrador de conexiones de Almacenamiento de Azure
-  El Administrador de conexiones de Azure Storage permite que un paquete SSIS para conectarse a una cuenta de almacenamiento de Azure mediante el uso de los valores especificados para las propiedades: Nombre de la cuenta de almacenamiento y clave de cuenta.  
+  El Administrador de conexiones de Azure Storage permite que un paquete SSIS para conectarse a una cuenta de almacenamiento de Azure mediante el uso de los valores especificados para las propiedades: Nombre de la cuenta de almacenamiento y Clave de la cuenta.  
   
 1.  En el cuadro de diálogo **Agregar administrador de conexiones SSIS** , seleccione **AzureStorage**y haga clic en **Agregar**.  
   

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 854336885617ac9f3bea98880433a7ce870c4844
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834581"
 ---
 # <a name="use-the-new-instance-wizard"></a>Usar el Asistente para nueva instancia
   El Asistente para nueva instancia sirve para crear una instancia nueva de un servicio CDC. Abra el asistente Crear una instancia CDC de Oracle desde la Consola del diseñador CDC. Puede hacer lo siguiente en el Asistente para nueva instancia.  

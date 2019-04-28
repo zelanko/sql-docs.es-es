@@ -24,11 +24,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4e2d11a6cb32759d32c95ddf5cd059071ea46eb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843229"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Utilizar los cmdlets del motor de base de datos
   Los cmdlets de Windows PowerShell son comandos de una sola función que suelen seguir la convención de nomenclatura verbo-nombre, como **Get-Help** o **Set-MachineName**. El proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para Windows PowerShell proporciona cmdlets específicos a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -54,13 +54,13 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Describe el uso de **Invoke-Sqlcmd** para ejecutar scripts de **sqlcmd** o comandos que contienen instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] o XQuery. Puede aceptar la entrada de **sqlcmd** como parámetro de entrada de la cadena de caracteres o como nombre de un archivo de script que se va a abrir.|[Cmdlet Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
-|Describe el uso de **Invoke-PolicyEvaluation** para informar de si un conjunto de objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de destino cumple las condiciones definidas en las directivas de administración basadas en directivas. Opcionalmente, el cmdlet se puede usar para volver a configurar cualquier opción que se pueda establecer en los objetos de destino que no cumplan las condiciones de la directiva.|[Cmdlet Invoke-PolicyEvaluation](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
-|Describe el uso de `Encode-Sqlname` y `Decode-Sqlname` para administrar los identificadores de SQL Server que contienen caracteres no admitidos en las rutas de acceso de Windows PowerShell.|[Codificar y descodificar identificadores de SQL Server](../powershell/encode-and-decode-sql-server-identifiers.md)|  
-|Describe cómo utilizar `Convert-UrnToPath` para convertir un SQL Server manejabilidad objeto URN Uniform Resource Name () en la ruta de acceso del proveedor de SQL Server equivalente.|[Convertir URN en rutas de acceso del proveedor de SQL Server](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
+|Describe el uso de **Invoke-Sqlcmd** para ejecutar scripts de **sqlcmd** o comandos que contienen instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] o XQuery. Puede aceptar la entrada de **sqlcmd** como parámetro de entrada de la cadena de caracteres o como nombre de un archivo de script que se va a abrir.|[cmdlet Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
+|Describe el uso de **Invoke-PolicyEvaluation** para informar de si un conjunto de objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de destino cumple las condiciones definidas en las directivas de administración basadas en directivas. Opcionalmente, el cmdlet se puede usar para volver a configurar cualquier opción que se pueda establecer en los objetos de destino que no cumplan las condiciones de la directiva.|[cmdlet Invoke-PolicyEvaluation](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
+|Describe el uso de `Encode-Sqlname` y `Decode-Sqlname` para administrar los identificadores de SQL Server que contienen caracteres no admitidos en las rutas de Windows PowerShell.|[Codificar y descodificar identificadores de SQL Server](../powershell/encode-and-decode-sql-server-identifiers.md)|  
+|Describe el uso de `Convert-UrnToPath` para convertir un nombre de recursos uniforme (URN) del objeto de administración de SQL Server a la ruta de acceso equivalente en el proveedor de SQL Server.|[Convertir URN en rutas de acceso del proveedor de SQL Server](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [SQL Server PowerShell Provider](../powershell/sql-server-powershell-provider.md)   
+ [Proveedor de PowerShell de SQL Server](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
  [Introducción a los PowerShell Cmdlets para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

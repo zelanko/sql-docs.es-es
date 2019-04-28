@@ -37,11 +37,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eb2537af2539854f0f66e3f6c39c3b6e5315ec6f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989763"
 ---
 # <a name="using-reports"></a>Utilizar los informes
   Se genera un informe independiente para cada componente y, cuando es necesario, para cada instancia, los cuales analiza el Asistente para análisis del Asesor de actualizaciones en un servidor. El informe proporciona detalles sobre los problemas conocidos que afectan a una actualización. También proporciona vínculos a información y acciones recomendadas para resolver los problemas identificados.  

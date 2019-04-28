@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988647"
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurar y ver el registro de diagnóstico y de SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "52410422"
 #### <a name="entries-for-power-pivot-services"></a>Entradas para los servicios PowerPivot  
  En la tabla siguiente se describen las entradas para las operaciones de servidor de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que es probable que se encuentren en un archivo de registro de SharePoint.  
   
-|Procesar|Área|Categoría|Nivel|de mensaje|Detalles|  
+|Procesar|Área|Category|Nivel|de mensaje|Detalles|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|Servicio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Uso|Verbose|No hay ninguna estadística de solicitudes actuales, nada para registrar.|En los intervalos predefinidos, el servicio notifica las estadísticas de respuesta de las consultas como un evento de uso al sistema de recopilación de datos de uso. Este mensaje indica que no hubo ninguna estadística de consulta que notificar.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Front end web|Verbose|Empezar a buscar un servidor de aplicaciones para el origen de datos =\<*ruta de acceso*>|Cuando se recibe una solicitud de conexión, el servicio de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifica un [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponible para administrar la solicitud. Si hay solo un servidor en la granja, el servidor local acepta la solicitud en todos los casos.|  

@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982310"
 ---
 # <a name="sqlfetch-function"></a>Función SQLFetch
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ISO 92  
   
  **Resumen**  
  **SQLFetch** recupera el siguiente conjunto de filas de datos del conjunto de resultados y devuelve datos para todas las columnas enlazadas.  
@@ -107,7 +107,7 @@ SQLRETURN SQLFetch(
 |Condición|Primera fila del conjunto de filas nuevas|  
 |---------------|-----------------------------|  
 |Antes de comenzar|1|  
-|*CurrRowsetStart* \< =  *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* \<= *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
 |*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|Después de finales|  
 |Después de finales|Después de finales|  
   
@@ -183,8 +183,8 @@ SQLRETURN SQLFetch(
 |SQL_ROW_SUCCESS_WITH_INFO|La fila se capturó correctamente y no ha cambiado desde que se capturó por última vez este conjunto de resultados. Sin embargo, se devuelve una advertencia acerca de la fila.|  
 |SQL_ROW_ERROR|Se produjo un error al capturar la fila.|  
 |SQL_ROW_UPDATED [1], [2] y [3]|La fila se capturó correctamente y ha cambiado desde que se capturó por última vez este conjunto de resultados. Si la fila se vuelve a recopilar desde este conjunto de resultados o se actualiza de forma **SQLSetPos**, el estado cambia a estado de la fila nueva.|  
-|SQL_ROW_DELETED [3]|La fila se ha eliminado desde que se capturó por última vez este conjunto de resultados.|  
-|SQL_ROW_ADDED [4]|La fila se insertó por **SQLBulkOperations**. Si la fila se vuelve a recopilar desde este conjunto de resultados o se actualiza de forma **SQLSetPos**, su estado es SQL_ROW_SUCCESS.|  
+|SQL_ROW_DELETED[3]|La fila se ha eliminado desde que se capturó por última vez este conjunto de resultados.|  
+|SQL_ROW_ADDED[4]|La fila se insertó por **SQLBulkOperations**. Si la fila se vuelve a recopilar desde este conjunto de resultados o se actualiza de forma **SQLSetPos**, su estado es SQL_ROW_SUCCESS.|  
 |SQL_ROW_NOROW|El conjunto de filas había superpuesto al final del conjunto de resultados y no se devolvió ninguna fila que correspondía a este elemento de la matriz de Estados de fila.|  
   
  [1] para el conjunto de claves, mixtos y dinámicos cursores, si se actualiza un valor de clave, se considera que se haya eliminado la fila de datos y agrega una nueva fila.  
@@ -232,16 +232,16 @@ SQLRETURN SQLFetch(
   
 |Campo descriptor|Desc.|Campo en|Establecer a través de|  
 |----------------------|-----------|--------------|-----------------|  
-|SQL_DESC_ARRAY_SIZE|DESCARTAR|Encabezado|Atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE|  
-|SQL_DESC_ARRAY_STATUS_PTR|IRD|Encabezado|Atributo de instrucción SQL_ATTR_ROW_STATUS_PTR|  
-|SQL_DESC_BIND_OFFSET_PTR|DESCARTAR|Encabezado|Atributo de instrucción SQL_ATTR_ROW_BIND_OFFSET_PTR|  
-|SQL_DESC_BIND_TYPE|DESCARTAR|Encabezado|Atributo de instrucción SQL_ATTR_ROW_BIND_TYPE|  
-|SQL_DESC_COUNT|DESCARTAR|Encabezado|*ColumnNumber* argumento de **SQLBindCol**|  
+|SQL_DESC_ARRAY_SIZE|DESCARTAR|header|SQL_ATTR_ROW_ARRAY_SIZE statement attribute|  
+|SQL_DESC_ARRAY_STATUS_PTR|IRD|header|Atributo de instrucción SQL_ATTR_ROW_STATUS_PTR|  
+|SQL_DESC_BIND_OFFSET_PTR|DESCARTAR|header|Atributo de instrucción SQL_ATTR_ROW_BIND_OFFSET_PTR|  
+|SQL_DESC_BIND_TYPE|DESCARTAR|header|Atributo de instrucción SQL_ATTR_ROW_BIND_TYPE|  
+|SQL_DESC_COUNT|DESCARTAR|header|*ColumnNumber* argumento de **SQLBindCol**|  
 |SQL_DESC_DATA_PTR|DESCARTAR|Registros|*TargetValuePtr* argumento de **SQLBindCol**|  
 |SQL_DESC_INDICATOR_PTR|DESCARTAR|Registros|*StrLen_or_IndPtr* argumento en **SQLBindCol**|  
 |SQL_DESC_OCTET_LENGTH|DESCARTAR|Registros|*BufferLength* argumento en **SQLBindCol**|  
 |SQL_DESC_OCTET_LENGTH_PTR|DESCARTAR|Registros|*StrLen_or_IndPtr* argumento en **SQLBindCol**|  
-|SQL_DESC_ROWS_PROCESSED_PTR|IRD|Encabezado|Atributo de instrucción SQL_ATTR_ROWS_FETCHED_PTR|  
+|SQL_DESC_ROWS_PROCESSED_PTR|IRD|header|Atributo de instrucción SQL_ATTR_ROWS_FETCHED_PTR|  
 |SQL_DESC_TYPE|DESCARTAR|Registros|*TargetType* argumento en **SQLBindCol**|  
   
  También pueden establecerse a través de todos los campos de descriptor **SQLSetDescField**.  

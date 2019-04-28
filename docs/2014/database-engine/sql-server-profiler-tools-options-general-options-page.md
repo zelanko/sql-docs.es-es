@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0dbabfc0564d1338fb4eec8b9688acd99538576
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844932"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - opciones de herramientas (página de opciones generales)
   Utilice el cuadro de diálogo **Opciones generales** para ver o especificar las siguientes opciones.  
@@ -61,7 +61,7 @@ ms.locfileid: "48113065"
  Cuando se abre un archivo de seguimiento, el [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pregunta antes de agregar un archivo de sustitución incremental.  
   
  **No cargar nunca los archivos siguientes de sustitución incremental**  
- Cuando se abre un archivo de seguimiento, el [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] no carga archivos de sustitución incremental.  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] no carga archivos de sustitución incremental.  
   
 ### <a name="replay-options"></a>Opciones de reproducción  
  **Número predeterminado de subprocesos de reproducción**  
@@ -75,7 +75,7 @@ ms.locfileid: "48113065"
   
 ## <a name="see-also"></a>Vea también  
  [Iniciar un seguimiento automáticamente después de conectarse a un servidor &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [Establecer valores predeterminados de presentación de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [Establecer los valores predeterminados de presentación de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [Reproducir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Reproducir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Reproducir seguimientos](../tools/sql-server-profiler/replay-traces.md)   

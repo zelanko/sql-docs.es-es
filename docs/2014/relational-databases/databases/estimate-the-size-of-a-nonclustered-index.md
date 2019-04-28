@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1ce0c45a46842791890257593ff2b839fc50289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871415"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimar el tamaño de un índice no clúster
   Siga estos pasos para estimar el espacio necesario para almacenar un índice no clúster:  
@@ -118,7 +118,7 @@ ms.locfileid: "48146745"
     >  Un índice no clúster se puede ampliar incluyendo columnas que no son de clave además de las columnas de clave de índice. Estas columnas adicionales solamente se almacenan en el nivel hoja del índice no clúster. Para más información, consulte [Create Indexes with Included Columns](../indexes/create-indexes-with-included-columns.md).  
   
     > [!NOTE]  
-    >  Puede combinar `varchar`, `nvarchar`, `varbinary`, o `sql_variant` columnas que provocan el ancho total definido para la tabla sea superior a 8.060 bytes. La longitud de cada una de estas columnas debe ajustarse al límite de 8.000 bytes en columnas `varchar`, `varbinary` o `sql_variant` y de 4.000 bytes en columnas `nvarchar`. Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla. Esto también se aplica a filas de hoja de índice no clúster con columnas incluidas.  
+    >  Puede combinar las columnas `varchar`, `nvarchar`, `varbinary` o `sql_variant` que hagan que el ancho total definido para la tabla sea superior a 8.060 bytes. La longitud de cada una de estas columnas debe ajustarse al límite de 8.000 bytes en columnas `varchar`, `varbinary` o `sql_variant` y de 4.000 bytes en columnas `nvarchar`. Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla. Esto también se aplica a filas de hoja de índice no clúster con columnas incluidas.  
   
      Si el índice no clúster no incluye columnas, utilice los valores del Paso 1, incluidas las modificaciones determinadas en el Paso 1.3:  
   
@@ -217,7 +217,7 @@ ms.locfileid: "48146745"
   
 2.  Calcule el número de páginas no hoja del índice:  
   
-     ***Num_Index_Pages*** = ∑Level (***Num_Leaf_Pages/Index_Rows_Per_Page***<sup>nivel</sup>) donde 1 < = Level < = ***niveles***  
+     ***Num_Index_Pages***  = ∑Level (***Num_Leaf_Pages/Index_Rows_Per_Page***<sup>Level</sup>)where 1 <= Level <= ***Levels***  
   
      Redondee cada sumando al número entero más próximo. Como ejemplo sencillo, considere un índice en el que ***Num_Leaf_Pages*** = 1000 e ***Index_Rows_Per_Page*** = 25. El primer nivel de índice por encima del nivel hoja almacena 1000 filas de índice, lo que equivale a una fila de índice por página hoja, y en cada página caben 25 filas de índice. Esto significa que se necesitan 40 páginas para almacenar las 1000 filas de índice. El siguiente nivel del índice debe almacenar 40 filas. Esto significa que necesita 2 páginas. El nivel final del índice debe almacenar 2 filas. Esto significa que necesita 1 página. Todo ello da lugar a 43 páginas no hoja de índice. Si se utilizan estos números en las fórmulas anteriores, el resultado será el siguiente:  
   
@@ -246,7 +246,7 @@ ms.locfileid: "48146745"
   
 -   Valores de objetos grandes (LOB)  
   
-     El algoritmo para determinar exactamente la cantidad de espacio se usará para almacenar los tipos de datos LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, y `image` valores es complejo. Basta con agregar el tamaño medio de los valores LOB esperados, multiplicarlo por ***Num_Rows***y sumar el resultado al tamaño total del índice no agrupado.  
+     El algoritmo para determinar exactamente la cantidad de espacio que se utilizará para almacenar los tipos de datos LOB y los valores `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml` y `image` es complejo. Basta con agregar el tamaño medio de los valores LOB esperados, multiplicarlo por ***Num_Rows***y sumar el resultado al tamaño total del índice no agrupado.  
   
 -   Compresión  
   

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e7e5ea7af394905d9f5efcb27dce4d102fb5d3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727539"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>Ver atributos en el Diseñador de dimensiones
   Los atributos se crean en objetos de dimensión. Para ver y configurar atributos, use el Diseñador de dimensiones en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El panel **Atributos** de la pestaña **Estructura de dimensión** del Diseñador de dimensiones contiene los atributos presentes en una dimensión. Use este panel para agregar, quitar o configurar atributos. También puede seleccionar atributos para usarlos como un nivel en una jerarquía nueva o para agregarlos como un nivel a una jerarquía existente.  
@@ -31,7 +31,7 @@ ms.locfileid: "48180045"
 |------------------------|-----------------|  
 |**Lista**|Muestra los atributos con formato de lista.<br /><br /> Haga clic con el botón secundario en un atributo para eliminarlo de la lista, para cambiar su nombre o para cambiar su uso.<br /><br /> Use esta vista para crear jerarquías. La información del atributo y las propiedades de miembro no están visibles.|  
 |**Árbol**|Muestra los atributos con formato de árbol, con la dimensión como nodo de nivel superior del árbol. Use esta vista para ver y crear propiedades de miembros. También puede utilizarla para generar jerarquías. Expanda un atributo para ver las relaciones de atributo correspondientes o para crear una nueva relación de atributo, efectuando las siguientes acciones:<br /><br /> Haga clic en la dimensión, un atributo o una propiedad del miembro para ver sus propiedades en la ventana **Propiedades** .<br /><br /> Haga clic con el botón secundario en un atributo o una propiedad del miembro para eliminarlo de la lista, para cambiar su nombre o para cambiar su uso.|  
-|**Cuadrícula**|Muestra los atributos con formato de cuadrícula. Haga clic en una fila de la cuadrícula para ver las propiedades correspondientes a ese atributo.  Use esta vista para crear y configurar atributos. La cuadrícula contiene las columnas siguientes:<br /><br /> **Nombre**: muestra el valor de la **nombre** propiedad. Escriba otro nombre para cambiar la configuración.<br /><br /> **Uso**: Especifica si se trata de un atributo Regular, Key, primario o AccountType. Haga clic en un valor de la columna para seleccionar otra opción.<br /><br /> **Tipo**: especifica la categoría de business intelligence para el atributo. Haga clic en esta celda para seleccionar otra opción.<br /><br /> **Columna de clave**: muestra el tipo de datos OLE DB para la **KeyColumn** propiedad del atributo. Esta columna no puede modificarse.<br /><br /> **Columna de nombre**: indica si el **NameColumn** configuración de la propiedad en el atributo es la misma columna que el valor para el **KeyColumn** propiedad. Esta columna no puede modificarse.|  
+|**Grid**|Muestra los atributos con formato de cuadrícula. Haga clic en una fila de la cuadrícula para ver las propiedades correspondientes a ese atributo.  Use esta vista para crear y configurar atributos. La cuadrícula contiene las columnas siguientes:<br /><br /> **Nombre**: muestra el valor de la **nombre** propiedad. Escriba otro nombre para cambiar la configuración.<br /><br /> **Uso**: Especifica si se trata de un atributo Regular, Key, primario o AccountType. Haga clic en un valor de la columna para seleccionar otra opción.<br /><br /> **Tipo**: especifica la categoría de business intelligence para el atributo. Haga clic en esta celda para seleccionar otra opción.<br /><br /> **Columna de clave**: muestra el tipo de datos OLE DB para la **KeyColumn** propiedad del atributo. Esta columna no puede modificarse.<br /><br /> **Columna de nombre**: indica si el **NameColumn** configuración de la propiedad en el atributo es la misma columna que el valor para el **KeyColumn** propiedad. Esta columna no puede modificarse.|  
   
  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], los iconos que aparecen en la tabla siguiente marcan los atributos según su uso.  
   

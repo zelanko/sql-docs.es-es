@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49e86c8b47a3a0de48a0138d96cec22d585901c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711450"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificaciones de capacidad máxima para SQL Server
   En las siguientes tablas se especifican el tamaño y la cantidad máximos de diversos objetos definidos en los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para navegar hasta la tabla de una tecnología de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , haga clic en su vínculo:  
@@ -86,7 +86,7 @@ ms.locfileid: "52771778"
 |Subconsultas anidadas|32|32|  
 |Niveles de desencadenadores anidados|32|32|  
 |Índices no clúster por tabla|999|999|  
-|Número de expresiones distintas en la cláusula GROUP BY cuando cualquiera de las siguientes opciones están presente: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP|32|32|  
+|Número de expresiones distintas en la cláusula GROUP BY cuando existe alguna de las siguientes opciones: CUBE, ROLLUP, GROUPING SETS, WITH CUBE, WITH ROLLUP|32|32|  
 |El número de conjuntos de agrupamiento generados por los operadores de la cláusula BY GROUP|4,096|4,096|  
 |Parámetros por procedimiento almacenado|2,100|2,100|  
 |Parámetros por función definida por el usuario|2,100|2,100|  

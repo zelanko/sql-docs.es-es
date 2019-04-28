@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 500a3e38599b0041b036eb148f837afc67260849
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719837"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Servicio de cursores de Microsoft para información general OLE DB
 El servicio de cursores de Microsoft para OLE DB complementa las funciones de compatibilidad de cursor de proveedores de datos. Como resultado, el usuario percibe una funcionalidad relativamente uniforme en todos los proveedores de datos.
@@ -57,11 +57,11 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  La propiedad dinámica DBPROP_SERVERDATAONINSERT no es compatible con el servicio de cursores, incluso si es compatible con el proveedor de datos subyacente.
 
-|Nombre de propiedad|Descripción|
+|Nombre de la propiedad|Descripción|
 |-------------------|-----------------|
 |Recálculo automático (DBPROP_ADC_AUTORECALC)|Para conjuntos de registros creados con el servicio de forma de datos, este valor se indica con qué frecuencia se calculan las columnas calculadas y de agregado. El valor predeterminado (valor = 1) es volver a calcular cada vez que el servicio de forma de datos determina que los valores han cambiado. Si el valor es 0, solo se calculan las columnas calculadas o de agregado cuando la jerarquía se crea inicialmente.|
 |Tamaño del lote (DBPROP_ADC_BATCHSIZE)|Indica el número de instrucciones de actualización que pueden encontrarse por lotes antes de enviarse al almacén de datos. Las instrucciones de más de un lote, el menos ciclos de ida y a los datos de almacén.|
-|Almacenar en caché las filas secundarias (DBPROP_ADC_CACHECHILDROWS)|Para conjuntos de registros creadas con el servicio de forma de datos, este valor indica si los conjuntos de registros secundarios se almacenan en una memoria caché para su uso posterior.|
+|Cache Child Rows (DBPROP_ADC_CACHECHILDROWS)|Para conjuntos de registros creadas con el servicio de forma de datos, este valor indica si los conjuntos de registros secundarios se almacenan en una memoria caché para su uso posterior.|
 |Versión del motor de cursor (DBPROP_ADC_CEVER)|Indica la versión del servicio de Cursor que se va a usar.|
 |Mantener el estado de cambio (DBPROP_ADC_MAINTAINCHANGESTATUS)|Indica el texto del comando utilizado para volver a sincronizar un una o varias filas en una combinación de varias tablas.|
 |[Optimización](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Indica si se debe crear un índice. Cuando se establece en **True**, autoriza la creación de índices para mejorar la ejecución de ciertas operaciones temporal.|
@@ -83,7 +83,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>Comportamiento de la propiedad integrada
  El servicio de cursores para OLE DB también afecta al comportamiento de ciertas propiedades integradas.
 
-|Nombre de propiedad|Descripción|
+|Nombre de la propiedad|Descripción|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Complementa los tipos de cursores que están disponibles para un **Recordset**.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Complementa los tipos de bloqueos disponibles para un **Recordset**. Permite procesar por lotes las actualizaciones.|

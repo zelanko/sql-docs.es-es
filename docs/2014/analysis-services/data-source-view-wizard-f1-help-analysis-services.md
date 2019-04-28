@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebdb15312f78b624a6bb908baa519da6b920307d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732797"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>Asistente para vistas de orígenes de datos (Ayuda F1) (Analysis Services)
   Use el Asistente para vistas del origen de datos para crear una vista del origen de datos y usarla en los siguientes proyectos de Business Intelligence de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  

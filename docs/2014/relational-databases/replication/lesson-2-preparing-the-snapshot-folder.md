@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721025"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Lección 2: Preparación de la carpeta de instantáneas
   En esta lección aprenderá a configurar la carpeta de instantáneas que se utiliza para crear y almacenar la instantánea de publicación.  
@@ -51,7 +51,7 @@ ms.locfileid: "54128495"
 10. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de repldata** y crear el recurso compartido repldata.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
- Ha configurado correctamente el recurso compartido para la carpeta de instantáneas. A continuación configurará la distribución. Consulte [lección 3: Configurar la distribución](lesson-3-configuring-distribution.md).  
+ Ha configurado correctamente el recurso compartido para la carpeta de instantáneas. A continuación configurará la distribución. Consulte [Lección 3: Configurar la distribución](lesson-3-configuring-distribution.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Proteger la carpeta de instantáneas](security/secure-the-snapshot-folder.md)  

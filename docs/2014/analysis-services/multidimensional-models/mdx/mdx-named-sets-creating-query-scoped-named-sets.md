@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbf5ac9c4bbb313ee6e7c608a64409273ef11c0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725379"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>Crear conjuntos con nombre del ámbito de consulta (MDX)
   Si un conjunto con nombre solo es necesario para una consulta de Expresiones multidimensionales (MDX) única, puede definir ese conjunto con nombre mediante la palabra clave WITH. Un conjunto con nombre que se ha creado con la palabra clave WITH deja de existir cuando cesa la ejecución de la consulta.  
@@ -94,7 +94,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Instrucción SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [Ámbito de sesión de creación de conjuntos con nombre &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [SELECT &#40;Instrucción, MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
+ [Crear conjuntos con nombre de ámbito de sesión &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

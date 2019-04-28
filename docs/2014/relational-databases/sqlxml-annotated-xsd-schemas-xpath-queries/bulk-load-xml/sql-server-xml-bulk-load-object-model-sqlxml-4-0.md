@@ -32,11 +32,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 91e7c73f0db30078dfaa884c110f2d813359bc22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717472"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modelo de objetos de carga masiva XML de SQL Server (SQLXML 4.0)
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el modelo de objetos de carga masiva XML está formado por el objeto SQLXMLBulkLoad. Este objeto admite los métodos y propiedades siguientes.  
@@ -46,7 +46,7 @@ ms.locfileid: "52750477"
  Realiza cargas masivas de los datos utilizando los archivos de esquema y de datos (o flujo) proporcionados como parámetros.  
   
 ## <a name="properties"></a>Propiedades  
- Carga masiva  
+ BulkLoad  
  Especifica si se debe realizar una carga masiva. Esta propiedad es útil si desea generar sólo los esquemas (vea las propiedades SchemaGen, SGDropTables y SGUseID que sigan) y no realizar una carga masiva. Ésta es una propiedad Boolean. Cuando la propiedad está establecida en TRUE, se ejecuta la carga masiva XML. Cuando está establecida en FALSE, no se ejecuta la carga masiva XML.  
   
  El valor predeterminado es TRUE.  
@@ -137,7 +137,7 @@ ms.locfileid: "52750477"
  El valor predeterminado es FALSE.  
   
  TempFilePath  
- Especifica la ruta de acceso del archivo donde la carga masiva XML crea los archivos temporales para una carga masiva llevada a cabo. (Esta propiedad solo es útil cuando la propiedad Transaction está establecida en TRUE). Debe asegurarse de que la cuenta de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se utiliza para la carga masiva XML tiene acceso a esta ruta. Si no se establece esta propiedad, la carga masiva XML almacena los archivos temporales en la ubicación especificada en la variable de entorno TEMP.  
+ Especifica la ruta de acceso del archivo donde la carga masiva XML crea los archivos temporales para una carga masiva llevada a cabo. (Esta propiedad es útil sólo cuando la propiedad de transacción está establecida en TRUE). Debe asegurarse de que la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuenta que se utiliza para la carga masiva XML tiene acceso a esta ruta. Si no se establece esta propiedad, la carga masiva XML almacena los archivos temporales en la ubicación especificada en la variable de entorno TEMP.  
   
  Transacción  
  Especifica si la carga masiva se debe hacer como una transacción, en cuyo caso se garantiza la reversión si se produce un error en la carga masiva. Ésta es una propiedad Boolean. Si la propiedad está establecida en TRUE, la carga masiva se produce en un contexto transaccional. La propiedad TempFilePath es útil sólo cuando la transacción se establece en TRUE.  

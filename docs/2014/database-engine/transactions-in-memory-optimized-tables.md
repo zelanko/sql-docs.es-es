@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843112"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transacciones en tablas con optimización para memoria
   La versión de las filas de las tablas basadas en disco (con el aislamiento de instantánea o READ_COMMITTED_SNAPSHOT) proporciona una forma de control de simultaneidad optimista. Los lectores y los escritores no se bloquean entre sí. Con las tablas optimizadas para memoria, los escritores no bloquean a los escritores. Con las versiones de fila de las tablas basadas en disco, una transacción cierra la fila y se bloquean las transacciones simultáneas que intentan actualizar la fila. Con las tablas optimizadas para memoria, no hay bloqueos. En su lugar, si dos transacciones intentan actualizar la misma fila, se produciría un conflicto de escritura/escritura (error 41302).  

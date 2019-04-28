@@ -23,11 +23,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00fc90be42bddd7feb43d96c9110def4db60835c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721817"
 ---
 # <a name="replication-agent-administration"></a>Administración del Agente de replicación
   Los agentes de replicación realizan muchas tareas asociadas con la replicación, lo que incluye la creación de copias de esquema y datos, detección de actualizaciones en el publicador o el suscriptor, y propagación de cambios entre servidores. De manera predeterminada, los agentes de replicación se ejecutan en los pasos de trabajo del Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Los agentes son simples ejecutables, por lo que se les puede llamar directamente desde la línea de comandos o desde scripts de proceso por lotes. Cada agente de replicación admite un conjunto de parámetros en tiempo de ejecución que se utilizan para controlar cómo se ejecuta; estos parámetros se especifican en un perfil de agente o en la línea de comandos.  
@@ -69,7 +69,7 @@ ms.locfileid: "54130455"
   
     -   Agente de lectura de cola  
   
-     Obtenga acceso a la información y a las tareas asociadas con estos agentes a través de la pestaña **Agentes** . Para obtener más información, consulte [ver información y realizar tareas con el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Obtenga acceso a la información y a las tareas asociadas con estos agentes a través de la pestaña **Agentes** . Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Los siguientes agentes están asociados con suscripciones en el Monitor de replicación:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "54130455"
   
     -   Agente de mezcla  
   
-     Información de acceso y las tareas asociadas con estos agentes a través de las siguientes pestañas: **Lista de supervisión** (disponible para todos los publicadores) o el **todas las suscripciones** (disponible para todas las publicaciones). Para obtener más información, consulte [ver información y realizar tareas con el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Acceda a la información y a las tareas asociadas con estos agentes a través de las pestañas siguientes: **Lista de supervisión de suscripciones** (disponible para todos los publicadores) o la pestaña **Todas las suscripciones** (disponible para todas las publicaciones). Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="independent-and-shared-agents"></a>Agentes independientes y compartidos  
  Un agente independiente es un agente que da servicio a una suscripción. Un agente compartido da servicio a varias suscripciones. Cuando varias suscripciones que utilizan el mismo agente tienen que sincronizarse, de manera predeterminada esperan en una cola y el agente compartido da servicio a cada una de ellas al mismo tiempo. La latencia se reduce cuando se utilizan agentes independientes porque el agente está preparado siempre que es necesario sincronizar la suscripción. La replicación de mezcla siempre utiliza agentes independientes, y la replicación transaccional utiliza de manera predeterminada agentes independientes para las publicaciones creadas en el Asistente para nueva publicación (en versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la replicación transaccional utilizaba agentes compartidos de manera predeterminada).  
@@ -87,8 +87,8 @@ ms.locfileid: "54130455"
   
 |Trabajo de limpieza|Descripción|Programación predeterminada|  
 |------------------|-----------------|----------------------|  
-|Historial del agente de limpieza: Distribución|Quita de la base de datos de distribución el historial del agente de replicación.|Se ejecuta cada diez minutos.|  
-|Distribución de limpieza: Distribución|Quita las transacciones replicadas de la base de datos de distribución. Desactiva las suscripciones que no se han sincronizado dentro del período de retención máximo de la distribución.|Se ejecuta cada diez minutos.|  
+|Limpieza del historial del agente: Distribución|Quita de la base de datos de distribución el historial del agente de replicación.|Se ejecuta cada diez minutos.|  
+|Limpieza de la distribución: Distribución|Quita las transacciones replicadas de la base de datos de distribución. Desactiva las suscripciones que no se han sincronizado dentro del período de retención máximo de la distribución.|Se ejecuta cada diez minutos.|  
 |Limpieza de suscripciones expiradas|Detecta y quita las suscripciones expiradas de las bases de datos de publicaciones.|Se ejecuta cada día a las 01:00 a.m.|  
 |Reinicializar suscripciones con errores de validación de datos|Detecta todas las suscripciones con errores de validación de datos y las marca para reinicializarse. La próxima vez que se ejecute el Agente de mezcla o el Agente de distribución, se aplicará una nueva instantánea a los suscriptores.|No existe programación predeterminada (no se habilita de forma predeterminada).|  
 |Comprobación de agentes de replicación|Detecta los agentes de replicación que no registran activamente un historial. Escribe en el registro de eventos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows si se produce un error en un trabajo.|Se ejecuta cada diez minutos.|  

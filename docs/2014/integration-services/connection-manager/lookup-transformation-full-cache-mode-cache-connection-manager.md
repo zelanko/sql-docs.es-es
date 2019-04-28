@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddfed959b0f8147a8a4e48a011f65ec011f3846c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833717"
 ---
 # <a name="implement-a-lookup-transformation-in-full-cache-mode-using-the-cache-connection-manager"></a>Implementar una transformación de búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché
   Puede configurar la transformación de búsqueda para utilizar el modo de caché completa y un Administrador de conexiones de caché. En el modo de caché completa, el conjunto de datos de referencia se carga en la memoria caché antes de que se ejecute la transformación Búsqueda.  
@@ -61,7 +61,7 @@ ms.locfileid: "58384283"
   
 -   [Contenedor de secuencias](../control-flow/sequence-container.md)  
   
- Para ver un vídeo que muestra cómo implementar una transformación Búsqueda en el modo de caché completa mediante el Administrador de conexiones de caché, [Cómo: Implementar una transformación Búsqueda en modo de caché completa (vídeo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Para ver un vídeo donde se muestra cómo implementar una transformación Búsqueda en el modo de caché completa mediante el administrador de conexiones de caché, vea [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131031) (Cómo implementar una transformación Búsqueda en modo de memoria caché completa [vídeo de SQL Server]).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Implementar una transformación Búsqueda en el modo de caché completa en un paquete utilizando el Administrador de conexiones de caché y un origen de datos del flujo de datos  
   

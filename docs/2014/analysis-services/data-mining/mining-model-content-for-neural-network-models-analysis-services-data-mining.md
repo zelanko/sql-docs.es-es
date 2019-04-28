@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d5b823481d47f6e986815673aa3ab65d44f07c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733500"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de red neuronal (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de red neuronal de Microsoft. Para obtener una explicación de cómo interpretar las estadísticas y la estructura compartidas por todos los tipos de modelos, así como las definiciones generales de términos relacionados con el contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "48218705"
 |Estadísticas marginales|En blanco|  
 |Nivel de entrada|En blanco|  
 |Nodo de entrada|Nombre del atributo de entrada|  
-|Nivel oculto|En blanco|  
+|nivel oculto|En blanco|  
 |Nodo oculto|En blanco|  
 |Nivel de salida|En blanco|  
 |Nodo de salida|Nombre del atributo de salida|  
@@ -132,7 +132,7 @@ ms.locfileid: "48218705"
 |Estadísticas marginales|En blanco|  
 |Nivel de entrada|En blanco|  
 |Nodo de entrada|Nombre del atributo de entrada|  
-|Nivel oculto|En blanco|  
+|nivel oculto|En blanco|  
 |Nodo oculto|Entero que indica la secuencia del nodo oculto en la lista de nodos ocultos.|  
 |Nivel de salida|En blanco|  
 |Nodo de salida|Si el atributo de salida es continuo, contiene su nombre.<br /><br /> Si el atributo de salida es discreto o discretizado, contiene el nombre del atributo y el valor.|  
@@ -217,11 +217,11 @@ ms.locfileid: "48218705"
 ### <a name="input-nodes"></a>Nodos de entrada  
  El nivel de entrada contiene un nodo para cada valor del atributo que se utilizó en el modelo.  
   
- **Atributo discreto:** el nodo de entrada solo almacena el nombre del atributo y su valor en las columnas ATTRIBUTE_NAME y ATTRIBUTE_VALUE. Por ejemplo, si [Work Shift] es la columna, se crea un nodo independiente para cada valor de esa columna que se utilizó en el modelo, como AM y PM. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
+ **Atributo discreto:** El nodo de entrada almacena únicamente el nombre del atributo y su valor en las columnas ATTRIBUTE_NAME y ATTRIBUTE_VALUE. Por ejemplo, si [Work Shift] es la columna, se crea un nodo independiente para cada valor de esa columna que se utilizó en el modelo, como AM y PM. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
   
- **Atributo numérico de datos discretos:** el nodo de entrada almacena el nombre del atributo y el valor, que puede ser un intervalo o un valor concreto. Las expresiones, como '77.4 - 87.4' o ' < 64.0', representan todos los valores para el valor de [Time Per Issue]. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
+ **Atributo numérico discretizado:** El nodo de entrada almacena el nombre del atributo y el valor, que puede ser un intervalo o un valor específico. Las expresiones, como '77.4 - 87.4' o ' < 64.0', representan todos los valores para el valor de [Time Per Issue]. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
   
- **Atributo continuo:** el nodo de entrada almacena el valor medio del atributo. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
+ **Atributo continuo:** El nodo de entrada almacena el valor medio del atributo. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
   
 ### <a name="hidden-layer-nodes"></a>Nodos del nivel oculto  
  El nivel oculto contiene un número variable de nodos. En cada uno, la tabla NODE_DISTRIBUTION contiene las asignaciones del nivel oculto a los nodos del nivel de entrada. La columna ATTRIBUTE_NAME contiene un identificador de nodo que corresponde a un nodo del nivel de entrada. La columna ATTRIBUTE_VALUE contiene el peso asociado a esa combinación de nodo de entrada y nodo de nivel oculto. La última fila de la tabla contiene un coeficiente que representa el peso de ese nodo oculto en el nivel oculto.  
@@ -231,14 +231,14 @@ ms.locfileid: "48218705"
   
  La tabla NODE_DISTRIBUTION tiene la información adicional siguiente, en función de si el tipo del atributo es:  
   
- **Atributo discreto:** las dos filas finales de la tabla NODE_DISTRIBUTION contienen un coeficiente para el nodo en conjunto y el valor actual del atributo.  
+ **Atributo discreto:** Las dos últimas filas de la tabla NODE_DISTRIBUTION contienen un coeficiente para el nodo como un todo y el valor actual del atributo.  
   
- **Un atributo numérico de datos discretos:** idéntico a los atributos discretos, solo que el valor del atributo es un intervalo de valores.  
+ **Atributo numérico discretizado:** Es idéntico a los atributos discretos, excepto en que el valor del atributo es un intervalo de valores.  
   
- **Atributo continuo:** las dos filas finales de la tabla NODE_DISTRIBUTION contienen la media del atributo, el coeficiente para el nodo en conjunto y la varianza del coeficiente.  
+ **Atributo continuo:** Las dos últimas filas de la tabla NODE_DISTRIBUTION contienen la media del atributo, el coeficiente para el nodo como un todo y la varianza del coeficiente.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
  [Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md)   
  [Ejemplos de consultas de modelos de red neuronal](neural-network-model-query-examples.md)  
   

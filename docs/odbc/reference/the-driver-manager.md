@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c1ae3f098aea3886d5cb84a0bfcb7553a8181fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719731"
 ---
 # <a name="the-driver-manager"></a>El Administrador de controladores
 El *Administrador de controladores* es una biblioteca que administra la comunicación entre aplicaciones y controladores. Por ejemplo, en las plataformas de Microsoft® Windows®, el Administrador de controladores es una biblioteca de vínculos dinámicos (DLL) que está escrita por Microsoft y puede distribuirse por los usuarios de MDAC 2.8 SP1 SDK redistribuible.  
@@ -32,7 +32,7 @@ El *Administrador de controladores* es una biblioteca que administra la comunica
   
  El Administrador de controladores soluciona este problema proporcionando un único lugar para llamar a cada función. La aplicación se vincula a las funciones ODBC el Administrador de controladores y las llamadas en el Administrador de controladores, no el controlador. La aplicación identifica el origen de datos y el controlador de destino con un *identificador de conexión*. Cuando se carga un controlador, el Administrador de controladores crea una tabla de punteros a las funciones de ese controlador. Usa el identificador de conexión pasado la aplicación para buscar la dirección de la función en el controlador de destino y llama a esa función por dirección.  
   
- En su mayor parte, el Administrador de controladores simplemente pasa las llamadas de función de la aplicación para el controlador correcto. Sin embargo, también implementa algunas funciones (**SQLDataSources**, **SQLDrivers**, y **SQLGetFunctions**) y realiza la comprobación de errores básico. Por ejemplo, el Administrador de controladores comprueba que los identificadores no son punteros nulos, que se llama a funciones en el orden correcto y que ciertos argumentos de función son válidos. Para obtener una descripción completa de los errores comprobados por el Administrador de controladores, consulte la sección de referencia para cada función y [tablas de transición de estado de apéndice B: ODBC](../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ En su mayor parte, el Administrador de controladores simplemente pasa las llamadas de función de la aplicación para el controlador correcto. Sin embargo, también implementa algunas funciones (**SQLDataSources**, **SQLDrivers**, y **SQLGetFunctions**) y realiza la comprobación de errores básico. Por ejemplo, el Administrador de controladores comprueba que los identificadores no son punteros nulos, que se llama a funciones en el orden correcto y que ciertos argumentos de función son válidos. Para obtener una descripción completa de los errores comprobados por el Administrador de controladores, consulte la sección de referencia para cada función y [Apéndice B: Las tablas de transición de estado de ODBC](../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  El rol principal final del Administrador de controladores se carga y descarga de controladores. La aplicación carga y descarga solo el Administrador de controladores. Cuando desea usar un controlador determinado, llama a una función de conexión (**SQLConnect**, **SQLDriverConnect**, o **SQLBrowseConnect**) en el Administrador de controladores y especifica el nombre de un origen de datos determinado o un controlador, por ejemplo, "Contabilidad" o "SQL Server". Con este nombre, el Administrador de controladores busca la información de origen de datos para el nombre de archivo del controlador, como Sqlsrvr.dll. A continuación, carga el controlador (suponiendo que ya no está cargado), almacena la dirección de cada función en el controlador y llama a la función de conexión en el controlador, que, a continuación, se inicializa y se conecta al origen de datos.  
   

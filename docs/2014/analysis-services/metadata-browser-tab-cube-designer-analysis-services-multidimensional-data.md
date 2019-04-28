@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c14a039d22238450023c4a7f9b7b099e9a2a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727951"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Metadatos (pestaña Explorador, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Utilice el panel **Metadatos** en la pestaña **Explorador** del Diseñador de cubos para examinar la estructura del cubo, para ver las medidas relacionadas, y para ver y crear dimensiones. Puede explorar en profundidad las jerarquías, ver una lista de medidas y KPI disponibles, y copiar los nombres completos de objetos.  
@@ -39,7 +39,7 @@ ms.locfileid: "48171155"
   
  Cuando se trabaja con un modelo tabular, la lista de funciones contiene funciones MDX y funciones DAX. De lo contrario, la lista solo contiene funciones MDX. Un modelo multidimensional no puede usar funciones DAX directamente, aunque puede incluirse una expresión DAX como parte de una definición de objeto.  
   
- Sugerencia: las carpetas que contienen funciones DAX se muestran con todas las letras en mayúsculas. Todas las demás carpetas contienen funciones MDX. Por ejemplo, hay dos carpetas para las funciones estadísticas: **STATISTICAL** contiene las funciones DAX relacionadas.  
+ Sugerencia: Se muestran las carpetas que contienen las funciones de DAX en todas las letras en mayúsculas. Todas las demás carpetas contienen funciones MDX. Por ejemplo, hay dos carpetas para las funciones estadísticas: **ESTADÍSTICA** contiene las funciones DAX relacionadas.  
   
 ## <a name="context-menu"></a>Menú contextual  
  Las siguientes opciones están disponibles en el menú contextual que se muestra al hacer clic con el botón derecho en un elemento del panel **Metadatos** :  
@@ -47,7 +47,7 @@ ms.locfileid: "48171155"
 |Opción|Descripción|  
 |------------|-----------------|  
 |**Agregar a consulta**|Haga clic para agregar el objeto seleccionado al panel inferior del área de creación de consultas.|  
-|**Agregar a filtro**|Haga clic para agregar la dimensión, el atributo, la jerarquía o el nivel seleccionados al área de filtro del **Explorador**.<br /><br /> Nota: Solo se habilitará esta opción si se selecciona una dimensión, un atributo, una jerarquía o un nivel.|  
+|**Agregar a filtro**|Haga clic para agregar la dimensión, el atributo, la jerarquía o el nivel seleccionados al área de filtro del **Explorador**.<br /><br /> Nota: Esta opción está habilitada sólo si una dimensión, atributo, jerarquía o nivel está seleccionado.|  
 |**Copiar**|Haga clic para agregar el elemento seleccionado al Portapapeles.<br /><br /> Nota: Esta opción copia el nombre completo del objeto.|  
   
 ## <a name="see-also"></a>Vea también  

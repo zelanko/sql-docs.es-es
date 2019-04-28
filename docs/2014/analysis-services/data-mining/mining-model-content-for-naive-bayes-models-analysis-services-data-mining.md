@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 378f59e4cf37328178cc537fde4c797badc927f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733617"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos Bayes naive (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación de cómo interpretar las estadísticas y la estructura compartidas por todos los tipos de modelos, así como las definiciones generales de los términos relacionados con el contenido del modelo de minería de datos, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -239,7 +239,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
   
 |Tipo de nodo|Contenido de la tabla anidada|  
 |---------------|-----------------------------|  
-|Raíz del modelo (1)|En blanco.|  
+|Raíz del modelo (1)|: en blanco.|  
 |Nodo de estadísticas marginales (24)|Contiene información de resumen para todos los atributos de predicción y de entrada, para el conjunto completo de datos de entrenamiento.|  
 |Atributo de predicción (9)|: en blanco.|  
 |Atributo de entrada (10)|: en blanco.|  
@@ -264,12 +264,12 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0.527065883|4|  
   
- En estos resultados, el valor de la columna SUPPORT le indica el recuento de clientes con el estado civil especificado que compraron una bicicleta. La columna PROBABILITY contiene la probabilidad de cada valor de atributo, calculada solo para este nodo. Para obtener definiciones generales de los términos usados en la tabla NODE_DISTRIBUTION, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ En estos resultados, el valor de la columna SUPPORT le indica el recuento de clientes con el estado civil especificado que compraron una bicicleta. La columna PROBABILITY contiene la probabilidad de cada valor de atributo, calculada solo para este nodo. Para obtener definiciones generales de los términos usados en la tabla NODE_DISTRIBUTION, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_margstats"></a> Información en el nodo de estadísticas marginales  
  En un modelo Bayes naive, la tabla anidada para el nodo de estadísticas marginales contiene la distribución de los valores para el conjunto completo de datos de entrenamiento. Por ejemplo, la tabla siguiente contiene una lista parcial de las estadísticas de la tabla anidada NODE_DISTRIBUTION para el modelo `TM_NaiveBayes`:  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
@@ -286,10 +286,10 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  En un modelo Bayes naive, no puede haber atributos continuos; por lo tanto, todos los datos numéricos se representan como discretos (VALUE_TYPE = 4) o discretizados (VALUE_TYPE = 5).  
   
- Un `Missing` valor (VALUE_TYPE = 1) se agrega a cada atributo de entrada y salida para representar valores potenciales que no estaban presentes en los datos de entrenamiento. Debe tener cuidado de distinguir entre "missing" como una cadena y el valor predeterminado `Missing` valor. Para más información, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
+ Se agrega un valor `Missing` (VALUE_TYPE = 1) a cada atributo de entrada y de salida para representar valores potenciales que no estaban presentes en los datos de entrenamiento. Debe tener cuidado de distinguir entre "missing" como cadena y el valor `Missing` predeterminado. Para más información, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)   
  [Consultas de minería de datos](data-mining-queries.md)   
  [Algoritmo Bayes naive de Microsoft](microsoft-naive-bayes-algorithm.md)  

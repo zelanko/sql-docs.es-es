@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853331"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Proveedor Microsoft OLE DB para ODBC Introducción
 Para un programador de ADO o RDS, un mundo ideal sería uno de los datos de cada origen expone una interfaz OLE DB, por lo que podría llamar ADO directamente en el origen de datos. Aunque cada vez más proveedores de base de datos están implementando las interfaces OLE DB, algunos orígenes de datos aún no están expuestos de este modo. Sin embargo, la mayoría de los sistemas DBMS en uso hoy en día puede obtenerse a través de ODBC.
@@ -101,7 +101,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Nombre del controlador (KAGPROP_DRIVERNAME)|Indica el nombre de archivo del controlador ODBC.|
 |Versión del controlador ODBC (KAGPROP_DRIVERODBCVER)|Indica la versión de ODBC que admite este controlador.|
 |Uso de archivos (KAGPROP_FILEUSAGE)|Indica cómo trata un archivo en un origen de datos; el controlador como una tabla o como un catálogo.|
-|Al igual que la cláusula de Escape (KAGPROP_LIKEESCAPECLAUSE)|Indica si el controlador admite la definición y uso de un carácter de escape para el carácter de porcentaje (%) y el carácter de subrayado (_) en el predicado LIKE de una cláusula WHERE.|
+|Al igual que la cláusula de Escape (KAGPROP_LIKEESCAPECLAUSE)|Indica si el controlador admite la definición y uso de un carácter de escape para el carácter de porcentaje (%) y subrayado (_) de caracteres en el predicado LIKE de una cláusula WHERE.|
 |Número máximo de columnas en Group By (KAGPROP_MAXCOLUMNSINGROUPBY)|Indica el número máximo de columnas que pueden aparecer en la cláusula GROUP BY de una instrucción SELECT.|
 |Número máximo de columnas de índice (KAGPROP_MAXCOLUMNSININDEX)|Indica el número máximo de columnas que puede incluirse en un índice.|
 |Número máximo de columnas de Order By (KAGPROP_MAXCOLUMNSINORDERBY)|Indica el número máximo de columnas que pueden aparecer en la cláusula ORDER BY de una instrucción SELECT.|
@@ -179,7 +179,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|no disponible|no disponible|lectura/escritura|lectura/escritura|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|solo lectura|solo lectura|solo lectura|
-|[Marcador](../../../ado/reference/ado-api/bookmark-property-ado.md)|no disponible|no disponible|lectura/escritura|lectura/escritura|
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|no disponible|no disponible|lectura/escritura|lectura/escritura|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
@@ -216,8 +216,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Sí|Sí|Sí|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sí|Sí|Sí|Sí|
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|Sí|Sí|Sí|
-|[Nueva consulta](../../../ado/reference/ado-api/requery-method.md)|Sí|Sí|Sí|Sí|
-|[Resincronización](../../../ado/reference/ado-api/resync-method.md)|No|No|Sí|Sí|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|Sí|Sí|Sí|
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|No|No|Sí|Sí|
 |[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|Sí|Sí|Sí|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Sí|Sí|Sí|Sí|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sí|Sí|Sí|Sí|
@@ -256,7 +256,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Niveles de aislamiento|DBPROP_SUPPORTEDTXNISOLEVELS|
 |Retención de aislamiento|DBPROP_SUPPORTEDTXNISORETAIN|
 |Identificador de configuración regional|DBPROP_INIT_LCID|
-|Ubicación|DBPROP_INIT_LOCATION|
+|Location|DBPROP_INIT_LOCATION|
 |Tamaño máximo de índice|DBPROP_MAXINDEXSIZE|
 |Tamaño máximo de fila|DBPROP_MAXROWSIZE|
 |Tamaño máximo de fila incluye BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|

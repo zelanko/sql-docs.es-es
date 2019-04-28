@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ecd6ec8584eb4031e7d2c8a0af95204a930498
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721849"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>Propiedades de &lt;Nombredeperfildeagente&gt;
   Utilice el cuadro de diálogo **Propiedades del perfil de agente** para ver los valores especificados para cada parámetro de agente y modificar los valores de los perfiles definidos por el usuario.  

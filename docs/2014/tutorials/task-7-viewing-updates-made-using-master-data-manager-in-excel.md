@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 544e61a95f4a2177e60c2b3fe11a91a5a23480e4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866207"
 ---
-# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Tarea 7: ver las actualizaciones realizadas con Master Data Manager en Excel
+# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Tarea 7: Visualización de las actualizaciones realizadas con Master Data Manager en Excel
   En esta tarea, comprobará que puede ver los datos actualizados desde MDS en Excel.  
   
 1.  Ahora, cambie a la ventana de excel que tenga **Cleansed and Matched Suppliers.xls** hoja de cálculo abierta.  

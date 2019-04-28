@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9307dd8c31d1f84f989e15dc36086066f6969ba
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835191"
 ---
 # <a name="conditional-split-transformation-editor"></a>División condicional, editor de transformación
   Use el cuadro de diálogo **Editor de transformación División condicional** para crear expresiones, establecer el orden de evaluación de expresiones y asignar un nombre a los resultados de una división condicional. Este cuadro de diálogo incluye operadores y funciones matemáticas, de cadenas y de fecha y hora que puede utilizar para generar expresiones. La primera condición evaluada como True determinará la salida a la que se dirigirá una fila.  
@@ -42,7 +42,7 @@ ms.locfileid: "58392972"
   
  Puede especificar el valor de esta propiedad con una expresión de propiedad.  
   
- **Temas relacionados:**  [Servicios de integración &#40;SSIS&#41; expresiones](expressions/integration-services-ssis-expressions.md), [operadores &#40;expresión de SSIS&#41;](expressions/operators-ssis-expression.md), y [funciones &#40;expresión de SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **Temas relacionados:**  [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41](expressions/functions-ssis-expression.md)  
   
  **Nombre de salida predeterminado**  
  Escriba un nombre para la salida predeterminada o utilice el nombre predeterminado.  

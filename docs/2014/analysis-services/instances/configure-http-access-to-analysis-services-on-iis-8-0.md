@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9bbe95b51982ca6835764e89b27481e0a0f4a92
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730529"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurar el acceso HTTP a Analysis Services en Internet Information Services (IIS) 8.0
   En este artículo se explica cómo configurar un extremo HTTP para acceder a una instancia de Analysis Services. Puede habilitar el acceso HTTP configurando MSMDPUMP.dll, una extensión ISAPI que se ejecuta en Internet Information Services (IIS) y transfiere datos entre las aplicaciones cliente y un servidor de Analysis Services. Este método proporciona una alternativa para conectarse a Analysis Services cuando una solución BI necesita las capacidades siguientes:  
@@ -108,12 +108,12 @@ ms.locfileid: "53363727"
 > [!NOTE]  
 >  No olvide desbloquear los puertos en Firewall de Windows para permitir las conexiones cliente a un servidor Analysis Services remoto. Para obtener más información, consulte [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-##  <a name="bkmk_copy"></a> Paso 1: Copiar los archivos MSMDPUMP en una carpeta del servidor web  
+##  <a name="bkmk_copy"></a> Paso 1: Copie los archivos MSMDPUMP en una carpeta en el servidor Web  
  Cada extremo HTTP que cree debería tener su propio conjunto de archivos MSMDPUMP. En este paso, copie el ejecutable MSMDPUMP, el archivo de configuración y la carpeta de recursos de las carpetas de programas de Analysis Services a una nueva carpeta del directorio virtual que creará en el sistema de archivos del equipo que ejecuta IIS.  
   
  La unidad debe tener el formato del sistema de archivos NTFS. La ruta de acceso a la carpeta que cree no debe contener ningún espacio.  
   
-1.  Copie los archivos siguientes, que se encuentra en \<unidad >: \Program Files\Microsoft SQL Server\\< instancia\>\OLAP\bin\isapi: MSMDPUMP.DLL, MSMDPUMP.INI y una carpeta de recursos.  
+1.  Copie los archivos siguientes, que se encuentra en \<unidad >: \Program Files\Microsoft SQL Server\\< instancia\>\OLAP\bin\isapi: MSMDPUMP. ARCHIVO DLL, MSMDPUMP. INI y una carpeta de recursos.  
   
      ![Explorador que muestra los archivos para copiar de archivos](../media/ssas-httpaccess-msmdpumpfilecopy.PNG "Explorador de archivos que muestra los archivos para copiar")  
   
@@ -121,13 +121,13 @@ ms.locfileid: "53363727"
   
 3.  Pegue los archivos que copió anteriormente en esta nueva carpeta.  
   
-4.  Compruebe que la carpeta \inetpub\wwwroot\OLAP del servidor web contenga lo siguiente: MSMDPUMP.DLL, MSMDPUMP.INI y una carpeta de recursos. La estructura de carpetas debe tener una apariencia como esta:  
+4.  Compruebe que la carpeta \inetpub\wwwroot\OLAP del servidor web contiene lo siguiente: MSMDPUMP. ARCHIVO DLL, MSMDPUMP. INI y una carpeta de recursos. La estructura de carpetas debe tener una apariencia como esta:  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<unidad >: \inetpub\wwwroot\OLAP\Resources  
+    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> Paso 2: Crear un grupo de aplicaciones y un directorio virtual en IIS  
  A continuación, cree un grupo de aplicaciones y un extremo al bombeo.  
@@ -182,7 +182,7 @@ ms.locfileid: "53363727"
   
  La**autenticación anónima** se suele utilizar durante las pruebas inicial debido a que su facilidad de configuración ayuda a validar rápidamente la conectividad HTTP a Analysis Services. En unos pocos pasos, puede asignar una cuenta de usuario único como identidad, conceder a esa cuenta permisos en Analysis Services, utilizar la cuenta para comprobar el acceso a los datos en una aplicación cliente y, después, deshabilitar la autenticación anónima cuando se complete la prueba.  
   
- También puede utilizar la autenticación anónima en un entorno de producción si los usuarios no tienen cuentas de usuario de Windows pero seguir las prácticas recomendadas bloqueando los permisos del sistema host, como se explica en este artículo: [Habilitar la autenticación anónima (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Asegúrese de que la autenticación se establece en el directorio virtual y no en el sitio Web primario, para reducir aún más el nivel de acceso de la cuenta.  
+ También puede usar la autenticación anónima en un entorno de producción si los usuarios no tienen cuentas de usuario de Windows pero seguir las prácticas recomendadas bloqueando los permisos en el sistema host, como se explica en este artículo: [Habilitar la autenticación anónima (IIS 7)](https://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Asegúrese de que la autenticación se establece en el directorio virtual y no en el sitio Web primario, para reducir aún más el nivel de acceso de la cuenta.  
   
  Cuando se habilita la autenticación anónima, cualquier conexión de usuario al extremo HTTP se permite como usuario anónimo. No podrá auditar conexiones de usuario individuales, ni usar la identidad del usuario para seleccionar datos de un modelo. Como puede ver, el uso de la autenticación anónima afecta a todo, desde el diseño del modelo a la actualización y el acceso a los datos. Sin embargo, si los usuarios no tienen un inicio de sesión de usuario de Windows con el que empezar, el uso de la cuenta anónima podría ser la única opción.  
   

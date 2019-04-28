@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a20d1bf52e623112f96ee2890e75e8d3ce0416ff
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878043"
 ---
 # <a name="ssis-package-explorer-tab"></a>Pestaña Explorador de paquetes SSIS
   Utilice la pestaña **Explorador de paquetes** del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] para ver una vista de todos los elementos de un paquete: configuraciones, conexiones, controladores de eventos, objetos ejecutables como tareas y contenedores, proveedores de registro, restricciones de precedencia y variables. Si un paquete contiene una tarea Flujo de datos, la pestaña **Explorador de paquetes** incluye un nodo que contiene una vista jerárquica de los componentes de flujo de datos.  

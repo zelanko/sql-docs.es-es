@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_17809 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
+ms.date: 04/04/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: language-reference
 helpviewer_keywords:
 - 17809 (Database Engine error)
 ms.assetid: d7f81e0a-13f7-42b2-bddf-1f6b95321fa7
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cab89537d9ac0894407d5c79e460bd3d2bd24403
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869478"
 ---
 # <a name="mssqlserver17809"></a>MSSQLSERVER_17809
-    
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  
 ## <a name="details"></a>Detalles  
   
 |||  
@@ -33,9 +34,8 @@ ms.locfileid: "48203505"
 |Texto del mensaje|No se pudo realizar la conexión porque ya se ha alcanzado el número máximo de conexiones de usuario '%d'. El administrador del sistema puede aumentar el número máximo con sp_configure. Se cerró la conexión.%.*ls|  
   
 ## <a name="explanation"></a>Explicación  
- El mensaje se explica por sí mismo.  
+El mensaje se explica por sí mismo.  
   
 ## <a name="user-action"></a>Acción del usuario  
- El mensaje se explica por sí mismo.  
-  
+El mensaje se explica por sí mismo.  
   

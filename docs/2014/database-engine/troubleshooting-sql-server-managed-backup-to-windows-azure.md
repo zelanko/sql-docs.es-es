@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842582"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Solucionar problemas de la Copia de seguridad administrada de SQL Server para Microsoft Azure
   En este tema se describen las tareas y las herramientas que puede usar para solucionar los errores que pueden producirse durante las operaciones de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
@@ -68,11 +68,11 @@ ms.locfileid: "52522533"
   
      La siguiente es una lista de números de error que podría ver, que están asociados a notificaciones por correo electrónico:  
   
-    -   Número de error: 45209  
+    -   ErrorNumber: 45209  
   
-    -   Número de error: 45210  
+    -   ErrorNumber: 45210  
   
-    -   Número de error: 45211  
+    -   ErrorNumber: 45211  
   
 3.  **Errores de conectividad:**  
   

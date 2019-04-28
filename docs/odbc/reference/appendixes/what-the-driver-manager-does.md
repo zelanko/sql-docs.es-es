@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4fa53595d304dc8200805a98491a824cf52a1bbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735081"
 ---
 # <a name="what-the-driver-manager-does"></a>Lo que hace el Administrador de controladores
 La tabla siguiente resume cómo el ODBC 3 *.x* Driver Manager asigna las llamadas a ODBC 2. *x* mientras que ODBC 3 *.x* controladores.  

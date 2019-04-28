@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720128"
 ---
 # <a name="monitor-and-respond-to-events"></a>Supervisar y responder a eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente puede supervisar y responder automáticamente a *eventos*, como, por ejemplo, mensajes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], condiciones de rendimiento específicas y eventos de Instrumental de administración de Windows (WMI).  

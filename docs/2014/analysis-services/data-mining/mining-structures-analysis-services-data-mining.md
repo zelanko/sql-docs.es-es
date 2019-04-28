@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b370c8f3fb3c8a672f832c13ba89381f475733f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733345"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Estructuras de minería de datos (Analysis Services - Minería de datos)
   La estructura de minería de datos define los datos a partir de los cuales se generan los modelos de minería de datos: especifica la vista de datos de origen, el número y el tipo de columnas, y una partición opcional en conjuntos de entrenamiento y de pruebas. Una misma estructura de minería de datos puede admitir varios modelos de minería de datos que comparten el mismo dominio. En el diagrama siguiente, se muestra la relación de la estructura de minería de datos con el origen de datos y con los modelos de minería de datos que la componen.  
@@ -94,7 +94,7 @@ ms.locfileid: "48172525"
 ### <a name="processing-mining-structures"></a>Procesar estructuras de minería de datos  
  Una estructura de minería de datos no es más que un contenedor de metadatos hasta que se procesa. Al procesar una estructura de minería de datos, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea una caché que almacena estadísticas sobre los datos, información sobre cómo se convierten en datos discretos los atributos continuos e información que usarán los modelos de minería de datos posteriormente. Por sí mismo, el modelo de minería de datos no almacena esta información de resumen, sino que hace referencia a la información almacenada en la memoria caché cuando se procesó la estructura de minería de datos. Por consiguiente, no es necesario volver a procesar la estructura cada vez que se agrega un nuevo modelo a una estructura existente; se puede procesar solamente el modelo.  
   
- También puede descartar la memoria caché después del procesamiento, si esta es muy grande o desea quitar los datos detallados. Si no desea almacenar los datos en la memoria caché, puede cambiar la propiedad `CacheMode` de la estructura de minería de datos a `ClearAfterProcessing`. Esto destruirá la caché una vez procesados los modelos. Establecer el `CacheMode` propiedad `ClearAfterProcessing` se deshabilitará la obtención de detalles del modelo de minería de datos.  
+ También puede descartar la memoria caché después del procesamiento, si esta es muy grande o desea quitar los datos detallados. Si no desea almacenar los datos en la memoria caché, puede cambiar la propiedad `CacheMode` de la estructura de minería de datos a `ClearAfterProcessing`. Esto destruirá la caché una vez procesados los modelos. Al establecer la propiedad `CacheMode` en `ClearAfterProcessing`, se deshabilita la obtención de detalles del modelo de minería de datos.  
   
  Sin embargo, una vez destruida la memoria caché, no podrá agregar nuevos modelos a la estructura de minería de datos. Si agrega un nuevo modelo de minería de datos a la estructura, o cambia las propiedades de los modelos existentes, primero deberá volver a procesar la estructura de minería de datos. Para más información, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](processing-requirements-and-considerations-data-mining.md).  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48172525"
 |Trabajar con los orígenes de datos subyacentes y actualizar los datos de origen|[Editar la vista del origen de datos usada para una estructura de minería de datos](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Procesar una estructura de minería de datos](process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Objetos de base de datos &#40;Analysis Services - datos multidimensionales&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Los modelos de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-models-analysis-services-data-mining.md)  
+ [Objetos de base de datos &#40;Analysis Services - Datos multidimensionales&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-models-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tipos (minería de datos) de contenido | Documentos de Microsoft
+title: (Minería de datos) de tipos de contenido | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0dcc5840467f039e78c0c4d4b75862bbf78a6a42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725189"
 ---
 # <a name="content-types-data-mining"></a>Tipos de contenido (minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34015742"
   
  Cuando una columna contiene datos numéricos y se sabe cómo deben distribuirse los datos, se podrían obtener análisis más exactos especificando la distribución prevista de los valores. La distribución de columnas se especifica en el nivel de la estructura de minería. Por lo tanto, la configuración se aplica a todos los modelos basados en la estructura. Para más información, vea [Distribuciones de columnas &#40;Minería de datos&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md).  
   
- El tipo de contenido **Continuous** es compatible con los siguientes tipos de datos: **Date**, **Double**y **Long**.  
+ El **Continuous** tipo de contenido es compatible con los siguientes tipos de datos: **Fecha**, **doble**, y **largo**.  
   
 ## <a name="discretized"></a>Discretized  
  La*discretización* es el proceso mediante el cual los valores de un conjunto de datos continuo se incluyen en depósitos para que haya un número limitado de valores posibles. Solo se pueden discretizar los datos numéricos.  
@@ -49,7 +49,7 @@ ms.locfileid: "34015742"
   
  Se pueden discretizar los datos manualmente, para asegurarse de que se obtienen los depósitos deseados, o se pueden utilizar los métodos de discretización proporcionados en SQL Server Analysis Services. Algunos algoritmos realizan la discretización automáticamente. Para más información, vea [Cambiar la discretización de una columna en un modelo de minería de datos](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md).  
   
- El tipo de contenido **Discretized** es compatible con los siguientes tipos de datos: **Date**, **Double**, **Long**y **Text**.  
+ El **Discretized** tipo de contenido es compatible con los siguientes tipos de datos: **Fecha**, **doble**, **largo**, y **texto**.  
   
 ## <a name="key"></a>Key  
  El tipo de contenido *clave* indica que la columna identifica una fila de forma inequívoca. Normalmente, en una tabla de casos, la columna de clave es un identificador numérico o de texto. Establezca el tipo de contenido en **key** para indicar que la columna no debe utilizarse para el análisis, sino para realizar el seguimiento de los registros.  
@@ -61,17 +61,17 @@ ms.locfileid: "34015742"
 > [!NOTE]  
 >  Las tablas anidadas solo están disponibles si utiliza los datos de un origen de datos externo definido como una vista del origen de datos (Analysis Services).  
   
- Este tipo de contenido es compatible con los siguientes tipos de datos: **Date**, **Double**, **Long**y **Text**.  
+ Este tipo de contenido es compatible con los siguientes tipos de datos: **Fecha**, **doble**, **largo**, y **texto**.  
   
 ## <a name="key-sequence"></a>Key Sequence  
  El tipo de contenido *secuencia de claves* solamente se puede utiliza en modelos de agrupación en clústeres de secuencia. Cuando se establece el tipo de contenido en **key sequence**, se indica que la columna contiene valores que representan una secuencia de eventos. Los valores están ordenados y no tienen que estar separados por una distancia equivalente.  
   
- Este tipo de contenido es compatible con los siguientes tipos de datos: **Double**, **Long**, **Text**y **Date**.  
+ Este tipo de contenido es compatible con los siguientes tipos de datos: **Double**, **largo**, **texto**, y **fecha**.  
   
 ## <a name="key-time"></a>Key Time  
  El tipo de contenido *clave temporal* solamente se puede utilizar en modelos de serie temporal. Cuando se establece el tipo de contenido en **key time**, se indica que los valores están ordenados y que representan una escala de tiempo.  
   
- Este tipo de contenido es compatible con los siguientes tipos de datos: **Double**, **Long**y **Date**.  
+ Este tipo de contenido es compatible con los siguientes tipos de datos: **Double**, **largo**, y **fecha**.  
   
 ## <a name="table"></a>Table  
  El tipo de contenido *tabla* indica que la columna contiene otra tabla de datos, con una o más columnas y una o más filas. Para cualquier fila concreta de la tabla de casos, esta columna puede contener varios valores, todos ellos relacionados con el registro del caso primario. Por ejemplo, si la tabla de casos principal contiene una lista de clientes, podría tener varias columnas con tablas anidadas, como una columna **ProductosComprados** , donde la tabla anidada muestre una lista de los productos que este cliente ha comprado en el pasado, y una columna **Aficiones** que muestre las aficiones del cliente.  
@@ -96,10 +96,10 @@ ms.locfileid: "34015742"
  Además de los tipos de contenido anteriores cuyo uso es común en todos los modelos, para algunos tipos de datos puede utilizar columnas clasificadas para definir tipos de contenido. Para más información sobre las columnas clasificadas, vea [Columnas clasificadas &#40;Minería de datos&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido tipos & #40; DMX & #41;](../../dmx/content-types-dmx.md)   
- [Tipos de datos & #40; minería de datos & #41;](../../analysis-services/data-mining/data-types-data-mining.md)   
- [Tipos de datos & #40; DMX & #41;](../../dmx/data-types-dmx.md)   
+ [Tipos de contenido &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [Tipos de datos &#40;minería de datos&#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [Tipos de datos &#40;DMX&#41;](../../dmx/data-types-dmx.md)   
  [Cambiar las propiedades de una estructura de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
- [Columnas de estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)  
+ [Columnas de la estructura de minería de datos](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   

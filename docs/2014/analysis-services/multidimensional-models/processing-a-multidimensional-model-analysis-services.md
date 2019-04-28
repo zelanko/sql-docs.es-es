@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3877278e26b6373c9121ad6b5c7e8249b73dc166
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736922"
 ---
 # <a name="multidimensional-model-object-processing"></a>Procesamiento de objetos del modelo multidimensional
   El procesamiento es el paso, o serie de pasos, en los que Analysis Services carga datos de un origen de datos relacional en un modelo multidimensional. Para los objetos que utilizan el almacenamiento MOLAP, los datos se guardan en el disco en la carpeta de archivos de base de datos. Para el almacenamiento ROLAP, el procesamiento se produce a petición, en respuesta a una consulta MDX en un objeto. Para los objetos que utilizan el almacenamiento ROLAP, el procesamiento hace referencia a la actualización de la memoria caché antes de devolver los resultados de la consulta.  
@@ -80,7 +80,7 @@ ms.locfileid: "48173325"
  Si procesa objetos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede seleccionar una opción de procesamiento o puede habilitar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para que determine el tipo de procesamiento adecuado. Los métodos de procesamiento disponibles difieren de un objeto a otro y se basan en el tipo de objeto. Además, los métodos disponibles se basan en los cambios producidos en el objeto desde el último procesamiento. Si habilita [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para seleccionar automáticamente un método de procesamiento, el programa utilizará el método que devuelve el objeto a un estado totalmente procesado en el menor tiempo posible. Para obtener más información, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Arquitectura lógica &#40;Analysis Services - datos multidimensionales&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Objetos de base de datos &#40;Analysis Services - datos multidimensionales&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Arquitectura lógica &#40;Analysis Services - Datos multidimensionales&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Objetos de base de datos &#40;Analysis Services - Datos multidimensionales&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

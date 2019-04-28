@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866528"
 ---
-# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Tarea 8: agregar un nuevo valor para la entidad Estado en Excel
+# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Tarea 8: Adición de un nuevo valor para la entidad Estado en Excel
   En esta tarea, agregará un valor para la entidad Estado en Excel y publicará el cambio en el servidor de MDS.  
   
 1.  Agregar un **hoja de cálculo** en Excel, haga clic en la nueva pestaña en la parte inferior.  
@@ -26,11 +26,11 @@ ms.locfileid: "56032036"
   
 2.  En **Excel**, haga clic en el **datos maestros** pestaña en el menú y, a continuación, haga clic en **Mostrar explorador** en la cinta de opciones.  
   
-3.  En el **Explorador de datos maestros**, seleccione **proveedores** para **modelo**. Debe ver dos entidades: **Proveedor** y **estado** en la lista de entidades.  
+3.  En el **Explorador de datos maestros**, seleccione **proveedores** para **modelo**. Debería ver dos entidades: **Proveedor** y **estado** en la lista de entidades.  
   
 4.  Haga doble clic en **estado** en la lista. Todos los miembros de la **estado** entidades de MDS deben mostrarse en la hoja de cálculo.  
   
-5.  Ahora, agregue una fila al final con los valores siguientes: **Carolina del Norte** para **nombre** y **NC** para **código**. La codificación de colores distingue los registros nuevos y actualizados de los demás registros.  
+5.  Ahora, agregue una fila al final con los siguientes valores: **Carolina del Norte** para **nombre** y **NC** para **código**. La codificación de colores distingue los registros nuevos y actualizados de los demás registros.  
   
      ![Excel - agregar North Carolina a estados](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel - agregar North Carolina a Estados")  
   

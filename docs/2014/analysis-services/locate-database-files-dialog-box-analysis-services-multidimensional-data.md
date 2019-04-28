@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf59757e72b8892e0b32202d9e7f5dc9a3d66be3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728186"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Buscar archivos de la base de datos (Analysis Services - Datos multidimensionales)
   El cuadro de diálogo **Buscar archivos de base de datos** muestra una lista de los archivos disponibles en las carpetas de datos y registros definidas para una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Puede seleccionar un archivo de la lista o especificar una carpeta o archivo distintos si fuese necesario. El cuadro de diálogo **Buscar archivos de base de datos** se muestra:  

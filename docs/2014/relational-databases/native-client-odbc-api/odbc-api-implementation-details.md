@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715092"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   En esta sección se documentan las funciones ODBC que exhiben comportamientos concretos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se utilizan con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. No todas las funciones ODBC se documentan aquí. Los temas individuales solamente discuten cuestiones específicas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para una función ODBC. No son una referencia completa de las funciones ODBC.  

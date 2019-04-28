@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a23baa7791aea37c4c90077c21391001ddc538a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704809"
 ---
 # <a name="example-specifying-the-elementxsinil-directive"></a>Ejemplo: Especificación de la directiva ELEMENTXSINIL
   Cuando se especifica la directiva ELEMENT para recuperar XML centrado en elementos, si la columna tiene algún valor NULL, el modo EXPLICIT no genera el elemento correspondiente. Opcionalmente, se puede especificar la directiva ELEMENTXSINIL para solicitar al elemento que se genera valores NULL donde el atributo `xsi:nil` esté establecido con el valor TRUE.  

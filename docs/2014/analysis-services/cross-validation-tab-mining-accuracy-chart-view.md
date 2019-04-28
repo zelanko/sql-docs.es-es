@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d49e80d01a83f2ffad43178fa987010cd4f76b01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679753"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Pestaña Validación cruzada (vista Gráfico de precisión de minería de datos)
-  La validación cruzada le permite dividir una estructura de minería de datos en secciones transversales y entrenar y probar de forma iterativa los modelos con cada sección transversal. Se especifican varios subconjuntos en los que se dividirán los datos, y cada uno se usa a su vez como datos de pruebas, mientras que los datos restantes se usan para entrenar un nuevo modelo. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a continuación, genera un conjunto de métricas de precisión estándar para cada modelo. Al comparar las medidas de los modelos generados para cada sección transversal, puede hacerse una idea del grado de confiabilidad del modelo de minería con respecto a todo el conjunto de datos.  
+  La validación cruzada le permite dividir una estructura de minería de datos en secciones transversales y entrenar y probar de forma iterativa los modelos con cada sección transversal. Se especifican varios subconjuntos en los que se dividirán los datos, y cada uno se usa a su vez como datos de pruebas, mientras que los datos restantes se usan para entrenar un nuevo modelo. A continuación, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] genera un conjunto de medidas de precisión estándar para cada modelo. Al comparar las medidas de los modelos generados para cada sección transversal, puede hacerse una idea del grado de confiabilidad del modelo de minería con respecto a todo el conjunto de datos.  
   
  Para más información, vea [Cross-Validation &#40;Analysis Services - Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md).  
   
@@ -100,9 +100,9 @@ ms.locfileid: "48188215"
  Cuando **destino** **umbral** está establecido en `null`, que es el valor predeterminado, la predicción más probable para cada caso se cuenta como correcta. En el ejemplo recién citado, 0,05, 0,15 y 0,8 son las probabilidades de las predicciones de tres casos diferentes. Aunque las probabilidades son muy distintas, cada una se contaría como correcta, porque cada caso genera solo una predicción y éstas son las mejores predicciones para estos casos.  
   
 ## <a name="see-also"></a>Vea también  
- [Pruebas y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)   
- [La validación cruzada &#40;Analysis Services - minería de datos&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
+ [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)   
+ [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
  [Medidas en el informe de validación cruzada](data-mining/measures-in-the-cross-validation-report.md)   
- [Procedimientos almacenados de minería de datos &#40;Analysis Services - minería de datos&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Procedimientos almacenados de minería de datos &#40;Analysis Services - Minería de datos&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

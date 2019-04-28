@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c7d3208729ec225c25d1616e7a2052245e6ed25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731347"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>Filtrar el cubo de origen para una estructura de minería de datos
   Cuando se crea una estructura de minería de datos que se basa en datos en un modelo multidimensional (un cubo OLAP), puede *segmento* el cubo que se basa la estructura de minería de datos. La segmentación permite crear subconjuntos de datos, como un tipo de filtro en los datos que se utilizan para entrenar el modelo de minería de datos.  
@@ -53,7 +53,7 @@ ms.locfileid: "48123535"
      El cubo de origen se filtrará tal y como define el segmento del cubo.  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas de estructura de minería de datos y procedimientos](data-mining/mining-structure-tasks-and-how-tos.md)   
+ [Tareas y procedimientos de las estructuras de minería de datos](data-mining/mining-structure-tasks-and-how-tos.md)   
  [Crear una estructura de minería de datos OLAP](data-mining/create-a-new-olap-mining-structure.md)  
   
   

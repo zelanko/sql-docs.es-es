@@ -26,11 +26,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e06a332823c593468c73fce635e1eac3040c6b6f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702473"
 ---
 # <a name="user-hierarchies"></a>Jerarquías de usuario
   Jerarquías definidas por el usuario son jerarquías definidas por el usuario de atributos que se usan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar los miembros de una dimensión en estructuras jerárquicas y proporcionar rutas de navegación de un cubo. Por ejemplo, en la tabla siguiente se define una tabla de dimensiones para una dimensión de tiempo. La tabla de dimensiones admite tres atributos denominados Year, Quarter y Month.  

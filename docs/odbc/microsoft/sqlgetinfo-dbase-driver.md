@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (dBASE controlador) | Microsoft Docs
+title: SQLGetInfo (dBASE Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 25ee9cd3cf92c61030211c4b00be88d3f14dfd9e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62694477"
 ---
 # <a name="sqlgetinfo-dbase-driver"></a>SQLGetInfo (dBASE controlador)
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.locfileid: "52507072"
  El controlador ODBC devuelve SQL_FILE_TABLE porque cada archivo es una tabla.  
   
 ## <a name="sqlaltertable"></a>SQL_ALTER_TABLE  
- SQL_AT_ADD_COLUMN &AMP;#124; SQL_AT_DROP_COLUMN  
+ SQL_AT_ADD_COLUMN &#124; SQL_AT_DROP_COLUMN  
   
 ## <a name="sqldbmsver"></a>SQL_DBMS_VER  
   
@@ -52,7 +52,7 @@ ms.locfileid: "52507072"
  SQL_DL_DROP_INDEX  
   
 ## <a name="sqlcatalogusage"></a>SQL_CATALOG_USAGE  
- SQL_QU_DML_STATEMENTS &AMP;#124; SQL_QU_TABLE_DEFINITION &AMP;#124; SQL_QU_INDEX_DEFINITION  
+ SQL_QU_DML_STATEMENTS &#124; SQL_QU_TABLE_DEFINITION &#124; SQL_QU_INDEX_DEFINITION  
   
 ## <a name="sqltimedatefunctions"></a>SQL_TIMEDATE_FUNCTIONS  
  SQL_FN_TD_DAYOFMONTH &AMP;#124; SQL_FN_TD_DAYOFWEEK &AMP;#124; SQL_FN_TD_DAYOFYEAR &AMP;#124; SQL_FN_TD_HOUR &AMP;#124; SQL_FN_TD_MINUTE &AMP;#124; SQL_FN_TD_MONTH &AMP;#124; SQL_FN_TD_SECOND &AMP;#124; SQL_FN_TD_WEEK &AMP;#124; SQL_FN_TD_YEAR

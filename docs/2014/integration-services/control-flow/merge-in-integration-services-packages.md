@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47940abbbbf4ebf41c85bb0c8a7ee6f986a570bf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831887"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE en paquetes de Integration Services
   En la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], la instrucción SQL de una tarea Ejecutar SQL puede contener una instrucción MERGE. Esta instrucción MERGE permite llevar a cabo varias operaciones INSERT, UPDATE y DELETE en una única instrucción.  
@@ -52,7 +52,7 @@ ms.locfileid: "58377963"
  La tabla FactBuyingHabits del almacenamiento de datos realiza un seguimiento de la última fecha en la que un cliente adquirió un determinado producto. Dicha tabla consta de las columnas ProductID, CustomerID y PurchaseDate. Todas las semanas, la base de datos transaccional genera una tabla PurchaseRecords que incluye las compras realizadas durante la semana. El objetivo es usar una única instrucción MERGE para combinar la información de la tabla PurchaseRecords con la de la tabla FactBuyingHabits. Para los pares de producto-cliente que no existen, la instrucción MERGE inserta nuevas filas. Para los pares de producto-cliente existentes, la instrucción MERGE actualiza la fecha de compra más reciente.  
   
 ###### <a name="track-price-history"></a>Realizar un seguimiento del historial de precios  
- La tabla DimBook representa la lista de libros en el inventario de un vendedor de libros e identifica el historial de precios de cada libro. Esta tabla tiene las siguientes columnas: ISBN, ProductID, Price, estante y IsCurrent. También incluye una fila para cada precio que ha tenido el libro. Una de estas filas contiene el precio actual. Para indicar la fila que contiene el precio actual, el valor de la columna IsCurrent para dicha fila se establece en 1.  
+ La tabla DimBook representa la lista de libros en el inventario de un vendedor de libros e identifica el historial de precios de cada libro. Esta tabla tiene las siguientes columnas: ISBN, ProductID, Price, Shelf e IsCurrent. También incluye una fila para cada precio que ha tenido el libro. Una de estas filas contiene el precio actual. Para indicar la fila que contiene el precio actual, el valor de la columna IsCurrent para dicha fila se establece en 1.  
   
  Todas las semanas, la base de datos genera una tabla denominada WeeklyChanges que contiene los cambios de precio para la semana y los libros que se han agregado durante la misma. Una única instrucción MERGE permitirá aplicar los cambios de la tabla WeeklyChanges a la tabla DimBook. Esta instrucción MERGE inserta nuevas filas para las nuevas adquisiciones de libros, y actualiza la columna IsCurrent a 0 en las filas de libros existentes cuyos precios han cambiado. Dicha instrucción también inserta nuevas filas para los libros cuyos precios han cambiado, y establece el valor de la columna IsCurrent en 1 para estas filas.  
   

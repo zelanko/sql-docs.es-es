@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802934"
 ---
 # <a name="absolute-and-relative-urls"></a>Direcciones URL absolutas y relativas
 Una dirección URL especifica la ubicación de un destino almacenado en un equipo local o de red. El destino puede ser un archivo, directorio, página HTML, imagen, programa y así sucesivamente *.*  
@@ -33,7 +33,7 @@ Una dirección URL especifica la ubicación de un destino almacenado en un equip
   
  Una dirección URL relativa normalmente consta solo de la *ruta*y, opcionalmente, el *recursos*, pero no *esquema* o *server*. Las tablas siguientes definen las partes individuales del formato de dirección URL completa.  
   
- *Esquema*  
+ *scheme*  
  Especifica cómo el *recursos* se tiene acceso.  
   
  *servidor*  
@@ -42,7 +42,7 @@ Una dirección URL especifica la ubicación de un destino almacenado en un equip
  *path*  
  Especifica la secuencia de directorios que llevan al destino. Si *recursos* es se omite, el destino es el último directorio en *ruta de acceso*.  
   
- *Recurso*  
+ *resource*  
  Si se incluye, *recursos* es el destino, y normalmente es el nombre de un archivo. Puede ser un *archivo simple,* que contiene un único flujo binario de bytes, o un *documentos estructurados,* que contiene uno o varios almacenamientos y secuencias binarias de bytes.  
   
 ## <a name="url-scheme-registration"></a>Registro del esquema de direcciones URL  

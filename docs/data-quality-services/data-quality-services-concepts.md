@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8455bacf178bdc733312e172e1f8227a9485d008
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659152"
 ---
 # <a name="data-quality-services-concepts"></a>Conceptos de Data Quality Services
 
@@ -93,7 +93,7 @@ ms.locfileid: "56033448"
   
  Para obtener más información acerca de la administración de DQS, vea [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

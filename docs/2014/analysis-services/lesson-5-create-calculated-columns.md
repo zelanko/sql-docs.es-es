@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adc7b7bf3335c8c9c7530d18f4d553492cfe9e1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728656"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lección 6: Crear columnas calculadas
   En esta lección creará nuevos datos en el modelo agregando columnas calculadas. Una columna calculada está basada en datos que ya existen en el modelo. Para obtener más información, consulte [Columnas calculadas &#40;SSAS tabular&#41;](tabular-models/ssas-calculated-columns.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "48134047"
  Tiempo estimado para completar esta lección: **15 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 5: Crear relaciones](lesson-4-create-relationships.md).  
+ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 5: Crear relaciones](lesson-4-create-relationships.md).  
   
 ## <a name="create-calculated-columns"></a>Crear columnas calculadas  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48134047"
      Después, los valores se rellenan para todas las filas de la columna calculada. Si se desplaza hacia abajo por la tabla, verá que las filas pueden tener valores diferentes para esta columna, en función de los datos que haya en cada fila.  
   
     > [!NOTE]  
-    >  Si aparece un error, compruebe que los nombres de columna de la fórmula coinciden con los nombres de columna que cambió en [Lección 3: Cambiar el nombre de las columnas](rename-columns.md).  
+    >  Si recibe un error, compruebe los nombres de columna en la fórmula coinciden con los nombres de columna que cambió en [lección 3: Cambiar el nombre de las columnas](rename-columns.md).  
   
 5.  Cambiar el nombre de esta columna a `Month Calendar`.  
   

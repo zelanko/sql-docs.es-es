@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678673"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Proveedor Microsoft OLE DB para Introducción a SQL Server
 El proveedor Microsoft OLE DB para SQL Server, SQLOLEDB, permite que ADO tener acceso a Microsoft SQL Server.
 
-**Nota:** no se recomienda utilizar este controlador para el nuevo desarrollo. El nuevo proveedor de OLE DB se llama a la [controlador OLE DB de Microsoft para SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) que se actualizará con las características más recientes del servidor en el futuro.
+**NOTA:**  No se recomienda utilizar este controlador para el nuevo desarrollo. El nuevo proveedor de OLE DB se llama a la [controlador OLE DB de Microsoft para SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) que se actualizará con las características más recientes del servidor en el futuro.
 
 ## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión
  Para conectarse a este proveedor, establezca el *proveedor* argumento para el [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad:
@@ -68,7 +68,7 @@ User ID=MyUserID;Password=MyPassword;"
 |Dirección de red|Indica la dirección de red de SQL Server especificado por el **ubicación** propiedad.|
 |Biblioteca de red|Indica el nombre de la biblioteca de red (DLL) utilizada para comunicarse con el servidor SQL Server. El nombre no debe incluir la ruta de acceso ni la extensión de nombre de archivo .dll. El valor predeterminado es proporcionado por la configuración de cliente de SQL Server.|
 |Usar procedimiento para preparar|Determina si SQL Server crea los procedimientos almacenados temporales cuando se preparan los comandos (mediante el **Prepared** propiedad).|
-|Traducir automáticamente|Indica si se convierten los caracteres OEM/ANSI. Esta propiedad puede establecerse en **True** o **False**. El valor predeterminado es **True**. Si esta propiedad se establece en **True**, SQLOLEDB realiza la conversión de caracteres OEM/ANSI cuando se recuperan de las cadenas de caracteres multibyte o envía a SQL Server. Si esta propiedad se establece en **False**, SQLOLEDB no realiza la conversión de caracteres OEM/ANSI en los datos de cadena de caracteres multibyte.|
+|Auto Translate|Indica si se convierten los caracteres OEM/ANSI. Esta propiedad puede establecerse en **True** o **False**. El valor predeterminado es **True**. Si esta propiedad se establece en **True**, SQLOLEDB realiza la conversión de caracteres OEM/ANSI cuando se recuperan de las cadenas de caracteres multibyte o envía a SQL Server. Si esta propiedad se establece en **False**, SQLOLEDB no realiza la conversión de caracteres OEM/ANSI en los datos de cadena de caracteres multibyte.|
 |Tamaño del paquete|Indica un tamaño de paquete de red en bytes. El valor de propiedad de tamaño de paquete debe estar entre 512 y 32767. El tamaño de paquete de red SQLOLEDB predeterminado es 4096.|
 |Application Name|Indica el nombre de la aplicación cliente.|
 |Id. de estación de trabajo|Cadena que identifica la estación de trabajo.|
@@ -135,7 +135,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## <a name="dynamic-properties"></a>Propiedades dinámicas
  El proveedor Microsoft OLE DB para SQL Server inserta varias propiedades dinámicas en la **propiedades** colección de los no abierto [conexión](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)y [ Comando](../../../ado/reference/ado-api/command-object-ado.md) objetos.
 
- Las tablas siguientes son un índice cruzado de los nombres de ADO y OLE DB para cada propiedad dinámica. Referencia de la base de datos del programador de OLE se refiere a un nombre de la propiedad ADO con el término "Description". Puede encontrar más información acerca de estas propiedades en referencia del programador de OLE DB. Busque el nombre de propiedad de OLE DB en el índice o vea [Apéndice C: propiedades de OLE DB](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ Las tablas siguientes son un índice cruzado de los nombres de ADO y OLE DB para cada propiedad dinámica. Referencia de la base de datos del programador de OLE se refiere a un nombre de la propiedad ADO con el término "Description". Puede encontrar más información acerca de estas propiedades en referencia del programador de OLE DB. Busque el nombre de propiedad de OLE DB en el índice o vea [Apéndice C: Propiedades de OLE DB](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## <a name="connection-dynamic-properties"></a>Propiedades dinámicas de conexión
  Las siguientes propiedades se agregan a la **propiedades** colección de la **conexión** objeto.

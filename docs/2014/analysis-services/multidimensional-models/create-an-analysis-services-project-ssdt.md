@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ccf355df8a26136a72b48c4b81a1953d84d90186
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702235"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Crear un proyecto de Analysis Services (SSDT)
   Puede definir un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando la plantilla de proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o el Asistente para importar bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a fin de leer el contenido de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si no hay ninguna solución cargada en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la creación de un nuevo proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea automáticamente una nueva solución. De lo contrario, el nuevo proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se agregará a la solución existente. Las prácticas recomendadas para el desarrollo de soluciones pasan por crear proyectos distintos para diferentes tipos de datos de aplicación, usando una única solución si los proyectos están relacionados. Por ejemplo, puede tener una solución que contiene proyectos distintos para los paquetes de Integration Services, las bases de datos de Analysis Services y los informes de Reporting Services que usa la misma aplicación empresarial.  
@@ -151,7 +151,7 @@ ms.locfileid: "52529640"
   
  Las plantillas de elementos, que aparecen en la tabla siguiente, están disponibles en la categoría Elementos de proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , en el cuadro de diálogo **Agregar nuevo elemento** .  
   
-|Categoría|Plantilla de elementos|Descripción|  
+|Category|Plantilla de elementos|Descripción|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Elementos de un proyecto|Cube|Inicia el Asistente para cubos para agregar un nuevo cubo al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Origen de datos|Inicia el Asistente para orígenes de datos para agregar un nuevo origen de datos al proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  

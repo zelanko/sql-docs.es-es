@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670702"
 ---
 # <a name="dta-utility"></a>dta, utilidad
   La utilidad **dta** es la versión del símbolo del sistema del Asistente para la optimización de motor de base de datos. La utilidad **dta** está diseñada para permitir usar la funcionalidad del Asistente para la optimización de motor de base de datos en aplicaciones y scripts.  
@@ -105,7 +105,7 @@ ms.locfileid: "54135435"
 dta -D database_name1, database_name2...  
 ```  
   
- Como alternativa, puede especificar varias bases de datos mediante el **-D** nombre de argumento para cada base de datos, por ejemplo:  
+ De forma alternativa, puede especificar varias bases de datos con el argumento **-D** para cada nombre de base de datos, por ejemplo:  
   
 ```  
 dta -D database_name1 -D database_name2... n  
@@ -148,7 +148,7 @@ dta -d AdventureWorks2012 ...
   
 |Parámetro|Valor predeterminado|  
 |---------------|-------------------|  
-|*database_name*|*database_name* especificado con el **-D** opción|  
+|*database_name*|*database_name* especificado con la opción **–D**|  
 |*owner_name*|**dbo**<br /><br /> Nota: *owner_name* debe ser **dbo**. Si se especifica otro valor, la ejecución de **dta** es errónea y devuelve un error.|  
 |*table_name*|None|  
   
@@ -202,10 +202,10 @@ dta -d AdventureWorks2012 ...
  Especifica un identificador numérico para la sesión de optimización. Si no se especifica, **dta** genera un número de identificación. Puede usar este identificador para ver la información de las sesiones de optimización existentes. Si no especifica un valor para **-ID**, debe especificar un nombre de sesión con **-s**.  
   
  **-ip**  
- Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para las bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la **- n** opción.  
+ Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para las bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la opción **- n**.  
   
  **-ipf**  
- Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para todas las bases de datos. Este valor se puede cambiar mediante la **- n** opción.  
+ Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para todas las bases de datos. Este valor se puede cambiar mediante la opción **- n**.  
   
  **-if** _workload_file_  
  Especifica el nombre y la ruta del archivo de carga de trabajo que se desea usar como entrada para la optimización. El archivo debe estar en uno de estos formatos: .trc (archivo de seguimiento de SQL Server Profiler) o .log (archivo de Seguimiento de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Debe especificarse un archivo de carga de trabajo o una tabla de carga de trabajo.  
@@ -217,7 +217,7 @@ dta -d AdventureWorks2012 ...
   
 |Parámetro|Valor predeterminado|  
 |---------------|-------------------|  
-|*database_name*|*database_name* especificado con **-D** opción.|  
+|*database_name*|*database_name* especificado con la opción **-D**.|  
 |*owner_name*|**dbo**.|  
 |*table_name*|Ninguno.|  
   

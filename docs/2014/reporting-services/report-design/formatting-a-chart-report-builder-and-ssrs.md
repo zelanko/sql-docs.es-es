@@ -53,11 +53,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cea1d745b677bfa67f6847f2b42ed3701914f1e1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654603"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Aplicar formato a un gráfico (Generador de informes y SSRS)
   Después de definir los datos para el gráfico y su aspecto, puede aplicar formato para mejorar su aspecto general y resaltar los puntos de datos clave. Las opciones de formato más comunes se pueden modificar desde el cuadro de diálogo de propiedades; estas opciones se muestran al hacer clic con el botón secundario en un elemento de gráfico para ver su menú contextual. Cada elemento de gráfico dispone de su propio cuadro de diálogo. Para más información sobre los elementos de gráfico, vea [Gráficos &#40;Generador de informes y SSRS&#41;](charts-report-builder-and-ssrs.md).  

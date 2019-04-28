@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bd5a24a76963532c7fa70100bfccc171ba3c90ff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792413"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   En esta sección se proporciona información sobre las actividades de administración de bases de datos que se pueden realizar en las bases de datos de DQS, como la copia de seguridad/restauración o las operaciones de separar/adjuntar.  

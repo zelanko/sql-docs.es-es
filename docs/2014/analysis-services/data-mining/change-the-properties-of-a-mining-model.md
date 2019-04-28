@@ -15,20 +15,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2533de57dd2baee8297cd0f277c4538d16fbc16a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689043"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Cambiar las propiedades de un modelo de minería de datos
-  Algunas propiedades del modelo de minería de datos se aplican al modelo en su conjunto, mientras que otras se aplican a columnas individuales. Ejemplos de propiedades que se aplican a todo el modelo sería el `Drillthrough` propiedad, que especifica si los datos del caso deben estar disponibles para las consultas, y el `Description` propiedad. Entre las propiedades que se aplican a la columna se incluyen `Usage` y `ModelingFlags`, que controlan cómo se utilizan los datos en la columna dentro del modelo.  
+  Algunas propiedades del modelo de minería de datos se aplican al modelo en su conjunto, mientras que otras se aplican a columnas individuales. Ejemplos de propiedades que se aplican a todo el modelo son las propiedades `Drillthrough`, que especifica si los datos de los casos deben estar disponibles para las consultas, y `Description`. Entre las propiedades que se aplican a la columna se incluyen `Usage` y `ModelingFlags`, que controlan cómo se utilizan los datos en la columna dentro del modelo.  
   
  Las propiedades del modelo siguientes disponen de editores avanzados que se pueden utilizar para crear expresiones o configurar propiedades complejas del modelo. Las propiedades siguientes proporcionan:  
   
--   `Filter` propiedad: abre el [filtro de conjunto de datos o el cuadro de diálogo de filtro de modelo](../data-set-filter-or-model-filter-dialog-box.md).  
+-   `Filter` Propiedad: Se abre el [filtro de conjunto de datos o el cuadro de diálogo de filtro de modelo](../data-set-filter-or-model-filter-dialog-box.md).  
   
--   `AlgorithmParameters` propiedad: abre el [cuadro de diálogo parámetros de algoritmo &#40;vista modelos de minería de datos&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
+-   `AlgorithmParameters` Propiedad: Se abre el [cuadro de diálogo parámetros de algoritmo &#40;vista los modelos de minería de datos&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
   
  Para obtener información sobre cómo configurar las propiedades de un modelo de minería de datos, vea [Columnas del modelo de minería de datos](mining-model-columns.md).  
   

@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 226998dccce432a2203782d667c35285860fa926
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862378"
 ---
 # <a name="create-a-cross-domain-rule"></a>Crear una regla entre dominios
 
@@ -42,7 +42,7 @@ ms.locfileid: "56014227"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear una regla entre dominios.  
   
 ##  <a name="Create"></a> Crear reglas entre dominios  

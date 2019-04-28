@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520afc917b3ee91e7b41eb74c21d050127deed56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680499"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>Finalización del asistente (Asistente para dimensiones)
   Use la página **Finalización del asistente** para realizar los procedimientos siguientes:  
@@ -34,7 +34,7 @@ ms.locfileid: "48223405"
 -   En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], en el **Explorador de soluciones**, haga clic con el botón derecho en la carpeta **Dimensiones** para un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, luego, haga clic en **Nueva dimensión**.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba el nombre de la nueva dimensión.  
   
  **Vista previa**  

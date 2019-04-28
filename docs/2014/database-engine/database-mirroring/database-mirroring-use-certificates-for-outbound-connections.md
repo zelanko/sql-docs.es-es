@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43a55174bae1bb03034ea005749055701884848f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806878"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-outbound-connections-transact-sql"></a>Permitir que un extremo de creación de reflejo de la base de datos utilice certificados para las conexiones salientes (Transact-SQL)
   En este tema se describen los pasos necesarios para configurar instancias de servidor que utilicen certificados para autenticar conexiones salientes en la creación de un reflejo de base de datos. La configuración de conexiones salientes se debe realizar antes de que se puedan configurar conexiones entrantes.  
@@ -168,7 +168,7 @@ GO
   
  Para obtener información sobre la creación de una base de datos reflejada, incluido un ejemplo de Transact-SQL, vea [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
- Para ver un ejemplo de Transact-SQL del establecimiento de una sesión de modo de alto rendimiento, vea [Ejemplo: configurar la creación de reflejo de la base de datos con certificados &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+ Para obtener un ejemplo de Transact-SQL del establecimiento de una sesión de modo de alto rendimiento, consulte [ejemplo: Configurar la creación de reflejo mediante certificados de la base de datos &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
 ## <a name="net-framework-security"></a>Seguridad de .NET Framework  
  A menos que garantice que su red es segura, se recomienda utilizar el cifrado para las conexiones de creación de reflejo de la base de datos.  
@@ -179,7 +179,7 @@ GO
  [Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
- [Ejemplo: configurar la creación de reflejo de la base de datos con certificados &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
+ [Ejemplo: Configurar la creación de reflejo mediante certificados de la base de datos &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)   
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Solucionar problemas de configuración de creación de reflejo de la base de datos &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Establecer una base de datos reflejada cifrada](set-up-an-encrypted-mirror-database.md)  

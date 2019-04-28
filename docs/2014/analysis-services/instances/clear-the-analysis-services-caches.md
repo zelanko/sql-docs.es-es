@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40b08c40b8b327ad26bb2974627e81000846a1b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730314"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Borrar las memorias caché de Analysis Services
   Analysis Services almacena los datos en memoria caché para mejorar el rendimiento de las consultas. En este tema se proporcionan recomendaciones para usar el comando ClearCache de XMLA con el fin de borrar las memorias caché creadas en respuesta a una consulta MDX. Los efectos de ejecutar ClearCache varían dependiendo de que se use un modelo tabular o multidimensional.  
@@ -53,7 +53,7 @@ ms.locfileid: "53350652"
   
 2.  Para obtener el identificador de grupo de medida, haga clic con el botón derecho en el grupo de medida y seleccione **Incluir grupo de medidas como**. Elija **Crear** o **Modificar**y envíe la consulta a una ventana. El identificador del grupo de medida estará visible en la definición del objeto. Copie el identificador de la definición del objeto.  
   
-#### <a name="step-2-run-the-query"></a>Paso 2: Ejecutar la consulta  
+#### <a name="step-2-run-the-query"></a>Paso 2: Ejecute la consulta  
   
 1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en una base de datos, señale **Nueva consulta**y seleccione **XMLA**.  
   

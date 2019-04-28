@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1577fbdfd4133e419ab5dfe6520efd5e19893cb8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792323"
 ---
 # <a name="perform-knowledge-discovery"></a>Realizar la detección de conocimiento
   En este tema se describe cómo crear una base de conocimiento mediante la detección de conocimiento. Durante el proceso de detección, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analiza los datos de un origen de datos de ejemplo mediante un proceso asistido por PC, y agrega el conocimiento adquirido a la base de conocimiento. Este conocimiento se puede modificar y mejorar en el paso **Administrar valores del dominio** de la actividad de detección de conocimiento, o en la actividad de administración de dominios.  
@@ -34,10 +34,10 @@ ms.locfileid: "56019676"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para crear una base de conocimiento, debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN.  
   
-##  <a name="FirstStep"></a> Primer paso: Iniciar detección de conocimiento  
+##  <a name="FirstStep"></a> Primer paso: iniciar detección de conocimiento  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -81,7 +81,7 @@ ms.locfileid: "56019676"
   
     -   Haga clic en **Cancelar** para terminar la actividad Detección de conocimiento, perdiendo los cambios realizados, y volver a la página de inicio de DQS.  
   
-    -   Haga clic en **Cerrar** para guardar los cambios realizados y volver a la página de inicio de DQS. La base de conocimiento se bloqueará, y su estado en la tabla de bases de conocimiento de la pantalla **Abrir base de conocimiento** será **Detección de conocimiento: asignar**. Después de hacer clic **cerrar**, para realizar la actividad de administración de dominios, tendría que hacer clic en **Knowledgediscovery** desde el **abrir base de conocimiento** pantalla, continúe con el **Administración de la Base de conocimiento: Administrar términos del dominio** pantalla, haga clic en **finalizar**y, a continuación, haga clic en **Sí** para publicar la base de conocimiento o **No** para guardar el trabajo en la base de conocimiento y salir.  
+    -   Haga clic en **Cerrar** para guardar los cambios realizados y volver a la página de inicio de DQS. La base de conocimiento se bloqueará, y su estado en la tabla de bases de conocimiento de la pantalla **Abrir base de conocimiento** será **Detección de conocimiento: asignar**. Después de hacer clic en **Cerrar**, para realizar la actividad de administración de dominios, haga clic en **Detección de conocimiento** en la pantalla **Abrir base de conocimiento** y, después, continúe en la pantalla **Administración de la base de conocimiento: administrar términos de dominio**, haga clic en **Finalizar** y, después, seleccione **Sí** para publicar la base de conocimiento o **No** para guardar el trabajo en la base de conocimiento y salir.  
   
 ##  <a name="Discover"></a> Fase de detección  
   
@@ -90,7 +90,7 @@ ms.locfileid: "56019676"
     > [!NOTE]  
     >  La detección se realiza en las columnas especificadas en la tabla **Asignaciones** de la página **Asignación** . El dominio asignado a cada columna se rellenará con el conocimiento extraído de la detección. Si el dominio es un dominio compuesto, el conocimiento se agregará a los dominios individuales que lo forman.  
   
-2.  Mientras se ejecuta el proceso de detección, compruebe el estado de finalización que se muestra para cada paso de la detección: **Registros de preprocesamiento**, **ejecutando las reglas de dominio**, y **ejecutando la detección**. Se mostrará tanto el porcentaje completado como el estado de finalización para cada una de estas fases.  
+2.  Mientras se ejecuta el proceso de detección, compruebe el estado de finalización que se muestra para cada paso de la detección: **Preprocesamiento de registros**, **Ejecutando reglas de dominio** y **Ejecutando detección**. Se mostrará tanto el porcentaje completado como el estado de finalización para cada una de estas fases.  
   
 3.  Una vez completado el análisis, compruebe que la línea de estado situada debajo de las estadísticas de finalización indica que ha finalizado correctamente.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "56019676"
   
     -   Haga clic en **Cancelar** para terminar la actividad Detección de conocimiento, perdiendo los cambios realizados, y volver a la página de inicio de DQS.  
   
-    -   Haga clic en **Cerrar** para guardar los cambios realizados y volver a la página de inicio de DQS. La base de conocimiento se bloqueará y su estado en la tabla de bases de conocimiento de la pantalla **Abrir base de conocimiento** será **Detección – Detectar**. Después de hacer clic **cerrar**, para realizar la actividad de administración de dominios, tendría que hacer clic en **Knowledgediscovery** desde el **abrir base de conocimiento** pantalla, continúe con el **Administración de la Base de conocimiento: Administrar términos del dominio** pantalla, haga clic en **finalizar**y, a continuación, haga clic en **Sí** para publicar la base de conocimiento o **No** para guardar el trabajo en la base de conocimiento y salir.  
+    -   Haga clic en **Cerrar** para guardar los cambios realizados y volver a la página de inicio de DQS. La base de conocimiento se bloqueará y su estado en la tabla de bases de conocimiento de la pantalla **Abrir base de conocimiento** será **Detección – Detectar**. Después de hacer clic en **Cerrar**, para realizar la actividad de administración de dominios, haga clic en **Detección de conocimiento** en la pantalla **Abrir base de conocimiento** y, después, continúe en la pantalla **Administración de la base de conocimiento: administrar términos de dominio**, haga clic en **Finalizar** y, después, seleccione **Sí** para publicar la base de conocimiento o **No** para guardar el trabajo en la base de conocimiento y salir.  
   
     -   Haga clic en esta opción para volver a la página **Detectar** .  
   
@@ -152,45 +152,45 @@ ms.locfileid: "56019676"
   
 4.  Para cambiar el estado de un valor, siga estos pasos:  
   
-    1.  **Establecer como corregidos los valores de dominio seleccionado**: Para cambiar el estado de un valor de Error o no válido a correcto, seleccione el valor y, a continuación, haga clic en el **establecer como corregidos seleccionados los valores de dominio** (comprobar) en la flecha hacia abajo en la barra de iconos o en la lista desplegable de tipo. Si el valor erróneo o no válido está agrupado con un valor correcto, elimine ese valor después de la operación.  
+    1.  **Establecer como corregidos los valores de dominio seleccionados**: para cambiar el estado de un valor de "Error" o "No válido" a "Correcto", seleccione el valor y, después, haga clic en el icono de **Establecer como corregidos los valores de dominio seleccionados** (marca de comprobación) desde la flecha abajo de la barra de iconos o en la lista desplegable Tipo. Si el valor erróneo o no válido está agrupado con un valor correcto, elimine ese valor después de la operación.  
   
-    2.  **Establecer como errores los valores de dominio seleccionado**: Para cambiar el estado de un valor de correcto o no válido a Error, seleccione el valor y, a continuación, haga clic en el **establecer como errores los valores de dominio seleccionados** (cruz) icono de la flecha hacia abajo en la barra de iconos o en la lista desplegable de tipo. Si lo desea, puede escribir una corrección en la columna **Corregir a** , o dejarla en blanco.  
+    2.  **Establecer como errores los valores de dominio seleccionados**: para cambiar el estado de un valor de "Correcto" o "No válido" a "Error", seleccione el valor y, después, haga clic en el icono de **Establecer como errores los valores de dominio seleccionados** (cruz) desde la flecha abajo de la barra de iconos o en la lista desplegable Tipo. Si lo desea, puede escribir una corrección en la columna **Corregir a** , o dejarla en blanco.  
   
-    3.  **Establecer los valores del dominio seleccionado como no válidos**: Para cambiar el estado de un valor de correcto o Error a no válido, seleccione el valor y, a continuación, haga clic en el **conjunto seleccionado de los valores de dominio como no válidos** icono de (triángulo) en la flecha hacia abajo en la barra de iconos o en la lista desplegable de tipo. Si lo desea, puede escribir una corrección en la columna **Corregir a** , o dejarla en blanco.  
+    3.  **Establecer como no válidos los valores de dominio seleccionados**: para cambiar el estado de un valor de "Correcto" o "Error" a "No válido", seleccione el valor y, después, haga clic en el icono de **Establecer como no válidos los valores de dominio seleccionados** (triángulo) en la flecha abajo de la barra de iconos o en la lista desplegable Tipo. Si lo desea, puede escribir una corrección en la columna **Corregir a** , o dejarla en blanco.  
   
-    4.  **Correcto para**: Después de establecer un valor como erróneo o no válido, escriba un nuevo valor en el **corregir a** columna. DQS agregará una nueva fila para el valor de reemplazo, lo designará como correcto y, a continuación, agrupará los dos valores. El nuevo valor se mostrará como el valor inicial, con el valor inicial en negrita y el valor erróneo o no válido con una sangría aplicada.  
+    4.  **Corregir a**: después de establecer un valor como erróneo o no válido, escriba un nuevo valor en la columna **Corregir a**. DQS agregará una nueva fila para el valor de reemplazo, lo designará como correcto y, a continuación, agrupará los dos valores. El nuevo valor se mostrará como el valor inicial, con el valor inicial en negrita y el valor erróneo o no válido con una sangría aplicada.  
   
 5.  Para designar valores como un grupo de sinónimos, seleccione varios valores que sean correctos y haga lo siguiente:  
   
-    -   **Establecer como sinónimos los valores de dominio seleccionado**: Haga clic aquí para establecer los valores seleccionados como sinónimos. DQS designará uno de los valores como el valor inicial con el que se reemplazarán los otros.  
+    -   **Establecer como sinónimos los valores de dominio seleccionados**: haga clic para establecer los valores seleccionados como sinónimos. DQS designará uno de los valores como el valor inicial con el que se reemplazarán los otros.  
   
         > [!NOTE]  
         >  Si selecciona dos o más valores de un grupo y otro valor fuera de este y, a continuación, los establece como sinónimos, obtendrá un mensaje de error. Después de cerrar el cuadro emergente del mensaje de error, los valores se establecerán correctamente como sinónimos.  
   
-    -   **Romper la relación entre los sinónimos seleccionados**: Haga clic aquí para deshacer la designación de sinónimos.  
+    -   **Romper la relación entre los sinónimos seleccionados**: haga clic para deshacer la designación de sinónimos.  
   
-    -   **Establecer el valor de dominio seleccionado como valor principal de su grupo**: Cambiar el valor inicial del grupo seleccionando un valor en el grupo que no se haya designado como valor inicial y, a continuación, haga clic en el **establecer el valor de dominio seleccionado como valor inicial de su grupo** botón.  
+    -   **Establecer el valor de dominio seleccionado como valor principal de su grupo**: para cambiar el valor inicial del grupo, seleccione un valor de este que no se haya designado como valor inicial y, después, haga clic en el botón **Establecer el valor de dominio seleccionado como valor principal de su grupo**.  
   
-6.  **Speller**: Si ha habilitado el corrector ortográfico en la página de propiedades del dominio, busque los valores que tienen un subrayado rojo ondulado, el valor que indica que el corrector ortográfico está sugiriendo una corrección. Haga clic con el botón secundario en el valor subrayado y seleccione una corrección si es necesario. El tipo de valor pasará a ser (o permanecerá como) erróneo, y la corrección se agregará a la columna **Corregir a** . Haga clic en la flecha abajo para ver correcciones propuestas adicionales. Escriba manualmente una corrección para agregarla al diccionario del corrector ortográfico y poder seleccionarla como corrección. Para obtener más información, consulte [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) y [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
+6.  **Corrector ortográfico**: si ha habilitado el corrector ortográfico en la página Propiedades del dominio, busque los valores que aparezcan subrayados con una línea ondulada de color rojo, lo que indicará que el corrector ortográfico sugiere una corrección. Haga clic con el botón secundario en el valor subrayado y seleccione una corrección si es necesario. El tipo de valor pasará a ser (o permanecerá como) erróneo, y la corrección se agregará a la columna **Corregir a** . Haga clic en la flecha abajo para ver correcciones propuestas adicionales. Escriba manualmente una corrección para agregarla al diccionario del corrector ortográfico y poder seleccionarla como corrección. Para obtener más información, consulte [Use the DQS Speller](../../2014/data-quality-services/use-the-dqs-speller.md) y [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Para utilizar el corrector ortográfico, puede habilitarlo en la página **Propiedades del dominio** o, si está deshabilitado en la página **Propiedades del dominio** , puede hacer clic en el icono **Habilitar o deshabilitar el corrector ortográfico** de la página **Administrar resultados de detección de datos** para habilitarlo en esta página.  
   
-7.  **Agregar un nuevo valor de dominio**: Agregar un nuevo valor para el dominio, haga clic en el **agregar un nuevo valor de dominio** para agregar una fila al final de la tabla. Después de agregar un valor, la fila se colocará de nuevo en orden alfabético.  
+7.  **Agregar un nuevo valor de dominio**: para agregar un nuevo valor al dominio, haga clic en el botón **Agregar un nuevo valor de dominio** para agregar una fila al final de la tabla. Después de agregar un valor, la fila se colocará de nuevo en orden alfabético.  
   
-8.  **Importar valores de dominio desde Excel**: Agregar nuevos valores desde una hoja de cálculo de Excel, haga clic en la flecha abajo de la **importar valores** icono y, a continuación, seleccione **importar valores de dominio desde Excel**. Escriba el nombre del archivo, seleccione **Usar la primera fila como encabezado** si procede y, a continuación, haga clic en **Aceptar**. Para obtener más información, consulte [Importar valores desde un archivo de Excel a un dominio](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
+8.  **Importar valores de dominio desde Excel**: para agregar nuevos valores desde una hoja de cálculo de Excel, haga clic en la flecha abajo del icono de **Importar valores** y, después, seleccione **Importar valores de dominio desde Excel**. Escriba el nombre del archivo, seleccione **Usar la primera fila como encabezado** si procede y, a continuación, haga clic en **Aceptar**. Para obtener más información, consulte [Importar valores desde un archivo de Excel a un dominio](../../2014/data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
   
-9. **Importar valores de proyecto**: Agregar nuevos valores desde un proyecto de calidad de datos, haga clic en la flecha abajo de la **importar valores** icono y seleccione **importar valores de proyecto**. Escriba el nombre del archivo, seleccione **Usar la primera fila como encabezado** si procede y, a continuación, haga clic en **Aceptar**. Seleccione el proyecto del que desee importar los valores y, a continuación, haga clic en **Aceptar**. Se mostrarán los valores importados. Haga clic en **Finalizar**. Para obtener más información, vea Importar valores de un proyecto de limpieza en un dominio.  
+9. **Importar valores de proyecto**: para agregar nuevos valores desde un proyecto de calidad de datos, haga clic en la flecha abajo del icono de **Importar valores** y, después, seleccione **Importar valores de proyecto**. Escriba el nombre del archivo, seleccione **Usar la primera fila como encabezado** si procede y, a continuación, haga clic en **Aceptar**. Seleccione el proyecto del que desee importar los valores y, a continuación, haga clic en **Aceptar**. Se mostrarán los valores importados. Haga clic en **Finalizar**. Para obtener más información, vea Importar valores de un proyecto de limpieza en un dominio.  
   
-10. **Eliminar los valores de dominio seleccionado**: Quitar uno o más valores del dominio seleccionando los valores y, a continuación, haga clic en el **eliminar los valores de dominio seleccionados** botón. Las entradas de DQS_NULL no se pueden eliminar, por lo que si opta por eliminar varios valores entre los que hay una de estas entradas, se producirá un error en la operación.  
+10. **Eliminar los valores de dominio seleccionados**: para quitar uno o varios valores del dominio, selecciónelos y haga clic en el botón **Eliminar los valores de dominio seleccionados**. Las entradas de DQS_NULL no se pueden eliminar, por lo que si opta por eliminar varios valores entre los que hay una de estas entradas, se producirá un error en la operación.  
   
 11. Haga clic en **Finalizar** para completar la actividad de detección de conocimiento. Se mostrará un cuadro emergente si no ha revisado cada uno de los dominios. Haga clic en **Sí** para seguir con la revisión o en **No** para continuar. Si hace clic en No, aparecerá un cuadro emergente con las opciones siguientes:  
   
-    1.  **Publish**: Se publicará la base de conocimiento para que el usuario actual u otros usuarios puedan usar. La base de conocimiento no se bloqueará, su estado se establecerá en "vacía" (en la tabla de bases de conocimiento), y las actividades Administración de dominios y Detección de conocimiento estarán disponibles. Volverá a la página de inicio. Para completar el proceso, haga clic en **Sí** en el menú emergente.  
+    1.  **Publish**: se publicará la base de conocimiento para que pueda usarla el usuario actual u otros usuarios. La base de conocimiento no se bloqueará, su estado se establecerá en "vacía" (en la tabla de bases de conocimiento), y las actividades Administración de dominios y Detección de conocimiento estarán disponibles. Volverá a la página de inicio. Para completar el proceso, haga clic en **Sí** en el menú emergente.  
   
-    2.  **No**: Se guardará su trabajo, la base de conocimiento permanecerá bloqueada y el estado de la base de conocimiento se establecerá en el trabajo. Las actividades Administración de dominios y Detección de conocimiento estarán disponibles. Volverá a la página de inicio.  
+    2.  **No**: se guardarán los cambios realizados, la base de conocimiento permanecerá bloqueada y su estado se establecerá en Trabajando. Las actividades Administración de dominios y Detección de conocimiento estarán disponibles. Volverá a la página de inicio.  
   
-    3.  **Cancelar**: Se cerrará la ventana emergente y permanecerá en el **administrar valores del dominio** página.  
+    3.  **Cancelar**: se cerrará el cuadro emergente y permanecerá en la página **Administrar valores del dominio**.  
   
 12. También puede hacer clic en las opciones siguientes:  
   
@@ -198,19 +198,19 @@ ms.locfileid: "56019676"
   
     -   **Cerrar** para guardar los cambios realizados y volver a la página de inicio de DQS. La base de conocimiento se bloqueará, y su estado en la tabla de bases de conocimiento de la pantalla **Abrir base de conocimiento** será **Detección - Administración de valores**.  
   
-    -   Haga clic en **Atrás** para volver a la página **Detectar** . Después de hacer clic **cerrar**, para realizar la actividad de administración de dominios, tendría que hacer clic en **Knowledgediscovery** desde el **abrir base de conocimiento** pantalla, continúe con el **Administración de la Base de conocimiento: Administrar términos del dominio** pantalla, haga clic en **finalizar**y, a continuación, haga clic en **Sí** para publicar la base de conocimiento o **No** para guardar el trabajo en la base de conocimiento y salir.  
+    -   Haga clic en **Atrás** para volver a la página **Detectar** . Después de hacer clic en **Cerrar**, para realizar la actividad de administración de dominios, haga clic en **Detección de conocimiento** en la pantalla **Abrir base de conocimiento** y, después, continúe en la pantalla **Administración de la base de conocimiento: administrar términos de dominio**, haga clic en **Finalizar** y, después, seleccione **Sí** para publicar la base de conocimiento o **No** para guardar el trabajo en la base de conocimiento y salir.  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de realizar la detección de conocimiento  
+##  <a name="FollowUp"></a> Seguimiento: después de realizar la detección de conocimiento  
  Una vez agregado el conocimiento a la base de conocimiento durante el proceso de detección de conocimiento asistido por PC, puede utilizar la base de conocimiento para un proyecto de limpieza de forma inmediata, o puede realizar antes la administración de dominios. Para más información sobre la limpieza de datos o la administración de dominios, vea [Limpieza de datos](../../2014/data-quality-services/data-cleansing.md) o [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md).  
   
 ##  <a name="Meaning"></a> El significado de los valores Correcto, Error y No válido  
  A cada valor de la tabla **Valor** de la página **Valores del dominio** se le asigna un **Tipo** : **Correcto**, **Error**o **No válido**. La actividad de detección de conocimiento es la que genera inicialmente el tipo del valor, y puede cambiarlo de acuerdo con sus necesidades. La actividad de limpieza es la que genera el tipo final, en función de los cambios interactivos y de detección. Estos valores tienen los significados siguientes:  
   
--   **Corregir:** Se trata de un valor que pertenece al dominio y no tiene ningún error de sintaxis. Por ejemplo, "Chicago" en un dominio City es un valor correcto.  
+-   **Correcto:** es un valor que pertenece al dominio y no tiene ningún error de sintaxis. Por ejemplo, "Chicago" en un dominio City es un valor correcto.  
   
--   **Error:** Se trata de un valor que pertenece al dominio, pero es un valor incorrecto. Por ejemplo, "Shicago" en lugar de "Chicago" en un dominio City es un valor erróneo. DQS designa un valor como erróneo si detecta un error de sintaxis y una corrección asociada en el proceso de detección. Los errores de sintaxis incluyen los errores de ortografía.  
+-   **Error:** es un valor que pertenece al dominio, pero es incorrecto. Por ejemplo, "Shicago" en lugar de "Chicago" en un dominio City es un valor erróneo. DQS designa un valor como erróneo si detecta un error de sintaxis y una corrección asociada en el proceso de detección. Los errores de sintaxis incluyen los errores de ortografía.  
   
--   **No válido:** Se trata de un valor que no pertenece al dominio y no tiene una corrección. Por ejemplo, el valor "12345" en un dominio City es un valor no válido. DQS designa un valor como no válido cuando no cumple una regla de dominio.  
+-   **No válido:** es un valor que no pertenece al dominio y que no tiene ninguna corrección. Por ejemplo, el valor "12345" en un dominio City es un valor no válido. DQS designa un valor como no válido cuando no cumple una regla de dominio.  
   
  Puede cambiar manualmente el tipo de un valor a cualquiera de los otros dos valores. DQS no aplica la semántica de errores y de validez en las operaciones manuales. Puede especificar una corrección para un valor no válido sin cambiar su estado. Puede designar un valor como no válido aunque haya cumplido las reglas de dominio. Puede designar un valor como erróneo aunque el proceso de detección no haya indicado que tiene un error de sintaxis. También puede quitar una corrección de un valor de error, que está marcado como correcto, sin cambiar su estado.  
   
@@ -236,31 +236,31 @@ ms.locfileid: "56019676"
   
  La pestaña **Generador de perfiles** proporciona las estadísticas siguientes para el proceso de detección, por campo y dominio:  
   
--   **Registros**: Número de registros de la muestra de datos detectado  
+-   **Registros**: número de registros que se han detectado en los datos de ejemplo.  
   
--   **Valores totales**: Número total de valores que se encontraron para cada campo y en total  
+-   **Valores totales**: número total de valores que se han encontrado para cada campo y en total.  
   
--   **Nuevos valores**: ¿Cuántos de los valores totales para cada campo y todos los campos asignados que son nuevos desde el último proceso de detección y su porcentaje sobre los valores totales  
+-   **Nuevos valores**: número total de valores para cada campo y para todos los campos asignados que son nuevos desde el último proceso de detección, y su porcentaje sobre los valores totales.  
   
--   **Valores únicos**: Número de los valores totales para cada campo y todos los campos asignados que son únicos y su porcentaje sobre los valores totales  
+-   **Valores únicos**: número total de valores para cada campo y para todos los campos asignados que son únicos, y su porcentaje sobre los valores totales.  
   
--   **Nuevos valores únicos**: ¿Cuántos de los valores únicos para cada campo y todos los campos asignados que son nuevos desde el último proceso de detección y su porcentaje sobre los valores totales  
+-   **Nuevos valores únicos**: número de valores únicos para cada campo y para todos los campos asignados que son nuevos desde el último proceso de detección, y su porcentaje sobre los valores totales.  
   
--   **Válido en valores de dominio**: Número de los valores totales para cada campo y todos los campos asignados que son válidos y su porcentaje sobre los valores totales  
+-   **Válido en valores de dominio**: número total de valores para cada campo y para todos los campos asignados que son válidos, y su porcentaje sobre los valores totales.  
   
  Las estadísticas del campo incluyen las siguientes:  
   
--   **Campo**: Nombre del campo en la base de datos de origen  
+-   **Campo**: nombre del campo de la base de datos de origen.  
   
--   **Dominio**: Nombre de dominio que se asigna al campo  
+-   **Dominio**: nombre del dominio que se asigna al campo.  
   
--   **Nuevo**: El número de valores nuevos y el porcentaje de nuevos valores en comparación con los valores existentes en el campo  
+-   **Nuevo**: el número de valores nuevos y el porcentaje de estos comparado con los valores existentes en el campo.  
   
--   **Único**: El número de registros únicos del campo y su porcentaje sobre el total  
+-   **Único**: número de registros únicos del campo y su porcentaje sobre el total.  
   
--   **Válido en el dominio**: El número de valores de dominio que son válidos y su porcentaje del total  
+-   **Válido en el dominio**: el número de valores de dominio que son válidos y su porcentaje sobre el total.  
   
--   **Integridad**: La integridad de cada campo de origen que se ha asignado para el ejercicio de búsqueda de coincidencias  
+-   **Integridad**: la integridad de cada campo de origen que se ha asignado para el ejercicio de búsqueda de coincidencias.  
   
  La generación de perfiles en la detección de conocimiento proporciona nuevas perspectivas sobre la integridad. Si la generación de perfiles le indica que un campo está relativamente incompleto, puede que desee quitarlo de la base de conocimiento de un proyecto de calidad de datos. La generación de perfiles no puede proporcionar estadísticas de integridad confiables para los dominios compuestos. Si necesita estadísticas de integridad, utilice dominios individuales en lugar de dominios compuestos. Si desea utilizar dominios compuestos, puede crear una base de conocimiento con dominios individuales para generar los perfiles y determinar la integridad, y crear otro dominio con un dominio compuesto para el proceso de limpieza. Por ejemplo, la generación de perfiles podría mostrar una integridad del 95% para los registros de direcciones utilizando un dominio compuesto, pero podría haber un nivel mucho más alto de falta de integridad en una de las columnas, por ejemplo, una columna de código postal (zip). En este ejemplo, podría medir la integridad de la columna de código postal con un dominio individual. La generación de perfiles probablemente proporcione estadísticas precisas y confiables para los dominios compuestos porque permite medir la precisión de varias columnas al mismo tiempo. El valor de estos datos está en la agregación compuesta, por lo que puede ser conveniente medir la precisión con un dominio compuesto.  
   

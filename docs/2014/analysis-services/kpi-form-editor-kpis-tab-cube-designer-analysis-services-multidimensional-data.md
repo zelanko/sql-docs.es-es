@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 233e8f36f103d1a5adac6937d47e1040dfe6395d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729649"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de KPI (pestaña KPI, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Editor de Formulario de KPI** de la pestaña **KPI** del Diseñador de cubos para crear o modificar el indicador clave de rendimiento (KPI) seleccionado.  

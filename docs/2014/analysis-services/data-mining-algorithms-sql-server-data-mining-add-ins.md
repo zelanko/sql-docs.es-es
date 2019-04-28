@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47bb42b4709c7978c9319e0021bac4d188d29fab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679552"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Algoritmos de minería de datos (Complementos de minería de datos de SQL Server)
   Los Complementos de minería de datos para Office admiten la creación de modelos analíticos con los siguientes algoritmos de minería de datos. Todos los algoritmos se basan en métodos conocidos de aprendizaje automático y los ha implementado Microsoft Research.  

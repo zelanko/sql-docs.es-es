@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e35d5ae9390a6b316ec41ce20a2983c1c78a1696
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793271"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Limpiar datos mediante conocimiento (externo) de datos de referencia
   En este tema se describe cómo limpiar los datos utilizando el conocimiento de los proveedores de datos de referencia. Aunque los pasos que se siguen para limpiar los datos mediante el conocimiento de los proveedores de datos de referencia son los mismos que los que se usan en la ejecución de una actividad de limpieza, tal como se explica en [Limpiar datos mediante el conocimiento de DQS &#40;interno&#41;](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md), en este tema se proporciona información específica para la limpieza de datos mediante el servicio de datos de referencia de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -35,7 +35,7 @@ ms.locfileid: "56029536"
     > [!NOTE]  
     >  Los valores de umbral que se aplican durante la limpieza de datos utilizando el conocimiento del servicio de datos de referencia son los especificados durante la asignación de un dominio a un servicio de datos de referencia, no los especificados en la pestaña **Configuración general** de la sección **Configuración** . Para obtener información acerca de cómo especificar los valores de umbral para la limpieza de datos de referencia, consulte el paso 9 de [adjuntar un dominio o un dominio compuesto a datos de referencia](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
--   Los valores de dominio se clasifican en las siguientes: **Sugiere**, **nueva**, **válido**, **corregido**, y **correcta**.  
+-   Los valores de dominio se clasifican en las siguientes categorías: **Sugerido**, **Nuevo**, **No válido**, **Corregido** y **Correcto**.  
   
 -   Los datos adicionales se anexan al origen, y la información, junto con los datos limpios, está disponible para su exportación.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "56029536"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_kb_operator en la base de datos DQS_MAIN para realizar la limpieza de datos.  
   
 ##  <a name="Cleanse"></a> Limpiar los datos mediante el conocimiento de los datos de referencia  
@@ -54,7 +54,7 @@ ms.locfileid: "56029536"
   
 1.  Cree un proyecto de calidad de datos y seleccione la actividad **Limpieza** . Consulte [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md).  
   
-2.  En el **mapa** página, asigne los 4 dominios siguientes con las columnas apropiadas de los datos de origen: **Línea de dirección**, **Ciudad**, **estado**, y **Zip**. Haga clic en **Siguiente**.  
+2.  En la página **Asignar**, asigne los siguientes cuatro dominios a las columnas correspondientes en los datos de origen: **Línea de dirección**, **Ciudad**, **Estado** y **Código postal**. Haga clic en **Siguiente**.  
   
     > [!NOTE]  
     >  Como ha asignado los cuatro dominios dentro del dominio compuesto **Address Verification** , la limpieza de datos ahora se realizará en el nivel de dominio compuesto, y no en el nivel de dominio individual.  
@@ -64,7 +64,7 @@ ms.locfileid: "56029536"
     > [!NOTE]  
     >  En la página **Limpieza** , DQS muestra información sobre los dominios adjuntados al servicio de datos de referencia de estas dos formas:  
     >   
-    >  -   Un mensaje se muestra a continuación el **iniciar** botón: "Dominios \<Dominio1 >, \<dominio2 >,... \<DominioN> se limpian mediante el proveedor de servicios de datos al que se hace referencia". En este ejemplo, se mostrará el mensaje siguiente: "Dominio Address Verification se limpia mediante el proveedor de servicios de datos de referencia".  
+    >  -   Se muestra un mensaje debajo del botón **Iniciar**: "Dominios \<Dominio1>, \<Dominio2>… \<DominioN> se limpian mediante el proveedor de servicios de datos al que se hace referencia". En este ejemplo, se mostrará el mensaje siguiente: "La verificación de dirección de dominio se limpia mediante el proveedor de servicios de datos de referencia".  
     > -   Se mostrará el icono ![El dominio se ha adjuntado al servicio de datos remotos (RDS)](../../2014/data-quality-services/media/dqs-rdsindicator.JPG "El dominio se ha adjuntado al servicio de datos remotos (RDS)") en el área **Generador de perfiles** para los dominios adjuntados al proveedor de servicios de datos de referencia. En este ejemplo, el icono se mostrará en el dominio compuesto **Address Verification** .  
   
 4.  En la página **Administrar y ver resultados** , revise los valores de dominio. El servicio de datos de referencia puede mostrar varias sugerencias, si están disponibles, para un valor dependiendo del número máximo de sugerencias especificadas en el cuadro **Candidatos sugeridos** durante la asignación del dominio al servicio de datos de referencia. Por ejemplo, se muestran dos sugerencias para la dirección de EE. UU. siguiente:  

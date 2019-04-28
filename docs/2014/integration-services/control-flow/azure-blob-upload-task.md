@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 392fcbf3a46b48b2032b5792321e9a22b3027341
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832790"
 ---
 # <a name="azure-blob-upload-task"></a>Tarea de carga de blobs de Azure
   La tarea de carga de blobs de Azure permite que un paquete SSIS cargar archivos en Azure blob storage.   

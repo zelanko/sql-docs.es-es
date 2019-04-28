@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789824"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Supervisar grupos de disponibilidad (Transact-SQL)
   Para supervisar réplicas y grupos de disponibilidad y las bases de datos asociado utilizando [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] proporciona un conjunto de vistas de administración dinámica y de catálogo y propiedades del servidor. Mediante instrucciones SELECT de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , puede utilizar las vistas para supervisar los grupos de disponibilidad y sus réplicas y bases de datos. La información devuelta para un grupo de disponibilidad determinado depende de si está conectado a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal o una réplica secundaria.  
@@ -32,7 +32,7 @@ ms.locfileid: "49460982"
   
  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requieren el permiso VIEW ANY DEFINITION en la instancia de servidor. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requieren el permiso VIEW SERVER STATE en el servidor.  
   
 ##  <a name="AoAgFeatureOnSI"></a> La característica de grupos de disponibilidad AlwaysOn en una instancia del servidor de supervisión  
@@ -169,7 +169,7 @@ ms.locfileid: "49460982"
 >  La ubicación de la réplica principal es el origen autorizado para un grupo de disponibilidad.  
   
 > [!NOTE]  
->  Para obtener más información sobre los contadores de rendimiento de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para bases de datos de disponibilidad (el objeto de rendimiento **SQLServer:Database Replica** ), vea [SQL Server, réplica de base de datos](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Además, para supervisar la actividad del registro de transacciones en bases de datos de disponibilidad, use los siguientes contadores del objeto de rendimiento **SQLServer:Databases** : **Tiempo de escritura de vaciados de registro (ms)**, **Vaciados del registro/s**, **Errores de caché de grupo de registros/s**, **Lecturas de disco de grupo de registros/s**y **Solicitudes de grupo de registros/s**. Para más información, vea [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Para obtener más información sobre los contadores de rendimiento de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para bases de datos de disponibilidad (el objeto de rendimiento **SQLServer:Database Replica** ), vea [SQL Server, réplica de base de datos](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Además, para supervisar la actividad del registro de transacciones en las bases de datos de disponibilidad, use los contadores siguientes del objeto de rendimiento **SQLServer:Databases**: **Tiempo de escritura de vaciados de registros (ms)**, **Vaciados de registro/s.**, **Errores de caché del grupo de registros/s.**, **Lecturas de disco del grupo de registros/s** y **Solicitudes del grupo de registros/s**. Para más información, vea [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Supervisar agentes de escucha del grupo de disponibilidad  
  Para supervisar los agentes de escucha del grupo de disponibilidad en las subredes del clúster de WSFC, utilice las vistas siguientes:  

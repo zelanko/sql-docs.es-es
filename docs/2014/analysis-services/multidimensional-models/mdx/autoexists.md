@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1b899348d947c842d66fa0245b8801ef1788bfb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700532"
 ---
 # <a name="autoexists"></a>autoexist
   El concepto de *autoexists* limita el espacio del cubo a esas celdas que realmente existen en el cubo en contraposición a aquellas que podrían existir como resultado de la creación de todas las posibles combinaciones de miembros de jerarquía de atributo a partir de la misma jerarquía. Esto es así porque los miembros de una jerarquía de atributo no pueden existir con los miembros de otra jerarquía de atributo de la misma dimensión. Cuando dos o más jerarquías de atributos de la dimensión se usan en una instrucción SELECT, Analysis Services evalúa las expresiones de los atributos para asegurarse de que los miembros de dichos atributos están correctamente delimitados, a fin de cumplir los criterios de todos los demás atributos.  

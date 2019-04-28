@@ -1,5 +1,5 @@
 ---
-title: Creación de medidas en MDX | Documentos de Microsoft
+title: Creación de medidas en MDX | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2095d3bde254a59c5b2edbe8ebb117854ab7777
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806139"
 ---
-# <a name="mdx-building-measures"></a>Medidas de creación de MDX
+# <a name="mdx-building-measures"></a>Medidas de compilación MDX
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   En las expresiones multidimensionales (MDX), una medida es una expresión DAX con nombre que se resuelve calculando la expresión para devolver un valor en un modelo tabular. Esta definición tan genérica tiene un alcance notable. La capacidad de construir y utilizar medias en una consulta MDX proporciona una gran solución para manipular datos tabulares.  
   
@@ -43,8 +43,8 @@ from [Model]
 |2004|25808962.34||  
   
 ## <a name="see-also"></a>Vea también  
- [CREATE MEMBER, instrucción & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Referencia de funciones MDX & #40; MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)   
- [Instrucción SELECT & #40; MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)  
+ [CREATE MEMBER &#40;instrucción MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Referencia de funciones MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [SELECT &#40;Instrucción, MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

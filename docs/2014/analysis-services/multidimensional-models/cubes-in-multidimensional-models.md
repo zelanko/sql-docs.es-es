@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adb21e802d437f7cd1e2d805f90c4525d6f9e8ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700135"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Cubos en modelos multidimensionales
   Un cubo es una estructura multidimensional que contiene información con fines analíticos; sus componentes principales son las dimensiones y las medidas. Las dimensiones definen la estructura del cubo que se utiliza para segmentar y dividir los datos, y las medidas proporcionan valores numéricos agregados importantes para el usuario final. Como estructura lógica, un cubo permite a una aplicación cliente recuperar valores, de medidas, como si estuvieran almacenados en las celdas del cubo; las celdas se definen para cada posible valor resumido. Las celdas del cubo se definen por la intersección de miembros de dimensión y contienen los valores agregados de las medidas en esa intersección concreta.  
@@ -40,7 +40,7 @@ ms.locfileid: "48103965"
 |perspectivas|[Perspectivas de modelos multidimensionales](perspectives-in-multidimensional-models.md)|  
 |Jerarquías|[Crear jerarquías definidas por el usuario](user-defined-hierarchies-create.md)|  
 |Acciones|[Acciones en modelos multidimensionales](actions-in-multidimensional-models.md)|  
-|Indicadores clave de rendimiento (KPI)|[Indicadores de rendimiento clave &#40;KPI&#41; en modelos multidimensionales](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|Indicadores clave de rendimiento (KPI)|[Indicadores clave de rendimiento &#40;KPI&#41; en modelos multidimensionales](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |Cálculos|[Cálculos en modelos multidimensionales](calculations-in-multidimensional-models.md)|  
 |Translations|[Traducciones en modelos multidimensionales](translations-in-multidimensional-models-analysis-services.md)|  
   
@@ -53,6 +53,6 @@ ms.locfileid: "48103965"
 |[Cálculos en modelos multidimensionales](calculations-in-multidimensional-models.md)|Describe cómo definir y configurar un cálculo en un script MDX.|  
 |[Acciones en modelos multidimensionales](actions-in-multidimensional-models.md)|Describe cómo definir y configurar una acción.|  
 |[Perspectivas de modelos multidimensionales](perspectives-in-multidimensional-models.md)|Describe cómo definir y configurar una perspectiva.|  
-|[Definición de procedimientos almacenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)|Describe cómo trabajar con los procedimientos almacenados.|  
+|[Definir procedimientos almacenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)|Describe cómo trabajar con los procedimientos almacenados.|  
   
   

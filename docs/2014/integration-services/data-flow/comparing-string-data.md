@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828148"
 ---
 # <a name="comparing-string-data"></a>comparar datos de cadena
   Las comparaciones de cadenas son una parte importante de muchas de las transformaciones realizadas por [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], y las comparaciones de cadenas también se utilizan en la evaluación de expresiones en variables y expresiones de propiedades. Por ejemplo, la transformación Ordenar compara valores en un conjunto de datos para ordenar datos en orden ascendente o descendente.  

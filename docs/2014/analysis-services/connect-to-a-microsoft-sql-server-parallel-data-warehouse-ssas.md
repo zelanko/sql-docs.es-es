@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9e8dd851604203a9a6c02959c3d11002145f9dc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680100"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>Conectarse a un almacenamiento de datos paralelos de Microsoft SQL Server (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite especificar los valores para conectar con un almacenamiento de datos paralelos (PDW) de Microsoft SQL Server. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c39b81594339dbeac5e5487fcab7d054a80293a6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654659"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Dar formato al texto en un cuadro de texto (Generador de informes y SSRS)
   Puede dar formato por separado a cualquier parte del texto de un cuadro de texto, y usar texto de marcador de posición y texto estático en un mismo cuadro de texto. Esta capacidad de mezclar formatos y agregar texto de marcador de posición permite crear combinaciones de correspondencia o plantillas para el texto del informe. Podrá definir y dar formato a cualquier expresión de forma independiente mediante un marcador de posición.  

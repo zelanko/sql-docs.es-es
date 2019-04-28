@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 271c97f635db61c0e66b7a22608272fde145387c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62649289"
 ---
 # <a name="upload-file-page-report-manager"></a>Cargar archivo (página del Administrador de informes)
   Use la página Cargar archivo para publicar un archivo del sistema de archivos en la base de datos del servidor de informes. Los archivos cargados se representan como elementos en la jerarquía de carpetas del servidor de informes.  

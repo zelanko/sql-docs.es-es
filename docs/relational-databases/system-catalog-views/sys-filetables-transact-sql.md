@@ -1,5 +1,5 @@
 ---
-title: Sys.filetables (Transact-SQL) | Microsoft Docs
+title: sys.filetables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3c99033dadd8964c39b95b0ee98a0cf9cc9ffa09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678835"
 ---
 # <a name="sysfiletables-transact-sql"></a>sys.filetables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47636463"
 |-----------------|---------------|-----------------|  
 |**object_id**||Número de identificación del objeto. Es único en una base de datos.<br /><br /> Para obtener más información, [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**is_enabled**|**bit**|1 = FileTable está en el estado "habilitado".|  
-|**directory_name**|**varchar (255)**|Nombre del directorio raíz de un objeto FileTable.|  
+|**directory_name**|**varchar(255)**|Nombre del directorio raíz de un objeto FileTable.|  
 |**filename_collation_id**||Es el identificador de intercalación definido para el FileTable|  
 |**filename_collation_name**||Es el nombre de intercalación definido para el FileTable.|  
   

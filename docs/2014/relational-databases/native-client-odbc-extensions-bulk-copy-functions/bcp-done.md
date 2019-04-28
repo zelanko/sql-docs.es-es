@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0326330e3d2052e8e997a293f666a8fc725391b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689077"
 ---
 # <a name="bcpdone"></a>bcp_done
   Finaliza una copia masiva de las variables de programa a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realizada con [bcp_sendrow](bcp-sendrow.md).  
@@ -40,7 +40,7 @@ hdbc
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  Es el identificador de la conexión ODBC habilitada para la copia masiva.  
   
 ## <a name="returns"></a>Devuelve  

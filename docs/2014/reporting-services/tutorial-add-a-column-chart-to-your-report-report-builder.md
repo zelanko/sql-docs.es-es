@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648259"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)
   Un gráfico de columnas muestra una serie como un conjunto de barras verticales agrupadas por categorías. Un gráfico de columnas puede ser útil para:  

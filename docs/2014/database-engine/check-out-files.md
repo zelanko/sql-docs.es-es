@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786750"
 ---
 # <a name="check-out-files"></a>Desproteger archivos
   A menos que se haya configurado el entorno de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para que se permita modificar los archivos protegidos, es necesario desproteger un archivo antes de poder modificarlo. Al desproteger un archivo, una copia de la versión de ese archivo se copia en el disco local y se quita el atributo de solo lectura del mismo.  
@@ -29,7 +29,7 @@ ms.locfileid: "48051225"
  Utilice el comando **Desproteger** para desproteger proyectos y archivos controlados por código fuente. Si utiliza este comando para desproteger una solución o un proyecto, todos los archivos de la solución o el proyecto también se desprotegen. No obstante, el hecho de desproteger un archivo de código fuente individual no da lugar a la desprotección del proyecto o la solución a los que pertenece.  
   
 > [!NOTE]  
->  Si el [!INCLUDE[msCoName](../includes/msconame-md.md)] base de datos de Visual SourceSafe para el proyecto está configurado para permitir varias desprotecciones y desea desproteger un archivo de modo exclusivo, debe borrar el **permitir varias desprotecciones** opción el  **Avanzadas opciones de desprotección** cuadro de diálogo antes de desproteger el archivo. Para que se aplique esta configuración, debe reiniciar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+>  Si la base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe del proyecto está configurada para permitir varias desprotecciones y desea desproteger un archivo en modo exclusivo, debe desactivar la opción **Permitir varias desprotecciones** del cuadro de diálogo **Opciones avanzadas de desprotección** antes de desproteger el archivo. Para que se aplique esta configuración, debe reiniciar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] .  
   
 ### <a name="to-check-out-a-file"></a>Para desproteger un archivo  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48051225"
   
 2.  En el menú **Archivo** , seleccione **Control de código fuente**y haga clic en **Desproteger para editar**.  
   
-3.  Si aparece el cuadro de diálogo **Desproteger para editar** , seleccione los elementos que desee y haga clic en **Desproteger**. Si ha configurado el [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] entorno no se muestre el **desproteger** cuadro de diálogo, los elementos seleccionados en el Explorador de soluciones y los elementos secundarios que puedan tener se desprotegen inmediatamente.  
+3.  Si aparece el cuadro de diálogo **Desproteger para editar** , seleccione los elementos que desee y haga clic en **Desproteger**. Si ha configurado el entorno de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] para que no muestre el cuadro de diálogo **Desproteger** , los elementos seleccionados en el Explorador de soluciones y los elementos secundarios que puedan tener se desprotegen inmediatamente.  
   
      **Check-out**  
      Desprotege todos los elementos seleccionados.  
@@ -55,9 +55,9 @@ ms.locfileid: "48051225"
      Muestra los elementos que va a desproteger como listas planas en su conexión de control de código fuente.  
   
      **Editar**  
-     Modifique un elemento sin desprotegerlo. El **editar** botón solo aparece si tiene [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] configurado para admitir la edición de archivos protegidos.  
+     Modifique un elemento sin desprotegerlo. El botón **Editar** solo aparece si ha configurado [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para que admita la edición de archivos protegidos.  
   
-     **Nombre**  
+     **Name**  
      Muestra los nombres de los elementos disponibles para su desprotección. Los elementos seleccionados aparecen con casillas junto a ellos. Si no desea desproteger un elemento determinado, desactive su casilla.  
   
      **Opciones**  

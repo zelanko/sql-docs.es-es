@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78c60832ea6111b0682e8a6d2b5ab3540a19cfb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680266"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Conectar con los datos de origen (Cliente de minería de datos para Excel)
   En este tema se describe cómo crear y usar las conexiones utilizadas para almacenar modelos de minería de datos y para obtener acceso a datos externos almacenados en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "48159745"
   
  **Conexiones a orígenes de datos externos.** También puede crear conexiones a datos externos mientras crea modelos o guarda resultados. Por ejemplo, puede crear un modelo de minería de datos en un servidor y, a continuación, realizar una consulta de predicción a partir de ese modelo de minería de datos usando los datos almacenados en otra instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], en una tabla de datos de Excel o en un origen de datos externo, como [!INCLUDE[msCoName](../includes/msconame-md.md)] Access. Cada vez que obtenga acceso al nuevo origen de datos, se le pedirá que cree una conexión mediante un cuadro de diálogo.  
   
-##  <a name="bkmk_prereq2"></a> Prerequisites  
+##  <a name="bkmk_prereq2"></a> Requisitos previos  
  Esta versión de los complementos requiere que la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sea SQL Server 2012. Si desea conectarse a una versión anterior de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], tiene a su disposición otra versión de los complementos. Existen versiones de los complementos que admiten SQL Server 2005, SQL Server 2008 y SQL Server 2008 R2.  
   
  Para conectarse a una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], debe tener permisos para obtener acceso al servidor de base de datos. Además, las sesiones de minería de datos deben estar habilitadas y se debe contar con permisos de lectura o de lectura y escritura en los objetos de base de datos almacenados en el servidor.  

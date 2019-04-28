@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d7c4a8d59a150e159a5eab99fbedd777a241b58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703263"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>Cuadro de diálogo Propiedades del modelo de minería de datos (Analysis Services: minería de datos)
   Use el cuadro de diálogo **Propiedades del modelo de minería de datos** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para establecer las propiedades de un modelo de minería de datos en una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para mostrar el cuadro de diálogo **Propiedades del modelo de minería de datos** , haga clic con el botón derecho en el **Explorador de objetos** y seleccione **Propiedades**.  
@@ -29,12 +29,12 @@ ms.locfileid: "48179939"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Nombre**|Muestra el nombre del modelo de minería de datos.|  
+|**Name**|Muestra el nombre del modelo de minería de datos.|  
 |**ID**|Muestra el identificador del modelo de minería de datos.|  
 |**Descripción**|Muestra la descripción del modelo de minería de datos.|  
 |**Marca de tiempo de creación**|Muestra la fecha y la hora de creación del modelo de minería de datos.|  
 |**Última actualización de esquema**|Muestra la fecha y la hora en que se actualizaron por última vez los metadatos del modelo de minería de datos.|  
-|**State**|Muestra el estado de procesamiento del modelo de minería de datos. Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**Estado**|Muestra el estado de procesamiento del modelo de minería de datos. Para obtener más información acerca de los valores de esta propiedad, vea <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Procesado por última vez**|Muestra la fecha y la hora en que se procesó por última vez el modelo de minería de datos.|  
   
 ## <a name="see-also"></a>Vea también  

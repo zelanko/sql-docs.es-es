@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Recuperar datos binarios | Microsoft Docs'
+title: 'Ejemplo: Recuperación de datos binarios | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c39f508d20e194b0031baecf168851cd300031e1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704842"
 ---
 # <a name="example-retrieving-binary-data"></a>Ejemplo: Recuperación de datos binarios
   La consulta siguiente devuelve la fotografía del producto almacenada en una columna de tipo `varbinary(max)`. En la consulta, se especifica la opción `BINARY BASE64` para devolver los datos binarios en formato codificado en base 64.  

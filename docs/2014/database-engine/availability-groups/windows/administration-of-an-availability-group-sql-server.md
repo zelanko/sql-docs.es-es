@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4896c9219632d816565fdd30c11aa82ccbf7fef1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791899"
 ---
 # <a name="administration-of-an-availability-group-sql-server"></a>Administración de un grupo de disponibilidad (SQL Server)
   La administración de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] implica una o varias de las siguientes tareas:  
@@ -123,7 +123,7 @@ ms.locfileid: "53355363"
   
 -   **Vídeos:**  
   
-     [Microsoft SQL Server Code-Named "Denali", serie AlwaysOn, parte 1: Introducción a la solución de alta disponibilidad de siguiente generación](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali", serie AlwaysOn, parte 1: Introducción a la solución de alta disponibilidad de próxima generación](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server Code-Named "Denali", serie AlwaysOn, parte 2: Creación de una solución esencial de alta disponibilidad utilizando AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
@@ -144,7 +144,7 @@ ms.locfileid: "53355363"
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
- [Grupos de disponibilidad AlwaysOn: Interoperabilidad &#40;SQL Server&#41;](always-on-availability-groups-interoperability-sql-server.md)   
+ [Grupos de disponibilidad AlwaysOn: interoperabilidad &#40;SQL Server&#41;](always-on-availability-groups-interoperability-sql-server.md)   
  [Información general sobre instrucciones Transact-SQL para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
  [Introducción a los PowerShell Cmdlets para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

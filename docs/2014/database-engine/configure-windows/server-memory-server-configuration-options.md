@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62810069"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opciones de configuración de memoria del servidor
   Use las dos opciones de memoria de servidor **Memoria de servidor mínima** y **Memoria de servidor máxima**para reconfigurar la cantidad de memoria (en megabytes) administrada por el Administrador de memoria de SQL Server para un proceso de SQL Server usado por una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

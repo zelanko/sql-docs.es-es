@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645501"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ ms.locfileid: "47842983"
 |**logical_name**|**nvarchar(128)**|Nombre lógico del archivo del que se hace una copia de seguridad. Puede ser NULL.|  
 |**physical_drive**|**nvarchar(260)**|Unidad física o nombre de partición. Puede ser NULL.|  
 |**physical_name**|**nvarchar(260)**|Resto del nombre de archivo físico (del sistema operativo). Puede ser NULL.|  
-|**state**|**tinyint**|Estado del archivo, uno de los siguientes:<br /><br /> 0 = Con conexión <br /><br /> 1 = En restauración <br /><br /> 2 = En recuperación <br /><br /> 3 = Recuperación pendiente <br /><br /> 4 = Sospechoso <br /><br /> 6 = Sin conexión <br /><br /> 7 = Inactivo<br /><br /> 8 = QUITAR<br /><br /> Nota: El valor 5 se omite de modo que estos valores se corresponden con los valores de los Estados de base de datos.|  
-|**state_desc**|**Nvarchar (64)**|Descripción del estado del archivo, uno de los siguientes:<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING <br /><br /> SUSPECT OFFLINE DEFUNCT|  
+|**state**|**tinyint**|Estado del archivo, uno de los siguientes:<br /><br /> 0 = Con conexión <br /><br /> 1 = En restauración <br /><br /> 2 = En recuperación <br /><br /> 3 = Recuperación pendiente <br /><br /> 4 = Sospechoso <br /><br /> 6 = Sin conexión <br /><br /> 7 = Inactivo<br /><br /> 8 = QUITAR<br /><br /> Nota: Para que estos valores se corresponden con los valores de los Estados de base de datos, se omite el valor 5.|  
+|**state_desc**|**nvarchar(64)**|Descripción del estado del archivo, uno de los siguientes:<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING <br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|Número de secuencia de registro en el que se creó el archivo.|  
 |**drop_lsn**|**numeric(25,0)**|Número de flujo de registro en el que se quitó el archivo. Puede ser NULL.<br /><br /> Si el archivo no se ha quitado, este valor es NULL.|  
 |**file_guid**|**uniqueidentifier**|Identificador único del archivo.|  

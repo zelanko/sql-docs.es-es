@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 325d932a0c14cf4ca6b4ecf9e2349fb8064c45bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699760"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Trabajar con la función RollupChildren (MDX)
   Expresiones multidimensionales (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) (función) [secuencia de comandos de búsqueda y reemplazo] acumula los elementos secundarios de un miembro, aplicar un operador unario diferente a cada elemento secundario y devuelve el valor de este resumen como un número. El operador unario utilizado puede ser proporcionado mediante una propiedad de miembro asociada al miembro secundario, o bien puede ser una expresión de cadena proporcionada directamente a la función.  

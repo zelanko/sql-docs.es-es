@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792085"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Preparar manualmente una base de datos secundaria para un grupo de disponibilidad (SQL Server)
   En este tema se describe cómo preparar una base de datos secundaria de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell. Preparar una base de datos secundaria requiere dos pasos: (1) restaurar una copia de seguridad de base de datos reciente de la base de datos principal y las copias de seguridad de registros subsiguientes en cada instancia del servidor que hospeda la réplica secundaria, utilizando RESTORE WITH NORECOVERY y (2) unir la base de datos restaurada al grupo de disponibilidad.  
@@ -76,7 +76,7 @@ ms.locfileid: "52525748"
 ###  <a name="Security"></a> Seguridad  
  Cuando se realiza una copia de seguridad de una base de datos, la [propiedad de base de datos TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) se establece en OFF. Por lo tanto, TRUSTWORTHY está siempre en OFF en una base de datos que se acaba de restaurar.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, los permisos BACKUP DATABASE y BACKUP LOG corresponden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator** . Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
  Cuando la base de datos que se va a restaurar no existe en la instancia de servidor, la instrucción RESTORE requiere permisos CREATE DATABASE. Para obtener más información, vea [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
@@ -277,7 +277,7 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
   
 ```  
   
-##  <a name="FollowUp"></a> Sigue: Después de preparar una base de datos secundaria  
+##  <a name="FollowUp"></a> Seguimiento: Después de preparar una base de datos secundaria  
  Para completar la configuración de la base de datos secundaria, debe unir la base de datos que se acaba de restaurar al grupo de disponibilidad. Para obtener más información, vea [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
 ## <a name="see-also"></a>Vea también  

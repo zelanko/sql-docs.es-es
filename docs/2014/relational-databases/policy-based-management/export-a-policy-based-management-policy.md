@@ -1,25 +1,27 @@
 ---
 title: Exportar una directiva de administración basada en directivas | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/01/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, export policy
 ms.assetid: f0001b33-9078-4432-8460-496736fb325a
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc7067432c46e1d03323ed2a32dab84ebdf72755
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705327"
 ---
 # <a name="export-a-policy-based-management-policy"></a>Exportar una directiva de administración basada en directivas
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describe cómo exportar una directiva de administración basada en directivas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **En este tema**  
@@ -36,7 +38,7 @@ ms.locfileid: "52786937"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  

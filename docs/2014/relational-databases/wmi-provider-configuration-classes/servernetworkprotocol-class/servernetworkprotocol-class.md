@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b40f40cea8e4f9c36b74ea87b22c5c2a6633e077
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659947"
 ---
 # <a name="servernetworkprotocol-class"></a>Clase ServerNetworkProtocol
   El [clase ServerNetworkProtocol] servernetworkprotocol-class.md) representa los protocolos de red instalados en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que permite la comunicación con los clientes a través de una red.  

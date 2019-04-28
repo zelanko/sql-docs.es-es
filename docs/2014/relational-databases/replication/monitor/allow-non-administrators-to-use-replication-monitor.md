@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e8f03d12d3ac1695d4f6d000c8eab89a42004fd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667393"
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>Permitir el uso del Monitor de replicación a los usuarios que no son administradores
   En este tema se describe cómo permitir a los usuarios que no son administradores que usen el Monitor de replicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. El Monitor de replicación solamente pueden utilizarlo usuarios que son miembros de los siguientes roles:  
@@ -46,7 +46,7 @@ ms.locfileid: "52776697"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para permitir que los usuarios utilizar el Monitor de replicación, un miembro de la **sysadmin** debe agregar el usuario a la base de datos de distribución y asignar ese usuario al rol fijo de servidor el `replmonitor` rol.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  

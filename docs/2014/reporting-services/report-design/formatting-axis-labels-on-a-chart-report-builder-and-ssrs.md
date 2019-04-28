@@ -29,11 +29,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 80cc037b98e527815f1b0b2e7010c1411da03c16
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654621"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a las etiquetas de los ejes de un gráfico (Generador de informes y SSRS)
   Los tipos de gráficos basados en coordenadas (de columnas, de barras, de áreas, de puntos, de líneas y de intervalos) tienen dos ejes que se usan para clasificar y mostrar las relaciones entre los datos. A cada eje se le aplican distintos tipos de formato.  
@@ -78,7 +78,7 @@ ms.locfileid: "59970991"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Ejemplo de cómo calcula el gráfico las etiquetas de los ejes  
  La tabla que se muestra a continuación contiene datos de ventas de ejemplo que se van a representar en un gráfico de columnas. El campo Nombre se agrega al área Grupos de categorías y el campo Cantidad se agrega al área Valores.  
   
-|Nombre|Cantidad|  
+|Name|Cantidad|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  

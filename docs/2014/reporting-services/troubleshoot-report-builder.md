@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b0287d9b8533cc551f31c4c054db9bf87c5415a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657424"
 ---
 # <a name="troubleshoot-report-builder"></a>Solucionar problemas del Generador de informes
   El Generador de informes es una herramienta de creación de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que le permite generar informes desde muchos tipos diferentes de orígenes de datos y publicarlos en un servidor de informes o en un sitio de SharePoint. Los informes que cree pueden verse en el generador de informes en un explorador Web, o como parte de un [!INCLUDE[msCoName](../includes/msconame-md.md)] aplicación de Windows o el sitio de SharePoint.  

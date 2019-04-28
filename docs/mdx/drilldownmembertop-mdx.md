@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3dd1128bfafb052936e742f7ce56529b1222333a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690846"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (MDX)
 
@@ -38,7 +38,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Count*  
  Expresión numérica válida que especifica el número de tuplas que serán devueltas.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
  *Hierarchy*  

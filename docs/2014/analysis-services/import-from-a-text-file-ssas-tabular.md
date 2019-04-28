@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 324f333a355dfb9813340fd1ed11a6876bd84698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730417"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>Importar desde un archivo de texto (SSAS tabular)
   Puede importar datos de archivos de Microsoft Excel y archivos de texto usando el Asistente para la importación de tablas.  
@@ -32,7 +32,7 @@ ms.locfileid: "48055786"
 3.  Siga los pasos en el Asistente para la importación de tablas. En las páginas siguientes, podrá seleccionar tablas específicas y aplicar filtros mediante la página de **Seleccionar tablas y vistas** .  
   
 ## <a name="see-also"></a>Vea también  
- [Importar datos &#40;Tabular de SSAS&#41;](import-data-ssas-tabular.md)   
- [Orígenes de datos compatibles &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
+ [Importar datos &#40;SSAS tabular&#41;](import-data-ssas-tabular.md)   
+ [Orígenes de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d36a9e8b5e4b46283b78f07c27834a79993faeab
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647687"
 ---
 # <a name="view-page-reports-report-manager"></a>Ver la página, informes (Administrador de informes)
   Use la página Ver para ver un informe. La primera vez que se abre un informe en el Administrador de informes, tiene formato HTML. Los informes HTML incluyen una barra de herramientas que aparece en la parte superior del informe, de modo que pueda navegar por las páginas del informe, realizar búsquedas en el informe, o bien exportar el informe a otro formato. El diagrama siguiente muestra la barra de herramientas de informe.  

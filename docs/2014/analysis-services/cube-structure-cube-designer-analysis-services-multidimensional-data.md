@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ef8764f2fa5e0cf135c6e3b4156964e6f904f8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679690"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>Estructura de cubo (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Utilice la pestaña **Estructura de cubo** del **Diseñador de cubos** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear y modificar grupos de medida y medidas, agregar dimensiones de cubo y mostrar objetos incluidos en el cubo desde una vista del origen de datos asociada.  
@@ -35,7 +35,7 @@ ms.locfileid: "48160855"
 |**Vista del origen de datos**|Utilice el panel **Vista del origen de datos** para ver y editar la vista del origen de datos asociada al cubo seleccionado. Para obtener más información sobre este panel, vea [Vista del origen de datos &#40;pestaña Estructura de cubo, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Vea también  
- [Arquitectura lógica &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Arquitectura lógica &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Cubos en modelos multidimensionales](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Configurar propiedades de medidas](multidimensional-models/configure-measure-properties.md)   
  [Dimensiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   

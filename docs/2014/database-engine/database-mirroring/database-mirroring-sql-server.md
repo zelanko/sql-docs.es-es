@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807938"
 ---
 # <a name="database-mirroring-sql-server"></a>Creación de reflejo de la base de datos (SQL Server)
     
@@ -212,7 +212,7 @@ ms.locfileid: "48154945"
 >  Dado que las bases de datos reflejadas son independientes entre sí, no pueden realizar la conmutación por error en grupo.  
   
 ###  <a name="ClientConnections"></a> Conexiones de cliente  
- El proveedor de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona compatibilidad con la conexión de cliente en sesiones de creación de reflejo de la base de datos. Para más información, consulte [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ El proveedor de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona compatibilidad con la conexión de cliente en sesiones de creación de reflejo de la base de datos. Para obtener más información, vea [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ###  <a name="ImpactOfPausing"></a> Impacto al pausar una sesión en el registro de transacciones del servidor principal  
  En cualquier momento, el propietario de la base de datos puede pausar una sesión. La pausa preserva el estado de la sesión mientras se quita la creación de reflejo. Cuando se pausa una sesión, el servidor principal no envía ninguna entrada del registro nueva al servidor reflejado. Todas estas entradas permanecen activas y se acumulan en el registro de transacciones de la base de datos principal. Mientras una sesión de creación de reflejo de la base de datos permanece pausada, el registro de transacciones no se puede truncar. Por tanto, si se realiza una pausa demasiado larga en la sesión de creación de reflejo de la base de datos, el registro puede llenarse.  
@@ -329,7 +329,7 @@ ms.locfileid: "48154945"
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Reparación de página automática &#40;para grupos de disponibilidad y la creación de reflejo de base de datos&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Solucionar problemas de configuración de creación de reflejo de la base de datos &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Creación de reflejo de la base de datos: interoperabilidad y coexistencia &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Creación de reflejo de base de datos: interoperabilidad y coexistencia &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Requisitos previos, restricciones y recomendaciones para la creación de reflejo de la base de datos](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
  [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../log-shipping/about-log-shipping-sql-server.md)  

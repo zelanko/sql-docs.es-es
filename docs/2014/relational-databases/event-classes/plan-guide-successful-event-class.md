@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56157ce2c29a95d35198ab44835b50e45d7831a4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827208"
 ---
 # <a name="plan-guide-successful-event-class"></a>Clase de evento Guía de plan correcta
   La clase de eventos Guía de plan correcta indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pudo generar correctamente un plan de ejecución para una consulta o lote que contenía una guía de plan. El evento se disparará cuando se cumplan las siguientes condiciones:  

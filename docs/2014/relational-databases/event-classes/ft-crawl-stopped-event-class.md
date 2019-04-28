@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 898a36e6f8dc65be24f386159a34158f23c1125a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662408"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>FT:Crawl Stopped (clase de eventos)
   La clase de eventos **:Crawl Stopped** indica que se ha detenido un rastreo de texto completo (rellenado). La detención podría deberse a un rastreo finalizado correctamente o a un error irrecuperable.  

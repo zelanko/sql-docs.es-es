@@ -1,5 +1,5 @@
 ---
-title: Cambiar las propiedades de un modelo de minería de datos | Documentos de Microsoft
+title: Cambiar las propiedades de un modelo de minería de datos | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3650b284e8817c2b7f8aee6a0beca71c275d6a1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670385"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Cambiar las propiedades de un modelo de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "34014852"
   
  Las propiedades del modelo siguientes disponen de editores avanzados que se pueden utilizar para crear expresiones o configurar propiedades complejas del modelo. Las propiedades siguientes proporcionan:  
   
--   Propiedad **Filter**: abre el [cuadro de diálogo Filtro de conjunto de datos o Filtro del modelo](http://msdn.microsoft.com/library/a9602174-b7e2-4e16-8ded-dfd8eb9264d7).  
+-   **Filtro** propiedad: Se abre el [filtro de conjunto de datos o el cuadro de diálogo de filtro de modelo](http://msdn.microsoft.com/library/a9602174-b7e2-4e16-8ded-dfd8eb9264d7).  
   
--   Propiedad **AlgorithmParameters**: abre el [cuadro de diálogo Parámetros de algoritmo &#40;vista Modelos de minería de datos&#41;](http://msdn.microsoft.com/library/57f9f6f8-8ca4-4a6e-8f18-85f0571b7060).  
+-   **AlgorithmParameters** propiedad: Se abre el [cuadro de diálogo parámetros de algoritmo &#40;vista los modelos de minería de datos&#41;](http://msdn.microsoft.com/library/57f9f6f8-8ca4-4a6e-8f18-85f0571b7060).  
   
  Para obtener información sobre cómo configurar las propiedades de un modelo de minería de datos, vea [Columnas del modelo de minería de datos](../../analysis-services/data-mining/mining-model-columns.md).  
   
@@ -48,6 +48,6 @@ ms.locfileid: "34014852"
      El nuevo valor tendrá efecto cuando se seleccione otro elemento diferente en el diseñador.  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas y tareas de modelo de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Tareas y procedimientos de los modelos de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cab0f3edc080e6f2f174e3393548620c65f9176
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831551"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de dependencia funcional (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de dependencia funcional** seleccionadas en el panel de solicitudes. Un perfil de dependencia funcional informa de hasta qué punto los valores de una columna (la columna dependiente) dependen de los valores de otra columna o de un conjunto de columnas (la columna determinante). Este perfil también puede ayudarle a identificar problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, imagine que genera un perfil de la dependencia entre una columna de código postal y una columna de estados de Estados Unidos. En este perfil, el mismo código postal debería tener siempre el mismo estado, pero el perfil detecta infracciones de la dependencia.  

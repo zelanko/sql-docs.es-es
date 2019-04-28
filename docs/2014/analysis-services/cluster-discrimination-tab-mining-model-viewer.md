@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68f52f1e64d46b2509ae995a1f0dfa56c4dad22f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680835"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>Pestaña Distinción del clúster (Visor de modelos de minería de datos)
   Utilice la pestaña **Distinción del clúster** para comparar dos clústeres que existan en un modelo de agrupación en clústeres. Puede ver cómo las diferentes combinaciones de atributos y valores se representan dentro de los clústeres.  
@@ -32,7 +32,7 @@ ms.locfileid: "52400378"
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos de los de la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Visor**  
+ **Viewer**  
  Elija un visor para explorar el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado de los modelos de agrupación en clústeres o el Visor de contenido de minería de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] . También puede utilizar visores de complemento si están disponibles.  
   
  **Clúster 1**  

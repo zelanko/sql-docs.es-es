@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bddbad8ebe91aaa57ab76fdd4f30a5ebb9e5ab3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700114"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Crear un cubo usando una vista del origen de datos
   Emplee este método para generar un nuevo cubo si piensa usar una vista del origen de datos existente. Este método le permite especificar la vista del origen de datos y seleccionar las tablas de hechos y de dimensiones que desea usar en dicha vista. A continuación, podrá elegir las dimensiones y las medidas que desea incluir en el cubo.  

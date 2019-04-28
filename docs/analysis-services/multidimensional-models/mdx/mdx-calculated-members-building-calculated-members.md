@@ -1,5 +1,5 @@
 ---
-title: Creación de miembros calculados en MDX (MDX) | Documentos de Microsoft
+title: Creación de miembros calculados en MDX (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9235b9e3531e2ca40cabe211d85c077e629dacee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806145"
 ---
-# <a name="mdx-calculated-members---building-calculated-members"></a>MDX calcula miembros - creación de miembros calculados
+# <a name="mdx-calculated-members---building-calculated-members"></a>Miembros calculados MDX: compilación de miembros calculados
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   En las Expresiones multidimensionales (MDX), un miembro calculado es un miembro que se resuelve calculando una expresión MDX para devolver un valor. Esta definición tan genérica tiene un alcance notable. La capacidad de construir y utilizar miembros calculados en una consulta MDX proporciona una gran solución para manipular datos multidimensionales.  
   
@@ -33,8 +33,8 @@ ms.locfileid: "34021792"
      Para obtener más información sobre el uso de la instrucción CREATE MEMBER para crear miembros calculados en una sesión, vea [Crear miembros calculados de ámbito de sesión &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
   
 ## <a name="see-also"></a>Vea también  
- [CREATE MEMBER, instrucción & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Referencia de funciones MDX & #40; MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)   
- [Instrucción SELECT & #40; MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)  
+ [CREATE MEMBER &#40;instrucción MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Referencia de funciones MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [SELECT &#40;Instrucción, MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

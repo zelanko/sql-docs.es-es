@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 20e04f8192753b2ca8a5cb48715fac20118df3e3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700298"
 ---
 # <a name="create-a-report-data-source"></a>Crear un origen de datos de informe
   Para que Power View se conecte con un modelo multidimensional, es necesario crear una definición de origen de datos de informe compartido, también conocida como un archivo .rsds, en una biblioteca de SharePoint. El archivo .rsds especifica el nombre de una instancia de servidor de Analysis Services, el tipo de conexión, la cadena de conexión y las credenciales utilizadas para conectarse con el modelo multidimensional. Cuando un usuario hace clic en el archivo .rsds, se abre un nuevo informe de Power View vacío (un archivo .rdlx) en el explorador.  

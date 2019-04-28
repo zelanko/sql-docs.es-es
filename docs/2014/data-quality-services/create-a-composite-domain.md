@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3cfaf75851b97a8b13856fa8f65aca0bde7e10d1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793216"
 ---
 # <a name="create-a-composite-domain"></a>Crear un dominio compuesto
   En este tema se describe cómo crear un dominio compuesto en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio compuesto consta de uno o varios dominios individuales que se aplican a un único campo de datos. Para más información sobre los dominios compuestos, vea [Administrar un dominio compuesto](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "56034096"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear un dominio compuesto.  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a> Crear un dominio compuesto en la actividad Detección de conocimiento  
@@ -79,17 +79,17 @@ ms.locfileid: "56034096"
   
 4.  En **Método de análisis**, seleccione una de las opciones siguientes:  
   
-    -   **Datos de referencia**: Analizar los valores del campo según el formato de los datos por el servicio de datos de referencia (RDS). Data Quality Services enviará los valores del dominio compuesto a RDS, y RDS devuelve datos corregidos y analizados en función del dominio compuesto.  
+    -   **Datos de referencia**: analiza los valores del campo en función del formato que el servicio de datos de referencia (RDS) haya aplicado a los datos de referencia. Data Quality Services enviará los valores del dominio compuesto a RDS, y RDS devuelve datos corregidos y analizados en función del dominio compuesto.  
   
-    -   **En orden**: Analizar los valores del campo según el orden de los dominios en el dominio compuesto. El primer valor se incluirá en el primer dominio, el segundo valor en el segundo dominio, y así sucesivamente.  
+    -   **En orden**: analiza los valores de los campos según el orden que tienen los dominios en el dominio compuesto. El primer valor se incluirá en el primer dominio, el segundo valor en el segundo dominio, y así sucesivamente.  
   
-    -   **Delimitadores**: Analiza los valores del campo según el delimitador seleccionado en los botones de radio que muestra cuando se selecciona delimitadores. Pueden ser **Carácter de tabulación**, **Punto y coma**, **Coma**, **Espacio**u **Otros**. Si selecciona **Otros**, escriba el valor que servirá como delimitador.  
+    -   **Delimitadores**: analiza los valores del campo según el delimitador seleccionado en los botones de radio que se muestran cuando se selecciona Delimitadores. Pueden ser **Carácter de tabulación**, **Punto y coma**, **Coma**, **Espacio**u **Otros**. Si selecciona **Otros**, escriba el valor que servirá como delimitador.  
   
 5.  Si selecciona **Delimitadores** como método de análisis, también puede seleccionar **Usar el análisis de bases de conocimiento**. Para obtener más información, consulte [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
 6.  Haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [Finalizar la actividad Administración de dominios](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de crear un dominio compuesto  
+##  <a name="FollowUp"></a> Seguimiento: crear un dominio compuesto  
  Una vez creado el dominio compuesto, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  

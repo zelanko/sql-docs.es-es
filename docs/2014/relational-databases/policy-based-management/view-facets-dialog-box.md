@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2b84ce093c25faa284033065c329bb14f254a8f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676853"
 ---
 # <a name="view-facets-dialog-box"></a>Ver facetas (cuadro de diálogo)
   Utilice este cuadro de diálogo para ver las propiedades de una faceta de administración basada en directivas. Las propiedades de una faceta se definen cuando se crea y no se pueden cambiar utilizando este cuadro de diálogo.  

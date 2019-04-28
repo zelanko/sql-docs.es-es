@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62651494"
 ---
 # <a name="create-nonclustered-indexes"></a>Crear índices no clúster
   Puede crear índices no clúster en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un índice no clúster es una estructura de índice independiente de los datos almacenados en una tabla que reordena una o más columnas seleccionadas. Con frecuencia, los índices no clúster pueden ayudarle a encontrar datos más rápidamente que cuando se busca en la tabla subyacente; las consultas a veces pueden responderse completamente con los datos del índice no clúster o el índice no clúster puede apuntar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] hacia las filas de la tabla subyacente. Normalmente, los índices no clúster se crean para mejorar el rendimiento de las consultas usadas con frecuencia no cubiertas por el índice clúster o para buscar filas en una tabla sin un índice clúster (denominado montón). Se pueden crear varios índices no clúster en una tabla o una vista indizada.  
@@ -59,7 +59,7 @@ ms.locfileid: "54132019"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  

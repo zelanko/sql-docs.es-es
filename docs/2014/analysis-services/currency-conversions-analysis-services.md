@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14ae3f58a8cfdef4dfde4d30e969e4386bd1dbc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679621"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversiones de moneda (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  solo a modelos multidimensionales  
@@ -55,7 +55,7 @@ ms.locfileid: "48190845"
  Dimensión de moneda  
  Una dimensión de base de datos definida con los siguientes parámetros:  
   
--   El `Type` propiedad de la dimensión se establece en Currency.  
+-   La propiedad `Type` de la dimensión se establece en Currency.  
   
 -   La propiedad `Type` de un atributo de la dimensión se establece en CurrencyName.  
   
@@ -69,18 +69,18 @@ ms.locfileid: "48190845"
   
 -   Existe una relación de dimensión normal entre una dimensión temporal y el grupo de medida de tarifas.  
   
--   Opcionalmente, la propiedad `Type` se establece en ExchangeRate. El Asistente de Business Intelligence utiliza las relaciones con las dimensiones de tiempo y de moneda para identificar los grupos de medida de tarifas probables, establecer el `Type` propiedad en ExchangeRate permite a aplicaciones cliente identificar más fácilmente la medida de la tasa grupos.  
+-   Opcionalmente, la propiedad `Type` se establece en ExchangeRate. En tanto el Asistente de Business Intelligence utiliza las relaciones con las dimensiones temporal y de moneda para identificar los grupos de medida de tarifas probables, la configuración de la propiedad `Type` en ExchangeRate permite a las aplicaciones cliente identificar más fácilmente los grupos de medida de tarifas.  
   
 -   Una o más medidas, que representan las tasas de cambio que contiene el grupo de medida de tarifas.  
   
  Dimensión de moneda del informe  
  La dimensión (definida por el Asistente de Business Intelligence después de una conversión de moneda) que contiene las monedas del informe para esa conversión. La dimensión de moneda del informe se basa en una consulta con nombre (definida en la vista del origen de datos en la que se basa la dimensión de moneda asociada con el grupo de medida de tarifas) de la tabla principal de dimensión de la dimensión de moneda. La dimensión se define con los siguientes parámetros:  
   
--   El `Type` propiedad de la dimensión se establece en Currency.  
+-   La propiedad `Type` de la dimensión se establece en Currency.  
   
--   El `Type` propiedad del atributo clave para la dimensión se establece en CurrencyName.  
+-   La propiedad `Type` de un atributo clave de la dimensión se establece en CurrencyName.  
   
--   El `Type` propiedad de un atributo dentro de la dimensión se establece en CurrencyDestination, y la columna enlazada con el atributo contiene los identificadores de moneda que representan las monedas del informe para la conversión de moneda.  
+-   La propiedad `Type` de un atributo dentro de la dimensión se establece en CurrencyDestination, y la columna enlazada con el atributo contiene los identificadores de moneda que representan las monedas del informe para esa conversión.  
   
 ## <a name="defining-currency-conversions"></a>Definir las conversiones de moneda  
  Puede utilizar el Asistente de Business Intelligence para definir la funcionalidad de conversión de moneda en un cubo o puede definir manualmente las conversiones de moneda mediante scripts MDX.  
@@ -149,7 +149,7 @@ ms.locfileid: "48190845"
 ### <a name="local-currencies"></a>Monedas locales  
  Si elige un tipo de conversión varios a varios o varios a uno para su conversión de moneda, deberá especificar cómo se identifican las monedas locales para las que el script MDX generado por el Asistente de Business Intelligence realiza los cálculos de conversión de moneda. La moneda local de una transacción en una tabla de hechos puede identificarse de una de estas dos formas:  
   
--   El grupo de media contiene una relación de dimensión normal con la dimensión de moneda. Por ejemplo, en la base de datos de ejemplo [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , el grupo de medida Internet Sales tiene una relación de dimensión normal con la dimensión Currency. La tabla de hechos para el grupo de medida contiene una columna de clave externa que hace referencia a los identificadores de moneda de la tabla de dimensiones para dicha dimensión. En este caso, puede seleccionar el atributo de la dimensión de moneda a la que hace referencia el grupo de medida para identificar la moneda local de las transacciones en la tabla de hechos de ese grupo de medida. Esta situación se produce, generalmente, en las aplicaciones bancarias, donde la propia transacción determina la moneda utilizada en la transacción.  
+-   El grupo de media contiene una relación de dimensión normal con la dimensión de moneda. Por ejemplo, en la base de datos de ejemplo [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , el grupo de medida Internet Sales tiene una relación de dimensión normal con la dimensión Currency. La tabla de hechos de ese grupo de medida contiene una columna de clave externa que hace referencia a los identificadores de moneda de la tabla de dimensiones de esa dimensión. En este caso, puede seleccionar el atributo de la dimensión de moneda a la que hace referencia el grupo de medida para identificar la moneda local de las transacciones en la tabla de hechos de ese grupo de medida. Esta situación se produce, generalmente, en las aplicaciones bancarias, donde la propia transacción determina la moneda utilizada en la transacción.  
   
 -   El grupo de medida contiene una relación de dimensión referenciada con la dimensión de moneda a través de otra dimensión que hace referencia directamente a la dimensión de moneda. Por ejemplo, en la base de datos de ejemplo [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , el grupo de medida Financial Reporting tiene una relación de dimensión de referencia con la dimensión Currency a través de la dimensión Organization. La tabla de hechos de ese grupo de medida contiene una columna de clave externa que hace referencia a los miembros de la tabla de dimensiones de la dimensión Organization. A su vez, la tabla de dimensiones de la dimensión Organization contiene una columna de clave externa que hace referencia a los identificadores de moneda de la tabla de dimensiones de la dimensión Currency. Esta situación se produce, generalmente, en las aplicaciones de informes financieros, donde la ubicación o delegación de una transacción determina la moneda de esa transacción. En este caso, puede seleccionar el atributo que hace referencia a la dimensión de la moneda desde la dimensión de la entidad de empresa.  
   

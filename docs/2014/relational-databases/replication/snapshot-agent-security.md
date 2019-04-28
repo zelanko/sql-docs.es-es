@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e63cee642738036933b0a1e2a9da6b48192fba9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676640"
 ---
 # <a name="snapshot-agent-security"></a>Seguridad del Agente de instantáneas
   El cuadro de diálogo **Seguridad del Agente de instantáneas** le permite especificar lo siguiente:  

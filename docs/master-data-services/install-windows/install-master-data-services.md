@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 55f67c71bfa1247d9b8df411889091527c95de48
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695543"
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Tareas de instalación de Master Data Services
 
@@ -24,18 +24,18 @@ ms.locfileid: "51703893"
 
   En este artículo se proporciona información general de las tareas de instalación, con vínculos a las instrucciones. Para ver un tutorial de instalación y configuración de Master Data Services, vea [Instalación y configuración de Master Data Services](../../master-data-services/master-data-services-installation-and-configuration.md). 
   
--   [Tareas de preinstalación:](#preinstall)compruebe los requisitos del sistema antes de instalar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+-   [Tareas previas a la instalación](#preinstall): Compruebe los requisitos del sistema antes de instalar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
--   [Operaciones de instalación](#install): instale [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utilizando en programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el símbolo del sistema.  
+-   [Operaciones de instalación](#install): Instalar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utilizando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el programa de instalación o la línea de comandos.  
   
--   [Tareas posteriores a la instalación:](#postinstall)abra [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para completar las operaciones posteriores a la instalación. Cree y configure la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] y los servicios web, e implemente un modelo de ejemplo.  
+-   [Tareas posteriores a la instalación](#postinstall): Abra [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para completar las operaciones posteriores a la instalación. Cree y configure la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] y los servicios web, e implemente un modelo de ejemplo.  
   
 ##  <a name="preinstall"></a> Tareas de preinstalación:  
   
 |Acción|Detalles|Temas relacionados|  
 |------------|-------------|--------------------|  
 |Comprobar los requisitos de instalación|El equipo donde se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe cumplir los requisitos mínimos para:<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Los servicios web y la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .<br /><br /> La base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , si hospeda la base de datos en el mismo equipo que la aplicación web.<br /><br /> <br /><br /> Puede separar el equipo servidor web y el equipo servidor de bases de datos ejecutando el programa de instalación solo en el equipo servidor web y creando la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] en un equipo remoto que ejecute una versión y edición compatibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)<br /><br /> [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [Requisitos de la aplicación web &#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)<br /><br /> [Requisitos de base de datos &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md)|  
-|Configurar los roles necesarios, servicios del rol y características|Antes de ejecutar el programa de instalación, configure el equipo con los roles de Windows, los servicios de rol y las características necesarios.<br /><br /> Nota: Aunque puede seguir este paso posteriormente en el flujo de trabajo, es útil configurar esto antes de ejecutar el programa de instalación para poder realizar tareas de configuración de web inmediatamente después de la instalación.|[Requisitos de la aplicación web &#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)|  
+|Configurar los roles necesarios, servicios del rol y características|Antes de ejecutar el programa de instalación, configure el equipo con los roles de Windows, los servicios de rol y las características necesarios.<br /><br /> Nota: Aunque puede realizar este paso más adelante en el flujo de trabajo, es útil configurar esto antes de ejecutar el programa de instalación para que pueda realizar las tareas de configuración de web inmediatamente después de la instalación.|[Requisitos de la aplicación web &#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)|  
 |Revisar las consideraciones de la compatibilidad con idiomas|Determine el idioma con el que desea instalar y ejecutar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Implementaciones plurilingües y globales &#40;Master Data Services&#41;](../../master-data-services/install-windows/multi-lingual-and-global-deployments-master-data-services.md)|  
   
 ##  <a name="install"></a> Operaciones de instalación  
@@ -52,7 +52,7 @@ ms.locfileid: "51703893"
 |Crear una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para crear una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para los datos maestros.|[Crea una base de datos de Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  
 |Crear una aplicación web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para crear y configurar una aplicación web para hospedar [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|[Crear una aplicación web de Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)|  
 |Asociar una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] a una aplicación web|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para asociar la aplicación web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] a su base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Asociar una base de datos y una aplicación web de Master Data Services](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)|  
-|Configurar la seguridad mejorada de Internet Explorer|Al instalar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] en un equipo de Windows Server 2012, podría tener que configurar la seguridad mejorada de Internet Explorer para permitir el scripting para el sitio de la aplicación [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . De lo contrario, la exploración al sitio de la aplicación de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] en el equipo servidor producirá errores.|[Internet Explorer: configuración de seguridad mejorada](https://go.microsoft.com/fwlink/p/?LinkId=223869)|  
+|Configurar la seguridad mejorada de Internet Explorer|Al instalar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] en un equipo de Windows Server 2012, podría tener que configurar la seguridad mejorada de Internet Explorer para permitir el scripting para el sitio de la aplicación [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . De lo contrario, la exploración al sitio de la aplicación de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] en el equipo servidor producirá errores.|[Internet Explorer: Configuración de seguridad mejorada](https://go.microsoft.com/fwlink/p/?LinkId=223869)|  
 |Instalar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|Los usuarios que vayan a trabajar con datos maestros pueden instalar [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)].|[https://go.microsoft.com/fwlink/?LinkID=398159](https://go.microsoft.com/fwlink/?LinkID=398159)|  
 |Habilitar la integración con Data Quality Services (DQS)|Para los usuarios de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], habilite la integración con la característica de DQS, que se puede usar para hacer corresponder datos similares.|[Habilitar la integración de Data Quality Services con Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)|  
 |Implementar un modelo de ejemplo|Los paquetes del modelo de ejemplo se instalan con Master Data Services y pueden implementarse mediante MDSModelDeploy.exe.|[Implementar ejemplos de MDS en SQL Server](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)|
@@ -61,7 +61,7 @@ ms.locfileid: "51703893"
   
  Si ya no necesita [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] en un equipo, puede desinstalar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] y determinar si se han de quitar los elementos que no estén afectados por el proceso de desinstalación. Para obtener más información, vea [Desinstalar y quitar Master Data Services](../../sql-server/install/uninstall-and-remove-master-data-services.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Instalar SQL Server 2016](../../database-engine/install-windows/install-sql-server.md)  
   
   

@@ -1,23 +1,26 @@
 ---
 title: Propiedades de Analysis Server (pestaña Servicio) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 4f083aafd2dc8718bb79798d43483c66b3520b0d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666752"
 ---
 # <a name="analysis-server-properties-service-tab"></a>Propiedades de Analysis Server (pestaña Servicio)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Este es el servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Este servicio debe estar en ejecución para que [!INCLUDE[ssAS](../../includes/ssas-md.md)] funcione correctamente. Los valores de propiedades en color gris claro no se pueden modificar con esta aplicación.  
   
 ## <a name="options"></a>Opciones  
@@ -47,9 +50,9 @@ ms.locfileid: "52795877"
   
 -   Manual: Este servicio no se inicia automáticamente cuando se inicia el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
   
--   Automático: El servicio intenta iniciarse cuando se inicia el equipo.  
+-   Automático: Este servicio intenta iniciarse cuando se inicia el equipo.  
   
--   Deshabilitado: No se puede iniciar el servicio.  
+-   Deshabilitado: No se puede iniciar este servicio.  
   
  **Estado**  
  Indica si el servicio está en ejecución, detenido o deshabilitado.  

@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7d265ea1bd3b2461219858d39fd0b9164999cc30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650983"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Evaluación de los objetos de base de datos de acceso para la conversión (AccessToSQL)
 Antes de cargar los objetos y migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, debe determinar cuánto de la migración se realice correctamente y cuánto tiempo puede tardar la conversión. SSMA puede crear un informe de evaluación que muestra el porcentaje de objetos que se han convertido correctamente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o estimaciones de tiempo y la sintaxis de SQL Azure para realizar la migración. SSMA también le permite ver los problemas específicos que causaba errores de conversión.  
@@ -44,7 +44,7 @@ Cuando crea un informe de evaluación, SSMA convierte los objetos seleccionados 
   
     SSMA muestra el progreso en la barra de estado en la parte inferior de la ventana. Si está visible el panel de resultados, también verá los mensajes en el panel de salida.  
   
-Una vez completada la evaluación, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant para Access: aparecerá la ventana de informe de evaluación.  
+Una vez completada la evaluación, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant para Access: Aparecerá la ventana de informe de evaluación.  
   
 ## <a name="using-assessment-reports"></a>Uso de informes de evaluación  
 La ventana de informe de evaluación contiene tres paneles: un explorador, un panel de detalles y un panel de mensajes.  

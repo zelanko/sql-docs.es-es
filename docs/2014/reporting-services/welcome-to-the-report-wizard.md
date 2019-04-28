@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 340f662cc71dc6a1c7a7e1ab0e94abefd9f1a22d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646973"
 ---
 # <a name="welcome-to-the-report-wizard"></a>Página de presentación del Asistente para informes
   Utilice esta página del Asistente para informes para ver un resumen de las tareas que se van a realizar.  

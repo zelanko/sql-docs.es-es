@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85c701c583705a2d2c0e7438832a5074e60c337a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666782"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Usar sqlcmd con variables de script
   Las variables que se usan en scripts se denominan variables de scripting. Las variables de scripting posibilitan el uso de un script en varias situaciones. Por ejemplo, si desea ejecutar un script en varios servidores, en lugar de modificar el script para cada servidor, puede usar una variable de scripting para el nombre del servidor. Al cambiar el nombre del servidor proporcionado a la variable de scripting, el mismo script puede ejecutarse en diferentes servidores.  
@@ -111,7 +111,7 @@ ms.locfileid: "48113785"
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|L/E|"8" (segundos)|  
-|SQLCMDSTATTIMEOUT|-t|L/E|"0" = esperar indefinidamente|  
+|SQLCMDSTATTIMEOUT|-T|L/E|"0" = esperar indefinidamente|  
 |SQLCMDHEADERS|-H|L/E|"0"|  
 |SQLCMDCOLSEP|-S|L/E|"|  
 |SQLCMDCOLWIDTH|-w|L/E|"0"|  
@@ -149,7 +149,7 @@ ms.locfileid: "48113785"
   
  `sqlcmd -i c:\test.sql`  
   
-### <a name="b-using-the-setvar-command-interactively"></a>B. Usar el comando setvar interactivamente  
+### <a name="b-using-the-setvar-command-interactively"></a>b. Usar el comando setvar interactivamente  
  En el ejemplo siguiente se muestra cómo establecer una variable de script de manera interactiva mediante el comando `setvar` .  
   
  `sqlcmd`  

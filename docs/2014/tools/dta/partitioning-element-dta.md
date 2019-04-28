@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: acf6d033595952186b411ef0e547858f8b59771b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657240"
 ---
 # <a name="partitioning-element-dta"></a>Partitioning (DTA, elemento)
   Contiene el esquema de particiones que se desea que utilice el Asistente para la optimización de motor de base de datos durante el análisis.  

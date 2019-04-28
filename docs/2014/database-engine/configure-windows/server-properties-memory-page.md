@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6950199a5da1f4aa773eaa12fee80edb98aba04f
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809422"
 ---
 # <a name="server-properties-memory-page"></a>Propiedades del servidor (página Memoria)
   Utilice esta página para ver o modificar las opciones de memoria del servidor. Cuando **Cantidad mínima de memoria del servidor** está establecida en 0 y **Cantidad máxima de memoria del servidor** está establecida en 2147483647 MB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede aprovechar la cantidad óptima de memoria en un momento dado, dependiendo de la cantidad de memoria que utilicen en ese momento el sistema operativo y otras aplicaciones. Al cambiar la carga del equipo y de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , también cambia la memoria asignada. Puede limitar aún más esta asignación de memoria dinámica a los valores máximos y mínimos que se especifican a continuación.  

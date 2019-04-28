@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d7efc9df277f609bf53ffb49f2253a937f45a4b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679700"
 ---
 # <a name="creating-a-data-mining-model"></a>Crear un modelo de minería de datos
   Modelado de datos es el paso de minería de datos donde se generan patrones y tendencias aplicando *algoritmos* a los datos. Después, puede utilizar esos patrones para el análisis, o para realizar predicciones.  

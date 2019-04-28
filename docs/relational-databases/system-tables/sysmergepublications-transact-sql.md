@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817046"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "52748428"
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador predeterminado.|  
 |**Nombre**|**sysname**|Nombre de la publicación.|  
 |**description**|**nvarchar(255)**|Descripción breve de la publicación.|  
-|**retención**|**int**|El período de retención para el conjunto de toda la publicación, donde la unidad se indica por el valor de la **retention_period_unit** columna.|  
+|**retention**|**int**|El período de retención para el conjunto de toda la publicación, donde la unidad se indica por el valor de la **retention_period_unit** columna.|  
 |**publication_type**|**tinyint**|Indica si la publicación se filtra:<br /><br /> **0** = no filtrada.<br /><br /> **1** = filtrados.|  
 |**pubid**|**uniqueidentifier**|Número de identificación único para esta publicación. Se genera cuando se agrega la publicación.|  
-|**DesignMasterID**|**uniqueidentifier**|Reservado para uso futuro.|  
+|**designmasterid**|**uniqueidentifier**|Reservado para uso futuro.|  
 |**parentid**|**uniqueidentifier**|Indica la publicación primaria a partir de la cual se creó la publicación del mismo nivel o subconjunto actual (utilizado en las topologías jerárquicas de publicación).|  
 |**sync_mode**|**tinyint**|Modo de sincronización de esta publicación:<br /><br /> **0** = nativo.<br /><br /> **1** = carácter.|  
 |**allow_push**|**int**|Indica si la publicación admite suscripciones de inserción.<br /><br /> **0** = no se admiten suscripciones de inserción.<br /><br /> **1** = se admiten suscripciones de inserción.|  
@@ -59,7 +59,7 @@ ms.locfileid: "52748428"
 |**ftp_port**|**int**|El número de puerto del servicio FTP para el distribuidor.|  
 |**ftp_subdirectory**|**nvarchar(255)**|Subdirectorio en el que están disponibles los archivos de instantánea para que los recoja el Agente de mezcla.|  
 |**ftp_login**|**sysname**|Nombre de usuario que se utiliza para conectarse al servicio FTP.|  
-|**ftp_password**|**nvarchar (524)**|La contraseña de usuario usada para conectarse al servicio FTP.|  
+|**ftp_password**|**nvarchar(524)**|La contraseña de usuario usada para conectarse al servicio FTP.|  
 |**conflict_retention**|**int**|Especifica el período de retención, expresado en días, durante el que se conservan los conflictos. Transcurrido ese tiempo, la fila del conflicto se limpia de la tabla de conflictos.|  
 |**keep_before_values**|**int**|Especifica si se está optimizando la sincronización para esta publicación:<br /><br /> **0** = sincronización no se optimiza y las particiones enviadas a todos los suscriptores se comprobarán cuando cambien los datos en una partición.<br /><br /> **1** = la sincronización se optimiza y solo los suscriptores con filas en la partición modificada se ven afectados.|  
 |**allow_subscription_copy**|**bit**|Especifica si se ha habilitado la capacidad para copiar la base de datos de suscripciones. **0** significa que no se permite la copia.|  
@@ -77,8 +77,8 @@ ms.locfileid: "52748428"
 |**allow_subscriber_initiated_snapshot**|**bit**|Indica que los suscriptores pueden iniciar el proceso que genera la instantánea para una publicación utilizando filtros con parámetros. **1** indica que los suscriptores pueden iniciar el proceso de instantáneas.|  
 |**dynamic_snapshot_queue_timeout**|**int**|Especifica cuántos minutos debe esperar en la cola un suscriptor para que empiece el proceso de generación de instantáneas al utilizar filtros con parámetros.|  
 |**dynamic_snapshot_ready_timeout**|**int**|Especifica cuántos minutos debe esperar un suscriptor para que empiece el proceso de generación de instantáneas al utilizar filtros con parámetros.|  
-|**distribuidor**|**sysname**|Nombre del distribuidor de la publicación.|  
-|**snapshot_jobid**|**binary (16)**|Identifica el trabajo de agente que genera la instantánea cuando el suscriptor puede iniciar el proceso de generación correspondiente.|  
+|**distributor**|**sysname**|Nombre del distribuidor de la publicación.|  
+|**snapshot_jobid**|**binary(16)**|Identifica el trabajo de agente que genera la instantánea cuando el suscriptor puede iniciar el proceso de generación correspondiente.|  
 |**allow_web_synchronization**|**bit**|Especifica si la publicación está habilitada para la sincronización Web, donde **1** significa que la sincronización Web está habilitada para la publicación.|  
 |**web_synchronization_url**|**nvarchar(500)**|Especifica el valor predeterminado de la dirección URL de Internet utilizada para la sincronización web.|  
 |**allow_partition_realignment**|**bit**|Indica si se envían eliminaciones al suscriptor cuando una modificación de la fila del publicador provoca que se modifique su partición.<br /><br /> **0** = datos de una antigua partición se dejarán en el suscriptor, donde no se replicarán los cambios realizados en estos datos en el publicador al suscriptor, pero los cambios realizados en el suscriptor se replicarán al publicador.<br /><br /> **1** = eliminaciones al suscriptor para reflejar los resultados de un cambio en la partición mediante la eliminación de datos que no forma parte de más de la partición del suscriptor.<br /><br /> Para obtener más información, consulte [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> Nota: Los datos que permanecen en el suscriptor cuando este valor es **0** deben tratarse como si fueran de solo lectura; sin embargo, no aplica esta directriz estrictamente por el sistema de replicación.|  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e71f45689554a8f45f492eb974815935d112e0e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702142"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Crear una dimensión usando una tabla existente
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el Asistente para dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para crear una dimensión a partir de una tabla existente. Para hacerlo, debe seleccionar la opción **Usar una tabla existente** en la página **Seleccionar método de creación** del asistente. Con esta opción, el asistente basa la estructura de la dimensión en las tablas de dimensiones, sus columnas y las posibles relaciones entre esas columnas en una vista del origen de datos existente. El asistente prueba los datos en la tabla de origen y las tablas relacionadas. Usa estos datos para definir columnas de atributos que se basan en las columnas de las tablas de dimensiones, así como para definir jerarquías de atributos (denominadas jerarquías *definidas por el usuario* ). Tras utilizar el Asistente para dimensiones para crear su dimensión, puede usar el Diseñador de dimensiones para agregar, quitar o configurar atributos y jerarquías de la dimensión.  
@@ -59,7 +59,7 @@ ms.locfileid: "48226625"
 > [!NOTE]  
 >  Si el tipo de dimensión y los tipos de atributo estándar no están establecidos al crear la dimensión, use el Asistente de Business Intelligence para establecerlos una vez creada la dimensión. Para más información, vea [Agregar inteligencia de dimensiones a una dimensión](bi-wizard-add-dimension-intelligence-to-a-dimension.md) o (para una dimensión de tipo Accounts) [Agregar inteligencia de cuentas a una dimensión](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
- El asistente establece automáticamente el tipo de dimensión basándose en los tipos de atributo especificados. Los tipos de atributo especificados en el Asistente determinan la `Type` propiedad para los atributos. El valor de la propiedad `Type` de la dimensión y sus atributos proporcionan información acerca del contenido de una dimensión al servidor y a las aplicaciones cliente. En algunos casos, estos `Type` propiedad solo se proporcionan instrucciones para las aplicaciones cliente y es opcional. En otros casos, como en las cuentas, Time o Currency dimensiones, estos `Type` propiedad determina comportamientos específicos basados en servidor y es posible que sea necesario implementar ciertos comportamientos del cubo.  
+ El asistente establece automáticamente el tipo de dimensión basándose en los tipos de atributo especificados. Los tipos de atributo especificados en el asistente determinan la propiedad `Type` de los atributos. El valor de la propiedad `Type` de la dimensión y sus atributos proporcionan información acerca del contenido de una dimensión al servidor y a las aplicaciones cliente. En algunos casos, el valor de la propiedad `Type` solo constituye una guía para las aplicaciones cliente y es opcional. En otros casos, como en las dimensiones Accounts, Time o Currency, el valor de la propiedad `Type` determina comportamientos específicos basados en el servidor y puede que sea necesario implementar ciertos comportamientos del cubo.  
   
  Para más información sobre tipos de atributos y dimensiones, vea [Tipos de atributo](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)y [Configurar tipos de atributos](attribute-properties-configure-attribute-types.md).  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48226625"
 -   La columna **Tipos de cuenta integrados** muestra los tipos de cuenta estándar correspondientes compatibles con el servidor. Si los datos de origen usan nombres estándar, el asistente asigna automáticamente el tipo de origen al tipo de servidor y rellena la columna **Tipos de cuenta integrados** con esta información. Si el servidor no asigna los tipos de cuenta o si usted quiere cambiar la asignación, seleccione un tipo diferente en la lista de la columna **Tipos de cuenta integrados** .  
   
 > [!NOTE]  
->  Si los tipos de cuenta no se asignan cuando el asistente crea una dimensión Accounts, use el Asistente de Business Intelligence para configurar las asignaciones una vez creada la dimensión. Para más información, vea [Agregar inteligencia de cuentas a una dimensión](bi-wizard-add-account-intelligence-to-a-dimension.md).  
+>  Si los tipos de cuenta no se asignan cuando el asistente crea una dimensión Accounts, use el Asistente de Business Intelligence para configurar las asignaciones una vez creada la dimensión. Para obtener más información, vea [Agregar inteligencia de cuentas a una dimensión](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## <a name="completing-the-wizard"></a>Finalizar el Asistente  
  El asistente examina las tablas de dimensiones para detectar las relaciones. El asistente creará automáticamente las relaciones de atributo entre los atributos clave de dimensiones de copo de nieve.  
@@ -89,7 +89,7 @@ ms.locfileid: "48226625"
 ## <a name="see-also"></a>Vea también  
  [Crear una dimensión generando una tabla que no sea de tiempos en el origen de datos](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
  [Crear una dimensión de tiempo generando una tabla de tiempos](create-a-time-dimension-by-generating-a-time-table.md)   
- [Referencia de propiedades de atributos de dimensión](dimension-attribute-properties-reference.md)   
+ [Referencia de las propiedades de los atributos de dimensión](dimension-attribute-properties-reference.md)   
  [Crear una dimensión de tiempo generando una tabla de tiempos](create-a-time-dimension-by-generating-a-time-table.md)   
  [Crear una dimensión generando una tabla que no sea de tiempos en el origen de datos](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   

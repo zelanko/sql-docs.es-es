@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cfaca7dcd5e72eb5ca540debac6c6723246354d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657452"
 ---
 # <a name="query-designers-report-builder"></a>Diseñadores de consultas (Generador de informes)
   El Generador de informes proporciona diseñadores gráficos de consultas y diseñadores de consultas basados en texto para ayudarle a generar consultas para los informes. Cada tipo de origen de datos tiene un diseñador de consultas asociado. Algunos orígenes de datos admiten diseñadores gráficos que permiten generar las consultas de forma interactiva. Otros orígenes de datos usan un diseñador de consultas basado en texto. Los orígenes de datos de SQL Server admiten ambos tipos de diseñadores de consultas.  

@@ -17,18 +17,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c3616e40ff54c67d27902ddf9454084fb62e282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813660"
 ---
 # <a name="cross-database-transactions-not-supported-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Transacciones entre bases de datos no compatibles para la creación de reflejo de la base de datos o grupos de disponibilidad de AlwaysOn (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y la creación de reflejo de la base de datos no admiten las transacciones entre bases de datos ni las transacciones distribuidas. Esto se debe a que la integridad o la atomicidad de las transacciones no se puede garantizar por las siguientes razones:  
   
--   Para las transacciones entre bases de datos: cada base de datos se confirma independientemente. Por consiguiente, incluso para las bases de datos de un solo grupo de disponibilidad, podría producirse una conmutación por error después de que una base de datos confirme una transacción, pero antes de que lo haga la otra. Para la creación de reflejo de la base de datos este problema puede agravarse porque, después de una conmutación por error, la base de datos reflejada está normalmente en una instancia del servidor diferente al de la otra base de datos, e incluso si ambas bases de datos se reflejan entre los dos mismos asociados, no existe ninguna garantía de que ambas bases de datos se conmutarán por error al mismo tiempo.  
+-   Para las transacciones entre bases de datos: Cada base de datos se confirma independientemente. Por consiguiente, incluso para las bases de datos de un solo grupo de disponibilidad, podría producirse una conmutación por error después de que una base de datos confirme una transacción, pero antes de que lo haga la otra. Para la creación de reflejo de la base de datos este problema puede agravarse porque, después de una conmutación por error, la base de datos reflejada está normalmente en una instancia del servidor diferente al de la otra base de datos, e incluso si ambas bases de datos se reflejan entre los dos mismos asociados, no existe ninguna garantía de que ambas bases de datos se conmutarán por error al mismo tiempo.  
   
--   Para las transacciones distribuidas: después de una conmutación por error, el nuevo servidor principal o la nueva réplica principal no puede conectarse al coordinador de transacciones distribuidas en el servidor principal o la réplica principal anterior. Por lo tanto, el nuevo servidor principal o la nueva réplica principal no puede obtener el estado de la transacción.  
+-   Para las transacciones distribuidas: Después de una conmutación por error, el nuevo servidor principal/réplica principal es no puede conectarse al Coordinador de transacciones distribuidas en el anterior servidor principal/réplica principal. Por lo tanto, el nuevo servidor principal o la nueva réplica principal no puede obtener el estado de la transacción.  
   
  En el siguiente ejemplo de creación de reflejo de la base de datos se muestra cómo podría producirse una incoherencia lógica. En este ejemplo, una aplicación utiliza una transacción entre bases de datos para insertar dos filas de datos: una fila se inserta en una tabla de una base de datos reflejada, A, y la otra fila se inserta en una tabla de otra base de datos, B. La base de datos A se está reflejando en modo de alta seguridad con conmutación automática por error. Mientras la transacción se confirma, la base de datos A deja de estar disponible y la sesión de creación de reflejo se conmuta por error automáticamente al reflejo de la base de datos A.  
   

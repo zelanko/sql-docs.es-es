@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f667ff368ca54f2ccfaeab47716338c7d694c1da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792161"
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>Combinar una réplica secundaria con un grupo de disponibilidad (SQL Server)
   En este tema se describe cómo combinar una réplica secundaria con un grupo de disponibilidad de AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Después de agregar una réplica secundaria a un grupo de disponibilidad de AlwaysOn, la réplica secundaria se debe combinar con el grupo de disponibilidad. La operación de combinar una réplica se debe realizar en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica secundaria.  
@@ -40,9 +40,9 @@ ms.locfileid: "48136225"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Seguimiento:** [Configurar bases de datos secundarias](#FollowUp)  
+-   **Seguimiento:** [Configurar las bases de datos secundarias](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48136225"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -100,7 +100,7 @@ ms.locfileid: "48136225"
   
  En el proveedor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell:  
   
-1.  Cambie el directorio (`cd`) a la instancia de servidor que hospeda la réplica secundaria.  
+1.  Cambie el directorio (`cd`) a la instancia del servidor que hospeda la réplica secundaria.  
   
 2.  Combine la réplica secundaria con el grupo de disponibilidad ejecutando el cmdlet **Join-SqlAvailabilityGroup** con el nombre del grupo de disponibilidad.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48136225"
     ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el `Get-Help` cmdlet en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   

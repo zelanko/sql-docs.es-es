@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28774dc49ba3052ee01d197570f3de87f7363cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732131"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Diseño (panel de la vista Predicción de modelo de minería de datos)
   El panel **Diseño** contiene el Generador de consultas de predicción, que puede utilizar para generar predicciones de minería de datos. Puede diseñar consultas de predicción que usen tablas de datos de entrada de una vista del origen de datos para generar predicciones masivas o puede crear consultas de predicción singleton que permiten proporcionar valores individuales.  

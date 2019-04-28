@@ -1,5 +1,5 @@
 ---
-title: Examinar un modelo usando el Visor Bayes Naive de Microsoft | Documentos de Microsoft
+title: Examinar un modelo usando el Visor Bayes Naive de Microsoft | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e7afe60ffa61af8e2c1ae5b60deb596230738a78
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678815"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Examinar un modelo usando el visor Bayes naive de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34014782"
  Como uno de los principales propósitos de un modelo Bayes naive es ofrecer una manera rápida de explorar los datos de un conjunto de datos, el Visor Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] proporciona varios métodos para mostrar la interacción entre los atributos de predicción y los atributos de entrada.  
   
 > [!NOTE]  
->  Si desea ver información detallada acerca de las ecuaciones que se usan en el modelo y los patrones detectados, puede cambiar al Visor de árbol de contenido genérico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para más información, vea [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
+>  Si desea ver información detallada acerca de las ecuaciones que se usan en el modelo y los patrones detectados, puede cambiar al Visor de árbol de contenido genérico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener más información, vea [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Fichas del visor  
  Cuando se explora un modelo de minería de datos en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el modelo aparece en la pestaña **Visor de modelos de minería de datos** del visor del diseñador de minería de datos apropiado para el modelo. El Visor Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] dispone de las siguientes pestañas para explorar datos:  
@@ -66,7 +66,7 @@ ms.locfileid: "34014782"
  Muestra otros atributos del conjunto de datos que contienen un estado que favorece claramente un estado del atributo de predicción.  
   
  **Valores**  
- Muestra el valor del atributo en la columna **Atributo** .  
+ Muestra el valor del atributo en la columna **Atributo**.  
   
  **Favorece \<valor 1 >**  
  Muestra una barra coloreada que indica la intensidad con la que el valor de atributo favorece el valor de atributo predecible mostrado en **Valor 1**.  
@@ -77,8 +77,8 @@ ms.locfileid: "34014782"
  [Volver al principio](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmo Bayes Naive de Microsoft](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
- [Tareas y tareas del Visor de modelo de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+ [Tareas y procedimientos del Visor de modelos de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Herramientas de minería de datos](../../analysis-services/data-mining/data-mining-tools.md)   
  [Visores de modelos de minería de datos](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   

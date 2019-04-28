@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0f53d25c99da4ae193f3f37ea07748f603b9cf2e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792671"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importar valores desde un archivo de Excel a un dominio
   En este tema se describe cómo importar valores desde un archivo de Excel a un dominio de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El uso de un archivo de Excel para importar valores de dominio en la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] simplifica el proceso de generación del conocimiento, lo que permite ahorrar tiempo y esfuerzo. Permite a quienes tienen una lista de valores de datos válidos en un archivo de Excel o en un archivo de texto importar dichos valores en un dominio. Desde un archivo de Excel es posible importar valores de dominio en uno o varios dominios de una base de conocimiento. (Vea [Importar dominios desde un archivo de Excel a la detección del conocimiento](../../2014/data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) para obtener más información sobre cómo importar dominios a una base de conocimiento). No se admite la exportación a un archivo Excel.  
@@ -37,7 +37,7 @@ ms.locfileid: "56019606"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para poder importar valores de dominio desde un archivo de Excel.  
   
 ##  <a name="Import"></a> Importar valores desde un archivo de Excel a un dominio  
@@ -70,7 +70,7 @@ ms.locfileid: "56019606"
   
 14. Haga clic en **Finalizar** para agregar los valores a la base de conocimiento.  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de importar valores desde un archivo de Excel a un dominio  
+##  <a name="FollowUp"></a> Seguimiento: después de importar valores desde un archivo de Excel a un dominio  
  Una vez importados los valores en un dominio, puede realizar en él otras tareas de administración, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Synonyms"></a> Importar sinónimos  

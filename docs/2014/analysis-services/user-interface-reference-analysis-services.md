@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80f8108b894c2a20ef0f0ea7d8ffb1be22bacc40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793694"
 ---
 # <a name="user-interface-reference-analysis-services"></a>Referencia de la interfaz de usuario (Analysis Services)
   En esta sección se incluyen temas de Ayuda de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Estos temas también están disponibles desde la interfaz de usuario, al presionar F1 o al hacer clic en **Ayuda** en las páginas del asistente, en los diseñadores y en los cuadros de diálogo.  

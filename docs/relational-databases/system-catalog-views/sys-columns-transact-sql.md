@@ -1,5 +1,5 @@
 ---
-title: Sys.Columns (Transact-SQL) | Microsoft Docs
+title: sys.columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/21/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c028fe9a09ad1f0f0da06a75f8ac7e0cc02b8095
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62668971"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "52405280"
 |generated_always_type|**tinyint**|**Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Identifica cuándo se genera el valor de columna (siempre será 0 para las columnas en las tablas del sistema):<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> Para obtener más información, consulte [las tablas temporales &#40;bases de datos relacionales&#41;](../../relational-databases/tables/temporal-tables.md).|  
 |generated_always_type_desc|**nvarchar(60)**|**Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Descripción textual del `generated_always_type`del valor (siempre NOT_APPLICABLE para las columnas en las tablas del sistema) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
 |encryption_type|**int**|**Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Tipo de cifrado:<br /><br /> 1 = cifrado determinista<br /><br /> 2 = cifrado aleatorio|  
-|encryption_type_desc|**Nvarchar (64)**|**Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Descripción del tipo de cifrado:<br /><br /> ALEATORIO<br /><br /> DETERMINISTIC|  
+|encryption_type_desc|**nvarchar(64)**|**Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Descripción del tipo de cifrado:<br /><br /> ALEATORIO<br /><br /> DETERMINISTIC|  
 |encryption_algorithm_name|**sysname**|**Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Nombre del algoritmo de cifrado.<br /><br /> AEAD_AES_256_CBC_HMAC_SHA_512 solo se admite.|  
 |column_encryption_key_id|**int**|**Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Id. de la CEK.|  
 |column_encryption_key_database_name|**sysname**|**Se aplica a**: de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssds-md.md)].<br /><br /> El nombre de la base de datos donde la clave de cifrado de columna existe si es diferente de la base de datos de la columna. Es NULL si la clave existe en la misma base de datos como la columna.|  
@@ -94,7 +94,7 @@ ms.locfileid: "52405280"
  [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  (Vistas de catálogo de objetos [Transact-SQL])  
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Consultar el catálogo del sistema SQL Server preguntas más frecuentes](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [Sys.ALL_COLUMNS &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [Sys.system_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)  
+ [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.system_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)  
   
   

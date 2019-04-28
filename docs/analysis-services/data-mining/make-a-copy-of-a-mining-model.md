@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7c5479a43a07a6398ff45635828a2a9c88b7cb11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679470"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>Realizar una copia de un modelo de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

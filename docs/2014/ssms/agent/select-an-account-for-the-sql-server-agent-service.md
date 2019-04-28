@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666802"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Seleccionar una cuenta para el servicio Agente SQL Server
   La cuenta de inicio del servicio define la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus permisos de red. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como una cuenta de usuario especificada. Se puede seleccionar una cuenta para el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , donde se pueden elegir las opciones siguientes:  

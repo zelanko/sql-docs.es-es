@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806381"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Crear un punto de control de la utilidad de SQL Server (utilidad de SQL Server)
   Una empresa puede tener varias utilidades de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cada una de esas utilidades de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede administrar muchas instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y aplicaciones de capa de datos. Cada utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone de un único punto de control de la utilidad (UCP). Debe crear un UCP nuevo para cada utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cada instancia administrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y todos los componentes de la aplicación de capa de datos pertenecen únicamente a una utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los administra un solo UCP.  

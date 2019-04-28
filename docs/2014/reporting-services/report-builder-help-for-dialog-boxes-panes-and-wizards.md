@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77b6eb7d3e82e2741c87612265ca69a75e369204
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657371"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>Ayuda del Generador de informes para cuadros de diálogo, paneles y asistentes
   Esta sección contiene Ayuda para muchos de los asistentes, vistas, paneles y cuadros de diálogo del Generador de informes. También puede abrir la Ayuda presionando F1 o haciendo clic en el botón Ayuda que se muestra en el cuadro de diálogo.  

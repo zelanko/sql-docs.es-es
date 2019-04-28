@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b188554ddbfba6d70ba1d869987aa96efd42f83
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703477"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Desconectar usuarios y sesiones en el servidor de Analysis Services
   Como administrador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede que desee la actividad del usuario final como parte de la administración de la carga de trabajo. Esto se lleva a cabo cancelando sesiones y conexiones. Las sesiones se pueden formar automáticamente cuando se ejecuta una consulta (implícito) o definirse en el momento en que las crea el administrador (explícito). Las conexiones son conductos abiertos con los que se pueden ejecutar las consultas. Tanto las sesiones como las conexiones se pueden terminar aunque estén activas. Por ejemplo, es posible que un administrador desee finalizar el procesamiento de una sesión si dicho procesamiento está tardando demasiado o si han surgido dudas sobre si el comando que se está ejecutando está correctamente escrito.  

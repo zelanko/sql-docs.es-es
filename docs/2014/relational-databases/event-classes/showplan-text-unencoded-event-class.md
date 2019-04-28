@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd9f8c6ca62fdd9f9a856a19f3d27c2144073b52
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650382"
 ---
 # <a name="showplan-text-unencoded-event-class"></a>Showplan Text (Unencoded), clase de eventos
   La clase de eventos Showplan Text (Unencoded) se produce cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SQL. Esta clase de eventos es igual que la clase de eventos Showplan Text, pero la información de evento tiene formato de cadena en lugar de datos binarios.  

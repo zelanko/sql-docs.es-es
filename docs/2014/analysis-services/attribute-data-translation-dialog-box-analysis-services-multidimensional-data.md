@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32832a354342b822ac0e6b2853c18c11ed3eb004
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650666"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Traducción de datos de atributos (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Traducción de datos de atributos** para establecer la columna que contiene los datos del título de la traducción, así como la intercalación y el orden que desea utilizar en los datos traducidos. Para mostrar el cuadro de diálogo **Traducción de datos de atributos** :  
@@ -64,7 +64,7 @@ ms.locfileid: "48117377"
  Si no está seleccionada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que las letras con y sin acentos son iguales.  
   
  **Distinguir Kana**  
- Seleccione esta opción para ordenar y comparar datos según las reglas de los diccionarios del idioma o alfabeto asociado y distinguir los dos tipos de caracteres kana japoneses: hiragana y katakana.  
+ Seleccione esta opción para ordenar y comparar datos según las reglas de diccionario proporcionadas para el idioma o alfabeto asociado y distinguir entre los dos tipos de caracteres kana japoneses: Hiragana y Katakana.  
   
  Si no está seleccionada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera que los caracteres hiragana y katakana son iguales.  
   

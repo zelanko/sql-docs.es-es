@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0f71f7b3f8d2cb6f7bd50ef676742282ee73d540
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703750"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Determinar el modo de servidor de una instancia de Analysis Services
-  Analysis Services puede instalarse en uno de los tres modos de servidor: multidimensional y minería de datos (predeterminado), PowerPivot para SharePoint y tabular. El modo de servidor de una instancia de Analysis Services se determina durante la instalación al elegir las opciones para instalar el servidor.  
+  Analysis Services pueden instalarse en uno de tres modos de servidor: Multidimensional y minería de datos (valor predeterminado), PowerPivot para SharePoint y Tabular. El modo de servidor de una instancia de Analysis Services se determina durante la instalación al elegir las opciones para instalar el servidor.  
   
  El modo de servidor determina el tipo de solución que se crea e implementa. Si no ha instalado el software de servidor y desea saber en qué modo se instaló el servidor, puede utilizar la información de este tema para determinar el modo. Para obtener más información sobre las características disponibles en un modo específico, vea [Comparar soluciones tabulares y multidimensionales &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md).  
   

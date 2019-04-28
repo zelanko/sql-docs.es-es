@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672146"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar y supervisar la captura de datos modificados (SQL Server)
   En este tema se describe cómo administrar y supervisar la captura de datos modificados.  
@@ -75,7 +75,7 @@ ms.locfileid: "52788907"
  Cuando se realiza una limpieza, la marca de límite inferior para todas las instancias de captura se actualiza inicialmente en una única transacción. A continuación, intenta quitar las entradas obsoletas de las tablas de cambios y de la tabla cdc.lsn_time_mapping. El valor de umbral configurable limita el número de entradas que se eliminan en una única instrucción. El que no se pueda realizar la eliminación en alguna tabla individual no impide que la operación se intente en las tablas restantes.  
   
 ### <a name="cleanup-job-customization"></a>Personalización del trabajo de limpieza  
- La posibilidad de personalización de los trabajos de limpieza radica en la estrategia que se usa para determinar qué entradas de la tabla de cambios se van a descartar. La única estrategia admitida en el trabajo de limpieza entregado es la que se basa en el tiempo. En esa situación, la nueva marca de límite inferior se calcula restando el período de retención permitido del tiempo de confirmación de la última transacción procesada. Dado que los procedimientos de limpieza subyacentes se basan en `lsn` en lugar de tiempo, se puede usar cualquier número de estrategias para determinar el `lsn` mantener en las tablas de cambios. Solo algunas se basan estrictamente en el tiempo. Por ejemplo, el conocimiento sobre los clientes se puede utilizar para proporcionar un seguro si los procesos de niveles inferiores que requieren acceso a las tablas de cambios no se pueden ejecutar. Además, aunque la estrategia predeterminada aplica el mismo `lsn` para limpiar las tablas de todas las bases de datos cambios, también se puede llamar el procedimiento de limpieza subyacente para limpiar en el nivel de instancia de captura.  
+ La posibilidad de personalización de los trabajos de limpieza radica en la estrategia que se usa para determinar qué entradas de la tabla de cambios se van a descartar. La única estrategia admitida en el trabajo de limpieza entregado es la que se basa en el tiempo. En esa situación, la nueva marca de límite inferior se calcula restando el período de retención permitido del tiempo de confirmación de la última transacción procesada. Como los procedimientos de limpieza subyacentes se basan en `lsn` en lugar de en el tiempo, se puede usar cualquier cantidad de estrategias para determinar el valor `lsn` más bajo que se debe conservar en las tablas de cambios. Solo algunas se basan estrictamente en el tiempo. Por ejemplo, el conocimiento sobre los clientes se puede utilizar para proporcionar un seguro si los procesos de niveles inferiores que requieren acceso a las tablas de cambios no se pueden ejecutar. Además, aunque la estrategia predeterminada aplica el mismo `lsn` para limpiar las tablas de cambios de todas las bases de datos, también se puede llamar al procedimiento de limpieza subyacente para limpiar en el nivel de la instancia de captura.  
   
 ##  <a name="Monitor"></a> Supervisar el proceso de captura de datos modificados  
  Supervisar el proceso de captura de datos modificados permite determinar si los cambios se están escribiendo correctamente y con una latencia razonable en las tablas de cambios. La supervisión también puede ayudar a identificar los errores que puedan producirse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos vistas de administración dinámica para ayudar a supervisar la captura de datos modificados: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) y [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  

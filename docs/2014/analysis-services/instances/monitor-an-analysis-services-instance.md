@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea756a960ee5030d974ef38a3ceeb1b72d1ad703
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703277"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Supervisar una instancia de Analysis Services
   Puede supervisar el rendimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o mediante el Monitor de Rendimiento, una aplicación que se denomina a veces **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] permite crear y administrar seguimientos y analizar y reproducir resultados de seguimiento. El Monitor de rendimiento notifica el estado del producto tal como se indiza a través de ciertos contadores, que se analizan en la siguiente sección.  

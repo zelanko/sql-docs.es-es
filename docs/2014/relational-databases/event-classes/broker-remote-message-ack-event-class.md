@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c919eb7c63a241c780d5e56b3e530921c6b51d6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663916"
 ---
 # <a name="brokerremote-message-ack-event-class"></a>Broker:Remote Message Ack, clase de eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Remote Message Ack** cuando [!INCLUDE[ssSB](../../includes/sssb-md.md)] envía o recibe un reconocimiento de mensaje.  
@@ -42,7 +42,7 @@ ms.locfileid: "52812267"
 |**IntegerData**|**int**|Número de fragmento del mensaje que contiene el reconocimiento.|25|No|  
 |**IntegerData2**|**int**|Número de fragmento del mensaje que se va a reconocer.|55|No|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario.<br /><br /> 0 = usuario<br /><br /> 1 = sistema|60|No|  
-|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSid**|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario al que pertenece la conexión que generó este evento.|6|Sí|  
 |**Prioridad**|**int**|Nivel de prioridad de la conversación.|5|Sí|  

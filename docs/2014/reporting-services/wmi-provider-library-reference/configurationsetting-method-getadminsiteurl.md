@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f99a269139c6c6be3cb52632481236eaa2ecf0f5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62649247"
 ---
 # <a name="getadminsiteurl-method-wmi"></a>Método GetAdminSiteUrl (WMI)
   Obtiene la dirección URL absoluta para sitio web de administración central para la granja Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] con la que el servidor de informes está integrada.  

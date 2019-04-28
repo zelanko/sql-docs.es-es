@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e7daff41d09f1468f3819af5a8d2020719aebe9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659016"
 ---
 # <a name="rangemid-dmx"></a>RangeMid (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ RangeMid(<scalar column reference>)
 ## <a name="return-type"></a>Tipo devuelto  
  Un valor escalar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Cuando se usa con [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), **RangeMin**, **RangeMid**, y **RangeMax**  funciones devuelven los valores de límite reales del depósito especificado. Por ejemplo, si realiza una predicción en una columna de datos discretos, la consulta devuelve el número de depósito predicho de la columna de datos discretos. El **RangeMin**, **RangeMid**, y **RangeMax** funciones describen el depósito que especifica la predicción. Cuando el **RangeMid** función se utiliza con una instrucción de PREDICTION JOIN, la referencia de columna escalar solo puede contener columnas discretas de predicción.  
   
 ## <a name="examples"></a>Ejemplos  

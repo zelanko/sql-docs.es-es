@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807040"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Tarea Volver a generar índice (Plan de mantenimiento)
   Use el cuadro de diálogo **Tarea Volver a generar índice** para volver a crear los índices de las tablas de la base de datos con un nuevo factor de relleno. El factor de relleno determina la cantidad de espacio vacío de cada una de las páginas del índice, para adaptarse a una futura expansión. Al agregar datos a la tabla, el espacio disponible se llena, ya que no se conserva el factor de relleno. Al reorganizar las páginas de datos y de índices, puede restablecer el espacio disponible.  

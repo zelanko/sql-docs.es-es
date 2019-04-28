@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 604eac1d089c488210db2d95ad92f2d23e09f373
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789974"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Realizar una conmutación por error manual forzada de un grupo de disponibilidad (SQL Server)
   En este tema se describe cómo realizar una conmutación por error forzada (con posible pérdida de datos) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Una conmutación por error forzada es una forma de conmutación por error manual pensada estrictamente para la recuperación ante desastres, cuando no es posible realizar una [conmutación por error manual planeada](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Si se fuerza la conmutación por error a una réplica secundaria no sincronizada, es posible que se pierdan datos. Por tanto, se recomienda encarecidamente que solo fuerce la conmutación por error si debe restaurar el servicio al grupo de disponibilidad inmediatamente y asume el riesgo de perder datos.  
@@ -28,7 +28,7 @@ ms.locfileid: "53375677"
  Después de una conmutación por error forzada, el destino de la conmutación por error al que se aplicó la conmutación por error del grupo de disponibilidad se convierte en la nueva réplica principal. Las bases de datos secundarias de las réplicas secundarias restantes se suspenden y se deben reanudar manualmente. Cuando la réplica principal anterior está disponible, realiza la transición al rol secundario, haciendo que las bases de datos principales anteriores se conviertan en bases de datos secundarias y realicen la transición al estado SUSPENDED. Antes de reanudar una base de datos secundaria determinada, quizás pueda recuperar datos perdidos de ella. Sin embargo, tenga en cuenta que el truncamiento del registro de transacciones se retrasa en una base de datos principal determinada mientras cualquiera de sus bases de datos secundarias está suspendida.  
   
 > [!IMPORTANT]  
->  La sincronización de datos con la base de datos principal no se realiza hasta que no se reanuda la base de datos secundaria. Para obtener información sobre cómo reanudar una base de datos secundaria, consulte [seguimiento: Esencial tareas después de una conmutación por error forzada](#FollowUp) más adelante en este artículo.  
+>  La sincronización de datos con la base de datos principal no se realiza hasta que no se reanuda la base de datos secundaria. Para obtener información sobre cómo reanudar una base de datos secundaria, vea [Seguimiento: tareas esenciales después de una conmutación por error forzada](#FollowUp), más adelante en este artículo.  
   
  Es necesario realizar una conmutación por error forzada en las situaciones de emergencia siguientes:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "53375677"
     >  Cuando el clúster de WSFC tiene un quórum en buen estado, si emite un comando para forzar la conmutación por error en una réplica secundaria sincronizada, la réplica realiza realmente una conmutación por error manual planeada.  
   
 > [!NOTE]  
->  Para obtener más información sobre los requisitos previos y recomendaciones para forzar la conmutación por error y para un escenario de ejemplo que usa una conmutación por error forzada para recuperarse de un error grave, vea [escenario de ejemplo: Uso de una conmutación por error forzada para recuperarse de un error grave](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy), más adelante en este tema.  
+>  Para más información sobre los requisitos previos y las recomendaciones para forzar la conmutación por error y consultar un escenario de ejemplo en el que se usa una conmutación por error forzada para recuperarse de un error grave, vea [Escenario de ejemplo: uso de una conmutación por error forzada para recuperarse de un error catastrófico](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy), más adelante en este tema.  
   
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
@@ -113,7 +113,7 @@ ms.locfileid: "53375677"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -127,7 +127,7 @@ ms.locfileid: "53375677"
   
 4.  Esto inicia el Asistente para conmutación por error del grupo de disponibilidad. Para obtener más información, vea [Usar el Asistente para grupo de disponibilidad de conmutación por error &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
-5.  Después de forzar un grupo de disponibilidad a la conmutación por error, complete los pasos necesarios de seguimiento. Para obtener más información, consulte [seguimiento: Esencial tareas después de una conmutación por error forzada](#FollowUp), más adelante en este tema.  
+5.  Después de forzar un grupo de disponibilidad a la conmutación por error, complete los pasos necesarios de seguimiento. Para más información, vea [Seguimiento: tareas esenciales después de una conmutación por error forzada](#FollowUp), más adelante en este tema.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para forzar la conmutación por error (con posible pérdida de datos)**  
@@ -146,7 +146,7 @@ ms.locfileid: "53375677"
     ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;  
     ```  
   
-3.  Después de forzar un grupo de disponibilidad a la conmutación por error, complete los pasos necesarios de seguimiento. Para obtener más información, consulte [seguimiento: Esencial tareas después de una conmutación por error forzada](#FollowUp), más adelante en este tema.  
+3.  Después de forzar un grupo de disponibilidad a la conmutación por error, complete los pasos necesarios de seguimiento. Para más información, vea [Seguimiento: tareas esenciales después de una conmutación por error forzada](#FollowUp), más adelante en este tema.  
   
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para forzar la conmutación por error (con posible pérdida de datos)**  
@@ -182,17 +182,17 @@ ms.locfileid: "53375677"
     > [!NOTE]  
     >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
-3.  Después de forzar un grupo de disponibilidad a la conmutación por error, complete los pasos necesarios de seguimiento. Para obtener más información, consulte [seguimiento: Esencial tareas después de una conmutación por error forzada](#FollowUp), más adelante en este tema.  
+3.  Después de forzar un grupo de disponibilidad a la conmutación por error, complete los pasos necesarios de seguimiento. Para más información, vea [Seguimiento: tareas esenciales después de una conmutación por error forzada](#FollowUp), más adelante en este tema.  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   
 -   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Sigue: Tareas esenciales después de una conmutación por error forzada  
+##  <a name="FollowUp"></a> Seguimiento: Tareas esenciales después de una conmutación por error forzada  
   
 1.  Después de una conmutación por error forzada, la réplica secundaria objeto de conmutación por error se convierte en la nueva réplica principal. Sin embargo, para que la réplica de disponibilidad esté accesible a los clientes, puede que necesite volver a configurar el quórum de WSFC o ajustar la configuración de modo de disponibilidad del grupo de disponibilidad del siguiente modo:  
   
-    -   **Si ha conmutado por error fuera de la [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]:**  Ajuste los votos de quórum de los nodos WSFC para reflejar la nueva configuración de grupo de disponibilidad. Si el nodo de WSFC que hospeda la réplica secundaria de destino no tiene un voto de quórum de WSFC, puede que sea necesario forzar el quórum de WSFC.  
+    -   **Si ha conmutado por error fuera de la [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]:**  ajuste los votos de quórum de los nodos WSFC para reflejar la configuración del nuevo grupo de disponibilidad. Si el nodo de WSFC que hospeda la réplica secundaria de destino no tiene un voto de quórum de WSFC, puede que sea necesario forzar el quórum de WSFC.  
   
         > [!NOTE]  
         >  [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] solo existe si dos réplicas de disponibilidad (incluida la réplica principal anterior) están configuradas para el modo de confirmación sincrónica con conmutación por error automática.  
@@ -205,7 +205,7 @@ ms.locfileid: "53375677"
   
         -   [Forzar el inicio de un clúster WSFC sin un quórum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
-    -   **Si ha conmutado por error fuera de la [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)]:** Se recomienda que considere la posibilidad de ajustar el modo de disponibilidad y el modo de conmutación por error en la nueva réplica principal y en las restantes réplicas secundarias para que se reflejen la confirmación sincrónica deseada y la configuración de conmutación por error automática.  
+    -   **Si ha conmutado por error fuera de la [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)]:** Se recomienda que considere la posibilidad de ajustar el modo de disponibilidad y el modo de conmutación por error en la nueva réplica principal y en las restantes réplicas secundarias para que reflejen la confirmación sincrónica deseada y la configuración de conmutación por error automática.  
   
         > [!NOTE]  
         >  [!INCLUDE[ssFosSync](../../../includes/ssfossync-md.md)] solo existe si la réplica principal actual se configura para el modo de confirmación sincrónica.  
@@ -247,7 +247,7 @@ ms.locfileid: "53375677"
     -   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
 ##  <a name="ExampleRecoveryFromCatastrophy"></a> Escenario de ejemplo: Usar una conmutación por error forzada para recuperarse de un error catastrófico  
- En el ejemplo siguiente se realiza manualmente una conmutación por error en el grupo de disponibilidad a la réplica secundaria local que está sincronizada actualmente con la réplica principal. La idoneidad de forzar una conmutación por error depende de: (1) si espera que la réplica principal esté sin conexión más tiempo de lo que el contrato de nivel de servicio (SLA) tolera y (2) si está dispuesto a exponerse a la posible pérdida de datos para conseguir que las bases de datos principales estén disponibles de inmediato. Si decide que un grupo de disponibilidad requiere una conmutación por error forzada, la conmutación por error forzada real no es sino uno de los pasos de un proceso de varios.  
+ En el ejemplo siguiente se realiza manualmente una conmutación por error en el grupo de disponibilidad a la réplica secundaria local que está sincronizada actualmente con la réplica principal. La idoneidad de forzar una conmutación por error depende de: (1) si espera que la réplica principal esté sin conexión durante más tiempo que el contrato de nivel de servicio (SLA) tolera y (2) si está dispuesto a arriesgar la pérdida de datos potencial para que las bases de datos principales estén disponibles rápidamente. Si decide que un grupo de disponibilidad requiere una conmutación por error forzada, la conmutación por error forzada real no es sino uno de los pasos de un proceso de varios.  
   
  Para ilustrar los pasos necesarios para usar una conmutación por error forzada para recuperarse de un error catastrófico, en este tema se presenta un posible escenario de recuperación de desastres. El escenario de ejemplo considera un grupo de disponibilidad cuya topología original consta de un centro de datos principal que hospeda tres réplicas de disponibilidad de confirmación sincrónica, incluida la réplica principal, y un centro de datos remoto que hospeda dos réplicas secundarias de confirmación asincrónica. En la ilustración siguiente se muestra la topología original de este grupo de disponibilidad de ejemplo. El grupo de disponibilidad está hospedado por un clúster WSFC de múltiples subredes con tres nodos en el centro de datos principal (**Nodo 01**, **Nodo 02**y **Nodo 03**) y dos nodos en un centro de datos remoto (**Nodo 04** y **Nodo 05**).  
   
@@ -285,8 +285,8 @@ ms.locfileid: "53375677"
   
 ||Paso|Vínculos|  
 |-|----------|-----------|  
-|**1.**|Los nodos del centro de datos principal se ponen de nuevo en línea y se vuelve a establecer la comunicación con el clúster WSFC. Sus réplicas de disponibilidad se ponen en línea como réplicas secundarias con las bases de datos suspendidas y el administrador de base de datos tendrá que reanudar manualmente cada una de estas bases de datos pronto.|[Reanudar una base de datos de disponibilidad &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)<br /><br /> Sugerencia: Ssi le preocupa la posible pérdida de datos en las bases de datos principales de conmutación por error, debería intentar crear una instantánea de bases de datos en las bases de datos suspendidas en una de las bases de datos secundarias de confirmación sincrónica. Tenga en cuenta que el truncamiento del registro de transacciones se retrasa en una base de datos principal mientras cualquiera de sus bases de datos secundarias se suspende. Además, el estado de sincronización de la réplica secundaria de confirmación sincrónica no puede pasar a HEALTHY siempre que alguna base de datos local se suspende.|  
-|**2.**|Un vez que las bases de datos se reanudan, el administrador de base de datos cambia temporalmente la nueva réplica principal al modo de confirmación sincrónica. Esto conlleva dos pasos:<br /><br /> 1) Cambiar una réplica de disponibilidad sin conexión al modo de confirmación asincrónica. <br />2) Cambiar la nueva réplica principal al modo de confirmación sincrónica.<br />Nota: Este paso habilita las bases de datos secundarias de confirmación sincrónica para que se sincronicen.|[Cambiar el modo de disponibilidad de una réplica de disponibilidad &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
+|**1.**|Los nodos del centro de datos principal se ponen de nuevo en línea y se vuelve a establecer la comunicación con el clúster WSFC. Sus réplicas de disponibilidad se ponen en línea como réplicas secundarias con las bases de datos suspendidas y el administrador de base de datos tendrá que reanudar manualmente cada una de estas bases de datos pronto.|[Reanudar una base de datos de disponibilidad &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)<br /><br /> Sugerencia: Si le preocupa la posible pérdida de datos en las bases de datos principal de conmutación por error posterior, debe intentar crear una instantánea de base de datos en las bases de datos suspendidas en una base de datos secundaria de confirmación sincrónica. Tenga en cuenta que el truncamiento del registro de transacciones se retrasa en una base de datos principal mientras cualquiera de sus bases de datos secundarias se suspende. Además, el estado de sincronización de la réplica secundaria de confirmación sincrónica no puede pasar a HEALTHY siempre que alguna base de datos local se suspende.|  
+|**2.**|Un vez que las bases de datos se reanudan, el administrador de base de datos cambia temporalmente la nueva réplica principal al modo de confirmación sincrónica. Esto conlleva dos pasos:<br /><br /> 1) Cambiar una réplica de disponibilidad sin conexión al modo de confirmación asincrónica. <br />2) Cambiar la nueva réplica principal al modo de confirmación sincrónica.<br />Nota: Este paso permite reanudar bases de datos secundarias confirmación sincrónica se sincronicen.|[Cambiar el modo de disponibilidad de una réplica de disponibilidad &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
 |**3.**|Una vez que la réplica secundaria de confirmación sincrónica del **Nodo 03** (la réplica principal original) entra en el estado de sincronización HEALTHY, el administrador de base de datos realiza una conmutación por error manual planeada en la réplica, para convertirla de nuevo en la principal. La réplica en el **Nodo 04** vuelve a ser una réplica secundaria.|[sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)<br /><br /> [Usar directivas de AlwaysOn para ver el estado de un grupo de disponibilidad &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)<br /><br /> [Realizar una conmutación por error manual planeada de un grupo de disponibilidad &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)|  
 |**4.**|El administrador de base de datos se conecta con la nueva réplica principal y:<br /><br /> 1) Cambia la anterior réplica principal (del centro remoto) de nuevo al modo de confirmación asincrónica.<br />2) Cambia la réplica secundaria de confirmación asincrónica en el centro de datos principal de nuevo al modo de confirmación sincrónica.|[Cambiar el modo de disponibilidad de una réplica de disponibilidad &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)|  
   

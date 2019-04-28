@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8367869193670fcc6573738521852ab62aced714
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680548"
 ---
 # <a name="completing-the-wizard-import-analysis-services-database-wizard"></a>Finalización del asistente (Asistente para importar bases de datos de Analysis Services)
   Utilice la página **Finalización del asistente** para mostrar el progreso del asistente a medida que se importan los datos y metadatos de la base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] seleccionada al proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

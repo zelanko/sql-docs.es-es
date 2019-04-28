@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25de20d08a477eb4a1bcb1d98f17ad7c179f356d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702933"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>Estructura de minería de datos (vista del Diseñador de modelos de minería)
   Utilice las vistas **Estructura de minería de datos** para modificar las estructuras de minería de datos y para procesar una estructura de minería de datos y todos los modelos de minería de datos asociados.  

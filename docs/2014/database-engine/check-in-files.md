@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812589"
 ---
 # <a name="check-in-files"></a>Proteger archivos
   Para poner los archivos controlados por código fuente a disposición de otros usuarios, es necesario proteger esos archivos en el control de código fuente. Al proteger un archivo, la versión que se protege se escribe en el proveedor de control de código fuente y se convierte en la última versión del archivo.  
@@ -47,7 +47,7 @@ ms.locfileid: "48096775"
      **Vista plana**  
      Muestra los archivos que protege como listas planas en su conexión de control de código fuente.  
   
-     **Nombre**  
+     **Name**  
      Muestra los nombres de los elementos que se protegen. Los elementos aparecen con las casillas que se encuentran junto a ellos activadas. Si no desea proteger un elemento determinado, desactive su casilla.  
   
      **Opciones**  

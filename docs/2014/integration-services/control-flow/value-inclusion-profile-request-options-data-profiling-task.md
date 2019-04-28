@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62829474"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de inclusión de valores (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de inclusión de valores** seleccionadas en el panel de solicitudes. Un perfil de inclusión de valores calcula la superposición en los valores entre dos columnas o conjuntos de columnas. Por lo tanto, también puede determinar si una columna o un conjunto de columnas es adecuado para actuar como una clave externa entre las tablas seleccionadas. Este perfil también puede ayudarle a identificar problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, suponga que utiliza un perfil de inclusión de valores para generar el perfil de la columna de identificadores de producto de una tabla de ventas. El perfil detecta que la columna contiene valores que no están en la columna IdProducto de la tabla Productos.  

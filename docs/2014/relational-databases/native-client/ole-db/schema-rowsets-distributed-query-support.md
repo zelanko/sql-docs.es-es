@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24411ceb757414f1a70f0f10bdf5b2c7660e2cd8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667601"
 ---
 # <a name="distributed-query-support-in-schema-rowsets"></a>Compatibilidad con consultas distribuidas en conjuntos de filas de esquema
   Para admitir [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consultas distribuidas, el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB **IDBSchemaRowset** interfaz devuelve los metadatos para los servidores vinculados.  
@@ -47,6 +47,6 @@ ms.locfileid: "54125185"
   
 ## <a name="see-also"></a>Vea también  
  [Compatibilidad con conjuntos de filas de esquema &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)   
- [Conjunto de filas LINKEDSERVERS &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS Rowset &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   
   

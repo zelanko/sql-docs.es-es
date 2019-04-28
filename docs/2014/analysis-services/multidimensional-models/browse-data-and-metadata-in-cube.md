@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c062137987a8ee1499449425d8e02df0d203050
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700940"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Examinar los datos y metadatos de un cubo
   Use la pestaña **Explorador** del Diseñador de cubos para examinar los datos de un cubo. Puede usar esta vista para examinar la estructura de un cubo y comprobar los datos, el cálculo, el formato y la seguridad de los objetos de la base de datos. Puede examinar rápidamente un cubo tal como lo ven los usuarios finales con las herramientas de elaboración de informes o con otras aplicaciones cliente. Si examina los datos de un cubo, podrá ver las distintas dimensiones, explorar en profundidad los miembros y segmentar las dimensiones.  

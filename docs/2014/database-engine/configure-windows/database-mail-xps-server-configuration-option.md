@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e916fe3b76abfa8773a757cf2779e7d5cbf26b86
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62810547"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs (opción de configuración del servidor)
   Use la opción **DatabaseMail XPs** para habilitar Correo electrónico de base de datos en este servidor. Los valores posibles son:  

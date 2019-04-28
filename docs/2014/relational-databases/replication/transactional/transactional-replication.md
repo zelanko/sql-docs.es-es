@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a6099a43713ebbcfdc65aec43aabcca95fe5e0b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655435"
 ---
 # <a name="transactional-replication"></a>replicación transaccional
   Normalmente, la replicación transaccional se inicia con una instantánea de los datos y los objetos de la base de datos de publicaciones. En cuanto se obtiene la instantánea inicial, los posteriores cambios de datos y modificaciones del esquema realizados en el publicador habitualmente se entregan en el suscriptor cuando se producen (casi en tiempo real). Los cambios de datos se aplican al suscriptor en el mismo orden y dentro de los mismos límites de la transacción que cuando se produjeron en el publicador. Por tanto, en una publicación, se garantiza la coherencia transaccional.  
@@ -67,7 +67,7 @@ ms.locfileid: "54127685"
 ##  <a name="DistributionAgent"></a> Agente de distribución  
  El Agente de distribución se ejecuta en el distribuidor para las suscripciones de inserción y en el suscriptor para las suscripciones de extracción. El Agente mueve las transacciones desde la base de datos de distribución al suscriptor. Si se ha marcado una suscripción para validarla, el Agente de distribución comprueba también si los datos en el publicador y en el suscriptor coinciden.  
 
-## <a name="publication-types"></a>Tipos de publicaciones
+## <a name="publication-types"></a>Tipos de publicación
 
   
 La replicación transaccional ofrece cuatro tipos de publicaciones:  
@@ -75,8 +75,8 @@ La replicación transaccional ofrece cuatro tipos de publicaciones:
 |Tipo de publicación|Descripción|  
 |----------------------|-----------------|  
 |Publicación transaccional estándar|Apropiada para topologías en las que todos los datos del suscriptor son de solo lectura (la replicación transaccional no exige que esto se cumpla en el suscriptor).<br /><br /> Las publicaciones transaccionales estándar se crean de manera predeterminada cuando se usa Transact-SQL o Replication Management Objects (RMO). Cuando se utiliza el Asistente para nueva publicación, se crean seleccionando **Publicación transaccional** en la página **Tipo de publicación** .<br /><br /> Para obtener más información sobre la creación de publicaciones, vea [Publish Data and Database Objects (Publicar datos y objetos de base de datos)](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
-|Publicación transaccional con suscripciones actualizables|Las características de este tipo de publicación son:<br /><br /> -Cada ubicación tiene datos idénticos, con un publicador y un suscriptor. <br /> -Es posible actualizar las filas en el suscriptor<br /> -Esta topología es más adecuada para entornos de servidor que necesitan una alta disponibilidad y escalabilidad de lectura.<br /><br />Para obtener más información, consulte [suscripciones actualizables](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
-|Topología punto a punto|Las características de este tipo de publicación son:<br /> -Cada ubicación tiene datos idénticos y actúa como publicador y suscriptor.<br /> -La misma fila puede cambiarse solo en una ubicación a la vez.<br /> -Admite [la detección de conflictos](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />-Esta topología es más adecuada para entornos de servidor que necesitan una alta disponibilidad y escalabilidad de lectura.<br /><br />Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
-|Replicación transaccional bidireccional|Las características de este tipo de publicación son:<br />Replicación bidireccional es similar a la replicación punto a punto, sin embargo, no proporciona la resolución de conflictos. Además, la replicación bidireccional se limita a 2 servidores. <br /><br /> Para obtener más información, consulte [la replicación transaccional bidireccional](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
+|Publicación transaccional con suscripciones actualizables|Las características de este tipo de publicación son:<br /><br /> -Cada ubicación tiene datos idénticos, con un publicador y un suscriptor. <br /> -Es posible actualizar las filas en el suscriptor<br /> - Esta topología es más apropiada para los entornos de servidor que necesitan una gran disponibilidad y escalabilidad de lectura.<br /><br />Para más información, vea [Suscripciones actualizables](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
+|Topología punto a punto|Las características de este tipo de publicación son:<br /> - Cada ubicación tiene datos idénticos y funciona como publicador y como suscriptor.<br /> - Una misma fila solo se puede cambiar en una ubicación a la vez.<br /> - Admite la [detección de conflictos](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />- Esta topología es más apropiada para los entornos de servidor que necesitan una gran disponibilidad y escalabilidad de lectura.<br /><br />Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|Replicación transaccional bidireccional|Las características de este tipo de publicación son:<br />La replicación bidireccional es similar a la replicación punto a punto, pero no proporciona resolución de conflictos. Además, la replicación bidireccional se limita a dos servidores. <br /><br /> Para más información, vea [Replicación transaccional bidireccional](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md). |  
   
   

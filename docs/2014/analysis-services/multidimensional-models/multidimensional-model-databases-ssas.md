@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adba97ff78d22ef2e82bb53065952a716f71a1d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699230"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Bases de datos de modelos multidimensionales (SSAS)
   Una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es una colección del orígenes de datos, vistas del origen de datos, cubos, dimensiones y roles. Una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también puede incluir estructuras de minería de datos y ensamblados personalizados que proporcionan un método para agregar funciones definidas por el usuario a la base de datos.  
@@ -50,19 +50,19 @@ ms.locfileid: "48082805"
   
  [Mover una base de datos de Analysis Services](move-an-analysis-services-database.md)  
   
- [Cambiar el nombre de una base de datos Multidimensional &#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
+ [Cambie el nombre de una base de datos multidimensional &#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
   
  [Establecer la compatibilidad de nivel de base de datos Multidimensional &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [Establecer las propiedades de la base de datos Multidimensional &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
+ [Establecer propiedades de bases de datos multidimensionales &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
   
  [Sincronizar bases de datos de Analysis Services](synchronize-analysis-services-databases.md)  
   
- [Cambiar una base de datos de Analysis Services entre los modos ReadOnly y ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Conectar en modo con conexión a una base de datos de Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [Conectar con una base de datos de Analysis Services en modo en línea](connect-in-online-mode-to-an-analysis-services-database.md)   
  [Crear un proyecto de Analysis Services &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
- [Consulta de datos multidimensionales con MDX](mdx/querying-multidimensional-data-with-mdx.md)  
+ [Consultar datos multidimensionales con MDX](mdx/querying-multidimensional-data-with-mdx.md)  
   
   

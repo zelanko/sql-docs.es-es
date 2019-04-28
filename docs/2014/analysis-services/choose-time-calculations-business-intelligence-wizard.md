@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe045f479d7c482da0a3eb3691479d0159bf978
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681082"
 ---
 # <a name="choose-time-calculations-business-intelligence-wizard"></a>Elegir cálculos y jerarquía de destino (Asistente de Business Intelligence)
   Utilice la página **Elegir cálculos y jerarquía de destino** para definir la resolución de los cálculos de tiempo nuevos que deben crearse para una jerarquía de tiempo existente.  
@@ -31,7 +31,7 @@ ms.locfileid: "48172845"
  Seleccione los cálculos de  tiempo que deben crearse para la jerarquía seleccionada.  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de Business Intelligence F1 Ayuda](business-intelligence-wizard-f1-help.md)   
+ [Asistente de Business Intelligence (Ayuda F1)](business-intelligence-wizard-f1-help.md)   
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

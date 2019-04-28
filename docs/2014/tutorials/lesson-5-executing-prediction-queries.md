@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822317"
 ---
-# <a name="lesson-5-executing-prediction-queries"></a>Lección 5: Ejecutar consultas de predicción
+# <a name="lesson-5-executing-prediction-queries"></a>Lección 5: Ejecución de consultas de predicción
   En esta lección, usará el [SELECT FROM \<modelo > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) del modelo que ha creado en el formulario de la instrucción SELECT para crear dos tipos diferentes de predicciones basadas en el árbol de decisión [ Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de asociación](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Estos tipos de predicciones se definen a continuación.  
   
  Consulta singleton  

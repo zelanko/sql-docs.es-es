@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa1dd7ba570a02eae75d93aa540090983717f130
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664301"
 ---
 # <a name="calculated-member-builder-dialog-box-analysis-services---multidimensional-data"></a>Generador de miembros calculados (Cuadro de diálogo) (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Generador de miembros calculados** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para generar un miembro calculado.  
@@ -28,7 +28,7 @@ ms.locfileid: "52525411"
 |Término|Definición|  
 |----------|----------------|  
 |**Name**|Escriba el nombre del miembro calculado.|  
-|**Jerarquía primaria**|Seleccione la jerarquía en la que desea crear el miembro calculado.|  
+|**Parent Hierarchy**|Seleccione la jerarquía en la que desea crear el miembro calculado.|  
 |**Miembro primario**|Esta opción se habilita si selecciona una jerarquía primaria (que no sea la dimensión `Measures`) con más de un nivel. Haga clic en el botón de puntos suspensivos (**...** ) para seleccionar un miembro primario. El miembro primario determina la ubicación del miembro calculado en la estructura de dimensión.|  
 |**Expresión**|Escriba la expresión MDX que se utilizará.|  
 |**Comprobación**|Haga clic en **Comprobar** para probar la expresión MDX definida en **Expresión**.|  

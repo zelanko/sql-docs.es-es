@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812599"
 ---
 # <a name="compare-files"></a>Comparar archivos
   Puede comparar archivos para determinar cómo ha progresado un archivo hasta su estado actual. Por ejemplo, si se detecta un defecto en una versión del proyecto de código tras haberse protegido una versión concreta del archivo de origen, podrá comparar la versión actual con la anterior.  Esto ayuda a identificar el código que ha ocasionado el defecto.  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62669453"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Datos espaciales: sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ```  
   
 ##  <a name="Arguments"></a> Argumentos  
- *COMPATIBILITY_LEVEL*  
+ *compatibility_level*  
  **int** que identifica el nivel de compatibilidad que se va a establecer.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
@@ -53,7 +53,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |**class_desc**|**nvarchar(60)**|OBJECT o COLUMN para restricciones<br /><br /> INDEX para índices y montones|  
 |**major_id**|**int**|OBJECT ID de restricciones<br /><br /> OBJECT ID de la tabla que contiene índices y montones|  
 |**minor_id**|**int**|NULL para restricciones<br /><br /> Index_id para índices y montones|  
-|**dependencia**|**nvarchar(60)**|Descripción de la dependencia que está haciendo que se deshabilite la restricción o el índice. Los mismos valores también se usan en las advertencias que se producen durante la actualización. Entre otros, se incluyen los siguientes ejemplos:<br /><br /> “space” para intrínseca<br /><br /> “geometry” para UDT del sistema<br /><br /> "geography::Parse" para un método de UDT del sistema|  
+|**dependency**|**nvarchar(60)**|Descripción de la dependencia que está haciendo que se deshabilite la restricción o el índice. Los mismos valores también se usan en las advertencias que se producen durante la actualización. Entre otros, se incluyen los siguientes ejemplos:<br /><br /> “space” para intrínseca<br /><br /> “geometry” para UDT del sistema<br /><br /> "geography::Parse" para un método de UDT del sistema|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Las columnas calculadas persistentes que usan algunas funciones intrínsecas se deshabilitan cuando se cambia el nivel de compatibilidad. Además, las columnas calculadas persistentes que emplean cualquier método Geometry o Geography se deshabilitan cuando se actualiza una base de datos.  
@@ -65,7 +65,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  Cuando las siguientes funciones se usan en la expresión de una columna calculada persistente, hacen que los índices y las restricciones que hacen referencia a esas columnas se deshabiliten cuando el nivel de compatibilidad se cambie entre 100 y 110 o superior:  
   
--   **SOUNDEX**  
+-   **Soundex**  
   
 -   **Geography:: GeomFromGML**  
   
@@ -114,7 +114,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>Comportamiento de los objetos deshabilitados  
  **Índices**  
   
- Si se deshabilita el índice agrupado o si se fuerza un índice no agrupado, se produce el error siguiente: "El procesador de consultas no puede producir un plan porque el índice ' %. \*ls' en la tabla o vista ' %. \*ls' está deshabilitado. " Para volver a habilitar estos objetos, vuelva a generar los índices después de la actualización llamando **ALTER INDEX ON... REBUILD**.  
+ Si el índice clúster está deshabilitado o si se fuerza un índice no agrupado, se produce el error siguiente: "El procesador de consultas no puede producir un plan porque el índice ' %. \*ls' en la tabla o vista ' %. \*ls' está deshabilitado. " Para volver a habilitar estos objetos, vuelva a generar los índices después de la actualización llamando **ALTER INDEX ON... REBUILD**.  
   
  **Montones**  
   

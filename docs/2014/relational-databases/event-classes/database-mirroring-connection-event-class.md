@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ffcd52ff5db3d6f04f0af1d3119aabbc4f5229c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663039"
 ---
 # <a name="database-mirroring-connection-event-class"></a>Database Mirroring: Connection (clase de eventos)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Database Mirroring Connection** para informar del estado de una conexión de transporte administrada por la creación de reflejo de la base de datos.  

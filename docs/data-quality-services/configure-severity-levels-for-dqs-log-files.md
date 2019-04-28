@@ -20,11 +20,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 598d0512593c737f1138577f36dfd5f8232d1c91
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864481"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurar los niveles de gravedad de los archivos de registro de DQS
 
@@ -48,7 +48,7 @@ ms.locfileid: "56010995"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para configurar niveles de gravedad, debe disponer del rol dqs_administrator en la base de datos DQS_MAIN.  
   
 ##  <a name="ConfigureActivity"></a> Configurar los niveles de gravedad en el nivel de actividad  
@@ -92,7 +92,7 @@ ms.locfileid: "56010995"
   
 5.  Haga clic en **Cerrar**.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Configurar las opciones avanzadas de los archivos de registro de DQS](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
   
   

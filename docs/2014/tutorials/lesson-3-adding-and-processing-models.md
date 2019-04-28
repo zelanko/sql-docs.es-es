@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653710"
 ---
-# <a name="lesson-3-adding-and-processing-models"></a>Lección 3: Agregar y procesar los modelos
+# <a name="lesson-3-adding-and-processing-models"></a>Lección 3: Adición y procesamiento de modelos
   La estructura de minería de datos que creó en la lección anterior contiene un modelo de minería de datos individual que se basa en el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../includes/msconame-md.md)]. Puede usar este modelo para identificar a los clientes para la campaña de correo directo. Sin embargo, para asegurarse de que el análisis es detallado, se suelen crear modelos relacionados usando algoritmos diferentes y comparar sus resultados. De esta manera, puede obtener diferentes puntos de vista. Por consiguiente, creará dos modelos adicionales y luego los procesará e implementará.  
   
  En esta lección, creará un conjunto de modelos de minería de datos que sugerirá los clientes que tienen una mayor probabilidad de serlo entre una lista de clientes potenciales.  

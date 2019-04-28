@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d396dd41c7643991063bfa476059362c668673e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808258"
 ---
 # <a name="continue-with-restore"></a>Continuar con la restauración
   Utilice el cuadro de diálogo **Continuar con la restauración** para indicar si desea restaurar el siguiente conjunto de copia de seguridad. Para retrasar la operación de restauración, por ejemplo, para intercambiar cintas, espere hasta estar preparado antes de hacer clic en **Aceptar**.  

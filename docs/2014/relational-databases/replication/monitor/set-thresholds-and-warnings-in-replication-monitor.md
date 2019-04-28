@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667188"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Establecer umbrales y advertencias en el Monitor de replicación
   En el Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se muestra información de estado de las publicaciones y suscripciones. De forma predeterminada, en el Monitor de replicación solamente se muestran advertencias de suscripciones no inicializadas, pero puede habilitar advertencias para otras condiciones. Se recomienda habilitar las advertencias para la topología, con el fin de estar puntualmente informado sobre el estado y rendimiento.  
@@ -61,7 +61,7 @@ ms.locfileid: "52781197"
   
 2.  Haga clic en la pestaña **Advertencias** . Para ver más información acerca de las opciones de esta pestaña, haga clic en **Ayuda** en la barra de menús.  
   
-3.  Para habilitar una advertencia, active la casilla apropiada: **Advertir si una suscripción expirará dentro del umbral** o **advertir si la latencia supera el umbral**.  
+3.  Para habilitar una advertencia, active la casilla apropiada: **Advertir si una suscripción expirará dentro del umbral** o **Advertir si la latencia supera el valor de umbral**.  
   
 4.  En la columna **Umbral** , establezca un umbral para las advertencias. Por ejemplo, si activó la casilla **Advertir si la latencia supera el valor de umbral** en el paso 3, puede seleccionar una latencia de **60 segundos** en la columna **Umbral** .  
   

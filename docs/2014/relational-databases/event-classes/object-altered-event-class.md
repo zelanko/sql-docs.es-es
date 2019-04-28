@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bd38e8d1685b23cfeeb1793d02b0fff1d7de0640
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662249"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered, clase de eventos
   La clase de eventos Object:Altered indica que se ha modificado un objeto; por ejemplo, mediante una instrucción ALTER INDEX, ALTER TABLE o ALTER DATABASE. Esta clase de evento se puede utilizar para determinar si están modificando objetos; por ejemplo, con aplicaciones ODBC, que, a menudo, crean procedimientos almacenados temporales.  

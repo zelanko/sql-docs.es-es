@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c272cef68f1fc392aed05a3d8d45ab665674e39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676627"
 ---
 # <a name="set-the-distribution-retention-period-for-transactional-publications-sql-server-management-studio"></a>Establecer el período de retención de distribución para las publicaciones transaccionales (SQL Server Management Studio)
   Especifique el período mínimo y máximo de retención de distribución en el cuadro de diálogo **Propiedades de la base de datos de distribución - \<baseDeDatosDeDistribución>**. Está disponible en la página **General** del cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>**. Para más información acerca de cómo obtener acceso a este cuadro de diálogo, [Ver y modificar las propiedades del distribuidor y del publicador](view-and-modify-distributor-and-publisher-properties.md).  

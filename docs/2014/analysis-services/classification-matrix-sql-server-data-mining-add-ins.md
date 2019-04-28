@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f2f1f055974edc3625ed66a8d803358b8345494
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681157"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matriz de clasificación (Complementos de minería de datos de SQL Server)
   ![Botón matriz de clasificación, cinta de opciones minería de datos](media/dmc-cmatrix.gif "botón matriz de clasificación, cinta de opciones minería de datos")  
@@ -37,11 +37,11 @@ ms.locfileid: "52522170"
   
 ||Bronce (real)|Oro (real)|Plata (real)|  
 |-|-----------------------|---------------------|-----------------------|  
-|Bronce|**94.45%**|15.18%|1,70%|  
+|Bronce|**94.45%**|15.18%|1.70%|  
 |Oro|2.72%|**84.82%**|0.00%|  
 |Plata|1.84%|0.00%|**93.80%**|  
 |*Correcto*|*95.45%*|*84.82%*|*98.30%*|  
-|*Incorrectas*|*4.55%*|*15.18%*|*1,70%*|  
+|*Incorrectas*|*4.55%*|*15.18%*|*1.70%*|  
   
 -   Cada columna muestra los valores reales del conjunto de datos de prueba.  
   

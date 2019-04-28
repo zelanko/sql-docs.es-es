@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 285ee82110ffdef521d75fb43343f4889663e981
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822650"
 ---
 # <a name="adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Agregar modelos nuevos a la estructura de correo de destino (tutorial básico de minería de datos)
   En esta tarea, definirá dos modelos adicionales mediante el uso de la **modelos de minería de datos** ficha del Diseñador de minería de datos. Para crear los modelos, se usarán el algoritmo Bayes naive y el algoritmo de clústeres de Microsoft. Estos dos algoritmos se han seleccionado debido a su capacidad de predecir un valor discreto (por ejemplo, la compra de una bicicleta). Para obtener más información acerca de estos algoritmos, vea [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md) y [algoritmo Bayes Naive de Microsoft](../../2014/analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  

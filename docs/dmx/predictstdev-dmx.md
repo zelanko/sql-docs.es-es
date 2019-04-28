@@ -1,5 +1,5 @@
 ---
-title: PredictStdev (DMX) | Documentos de Microsoft
+title: PredictStdev (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 56d8ade3b270f1e81cb2ac0455a245bd78cacd70
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659011"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ PredictStdev(<scalar column reference>)
 ## <a name="return-type"></a>Tipo devuelto  
  Un valor escalar del tipo especificado por  *\<referencia de columna escalar >*.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si la referencia de columna es discreta, **PredictStdev** devuelve 0 porque no se puede calcular la desviación estándar de valores discretos.  
   
 ## <a name="examples"></a>Ejemplos  
@@ -55,7 +55,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; función referencia](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

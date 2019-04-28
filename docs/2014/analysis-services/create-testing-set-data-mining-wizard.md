@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb970a24faf35b269af2c9972e4d604be57d0f88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679879"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Crear conjunto de pruebas (Asistente para minería de datos)
   Utilice la página **Crear conjunto de pruebas** para especificar qué cantidad de datos se va a utilizar para el entrenamiento y cuánta se va a reservar para utilizarla en un conjunto de pruebas. Al separar los datos en un conjunto de aprendizaje y de pruebas cuando se crea una estructura de minería de datos, resulta más fácil evaluar la exactitud de los modelos de minería que se crean después.  
@@ -35,7 +35,7 @@ ms.locfileid: "48096355"
   
 -   No se pueden dividir los datos si está intentando predecir un valor que está almacenado en una tabla anidada.  
   
- **Para más información:** [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md), [Crear una estructura de min6ería de datos relacional](data-mining/create-a-relational-mining-structure.md), [Tutorial básico de minería de datos](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Para obtener más información:** [Pruebas y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md), [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md), [Tutorial de minería de datos básicos](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>Opciones  
  **Porcentaje de datos de prueba**  

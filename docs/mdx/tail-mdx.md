@@ -1,5 +1,5 @@
 ---
-title: Tail (MDX) | Documentos de Microsoft
+title: Tail (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4563ec53f3ed12081e91b5010ae00a71b6c2feb3
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677338"
 ---
 # <a name="tail-mdx"></a>Tail (MDX)
 
@@ -32,14 +32,14 @@ Tail(Set_Expression [ ,Count ] )
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Recuento*  
+ *Count*  
  Expresión numérica válida que especifica el número de tuplas que serán devueltas.  
   
-## <a name="remarks"></a>Notas  
- El **final** función devuelve el número especificado de tuplas desde el final del conjunto especificado. Se conserva el orden de los elementos. El valor predeterminado de *recuento* es 1. Si el número especificado de tuplas es menor que 1, la función devuelve un conjunto vacío. Si el número especificado de tuplas supera al número de tuplas del conjunto, la función devuelve el conjunto original.  
+## <a name="remarks"></a>Comentarios  
+ El **Tail** función devuelve el número especificado de tuplas desde el final del conjunto especificado. Se conserva el orden de los elementos. El valor predeterminado de *recuento* es 1. Si el número especificado de tuplas es menor que 1, la función devuelve un conjunto vacío. Si el número especificado de tuplas supera al número de tuplas del conjunto, la función devuelve el conjunto original.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente devuelve la medida Reseller Sales de las cinco subcategorías de productos más vendidos, independientemente de su jerarquía, de acuerdo con Reseller Gross Profit. El **final** función se utiliza para devolver solo los últimos cinco conjuntos del resultado después de que el resultado se ha ordenado inversamente mediante la **orden** función.  
+ El ejemplo siguiente devuelve la medida Reseller Sales de las cinco subcategorías de productos más vendidos, independientemente de su jerarquía, de acuerdo con Reseller Gross Profit. El **Tail** función se utiliza para devolver solo los últimos cinco conjuntos del resultado después de que el resultado se ha ordenado inversamente mediante la **orden** función.  
   
 ```  
 SELECT Tail  

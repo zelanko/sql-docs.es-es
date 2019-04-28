@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a0655a76463f7a0a1507fa2767eade3cb37c48a8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710194"
 ---
 # <a name="submitchanges-method-rds"></a>Método SubmitChanges (RDS)
 Envía los cambios pendientes del localmente en caché y actualizable [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) al origen de datos especificado en el [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propiedad o el [URL](../../../ado/reference/rds-api/url-property-rds.md) propiedad.  
@@ -38,13 +38,13 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *DataControl*  
  Una variable de objeto que representa un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
   
- *Data Factory*  
+ *DataFactory*  
  Una variable de objeto que representa un [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto.  
   
  *Conexión*  
  Un **cadena** valor que representa la conexión creada con el **RDS. DataControl** del objeto [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propiedad.  
   
- *Conjunto de registros*  
+ *Recordset*  
  Una variable de objeto que representa un **Recordset** objeto.  
   
 ## <a name="remarks"></a>Comentarios  

@@ -16,17 +16,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec993b67736c8f1d77341ff25b620796dd9a209b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730665"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Generar consulta con nombre (Analysis Services - Datos multidimensionales)
   Utilice el cuadro de diálogo **Generar consulta con nombre** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear una consulta con nombre basada en una serie de gráficos, el valor de una serie de gráficos o el filtro del gráfico seleccionado en el gráfico que se muestra en la pestaña **Gráfico dinámico** del cuadro de diálogo **Explorar datos** . Para mostrar el cuadro de diálogo **Generar consulta con nombre** , haga clic en **Generar consulta con nombre** en el cuadro de diálogo **Explorar datos** .  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba el nombre de la consulta con nombre.  
   
  **Descripción**  

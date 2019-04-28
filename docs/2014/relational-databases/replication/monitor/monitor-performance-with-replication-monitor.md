@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e69b1d6ca838334c36ff94037473e5fda45cce43
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667221"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Supervisar el rendimiento con el Monitor de replicación
   El Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le ofrece las siguientes posibilidades para supervisar el rendimiento de la replicación transaccional y de la replicación de mezcla:  
@@ -85,16 +85,16 @@ ms.locfileid: "54126425"
     |---------------|----------|----------|----------|  
     |151+%|76 - 150 %|26 - 75 %|0 - 25 %|  
   
- Para obtener más información acerca de cómo ver información de suscripción, consulte [ver información y realizar tareas con el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
+ Para más información sobre cómo ver información de la suscripción, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>Determinar la latencia con testigos de seguimiento  
  La replicación transaccional le permite medir la latencia en un sistema insertando un token (una pequeña cantidad de datos) en el registro de transacciones de la base de datos de publicaciones y registrando cuánto tiempo tarda en llegar al distribuidor y a los suscriptores. El token también le permite identificar si los datos no están llegando al distribuidor o al suscriptor. Para más información, consulte [Medir la latencia y validar las conexiones de la replicación transaccional](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>Ver detalles del rendimiento de la sincronización en la replicación de mezcla  
- En la replicación de mezcla, el Monitor de replicación muestra estadísticas detalladas de cada artículo que se procesa durante la sincronización, incluida la cantidad de tiempo  de cada fase del proceso (carga de cambios, descarga de cambios, etc.). Esto puede ayudar a identificar las tablas específicas que están causando una reducción de la velocidad y es el mejor lugar para solucionar problemas de rendimiento con las suscripciones de mezcla. Para obtener más información sobre cómo ver estadísticas detalladas, consulte [ver información y realizar tareas con el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
+ En la replicación de mezcla, el Monitor de replicación muestra estadísticas detalladas de cada artículo que se procesa durante la sincronización, incluida la cantidad de tiempo  de cada fase del proceso (carga de cambios, descarga de cambios, etc.). Esto puede ayudar a identificar las tablas específicas que están causando una reducción de la velocidad y es el mejor lugar para solucionar problemas de rendimiento con las suscripciones de mezcla. Para más información sobre cómo ver estadísticas detalladas, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>Ver transacciones y tiempos de entrega en la replicación transaccional  
- En la replicación transaccional, el Monitor de replicación muestra información sobre el número de transacciones en la base de datos de distribución que no se han distribuido todavía a un suscriptor y el tiempo estimado para distribuir dichas transacciones. Para obtener más información, consulte [ver información y realizar tareas con el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
+ En la replicación transaccional, el Monitor de replicación muestra información sobre el número de transacciones en la base de datos de distribución que no se han distribuido todavía a un suscriptor y el tiempo estimado para distribuir dichas transacciones. Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Monitoring Replication](../monitoring-replication.md)  (Supervisar la replicación)  

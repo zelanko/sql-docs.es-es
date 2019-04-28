@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6d5b5b5ee05f467c0881b38108d126da523ea2e7
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676933"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>Ver o modificar las propiedades de una directiva de administración basada en directivas
   En este tema se describe cómo ver o modificar las propiedades de una directiva de administración basada en directivas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -39,14 +39,14 @@ ms.locfileid: "54100231"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>Para ver las propiedades de todas las directivas de un objeto  
   
-1.  En el Explorador de objetos, haga clic con el botón derecho en un servidor, objeto de servidor, base de datos u objeto de base de datos, elija **Directivas** y seleccione **Ver**. Para obtener más información sobre las opciones disponibles en el **ver directivas -**_object_name_ cuadro de diálogo, vea [cuadro de diálogo Ver directivas](view-policies-dialog-box.md).  
+1.  En el Explorador de objetos, haga clic con el botón derecho en un servidor, objeto de servidor, base de datos u objeto de base de datos, elija **Directivas** y seleccione **Ver**. Para más información sobre las opciones disponibles en el cuadro de diálogo **Ver directivas -**_nombre_de_objeto_, vea [Cuadro de diálogo Ver directivas](view-policies-dialog-box.md).  
   
 2.  Cuando termine, haga clic en **Cerrar**.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "54100231"
   
 4.  Haga clic en el signo más para expandir la carpeta **Directivas** .  
   
-5.  Haga clic con el botón derecho en la directiva que quiera ver o editar y seleccione **Propiedades**. Para obtener más información sobre las opciones disponibles en el **Abrir directiva -**_nombreDeDirectiva_ cuadro de diálogo, vea [crear nueva directiva o Abrir cuadro de diálogo de directiva, página General](../../integration-services/general-page-of-integration-services-designers-options.md) y [ Crear nueva directiva o el cuadro de diálogo Abrir directiva, página Descripción](create-new-policy-or-open-policy-dialog-box-description-page.md).  
+5.  Haga clic con el botón derecho en la directiva que quiera ver o editar y seleccione **Propiedades**. Para más información sobre las opciones disponibles en el cuadro de diálogo **Abrir directiva -**_nombre_de_directiva_, vea [Cuadro de diálogo Crear nueva directiva o Abrir directiva, página General](../../integration-services/general-page-of-integration-services-designers-options.md) y [Cuadro de diálogo Crear nueva directiva o Abrir directiva, página Descripción](create-new-policy-or-open-policy-dialog-box-description-page.md).  
   
 6.  Cuando termine, haga clic en **Aceptar**.  
   

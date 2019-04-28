@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca0ef50d40b1c4d4f481bef4de89b43ff4a275c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650418"
 ---
 # <a name="qntemplate-event-class"></a>QN:Template (clase de eventos)
   El evento QN:Template ofrece información acerca del uso interno de plantillas de consulta. Las plantillas de consulta son el mecanismo que utiliza el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para compartir las definiciones de una consulta para su notificación. Estas plantillas se crean junto con tablas de parámetros. [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea un evento de este tipo cuando se crea, utiliza o destruye una plantilla de consulta.  
@@ -34,7 +34,7 @@ ms.locfileid: "53349514"
 |DatabaseName|`nvarchar`|Nombre de la base de datos en que se ejecuta la instrucción del usuario.|35|Sí|  
 |EventClass|`int`|Tipo de evento = 201.|27|No|  
 |EventSequence|`int`|Número de secuencia de este evento.|51|No|  
-|EventSubClass|`nvarchar`|Tipo de subclase de evento que proporciona más información acerca de cada clase de evento. Esta columna puede incluir los valores siguientes:<br /><br /> Plantilla que creó: Indica que se ha creado una plantilla de notificación de consulta en la base de datos.<br /><br /> Plantilla coincida: Indica cuándo se reutiliza una plantilla de notificación de consulta.<br /><br /> Quita plantilla: Indica cuándo se elimina una plantilla de notificación de consulta de la base de datos.|21|Sí|  
+|EventSubClass|`nvarchar`|Tipo de subclase de evento que proporciona más información acerca de cada clase de evento. Esta columna puede incluir los valores siguientes:<br /><br /> Plantilla que creó: Indica que se ha creado una plantilla de notificación de consulta en la base de datos.<br /><br /> Plantilla coincida: Indica cuándo se reutiliza una plantilla de notificación de consulta.<br /><br /> Quita plantilla: Indica cuando se quita una plantilla de notificación de consulta de la base de datos.|21|Sí|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IsSystem|`int`|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario.<br /><br /> 0 = usuario<br /><br /> 1 = sistema|60|No|  

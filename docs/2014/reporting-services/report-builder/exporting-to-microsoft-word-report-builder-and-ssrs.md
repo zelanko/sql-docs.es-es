@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 30401dfbc8d9ea9e4c77dad1516b9301d6dae833
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657967"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
   La extensión de representación de Word representa informes en el formato nativo de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. El formato es Office Open XML.  

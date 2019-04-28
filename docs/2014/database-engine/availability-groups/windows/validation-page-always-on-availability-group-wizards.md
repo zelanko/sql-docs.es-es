@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6cf16c8afb363a1b7727b6da3a5f75bf966ab0d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812996"
 ---
 # <a name="validation-page-alwayson-availability-group-wizards"></a>Página Validación (asistentes para grupos de disponibilidad AlwaysOn)
   En este tema de Ayuda se describen las opciones de la página **Validación** . Esta tema se aplica a [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]y [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilice esta página para validar que el entorno admite todas las opciones de configuración realizada en las páginas anteriores del asistente.  
@@ -30,7 +30,7 @@ ms.locfileid: "48152962"
  **Resultados de la validación de grupos de disponibilidad.**  
  Esta cuadrícula muestra los resultados de cada paso de la validación completado. Las columnas de la cuadrícula son las siguientes:  
   
- **Nombre**  
+ **Name**  
  Muestra una frase que describe un paso concreto.  
   
  **Resultado**  

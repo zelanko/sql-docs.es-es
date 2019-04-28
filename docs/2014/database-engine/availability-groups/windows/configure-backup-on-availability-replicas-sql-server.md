@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 223bc3aa5e404f2723996073628e64906a60aa64
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815202"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Configurar la copia de seguridad en réplicas de disponibilidad (SQL Server)
   En este tema se describe cómo configurar la copia de seguridad en réplicas secundarias para un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "57579595"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
   
 |Tarea|Permisos|  
 |----------|-----------------|  

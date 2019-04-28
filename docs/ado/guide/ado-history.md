@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e3e491ccb659d8739cb93d72e0c923fce480015
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695430"
 ---
 # <a name="ado-features-for-each-release"></a>Características de ADO para cada versión
 

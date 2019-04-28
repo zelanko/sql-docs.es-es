@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ddd2b4d998ab2718757db4dd58de6aea8bee05e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62799008"
 ---
 # <a name="odbc-static-cursors"></a>Cursores estáticos ODBC
 Un cursor estático es una en la que el conjunto de resultados aparece como estática. Normalmente no detectar los cambios realizados en la pertenencia, orden o los valores del conjunto una vez abierto el cursor de resultados. Por ejemplo, suponga que un cursor estático recupera una fila y la otra aplicación, a continuación, actualiza esa fila. Si el cursor estático vuelve a obtener la fila, los valores que ve son iguales, a pesar de los cambios realizados por la otra aplicación.  

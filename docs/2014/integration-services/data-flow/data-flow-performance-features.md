@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 030318d65d469546f946679e9c9173bfdb1a3f36
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828050"
 ---
 # <a name="data-flow-performance-features"></a>Características de rendimiento del flujo de datos
   En este tema se proporcionan sugerencias sobre cómo diseñar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas de rendimiento comunes. También proporciona información sobre las características y las herramientas que puede utilizar para solucionar problemas relacionados con el rendimiento de los paquetes.  
@@ -143,7 +143,7 @@ ms.locfileid: "58392783"
   
  Normalmente, los componentes más lentos de la transformación Dimensión de variación lenta son las transformaciones Comando de OLE DB que ejecutan cláusulas UPDATE sobre las filas de una en una. Por consiguiente, la manera más efectiva de mejorar el rendimiento de la transformación Dimensión de variación lenta consiste en reemplazar las transformaciones Comando de OLE DB. Puede reemplazar estas transformaciones por componentes de destino que guarden todas las filas que hay que actualizar en una tabla de ensayo. A continuación, puede agregar una tarea Ejecutar SQL que ejecute una cláusula Transact-SQL UPDATE basada en un solo conjunto sobre todas las filas al mismo tiempo.  
   
- Los usuarios avanzados pueden diseñar un flujo de datos personalizado para el procesamiento de dimensiones de variación lenta que esté optimizado para las dimensiones de gran tamaño. Para obtener una descripción y ejemplo de este enfoque, consulte la sección "Unique dimension scenario", en las notas [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+ Los usuarios avanzados pueden diseñar un flujo de datos personalizado para el procesamiento de dimensiones de variación lenta que esté optimizado para las dimensiones de gran tamaño. Para obtener una descripción y un ejemplo de este método, consulte la sección dedicada al escenario de dimensión única en las notas del producto, [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
   
 ### <a name="destinations"></a>Destinos  
  Para lograr un mejor rendimiento con los destinos, considere la posibilidad de utilizar un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de probar el rendimiento del destino.  
@@ -166,7 +166,7 @@ ms.locfileid: "58392783"
 ## <a name="related-content"></a>Contenido relacionado  
  **Artículos y publicaciones de blogs**  
   
--   Artículo técnico, [SQL Server 2005 Integration Services: Una estrategia de rendimiento](https://go.microsoft.com/fwlink/?LinkId=98899), en technet.microsoft.com  
+-   Artículo técnico, [SQL Server 2005 Integration Services: A Strategy for Performance](https://go.microsoft.com/fwlink/?LinkId=98899), en technet.microsoft.com  
   
 -   Artículo técnico, [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900), en technet.microsoft.com  
   

@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9236bfbd945386aa249291b490ad41680a3ff5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700951"
 ---
 # <a name="enable-dimension-writeback"></a>Habilitar reescritura en la dimensión
   Agregar la mejora de reescritura de dimensiones a un cubo o dimensión para permitir que los usuarios modifiquen manualmente la estructura y los miembros de la dimensión. Las actualizaciones de una dimensión habilitada para escritura se registran directamente en la tabla de dimensiones. Esta mejora cambia la configuración de la propiedad `WriteEnabled` para una dimensión.  
@@ -39,10 +39,10 @@ ms.locfileid: "48171655"
  En la primera página **Habilitar reescritura en la dimensión** del asistente, se especifica la dimensión a la que se desea aplicar la reescritura. La mejora de reescritura de dimensiones agregada a esta dimensión seleccionada produce cambios en la dimensión. Estos cambios son heredados por todos los cubos que incluyan la dimensión seleccionada.  
   
 ## <a name="setting-dimension-writeback-capability"></a>Establecer la capacidad de reescritura de dimensiones  
- En la segunda página **Habilitar reescritura en la dimensión** del asistente se establece la opción **Habilitar reescritura en la dimensión** . Al seleccionar esta opción establece automáticamente la `WriteEnabled` propiedad de la dimensión a `True`. Si se desactiva automáticamente esta opción establece la propiedad en `False`.  
+ En la segunda página **Habilitar reescritura en la dimensión** del asistente se establece la opción **Habilitar reescritura en la dimensión** . Al seleccionar esta opción se establece automáticamente la propiedad `WriteEnabled` de la dimensión como `True`. Al eliminar la selección de esta opción, se establece automáticamente la propiedad como `False`.  
   
 ## <a name="remarks"></a>Comentarios  
- Al crear un nuevo miembro, debe incluir todos los atributos en una dimensión. No puede insertar un miembro sin especificar un valor para el atributo clave de la dimensión. Por lo tanto, la creación de miembros está sujeta a las restricciones (como los valores de clave no nulos) definidas en la tabla de la dimensión. También debe considerar las columnas especificadas opcionalmente por las propiedades de dimensión, como las columnas especificadas en el `CustomRollupColumn`, `CustomRollupPropertiesColumn` o `UnaryOperatorColumn` propiedades de la dimensión.  
+ Al crear un nuevo miembro, debe incluir todos los atributos en una dimensión. No puede insertar un miembro sin especificar un valor para el atributo clave de la dimensión. Por lo tanto, la creación de miembros está sujeta a las restricciones (como los valores de clave no nulos) definidas en la tabla de la dimensión. También debe tener en cuenta las columnas especificadas opcionalmente por las propiedades de la dimensión, como las columnas especificadas en las propiedades de la dimensión `CustomRollupColumn`, `CustomRollupPropertiesColumn` o `UnaryOperatorColumn`.  
   
 > [!WARNING]  
 >  Si usa SQL Azure como origen de datos para realizar la reescritura en una base de datos de Analysis Services, se produce un error en la operación. Esto es así por cuestiones de diseño, porque la opción del proveedor que permite que haya varios conjuntos de resultados (MARS) activos no está activada de forma predeterminada.  

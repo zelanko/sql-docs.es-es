@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58bfdace704ee1be0c5b902fd24007844fcc4e45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699794"
 ---
 # <a name="building-measures-in-mdx"></a>Generar medidas en MDX
   En las expresiones multidimensionales (MDX), una medida es una expresión DAX con nombre que se resuelve calculando la expresión para devolver un valor en un modelo tabular. Esta definición tan genérica tiene un alcance notable. La capacidad de construir y utilizar medias en una consulta MDX proporciona una gran solución para manipular datos tabulares.  
@@ -44,8 +44,8 @@ from [Model]
 |2004|25808962.34||  
   
 ## <a name="see-also"></a>Vea también  
- [Instrucción CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
+ [CREATE MEMBER &#40;instrucción MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
  [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [Instrucción SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
+ [SELECT &#40;Instrucción, MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

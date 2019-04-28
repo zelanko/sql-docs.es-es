@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8cd7aec26338516d397c2b125e586ba1f94601a2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662451"
 ---
 # <a name="exception-event-class"></a>Exception, clase de eventos
   La clase de eventos Exception indica que se ha producido una excepción en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

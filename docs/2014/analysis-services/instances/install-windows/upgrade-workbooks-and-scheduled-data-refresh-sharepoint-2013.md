@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ed3fc8546ef7bd85934d8b127ff124acc095e29
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730199"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Actualizar libros y actualización de datos programada (SharePoint 2013)
   En este tema se explica la experiencia de usuario de libros creados en entornos anteriores de PowerPivot y cómo actualizar los libros PowerPivot para poder aprovechar las nuevas características presentadas en esta versión. Para más información sobre las nuevas características, consulte [Novedades de PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -53,14 +53,14 @@ ms.locfileid: "53373954"
 |Creado en|\<|Compatibilidad y comportamiento|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 PowerPivot para SharePoint 2010**|**2012 PowerPivot para SharePoint 2010**|**2012 SP1 PowerPivot para SharePoint 2013**|  
-|**2008 R2 PowerPivot para Excel 2010**|Todas las características|**Experiencia:** los usuarios pueden interactuar con el libro en el explorador y usarlo como origen de datos para otras soluciones.<br /><br /> **Actualización:** los libros se actualizarán automáticamente en la biblioteca de documentos si la actualización automática está habilitada para el servicio del sistema PowerPivot en la granja de servidores de SharePoint.<br /><br /> **Programar la actualización de datos:** NO compatible. Es necesario actualizar el libro.|**Experiencia:** los usuarios pueden interactuar con el libro y usarlo como origen de datos para otras soluciones.<br /><br /> **Actualización:** la actualización automática no está disponible. Los usuarios deben actualizar manualmente sus libros de 2008 R2 a la versión 2012 o a la versión de Office 2013.<br /><br /> **Programar la actualización de datos:** NO compatible. Es necesario actualizar el libro.|  
-|**2012 PowerPivot para Excel**|No compatible|Todas las características|**Experiencia:** los usuarios pueden interactuar con el libro en el explorador y usarlo como origen de datos para otras soluciones. La programación de la actualización de datos está disponible.<br /><br /> **Actualización:** la actualización automática no se admite. Los usuarios pueden actualizar manualmente sus libros a la versión de Office 2013.<br /><br /> **Programar la actualización de datos** : se admite.|  
+|**2008 R2 PowerPivot para Excel 2010**|Todas las características|**Experiencia:** Los usuarios pueden interactuar con el libro en el explorador y usarlo como origen de datos para otras soluciones.<br /><br /> **Actualización:** Los libros se actualizarán automáticamente en la biblioteca de documentos si la actualización automática está habilitada para el servicio en la granja de SharePoint, de sistema de PowerPivot<br /><br /> **Programar la actualización de datos:** NO se admite. Es necesario actualizar el libro.|**Experiencia:** Los usuarios pueden interactuar con el libro y usarlo como origen de datos para otras soluciones.<br /><br /> **Actualización:** Actualización automática no está disponible. Los usuarios deben actualizar manualmente sus libros de 2008 R2 a la versión 2012 o a la versión de Office 2013.<br /><br /> **Programar la actualización de datos:** NO se admite. Es necesario actualizar el libro.|  
+|**2012 PowerPivot para Excel**|No compatible|Todas las características|**Experiencia:** Los usuarios pueden interactuar con el libro en el explorador y usarlo como origen de datos para otras soluciones. La programación de la actualización de datos está disponible.<br /><br /> **Actualización:** No se admite la actualización automática. Los usuarios pueden actualizar manualmente sus libros a la versión de Office 2013.<br /><br /> **Programar la actualización de datos** : se admite.|  
 |**Excel 2013**|No compatible|No compatible|Todas las características|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> Actualizar libros de SQL Server 2008 R2 a libros de SQL Server 2012 Service Pack 1 (SP1)  
  En esta sección se describe cómo actualizar libros de SQL Server 2008 R2 PowerPivot para Excel 2010 a libros de SQL Server 2012 SP1 PowerPivot para Excel 2013.  
   
- **Cambio de comportamiento:** los libros de SQL Server 2008 R2 PowerPivot no se actualizarán automáticamente cuando se usen en SQL Server 2012 SP1 PowerPivot para SharePoint 2013. Por tanto, las actualizaciones de datos programadas no funcionarán para los libros de SQL Server 2008 R2 PowerPivot.  
+ **Cambio de comportamiento:** Los libros de SQL Server 2008 R2 PowerPivot no se actualizarán automáticamente cuando se usan en SQL Server 2012 SP1 PowerPivot para SharePoint 2013. Por tanto, las actualizaciones de datos programadas no funcionarán para los libros de SQL Server 2008 R2 PowerPivot.  
   
  Los libros de SQL Server 2008 R2 se abrirán en PowerPivot para SharePoint 2013, pero las actualizaciones de datos programadas no funcionarán. Si examina el historial de actualización verá un mensaje de error similar al siguiente:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "53373954"
   
 -   SQL Server 2012 PowerPivot para Excel 2013.  
   
- **Cómo actualizar un libro:** la actualización de datos programada no funcionará hasta que actualice el libro a un libro de 2012. Para actualizar el libro y el modelo que contiene, complete una de las acciones siguientes:  
+ **Cómo actualizar un libro:** La actualización de datos programada no funcionará hasta que actualice el libro a un libro de 2012. Para actualizar el libro y el modelo que contiene, complete una de las acciones siguientes:  
   
 -   Descargue y abra el libro en Microsoft Excel 2010 con el complemento SQL Server 2012 PowerPivot para Excel instalado.  
   

@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678523"
 ---
-# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lección 1: Crear el proyecto de Visual Studio de la aplicación Esquema RDL
+# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>Lección 1: Creación del proyecto de Visual Studio Esquema RDL
   Para este tutorial creará una aplicación de consola sencilla. En este tutorial se da por supuesto que está desarrollando en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)].  
   
 > [!NOTE]  
@@ -197,7 +197,7 @@ ms.locfileid: "56018916"
     ```  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- En la siguiente lección utilizará la herramienta de definición de esquemas XML (Xsd.exe) para generar clases a partir del esquema RDL e incluirlas en el proyecto. Consulte [lección 2: Generar clases a partir del esquema RDL con la herramienta xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
+ En la siguiente lección utilizará la herramienta de definición de esquemas XML (Xsd.exe) para generar clases a partir del esquema RDL e incluirlas en el proyecto. Consulte [Lección 2: Generar clases a partir del esquema RDL con la herramienta xsd](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Actualizar informes con clases generadas a partir del esquema RDL &#40;Tutorial de SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788732"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Usar el Panel de AlwaysOn (SQL Server Management Studio)
   Los administradores de bases de datos utilizan el Panel AlwaysOn para obtener una vista global del estado de un grupo de disponibilidad AlwaysOn y de sus réplicas y bases de datos de disponibilidad en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Algunas de los usos típicos del Panel AlwaysOn son:  
@@ -58,7 +58,7 @@ ms.locfileid: "49120372"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere permisos CONNECT TO, VIEW SERVER STATE y VIEW ANY DEFINITION.  
   
 ##  <a name="SSMSProcedure"></a> Para iniciar el panel AlwaysOn  
@@ -120,7 +120,7 @@ ms.locfileid: "49120372"
 ##  <a name="AvReplicaDetails"></a> Detalles de la réplica de disponibilidad  
  El panel **Réplica de disponibilidad** muestra las columnas siguientes:  
   
- **Nombre**  
+ **Name**  
  El nombre de la instancia de servidor que hospeda la réplica de disponibilidad. Esta columna se muestra de forma predeterminada.  
   
  **Rol**  
@@ -218,7 +218,7 @@ ms.locfileid: "49120372"
   
  El panel que muestra que muestra la información agrupada tiene las siguientes columnas:  
   
- **Nombre**  
+ **Name**  
  El nombre de la base de datos de disponibilidad. Este valor se muestra de forma predeterminada.  
   
  **Réplica**  

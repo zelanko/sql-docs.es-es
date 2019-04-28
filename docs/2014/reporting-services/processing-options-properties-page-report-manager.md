@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 524fcaea873128ea4bde6ccdc213a29ec31cc77d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657675"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Página de propiedades Opciones de procesamiento (Administrador de informes)
   Use la página de propiedades Opciones de procesamiento para establecer las propiedades de ejecución de informes del informe actualmente seleccionado. Estas opciones determinan cuándo se produce el procesamiento de datos para el informe. Pueden usarse para recuperar los datos de informe durante las horas de menor actividad. Si tiene un informe al que se obtiene acceso con frecuencia, se pueden almacenar en caché copias temporales del mismo para que los usuarios no tengan que esperar si tienen acceso al mismo informe con diferencia de minutos.  

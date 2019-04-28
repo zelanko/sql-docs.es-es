@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688914"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Estrategias para hacer copias de seguridad y restaurar la replicación de mezcla
   Para la replicación de mezcla, cree periódicamente una copia de seguridad de las siguientes bases de datos:  
@@ -51,7 +51,7 @@ ms.locfileid: "54131915"
   
 -   Si la publicación no está filtrada, debe poder actualizar la base de datos de publicaciones sincronizándola con el suscriptor más actualizado.  
   
--   Si la publicación está filtrada, es posible que no pueda actualizar la base de datos de publicaciones. Considere una tabla que se crean particiones de forma que cada suscripción recibe los datos del cliente sólo de una sola región: Norte, este, sur y oeste. Si hay al menos un suscriptor para cada partición de datos, al sincronizar cada partición con un suscriptor se debería actualizar la base de datos de publicaciones. Sin embargo, si los datos de la partición oeste, por ejemplo, no se han replicado en ningún suscriptor, no se podrán actualizar estos datos en el publicador.  
+-   Si la publicación está filtrada, es posible que no pueda actualizar la base de datos de publicaciones. Considere una tabla dividida de forma que cada suscripción reciba únicamente datos de clientes de una región: norte, este, sur y oeste. Si hay al menos un suscriptor para cada partición de datos, al sincronizar cada partición con un suscriptor se debería actualizar la base de datos de publicaciones. Sin embargo, si los datos de la partición oeste, por ejemplo, no se han replicado en ningún suscriptor, no se podrán actualizar estos datos en el publicador.  
   
 > [!IMPORTANT]  
 >  La sincronización de una base de datos de publicaciones con una base de datos de suscripciones puede dar como resultado la restauración de las tablas publicadas hasta un momento más reciente que el de las otras tablas no publicadas restauradas de la copia de seguridad.  

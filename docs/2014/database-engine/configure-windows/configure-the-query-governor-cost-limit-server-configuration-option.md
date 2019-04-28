@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 758c2b42d09e120bf0621bcdedf26b93f130b39f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786809"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>Configurar la opción de configuración del servidor Límite de costo de regulador de consultas
   En este tema se describe cómo configurar el `query governor cost limit` opción de configuración de servidor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de límite de costo de regulador de consultas especifica un límite superior al periodo de tiempo en que una consulta puede ejecutarse. El costo de consulta hace referencia al tiempo estimado, en segundos, que se necesita para completar una consulta con una configuración de hardware específica. El valor predeterminado de esta opción es 0, que establece el regulador de consultas en OFF. Esto permite que todas las consultas se ejecuten sin limitación de tiempo. Si especifica un valor positivo distinto de cero, el regulador de consultas no permitirá la ejecución de ninguna consulta que tenga un costo estimado superior a ese valor.  

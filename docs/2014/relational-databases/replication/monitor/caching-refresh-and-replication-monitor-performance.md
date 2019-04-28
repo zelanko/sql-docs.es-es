@@ -17,20 +17,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5d61c50c68033b3add4b52063980bf5caa042369
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667373"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>Almacenamiento en caché, actualización y rendimiento del Monitor de replicación
   El Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está diseñado para supervisar de manera eficaz un gran número de equipos en un sistema de producción. Las consultas que utiliza el Monitor de replicación para realizar cálculos y recopilar datos se almacenan en caché y se actualizan periódicamente. El almacenamiento en caché reduce el número de consultas y cálculos necesarios para ver diferentes páginas en el Monitor de replicación, y permite escalar la supervisión para varios usuarios.  
   
  Un trabajo del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , el **Actualizador de supervisión de replicación para distribución**, controla la actualización de la caché. El trabajo se ejecuta continuamente, pero la programación de actualización de la caché se basa en esperar determinado tiempo después de la actualización anterior:  
   
--   Si se produjeron cambios en el historial del agente desde la memoria caché se creó por última vez, el tiempo de espera es el mínimo de: 4 segundos; o la cantidad de tiempo necesario para crear la caché anterior.  
+-   Si hay cambios en el historial del agente desde que se creó la caché por última vez, el tiempo de espera es el menor de los siguientes: 4 segundos o el tiempo necesario para crear la caché anterior.  
   
--   Si no hubiera ningún cambio de historial del agente desde la memoria caché la última creado (podría haber otros cambios), el tiempo de espera es el número máximo de: 30 segundos; o la cantidad de tiempo necesario para crear la caché anterior.  
+-   Si no hay cambios en el historial del agente desde que se creó la caché por última vez (aunque haya habido otros cambios), el tiempo de espera es el mayor de los siguientes: 30 segundos o el tiempo necesario para crear la caché anterior.  
   
 ## <a name="refreshing-the-replication-monitor-user-interface"></a>Actualizar la interfaz de usuario del Monitor de replicación  
  La interfaz de usuario del Monitor de replicación se puede actualizar de varias formas:  

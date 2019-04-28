@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a74de18847236ca36677678da130aca87c128262
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701781"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye copias de seguridad y restauración para poder recuperar una base de datos y sus objetos de un momento determinado. Copias de seguridad y restauración también es una técnica válida para migrar bases de datos a servidores actualizados, mover bases de datos entre servidores o implementar una base de datos en un servidor de producción. Para la recuperación de datos, si aún no tiene un plan de copias de seguridad y los datos son importantes, debe diseñar e implementar un plan lo antes posible.  

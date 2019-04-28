@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acd35ed9c39dc11b0ea60017b082d407f6c1b47d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700678"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Conceptos clave de MDX (Analysis Services)
   Para poder utilizar las expresiones multidimensionales (MDX) para consultar datos multidimensionales o crear expresiones MDX en un cubo, viene bien conocer los conceptos y los términos multidimensionales.  
@@ -103,7 +103,7 @@ ms.locfileid: "52512797"
 ## <a name="key-attributes"></a>Atributos clave  
  Los modelos son una colección de objetos relacionados que requieren claves e índices para establecer las asociaciones. Los modelos de Analysis Services no son diferentes. Para cada dimensión (recuerde que es equivalente a una tabla en un modelo relacional), hay un atributo clave. El **atributo clave** se usa en relaciones de clave externa con la tabla de hechos (grupo de medidas). Todos los atributos sin clave de la dimensión están enlazados (directa o indirectamente) con el atributo clave.  
   
- Con frecuencia, aunque no siempre, el atributo clave es también el **Atributo de granularidad**. Granularidad significa el nivel de detalle o precisión dentro de los datos. También en esta ocasión poner un ejemplo común es la mejor forma de entenderlo. Piense en los valores de fecha: Para las ventas diarias, necesita valores de fecha que especifiquen el día. En el caso de las cuotas, quizás sea suficiente hablar de trimestres, pero si los datos analíticos hacen referencia a los resultados de una carrera en un evento deportivo, será necesario que el "grano" sea de milisegundos. El nivel de precisión en los valores de datos se conoce como grano.  
+ Con frecuencia, aunque no siempre, el atributo clave es también el **Atributo de granularidad**. Granularidad significa el nivel de detalle o precisión dentro de los datos. También en esta ocasión poner un ejemplo común es la mejor forma de entenderlo. Tenga en cuenta los valores de fecha: Para las ventas diarias, se necesita valores de fecha especificados para el día. las cuotas, trimestralmente podría ser suficiente, pero si los datos analíticos constan de los resultados de un evento deportivo carrera, el nivel de detalle necesario que sea de milisegundos. El nivel de precisión en los valores de datos se conoce como grano.  
   
  Moneda es otro ejemplo: una aplicación financiera puede realizar un seguimiento de los valores monetarios hasta muchas posiciones decimales, mientras que el captador de fondos de tu escuela local es posible que solo necesitará valores próximos al euro. Comprender el concepto de grano es importante para evitar el almacenamiento de datos innecesarios. Recortar los milisegundos de una marca de tiempo o céntimos del importe de ventas puede ahorrar espacio de almacenamiento y tiempo de procesamiento cuando el nivel de detalle no es importante para el análisis que se hará.  
   

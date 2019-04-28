@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dbc80b6f50ea023a998b6a7958577933afd007a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654018"
 ---
 # <a name="server-configuration---collation"></a>Configurar servidor - Intercalación
   En la página Configuración del servidor - Intercalación del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede modificar los valores de intercalación que [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizan para la ordenación. Seleccione la opción que coincida con los valores de intercalación de distintas instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o de otro equipo.  

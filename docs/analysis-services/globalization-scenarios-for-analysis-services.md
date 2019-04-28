@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659700"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Escenarios de globalización para Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "58658329"
   
 -   Los archivos de registro contienen una mezcla de mensajes en inglés y localizados, si instaló un paquete de idioma en el servidor Windows Server en el que se ejecuta Analysis Services.  
   
--   La documentación y las herramientas, como [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] y [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], se traducen a los siguientes idiomas: chino simplificado, chino tradicional, francés, alemán, italiano, japonés, coreano, portugués (Brasil), ruso y español. La referencia cultural se especifica durante la instalación.  
+-   Documentación y las herramientas, como [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] y [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], se traducen en estos idiomas: Chino simplificado, chino tradicional, francés, alemán, italiano, japonés, coreano, portugués (Brasil), ruso y español. La referencia cultural se especifica durante la instalación.  
   
  En el caso de los modelos multidimensionales, Analysis Services le permite definir el idioma, la intercalación y las traducciones de forma independiente en toda la jerarquía de objetos.  En el caso de los modelos tabulares, solo puede agregar las traducciones, porque el sistema operativo hereda el idioma y la intercalación.  
   

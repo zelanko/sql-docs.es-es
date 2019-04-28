@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8298e0cf1e635d2adea47457d7d8827c9b530fcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657628"
 ---
 # <a name="install-sql-server-management-tools"></a>Instalar las herramientas de administración de SQL Server
   Las herramientas de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluyen los componentes siguientes:  
@@ -33,9 +33,9 @@ ms.locfileid: "48061953"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] complementos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
- Observe que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] es una opción independiente durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Observe que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] es una opción independiente durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Con independencia del número de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instaladas en un equipo, solo se instalará una copia de las herramientas de administración de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Con independencia del número de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instaladas en un equipo, solo se instalará una copia de las herramientas de administración de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Las herramientas de administración pueden ejecutar en paralelo en el mismo equipo con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las herramientas de administración.  
   

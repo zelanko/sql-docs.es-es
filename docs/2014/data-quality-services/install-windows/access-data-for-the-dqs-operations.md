@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 951ff99f6c1e234a0c2861b12ae8f54815f1e37e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792608"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Acceso a datos para las operaciones de DQS
   Para usar los datos de origen para las operaciones del [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) y exportar los datos procesados, puede realizar una de las acciones siguientes:  
@@ -40,13 +40,13 @@ ms.locfileid: "56019926"
   
 4.  En el cuadro de diálogo **Propiedades de inicio de sesión** , haga clic en la página **Asignación de usuarios** en el panel izquierdo.  
   
-5.  En el panel derecho, seleccione la casilla situada bajo la **mapa** columna para el **DQS_STAGING_DATA** de base de datos y, a continuación, seleccione los siguientes roles en el **pertenencia al rol de la base de datos: DQS_STAGING_DATA** panel:  
+5.  En el panel derecho, active la casilla de la columna **Asignar** para la base de datos **DQS_STAGING_DATA** y, después, seleccione los siguientes roles en el panel **Pertenencia al rol de la base de datos para: Panel DQS_STAGING_DATA**:  
   
-    -   **db_datareader**: Leer datos de tablas o vistas.  
+    -   **db_datareader**: leer datos de tablas o vistas.  
   
-    -   **db_datawriter**: Agregar, eliminar o cambiar datos en tablas.  
+    -   **db_datawriter**: agregar, eliminar o cambiar datos en tablas.  
   
-    -   **db_ddladmin**: Crear, modificar o eliminar tablas o vistas.  
+    -   **db_ddladmin**: crear, modificar o eliminar las tablas o vistas.  
   
 6.  En el cuadro de diálogo **Propiedades de inicio de sesión** , haga clic en **Aceptar** para aplicar los cambios.  
   

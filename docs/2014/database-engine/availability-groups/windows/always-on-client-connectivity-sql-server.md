@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790664"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Conectividad de cliente de AlwaysOn (SQL Server)
   En este tema se describen las consideraciones para la conectividad de cliente a grupos de AlwaysOn, incluidos los requisitos previos, las restricciones y las recomendaciones para las configuraciones y los valores de cliente.  
@@ -33,7 +33,7 @@ ms.locfileid: "53355763"
   
  En la tabla siguiente se resume la compatibilidad de los controladores con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
-|Controlador|Conmutación por error de múltiples subredes|Intención de aplicaciones|Enrutamiento de solo lectura|Conmutación por error de varias subredes: Conmutación por error más rápida del extremo de una sola subred|Conmutación por error de varias subredes: Resolución de instancias con nombre para las instancias en clúster SQL |  
+|Controlador|Conmutación por error de múltiples subredes|Intención de aplicaciones|Enrutamiento de solo lectura|Conmutación por error de múltiples subredes: Más rápida una sola conmutación por error de punto de conexión de subred|Conmutación por error de múltiples subredes: Las instancias en clúster de resolución de instancias con nombre para SQL|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Sí|Sí|Sí|Sí|Sí|  
 |SQL Native Client 11.0 OLEDB|No|Sí|Sí|No|No|  

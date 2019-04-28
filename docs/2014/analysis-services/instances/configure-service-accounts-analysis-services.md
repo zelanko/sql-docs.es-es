@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b6be38afc2c95d6cfce80bcefa6ad0b3ab954fe
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703824"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurar las cuentas de servicio (Analysis Services)
   El aprovisionamiento de cuentas para todo un producto se documenta en [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), un tema que contiene gran cantidad de información sobre las cuentas de servicio de todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluido [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consulte ese tema para obtener información sobre los tipos de cuenta válidos, los privilegios de Windows que se asignan durante la instalación, los permisos del sistema de archivos, los permisos del Registro, etc.  
@@ -67,7 +67,7 @@ ms.locfileid: "54125505"
   
 |||  
 |-|-|  
-|**Aumentar el espacio de trabajo de un proceso** (SeIncreaseWorkingSetPrivilege)|Este privilegio se encuentra disponible para todos los usuarios de forma predeterminada mediante el grupo de seguridad **Usuarios** . Si bloquea un servidor y, para ello, quita los privilegios para este grupo, es posible que Analysis Servicies no se inicie y arroje este error: "El cliente no dispone de un privilegio requerido". Cuando se produce este error, restablezca el privilegio para Analysis Services; para ello, otorgue el privilegio al grupo de seguridad de Analysis Services apropiado.|  
+|**Aumentar el espacio de trabajo de un proceso** (SeIncreaseWorkingSetPrivilege)|Este privilegio se encuentra disponible para todos los usuarios de forma predeterminada mediante el grupo de seguridad **Usuarios** . Si bloquea un servidor mediante la eliminación de privilegios para este grupo, Analysis Services no puede iniciarse, registre este error: "Un privilegio requerido no se mantiene por el cliente." Cuando se produce este error, restablezca el privilegio para Analysis Services; para ello, otorgue el privilegio al grupo de seguridad de Analysis Services apropiado.|  
 |**Ajustar las cuotas de la memoria para un proceso** (SeIncreaseQuotaSizePrivilege)|Este privilegio se usa para solicitar más memoria cuando un proceso dispone de recursos insuficientes para completar su ejecución, en función de los umbrales de memoria que se hubieran establecido para la instancia.|  
 |**Bloquear páginas en la memoria** (SeLockMemoryPrivilege)|Este privilegio solo es necesario cuando la paginación está desactivada. De forma predeterminada, las instancias de servidor tabular usan el archivo de paginación de Windows, pero puede evitar que use la paginación de Windows si establece `VertiPaqPagingPolicy` en 0.<br /><br /> Si se establece `VertiPaqPagingPolicy` en 1 (predeterminado), la instancia del servidor tabular usará el archivo de paginación de Windows. Las asignaciones no están bloqueadas, de forma que Windows puede paginar según lo necesite. Como se está usando la paginación, no resulta necesario bloquear las páginas en la memoria. Por lo tanto, para la configuración predeterminada (donde `VertiPaqPagingPolicy` = 1), no es necesario conceder el **bloquear páginas en memoria** privilegio a una instancia tabular.<br /><br /> `VertiPaqPagingPolicy` en 0. Si desactiva la paginación para Analysis Services, se bloquean las asignaciones, de forma que se asume que se ha otorgado el privilegio **Bloquear páginas en memoria** a la instancia tabular. Con esta configuración y el privilegio **Bloquear páginas en memoria** , Windows no puede paginar las asignaciones de memoria que se realicen para Analysis Services cuando el sistema se encuentre en condiciones de presión de memoria. Analysis Services se basa en el **bloquear páginas en memoria** permiso como exigencia `VertiPaqPagingPolicy` = 0. Tenga en cuenta que no se recomienda desactivar la paginación de Windows. Se incrementaría el índice de errores por memoria insuficiente para las operaciones que de otra forma se realizarían correctamente si se hubiera permitido la paginación. Consulte [propiedades de memoria](../server-properties/memory-properties.md) para obtener más información acerca de `VertiPaqPagingPolicy`.|  
   

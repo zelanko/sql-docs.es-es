@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827566"
 ---
 # <a name="define-a-state-variable"></a>Definir una variable de estado
   Este procedimiento describe cómo definir una variable de paquete donde se almacena el estado CDC.  

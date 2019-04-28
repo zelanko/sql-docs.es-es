@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2c8f3d7062f0ab720767c13bb486a4060cec8ab
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654487"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a los colores de serie de un gráfico (Generador de informes y SSRS)
   Reporting Services proporciona varias paletas integradas para los gráficos, pero también se puede definir una paleta personalizada. De forma predeterminada, los gráficos usan la integrada **BrightPastel** paleta de colores para rellenar las series. Estos colores también aparecen en la leyenda. Cuando se agregan varias series al gráfico, este asigna un color a cada serie siguiendo el orden en el que se han definido los colores en la paleta.  

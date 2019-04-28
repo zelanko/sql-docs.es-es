@@ -1,5 +1,5 @@
 ---
-title: Crear ámbito de sesión celdas calculadas | Documentos de Microsoft
+title: Crear ámbito de sesión de celdas calculadas | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4ca621d103f294a88fec93dbf6f24d7402279efa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62799537"
 ---
-# <a name="mdx-cell-calculations---session-scoped-calculated-cells"></a>Cálculos de celdas MDX - celdas calculadas de ámbito de sesión
+# <a name="mdx-cell-calculations---session-scoped-calculated-cells"></a>Cálculos de celdas MDX: ámbito de sesión celdas calculadas
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
     
 > [!IMPORTANT]  
@@ -73,7 +73,7 @@ FOR String_Expression AS 'MDX_Expression'
   
  El valor `String_Expression` contiene una lista de expresiones de conjunto MDX ortogonales de una sola dimensión, cada una de las cuales debe resolverse en alguna de las siguientes categorías de conjuntos que se indican en la siguiente tabla.  
   
-|Categoría|Description|  
+|Category|Descripción|  
 |--------------|-----------------|  
 |Conjunto vacío|Una expresión de conjunto MDX que se resuelve en un conjunto vacío. En este caso, el ámbito de la celda calculada es todo el cubo.|  
 |Conjunto de un solo miembro|Una expresión de conjunto MDX que se resuelve en un solo miembro.|  
@@ -81,6 +81,6 @@ FOR String_Expression AS 'MDX_Expression'
 |Conjunto de descendientes|Una expresión de conjunto MDX que se resuelve en los descendientes de un miembro determinado. Un ejemplo de esto es la función MDX **Descendants**(*Member_Expression*, *Level_Expression*, *Desc_Flag*).<br /><br /> Para más información, vea [Descendants &#40;MDX&#41;](../../../mdx/descendants-mdx.md).|  
   
 ## <a name="see-also"></a>Vea también  
- [Generar cálculos de celdas en MDX & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)  
+ [Generar cálculos de celdas en MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)  
   
   

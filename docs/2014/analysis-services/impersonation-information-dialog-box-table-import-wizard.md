@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d271bbfdf31a24304961d71e4501ea7ae4579440
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730709"
 ---
 # <a name="impersonation-information-dialog-box-table-import-wizard"></a>Cuadro de diálogo Información de suplantación (Asistente para la importación de tablas)
   Use la página **Información de suplantación** para especificar las credenciales que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizará para conectarse al origen de datos. Para más información sobre la suplantación de credenciales, vea [Impersonation &#40;SSAS Tabular&#41;](tabular-models/impersonation-ssas-tabular.md).  
@@ -43,6 +43,6 @@ ms.locfileid: "48047566"
  Seleccione esta opción para usar las credenciales de seguridad asociadas al servicio de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que administra el modelo.  
   
 ## <a name="see-also"></a>Vea también  
- [Suplantación &#40;Tabular de SSAS&#41;](tabular-models/impersonation-ssas-tabular.md)  
+ [Suplantación &#40;SSAS tabular&#41;](tabular-models/impersonation-ssas-tabular.md)  
   
   

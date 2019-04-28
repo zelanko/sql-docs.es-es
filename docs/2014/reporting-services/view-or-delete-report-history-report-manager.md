@@ -27,11 +27,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 492835539e36611a56e3896a29d06ed75c17f4b4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647439"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>Ver o eliminar el historial de informes (Administrador de informes)
   El historial de informe se conserva junto con el informe en el que se basa. Cualquier usuario con permiso para ver un informe puede ver su historial.  

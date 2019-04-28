@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b06c909f8661bf1bec2d715a449e565295eb179b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664261"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Asistente de Business Intelligence (Ayuda F1)
   Utilice el Asistente de Business Intelligence para definir características de Business Intelligence y establecer opciones avanzadas para cubos y dimensiones. El asistente permite establecer propiedades en objetos existentes, crear objetos y generar scripts de expresiones multidimensionales (MDX) a fin de proporcionar características tales como inteligencia de dimensiones y conversión de moneda.  

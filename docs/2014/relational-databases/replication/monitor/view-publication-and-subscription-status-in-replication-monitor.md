@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666968"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Ver el estado de la suscripción y la publicación en el Monitor de replicación
   En el Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se muestra información de estado de las publicaciones y suscripciones:  
@@ -53,7 +53,7 @@ ms.locfileid: "54123935"
   
  **Para ver el estado de la publicación y la suscripción**  
   
--   Monitor de replicación: [Ver información y realizar tareas con el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).
+-   Monitor de replicación: [Visualización de información y realización de tareas mediante el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).
   
   
 ## <a name="publication-status-values"></a>Valores del estado de la publicación  

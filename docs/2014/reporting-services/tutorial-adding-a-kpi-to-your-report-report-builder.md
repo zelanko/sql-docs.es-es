@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648239"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: Agregar un KPI a un informe (Generador de informes)
   Un indicador clave de rendimiento (KPI) es un valor medible que tiene importancia para la empresa. Este tutorial lo enseñará a incluir un KPI en un informe. En este escenario, el resumen de ventas por subcategorías de producto es el KPI. El estado actual del KPI se muestra mediante colores, medidores e indicadores.  

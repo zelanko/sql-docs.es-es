@@ -1,5 +1,5 @@
 ---
-title: SQLGetDiagField | Documentos de Microsoft
+title: SQLGetDiagField | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657708"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client especifica los siguientes campos de diagnóstico adicionales para `SQLGetDiagField`. Estos campos admiten el informe de errores enriquecido para aplicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y están disponible en todos los registros de diagnóstica que se generan en los identificadores de conexión de ODBC e identificadores de instrucciones de ODBC conectados. Los campos se definen en sqlncli.h.  
@@ -36,7 +36,7 @@ ms.locfileid: "53368117"
   
  El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client notifica los siguientes códigos de función dinámica adicionales que identifican la última instrucción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentada. El código de función dinámica se devuelve en el encabezado (registro 0) del conjunto de registros de diagnóstico y está por tanto disponible en cada ejecución (correcta o no).  
   
-|Código de función dinámica|Origen|  
+|Código de función dinámica|Source|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|instrucción ALTER DATABASE|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Instrucción CHECKPOINT|  

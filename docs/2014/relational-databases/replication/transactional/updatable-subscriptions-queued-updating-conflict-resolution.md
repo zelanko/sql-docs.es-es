@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655341"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   Como las suscripciones de actualización en cola permiten realizar modificaciones en los mismos datos en múltiples ubicaciones, pueden producirse conflictos cuando se sincronizan los datos en el publicador. La replicación detecta los conflictos cuando se sincronizan los cambios con el publicador y resuelve esos conflictos utilizando la directiva de resolución que ha seleccionado al crear la publicación. Pueden producirse los siguientes conflictos:  
@@ -56,7 +56,7 @@ ms.locfileid: "54133635"
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Establecer opciones de resolución de conflictos de actualización en cola &#40;SQL Server Management Studio&#41;](../publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
--   Programación de Transact-SQL de la replicación: [Habilitar suscripciones actualizables para publicaciones transaccionales](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   Programación de la replicación con Transact-SQL: [Habilitar suscripciones actualizables para publicaciones transaccionales](../publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **Para ver conflictos de datos**  
   

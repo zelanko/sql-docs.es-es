@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1068811d987745b5c4404079230a1a625deb9316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705996"
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>Nuevas características de interfaz gráfica de usuario de SSMA para Sybase (SybaseToSQL)
 Este capítulo describe las nuevas características de interfaz de usuario de SSMA.  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a1f7718c984c564d8ef000adeb9605768e6a70d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795524"
 ---
 # <a name="partition-representation-tabular"></a>Representación de partición (tabular)
   A efectos operativos, una tabla se puede dividir en distintos subconjuntos de filas que, al combinarse, forman la tabla. Cada uno de los subconjuntos es una partición de la tabla.  

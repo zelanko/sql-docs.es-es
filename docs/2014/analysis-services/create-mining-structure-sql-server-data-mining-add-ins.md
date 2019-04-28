@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2788c663553d8b01e6a047be70f101dc364d6042
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679909"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Crear estructura de minería de datos (Complementos de minería de datos de SQL Server)
   ![Botón de crear estructura de minería de datos, cinta de opciones minería de datos](media/dmc-createstruct.gif "botón Crear estructura de minería de datos, cinta de opciones minería de datos")  
@@ -95,7 +95,7 @@ ms.locfileid: "52542967"
   
 |Valores|Descripción|  
 |------------|-----------------|  
-|**incluir**|Especifica que la columna contiene datos quede pueden usarse para análisis o para predicción.|  
+|**Include**|Especifica que la columna contiene datos quede pueden usarse para análisis o para predicción.|  
 |**Key**|Especifica que la columna contiene un identificador de transacción, un identificador de serie u otra clave necesaria para el procesamiento.<br /><br /> Todos los algoritmos requieren una columna de clave. No obstante, algunos algoritmos admiten una sola clave, mientras que otros admiten varias.<br /><br /> Si la columna contiene una clave pero no es necesaria para el procesamiento, seleccione **no utilizan**.|  
 |**Clave temporal**|Especifica que la columna contiene una fecha u otro valor numérico que puede usarse para identificar de forma única los elementos de una serie temporal.|  
 |**No Use**|Especifica que la columna debe omitirse. No se procesarán los datos de la columna.|  

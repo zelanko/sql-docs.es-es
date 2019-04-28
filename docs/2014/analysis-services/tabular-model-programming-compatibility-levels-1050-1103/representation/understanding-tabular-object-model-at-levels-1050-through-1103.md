@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dcfd16ae7e49392c9ba0a001ea8d205c4fa88d1c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795346"
 ---
 # <a name="understanding-the-tabular-object-model"></a>Descripción del modelo de objetos tabulares
   Un modelo tabular es una representación lógica de tablas, relaciones, jerarquías, perspectivas, medidas y rendimiento clave. En esta sección se presenta la implementación interna mediante AMO. Consulte [desarrollar con objetos de administración de análisis &#40;AMO&#41; ](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo) si aún no ha usado AMO antes.  

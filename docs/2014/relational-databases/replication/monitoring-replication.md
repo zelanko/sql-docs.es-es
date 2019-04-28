@@ -19,11 +19,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666873"
 ---
 # <a name="monitoring-replication"></a>Supervisar (replicación)
   Supervisar una topología de replicación es un aspecto importante en la implementación de la replicación. Debido a que la actividad de replicación se distribuye, es fundamental realizar un seguimiento de la actividad y el estado de todos los equipos que participan en la replicación. Para supervisar la replicación se pueden utilizar las siguientes herramientas:  
@@ -34,7 +34,7 @@ ms.locfileid: "54134305"
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] proporciona acceso al Monitor de replicación. También le permite ver el estado actual y último mensaje registrado por los siguientes agentes y permite iniciar y detener a cada agente: Registro del log, agente de instantáneas, agente de mezcla y agente de distribución. Para más información, consulte [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] proporciona acceso al Monitor de replicación. También permite ver el estado actual y el último mensaje registrado por los siguientes agentes, además de permitir iniciar y detener cada agente: Agente de registro del LOG, Agente de instantáneas, Agente de mezcla y Agente de distribución. Para más información, consulte [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] y Replication Management Objects (RMO)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54134305"
      El Monitor de sistema puede resultar útil para supervisar el rendimiento, ya que proporciona una serie de contadores para la replicación. Para más información, consulte [Monitoring Replication with System Monitor](monitor/monitoring-replication-with-system-monitor.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Preguntas más frecuentes sobre la administración de replicación](administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Preguntas más frecuentes para administradores de replicación](administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
 
   

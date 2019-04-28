@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52770f78381da2eb686aa445d19e6923f0f0a275
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699176"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Cubos locales (Analysis Services - Datos multidimensionales)
   Para crear, actualizar o eliminar los cubos locales, debe escribir y ejecutar un script ASSL o un programa AMO.  

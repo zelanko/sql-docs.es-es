@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e95dff588932bc7885d2501e3d24cc643ae10272
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699933"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>Definir asignaciones y otros comandos de script
   En la pestaña **Cálculos** del Diseñador de cubos, haga clic en el icono **Nuevo comando de script** de la barra de herramientas para crear un script vacío. Cuando cree un script, aparecerá inicialmente con un título en blanco en el panel **Organizador de script** de la pestaña Cálculos. Los caracteres escritos en el panel de las expresiones de cálculo estarán visibles como nombre del elemento en **Organizador de script**. Por lo tanto, puede que desee escribir un nombre comentado en la primera línea para identificar más fácilmente el script en el panel **Organizador de script** . Para obtener más información, vea la [introducción a scripting de MDX en Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892). Para obtener más información acerca de los problemas de rendimiento relacionados con los cálculos y consultas MDX, vea la sección "Escritura de MDX eficaz" en el [Guía de rendimiento de SQL Server 2005 Analysis Services](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  

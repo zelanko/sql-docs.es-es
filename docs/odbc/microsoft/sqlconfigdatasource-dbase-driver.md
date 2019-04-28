@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63d1951cfe835cbfca23ab366db2216215aa92c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665357"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (dBASE controlador)
 > [!NOTE]  
@@ -30,7 +30,7 @@ ms.locfileid: "47631653"
 |Palabra clave|Descripción|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|La secuencia en la que se ordenan los campos.<br /><br /> La secuencia puede ser: ASCII (valor predeterminado) o internacional.<br /><br /> Esto establece la misma opción como **secuencia de intercalación** en el cuadro de diálogo programa de instalación.|  
-|VALOR DE ESTA OPCIÓN|La especificación de ruta de acceso al directorio.|  
+|DEFAULTDIR|La especificación de ruta de acceso al directorio.|  
 |DELETED|Para el controlador de dBASE, especifica si se pueden recuperar o colocadas en las filas que se han marcado como eliminado. Si se establece en 1, las filas eliminadas no se muestra. Si se establece en 0, filas eliminadas se trata igual que las filas no eliminados.<br /><br /> Esto establece la misma opción como **mostrar filas eliminadas** en el cuadro de diálogo programa de instalación.|  
 |DESCRIPTION|Una descripción de los datos del origen de datos.<br /><br /> Esto establece la misma opción como **descripción** en el cuadro de diálogo programa de instalación.|  
 |DRIVER|La especificación de ruta de acceso a la DLL del controlador.|  

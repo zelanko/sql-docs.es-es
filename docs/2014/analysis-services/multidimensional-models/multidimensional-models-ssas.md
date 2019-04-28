@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47efdd38b14a22f28026f98d2289c1c67fc65b9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699018"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Modelado multidimensional (SSAS)
   Una solución multidimensional de Analysis Services usa estructuras de cubierta para analizar datos de negocio en varias dimensiones. El modo multidimensional es el modo de servidor predeterminado de Analysis Services. Incluye un motor de cálculo y consulta de datos OLAP, con los modos de almacenamiento MOLAP, ROLAP y ROLAP para equilibrar el rendimiento con los requisitos de datos escalables. El motor OLAP de Analysis Services es un servidor OLAP principal del sector que funciona con una amplia variedad de herramientas de BI. La mayoría de las implementaciones de Analysis Services se instalan como servidores OLAP clásicos.  
@@ -29,7 +29,7 @@ ms.locfileid: "48117565"
 ## <a name="in-this-section"></a>En esta sección  
  [Soluciones de modelos multidimensionales &#40;SSAS&#41;](multidimensional-model-solutions-ssas.md)  
   
- [Bases de datos modelo multidimensionales &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Bases de datos de modelos multidimensionales &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
  [Procesamiento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)  
   
@@ -37,6 +37,6 @@ ms.locfileid: "48117565"
   
  [Power View para modelos multidimensionales](power-view-for-multidimensional-models.md)  
   
- [Administración de los ensamblados de modelos multidimensionales](multidimensional-model-assemblies-management.md)  
+ [Administración de ensamblados de modelos multidimensionales](multidimensional-model-assemblies-management.md)  
   
   

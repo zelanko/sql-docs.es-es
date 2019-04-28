@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebbb4e6510f8896b9c931d6a582eaf6b3e2b0c24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703128"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Creación de modelos multidimensionales (tutorial de Adventure Works)
   Este es el Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . En este tutorial se describe cómo usar [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para desarrollar e implementar un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , usando la empresa ficticia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] para todos los ejemplos.  
@@ -51,21 +51,21 @@ ms.locfileid: "48049426"
   
 |Lección|Tiempo estimado para completar la lección|  
 |------------|--------------------------------|  
-|[Lección 1: Definir una vista del origen de datos en un proyecto de Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minutos|  
+|[Lección 1: Definir una vista del origen de datos dentro de un análisis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minutos|  
 |[Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)|30 minutos|  
 |[Lección 3: Modificar medidas, atributos y jerarquías](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minutos|  
-|[Lección 4: Definir propiedades de dimensiones y de atributos avanzados](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutos|  
+|[Lección 4: Definir propiedades de dimensión y atributos avanzados](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutos|  
 |[Lección 5: Definir relaciones entre dimensiones y grupos de medida](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minutos|  
 |[Lección 6: Definir cálculos](lesson-6-defining-calculations.md)|45 minutos|  
 |[Lección 7: Definir indicadores clave de rendimiento &#40;KPI&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 minutos|  
 |[Lección 8: Definir acciones](lesson-8-defining-actions.md)|30 minutos|  
 |[Lección 9: Definir perspectivas y traducciones](lesson-9-defining-perspectives-and-translations.md)|30 minutos|  
-|[Lección 10: Definir roles administrativos](lesson-10-defining-administrative-roles.md)|15 minutos|  
+|[Lección 10: Definir Roles administrativos](lesson-10-defining-administrative-roles.md)|15 minutos|  
   
 > [!NOTE]  
 >  La base de datos del cubo que creará en este tutorial es una versión simplificada del proyecto de modelo multidimensional de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que forma parte de las bases de datos de ejemplo Adventure Works que se pueden descargar en el sitio de codeplex. La versión del tutorial de la base de datos multidimensional de Adventure Works se ha simplificado para centrarse en los conocimientos específicos que le interesará dominar inmediatamente. Después de completar el tutorial, considere la posibilidad de explorar el proyecto de modelo multidimensional por su cuenta para entender mejor el modelado multidimensional de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="next-step"></a>Paso siguiente  
- Para comenzar el tutorial, vaya a la primera lección: [Lección 1: Definir una vista del origen de datos en un proyecto de Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
+ Para comenzar el tutorial, vaya a la primera lección: [Lección 1: Definir una vista del origen de datos dentro de un análisis Services proyecto](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md).  
   
   

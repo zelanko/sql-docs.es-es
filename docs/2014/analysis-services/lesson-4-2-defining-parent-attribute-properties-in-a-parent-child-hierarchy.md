@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36584cce341bdbe0e13b917cbe1bcc47469d0deb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729174"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definir propiedades de atributo primario en una jerarquía de elementos primarios y secundarios
   Una jerarquía de elementos primarios y secundarios es una jerarquía de una dimensión que está basada en dos columnas de tabla. La combinación de estas columnas define las relaciones jerárquicas entre los miembros de dimensión. La primera columna, denominada *columna de claves de miembro*, identifica a cada miembro de dimensión. La otra columna, denominada *columna principal*, identifica al elemento principal de cada miembro de dimensión. La propiedad **NamingTemplate** de un atributo primario determina el nombre de cada nivel en la jerarquía de elementos primarios y secundarios, y la propiedad **MembersWithData** determina si deben mostrarse los datos de los miembros primarios.  

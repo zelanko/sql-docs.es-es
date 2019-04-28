@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f6f6f0f1140b4cd46ecdea496ecb593bea7a0eb9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666855"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>Cuadro de diálogo de Propiedades del título del eje, General (Generador de informes y SSRS)
   Seleccione **General** en el cuadro de diálogo **Propiedades del título del eje** para definir el título del eje. El título del eje se muestra debajo el eje X o junto al eje Y.  

@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c4095448b8a9068dad3c4df1c28065e7cffbd67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62687505"
 ---
 # <a name="sqlspecialcolumns-visual-foxpro-odbc-driver"></a>SQLSpecialColumns (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
 >  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: completo  
+ Soporte técnico: Completo  
   
- Conformidad de ODBC API: Nivel 1  
+ Conformidad de la API de ODBC: Nivel 1  
   
  Recupera el conjunto óptimo de columnas que identifica de forma única una fila en la tabla.  
   

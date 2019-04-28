@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 169b7b266ab8230c2cc669353b6e02f66b9f1c65
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660199"
 ---
 # <a name="browsing-a-neural-network-model"></a>Examinar un modelo de red neuronal
   Cuando abre un modelo de red neuronal o de regresión lógica a través de **Examinar**, el modelo se muestra en un visor interactivo, similar al visor de modelos de red neuronal en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El visor sirve para explorar correlaciones y obtener información sobre los patrones del modelo y los datos subyacentes.  
@@ -128,7 +128,7 @@ ms.locfileid: "48218585"
  [Volver al principio](#BKMK_Tabs)  
   
 ## <a name="more-about-neural-network-models"></a>Más información acerca de los modelos de red neuronal  
- La información del visor se recupera del servidor con un procedimiento almacenado específico para este tipo de modelo: System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  
+ La información en el Visor se recupera desde el servidor mediante un procedimiento almacenado específico para este tipo de modelo: System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  
   
  Si quiere crear un modelo con varios atributos de predicción mediante complementos, use las opciones de modelado **avanzadas**.  
   

@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653788"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>Lección 3: Obtener acceso al servicio web
+# <a name="lesson-3-accessing-the-web-service"></a>Lección 3: Acceso al servicio web
   Una vez haya agregado al proyecto una referencia del servicio web del servidor de informes, el paso siguiente consiste en crear una instancia de la clase proxy del servicio web. A continuación, puede tener acceso a los métodos del servicio web llamando a los métodos de la clase proxy. Cuando la aplicación llama a estos métodos, el código de la clase proxy generado por [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] controla las comunicaciones entre la aplicación y el servicio web.  
   
  En primer lugar, va a crear una instancia de la clase proxy del servicio web, <xref:ReportService2010.ReportingService2010>. A continuación, hará una llamada al método <xref:ReportService2010.ReportingService2010.GetProperties%2A> del servicio web utilizando la clase proxy. Utilizará la llamada para recuperar el nombre y la descripción de uno de los informes de ejemplo, Company Sales.  

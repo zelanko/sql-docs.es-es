@@ -24,11 +24,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 84e1a9a26d9fb19224f8e40d32cd98bc534d1b4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678683"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Asignar tipos de datos en conjuntos de filas y parámetros
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47689103"
 |**datetime2**|DBTYPE_DBTIME2|  
 |**decimal**|DBTYPE_NUMERIC|  
 |**float**|DBTYPE_R8|  
-|**imagen**|DBTYPE_BYTES|  
+|**image**|DBTYPE_BYTES|  
 |**int**|DBTYPE_I4|  
 |**money**|DBTYPE_CY|  
 |**nchar**|DBTYPE_WSTR|  
@@ -94,7 +94,7 @@ ms.locfileid: "47689103"
   
 |||  
 |-|-|  
-|SSPROP_ALLOWNATIVEVARIANT|Tipo: VT_BOOL<br /><br /> L/E: de lectura/escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: determina si los datos se capturan como DBTYPE_VARIANT o DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: el tipo de columna se devuelve como DBTYPE_SQLVARIANT, en cuyo caso el búfer contendrá la estructura SSVARIANT.<br /><br /> VARIANT_FALSE: el tipo de columna se devuelve como DBTYPE_VARIANT y el búfer contendrá la estructura VARIANT.|  
+|SSPROP_ALLOWNATIVEVARIANT|Tipo: VT_BOOL<br /><br /> R/W: Lectura/escritura<br /><br /> Predeterminado: VARIANT_FALSE<br /><br /> Descripción: Determina si los datos que se capturan como DBTYPE_VARIANT o DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: Tipo de columna se devuelve como DBTYPE_SQLVARIANT, en cuyo caso el búfer contendrá la estructura SSVARIANT.<br /><br /> VARIANT_FALSE: Tipo de columna se devuelve como DBTYPE_VARIANT y el búfer contendrá la estructura VARIANT.|  
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de datos &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-types/data-types-ole-db.md)  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655631"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Parámetros y metadatos de conjuntos de filas
   En este tema se proporciona información acerca de los siguientes tipos y miembros de tipo relacionados con las mejoras de fecha y hora de OLE DB.  
@@ -37,10 +37,10 @@ ms.locfileid: "52818166"
   
 |Tipo de parámetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|Date|DBTYPE_DBDATE|6|10|0|Desactivar|  
+|date|DBTYPE_DBDATE|6|10|0|Desactivar|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Establecer|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Desactivar|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19,21..27|0..7|Establecer|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26,28..34|0..7|Establecer|  
   
@@ -54,11 +54,11 @@ ms.locfileid: "52818166"
 |*pwszDataSourceType*<br /><br /> (depende del proveedor)|*pwszDataSourceType*<br /><br /> (OLE DB genérico)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|Omitido|  
-|Date|DBTYPE_DBDATE|6|Omitido|  
+|date|DBTYPE_DBDATE|6|Omitido|  
 ||DBTYPE_DBTIME|10|Omitido|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|Omitido|  
-|DATETIME||16|Omitido|  
+|datetime||16|Omitido|  
 |datetime2 o DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52818166"
 |Tipo de enlace|*pwszDataSourceType*<br /><br /> (depende del proveedor)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|Date|  
+|DBTYPE_DBDATE|date|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -82,10 +82,10 @@ ms.locfileid: "52818166"
   
 |Tipo de columna|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|Date|DBTYPE_DBDATE|6|10|0|Desactivar|  
+|date|DBTYPE_DBDATE|6|10|0|Desactivar|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Establecer|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Desactivar|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Establecer|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Establecer|  
   
@@ -116,10 +116,10 @@ ms.locfileid: "52818166"
   
 |Tipo de parámetro|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|Date|DBTYPE_DBDATE|6|10|0|Desactivar|  
+|date|DBTYPE_DBDATE|6|10|0|Desactivar|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Establecer|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Desactivar|  
-|DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
+|datetime|DBTYPE_DBTIMESTAMP|16|23|3|Desactivar|  
 |datetime2|DBTYPE_DBTIMESTAMP|16|19, 21..27|0..7|Establecer|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|26, 28..34|0..7|Establecer|  
   

@@ -14,11 +14,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655483"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Usuarios de base de datos independiente: hacer que la base de datos sea portátil
   Use los usuarios de base de datos independiente para autenticar conexiones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el nivel de base de datos. Una base de datos independiente es una base de datos que está aislada de otras bases de datos y de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (y de la base de datos maestra) que hospeda la base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite usuarios de base de datos independientes para la autenticación de Windows y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al usar [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se combinan las reglas de usuarios de la base de datos independiente con las de firewall de nivel de base de datos. En este tema se revisan las diferencias y ventajas de utilizar el modelo de base de datos independiente en comparación con el modelo de inicio de sesión o usuario tradicionales y las reglas de firewall de Windows o de nivel de servidor. Es posible que la lógica de escenarios específicos, de manejabilidad o de software empresarial todavía pueda necesitar el uso de reglas de inicio de sesión o usuario tradicionales y de firewall de nivel de servidor.  
@@ -51,7 +51,7 @@ ms.locfileid: "53351554"
   
 -   [Firewall de la base de datos SQL de Azure](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
--   [Cómo: Configurar el Firewall (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+-   [Cómo: Configurar los valores del firewall (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
 -   [sp_set_firewall_rule &#40;Base de datos SQL de Azure&#41;](/sql/relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database)  
   

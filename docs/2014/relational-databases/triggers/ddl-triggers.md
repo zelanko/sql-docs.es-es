@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654981"
 ---
 # <a name="ddl-triggers"></a>Desencadenadores DDL
   Los desencadenadores DDL se inician en respuesta a una variedad de eventos de lenguaje de definición de datos (DDL). Estos eventos corresponden principalmente a las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que comienzan por las palabras clave CREATE, ALTER, DROP, GRANT, DENY, REVOKE o UPDATE STATISTICS. Algunos procedimientos almacenados del sistema que ejecutan operaciones de tipo DDL también pueden activar desencadenadores DDL.  

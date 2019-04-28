@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c3061794a565c4397bbf949211774306c9acebf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664271"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report, clase de eventos
   La clase de evento **Blocked Process Report** indica que una tarea ha estado bloqueada durante más de un período de tiempo especificado. Esta clase de evento no incluye tareas del sistema ni tareas que estén esperando recursos no detectables por interbloqueo.  
@@ -39,7 +39,7 @@ ms.locfileid: "52752887"
 |**EventSequence**|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|No|  
 |**IndexID**|**int**|Id. del índice del objeto afectado por el evento. Para determinar el Id. de índice de un objeto, utilice la columna **indid** de la tabla del sistema **sysindexes** .|24|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
-|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Este evento se notifica siempre desde el subproceso del sistema. IsSystem = 1; SID = sa.|41|Sí|  
+|**LoginSid**|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Este evento se notifica siempre desde el subproceso del sistema. IsSystem = 1; SID = sa.|41|Sí|  
 |**Modo**|**int**|Estado que el evento ha recibido o ha solicitado.<br /><br /> 0=NULL<br /><br /> 1=Sch-S<br /><br /> 2=Sch-M<br /><br /> 3=S<br /><br /> 4=U<br /><br /> 5=X<br /><br /> 6=IS<br /><br /> 7=IU<br /><br /> 8=IX<br /><br /> 9=SIU<br /><br /> 10=SIX<br /><br /> 11=UIX<br /><br /> 12=BU<br /><br /> 13=RangeS-S<br /><br /> 14=RangeS-U<br /><br /> 15=RangeI-N<br /><br /> 16=RangeI-S<br /><br /> 17=RangeI-U<br /><br /> 18=RangeI-X<br /><br /> 19=RangeX-S<br /><br /> 20=RangeX-U<br /><br /> 21=RangeX-X|32|Sí|  
 |**ObjectID**|**int**|Id. asignado por el sistema del objeto en el que se ha adquirido el bloqueo, si está disponible y es aplicable.|22|Sí|  
 |**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26||  

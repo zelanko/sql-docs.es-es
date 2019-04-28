@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af799e8e806696022635a04d808213ffb5c0e779
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794306"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Especificar Marcar como tabla de fechas con inteligencia de tiempo (SSAS tabular)
   Para usar las funciones de inteligencia de tiempo en fórmulas DAX, debe especificar una tabla de fechas y una columna de identificador único (datetime) del tipo de datos Date. Una vez especificada una columna en la tabla de fechas como identificador único, puede crear relaciones entre las columnas de la tabla de fechas y cualquier tabla de hechos.  
@@ -52,7 +52,7 @@ ms.locfileid: "48148575"
 4.  Si fuera necesario, cree las relaciones entre las tablas de hechos y la tabla de fechas.  
   
 ## <a name="see-also"></a>Vea también  
- [Cálculos &#40;Tabular de SSAS&#41;](calculations-ssas-tabular.md)   
+ [Cálculos &#40;SSAS tabular&#41;](calculations-ssas-tabular.md)   
  [Funciones de inteligencia de tiempo &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)  
   
   

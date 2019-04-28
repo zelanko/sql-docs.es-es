@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f489a87573dabbd091f5d2dce8a084b53cc5771e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653541"
 ---
 # <a name="children-property-ado-md"></a>Los elementos secundarios (propiedad, ADO MD)
 Devuelve un [miembros](../../../ado/reference/ado-md-api/members-collection-ado-md.md) colección para el que actual [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) es la entidad primaria en la jerarquía.  

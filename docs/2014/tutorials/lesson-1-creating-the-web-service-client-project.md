@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676063"
 ---
-# <a name="lesson-1-creating-the-web-service-client-project"></a>Lección 1: Crear el proyecto cliente del servicio web
+# <a name="lesson-1-creating-the-web-service-client-project"></a>Lección 1: Creación del proyecto cliente del servicio web
   Para esta visita guiada, creará una aplicación de consola sencilla con acceso al servicio web del servidor de informes. En este tutorial se da por supuesto que la programación se realiza con [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
 ### <a name="to-create-a-console-application"></a>Crear una aplicación de consola  

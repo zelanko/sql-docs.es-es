@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7aa0e4755de7f358596c7ce477367d84646fd176
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676041"
 ---
-# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lección 1: crear la base de conocimiento de DQS Proveedores
+# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lección 1: Creación de la base de conocimiento de DQS Proveedores
   En esta lección, creará una base de conocimiento de DQS denominada **Proveedores** con el conocimiento (los metadatos) sobre los datos de proveedor. Usará la base de conocimiento para realizar las actividades de limpieza y coincidencia sobre los datos de proveedor de entrada. La actividad de limpieza identifica los datos incorrectos o no válidos, corrige los datos incorrectos, propone correcciones y sugerencias, normaliza los datos y enriquece los datos con más información. La actividad de coincidencia compara los datos e identifica los registros similares (pero ligeramente diferentes) en los datos, lo que ayuda a quitar duplicados de los datos.  
   
  Se pueden usar procesos asistidos por PC y procesos interactivos para crear, compilar y administrar una base de conocimiento. El conocimiento de una base de conocimiento se mantiene en dominios, cada uno de los cuales es específico de un campo de los datos que desea limpiar o para los que desea buscar coincidencias.  

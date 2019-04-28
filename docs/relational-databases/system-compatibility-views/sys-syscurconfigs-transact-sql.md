@@ -1,5 +1,5 @@
 ---
-title: Sys.syscurconfigs (Transact-SQL) | Microsoft Docs
+title: sys.syscurconfigs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3ef0f49229ab374a0ca9e2dce12d7fa6ea5f59bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62693844"
 ---
 # <a name="syssyscurconfigs-transact-sql"></a>sys.syscurconfigs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "47757703"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Valor**|**int**|Valor de la variable, que el usuario puede modificar. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lo utiliza solo si se ha ejecutado RECONFIGURE.|  
-|**configuración**|**smallint**|Número de la variable de configuración.|  
-|**Comentario**|**nvarchar(255)**|Explicación de la opción de configuración.|  
+|**value**|**int**|Valor de la variable, que el usuario puede modificar. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] lo utiliza solo si se ha ejecutado RECONFIGURE.|  
+|**config**|**smallint**|Número de la variable de configuración.|  
+|**comment**|**nvarchar(255)**|Explicación de la opción de configuración.|  
 |**status**|**smallint**|Mapa de bits que indica el estado de la opción. Entre los valores posibles figuran los siguientes:<br /><br /> 0 = Estático. Configuración surte efecto cuando se reinicia el servidor.<br /><br /> 1 = Dinámico. La variable surte efecto cuando se ejecuta la instrucción RECONFIGURE.<br /><br /> 2 = Avanzado. Se muestra la variable solo cuando el **Mostrar opciones avanzadas** está establecido.<br /><br /> 3 = Dinámico y avanzado.|  
   
 ## <a name="see-also"></a>Vea también  

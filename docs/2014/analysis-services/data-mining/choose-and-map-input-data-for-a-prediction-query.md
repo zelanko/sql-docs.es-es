@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7741d2acf1e26e4e5a424c823a435fb37ff1d71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705766"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Elegir y asignar datos de entrada para una consulta de predicción
-  Generalmente, la creación de predicciones a partir de un modelo de minería de datos se realiza proporcionando datos nuevos al modelo. (La excepción son los modelos de serie temporal, que pueden realizar predicciones basadas únicamente en datos históricos). Para proporcionar nuevos datos al modelo, debe asegurarse de que los datos están disponibles como parte de una vista del origen de datos. Si conoce de antemano los datos que va a usar para la predicción, puede incluirlos en la vista del origen de datos usada para crear el modelo. De lo contrario, es posible que tenga que crear una nueva vista del origen de datos. Para obtener más información, vea [Vistas del origen de datos en modelos multidimensionales](../multidimensional-models/data-source-views-in-multidimensional-models.md).  
+  Generalmente, la creación de predicciones a partir de un modelo de minería de datos se realiza proporcionando datos nuevos al modelo. (La excepción son los modelos de serie temporal, que pueden realizar predicciones basadas únicamente en datos históricos). Para proporcionar nuevos datos al modelo, debe asegurarse de que los datos están disponibles como parte de una vista del origen de datos. Si conoce de antemano los datos que va a usar para la predicción, puede incluirlos en la vista del origen de datos usada para crear el modelo. De lo contrario, es posible que tenga que crear una nueva vista del origen de datos. Para más información, vea [Vistas del origen de datos en modelos multidimensionales](../multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
  Algunas veces, los datos que necesita se encuentran en varias tablas en una combinación de uno a varios. Es el caso de los datos usados para los modelos de asociación o los modelos de clústeres de secuencia, que usan una tabla de casos vinculada a una tabla anidada que contiene detalles sobre productos o transacciones. Si el modelo usa una estructura de tabla de casos anidados, los datos usados para la predicción también deben tener dicha estructura.  
   

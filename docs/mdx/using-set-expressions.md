@@ -1,5 +1,5 @@
 ---
-title: Usar expresiones de conjunto | Documentos de Microsoft
+title: Usar expresiones de conjunto | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 012a2946ff931e1326dcd3fa6321472761d67c56
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34744114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861710"
 ---
 # <a name="using-set-expressions"></a>Usar expresiones de conjunto
 
@@ -23,7 +23,7 @@ ms.locfileid: "34744114"
   
  La expresión completa de un conjunto consta de cero o más tuplas especificadas explícitamente entre corchetes:  
   
- {[{ *Tuple_expression* | *expresión_miembro* } [, { *Tuple_expression* | *expresión_miembro* }]...]}  
+ {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* } ] ... ] }  
   
  Las expresiones de miembro especificadas en expresiones de conjunto se convierten en expresiones de tupla de un miembro.  
   
@@ -52,15 +52,15 @@ ms.locfileid: "34744114"
   
  {([Product].[Product Categories].[Category].&[4], [Date].[Calendar].[Calendar Year].&[2004]),  
   
- ([Product].[Product Categories].[Category].&[1], [Date].[Calendar].[Calendar Year].&[2003]),  
+ ([Product]. [Categorías de producto]. [Categoría]. & [1], [fecha]. [Calendar]. [Año natural]. & [2003]),  
   
- ([Product].[Product Categories].[Category].&[3], [Date].[Calendar].[Calendar Year].&[2004])}  
+ ([Product]. [Categorías de producto]. [Categoría]. & [3], [fecha]. [Calendar]. [Calendar Year]. & [2004])}  
   
  está compuesto de tres tuplas, cada una de las cuales contiene dos referencias explícitas a miembros de la jerarquía Product Categories de la dimensión Product y de la jerarquía Calendar de la dimensión Date.  
   
  Para obtener ejemplos de funciones que devuelven conjuntos, vea [trabajar con miembros, tuplas y conjuntos &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

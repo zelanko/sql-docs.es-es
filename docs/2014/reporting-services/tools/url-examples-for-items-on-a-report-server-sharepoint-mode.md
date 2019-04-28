@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1b958a1552bf979abfcebd16345768ea2f7f5fed
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657442"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Ejemplos de dirección URL para los elementos de informe publicados en un servidor de informes en modo de SharePoint (SSRS)
   Para publicar informes y elementos relacionados en una biblioteca de SharePoint, puede publicar el contenido con las herramientas de creación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , como, por ejemplo, el Diseñador de informes o puede cargar el contenido mediante acciones del sitio de SharePoint.  

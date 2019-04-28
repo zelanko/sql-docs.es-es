@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 49cf92537bf0289765dca7b3a04c76fe0bf50fd8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62800022"
 ---
 # <a name="mdx-cell-properties---using-cell-properties"></a>Propiedades de celdas MDX: uso de las propiedades de celda
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ SELECT [<axis_specification>
   
 |Property|Descripción|  
 |--------------|-----------------|  
-|**ACTION_TYPE**|Máscara de bits que indica los tipos de acciones de la celda. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Nota: Las acciones de obtención de detalles no se incluyen para las consultas que contienen un conjunto en la cláusula WHERE.|  
+|**ACTION_TYPE**|Máscara de bits que indica los tipos de acciones de la celda. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Nota: Acciones de obtención de detalles no se incluyen para las consultas que contienen un conjunto de where cláusula.|  
 |**BACK_COLOR**|Color de fondo para mostrar las propiedades **VALUE** o **FORMATTED_VALUE**. Para obtener más información, vea [Contenido de FORE_COLOR y BACK_COLOR &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |**CELL_ORDINAL**|Número ordinal de la celda en el conjunto de datos.|  
 |**FONT_FLAGS**|Máscara de bits que detalla los efectos de la fuente. El valor es el resultado de una operación de bits OR de una o varias de las siguientes constantes:<br /><br /> **MDFF_BOLD** = 1<br /><br /> **MDFF_ITALIC** = 2<br /><br /> **MDFF_UNDERLINE** = 4<br /><br /> **MDFF_STRIKEOUT** = 8<br /><br /> <br /><br /> Por ejemplo, el valor 5 representa la combinación de los efectos de fuente negrita (**MDFF_BOLD**) y subrayado (**MDFF_UNDERLINE**).|  

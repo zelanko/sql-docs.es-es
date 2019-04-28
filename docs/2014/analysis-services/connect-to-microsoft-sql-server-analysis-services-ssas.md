@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 350251b6813027455f8e1e9b83dcf2508371df70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680090"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>Conectarse a Microsoft SQL Server Analysis Services (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite especificar valores para importar datos de un cubo de Microsoft SQL Server Analysis Services o un libro PowerPivot que se hospeda en SharePoint. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  

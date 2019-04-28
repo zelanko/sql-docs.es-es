@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676846"
 ---
 # <a name="view-policies-dialog-box"></a>Cuadro de diálogo Ver directivas
   Utilice este cuadro de diálogo para ver las directivas que están vigentes para este destino. Este cuadro de diálogo muestra directivas relevantes, sus categorías de directiva e información sobre las directivas.  

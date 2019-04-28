@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813201"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Cambios de comportamiento en la búsqueda de texto completo
   En este tema se describen los cambios de comportamiento en la búsqueda de texto completo. Los cambios de comportamiento afectan al modo en que las características de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] funcionan o interactúan en comparación con las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -68,7 +68,7 @@ ms.locfileid: "52508867"
   
 |**Término**|**Resultados con anterior separador de palabras y lematizadores**|**Resultados con separadores de palabras y lematizadores**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿqℭžl<br /><br /> *(donde los términos no son caracteres válidos en inglés)*|'jěˊÿqℭžl'|je yq zl|  
+|jěˊÿｑℭžl<br /><br /> *(donde los términos no son caracteres válidos en inglés)*|'jěˊÿｑℭžl'|je yq zl|  
 |table's|table's<br /><br /> table|table's|  
 |gato-|cat<br /><br /> gato-|cat|  
 |v-z *(donde v y z son palabras irrelevantes)*|*(sin resultados)*|v-z|  

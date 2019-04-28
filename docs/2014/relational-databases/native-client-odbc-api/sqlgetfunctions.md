@@ -1,5 +1,5 @@
 ---
-title: SQLGetFunctions | Documentos de Microsoft
+title: SQLGetFunctions | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e7dbd69379bd59e75ac39fc5765514ab8e1b4151
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657834"
 ---
 # <a name="sqlgetfunctions"></a>SQLGetFunctions
   La interfaz del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client cumple los tres niveles de compatibilidad definidos para ODBC (ISO, Open Group y ODBC nivel 2). **SQLGetFunctions** informa que todas las funciones ODBC son compatibles con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

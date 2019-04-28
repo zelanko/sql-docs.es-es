@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd626d476bf1c4ac8b4f83f397584c367299904f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665410"
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource (controlador de Access)
 > [!NOTE]  
@@ -35,7 +35,7 @@ ms.locfileid: "47637943"
 |CREATE_SYSDB|Crea un archivo de base de datos del sistema. Tiene el formato siguiente: CREATE_SYSDB =\<nombre de ruta de acceso >\<criterio de ordenación opcional >, donde el nombre de ruta de acceso es la ruta de acceso completa a una base de datos de Microsoft Access. Si el nombre de ruta de acceso especifica una base de datos existente, se devolverá un error. El criterio de ordenación será como el conjunto de copia en el **nueva base de datos** muestra el cuadro de diálogo cuando el **crear** hace clic en botón el **ODBC Microsoft Access Setup** cuadro de diálogo. Si no se especifica ningún criterio de ordenación, se usa General.|  
 |CREATE_V2DB|Crea un archivo de base de datos que es compatible con Microsoft Access 2.0. Tiene el formato siguiente: CREATE_V2DB =\<nombre de ruta de acceso >\<criterio de ordenación opcional >, donde el nombre de ruta de acceso es la ruta de acceso completa a una base de datos de Microsoft Access. Si el nombre de ruta de acceso especifica una base de datos existente, se devolverá un error. El criterio de ordenación será como el conjunto de copia en el cuadro de diálogo nueva base de datos cuando se presiona el botón Crear en el cuadro de diálogo de instalación de Microsoft Access. Si no se especifica ningún criterio de ordenación, se usa General.<br /><br /> Cuando se usa la palabra clave CREATE_V2DB en la misma instrucción con una palabra clave DSN, este controlador omite la palabra clave DSN. Por lo tanto, crear una base de datos y especificar un DSN es un proceso en dos pasos.<br /><br /> Cuando se usa la palabra clave CREATE_V2DB, si la ruta de acceso de la base de datos de Microsoft Access a crearse contiene uno o varios espacios, a continuación, la ruta de acceso completa debe estar delimitado por comillas dobles, como se muestra en los ejemplos siguientes:<br /><br /> "C:\PROGRAM FILES\COMMON programa\ MyAccess.mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_V2DB=C:\TEMP\test.mdb (sin comillas necesitados)|  
 |DBQ|El nombre del archivo de base de datos.<br /><br /> Esto establece la misma opción como **base de datos** en el cuadro de diálogo programa de instalación.|  
-|VALOR DE ESTA OPCIÓN|La especificación de ruta de acceso al archivo de base de datos.|  
+|DEFAULTDIR|La especificación de ruta de acceso al archivo de base de datos.|  
 |DESCRIPTION|Una descripción de los datos del origen de datos.<br /><br /> Esto establece la misma opción como **descripción** en el cuadro de diálogo programa de instalación.|  
 |DRIVER|La especificación de ruta de acceso a la DLL del controlador.|  
 |DRIVERID|Un identificador entero para el controlador.  25 (Microsoft Access)|  

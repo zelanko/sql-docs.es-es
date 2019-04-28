@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 51a3deffc9db182f7b3ad8f50d27c24e0f74dc6d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807120"
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Tarea Actualizar estadísticas (Plan de mantenimiento)
   Utilice el cuadro de diálogo **Tarea Actualizar estadísticas** para actualizar la información de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre los datos de tablas e índices. Esta tarea vuelve a muestrear las estadísticas de distribución de cada índice creado en las tablas de usuario de la base de datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza las estadísticas de distribución para optimizar la navegación de las tablas durante el procesamiento de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para generar automáticamente las estadísticas de distribución, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestrea periódicamente los datos de la tabla correspondiente para cada índice. Este tamaño de la muestra se basa en el número de filas de la tabla y en la frecuencia de modificación de los datos. Utilice esta opción para realizar un muestreo adicional con el porcentaje especificado de datos de las tablas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza esta información para crear planes de consultas mejores.  

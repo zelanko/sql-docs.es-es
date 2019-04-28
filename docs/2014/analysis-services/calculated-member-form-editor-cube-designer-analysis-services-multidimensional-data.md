@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a16319b01c6555aa3bf299da201d9662cd59f4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667865"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de miembro calculado (pestaña Cálculos, Diseñador de cubos) (Analysis Services -  Datos multidimensionales)
   Utilice el panel del **Editor de Formulario de miembro calculado** de la pestaña **Cálculos** del Diseñador de cubos para crear o modificar un miembro calculado.  
@@ -26,7 +26,7 @@ ms.locfileid: "48049115"
  **Nota** Este panel solamente se muestra en la vista de formulario.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba el nombre del miembro calculado.  
   
  **Propiedades del miembro primario**  
@@ -40,7 +40,7 @@ ms.locfileid: "48049115"
   
  **Nota** Esta opción está disponible si **Jerarquía primaria** especifica una jerarquía distinta de MEASURES.  
   
- **Cambio**  
+ **Change**  
  Seleccione esta opción para mostrar el cuadro de diálogo **Seleccionar miembro primario** y, luego, un miembro para **Miembro primario**. Para más información sobre el cuadro de diálogo **Seleccionar miembro primario**, vea [Cuadro de diálogo Seleccionar miembro primario &#40;Analysis Services - Datos multidimensionales&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Expresión**  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03395f35d42ee8ec3d4a69345d509432fbcdd485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729647"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Organizador de KPI (pestaña KPI, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Organizador de KPI** en la pestaña **KPI** del Diseñador de cubos para acceder a los indicadores clave de rendimiento (KPI) del cubo especificado para ordenarlos.  
@@ -38,8 +38,8 @@ ms.locfileid: "48136801"
 |Opción|Definición|  
 |------------|----------------|  
 |**Nuevo KPI**|Seleccione esta opción para mostrar el **Editor de Formulario de KPI** y crear un nuevo KPI. Para más información sobre el **Editor de Formulario de KPI**, vea [Editor de Formulario de KPI &#40;KPIs Tab, Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Subir**|Seleccione esta opción para subir el KPI seleccionado una posición en el **Organizador de KPI** y para determinar el orden en el que se mostrarán los KPI en el **Examinador de KPI**.<br /><br /> Nota: Esta opción estará deshabilitada si el KPI seleccionado no puede desplazarse más.|  
-|**Bajar**|Seleccione esta opción para bajar el KPI seleccionado una posición en el **Organizador de KPI** y para determinar el orden en el que se mostrarán los KPI en el **Examinador de KPI**.<br /><br /> Nota: Esta opción estará deshabilitada si el KPI seleccionado no puede desplazarse más.|  
+|**Subir**|Seleccione esta opción para subir el KPI seleccionado una posición en el **Organizador de KPI** y para determinar el orden en el que se mostrarán los KPI en el **Examinador de KPI**.<br /><br /> Nota: Esta opción está deshabilitada si el KPI seleccionado no puede desplazarse más.|  
+|**Bajar**|Seleccione esta opción para bajar el KPI seleccionado una posición en el **Organizador de KPI** y para determinar el orden en el que se mostrarán los KPI en el **Examinador de KPI**.<br /><br /> Nota: Esta opción está deshabilitada si el KPI seleccionado no puede desplazarse más.|  
 |**Eliminar**|Seleccione esta opción para eliminar el KPI seleccionado.|  
   
 ## <a name="see-also"></a>Vea también  

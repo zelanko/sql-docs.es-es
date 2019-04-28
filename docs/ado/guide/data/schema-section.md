@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45e8e37d8bb85e727771072abda9249b8155076f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802676"
 ---
 # <a name="schema-section"></a>Sección de esquema
 La sección de esquema es necesaria. Como se muestra en el ejemplo anterior, ADO escribe metadatos detallados sobre cada columna para conservar la semántica de los valores de datos tanto como sea posible para la actualización. Sin embargo, para cargar el XML, ADO requiere sólo los nombres de las columnas y el conjunto de filas al que pertenecen. Este es un ejemplo de un esquema mínimo:  

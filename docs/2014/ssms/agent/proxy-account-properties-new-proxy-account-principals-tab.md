@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f97e8fec31f6011b7a2769753bed35e4ab62b47b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650226"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>Propiedades de cuenta de proxy y Nueva cuenta de proxy (pestaña Entidades de seguridad)
   Use esta página para ver o cambiar las entidades de seguridad que pueden utilizar una cuenta de proxy del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en los pasos de trabajo.  

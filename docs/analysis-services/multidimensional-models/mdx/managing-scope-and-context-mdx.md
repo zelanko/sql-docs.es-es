@@ -1,5 +1,5 @@
 ---
-title: Administrar el ámbito y contexto (MDX) | Documentos de Microsoft
+title: Administrar el ámbito y contexto (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1656ac98555d4377ec70c37a43b70217b9be759c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62800037"
 ---
 # <a name="managing-scope-and-context-mdx"></a>Administrar el ámbito y el contexto (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -107,8 +107,8 @@ END SCOPE;
  Para obtener más información sobre la sintaxis de la instrucción SCOPE, vea [SCOPE &#40;Instrucción,MDX&#41;](../../../mdx/mdx-scripting-scope.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia del lenguaje MDX & #40; MDX & #41;](../../../mdx/mdx-language-reference-mdx.md)   
- [El Script MDX básico & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [Aspectos básicos de consulta MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Referencia del lenguaje MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Script MDX básico &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

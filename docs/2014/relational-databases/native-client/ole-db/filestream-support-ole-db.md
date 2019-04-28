@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad6aa7b55906e68dba6615140ef2c6afcc3efaa5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62668938"
 ---
 # <a name="filestream-support-ole-db"></a>Compatibilidad con FILESTREAM (OLE DB)
   A partir [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, OLE DB es compatible con la característica mejorada FILESTREAM. Para obtener más información sobre esta característica, consulte [compatibilidad con FILESTREAM](../features/filestream-support.md). Para obtener ejemplos, vea [Filestream y OLE DB](../../native-client-ole-db-how-to/filestream/filestream-and-ole-db.md).  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06a5b4261ecde623dc8c31c7b8045042513a8da2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689607"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Agregar modelos de minería de datos a una estructura (Analysis Services - Minería de datos)
   Una estructura de minería de datos se ha diseñado para admitir varios modelos de minería de datos. Por tanto, cuando el asistente finalice, puede abrir la estructura y agregar nuevos modelos de minería de datos. Cada vez que cree un modelo, puede utilizar un algoritmo diferente, cambiar los parámetros o aplicar filtros para utilizar un subconjunto distinto de datos.  

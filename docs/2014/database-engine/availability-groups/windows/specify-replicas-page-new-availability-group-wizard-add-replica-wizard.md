@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788358"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar réplicas (Asistente para nuevo grupo de disponibilidad: Asistente para agregar réplica)
   En este tema se describen las opciones de la página **Especificar réplicas** . Esta página se aplica a [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] y a [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use la página **Especificar réplicas** para especificar y configurar una o varias réplicas de disponibilidad para agregar al grupo de disponibilidad. Esta página contiene cuatro pestañas, que se presentan en la tabla siguiente. Haga clic en el nombre de una pestaña de la tabla para ir a la sección correspondiente, más adelante en este tema.  
@@ -38,7 +38,7 @@ ms.locfileid: "53371577"
  Si una instancia de servidor que se usa para hospedar una réplica secundaria no aparece en la cuadrícula **Réplicas de disponibilidad** , haga clic en el botón **Agregar réplica** . Si configura un grupo de disponibilidad en un entorno de tecnologías de la información híbrida (consulte [Alta disponibilidad y recuperación ante desastres para SQL Server en máquinas virtuales de Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), puede hacer clic en el botón **Agregar réplica de Microsoft Azure** para crear máquinas virtuales con las réplicas secundarias de Windows Azure.  
   
  **Rol inicial**  
- Indica el rol que la nueva réplica realizará inicialmente: **Principal** o **secundaria**.  
+ Indica el rol que la nueva réplica realizará inicialmente: **Principal** o **Secundaria**.  
   
  **Conmutación por error automática (hasta 2)**  
  Active esta casilla solo si desea que esta réplica de disponibilidad sea un asociado de conmutación por error automática. Para configurar la conmutación por error automática, debe elegir esta opción para la réplica principal inicial y para una réplica secundaria. Estas dos réplicas utilizarán el modo de disponibilidad de confirmación sincrónica. Solo dos réplicas pueden admitir la conmutación por error automática.  
@@ -122,7 +122,7 @@ ms.locfileid: "53371577"
  Especifica que, de acuerdo con sus preferencias, los trabajos de copia de seguridad omitan el rol de las réplicas de disponibilidad cuando la réplica realiza copias de seguridad. Tenga en cuenta que los trabajos de copia de seguridad pueden evaluar otros factores, como la prioridad de copia de seguridad de cada réplica de disponibilidad junto con su estado operativo y de conexión.  
   
 > [!IMPORTANT]  
->  No se aplica el valor de preferencia de copia de seguridad. La interpretación de esta preferencia depende de la lógica, si existe, del script con los trabajos de copia de seguridad ejecutado para las bases de datos de un grupo de disponibilidad dado. Para obtener más información, consulte [secundarias activas: Copia de seguridad en réplicas secundarias (grupos de disponibilidad AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  No se aplica el valor de preferencia de copia de seguridad. La interpretación de esta preferencia depende de la lógica, si existe, del script con los trabajos de copia de seguridad ejecutado para las bases de datos de un grupo de disponibilidad dado. Para más información, consulte [Secundarias activas: Copia de seguridad en réplicas secundarias (grupos de disponibilidad AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ### <a name="replica-backup-priorities-grid"></a>Cuadrícula de prioridades de copia de seguridad de réplica  
  Use la cuadrícula **Prioridades de copia de seguridad de réplica** para especificar sus prioridades de copia de seguridad para cada una de las réplicas del grupo de disponibilidad. Esta cuadrícula contiene las columnas siguientes:  

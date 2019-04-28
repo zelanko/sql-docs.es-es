@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729079"
 ---
 # <a name="monitoring-traces-xmla"></a>Supervisar los seguimientos (XMLA)
   Puede usar el [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) XML for Analysis (XMLA) para supervisar un seguimiento existente definido en una instancia de comando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El comando `Subscribe` devuelve los resultados de un seguimiento como conjunto de filas.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bb982848854eef74363250c291b9f5676abec2f6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729041"
 ---
 # <a name="defining-named-sets"></a>Definir conjuntos con nombre
   Un conjunto con nombre es una expresión de Expresiones multidimensionales (MDX) que devuelve un conjunto de miembros de dimensión. Puede definir conjuntos con nombre y guardarlos como parte de la definición del cubo; también puede crear conjuntos con nombre en aplicaciones cliente. Puede crear conjuntos con nombre combinando datos del cubo, operadores aritméticos, números y funciones. Los usuarios pueden usar los conjuntos con nombre en consultas MDX en aplicaciones cliente y también pueden usarse para definir conjuntos en subcubos. Un subcubo es una colección de conjuntos unidos de forma cruzada que restringe el espacio del cubo al subespacio definido para instrucciones posteriores. La definición de un espacio del cubo restringido es un concepto fundamental para el scripting de MDX.  

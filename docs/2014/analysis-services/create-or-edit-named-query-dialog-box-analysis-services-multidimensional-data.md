@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc03192d0deae00b9ace6f70e72ced4883d26b1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679773"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Crear o Editar consulta con nombre (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Crear/Editar consulta con nombre** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear o editar una consulta con nombre en el **Diseñador de vistas del origen de datos**. Una consulta con nombre puede tratarse como una tabla en la que se pueden basar otros objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Puede mostrar el cuadro de diálogo **Crear/Editar consulta con nombre** de distintas maneras:  
@@ -42,7 +42,7 @@ ms.locfileid: "48224695"
      El Generador de consultas genérico proporciona a los usuarios avanzados una interfaz de usuario más sencilla y más directa para crear y probar consultas SQL.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba el nombre de la consulta.  
   
  **Descripción**  
@@ -59,19 +59,19 @@ ms.locfileid: "48224695"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**Cambiar a generador de consultas genérico**|Seleccione esta opción si desea mostrar únicamente las opciones disponibles para la vista del Generador de consultas genérico. Se mostrará solo una de las opciones siguientes:<br />**Panel SQL**<br />**Panel de resultados**<br />**Barra de herramientas**, que contiene únicamente **Cambiar a Generador de consultas de VDT** y **Ejecutar**<br /><br /> <br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
-|**Cambiar a generador de consultas de VDT**|Seleccione esta opción si desea mostrar todas las opciones disponibles para la vista del Generador de consultas de Visual Database Tools (VDT).<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas genérico** .|  
+|**Cambiar a generador de consultas genérico**|Seleccione esta opción si desea mostrar únicamente las opciones disponibles para la vista del Generador de consultas genérico. Se mostrará solo una de las opciones siguientes:<br />**Panel SQL**<br />**Panel de resultados**<br />**Barra de herramientas**, que contiene únicamente **Cambiar a Generador de consultas de VDT** y **Ejecutar**<br /><br /> <br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
+|**Cambiar a generador de consultas de VDT**|Seleccione esta opción si desea mostrar todas las opciones disponibles para la vista del Generador de consultas de Visual Database Tools (VDT).<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas genérico** está seleccionada.|  
 |**Mostrar u ocultar panel de diagrama**|Muestra u oculta el **panel Diagrama**.<br /><br /> **Nota** Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
-|**Mostrar u ocultar panel de cuadrícula**|Muestra u oculta el **panel Cuadrícula**.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
-|**Mostrar u ocultar panel de SQL**|Muestra u oculta el **panel de SQL**.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
-|**Mostrar u ocultar panel de resultados**|Muestra u oculta el **panel Resultado**.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
+|**Mostrar u ocultar panel de cuadrícula**|Muestra u oculta el **panel Cuadrícula**.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
+|**Mostrar u ocultar panel de SQL**|Muestra u oculta el **panel de SQL**.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
+|**Mostrar u ocultar panel de resultados**|Muestra u oculta el **panel Resultado**.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
 |**Ejecutar**|Ejecuta la consulta. Los resultados se muestran en el **panel Resultado**.|  
-|**Comprobar SQL**|Comprueba la instrucción SQL de la consulta.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
-|**Orden ascendente**|Ordena de forma ascendente las filas de salida de la columna seleccionada en el **panel Cuadrícula**.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
-|**Orden descendente**|Ordena de forma descendente las filas de salida de la columna seleccionada en el **panel Cuadrícula**.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
-|**Quitar filtro**|Quita los criterios de ordenación, si corresponde, para la fila seleccionada en el **panel Cuadrícula**.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
-|**Usar GROUP BY**|Agrega la funcionalidad de agrupamiento a la consulta.<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
-|**Agregar tabla**|Muestra el cuadro de diálogo **Agregar tabla** para agregar una nueva tabla o vista a la consulta. Para obtener más información sobre el cuadro de diálogo **Agregar tabla**, vea [Cuadro de diálogo Agregar tabla &#40;Analysis Services - Datos multidimensionales&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Nota: Esta opción solo se muestra si se selecciona **Cambiar a Generador de consultas de VDT** .|  
+|**Comprobar SQL**|Comprueba la instrucción SQL de la consulta.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
+|**Orden ascendente**|Ordena de forma ascendente las filas de salida de la columna seleccionada en el **panel Cuadrícula**.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
+|**Orden descendente**|Ordena de forma descendente las filas de salida de la columna seleccionada en el **panel Cuadrícula**.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
+|**Quitar filtro**|Quita los criterios de ordenación, si corresponde, para la fila seleccionada en el **panel Cuadrícula**.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
+|**Usar GROUP BY**|Agrega la funcionalidad de agrupamiento a la consulta.<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
+|**Agregar tabla**|Muestra el cuadro de diálogo **Agregar tabla** para agregar una nueva tabla o vista a la consulta. Para obtener más información sobre el cuadro de diálogo **Agregar tabla**, vea [Cuadro de diálogo Agregar tabla &#40;Analysis Services - Datos multidimensionales&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Nota: Esta opción aparece sólo si **cambiar a generador de consultas de VDT** está seleccionada.|  
   
  **Panel Diagrama**  
  Muestra en un diagrama los objetos a los que se hace referencia en la consulta. El diagrama muestra las tablas incluidas en la consulta y cómo se combinan. Active o desactive la casilla situada junto a una columna de la tabla para agregarla a (o quitarla de) la salida de la consulta.  

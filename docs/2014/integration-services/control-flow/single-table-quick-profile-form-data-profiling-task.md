@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5cd76f42424836114bc5b8ed32862d5e1d84869e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62830187"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Formulario de perfil rápido de tabla única (tarea de generación de perfiles de datos)
   Utilice el **Formulario de perfil rápido de tabla única** para configurar rápidamente la tarea de generación de perfiles de datos de una sola tabla o vista utilizando la configuración predeterminada.  

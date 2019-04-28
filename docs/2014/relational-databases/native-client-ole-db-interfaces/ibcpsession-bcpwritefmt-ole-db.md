@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: Bcpwritefmt (OLE DB) | Microsoft Docs'
+title: IBCPSession::BCPWriteFmt (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b4022f14c1f39984b1feaa0a45adef2154c1d0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62826847"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
   Escribe la información de formato de cada columna en el archivo de formato.  
@@ -37,9 +37,9 @@ const wchar_t *pwszFormatFile);
 ## <a name="remarks"></a>Comentarios  
  El archivo de formato especifica el formato de los datos de un archivo de datos creado mediante copia masiva. Las llamadas a los métodos [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) e [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) definen el formato del archivo de datos. El método **BCPWriteFmt** guarda esta definición en el archivo al que se hace referencia en el argumento pwszFormatFile.  
   
- El método **BCPWriteFmt** puede guardar los archivos de formato en formato xml o de texto. Esto se debe indicar mediante la opción de control BCP_OPTION_XML con el método [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md).  
+ El método **BCPWriteFmt** puede guardar los archivos de formato en formato xml o de texto. Esto se debe indicar utilizando la opción de control BCP_OPTION_XML con el método [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md) .  
   
- Para cargar un archivo de formato guardado, use el método [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md).  
+ Para cargar un archivo de formato guardado, utilice el método [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) .  
   
 ## <a name="arguments"></a>Argumentos  
  *pwszFormatFile*[in]  

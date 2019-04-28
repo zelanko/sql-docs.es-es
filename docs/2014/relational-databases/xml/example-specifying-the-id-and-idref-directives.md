@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Especificar las directivas ID e IDREF | Microsoft Docs'
+title: 'Ejemplo: Especificación de las directivas ID e IDREF | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f985745f450b402781685ded5c0a655e3f4e497c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704832"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Ejemplo: Especificación de las directivas ID e IDREF
   Este ejemplo es casi idéntico al ejemplo [Especificar la directiva ELEMENTXSINIL](example-specifying-the-elementxsinil-directive.md) . La única diferencia consiste en que la consulta especifica las directivas **ID** e **IDREF** . Estas directivas sobrescriben los tipos del atributo **SalesPersonID** en los elementos <`OrderHeader`> y <`OrderDetail`>. De este modo, se forman vínculos dentro de los documentos. Para ver los tipos sobrescritos, se necesita el esquema. Por lo tanto, la consulta especifica la opción **XMLDATA** en la cláusula FOR XML para recuperar el esquema.  

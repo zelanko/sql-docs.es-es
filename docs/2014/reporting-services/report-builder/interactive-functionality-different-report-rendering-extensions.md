@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b566b27ca060f84fe976a3827e5f657ca43bf741
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688779"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>Funcionalidad interactiva para diferentes extensiones de representación de informes (Generador de informes y SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona características de informe interactivas que permiten trabajar con un informe en tiempo de ejecución. No todos los formatos de representación de informes son compatibles con todas las características interactivas. Consulte la tabla siguiente para comprender el funcionamiento de las características interactivas en los diferentes formatos.  

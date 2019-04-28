@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731681"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>Escenarios de implementación de DirectQuery (SSAS tabular)
   Este tema proporciona un tutorial del proceso de diseño e implementación para los modelos de DirectQuery. Puede configurar DirectQuery para utilizar solo datos relacionales (solo DirectQuery), o puede configurar el modelo para cambiar entre usar solo datos en caché o solo datos relacionales (modo híbrido). En este tema se describe el proceso de implementación para ambos modos, y describe diferencias posibles en los resultados de la consulta dependiendo del modo y configuración de seguridad.  
@@ -78,7 +78,7 @@ ms.locfileid: "48135185"
   
 |||  
 |-|-|  
-|**Solo DirectQuery**|En la propiedad  **Configuración de suplantación** , especifique la cuenta que se utilizará para conectar con el origen de datos de SQL Server.<br /><br /> Si usa el valor, **ImpersonateCurrentUser**, la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que hospeda el modelo pasará las credenciales del usuario actual del modelo de la base de datos de SQL Server.|  
+|**Solo DirectQuery**|En la propiedad  **Configuración de suplantación** , especifique la cuenta que se utilizará para conectar con el origen de datos de SQL Server.<br /><br /> Si utiliza el valor **ImpersonateCurrentUser**, la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que hospeda el modelo pasará las credenciales del usuario actual del modelo a la base de datos de SQL Server.|  
 |**Modo híbrido**|En la propiedad **Configuración de suplantación** , especifique la cuenta que se utilizará para acceder a los datos del origen de datos de SQL Server.<br /><br /> Esta configuración no afecta a las credenciales utilizadas para procesar la memoria caché usada por el modelo.|  
   
  **Paso 7. Implementar el modelo**  
@@ -106,7 +106,7 @@ ms.locfileid: "48135185"
  **Solo DirectQuery**  
  Es preferible utilizar esta opción si se desea garantizar un único origen de datos, o si los datos no caben en la memoria. Si trabaja con un origen de datos relacional muy grande, durante el tiempo de diseño puede crear el modelo utilizando un subconjunto de los datos. Al implementar el modelo en el modo Solo DirectQuery, puede modificar la definición del origen de datos para incluir todos los datos necesarios.  
   
- También es preferible utilizar esta opción si se desea utilizar la seguridad proporcionada por el origen de datos relacional para controlar el acceso de los usuarios a los datos. Con los modelos tabulares almacenados en caché, también puede usar [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] roles para controlar el acceso de datos, pero los datos almacenados en la memoria caché también deben protegerse. Debe utilizar siempre esta opción si el contexto de seguridad requiere que los datos no se almacenen nunca en la memoria caché.  
+ También es preferible utilizar esta opción si se desea utilizar la seguridad proporcionada por el origen de datos relacional para controlar el acceso de los usuarios a los datos. En los modelos tabulares almacenados en caché, también es posible utilizar los roles de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para controlar el acceso a los datos, pero los datos almacenados en la caché también deben protegerse. Debe utilizar siempre esta opción si el contexto de seguridad requiere que los datos no se almacenen nunca en la memoria caché.  
   
  En la tabla siguiente se describen los posibles resultados de implementación para el modo Solo DirectQuery:  
   

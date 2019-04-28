@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789857"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundarias activas: Réplicas secundarias legibles (siempre en grupos de disponibilidad)
   Las funcionalidades secundarias activas de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluyen compatibilidad con el acceso de solo lectura a una o varias réplicas secundarias (*réplicas secundarias legibles*). Una réplica secundaria legible permite el acceso de solo lectura a todas las bases de datos secundarias. Sin embargo, las bases de datos secundarias legibles no se establecen como de solo lectura. Son dinámicas. Una base de datos secundaria dada cambia a medida que se aplican los cambios en la base de datos principal correspondiente. En lo que respecta a las réplicas secundarias típicas, los datos, lo cual incluye las tablas con optimización para memoria durables, las bases de datos secundarias están en tiempo prácticamente real. Además, los índices de texto completo se sincronizan con las bases de datos secundarias. En muchas circunstancias, la latencia de datos entre una base de datos principal y la base de datos secundaria correspondiente suele ser de solo unos pocos segundos.  

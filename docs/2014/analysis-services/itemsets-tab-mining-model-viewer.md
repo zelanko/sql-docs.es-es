@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60c5dc93ea10042ff87b48bdb8ca4c8d6de1108b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730214"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Pestaña Conjuntos de elementos (Visor de modelos de minería de datos)
   Puede utilizar el panel **Conjuntos de elementos** para ver los conjuntos de elementos frecuentes que contiene un modelo de minería de datos de reglas de asociación. Dado que un modelo de asociación puede contener muchos conjuntos de elementos, el visor dispone de controles para ayudarle a filtrar los conjuntos de elementos que se muestran en el visor.  
   
- **Para obtener más información:** [Algoritmo de asociación de Microsoft](data-mining/microsoft-association-algorithm.md), [Examinar un modelo usando el Visor de reglas de asociación de Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Para obtener más información:** [Algoritmo de asociación de Microsoft](data-mining/microsoft-association-algorithm.md), [examinar un modelo usando el Visor de reglas de asociación de Microsoft](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del Visor**  
@@ -32,7 +32,7 @@ ms.locfileid: "48060345"
  **Modelo de minería de datos**  
  Elija esta opción para ver un modelo de minería de datos que se encuentra en la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Visor**  
+ **Viewer**  
  Elija un visor para ver el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado de los modelos de asociación o el visor de árbol de contenido genérico de [!INCLUDE[msCoName](../includes/msconame-md.md)] . También puede utilizar visores de complemento si están disponibles.  
   
  **Soporte mínimo**  
@@ -75,11 +75,11 @@ ms.locfileid: "48060345"
  **Tamaño**  
  Muestra el número de elementos que existe en cada conjunto de elementos.  
   
- **Conjunto de elementos**  
+ **Itemset**  
  Muestra la descripción de cada conjunto de elementos. De forma predeterminada, los conjuntos de elementos se presentan en una lista de atributos y sus valores delimitada por comas. Puede cambiar la manera en que se muestran utilizando la opción **Mostrar** .  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

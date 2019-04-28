@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667725"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Ejecución de casos de prueba (SybaseToSQL)
 Cuando el evaluador de SSMA se ejecuta un caso de prueba, los objetos seleccionados para las pruebas se ejecuta y crea un informe sobre los resultados de la comprobación. Si los resultados son idénticos en ambas plataformas, la prueba fue correcta. La correspondencia de objetos entre Sybase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se determina según la configuración de asignación de esquema para el proyecto SSMA actual.  
@@ -47,19 +47,19 @@ Los siguientes objetos se crean en Sybase en la base de datos SSMATESTER2005db o
   
 |Nombre|Tipo|Descripción|  
 |--------|--------|---------------|  
-|USER_TABLE$ Trg|Desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
-|USER_TABLE$ Aud|Table|Tabla donde se guardan las filas eliminadas y sobrescribir.|  
-|USER_TABLE$ AudID|Table|Tabla donde se guardan las filas nuevas y modificadas.|  
+|USER_TABLE$Trg|Desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
+|USER_TABLE$Aud|Table|Tabla donde se guardan las filas eliminadas y sobrescribir.|  
+|USER_TABLE$AudID|Table|Tabla donde se guardan las filas nuevas y modificadas.|  
 |USER_TABLE|Ver|Representación simplificada de las modificaciones de tabla.|  
-|USER_TABLE$ nuevo|Ver|Representación simplificada de las filas insertadas y sobrescribir.|  
-|USER_TABLE$ new_id|Ver|Identificación de las filas insertadas y modificadas.|  
+|USER_TABLE$new|Ver|Representación simplificada de las filas insertadas y sobrescribir.|  
+|USER_TABLE$new_id|Ver|Identificación de las filas insertadas y modificadas.|  
 |USER_TABLE$ antiguo|Ver|Representación simplificada de las filas eliminadas y sobrescribir.|  
   
 El siguiente objeto se crea en la base de datos de tabla comprobado en Sybase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nombre|Tipo|Descripción|  
+|Name|Tipo|Descripción|  
 |--------|--------|---------------|  
-|USER_TABLE$ Trg|Desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
+|USER_TABLE$Trg|Desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
   
 ### <a name="test-object-calls"></a>Llamadas de objeto de prueba  
 En este paso, el evaluador de SSMA invoca cada objeto seleccionado para la prueba, compara los resultados y muestra el informe.  

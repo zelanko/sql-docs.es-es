@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6992d667383539092f13602c277eec4ee2f7c7f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680519"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>Configurar los atributos de dimensión (Asistente de Business Intelligence)
   Use la página **Configurar los atributos de dimensión** para asignar atributos de dimensión a los tipos de atributo que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa para identificar atributos para dimensiones de cuentas.  
@@ -33,7 +33,7 @@ ms.locfileid: "48133695"
  **Atributos de dimensión**  
  Muestra los tipos de atributo válidos que se pueden asignar a los atributos de dimensión existentes en la dimensión.  
   
- **incluir**  
+ **Include**  
  Active una casilla para incluir el tipo de atributo correspondiente en la dimensión.  
   
  **Tipo de atributo**  
@@ -49,7 +49,7 @@ ms.locfileid: "48133695"
 >  Esta opción no aparece si se ha iniciado el Asistente de Business Intelligence desde el Diseñador de dimensiones o haciendo clic con el botón secundario en una dimensión del Explorador de soluciones de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de Business Intelligence F1 Ayuda](business-intelligence-wizard-f1-help.md)   
+ [Asistente de Business Intelligence (Ayuda F1)](business-intelligence-wizard-f1-help.md)   
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

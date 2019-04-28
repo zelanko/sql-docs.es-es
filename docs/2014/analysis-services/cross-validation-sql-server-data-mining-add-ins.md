@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95d0a5e0f7d3d108543d6741dea84efde4280387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679846"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Validación cruzada (Complementos de minería de datos de SQL Server)
   ![Botón validación cruzada, cinta de opciones minería de datos](media/dmc-xvalid.gif "botón validación cruzada, cinta de opciones minería de datos")  
@@ -96,12 +96,12 @@ ms.locfileid: "48171755"
   
 -   La media de la desviación desde el promedio para una medida concreta, para todas las particiones de un modelo.  
   
-#### <a name="classification-passfail"></a>Clasificación: Éxito/error  
+#### <a name="classification-passfail"></a>Clasificación: Correcto/incorrecto  
  Esta medida se usa en modelos de clasificación cuando no se especifica un valor de destino para el atributo de predicción. Por ejemplo, si crea un modelo que predice varias posibilidades, esta medida le indica el grado de eficiencia del modelo a la hora de predecir todos los valores posibles.  
   
  Correcto/incorrecto se calcula contando los casos que cumplen las condiciones siguientes: **pasar** si el estado predicho con la máxima probabilidad es igual que el estado de entrada y probabilidad es mayor que el valor que especificó para **State Threshold**; en caso contrario, **producirá un error en**.  
   
-#### <a name="classification-true-or-false-positives-and-negatives"></a>Clasificación: verdaderos o falsos positivos y negativos  
+#### <a name="classification-true-or-false-positives-and-negatives"></a>Clasificación: Valores negativos y positivos true o False  
  Esta prueba se usa para todos los modelos de clasificación que tienen un destino especificado. Esta medida indica cómo se clasifica cada caso en respuesta a estas preguntas: qué predijo el modelo y cuál fue el resultado real.  
   
 |Measure|Descripción|  

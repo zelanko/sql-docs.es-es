@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57b340d4f79ec093f6322687ceca0186931a9dcf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658861"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ PredictSupport(<scalar column reference>, [<predicted state>])
 ## <a name="return-type"></a>Tipo devuelto  
  Un valor escalar del tipo especificado por *\<* referencia de columna escalar*>*.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si se omite el estado predicho, se usa el estado que tiene la mayor probabilidad de predicción, sin incluir el depósito de estados que falta. Para incluir el depósito de Estados que faltan, establezca el \<estado de predicción > a **INCLUDE_NULL**.  
   
  Para devolver la compatibilidad con los Estados que faltan, establezca el \<estado de predicción > en NULL.  

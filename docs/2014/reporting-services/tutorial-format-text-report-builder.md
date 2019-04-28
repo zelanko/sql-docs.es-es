@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647547"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Aplicación de formato a un texto (Generador de informes)
   En este tutorial, puede practicar el proceso de dar formato al texto de varias maneras. Después de configurar el informe en blanco con el origen de datos y el conjunto de datos, puede escoger y elegir los pasos que desea explorar.  

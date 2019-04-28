@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4398085227952f30e4df7d54ac78c1aef1355173
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664054"
 ---
 # <a name="brokermessage-classify-event-class"></a>Broker:Message Classify, clase de eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un evento **Broker:Message Classify** cuando Service Broker determina el enrutamiento para un mensaje.  
@@ -33,12 +33,12 @@ ms.locfileid: "52803957"
 |**DatabaseID**|**int**|Identificador de la base de datos especificada mediante la instrucción USE *baseDeDatos* o identificador de la base de datos predeterminada si no se emite la instrucción USE *baseDeDatos* para una instancia determinada. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**EventClass**|**int**|Tipo de clase de eventos capturado. Es siempre **141** para **Broker:Message Classify**.|27|No|  
 |**EventSequence**|**int**|Número de secuencia de este evento.|51|No|  
-|**EventSubClass**|**nvarchar**|Tipo de subclase de evento que proporciona más información acerca de cada clase de evento. Esta columna puede incluir los valores siguientes:<br /><br /> **Local**: La ruta elegida tiene la dirección LOCAL.<br /><br /> **Remoto**: La ruta elegida tiene una dirección diferente a LOCAL.<br /><br /> **Retrasa**: El mensaje tiene demora porque el reenvío está deshabilitado o porque no hay ninguna ruta que coincida.|21|Sí|  
+|**EventSubClass**|**nvarchar**|Tipo de subclase de evento que proporciona más información acerca de cada clase de evento. Esta columna puede incluir los valores siguientes:<br /><br /> **Local**: La ruta elegida tiene la dirección LOCAL.<br /><br /> **Remoto**: La ruta elegida tiene una dirección que no sea LOCAL.<br /><br /> **Retrasa**: El mensaje tiene demora porque el reenvío está deshabilitado o porque no hay ninguna ruta que coincida.|21|Sí|  
 |**FileName**|**nvarchar**|Nombre del servicio al que se dirige el mensaje.|36|No|  
 |**GUID**|**uniqueidentifier**|Id. de conversación del diálogo. Este identificador se transmite como parte del mensaje y lo comparten ambas partes de la conversación.|54|No|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|No|  
-|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSid**|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario al que pertenece la conexión que generó este evento.|6|Sí|  
 |**OwnerName**|**nvarchar**|Identificador de agente al que se dirige el mensaje.|37|No|  

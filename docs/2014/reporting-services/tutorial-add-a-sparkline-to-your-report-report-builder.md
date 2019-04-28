@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648699"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Agregar un minigráfico a un informe (generador de informes)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adición de un minigráfico a un informe (Generador de informes)
   En este tutorial, crea un informe de la tabla básico basado en datos de ventas de ejemplo y, a continuación, agrega un minigráfico a una celda de la tabla.  
   
  Una versión mejorada del informe que creará en este tutorial está disponible como informe de ejemplo del Generador de informes de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener más información acerca de cómo descargar este ejemplo y otros informes, vea [informe del generador de informes de ejemplo](https://go.microsoft.com/fwlink/?LinkId=184851). La siguiente ilustración muestra un informe de ejemplo similar al que creará.  

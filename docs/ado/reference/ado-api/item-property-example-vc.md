@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b228ad46c89766475e8a74e26a0aaf389130acd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864437"
 ---
 # <a name="item-property-example-vc"></a>Ejemplo de la propiedad de elemento (VC ++)
 Este ejemplo se muestra cómo el [elemento](../../../ado/reference/ado-api/item-property-ado.md) propiedad tiene acceso a miembros de una colección. El ejemplo se abre el ***autores*** tabla de la ***Pubs*** base de datos con un comando con parámetros.  

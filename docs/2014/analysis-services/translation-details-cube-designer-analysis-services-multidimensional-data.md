@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a48ac22eb47eca8e265958289fdb461d4dd7f032
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794286"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Detalles de traducción (pestaña Traducciones, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Detalles de transacción** de la pestaña **Transacciones** en el Diseñador de cubos para definir y administrar traducciones en el cubo seleccionado.  
@@ -32,37 +32,37 @@ ms.locfileid: "48118755"
   
 -   Grupo de medida  
   
-     `Caption` Propiedad  
+     Propiedad `Caption`  
   
 -   Measure  
   
-     `Caption` y `DisplayFolder` propiedades  
+     Propiedades `Caption` y `DisplayFolder`  
   
 -   Dimensión  
   
-     `Caption` Propiedad  
+     Propiedad `Caption`  
   
 -   Perspective  
   
-     `Caption` Propiedad  
+     Propiedad `Caption`  
   
 -   Indicador clave de rendimiento (KPI)  
   
-     `Caption`, `Description`, y `DisplayFolder` propiedades  
+     Propiedades `Caption`, `Description` y `DisplayFolder`.  
   
 -   Acción  
   
-     `Caption` Propiedad  
+     Propiedad `Caption`  
   
 -   Conjunto con nombre  
   
-     `Caption` Propiedad  
+     Propiedad `Caption`  
   
 -   miembro calculado  
   
-     `Caption` Propiedad  
+     Propiedad `Caption`  
   
- **\<Lenguaje >**  
+ **\<Language>**  
  Escriba el valor de la propiedad del objeto de cubo en el idioma seleccionado.  
   
 ## <a name="context-menu"></a>Menú contextual  

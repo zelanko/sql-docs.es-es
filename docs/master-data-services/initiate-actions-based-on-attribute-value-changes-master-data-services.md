@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d330a02f24729e60dda438ad112bb6006ca2b202
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695754"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>Iniciar acciones según los cambios de valores de atributos (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52822219"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una regla de negocios para iniciar acciones según los cambios de los valores de atributos. Por ejemplo, cuando un valor de atributo concreto cambia, quizás desee cambiar un valor, enviar una notificación o iniciar un flujo de trabajo externo.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -83,7 +83,7 @@ ms.locfileid: "52822219"
   
 21. En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. El estado de la regla cambia a **Activo**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   Aplique las reglas de negocios a los datos siguiendo uno de estos procedimientos:  
   
@@ -91,7 +91,7 @@ ms.locfileid: "52822219"
   
     -   [Validar una versión con las reglas de negocios &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Agregar atributos a un grupo de seguimiento de cambios &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
  [Reglas de negocios &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   

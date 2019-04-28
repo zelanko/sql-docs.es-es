@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80226e3e82dec9e3c163ed96106d1b24846fca0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700208"
 ---
 # <a name="create-calculated-members"></a>Crear miembros calculados
   Puede crear medidas o miembros de una dimensión personalizados, denominados miembros calculados, combinando datos del cubo, operadores aritméticos, números y funciones. Por ejemplo, puede crear un miembro calculado denominado Euros que convierta dólares en euros multiplicando una medida de dólar existente por una tasa de cambio. De esta manera, se puede mostrar a los usuarios finales el valor en euros en una fila o una columna independiente.  
@@ -30,7 +30,7 @@ ms.locfileid: "48077685"
   
  Los miembros calculados se crean en cubos. Para crear un miembro calculado, en el Diseñador de cubos, en la pestaña **Cálculos** , haga clic en el icono de **Nuevo miembro calculado** de la barra de herramientas. Este comando abre un formulario para especificar las siguientes opciones para el miembro calculado:  
   
- **Nombre**  
+ **Name**  
  Seleccione el nombre del miembro calculado. Este nombre aparece como encabezado de columna o de fila de los valores de miembros calculados cuando los usuarios finales examinan el cubo.  
   
  **Jerarquía primaria**  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f42b418a2cc40b3e805e0129dc3414c3db5bbdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650355"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>Buscar origen de datos (vista del Asistente para minería de datos)
   Utilice el cuadro de diálogo de la vista **Buscar origen de datos** para ver la vista del origen de datos que ha seleccionado en la página **Seleccionar vista del origen de datos** del asistente.  
@@ -26,7 +26,7 @@ ms.locfileid: "48187291"
 > [!NOTE]  
 >  Esta página solo aparecerá si ha seleccionado **A partir de una base de datos relacional o del almacenamiento de datos** en la página **Seleccionar el método de definición** del asistente.  
   
- **Para más información:** [Vistas del origen de datos en modelos multidimensionales](multidimensional-models/data-source-views-in-multidimensional-models.md), [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
+ **Para obtener más información:** [Vistas en modelos multidimensionales de origen de datos](multidimensional-models/data-source-views-in-multidimensional-models.md), [Asistente para minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Opciones  
  **Zoom**  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a710ef8474ea0ce67d0b549febb3a9dd40aa36e0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811407"
 ---
 # <a name="configure-the-cursor-threshold-server-configuration-option"></a>Establecer la opción de configuración del servidor Umbral de cursor
   En este tema se describe cómo establecer la opción de configuración del servidor **umbral de cursor** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **umbral de cursor** especifica el número de filas del conjunto de cursores donde se generan de manera asincrónica los conjuntos de claves del cursor. Cuando los cursores generan un conjunto de claves para un conjunto de resultados, el optimizador de consultas calcula el número de filas que se va a devolver para ese conjunto de resultados. Si el optimizador de consultas calcula que el número de filas devuelto es superior a este umbral, el cursor se genera de manera asincrónica, lo que permite al usuario capturar las filas del cursor mientras sigue llenándose. De lo contrario, el cursor se genera de manera sincrónica y la consulta espera a que se devuelvan todas las filas.  

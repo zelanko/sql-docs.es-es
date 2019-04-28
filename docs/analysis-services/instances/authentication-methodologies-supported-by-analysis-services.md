@@ -1,5 +1,5 @@
 ---
-title: Metodologías de autenticación admitidas por Analysis Services | Documentos de Microsoft
+title: Metodologías de autenticación admitidas por Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fe2c4021792c3285165440fc0627aa7eab374882
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659224"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Metodologías de autenticación admitidas por Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

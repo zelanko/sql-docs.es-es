@@ -12,16 +12,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d5f3c133b105c905b79589d86952658b6d39f0f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653392"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>Resumen de la interfaz del proveedor de servicios de ODBC
 En la tabla siguiente se describe las funciones de interfaz de proveedor de servicios de ODBC. Para obtener más información sobre la sintaxis y semántica para cada función, vea [referencia de la interfaz de proveedor de servicios (SPI) de ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md).  
   
-|Nombre de función|Propósito|  
+|Nombre de función|Finalidad|  
 |-------------------|-------------|  
 |[SQLSetConnectAttrForDbcInfo](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|Igual que [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), pero establece el atributo en el token de la información de conexión en lugar de en el identificador de conexión.|  
 |[SQLSetDriverConnectInfo](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|Establece la cadena de conexión en el token de la información de conexión para una aplicación [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) llamar.|  

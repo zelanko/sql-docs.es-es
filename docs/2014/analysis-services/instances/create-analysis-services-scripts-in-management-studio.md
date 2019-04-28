@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d419a09c34998165f13fbc9e43c9b561602b69aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730205"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Crear scripts de Analysis Services en Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye características, plantillas y editores de generación de script que se pueden usar para incluir objetos y tareas de Analysis Services en un script.  
@@ -36,7 +36,7 @@ ms.locfileid: "48067205"
   
 2.  Haga clic con el botón derecho en una base de datos y haga clic en **Copia de seguridad**. Se abre el cuadro de diálogo Copia de seguridad de la base de datos. Especifique un nombre de archivo de copia de seguridad y elija las opciones que desee para esta copia de seguridad.  
   
-3.  Haga clic en **Script** en la parte superior del cuadro de diálogo. La característica Script forma parte de todos los cuadros de diálogo basados en tareas en Management Studio. Tiene las opciones siguientes: **Generar script de acción en la ventana Nueva consulta** para abrir la ventana del editor de consultas, **Generar script de acción en archivo** para guardar el script XMLA en un archivo o **Generar script de acción en Portapapeles** para guardar el script XMLA en el Portapapeles.  
+3.  Haga clic en **Script** en la parte superior del cuadro de diálogo. La característica Script forma parte de todos los cuadros de diálogo basados en tareas en Management Studio. Tiene las siguientes opciones: **Script de acción en ventana nueva consulta** para abrir la ventana del editor de consultas, **acción de Script en archivo** para guardar el script XMLA en un archivo, o **acción de Script en Portapapeles** para guardar el script XMLA para el Portapapeles.  
   
      Tenga en cuenta que la opción **Generar script de acción en trabajo** que aparece como una opción de script en Management Studio no se admite para los scripts de Analysis Services.  
   
@@ -60,13 +60,13 @@ ms.locfileid: "48067205"
   
 2.  Busque el objeto para el que desee crear un script que cree, altere o elimine objetos.  
   
-3.  Haga clic con el botón derecho en el objeto, seleccione **Generar script del cubo como**, elija **CREATE To**, **ALTER To**o **Delete To**y, después, haga clic en una de las siguientes opciones: **Nueva ventana del Editor de consultas** para abrir la ventana del editor de consultas, **Archivo** para guardar el script XMLA en un archivo o **Portapapeles** para guardarlo en el Portapapeles.  
+3.  Haga clic en el objeto, elija **incluir cubo como**, apunte a **CREATE To**, **ALTER To**, o **Delete To**y, a continuación, haga clic en uno de los siguientes opciones: **Nueva ventana del Editor de consultas** para abrir la ventana del editor de consultas, **archivo** para guardar el script XMLA en un archivo, o **Portapapeles** para guardar el script XMLA en el Portapapeles.  
   
     > [!NOTE]  
     >  Normalmente se selecciona **Archivo** para crear versiones diferentes del archivo.  
   
 ## <a name="see-also"></a>Vea también  
- [Secuencia de comandos de las tareas administrativas en Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
- [Editor de consultas XMLA &#40;Analysis Services - datos multidimensionales&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
+ [Crear scripts para tareas administrativas en Analysis Services](../script-administrative-tasks-in-analysis-services.md)   
+ [Editor de consultas XMLA &#40;Analysis Services: datos multidimensionales&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

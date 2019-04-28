@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2e38b572535011737f33ba1e4c438540ecdd6849
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811236"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instancias del motor de base de datos (SQL Server)
   Una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] es una copia del ejecutable de `sqlservr.exe` que se ejecuta como un servicio de sistema operativo. Cada instancia administra varias bases de datos del sistema y una o varias bases de datos de usuario. Cada equipo puede ejecutar varias instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Las aplicaciones se conectan a la instancia para realizar el trabajo en una base de datos administrada por la instancia.  

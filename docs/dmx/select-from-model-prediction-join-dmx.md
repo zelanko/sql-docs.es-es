@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658957"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modelo&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  *expression*  
  Opcional. Expresión que devuelve un valor escalar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La cláusula ON define la asignación entre las columnas de la consulta de origen y las columnas del modelo de minería. Esta asignación sirve para unir columnas de la consulta de origen con columnas del modelo de minería de datos de forma que las columnas se puedan usar como entradas para crear las predicciones. Las columnas de la \< *lista de asignación de combinación*> están relacionadas con un signo igual (=), tal como se muestra en el ejemplo siguiente:  
   
 ```  
@@ -78,7 +78,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  La cláusula ORDER by puede aceptar una sola columna como argumento; es decir, no se puede ordenar por más de una columna.  
   
-## <a name="example-1-singleton-query"></a>Ejemplo 1: consulta singleton  
+## <a name="example-1-singleton-query"></a>Ejemplo 1: Consulta singleton  
  El ejemplo siguiente muestra cómo crear una consulta para predecir si una persona determinada comprará una bicicleta en tiempo real. En esta consulta los datos no están almacenados en una tabla u otro origen de datos, sino que se especifican directamente en la consulta. La persona de la consulta tiene el siguiente perfil:  
   
 -   35 años  
@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
   2 AS [Total Children]) AS t  
 ```  
   
-## <a name="example-2-using-openquery"></a>Ejemplo 2: usar OPENQUERY  
+## <a name="example-2-using-openquery"></a>Ejemplo 2: Utilizando OPENQUERY  
  El ejemplo siguiente muestra cómo crear una consulta de predicción por lotes mediante una lista de clientes potenciales almacenada en un conjunto de datos externo. Dado que la tabla forma parte de una vista del origen de datos que se ha definido en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puede usar la consulta [OPENQUERY](../dmx/source-data-query-openquery.md) para recuperar los datos. Dado que los nombres de las columnas de la tabla son diferentes de los del modelo de minería de datos, el **ON** cláusula debe usarse para asignar las columnas de la tabla a las columnas del modelo.  
   
  La consulta devuelve nombre y el apellido de cada persona de la tabla, junto con una columna booleana que indica si es probable que cada persona compre una bicicleta, donde 0 significa que "probablemente no comprará una bicicleta" y 1 significa que "probablemente comprará una bicicleta". La última columna contiene la probabilidad del resultado predicho.  
@@ -154,7 +154,7 @@ WHERE [BIKE Buyer]
 ORDER BY [LastName] ASC  
 ```  
   
-## <a name="example-3-predicting-associations"></a>Ejemplo 3: predecir las asociaciones  
+## <a name="example-3-predicting-associations"></a>Ejemplo 3: Predecir asociaciones  
  En el ejemplo siguiente se muestra cómo crear una predicción usando un modelo generado a partir del algoritmo de asociación de [!INCLUDE[msCoName](../includes/msconame-md.md)]. Las predicciones en un modelo de asociación se pueden utilizar para recomendar productos relacionados. Por ejemplo, la consulta siguiente devuelve los tres productos que es más probable que se compren juntos:  
   
 -   Mountain Bottle Cage  
@@ -187,7 +187,7 @@ NATURAL PREDICTION JOIN
  Dado que la columna que contiene el atributo de predicción, `[v Assoc Seq Line Items]`, es una columna de la tabla, la consulta devuelve una única columna que contiene una tabla anidada. De forma predeterminada, la columna de tabla anidada se denomina `Expression`. Si el proveedor no admite conjuntos de filas jerárquicos, puede usar el **FLATTENED** palabra clave, como se muestra en este ejemplo, para facilitar la visualización de los resultados.  
   
 ## <a name="see-also"></a>Vea también  
- [SELECCIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

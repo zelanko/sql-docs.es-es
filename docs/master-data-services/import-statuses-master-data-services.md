@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cc1a94e0677f0c9356f4fba43b7b6230759c9458
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696298"
 ---
 # <a name="import-statuses-master-data-services"></a>Estados de importación (Master Data Services)
 
@@ -28,11 +28,11 @@ ms.locfileid: "52819287"
 |------------|-----------------|----------------|  
 |En cola para ejecutar|No se ha iniciado el procesamiento del lote.|1|  
 |En ejecución|Se está procesando el lote.|2|  
-|Completado|Se ha terminado de procesar el lote.|3|  
+|Completada|Se ha terminado de procesar el lote.|3|  
 |En cola para borrar|El lote ha finalizado su procesamiento y se borrará.|4|  
 |Desactivado|Se ha borrado el lote.|5|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   

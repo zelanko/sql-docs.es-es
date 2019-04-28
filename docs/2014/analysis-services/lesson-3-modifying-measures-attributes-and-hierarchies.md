@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01122ad03366af6c296046fb2bb91982f02385eb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729361"
 ---
-# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lección 3: Modificar medidas, atributos y jerarquías
+# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lección 3: Modificación de medidas, atributos y jerarquías
   Una vez definido el cubo inicial, estará listo para mejorar la utilidad y la facilidad de uso del cubo. Puede hacerlo agregando jerarquías que admitan navegación y agregación en varios niveles, aplicando formatos a la medida específica, y definiendo cálculos y relaciones.  
   
 > [!NOTE]  

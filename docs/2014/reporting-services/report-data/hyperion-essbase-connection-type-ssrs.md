@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 05238c6a8916875359258c31fbb3bb0f427fa0cd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696100"
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Tipo de conexión de Hyperion Essbase (SSRS)
   Para incluir los datos de un origen de datos externo de [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] en su informe, deberá tener un conjunto de datos basado en un origen de datos de informe de tipo [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Este tipo de origen de datos integrado se basa en la extensión de datos de [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], que permite recuperar los datos multidimensionales de un origen de datos externo de [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  

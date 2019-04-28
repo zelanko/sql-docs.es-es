@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61ad84ce632de0431a584d6ca53b2673d37207c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676422"
 ---
 # <a name="overview-of-upgrade-advisor"></a>Información general sobre el Asesor de actualizaciones
   En esta sección se proporciona información general sobre el proceso de actualización, así como información para ayudarle a entender y usar el Asistente para análisis del Asesor de actualizaciones y el Visor de informes del Asesor de actualizaciones.  

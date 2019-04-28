@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea979963906af46a1d032614ad6b398f70ef3483
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729461"
 ---
 # <a name="lesson-14-deploy"></a>Lección 14: Implementar
   En esta lección, configurará propiedades de implementación, especificará una instancia del servidor de implementación de Analysis Services que se ejecute en modo tabular y asignará un nombre al modelo que va a implementar. A continuación, implementará el modelo en esa instancia. Una vez implementado, los usuarios podrán conectarse al modelo mediante una aplicación cliente de informes. Para obtener más información, vea [Implementación de soluciones de modelos tabulares &#40;SSAS tabular&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
@@ -24,7 +24,7 @@ ms.locfileid: "48196235"
  Tiempo estimado para completar esta lección: **5 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas de esta lección, debe haber completado la lección anterior: [Lección 13: Analizar en Excel](lesson-12-analyze-in-excel.md).  
+ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 13: Analizar en Excel](lesson-12-analyze-in-excel.md).  
   
 ## <a name="deploy-the-model"></a>Implementar el modelo  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48196235"
   
 ## <a name="see-also"></a>Vea también  
  [Modo DirectQuery &#40;SSAS tabular&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [Configurar las propiedades de implementación y modelado de datos predeterminada &#40;Tabular de SSAS&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [Las bases de datos de modelo tabular &#40;Tabular de SSAS&#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
+ [Configurar las propiedades predeterminadas de modelado de datos y de implementación &#40;SSAS tabular&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Bases de datos de modelo tabular &#40;SSAS tabular&#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   

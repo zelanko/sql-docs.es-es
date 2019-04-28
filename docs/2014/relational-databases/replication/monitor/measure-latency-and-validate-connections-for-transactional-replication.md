@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667892"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir la latencia y validar las conexiones de la replicación transaccional
   En este tema se describe cómo medir la latencia y validar conexiones para la replicación transaccional en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante el Monitor de replicación, [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). La replicación transaccional proporciona la característica de testigo de seguimiento, que ofrece una forma cómoda de medir la latencia en topologías de replicación transaccional y validar las conexiones entre el publicador, el distribuidor y los suscriptores. Se escribe un token (una pequeña cantidad de datos) en el registro de transacción de la base de datos de publicaciones, marcado como si fuese una transacción replicada, y se envía a través del sistema, de forma que permite calcular:  
@@ -88,7 +88,7 @@ ms.locfileid: "52813907"
   
 3.  Haga clic en **Insertar seguimiento**.  
   
-4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **distribuidor a suscriptor**, **latencia Total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
+4.  Vea el tiempo transcurrido para el token de seguimiento de las columnas siguientes: **Publicador a distribuidor**, **Distribuidor a suscriptor**, **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Para ver información en el testigo de seguimiento insertado previamente  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52813907"
   
 3.  Seleccione una hora en la lista desplegable **Hora de inserción** .  
   
-4.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **distribuidor a suscriptor**, **latencia Total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
+4.  Vea el tiempo transcurrido para el token de seguimiento de las columnas siguientes: **Publicador a distribuidor**, **Distribuidor a suscriptor**, **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
   
     > [!NOTE]  
     >  La información del testigo de seguimiento se guarda durante el mismo período que otros datos del historial, que depende del período de retención de historial de la base de datos de distribución. Para obtener información sobre cómo cambiar las propiedades de la base de datos de distribución, vea [Ver y modificar las propiedades del distribuidor y del publicador](../view-and-modify-distributor-and-publisher-properties.md).  

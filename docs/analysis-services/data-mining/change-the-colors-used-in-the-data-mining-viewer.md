@@ -1,23 +1,26 @@
 ---
-title: Cambiar los colores utilizados en el Visor de minería de datos | Documentos de Microsoft
-ms.date: 05/01/2018
-ms.prod: sql
-ms.technology: analysis-services
-ms.custom: data-mining
+title: Cambiar los colores utilizados en el Visor de minería de datos | Microsoft Docs
+ms.custom: ''
+ms.date: 06/14/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.technology:
+- analysis-services
 ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+f1_keywords:
+- VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
+ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
 author: minewiskan
-manager: kfile
+ms.author: owend
+manager: craigg
 ms.openlocfilehash: f9bf7df74e5a247b7608ac603465fe579b4ab68e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670534"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>Cambiar los colores usados en los visores de minería de datos
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Puede cambiar los colores que se utilizan en los visores de minería de datos para mostrar series de datos, nodos o clústeres. Para ello, se establecen las opciones en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Después de haber cambiado los valores, las selecciones de color se aplican a todos los modelos que se ven con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]; sin embargo, debe cerrar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y volver a abrir el modelo en el visor para ver los nuevos colores.  
   
 ### <a name="to-change-the-colors-used-in-the-data-mining-viewers"></a>Para cambiar los colores utilizados en los visores de minería de datos  

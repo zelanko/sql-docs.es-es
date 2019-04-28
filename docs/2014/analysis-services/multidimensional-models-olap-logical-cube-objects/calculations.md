@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702692"
 ---
 # <a name="calculations"></a>Cálculos
   Un cálculo es una expresión MDX (expresiones multidimensionales) o un script que se usa para definir un miembro calculado, un conjunto con nombre o una asignación con ámbito en un cubo en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Los cálculos permiten agregar objetos definidos no por los datos del cubo, sino por expresiones que pueden hacer referencia a otras partes del cubo, a otros cubos o incluso a información que se encuentra fuera de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Los cálculos permiten ampliar las capacidades de un cubo, al aumentar la flexibilidad y la eficacia de las aplicaciones de Business Intelligence. Para obtener más información acerca de los cálculos de scripting, consulte [Introducción a Scripting de MDX en Microsoft SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=81892). Para obtener más información acerca de los problemas de rendimiento relacionados con los cálculos y consultas MDX, vea el [Guía de rendimiento de SQL Server 2005 Analysis Services](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  

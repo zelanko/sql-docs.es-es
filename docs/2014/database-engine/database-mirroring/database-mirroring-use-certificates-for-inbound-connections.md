@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3f70ddfc241a902a59dff989323a75b17f7af55e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807564"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>Permitir que un extremo de creación de reflejo de la base de datos utilice certificados para las conexiones entrantes (Transact-SQL)
   En este tema se describen los pasos necesarios para configurar instancias del servidor que utilicen certificados para autenticar conexiones entrantes para la creación de reflejo de la base de datos. Antes de poder configurar las conexiones entrantes, deberá configurar las conexiones salientes en cada una de las instancias del servidor. Para obtener más información, vea [Permitir que un punto de conexión de creación de reflejo de la base de datos utilice certificados para las conexiones salientes &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md).  

@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b3b52b0fbdfcd5ccdd7c841bf1a7b73f54857b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862467"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Adjuntar un dominio o un dominio compuesto a datos de referencia
 
@@ -91,7 +91,7 @@ ms.locfileid: "56010726"
 ##  <a name="FollowUp"></a> Seguimiento: después de asignar un dominio a datos de referencia  
  Cree un proyecto de calidad de datos y ejecute la actividad de limpieza en los datos de origen que incluyan direcciones de EE. UU., comparándolos con la base de conocimiento creada en este tema. Vea [Limpiar datos mediante el conocimiento de datos de referencia &#40;externo&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Servicios de datos de referencia en DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Limpieza de datos](../data-quality-services/data-cleansing.md)  
   

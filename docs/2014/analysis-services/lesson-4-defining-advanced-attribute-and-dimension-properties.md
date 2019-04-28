@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c685a2050611ce9cc55309847608bf50521fff16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728780"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lección 4: Definir propiedades de dimensiones y de atributos avanzados
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lección 4: Definición de propiedades de dimensiones y de atributos avanzados
   En esta lección, aprenderá a utilizar algunas de las propiedades avanzadas de atributos, jerarquías de atributos y propiedades de dimensiones.  
   
 > [!NOTE]  

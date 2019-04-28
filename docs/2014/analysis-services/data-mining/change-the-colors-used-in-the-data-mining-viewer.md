@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6152b183e00ca429efb817b9b19cdc0a7a1f77c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689402"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>Cambiar los colores usados en los visores de minería de datos
   Puede cambiar los colores que se utilizan en los visores de minería de datos para mostrar series de datos, nodos o clústeres. Para ello, se establecen las opciones en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Después de haber cambiado los valores, las selecciones de color se aplican a todos los modelos que se ven con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]; sin embargo, debe cerrar [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y volver a abrir el modelo en el visor para ver los nuevos colores.  

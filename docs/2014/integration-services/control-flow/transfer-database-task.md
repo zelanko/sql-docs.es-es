@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62830154"
 ---
 # <a name="transfer-database-task"></a>Tarea Transferir bases de datos
   La tarea Transferir bases de datos transfiere una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre dos instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A diferencia de otras tareas que solo transfieren objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiándolos, la tarea Transferir bases de datos puede copiar o mover una base de datos. Esta tarea también puede utilizarse para copiar una base de datos en el mismo servidor.  

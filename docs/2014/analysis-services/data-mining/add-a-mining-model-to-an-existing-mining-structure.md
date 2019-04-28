@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f62a5fb194813f9fcab5fcdb5c9f2bfb70135d8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704004"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Agregar un modelo de minería de datos a una estructura de minería de datos existente
   Una vez agregado el modelo de minería de datos inicial, podrá agregar más modelos a una estructura de minería de datos. Los modelos deben incluir columnas que estén presentes en la estructura, pero se puede definir el uso de las columnas de un modo distinto para cada modelo de minería de datos. Para obtener más información sobre la forma de definir columnas del modelo de minería de datos, vea [Columnas del modelo de minería de datos](mining-model-columns.md).  

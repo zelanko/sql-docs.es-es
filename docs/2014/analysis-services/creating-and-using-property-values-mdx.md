@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73215fc788e558e8bbbc006eb45f43b2514d21aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679743"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>Crear y usar los valores de propiedad (MDX)
   Las expresiones multidimensionales (MDX) admiten propiedades intrínsecas y definidas por el usuario para dimensiones, niveles, miembros y celdas. Las propiedades intrínsecas se utilizan para proporcionar nombres únicos, títulos e incluso formatos y tamaños de fuente para celdas individuales. Por otro lado, las propiedades definidas por el usuario pueden utilizarse para proporcionar casi cualquier tipo de atributo adicional para los miembros.  
@@ -39,6 +39,6 @@ ms.locfileid: "48196005"
  Para más información sobre las propiedades de celda y cómo usarlas, vea [Usar las propiedades de celda &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Aspectos básicos de consultas MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

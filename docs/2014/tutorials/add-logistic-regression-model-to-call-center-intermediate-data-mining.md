@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823282"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>Agregar un modelo de regresión logística a la estructura de centro de llamadas (Tutorial intermedio de minería de datos)
   Además de analizar los factores que pueden influir en las operaciones del centro de llamadas, se le pidió que proporcionara recomendaciones concretas sobre la manera en que el personal puede mejorar la calidad de servicio. En esta tarea usará la misma estructura de minería de datos con la que creó el modelo de exploración y agregará un modelo de minería de datos que después se usará para crear predicciones.  

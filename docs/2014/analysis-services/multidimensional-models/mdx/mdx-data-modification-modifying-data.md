@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9e83cd72f972107b83bb6efea27d28857053e200
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699672"
 ---
 # <a name="modifying-data-mdx"></a>Modificar datos (MDX)
   Además de usar las expresiones multidimensionales (MDX) para recuperar y administrar los datos de las dimensiones y los cubos, MDX también permite actualizar o *reescribir* los datos de las dimensiones y los cubos. Dichas actualizaciones pueden ser temporales, como los análisis especulativos o de escenarios condicionales, o permanentes (cuando los cambios se producen a partir del análisis de los datos).  
@@ -37,6 +37,6 @@ ms.locfileid: "48177605"
  Para más información, vea [Usar reescrituras de cubos &#40;MDX&#41;](mdx-data-modification-using-cube-writebacks.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Aspectos básicos de consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

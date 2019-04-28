@@ -1,5 +1,5 @@
 ---
-title: Sys.database_audit_specification_details (Transact-SQL) | Microsoft Docs
+title: sys.database_audit_specification_details (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 865fb25a08bdf549c09a9bb4e4e23cff929f12ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652483"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "47648953"
 |**audit_action_id**|**int**|Id. de la acción de auditoría.|  
 |**audit_action_name**|**sysname**|Nombre de acción de auditoría o el grupo de acciones de auditoría|  
 |**Clase**|**int**|Identifica la clase del objeto que se está auditando.|  
-|**class_ desc**|**nvarchar (60)**|Descripción de la clase del objeto que se está auditando:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
+|**class_ desc**|**Nvarchar(60)**|Descripción de la clase del objeto que se está auditando:<br /><br /> - SCHEMA<br /><br /> - TABLE|  
 |**major_id**|**int**|Id. principal del objeto que se está auditando; por ejemplo, el Id. de tabla de una acción de auditoría de tabla.|  
 |**minor_id**|**Int**|Id. secundario del objeto que se está auditando, interpretado según la clase; por ejemplo, el Id. de columna de una acción de auditoría de tabla.|  
 |**audited_principal_id**|**int**|Entidad de seguridad que se está auditando.|  
-|**audited_result**|**nvarchar (60)**|Resultados de la acción de auditoría:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
+|**audited_result**|**Nvarchar(60)**|Resultados de la acción de auditoría:<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
 |**is_group**|**Bit**|Indica si el objeto es un grupo:<br /><br /> 0 - no es un grupo<br /><br /> 1 - es un grupo|  
   
 ## <a name="permissions"></a>Permisos  

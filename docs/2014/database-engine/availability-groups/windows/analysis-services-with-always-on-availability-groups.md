@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791886"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con grupos de disponibilidad AlwaysOn
   El grupo de disponibilidad AlwaysOn es una colección predefinida de bases de datos relacionales de SQL Server que conmuta por error conjuntamente cuando las condiciones desencadenan una conmutación por error en una base de datos, redirigiendo las solicitudes a una base de datos reflejada en otra instancia del mismo grupo de disponibilidad. Si utiliza grupos de disponibilidad como solución de alta disponibilidad, puede usar una base de datos de ese grupo como origen de datos en una solución tabular o multidimensional de Analysis Services. Todas las operaciones de Analysis Services siguientes funcionan de la manera esperada cuando se utiliza una base de datos de disponibilidad: procesando o importando datos, consultando datos relacionales directamente (utilizando el modo DirectQuery o almacenamiento ROLAP) y con reescritura.  
@@ -30,7 +30,7 @@ ms.locfileid: "52414092"
   
  **(Para cargas de trabajo de solo lectura)**. El rol de réplica secundaria se debe configurar para las conexiones de solo lectura, el grupo de disponibilidad debe tener una lista de distribución y la conexión del origen de datos de Analysis Services debe especificar el agente de escucha del grupo de disponibilidad. En este tema se proporcionan instrucciones al respecto.  
   
-##  <a name="bkmk_UseSecondary"></a> Lista de comprobación: Usar una réplica secundaria para operaciones de solo lectura  
+##  <a name="bkmk_UseSecondary"></a> Lista de comprobación: uso de una réplica secundaria para las operaciones de solo lectura  
  A menos que la solución de Analysis Services incluya reescritura, puede configurar una conexión a un origen de datos para utilizar una réplica secundaria legible. Si tiene una conexión de red rápida, la replicación secundaria tiene una latencia de datos muy baja, proporcionando datos casi idénticos a los de la réplica primaria. Con la réplica secundaria para las operaciones de Analysis Services, puede reducir la contención de lectura/escritura de la replicación primaria y conseguir una mejor utilización de las réplicas secundarias en el grupo de disponibilidad.  
   
  De forma predeterminada, tanto el acceso de lectura-escritura como de intención de lectura se permiten en la réplica principal y no se permiten conexiones en las réplicas secundarias. Se requiere una configuración adicional para configurar una conexión de cliente de solo lectura en una réplica secundaria. La configuración requiere establecer las propiedades en la réplica secundaria y ejecutar un script T-SQL que defina una lista de enrutamiento de solo lectura. Utilice los procedimientos siguientes para asegurarse de que ha realizado los dos pasos.  
@@ -151,7 +151,7 @@ ms.locfileid: "52414092"
 ##  <a name="bkmk_test"></a> Probar la configuración  
  Después de configurar la replicación secundaria y crear una conexión a un origen de datos en Analysis Services, puede confirmar que los comandos de consulta y procesamiento se redirigen a la réplica secundaria. También puede realizar una conmutación por error manual planeada para comprobar el plan de recuperación para este escenario.  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Paso 1: Confirme que la conexión de origen de datos se redirige a la réplica secundaria  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Paso 1: Confirmar que la conexión a un origen de datos se redirige a la réplica secundaria  
   
 1.  Inicie SQL Server Profiler y conéctese a la instancia de SQL Server que hospeda la réplica secundaria.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "52414092"
 ##  <a name="bkmk_whathappens"></a> Qué ocurre después de una conmutación por error  
  Durante una conmutación por error, una réplica secundaria realiza la transición al rol principal y la réplica principal anterior realiza la transición al rol secundario. Todas las conexiones de cliente se terminan, la propiedad del agente de grupo de disponibilidad pasa con el rol de réplica principal a una nueva instancia de SQL Server y el punto de conexión del agente de escucha se enlaza a los puertos TCP y las direcciones IP virtuales de la nueva instancia. Para obtener más información, vea [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- Si la conmutación por error se produce durante el procesamiento, se produce el siguiente error en Analysis Services en la ventana de salida o de archivo de registro: "Error de OLE DB: Error de OLE DB u ODBC. Error de vínculo de comunicación; 08S01; Proveedor TPC: El host remoto cerró fuerza una conexión existente. ; 08S01".  
+ Si la conmutación por error se produce durante el procesamiento, se produce el error siguiente en Analysis Services en el archivo de registro o la ventana de salida: "Error de OLE DB: Error de OLE DB u ODBC: Error en el vínculo de comunicación; 08S01; Proveedor TPC: El host remoto forzó el cierre de la conexión existente. ; 08S01".  
   
  Este error se debe resolver si espera un minuto y vuelve a intentarlo. Si el grupo de disponibilidad se configura correctamente para la réplica secundaria legible, el procesamiento se reanudará en la nueva réplica secundaria cuando se reintente el procesamiento.  
   

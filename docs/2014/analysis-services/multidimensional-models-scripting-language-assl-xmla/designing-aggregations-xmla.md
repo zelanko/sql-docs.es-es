@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702122"
 ---
 # <a name="designing-aggregations-xmla"></a>Diseñar agregaciones (XMLA)
   Los diseños de agregaciones están asociados a las particiones de un grupo de medida determinado para asegurar que las particiones usan la misma estructura al almacenar agregaciones. Con la misma estructura de almacenamiento para particiones le permite definir fácilmente las particiones que pueden combinarse más tarde mediante el [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) comando. Para obtener más información acerca de los diseños de agregaciones, vea [agregaciones y diseños de agregaciones](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  

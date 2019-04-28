@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85f3fe4115f770f45df6dc226eac81e798514f08
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788466"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Especificar la dirección URL del extremo al agregar o modificar una réplica de disponibilidad (SQL Server)
   Para hospedar una réplica de disponibilidad de un grupo de disponibilidad, una instancia de servidor debe poseer un extremo de creación de reflejo de la base de datos. La instancia de servidor utiliza este extremo para escuchar los mensajes de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] procedentes de las réplicas de disponibilidad hospedadas por otras instancias del servidor. Para definir una réplica de disponibilidad para un grupo de disponibilidad, debe especificar la dirección URL del extremo de la instancia del servidor que hospedará la réplica. La *dirección URL del punto de conexión* identifica el protocolo de transporte del TCP del punto de conexión de creación de reflejo de la base de datos, la dirección del sistema de la instancia del servidor y el número de puerto asociado con el punto de conexión.  

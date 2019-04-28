@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811289"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la **protección ampliada** a partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protección ampliada para la autenticación** es una característica de los componentes de red que implementa el sistema operativo. La**protección ampliada** se admite en Windows 7 y Windows Server 2008 R2. **Protección ampliada** se incluye en Service packs para [!INCLUDE[msCoName](../../includes/msconame-md.md)] sistemas operativos antiguos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es más seguro cuando las conexiones se realizan con **Extended Protection**.  

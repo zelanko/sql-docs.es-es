@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9f098e3d73e085ba3b03d42ebcbd7314b0325f6a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660550"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>Método SetFlag (clase ServerNetworkProtocolProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ object.SetFlag(BoolValue)
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|*ValorBOOL*|Valor booleano que especifica el nuevo valor de la marca.|  
+|*BoolValue*|Valor booleano que especifica el nuevo valor de la marca.|  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **uint32** que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  

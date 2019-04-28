@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 417f92a00e396952218c6ef04d105245f1e3708e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658983"
 ---
 # <a name="rangemax-dmx"></a>RangeMax (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ RangeMax(<scalar column reference>)
 ## <a name="return-type"></a>Tipo devuelto  
  Un valor escalar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **RangeMax** función puede utilizarse en [SELECT DISTINCT FROM &#60;modelo &#62; &#40;DMX&#41; ](../dmx/select-distinct-from-model-dmx.md) las consultas. Cuando se usa con este tipo de consulta, la referencia de columna escalar puede contener columnas continuas o discretas que son de predicción o de entrada.  
   
  Cuando se usa con [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), **RangeMin**, **RangeMid**, y **RangeMax**  funciones devuelven los valores de límite reales del depósito especificado. Por ejemplo, si realiza una predicción en una columna de datos discretos, la consulta devuelve el número de depósito predicho de la columna de datos discretos. El **RangeMin**, **RangeMid**, y **RangeMax** funciones describen el depósito que especifica la predicción. Cuando el **RangeMax** función se utiliza con una instrucción de PREDICTION JOIN, la referencia de columna escalar solo puede contener columnas discretas de predicción.  

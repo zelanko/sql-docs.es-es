@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49c96ead9463f49ce81133f8d29127aebb211d85
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691803"
 ---
 # <a name="select-source-dialog-box"></a>Seleccionar origen (cuadro de diálogo)
   Utilice este cuadro de diálogo para seleccionar el origen de las directivas que se van a ejecutar. Para seleccionar uno o más archivos XML que contienen directivas, seleccione **Archivos**. Para ejecutar las directivas que se buscan en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione **Servidor**.  

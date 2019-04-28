@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 522bffc53240a7456ee77911b4f3044ffe0f231c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650851"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Atributos (pestaña Estructura de dimensión, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use este panel para administrar los atributos asociados con la dimensión seleccionada. Los atributos se pueden arrastrar desde este panel hasta el panel **Jerarquías** para crear jerarquías y niveles. Para obtener más información, vea [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "48229815"
 ## <a name="grid-mode-options"></a>Opciones del modo de cuadrícula  
  Cuando se visualizan los atributos en modo de cuadrícula, se tiene acceso a las columnas enumeradas en la tabla siguiente.  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre del atributo.  
   
  **Usage**  

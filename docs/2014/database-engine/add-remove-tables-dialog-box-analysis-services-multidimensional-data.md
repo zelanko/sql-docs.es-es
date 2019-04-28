@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f903e6c783f71add561cafb1e1d5087b85c8d314
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792138"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Agregar o quitar tablas (Analysis Services - datos multidimensionales)
   Use el cuadro de diálogo **Agregar o quitar tablas** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para agregar o quitar tablas de un origen de datos a, o de, una vista del origen de datos. Para mostrar el cuadro de diálogo **Agregar o quitar tablas**:  
@@ -54,6 +54,6 @@ ms.locfileid: "48200425"
   
 ## <a name="see-also"></a>Vea también  
  [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Diseñador de vistas del origen de datos &#40;Analysis Services - datos multidimensionales&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

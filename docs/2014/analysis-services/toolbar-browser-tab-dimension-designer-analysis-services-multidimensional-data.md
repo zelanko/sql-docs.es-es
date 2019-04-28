@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4788e421015effe2b3ee6abf0ffeca2cbbdd386
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794476"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Explorador, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Utilice el panel **Barra de herramientas** para realizar operaciones habituales en la pestaña **Explorador** del **Diseñador de dimensiones**.  
@@ -25,7 +25,7 @@ ms.locfileid: "48091255"
  **Procesar**  
  Haga clic para abrir el cuadro de diálogo **Procesar** y procese la dimensión seleccionada.  
   
- **Volver a conectar**  
+ **Reconnect**  
  Haga clic para volver a conectar la pestaña **Explorador** a la instancia y base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contienen la dimensión si la sesión de la pestaña **Explorador** se ha desconectado debido a una pérdida de la conexión o a un tiempo de espera excesivo.  
   
  **Actualizar**  
@@ -39,7 +39,7 @@ ms.locfileid: "48091255"
  **Filtrar miembros**  
  Haga clic para mostrar el cuadro de diálogo **Filtrar miembros** y filtre los miembros que aparecen en **Level and Members** (Nivel y miembros) para la jerarquía seleccionada.  
   
- **Escritura diferida**  
+ **Writeback**  
  Seleccione para establecer el panel **Level and Members** (Nivel y miembros) en el modo de reescritura de dimensiones.  
   
  **Disminuir sangría**  

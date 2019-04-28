@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730226"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Idiomas e intercalaciones (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite los idiomas e intercalaciones que proporcionan los sistemas operativos [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Las propiedades de `Language` y `Collation` se establecen inicialmente en el nivel de instancia durante la instalación, pero se pueden cambiar más tarde en diferentes niveles de la jerarquía de objetos.  

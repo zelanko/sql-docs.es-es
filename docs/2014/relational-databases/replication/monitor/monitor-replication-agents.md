@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab277c5ad8d85fdc7c24046bfa191078525fe705
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667133"
 ---
 # <a name="monitor-replication-agents"></a>Supervisar agentes de replicación
   El Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona una vista sistémica de la actividad de replicación, aunque también facilita la búsqueda de información sobre un agente concreto. En la siguiente lista se incluye cada agente, las pestañas del Monitor de replicación en las que se puede encontrar y un vínculo a un tema en el que se explica el modo de obtener acceso a dichas pestañas:  
@@ -37,7 +37,7 @@ ms.locfileid: "54132315"
   
     -   Agente de lectura de cola  
   
-     Información de acceso y las tareas asociadas con estos agentes a través de las siguientes pestañas: **Los agentes** (disponible para todos los publicadores y publicaciones) y **advertencias** (disponible para todas las publicaciones). Para obtener más información, consulte [ver información y realizar tareas con el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
+     Acceda a la información y a las tareas asociadas con estos agentes a través de las pestañas siguientes: **Agentes** (disponible para todos los publicadores y publicaciones) y **Advertencias** (disponible para todas las publicaciones). Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Los siguientes agentes están asociados con suscripciones en el Monitor de replicación:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "54132315"
   
     -   Agente de mezcla  
   
-     Información de acceso y las tareas asociadas con estos agentes a través de las siguientes pestañas: **Lista de supervisión** (disponible para todos los publicadores) o el **todas las suscripciones** (disponible para todas las publicaciones). Para obtener más información, consulte [ver información y realizar tareas con el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
+     Acceda a la información y a las tareas asociadas con estos agentes a través de las pestañas siguientes: **Lista de supervisión de suscripciones** (disponible para todos los publicadores) o la pestaña **Todas las suscripciones** (disponible para todas las publicaciones). Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>Usar SQL Server Management Studio para supervisar agentes de replicación  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] proporciona los siguientes cuadros de diálogo para supervisar agentes de replicación:  
@@ -56,7 +56,7 @@ ms.locfileid: "54132315"
   
 -   **Ver estado de sincronización** (para todas las suscripciones; este cuadro de diálogo permite el acceso al Agente de distribución y al Agente de mezcla)  
   
- El Monitor de replicación proporciona información adicional sobre cada agente y ofrece la posibilidad de supervisar al Agente de lectura de cola, si se utiliza. Para obtener más información, consulte [ver información y realizar tareas con el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
+ El Monitor de replicación proporciona información adicional sobre cada agente y ofrece la posibilidad de supervisar al Agente de lectura de cola, si se utiliza. Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
   
 #### <a name="to-monitor-the-snapshot-agent-and-log-reader-agent"></a>Para supervisar el Agente de instantáneas y el Agente de registro del LOG  
   

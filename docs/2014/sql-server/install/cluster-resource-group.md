@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c3ff85f2d8f99f530ad784b3a68c3ef2bfcd6432
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650276"
 ---
 # <a name="cluster-resource-group"></a>Grupo de recursos de clúster
   Use la página Grupo de recursos de clúster para especificar el disco donde se ubicarán los recursos de servidor virtual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

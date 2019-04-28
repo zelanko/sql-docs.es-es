@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729321"
 ---
 # <a name="lesson-2-add-data"></a>Lección 2: Agregar datos
   En esta lección usará el Asistente para la importación de tablas de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para conectarse a la base de datos SQL AdventureWorksDW, seleccionar datos, obtener una vista previa, filtrar los datos e importarlos al área de trabajo del modelo.  
   
- Con el Asistente para importación de tabla, puede importar datos desde una variedad de orígenes relacionales: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata y mucho más. El procedimiento para importar los datos de cada uno de estos orígenes relacionales es muy similar al que se describe a continuación. Asimismo, los datos se pueden seleccionar mediante un procedimiento almacenado.  
+ Al usar al Asistente para importación de tablas, puede importar datos desde una variedad de orígenes relacionales: Access, SQL, Oracle, Sybase, Informix, DB2, Teradata y mucho más. El procedimiento para importar los datos de cada uno de estos orígenes relacionales es muy similar al que se describe a continuación. Asimismo, los datos se pueden seleccionar mediante un procedimiento almacenado.  
   
  Para obtener más información sobre la importación de datos y los diferentes tipos de orígenes de datos de los que puede realizar la importación, vea [Orígenes de datos &#40;SSAS tabular&#41;](data-sources-ssas-tabular.md).  
   

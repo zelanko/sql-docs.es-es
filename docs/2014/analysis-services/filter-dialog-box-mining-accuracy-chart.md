@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731318"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Cuadro de diálogo Filtrar (gráfico de precisión de minería de datos)
   El cuadro de diálogo **Filtrar** ayuda a generar las condiciones que se pueden aplicar a un conjunto de datos. El conjunto de datos puede ser un conjunto de datos externo que se use para las pruebas o los datos del caso que se usen para entrenar un modelo de minería de datos. Este cuadro de diálogo ayuda a generar criterios que se pueden guardar como parte de criterios de filtro más complejos en los cuadros de diálogo **Filtro de conjunto de datos** o **Filtro del modelo** .  
@@ -33,7 +33,7 @@ ms.locfileid: "48060181"
   
  Si aplica el filtro al conjunto de datos nuevo, el modelo de minería de datos existente se usa para evaluar solo los casos en el conjunto de datos que cumplen las condiciones. Sin embargo, si aplica el filtro al propio modelo de minería de datos, la exactitud del modelo se evalúa solo para los casos dentro del modelo que cumplen esos criterios.  
   
- **Para más información:** [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Para obtener más información:** [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opciones  
  **Condiciones**  

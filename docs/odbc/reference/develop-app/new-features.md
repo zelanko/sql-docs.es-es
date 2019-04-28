@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658188"
 ---
 # <a name="new-features"></a>Nuevas características
 Se ha introducido la nueva funcionalidad siguiente en ODBC 3. *x*. Un ODBC 3. *x* la aplicación funciona con un ODBC 2 *.x* controlador no podrá utilizar esta funcionalidad. ODBC 3. *x* Administrador de controladores no se asigna estas características cuando se trabaja con un ODBC 2 *.x* controlador.  

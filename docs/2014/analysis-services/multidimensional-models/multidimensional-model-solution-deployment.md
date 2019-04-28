@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab19949b3a05040285a11b6988614d34bf5f5ccf
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699167"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Implementación de soluciones de modelos multidimensionales
-  Una vez completado el desarrollo de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede implementar la base de datos en un servidor de Analysis Services. Analysis Services proporciona seis métodos de implementación posibles que se pueden usar para mover la base de datos a un servidor de prueba o de producción. Estos son los métodos de implementación, por orden de ventaja: automatización AMO, XMLA, Asistente para la implementación, Utilidad de implementación, Asistente para sincronizar y Copia de seguridad y restauración.  
+  Una vez completado el desarrollo de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede implementar la base de datos en un servidor de Analysis Services. Analysis Services proporciona seis métodos de implementación posibles que se pueden usar para mover la base de datos a un servidor de prueba o de producción. Se enumeran los métodos aquí en orden de ventaja: Automatización AMO, XMLA, Asistente para la implementación, utilidad de implementación, sincronizar el Asistente para copia de seguridad y restauración.  
   
  En este tema se incluyen las secciones siguientes:  
   

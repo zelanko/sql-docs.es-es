@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678498"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lección 1: Creación de la estructura de minería de datos de Bike Buyer
   En esta lección creará una estructura de minería de datos que permita predecir si un cliente potencial de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] adquirirá una bicicleta. Si no está familiarizado con las estructuras de minería de datos y su función en la minería de datos, vea [estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  

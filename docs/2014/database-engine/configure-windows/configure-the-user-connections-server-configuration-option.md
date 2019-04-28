@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4d780294ca82b8d8b577a62446f4d8bd8bb4b93
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811226"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Establecer la opción de configuración del servidor Conexiones de usuario
   En este tema se describe cómo establecer la opción de configuración del servidor **conexiones de usuario** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción de **conexiones de usuario** especifica el número máximo de conexiones de usuario simultáneas que se permiten en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El número real de conexiones de usuario permitidas depende también de la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se use y de los límites de las aplicaciones y del hardware. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite un máximo de 32.767 conexiones de usuario. Como la opción **user connections** es una opción dinámica (autoconfiguración), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajusta automáticamente el número máximo de conexiones de usuario a medida que se necesitan, hasta el valor máximo permitido. Por ejemplo, si solo 10 usuarios han iniciado una sesión, se asignan 10 objetos de conexión de usuario. En la mayoría de los casos, no es necesario cambiar el valor de esta opción. El valor predeterminado es 0, lo que significa que se permite un máximo de 32 767 conexiones de usuario.  

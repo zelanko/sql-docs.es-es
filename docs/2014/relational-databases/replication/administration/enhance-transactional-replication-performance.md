@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1cb8d3e14d7963bdcbad9bdc273f2adfaf11c0ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704758"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aumentar el rendimiento de la replicación transaccional
   Una vez que haya considerado las sugerencias generales sobre el rendimiento que se describen en [Aumentar el rendimiento general de la replicación](enhance-general-replication-performance.md), tenga en cuenta estas áreas adicionales específicas de la replicación transaccional.  

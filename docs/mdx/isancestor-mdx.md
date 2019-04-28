@@ -1,5 +1,5 @@
 ---
-title: IsAncestor (MDX) | Documentos de Microsoft
+title: IsAncestor (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8aacd6825a81ff172d8fdf79373f5b251d6e18b9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653475"
 ---
 # <a name="isancestor-mdx"></a>IsAncestor (MDX)
 
@@ -35,8 +35,8 @@ IsAncestor(Member_Expression1, Member_Expression2)
  *Member_Expression2*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Notas  
- El **IsAncestor** función devuelve **true** si el primer miembro especificado es un antecesor del segundo miembro especificado. En caso contrario, la función devuelve **false**.  
+## <a name="remarks"></a>Comentarios  
+ El **IsAncestor** función devuelve **true** si el primer miembro especificado es un antecesor del segundo miembro especificado. En caso contrario, devuelve la función **false**.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve **true** si [Date]. [ Fiscal]. CurrentMember es un antecesor de January de 2003:  

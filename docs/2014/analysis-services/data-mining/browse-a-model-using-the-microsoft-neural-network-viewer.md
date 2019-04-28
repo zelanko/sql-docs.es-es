@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcbca7ac7ae5d218d99623d1b98dd64e19dcda77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689439"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Examinar un modelo usando el Visor de redes neuronales de Microsoft
   El Visor de redes neuronales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los modelos de minería de datos que se generan con el algoritmo de Red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . El algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] crea modelos de minería de datos de regresión y de clasificación que pueden analizar entradas y salidas múltiples, y es muy útil para los análisis de final abierto y la exploración. Para obtener más información acerca de este algoritmo, vea [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md).  
@@ -70,16 +70,16 @@ ms.locfileid: "48117865"
  [Volver al principio](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Characteristics"></a> Variables  
- La cuadrícula de la pestaña **Variables** contiene las columnas siguientes: **Atributo**, **Valor**, **Favorece [valor 1]** y **Favorece [valor 2]**. De forma predeterminada, las columnas se ordenan por la intensidad de **Favorece [valor 1]**. Si hace clic en un encabezado de columna, cambia el orden de la columna seleccionada.  
+ La cuadrícula en el **Variables** ficha contiene las siguientes columnas: **Atributo**, **valor**, **favorece [valor 1]**, y **favorece [valor 2]**. De forma predeterminada, las columnas se ordenan por la intensidad de **Favorece [valor 1]**. Si hace clic en un encabezado de columna, cambia el orden de la columna seleccionada.  
   
  Una barra a la derecha del atributo muestra el estado del atributo de entrada que el estado del atributo de salida favorece. El tamaño de la barra muestra la intensidad con la que el estado de salida favorece al estado de entrada.  
   
  [Volver al principio](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm.md)   
- [Tareas del Visor de modelo de minería de datos y procedimientos](mining-model-viewer-tasks-and-how-tos.md)   
- [Tareas del Visor de modelo de minería de datos y procedimientos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
+ [Tareas y procedimientos del Visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tareas y procedimientos del Visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
  [Herramientas de minería de datos](data-mining-tools.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)  
   

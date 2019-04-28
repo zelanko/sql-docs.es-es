@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680388"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Actualizar una instancia de clúster de conmutación por error de SQL Server (programa de instalación)
   Puede actualizar un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a un clústeres de conmutación por error de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] con el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o el símbolo del sistema.  
@@ -80,7 +80,7 @@ ms.locfileid: "53363717"
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clúster de conmutación por error está configurado actualmente en una sola subred: Primero debe actualizar el clúster existente a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] iniciando el programa de instalación y siguiendo el proceso de actualización. Después de completar la actualización del clúster de conmutación por error existente, agregue un nodo que esté en otra subred mediante la funcionalidad AddNode. Confirme el cambio de dependencia de recurso de dirección IP a OR en la página de configuración de red en clúster. Tiene ahora un clústeres de conmutación por error de varias subredes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-2.  El clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está configurado actualmente en varias subredes mediante la tecnología de V-LAN elástica: debe actualizar primero el clúster existente a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Dado que la tecnología de V-LAN elástica configura una subred única, se debe cambiar la configuración de red a varias subredes, cambiar la dependencia de recurso de dirección IP mediante la herramienta de administración de clúster de conmutación por error de Windows y cambiar la dependencia de IP a OR.  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clúster de conmutación por error está configurado actualmente en varias subredes mediante la tecnología de V-LAN stretch: Primero debe actualizar el clúster existente a [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Dado que la tecnología de V-LAN elástica configura una subred única, se debe cambiar la configuración de red a varias subredes, cambiar la dependencia de recurso de dirección IP mediante la herramienta de administración de clúster de conmutación por error de Windows y cambiar la dependencia de IP a OR.  
   
 ###  <a name="BestPractices"></a> Prácticas recomendadas antes de actualizar un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clúster de conmutación por error  
  Para eliminar el tiempo de inactividad inesperado debido al reinicio, instale por adelantado el paquete para no reiniciar de .NET Framework 4.0 en todos los nodos de clúster de conmutación por error antes de ejecutar la actualización en los nodos en clúster. Se recomienda seguir estos pasos para instalar por adelantado los requisitos previos:  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d90f2a1504daecf80901157b34dcaffa4220261b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689432"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Ayuda F1 del Asistente para minería de datos (Analysis Services – Minería de datos)
   Use el **Asistente para minería de datos** para crear una nueva estructura de minería de datos y un modelo de minería de datos asociado opcional.  
@@ -58,7 +58,7 @@ ms.locfileid: "48087765"
  Después de crear la estructura de minería de datos y un modelo de minería opcional, puede utilizar el **Diseñador de minería de datos** para modificar sus propiedades.  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente para minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [Diseñador de minería de datos](data-mining/data-mining-designer.md)   
  [Crear una estructura de minería de datos relacional](data-mining/create-a-relational-mining-structure.md)   
  [Seleccione el método de definición &#40;Asistente para minería de datos&#41;](select-the-definition-method-data-mining-wizard.md)   

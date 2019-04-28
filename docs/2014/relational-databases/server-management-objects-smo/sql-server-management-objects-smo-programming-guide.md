@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4dfa741f79b0a6dec95250edd9f7eb8cee4afb1d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655305"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>Guía de programación para objetos de administración de SQL Server (SMO)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objetos de administración (SMO) es una colección de objetos que están diseñados para programar todos los aspectos de la administración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Replication Management Objects (RMO) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una colección de objetos que encapsula la administración de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

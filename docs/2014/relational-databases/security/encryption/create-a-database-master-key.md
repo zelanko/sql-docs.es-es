@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: be6b5614258d5fc2941d3355c680138f59d873f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655323"
 ---
 # <a name="create-a-database-master-key"></a>Crear la clave maestra de una base de datos
   En este tema se describe cómo crear una clave maestra de base de datos en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -30,11 +30,11 @@ ms.locfileid: "48170425"
   
 -   [Para crear una clave maestra de base de datos mediante Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Necesita el permiso CONTROL en la base de datos.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  

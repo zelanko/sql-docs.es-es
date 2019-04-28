@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fb3dcd1729805c9458b7cc882e1d33f6be918e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730749"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>Resaltar excepciones (Herramientas de análisis de tabla para Excel)
   ![Botón Resaltar excepciones en la cinta de opciones](media/tat-highlightex.gif "botón Resaltar excepciones en la cinta de opciones")  

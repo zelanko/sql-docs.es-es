@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c0444930e15d933d75dd72554c3232871cd59e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679942"
 ---
 # <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>Crear y editar cuadro de diálogo de cálculo con nombre (Analysis Services)
   Use el cuadro de diálogo **Crear/editar cálculo con nombre** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir o modificar un cálculo con nombre para una tabla en una vista del origen de datos. Para mostrar el cuadro de diálogo **Crear/editar cálculo con nombre**:  
@@ -49,6 +49,6 @@ SELECT <Table Name in Data Source>.* , <Expression> AS <Column Name> FROM <Table
   
 ## <a name="see-also"></a>Vea también  
  [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Diseñador de vistas del origen de datos &#40;Analysis Services - datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Diseñador de vistas del origen de datos &#40;Analysis Services - Datos multidimensionales&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

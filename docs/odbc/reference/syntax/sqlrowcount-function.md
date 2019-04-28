@@ -1,5 +1,5 @@
 ---
-title: Función SQLRowCount | Microsoft Docs
+title: SQLRowCount Function | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ab7046e036a6f50f8009a481f92345d7ce12aea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656073"
 ---
 # <a name="sqlrowcount-function"></a>Función SQLRowCount
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ISO 92  
   
  **Resumen**  
  **SQLRowCount** devuelve el número de filas afectadas por una **actualización**, **insertar**, o **eliminar** instrucción; un SQL_ADD SQL_UPDATE_BY_BOOKMARK o SQL_ Operación DELETE_BY_BOOKMARK en **SQLBulkOperations**; o una operación SQL_UPDATE o SQL_DELETE de **SQLSetPos**.  

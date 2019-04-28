@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05ebc2ffa952c0b5c927d890aad70bbf55f3c5af
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728591"
 ---
 # <a name="lesson-5-create-relationships"></a>Lección 5: Crear relaciones
   En esta lección, comprobará las relaciones que se han creado de forma automática al importar datos y agregará nuevas relaciones entre tablas diferentes. Una relación es una conexión entre dos tablas de datos que establece cómo se deben poner en correlación los datos de esas tablas. Por ejemplo, la tabla Product y la tabla Product Subcategory tienen una relación basada en el hecho de que cada producto pertenece a una subcategoría. Para obtener más información, consulte [Relaciones &#40;SSAS tabular&#41;](tabular-models/relationships-ssas-tabular.md).  

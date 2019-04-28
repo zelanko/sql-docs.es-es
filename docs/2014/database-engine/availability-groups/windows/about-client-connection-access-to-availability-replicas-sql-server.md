@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789847"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Acerca del acceso de conexión de cliente a réplicas de disponibilidad (SQL Server)
   En un grupo de disponibilidad AlwaysOn, puede configurar una o varias réplicas de disponibilidad para permitir conexiones de solo lectura cuando se ejecutan en el rol secundario (es decir, cuando se ejecutan como réplica secundaria). También puede configurar cada réplica de disponibilidad para permitir o excluir conexiones de solo lectura cuando se ejecutan bajo el rol principal (es decir, cuando se ejecutan como réplica principal).  

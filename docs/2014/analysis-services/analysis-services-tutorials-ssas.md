@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0a4c8105b023bbb98387315a37a770f7e034937
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648878"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Tutoriales de Analysis Services (SSAS)
   Esta sección contiene los tutoriales de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services.  
@@ -37,7 +37,7 @@ ms.locfileid: "53359017"
  La mayoría de los tutoriales de SQL Server 2008 R2 funcionan en un servidor de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Si no tiene experiencia con la minería de datos, use este vínculo para buscar tutoriales de minería de datos de SQL Server 2008 R2 que funcionan también con una instancia de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] de Analysis Services.  
   
 ## <a name="see-also"></a>Vea también  
- [WIKI de TechNet: Ejemplos de SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)   
+ [Wiki de TechNet: Ejemplos de SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)   
  [Conjunto de datos picnic (datos de ejemplo)](https://go.microsoft.com/fwlink/?linkID=219108)  
   
   

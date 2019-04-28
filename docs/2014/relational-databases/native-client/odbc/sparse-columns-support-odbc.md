@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6e1583dad869860bdd2f555a354850c7f7a1198
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691957"
 ---
 # <a name="sparse-columns-support-odbc"></a>Compatibilidad con columnas dispersas (ODBC)
   En este tema se describe la compatibilidad ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con columnas dispersas. Para obtener un ejemplo que muestra la compatibilidad de ODBC con columnas dispersas, vea [llamar a SQLColumns sobre una tabla con columnas dispersas](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md). Para obtener más información sobre las columnas dispersas, vea [con las columnas dispersas en SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "48124335"
  Es posible utilizar un nuevo descriptor de filas de implementación (IRD), un campo SQLSMALLINT de solo lectura denominado SQL_CA_SS_IS_COLUMN_SET, para determinar si una columna es un valor `column_set` XML. SQL_CA_SS_IS_COLUMN_SET toma los valores SQL_TRUE y SQL_FALSE.  
   
 ## <a name="catalog-metadata"></a>Metadatos de catálogo  
- Dos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] columnas específicas (SS_IS_SPARSE y SS_IS_COLUMN_SET) se han agregado para el conjunto de resultados [SQLColumns](../../native-client-odbc-api/sqlcolumns.md).  
+ Se han agregado dos columnas específicas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SS_IS_SPARSE y SS_IS_COLUMN_SET) al conjunto de resultados de [SQLColumns](../../native-client-odbc-api/sqlcolumns.md).  
   
 ## <a name="odbc-function-support-for-sparse-columns"></a>Compatibilidad de funciones ODBC con columnas dispersas  
  Las funciones ODBC que se muestran a continuación se han actualizado para admitir columnas dispersas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client:  

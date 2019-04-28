@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ebc622c0adb9fe2422c1cd215de36b6ba79057c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780836"
 ---
 # <a name="preparing-to-use-smo"></a>Prepararse para usar SMO
   En esta sección se incluye información para comenzar a usar los Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO). La siguiente lista le ayudará a localizar información sobre los estilos de sintaxis de la documentación, los requisitos del sistema para la programación en SMO, archivos y números de versión, una descripción de las novedades de SMO y una guía de instalación.  

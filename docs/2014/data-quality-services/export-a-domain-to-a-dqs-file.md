@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 46f2cd765667a64062c3a47ac91973eed8c94664
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792742"
 ---
 # <a name="export-a-domain-to-a-dqs-file"></a>Exportar un dominio a un archivo .dqs
   En este tema se describe cómo exportar un dominio a un archivo .dqs en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Puede exportar un dominio o una base de conocimiento completa a un archivo de datos. Para obtener información sobre cómo exportar una base de conocimiento, vea [Exportar una base de conocimiento a un archivo .dqs](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "56023646"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para poder exportar un dominio a un archivo de datos .dqs.  
   
 ##  <a name="Export"></a> Export a domain to a .dqs file  
@@ -51,7 +51,7 @@ ms.locfileid: "56023646"
   
 6.  En el cuadro de diálogo **Exportar dominio** , compruebe que la línea de estado de este indica que se ha completado la exportación. Haga clic en **Aceptar**.  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de exportar un dominio a un archivo .dqs  
+##  <a name="FollowUp"></a> Seguimiento: después de exportar un dominio a un archivo .dqs  
  Una vez exportado un dominio a un archivo .dqs, puede importarlo en otra base de conocimiento.  
   
   

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d5e85a3685804fa834c9a92887a46c72b7cb69a7
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62811320"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>default trace enabled (opción de configuración del servidor)
   Utilice la opción **default trace enabled** para habilitar o deshabilitar los archivos predeterminados de registro de seguimiento. La funcionalidad de registro de seguimiento predeterminado ofrece un registro completo y persistente de la actividad y los cambios principalmente relacionados con las opciones de configuración.  
@@ -27,7 +27,7 @@ ms.locfileid: "52641426"
 > [!WARNING]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use eventos extendidos en su lugar.  
   
-## <a name="purpose"></a>Propósito  
+## <a name="purpose"></a>Finalidad  
  Los seguimientos predeterminados ofrecen ayuda para la solución de problemas a los administradores de bases de datos al garantizar que disponen de los datos de registro necesarios para diagnosticar los problemas la primera vez que ocurren.  
   
 ## <a name="viewing"></a>Ver  

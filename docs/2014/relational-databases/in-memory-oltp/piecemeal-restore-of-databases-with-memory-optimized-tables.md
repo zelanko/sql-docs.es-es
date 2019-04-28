@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3c9ee00a81dd64ea1fa6093eaccc8d9b96e0aa59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806697"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Restauración por etapas de bases de datos con tablas con optimización para memoria
   La restauración por etapas se admite en bases de datos con tablas optimizadas para memoria, a excepción de una restricción que describe más adelante. Para obtener más información sobre la restauración y la copia de seguridad por etapas, vea [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) y [Restauraciones por etapas &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "48170105"
   
     -   Mediante la reparación de página, puede corregir daños en una página restaurando específicamente esa página. Para obtener más información, vea [Restaurar páginas &#40;SQL Server&#41;](../backup-restore/restore-pages-sql-server.md).  
   
-## <a name="samples"></a>Ejemplos  
+## <a name="samples"></a>Muestras  
  En los ejemplos se usa el esquema siguiente:  
   
 ```  

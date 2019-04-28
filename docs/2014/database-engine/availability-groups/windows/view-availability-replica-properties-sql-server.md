@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1ca87fc977ee97900be9e821cab4918064c7a44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788011"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>Ver las propiedades de una réplica de disponibilidad (SQL Server)
   En este tema se describe cómo pueden verse las propiedades de una réplica de un grupo disponibilidad AlwaysOn con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)] en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  

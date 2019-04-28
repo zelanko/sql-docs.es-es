@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c848ddd8d7234ab8286d5f25603704638ce26bfd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654989"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrar, agrupar y ordenar datos (Generador de informes y SSRS)
   En un informe, las expresiones sirven para ayudar a controlar, organizar y ordenar los datos de informe. De forma predeterminada, cuando se crean conjuntos de datos y se diseñan informes, las propiedades de los elementos de informe están se establecen de forma automática en las expresiones basadas en los campos de conjunto de datos, los parámetros y otros elementos que aparecen en el panel Datos de informe. Puede agregar también un botón de ordenación interactivo a una tabla o a una celda de la matriz para permitir a los usuarios cambiar el criterio de ordenación de las filas para los grupos o las filas dentro de los grupos.  

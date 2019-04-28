@@ -1,5 +1,5 @@
 ---
-title: Nivel de compatibilidad de una base de datos Multidimensional (Analysis Services) | Documentos de Microsoft
+title: Nivel de compatibilidad de una base de datos Multidimensional (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8f11bb819073ef054582a55620b553865469466
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825902"
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>Nivel de compatibilidad de una base de datos multidimensional (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34024232"
   
  En el caso de una base de datos multidimensional, los valores válidos para la propiedad **CompatibilityLevel** incluyen los siguientes:  
   
-|Configuración|Description|  
+|Parámetro|Descripción|  
 |-------------|-----------------|  
 |**1050**|Este valor no es visible en el script ni en las herramientas pero corresponde a las bases de datos creadas en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Cualquier base de datos que no tenga establecido explícitamente **CompatibilityLevel** se ejecuta de forma implícita en el nivel **1050** .|  
 |**1100**|Es el valor predeterminado para las nuevas bases de datos creadas en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. También puede especificarla si para las bases de datos creadas en versiones anteriores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se permite el uso de características que solo se admiten en este nivel de compatibilidad (a saber, mayor almacenamiento de cadenas para atributos de dimensión o medidas de recuento distintivas que contienen datos de cadena).<br /><br /> Las bases de datos que tienen la propiedad **CompatibilityLevel** establecida en **1100** obtienen una propiedad adicional, **StringStoresCompatibilityLevel**, que permite elegir un almacenamiento de cadenas alternativo para particiones y dimensiones.|  

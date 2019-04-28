@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 150007626cab59ab7905d369e8e50d7f1b001982
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681467"
 ---
 # <a name="completing-the-wizard-partition-wizard"></a>Finalización del asistente (Asistente para particiones)
   Use la página **Finalización del asistente** para asignar un nombre a la partición, definir el diseño de agregaciones para la partición y, opcionalmente, implementar y procesar la partición después de completar el Asistente para particiones.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba el nombre para la nueva partición. Si está trabajando con múltiples tablas, escriba el prefijo que se combinará con el nombre de la tabla para crear el nombre de cada partición.  
   
  **Opciones de agregaciones**  
@@ -39,9 +39,9 @@ ms.locfileid: "48102231"
 |**Copiar el diseño de agregaciones de una partición existente**|Copia en al nueva partición el diseño de agregaciones de una partición existente en el grupo de medida. Al hacer clic en esta opción, se habilita la opción **Copiar de** . Utilice la opción **Copiar de** para seleccionar la partición desde la cual se va a copiar el diseño de agregaciones.<br /><br /> Tenga en cuenta que las particiones que se puedan mezclar en el futuro deben tener el mismo diseño de estructura y la agregación de tabla. Si desea mezclar la nueva partición con una partición existente en el grupo de medida, deberá copiar el diseño de agregaciones de la partición existente en la partición nueva.|  
   
  **Implementar y procesar ahora**  
- Implementa y procesa la partición en la instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] especificada en la página **Ubicaciones de procesamiento y almacenamiento**. El asistente implementa y procesa la partición una vez que se ha hecho clic en **Finalizar** en esta página.  
+ Implementa y procesa la partición en la instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] especificada en la página **Ubicaciones de procesamiento y almacenamiento** . El asistente implementa y procesa la partición una vez que se ha hecho clic en **Finalizar** en esta página.  
   
 ## <a name="see-also"></a>Vea también  
- [Las particiones &#40;Analysis Services - datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

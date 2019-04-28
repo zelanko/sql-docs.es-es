@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789874"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn (SQL Server)
   En este tema se describen las consideraciones para implementar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], incluidos los requisitos previos, restricciones y recomendaciones para equipos host, los clústeres de conmutación por error de Windows Server (WSFC), las instancias del servidor y los grupos de disponibilidad. Para cada uno de estos componentes, se indican los criterios de seguridad y permisos necesarios, si existen.  
@@ -76,7 +76,7 @@ ms.locfileid: "59242236"
   
 -   **Sistemas comparables:**  En el caso de un grupo de disponibilidad determinado, todas las réplicas de disponibilidad se deben ejecutar en sistemas comparables que puedan controlar cargas de trabajo idénticas.  
   
--   **Adaptadores de red dedicados:**  Para obtener el mejor rendimiento, use un adaptador de red dedicado (tarjeta de interfaz de red) para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+-   **Adaptadores de red dedicados:**  Para obtener el mejor rendimiento, utilice un adaptador de red (tarjeta de interfaz de red) dedicado para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
 -   **Espacio suficiente en disco:**  todos los equipos en los que una instancia del servidor hospede una réplica de disponibilidad deben tener suficiente espacio en disco para todas las bases de datos del grupo de disponibilidad. Tenga en cuenta que según crecen las bases de datos principales, las correspondientes bases de datos secundarias aumentan la misma cantidad.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "59242236"
   
  
   
-###  <a name="PrerequisitesSI"></a> Lista de comprobación: Requisitos previos (instancia del servidor)  
+###  <a name="PrerequisitesSI"></a> Lista de comprobación: Requisitos previos (instancia de servidor)  
   
 ||Requisito previo|Vínculos|  
 |-|------------------|-----------|  
@@ -251,7 +251,7 @@ ms.locfileid: "59242236"
   
 -   **Réplicas de disponibilidad:**  Cada grupo de disponibilidad admite una réplica principal y hasta ocho réplicas secundarias. Todas las réplicas pueden ejecutarse en el modo de confirmación asincrónica o hasta tres de ellas pueden ejecutarse en el modo de confirmación sincrónica (una réplica principal con dos réplicas secundarias sincrónicas).  
   
--   **Número máximo de grupos de disponibilidad y bases de datos de disponibilidad por equipo:** El número real de bases de datos y grupos de disponibilidad que puede colocar en un equipo (máquina virtual o físico) depende del hardware y la carga de trabajo, pero no hay ningún límite forzoso. Microsoft ha probado exhaustivamente con 10 grupos de disponibilidad y 100 bases de datos por equipo físico. Los signos de sistemas sobrecargados pueden incluir, pero no limitarse a los siguientes: agotamiento de subprocesos de trabajo, tiempos de respuesta lentos para vistas del sistema y DMV de AlwaysOn o volcados del sistema del distribuidor detenidos. Asegúrese de comprobar minuciosamente el entorno con una carga de trabajo similar a la que usará en producción para asegurarse de que puede controlar la capacidad de carga de trabajo máxima con sus contratos de nivel de servicio de aplicación. Cuando evalúe los contratos de nivel de servicio, no olvide tener en cuenta la carga en condiciones de error además de los tiempos de respuesta esperados.  
+-   **Número máximo de grupos de disponibilidad y bases de datos de disponibilidad por equipo:** El número real de bases de datos y grupos de disponibilidad que puede colocar en un equipo (equipo físico o máquina virtual) depende del hardware y de la carga de trabajo, pero no hay ningún límite impuesto. Microsoft ha probado exhaustivamente con 10 grupos de disponibilidad y 100 bases de datos por equipo físico. Los signos de sistemas sobrecargados pueden incluir, pero no limitarse a los siguientes: agotamiento de subprocesos de trabajo, tiempos de respuesta lentos para vistas del sistema y DMV de AlwaysOn o volcados del sistema del distribuidor detenidos. Asegúrese de comprobar minuciosamente el entorno con una carga de trabajo similar a la que usará en producción para asegurarse de que puede controlar la capacidad de carga de trabajo máxima con sus contratos de nivel de servicio de aplicación. Cuando evalúe los contratos de nivel de servicio, no olvide tener en cuenta la carga en condiciones de error además de los tiempos de respuesta esperados.  
   
 -   **No use el Administrador de clústeres de conmutación por error para manipular grupos de disponibilidad:**  
   

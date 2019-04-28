@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679185"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propiedades de SQL Server (pestaña Parámetros de inicio)
   Utilice este cuadro de diálogo para agregar o quitar parámetros de inicio para el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los parámetros de inicio pueden tener una gran influencia en el rendimiento del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Antes de agregar o cambiar los parámetros de inicio, vea el tema "Usar las opciones de inicio del servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] " en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -34,7 +34,7 @@ ms.locfileid: "52780128"
   
 -   Los espacios iniciales y finales se recortan de los parámetros de inicio.  
   
--   Todos los parámetros de inicio empiezan con un - (dash) y el segundo valor es una letra.  
+-   Todos los parámetros de inicio empiezan con un guion (–) y el segundo valor es una letra.  
   
 ## <a name="required-parameters"></a>Parámetros necesarios  
  Los parámetros siguientes son necesarios. Se pueden cambiar pero no quitar.  
@@ -77,6 +77,6 @@ ms.locfileid: "52780128"
 -   La cuenta de dominio utilizada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] está configurado para ejecutarse bajo una cuenta de dominio.  
   
 ## <a name="books-online-references"></a>Referencias de los Libros en pantalla  
- Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parámetros de inicio, consulte "Cómo: Configurar las opciones de inicio del servidor (Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para información adicional sobre los parámetros de inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte "Cómo: Configurar las opciones de inicio del servidor ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager) "en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
   
   

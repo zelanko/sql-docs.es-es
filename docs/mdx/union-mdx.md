@@ -1,5 +1,5 @@
 ---
-title: Union (MDX) | Documentos de Microsoft
+title: Union (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e51749416c0668ccc4760132bb860121ebae6e3d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653465"
 ---
 # <a name="union--mdx"></a>Union (MDX)
 
@@ -42,11 +42,11 @@ Alternate syntax 2
  *Expresión de conjunto 2*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
-## <a name="remarks"></a>Notas  
- Esta función devuelve la unión de dos o más conjuntos especificados *.* Con la sintaxis estándar y con la sintaxis alternativa 1, los duplicados se eliminan de forma predeterminada. Con la sintaxis estándar, con el **todos los** marca mantiene los duplicados en el conjunto combinado. Se eliminan los duplicados de la cola del conjunto. Con la sintaxis alternativa 2, siempre se conservan los duplicados.  
+## <a name="remarks"></a>Comentarios  
+ Esta función devuelve la unión de dos o más conjuntos especificados *.* Con la sintaxis estándar y con la sintaxis alternativa 1, los duplicados se eliminan de forma predeterminada. Con la sintaxis estándar, mediante el **todas** marca conserva los duplicados del conjunto combinado. Se eliminan los duplicados de la cola del conjunto. Con la sintaxis alternativa 2, siempre se conservan los duplicados.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos siguientes muestran el comportamiento de la **unión** funcionar con cada sintaxis.  
+ Los ejemplos siguientes muestran el comportamiento de la **unión** funcione con cada sintaxis.  
   
 ### <a name="standard-syntax-duplicates-eliminated"></a>Sintaxis estándar, eliminación de duplicados  
   

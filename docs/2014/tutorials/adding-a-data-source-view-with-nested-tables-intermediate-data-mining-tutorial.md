@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822787"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>Agregar una vista del origen de datos con tablas anidadas (Tutorial intermedio de minería de datos)
   Para crear un modelo de cesta de la compra, debe usar una vista del origen de datos que admita datos asociativos. Esta vista del origen de datos también se utilizará para el escenario de agrupación en clústeres de secuencia.  

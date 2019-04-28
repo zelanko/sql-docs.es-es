@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 749aaffe61033564649f9cd70871f2cb01340757
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789582"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>Información general de los grupos de disponibilidad AlwaysOn (SQL Server)
   En este tema se presentan los conceptos centrales de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para configurar y administrar uno o varios grupos de disponibilidad en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para obtener un resumen de las ventajas proporcionadas por los grupos de disponibilidad e información general de la terminología de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "53363597"
  Un *grupo de disponibilidad* admite un entorno de conmutación por error para un conjunto discreto de bases de datos de usuario, conocido como *bases de datos de disponibilidad*, que realizan la conmutación por error conjuntamente. Un grupo de disponibilidad admite un conjunto de bases de datos principales y de uno a ocho conjuntos de bases de datos secundarias correspondientes. Las bases de datos secundarias *no* son copias de seguridad. Continúe haciendo copias de seguridad de las bases de datos y de sus registros de transacciones periódicamente.  
   
 > [!TIP]  
->  Puede crear cualquier tipo de copia de seguridad de una base de datos principal. También puede crear copias de seguridad de registros y copias de seguridad completas de solo copia de las bases de datos secundarias. Para obtener más información, consulte [secundarias activas: Copia de seguridad en réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Puede crear cualquier tipo de copia de seguridad de una base de datos principal. También puede crear copias de seguridad de registros y copias de seguridad completas de solo copia de las bases de datos secundarias. Para más información, consulte [Secundarias activas: Copia de seguridad en réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  Cada conjunto de base de datos de disponibilidad es hospedado por una *réplica de disponibilidad*. Existen dos tipos de réplicas de disponibilidad: una única *réplica principal*, que hospeda las bases de datos principales, y entre una y ocho *réplicas secundarias*, cada una de las cuales hospeda un conjunto de bases de datos secundarias y podría ser el destino de una posible conmutación por error del grupo de disponibilidad. Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. En el conjunto de bases de datos de un grupo de disponibilidad, una réplica de disponibilidad proporciona redundancia únicamente en el nivel de la base de datos. Las conmutaciones por error no se deben a problemas de bases de datos, como, por ejemplo, a que una base de datos pase a ser sospechosa debido a la pérdida de un archivo de datos o a los daños de un registro de transacciones.  
   
@@ -118,11 +118,11 @@ ms.locfileid: "53363597"
   
 -   **Realizar operaciones de copia de seguridad en las réplicas secundarias**  
   
-     Las réplicas secundarias admiten la realización de copias de seguridad de registros y de [solo copia](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) de toda una base de datos, un archivo o un grupo de archivos. Puede configurar el grupo de disponibilidad para que se especifique la preferencia por la que las copias de seguridad deben realizarse. Es importante entender que SQL Server no aplica la preferencia, por lo que las copias de seguridad ad hoc no resultan afectadas. La interpretación de esta preferencia depende de la lógica, si existe, del script con los trabajos de copia de seguridad ejecutado para cada una de las bases de datos de un grupo de disponibilidad dado. En el caso de una réplica de disponibilidad individual, puede especificar la prioridad para realizar copias de seguridad en esta réplica en relación con las otras réplicas del mismo grupo de disponibilidad. Para obtener más información, consulte [secundarias activas: Copia de seguridad en réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Las réplicas secundarias admiten la realización de copias de seguridad de registros y de [solo copia](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) de toda una base de datos, un archivo o un grupo de archivos. Puede configurar el grupo de disponibilidad para que se especifique la preferencia por la que las copias de seguridad deben realizarse. Es importante entender que SQL Server no aplica la preferencia, por lo que las copias de seguridad ad hoc no resultan afectadas. La interpretación de esta preferencia depende de la lógica, si existe, del script con los trabajos de copia de seguridad ejecutado para cada una de las bases de datos de un grupo de disponibilidad dado. En el caso de una réplica de disponibilidad individual, puede especificar la prioridad para realizar copias de seguridad en esta réplica en relación con las otras réplicas del mismo grupo de disponibilidad. Para más información, consulte [Secundarias activas: Copia de seguridad en réplicas secundarias &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Acceso de solo lectura a una o varias réplicas secundarias (réplicas secundarias legibles)**  
   
-     La réplica de disponibilidad se puede configurar para permitir el acceso de solo lectura a las bases de datos locales si desempeñan el rol secundario, aunque algunas operaciones no son totalmente compatibles. Además, si desea evitar que cargas de trabajo de solo lectura se ejecuten en la réplica principal, puede configurar las réplicas para permitir el acceso de lectura y escritura cuando se ejecuten con el rol principal. Para obtener más información, consulte [secundarias activas: Las réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+     La réplica de disponibilidad se puede configurar para permitir el acceso de solo lectura a las bases de datos locales si desempeñan el rol secundario, aunque algunas operaciones no son totalmente compatibles. Además, si desea evitar que cargas de trabajo de solo lectura se ejecuten en la réplica principal, puede configurar las réplicas para permitir el acceso de lectura y escritura cuando se ejecuten con el rol principal. Para más información, consulte [Secundarias activas: Las réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
      Si un grupo de disponibilidad posee actualmente un agente de escucha de grupo de disponibilidad y una o varias réplicas secundarias legibles, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede enrutar las solicitudes de conexión de intento de lectura a una de ellas (*enrutamiento de solo lectura*). Para obtener más información, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
@@ -149,7 +149,7 @@ ms.locfileid: "53363597"
   
 -   **Blogs:**  
   
-     [AlwaysON - HADRON Learning Series: Bases de datos de uso del grupo de trabajo de HADRON habilitadas](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
   
      [Blogs del equipo de AlwaysOn SQL Server: El blog del equipo de AlwaysOn oficial SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -157,7 +157,7 @@ ms.locfileid: "53363597"
   
 -   **Vídeos:**  
   
-     [Microsoft SQL Server Code-Named "Denali", serie AlwaysOn, parte 1: Introducción a la solución de alta disponibilidad de siguiente generación](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali", serie AlwaysOn, parte 1: Introducción a la solución de alta disponibilidad de próxima generación](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server Code-Named "Denali", serie AlwaysOn, parte 2: Creación de una solución esencial de alta disponibilidad utilizando AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

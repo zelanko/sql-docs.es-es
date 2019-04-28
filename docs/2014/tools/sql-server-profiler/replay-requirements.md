@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b9da4b68bba6358ff473846fb710f8fa6454e5d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688593"
 ---
 # <a name="replay-requirements"></a>Replay Requirements
   Para reproducir los datos de seguimiento con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] o Distributed Replay Utility, se debe capturar un conjunto específico de clases de eventos y columnas en el seguimiento. Esta configuración se habilita de forma predeterminada si se usa la plantilla de seguimiento **TSQL_Replay** para configurar un seguimiento que se usará posteriormente para la reproducción. En este tema se describe esta configuración y otros requisitos de reproducción.  

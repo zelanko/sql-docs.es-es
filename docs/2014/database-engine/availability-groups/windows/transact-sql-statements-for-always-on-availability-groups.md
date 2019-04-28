@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f635faa05d7d77a50d31491b1bab9b16875e728c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813828"
 ---
 # <a name="overview-of-transact-sql-statements-for-alwayson-availability-groups-sql-server"></a>Información general sobre instrucciones Transact-SQL para grupos de disponibilidad de AlwaysOn (SQL Server)
   En este tema se presentan las instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] que admiten la implementación de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y la creación y administración de un grupo de disponibilidad, réplica de disponibilidad y base de datos de disponibilidad dados.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8690c252ddb1b91cd939044ee4f0ccc3a6f4a60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703617"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Instalar Analysis Services en mode tabular
   Si está instalando Analysis Services para usar las nuevas características de modelado tabular, debe instalar Analysis Services en un modo de servidor que admita ese tipo de modelo. El modo de servidor es Tabular y se configura durante la instalación.  
@@ -56,8 +56,8 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|MULTIDIMENSIONAL|Este es el valor predeterminado. Si no establece `ASSERVERMODE`, el servidor está instalado en modo de servidor Multidimensional.|  
-|POWERPIVOT|Este valor es opcional. En ejercicio, si establece el parámetro `ROLE`, el modo de servidor se establece automáticamente en 1, haciendo que `ASSERVERMODE` sea opcional en una instalación de PowerPivot para SharePoint. Para obtener más información, consulte [instalar PowerPivot desde el símbolo](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md).|  
+|MULTIDIMENSIONAL|Este es el valor predeterminado. Si no establece `ASSERVERMODE`, el servidor se instala en modo de servidor multidimensional.|  
+|POWERPIVOT|Este valor es opcional. En ejercicio, si establece el parámetro `ROLE`, el modo de servidor se establece automáticamente en 1, haciendo que `ASSERVERMODE` sea opcional en una instalación de PowerPivot para SharePoint. Para obtener más información, vea [Install PowerPivot from the Command Prompt](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md).|  
 |TABULAR|Se requiere este valor si va a instalar Analysis Services en modo tabular utilizando la instalación de la línea de comandos.|  
   
 ## <a name="see-also"></a>Vea también  

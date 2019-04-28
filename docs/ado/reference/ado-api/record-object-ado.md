@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d719ebf47757a48b034d2a0cadd0ed68f51f0ee5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661636"
 ---
 # <a name="record-object-ado"></a>Objeto Record (ADO)
 Representa una fila de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) o el proveedor de datos o un objeto devuelto por un proveedor de datos semiestructurados, como un archivo o directorio.  

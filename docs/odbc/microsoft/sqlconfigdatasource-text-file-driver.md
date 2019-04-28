@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1635538f69b313a73a24ab1531f8793c7d98741e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665261"
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (controlador de archivo de texto)
 > [!NOTE]  
@@ -31,7 +31,7 @@ ms.locfileid: "47612663"
 |-------------|-----------------|  
 |CHARACTERSET|Para el controlador de texto, OEM o ANSI.|  
 |COLNAMEHEADER|Para el controlador de texto, indica si el primer registro de datos se especifican los nombres de columna. TRUE o FALSE.|  
-|VALOR DE ESTA OPCIÓN|La especificación de ruta de acceso al directorio.|  
+|DEFAULTDIR|La especificación de ruta de acceso al directorio.|  
 |DESCRIPTION|Una descripción de los datos del origen de datos.<br /><br /> Esto establece la misma opción como **descripción** en el cuadro de diálogo programa de instalación.|  
 |DRIVER|La especificación de ruta de acceso a la DLL del controlador.|  
 |DRIVERID|Un identificador entero para el controlador. 27 (texto)|  

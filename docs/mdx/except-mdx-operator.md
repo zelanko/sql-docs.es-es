@@ -1,5 +1,5 @@
 ---
-title: '- (Excepto) (MDX) | Documentos de Microsoft'
+title: '- (Excepto) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 618beda530627898cdf55f08be5071fd7568688c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690868"
 ---
-# <a name="except-mdx-operator"></a>Excepto operador (MDX)
+# <a name="except-mdx-operator"></a>Salvo el operador (MDX)
 
 
   Realiza una operación de conjunto que devuelve la diferencia entre dos conjuntos y quita los miembros duplicados.  
@@ -35,8 +35,8 @@ Set_Expression - Set_Expression
 ## <a name="return-value"></a>Valor devuelto  
  Un conjunto que contiene miembros que no comparten ambos parámetros especificados.  
   
-## <a name="remarks"></a>Notas  
- El **- (excepto)** operador es funcionalmente equivalente a la [excepto](../mdx/except-mdx-function.md) (función).  
+## <a name="remarks"></a>Comentarios  
+ El **- (excepto)** operador es funcionalmente equivalente a la [excepto](../mdx/except-mdx-function.md) función.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se muestra el uso de este operador:  
@@ -53,6 +53,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

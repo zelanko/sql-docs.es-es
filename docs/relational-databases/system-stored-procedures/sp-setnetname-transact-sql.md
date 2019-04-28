@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67d07d2ea4bd1656ed8f24458410f5812ed22e70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656470"
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_setnetname
  **@server = '** *server* **'**  
  Es el nombre del servidor remoto tal como se ha especificado en la sintaxis de llamada a procedimiento almacenado remoto codificada por el usuario. Exactamente una fila en **sys.servers** ya debe existir para poder usar este *server*. *server* es de tipo **sysname**y no tiene ningún valor predeterminado.  
   
- **@netname ='** *nombre_red* **'**  
+ **@netname ='** *network_name* **'**  
  Es el nombre de red del equipo en el que se realizan las llamadas a procedimiento almacenado remoto. *nombre_red* es **sysname**, no tiene ningún valor predeterminado.  
   
  Este nombre debe coincidir con el nombre del equipo con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows y puede incluir caracteres que no estén admitidos en los identificadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

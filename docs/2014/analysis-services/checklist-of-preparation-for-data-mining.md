@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c74fcbc925091a563d10bc8feef44337af48f84
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681222"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Lista de comprobación de la preparación para la minería de datos
   Pese a que los complementos de minería de datos facilitan y hacen más agradable la creación de modelos y la experimentación con los mismos, cuando se necesita obtener resultados repetibles y procesables, se debe prever un periodo adecuado para la formulación de requisitos de negocio básicos y para la obtención y preparación de los datos. En esta sección encontrará una lista de comprobación para ayudarle a planear la investigación, así como descripciones de los problemas comunes.  
@@ -71,7 +71,7 @@ ms.locfileid: "52519927"
   
 -   ¿Si combinó conjuntos de datos, comprobó si había varias columnas que representaban los mismos datos?  
   
- **Sé donde se almacenan los datos de origen, de dónde proceden y cómo se procesan. El proceso puede repetirse fácilmente si es necesario.**  
+ **Sé donde se almacenan los datos de origen, su procedencia y cómo se procesan. El proceso puede repetirse fácilmente si es necesario.**  
  Conjuntos de datos únicos están bien para los experimentos, pero si desea mover el modelo en producción, conviene pensar de antemano en cómo se puede aplicar el proceso de limpieza a los datos operativos. Además, si tiene datos operativos, debe saber cómo se pueden haber sido modificado antes de que lo tienes-necesitará saber cómo se redondearon o resumido, sin duda.  
   
 -   ¿Desea poder repetir el experimento?  

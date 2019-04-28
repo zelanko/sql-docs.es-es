@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a4333b9d2c15097b1954144738543250bb591621
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679631"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Diseñador de cubos (Analysis Services - Datos multidimensionales)
   Use el **Diseñador de cubos** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para editar diversas propiedades de un cubo existente, incluidos los grupos de medidas y las medidas, las dimensiones del cubo y las relaciones de dimensión, los cálculos, los indicadores clave de rendimiento (KPI), las acciones, las particiones, las perspectivas y las traducciones incluidas en el cubo, así como para examinar los datos incluidos en el cubo. Para mostrar el cuadro de diálogo **Diseñador de cubos** :  

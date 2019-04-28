@@ -1,5 +1,5 @@
 ---
-title: 'Arquitectura física (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Arquitectura física (Analysis Services - minería de datos) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 99e2cf7386bdf395ac82f05cc0b94f3e2b5e3123
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62668522"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Arquitectura física (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa componentes de servidor y cliente para proporcionar la funcionalidad de minería de datos para aplicaciones de business intelligence:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa tanto componentes de servidor como de cliente para proporcionar la funcionalidad de minería de datos en las aplicaciones Business Intelligence:  
   
 -   El componente de servidor se implementa como servicio de Microsoft Windows. Puede tener varias instancias en el mismo equipo, con cada instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implementada como instancia independiente del servicio de Windows.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "34015752"
 ## <a name="server-configuration"></a>Configuración del servidor  
  Una instancia del servidor puede admitir varias bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , cada una con su propia instancia del servicio de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que responde a las solicitudes de cliente y procesa los objetos.  
   
- Las instancias independientes deben estar instaladas si desea trabajar tanto con modelos de minería de datos tabulares (TDS) como con modelos multidimensionales. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la instalación en paralelo de las instancias que se ejecutan en el modo tabular (que utiliza el motor analítico en memoria xVelocity (VertiPaq) y de las instancias que se ejecutan en una de las configuraciones convencionales OLAP, MOLAP o ROLAP. Para obtener más información, vea [Determinar el modo de servidor de una instancia de Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+ Las instancias independientes deben estar instaladas si desea trabajar tanto con modelos de minería de datos tabulares (TDS) como con modelos multidimensionales. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la instalación en paralelo de las instancias que se ejecutan en el modo tabular, que usa el motor de almacenamiento analítico en memoria xVelocity (VertiPaq), y de las instancias que se ejecutan en una de las configuraciones convencionales OLAP, MOLAP o ROLAP. Para obtener más información, vea [Determinar el modo de servidor de una instancia de Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  Todas las comunicaciones entre un cliente y el servidor de Analysis Services usan XMLA, que es un protocolo independiente de la plataforma y del lenguaje. Cuando se recibe una solicitud de un cliente, Analysis Services determina si está relacionada con OLAP o con la minería de datos, y la enruta apropiadamente. Para obtener más información, vea [Componentes de servidor del motor OLAP](../../analysis-services/multidimensional-models/olap-physical/olap-engine-server-components.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Arquitectura lógica & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Arquitectura lógica &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

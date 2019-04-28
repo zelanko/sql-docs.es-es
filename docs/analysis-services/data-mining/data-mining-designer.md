@@ -1,5 +1,5 @@
 ---
-title: Diseñador de minería de datos | Documentos de Microsoft
+title: Diseñador de minería de datos | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 25eea114d105ec445e91b5bebbbe74e1d0f846f3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650385"
 ---
-# <a name="data-mining-designer"></a>Diseñador de minería de datos
+# <a name="data-mining-designer"></a>Data Mining Designer
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   El Diseñador de minería de datos es el entorno principal en el que se trabaja con modelos de minería de datos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Puede obtener acceso al diseñador seleccionando una estructura de minería de datos existente o utilizando el Asistente para minería de datos para crear una nueva estructura y un nuevo modelo de minería de datos. Puede usar el Diseñador de minería de datos para realizar las tareas siguientes:  
   
@@ -33,9 +33,9 @@ ms.locfileid: "34014362"
 ## <a name="mining-structure-tab"></a>Pestaña Estructura de minería de datos  
  Utilice la pestaña **Estructura de minería de datos** para agregar columnas y modificar las propiedades de una estructura de minería de datos existente. Las tareas y los temas siguientes proporcionan más información sobre cómo trabajar con estructuras de minería de datos:  
   
- [Estructuras de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
- [Tareas de estructura de minería de datos y procedimientos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tareas y procedimientos de las estructuras de minería de datos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
 ## <a name="mining-models-tab"></a>Pestaña Modelos de minería de datos  
  Utilice la pestaña **Modelos de minería de datos** para administrar modelos de minería de datos existentes y crear otros nuevos. Los modelos de minería de datos siempre se basan en una estructura de minería de datos existente.  
@@ -44,9 +44,9 @@ ms.locfileid: "34014362"
   
  Vea los temas siguientes para obtener más información sobre cómo trabajar con los modelos de minería de datos:  
   
- [Modelos de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
+ [Modelos de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
- [Tareas y tareas de modelo de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Tareas y procedimientos de los modelos de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
 ## <a name="mining-model-viewer-tab"></a>Pestaña Visor de modelos de minería de datos  
  Utilice la pestaña **Visor de modelos de minería de datos** para explorar visualmente los modelos de minería de datos. Cada modelo de minería de datos está asociado con un visor personalizado que muestra el contenido específico de ese modelo. También puede ver el contenido del modelo de minería de datos utilizando el visor de contenido.  
@@ -55,16 +55,16 @@ ms.locfileid: "34014362"
   
  [Visores de modelos de minería de datos](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
- [Tareas y tareas del Visor de modelo de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Tareas y procedimientos del Visor de modelos de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
 ## <a name="mining-accuracy-chart-tab"></a>Pestaña Gráfico de precisión de minería de datos  
  Utilice la pestaña **Gráfico de precisión de minería de datos** para probar la precisión de predicción de un único modelo de minería de datos o para comparar la eficacia de varios modelos de minería de datos contenidos en una estructura de minería de datos. La pestaña contiene herramientas para filtrar los datos, seleccionar modelos y mostrar los resultados en un gráfico de elevación, en un gráfico de beneficios o en una matriz de clasificación.  
   
  Vea los siguientes temas para obtener más información acerca de la prueba y la validación de modelos de minería de datos:  
   
- [Prueba y validación & #40; minería de datos & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
- [Pruebas y las tareas de validación y procedimientos & #40; minería de datos & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tareas y procedimientos de prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>Pestaña Predicción de modelo de minería de datos  
  La pestaña **Predicción de modelo de minería de datos** incluye el Generador de consultas de predicción, que se puede usar para crear consultas de predicción DMX (Extensiones de minería de datos). La pestaña contiene herramientas para especificar modelos de minería de datos y tablas de entrada, asignar las columnas del modelo de minería de datos a las columnas de la tabla de entrada, agregar funciones a una consulta y especificar criterios para cada columna.  
@@ -75,7 +75,7 @@ ms.locfileid: "34014362"
   
  [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)  
   
- [Tareas y tareas de consulta de minería de datos](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)  
+ [Tareas y procedimientos de Consulta de minería de datos](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Soluciones de minería de datos](../../analysis-services/data-mining/data-mining-solutions.md)  

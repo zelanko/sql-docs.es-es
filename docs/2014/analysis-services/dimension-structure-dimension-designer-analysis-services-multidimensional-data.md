@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b9eb15a1f82f8b6d139f220a564582ef9699b24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731801"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>Estructura de dimensión (Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use la página **Estructura de dimensión** del Diseñador de dimensiones para modificar los atributos, las jerarquías y los niveles de la dimensión seleccionada. La página **Estructura de dimensión** contiene una barra de herramientas y tres paneles.  

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 020b692bc97afc4c76447274b3b900a6355d99d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792555"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Conceder roles de DQS a los usuarios
   En este tema se describe cómo crear los inicios de sesión de SQL según una entidad de seguridad de Windows y cómo conceder roles de [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) en la base de datos DQS_MAIN.  
@@ -38,7 +38,7 @@ ms.locfileid: "56035459"
   
 5.  Después de validar el usuario, haga clic en la página **Asignación de usuarios** en el panel izquierdo.  
   
-6.  En el panel derecho, seleccione la casilla situada bajo la **mapa** columna para el **DQS_MAIN** de base de datos y, a continuación, seleccione el **dqs_administrator**, **dqs_kb_editor** , o **dqs_kb_operator** casilla de verificación en la **pertenencia al rol de la base de datos: DQS_MAIN** panel según el nivel de acceso necesario para el usuario. Para obtener más información acerca de los tres roles de DQS, vea [Seguridad DQS](../dqs-security.md).  
+6.  En el panel derecho, active la casilla de la columna **Asignar** para la base de datos **DQS_MAIN** y, después, active la casilla **dqs_administrator**, **dqs_kb_editor** o **dqs_kb_operator** en el panel  **Pertenencia al rol de la base de datos para: DQS_MAIN**, según el nivel de acceso necesario para el usuario. Para obtener más información acerca de los tres roles de DQS, vea [Seguridad DQS](../dqs-security.md).  
   
 7.  En el cuadro de diálogo **Inicio de sesión - Nuevo**, haga clic en **Aceptar** para aplicar los cambios.  
   

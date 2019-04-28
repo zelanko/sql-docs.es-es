@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 419db8a664d235090a68d495373eee1e0addbfff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643998"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Diseñador de consultas MDX de Analysis Services (PowerPivot)
   El diseñador de consultas de expresiones multidimensionales (MDX) de Analysis Services proporciona una interfaz gráfica de usuario para ayudarle a crear consultas MDX para un origen de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . El diseñador gráfico de consultas MDX tiene dos modos: modo de diseño y modo de consulta. Cada modo proporciona un panel de metadatos desde el que puede arrastrar miembros de los cubos seleccionados para crear una consulta MDX que recupera los datos que desee usar.  

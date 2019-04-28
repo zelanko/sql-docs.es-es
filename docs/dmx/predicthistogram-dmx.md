@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7e7129985eac09d741ea9d00c551a9507ee92c9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659179"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="return-type"></a>Tipo devuelto  
  Tabla.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los histogramas generan columnas de estadísticas. La estructura de columnas del histograma devuelto depende del tipo de referencia de columna que se usa con el **PredictHistogram** función.  
   
 ## <a name="scalar-columns"></a>Columnas escalares  
@@ -85,14 +85,14 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Clúster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
+ [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
  [PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)   
  [PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)   
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  

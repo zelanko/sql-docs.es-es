@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c479c8e7026e549c33b838c39017c9063894b607
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828776"
 ---
 # <a name="custom-messages-for-logging"></a>Mensajes personalizados para registro
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona a un amplio conjunto de eventos personalizados para escribir entradas del registro para paquetes y muchas tareas. Puede utilizar estas entradas para guardar información detallada sobre el progreso, resultados y problemas de ejecución al registrar eventos predefinidos o mensajes definidos por el usuario para su análisis posterior. Por ejemplo, puede registrar cuando se inicia y finaliza la inserción masiva para identificar los problemas de rendimiento en la ejecución del paquete.  
@@ -116,7 +116,7 @@ ms.locfileid: "58389503"
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|Indica que la tarea inició la ejecución del paquete DTS 2000.|  
-|`ExecuteDTS80PackageTaskEnd`|Indica que finalizó la tarea.<br /><br /> Nota: Es posible que el paquete DTS 2000 continúe ejecutándose una vez finalizada la tarea.|  
+|`ExecuteDTS80PackageTaskEnd`|Indica que finalizó la tarea.<br /><br /> Nota: El paquete DTS 2000 puede continuar ejecutándose una vez finalizada la tarea.|  
 |`ExecuteDTS80PackageTaskTaskInfo`|Proporciona información descriptiva sobre la tarea.|  
 |`ExecuteDTS80PackageTaskTaskResult`|Informa del resultado de la ejecución del paquete DTS 2000 que ejecutó la tarea.|  
   

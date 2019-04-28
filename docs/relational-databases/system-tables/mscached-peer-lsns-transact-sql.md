@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 406715f59a3a45184b9700d72331688911bc83e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817034"
 ---
 # <a name="mscachedpeerlsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "52810307"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**valor de agent_id**|**int**|Id. del Agente de distribución.|  
-|**originador**|**sysname**|Nombre del publicador de origen.|  
+|**agent_id**|**int**|Id. del Agente de distribución.|  
+|**originator**|**sysname**|Nombre del publicador de origen.|  
 |**originator_db**|**sysname**|Nombre de la base de datos de publicación de origen.|  
 |**originator_publication_id**|**int**|Identifica la publicación de origen.|  
 |**originator_db_version**|**int**|Identifica el número de versión de la base de datos de origen.|  
-|**originator_lsn**|**varbinary (16)**|LSN de la transacción de origen.|  
+|**originator_lsn**|**varbinary(16)**|LSN de la transacción de origen.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los valores de LSN solo se utilizan inmediatamente después de la inserción, y no tienen un significado duradero en el sistema.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658897"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;modelo &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -129,13 +129,13 @@ FROM [TM Decision Tree]
   
  Por ejemplo, si examina el modelo usando el Visor de árbol de decisión y hace clic en un nodo que contiene clientes agrupados por ingresos, se muestran las propiedades de nodo siguientes en la información sobre herramientas:  
   
- Age >=69 AND Yearly Income < 39221.41  
+ Edad > = 69 y Yearly Income < 39221.41  
   
 > [!NOTE]  
 >  El valor mínimo del depósito mínimo y el valor máximo del depósito máximo son los valores observados más altos y más bajos. Los valores que queden fuera de este intervalo observado se supone que pertenecen a los depósitos mínimo y máximo.  
   
 ## <a name="see-also"></a>Vea también  
- [SELECCIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

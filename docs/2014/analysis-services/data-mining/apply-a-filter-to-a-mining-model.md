@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692087"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Aplicar un filtro a un modelo de minería de datos
   Si la estructura de minería de datos contiene una tabla anidada, puede aplicar un filtro a la tabla de casos, a la tabla anidada o a ambas.  
@@ -67,7 +67,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Haga clic en el cuadro de texto **Valor** y escriba un valor:  
   
-     Por ejemplo, seleccione `Income` como columna, seleccione el operador mayor que (>) y, después, escriba `30000`.  
+     Por ejemplo, seleccione `Income` como columna, seleccione el mayor que (>) de operador y, a continuación, escriba `30000`.  
   
 9. Haga clic en la siguiente fila de la cuadrícula.  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. Seleccione un operador y escriba un valor tal como se describe en los pasos 7 y 8.  
   
-     Por ejemplo, seleccione de nuevo `Income` como columna, seleccione el operador menor que (<) y, a continuación, escriba `40000`.  
+     Por ejemplo, seleccione `Income` como la columna de nuevo, seleccione el operador menor que (<) y, a continuación, escriba `40000`.  
   
 12. Haga clic en la siguiente fila de la cuadrícula.  
   

@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d91e282ebfe0299fd6015530e8af1b6d10e6547
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681117"
 ---
 # <a name="choosing-a-model"></a>Elegir un modelo
   **Algoritmo de minería de datos:** La minería de datos *algoritmo* es el mecanismo que crea patrones a partir de datos. El algoritmo define cómo se cuentan los datos, cómo se derivan las relaciones, y cómo se guardan los patrones. La selección de un algoritmo depende en parte del tipo de datos que se desea analizar. Por ejemplo, algunos algoritmos solo funcionan con números continuos, mientras que otros funcionan mejor con un número limitado de valores diferentes.  

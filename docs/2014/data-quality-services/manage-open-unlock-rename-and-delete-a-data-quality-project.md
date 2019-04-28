@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c77d1924bde3611bff4cf0328a659b2fea2cae45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792358"
 ---
 # <a name="manage-open-unlock-rename-and-delete-a-data-quality-project"></a>Administrar (abrir, desbloquear, cambiar nombre y eliminar) un proyecto de calidad de los datos
   En este tema se describe cómo administrar un proyecto de calidad de datos mediante [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , realizando acciones tales como abrirlo, desbloquearlo, cambiarle el nombre y eliminarlo.  
@@ -44,7 +44,7 @@ ms.locfileid: "56020327"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_kb_operator en la base de datos DQS_MAIN para administrar un proyecto de calidad de datos.  
   
 ##  <a name="Open"></a> Abrir un proyecto de calidad de datos  
@@ -59,9 +59,9 @@ ms.locfileid: "56020327"
   
 4.  El proyecto de calidad de datos se abre en el mismo estado de la actividad en que se cerró por última vez. Un proyecto de calidad de datos tiene los estados siguientes:  
   
-    -   Para el **limpieza** actividad, un proyecto de calidad de datos puede tener los siguientes estados: **Limpieza: asignar**, **limpieza: limpiar**, **limpieza: administrar y ver resultados**, y **limpieza: exportar**.  
+    -   Para la actividad **Limpieza**, un proyecto de calidad de datos puede tener los siguientes estados: **Limpieza: asignar**, **Limpieza: limpiar**, **Limpieza: administrar y ver resultados** y **Limpieza: exportar**.  
   
-    -   Para el **coincidencia** actividad, un proyecto de calidad de datos puede tener los siguientes estados: **Coincidencia: asignar**, **coincidencia: coincidencia**, **coincidencia: permanencia**, y **coincidencia: exportar**.  
+    -   Para la actividad **Coincidencia**, un proyecto de calidad de datos puede tener los siguientes estados: **Coincidencia: asignar**, **Coincidencia: coincidencia**, **Coincidencia: permanencia** y **Coincidencia: exportar**.  
   
 ##  <a name="Unlock"></a> Desbloquear un proyecto de calidad de datos  
  Cuando se crea un proyecto de calidad de datos, queda bloqueado para evitar su uso o modificación por parte de otros usuarios. Si desea que otros usuarios puedan trabajar en el proyecto de calidad de datos, deberá desbloquearlo después de finalizar su trabajo. Para los proyectos que están bloqueados se muestra un símbolo con un candado.  

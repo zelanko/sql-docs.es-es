@@ -35,11 +35,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60b3e29ae94c4dcf5d136bcc01bf291a9a6118fe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700081"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Orígenes de datos y enlaces (SSAS multidimensional)
   Es posible enlazar cubos, dimensiones y otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a un origen de datos. Un origen de datos puede ser uno de los objetos siguientes:  
@@ -67,7 +67,7 @@ ms.locfileid: "52510543"
 |Integer|Entero de 32 bits con signo. Este tipo de datos se asigna internamente al tipo de datos Int32 en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_I4 en OLE DB.|  
 |Único|Número de punto flotante de precisión simple comprendido entre -3,40E +38 y 3,40E +38. Este tipo de datos se asigna internamente al tipo de datos Single en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_R4 en OLE DB.|  
 |SmallInt|Entero de 16 bits con signo. Este tipo de datos se asigna internamente al tipo de datos Int16 en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_I2 en OLE DB.|  
-|TinyInt|Entero de 8 bits con signo. Este tipo de datos se asigna internamente al tipo de datos SByte en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_I1 en OLE DB.<br /><br /> Nota: Si un origen de datos contiene campos que son del tipo de datos tinyint y la propiedad Incremento automático está establecida en True, se convertirán en enteros en la vista del origen de datos.|  
+|TinyInt|Entero de 8 bits con signo. Este tipo de datos se asigna internamente al tipo de datos SByte en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_I1 en OLE DB.<br /><br /> Nota: Si un origen de datos contiene campos que son del tipo de datos tinyint y la propiedad incremento automático se establece en True, se convertirán en enteros en la vista del origen de datos.|  
 |UnsignedBigInt|Entero de 64 bits sin signo. Este tipo de datos se asigna internamente al tipo de datos UInt64 en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_UI8 en OLE DB.|  
 |UnsignedInt|Entero de 32 bits sin signo. Este tipo de datos se asigna internamente al tipo de datos UInt32 en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_UI4 en OLE DB.|  
 |UnsignedSmallInt|Entero de 16 bits sin signo. Este tipo de datos se asigna internamente al tipo de datos UInt16 en [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y al tipo de datos DBTYPE_UI2 en OLE DB.|  

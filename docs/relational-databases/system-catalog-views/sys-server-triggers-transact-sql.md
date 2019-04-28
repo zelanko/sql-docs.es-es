@@ -1,5 +1,5 @@
 ---
-title: Sys.server_triggers (Transact-SQL) | Microsoft Docs
+title: sys.server_triggers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b13aeed62a84258fcfbf5820c17dca59f4b5852
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660756"
 ---
 # <a name="sysservertriggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47731243"
 |**Nombre**|**sysname**|Nombre del desencadenador.|  
 |**object_id**|**int**|Id. del objeto.|  
 |**parent_class**|**tinyint**|Clase del elemento primario. Siempre es:<br /><br /> 100 = Servidor|  
-|**parent_class_desc**|**nvarchar(60)**|Descripción de la clase de elemento primario. Siempre es:<br /><br /> SERVIDOR.|  
+|**parent_class_desc**|**nvarchar(60)**|Descripción de la clase de elemento primario. Siempre es:<br /><br /> SERVER.|  
 |**parent_id**|**int**|Siempre es 0 para los desencadenadores de SERVER.|  
 |**Tipo**|**char(2)**|Tipo de objeto:<br /><br /> TA = Desencadenador de ensamblado (CLR)<br /><br /> TR = Desencadenador SQL|  
 |**type_desc**|**nvarchar(60)**|Descripción de la clase del tipo de objeto.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  

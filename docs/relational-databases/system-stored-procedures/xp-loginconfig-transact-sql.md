@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8590a33f870dc14ac34118ce5e655acc6e67f257
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645104"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ xp_loginconfig ['config_name']
 |**Dominio predeterminado**|Nombre del dominio de Windows predeterminado para los usuarios de red de conexiones de confianza. El dominio predeterminado es el dominio del que es miembro el equipo de Windows que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
 |**nivel de auditoría**|Nivel de auditoría. Los valores posibles son **ninguno**, **éxito**, **error**, y **todas**. Las auditorías se escriben en el registro de errores y en el Visor de eventos de Windows.|  
 |**nombre de host de conjunto**|Indica si el nombre del host desde el que se registra el cliente se sustituye por el nombre de usuario de la red de Windows. Los valores posibles son **true** o **false**. Si se establece, el nombre de usuario de red aparece en la salida de **sp_who**.|  
-|**asignar _**|Informa de los caracteres especiales de Windows asignados al carácter de subrayado (_) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador dominio** (valor predeterminado), **espacio**, **null**, o cualquier carácter individual. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
+|**map _**|Informa de los caracteres especiales de Windows asignados al carácter de subrayado (_) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador dominio** (valor predeterminado), **espacio**, **null**, o cualquier carácter individual. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
 |**asignar $**|Informa de los caracteres especiales de Windows asignados al carácter de dólar ($) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador dominio**, **espacio**, **null**, o cualquier carácter individual. El valor predeterminado es **espacio**. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
 |**asignar #**|Informa de los caracteres especiales de Windows asignados al carácter de número (#) válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son **separador dominio**, **espacio**, **null**, o cualquier carácter individual. El valor predeterminado es el guión. Este valor se proporciona por motivos de compatibilidad con versiones anteriores.|  
   
@@ -85,7 +85,7 @@ EXEC xp_loginconfig;
 GO  
 ```  
   
-### <a name="b-how-to-report-a-specific-configuration-value"></a>B. Cómo presentar un valor de configuración específico  
+### <a name="b-how-to-report-a-specific-configuration-value"></a>b. Cómo presentar un valor de configuración específico  
  En el ejemplo siguiente solo se muestra la configuración del modo de inicio de sesión.  
   
 ```  

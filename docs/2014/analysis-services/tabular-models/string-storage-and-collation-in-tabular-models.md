@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9bc74d7ac6c1e3fb826e2a1b3ebdc0122fd2720
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794256"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Almacenamiento e intercalación de cadenas en modelos tabulares
   Las cadenas (valores de texto) se almacenan en los modelos tabulares utilizando un formato muy comprimido; debido a esta compresión, puede obtener resultados inesperados al recuperar cadenas completas o parciales. Además, dado que la configuración regional y las intercalaciones de las cadenas se heredan jerárquicamente del objeto primario más próximo, si no se define explícitamente el idioma de las cadenas, la configuración regional y la intercalación del elemento primario pueden afectar a la forma de almacenamiento de cada una de las cadenas y determinar si la cadena es única o se combina con cadenas similares tal como se define en la intercalación primaria.  

@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792095"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Agregar soluciones y proyectos al control de código fuente
   Al agregar una solución al control de código fuente, ésta se convierte en parte de un archivo de control de versiones dinámico creado y conservado por el proveedor de control de código fuente. Cada vez que alguien protege una nueva versión de la solución, ésta se convierte en parte del archivo y se pone a disposición de otros usuarios del control de código fuente.  

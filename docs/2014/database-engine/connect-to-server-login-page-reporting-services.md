@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808731"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>Conectar al servidor (página Inicio de sesión de Reporting Services)
   Use esta pestaña para ver o especificar las siguientes opciones cuando se conecte a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -63,7 +63,7 @@ ms.locfileid: "48108715"
  Muestra opciones de conexión al servidor adicionales, tales como recordar la contraseña.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar una conexión de base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Conectar con un servidor de informes en Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Autenticación con el servidor de informes](../reporting-services/security/authentication-with-the-report-server.md)  
   

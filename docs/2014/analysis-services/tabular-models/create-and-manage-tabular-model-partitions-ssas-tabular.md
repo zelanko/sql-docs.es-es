@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a2e06d49f22180ae99bf5f41bb4007fda1e03f84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795381"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>Crear y administrar particiones de modelos tabulares (SSAS tabular)
   Las particiones dividen una tabla en partes lógicas. A continuación, cada partición se puede procesar (actualizar) de forma independiente de las demás particiones. Las particiones definidas para un modelo durante la creación de modelos se duplican en un modelo implementado. Una vez realizada la implementación, puede administrar esas particiones mediante el cuadro de diálogo **Particiones** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o mediante un script. Las tareas proporcionadas en este tema describen cómo crear y administrar particiones en un modelo implementado.  
@@ -64,7 +64,7 @@ ms.locfileid: "48113607"
 -   En el cuadro de diálogo **Particiones** , en la lista **Particiones** , seleccione la partición que desea eliminar y, a continuación, haga clic en el botón **Eliminar** .  
   
 ## <a name="see-also"></a>Vea también  
- [Particiones de modelos tabulares &#40;Tabular de SSAS&#41;](partitions-ssas-tabular.md)   
- [Procesar particiones de modelos tabulares &#40;Tabular de SSAS&#41;](process-tabular-model-partitions-ssas-tabular.md)  
+ [Particiones de modelos tabulares &#40;SSAS tabular&#41;](partitions-ssas-tabular.md)   
+ [Procesar particiones de modelos tabulares &#40;SSAS tabular&#41;](process-tabular-model-partitions-ssas-tabular.md)  
   
   

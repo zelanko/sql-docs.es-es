@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8f0807478066e5e82cf479246c35dcd6b511f75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728976"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definir y examinar KPI
   Para definir indicadores clave de rendimiento (KPI), deberá primero definir un nombre de KPI y el grupo de medida con el que desea asociar el KPI. Un KPI se puede asociar con todos los grupos de medida o con un solo grupo de medida. Se definirán entonces los siguientes elementos del KPI:  

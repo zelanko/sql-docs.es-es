@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 260767c88fdf980466a21d4cc9658b259b91c854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690651"
 ---
 # <a name="odbc-driver-architecture"></a>Arquitectura de controladores ODBC
 Los escritores de controlador deben tener en cuenta que puede afectar la arquitectura de controladores si una aplicación puede usar SQL específicos para DBMS.  
@@ -45,11 +45,11 @@ Los escritores de controlador deben tener en cuenta que puede afectar la arquite
   
  Para obtener más información acerca de problemas de controladores se puede encontrar en las ubicaciones descritas en la tabla siguiente.  
   
-|Problema|Tema|Ubicación|  
+|Problema|Tema|Location|  
 |-----------|-----------|--------------|  
 |Problemas de compatibilidad con aplicaciones y controladores|[Compatibilidad de aplicaciones y controladores](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)|[Consideraciones sobre la programación](../../../odbc/reference/develop-app/programming-considerations.md), en la referencia del programador de ODBC|  
 |Controladores ODBC de escritura|[Controladores ODBC 3.x de escritura](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)|[Consideraciones sobre la programación](../../../odbc/reference/develop-app/programming-considerations.md), en la referencia del programador de ODBC|  
-|Directrices de controlador para la compatibilidad con versiones anteriores|[Directrices de controlador para la compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[Apéndice G: directrices de controlador para la compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md), en la referencia del programador de ODBC|  
+|Directrices de controlador para la compatibilidad con versiones anteriores|[Directrices de controlador para la compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[Apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md), en la referencia del programador de ODBC|  
 |Conectarse a un controlador|[Elegir datos de un origen o el controlador](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)|[Conectarse a datos de un origen o el controlador](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), en la referencia del programador de ODBC|  
 |Identificación de controladores|[Visualización de controladores](../../../odbc/admin/viewing-drivers.md)|[Visualización de controladores](../../../odbc/admin/viewing-drivers.md), en la Ayuda en pantalla de administrador de orígenes de datos ODBC de Microsoft|  
 |Habilitar la agrupación de conexiones|[Agrupación de conexiones ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)|[Conectarse a datos de un origen o el controlador](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), en la referencia del programador de ODBC|  

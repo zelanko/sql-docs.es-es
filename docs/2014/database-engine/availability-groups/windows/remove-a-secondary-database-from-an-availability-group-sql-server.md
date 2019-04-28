@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 183acf0bf1e6e92483989545a710769501fa946d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814150"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Quitar una base de datos secundaria de un grupo de disponibilidad (SQL Server)
   En este tema se describe cómo quitar una base de datos secundaria de un grupo de disponibilidad AlwaysOn utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "48089245"
   
 -   **Seguimiento:**  [después de quitar una base de datos secundaria de un grupo de disponibilidad](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a>   
 ###  <a name="Prerequisites"></a> Requisitos previos y restricciones  
@@ -51,7 +51,7 @@ ms.locfileid: "48089245"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -94,7 +94,7 @@ ms.locfileid: "48089245"
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para quitar una base de datos secundaria de un grupo de disponibilidad**  
   
-1.  Cambie el directorio (`cd`) a la instancia de servidor que hospeda la réplica secundaria.  
+1.  Cambie el directorio (`cd`) a la instancia del servidor que hospeda la réplica secundaria.  
   
 2.  Use el cmdlet **Remove-SqlAvailabilityDatabase** , y especifique el nombre de la base de datos de disponibilidad que se va a quitar del grupo de disponibilidad. Cuando esté conectado a una instancia de servidor que hospeda una réplica secundaria, solo la base de datos secundaria local se quita del grupo de disponibilidad.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48089245"
     ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el `Get-Help` cmdlet en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805644"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Otros problemas de actualización del motor de base de datos
   La versión actual del Asesor de actualizaciones no podrá detectar los siguientes problemas de actualización. Examine los problemas enumerados a continuación para evaluar su posible impacto en los sistemas.  
@@ -57,7 +57,7 @@ ms.locfileid: "52321641"
   
 -   Geografía  
   
--   Geometría  
+-   Geometry  
   
 -   Datetime2  
   

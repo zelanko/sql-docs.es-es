@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63beac3d5034d041488b44202c4173b759a1884
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730409"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>General (cuadro de diálogo Restaurar base de datos) (Analysis Services - Datos multidimensionales)
   Use la página **General** del cuadro de diálogo **Restaurar base de datos** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para especificar el archivo de copia de seguridad y la configuración general que se utilizará al restaurar una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -75,7 +75,7 @@ ms.locfileid: "48099315"
  Si el archivo de copia de seguridad está cifrado, escriba la contraseña usada para cifrarlo.  
   
 ## <a name="see-also"></a>Vea también  
- [Restaurar la base de datos cuadro de diálogo &#40;Analysis Services - datos multidimensionales&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Cuadro de diálogo Restaurar base de datos &#40;Analysis Services - Datos multidimensionales&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Las particiones &#40;restaurar la base de datos cuadro de diálogo&#41; &#40;Analysis Services - datos multidimensionales&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

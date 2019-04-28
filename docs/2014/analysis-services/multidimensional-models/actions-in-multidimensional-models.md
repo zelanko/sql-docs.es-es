@@ -17,18 +17,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b447531f813d55be8f5318b192909c21e42e78d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701935"
 ---
 # <a name="actions-in-multidimensional-models"></a>Acciones en modelos multidimensionales
   Una acción es una operación iniciada por el usuario final en un cubo seleccionado o en una parte de un cubo. La operación puede iniciar una aplicación con el elemento seleccionado como parámetro o recuperar información acerca del elemento seleccionado. Para más información sobre las acciones, vea [Acciones &#40;Analysis Services - Datos multidimensionales&#41;](actions-analysis-services-multidimensional-data.md).  
   
  Use la pestaña **Acciones** del Diseñador de cubos para generar acciones para un cubo. Especifique lo siguiente:  
   
- **Nombre**  
+ **Name**  
  Seleccione un nombre que identifique la acción.  
   
  **Destino de la acción**  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807465"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Agregar o reemplazar un testigo de creación de reflejo de la base de datos (SQL Server Management Studio)
   Si los extremos de la creación de reflejo de la base de datos usan la Autenticación de Windows, puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para agregar o reemplazar un testigo. Cuando se agrega un testigo en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , se cambia también el modo de operación al modo de alta seguridad con conmutación automática por error.  

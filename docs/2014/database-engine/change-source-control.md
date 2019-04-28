@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812761"
 ---
 # <a name="change-source-control"></a>Cambiar el control de código fuente
   Crea y administra las conexiones y los enlaces que vinculan una solución o un proyecto guardados localmente con una carpeta de la base de datos de control de código fuente.  
@@ -31,7 +31,7 @@ ms.locfileid: "48092545"
 >  También se puede obtener acceso a este cuadro de diálogo haciendo clic con el botón secundario en el elemento, en el Explorador de soluciones.  
   
 ## <a name="options"></a>Opciones  
- **Enlazar**  
+ **Bind**  
  Asocie elementos seleccionados con una ubicación del servidor de control de código fuente. Por ejemplo, puede utilizar este botón para enlazar con las últimas carpetas y bases de datos conocidas del servidor de control de código fuente. Si no encuentra una base de datos o una carpeta del servidor recientes, se le indicará que especifique otras.  
   
  **Examinar**  
@@ -80,7 +80,7 @@ ms.locfileid: "48092545"
 |Desconocido|El estado del elemento en el control de código fuente no se ha determinado todavía.|  
 |No controlado|El elemento no se ha colocado en el control de código fuente.|  
   
- **Desenlazar**  
+ **Unbind**  
  Muestra el cuadro de diálogo **Control de código fuente** para permitirle eliminar los elementos seleccionados del control de código fuente y anular definitivamente la asociación de los elementos con sus carpetas actuales.  
   
 ## <a name="see-also"></a>Vea también  

@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc34ca4eb6e73233fc5302c154f5397bf44a81d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680598"
 ---
 # <a name="completing-the-wizard-aggregation-design-wizard"></a>Finalización del asistente (Asistente para diseñar agregaciones)
   Utilice la página **Finalización del asistente** para guardar el diseño de agregaciones en las particiones seleccionadas. De manera opcional, también es posible implementar y procesar las particiones seleccionadas después de que el Asistente para diseñar agregaciones haya terminado de diseñar y guardar las agregaciones.  
   
 ## <a name="options"></a>Opciones  
- **Nombre**  
+ **Name**  
  Escriba un nombre para el diseño de agregaciones.  
   
  **Implementar y procesar las agregaciones ahora**  

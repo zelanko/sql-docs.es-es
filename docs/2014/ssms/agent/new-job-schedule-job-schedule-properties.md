@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704626"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>Nueva programación de trabajo: Propiedades de programación del trabajo
   Utilice esta página para ver y cambiar las propiedades de la programación.  

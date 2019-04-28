@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809880"
 ---
 # <a name="remote-servers"></a>Servidores remotos
   Los servidores remotos solo se admiten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por compatibilidad con versiones anteriores. No obstante, las aplicaciones nuevas deben utilizar servidores vinculados. Para obtener más información, vea [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).  

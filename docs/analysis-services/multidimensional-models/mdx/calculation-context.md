@@ -1,5 +1,5 @@
 ---
-title: Contexto de cálculo | Documentos de Microsoft
+title: Contexto de cálculo | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 340d03ba8d0c5a66d89937627ab9389fc49abcae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807738"
 ---
 # <a name="calculation-context"></a>Contexto de cálculo
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34021772"
   
 5.  Las celdas de cubo o subcubo en cada eje, lo que elimina las tuplas vacías del eje y aplica la cláusula HAVING.  
   
-6.  Para más información, vea [Establishing Cube Context in a Query &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md).  
+6.  Para más información, vea [Establecer el contexto de cubo en una consulta &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md).  
   
  En la siguiente consulta, el contexto de cálculo del eje de fila está limitado por el miembro de atributo Country y el miembro de atributo Calendar Year especificados en la cláusula WHERE.  
   
@@ -70,8 +70,8 @@ WHERE (Customer.Country.France,
 >  Para aumentar el rendimiento de la consulta, debe eliminar los miembros y las tuplas lo más pronto posible en el proceso de resolución. De esta manera, los cálculos de tiempo de consulta complejos en el conjunto final de miembros operan en la menor cantidad de celdas posible.  
   
 ## <a name="see-also"></a>Vea también  
- [Establecer el contexto de cubo en una consulta & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [Aspectos básicos de consulta MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Conceptos clave de MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [Establecer el contexto de cubo en una consulta &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Conceptos clave de MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

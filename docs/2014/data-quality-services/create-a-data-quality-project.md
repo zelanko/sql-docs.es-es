@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dff9b07ddf0bd5062c1e10a2d31fe2fe1fa5c50f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793110"
 ---
 # <a name="create-a-data-quality-project"></a>Crear un proyecto de calidad de datos
   En este tema se describe cómo crear un proyecto de calidad de datos mediante [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Un proyecto de calidad de datos se utiliza para ejecutar la actividad de limpieza o de búsqueda de coincidencias en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -32,7 +32,7 @@ ms.locfileid: "56020176"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_kb_operator en la base de datos DQS_MAIN para crear un proyecto de calidad de datos.  
   
 ##  <a name="Create"></a> Crear un proyecto de calidad de datos  
@@ -51,13 +51,13 @@ ms.locfileid: "56020176"
   
     4.  En el área **Seleccione la actividad** , haga clic en la actividad que desea realizar utilizando este proyecto de calidad de datos:  
   
-        -   **Limpieza**: Seleccione esta actividad para limpiar los datos de origen.  
+        -   **Limpieza**: seleccione esta actividad para limpiar los datos de origen.  
   
-        -   **Coincidencia**: Seleccione esta actividad para realizar la coincidencia. Esta actividad solo está disponible si la base de conocimiento seleccionada para el proyecto de calidad de datos contiene una directiva de coincidencia.  
+        -   **Coincidencia**: seleccione esta actividad para realizar la búsqueda de coincidencias. Esta actividad solo está disponible si la base de conocimiento seleccionada para el proyecto de calidad de datos contiene una directiva de coincidencia.  
   
 4.  Haga clic en **Crear** para crear un proyecto de calidad de datos.  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de crear un proyecto de calidad de datos  
+##  <a name="FollowUp"></a> Seguimiento: después de crear un proyecto de calidad de datos  
  Una vez creado el proyecto de calidad de datos, aparecerá un asistente que podrá utilizar para realizar la actividad seleccionada: limpieza o búsqueda de coincidencias. Para más información sobre las actividades de limpieza y de búsqueda de coincidencias, vea [Limpieza de datos](../../2014/data-quality-services/data-cleansing.md) y [Coincidencia de datos](../../2014/data-quality-services/data-matching.md).  
   
   

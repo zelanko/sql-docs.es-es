@@ -17,16 +17,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aaed1030d35fffb1b539339dc882cfb2d6676229
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815378"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>Configurar el acceso de solo lectura en una réplica de disponibilidad (SQL Server)
   De forma predeterminada, tanto el acceso de lectura y escritura como de intento de lectura se permiten en la réplica principal. No se permiten conexiones en las réplicas secundarias de un grupo de disponibilidad AlwaysOn. En este tema se describe cómo se configura el acceso de conexión de una réplica de disponibilidad de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell.  
   
- Para obtener información acerca de las implicaciones de habilitar el acceso de solo lectura para una réplica secundaria y una introducción al acceso de conexión, vea [acerca de acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41; ](about-client-connection-access-to-availability-replicas-sql-server.md) y [secundarias activas: Las réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Para obtener información sobre las implicaciones de habilitar el acceso de solo lectura en una réplica secundaria y una introducción al acceso de conexión, vea [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md) y [Secundarias activas: Las réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
   
   
@@ -38,7 +38,7 @@ ms.locfileid: "53358967"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
   
 |Tarea|Permisos|  
 |----------|-----------------|  
@@ -182,7 +182,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
 ```  
   
   
-##  <a name="FollowUp"></a> Sigue: Después de configurar el acceso de solo lectura para una réplica de disponibilidad  
+##  <a name="FollowUp"></a> Seguimiento: después de configurar el acceso de solo lectura para una réplica de disponibilidad  
  **Acceso de solo lectura a una réplica secundaria legible**  
   
 -   Cuando se usa el [bcp (utilidad)](../../../tools/bcp-utility.md) o [utilidad sqlcmd](../../../tools/sqlcmd-utility.md), puede especificar el acceso de solo lectura a cualquier réplica secundaria que está habilitada para el acceso de solo lectura mediante el `-K ReadOnly` cambie.  
@@ -214,25 +214,25 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
   
 ##  <a name="RelatedContent"></a> Contenido relacionado  
   
--   [AlwaysOn: Propuesta de valor de secundaria legible](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
+-   [AlwaysOn: propuesta de valor de secundaria legible](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
   
--   [AlwaysOn: ¿Por qué hay dos opciones para habilitar una réplica secundaria para la carga de trabajo de lectura?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
+-   [AlwaysOn: ¿por qué hay dos opciones para habilitar una réplica secundaria para la carga de trabajo de lectura?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
   
--   [AlwaysOn: Configurar una réplica secundaria legible](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
+-   [AlwaysOn: configuración de una réplica secundaria legible](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
   
--   [AlwaysOn: Acabo de habilitar una secundaria legible pero mi consulta está bloqueada?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
+-   [AlwaysOn: acabo de habilitar una secundaria legible pero mi consulta está bloqueada](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
   
--   [AlwaysOn: Disposición de las estadísticas más recientes en la secundaria legible, base de datos de solo lectura y la instantánea de base de datos](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [AlwaysOn: ofrecer las estadísticas más recientes de la secundaria legible, la base de datos de solo lectura y la instantánea de base de datos](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
   
--   [AlwaysOn: Desafíos de las estadísticas en la base de datos de solo lectura, la instantánea de base de datos y la réplica secundaria](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
+-   [AlwaysOn: desafíos de las estadísticas de la base de datos de solo lectura, la instantánea de base de datos y la réplica secundaria](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
   
--   [AlwaysOn: Impacto en la carga de trabajo principal al ejecutar la carga de trabajo informe en la réplica secundaria](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
+-   [AlwaysOn: impacto sobre la carga de trabajo principal al ejecutar la carga de trabajo de informes en la réplica secundaria](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
   
--   [AlwaysOn: Efectos de asignar la carga de trabajo informe en una secundaria legible al aislamiento de instantánea](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
+-   [AlwaysOn: efectos de asignar la carga de trabajo de informes de la secundaria legible al aislamiento de instantánea](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
   
--   [AlwaysOn: Minimizar el bloqueo de subprocesos REDO al ejecutar la carga de trabajo informe en la réplica secundaria](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
+-   [AlwaysOn: minimizar el bloqueo de subprocesos REDO al ejecutar la carga de trabajo de informes en la réplica secundaria](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
   
--   [AlwaysOn: Latencia de datos y la base de datos secundaria legible](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
+-   [AlwaysOn: secundaria legible y latencia de datos](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
   
   
 ## <a name="see-also"></a>Vea también  

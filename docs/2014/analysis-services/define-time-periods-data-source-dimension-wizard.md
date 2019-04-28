@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aacc0e61ca3db517b5f05aa93ed43b3268e40529
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732333"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>Definir períodos de tiempo (Origen de datos, Asistente para dimensiones)
   Use la página **Definir períodos de tiempo** para definir los atributos que representan los períodos de tiempo en la dimensión de tiempo con columnas en la tabla especificada en la página **Seleccionar el tipo de dimensión** .  

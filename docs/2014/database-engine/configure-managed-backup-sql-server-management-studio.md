@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8c9664baa2803bbab4282b6897d49f0ddb1831
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812712"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Configurar la copia de seguridad administrada (SQL Server Management Studio)
   El **copia de seguridad administrada** cuadro de diálogo le permite configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] valores predeterminados para la instancia. En este tema se describe cómo usar este cuadro de diálogo para configurar los valores predeterminados de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] de la instancia y las opciones que debe tener en cuenta al hacerlo. Cuando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está configurado para la instancia, la configuración se aplica a cualquier base de datos nueva creada posteriormente.  
@@ -51,7 +51,7 @@ ms.locfileid: "52523634"
   
  Pertenencia en el rol de base de datos `db_backupoperator`, con permisos `ALTER ANY CREDENTIAL` y permisos `EXECUTE` en el procedimiento almacenado de `sp_delete_backuphistory`.  
   
- Permisos `SELECT` en la función `smart_admin.fn_get_current_xevent_settings`.  
+ `SELECT` los permisos en el `smart_admin.fn_get_current_xevent_settings` función.  
   
  `EXECUTE` los permisos en el `smart_admin.sp_get_backup_diagnostics` procedimiento almacenado. Además, requiere permisos `VIEW SERVER STATE` ya que internamente llama a otros objetos del sistema que requieren este permiso.  
   

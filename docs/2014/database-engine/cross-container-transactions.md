@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807429"
 ---
 # <a name="cross-container-transactions"></a>Transacciones entre contenedores
   Las transacciones entre contenedores son transacciones de usuario implícitas o explícitas que incluyen llamadas a procedimientos almacenados compilados de forma nativa u operaciones en tablas optimizadas para memoria.  

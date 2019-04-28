@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53299289e4daf504eef9cb382469225d14efd698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732637"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Ver o cambiar marcas de modelado (minería de datos)
   Las marcas de modelado son propiedades que se activan en una columna de estructura de minería de datos o columnas de modelo de minería de datos para controlar cómo procesa los datos el algoritmo durante el análisis.  
@@ -52,7 +52,7 @@ ms.locfileid: "48050145"
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas del modelo de minería de datos y procedimientos](mining-model-tasks-and-how-tos.md)   
- [Las marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)  
+ [Tareas y procedimientos de los modelos de minería de datos](mining-model-tasks-and-how-tos.md)   
+ [Marcas de modelado &#40;Minería de datos&#41;](modeling-flags-data-mining.md)  
   
   

@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701993"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Administrar conexiones y sesiones (XMLA)
   *Disponibilidad de estados* es una condición durante el cual el servidor conserva la identidad y el contexto de un cliente entre las llamadas de método. *Dinamismo* es una condición durante el cual el servidor no recuerda la identidad y el contexto de un cliente después de que finalice una llamada al método.  

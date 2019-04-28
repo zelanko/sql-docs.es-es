@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bec1e9c00c0c97bda29dd1deceac6ca152b6c085
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862759"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Limpiar datos mediante conocimiento (externo) de datos de referencia
 
@@ -53,7 +53,7 @@ ms.locfileid: "56036026"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_kb_operator en la base de datos DQS_MAIN para realizar la limpieza de datos.  
   
 ##  <a name="Cleanse"></a> Limpiar los datos mediante el conocimiento de los datos de referencia  

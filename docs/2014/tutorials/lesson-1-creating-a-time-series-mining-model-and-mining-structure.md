@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678448"
 ---
-# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lección 1: Creación de una serie temporal del modelo de minería de datos y la estructura de minería de datos
+# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lección 1: Creación de un modelo de minería de datos de serie temporal y una estructura de minería de datos
   En esta lección, creará un modelo de minería de datos que le permita predecir valores a lo largo del tiempo, según datos históricos. Al crear el modelo, la estructura subyacente se generará automáticamente y se utilizará como base para otros modelos de minería de datos.  
   
  En esta lección se supone que conoce los modelos de predicción y los requisitos del algoritmo de serie temporal de Microsoft. Para más información, consulte [Microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  

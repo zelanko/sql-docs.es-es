@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2b925540844a45d94fb2ee823a8ac5e9bc7ef2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788133"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Usar el Asistente para agregar réplica de Azure (SQL Server)
   Use el Asistente para agregar réplica de Azure para que le ayude a crear una nueva máquina virtual de Windows Azure en tecnologías informáticas híbridas y configurarla como una réplica secundaria para un grupo de disponibilidad AlwaysON nuevo o existente.  
@@ -28,9 +28,9 @@ ms.locfileid: "48095645"
   
      [Seguridad](#Security)  
   
--   **Para agregar una réplica con:**  [Asistente Agregar réplica de Microsoft Azure (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Para agregar una réplica, mediante:**  [Agregar el Asistente para la réplica de Azure (SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Si nunca ha agregado una réplica de disponibilidad a un grupo de disponibilidad, consulte la "Instancias del servidor" y "grupos de disponibilidad y réplicas" secciones en [requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
@@ -49,7 +49,7 @@ ms.locfileid: "48095645"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Consulte [Security](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)  
   
 ##  <a name="SSMSProcedure"></a> Usar el Asistente para agregar réplica de Azure (SQL Server Management Studio)  
@@ -69,7 +69,7 @@ ms.locfileid: "48095645"
   
 4.  Especifique los valores de configuración para la máquina virtual de Windows Azure que hospedará la nueva réplica secundaria:  
   
-     Imagen  
+     Image  
      Nombre de la imagen de SQL Server que se va a usar para la máquina virtual de Windows Azure.  
   
      Tamaño de VM  

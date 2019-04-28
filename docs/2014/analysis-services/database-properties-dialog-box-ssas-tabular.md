@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8204913babd9b52caf2edcaa2de8feae76c70d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732311"
 ---
 # <a name="database-properties-dialog-box-ssas---tabular"></a>Cuadro de diálogo Propiedades de base de datos (SSAS: tabular)
   Este cuadro de diálogo proporciona marcas de tiempo y otra información descriptiva, además de propiedades personalizables que determinan si la base de datos usa datos almacenados en caché. Entre las propiedades personalizables se incluyen la posibilidad de cambiar el nombre de la base de datos y especificar las opciones de suplantación.  
@@ -27,7 +27,7 @@ ms.locfileid: "48105695"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Nombre**|**Nombre** es el nombre de la base de datos que identifica exclusivamente la base de datos en el servidor. Al cambiar el nombre de la base de datos, considere el efecto en los informes y las aplicaciones cliente que utilizan el nombre actual en las cadenas de conexión existentes. Tendrá que actualizar las cadenas de conexión de los informes existentes para evitar errores de acceso denegado. Además, el modelo tabular que es el origen de esta base de datos utiliza probablemente el nombre original. Considere actualizar las propiedades de implementación del modelo para asegurarse de que las actualizaciones posteriores de ese modelo se publican en la base de datos deseada.|  
+|**Name**|**Nombre** es el nombre de la base de datos que identifica exclusivamente la base de datos en el servidor. Al cambiar el nombre de la base de datos, considere el efecto en los informes y las aplicaciones cliente que utilizan el nombre actual en las cadenas de conexión existentes. Tendrá que actualizar las cadenas de conexión de los informes existentes para evitar errores de acceso denegado. Además, el modelo tabular que es el origen de esta base de datos utiliza probablemente el nombre original. Considere actualizar las propiedades de implementación del modelo para asegurarse de que las actualizaciones posteriores de ese modelo se publican en la base de datos deseada.|  
 |**ID**|Muestra el identificador de la base de datos.|  
 |**Descripción**|Escriba una descripción para cambiar la descripción de la base de datos.|  
 |**Marca de tiempo de creación**|Muestra la fecha y hora en que se creó la base de datos.|  

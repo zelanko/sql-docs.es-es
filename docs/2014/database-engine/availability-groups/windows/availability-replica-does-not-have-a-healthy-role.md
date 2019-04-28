@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815602"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>La réplica de disponibilidad no tiene un rol en buen estado
     
@@ -41,7 +41,7 @@ ms.locfileid: "53359374"
 ## <a name="possible-causes"></a>Posibles causas  
  El rol de esta réplica de disponibilidad está en mal estado. La réplica no tiene el rol principal o secundario.  
   
-## <a name="possible-solution-informationstilltocome"></a>Posible solución: Information_still_to_come  
+## <a name="possible-solution-informationstilltocome"></a>Solución posible: Information_still_to_come  
   
 ## <a name="see-also"></a>Vea también  
  [Información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

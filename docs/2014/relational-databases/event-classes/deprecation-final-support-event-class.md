@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2833f1f342aa212b73611d257b8e29606a14cce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662986"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support, clase de eventos
   La clase de eventos **Deprecation Final Support** tiene lugar cuando se usa una característica que se va a quitar de la siguiente versión principal de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para que sus aplicaciones duren el mayor tiempo posible, evite el uso de características que provoquen la aparición de las clases de eventos **Deprecation Announcement** o **Deprecation Final Support** . Modifique lo antes posible las aplicaciones que usan este tipo de características.  

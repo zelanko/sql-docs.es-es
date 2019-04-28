@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eec122493d7af91bc5aa5483fbdb1de842705c90
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59960111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695816"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propiedades de campo extendidas para una base de datos de Analysis Services (SSRS)
   La extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite propiedades de campo extendidas. Las propiedades de campo extendidas son propiedades disponibles además de las propiedades de campo `Value` e `IsMissing` en el origen de datos y admitidas por la extensión de procesamiento de datos. Las propiedades extendidas no aparecen en el panel Datos de informe como parte de la colección de campos para un conjunto de datos de informe. Puede incluir valores de propiedad de campo extendidas en el informe, escriba expresiones que especifiquen por su nombre usa el método integrado `Fields` colección.  

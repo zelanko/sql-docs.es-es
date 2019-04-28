@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13d14fafd18fb9e0cdb156617798c8d2f15ff661
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815368"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Crear un grupo de disponibilidad (Transact-SQL)
   En este tema se describe cómo usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] para crear y configurar un grupo de disponibilidad en las instancias de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] en que se habilita la característica de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Un *grupo de disponibilidad* define un conjunto de bases de datos de usuario que realizarán la conmutación por error como una sola unidad y un conjunto de asociados de conmutación por error, conocido como *réplicas de disponibilidad*, que admiten la conmutación por error.  
@@ -39,7 +39,7 @@ ms.locfileid: "53365188"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Se requiere la pertenencia al rol fijo de servidor **sysadmin** y el permiso de servidor CREATE AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
 ###  <a name="SummaryTsqlStatements"></a> Resumen de las tareas e instrucciones Transact-SQL correspondientes  
@@ -58,7 +58,7 @@ ms.locfileid: "53365188"
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL para crear y configurar un grupo de disponibilidad  
   
 > [!NOTE]  
->  Para obtener un procedimiento de configuración de ejemplo que contiene ejemplos de código de cada una de estas [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones, consulte [ejemplo: Configurar un grupo de disponibilidad que utiliza la autenticación de Windows](#ExampleConfigAGWinAuth).  
+>  Para obtener un procedimiento de configuración de ejemplo que contiene ejemplos de código de cada una de estas instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)], vea [Ejemplo: Configuración de un grupo de disponibilidad que usa la Autenticación de Windows](#ExampleConfigAGWinAuth).  
   
 1.  Conéctese a la instancia del servidor que va a hospedar la réplica principal.  
   
@@ -66,11 +66,11 @@ ms.locfileid: "53365188"
   
 3.  Una la nueva réplica secundaria al grupo de disponibilidad. Para obtener más información, vea [Combinar una réplica secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-4.  Para cada base de datos del grupo de disponibilidad, cree una base de datos secundaria restaurando las copias de seguridad recientes de la base de datos principal, utilizando RESTORE WITH NORECOVERY. Para obtener más información, consulte [ejemplo: Configurar una disponibilidad de grupo mediante Windows la autenticación (Transact-SQL)](create-an-availability-group-transact-sql.md), comenzando por el paso que restaura la copia de seguridad de base de datos.  
+4.  Para cada base de datos del grupo de disponibilidad, cree una base de datos secundaria restaurando las copias de seguridad recientes de la base de datos principal, utilizando RESTORE WITH NORECOVERY. Para más información, vea [Ejemplo: Configuración de un grupo de disponibilidad mediante la Autenticación de Windows (Transact-SQL)](create-an-availability-group-transact-sql.md), comenzando por el paso que restaura la copia de seguridad de la base de datos.  
   
 5.  Una cada nueva base de datos secundaria al grupo de disponibilidad. Para obtener más información, vea [Combinar una réplica secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-##  <a name="ExampleConfigAGWinAuth"></a> Ejemplo: Configuración de un grupo de disponibilidad que usa la Autenticación de Windows  
+##  <a name="ExampleConfigAGWinAuth"></a> Ejemplo: Configurar un grupo de disponibilidad que utiliza la autenticación de Windows  
  En este ejemplo se crea un procedimiento de configuración de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] de ejemplo que utiliza [!INCLUDE[tsql](../../../includes/tsql-md.md)] para configurar los extremos de creación de reflejo de la base de datos que utilizan la Autenticación de Windows y para crear y configurar un grupo de disponibilidad y sus bases de datos secundarias.  
   
  Este ejemplo contiene las siguientes secciones:  
@@ -510,7 +510,7 @@ GO
   
 -   **Blogs:**  
   
-     [AlwaysON - HADRON Learning Series: Bases de datos de uso del grupo de trabajo de HADRON habilitadas](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (Series de aprendizaje de Always ON - HADRON: uso del grupo de trabajo para las bases de datos compatibles con HADRON)  
   
      [Blogs del equipo de AlwaysOn SQL Server: El blog del equipo de AlwaysOn oficial SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -518,7 +518,7 @@ GO
   
 -   **Vídeos:**  
   
-     [Microsoft SQL Server Code-Named "Denali", serie AlwaysOn, parte 1: Introducción a la solución de alta disponibilidad de siguiente generación](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali", serie AlwaysOn, parte 1: Introducción a la solución de alta disponibilidad de próxima generación](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server Code-Named "Denali", serie AlwaysOn, parte 2: Creación de una solución esencial de alta disponibilidad utilizando AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01f4bcc06ca7bf8bcee3cf581ad0c2bec3ba4f9f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794612"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Implementación de soluciones de modelos tabulares (SSAS tabular)
   Después de crear un proyecto de modelo tabular, deberá implementarlo para que los usuarios examinen el modelo usando una aplicación cliente de informes. Este tema describe las diferentes propiedades y métodos que puede utilizar al implementar soluciones de modelo tabular en el entorno.  
@@ -62,7 +62,7 @@ ms.locfileid: "52502920"
 |--------------|---------------------|-----------------|  
 |**Servidor**<br /><br /> Establézcalo cuando se cree el proyecto.|**localhost**|Esta propiedad, establecida cuando se crea el proyecto, especifica el nombre de la instancia de Analysis Services en la que se implementará el modelo. De forma predeterminada, el modelo se implementará en la instancia predeterminada de Analysis Services del equipo local. Sin embargo, puede cambiar este valor para especificar una instancia con nombre en el equipo local o cualquier instancia en cualquier equipo remoto en el que tenga permiso para crear objetos de Analysis Services.|  
 |**Edición**|La misma edición que la instancia en la que se encuentra el servidor del área de trabajo.|Esta propiedad especifica la edición del servidor de Analysis Services en la que se implementará el modelo. La edición del servidor define varias características que se pueden incorporar al proyecto. De forma predeterminada, la edición será la del servidor de Analysis Services local. Si especifica otro servidor de Analysis Services, por ejemplo, uno de producción, asegúrese de especificar la edición de ese servidor de Analysis Services.|  
-|**Base de datos**|**\<ProjectName >**|Esta propiedad especifica el nombre de la base de datos de Analysis Services en la que se crearán instancias de los objetos de modelo durante la implementación. Este nombre también se especificará en una conexión de datos del cliente de informes o en un archivo de conexión de datos .bism.<br /><br /> Puede cambiar este nombre en cualquier momento durante la creación del modelo. Si cambia el nombre después de haber implementado el modelo, los cambios realizados no afectarán al modelo implementado previamente. Por ejemplo, si abre una solución denominada `TestDB` e implementa la solución con el nombre predeterminado de la base de datos del modelo (Modelo) y, a continuación, modifica la solución y cambia el nombre de la base de datos del modelo a `Sales`, la instancia de Analysis Services en la que se implementaron las soluciones mostrará bases de datos independientes, una denominada Modelo y otra Ventas.|  
+|**Base de datos**|**\<projectname>**|Esta propiedad especifica el nombre de la base de datos de Analysis Services en la que se crearán instancias de los objetos de modelo durante la implementación. Este nombre también se especificará en una conexión de datos del cliente de informes o en un archivo de conexión de datos .bism.<br /><br /> Puede cambiar este nombre en cualquier momento durante la creación del modelo. Si cambia el nombre después de haber implementado el modelo, los cambios realizados no afectarán al modelo implementado previamente. Por ejemplo, si abre una solución denominada `TestDB` e implementa la solución con el nombre predeterminado de la base de datos del modelo (Modelo) y, a continuación, modifica la solución y cambia el nombre de la base de datos del modelo a `Sales`, la instancia de Analysis Services en la que se implementaron las soluciones mostrará bases de datos independientes, una denominada Modelo y otra Ventas.|  
 |**Nombre del cubo**|**Modelo**|Esta propiedad especifica el nombre del cubo como se muestra en las herramientas cliente (por ejemplo, Excel) y en AMO (Objetos de administración de análisis).|  
   
 ### <a name="directquery-options-properties"></a>Propiedades de las opciones de DirectQuery  

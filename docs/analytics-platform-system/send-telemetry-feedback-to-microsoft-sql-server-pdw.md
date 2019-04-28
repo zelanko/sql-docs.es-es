@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678376"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Enviar comentarios de telemetría a Microsoft para Analytics Platform System
 Analytics Platform System tiene una característica opcional de telemetría que envía datos de la consola de administración a Microsoft. 

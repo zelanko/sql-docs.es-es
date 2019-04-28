@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 13383c305b9e2e8f1c1ece754c55e5d0f0bd6955
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825036"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas (Generador de informes y SSRS)
   Puede organizar los datos de distintas formas para mostrar la relación entre lo general y lo detallado.  Puede incluir todos los datos en el informe, pero establecer que permanezcan ocultos hasta que un usuario haga clic para mostrar los detalles; esta es una acción *de obtención de detalles* . Puede mostrar los datos en una región de datos, como una tabla o un gráfico, que *está anidada* en otra, como una tabla o matriz. Puede mostrar los datos en un *subinforme* que esté completamente incluido dentro de un informe principal. O también, puede colocar los datos detallados en informes *detallados* , informes independientes que se muestran cuando un usuario hace clic en un vínculo.  

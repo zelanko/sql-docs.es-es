@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Cambiar el nombre de la &lt;fila&gt; elemento | Microsoft Docs'
+title: 'Ejemplo: Cambio de nombre del elemento &lt;row&gt; | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b835696c5e64182cffb72aea80d53b3c3bb776
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704902"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>Ejemplo: Cambiar el nombre de la &lt;fila&gt; elemento
+# <a name="example-renaming-the-ltrowgt-element"></a>Ejemplo: Cambio de nombre del elemento &lt;row&gt;
   El modo RAW genera un elemento para cada fila del conjunto de resultados `<row>`. Opcionalmente, se puede indicar otro nombre para este elemento especificando un argumento opcional para el modo RAW, como se muestra en esta consulta. La consulta devuelve un elemento <`ProductModel`> para cada fila del conjunto de filas.  
   
 ## <a name="example"></a>Ejemplo  

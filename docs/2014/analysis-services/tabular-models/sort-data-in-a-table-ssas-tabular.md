@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4fd42458d59f7d591bf7de8279e983e30f754164
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794375"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>Ordenar datos en una tabla (SSAS tabular)
   Puede ordenar los datos por texto (de A a Z o de Z a A) y los números (de menor a mayor o viceversa) en una o varias columnas.  
@@ -48,8 +48,8 @@ ms.locfileid: "48081855"
     >  Si los resultados no son los que esperaba, la columna podría contener números almacenados como texto y no como números. Por ejemplo, los números negativos importados de algunos sistemas contables o un número escrito con un símbolo ' inicial (apóstrofo) se almacenan en forma de texto.  
   
 ## <a name="see-also"></a>Vea también  
- [Filtrar y ordenar datos &#40;Tabular de SSAS&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [Las perspectivas &#40;Tabular de SSAS&#41;](perspectives-ssas-tabular.md)   
- [Roles &#40;Tabular de SSAS&#41;](roles-ssas-tabular.md)  
+ [Filtrar y ordenar datos &#40;SSAS tabular&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [Perspectivas &#40;SSAS tabular&#41;](perspectives-ssas-tabular.md)   
+ [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md)  
   
   

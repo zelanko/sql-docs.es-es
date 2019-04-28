@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812639"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptador para la nube de SQL Server
   El servicio del adaptador para la nube se crea como parte del aprovisionamiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en una máquina virtual de Windows Azure. El servicio Adaptador para la nube genera un certificado SSL autofirmado la primera vez que se ejecuta y, después, se ejecuta como una cuenta de **sistema local** . Genera un archivo de configuración que utiliza para configurarse a sí mismo. El adaptador para la nube también crea una regla de Firewall de Windows para permitir conexiones entrantes de TCP en el puerto predeterminado 11435.  
@@ -48,19 +48,19 @@ ms.locfileid: "52518259"
   
 -   **Parámetros del archivo de configuración** -  
   
-    -   \<Configuración >  
+    -   \<configuration>  
   
-        -   \<appSettings >  
+        -   \<appSettings>  
   
-            -   \<Agregar clave = "WebServicePort" value = "" / >  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<Agregar clave = "WebServiceCertificate" value = "GUID" / >  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<Agregar clave = "ExposeExceptionDetails" value = "true" / >  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
-        -   \</appSettings >  
+        -   \</appSettings>  
   
-    -   \</Configuration >  
+    -   \</configuration>  
   
 -   **Detalles del certificado** -el certificado tiene los siguientes valores:  
   

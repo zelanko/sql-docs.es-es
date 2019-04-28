@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2018
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
-ms.sourcegitcommit: 0330cbd1490b63e88334a9f9e421f4bd31a6083f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52886890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690785"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +89,7 @@ Este comando restablece todos los contadores en 0.
   
  En la tabla siguiente se muestran los tipos de espera encontrados por las tareas.  
 
-|Tipo |Descripción| 
+|type |Descripción| 
 |-------------------------- |--------------------------| 
 |ABR |Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.| | 
 |AM_INDBUILD_ALLOCATION |TBD <br />**Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

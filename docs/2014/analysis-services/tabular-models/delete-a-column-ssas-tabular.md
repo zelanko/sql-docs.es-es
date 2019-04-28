@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01060e5161071a06a0fb2c269af5f5a3e14c31b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795304"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>Eliminar una columna (SSAS tabular)
   En este tema se describe cómo eliminar una columna de una tabla de modelo tabular.  
@@ -39,7 +39,7 @@ ms.locfileid: "48178485"
 3.  En el cuadro de diálogo **Editar propiedades de tabla** , en la ventana de vista previa de la tabla, desactive la columna de origen que desee eliminar y haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Agregar columnas a una tabla &#40;Tabular de SSAS&#41;](add-columns-to-a-table-ssas-tabular.md)   
- [Las particiones &#40;Tabular de SSAS&#41;](partitions-ssas-tabular.md)  
+ [Agregar columnas a una tabla &#40;SSAS tabular&#41;](add-columns-to-a-table-ssas-tabular.md)   
+ [Particiones &#40;SSAS tabular&#41;](partitions-ssas-tabular.md)  
   
   

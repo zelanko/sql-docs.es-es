@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 002caf336a45e9b1b8b01e2e1ba2308b05a38378
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697722"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>Agregar, editar y actualizar campos en el panel Datos de informe (Generador de informes y SSRS)
   Los campos de conjunto de datos son la colección integrada de nombres de campo que representan los datos que se devuelven cuando una consulta de conjunto de datos se ejecuta en un origen de datos externo.  

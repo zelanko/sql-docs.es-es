@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b05aec565feb655f9c66df928656ecef4bc675f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689475"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Examinar un modelo usando el Visor de serie temporal de Microsoft
   El Visor de series temporales de [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los modelos de minería de datos que se generan con el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Este algoritmo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de regresión que crea modelos de minería de datos para predecir columnas continuas como las ventas de productos, en un escenario de previsión. Estos modelos de serie temporal pueden incluir información basada en algoritmos diferentes:  
@@ -87,9 +87,9 @@ ms.locfileid: "48137565"
  [Volver al principio](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas del Visor de modelo de minería de datos y procedimientos](mining-model-viewer-tasks-and-how-tos.md)   
- [Algoritmo de serie temporal de Microsoft](microsoft-time-series-algorithm.md)   
- [Ejemplos de consultas de modelo de serie temporal](time-series-model-query-examples.md)   
+ [Tareas y procedimientos del Visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Time Series Algorithm](microsoft-time-series-algorithm.md)   
+ [Ejemplos de consultas de modelos de serie temporal](time-series-model-query-examples.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)  
   
   

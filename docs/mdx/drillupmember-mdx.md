@@ -1,5 +1,5 @@
 ---
-title: DrillupMember (MDX) | Documentos de Microsoft
+title: DrillupMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 31981669d5d08e63a853b8daa530b886f9b7dfbe
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690764"
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember (MDX)
 
@@ -35,13 +35,13 @@ DrillupMember(Set_Expression1, Set_Expression2)
  *Set_Expression2*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
-## <a name="remarks"></a>Notas  
- El **DrillupMember** función devuelve un conjunto de miembros basado en los miembros especificados en el primer conjunto que son descendientes de miembros en el segundo conjunto. El primer conjunto puede tener varias dimensiones, pero el segundo conjunto debe contener un conjunto de una dimensión. Se mantiene el orden entre los miembros originales del primer conjunto. La función crea el conjunto mediante la inclusión únicamente de los miembros del primer conjunto que son descendientes inmediatos de miembros del segundo conjunto. Si el antecesor inmediato de un miembro del primer conjunto no se encuentra en el segundo conjunto, el miembro del primer conjunto se incluye en el conjunto devuelto por esta función. También se incluyen los descendientes del primer conjunto que preceden a un miembro antecesor del segundo conjunto.  
+## <a name="remarks"></a>Comentarios  
+ El **DrillupMember** función devuelve un conjunto de miembros en función de los miembros especificados en el primer conjunto que son descendientes de miembros en el segundo conjunto. El primer conjunto puede tener varias dimensiones, pero el segundo conjunto debe contener un conjunto de una dimensión. Se mantiene el orden entre los miembros originales del primer conjunto. La función crea el conjunto mediante la inclusión únicamente de los miembros del primer conjunto que son descendientes inmediatos de miembros del segundo conjunto. Si el antecesor inmediato de un miembro del primer conjunto no se encuentra en el segundo conjunto, el miembro del primer conjunto se incluye en el conjunto devuelto por esta función. También se incluyen los descendientes del primer conjunto que preceden a un miembro antecesor del segundo conjunto.  
   
  El primer conjunto puede contener tuplas en vez de miembros. Obtención de detalles de tupla es una extensión de OLE DB y devuelve un conjunto de tuplas en vez de miembros.  
   
 > [!IMPORTANT]  
->  Se reducirá el detalle de un miembro solo si va inmediatamente seguido por un elemento secundario o un descendiente. Es importante el orden de los miembros del conjunto para la obtención de detalles\* y Drillup\* familias de funciones. Considere el uso de la **Hierarchize** función para ordenar adecuadamente los miembros del primer conjunto.  
+>  Se reducirá el detalle de un miembro solo si va inmediatamente seguido por un elemento secundario o un descendiente. Es importante el orden de los miembros del conjunto para ambos la obtención de detalles\* y Drillup\* familias de funciones. Considere el uso de la **Hierarchize** función para ordenar adecuadamente los miembros del primer conjunto.  
   
 ## <a name="example"></a>Ejemplo  
  Los tres ejemplos siguientes son idénticos salvo por el segundo conjunto. En el primer ejemplo, el segundo conjunto es Estados Unidos. Como resultado, Colorado se excluye del conjunto de resultados. Es un descendiente de Estados Unidos.  

@@ -24,11 +24,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f7ff454dd4464fab5173c4d0022bd94543c1dad
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701744"
 ---
 # <a name="group-attribute-members-discretization"></a>Agrupar miembros de atributos (discretización)
   Un grupo de miembros es una colección de miembros de dimensión consecutivos generada por el sistema. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los miembros de un atributo pueden agruparse en varios grupos de miembros mediante un proceso denominado discretización. Un nivel de una jerarquía contiene miembros o grupos de miembro, pero no los dos. Cuando los usuarios corporativos examinan un nivel que contiene grupos de miembros, ven los nombres y valores de celdas de estos grupos. Los miembros que genera [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para admitir grupos de miembros se denominan miembros de agrupación y son similares a los miembros normales.  

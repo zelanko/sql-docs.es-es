@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f24a5ca8ea44f3e05bc11d0148ab30d6f83e993
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730790"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Conceder permisos para procedimientos almacenados (Analysis Services)
-  Procedimientos almacenados o los ensamblados, en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] son rutinas externas escritas una [!INCLUDE[msCoName](../includes/msconame-md.md)] lenguaje de programación. NET, que extienden las capacidades de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Los ensamblados permiten a los programadores beneficiarse de la integración entre lenguajes, el tratamiento de excepciones, la compatibilidad de control de versiones, la compatibilidad de implementación y la compatibilidad de depuración.  
+  Los procedimientos almacenados, o ensamblados, en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] son rutinas externas escritas en lenguaje de programación [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET que amplían las capacidades de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Los ensamblados permiten a los programadores beneficiarse de la integración entre lenguajes, el tratamiento de excepciones, la compatibilidad de control de versiones, la compatibilidad de implementación y la compatibilidad de depuración.  
   
  Debe ser un administrador del servidor para registrar un ensamblado. Consulte [conceder permisos de administrador de servidor &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
@@ -37,6 +37,6 @@ ms.locfileid: "48148555"
 -   **Unrestricted** con el permiso Unrestricted establecido, un procedimiento almacenado puede tener acceso a recursos externos mediante el uso de cualquier código. Con este permiso establecido, no puede garantizarse la seguridad ni la confiabilidad de los procedimientos almacenados.  
   
 ## <a name="see-also"></a>Vea también  
- [Administración de los ensamblados de modelos multidimensionales](multidimensional-models/multidimensional-model-assemblies-management.md)  
+ [Administración de ensamblados de modelos multidimensionales](multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

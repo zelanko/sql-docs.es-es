@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813258"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>Ver las propiedades del grupo de disponibilidad (SQL Server)
   En este tema se describe cómo pueden verse las propiedades de un grupo disponibilidad AlwaysOn con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)] en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -33,7 +33,7 @@ ms.locfileid: "48126365"
   
 3.  Haga clic con el botón secundario en el grupo de disponibilidad cuyas propiedades desea ver y seleccione el comando **Propiedades** .  
   
-4.  En el cuadro de diálogo **Propiedades de grupo de disponibilidad** , use las páginas **General** y **Preferencias de copia de seguridad** para ver y, en algunos casos, cambiar las propiedades del grupo de disponibilidad seleccionado. Para más información, vea [Propiedades de grupo de disponibilidad y nuevo grupo de disponibilidad &#40;página General&#41;](availability-group-properties-new-availability-group-general-page.md) y [Propiedades de grupo de disponibilidad: Nuevo grupo de disponibilidad &#40;página Preferencias de copia de seguridad&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md).  
+4.  En el cuadro de diálogo **Propiedades de grupo de disponibilidad** , use las páginas **General** y **Preferencias de copia de seguridad** para ver y, en algunos casos, cambiar las propiedades del grupo de disponibilidad seleccionado. Para obtener más información, consulte [propiedades del grupo de disponibilidad y nuevo grupo de disponibilidad &#40;página General&#41; ](availability-group-properties-new-availability-group-general-page.md) y [propiedades del grupo de disponibilidad: Nuevo grupo de disponibilidad &#40;página Preferencias de copia de seguridad&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md).  
   
      Use la página de **Permisos** para ver los inicios de sesión, roles y permisos explícitos actuales asociados al grupo de disponibilidad. Para más información, consulte [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md).  
   

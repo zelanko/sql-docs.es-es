@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6099fdba06e03c178f2673c66e49e71564a0d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680588"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>Finalización del asistente (Asistente para origen de datos) (Analysis Services)
   Utilice la página **Finalización del asistente** de este asistente para revisar la cadena de conexión y especificar un nombre para el nuevo origen de datos.  

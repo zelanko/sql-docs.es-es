@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cea836d49b46bd7931d7230d3d22824af9506961
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729779"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Programar tareas administrativas de SSAS con el Agente SQL Server
   Con el servicio Agente SQL Server, puede programar tareas administrativas de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se ejecutan en el orden y a las horas que se necesitan. Las tareas programadas le ayudan a automatizar los procesos que se ejecutan en ciclos normales o predecibles. Puede programar tareas administrativas, como procesamiento de cubos, para que se ejecuten en momentos de poca actividad empresarial. También puede determinar el orden en el que se ejecutarán las tareas creando pasos de trabajo en un trabajo del Agente SQL Server. Por ejemplo, puede procesar un cubo y luego realizar una copia de seguridad del cubo.  

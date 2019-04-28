@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815760"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn (SQL Server)
   El modelo de estados de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] evalúa un conjunto de directivas predefinidas de administración basada en directiva (PBM). Puede utilizarlas para ver el estado de un grupo de disponibilidad y sus réplicas de disponibilidad y bases de datos en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b38734544ac3accb3ddfdbcae8ae92f67b252e54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805859"
 ---
 # <a name="error-messages"></a>mensajes de error
   El texto de los mensajes devueltos por la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client se coloca en el *MessageText* parámetro de **SQLGetDiagRec**. El encabezado del mensaje indica el origen de un error:  

@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808403"
 ---
 # <a name="connection-properties-dialog-box"></a>Propiedades de conexión, cuadro de diálogo
   Utilice este cuadro de diálogo para ver las propiedades de la conexión actual. Este cuadro de diálogo está disponible cuando se hace clic en **Ver propiedades de conexión** en varios cuadros de diálogo del Explorador de objetos. Las propiedades que aparecen en esta página son de solo lectura.  

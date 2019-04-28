@@ -1,5 +1,5 @@
 ---
-title: Expresiones (MDX) | Documentos de Microsoft
+title: Expresiones (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ef7250c7af3918509e38c9aa1f5350f3ac5610
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690841"
 ---
 # <a name="expressions-mdx"></a>Expresiones (MDX)
 
@@ -33,7 +33,7 @@ ms.locfileid: "34740844"
  Una función escalar devuelve un solo valor en el contexto de evaluación de MDX. Esta diferencia es importante para comprender cómo resuelve MDX las funciones escalares, puesto que la mayoría de las expresiones, instrucciones y scripts MDX se evalúan no respecto a un solo elemento de datos, sino de forma iterativa respecto a un grupo de elementos de datos como celdas o miembros. Sin embargo, cuando se evalúa la función escalar, la función suele revisar un solo elemento de datos.  
   
  Identificador de objeto  
- MDX está orientado a objetos por la naturaleza de los datos multidimensionales. Los identificadores de objetos se consideran expresiones simples en MDX. Para obtener más información acerca de los identificadores, vea [identificadores &#40;MDX&#41;](../mdx/identifiers-mdx.md).  
+ MDX está orientado a objetos por la naturaleza de los datos multidimensionales. Los identificadores de objetos se consideran expresiones simples en MDX. Para obtener más información sobre los identificadores, vea [identificadores &#40;MDX&#41;](../mdx/identifiers-mdx.md).  
   
  Las expresiones complejas también pueden generarse a partir de la combinación de estas entidades mediante operadores.  
   
@@ -86,6 +86,6 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="see-also"></a>Vea también  
  [Referencia del lenguaje MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Aspectos básicos de consulta MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

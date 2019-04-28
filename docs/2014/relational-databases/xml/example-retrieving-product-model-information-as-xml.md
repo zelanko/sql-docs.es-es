@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplo: Recuperar información del modelo de producto como XML | Microsoft Docs'
+title: 'Ejemplo: Recuperación de información de modelos de productos como XML | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704715"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>Ejemplo: Recuperación de información de modelos de productos como XML
   En la siguiente consulta se devuelve información de modelos de productos. `RAW` se especifica en la cláusula `FOR XML` .  

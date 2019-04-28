@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1027310bdf012f00e7b70981521088d69d08598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729894"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Pestaña Selección de entrada (vista Gráfico de precisión de minería de datos)
   Utilice la pestaña **Selección de entrada** del diseñador **Gráfico de precisión de minería de datos** para especificar el origen de datos que se utiliza para probar el modelo y generar el gráfico de precisión.  
   
- **Para más información:** [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Para obtener más información:** [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opciones  
  **Sincronizar columnas y valores de** **predicción**  
@@ -36,7 +36,7 @@ ms.locfileid: "48120875"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**Mostrar**|Active la casilla situada junto al nombre de cada columna de predicción del modelo de minería que desee mostrar en el gráfico.<br /><br /> Si el gráfico es demasiado complejo para verlo con facilidad, borre el cuadro situado al lado de una o varias columnas para simplificar el gráfico.<br /><br /> Nota: No se pueden crear gráficos de precisión hasta que haya al menos una columna seleccionada.|  
+|**Mostrar**|Active la casilla situada junto al nombre de cada columna de predicción del modelo de minería que desee mostrar en el gráfico.<br /><br /> Si el gráfico es demasiado complejo para verlo con facilidad, borre el cuadro situado al lado de una o varias columnas para simplificar el gráfico.<br /><br /> Nota: No se puede crear un gráfico de precisión a menos que se seleccione al menos una columna.|  
 |**Modelo de minería de datos**|Muestra los modelos de minería contenidos en la estructura de minería.|  
 |**Nombre de columna de predicción**|Seleccione una columna de predicción que esté contenida dentro de los modelos de minería de datos que se utilizarán para crear el gráfico de elevación.|  
 |**Valor de predicción**|Seleccione un valor para la columna de predicción. Si deja esta opción en blanco, el gráfico de elevación predice en qué medida será satisfactoria la realización del modelo para todos los estados de la columna de predicción.|  
@@ -72,6 +72,6 @@ ms.locfileid: "48120875"
  [Pruebas y validación tareas y procedimientos &#40;minería de datos&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Diseñador gráfico de precisión de minería de datos &#40;minería de datos&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Aplicar un filtro a un modelo de minería de datos](data-mining/apply-a-filter-to-a-mining-model.md)   
- [Filtros para modelos de minería de datos de &#40;Analysis Services - minería de datos&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [Filtros para modelos de minería &#40;Analysis Services - Minería de datos&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

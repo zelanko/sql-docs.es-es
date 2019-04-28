@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b5fff7c8804feab436271d60f3e5542b372ada60
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793173"
 ---
 # <a name="create-a-matching-policy"></a>Crear una directiva de coincidencia
   En este tema se describe cómo crear una directiva de coincidencia en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El proceso de búsqueda de coincidencias se prepara en DQS ejecutando la actividad Directiva de coincidencia con los datos de ejemplo. En esta actividad creará y probará una o varias reglas de coincidencia en la directiva y después publicará la base de conocimiento para poner a disposición pública las reglas de coincidencia. Solo puede haber una directiva de coincidencia en cada base de conocimiento, pero esta directiva puede contener varias reglas de coincidencia.  
@@ -33,7 +33,7 @@ ms.locfileid: "56025356"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear una directiva de coincidencia.  
   
 ##  <a name="MatchingRules"></a> Cómo establecer parámetros para las reglas de coincidencia  
@@ -41,13 +41,13 @@ ms.locfileid: "56025356"
   
  En una regla de coincidencia se especifican los factores siguientes:  
   
--   Peso: Para cada dominio en la regla, especifique una ponderación numérica que determina cómo se compararán el análisis de coincidencia para el dominio al que para cada uno de los demás dominios de la regla. La ponderación indica la contribución de la puntuación del campo a la puntuación de coincidencia total entre dos registros. Las puntuaciones calculadas asignadas a cada campo de origen se suman para obtener la puntuación de coincidencia compuesta de los dos registros. Para cada campo que no sea un requisito previo (con una similitud de Exacto o Similar), establezca la ponderación entre 10 y 100. La suma de las ponderaciones de los dominios que no son requisitos previos debe ser igual a 100. Si el valor es un requisito previo, la ponderación se establece en 0 y no se puede cambiar.  
+-   Ponderación: para cada dominio de la regla, especifique una ponderación numérica que determina el modo en que el análisis de coincidencia para el dominio se comparará con el de los demás dominios de la regla. La ponderación indica la contribución de la puntuación del campo a la puntuación de coincidencia total entre dos registros. Las puntuaciones calculadas asignadas a cada campo de origen se suman para obtener la puntuación de coincidencia compuesta de los dos registros. Para cada campo que no sea un requisito previo (con una similitud de Exacto o Similar), establezca la ponderación entre 10 y 100. La suma de las ponderaciones de los dominios que no son requisitos previos debe ser igual a 100. Si el valor es un requisito previo, la ponderación se establece en 0 y no se puede cambiar.  
   
--   Similitud de exacto: Seleccione **Exact** si los valores en el mismo campo de dos registros diferentes deben ser idénticos para los valores se consideren una coincidencia. Si son idénticos, la puntuación de coincidencia para ese dominio se establecerá en "100" y DQS usará esa puntuación y las de los demás dominios de la regla para determinar la puntuación de coincidencia global. Si no son idénticos, la puntuación de coincidencia para ese dominio se establecerá en "0" y el procesamiento de la regla continuará con la siguiente condición. Si está configurando una regla de coincidencia para un dominio numérico y selecciona **Similar**, puede especificar una tolerancia en forma de porcentaje o de número entero. Para un dominio del tipo fecha, puede especificar una tolerancia en días, meses o años (enteros) si selecciona **Similar**; la tolerancia para un dominio de fecha no puede expresarse en forma de porcentaje. Si selecciona **Exacto**, no tiene esta opción.  
+-   Similitud de Exacto: seleccione **Exacto** si los valores del mismo campo de dos registros diferentes deben ser idénticos para que los valores se consideren una coincidencia. Si son idénticos, la puntuación de coincidencia para ese dominio se establecerá en "100" y DQS usará esa puntuación y las de los demás dominios de la regla para determinar la puntuación de coincidencia global. Si no son idénticos, la puntuación de coincidencia para ese dominio se establecerá en "0" y el procesamiento de la regla continuará con la siguiente condición. Si está configurando una regla de coincidencia para un dominio numérico y selecciona **Similar**, puede especificar una tolerancia en forma de porcentaje o de número entero. Para un dominio del tipo fecha, puede especificar una tolerancia en días, meses o años (enteros) si selecciona **Similar**; la tolerancia para un dominio de fecha no puede expresarse en forma de porcentaje. Si selecciona **Exacto**, no tiene esta opción.  
   
--   Similitud de Similar: Seleccione **Similar** si dos valores en el mismo campo de dos registros diferentes pueden considerarse una coincidencia aunque los valores no son idénticos. Cuando DQS ejecute la regla, calculará una puntuación de coincidencia para ese dominio y utilizará la puntuación y las puntuaciones de los demás dominios de la regla para determinar la puntuación de coincidencia global. La similitud mínima entre los valores de un campo es del 60%. Si la puntuación de coincidencia calculada para un mismo campo de dos registros es menor que 60, la puntuación de similitud se establece automáticamente en 0. Si está configurando una regla de coincidencia para un campo numérico y selecciona **Similar**, puede especificar una tolerancia en forma de porcentaje o de número entero. Si está configurando una regla de coincidencia para un campo de fecha y selecciona **similar**, puede especificar una tolerancia numérica.  
+-   Similitud de Similar: seleccione **Similar** si se puede considerar que los dos valores del mismo campo de dos registros distintos son una coincidencia aunque los valores no sean idénticos. Cuando DQS ejecute la regla, calculará una puntuación de coincidencia para ese dominio y utilizará la puntuación y las puntuaciones de los demás dominios de la regla para determinar la puntuación de coincidencia global. La similitud mínima entre los valores de un campo es del 60%. Si la puntuación de coincidencia calculada para un mismo campo de dos registros es menor que 60, la puntuación de similitud se establece automáticamente en 0. Si está configurando una regla de coincidencia para un campo numérico y selecciona **Similar**, puede especificar una tolerancia en forma de porcentaje o de número entero. Si está configurando una regla de coincidencia para un campo de fecha y selecciona **similar**, puede especificar una tolerancia numérica.  
   
--   Requisito previo: Seleccione **requisitos previos** para especificar que los valores en el mismo campo de dos registros distintos deben devolver una coincidencia del 100%, o los registros no se consideran una coincidencia y se descartan las demás cláusulas de la regla. Cuando se selecciona **Requisito previo** , se quita el campo de ponderación para el dominio de modo que no puede definir una ponderación para el dominio. Debe restablecer una o varias ponderaciones del dominio de modo que la suma de todas ellas sea igual a 100. Los dominios de requisito previo no contribuyen a la puntuación de coincidencia de los registros. La puntuación de coincidencia de los registros se determina comparando los valores de los campos cuya similitud se establece en Similar o Exacto. Cuando un campo es un requisito previo, la similitud para ese dominio se establece automáticamente en Exacto.  
+-   Requisito previo: seleccione **Requisito previo** para especificar que los valores del mismo campo de dos registros distintos deben devolver una coincidencia del 100 %; en caso contrario, los registros no se considerarán una coincidencia y las demás cláusulas de la regla no se tendrán en cuenta. Cuando se selecciona **Requisito previo** , se quita el campo de ponderación para el dominio de modo que no puede definir una ponderación para el dominio. Debe restablecer una o varias ponderaciones del dominio de modo que la suma de todas ellas sea igual a 100. Los dominios de requisito previo no contribuyen a la puntuación de coincidencia de los registros. La puntuación de coincidencia de los registros se determina comparando los valores de los campos cuya similitud se establece en Similar o Exacto. Cuando un campo es un requisito previo, la similitud para ese dominio se establece automáticamente en Exacto.  
   
  La puntuación de coincidencia mínima es el umbral que, una vez alcanzado o superado, hace que dos registros se consideren una coincidencia (el estado de los registros se establece en "Coincidente"). Especifique un valor entero en incrementos de "1" o haga clic en la flecha arriba o abajo para aumentar o disminuir el valor en incrementos de "10". El valor mínimo es 80. Si la puntuación de coincidencia se encuentra por debajo de 80, los dos registros no se consideran una coincidencia. No puede cambiar el intervalo de puntuación de coincidencia mínima en esta página. La puntuación de coincidencia mínima es de 80. Puede, no obstante, cambiar la puntuación de coincidencia mínima más baja en la página Administración (si es un administrador de DQS).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "56025356"
   
  La generación de perfiles proporciona nuevas perspectivas sobre la integridad y la unicidad. Considere que la integridad y la unicidad forman un tándem. Utilice los datos de integridad y unicidad para determinar qué ponderación debe tener un campo en el proceso de búsqueda de coincidencias. Si hay un nivel alto de unicidad en un campo, utilizar ese campo en una directiva de coincidencia puede reducir los resultados de búsqueda de coincidencias, por lo que puede establecer la ponderación de ese campo en un valor relativamente pequeño. Si tiene un bajo nivel de unicidad en una columna, pero la integridad es baja, es posible que no desee incluir un dominio para esa columna. Si el nivel de unicidad es bajo, pero el nivel de integridad es alto, puede que desee incluir el dominio. Algunas columnas, como sexo, pueden tener un nivel bajo de unicidad intrínseco. Para obtener más información, consulte [Pestañas Generador de perfiles y Resultados](#Tabs).  
   
-##  <a name="Starting"></a> Primer paso: A partir de una directiva de coincidencia  
+##  <a name="Starting"></a> Primer paso: iniciar una directiva de coincidencia  
  La actividad de directiva de coincidencia se realiza en el área de administración de la base de conocimiento de la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] .  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ejecute la aplicación Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
@@ -173,20 +173,20 @@ ms.locfileid: "56025356"
   
 7.  Si está satisfecho con los resultados de todas las reglas, haga clic en **Finalizar** para completar el proceso de directiva de coincidencia y, a continuación, haga clic en una de las opciones siguientes:  
   
-    -   **Sí - publicar la base de conocimiento y salir**: Se publicará la base de conocimiento para que el usuario actual u otros usuarios puedan usar. La base de conocimiento no se bloqueará, su estado se establecerá en "vacía" (en la tabla de bases de conocimiento), y las actividades Administración de dominios y Detección de conocimiento estarán disponibles. Volverá a la pantalla Abrir base de conocimiento.  
+    -   **Sí – Publicar la base de conocimiento y salir**: se publicará la base de conocimiento para que pueda utilizarla el usuario actual u otros usuarios. La base de conocimiento no se bloqueará, su estado se establecerá en "vacía" (en la tabla de bases de conocimiento), y las actividades Administración de dominios y Detección de conocimiento estarán disponibles. Volverá a la pantalla Abrir base de conocimiento.  
   
-    -   **No - guardar el trabajo en la base de conocimiento y salir**: Se guardará su trabajo, la base de conocimiento permanecerá bloqueada y el estado de la base de conocimiento se establecerá en **en trabajo**. Las actividades Administración de dominios y Detección de conocimiento estarán disponibles. Volverá a la página de inicio.  
+    -   **No – Guardar el trabajo en la base de conocimiento y salir**: se guardarán los cambios realizados, la base de conocimiento permanecerá bloqueada y su estado se establecerá en **Trabajando**. Las actividades Administración de dominios y Detección de conocimiento estarán disponibles. Volverá a la página de inicio.  
   
-    -   **Cancelar – permanecer en la pantalla actual**: Se cerrará la ventana emergente y se le devolverá a la pantalla de administración de dominios.  
+    -   **Cancelar – Permanecer en la pantalla actual**: se cerrará el cuadro emergente y se volverá a la pantalla Administración de dominios.  
   
-8.  Haga clic en **Cerrar** para guardar los cambios realizados y volver a la página de inicio de DQS. El estado de la base de conocimiento mostrará la cadena "Directiva de coincidencia - " y el estado actual. Si hizo clic en **cerrar** mientras está en el **resultado coincidente** pantalla, el estado mostrará: "Directiva de coincidencia: resultados". Si hizo clic en Cerrar mientras estaba en el **directiva de coincidencia** pantalla, el estado mostrará: "Directiva de coincidencia: directiva de coincidencia". Después de hacer clic en **Cerrar**, para realizar la actividad **Detección de conocimiento** tendría que volver a la actividad **Directiva de coincidencia** , hacer clic en **Finalizar**y, por último, hacer clic en **Sí** para publicar la base de conocimiento o en **No** para guardar el trabajo en la base de conocimiento y salir.  
+8.  Haga clic en **Cerrar** para guardar los cambios realizados y volver a la página de inicio de DQS. El estado de la base de conocimiento mostrará la cadena "Directiva de coincidencia - " y el estado actual. Si hizo clic en **Cerrar** mientras estaba en la pantalla **Resultados de búsqueda de coincidencias**, el estado mostrará: "Directiva de coincidencia: resultados". Si hizo clic en Cerrar mientras estaba en la pantalla **Resultados de búsqueda de coincidencias**, el estado mostrará: "Directiva de coincidencia: directiva de coincidencia". Después de hacer clic en **Cerrar**, para realizar la actividad **Detección de conocimiento** tendría que volver a la actividad **Directiva de coincidencia** , hacer clic en **Finalizar**y, por último, hacer clic en **Sí** para publicar la base de conocimiento o en **No** para guardar el trabajo en la base de conocimiento y salir.  
   
     > [!NOTE]  
     >  Si hace clic en **Cerrar** mientras se está ejecutando un proceso de búsqueda de coincidencias, el proceso de búsqueda de coincidencias no finalizará al hacer clic en **Cerrar**. Puede volver a abrir la base de conocimiento y ver cómo el proceso se sigue ejecutando o, si ha finalizado, comprobar que se muestran los resultados. Si el proceso no ha finalizado, la pantalla mostrará el progreso.  
   
 9. Haga clic en **Cancelar** para finalizar la actividad Directiva de coincidencia, perdiendo los cambios realizados, y volver a la página de inicio de DQS.  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de crear una directiva de coincidencia  
+##  <a name="FollowUp"></a> Seguimiento: después de crear una directiva de coincidencia  
  Después de crear una directiva de coincidencia, puede ejecutar un proyecto de búsqueda de coincidencias basándose en la base de conocimiento que contiene la directiva de coincidencia. Para obtener más información, consulte [Ejecutar un proyecto de coincidencia](../../2014/data-quality-services/run-a-matching-project.md).  
   
 ##  <a name="Tabs"></a> Profiler and Results Tabs  
@@ -199,15 +199,15 @@ ms.locfileid: "56025356"
   
  Las estadísticas de la base de datos de origen incluyen:  
   
--   **Registros**: El número total de registros en la base de datos de origen  
+-   **Registros**: número total de registros existentes en la base de datos de origen  
   
--   **Valores totales**: El número total de valores de los campos del origen de datos  
+-   **Valores totales**: número total de valores existentes en los campos del origen de datos  
   
--   **Nuevos valores**: El número total de valores que son nuevos desde la ejecución anterior y su porcentaje del total  
+-   **Nuevos valores**: número total de valores que son nuevos desde la ejecución anterior y su porcentaje del total  
   
--   **Valores únicos**: El número total de valores únicos de los campos y su porcentaje del total  
+-   **Valores únicos**: número total de valores únicos existentes en los campos y su porcentaje del total  
   
--   **Nuevos valores únicos**: El número total de valores únicos que son nuevos en los campos y su porcentaje del total  
+-   **Nuevos valores únicos**: número total de valores únicos que son nuevos en los campos y su porcentaje del total  
   
  Las estadísticas del campo incluyen las siguientes:  
   
@@ -215,11 +215,11 @@ ms.locfileid: "56025356"
   
 -   **Nombre del dominio**  
   
--   **Nuevo**: El número de valores nuevos y el porcentaje de nuevos valores en comparación con los valores existentes en el dominio  
+-   **Nuevo**: número de valores nuevos y el porcentaje de estos comparado con los valores existentes en el dominio  
   
--   **Único**: El número de registros únicos del campo y su porcentaje del total  
+-   **Único**: número de registros únicos del campo y su porcentaje sobre el total  
   
--   **Integridad**: La integridad de cada campo de origen que se ha asignado para el ejercicio de búsqueda de coincidencias  
+-   **Integridad**: integridad de cada campo de origen que se ha asignado para el ejercicio de búsqueda de coincidencias  
   
 ###  <a name="Notifications"></a> Notificaciones de directiva de coincidencia  
  En la actividad de directiva de coincidencia, se producen notificaciones cuando se dan las condiciones siguientes:  

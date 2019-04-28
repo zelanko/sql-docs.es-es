@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5efb31c8fa537c1483635128755aa20fc9c898db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705141"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Cuadro de diálogo Evaluar directivas, página Resultados de la evaluación
   Utilice este cuadro de diálogo para ver los resultados de la evaluación de directivas y para aplicar directivas de administración basada en directivas a un conjunto de destinos que no las cumple.  
@@ -29,10 +29,10 @@ ms.locfileid: "52798327"
  **Resultados: Mensaje**  
  Vínculo a información si se produce un error.  
   
- **Detalles del destino: Servidor**  
+ **Detalles del destino: Server**  
  Instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la que se evalúan las directivas.  
   
- **Detalles del destino: Destino**  
+ **Detalles del destino: Target**  
  Destino con el que se evalúan las directivas.  
   
  **Detalles del destino: Detalles**  

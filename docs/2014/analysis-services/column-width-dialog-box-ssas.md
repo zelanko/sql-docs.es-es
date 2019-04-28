@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 097b29ca68b03d6711265c9194c318397fd03381
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680608"
 ---
 # <a name="column-width-dialog-box-ssas"></a>Ancho de columna, cuadro de diálogo (SSAS)
   El cuadro de diálogo **Ancho de columna** le permite especificar el ancho de una columna en el diseñador de modelos. Para tener acceso a este cuadro de diálogo, haga clic con el botón derecho en una columna y luego haga clic en **Ancho de columna**. También puede hacer que la columna se ajuste automáticamente al tamaño del contenido de la columna haciendo doble clic en la línea de cuadrícula en el borde derecho de la columna.  

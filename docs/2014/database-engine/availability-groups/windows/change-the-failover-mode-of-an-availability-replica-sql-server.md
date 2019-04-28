@@ -16,18 +16,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5b2a481de3c100e65f780d28aa23650bd8fd4711
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791983"
 ---
 # <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>Cambiar el modo de conmutación por error de una réplica de disponibilidad (SQL Server)
   En este tema se describe cómo cambiar el modo de conmutación por error de una réplica de disponibilidad de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell. El modo de conmutación por error es una propiedad de réplica que determina el modo de conmutación por error para las réplicas que se ejecutan en modo de disponibilidad de confirmación sincrónica. Para más información, vea [Conmutación por error y modos de conmutación por error &#40;grupos de disponibilidad AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md) y [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](availability-modes-always-on-availability-groups.md).  
   
 
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos y restricciones  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48205605"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -101,7 +101,7 @@ ms.locfileid: "48205605"
   
 1.  Cambie el directorio (`cd`) a la instancia de servidor que hospeda la réplica principal.  
   
-2.  Use la `Set-SqlAvailabilityReplica` cmdlet con el `FailoverMode` parámetro. Cuando se establece una réplica en conmutación automática por error, deberá usar el `AvailabilityMode` parámetro para cambiar la réplica al modo de disponibilidad de confirmación sincrónica.  
+2.  Utilice el cmdlet `Set-SqlAvailabilityReplica` con el parámetro `FailoverMode`. Cuando se establece una réplica en conmutación automática por error, puede que sea necesario usar el parámetro `AvailabilityMode` para cambiar la réplica al modo de disponibilidad de confirmación sincrónica.  
   
      Por ejemplo, el comando siguiente modifica la réplica `MyReplica` en el grupo de disponibilidad `MyAg` para utilizar el modo de disponibilidad de confirmación sincrónica y admitir la conmutación automática por error.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "48205605"
     ```  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el `Get-Help` cmdlet en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Para configurar y usar el proveedor de SQL Server PowerShell**  
   

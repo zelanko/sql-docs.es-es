@@ -1,5 +1,5 @@
 ---
-title: Establecer el contexto de cubo en una consulta (MDX) | Documentos de Microsoft
+title: Establecer el contexto de cubo en una consulta (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2efdfc74bf45f4e8e6b913e651b0be5fa4511034
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807610"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>Establecer el contexto de cubo en una consulta (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -53,6 +53,6 @@ FROM [Adventure Works]
  Puede utilizar la función de MDX [LookupCube](../../../mdx/lookupcube-mdx.md) para recuperar datos de cubos que se encuentren fuera del contexto de cubo. Además, funciones como [Filter](../../../mdx/filter-mdx.md) están disponibles para permitir la restricción temporal del contexto mientras se evalúa la consulta.  
   
 ## <a name="see-also"></a>Vea también  
- [Aspectos básicos de consulta MDX & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

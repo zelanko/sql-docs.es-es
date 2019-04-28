@@ -1,5 +1,5 @@
 ---
-title: Sys.selective_xml_index_paths (Transact-SQL) | Microsoft Docs
+title: sys.selective_xml_index_paths (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 123258c5eceebe14a8b920b7917941cd83dc7b42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62860842"
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Identificador de la tabla con la columna XML.|  
 |**index_id**|**int**|Identificador único del índice xml selectivo.|  
-|**de path_id**|**int**|Identificador de la ruta de acceso XML promocionado.|  
+|**path_id**|**int**|Identificador de la ruta de acceso XML promocionado.|  
 |**path**|**nvarchar(4000)**|Ruta de acceso promocionada. Por ejemplo, '/a/b/c/d/e'.|  
 |**Nombre**|**sysname**|Nombre de ruta de acceso.|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
@@ -62,8 +62,8 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**system_type_id**|**tinyint**|Id. del tipo de sistema de la columna.|  
 |**user_type_id**|**tinyint**|Identificador del tipo de usuario de la columna.|  
 |**max_length**|**smallint**|Max Length (en bytes) del tipo.<br /><br /> -1 = El tipo de datos de las columnas es varchar(max), nvarchar(max), varbinary(max) o xml.|  
-|**Precisión**|**tinyint**|Precisión máxima del tipo si está basado en numerales. En caso contrario, es 0.|  
-|**Escala**|**tinyint**|Escala máxima del tipo si está basado en numerales. En caso contrario, es 0.|  
+|**precisión**|**tinyint**|Precisión máxima del tipo si está basado en numerales. En caso contrario, es 0.|  
+|**scale**|**tinyint**|Escala máxima del tipo si está basado en numerales. En caso contrario, es 0.|  
 |**collation_name**|**sysname**|Nombre de la intercalación del tipo si está basado en caracteres. En caso contrario, NULL.|  
 |**is_singleton**|**bit**|0 = la sugerencia SINGLETON no está presente.<br /><br /> 1 = Se aplica la sugerencia de optimización SINGLETON.|  
   

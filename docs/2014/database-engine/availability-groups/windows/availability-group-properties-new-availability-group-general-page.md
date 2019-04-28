@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815658"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>Propiedades de grupo de disponibilidad y nuevo grupo de disponibilidad (página General)
   Este tema se aplica a la pestaña **General** del cuadro de diálogo de **Nuevo grupo de disponibilidad** y el cuadro de diálogo de **Propiedades de grupo de disponibilidad** .  El cuadro de diálogo **Nuevo grupo de disponibilidad** permite crear un nuevo grupo de disponibilidad sin utilizar [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. El cuadro de diálogo **Propiedades de grupo de disponibilidad** permite ver y modificar la configuración de un grupo de disponibilidad existente.  

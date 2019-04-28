@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 20968e8218eb2440873a60ed3f99ef746ff6f2d2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862752"
 ---
 # <a name="create-term-based-relations"></a>Crear relaciones basadas en términos
 
@@ -61,7 +61,7 @@ ms.locfileid: "56024676"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear relaciones basadas en términos.  
   
 ##  <a name="Create"></a> Crear relaciones basadas en términos  

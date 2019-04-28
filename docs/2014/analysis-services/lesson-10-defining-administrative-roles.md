@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f588e5266b3707ac012d6e18e062d01d23fca56d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729501"
 ---
-# <a name="lesson-10-defining-administrative-roles"></a>Lección 10: Definir roles administrativos
+# <a name="lesson-10-defining-administrative-roles"></a>Lección 10: Definición de roles administrativos
   En esta lección, aprenderá a definir roles de seguridad para tareas administrativas.  
   
 > [!NOTE]  

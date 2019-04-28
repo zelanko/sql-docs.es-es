@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 30624ce9283c9604af12497ffbd8d3e17979be8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862688"
 ---
 # <a name="change-domain-values"></a>Cambiar valores de dominio
 
@@ -43,7 +43,7 @@ ms.locfileid: "56011906"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para cambiar valores de dominio.  
   
 ##  <a name="Change"></a> Cambiar valores de dominio  

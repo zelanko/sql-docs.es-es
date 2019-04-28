@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680960"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Tutorial del diagrama del clúster (Complementos de minería de datos)
   Después de haber creado un modelo de agrupación en clústeres, puede importarlo en Visio con el **clúster** dar forma y, a continuación, seguir personalizando y mejorando el diseño. El **formas de minería de datos para Visio** incluyen los siguientes controles personalizados para trabajar con diagramas de minería de datos:  
@@ -127,7 +127,7 @@ ms.locfileid: "52420010"
      **Slider**  
      Filtra las líneas entre los clústeres. Si se sube el control deslizante, se quitan todas las asociaciones salvo las más importantes.  
   
-     **Sombreado**  
+     **Shading**  
      Este control no funciona en Office 2013.  
   
 5.  Use la **panorámica y Zoom** controlar, en el **panel de tareas** área de la Visio **vista** cinta de opciones para centrarse en un conjunto de clústeres y desplazarse por el diagrama.  

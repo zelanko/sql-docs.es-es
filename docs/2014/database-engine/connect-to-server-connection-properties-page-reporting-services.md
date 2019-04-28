@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dcf8984e678a9aba926be1fdc50dff073f82b6ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808666"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>Conectar al servidor (página Propiedades de conexión de Reporting Services)
   Use esta pestaña para ver o especificar opciones cuando se conecte a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] o cuando registre [!INCLUDE[ssRS](../includes/ssrs.md)] en **Servidores registrados**. **Conectar** y **Opciones** solo aparecen en este cuadro de diálogo al conectar. **Probar** y **Guardar** solo aparecen en este cuadro de diálogo al registrar [!INCLUDE[ssRS](../includes/ssrs.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "48066985"
  Guarda la configuración en **Servidores registrados**.  
   
 ## <a name="see-also"></a>Vea también  
- [Configurar una conexión de base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Conectar con un servidor de informes en Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Autenticación con el servidor de informes](../reporting-services/security/authentication-with-the-report-server.md)  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ad62600c6ae48f156049cdae6078df37de0b330
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732606"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Usar la obtención de detalles desde los visores de modelos
   Dependiendo del tipo de modelo, es posible utilizar la obtención de detalles desde los visores de exploración de la pestaña **Visor de modelos de minería de datos** del Diseñador de minería de datos para explorar los casos usados en el modelo de minería de datos o para ver columnas adicionales en la estructura de minería de datos. Aunque muchos tipos de modelos no admiten la obtención de detalles debido a que los patrones del modelo no se pueden vincular directamente con casos concretos, los tipos de modelos siguientes sí lo hacen.  
@@ -29,7 +29,7 @@ ms.locfileid: "48090695"
   
 2.  Haga clic con el botón derecho en cualquier nodo del gráfico de árbol y seleccione **Explorar en profundidad**.  
   
-3.  Seleccione una de las opciones siguientes: **Solo columnas de modelos** o **Columnas de modelo y estructura**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
+3.  Seleccione una de las siguientes opciones: **Columnas del modelo solo** o **del modelo y estructura de columnas**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
   
 4.  Se abre el cuadro de diálogo **Explorar en profundidad** , que muestra los datos de los casos o de la estructura. La barra de título del cuadro de diálogo también contiene una descripción que identifica el nodo desde el que se ejecutó la consulta de obtención de detalles.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48090695"
   
 2.  En la pestaña **Clúster** , haga clic con el botón derecho en cualquier nodo.  
   
-3.  Seleccione **Obtener detalles**y, a continuación, seleccione una de las opciones siguientes: **Solo columnas de modelos** o **Columnas de modelo y estructura**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
+3.  Seleccione **obtención de detalles**y, a continuación, seleccione una de las siguientes opciones: **Columnas del modelo solo** o **del modelo y estructura de columnas**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
   
 4.  Se abre el cuadro de diálogo **Explorar en profundidad** , que muestra los datos de los casos o de la estructura. La barra de título del cuadro de diálogo también contiene una descripción que identifica el clúster para los casos.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48090695"
   
 2.  En la pestaña **Reglas** , haga clic con el botón derecho en cualquier fila que represente una regla. En la pestaña **Conjuntos de elementos** , haga clic en cualquier fila que contenga un conjunto de elementos.  
   
-3.  Seleccione **Obtener detalles**y, a continuación, seleccione una de las opciones siguientes: **Solo columnas de modelos** o **Columnas de modelo y estructura**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
+3.  Seleccione **obtención de detalles**y, a continuación, seleccione una de las siguientes opciones: **Columnas del modelo solo** o **del modelo y estructura de columnas**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
   
 4.  Se abre el cuadro de diálogo **Explorar en profundidad** , que muestra los datos de los casos o de la estructura. La barra de título del cuadro de diálogo también contiene una descripción que identifica el nombre de la regla.  
   
@@ -65,14 +65,14 @@ ms.locfileid: "48090695"
   
 2.  En la **pestaña Diagrama del clúster**, haga clic con el botón derecho en un nodo que represente a un clúster. En la pestaña **Perfiles del clúster** , haga clic en cualquier lugar de un perfil de clúster o en el clúster que represente a la población total del modelo.  
   
-3.  Seleccione **Obtener detalles**y, a continuación, seleccione una de las opciones siguientes: **Solo columnas de modelos** o **Columnas de modelo y estructura**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
+3.  Seleccione **obtención de detalles**y, a continuación, seleccione una de las siguientes opciones: **Columnas del modelo solo** o **del modelo y estructura de columnas**. Si no dispone de los permisos apropiados, es posible que alguna opción no esté disponible.  
   
 4.  Se abre el cuadro de diálogo **Explorar en profundidad** , que muestra los datos de los casos o de la estructura. La barra de título del cuadro de diálogo también contiene una descripción que identifica el clúster para los casos.  
   
 5.  Haga clic con el botón derecho en cualquier lugar de los resultados y seleccione **Copiar todo** para guardar los resultados en el Portapapeles. Si el modelo contiene una columna de tabla anidada, solo se pegará el nombre de dicha columna; si desea recuperar los valores de datos almacenados dentro de esta columna para cada caso, deberá crear una consulta en el contenido del modelo.  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas del Visor de modelo de minería de datos y procedimientos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tareas y procedimientos del Visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
  [Obtención de detalles en modelos de minería de datos](drillthrough-on-mining-models.md)   
  [Obtención de detalles en estructuras de minería de datos](drillthrough-on-mining-structures.md)  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2ba3dd43475f656be7268349e0760cd48cbaa32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677072"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Herramientas de cálculo (pestaña Acciones, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Herramientas de cálculo** en la pestaña **Acciones** del Diseñador de cubos para explorar metadatos, funciones y plantillas disponibles para utilizarlas en acciones, acciones de obtención de detalles y acciones de informe.  
@@ -49,10 +49,10 @@ ms.locfileid: "48133515"
 |------------|----------------|  
 |**Copiar**|Seleccione esta opción para copiar el elemento seleccionado en **Metadatos** o **Funciones** en el Portapapeles.<br /><br /> Tenga en cuenta que esta opción no aparece si **plantillas** está seleccionada. Tenga en cuenta que esta opción está deshabilitada si no se puede copiar el miembro seleccionado, como el **conjuntos** carpeta de una dimensión mostrada en **metadatos** o la carpeta del grupo de función para una función mostrada en  **Funciones**.|  
 |**Filtrar miembros**|Seleccione esta opción para mostrar el cuadro de diálogo **Filtrar miembros** y filtrar los miembros del elemento seleccionado en **Metadatos**. Para más información sobre el cuadro de diálogo **Filtrar miembros**, vea [Cuadro de diálogo Filtrar miembros &#40;Analysis Services - Datos multidimensionales&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Tenga en cuenta que esta opción aparece sólo si **metadatos** está seleccionada. Tenga en cuenta que esta opción está habilitada sólo si se selecciona un nivel para un atributo en **metadatos**.|  
-|**Agregar plantilla**|Seleccione esta opción para agregar al cubo una nueva acción, una acción de obtención de detalles o una acción de informe según la plantilla seleccionada y para mostrar, respectivamente, el **Editor de Formulario de acción estándar**, el **Editor de Formulario de acción de obtención de detalles**o el **Editor de Formulario de acción de informe**.<br /><br /> Nota: Esta opción aparece sólo si **metadatos** está seleccionada.|  
+|**Agregar plantilla**|Seleccione esta opción para agregar al cubo una nueva acción, una acción de obtención de detalles o una acción de informe según la plantilla seleccionada y para mostrar, respectivamente, el **Editor de Formulario de acción estándar**, el **Editor de Formulario de acción de obtención de detalles**o el **Editor de Formulario de acción de informe**.<br /><br /> Nota: Solo se mostrará esta opción si se selecciona **Metadatos** .|  
   
 ## <a name="see-also"></a>Vea también  
- [Aspectos básicos de Scripting de MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Aspectos básicos de scripting MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Acciones &#40;Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Barra de herramientas &#40;pestaña acciones, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Organizador de acciones &#40;pestaña acciones, Diseñador de cubos&#41; &#40;Analysis Services - datos multidimensionales&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   

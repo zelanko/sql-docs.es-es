@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2edab11fc05f7fec3af8d2fcbff48f4f44a2e8e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793130"
 ---
 # <a name="create-a-knowledge-base"></a>Crear una base de conocimiento
   En este tema se describe cómo crear una base de conocimiento en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) y cómo prepararla para la administración de dominios, la detección de conocimiento o la adición de una directiva de coincidencia.  
@@ -30,7 +30,7 @@ ms.locfileid: "56036016"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para crear una base de conocimiento, debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN.  
   
 ##  <a name="Createaknowledgebase"></a> Create a knowledge base  
@@ -59,7 +59,7 @@ ms.locfileid: "56036016"
   
 6.  Haga clic en **Crear**.  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de crear una Base de conocimiento  
+##  <a name="FollowUp"></a> Seguimiento: después de crear una base de conocimiento  
  Una vez creada la base de conocimiento, aparecerá un asistente que podrá utilizar para realizar la detección de conocimiento, un asistente para crear una directiva de coincidencia o varias páginas que le permitirán realizar la administración de dominios. Para más información sobre la detección de conocimiento, la administración de dominios o la directiva de coincidencia, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

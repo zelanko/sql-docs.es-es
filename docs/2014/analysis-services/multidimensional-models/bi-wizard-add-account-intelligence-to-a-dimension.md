@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 069611d1466f2810b958a7ad825f5abb0895f63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701377"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Agregar inteligencia de cuentas a una dimensión
   Agregue la mejora de inteligencia de cuentas a un cubo o dimensión para asignar las clasificaciones de cuenta estándar, como ingresos y gastos, a los miembros de un atributo de cuenta. Esta mejora también identifica los tipos de cuenta (como Asset y Liability) y asigna la agregación adecuada a cada tipo de cuenta. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede usar las clasificaciones para agregar cuentas a lo largo del tiempo.  
@@ -51,7 +51,7 @@ ms.locfileid: "48183445"
     |**Liability**|`LastNonEmpty`|Dinero o valor de cosas debidas en un momento dado. Este tipo de cuenta no se acumula a lo largo del tiempo, por lo que no se agrega de forma natural a lo largo del tiempo. Por ejemplo, la cantidad Year es el valor del último mes con datos. Este tipo de cuenta convierte monedas con la tasa del final del período.|  
     |**Asset**|`LastNonEmpty`|Dinero o valor de cosas mantenidas en un momento dado. Este tipo de cuenta se acumula a lo largo del tiempo, por lo que no se agrega de forma natural a lo largo del tiempo. Por ejemplo, la cantidad Year es el valor del último mes con datos. Este tipo de cuenta convierte monedas con la tasa del final del período.|  
     |**Equilibrio**|`LastNonEmpty`|Recuento de algo en un momento dado. Este tipo de cuenta se acumula pero no se agrega de forma natural a lo largo del tiempo. Por ejemplo, la cantidad Year es el valor del último mes con datos.|  
-    |**Flow**|`Sum`|Recuento incremental de algo. Este tipo de cuenta se agrega como un `Sum` con el tiempo, pero no convierte con reglas de conversión de moneda.|  
+    |**Flow**|`Sum`|Recuento incremental de algo. Este tipo de cuenta se agrega como una `Sum` a lo largo del tiempo pero no convierte con reglas de conversión de monedas.|  
     |**Expense**|`Sum`|Dinero o valor de cosas gastadas. Este tipo de cuenta se agrega como una `Sum` a lo largo del tiempo y convierte monedas con una tasa media.|  
     |**Income**|`Sum`|Dinero o valor de cosas recibidas. Este tipo de cuenta se agrega como una `Sum` a lo largo del tiempo y convierte monedas con una tasa media.|  
   

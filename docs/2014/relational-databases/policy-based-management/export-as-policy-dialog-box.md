@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: df28974c9fc6fdf3c9ef974ea5dd868f775af134
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705199"
 ---
 # <a name="export-as-policy-dialog-box"></a>Exportar como directiva (cuadro de diálogo)
   Utilice este cuadro de diálogo para guardar un conjunto de propiedades de faceta de administración basada en directivas como una directiva. Las directivas se pueden guardar en un archivo XML o directamente en la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]actual.  

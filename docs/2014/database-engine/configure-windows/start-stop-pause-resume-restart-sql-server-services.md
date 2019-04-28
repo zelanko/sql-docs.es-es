@@ -41,11 +41,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 341640e4aff44fbc14c85f61b5a98246f857538a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808754"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser
   En este tema se describe cómo iniciar, comandos de detener, comandos de pausar, comandos de reanudar o reiniciar [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], comandos de el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser mediante el uso del Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , comandos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], comandos de **net** desde un símbolo del sistema, comandos de [!INCLUDE[tsql](../../includes/tsql-md.md)], comandos de or PowerShell.  
@@ -134,7 +134,7 @@ ms.locfileid: "58530488"
 5.  Haga clic en **Aceptar** para cerrar el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Para iniciar una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con opciones de inicio, vea [Configurar opciones de inicio del servidor &amp;#40;Administrador de configuración de SQL Server&amp;#41;](scm-services-configure-server-startup-options.md).  
+>  Para iniciar una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con opciones de inicio, vea [Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server&#41;](scm-services-configure-server-startup-options.md).  
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-includessnoversionincludesssnoversion-mdmd-browser-or-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>Para iniciar, detener, pausar, reanudar o reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser o una instancia de Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791996"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>Mantener una base de datos de publicación AlwaysOn (SQL Server)
   En este tema se describen las consideraciones especiales para mantener una base de datos de publicación cuando se usan grupos de disponibilidad AlwaysOn.  
@@ -106,7 +106,7 @@ ms.locfileid: "54126990"
   
 -   [Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [Preguntas más frecuentes sobre la administración de replicación](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
+-   [Preguntas más frecuentes para administradores de replicación](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [Los suscriptores de replicación y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

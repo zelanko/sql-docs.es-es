@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd66205c6f7a03d1bba0783aabbed3936b25e691
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681033"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Pestaña Diagrama del clúster (Visor de modelos de minería de datos)
   La pestaña **Diagrama del clúster** proporciona una vista gráfica de todos los clústeres que contiene el modelo de agrupación en clústeres.  
   
- **Para obtener más información:** [Algoritmo de clústeres de Microsoft](data-mining/microsoft-clustering-algorithm.md), [Examinar un modelo usando el Visor de clústeres de Microsoft](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Para obtener más información:** [Algoritmo de clústeres de Microsoft](data-mining/microsoft-clustering-algorithm.md), [examinar un modelo usando el Visor de clústeres de Microsoft](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del Visor**  
@@ -32,7 +32,7 @@ ms.locfileid: "48184206"
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos de los de la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Visor**  
+ **Viewer**  
  Elija un visor para explorar el modelo de minería de datos seleccionado. Puede utilizar uno de los visores de agrupación en clústeres personalizados o utilizar el Visor de contenido de minería de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] . También puede utilizar un visor de complemento si está disponible.  
   
  **Acercar**  
@@ -64,14 +64,14 @@ ms.locfileid: "48184206"
  **Variable de sombreado**  
  Seleccione un atributo que desee representar en el diagrama del clúster.  
   
- **State**  
+ **Estado**  
  Seleccione un único estado de **Variable de sombreado** para usarlo en el diagrama del clúster.  
   
- **Vínculos**  
+ **Links**  
  Ajuste cuántos vínculos se muestran entre los clústeres, moviendo el control deslizante arriba o abajo. Si baja el control deslizante solo quedarán las asociaciones más fuertes entre los clústeres.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

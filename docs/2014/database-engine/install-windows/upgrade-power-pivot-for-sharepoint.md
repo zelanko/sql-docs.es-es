@@ -11,11 +11,11 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775665"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Actualizar PowerPivot para SharePoint
   En este tema se resumen los pasos necesarios para actualizar una implementación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Los pasos específicos dependen de la versión de SharePoint que está ejecutando el entorno e incluyen el complemento PowerPivot para SharePoint (**spPowerPivot.msi**).  
@@ -187,7 +187,7 @@ ms.locfileid: "58434506"
   
     10. La actualización de soluciones y características de la granja puede tardar varios minutos en completarse. Durante este tiempo, se producirá un error de las solicitudes de conexión de datos de PowerPivot con errores como "No se puede actualizar los datos" o "error al intentar realizar la acción solicitada. Inténtelo de nuevo". Una vez finalizada la actualización, el servidor estará disponible y estos errores ya no se producirán.  
   
-8.  **Repita el proceso** para cada servicio de SQL Server Analysis Services (PowerPivot) en la granja de servidores: 1) Ejecute el programa de instalación de SQL Server. 2) Ejecute la herramienta de configuración de PowerPivot.  
+8.  **Repita el proceso** para cada servicio de SQL Server Analysis Services (PowerPivot) en la granja de servidores: Programa de instalación 1) ejecute SQL Server (2) ejecute la herramienta de configuración de PowerPivot.  
   
 9. Para comprobar que la actualización se efectuó correctamente, ejecute los pasos posteriores a la actualización y compruebe la versión de los servidores de PowerPivot en la granja de servidores. Para obtener más información, vea [Post-upgrade verification tasks](#verify) en este tema y la siguiente sección:  
   

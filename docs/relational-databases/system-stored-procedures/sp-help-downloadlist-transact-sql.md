@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62796188"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**object_name**|**sysname**|Objeto afectado por la instrucción.|  
 |**object_id**|**uniqueidentifier**|Número de identificación del objeto afectado por la instrucción (**job_id** para un objeto de trabajo, o 0 x 00 para un objeto de servidor) o un valor de datos específico para el **operation_code**.|  
 |**target_server**|**nvarchar(30)**|Servidor de destino que va a descargar esta instrucción.|  
-|**error_message**|**nvarchar(1024)**|Mensaje de error (si existe) del servidor de destino si se encontró algún problema al procesar la instrucción.<br /><br /> Nota: Cualquier mensaje de error bloquea las posteriores descargas del servidor de destino.|  
+|**error_message**|**nvarchar(1024)**|Mensaje de error (si existe) del servidor de destino si se encontró algún problema al procesar la instrucción.<br /><br /> Nota: Cualquier mensaje de error bloquea todas las posteriores descargas por el servidor de destino.|  
 |**date_posted**|**datetime**|Fecha en que la instrucción se envió a la tabla.|  
 |**date_downloaded**|**datetime**|Fecha en que el servidor de destino descargó la instrucción.|  
 |**status**|**tinyint**|Estado del trabajo:<br /><br /> **0** = no se ha descargado<br /><br /> **1** = descargado correctamente.|  

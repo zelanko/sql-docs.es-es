@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828232"
 ---
 # <a name="cdc-splitter"></a>Divisor CDC
   El divisor CDC divide un único flujo de filas de un flujo de datos de origen de CDC en varios flujos de datos para las operaciones de inserción, actualización y eliminación. El flujo de datos se divide según la columna obligatoria `__$operation` y sus valores estándar en las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
@@ -40,11 +40,11 @@ ms.locfileid: "58387752"
   
  La salida de error del componente incluye las columnas de salida siguientes:  
   
--   **Código de error**: Se establece en 1.  
+-   **Código de error**: establézcalo en 1.  
   
--   **Columna de error**: La columna de origen que produce el error (para errores de conversión).  
+-   **Columna de error**: la columna de origen que produce el error (para los errores de conversión).  
   
--   **Columnas de la fila de error**: Las columnas de entrada de la fila que produjo el error.  
+-   **Columnas de fila de error**: las columnas de entrada de la fila que produjo el error.  
   
 ## <a name="configuring-the-cdc-splitter"></a>Configuración del divisor CDC  
  No hay propiedades configurables del divisor CDC.  

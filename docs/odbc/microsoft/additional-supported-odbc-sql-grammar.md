@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658266"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Gramática de SQL de ODBC compatibles adicionales
 Los controladores ODBC admiten completamente la gramática mínima ODBC 2.5 y las cláusulas siguientes en la gramática básicos y extendidos 2.5 de ODBC. Se puede mostrar información adicional yendo a la [instrucción ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), [nombres de correlación](../../odbc/microsoft/correlation-names.md), y [invocación del procedimiento](../../odbc/microsoft/procedure-invocation.md) temas.  

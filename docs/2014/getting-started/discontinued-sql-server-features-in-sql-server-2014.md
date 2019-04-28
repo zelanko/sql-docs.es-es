@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 028d14230f0f48f04bd94f327c1e46c5bee42b56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774738"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Características de SQL Server no disponibles en SQL Server 2014
   En este tema se describen las características que ya no están disponibles tras actualizar a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "53351014"
 ### <a name="discontinued-active-directory-helper-service"></a>Servicio del asistente de Active Directory no incluido  
  El Servicio del asistente de Active Directory los componentes relacionados se han quitado. En la siguiente tabla se muestran los componentes asociados que se quitan como resultado:  
   
-|Categoría|Característica no incluida|Sustituta|  
+|Category|Característica no incluida|Sustituta|  
 |--------------|--------------------------|-----------------|  
 |Procedimientos almacenados del sistema|sp_ActiveDirectory_Obj<br /><br /> sp_ActiveDirectory_SCP<br /><br /> sp_ActiveDirectory_Start|Ningún reemplazo disponible|  
   

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814061"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] En [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ayuda a proporcionar alta disponibilidad y capacidades adicionales de recuperación de base de datos.  
@@ -191,9 +191,9 @@ ms.locfileid: "57579325"
   
 -   Cuando se utiliza la replicación de mezcla y la base de datos de publicación está en un grupo de disponibilidad:  
   
-    -   Suscripción de inserción: tanto el publicador como el distribuidor deben ejecutar como mínimo [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Suscripción de inserción: El publicador y el distribuidor deben ejecutar al menos [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Suscripción de extracción: las bases de datos del publicador, el distribuidor y el suscriptor deben ser al menos de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Esto se debe a que el agente de mezcla el suscriptor debe entender cómo un grupo de disponibilidad puede realizar la conmutación por error a su réplica secundaria.  
+    -   Suscripción de extracción: Las bases de datos del publicador, distribuidor y suscriptor deben ser al menos [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Esto se debe a que el agente de mezcla el suscriptor debe entender cómo un grupo de disponibilidad puede realizar la conmutación por error a su réplica secundaria.  
   
 -   No se admite poner la base de datos de distribución en un grupo de disponibilidad.  
   

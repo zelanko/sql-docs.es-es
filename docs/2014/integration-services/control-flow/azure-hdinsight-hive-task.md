@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7b61bd02d44639cb3f5ad540d53ebeebcff4da0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832740"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Tarea de Hive de HDInsight de Azure
 Utilice la **tarea de Hive de HDInsight** para ejecutar el script de Hive en un clúster de HDInsight de Azure.
@@ -37,8 +37,8 @@ Para agregar una **tarea de Hive de HDInsight de Azure**, arrástrela al Diseña
   
 5.  Hay dos maneras de especificar el script de Hive que se va a ejecutar:
   
-    1.  **Secuencia de comandos en línea**: Especifique el **Script** campo escribiendo el script para ejecutarlo en línea el **escriba el Script** cuadro de diálogo.
+    1.  **Script insertado**: para especificar el campo **Script**, escriba el script insertado que quiere ejecutar en el cuadro de diálogo **Escriba el script**.
   
-    2.  **Archivo de script**: Cargue el archivo de script en Azure Blob Storage y especifique el **BlobName** campo. Si el blob no está en el contenedor ni en la cuenta de almacenamiento predeterminados asociados con el clúster de HDInsight, deben especificarse los campos **ExternalStorageAccountName** y **ExternalBlobContainer**. Para un blob externo, asegúrese de que está configurado como accesible públicamente.  
+    2.  **Archivo de script**: cargue el archivo de script en Azure Blob Storage y especifique el campo **BlobName**. Si el blob no está en el contenedor ni en la cuenta de almacenamiento predeterminados asociados con el clúster de HDInsight, deben especificarse los campos **ExternalStorageAccountName** y **ExternalBlobContainer**. Para un blob externo, asegúrese de que está configurado como accesible públicamente.  
   
      Si se especifican ambos, se usará el archivo de script y se omitirá el script en línea.

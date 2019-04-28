@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0f8d69e97aa542d89291d81d60177e520e6a007b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732181"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Tutorial del diagrama de red de dependencias (Complementos de minería de datos)
   Existen diversos tipos de modelos de minería de datos que usan gráficos de red como una forma para explorar las relaciones entre los datos. Puede importar estos modelos en Visio con el **red de dependencias** dar forma y, a continuación, seguir personalizando y mejorando el diseño. El **formas de minería de datos para Visio** incluyen los siguientes controles personalizados para trabajar con diagramas de red de dependencia:  
@@ -106,7 +106,7 @@ ms.locfileid: "48197935"
      **Intensidad del borde**  
      Alterna la presentación de la intensidad del borde para todo el gráfico. Un borde es una conexión entre nodos. Puede utilizar el control deslizante para filtrar las conexiones que no son fuertes.  
   
-     **Control deslizante**  
+     **Slider**  
      El **control deslizante** le permite controlar la importancia de las relaciones que se muestran en el diagrama de red de dependencias.  
   
      Cada nodo del gráfico representa un estado. Una flecha representa una transición entre dos estados y la probabilidad asociada a la transición. Para reducir el número de nodos del gráfico, mueva la barra del control deslizante hacia arriba.  

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782000"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos
   El uso de la autenticación Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere que se cumplan las siguientes condiciones:  
@@ -158,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |Escenario|Método de autenticación|  
 |--------------|---------------------------|  
-|El SPN se asigna a la cuenta de dominio, cuenta virtual, MSA o cuenta integrada correcta. Por ejemplo, Sistema local o Servicio de red.<br /><br /> Nota: En otras palabras, la cuenta asignada por el SPN registrado es la cuenta en la que se está ejecutando el servicio SQL Server.|Las conexiones locales usan NTLM, mientras que las conexiones remotas usan Kerberos.|  
-|El SPN es la cuenta de dominio, cuenta virtual, MSA o cuenta integrada correcta.<br /><br /> Nota: En otras palabras, la cuenta asignada por el SPN registrado es la cuenta en la que se está ejecutando el servicio SQL Server.|Las conexiones locales usan NTLM, mientras que las conexiones remotas usan Kerberos.|  
+|El SPN se asigna a la cuenta de dominio, cuenta virtual, MSA o cuenta integrada correcta. Por ejemplo, Sistema local o Servicio de red.<br /><br /> Nota: Correcto significa que la cuenta asignada por el SPN registrado es la cuenta que se ejecuta el servicio SQL Server.|Las conexiones locales usan NTLM, mientras que las conexiones remotas usan Kerberos.|  
+|El SPN es la cuenta de dominio, cuenta virtual, MSA o cuenta integrada correcta.<br /><br /> Nota: Correcto significa que la cuenta asignada por el SPN registrado es la cuenta que se ejecuta el servicio SQL Server.|Las conexiones locales usan NTLM, mientras que las conexiones remotas usan Kerberos.|  
 |El SPN se asigna a una cuenta de dominio, cuenta virtual, MSA o cuenta integrada incorrecta.|Se produce un error en la autenticación.|  
 |Se produce un error en la búsqueda de SPN o no se asigna a una cuenta de dominio, cuenta virtual, MSA o cuenta integrada correcta, o no es una cuenta de dominio, cuenta virtual MSA o cuenta integrada correcta.|Tanto las conexiones locales como las remotas usan NTLM.|  
   

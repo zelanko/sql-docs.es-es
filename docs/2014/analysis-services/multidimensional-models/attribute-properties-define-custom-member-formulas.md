@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83c864fc3af588b2dbf78346af1ddf1cd8430a01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701678"
 ---
 # <a name="define-custom-member-formulas"></a>Definir fórmulas de miembro personalizado
   Puede definir una expresión MDX (Expresiones multidimensionales), denominada fórmula de miembro personalizado, para suministrar los valores de los miembros de determinado atributo. Una columna de una tabla de una vista del origen de datos proporciona, para cada miembro de un atributo, la expresión utilizada para suministrar el valor para dicho miembro.  
@@ -39,23 +39,23 @@ ms.locfileid: "48186025"
   
 -   2003: 2100  
   
-    -   Quarter 1: 700  
+    -   Trimestre 1: 700  
   
-    -   Quarter 2: 500  
+    -   Trimestre 2: 500  
   
-    -   Quarter 3: 100  
+    -   Trimestre 3: 100  
   
-    -   Quarter 4: 800  
+    -   Trimestre 4: 800  
   
 -   2004: 1500  
   
-    -   Quarter 1: 600  
+    -   Trimestre 1: 600  
   
-    -   Quarter 2: 200  
+    -   Trimestre 2: 200  
   
-    -   Quarter 3: 300  
+    -   Trimestre 3: 300  
   
-    -   Quarter 4: 400  
+    -   Trimestre 4: 400  
   
  Con una fórmula de miembro personalizado, el valor del miembro es un su lugar suministrado por la fórmula de resumen personalizado. Por ejemplo, la siguiente fórmula de miembro personalizado se puede utilizar para suministrar el valor del miembro secundario Quarter 4 del miembro 2004 en la dimensión Time como 450.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48186025"
 Time.[Quarter 3] * 1.5  
 ```  
   
- Las fórmulas de miembro personalizado se almacenan en una columna de la tabla de dimensión. Puede habilitar fórmulas de resumen personalizado estableciendo la `CustomRollupColumn` propiedad en un atributo.  
+ Las fórmulas de miembro personalizado se almacenan en una columna de la tabla de dimensión. Puede habilitar fórmulas de resumen personalizado estableciendo la propiedad `CustomRollupColumn` en un atributo.  
   
  Para aplicar una expresión MDX única a todos los miembros de un atributo, cree un cálculo con nombre en la tabla de dimensión que devuelva una expresión MDX como cadena literal. A continuación, especifique el cálculo con nombre con el valor de propiedad `CustomRollupColumn` en el atributo que desea configurar. Un cálculo con nombres es una columna de una tabla de vista del origen de datos que devuelve valores de filas definidos por una expresión SQL. Para obtener más información sobre cómo crear cálculos con nombre, vea [Definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
@@ -73,7 +73,7 @@ Time.[Quarter 3] * 1.5
  Si utiliza miembros calculados y fórmulas de resumen personalizado para los miembros de un atributo, debe tener en cuenta el orden de evaluación. Los miembros calculados se resuelven antes que las fórmulas de resumen personalizado.  
   
 ## <a name="see-also"></a>Vea también  
- [Atributos y jerarquías de atributo](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Atributos y jerarquías de atributos](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Configurar fórmulas de miembro personalizado para los atributos de una dimensión](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

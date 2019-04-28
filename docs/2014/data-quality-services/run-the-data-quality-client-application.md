@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3b40e0243b8ab330a4c865514d6bc047f7b0b2d5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792303"
 ---
 # <a name="run-the-data-quality-client-application"></a>Ejecutar la aplicación Data Quality Client
   Puede utilizar [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ejecutando [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] e iniciando sesión en un [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "56035706"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para poder iniciar sesión en [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], es necesario disponer de uno de los tres roles de DQS (dqs_administrator, dqs_kb_editor o dqs_kb_operator) en la base de datos DQS_MAIN.  
   
 ##  <a name="Run"></a> Ejecutar Data Quality Client  

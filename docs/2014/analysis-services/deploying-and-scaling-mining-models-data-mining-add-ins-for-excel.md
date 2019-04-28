@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cedf0226f4386be5b822a06dc85f384044e94f0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732169"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>Implementar y ampliar modelos de minería de datos (Complementos de minería de datos para Excel)
   Las herramientas de la **uso del modelo** y **administración** grupo se proporcionan para ayudarle a administrar y examinar los modelos de minería de datos existente. Puede utilizar estas herramientas para ver cualquier modelo que esté almacenado en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], no solo los creados mediante los complementos.  
@@ -37,7 +37,7 @@ ms.locfileid: "48103885"
   
  Para obtener más información, consulte [documentar modelos de minería de datos &#40;complementos minería de datos para Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md).  
   
-### <a name="query"></a>Consulta  
+### <a name="query"></a>Consultar  
  Haga clic en **consulta** para iniciar el **consulta** asistente. El asistente le guía de forma interactiva por el proceso de creación de una consulta de predicción en un modelo de minería de datos existente.  
   
  Para personalizar la consulta, o generar consultas no incluidas en el Asistente para, simplemente haga clic en el **avanzadas** botón para iniciar el **Data Mining Editor de consultas avanzadas**.  

@@ -11,18 +11,18 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 728d69dcf44e0cab436c73396d833f754891a3f5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792631"
 ---
 # <a name="install-data-quality-services"></a>Instalar Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) contiene los dos componentes siguientes: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** y **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
   
 |Componente DQS|Descripción|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] se instala en la parte superior de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] motor de base de datos e incluye tres bases de datos: DQS_MAIN, DQS_PROJECTS y DQS_STAGING_DATA. DQS_MAIN contiene procedimientos almacenados DQS, el motor DQS y las bases de conocimiento publicadas. DQS_PROJECTS contiene información del proyecto de calidad de los datos. DQS_STAGING_DATA es el área de almacenamiento provisional donde puede copiar los datos de origen para realizar operaciones de DQS y después exportar los datos procesados.|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] se instala sobre el Motor de base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e incluye tres bases de datos: DQS_MAIN, DQS_PROJECTS y DQS_STAGING_DATA. DQS_MAIN contiene procedimientos almacenados DQS, el motor DQS y las bases de conocimiento publicadas. DQS_PROJECTS contiene información del proyecto de calidad de los datos. DQS_STAGING_DATA es el área de almacenamiento provisional donde puede copiar los datos de origen para realizar operaciones de DQS y después exportar los datos procesados.|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] es una aplicación independiente que permite conectar con [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]y proporciona una interfaz gráfica de usuario muy intuitiva para realizar operaciones de calidad de datos y otras tareas administrativas relacionadas con DQS.|  
   
 > [!IMPORTANT]
@@ -33,11 +33,11 @@ ms.locfileid: "56019645"
   
  La instalación de DQS es un proceso que consta de tres partes:  
   
--   [Tareas de preinstalación](#PreInstallationTasks): Compruebe los requisitos del sistema antes de instalar DQS.  
+-   [Tareas previas a la instalación](#PreInstallationTasks): compruebe los requisitos del sistema antes de instalar DQS.  
   
--   [Tareas de instalación de Data Quality Services](#DQSInstallation): Instale DQS mediante el programa de instalación de SQL Server.  
+-   [Tareas de instalación de Data Quality Services](#DQSInstallation): instale DQS mediante el programa de instalación de SQL Server.  
   
--   [Tareas posteriores a la instalación](#PostInstallationTasks): Realice estas tareas después de terminar con la instalación de SQL Server para terminar de instalar DQS.  
+-   [Tareas posteriores a la instalación](#PostInstallationTasks): realice estas tareas después de terminar con el programa de instalación de SQL Server para terminar de instalar DQS.  
   
 > [!NOTE]  
 >  Este tema no incluye instrucciones para ejecutar el programa de instalación desde la línea de comandos. Para obtener información acerca de las opciones de línea de comandos para instalar [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] y el cliente, vea [parámetros de función](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) en [instalar SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "56019645"
   
 |Componente DQS|Requisitos mínimos del sistema|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Memoria (RAM):<br />-Como mínimo: 2 GB<br />-Se recomienda: 4 GB o más<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obtener más información, consulte [acerca de que el motor de base de datos de SQL Server](../../database-engine/sql-server-database-engine-overview.md).|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Memoria (RAM):<br />-Como mínimo: 2 GB<br />-Se recomienda: 4 GB o más.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obtener más información, consulte [acerca de que el motor de base de datos de SQL Server](../../database-engine/sql-server-database-engine-overview.md).|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4 (se instala durante la instalación del [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , si no está ya instalado)<br /><br /> Internet Explorer 6.0 SP1 o posterior|  
   
 > [!IMPORTANT]

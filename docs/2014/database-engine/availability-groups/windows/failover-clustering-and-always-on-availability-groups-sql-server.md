@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8d4858d55d9c37529e44cdf7759bf9fe6ce2630
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792008"
 ---
 # <a name="failover-clustering-and-alwayson-availability-groups-sql-server"></a>Clúster de conmutación por error y grupos de disponibilidad de AlwaysOn (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la solución de alta disponibilidad y recuperación ante desastres introducida en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], requiere clústeres de conmutación por error de Windows Server (WSFC). Además, aunque [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no depende de los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , se puede utilizar una instancia de clústeres de conmutación por error (FCI) para hospedar una réplica de disponibilidad para un grupo de disponibilidad. Es importante conocer el rol de cada tecnología de clústeres y saber qué consideraciones son necesarias cuando se diseña el entorno de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
@@ -120,7 +120,7 @@ ms.locfileid: "53352309"
   
 -   **Notas del producto:**  
   
-     [Guía de arquitectura de AlwaysOn: Creación de una alta disponibilidad y la solución de recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](https://msdn.microsoft.com/library/jj215886.aspx)  
+     [Guía de arquitectura de AlwaysOn: generación de una solución de alta disponibilidad y recuperación ante desastres mediante instancias de clúster de conmutación por error y grupos de disponibilidad](https://msdn.microsoft.com/library/jj215886.aspx)  
   
      [Guía de soluciones de Microsoft SQL Server AlwaysOn para alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

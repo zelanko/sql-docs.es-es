@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41131b63817ababfe20e171185f0c27dc5f0ca06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807499"
 ---
 # <a name="database-engine-powershell-reference"></a>Referencia del motor de base de datos de PowerShell
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] incluye un conjunto de cmdlets de Windows PowerShell 2.0 para realizar acciones comunes en [!INCLUDE[ssDE](../includes/ssde-md.md)]. Además, las expresiones de consulta y los nombres de recursos uniformes (URN) pueden convertirse en rutas acceso de SQL Server PowerShell o usarse para especificar uno o más objetos en [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -31,11 +31,11 @@ ms.locfileid: "48222305"
   
 |Descripción|Cmdlet|  
 |-----------------|------------|  
-|Ejecuta scripts de Transact-SQL y XQuery, como secuencias de comandos que se pueden ejecutar con la `sqlcmd` utilidad.|[Cmdlet Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
-|Evalúa si un objeto de motor de base de datos cumple una directiva de administración basada en directivas.|[Cmdlet Invoke-PolicyEvaluation](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
+|Ejecuta scripts Transact-SQL y XQuery como, por ejemplo, los scripts que se pueden ejecutar con la utilidad `sqlcmd`.|[Cmdlet Invoke-Sqlcmd](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
+|Evalúa si un objeto de motor de base de datos cumple una directiva de administración basada en directivas.|[cmdlet Invoke-PolicyEvaluation](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
   
 ### <a name="information-about-other-cmdlets"></a>Información sobre otros cmdlets  
- El `Encode-Sqlname` y `Decode-Sqlname` cmdlets le ayudan a especificar los identificadores de SQL Server que contienen caracteres no admitidos en las rutas de PowerShell. Para más información, consulte [SQL Server Identifiers in PowerShell](../powershell/sql-server-identifiers-in-powershell.md).  
+ Los cmdlets `Encode-Sqlname` y `Decode-Sqlname` le ayudan a especificar los identificadores de SQL Server que contienen caracteres no admitidos en las rutas de acceso de PowerShell. Para más información, consulte [SQL Server Identifiers in PowerShell](../powershell/sql-server-identifiers-in-powershell.md).  
   
  Use el cmdlet `Convert-UrnToPath` para convertir un nombre de recurso único de un objeto de [!INCLUDE[ssDE](../includes/ssde-md.md)] en una ruta de acceso para el proveedor de SQL Server PowerShell. Para más información, consulte [Convert URNs to SQL Server Provider Paths](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md).  
   

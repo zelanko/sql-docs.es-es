@@ -1,5 +1,5 @@
 ---
-title: Sys.column_store_segments (Transact-SQL) | Microsoft Docs
+title: sys.column_store_segments (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2018
 ms.prod: sql
@@ -21,11 +21,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: df7698d222c2c2f0f68138eaa5f6289106b97659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62799877"
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Devuelve una fila por cada segmento de columna en un índice de almacén de colu
 |**row_count**|**int**|Número de filas del grupo de filas.|  
 |**has_nulls**|**int**|1 si el segmento de la columna tiene valores NULL.|  
 |**base_id**|**bigint**|Identificador del valor base si se está usando el tipo de codificación 1.  Si no se utiliza la codificación de tipo 1, base_id se establece en -1.|  
-|**magnitud**|**float**|Magnitud si se utiliza el tipo de codificación 1.  Si no se utiliza la codificación de tipo 1, magnitud se establece en -1.|  
+|**magnitude**|**float**|Magnitud si se utiliza el tipo de codificación 1.  Si no se utiliza la codificación de tipo 1, magnitud se establece en -1.|  
 |**primary_dictionary_id**|**int**|Un valor de 0 representa el diccionario global. El valor -1 indica que no hay ningún diccionario global creado para esta columna.|  
 |**secondary_dictionary_id**|**int**|Un valor distinto de cero puntos en el diccionario local para esta columna en el segmento actual (es decir, el grupo de filas). El valor -1 indica que no hay ningún diccionario local para este segmento.|  
 |**min_data_id**|**bigint**|Identificador de datos mínimo en el segmento de columna.|  
@@ -77,7 +77,7 @@ GO
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Consultar el catálogo del sistema SQL Server preguntas más frecuentes](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [Sys.ALL_COLUMNS &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Guía de índices de almacén de columnas](~/relational-databases/indexes/columnstore-indexes-overview.md)    
  [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  

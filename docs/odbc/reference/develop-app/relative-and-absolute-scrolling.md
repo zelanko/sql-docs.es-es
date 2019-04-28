@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5ba05cb9079514750cf087149bae476efe0d8d41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861515"
 ---
 # <a name="relative-and-absolute-scrolling"></a>Desplazamiento relativas y absolutas
 La mayoría de las opciones de desplazamiento en **SQLFetchScroll** coloque el cursor en relación con la posición actual o a una posición absoluta. **SQLFetchScroll** admite la recuperación de la siguiente, anterior, primero y último conjuntos de filas, como una captura relativa también como (capturar el conjunto de filas *n* filas desde el principio del conjunto de filas actual) y una captura absoluta (el conjunto de filas a partir de fetch en la fila *n*). Si *n* es negativo en una captura absoluta, las filas se cuentan desde el final del conjunto de resultados. Por lo tanto, una captura absoluta de la fila -1 significa que se capturará el conjunto de filas que comienza con la última fila del conjunto de resultados.  

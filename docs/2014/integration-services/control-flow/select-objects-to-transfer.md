@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ca32cdc72bb5c062be4c3745d3f742f39753afa
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62830409"
 ---
 # <a name="select-objects-to-transfer"></a>Seleccionar objetos para transferir
   Utilice este cuadro de diálogo para seleccionar los objetos que se van a transferir desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra mediante una tarea de transferencia de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

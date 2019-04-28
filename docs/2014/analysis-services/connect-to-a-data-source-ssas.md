@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 764884f73cb554794edfb998f2c8d7b8f8d7d1fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680419"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>Conectarse a un origen de datos (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite crear una nueva conexión con un origen de datos con diversidad de orígenes de datos, como bases de datos relacionales, fuentes de distribución de datos y archivos. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  

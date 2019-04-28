@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3bb2f1dcabe17bb2c3e7258653602ac43615c706
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678478"
 ---
 # <a name="lesson-1-creating-the-intermediate-data-mining-solution-intermediate-data-mining-tutorial"></a>Lección 1: Creación de la solución de minería de datos intermedia (Tutorial de minería de datos intermedios)
   En el Tutorial básico de minería de datos, creó un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene una solución de minería de datos sencilla basada en la nueva base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
@@ -33,7 +33,7 @@ ms.locfileid: "56035806"
  [Lección 2: Generar un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
 ## <a name="all-lessons"></a>Todas las lecciones  
- Lección 1: Creación de la solución de minería de datos intermedios  
+ Lección 1: Creación de la solución de minería de datos intermedia  
   
  [Lección 2: Generar un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62854338"
 ---
 # <a name="create-mining-structure-dmx"></a>CREAR ESTRUCTURA DE MINERÍA DE DATOS (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,16 +35,16 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *estructura*  
+ *structure*  
  Nombre único de la estructura.  
   
  *lista de definiciones de columna*  
  Lista delimitada por comas de definiciones de columna.  
   
- *exclusión maxpercent*  
+ *holdout-maxpercent*  
  Número entero entre 1 y 100 que indica el porcentaje de datos que se reservan para las pruebas.  
   
- *exclusión maxcases*  
+ *holdout-maxcases*  
  Número entero que indica el número máximo de casos que deben utilizarse para las pruebas.  
   
  Si el valor especificado para el número máximo de casos es mayor que el número de casos de entrada, se utilizarán todos los casos de entrada para las pruebas y se generará un mensaje de advertencia.  
@@ -60,9 +60,9 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  Debería especificar un valor de inicialización si necesita asegurarse de que se puede reproducir una partición.  
   
- Valor predeterminado: REPEATABLE(0)  
+ Predeterminado: REPEATABLE(0)  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para definir una estructura de minería de datos hay que especificar una lista de columnas y, opcionalmente, las relaciones jerárquicas entre las columnas; también existe la opción de crear particiones de la estructura de minería de datos en conjuntos de datos de aprendizaje y de pruebas.  
   
  La palabra clave opcional SESSION indica que la estructura es una estructura temporal que solamente puede usarse durante el transcurso de la sesión actual. Cuando finalice la sesión, se eliminará la estructura, así como cualquier modelo basado en la estructura. Para crear modelos y estructuras de minería de datos temporales, primero debe establecer la propiedad de base de datos, AllowSessionMiningModels. Para más información, consulte [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md).  
@@ -102,7 +102,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
 -   [Distribuciones de columnas &#40;minería de datos&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Las marcas de modelado &#40;minería de datos&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Marcas de modelado &#40;Minería de datos&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  Puede definir varios valores de marcas de modelado para una columna. Sin embargo, solo puede haber un tipo de contenido y un tipo de datos para cada columna.  
   
@@ -137,7 +137,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
 ## <a name="examples"></a>Ejemplos  
  En los ejemplos siguientes se muestra cómo crear una estructura de minería de datos con exclusión mediante DMX.  
   
-### <a name="example-1-adding-a-structure-with-no-training-set"></a>Ejemplo 1: agregar una estructura sin un conjunto de aprendizaje  
+### <a name="example-1-adding-a-structure-with-no-training-set"></a>Ejemplo 1: Adición de una estructura con ningún conjunto de entrenamiento  
  En el ejemplo siguiente se crea una estructura de minería de datos denominada `New Mailing` sin crear ningún modelo de minería de datos asociado y sin utilizar la exclusión. Para obtener información sobre cómo agregar un modelo de minería de datos a la estructura, vea [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
 ```  
@@ -150,7 +150,7 @@ CREATE MINING STRUCTURE [New Mailing]
 )  
 ```  
   
-### <a name="example-2-specifying-holdout-percentage-and-seed"></a>Ejemplo 2: especificar el porcentaje y el valor de inicialización de la exclusión  
+### <a name="example-2-specifying-holdout-percentage-and-seed"></a>Ejemplo 2: Valor de inicialización y especificar el porcentaje de exclusión  
  Puede agregarse la siguiente cláusula a continuación de la lista de definiciones de columna para definir un conjunto de datos que puede usarse para probar todos los modelos de minería de datos asociados a la estructura de minería de datos. La instrucción creará un conjunto de pruebas con el 25 por ciento del total de casos de entrada sin un límite en el número máximo de casos. Se utiliza 5000 como valor de inicialización para crear la partición. Cuando especifique un valor de inicialización, se elegirán los mismo casos para el conjunto de pruebas cada vez que procese la estructura de minería de datos, siempre y cuando los datos subyacentes no cambien.  
   
 ```  
@@ -164,7 +164,7 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT) REPEATABLE(5000)  
 ```  
   
-### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>Ejemplo 3: especificar el porcentaje y el número máximo de casos de exclusión  
+### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>Ejemplo 3: Especifica el porcentaje de exclusión y máximo de casos  
  La cláusula siguiente creará un conjunto de pruebas que contiene el 25 por ciento del total de casos de entrada o 2000 casos, lo que sea menor. Dado que se especifica 0 como valor de inicialización, se utiliza el nombre de la estructura de minería de datos para crear el valor de inicialización que se usa para empezar el muestreo de los casos de entrada.  
   
 ```  

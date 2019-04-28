@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815730"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server Management Studio)
   Use el Asistente para agregar una base de datos al grupo de disponibilidad como ayuda para agregar una o varias bases de datos a un grupo de disponibilidad AlwaysOn existente.  
@@ -36,9 +36,9 @@ ms.locfileid: "48055645"
   
      [Seguridad](#Security)  
   
--   **Para agregar una base de datos mediante:**  [Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Para agregar una base de datos, utilizando:**  [Agregar base de datos al Asistente de grupo de disponibilidad (SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Si nunca ha agregado una base de datos a un grupo de disponibilidad, consulte la sección "Bases de datos de disponibilidad" en [requisitos previos, restricciones y recomendaciones para grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ###  <a name="Prerequisites"></a> Requisitos previos, restricciones y recomendaciones  
@@ -71,7 +71,7 @@ ms.locfileid: "48055645"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Usar el Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server Management Studio)  

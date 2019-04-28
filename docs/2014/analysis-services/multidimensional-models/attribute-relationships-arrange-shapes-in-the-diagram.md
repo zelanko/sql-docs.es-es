@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 459afedd5d9e9e417410961d010c6b650eb0a01e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701387"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>Organizar formas en el diagrama de relación de los atributos
   Puede cambiar el diseño de las formas en la pestaña **Relación de los atributos** de la vista Estructura de dimensión del Diseñador de dimensiones en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "48090535"
      Asimismo, puede hacer clic en **Organizar formas** para organizar de forma automática todas las formas en el diagrama según el algoritmo del diseño que usa el Diseñador de dimensiones.  
   
 ## <a name="see-also"></a>Vea también  
- [Relaciones de atributo](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+ [Relación de los atributos](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
  [Definir relaciones de atributo](attribute-relationships-define.md)  
   
   

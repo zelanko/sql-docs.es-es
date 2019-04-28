@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e67c33daecf94a9c903f3a2fb9a2d35d387a50e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701284"
 ---
 # <a name="create-modify-or-delete-an-attribute-relationship"></a>Crear, modificar o eliminar una relación de atributo
   Puede crear, modificar o eliminar una relación de atributo entre los atributos de una dimensión utilizando la pestaña **Relación de los atributos** en el Diseñador de dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -61,6 +61,6 @@ ms.locfileid: "48202795"
 3.  En el cuadro de diálogo **Eliminar objetos** , haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Relaciones de atributo](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [Relación de los atributos](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

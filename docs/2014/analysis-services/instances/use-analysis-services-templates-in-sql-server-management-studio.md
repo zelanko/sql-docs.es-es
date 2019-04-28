@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b2f65e31a6a1c42d4d2bfd79f6daf0139edcd49f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729833"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usar las plantillas de Analysis Services en SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona un conjunto de plantillas para ayudarle a crear scripts XMLA, DMX o consultas MDX; para crear KPI en un cubo o un modelo tabular; incluir en scripts las operaciones de copia de seguridad y restauración; y otras muchas tareas. Las plantillas se encuentran en el **Explorador de plantillas** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -166,7 +166,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Referencia de las plantillas de Analysis Services  
  Las plantillas siguientes se proporcionan para trabajar con bases de datos de Analysis Services y los objetos de la base de datos, incluidas las restricciones de minería de datos y los modelos de minería de datos, los cubos y los modelos tabulares:  
   
-|Categoría|Plantilla de elementos|Descripción|  
+|Category|Plantilla de elementos|Descripción|  
 |--------------|-------------------|-----------------|  
 |DMX\Contenido del modelo|Content Query|Muestra cómo usar el DMX SELECT FROM  *\<modelo >*. Instrucción contenido que se va a recuperar el contenido de conjunto de filas de esquema del modelo de minería de datos para un modelo de minería de datos especificado.|  
 ||Continuous Column Values|Muestra cómo usar el DMX SELECT DISTINCT FROM  *\<modelo >* instrucción con DMX `RangeMin` y `RangeMax` funciones para recuperar un conjunto de valores en un intervalo especificado de las columnas continuas de un modelo de minería de datos especificado.|  

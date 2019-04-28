@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814546"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)
   Dentro del contexto de un grupo de disponibilidad, el rol principal y el rol secundario de las réplicas de disponibilidad suelen ser intercambiables en un proceso denominado *conmutación por error*. Hay tres formas de conmutación por error: conmutación por error automática (sin pérdida de datos), conmutación por error manual planeada (sin pérdida de datos) y conmutación por error manual forzada (con posible pérdida de datos), normalmente denominada *conmutación por error forzada*. Las conmutaciones por error automáticas o manuales planeadas mantienen todos los datos. Un grupo de disponibilidad realiza la conmutación por error en el nivel de la réplica de disponibilidad. Es decir, un grupo de disponibilidad conmuta por error a una de sus réplicas secundarias (el *destino de conmutación por error*actual).  
@@ -82,7 +82,7 @@ ms.locfileid: "53359247"
   
 -   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (opcional):**  Dentro de un grupo de disponibilidad dado, conjunto de dos o tres réplicas de disponibilidad (incluida la réplica principal actual) que están configuradas para el modo de confirmación sincrónica, si lo hubiera. Un conjunto de confirmación sincrónica de conmutación automática por error solo tiene efecto si las réplicas secundarias están configuradas para el modo de conmutación por error manual y al menos una réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  En un grupo de disponibilidad determinado, conjunto de todas las réplicas de disponibilidad cuyo estado operativo es actualmente ONLINE, independientemente del modo de disponibilidad y el modo de conmutación por error. El conjunto completo de conmutación por error es importante cuando no hay actualmente ninguna réplica secundaria en estado SYNCHRONIZED con la réplica principal.  
+-   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)]:**   En un grupo de disponibilidad determinado, conjunto de todas las réplicas de disponibilidad cuyo estado operativo es actualmente ONLINE, independientemente del modo de disponibilidad y el modo de conmutación por error. El conjunto completo de conmutación por error es importante cuando no hay actualmente ninguna réplica secundaria en estado SYNCHRONIZED con la réplica principal.  
   
  Al configurar una réplica de disponibilidad como confirmación sincrónica con conmutación por error automática, la réplica de disponibilidad forma parte de [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Sin embargo, que el conjunto tenga efecto dependerá de la réplica principal actual. Las formas de conmutación por error que son actualmente posibles en un momento determinado dependen de qué conjuntos de conmutación estén actualmente activos.  
   
@@ -226,7 +226,7 @@ ms.locfileid: "53359247"
 ###  <a name="WhyFFoPostForcedQuorum"></a> Por qué se requiere la conmutación por error después de forzar el quórum  
  Después de forzar el cuórum en el clúster WSFC (*cuórum forzado*), debe realizarse una conmutación por error forzada (con posible pérdida de datos) en todos los grupos de disponibilidad. La conmutación por error forzada es necesaria porque el estado real de los valores del clúster WSFC puede haberse perdido. Es necesario evitar las conmutaciones por error normales después de un quórum forzado debido a la posibilidad de que una réplica secundaria no sincronizada parezca sincronizada en el clúster WSFC reconfigurado.  
   
- Por ejemplo, considere la posibilidad de un clúster WSFC que hospeda un grupo de disponibilidad en tres nodos:  Nodo A hospeda la réplica principal y nodo B y C hospedan una réplica secundaria. El nodo C se desconecta del clúster WSFC mientras la réplica secundaria local se sincroniza.  Pero los nodos A y B conservan un quórum correcto y el grupo de disponibilidad sigue en línea. En el nodo A, la réplica principal continúa aceptando actualizaciones y, en el nodo B, la réplica secundaria continúa sincronizándose con la réplica principal. La réplica secundaria del nodo C se desincroniza y se encuentra cada vez más retrasada respecto de la réplica principal. Sin embargo, debido a que el nodo C está desconectado, la réplica permanece incorrectamente en el estado SYNCHRONIZED.  
+ Por ejemplo, considere la posibilidad de un clúster WSFC que hospeda un grupo de disponibilidad en tres nodos:  el nodo A hospeda la réplica principal y los nodos B y C hospedan una réplica secundaria cada uno. El nodo C se desconecta del clúster WSFC mientras la réplica secundaria local se sincroniza.  Pero los nodos A y B conservan un quórum correcto y el grupo de disponibilidad sigue en línea. En el nodo A, la réplica principal continúa aceptando actualizaciones y, en el nodo B, la réplica secundaria continúa sincronizándose con la réplica principal. La réplica secundaria del nodo C se desincroniza y se encuentra cada vez más retrasada respecto de la réplica principal. Sin embargo, debido a que el nodo C está desconectado, la réplica permanece incorrectamente en el estado SYNCHRONIZED.  
   
  Si se pierde el quórum y después se fuerza en el nodo A, el estado de sincronización del grupo de disponibilidad del clúster WSFC debería ser correcto y la réplica secundaria del nodo C debería mostrarse como UNSYNCHRONIZED. Sin embargo, si se fuerza el quórum en el nodo C, la sincronización del grupo de disponibilidad será incorrecta. El estado de sincronización del clúster se habrá revertido al estado que tenía cuando el nodo C estaba desconectado y la réplica secundaria del nodo C se mostraría *incorrectamente* como SYNCHRONIZED. Dado que las conmutaciones por error manuales planeadas garantizan la seguridad de los datos, no están permitidas para poner un grupo de disponibilidad de nuevo en línea después de forzar el quórum.  
   

@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bf9bcf7f96616d4c0ac49fa361a145bc69ec1d55
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793047"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   La limpieza de datos es el proceso de analizar la calidad de los datos en un origen de datos; para ello, se aprueban o rechazan manualmente las sugerencias del sistema y, de esta manera, se hacen modificaciones en los datos. La limpieza de datos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) incluye un proceso asistido por PC que analiza cómo se ajustan los datos al conocimiento de una base de conocimiento y un proceso interactivo que permite al administrador de datos revisar y modificar los resultados obtenidos en los procesos asistidos por PC con el fin de garantizar que la limpieza de datos resulta exactamente como se deseaba efectuar.  
@@ -63,15 +63,15 @@ ms.locfileid: "56020387"
 ##  <a name="Interactive"></a> Limpieza interactiva  
  En función del proceso de limpieza asistido por PC, DQS proporciona al administrador de datos la información que necesita para tomar una decisión sobre si debe cambiar los datos. DQS clasifica los datos en las cinco pestañas siguientes:  
   
--   **Sugiere**: Los valores para los que DQS detectó sugerencias con un nivel de confianza mayor que el *umbral de sugerencia automática* , pero inferior el *umbral de corrección automática* valor. Debe revisar estos valores y aprobarlos o rechazarlos según corresponda.  
+-   **Sugerido**: valores para los que DQS detectó sugerencias con un nivel de confianza mayor que el *umbral de sugerencia automática*, pero inferior al *umbral de corrección automática*. Debe revisar estos valores y aprobarlos o rechazarlos según corresponda.  
   
--   **Nuevo**: valores válidos para los que DQS no tiene suficiente información (sugerencia), por lo que no se pueden asignar a ninguna otra pestaña. Además, esta pestaña también contiene valores con un nivel de confianza inferior al *umbral de sugerencia automática* , pero lo suficientemente altos para que se identifiquen como válidos.  
+-   **Nuevo**: Valores válidos para el que DQS no tiene suficiente información (sugerencia) y, por lo tanto, no se puede asignar a ninguna otra pestaña. Además, esta pestaña también contiene valores con un nivel de confianza inferior al *umbral de sugerencia automática* , pero lo suficientemente altos para que se identifiquen como válidos.  
   
--   **No válido**: valores que se marcaron como no válidos en el dominio de la base de conocimiento o valores que no cumplieron una regla de dominios o datos de referencia. Esta pestaña también contendrá los valores que rechaza el usuario en cualquiera de las otras cuatro pestañas durante el proceso de limpieza interactivo.  
+-   **No válido**: Valores que se marcaron como no válidos en el dominio en la base de conocimiento o valores que no se pudieron un dominio regla o datos de referencia. Esta pestaña también contendrá los valores que rechaza el usuario en cualquiera de las otras cuatro pestañas durante el proceso de limpieza interactivo.  
   
--   **Se ha corregido**: Valores corregidos por DQS durante el proceso de limpieza automatizada que DQS detectó una corrección para el valor con el nivel de confianza por encima del *umbral de corrección automática* valor. Esta pestaña también contendrá los valores para los que el usuario especificó un valor correcto en la columna de **Corregir a** durante la limpieza interactiva y que fueron posteriormente aprobados haciendo clic en el botón de opción de la columna **Aprobar** en cualquiera de las otras cuatro pestañas.  
+-   **Corregido**: valores corregidos por DQS durante el proceso de limpieza automatizada para los que DQS detectó una corrección para el valor con un nivel de confianza por encima del *umbral de corrección automática*. Esta pestaña también contendrá los valores para los que el usuario especificó un valor correcto en la columna de **Corregir a** durante la limpieza interactiva y que fueron posteriormente aprobados haciendo clic en el botón de opción de la columna **Aprobar** en cualquiera de las otras cuatro pestañas.  
   
--   **Correcto**: valores que se estiman correctos. Por ejemplo, si el valor coincide con un valor de dominio. Si procede, puede invalidar la limpieza de DQS; para ello, rechace los valores en esta pestaña o especifique una palabra alternativa en la columna **Corregir a** y haga clic en el botón de opción de la columna **Aceptar** . Esta pestaña también contendrá los valores que aprobó el usuario durante la limpieza interactiva haciendo clic en el botón de opción de la columna **Aprobar** en la pestaña **Nuevo** o **No válido** .  
+-   **Correcto**: Valores que se estiman correctos. Por ejemplo, si el valor coincide con un valor de dominio. Si procede, puede invalidar la limpieza de DQS; para ello, rechace los valores en esta pestaña o especifique una palabra alternativa en la columna **Corregir a** y haga clic en el botón de opción de la columna **Aceptar** . Esta pestaña también contendrá los valores que aprobó el usuario durante la limpieza interactiva haciendo clic en el botón de opción de la columna **Aprobar** en la pestaña **Nuevo** o **No válido** .  
   
 > [!NOTE]  
 >  En las pestañas **Sugerido**, **Corregido**y **Correcto** , DQS muestra el valor inicial de un dominio, si procede, en la columna **Corregir a** en comparación con el valor respectivo de dominio.  

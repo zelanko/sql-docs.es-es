@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 96fd36d1710a166285fecba092735c7d2495271e
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690445"
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "58658249"
 |dms_step_index|**int**|El paso en el plan DMS que se está ejecutando este trabajo.<br /><br /> request_id step_index y dms_step_index forman la clave para esta vista.||  
 |pdw_node_id|**int**|Nodo que se está ejecutando el trabajo.|Consulte node_id en [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**Int**|Distribución que se ejecuta el trabajo, si existe.|Consulte en el valor de distribution_id [sys.pdw_distributions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|Tipo|**nvarchar(32)**|Tipo de subproceso de trabajo DMS que representa esta entrada.|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', 'REJECT_WRITER', 'ESCRITOR'|  
+|type|**nvarchar(32)**|Tipo de subproceso de trabajo DMS que representa esta entrada.|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', 'REJECT_WRITER', 'ESCRITOR'|  
 |status|**nvarchar(32)**|Estado del trabajo DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|Rendimiento de lectura o escritura en el último segundo.|Mayor o igual que 0. Es NULL si se ha cancelado o error antes de que el trabajador se pudo ejecutar la consulta.|  
 |bytes_processed|**bigint**|Número total de bytes procesado por este trabajador.|Mayor o igual que 0. Es NULL si se ha cancelado o error antes de que el trabajador se pudo ejecutar la consulta.|  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863702"
 ---
 # <a name="maxrecords-property-example-vc"></a>Ejemplo de la propiedad MaxRecords (VC ++)
 Este ejemplo se usa el [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propiedad para abrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) que contiene los títulos más caros 10 en el ***títulos*** tabla.  
@@ -168,13 +168,13 @@ void PrintComError(_com_error &e) {
   
  **Títulos de diez principales por precio:**  
 **¿Pero es fácil de usar? ---22.95**  
-**Individuos Phobic y no que no disfrutan de equipo: Variaciones de comportamiento---21.59**  
-**Las cebollas, los puerros y ajo: cocinar los secretos de los mares Mediterráneo---20.95**  
+**Personas Phobic y no que no disfrutan de equipo: Variaciones de comportamiento---21.59**  
+**Las cebollas, los puerros y ajo: Cocinar los secretos de los mares Mediterráneo---20.95**  
 **Secretos de Silicon Valley---20,00**  
 **Guía de base de datos de un ejecutivo ocupado---19,99**  
 **Recta hablar sobre equipos---19,99**  
 **Trata de Silicon Valley gastronomía---19,99**  
-**Privación de datos largos: Cuatro casos prácticos---19,99**  
+**Prolonga la privación de datos: Cuatro casos prácticos---19,99**  
 **¿Identidad (phishing), cualquier persona? ---14,99**  
 **Años cincuenta en cocinas Buckingham Palacio---11.95**   
 ## <a name="see-also"></a>Vea también  

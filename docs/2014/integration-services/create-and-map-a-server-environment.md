@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d40f86706a8c2b9c3d8815398457073ca7acce0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828732"
 ---
 # <a name="create-and-map-a-server-environment"></a>Crear y asignar un entorno de servidor
   Los entornos de servidor se crean con el fin de especificar valores en tiempo de ejecución para los paquetes contenidos en un proyecto implementado en el servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Después puede asignar las variables de entorno a parámetros para un paquete concreto, para los paquetes de punto de entrada o para todos los paquetes de un proyecto determinado. Un paquete de punto de entrada suele ser un paquete primario que ejecuta un paquete secundario.  

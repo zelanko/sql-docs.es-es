@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e02b80c1967059f91e3a97fb940a2715c6beebb8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656776"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>Instalar PowerPivot para SharePoint 2010
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] es una colección de servicios de nivel intermedio y back-end que proporcionan acceso a datos PowerPivot en una granja de SharePoint 2010. Si su organización usa la aplicación cliente, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel 2010, para crear libros que contienen datos analíticos, debe tener [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] para acceder a esos datos en un entorno de servidor. Este tema es una guía a través del proceso de instalación básico e incluye vínculos a temas adicionales para ayudarle a configurar PowerPivot.  
@@ -116,12 +116,12 @@ ms.locfileid: "53356802"
 > [!TIP]  
 >  Si necesita solucionar problemas con la instalación de SQL Server, vea [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-##  <a name="bkmk_config"></a> Paso 2: Configuración del servidor  
+##  <a name="bkmk_config"></a> Paso 2: Configurar el servidor  
   
 > [!IMPORTANT]  
 >  SharePoint 2010 SP2 debe instalarse antes de configurar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] o una granja de servidores de SharePoint que use un servidor de bases de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Si no ha instalado todavía el Service Pack, hágalo ahora antes de empezar la configuración del servidor.  
   
- La instalación no se completa hasta que se configure el servidor. En esta versión, la configuración del servidor siempre se realiza como una tarea posterior a la instalación, mediante uno de los métodos siguientes: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Herramienta de configuración, Administración central o PowerShell. Para continuar, elija uno de los métodos siguientes:  
+ La instalación no se completa hasta que se configure el servidor. En esta versión, la configuración del servidor siempre se realiza como una tarea posterior a la instalación, mediante uno de los métodos siguientes: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Herramienta de configuración, Administración Central o PowerShell. Para continuar, elija uno de los métodos siguientes:  
   
 -   [Configurar o reparar PowerPivot para SharePoint 2010 &#40;herramienta de configuración de PowerPivot&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)  
   
@@ -131,7 +131,7 @@ ms.locfileid: "53356802"
   
  **Conectarse a la instancia del motor de base de datos.** Cuando instaló [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], el programa de instalación de SQL Server le dio la opción de agregar una instancia del Motor de base de datos a la instalación. Es posible que ha agregado una instancia del motor de base de datos a la instalación si va a configurar una granja de servidores y necesita un servidor de base de datos para ejecutar la configuración y las bases de datos de contenido de la granja de servidores. Si agregó el Motor de base de datos, se instaló como una instancia con nombre de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Siempre que necesite especificar una conexión a esta instancia (por ejemplo, en la granja de servidores Asistente para configuración si está usando ese asistente para configurar la granja de servidores), Acuérdese de escribir el nombre de la base de datos en este formato: <`servername`> \PowerPivot.  
   
-##  <a name="bkmk_redist"></a> Paso 3: Instalar proveedores OLE DB de Analysis Services en servidores de aplicaciones de Excel Services  
+##  <a name="bkmk_redist"></a> Paso 3: Instalar a proveedores OLE DB de Analysis Services en servidores de aplicaciones de servicios de Excel  
  Se necesitan pasos de instalación adicionales si ejecuta Excel Calculation Services y [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en servidores de aplicaciones diferentes. En los servidores de aplicaciones que ejecutan Excel Calculation Services, instale la versión adecuada del proveedor OLE DB de Analysis Services (MSOLAP).  
   
 -   La versión de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de MSOLAP se incluye en el programa de instalación de SQL Server, por lo que solo es necesario instalar explícitamente la versión [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de MSOLAP si su servidor de aplicaciones no es un servidor de aplicaciones de PowerPivot.  

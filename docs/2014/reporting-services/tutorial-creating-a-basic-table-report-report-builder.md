@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62651472"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Crear un informe de tabla básico (Generador de informes)
   Este tutorial muestra cómo crear un informe de tabla básico basado en datos de ventas de ejemplo. En la siguiente ilustración se muestra el informe que va a crear.  

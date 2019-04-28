@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 340accda9321eb8732f909e73729ccaf5193e9a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730386"
 ---
 # <a name="import-data-ssas-tabular"></a>Importar datos (SSAS tabular)
   Puede importar datos en un modelo tabular desde una gran variedad de orígenes. En los temas de esta sección se describe cómo utilizar el Asistente para la importación de tablas para conectarse y seleccionar los datos que se van a importar en un proyecto de modelos.  
@@ -43,6 +43,6 @@ ms.locfileid: "48146011"
 |[Importar desde un origen de datos Multidimensional &#40;Tabular de SSAS&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|Describe cómo importar datos de un cubo multidimensional de SQL Server Analysis Services.|  
 |[Importar desde una fuente de datos &#40;Tabular de SSAS&#41;](import-from-a-data-feed-ssas-tabular.md)|Describe cómo importar datos desde una fuente de distribución de datos, como un informe de Microsoft Reporting Services o un conjunto de datos de Azure DataMarket.|  
 |[Importar desde un archivo de texto &#40;Tabular de SSAS&#41;](import-from-a-text-file-ssas-tabular.md)|Describe cómo importar datos desde un libro de Microsoft Excel o un archivo de texto.|  
-|[Copiar y pegar datos &#40;Tabular de SSAS&#41;](copy-and-paste-data-ssas-tabular.md)|Describe cómo agregar datos a una tabla existente en el Diseñador de modelos usando Pegar, y Pegar y anexar.|  
+|[Copiar y pegar datos &#40;SSAS tabular&#41;](copy-and-paste-data-ssas-tabular.md)|Describe cómo agregar datos a una tabla existente en el Diseñador de modelos usando Pegar, y Pegar y anexar.|  
   
   

@@ -1,29 +1,23 @@
 ---
 title: Elegir un tipo de gráfico de precisión y establecer las opciones del gráfico | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: data-mining
 ms.topic: conceptual
-helpviewer_keywords:
-- Mining Accuracy Chart [Analysis Services]
-- mining models [Analysis Services], validating
-- classification accuracy [data mining]
-- accuracy testing [data mining]
-ms.assetid: bd24dd4a-624f-478a-9c94-b1361e857680
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 13d55fe9e4837bdacb248ddb63aad8b4064a88a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705406"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>Elegir un tipo de gráfico de precisión y establecer las opciones del gráfico
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varios métodos para determinar la validez de los modelos de minería de datos. El tipo de gráfico de precisión que puede crear para cada modelo o estructura depende de estos factores:  
   
 -   El tipo de algoritmo utilizado para crear el modelo  

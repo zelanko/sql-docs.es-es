@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822107"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>Lección 5: Ampliación de la serie temporal de modelo
+# <a name="lesson-5-extending-the-time-series-model"></a>Lección 5: Extensión del modelo de serie temporal
   En [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise, es posible agregar datos nuevos a un modelo de serie temporal e incorporarlos automáticamente al mismo. Los nuevos datos se agregan a un modelo de minería de datos de serie temporal de una de estas dos maneras:  
   
 -   Usando una instrucción PREDICTION JOIN  para unir los datos de un origen externo a los datos de entrenamiento.  

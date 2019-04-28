@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05555f9f3b90cbf0eaae410a2b97dc31a0ed17d2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699550"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>Especificar el contenido de un eje de consulta (MDX)
   Los ejes de consulta especifican los límites de un conjunto de celdas devuelto por una instrucción SELECT de Expresiones multidimensionales (MDX). Al especificar los límites de un conjunto de celdas puede restringir los datos devueltos que son visibles para el cliente.  

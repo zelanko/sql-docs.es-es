@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 71c4e3f36548ddd594b301a73f4032303e4ddea5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700882"
 ---
 # <a name="start-the-business-intelligence-wizard-in-dimension-designer"></a>Iniciar el Asistente de Business Intelligence en el Diseñador de dimensiones
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede crear operadores de resúmenes personalizados y fórmulas de miembro personalizado, y configurar las dimensiones para la reescritura mediante el Asistente de Business Intelligence o el Diseñador de dimensiones. Puede iniciar el Asistente de Business Intelligence desde el Explorador de soluciones o desde el Diseñador de cubos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Se puede obtener acceso al Diseñador de dimensiones desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

@@ -19,11 +19,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c7b6476b9875b52f6961df20b750e68e5df0858c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793206"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurar los niveles de gravedad de los archivos de registro de DQS
   En este tema se describe cómo configurar los niveles de gravedad de las distintas actividades y módulos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) mediante [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Los niveles de gravedad definen la intensidad de los eventos que tienen lugar en DQS. Los eventos de DQS tienen los niveles de gravedad siguientes, en orden decreciente:  
@@ -44,7 +44,7 @@ ms.locfileid: "56010588"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para configurar niveles de gravedad, debe disponer del rol dqs_administrator en la base de datos DQS_MAIN.  
   
 ##  <a name="ConfigureActivity"></a> Configurar los niveles de gravedad en el nivel de actividad  

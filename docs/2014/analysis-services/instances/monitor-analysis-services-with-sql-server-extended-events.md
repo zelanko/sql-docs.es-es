@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 546ee0df900f25395314adffde19cea01abb481b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703231"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>Usar SQL Server Extended Events (XEvents) para supervisar Analysis Services
   Analysis Services proporciona capacidades de seguimiento mediante el uso de [Extended Events](../../relational-databases/extended-events/extended-events.md).  

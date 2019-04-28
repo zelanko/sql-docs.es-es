@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d960ae015bb2e52daa183e1f55d6ff119f234b18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676458"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Crear desencadenadores DML para administrar varias filas de datos
   Cuando escriba el código para un desencadenador DML, tenga en cuenta que la instrucción que hace que se active el disparador puede ser una sola instrucción que afecte a varias filas de datos, en lugar de una sola fila. Este comportamiento es habitual para los desencadenadores UPDATE y DELETE, ya que estas instrucciones suelen afectar a varias filas. No es tan corriente para los desencadenadores INSERT, porque la instrucción INSERT básica solo agrega una fila. Pero, dado que un desencadenador INSERT puede ser activado por una instrucción INSERT INTO (*nombre_tabla*) SELECT, la inserción de muchas filas puede tener como resultado la invocación de un solo desencadenador.  
@@ -51,7 +51,7 @@ AFTER INSERT AS
    WHERE PurchaseOrderHeader.PurchaseOrderID = inserted.PurchaseOrderID ;  
 ```  
   
-### <a name="b-storing-a-running-total-for-a-multirow-or-single-row-insert"></a>B. Almacenar un total acumulativo para una inserción de una o varias filas  
+### <a name="b-storing-a-running-total-for-a-multirow-or-single-row-insert"></a>b. Almacenar un total acumulativo para una inserción de una o varias filas  
  En caso de una inserción de varias filas, el desencadenador DML del ejemplo A no funcionaría correctamente; la expresión situada a la derecha de una asignación de una instrucción UPDATE (`SubTotal` + `LineTotal`) debe tener un solo valor, no una lista de valores. Por lo tanto, el efecto del desencadenador es recuperar un valor de una sola fila de la tabla **inserted** y agregarlo al valor `SubTotal` existente en la tabla `PurchaseOrderHeader` para un valor `PurchaseOrderID` específico. Esta operación puede no tener el efecto esperado si se da un solo valor `PurchaseOrderID` más de una vez en la tabla **inserted** .  
   
  Para actualizar correctamente la tabla `PurchaseOrderHeader` , el desencadenador debe permitir que pueda haber varias filas en la tabla **inserted** . Puede hacerlo utilizando la función `SUM` que calcula el total `LineTotal` para un grupo de filas de la tabla **inserted** para cada `PurchaseOrderID`. La función `SUM` se incluye en una subconsulta correlacionada (la instrucción `SELECT` entre paréntesis). Esta subconsulta devuelve un único valor para cada `PurchaseOrderID` de la tabla **inserted** que coincida o esté correlacionado con un `PurchaseOrderID` de la tabla `PurchaseOrderHeader` .  

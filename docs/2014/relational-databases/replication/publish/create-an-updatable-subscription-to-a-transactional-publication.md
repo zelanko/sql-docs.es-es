@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691596"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Crear una suscripción actualizable a una publicación transaccional [Management Studio]
 
@@ -29,7 +29,7 @@ La replicación transaccional permite que los cambios realizados en un suscripto
 
 Configure suscripciones actualizables en la página **Suscripciones actualizables** del **Asistente para nuevas suscripciones**. Esta página solo está disponible si ha habilitado una publicación transaccional para suscripciones actualizables. Para obtener más información sobre cómo habilitar las suscripciones actualizables, vea [Habilitar suscripciones actualizables para publicaciones transaccionales](enable-updating-subscriptions-for-transactional-publications.md).   
   
-## <a name="configure-an-updatable-subscription-from-the-publisher"></a>Configurar una suscripción actualizable desde el publicador  
+## <a name="configure-an-updatable-subscription-from-the-publisher"></a>Configuración de una suscripción actualizable desde el publicador  
 
 1. Conéctese al publicador en Microsoft SQL Server Management Studio y, a continuación, expanda el nodo del servidor.
 2. Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Publicaciones locales** .
@@ -52,7 +52,7 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
 
 8. Finalice el asistente.
 
-## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>Configurar una suscripción actualizable desde el suscriptor
+## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>Configuración de una suscripción actualizable desde el suscriptor
 
 
 1. Conéctese al suscriptor en SQL Server Management Studio y expanda el nodo de servidor.
@@ -79,7 +79,7 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
 
 11. Finalice el asistente.
 
-## <a name="create-an-immediate-updating-pull-subscription"></a>Crear una suscripción de extracción de actualización inmediata
+## <a name="create-an-immediate-updating-pull-subscription"></a>Creación de una suscripción de extracción de actualización inmediata
 
 1. En el publicado, ejecute [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)para comprobar que la publicación admite las suscripciones de actualización inmediata. 
 
@@ -121,7 +121,7 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
 Esto registra la suscripción de extracción en el publicador. 
 
 
-## <a name="create-an-immediate-updating-push-subscription"></a>Crear una suscripción de inserción de actualización inmediata 
+## <a name="create-an-immediate-updating-push-subscription"></a>Creación de una suscripción de inserción de actualización inmediata 
 
 1. En el publicado, ejecute [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)para comprobar que la publicación admite las suscripciones de actualización inmediata. 
 
@@ -159,7 +159,7 @@ Esto registra la suscripción de extracción en el publicador.
      * `2` - Use un inicio de sesión vinculado definido por el usuario ya existente y creado con [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).
 
 
-## <a name="create-a-queued-updating-pull-subscription"></a>Crear una suscripción de extracción de actualización en cola ##
+## <a name="create-a-queued-updating-pull-subscription"></a>Creación de una suscripción de extracción de la actualización en cola ##
 
 1. En el publicador, ejecute [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)para comprobar que la publicación admite suscripciones de actualización en cola. 
 
@@ -200,7 +200,7 @@ Esto registra la suscripción de extracción en el publicador.
 1. En el publicador, ejecute [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)para comprobar que la publicación admite suscripciones de actualización en cola. 
 
     * Si el valor de allow_queued_tran en el conjunto de resultados es 1, la publicación admite suscripciones de actualización inmediata.
-    * Si el valor de allow_queued_tran en el conjunto de resultados es 0, la publicación se debe volver a crear con suscripciones de actualización en cola habilitadas. Para obtener más información, consulte Cómo: Habilitar suscripciones actualizables para publicaciones transaccionales (programación de Transact-SQL de replicación).
+    * Si el valor de allow_queued_tran en el conjunto de resultados es 0, la publicación se debe volver a crear con suscripciones de actualización en cola habilitadas. Para más información, vea Cómo: Habilitar suscripciones actualizables para publicaciones transaccionales (programación de la replicación con Transact-SQL).
 
 2. En el publicador, ejecute [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)para comprobar que la publicación admite suscripciones de inserción. 
 

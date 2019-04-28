@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6254610e6d42c33e1a46c48080db27f208f5bbf7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680276"
 ---
 # <a name="connect-to-a-teradata-database-ssas"></a>Conectarse a una base de datos de Teradata (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite especificar los valores para conectarse con una base de datos de Teradata. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  

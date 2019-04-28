@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96b34d8b3fd2dce31f604c50a7431b993a29beca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699578"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>Crear conjuntos con nombre de ámbito de sesión (MDX)
   Para crear un conjunto con nombre que esté disponible en una sesión de expresiones multidimensionales (MDX), se usa la instrucción [CREATE SET](/sql/mdx/mdx-data-definition-create-set). Un conjunto con nombre creado mediante la instrucción CREATE SET no se quitará hasta que se cierre la sesión MDX.  
@@ -54,6 +54,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Crear ámbito de consulta conjuntos con nombre &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [Crear conjuntos con nombre del ámbito de consulta &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

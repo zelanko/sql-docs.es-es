@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660806"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
  [ @reserved **=**] **'***reservada***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *reservado* es **nvarchar (20)**, su valor predeterminado es null.  
   
- [ @publisher **=** ] **'***publisher***'**  
+ [ @publisher**=** ] **'***publisher***'**  
  El nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null.  
   
- [@publisher_db **=** ] **'***publisher_db***'**  
+ [@publisher_db**=** ] **'***publisher_db***'**  
  El nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -79,7 +79,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |snapshot_ready|**tinyint**|Indica si la instantánea de esta publicación está lista:<br /><br /> **0** = instantánea está lista para su uso.<br /><br /> **1** = instantánea no está lista para su uso.|  
 |publication_type|**int**|Tipo de publicación:<br /><br /> **0** = la instantánea.<br /><br /> **1** = transaccional.<br /><br /> **2** = la mezcla.|  
 |pubid|**uniqueidentifier**|Identificador único de esta publicación.|  
-|snapshot_jobid|**binary (16)**|Identificador de trabajo del Agente de instantáneas. Para obtener la entrada del trabajo de instantánea en la [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) tabla del sistema, debe convertir este valor hexadecimal a **uniqueidentifier**.|  
+|snapshot_jobid|**binary(16)**|Identificador de trabajo del Agente de instantáneas. Para obtener la entrada del trabajo de instantánea en la [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) tabla del sistema, debe convertir este valor hexadecimal a **uniqueidentifier**.|  
 |enabled_for_internet|**int**|Determina si la publicación está habilitada para Internet. Si **1**, los archivos de sincronización para la publicación se colocan en el `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` directory. El usuario debe crear el directorio FTP (Protocolo de transferencia de archivos). Si **0**, la publicación no está habilitada para el acceso a Internet.|  
 |dynamic_filter|**int**|Indica si se debe usar el filtro de filas con parámetros. **0** significa que no se utiliza un filtro de fila con parámetros.|  
 |has_subscription|**bit**|Indica si la publicación tiene alguna suscripción. **0** significa que actualmente no hay ninguna suscripción a esta publicación.|  
@@ -93,11 +93,11 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar(255)**|Especifica dónde se encuentran los archivos de instantánea para que los recoja el Agente de mezcla cuando se envía la instantánea mediante FTP.|  
 |ftp_login|**sysname**|Se usa el nombre de usuario para conectarse al servicio FTP.|  
 |conflict_retention|**int**|Especifica el período de retención, expresado en días, durante el que se conservan los conflictos. Transcurrido el número de días especificado, se purga la fila del conflicto de la tabla de conflictos.|  
-|keep_partition_changes|**int**|Especifica si se está optimizando la sincronización para esta publicación. **keep_partition_changes** tiene un valor predeterminado de **0**. Un valor de **0** significa que la sincronización no se optimiza y las particiones enviadas a todos los suscriptores se comprueban cuando cambian los datos en una partición.<br /><br /> **1** significa que la sincronización se optimiza y solo los suscriptores con filas en la partición modificada se ven afectados.<br /><br /> Nota: De manera predeterminada, las publicaciones de combinación utilizan particiones previamente calculadas, lo que proporciona un mayor grado de optimización que esta opción. Para obtener más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) y [optimizar el rendimiento de filtro con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
+|keep_partition_changes|**int**|Especifica si se está optimizando la sincronización para esta publicación. **keep_partition_changes** tiene un valor predeterminado de **0**. Un valor de **0** significa que la sincronización no se optimiza y las particiones enviadas a todos los suscriptores se comprueban cuando cambian los datos en una partición.<br /><br /> **1** significa que la sincronización se optimiza y solo los suscriptores con filas en la partición modificada se ven afectados.<br /><br /> Nota: De forma predeterminada, las publicaciones de combinación utilizan particiones precalculadas, que proporciona un mayor grado de optimización que esta opción. Para obtener más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) y [optimizar el rendimiento de filtro con parámetros con particiones calculadas previamente](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
 |allow_subscription_copy|**int**|Especifica si se ha habilitado la capacidad de copiar las bases de datos de suscripciones que se suscriben a esta publicación. Un valor de **0** significa que no se permite la copia.|  
 |allow_synctoalternate|**int**|Especifica si se permite un asociado de sincronización alternativo para sincronizar con este publicador. Un valor de **0** significa que no se permite un asociado de sincronización.|  
 |validate_subscriber_info|**nvarchar(500)**|Enumera las funciones que se están utilizando para recuperar información del suscriptor y validar los criterios de filtrado de filas con parámetros del suscriptor. Ayuda a comprobar que se hayan creado particiones de la información de manera coherente con cada combinación.|  
-|backward_comp_level|**int**|Nivel de compatibilidad de la base de datos, que puede ser uno de los que se especifican a continuación:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|Nivel de compatibilidad de la base de datos, que puede ser uno de los que se especifican a continuación:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|Especifica si la información de publicación se publica en Active Directory. Un valor de **0** significa que la información de publicación no está disponible desde Active Directory.<br /><br /> Este parámetro ha quedado desusado y solo se admite para la compatibilidad de scripts con versiones anteriores. Ya no es posible agregar información de publicación a Active Directory.|  
 |max_concurrent_merge|**int**|Número de procesos de combinación simultáneos. Si **0**, no hay ningún límite al número de procesos de mezcla simultáneos que se ejecutan en un momento dado.|  
 |max_concurrent_dynamic_snapshots|**int**|Número máximo de sesiones de instantáneas de datos filtrados simultáneas que se pueden ejecutar con la publicación de combinación. Si **0**, no hay ningún límite en el número máximo de sesiones de instantánea de datos filtrados simultáneas que se pueden ejecutar simultáneamente con la publicación en un momento dado.|  

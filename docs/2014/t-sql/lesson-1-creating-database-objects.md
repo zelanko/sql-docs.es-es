@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 45eabd88d5753721b081c79d3dab03b0a6134c78
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704552"
 ---
-# <a name="lesson-1-creating-database-objects"></a>Lección 1: Crear objetos de base de datos
+# <a name="lesson-1-creating-database-objects"></a>Lección 1: Creación de objetos de base de datos
   En esta lección se muestra cómo crear una base de datos, crear una tabla en la base de datos y, a continuación, tener acceso a los datos de la tabla y cambiarlos. Puesto que esta lección es una introducción al uso de [!INCLUDE[tsql](../includes/tsql-md.md)], no usa ni describe las múltiples opciones disponibles para estas instrucciones.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] se pueden escribir y enviar a [!INCLUDE[ssDE](../includes/ssde-md.md)] de las siguientes maneras:  

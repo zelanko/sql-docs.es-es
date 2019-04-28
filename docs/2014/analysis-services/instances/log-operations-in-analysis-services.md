@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58169ffcc696c87addee0417700ba131a71e12f0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703292"
 ---
 # <a name="log-operations-in-analysis-services"></a>Operaciones de registro en Analysis Services
   Una instancia de Analysis Services registrará las notificaciones de servidor, los errores y advertencias en el archivo msmdsrv.log: uno para cada instancia que instale. Los administradores consultan este registro para obtener información sobre eventos, tanto rutinarios como extraordinarios. En las versiones recientes, los registros se han mejorado para incluir más información. Las entradas de registro ahora incluyen información de la versión y la edición, así como del procesador, la memoria, la conectividad y los eventos de bloqueo. Puede revisar la lista completa de cambios en [Mejoras de los registros](https://support.microsoft.com/kb/2965035).  
@@ -38,7 +38,7 @@ ms.locfileid: "53363757"
 -   [Sugerencias y prácticas recomendadas](#bkmk_tips)  
   
 > [!NOTE]  
->  Si busca información acerca de los registros, también podría interesarle el seguimiento de las operaciones, que muestra el procesamiento y las rutas de ejecución de consultas. En los vínculos que figuran en esta página encontrará objetos de seguimiento ad hoc y continuado (como el acceso al cubo de auditoría), así como recomendaciones sobre el mejor modo de usar la caja negra, SQL Server Profiler y xEvents: [Supervisar una instancia de Analysis Services](monitor-an-analysis-services-instance.md).  
+>  Si busca información acerca de los registros, también podría interesarle el seguimiento de las operaciones, que muestra el procesamiento y las rutas de ejecución de consultas. Objetos de seguimiento ad hoc y continuado (como el acceso al cubo de auditoría), así como recomendaciones sobre cómo utilizar mejor caja negra, SQL Server Profiler y xEvents encontrará a través de los vínculos en esta página: [Supervisar una instancia de Analysis Services](monitor-an-analysis-services-instance.md).  
   
 ##  <a name="bkmk_location"></a> Ubicación y tipos de registros  
  Analysis Services proporciona los registros que se describen a continuación.  
@@ -49,7 +49,7 @@ ms.locfileid: "53363757"
 |Tabla OlapQueryLog en una base de datos relacional|Registro de consultas|Recopilación de entradas para el Asistente de optimización de uso|No|  
 |Archivos SQLDmp\<guid > .mdmp archivos|Errores y excepciones|Solución de problemas a fondo|No|  
   
- Recomendamos consultar el siguiente vínculo para obtener recursos de información adicionales que no se tratan en este tema: [Inicial sugerencias de recopilación de datos de Microsoft Support](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
+ Se recomienda el siguiente vínculo para recursos de información adicional que no se tratan en este tema: [Inicial sugerencias de recopilación de datos de Microsoft Support](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
 ##  <a name="bkmk_general"></a> Información general sobre la configuración del archivo de registro  
  Puede encontrar secciones para cada registro en el archivo de configuración del servidor msmdsrv.ini, ubicado en la carpeta \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config. Consulte en [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) las instrucciones para editar el archivo.  
@@ -149,7 +149,7 @@ ms.locfileid: "53363757"
   
  **Configurar informes de bloqueo**  
   
- A menos que el soporte técnico de Microsoft indique lo contrario, la mayoría de los administradores usan la configuración predeterminada. Este artículo anterior de Knowledge Base se sigue usando para ofrecer instrucciones sobre cómo configurar los archivos de volcado: [Cómo configurar Analysis Services para generar archivos de volcado de memoria](https://support.microsoft.com/kb/919711).  
+ A menos que el soporte técnico de Microsoft indique lo contrario, la mayoría de los administradores usan la configuración predeterminada. Este artículo de Knowledge Base anterior aún se utiliza para proporcionar instrucciones sobre cómo configurar los archivos de volcado de memoria: [Cómo configurar Analysis Services para generar archivos de volcado de memoria](https://support.microsoft.com/kb/919711).  
   
  El ajuste de configuración que se modificará con más probabilidad es `CreateAndSendCrashReports`, que se usa para determinar si se generará un archivo de volcado de memoria.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "53363757"
   
 -   Configure el archivo msmdsrv.log para controlar el tamaño y el número de archivos de registro msmdsrv. Estos ajustes no están habilitados de forma predeterminada, por lo que debe asegurarse de agregarlos después de la instalación. Consulte [Archivo de registro del servicio MSMDSRV](#bkmk_msmdsrv) en este tema.  
   
--   Revise esta entrada de blog del servicio de soporte al cliente de Microsoft para obtener información sobre los recursos que usan para obtener datos acerca de las operaciones del servidor: [Recopilación de datos iniciales](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
+-   Revise esta entrada de blog de soporte técnico de Microsoft para obtener información sobre los recursos que se usan para obtener información sobre las operaciones del servidor: [Recopilación de datos iniciales](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
 -   Utilice ASTrace2012 en lugar de un registro de consultas para averiguar quién está consultando los cubos. El registro de consultas se usa normalmente para proporcionar datos al Asistente para la optimización basada en el uso. Los datos que captura no se leen o interpretan fácilmente. ASTrace2012 es una herramienta de la comunidad ampliamente utilizada que captura las operaciones de consulta. Consulte [ejemplos de la Comunidad de Microsoft SQL Server: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
   

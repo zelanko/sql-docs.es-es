@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 127111dcbcdef14d511c7e296743ba23a5ca1cdd
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670458"
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>Conjuntos de filas de esquema de minería de datos (SSAs)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "50144291"
 ## <a name="examples"></a>Ejemplos  
  En la sección siguiente se proporcionan algunos ejemplos de consultas para los conjuntos de filas de esquema de minería de datos.  
   
-### <a name="example-1-list-data-mining-services"></a>Ejemplo 1: lista de servicios de minería de datos  
+### <a name="example-1-list-data-mining-services"></a>Ejemplo 1: Servicios de minería de datos de lista  
  La consulta siguiente devuelve una lista de servicios de minería que están disponibles en el servidor actual, es decir, los algoritmos que están habilitados. Las columnas proporcionadas para cada servicio de minería incluyen las marcas de modelado y tipos de contenido que pueden ser utilizados por cada algoritmo, el GUID para cada servicio y los límites de predicción que se puede haber agregado para cada servicio.  
   
 ```  
@@ -52,7 +52,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>Ejemplo 2: lista de parámetros de modelo de minería  
+### <a name="example-2-list-mining-model-parameters"></a>Ejemplo 2: Lista de parámetros del modelo de minería de datos  
  En el ejemplo siguiente se devuelven los parámetros que se utilizaron para crear un modelo de minería concreto:  
   
 ```  
@@ -61,7 +61,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>Ejemplo 3: lista de todos los conjuntos de filas  
+### <a name="example-3-list-all-rowsets"></a>Ejemplo 3: Lista de todos los conjuntos de filas  
  En el ejemplo siguiente se devuelve una lista completa de los conjuntos de filas que están disponibles en el servidor actual:  
   
 ```  

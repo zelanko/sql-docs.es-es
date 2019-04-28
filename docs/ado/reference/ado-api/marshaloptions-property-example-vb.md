@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aad4088e8a102ea3afbf2cd8e75e3fe605c268cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864160"
 ---
 # <a name="marshaloptions-property-example-vb"></a>Ejemplo de la propiedad MarshalOptions (VB)
 Este ejemplo se usa el [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) propiedad para especificar qué filas se envían al servidor - todas las filas o solo las puede modificar.  

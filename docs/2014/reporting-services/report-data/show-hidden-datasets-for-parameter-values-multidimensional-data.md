@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce84fc2829334d202fde2f41f35fe1c4cbac856e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654787"
 ---
 # <a name="show-hidden-datasets-for-parameter-values-for-multidimensional-data-report-builder-and-ssrs"></a>Mostrar conjuntos de datos ocultos para los valores de parámetro de datos multidimensionales (Generador de informes y SSRS)
   Su informe podría incluir conjuntos de datos generados automáticamente (también conocidos como conjuntos de datos ocultos) que no aparecen de forma predeterminada en el panel Datos de informe. Estos conjuntos de datos se crean de las formas siguientes:  

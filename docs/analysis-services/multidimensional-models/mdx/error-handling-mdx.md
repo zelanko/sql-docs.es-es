@@ -1,5 +1,5 @@
 ---
-title: Control de errores (MDX) | Documentos de Microsoft
+title: (MDX) de control de errores | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d6679e264ee15fd6a1ba038d3c6492aec07c81c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802711"
 ---
 # <a name="error-handling-mdx"></a>Control de errores (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

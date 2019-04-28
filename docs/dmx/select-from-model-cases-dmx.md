@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f65aa4dc64e795235286eccd9f3283216ba6f4f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658776"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;modelo&gt;. CASOS (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +64,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
 ## <a name="examples"></a>Ejemplos  
  Los ejemplos siguientes se basan en la estructura de minería de datos Targeted Mailing, que se basa en el [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]base de datos y sus modelos de minería de datos asociados. Para obtener más información, consulte [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
-### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Ejemplo 1: obtención de detalles de los casos del modelo y de las columnas de estructura  
+### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Ejemplo 1: Obtención de detalles de los casos del modelo y las columnas de estructura  
  En el siguiente ejemplo se devuelven las columnas para todos los casos que se emplearon para probar el modelo Targeted Mailing. Si la estructura de minería de datos en la que se genera el modelo no tiene un conjunto de datos de prueba de exclusión, esta consulta devolvería 0 casos. Puede utilizar la lista de expresiones para devolver únicamente las columnas que necesite.  
   
 ```  
@@ -72,7 +72,7 @@ SELECT * FROM [TM Decision Tree].Cases
 WHERE IsTestCase();  
 ```  
   
-### <a name="example-2-drillthrough-to-training-cases-in-a-specific-node"></a>Ejemplo 2: obtención de detalles de los casos de aprendizaje en un nodo concreto  
+### <a name="example-2-drillthrough-to-training-cases-in-a-specific-node"></a>Ejemplo 2: Obtención de detalles para casos de entrenamiento en un nodo específico  
  En el ejemplo siguiente solo se devuelven los casos que se utilizaron para el aprendizaje de Clúster 2. El nodo para Clúster 2 tiene el valor 002' para la columna NODE_UNIQUE_NAME. El ejemplo también devuelve una columna de estructura, [Customer Key], que no formaba parte del modelo de minería de datos y proporciona el alias `CustomerID` para la columna. Observe que el nombre de la columna de estructura se pasa como un valor de cadena y por ello debe estar entre comillas, no entre corchetes.  
   
 ```  
@@ -88,7 +88,7 @@ AND IsInNode('002')
 >  No todos los tipos de modelos de minería de datos admiten la obtención de detalles. Para obtener información acerca de los modelos que admiten la obtención de detalles, consulte [consultas de obtención de detalles &#40;minería de datos&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 ## <a name="see-also"></a>Vea también  
- [SELECCIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

@@ -1,5 +1,5 @@
 ---
-title: Cambiar las propiedades de una estructura de minería de datos | Documentos de Microsoft
+title: Cambiar las propiedades de una estructura de minería de datos | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8064fcc088c7ae9e7dd96c5c132b1246fe0ae2db
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670185"
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>Cambiar las propiedades de una estructura de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,6 +39,6 @@ ms.locfileid: "34014052"
      El nuevo valor tendrá efecto cuando se seleccione otro elemento diferente en el diseñador.  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas de estructura de minería de datos y procedimientos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tareas y procedimientos de las estructuras de minería de datos](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

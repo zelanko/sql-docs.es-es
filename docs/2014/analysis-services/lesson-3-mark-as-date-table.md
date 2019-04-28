@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ef1be7d87012b6ae1d1b69e3f2c92dccca86ac0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729201"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>Lección 4: Marcar como tabla de fechas
   En la lección 2: Agregar datos, importó una tabla de dimensiones denominada DimDate. A continuación, cambió el nombre de la tabla DimDate, en la lección 3: Cambie el nombre de las columnas, simplemente, Date. Aunque en el modelo esta tabla se denomina Date, puede ser también conocida como *tabla Date*, porque contiene datos de fecha y hora.  

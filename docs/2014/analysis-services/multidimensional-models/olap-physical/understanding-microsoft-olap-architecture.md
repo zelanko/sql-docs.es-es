@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81af61f5bc7af7b4b722067622918bd1c9cecd9b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698954"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Descripción de la arquitectura OLAP de Microsoft
   Utilice estos temas para entender mejor las bases de datos multidimensionales de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y para planear su implementación en la solución de Business Intelligence.  

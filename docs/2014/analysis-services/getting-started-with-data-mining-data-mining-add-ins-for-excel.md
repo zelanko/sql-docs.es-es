@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b34ff1ef4f204b2c4a753366aa6e84f678c9ea8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730728"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Introducción a la minería de datos (Complementos de minería de datos para Excel)
   La minería de datos es el proceso de detectar patrones significativos en los datos. La minería de datos es un complemento natural al proceso de explorar y entender los datos a través de BI tradicional. Los algoritmos automáticos pueden procesar cantidades de datos muy grandes y detectar patrones y tendencias que, de lo contrario, estarían ocultos.  

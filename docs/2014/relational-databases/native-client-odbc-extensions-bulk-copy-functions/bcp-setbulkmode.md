@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688790"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode le permite especificar el formato de columna en una operación de copia masiva, establecer todos los atributos de columna en una única llamada de función.  
@@ -49,13 +49,13 @@ cbRow
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  Identificador de la conexión ODBC habilitado para la copia masiva.  
   
  *property*  
  Constante de tipo BYTE. Vea la tabla en la sección Comentarios para obtener una lista de las constantes.  
   
- *Years*  
+ *pField*  
  Puntero al valor de terminador de campo.  
   
  *cbField*  

@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813683"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask (opción de configuración del servidor)
   Para llevar a cabo una multitarea, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 y Windows Server 2003 a veces mueven subprocesos entre distintos procesadores. Aunque es eficaz desde el punto de vista del sistema operativo, esta actividad puede reducir el rendimiento de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en casos de elevadas cargas de trabajo, ya que cada caché de procesador se recarga repetidamente con los datos. La asignación de procesadores a subprocesos específicos puede mejorar el rendimiento en estas condiciones, ya que se eliminan las recargas de procesador; esta asociación entre un subproceso y un procesador se denomina afinidad del procesador.  

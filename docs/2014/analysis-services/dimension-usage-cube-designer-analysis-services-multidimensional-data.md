@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7561d15eb1a291d39fd481ef2f0a4ed8d221a06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731691"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>Uso de dimensiones (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use la pestaña **Uso de dimensiones** del Diseñador de cubos para ver y editar las relaciones de dimensiones existentes entre las dimensiones de cubo y los grupos de medida del cubo.  
@@ -28,7 +28,7 @@ ms.locfileid: "48126055"
 |Panel|Definición|  
 |----------|----------------|  
 |**Barra de herramientas**|Use la barra de herramientas para llevar a cabo operaciones comunes en esta pestaña. Para más información sobre este panel, vea [Barra de herramientas &#40;pestaña Uso de dimensiones, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Cuadrícula**|Use la cuadrícula para ver y editar relaciones de dimensiones existentes entre las dimensiones de cubo y los grupos de medida del cubo. Para más información sobre este panel, vea [Cuadrícula &#40;pestaña Uso de dimensiones, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Grid**|Use la cuadrícula para ver y editar relaciones de dimensiones existentes entre las dimensiones de cubo y los grupos de medida del cubo. Para más información sobre este panel, vea [Cuadrícula &#40;pestaña Uso de dimensiones, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Vea también  
  [Relaciones de dimensión](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

@@ -12,14 +12,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e75581756f0464197e05b78083b7e90d7d3dfb3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808220"
 ---
 # <a name="convert-urns-to-sql-server-provider-paths"></a>Convertir URN en rutas de acceso del proveedor de SQL Server
-  El modelo de objetos de administración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SMO) compila nombres de recursos uniformes (URN) para sus objetos. Cada URN identifica un objeto SMO y se puede convertir en una ruta de acceso del proveedor de PowerShell de SQL Server mediante el uso de la `Convert-UrnToPath` cmdlet.  
+  El modelo de objetos de administración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SMO) compila nombres de recursos uniformes (URN) para sus objetos. Cada URN identifica un objeto SMO y se puede convertir en una ruta de acceso del proveedor de PowerShell de SQL Server mediante el cmdlet `Convert-UrnToPath`.  
   
 ## <a name="converting-urns-to-paths"></a>Convertir los URN en rutas de acceso  
  Cada URN tiene la misma información que una ruta de acceso al objeto, pero en un formato diferente. Por ejemplo, esta es la ruta de acceso a una tabla:  

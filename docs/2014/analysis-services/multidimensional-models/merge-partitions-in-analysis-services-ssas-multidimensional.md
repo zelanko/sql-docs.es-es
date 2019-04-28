@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11f6267cb8546ac21dedeae0c802cbbb9af9ce6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699086"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Mezclar particiones en Analysis Services (SSAS - Multidimensional)
   Puede mezclar particiones de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente para consolidar datos de hechos de varias particiones del mismo grupo de medida.  
@@ -70,7 +70,7 @@ ms.locfileid: "48063345"
 ##  <a name="bkmk_Where"></a> Actualizar el origen de la partición después de mezclar particiones  
  Las particiones se segmentan por consulta, como la cláusula WHERE de una consulta SQL usada para procesar los datos, o por una tabla o una consulta con nombre que proporcione los datos a la partición. La propiedad `Source` de la partición indica si la partición está enlazada a una consulta o una tabla.  
   
- Cuando se mezclan particiones, el contenido de las particiones se consolida, pero la `Source` propiedad no se actualiza para reflejar el ámbito adicional de la partición. Esto significa que si se vuelve a procesar posteriormente una partición que conserva su original `Source`, obtendrá datos incorrectos de esa partición. La partición agregará erróneamente datos en el nivel primario. En el ejemplo siguiente se ilustra este comportamiento.  
+ Cuando se mezclan particiones, el contenido de las particiones se consolida, pero la propiedad `Source` no se actualiza para reflejar el ámbito adicional de la partición. Esto significa que si vuelve a procesar posteriormente una partición que conserva su valor `Source` original, obtendrá datos incorrectos de esa partición. La partición agregará erróneamente datos en el nivel primario. En el ejemplo siguiente se ilustra este comportamiento.  
   
  **El problema**  
   
@@ -78,16 +78,16 @@ ms.locfileid: "48063345"
   
  **Solución**  
   
- La solución consiste en actualizar el `Source` propiedad, ajustando la cláusula WHERE o la consulta con nombre, o mezclando manualmente los datos de las tablas de hechos subyacentes, para asegurarse de que el procesamiento posterior es preciso dado el ámbito ampliado de la partición.  
+ La solución consiste en actualizar la propiedad `Source`, ajustando la cláusula WHERE o la consulta con nombre, o mezclando manualmente los datos de las tablas de hechos subyacentes, para asegurarse de que el procesamiento posterior es preciso dado el ámbito ampliado de la partición.  
   
  En este ejemplo, después de mezclar la partición 3 en la partición 2, puede proporcionar un filtro como ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet') en la partición 2 resultante para especificar que únicamente se extraigan de la tabla de hechos los datos sobre [ColaDecaf] y [ColaDiet], y se excluyan los datos relacionados con [ColaFull]. Como alternativa, puede especificar filtros para la partición 2 y la partición 3 cuando se crean. Estos filtros se combinarán durante el proceso de mezcla. En cualquier caso, después de procesar la partición, el cubo no contendrá datos duplicados.  
   
  **La cConclusión**  
   
- Después de mezclar particiones, compruebe siempre la `Source` para comprobar el filtro es correcto para los datos combinados. Si empezó con una partición que incluía datos históricos para T1, T2 y Q3, y ahora mezcla T4, debe ajustar el filtro para incluir T4. De lo contrario, el procesamiento posterior de la partición producirá resultados erróneos. No será correcto para T4.  
+ Después de mezclar particiones, compruebe siempre `Source` para comprobar si el filtro es correcto para los datos mezclados. Si empezó con una partición que incluía datos históricos para T1, T2 y Q3, y ahora mezcla T4, debe ajustar el filtro para incluir T4. De lo contrario, el procesamiento posterior de la partición producirá resultados erróneos. No será correcto para T4.  
   
 ##  <a name="bkmk_fact"></a> Consideraciones especiales para las particiones segmentadas por una tabla de hechos o por una consulta con nombre  
- Además de por consultas, las particiones también se pueden segmentar por tabla o por consulta con nombre. Si la partición de origen y la partición de destino emplean la misma tabla de hechos en un origen de datos o en una vista del origen de datos, la propiedad `Source` es válida después de mezclar las particiones. Especifica los datos de la tabla de hechos que son adecuados para la partición resultante. Como los hechos que son necesarios para la partición resultante se encuentran en el hecho de tabla, ninguna modificación en el `Source` propiedad es necesaria.  
+ Además de por consultas, las particiones también se pueden segmentar por tabla o por consulta con nombre. Si la partición de origen y la partición de destino emplean la misma tabla de hechos en un origen de datos o en una vista del origen de datos, la propiedad `Source` es válida después de mezclar las particiones. Especifica los datos de la tabla de hechos que son adecuados para la partición resultante. Como los hechos necesarios para la partición resultante se encuentran en la tabla de hechos, no es necesario efectuar ninguna modificación a la propiedad `Source`.  
   
  Las particiones que usan datos de varias tablas de hechos o de varias consultas con nombre requieren un trabajo adicional. Debe mezclar manualmente los hechos de la tabla de hechos de la partición de origen en la tabla de hechos de la partición de destino.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "48063345"
   
  Por ese mismo motivo, también es necesario actualizar las particiones que obtienen datos segmentados de consultas con nombre. La partición combinada debe tener ahora una consulta con nombre que devuelva el conjunto de resultados combinado que se ha obtenido anteriormente de las distintas consultas con nombre.  
   
-## <a name="partition-storage-considerations-molap"></a>Consideraciones sobre el almacenamiento de particiones: MOLAP  
+## <a name="partition-storage-considerations-molap"></a>Consideraciones de almacenamiento de partición: MOLAP  
  Cuando se mezclan particiones MOLAP, también se mezclan los hechos almacenados en las estructuras multidimensionales de las particiones. Como resultado, se obtiene un partición internamente completa y coherente. Sin embargo, los hechos almacenados en particiones MOLAP son copias de los hechos contenidos en la tabla de hechos. Cuando se procesa posteriormente la partición, se eliminan los hechos almacenados en la estructura multidimensional (solo en procesamientos completos y actualizaciones) y se copian los datos contenidos en la tabla de hechos tal como se especifica en el origen de datos y en el filtro de la partición. Si la partición de origen utiliza una tabla de hechos distinta de la partición de destino, se debe mezclar manualmente la tabla de hechos de la partición de origen con la tabla de hechos de la partición de destino, para asegurar que se podrá disponer de un conjunto de datos completo cuando se procese la partición resultante. Esto se aplica también si las dos particiones se basan en consultas con nombre diferentes.  
   
 > [!IMPORTANT]  
 >  Una partición MOLAP mezclada con una tabla de hechos incompleta contiene una copia combinada internamente de los datos de la tabla de hechos, y funciona correctamente hasta que se procesa.  
   
-## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Consideraciones sobre el almacenamiento de particiones: particiones HOLAP y ROLAP  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Consideraciones de almacenamiento de partición: Particiones HOLAP y ROLAP  
  Cuando se mezclan particiones HOLAP o ROLAP que tienen tablas de hechos diferentes, las tablas de hechos no se mezclan automáticamente. A menos que se mezclen manualmente las tablas de hechos, la partición resultante solo podrá disponer de la tabla de hechos asociada con la partición de destino. Los hechos asociados con la partición de origen no estarán disponibles para obtener detalles en la partición resultante y, cuando se procese la partición, las agregaciones no resumirán los datos procedentes de la tabla no disponible.  
   
 > [!IMPORTANT]  
@@ -133,9 +133,9 @@ ms.locfileid: "48063345"
  Para más información, vea el tema [Mezclar particiones &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Objetos de procesamiento de Analysis Services](processing-analysis-services-objects.md)   
- [Las particiones &#40;Analysis Services - datos multidimensionales&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Crear y administrar una partición Local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [Procesar objetos de Analysis Services](processing-analysis-services-objects.md)   
+ [Particiones &#40;Analysis Services - Datos multidimensionales&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Crear y administrar una partición local &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
  [Crear y administrar una partición remota &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
  [Establecer la reescritura de particiones](set-partition-writeback.md)   
  [Particiones habilitadas para escritura](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   

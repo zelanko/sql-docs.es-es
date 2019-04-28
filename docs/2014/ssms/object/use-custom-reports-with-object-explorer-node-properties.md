@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823702"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Usar informes personalizados con las propiedades de nodo del Explorador de objetos
   Los informes personalizados se pueden ejecutar en el contexto de un nodo del Explorador de objetos si los informes personalizados hacen referencia a los parámetros de informe de dicho nodo. Esto permite que los informes usen el contexto actual como, por ejemplo, la base de datos actual o un objeto de la base de datos o del servidor.  

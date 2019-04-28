@@ -1,5 +1,5 @@
 ---
-title: Definir fórmulas de miembro personalizado | Documentos de Microsoft
+title: Definir fórmulas de miembro personalizado | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cfeee065f99a9071f7175d8344f7e6eae84a7bc6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666596"
 ---
-# <a name="attribute-properties---define-custom-member-formulas"></a>Propiedades de atributo: definir fórmulas de miembro personalizado
+# <a name="attribute-properties---define-custom-member-formulas"></a>Propiedades de atributos: Definir fórmulas de miembro personalizado
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Puede definir una expresión MDX (Expresiones multidimensionales), denominada fórmula de miembro personalizado, para suministrar los valores de los miembros de determinado atributo. Una columna de una tabla de una vista del origen de datos proporciona, para cada miembro de un atributo, la expresión utilizada para suministrar el valor para dicho miembro.  
   
@@ -33,23 +33,23 @@ ms.locfileid: "34021672"
   
 -   2003: 2100  
   
-    -   Quarter 1: 700  
+    -   Trimestre 1: 700  
   
-    -   Quarter 2: 500  
+    -   Trimestre 2: 500  
   
-    -   Quarter 3: 100  
+    -   Trimestre 3: 100  
   
-    -   Quarter 4: 800  
+    -   Trimestre 4: 800  
   
 -   2004: 1500  
   
-    -   Quarter 1: 600  
+    -   Trimestre 1: 600  
   
-    -   Quarter 2: 200  
+    -   Trimestre 2: 200  
   
-    -   Quarter 3: 300  
+    -   Trimestre 3: 300  
   
-    -   Quarter 4: 400  
+    -   Trimestre 4: 400  
   
  Con una fórmula de miembro personalizado, el valor del miembro es un su lugar suministrado por la fórmula de resumen personalizado. Por ejemplo, la siguiente fórmula de miembro personalizado se puede utilizar para suministrar el valor del miembro secundario Quarter 4 del miembro 2004 en la dimensión Time como 450.  
   
@@ -67,7 +67,7 @@ Time.[Quarter 3] * 1.5
  Si utiliza miembros calculados y fórmulas de resumen personalizado para los miembros de un atributo, debe tener en cuenta el orden de evaluación. Los miembros calculados se resuelven antes que las fórmulas de resumen personalizado.  
   
 ## <a name="see-also"></a>Vea también  
- [Atributos y jerarquías de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Atributos y jerarquías de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Configurar fórmulas de miembro personalizado para los atributos de una dimensión](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

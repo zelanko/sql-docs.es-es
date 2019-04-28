@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d2a9f40c2d1566a1f8ca5f054467f61da1920e5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805941"
 ---
 # <a name="configure-your-utility-control-point-data-warehouse-sql-server-utility"></a>Configurar el almacenamiento de datos del punto de control de la utilidad (utilidad de SQL Server)
   Los datos que recopilan las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se almacenan en el almacén de administración de datos de la utilidad (UMDW); el nombre del archivo de este almacén es sysutility_mdw.  
@@ -28,7 +28,7 @@ ms.locfileid: "52804047"
   
 -   Frecuencia de carga del conjunto de recopilación: Cada 15 minutos.  
   
- Es posible configurar el directorio del UMDW: \<Unidad del sistema >: \Program Files\Microsoft SQL Server\MSSQL10_50. < UCP_Name > \MSSQL\Data\\, donde \<unidadDelSistema > es normalmente la unidad C:\. El archivo de registro, Sysutility_mdw_\<GUID>_LOG, se encuentra en el mismo directorio.  
+ Es posible configurar el directorio del UMDW: \<Unidad del sistema >: \Program Files\Microsoft SQL Server\MSSQL10_50. < UCP_Name > \MSSQL\Data\\, donde \<unidadDelSistema > es normalmente el C:\ unidad. El archivo de registro, Sysutility_mdw_\<GUID>_LOG, se encuentra en el mismo directorio.  
   
 > [!NOTE]  
 >  La ubicación del archivo del almacén de administración de datos de utilidad se puede cambiar mediante detach/attach o ALTER DATABASE. Recomendamos el uso de ALTER DATABASE. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  

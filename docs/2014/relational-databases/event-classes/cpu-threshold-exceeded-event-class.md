@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663488"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>Clase de eventos Umbral de la CPU superado
   Esta clase de eventos indica que el regulador de recursos ha detectado una consulta que supera el umbral de la CPU especificado para REQUEST_MAX_CPU_TIME_SEC.  
@@ -36,7 +36,7 @@ ms.locfileid: "52770457"
 |EventSubClass|`int`|Infracción del límite de la CPU.|21|Sí|  
 |GroupID|`int`|Id. del grupo donde se produjo la infracción.|66|Sí|  
 |OwnerID|`int`|SPID del proceso que produjo la infracción.|58|Sí|  
-|SPID|`int`|Id. del proceso de servidor que dispara este evento.<br /><br /> Nota: Este puede ser diferente al SPID del usuario actual si un subproceso del sistema valida el uso de la CPU como una tarea en segundo plano.|12|Sí|  
+|SPID|`int`|Id. del proceso de servidor que dispara este evento.<br /><br /> Nota: Esto puede diferir lo SPID del usuario actual si un subproceso del sistema valida el uso de CPU como una tarea en segundo plano.|12|Sí|  
 |StartTime|`datetime`|El momento en el que se desencadenó este evento.|14|Sí|  
   
 ## <a name="see-also"></a>Vea también  

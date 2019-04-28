@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ae3ac89f40c67a8097db676ba0628a25d260fbeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731447"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>Explorar datos (Complementos de minería de datos de SQL Server)
   ![Asistente para datos de exploración](media/dmc-explore.gif "Asistente para explorar datos")  

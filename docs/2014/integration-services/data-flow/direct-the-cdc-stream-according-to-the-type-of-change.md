@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ee2b3238a66000546619815a886fc6017c51fe6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827398"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Dirigir el flujo CDC según el tipo de cambio
   Para agregar y configurar una transformación Divisor CDC, el paquete debe contener por lo menos una tarea Flujo de datos y un origen de CDC.  
@@ -36,11 +36,11 @@ ms.locfileid: "58377273"
   
 6.  Seleccione una de las siguientes salidas:  
   
-    -   Eliminación de salida: La salida donde se dirigen las filas de cambio de eliminación.  
+    -   Salida Delete: la salida adonde se dirigen las filas de cambios DELETE.  
   
-    -   Salida INSERT: La salida donde se dirigen las filas de cambios INSERT.  
+    -   Salida Insert: la salida adonde se dirigen las filas de cambios INSERT.  
   
-    -   Actualizar salida: La salida donde antes o después del cambio de la actualización filas y mezcla cambian las filas se dirigen.  
+    -   Salida Update: la salida adonde se dirigen las filas de cambios UPDATE antes o después y las filas de cambios de combinación.  
   
 7.  Opcionalmente, puede configurar las propiedades avanzadas mediante el cuadro de diálogo **Editor avanzado** .  
   

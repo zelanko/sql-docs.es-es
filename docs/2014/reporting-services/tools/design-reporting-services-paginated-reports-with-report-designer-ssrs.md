@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691686"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Diseñar informes con el Diseñador de informes (SSRS)
   Use el Diseñador de informes para crear informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y soluciones de informes completos. El Diseñador de informes proporciona una interfaz gráfica en la que se pueden definir orígenes de datos, conjuntos de datos y consultas, posiciones de diseño del informe para las regiones de datos y campos, y características interactivas como parámetros y conjuntos de informes que funcionan conjuntamente.  

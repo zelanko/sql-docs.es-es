@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805899"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aumentar el rendimiento de la replicación de mezcla
   Tras considerar las sugerencias generales de rendimiento que se describen en [Aumentar el rendimiento general de la replicación](enhance-general-replication-performance.md), tenga en cuenta estas otras áreas específicas de la replicación de mezcla.  
@@ -140,10 +140,10 @@ ms.locfileid: "54129125"
   
 -   De vez en cuando, vuelva a crear los índices de tablas del sistema de la replicación de mezcla.  
   
-     Como parte del mantenimiento de replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la replicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory**, y **MSmerge_tombstone**, **MSmerge_current_partition_mappings**, y **MSmerge_ past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, vea [Reorganizar y volver a generar índices](../../indexes/reorganize-and-rebuild-indexes.md).  
+     Como parte del mantenimiento de la replicación de mezcla, compruebe ocasionalmente el crecimiento de las tablas del sistema asociadas con la replicación de mezcla: **MSmerge_contents**, **MSmerge_genhistory** y **MSmerge_tombstone**, **MSmerge_current_partition_mappings** y **MSmerge_past_partition_mappings**. Vuelva a indizar estas tablas periódicamente. Para obtener más información, vea [Reorganizar y volver a generar índices](../../indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Supervise el rendimiento de la sincronización utilizando la pestaña **Historial de sincronizaciones** del Monitor de replicación.  
   
-     En la replicación de mezcla, el Monitor de replicación muestra en la pestaña **Historial de sincronizaciones** estadísticas detalladas de cada artículo que se procesa durante la sincronización, incluida la cantidad de tiempo de cada fase del proceso (carga de cambios, descarga de cambios, etc.). Esto puede ayudar a identificar las tablas específicas que están causando una reducción de la velocidad y es el mejor lugar para solucionar problemas de rendimiento con las suscripciones de mezcla. Para obtener más información sobre cómo ver estadísticas detalladas, consulte [ver información y realizar tareas con el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     En la replicación de mezcla, el Monitor de replicación muestra en la pestaña **Historial de sincronizaciones** estadísticas detalladas de cada artículo que se procesa durante la sincronización, incluida la cantidad de tiempo de cada fase del proceso (carga de cambios, descarga de cambios, etc.). Esto puede ayudar a identificar las tablas específicas que están causando una reducción de la velocidad y es el mejor lugar para solucionar problemas de rendimiento con las suscripciones de mezcla. Para más información sobre cómo ver estadísticas detalladas, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

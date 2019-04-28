@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a72e9b868807c391e3ccc96ba74df7c8db8e2e3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62697471"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Crear una consulta en el Diseñador de consultas relacionales (Generador de informes y SSRS)
   Los diseñadores de consultas le ayudan a especificar los datos que se deben recuperar de un origen de datos externo para un conjunto de datos de informe. Puede utilizar un diseñador de consultas cuando genere una consulta en un asistente o cree una consulta de conjunto de datos.  

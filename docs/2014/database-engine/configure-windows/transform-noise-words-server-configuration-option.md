@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808696"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>transform noise words (opción de configuración del servidor)
   Use la `transform noise words` opción de configuración de servidor para suprimir un mensaje de error si palabras irrelevantes, que es [las palabras irrelevantes](../../relational-databases/search/full-text-search.md), hacen que una operación booleana en una consulta de texto completo devuelva cero filas. Esta opción es útil para las consultas de texto completo que utilizan el predicado CONTAINS en el que las operaciones booleanas o las operaciones NEAR incluyen palabras irrelevantes. En la siguiente tabla se describen los valores posibles.  

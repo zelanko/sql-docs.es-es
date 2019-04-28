@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27c22caf9c3b6dfebede60cd795496496562c19b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730761"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importar datos de una fuente de distribución de datos (SSAS tabular)
   Las fuentes de distribución de datos son uno o varios flujos de datos XML que se generan a partir de un origen de datos en línea y se transmiten a un documento o aplicación de destino. Puede importar datos desde una fuente de distribución de datos en el modelo mediante el Asistente para la importación de tablas.  
@@ -191,10 +191,10 @@ ms.locfileid: "48099845"
 12. En la página **Seleccionar tablas y vistas** , haga clic en **Finalizar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Orígenes de datos admitidos &#40;Tabular de SSAS&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Tipos de datos admitidos &#40;Tabular de SSAS&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
- [Suplantación &#40;Tabular de SSAS&#41;](tabular-models/impersonation-ssas-tabular.md)   
- [Procesar datos &#40;Tabular de SSAS&#41;](process-data-ssas-tabular.md)   
- [Importar datos &#40;Tabular de SSAS&#41;](import-data-ssas-tabular.md)  
+ [Orígenes de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Tipos de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
+ [Suplantación &#40;SSAS tabular&#41;](tabular-models/impersonation-ssas-tabular.md)   
+ [Procesar datos &#40;SSAS tabular&#41;](process-data-ssas-tabular.md)   
+ [Importar datos &#40;SSAS tabular&#41;](import-data-ssas-tabular.md)  
   
   

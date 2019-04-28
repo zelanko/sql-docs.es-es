@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 386e07bd1be4eaac4c75541665fc6951e2a24fd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789340"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Realizar una conmutación por error manual planeada de un grupo de disponibilidad (SQL Server)
-  En este tema se describe cómo realizar una conmutación por error manual sin pérdida de datos (una *conmutación por error manual planeada*) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Una conmutación por error manual planeada, como cualquier conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , realiza la transición de una réplica secundaria al rol principal y, simultáneamente, realiza la transición de la réplica principal anterior al rol secundario.  
+  En este tema se describe cómo realizar una conmutación por error manual sin pérdida de datos (una *conmutación por error manual planeada*) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Una conmutación por error manual planeada, como cualquier conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , realiza la transición de una réplica secundaria al rol principal y, simultáneamente, realiza la transición de la réplica principal anterior al rol secundario.  
   
  Una conmutación por error manual planeada, que solo se admite cuando la réplica principal y la réplica secundaria de destino se ejecutan en modo de confirmación sincrónica y están sincronizadas actualmente, conserva todos los datos de las bases de datos secundarias que están unidas al grupo de disponibilidad en la réplica secundaria de destino. Una vez que la réplica principal anterior realiza la transición al rol secundario, sus bases de datos se convierten en bases de datos secundarias y comienzan la sincronización con las nuevas bases de datos principales. Después de que todas realicen la transición al estado SYNCHRONIZED, la nueva réplica secundaria es apta para actuar como destino de una conmutación por error manual planeada futura.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48155351"
 >  Si las replicas principal y secundaria se configuran para el modo de conmutación automática por error, una vez que la réplica secundaria esté sincronizada, también pueden actuar como destino de una conmutación automática por error. Para más información, vea [Modos de disponibilidad &#40;Grupos de disponibilidad AlwaysOn&#41;](availability-modes-always-on-availability-groups.md).  
   
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48155351"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -91,10 +91,10 @@ ms.locfileid: "48155351"
   
 1.  Cambie el directorio (`cd`) a la instancia de servidor que hospeda la réplica secundaria de destino.  
   
-2.  Use el `Switch-SqlAvailabilityGroup` cmdlet.  
+2.  Utilice el cmdlet `Switch-SqlAvailabilityGroup`.  
   
     > [!NOTE]  
-    >  Para ver la sintaxis de un cmdlet, use el `Get-Help` cmdlet en el [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] entorno de PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Para ver la sintaxis de un cmdlet, use el cmdlet `Get-Help` en el entorno de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Para más información, consulte [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
      En el ejemplo siguiente, se realiza manualmente una conmutación por error del grupo de disponibilidad *MyAg* a la réplica secundaria que tiene la ruta de acceso especificada.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48155351"
   
 -   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a> Seguimiento: después de producir manualmente la conmutación por error en un grupo de disponibilidad  
+##  <a name="FollowUp"></a> Seguimiento: Después de la conmutación manual por un grupo de disponibilidad  
  Si la conmutación por error se produjo fuera del grupo de disponibilidad de [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] , ajuste los votos de quórum de los nodos de WSFC para reflejar la configuración del nuevo grupo de disponibilidad. Para obtener más información, vea [Clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
 ## <a name="see-also"></a>Vea también  

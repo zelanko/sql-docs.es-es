@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b390fd7b731f37be46aae06f0b79473bda4f2e81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699596"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>Crear conjuntos con nombre en MDX (MDX)
   Una expresión de conjunto puede ser una declaración extensa, compleja y, por tanto, difícil de seguir o entender. O bien, una expresión de conjunto puede utilizarse con tanta frecuencia que definir repetidamente el conjunto sea fatigoso. Para facilitar el trabajo con una expresión larga, compleja o de uso habitual, las expresiones multidimensionales (MDX) permiten expresiones como un *conjunto con nombre*.  
@@ -41,8 +41,8 @@ ms.locfileid: "48083065"
      Para más información sobre cómo usar la instrucción CREATE SET para crear conjuntos de nombre en una sesión, vea [Crear conjuntos con nombre del ámbito de consulta &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Instrucción SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [Instrucción CREATE SET &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)   
- [Aspectos básicos de consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [SELECT &#40;Instrucción, MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
+ [CREATE SET &#40;Instrucción, MDX&#41;](/sql/mdx/mdx-data-definition-create-set)   
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

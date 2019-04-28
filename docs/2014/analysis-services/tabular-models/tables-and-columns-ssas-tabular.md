@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3fd3692049ef1a5fb85ef188a73d453762d4daf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794300"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Definir tablas y columnas (SSAS tabular)
   Después de haber agregado tablas y datos a un modelo mediante el Asistente para la importación de tablas, puede empezar a trabajar con las tablas agregando nuevas columnas de datos, creando relaciones entre las tablas, definiendo cálculos que amplían los datos y filtrando y ordenando datos en las tablas para facilitar su visualización.  

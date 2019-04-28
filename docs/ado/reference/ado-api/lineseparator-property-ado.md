@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b55f82e92ff74ba359074613205bc8086af81b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864459"
 ---
 # <a name="lineseparator-property-ado"></a>Separador de línea (propiedad, ADO)
 Indica el carácter binario que se usará como separador de línea en texto [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objetos.  

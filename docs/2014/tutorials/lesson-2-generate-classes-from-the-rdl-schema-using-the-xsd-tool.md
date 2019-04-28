@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653756"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lección 2: Generar clases a partir del esquema RDL con la herramienta xsd
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Lección 2: Generación de clases a partir del esquema RDL con la herramienta xsd
   Una vez creado el proyecto de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], el siguiente paso es recuperar una copia local del esquema de definición de informe y ejecutar la herramienta de definición de esquemas XML (Xsd.exe).  
   
 ### <a name="to-generate-the-rdl-classes"></a>Para generar clases RDL  
@@ -52,7 +52,7 @@ ms.locfileid: "56025206"
     >  Después de haber agregado el archivo ReportDefinition.xsd al proyecto, observará en **el Explorador de soluciones** que el archivo ReportDefinition.cs (.vb) no está allí. Para mostrar el archivo, haga clic el botón de expandir o contraer situado junto al archivo ReportDefinition.xsd.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- En la siguiente lección, escribirá código para cargar una definición de informe desde un servidor de informes usando las clases generadas con el esquema RDL. Consulte [lección 3: Cargar una definición de informe desde el servidor de informes](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
+ En la siguiente lección, escribirá código para cargar una definición de informe desde un servidor de informes usando las clases generadas con el esquema RDL. Consulte [Lección 3: Cargar una definición de informe desde el servidor de informes](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Actualizar informes con clases generadas a partir del esquema RDL &#40;Tutorial de SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

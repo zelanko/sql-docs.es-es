@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61173f4b9ef6c8f836b3654bdc5b7366a8a54461
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654069"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modificar los servidores de destino asociados a un trabajo maestro del Agente SQL Server
   En este tema se describe cómo modificar los servidores de destino asociados a un trabajo maestro del Agente SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "54129065"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modificar los trabajos de su propiedad. Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -56,7 +56,7 @@ ms.locfileid: "54129065"
   
 4.  Haga clic con el botón derecho en el trabajo en el que desea modificar el servidor de destino y seleccione **Propiedades**.  
   
-5.  En el **Job Properties -**_job_name_ cuadro de diálogo **seleccionar una página**, seleccione **destinos**. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: Nuevo trabajo &#40;tiene como destino de la página&#41;](job-properties-new-job-targets-page.md).  
+5.  En el cuadro de diálogo **Propiedades de trabajo -**_nombre_de_trabajo_, en **Seleccionar una página**, haga clic en **Destinos**. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: Nuevo trabajo &#40;tiene como destino de la página&#41;](job-properties-new-job-targets-page.md).  
   
 6.  Cuando termine, haga clic en **Aceptar**.  
   

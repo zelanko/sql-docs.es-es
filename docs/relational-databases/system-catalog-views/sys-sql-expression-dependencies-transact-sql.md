@@ -1,5 +1,5 @@
 ---
-title: Sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs
+title: sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4ef878879fb5c2896c45aedbf2a86f83557804c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856105"
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -72,22 +72,22 @@ ms.locfileid: "47826192"
 |-----------------|------------------------|-----------------------|  
 |Table|Sí*|Sí|  
 |Ver|Sí|Sí|  
-|Índice filtrado|Sí**|no|  
-|Estadísticas filtradas|Sí**|no|  
+|Índice filtrado|Sí**|No|  
+|Estadísticas filtradas|Sí**|No|  
 |Procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Sí|Sí|  
-|procedimiento almacenado CLR|no|Sí|  
+|procedimiento almacenado CLR|No|Sí|  
 |Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
-|Función CLR definida por el usuario|no|Sí|  
-|Desencadenador CLR (DML y DDL)|no|no|  
-|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
-|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
-|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|no|  
-|Procedimientos almacenados extendidos|no|Sí|  
-|Cola|no|Sí|  
-|Synonym (Sinónimo)|no|Sí|  
-|Tipo (tipo CLR y alias definido por el usuario)|no|Sí|  
-|Colección de esquemas XML|no|Sí|  
-|Función de partición|no|Sí|  
+|Función CLR definida por el usuario|No|Sí|  
+|Desencadenador CLR (DML y DDL)|No|No|  
+|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
+|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
+|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
+|Procedimientos almacenados extendidos|No|Sí|  
+|Cola|No|Sí|  
+|Synonym (Sinónimo)|No|Sí|  
+|Tipo (tipo CLR y alias definido por el usuario)|No|Sí|  
+|Colección de esquemas XML|No|Sí|  
+|Función de partición|No|Sí|  
   
  \* Una tabla se realiza un seguimiento como una entidad de referencia solo cuando hace referencia a un [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido por el usuario o la colección de esquemas XML en la definición de una columna calculada, restricción CHECK o restricción predeterminada.  
   
@@ -121,7 +121,7 @@ GO
   
 ```  
   
-### <a name="b-returning-entities-that-reference-another-entity"></a>B. Devolver las entidades que hacen referencia a otra entidad  
+### <a name="b-returning-entities-that-reference-another-entity"></a>b. Devolver las entidades que hacen referencia a otra entidad  
  El ejemplo siguiente devuelve las entidades que hacen referencia a la tabla `Production.Product`. Las entidades devueltas en la columna `referencing_entity_name` dependen de la tabla `Product`.  
   
 ```  

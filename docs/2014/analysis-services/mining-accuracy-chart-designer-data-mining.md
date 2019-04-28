@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf2c26f3d2029e180261ba478184b3d95dd72a8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703182"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>Diseñador de gráfico de precisión de minería de datos (Minería de datos)
   Utilice la vista **Gráfico de precisión de minería de datos** para comparar el rendimiento de los modelos de minería de datos que se integran en la estructura de minería de datos.  
@@ -35,9 +35,9 @@ ms.locfileid: "48171975"
   
 -   [Pestaña matriz de clasificación &#40;vista Gráfico de precisión de minería de datos&#41;](classification-matrix-tab-mining-accuracy-chart-view.md)  
   
-     Muestra la matriz de clasificación para los modelos seleccionados en el `Input Selection` ficha.  
+     Muestra la matriz de clasificación para los modelos seleccionados en la pestaña `Input Selection`.  
   
--   [Pestaña validación cruzada &#40;vista Gráfico de precisión de minería de datos&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
+-   [Pestaña Validación cruzada &#40;vista Gráfico de precisión de minería de datos&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
   
      Establezca las opciones y genere los resultados de la validación cruzada para la estructura de minería de datos seleccionada.  
   

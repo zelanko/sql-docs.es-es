@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3322b71162b93204591dbb1c0bffb6bac4856454
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679952"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>Propiedades de conexión (cuadro de diálogo) (SSAS: tabular)
   Utilice esta página para ver o modificar en SQL Server Management Studio las propiedades de conexión de un origen de datos que usa una base de datos modelo tabular.  
@@ -29,7 +29,7 @@ ms.locfileid: "50148400"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Nombre**|Especifica el nombre del origen de datos.|  
+|**Name**|Especifica el nombre del origen de datos.|  
 |**ID**|Muestra el identificador del objeto de origen de datos.|  
 |**Descripción**|Muestra la descripción del objeto de origen de datos.|  
 |**Marca de tiempo de creación**|Muestra la fecha y hora en que se creó la base de datos.|  

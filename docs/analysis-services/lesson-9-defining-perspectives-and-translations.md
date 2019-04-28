@@ -1,5 +1,5 @@
 ---
-title: 'Lección 9: Definir perspectivas y traducciones | Documentos de Microsoft'
+title: 'Lección 9: Definir perspectivas y traducciones | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d36bf95a0f0758b9e33a6c695a5a060ba54706b8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807519"
 ---
-# <a name="lesson-9-defining-perspectives-and-translations"></a>Lección 9: Definir perspectivas y traducciones
+# <a name="lesson-9-defining-perspectives-and-translations"></a>Lección 9: Definición de perspectivas y traducciones
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 En esta lección, aprenderá a definir perspectivas y traducciones. Puede definir perspectivas para reducir la complejidad aparente de un cubo y definir traducciones que permitan a los usuarios ver los metadatos del cubo en el idioma que desee.  
@@ -37,7 +37,7 @@ En esta tarea, se definen y examinan traducciones de metadatos específicos en d
   
 ## <a name="see-also"></a>Vea también  
 [Escenario de Tutorial de Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modelado multidimensional & #40; Tutorial de Adventure Works & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Perspectivas](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)  
 [Perspectivas de modelos multidimensionales](../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
 [Traducciones de dimensiones](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  

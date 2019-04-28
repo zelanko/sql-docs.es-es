@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3be65edb0300b2ab47f22784cb7b109372062e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795474"
 ---
 # <a name="delete-relationships-ssas-tabular"></a>Eliminar relaciones (SSAS tabular)
-  Puede eliminar las relaciones existentes utilizando el diseñador de modelos en la Vista de diagrama o utilizando el cuadro de diálogo Administrar relaciones. Para más información sobre cómo se usan las relaciones en los modelos tabulares, vea [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  
+  Puede eliminar las relaciones existentes utilizando el diseñador de modelos en la Vista de diagrama o utilizando el cuadro de diálogo Administrar relaciones. Para más información sobre cómo se usan las relaciones en los modelos tabulares, vea [Relaciones &#40;SSAS tabular&#41;](relationships-ssas-tabular.md).  
   
 ## <a name="considerations-for-deleting-relationships"></a>Aspectos que se deben tener en cuenta al eliminar relaciones  
  Tenga en cuenta los siguientes problemas a la hora de decidir si va a eliminar una relación:  
@@ -53,7 +53,7 @@ ms.locfileid: "48130645"
 4.  En el cuadro de diálogo **Administrar las relaciones** , haga clic en **Cerrar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Relaciones &#40;Tabular de SSAS&#41;](relationships-ssas-tabular.md)   
- [Crear una relación entre dos tablas &#40;Tabular de SSAS&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
+ [Relaciones &#40;SSAS tabular&#41;](relationships-ssas-tabular.md)   
+ [Crear una relación entre dos tablas &#40;SSAS tabular&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)  
   
   

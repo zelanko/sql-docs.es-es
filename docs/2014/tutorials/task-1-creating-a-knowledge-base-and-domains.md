@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822219"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Tarea 1: crear una base de conocimiento y dominios
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Tarea 1: Creación de una base de conocimiento y dominios
   En esta tarea, creará el **proveedores** base de conocimiento y creará dominios que se usa para la limpieza y coincidencia de datos para quitar duplicados.  
   
 1.  Iniciar **Data Quality Client**. Haga clic en **iniciar**, apunte a **todos los programas**, haga clic en **Microsoft SQL Server 2012**, haga clic en **Data Quality Services**y, a continuación, haga clic en  **Data Quality Client**.  
@@ -46,7 +46,7 @@ ms.locfileid: "56011106"
   
      ![Crear el cuadro de diálogo dominio](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "crear el cuadro de diálogo dominio")  
   
-9. Repita el paso anterior para crear los dominios siguientes con toda la configuración predeterminada. Para simplificar el tutorial, configuró el **tipo de datos** de todos los dominios como **cadena**. Los demás tipos de datos permitidos son: Entero, Decimal y Fecha. Cuando el **usar valores iniciales** opción está activada (valor predeterminado), todos los sinónimos se reemplazan con el valor inicial del grupo de sinónimos en la salida. Establecer **normalizar cadena** (valor predeterminado) quita todos los caracteres especiales en los valores de dominio. El **formato de salida para** opción le permite seleccionar el formato que se aplica cuando los valores de los datos en el dominio. Seleccione **Habilitar corrector ortográfico** (valor predeterminado) para ejecutar el corrector ortográfico en todos los valores de cadena al rellenar el dominio. El **lenguaje** configuración especifica la versión de idioma de la **corrector ortográfico** que desea aplicar. Seleccione **deshabilitar algoritmos de Error de sintaxis** para rellenar el dominio sin comprobar los valores de cadena para errores de sintaxis. Consulte [crear un dominio](https://msdn.microsoft.com/library/hh510401.aspx) tema en MSDN library para obtener más detalles.  
+9. Repita el paso anterior para crear los dominios siguientes con toda la configuración predeterminada. Para simplificar el tutorial, configuró el **tipo de datos** de todos los dominios como **cadena**. Los otros tipos de datos permitidos son: Entero, Decimal y fecha. Cuando el **usar valores iniciales** opción está activada (valor predeterminado), todos los sinónimos se reemplazan con el valor inicial del grupo de sinónimos en la salida. Establecer **normalizar cadena** (valor predeterminado) quita todos los caracteres especiales en los valores de dominio. El **formato de salida para** opción le permite seleccionar el formato que se aplica cuando los valores de los datos en el dominio. Seleccione **Habilitar corrector ortográfico** (valor predeterminado) para ejecutar el corrector ortográfico en todos los valores de cadena al rellenar el dominio. El **lenguaje** configuración especifica la versión de idioma de la **corrector ortográfico** que desea aplicar. Seleccione **deshabilitar algoritmos de Error de sintaxis** para rellenar el dominio sin comprobar los valores de cadena para errores de sintaxis. Consulte [crear un dominio](https://msdn.microsoft.com/library/hh510401.aspx) tema en MSDN library para obtener más detalles.  
   
     -   Nombre de proveedor  
   

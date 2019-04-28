@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f5ca47ac10549a727f284eb412ba2b35127a518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731594"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>Rellenar desde ejemplo (Herramientas de análisis de tabla para Excel)
   ![Botón rellenar desde ejemplo de herramientas de análisis de tabla](media/tat-fillex.gif "botón rellenar desde ejemplo de herramientas de análisis de tabla")  
@@ -62,7 +62,7 @@ ms.locfileid: "48160907"
   
 |columna|Valor|Favorece|Impacto relativo|  
 |------------|-----------|------------|---------------------|  
-|StateProvinceCode|AB|>500 kilómetros|80%|  
+|StateProvinceCode|AB|> 500 kilómetros|80%|  
   
  Esto significa que el valor AB de la **StateProvinceCode** columna predice una distancia de trasvase de registros de > 500 kilómetros.  
   

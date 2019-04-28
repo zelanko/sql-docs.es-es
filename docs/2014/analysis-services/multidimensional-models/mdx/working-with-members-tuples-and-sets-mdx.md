@@ -29,11 +29,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 570d812400a35a45d59f97901b9be698abc21863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699136"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Trabajar con miembros, tuplas y conjuntos (MDX)
   MDX proporciona varias funciones que devuelven uno o más miembros, tuplas o conjuntos; o que actúan sobre un miembro, tupla o conjunto.  
@@ -49,7 +49,7 @@ FROM [Adventure Works]
   
 ```  
   
- También puede usar el `FirstChild` función para devolver el mismo miembro, como se muestra en el ejemplo siguiente.  
+ También se puede utilizar la función `FirstChild` para devolver el mismo miembro, como se muestra en el siguiente ejemplo.  
   
 ```  
 SELECT [Date].[Calendar Year].FirstChild on 0  
@@ -57,7 +57,7 @@ FROM [Adventure Works]
   
 ```  
   
- Para obtener más información sobre las funciones de miembro de MDX, vea [MDX Function Reference &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
+ Para obtener más información sobre las funciones de miembro de MDX, vea [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
 ## <a name="tuple-functions"></a>funciones de tupla  
  MDX proporciona varias funciones que devuelven tuplas y que se pueden utilizar en cualquier ubicación en la que se acepte una tupla. Por ejemplo, la función [Item &#40;Tuple&#41; &#40;MDX&#41;](/sql/mdx/item-tuple-mdx) puede usarse para extraer la primera tupla de un conjunto, lo que resulta muy útil cuando se sabe que un conjunto está compuesto por una sola tupla y se quiere proporcionar esa tupla a una función que requiere una.  
@@ -127,8 +127,8 @@ FROM [Adventure Works]
  Una función de cadena actúa sobre una expresión MDX para devolver una cadena. Por ejemplo, la función [UniqueName &#40;MDX&#41;](/sql/mdx/uniquename-mdx) devuelve un valor de cadena que contiene el nombre único de una dimensión, jerarquía, nivel o miembro. Para obtener más información sobre las funciones de cadena, vea [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
 ## <a name="see-also"></a>Vea también  
- [Conceptos clave para MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [Aspectos básicos de consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [Conceptos clave de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

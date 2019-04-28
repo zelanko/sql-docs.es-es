@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d5ce458ea8f5874620ea0561eeea5c6ff8e56bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689034"
 ---
 # <a name="bcpexec"></a>bcp_exec
   Ejecuta una copia masiva completa de los datos entre una tabla de base de datos y un archivo de usuario.  
@@ -43,17 +43,17 @@ pnRowsProcessed
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  Es el identificador de la conexión ODBC habilitada para la copia masiva.  
   
  *pnRowsProcessed*  
  Es un puntero a un DBINT. La función **bcp_exec** llena este DBINT con el número de filas copiadas correctamente. Si *pnRowsProcessed* es NULL, **bcp_exec**lo omite.  
   
 ## <a name="returns"></a>Devuelve  
- SUCCEED, SUCCEED_ASYNC o FAIL. La función **bcp_exce** devuleve SUCCEED si se se copian todas las filas. **bcp_exec** devuelve SUCCEED_ASYNC si la copia masiva asincrónica no se ha completado todavía. **bcp_exec** devuelve FAIL si se produce un error total o si el número de filas que generan errores alcanza el valor especificado para BCPMAXERRS con [bcp_control](bcp-control.md). BCPMAXERRS toma como valor predeterminado 10. La opción BCPMAXERRS afecta solo a los errores de sintaxis detectados por el proveedor al leer las filas del archivo de datos (y no las filas enviadas al servidor). El servidor anula el lote cuando detecta un error con una fila. Compruebe en el parámetro *pnRowsProcessed* el número de filas copiadas correctamente.  
+ SUCCEED, SUCCEED_ASYNC o FAIL. La función **bcp_exce** devuleve SUCCEED si se se copian todas las filas. **bcp_exec** devuelve SUCCEED_ASYNC si la copia masiva asincrónica no se ha completado todavía. **bcp_exce** devuelve FAIL si se produce un error total o si el número de filas que generan errores alcanza el valor que se ha especificado para BCPMAXERRS con [bcp_control](bcp-control.md). BCPMAXERRS toma como valor predeterminado 10. La opción BCPMAXERRS afecta solo a los errores de sintaxis detectados por el proveedor al leer las filas del archivo de datos (y no las filas enviadas al servidor). El servidor anula el lote cuando detecta un error con una fila. Compruebe en el parámetro *pnRowsProcessed* el número de filas copiadas correctamente.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función copia los datos de un archivo de usuario a una tabla de base de datos o viceversa, dependiendo del valor de la *eDirection* parámetro [bcp_init](bcp-init.md).  
+ Esta función copia los datos de un archivo de usuario en una tabla de base de datos o viceversa, dependiendo del valor del parámetro *eDirection* de [bcp_init](bcp-init.md).  
   
  Antes de llamar a **bcp_exec**, llame a **bcp_init** con un nombre de archivo de usuario válido. Si no lo hace, se producirá un error.  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40e802ac33c7aa9b97267a725b20eb0d2f00dbb1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794210"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>Crear una columna calculada (SSAS tabular)
   Las columnas calculadas permiten agregar nuevos datos al modelo. En lugar de pegar o importar los valores en la columna, cree una fórmula DAX que define los valores de nivel de fila de la columna. Los valores de cada fila de una columna calculada se calculan y se rellenan al crear una fórmula válida y hacer clic en ENTRAR. A continuación, la columna calculada se puede agregar a una aplicación de informes o de análisis como cualquier otra columna de datos. En este tema se describe cómo crear una nueva columna calculada con la barra de fórmulas DAX del diseñador de modelos.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856500"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Ver las dependencias de un procedimiento almacenado
     
@@ -27,13 +27,13 @@ ms.locfileid: "48224425"
   
 -   **Antes de empezar:**  [Seguridad](#Security)  
   
--   **Para ver las dependencias de un procedimiento, mediante:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Para ver las dependencias de un procedimiento, utilizando:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Función del sistema: `sys.dm_sql_referencing_entities`  
  Requiere el permiso CONTROL en la entidad a la que se hace referencia y el permiso SELECT en sys.dm_sql_referencing_entities. Cuando la entidad a la que se hace referencia es una función de partición, se requiere el permiso CONTROL en la base de datos. De forma predeterminada, se concede el permiso SELECT a public.  
   

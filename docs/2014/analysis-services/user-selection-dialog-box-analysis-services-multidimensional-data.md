@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6b72e4872de2f1e744ac55a60c5abb34aea0f32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793462"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Selección de usuarios (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Selección de usuarios** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para seleccionar los usuarios sobre los que va a filtrar consultas almacenadas en el registro de consultas del Asistente para optimización basada en el uso.  

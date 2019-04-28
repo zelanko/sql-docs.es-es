@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d4fd0da06ec6e0cbdc578fe55e2549cefdc2794
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681182"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Pestaña Gráfico (Visores de modelos de minería de datos)
   Utilice el panel **Gráfico** para mostrar los datos históricos utilizados para entrenar un modelo de serie temporal, junto con los valores de predicción. El eje vertical del gráfico representa el valor de la serie y el eje horizontal representa el tiempo. Las predicciones futuras se representan mediante una línea de puntos.  
   
- **Para más información:** [Algoritmo de serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md), [Examinar un modelo usando el Visor de serie temporal de Microsoft](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **Para obtener más información:** [Algoritmo de serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md), [examinar un modelo usando el Visor de Series temporales de Microsoft](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del Visor**  
@@ -32,7 +32,7 @@ ms.locfileid: "48146021"
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos de los de la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Visor**  
+ **Viewer**  
  Elija un visor para explorar el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado de los modelos de serie temporal o el Visor de contenido de minería de datos genérico de [!INCLUDE[msCoName](../includes/msconame-md.md)] . También puede utilizar visores de complemento si están disponibles.  
   
  **Acercar**  
@@ -60,7 +60,7 @@ ms.locfileid: "48146021"
  Abra un cuadro de diálogo desde el que puede seleccionar la serie que desea incluir en el visor.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

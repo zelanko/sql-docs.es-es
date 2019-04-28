@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e1a89759d6943dc6ccae2a6bfbe65bd96927f87c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863947"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 Especifica qué registros se deben devolver al servidor.  
@@ -32,7 +32,7 @@ Especifica qué registros se deben devolver al servidor.
 |**adMarshalModifiedOnly**|1|Devuelve solo las filas al servidor modificadas.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

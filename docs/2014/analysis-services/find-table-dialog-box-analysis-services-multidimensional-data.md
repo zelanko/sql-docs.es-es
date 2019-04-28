@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc73bc6fbdbcbeb350bc32681bfd8dae3e01a642
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731207"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Buscar tabla (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Buscar tabla** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para ubicar una tabla en la vista del origen de datos asociada con una dimensión, un cubo o una estructura de minería de datos. Para mostrar este cuadro de diálogo en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] :  

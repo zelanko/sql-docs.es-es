@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af4604c6a645c181aab1b95db99d545ae0bb5221
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795362"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Cambiar las asignaciones de filtros de tabla, columna o fila (SSAS tabular)
   Este tema describe cómo cambiar las asignaciones de filtros de tabla, columna o fila mediante el cuadro de diálogo **Editar propiedades de tabla** de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -45,6 +45,6 @@ ms.locfileid: "48201495"
          Si comete un error y necesita volver a empezar, haga clic en **Borrar filtros de fila**.  
   
 ## <a name="see-also"></a>Vea también  
- [Editar cuadro de diálogo Propiedades de tabla &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+ [Editar propiedades de tabla, cuadro de diálogo &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
   
   

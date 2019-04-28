@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e61ae53ee78574351545109f75cebd88827c404b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692034"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Cliente de minería de datos para Excel (Complementos de minería de datos de SQL Server)
   El Cliente de minería de datos para Excel es un conjunto de herramientas que permiten realizar tareas comunes de minería de datos, desde limpieza de datos hasta generación de modelos y consultas de predicción. Puede utilizar los datos de las tablas o los rangos de Excel, o tener acceso a orígenes de datos externos.  
@@ -77,12 +77,12 @@ ms.locfileid: "48063564"
  [Asistente para clasificar &#40;datos complementos de minería de datos para Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
  El **clasificar** asistente le ayuda a crear un modelo de clasificación basado en datos existentes en una tabla de Excel, un rango de Excel o un origen de datos externo. Un modelo de clasificación extrae patrones de los datos que indican similitudes y permiten realizar predicciones basadas en las agrupaciones de valores. Por ejemplo, un modelo de clasificación podría utilizarse para predecir el riesgo en función de los patrones de ingresos o gastos.  
   
- El **clasificar** asistente admite el uso de estos algoritmos de minería de datos de Microsoft: algoritmo de árboles de decisión, regresión logística, Naïve Bayes, las redes neuronales.  
+ El **clasificar** asistente admite el uso de estos algoritmos de minería de datos de Microsoft: Algoritmo de árboles de decisión, Regresión logística, Naïve Bayes, Redes neurales.  
   
  [Asistente para estimación &#40;datos complementos de minería de datos para Excel&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
  El **estimación** asistente le ayuda a crear un modelo de estimación. Un modelo de estimación extrae patrones de los datos y los usa para predecir un resultado numérico, como valores de moneda, importes de venta, fechas u horas.  
   
- El **estimación** asistente usa estos algoritmos de minería de datos de Microsoft: árboles de decisión, regresión lineal, regresión logística y redes neuronales.  
+ El **estimación** asistente usa estos algoritmos de minería de datos de Microsoft: Árboles de decisión, Regresión lineal, Regresión logística y Redes neurales.  
   
  [Analizar Influenciadores clave &#40;herramientas de análisis de tabla para Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
  El Asistente para clúster ayuda a crear un modelo de agrupación en clústeres. Un modelo de clústeres detecta grupos de filas que comparten características similares. Este asistente resulta útil para examinar patrones en todo tipo de datos.  

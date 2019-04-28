@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35e720872257f1a1c96d8aa50aef8458daf574ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699829"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Crear cálculos de celdas del ámbito de consulta (MDX)
-  La palabra clave `WITH` en las expresiones multidimensionales (MDX) se usa para describir las celdas calculadas en el contexto de una consulta. El `WITH` palabra clave tiene la siguiente sintaxis:  
+  La palabra clave `WITH` en las expresiones multidimensionales (MDX) se usa para describir las celdas calculadas en el contexto de una consulta. La palabra clave `WITH` tiene la siguiente sintaxis:  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -30,7 +30,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  El valor `CellCalc_Identifier` es el nombre de las celdas calculadas. El valor `String_Expression` contiene una lista de expresiones de conjunto MDX ortogonales de una sola dimensión. Cada una de estas expresiones de conjunto debe dar como resultado una de las categorías que figuran en la siguiente tabla:  
   
-|Categoría|Descripción|  
+|Category|Descripción|  
 |--------------|-----------------|  
 |Conjunto vacío|Una expresión de conjunto MDX que se resuelve en un conjunto vacío. En este caso, el ámbito de la celda calculada es todo el cubo.|  
 |Conjunto de un solo miembro|Una expresión de conjunto MDX que se resuelve en un solo miembro.|  
@@ -55,6 +55,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  Por otro lado, MDX procesa la fórmula de cálculo siempre que se emite una consulta MDX en el cubo y ésta implica celdas incluidas en la definición de celdas calculadas. Este procesamiento se lleva a cabo independientemente del ámbito de creación.  
   
 ## <a name="see-also"></a>Vea también  
- [Instrucción CREATE CELL CALCULATION &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [CREATE CELL CALCULATION &#40;Instrucción, MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

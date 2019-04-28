@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e549e9b4121d116adc627c34dad017b85099a825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681172"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Cambiar configuración (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Cambiar configuración** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para cambiar la configuración que controla el procesamiento de los objetos enumerados en el cuadro de diálogo **Procesar** . Para mostrar el cuadro de diálogo **Cambiar configuración** , haga clic en **Cambiar configuración** en el cuadro de diálogo **Proceso** .  
@@ -36,7 +36,7 @@ ms.locfileid: "48077865"
  **Tareas paralelas máximas**  
  Seleccione el número máximo de tareas que quiere que la operación de procesamiento ejecute en paralelo o elija **Dejar que el servidor decida** para que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] seleccione el número óptimo de tareas paralelas.  
   
- **Secuencial**  
+ **Sequential**  
  Haga clic en esta opción procesar los objetos de manera secuencial.  
   
  **Modo de transacción**  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705127"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Cuadro de diálogo Evaluar directivas, página Selección de directiva
   Utilice este cuadro de diálogo para evaluar las directivas de administración basada en directivas. Al seleccionar la página **Resultados de la evaluación** , puede aplicar directivas a los elementos de un conjunto de destinos que no cumplen las directivas.  
@@ -38,7 +38,7 @@ ms.locfileid: "52780957"
  **Directivas: Categoría**  
  Categoría de la directiva. Este cuadro es de solo lectura.  
   
- **Directivas: Faceta**  
+ **Directivas: Facet**  
  Faceta implementada por la directiva. Este cuadro es de solo lectura.  
   
  **Evaluar**  

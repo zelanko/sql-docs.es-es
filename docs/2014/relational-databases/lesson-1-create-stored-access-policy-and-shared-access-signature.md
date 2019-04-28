@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7ddcef5d5e0695041742784151103c358a973d55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806736"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>Lección 2: Crear una directiva en el contenedor y generar una clave de firma de acceso compartido (SAS)
   En esta lección, aprenderá a crear una directiva en el contenedor de blobs y también a generar una clave SAS.  
@@ -25,7 +25,7 @@ ms.locfileid: "48124085"
   
  Puede crear una directiva y una firma de acceso compartido mediante uno de los métodos siguientes:  
   
--   Las operaciones de API de REST de Windows Azure: [crear contenedor](https://msdn.microsoft.com/library/azure/dd179468.aspx), [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx), y [obtener ACL del contenedor](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
+-   Operaciones de API de REST de Windows Azure: [Crear contenedor](https://msdn.microsoft.com/library/azure/dd179468.aspx), [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx), y [obtener ACL del contenedor](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
   
 -   [CloudBlobContainer.GetSharedAccessSignature método](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storageclient.cloudblobcontainer.getsharedaccesssignature.aspx) en Windows Azure SDK.  
   
@@ -45,6 +45,6 @@ ms.locfileid: "48124085"
   
  **Lección siguiente:**  
   
- [Lección 3: Crear una credencial de SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+ [Lección 3: Crear una credencial SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
   

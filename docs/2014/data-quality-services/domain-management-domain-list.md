@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2a68300e15c1ae05bcd6ae83228565842a854234
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792752"
 ---
 # <a name="domain-management-domain-list"></a>Administración de dominios: Lista de dominios
   En este tema se describen los controles de la lista de dominios de la página **Administración de dominios** de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Utilice este panel para seleccionar el dominio en el que va a realizar las operaciones de administración. Este mismo panel se utiliza en todas las páginas con pestañas de la página **Administración de dominios** .  

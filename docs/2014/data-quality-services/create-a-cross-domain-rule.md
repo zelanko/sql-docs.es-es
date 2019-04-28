@@ -14,18 +14,18 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b50eb916b114387f9d80202cf0993e830e79aecd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793196"
 ---
 # <a name="create-a-cross-domain-rule"></a>Crear una regla entre dominios
   En este tema se describe cómo crear una regla entre dominios para un dominio compuesto en una base de conocimiento de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una regla entre dominios comprueba la relación entre los valores de los dominios individuales incluidos en un dominio compuesto. Una regla entre dominios debe cumplirse en todo el dominio compuesto para que los valores de dominio se consideren precisos y compatibles con los requisitos empresariales. Las reglas entre dominios se utilizan para validar, corregir y normalizar valores de dominio.  
   
  La cláusula If de una regla entre dominios se define para uno de los dominios individuales del dominio compuesto y la cláusula Then para otro distinto. Se debe definir cada una de las cláusulas para un dominio individual distinto. Una regla entre dominios debe estar relacionada con varios dominios individuales; no es posible definir una regla de dominio simple (solo para un dominio individual) para un dominio compuesto. Para ello, deberá definir una regla de dominio para un dominio individual. Cada una de las cláusulas If y Then puede contener una o varias condiciones.  
   
- Una regla entre dominios que tenga condiciones definitivas aplicará la lógica de la regla a los sinónimos del valor en las condiciones, así como a los propios valores. Las condiciones definitivas para las cláusulas If y Then son El valor es igual a, El valor no es igual a, El valor está en o El valor no está en. Por ejemplo, suponga que tiene la siguiente regla entre dominios para un dominio compuesto: "For"City", si el valor es igual a 'Los Angeles', a continuación, para"State", valor es igual a 'CA'. Si "Los Angeles" y "LA" son sinónimos, esta regla dará un resultado correcto para "Los Angeles CA" y "LA CA", y un error para "Los Angeles WA" y "LA WA".  
+ Una regla entre dominios que tenga condiciones definitivas aplicará la lógica de la regla a los sinónimos del valor en las condiciones, así como a los propios valores. Las condiciones definitivas para las cláusulas If y Then son El valor es igual a, El valor no es igual a, El valor está en o El valor no está en. Por ejemplo, imagine que tiene la siguiente regla entre dominios para un dominio compuesto: "Para «Ciudad», si Valor es igual a «Los Ángeles», entonces para «Estado», el Valor es igual a «California»". Si "Los Angeles" y "LA" son sinónimos, esta regla dará un resultado correcto para "Los Angeles CA" y "LA CA", y un error para "Los Angeles WA" y "LA WA".  
   
  Además de permitirle conocer la validez de una regla entre dominios, la cláusula *Then* definitiva **El valor es igual a**de una regla entre dominios también corrige los datos durante la actividad de limpieza de datos. Para obtener más información, vea [Data Correction using Definitive Cross-Domain Rules](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection) en [Cleanse Data in a Composite Domain](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "56012034"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear una regla entre dominios.  
   
 ##  <a name="Create"></a> Crear reglas entre dominios  
@@ -94,7 +94,7 @@ ms.locfileid: "56012034"
   
 2.  Cuando haya terminado de definir las reglas entre dominios, haga clic en **Finalizar** para finalizar la actividad de administración de dominios, tal como se describe en [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de crear una regla entre dominios  
+##  <a name="FollowUp"></a> Seguimiento: después de crear una regla entre dominios  
  Una vez creada una regla entre dominios, puede realizar otras tareas de administración en el dominio, ejecutar la detección de conocimiento para agregar conocimiento al dominio o agregar a este una directiva de coincidencia. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

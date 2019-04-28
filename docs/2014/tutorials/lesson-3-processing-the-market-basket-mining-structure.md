@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653867"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Lección 3: Procesar la estructura de minería de datos Market Basket
   En esta lección, usará el [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instrucción y el vAssocSeqLineItems y vAssocSeqOrders de la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] modelos de datos de ejemplo para procesar las estructuras de minería de datos y la minería de datos creado en [lección 1: Creación de la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md) y [lección 2: Agregar modelos de minería de datos a la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md).  

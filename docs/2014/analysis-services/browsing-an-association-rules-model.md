@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1259cc627ef53d8f5a201e42772a9dba390824cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664421"
 ---
 # <a name="browsing-an-association-rules-model"></a>Examinar un modelo de reglas de asociación
   Al abrir un modelo de asociación utilizando **examinar**, el modelo se muestra en un visor interactivo, similar al Visor de reglas de asociación de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  El visor le permite comprobar de un vistazo qué elementos estaban en correlación entre sí y muestra las reglas que puede utilizar para la predicción o para realizar recomendaciones.  
@@ -149,9 +149,9 @@ ms.locfileid: "52537184"
   
  Si desea establecer parámetros avanzados o modificar la probabilidad mínima y compatibilidad, use el [Asistente asociar &#40;cliente de minería de datos para Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) asistente, o crear su propio modelo utilizando el [Agregar modelo a Estructura &#40;complementos minería de datos para Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) opción de modelado.  
   
--   **Conjuntos de elementos:** Al crear el modelo, puede controlar también el número de conjuntos de elementos que se generan asignando un valor al parámetro MINIMUM_PROBABILITY. Este parámetro está disponible en el cuadro de diálogo parámetros de algoritmo.  
+-   **Conjuntos de elementos:** Cuando se crea el modelo, también puede controlar el número de conjuntos de elementos que se generan asignando un valor al parámetro MINIMUM_PROBABILITY. Este parámetro está disponible en el cuadro de diálogo parámetros de algoritmo.  
   
--   **Reglas:** El algoritmo de reglas de asociación de [!INCLUDE[msCoName](../includes/msconame-md.md)] usa valores de probabilidad para restringir el número de reglas que se generan. Puede controlar el número de reglas estableciendo los parámetros `MINIMUM_PROBABILITY` o `MINIMUM _IMPORTANCE`.  
+-   **Reglas:** El [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo de reglas de asociación usa valores de probabilidad para restringir el número de reglas que se generan. Puede controlar el número de reglas estableciendo los parámetros `MINIMUM_PROBABILITY` o `MINIMUM _IMPORTANCE`.  
   
  Para obtener más información acerca de cómo configurar los parámetros avanzados, consulte [algoritmos de minería de datos &#40;complementos de minería de datos de SQL Server&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md).  
   

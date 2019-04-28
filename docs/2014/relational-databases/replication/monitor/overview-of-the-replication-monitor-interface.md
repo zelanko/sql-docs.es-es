@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62668991"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Información general de la interfaz del Monitor de replicación
   El Monitor de replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] presenta una vista centrada en el publicador o una vista centrada en el distribuidor de toda la actividad de replicación en un formato de dos paneles. Se agrega un publicador al monitor en el panel izquierdo y, en el panel derecho, el monitor muestra información sobre el publicador, sus publicaciones, las suscripciones a esas publicaciones y los diversos agentes de replicación. Además de presentar información de la topología de replicación, el Monitor de replicación permite realizar varias tareas, como iniciar y detener agentes y validar datos.  
@@ -104,7 +104,7 @@ ms.locfileid: "54134585"
   
      Esta pestaña muestra información detallada sobre los agentes y trabajos utilizados por todos los tipos de replicación. La pestaña también le permite iniciar y detener cada agente y trabajo.  
   
- Para obtener más información, consulte [ver información y realizar tareas con el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
+ Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
   
  El Monitor de replicación también proporciona un menú contextual para el nodo de publicador. En el panel izquierdo, haga clic con el botón secundario en un publicador para:  
   
@@ -177,7 +177,7 @@ ms.locfileid: "54134585"
   
          Los mensajes de error disponibles proporcionan información detallada sobre por qué no funciona un agente y un punto inicial para solucionar problemas con los agentes asociados con una publicación.  
   
- Para obtener más información, consulte [ver información y realizar tareas con el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
+ Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
   
  El Monitor de replicación también proporciona un menú contextual para el nodo de publicaciones. En el panel izquierdo, haga clic con el botón secundario en una publicación para:  
   
@@ -216,7 +216,7 @@ ms.locfileid: "54134585"
   
          En esta pestaña se proporcionan estadísticas detalladas de cada artículo procesado durante la sincronización, incluido el tiempo invertido en cada fase del proceso (carga de cambios, descarga de cambios, etc.). Puede ayudar a identificar con precisión tablas específicas que provocan lentitud y el mejor lugar para solucionar problemas de rendimiento con suscripciones de mezcla.  
   
- Para obtener más información, consulte [ver información y realizar tareas con el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).
+ Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>Ver información y realizar tareas relacionadas con perfiles de agente  
  El Monitor de replicación incluye varios cuadros de diálogo para administrar perfiles de agente. Los perfiles de agente son conjuntos de parámetros de un agente que determinan su comportamiento. Para más información, consulte [Replication Agent Profiles](../agents/replication-agent-profiles.md). Los cuadros de diálogo son:  

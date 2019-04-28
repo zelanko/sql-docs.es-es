@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4e4c55a1f55dc4a6a0e9e1c4844ffcc07e003804
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701751"
 ---
 # <a name="bind-an-attribute-to-a-name-column"></a>Enlazar un atributo a una columna de nombre
   Este procedimiento describe cómo enlazar un atributo a una columna de nombre mediante el panel **Atributos** del Diseñador de dimensiones y el cuadro de diálogo **Enlace de objetos** .  

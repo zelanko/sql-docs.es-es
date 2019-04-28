@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 923467270901b91c35b40005c75207e7b1799194
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732605"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Cuadro de diálogo Filtro de conjunto de datos o Filtro de modelo
   Este cuadro de diálogo le ayuda a generar los filtros que puede aplicar a un conjunto de datos.  El conjunto de datos puede ser un conjunto de datos externo que se use para las pruebas, o los datos del caso para un modelo de minería. El nombre del cuadro de diálogo cambia en función de si el filtro está destinado a un conjunto de datos externo o a un modelo de minería.  

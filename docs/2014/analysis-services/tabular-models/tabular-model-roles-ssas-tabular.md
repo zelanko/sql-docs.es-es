@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 714bc18b6eda419bbcc148c32c5ddcc316daf503
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794565"
 ---
 # <a name="tabular-model-roles-ssas-tabular"></a>Roles de modelos tabulares (SSAS tabular)
   La información de este tema y las tareas relacionadas están dirigidas a administradores de bases de datos de modelo tabular que crearán y administrarán los roles de los modelos tabulares implementados mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener información sobre los roles en modelos tabulares, vea [Roles &#40;SSAS tabular&#41;](roles-ssas-tabular.md). Para obtener información sobre cómo crear y administrar roles en un proyecto de modelo tabular mediante el Administrador de roles en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vea [Crear y administrar roles &#40;SSAS tabular&#41;](create-and-manage-roles-ssas-tabular.md).  
@@ -27,6 +27,6 @@ ms.locfileid: "48186654"
   
 |Tarea|Descripción|  
 |----------|-----------------|  
-|[Administrar Roles utilizando SSMS &#40;Tabular de SSAS&#41;](manage-roles-by-using-ssms-ssas-tabular.md)|Describe cómo crear roles, agregar y quitar miembros de un rol, cambiar permisos para un rol, y agregar, modificar o quitar los filtros de nivel de fila con DAX.|  
+|[Administrar roles utilizando SSMS &#40;SSAS tabular&#41;](manage-roles-by-using-ssms-ssas-tabular.md)|Describe cómo crear roles, agregar y quitar miembros de un rol, cambiar permisos para un rol, y agregar, modificar o quitar los filtros de nivel de fila con DAX.|  
   
   

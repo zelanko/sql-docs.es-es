@@ -17,18 +17,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b91a2848dda5dff2150d80760c7a43680a8f325
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827020"
 ---
 # <a name="progress-report-event-category"></a>Informe de progreso (categoría de eventos)
-  El **informe de progreso** categoría de evento contiene el **informe de progreso: Online Index Operation** clase de eventos.  
+  El **informe de progreso** categoría de evento contiene el **informe de progreso: Online Index Operation**.  
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Informe de progreso: Clase de eventos Online Index Operation](progress-report-online-index-operation-event-class.md)|Indica el progreso de una operación de generación de índices en línea.|  
+|[Progress Report: Online Index Operation (clase de eventos)](progress-report-online-index-operation-event-class.md)|Indica el progreso de una operación de generación de índices en línea.|  
   
 ## <a name="see-also"></a>Vea también  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc4cc6f10a48f48cc15e8309794563cd1585bd6e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817101"
 ---
 # <a name="msdbms-transact-sql"></a>MSdbms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "52810377"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**dbms_id**|**int**|Identifica cada DBMS único y su versión.|  
-|**DBMS**|**sysname**|Nombre del DBMS.<br /><br /> MSSQLSERVER<br /><br /> DB2<br /><br /> ORACLE<br /><br /> SYBASE|  
-|**version**|**varchar (10)**|Versión del DBMS.|  
+|**dbms**|**sysname**|Nombre del DBMS.<br /><br /> MSSQLSERVER<br /><br /> DB2<br /><br /> ORACLE<br /><br /> SYBASE|  
+|**version**|**varchar(10)**|Versión del DBMS.|  
   
 ## <a name="see-also"></a>Vea también  
  [Replicación de bases de datos heterogéneas](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

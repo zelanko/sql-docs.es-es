@@ -1,5 +1,5 @@
 ---
-title: Descripción de la generación Incremental | Documentos de Microsoft
+title: Descripción de la generación Incremental | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802705"
 ---
 # <a name="understanding-incremental-generation"></a>Descripción de la generación incremental
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Tras la generación del esquema inicial, es posible cambiar las definiciones de cubo y de dimensión mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]y volver a ejecutar el Asistente para generar esquemas. El asistente actualiza el esquema de la base de datos del área de asunto y de la vista de origen de datos asociada para reflejar los cambios y conservar los datos que existen actualmente en las tablas que se van a volver a generar, en la medida de lo posible. Si las tablas han cambiado tras la generación inicial, el Asistente para generar esquemas conservará en la medida de lo posible los cambios siguiendo estas reglas:  
   
--   Si la tabla se generó anteriormente utilizando el asistente, entonces se sobrescribirá. Para evitar que se sobrescriba una tabla generada con el asistente, debe cambiarse la propiedad **AllowChangesDuringGeneration** de la tabla en la vista de origen de datos a **false**. Al asumir el control de una tabla, ésta recibe el mismo tratamiento que una tabla definida por el usuario y no se ve afectada por la regeneración. Tras quitar una tabla de la generación, puede cambiarse más adelante la propiedad **AllowChangesDuringGeneration** de la tabla en la vista de origen de datos a **true** y volver a abrir la tabla para que tengan efecto los cambios realizados por el asistente. Para obtener más información, vea [Cambiar las propiedades de una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md).  
+-   Si la tabla se generó anteriormente utilizando el asistente, entonces se sobrescribirá. Para evitar que se sobrescriba una tabla generada con el asistente, debe cambiarse la propiedad **AllowChangesDuringGeneration** de la tabla en la vista de origen de datos a **false**. Al asumir el control de una tabla, ésta recibe el mismo tratamiento que una tabla definida por el usuario y no se ve afectada por la regeneración. Tras quitar una tabla de la generación, puede cambiarse más adelante la propiedad **AllowChangesDuringGeneration** de la tabla en la vista de origen de datos a **true** y volver a abrir la tabla para que tengan efecto los cambios realizados por el asistente. Para más información, vea [Cambiar las propiedades de una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md).  
   
 -   Si se ha agregado una tabla a la vista de origen de datos o a la base de datos subyacente por un medio distinto del asistente, no se sobrescribe la tabla.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34024352"
  Por otra parte, no se generarán errores si se cambia la cadena de conexión de origen de datos a una base de datos distinta de la generación anterior. Se utilizará la nueva base de datos y no se realizarán cambios en la base de datos anterior.  
   
 ## <a name="see-also"></a>Vea también  
- [Administrar los cambios en las vistas del origen de datos y orígenes de datos](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
- [Asistente para generar esquemas & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
+ [Administrar los cambios de las vistas del origen de datos y los orígenes de datos](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
+ [Asistente para generar esquemas &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   

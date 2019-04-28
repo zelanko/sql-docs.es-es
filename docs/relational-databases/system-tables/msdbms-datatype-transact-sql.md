@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bf246256471931292d6dfcee8a83386bce256e08
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816948"
 ---
 # <a name="msdbmsdatatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52810547"
 |**datatype_id**|**int**|Identifica cada tipo de datos único.|  
 |**dbms_id**|**int**|Identifica el DBMS al que pertenece el tipo.|  
 |**Tipo**|**sysname**|Nombre del tipo de datos (nativos).|  
-|**CreateParams**|**int**|Mapa de bits que describe la combinación de longitud, precisión y escala aplicable a cada tipo de datos, que incluye:<br /><br /> **0 x 1** = precisión.<br /><br /> **0 x 2** = escala.<br /><br /> **0 x 4** = longitud.|  
+|**createparams**|**int**|Mapa de bits que describe la combinación de longitud, precisión y escala aplicable a cada tipo de datos, que incluye:<br /><br /> **0 x 1** = precisión.<br /><br /> **0 x 2** = escala.<br /><br /> **0x4** = LENGTH.|  
   
 ## <a name="remarks"></a>Comentarios  
  Esta tabla contiene entradas para los tipos de datos de SQL Server porque una instancia de SQL Server puede suscribirse a una base de datos que no son de SQL Server y publicar para un suscriptor no SQL Server.  

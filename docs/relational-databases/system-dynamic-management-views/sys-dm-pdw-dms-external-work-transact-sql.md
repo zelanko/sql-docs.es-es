@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d02a1d50e9c7a5f906e78fa6753d594edced341f
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691048"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "58658129"
 |step_index|**int**|Paso de consulta que se está invocando a este trabajo DMS.<br /><br /> request_id step_index y dms_step_index forman la clave para esta vista.|Igual que step_index en [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Paso actual en el plan DMS.<br /><br /> request_id step_index y dms_step_index forman la clave para esta vista.|Igual que dms___step_index en [sys.dm_pdw_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md).|  
 |pdw_node_id|**int**|Nodo que se está ejecutando el trabajo DMS.|Igual que node_id en [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|Tipo|**nvarchar(60)**|Tipo de operación externa que este nodo se está ejecutando.<br /><br /> DIVIDIR el archivo es una operación en un archivo externo de Hadoop que se ha dividido en varios caídas más pequeños.|'DIVISIÓN DE ARCHIVO'|  
+|type|**nvarchar(60)**|Tipo de operación externa que este nodo se está ejecutando.<br /><br /> DIVIDIR el archivo es una operación en un archivo externo de Hadoop que se ha dividido en varios caídas más pequeños.|'DIVISIÓN DE ARCHIVO'|  
 |work_id|**int**|El archivo de dividir el identificador.|Mayor o igual que 0.<br /><br /> Único para cada nodo de proceso.|  
 |input_name|**nvarchar(60)**|Nombre para el que se está leyendo de la entrada de cadena.|Para un archivo de Hadoop, esto es el nombre de archivo de Hadoop.|  
 |read_location|**bigint**|Desplazamiento de la ubicación de lectura.||  

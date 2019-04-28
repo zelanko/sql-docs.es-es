@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ef0dfbb1c0e62bbe5301f769ee0f3e4d585b06b6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808357"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Crear una sesión de eventos extendidos mediante el Editor de consultas
   Puede crear una sesión de eventos extendidos utilizando el Editor de consultas o puede crear una sesión en el Explorador de objetos. En el Explorador de objetos, Extended Events proporciona dos interfaces de usuario que puede usar para crear, modificar y ver datos de sesión de eventos: un asistente que le guiará por el proceso de creación de la sesión de eventos y una nueva interfaz de usuario de la sesión que proporciona opciones de configuración más avanzadas. Puede crear sesiones de eventos extendidos para diagnosticar el seguimiento de SQL Server, lo cual le permite resolver problemas como el siguiente:  
@@ -36,7 +36,7 @@ ms.locfileid: "52521263"
   
  Para obtener más información sobre cómo crear una sesión de eventos extendidos con el Asistente para nueva sesión, vea [Crear una sesión de Extended Events utilizando el asistente &#40;Explorador de objetos&#41;](../ssms/object/object-explorer.md). Para obtener más información sobre cómo crear una sesión de eventos extendidos con la interfaz de usuario de nueva sesión, vea [Crear una sesión de eventos extendidos utilizando el cuadro de diálogo Nueva sesión](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md).  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="BeforeYouBegin"></a> Permisos  
  Para crear una sesión de eventos extendidos, debe disponer del permiso ALTER ANY EVENT SESSION.  
   
 ## <a name="creating-an-extended-events-session-using-query-editor"></a>Crear una sesión de eventos extendidos mediante el Editor de consultas  

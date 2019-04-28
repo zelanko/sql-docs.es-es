@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 410bb163ba04d99ea8f71c262c8e671f8393c841
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792943"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>Importar una base de conocimiento desde un archivo .dqs
   En este tema se describe cómo importar una base de conocimiento completa desde un archivo de datos .dqs en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Para crear el archivo de datos, debe exportar una base de conocimiento existente desde la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] (vea [exportar una Base de conocimiento a un archivo .dqs](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)).  
@@ -33,7 +33,7 @@ ms.locfileid: "56039558"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para importar una base de conocimiento desde un archivo de datos .dqs.  
   
 ##  <a name="Import"></a> Importar una base de conocimiento desde un archivo .dqs  
@@ -64,7 +64,7 @@ ms.locfileid: "56039558"
   
 13. En la página de inicio de Data Quality Services, compruebe que la base de conocimiento aparece debajo de **Base de conocimiento reciente**.  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de importar una Base de conocimiento desde un archivo .dqs  
+##  <a name="FollowUp"></a> Seguimiento: después de importar una base de conocimiento desde un archivo .dqs  
  Después de importar una base de conocimiento desde un archivo .dqs, puede agregar conocimiento a la base de conocimiento o utilizarla en un proyecto de limpieza o de búsqueda de coincidencias, dependiendo de su contenido. Para más información, vea [Realizar la detección de conocimiento](../../2014/data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../../2014/data-quality-services/managing-a-domain.md), [Administrar un dominio compuesto](../../2014/data-quality-services/managing-a-composite-domain.md), [Crear una directiva de coincidencia](../../2014/data-quality-services/create-a-matching-policy.md), [Limpieza de datos](../../2014/data-quality-services/data-cleansing.md) o [Coincidencia de datos](../../2014/data-quality-services/data-matching.md).  
   
   

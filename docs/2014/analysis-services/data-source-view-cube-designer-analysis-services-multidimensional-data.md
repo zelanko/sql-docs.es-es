@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd3d21c2371878c44accc4d7e9f501f47ce64646
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732676"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Vista del origen de datos (pestaña Estructura de cubo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Utilice el panel **Vista del origen de datos** para ver tablas y columnas de la vista del origen de datos asociada al cubo seleccionado. Este panel se utiliza para crear grupos de medida y medidas arrastrando columnas desde el panel **Vista del origen de datos** hasta el panel **Medidas** .  

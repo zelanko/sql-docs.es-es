@@ -11,30 +11,30 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 40a69447a0aff678cfd53a75603200b467a542c7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791738"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>Utilizar la base de conocimiento predeterminada de DQS
   En este tema se describe la base de conocimiento predeterminada, **Datos de DQS**, que se instala con [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Esta es una base de conocimiento predeterminada pregenerada que contiene los dominios siguientes:  
   
--   **País o región**: Contiene el largo convencional (nombre válido según se designe por el país o región) y los nombres cortos (nombre común usado en las listas, en el mapa, etc.), abreviatura de dos letras, abreviatura de tres letras y código de tres dígitos para cada ubicación.  El valor principal se establece en el nombre de país largo.  
+-   **País o región**: contiene nombres convencionales largos (nombre oficial según se designe por el país o región) y cortos (nombre común usado en las listas, en el mapa, etc.), la abreviatura de dos letras, la abreviatura de tres letras y el código de tres dígitos para cada ubicación.  El valor principal se establece en el nombre de país largo.  
   
--   **País o región (tres letras iniciales)**: Contiene el largo convencional (nombre válido según se designe por el país o región) y los nombres cortos (nombre común usado en las listas, en el mapa etc.), abreviatura de dos letras, abreviatura de tres letras y código de tres dígitos para cada ubicación.  Los valores iniciales se establecen en la abreviatura de tres letras del condado.  
+-   **País o región (tres letras iniciales)**: contiene nombres convencionales largos (nombre oficial según se designe por el país o región) y cortos (nombre común usado en las listas, en el mapa, etc.), la abreviatura de dos letras, la abreviatura de tres letras y el código de tres dígitos para cada ubicación.  Los valores iniciales se establecen en la abreviatura de tres letras del condado.  
   
--   **País o región (dos letras iniciales)**: Contiene el largo convencional (nombre válido según se designe por el país o región) y los nombres cortos (nombre común usado en las listas, en el mapa, etc.), abreviatura de dos letras, abreviatura de tres letras y código de tres dígitos para cada ubicación.  El valor principal se establece en la abreviatura de dos letras del país.  
+-   **País o región (dos letras iniciales)**: contiene nombres convencionales largos (nombre oficial según se designe por el país o región) y cortos (nombre común usado en las listas, en el mapa, etc.), la abreviatura de dos letras, la abreviatura de tres letras y el código de tres dígitos para cada ubicación.  El valor principal se establece en la abreviatura de dos letras del país.  
   
--   **EE. UU. - los condados**: Contiene una lista de los condados de Estados Unidos.  
+-   **Condados de Estados Unidos**: contiene una lista de condados de Estados Unidos.  
   
--   **EE. UU. - apellido**: Contiene una lista de apellidos (apellidos) que se producen 100 o más veces en el censo de 2000.  
+-   **Apellidos de Estados Unidos**: contiene una lista de apellidos que aparecen al menos 100 veces en el censo de 2000.  
   
--   **EE. UU. - coloca**: Contiene una lista de sitios para los 50 estados, el distrito de Columbia y Puerto Rico extraidos del censo de 2010.  
+-   **Lugares de Estados Unidos**: contiene una lista de sitios para los 50 estados, el distrito de Columbia y Puerto Rico extraídos del censo de 2010.  
   
--   **EE. UU. - estado**: Contiene el largo convencional (oficial) nombre y la abreviatura de dos letras para cada estado de Estados Unidos. El valor principal se establece en el nombre convencional de estado.  
+-   **Estados de Estados Unidos**: contiene el nombre largo convencional (oficial) y la abreviatura de dos letras para cada estado de EE. UU. El valor principal se establece en el nombre convencional de estado.  
   
--   **US - Estados (encabezado de 2 letras)**: Contiene el largo convencional (oficial) nombre y la abreviatura de dos letras para cada estado de Estados Unidos. El valor inicial se establece en la abreviatura de dos letras del nombre de estado.  
+-   **Estados de Estados Unidos (encabezado de dos letras)**: contiene el nombre largo convencional (oficial) y la abreviatura de dos letras para cada estado de EE. UU. El valor inicial se establece en la abreviatura de dos letras del nombre de estado.  
   
 ## <a name="using-the-default-knowledge-base"></a>Usar la base de conocimiento predeterminada  
  Puede utilizar la base de conocimiento predeterminado DQS, DQS Data, de las maneras siguientes:  

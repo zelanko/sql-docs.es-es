@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4c9e337bfd091c02645119c1f8f4c81eb8daab29
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793025"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) es un producto de calidad de datos controlado por conocimiento. Con DQS, podrá generar una base de conocimiento y usarla para llevar a cabo diversas tareas fundamentales de calidad de datos, lo que incluye correcciones, enriquecimiento, estandarización y eliminación de datos duplicados. Con DQS, podrá realizar limpiezas de datos mediante servicios de datos de referencia basados en la nube que proporcionan proveedores de datos de referencia. Asimismo, DQS proporciona la generación de perfiles que se integra en las tareas de calidad de datos, de forma que podrá analizar la integridad de los datos.  

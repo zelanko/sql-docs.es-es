@@ -1,5 +1,5 @@
 ---
-title: Medidas en el informe de validación cruzada | Documentos de Microsoft
+title: Medidas en el informe de validación cruzada | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 00a8d7d0e05d4fa4a714011e18ec1162eb7b68e7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678914"
 ---
 # <a name="measures-in-the-cross-validation-report"></a>Medidas en el informe de validación cruzada
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,6 +49,6 @@ ms.locfileid: "34016735"
 ||**Desviación estándar**:<br />                      La media de la desviación desde el promedio para una medida concreta, para todas las particiones de un modelo.<br /><br /> Para la validación cruzada, un valor mayor para esta puntuación implica una variación sustancial entre los subconjuntos.|  
   
 ## <a name="see-also"></a>Vea también  
- [Prueba y validación & #40; minería de datos & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Prueba y validación &#40;minería de datos&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

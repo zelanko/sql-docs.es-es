@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c67966895699c34d58a0527ea27c06e7cc05ed5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729681"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Columnas de clave (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Columnas de clave** para cambiar la propiedad **KeyColumns** de un atributo. Para más información, vea [Modificar la propiedad KeyColumns de un atributo](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  

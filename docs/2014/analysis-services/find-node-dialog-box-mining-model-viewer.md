@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e52a160dd72e541e51a57a002919aa2cc251e7e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731517"
 ---
 # <a name="find-node-dialog-box-mining-model-viewer"></a>Cuadro de diálogo Buscar nodo (Visor de modelos de minería de datos)
   Utilice el cuadro de diálogo **Buscar nodo** , disponible en la pestaña **Red de dependencias** de un modelo, para buscar un nodo concreto. Esta característica es útil en diagramas complejos que contienen muchos nodos o conjuntos de elementos.  
@@ -38,6 +38,6 @@ ms.locfileid: "48218547"
 ## <a name="see-also"></a>Vea también  
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)   
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

@@ -19,28 +19,28 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e85f6ca82f11b9f19c14a020d879afb65a6d1775
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794486"
 ---
 # <a name="translations-analysis-services"></a>Traducciones (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  solo a modelos multidimensionales  
   
- En un modelo de datos multidimensional de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puede incrustar varias traducciones de un título para proporcionar cadenas específicas de la configuración regional que coincidan con cada LCID. Se pueden agregar traducciones para el nombre de la base de datos, objetos de cubo y objetos de la dimensión de base de datos.  
+ En un modelo de datos multidimensional de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puede incrustar varias traducciones de un título para proporcionar cadenas específicas de la configuración regional que coincidan con cada LCID. Se pueden agregar traducciones del nombre de la base de datos, los objetos del cubo y los objetos de dimensión de la base de datos.  
   
  Definir una traducción crea los metadatos y el título traducido dentro del modelo, pero para representar cadenas localizadas en una aplicación cliente, deberá establecer la propiedad de `Language` en el objeto o pasar un parámetro de `Locale Identifier` en la cadena de conexión (por ejemplo, estableciendo `LocaleIdentifier=1036` para que devuelva cadenas en francés). Le recomendamos que utilice `Locale Identifier` si desea admitir varias traducciones simultáneas del mismo objeto en diferentes idiomas. Si configura la propiedad `Language`, funcionará, pero esto afectará también al procesamiento y a las consultas, lo cual podría tener consecuencias no deseadas. Configurar `Locale Identifier` es la mejor opción, porque solo se utiliza para devolver las cadenas traducidas.  
   
- Una traducción consta de un identificador de configuración regional (LCID), de un título traducido para el objeto (por ejemplo, la dimensión o un nombre de atributo) y, opcionalmente, de un enlace a una columna que proporciona los valores de datos en el idioma de destino. Puede tener varias traducciones, pero solo puede utilizar una para cada una de las conexiones. No hay ningún límite teórico en la cantidad de traducciones que puede incrustar en el modelo, pero cada traducción agrega complejidad a las pruebas y todas las traducciones deben compartir la misma intercalación. Por lo tanto, al diseñar la solución, tenga en cuenta estas restricciones naturales.  
+ Una traducción está formada por un identificador de configuración regional (LCID), un título traducido del objeto (por ejemplo, el nombre de la dimensión o el atributo) y, si se quiere, un enlace a una columna que proporciona los valores de los datos en el idioma de destino. Puede tener varias traducciones, pero solo puede utilizar una para cada una de las conexiones. No hay ningún límite teórico en la cantidad de traducciones que puede incrustar en el modelo, pero cada traducción agrega complejidad a las pruebas y todas las traducciones deben compartir la misma intercalación. Por lo tanto, al diseñar la solución, tenga en cuenta estas restricciones naturales.  
   
 > [!TIP]  
 >  Puede usar aplicaciones cliente como Excel, Management Studio y [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] para devolver las cadenas traducidas. Para obtener información detallada, vea [Globalization Tips and Best Practices &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md) .  
   
 ## <a name="setting-up-a-model-to-support-translated-members"></a>Configuración de un modelo para admitir los miembros traducidos  
- Un modelo de datos que se use en una solución multilingüe no solo necesitará las etiquetas traducidas (los nombres de campo y las descripciones). También debe proporcionar los valores de los datos que se articulan en los diferentes alfabetos de los idiomas. Para conseguir una solución multilingüe, debe tener atributos individuales enlazados a columnas de una base de datos externa que devuelva los datos.  
+ Un modelo de datos que se use en una solución multilingüe no solo necesitará las etiquetas traducidas (los nombres de campo y las descripciones). También debe proporcionar los valores de los datos que se articulan en los diferentes alfabetos de los idiomas. Para conseguir una solución multilingüe, necesita atributos individuales, enlazados a las columnas de una base de datos externa que devuelva los datos.  
   
- Las bases de datos de muestra de Adventure Works (almacenamiento de datos relacional y multidimensional) muestran la característica de traducción. El modelo de ejemplo incluye descripciones y títulos traducidos. El almacenamiento de datos relacional de muestra contiene columnas de valores traducidos que proporcionan los miembros de atributos localizados del modelo.  
+ Las bases de datos de muestra de Adventure Works (almacenamiento de datos relacional y multidimensional) muestran la característica de traducción. El modelo de muestra incluye descripciones y títulos traducidos. El almacenamiento de datos relacional de muestra contiene columnas de valores traducidos que proporcionan los miembros de atributos localizados del modelo.  
   
  Para ver los valores de datos traducidos de los que dispone el modelo:  
   
@@ -52,12 +52,12 @@ ms.locfileid: "50145960"
   
 4.  Haga clic con el botón derecho en cualquier campo y seleccione **Explorar datos**. Verá las traducciones de inglés, español y francés de cada miembro.  
   
- Los formatos de fecha, hora y moneda no se implementan en las traducciones. Para proporcionar dinámicamente formatos específicos de cada cultura en función de la configuración regional del cliente, utilice el Asistente de conversión de moneda y la propiedad `FormatString`. Para más información, vea [Conversiones de moneda &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) y [Elemento FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
+ Los formatos de fecha, hora y moneda no se implementan con traducciones. Para proporcionar dinámicamente formatos específicos de cada cultura en función de la configuración regional del cliente, utilice el Asistente de conversión de moneda y la propiedad `FormatString`. Para más información, vea [Conversiones de moneda &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) y [Elemento FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
- [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) , en el Tutorial de Analysis Services, le guiará por los pasos necesarios para crear y probar las traducciones.  
+ [Lección 9: Definir perspectivas y traducciones](lesson-9-defining-perspectives-and-translations.md) en el Tutorial de Analysis Services le guiará por los pasos para crear y probar las traducciones.  
   
 ## <a name="defining-translations"></a>Definir traducciones  
- Al definir una traducción se crea un objeto `Translation` como un elemento secundario de la base de datos, de la dimensión o del objeto de cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Utilice [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] para abrir la solución y para definir las traducciones.  
+ Al definir una traducción se crea un objeto `Translation` como un elemento secundario de la base de datos, de la dimensión o del objeto de cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Utilice [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] para abrir la solución y definir las traducciones.  
   
 ### <a name="add-translations-to-a-cube"></a>Agregar traducciones a un cubo  
  Puede agregar traducciones al cubo, grupos de medidas, medidas, dimensión del cubo, perspectivas, KPI, acciones, conjuntos con nombre y miembros calculados.  
@@ -108,11 +108,11 @@ ms.locfileid: "50145960"
   
 1.  En el Explorador de soluciones, haga clic con el botón derecho en el nombre del proyecto | **Editar base de datos** para abrir el Diseñador de bases de datos.  
   
-2.  En Traducciones, especifique el idioma de destino (se resuelve en un LCID), el título traducido y la descripción traducida. La lista de idiomas es coherente en Analysis Services, tanto si configura el idioma del servidor en Management Studio como si agrega la sustitución de una traducción en un solo atributo.  
+2.  En Traducciones, especifique el idioma de destino (se resuelve en un LCID), el título traducido y la descripción traducida. La lista de idiomas es coherente en todo Analysis Services, tanto si configura el idioma del servidor en Management Studio como si agrega una invalidación de traducción en un solo atributo.  
   
 3.  En la página de propiedades de la base de datos, configure `Language` con el mismo LCID que especificó para la traducción. Si quiere, configure también `Collation` si el valor predeterminado no es adecuado.  
   
-4.  Compilar e implementar la base de datos.  
+4.  Compile e implemente la base de datos.  
   
 ## <a name="resolving-translations"></a>Resolver traducciones  
  Si una aplicación cliente solicita un identificador de configuración regional, la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tratará de resolver los datos y metadatos de los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el LCID que mejor coincida. Si la aplicación cliente no especifica un idioma predeterminado, especifica el identificador de configuración regional neutro (0) o procesa el identificador de idioma predeterminado (1024), [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usará el idioma predeterminado para que la instancia devuelva los datos y los metadatos de los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

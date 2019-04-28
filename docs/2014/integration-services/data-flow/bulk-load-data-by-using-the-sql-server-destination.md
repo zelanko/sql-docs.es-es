@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad0e0c5fc4aec54e9da3333994bf25a34d51acd1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828138"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Realizar una carga masiva de datos mediante el destino de SQL Server
   Para agregar y configurar un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen de datos.  
@@ -54,7 +54,7 @@ ms.locfileid: "58387413"
     > [!NOTE]  
     >  El destino asigna automáticamente las columnas con el mismo nombre.  
   
-9. Haga clic en **avanzadas** y establezca las opciones de carga masiva: **Mantener valores de identidad**, **mantener valores NULL**, **bloqueo de tabla**, **restricciones Check**, y **activan los disparadores**.  
+9. Haga clic en **Avanzadas** y establezca las opciones de carga masiva: **Mantener valores de identidad**, **Mantener valores NULL**, **Bloqueo de tabla**, **Restricciones CHECK** y **Activar desencadenadores**.  
   
      Opcionalmente, especifique la primera y última fila de entrada que desea insertar, la cantidad máxima de errores que pueden producirse antes de que se detenga la operación de inserción y las columnas en las que se ordena la inserción.  
   

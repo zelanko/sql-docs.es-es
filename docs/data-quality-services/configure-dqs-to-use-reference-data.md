@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b0246f3aa83dace474b482d2998206b8418738a0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862461"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurar DQS para utilizar datos de referencia
 
@@ -38,7 +38,7 @@ ms.locfileid: "56030786"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para configurar servicios de datos de referencia en DQS, debe disponer del rol dqs_administrator en la base de datos DQS_MAIN.  
   
 ##  <a name="Marketplace"></a> Configurar DQS para utilizar datos de referencia de Marketplace  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 936862a702d7ca6f82dab5104c5354105443c3be
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679763"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Cuadros de diálogo Crear relación de atributo y Editar relación de atributo (pestaña Diseñador de Relación de los atributos, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Crear relación de atributo** para definir nuevas relaciones de atributo y el cuadro de diálogo **Editar relación de atributo** para cambiar una relación de atributo. Para obtener más información, vea [Definir relaciones de atributo](multidimensional-models/attribute-relationships-define.md).  

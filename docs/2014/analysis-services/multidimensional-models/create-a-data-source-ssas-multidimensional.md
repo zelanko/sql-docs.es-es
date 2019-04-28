@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 54971b2b71d37ec4b246d982429fac3d6abf5b9a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702154"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Crear un origen de datos (SSAS multidimensional)
   En un modelo multidimensional de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , un objeto de origen de datos representa una conexión al origen de datos del que va a procesar o importar los datos. Un modelo multidimensional debe contener al menos un objeto de origen de datos, pero puede agregar más para combinar datos de varios almacenamientos de datos. Siga las instrucciones de este tema para crear un objeto de origen de datos para el modelo. Para obtener más información sobre cómo establecer propiedades en este objeto, vea [Establecer propiedades de origen de datos &#40;SSAS multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md).  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699205"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Información general de arquitectura lógica (Analysis Services - Datos multidimensionales)
   Analysis Services funciona en un modo de implementación de servidor que determina la arquitectura de memoria y el entorno en tiempo de ejecución utilizados por diferentes tipos de modelos de Analysis Services. Determina el modo de servidor durante la instalación. **Modo multidimensional y minería de datos** admite OLAP tradicional y minería de datos. **Modo tabular** admite modelos tabulares. **El modo integrado de SharePoint** hace referencia a una instancia de Analysis Services que se instaló como PowerPivot para SharePoint y se usa para cargar y consultar modelos de datos de Excel o PowerPivot dentro de un libro.  

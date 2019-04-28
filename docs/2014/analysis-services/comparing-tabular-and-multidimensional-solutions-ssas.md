@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 498cba5d7ccb4e97de13d9cb46e58351547d9b75
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680825"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparar soluciones tabulares y multidimensionales (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona dos enfoques distintos para el modelado de datos: tabular y multidimensional. Aunque existe una superposición significativa entre ellos, también hay diferencias importantes que influirán en su decisión sobre cómo avanzar. En este tema se ofrecen comparaciones de características y se explica cómo cada enfoque aborda los requisitos de proyecto comunes. Por ejemplo, si la compatibilidad de un origen de datos concreto es una consideración fundamental, la sección sobre orígenes de datos puede servirle de guía para tomar la decisión sobre qué enfoque de modelado usar.  
@@ -47,7 +47,7 @@ ms.locfileid: "53365847"
   
 -   [Paso siguiente: Crear una solución](#bkmk_Next)  
   
- Puede encontrar información adicional en este artículo técnico de MSDN: [Elegir una experiencia de modelado Tabular o Multidimensional en SQL Server 2012 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=251588).  
+ En este artículo técnico de MSDN se puede encontrar información adicional: [Elegir una experiencia de modelado Tabular o Multidimensional en SQL Server 2012 Analysis Services](https://go.microsoft.com/fwlink/?LinkId=251588).  
   
 ##  <a name="bkmk_overview"></a> Información general de modelado en Analysis Services  
  Analysis Services proporciona una experiencia de desarrollo de modelo, así como la implementación de modelos a través de base de datos hospedada en una instancia de Analysis Services. Se incluyen los tipos de modelos tabular y multidimensional. Como cabría esperar, el hospedaje de base de datos es compatible con las soluciones tabulares y multidimensionales que cree, pero también incluye PowerPivot para SharePoint.  
@@ -191,7 +191,7 @@ ms.locfileid: "53365847"
 |Sitios de Power BI en Office 365|En un sitio de Power BI, los informes de Power View pueden conectarse a modelos de datos tabulares que se ejecutan en local.|  
 |Servidores locales (instancias de SQL Server y SharePoint)|Un servidor de base de datos local (es decir, una instancia de SQL Server que tenga instalado Analysis Services) sigue siendo el medio principal de ofrecer disponibilidad de los datos de Analysis Services para informes y aplicaciones cliente. Las soluciones tabulares, multidimensionales y de minería de datos se ejecutan en las instancias de Analysis Services en una red, sin dependencia de SharePoint.<br /><br /> SQL Server se integra con SharePoint agregando compatibilidad para el acceso a datos PowerPivot y el acceso a datos tabulares. La inversión en la integración de SharePoint y SQL Server crece cuando se maximiza el número de características utilizadas de cada producto. Si tiene SharePoint, puede instalar SQL Server PowerPivot para SharePoint para habilitar el acceso a datos PowerPivot y obtener los archivos de conexión .bism de PowerPivot utilizados para tener acceso a las bases de datos tabulares que se ejecutan en una instancia externa de Analysis Services en un servidor de red.<br /><br /> Si tiene SQL Server y SharePoint, puede admitir la siguiente combinación de servicios y aplicaciones:<br /><br /> Modelos de Analysis Services (tabulares o multidimensionales)<br /><br /> Servicios de SharePoint de nivel intermedio (Servicios de Excel, Reporting Services en SharePoint o servicios en PerformancePoint)<br /><br /> Clientes de explorador o clientes avanzados (Excel) para una exploración y análisis más profundos.|  
   
-##  <a name="bkmk_Next"></a> Paso siguiente: Compilar una solución  
+##  <a name="bkmk_Next"></a> Paso siguiente: Crear una solución  
  Ahora que conoce los fundamentos de una comparación de las soluciones, siga los tutoriales para conocer los pasos que permiten crear cada una. Los siguientes vínculos señalan a tutoriales que explican los pasos.  
   
 -   Generar un modelo tabular mediante la [Creación de modelos tabulares &#40;tutorial de Adventure Works&#41;](tabular-modeling-adventure-works-tutorial.md).  

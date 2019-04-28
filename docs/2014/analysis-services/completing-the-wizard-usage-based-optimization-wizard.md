@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02628703bebc6b797e3eeada2ea7bb6e467236c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680429"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>Finalización del asistente (Asistente para optimización basada en el uso)
   Use la página **Finalización del asistente** para guardar el diseño de agregaciones y asignarlo a las particiones seleccionadas. Opcionalmente, también puede procesar las particiones seleccionadas cuando el Asistente para optimización basada en el uso termine de diseñar y guardar las agregaciones.  

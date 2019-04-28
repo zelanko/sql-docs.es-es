@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648658"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Creación de un informe de forma libre (generador de informes)
   Este tutorial le enseña a crear un informe de forma libre de SSRS que se asemeja a una carta de formularios. Puede organizar los elementos de informe para crear un formulario con cuadros de texto, imágenes y otras regiones de datos.  

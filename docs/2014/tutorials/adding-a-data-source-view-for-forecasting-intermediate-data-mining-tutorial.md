@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823135"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>Agregar una vista del origen de datos para las previsiones (tutorial intermedio de minería de datos)
   En esta tarea, agregará una vista del origen de datos que se utilizará para el escenario de pronóstico. Un modelo de previsión requiere que los datos contengan una columna que se pueda utilizar para identificar pasos en una serie temporal. Si piensa analizar varias series de datos, todas ellas deben finalizar en la misma fecha o estadio temporal.  

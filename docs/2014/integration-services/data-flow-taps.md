@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 171bb649f5e4f91df947ed2a0a3113786755efe4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828649"
 ---
 # <a name="data-flow-taps"></a>Derivaciones de flujo de datos
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] presenta una nueva característica que le permite agregar una derivación de datos en la ruta de flujo de datos en tiempo de ejecución y dirigir la salida de la derivación de datos a un archivo externo. Para usar esta característica, debe implementar el proyecto de SSIS con el modelo de implementación de proyectos en un servidor de SSIS. Después de implementar el paquete en el servidor, debe ejecutar scripts T-SQL en la base de datos SSISDB para agregar derivaciones de datos antes de ejecutar el paquete. Este es un escenario de ejemplo:  

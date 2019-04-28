@@ -1,5 +1,5 @@
 ---
-title: Sys.Servers (Transact-SQL) | Microsoft Docs
+title: sys.servers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 59849d1e4a462433ac7f0b1b4e3e620bcdb82256
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856061"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "47829678"
 |**server_id**|**int**|Id. local del servidor vinculado.|  
 |**Nombre**|**sysname**|Cuando **server_id** = 0, el valor devuelto es el nombre del servidor.<br /><br /> Cuando **server_id** > 0, el valor devuelto es el nombre local del servidor vinculado.|  
 |**product**|**sysname**|Nombre de producto del servidor vinculado. Un valor de "SQL Server" indica que otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Proveedor**|**sysname**|Nombre del proveedor OLE DB para la conexión con el servidor vinculado.|  
+|**provider**|**sysname**|Nombre del proveedor OLE DB para la conexión con el servidor vinculado.|  
 |**data_source**|**nvarchar(4000)**|Propiedad de conexión del origen de datos OLE DB.|  
-|**Ubicación**|**nvarchar(4000)**|Propiedad de conexión de la ubicación OLE DB. Es NULL si no hay ninguna.|  
+|**location**|**nvarchar(4000)**|Propiedad de conexión de la ubicación OLE DB. Es NULL si no hay ninguna.|  
 |**provider_string**|**nvarchar(4000)**|Propiedad de conexión de la cadena del proveedor OLE DB.<br /><br /> Es NULL a menos que el autor de la llamada tenga permiso ALTER ANY LINKED SERVER.|  
 |**catalog**|**sysname**|Propiedad de conexión del catálogo OLE DB. Es NULL si no hay ninguna.|  
 |**connect_timeout**|**int**|Tiempo de espera de conexión, en segundos. Es 0 si no hay ninguno.|  

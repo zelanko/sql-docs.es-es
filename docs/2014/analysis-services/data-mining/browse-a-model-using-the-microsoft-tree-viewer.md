@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f7b0d8a4c5e3403e326cd88d2a7eafa5726addb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689424"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Examinar un modelo usando el Visor de árboles de Microsoft
   El Visor de árboles de [!INCLUDE[msCoName](../../includes/msconame-md.md)] en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los árboles de decisión que se generan con el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo del árbol de decisión híbrido que admite clasificación y regresión. Por consiguiente, también puede usar este visor para ver modelos basados en el algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] se usa para el modelo de predicción de los atributos discretos y continuos. Para obtener más información acerca de este algoritmo, vea [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md).  
@@ -105,9 +105,9 @@ ms.locfileid: "48104741"
  [Volver al principio](#BKMK_TabsPanes)  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmo de árboles de decisión de Microsoft](microsoft-decision-trees-algorithm.md)   
+ [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](../mining-model-viewers-data-mining-model-designer.md)   
- [Tareas del Visor de modelo de minería de datos y procedimientos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tareas y procedimientos del Visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
  [Herramientas de minería de datos](data-mining-tools.md)   
  [Visores de modelos de minería de datos](data-mining-model-viewers.md)  
   

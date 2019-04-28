@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788328"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>Usar los detalles del Explorador de objetos para supervisar los grupos de disponibilidad (SQL Server Management Studio)
   En este tema se describe cómo se usa el panel **Detalles del Explorador de objetos** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para supervisar y administrar grupos de disponibilidad AlwaysOn, réplicas de disponibilidad y bases de datos de disponibilidad existentes.  
@@ -31,17 +31,17 @@ ms.locfileid: "48075135"
   
 -   **Antes de empezar:**  [Requisitos previos](#Prerequisites)  
   
--   **Para supervisar un grupo de disponibilidad utilizando:**  [SQL Server Management Studio](#SSMSProcedure)  
+-   **Para supervisar un grupo de disponibilidad, utilizando:**  [SQL Server Management Studio](#SSMSProcedure)  
   
 -   **Detalles del Explorador de objetos:**  
   
-     [Detalles del grupo de disponibilidad](#AvGroupsDetails)  
+     [Detalles de grupos de disponibilidad](#AvGroupsDetails)  
   
      [Detalles de la réplica de disponibilidad](#AvReplicaDetails)  
   
      [Detalles de la base de datos de disponibilidad](#AvDbDetails)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
  Debe estar conectado a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instancia del servidor) que hospeda la réplica principal o una réplica secundaria.  
@@ -70,7 +70,7 @@ ms.locfileid: "48075135"
 ##  <a name="AvGroupsDetails"></a> Detalles de grupos de disponibilidad  
  La pantalla de detalles de **Grupos de disponibilidad** muestra las siguientes columnas:  
   
- **Nombre**  
+ **Name**  
  Enumera las carpetas de agentes de escucha de **Réplicas de disponibilidad**, **Bases de datos de disponibilidad**y **Grupo de disponibilidad** del grupo de disponibilidad seleccionado.  
   
 ##  <a name="AvReplicaDetails"></a> Detalles de la réplica de disponibilidad  
@@ -108,7 +108,7 @@ ms.locfileid: "48075135"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**No sincronizadas**|La base de datos no está sincronizada o no se ha unido todavía al grupo de disponibilidad.|  
-|**Sincronizado**|La base de datos está sincronizada con la base de datos principal en la réplica principal actual, si existe, o en la última réplica principal.<br /><br /> Nota: En modo de rendimiento, la base de datos nunca está en estado Sincronizado.|  
+|**Sincronizado**|La base de datos está sincronizada con la base de datos principal en la réplica principal actual, si existe, o en la última réplica principal.<br /><br /> Nota: En el modo de rendimiento, la base de datos nunca está en estado Synchronized.|  
 |**NULL**|Estado desconocido. Este valor aparece cuando la instancia del servidor local no puede comunicarse con el clúster de conmutación por error de WSFC (es decir, el nodo local no forma parte del quórum de WSFC).|  
   
 > [!NOTE]  
@@ -117,7 +117,7 @@ ms.locfileid: "48075135"
 ##  <a name="AvDbDetails"></a> Detalles de la base de datos de disponibilidad  
  La pantalla de detalles de **Base de datos de disponibilidad** muestra las siguientes propiedades de las bases de datos de disponibilidad de un grupo de disponibilidad determinado:  
   
- **Nombre**  
+ **Name**  
  El nombre de la base de datos de disponibilidad.  
   
  **Estado de sincronización**  
@@ -127,7 +127,7 @@ ms.locfileid: "48075135"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|Sincronizando|La base de datos secundaria ha recibido las entradas del registro de transacciones de la base de datos principal no escritas todavía en el disco (protegido).<br /><br /> Nota: En el modo de confirmación asincrónica, el estado de sincronización siempre es **Sincronizando**.|  
+|Sincronizando|La base de datos secundaria ha recibido las entradas del registro de transacciones de la base de datos principal no escritas todavía en el disco (protegido).<br /><br /> Nota: En el modo de confirmación asincrónica, el estado de sincronización siempre es **Synchronizing**.|  
   
  **Suspendida**  
  Indica si la base de datos de disponibilidad está actualmente en línea. Los valores posibles son los siguientes:  

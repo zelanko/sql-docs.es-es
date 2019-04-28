@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861732"
 ---
 # <a name="pattern-value-arguments"></a>Argumentos de valor de patrón
 Funciones de algunos argumentos en el catálogo, como el *TableName* argumento en **SQLTables**, acepte los patrones de búsqueda. Estos argumentos aceptan modelos de búsqueda si se establece el atributo de instrucción SQL_ATTR_METADATA_ID en SQL_FALSE; son los argumentos de identificador que no aceptan un patrón de búsqueda si este atributo está establecido en SQL_TRUE.  
@@ -37,7 +37,7 @@ Funciones de algunos argumentos en el catálogo, como el *TableName* argumento e
   
 |Patrón de búsqueda|Descripción|  
 |--------------------|-----------------|  
-|%A %|Todos los identificadores que contiene la letra A|  
+|%A%|Todos los identificadores que contiene la letra A|  
 |ABC_|Todos los identificadores de cuatro caracteres, empezando por ABC|  
 |ABC\\_|El identificador ABC_, suponiendo que el carácter de escape es una barra diagonal inversa (\\)|  
 |\\\\%|Todos los identificadores a partir de una barra diagonal inversa (\\), suponiendo que el carácter de escape es una barra diagonal inversa|  

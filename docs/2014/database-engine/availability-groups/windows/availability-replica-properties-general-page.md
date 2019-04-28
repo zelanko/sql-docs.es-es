@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791909"
 ---
 # <a name="availability-replica-properties-general-page"></a>Propiedades de las réplicas de disponibilidad (página General)
   Use este cuadro de diálogo para ver las propiedades de una réplica de disponibilidad.  
@@ -87,7 +87,7 @@ ms.locfileid: "48149875"
  **Sí**  
  Se permiten todas las conexiones a las bases de datos secundarias de esta réplica, pero solo para acceso de lectura. Todas las bases de datos secundarias están disponibles para acceso de lectura.  
   
- Para obtener más información, consulte [secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Para más información, consulte [Secundarias activas: Réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **Tiempo de espera de sesión (segundos)**  
  Período de tiempo de espera, en segundos. El período de tiempo de espera es el tiempo máximo que la réplica espera hasta recibir un mensaje de otra réplica antes de considerar que se ha producido un error en la conexión entre la réplica principal y la secundaria. El tiempo de espera de la sesión detecta si las réplicas secundarias están conectadas a la réplica principal. Al detectar un error en la conexión con una réplica secundaria, la réplica principal considera que la réplica secundaria no se ha sincronizado (NOT_SYNCHRONIZED). Al detectar un error en la conexión con la réplica principal, la réplica secundaria intenta volver a conectarse.  

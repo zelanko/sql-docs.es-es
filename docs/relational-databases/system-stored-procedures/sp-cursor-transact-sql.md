@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724210"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  Es un parámetro necesario que designa qué operación realizará el cursor. *optype* requiere uno de los siguientes **int** valores de entrada.  
   
-|Valor|Nombre|Descripción|  
+|Valor|Name|Descripción|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Se usa para actualizar una o varias filas en el búfer de captura.  Las filas especificadas en *rownum* se vuelve a tener acceso a y se actualizan.|  
 |0x0002|SUPRIMIR|Se usa para eliminar una o varias filas en el búfer de captura. Las filas especificadas en *rownum* se vuelve a tener acceso a y se eliminan.|  
@@ -59,7 +59,7 @@ sp_cursor  cursor, optype, rownum, table
 |0X0008|REFRESH|Se usa para rellenar el búfer a partir de las tablas subyacentes y se puede usar para actualizar la fila si una actualización o eliminación no puede realizarse debido a un control de simultaneidad optimista o después de una operación UPDATE.|  
 |0X10|LOCK|Hace que un SQL Server bloqueo U obtenerse en la página que contiene la fila especificada. Este bloqueo es compatible con los bloqueos S. No es compatible con los bloqueos X ni U. Se puede usar para implementar el bloqueo a corto plazo.|  
 |0X20|SETPOSITION|Se utiliza únicamente cuando el programa va a emitir una posterior de SQL Server coloca la instrucción DELETE o UPDATE.|  
-|0X40|ABSOLUTE|Solo se puede usar junto con UPDATE o DELETE.  ABSOLUTE solo se emplea con cursores KEYSET (se omite para los cursores DYNAMIC y los cursores STATIC no se pueden actualizar).<br /><br /> Nota: Si se especifica ABSOLUTE en una fila del conjunto de claves que no se ha capturado, la operación puede producir un error en la comprobación de simultaneidad y no se puede garantizar el resultado devuelto.|  
+|0X40|ABSOLUTE|Solo se puede usar junto con UPDATE o DELETE.  ABSOLUTE solo se emplea con cursores KEYSET (se omite para los cursores DYNAMIC y los cursores STATIC no se pueden actualizar).<br /><br /> Nota: Si se especifica ABSOLUTE en una fila en el conjunto de claves que no se han obtenido, la operación puede producir un error en la comprobación de simultaneidad y el resultado devuelto no se puede garantizar.|  
   
  *rownum*  
  Especifica con cuál de las filas del búfer de captura operará el cursor, cuál actualizará o cuál eliminará.  

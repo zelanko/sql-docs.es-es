@@ -1,5 +1,5 @@
 ---
-title: Contadores de rendimiento (SSAS) | Documentos de Microsoft
+title: Contadores de rendimiento (SSAS) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 79b4ecc40d69e8f40a5a1612985477d8ee6f166a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709725"
 ---
 # <a name="performance-counters-ssas"></a>Contadores de rendimiento (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34019242"
   
 ## <a name="counters-by-groups"></a>Contadores por grupos  
   
-|Grupo|Description|  
+|Agrupar|Descripción|  
 |-----------|-----------------|  
 |[Caché](#bkmk_Cache)|Estadísticas relacionadas con la memoria caché de agregaciones de Analysis Services.|  
 |[Conexión](#bkmk_Connection)|Estadísticas relacionadas con las conexiones de Microsoft Analysis Services.|  
@@ -49,7 +49,7 @@ ms.locfileid: "34019242"
 ###  <a name="bkmk_Cache"></a> Caché  
  Estadísticas relacionadas con la caché de agregaciones de Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |KB actuales|Memoria actual usada por la caché de agregaciones, en KB.|  
 |KB agregados/s|Velocidad de memoria agregada a la caché, KB/s.|  
@@ -71,7 +71,7 @@ ms.locfileid: "34019242"
 ###  <a name="bkmk_Connection"></a> Conexión  
  Estadísticas relacionadas con las conexiones de Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |Conexiones actuales|Número actual de conexiones de cliente establecidas.|  
 |Solicitudes/s|Velocidad de solicitudes de conexión.  Se trata de llegadas.|  
@@ -85,7 +85,7 @@ ms.locfileid: "34019242"
 ###  <a name="bkmk_DataMiningModelProcessing"></a> Procesamiento del modelo de minería de datos  
  Estadísticas relacionadas con el procesamiento del modelo de minería de datos de Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |Casos/s|Velocidad a la que se procesan los casos.|  
 |Procesamiento actual de modelos|Número actual de modelos en proceso.|  
@@ -93,7 +93,7 @@ ms.locfileid: "34019242"
 ###  <a name="bkmk_DataMiningPrediction"></a> Predicción de minería de datos  
  Estadísticas relacionadas con la predicción de minería de datos de Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |Consultas de minería simultáneas|Número actual de consultas de minería de datos en las que se está trabajando activamente.|  
 |Predicciones/s|Número de predicciones generadas en las consultas de minería de datos|  
@@ -106,7 +106,7 @@ ms.locfileid: "34019242"
 ###  <a name="bkmk_Locks"></a> Bloqueos  
  Estadísticas relacionadas con los bloqueos internos del servidor de Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |Esperas de bloqueos temporales|Número actual de subprocesos que esperan un bloqueo temporal.  Se trata de solicitudes de bloqueos temporales que no se han podido satisfacer de inmediato y que están en un estado de espera.|  
 |Esperas de bloqueos temporales/s|Velocidad de solicitudes de bloqueos temporales que no se han podido satisfacer de inmediato y que han tenido que esperar antes de ser concedidas.|  
@@ -122,7 +122,7 @@ ms.locfileid: "34019242"
 ###  <a name="bkmk_MDX"></a> MDX  
  Estadísticas relacionadas con los cálculos MDX de Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |Número de cubiertas de cálculos|Número total de nodos de evaluación generados por planes de ejecución MDX, incluidos los activos y los de la caché.|  
 |Número actual de nodos de evaluación|Número (aproximado) actual de nodos de evaluación generados por planes de ejecución MDX, incluidos los activos y los almacenados en caché.|  
@@ -155,7 +155,7 @@ ms.locfileid: "34019242"
 ###  <a name="bkmk_Memory"></a> Memoria  
  Estadísticas relacionadas con la memoria interna del servidor de Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |64 KB asignados de bloque paginado|Memoria prestada del sistema, en KB.  Esta memoria se cede a otras partes del servidor.|  
 |64 KB en lista de direcciones de bloque paginado|Memoria actual en lista de direcciones de 64 KB, en KB.  (Páginas de memoria listas para utilizarlas).|  
@@ -232,7 +232,7 @@ ms.locfileid: "34019242"
 ###  <a name="bkmk_ProactiveCaching"></a> Almacenamiento en caché automático  
  Estadísticas relacionadas con el almacenamiento en caché automático de Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |Notificaciones/s|Velocidad de notificaciones de la base de datos relacional.|  
 |Cancelaciones de procesamiento/s|Velocidad de cancelaciones de procesamiento producidas por notificaciones.|  
@@ -242,7 +242,7 @@ ms.locfileid: "34019242"
 ###  <a name="bkmk_ProcAggregations"></a> Procesamiento de agregaciones  
  Estadísticas relacionadas con el procesamiento de agregaciones de Microsoft Analysis Services en archivos de datos MOLAP.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |Particiones actuales|Número actual de particiones en proceso.|  
 |Total de particiones|Número total de particiones procesadas (correcta o incorrectamente).|  
@@ -256,7 +256,7 @@ ms.locfileid: "34019242"
 ###  <a name="bkmk_ProcIndexes"></a> Procesamiento de índices  
  Estadísticas relacionadas con el procesamiento de índices de Microsoft Analysis Services para archivos de datos MOLAP.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |Particiones actuales|Número actual de particiones en proceso.|  
 |Total de particiones|Número total de particiones procesadas (correcta o incorrectamente).|  
@@ -266,7 +266,7 @@ ms.locfileid: "34019242"
 ###  <a name="bkmk_Processing"></a> Procesamiento  
  Estadísticas relacionadas con el procesamiento de datos de Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |Filas leídas/s|Velocidad de filas leídas en todas las bases de datos relacionales.|  
 |Total de filas leídas|Recuento de filas leídas en todas las bases de datos relacionales.|  
@@ -278,7 +278,7 @@ ms.locfileid: "34019242"
 ###  <a name="bkmk_StorageEngineQuery"></a> Consulta del motor de almacenamiento  
  Estadísticas relacionadas con las consultas del motor de almacenamiento de Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |Consultas de grupo de medida actuales|Número actual de consultas de grupo de medida en las que se está trabajando activamente.|  
 |Consultas de grupo de medida/s|Velocidad de consultas de grupo de medida|  
@@ -321,7 +321,7 @@ ms.locfileid: "34019242"
 ###  <a name="bkmk_Threads"></a> Subprocesos  
  Estadísticas relacionadas con los subprocesos de Microsoft Analysis Services.  
   
-|Contador|Description|  
+|Contador|Descripción|  
 |-------------|-----------------|  
 |Subprocesos inactivos de análisis corto|Número de subprocesos inactivos en el grupo de subprocesos de análisis corto.|  
 |Subprocesos ocupados de análisis corto|Número de subprocesos ocupados en el grupo de subprocesos de análisis corto.|  

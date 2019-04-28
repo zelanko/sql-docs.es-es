@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b424c87993de202f0164a1e407cda5a203bed6d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733315"
 ---
 # <a name="mining-structure-columns"></a>Columnas de la estructura de minería de datos
   Define las columnas de una estructura de minería de datos al crear dicha estructura eligiendo columnas de datos externos y especificando a continuación cómo se van a usar los datos para el modelado. Por tanto, las columnas de la estructura de minería de datos son más que copias de los datos de un origen de datos: definen cómo se van a usar los datos del origen en el modelo de minería de datos. Puede asignar propiedades que determinen cómo se discretizan los datos, las propiedades que describen cómo se distribuyen los valores de datos  
@@ -33,19 +33,19 @@ ms.locfileid: "48159797"
   
  La definición de una columna de estructura de minería de datos debe contener la siguiente información:  
   
--   **Identificador**: nombre único de la columna, a menudo, el mismo que el nombre. Este dato no se puede cambiar después de crear la estructura de minería de datos, mientras que el nombre se puede cambiar.  
+-   **ID**: El nombre único de la columna, suele ser el mismo que el nombre. Este dato no se puede cambiar después de crear la estructura de minería de datos, mientras que el nombre se puede cambiar.  
   
--   **Nombre**: nombre o alias de la columna.  
+-   **Nombre**: Un nombre o alias de la columna.  
   
--   **Contenido**: enumeración que describe si los datos son discretos o continuos.  
+-   **Contenido**: Una enumeración que describe si los datos son discretos o continuos.  
   
--   **Tipo**: enumeración que indica el tipo de datos general.  
+-   **Tipo**: Una enumeración que indica el tipo de datos general.  
   
--   **Distribución**: enumeración que describe la distribución esperada de valores. Se incluye una distribución si la columna es continua.  
+-   **Distribución**: Una enumeración que describe la distribución esperada de valores. Se incluye una distribución si la columna es continua.  
   
--   **Marcas de modelado**: enumeración que indica cómo tratar los valores que faltan y así sucesivamente. Las marcas de modelado también pueden definirse en el modelo de minería de datos, pero las marcas de modelo son diferentes de las marcas que se usan en las columnas de la estructura.  
+-   **Las marcas de modelado**: Una enumeración que indica cómo controlar los valores que faltan y así sucesivamente. Las marcas de modelado también pueden definirse en el modelo de minería de datos, pero las marcas de modelo son diferentes de las marcas que se usan en las columnas de la estructura.  
   
--   **Enlaces**: propiedades que especifican que los datos de origen.  
+-   **Enlaces**: Propiedades que especifican los datos de origen.  
   
  Los algoritmos de terceros también pueden incluir propiedades personalizadas que se pueden definir en la columna de la estructura de minería de datos.  
   
@@ -61,12 +61,12 @@ ms.locfileid: "48159797"
 |Presenta el concepto de tablas anidadas y explica el modo en que las tablas anidadas se pueden agregar al origen de datos como columnas de la estructura de minería de datos.|[Columnas clasificadas &#40;minería de datos&#41;](classified-columns-data-mining.md)|  
 |Enumera y explica las propiedades de distribución que puede establecer en una columna de estructura de minería de datos para especificar la distribución esperada de valores de la columna.|[Distribuciones de columnas &#40;minería de datos&#41;](column-distributions-data-mining.md)|  
 |Explica el concepto de *discretización* y describe métodos que proporciona Analysis Services para discretizar datos numéricos continuos.|[Métodos de discretización &#40;minería de datos&#41;](discretization-methods-data-mining.md)|  
-|Describe las marcas de modelado que se pueden establecer en una columna de la estructura de minería de datos.|[Las marcas de modelado &#40;minería de datos&#41;](modeling-flags-data-mining.md)|  
+|Describe las marcas de modelado que se pueden establecer en una columna de la estructura de minería de datos.|[Marcas de modelado &#40;Minería de datos&#41;](modeling-flags-data-mining.md)|  
 |Describe las columnas clasificadas, que son un tipo especial de columna que puede utilizar para relacionar una columna de la estructura de minería de datos con otra.|[Columnas clasificadas &#40;minería de datos&#41;](classified-columns-data-mining.md)|  
 |Aprenda a agregar y modificar columnas de la estructura de minería de datos.|[Tareas y procedimientos de las estructuras de minería de datos](mining-structure-tasks-and-how-tos.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
  [Columnas del modelo de minería de datos](mining-model-columns.md)  
   
   

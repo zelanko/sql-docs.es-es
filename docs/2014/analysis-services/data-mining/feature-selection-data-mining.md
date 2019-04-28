@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722397"
 ---
 # <a name="feature-selection-data-mining"></a>Selección de características (minería de datos)
   *Selección de características* es un término usado habitualmente en la minería de datos para describir las herramientas y técnicas disponibles para reducir las entradas a un tamaño apropiado para su procesamiento y análisis. Selección de características implica no solo *reducción de cardinalidad*, lo que significa que impone un límite arbitrario o predefinido en el número de atributos que se pueden considerar al crear un modelo, sino también la elección de atributos, lo que significa que el analista o la herramienta de modelado activamente selecciona o descarta los atributos según su utilidad para el análisis.  

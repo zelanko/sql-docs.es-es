@@ -1,5 +1,5 @@
 ---
-title: Elegir y asignar datos de entrada para una consulta de predicción | Documentos de Microsoft
+title: Elegir y asignar datos de entrada para una consulta de predicción | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0781c35dfe7bcc1ea99be3d68fcbb839d5f9374b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724869"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Elegir y asignar datos de entrada para una consulta de predicción
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -115,6 +115,6 @@ ms.locfileid: "34015062"
      Si ya existe una relación, las columnas del modelo de minería de datos se asignan automáticamente a las columnas que tienen el mismo nombre en la tabla de entrada. Puede modificar la relación entre la tabla anidada y la tabla de casos haciendo clic en **Modificar combinación**, que abre el cuadro de diálogo **Crear relación** .  
   
 ## <a name="see-also"></a>Vea también  
- [Consultas de predicción & #40; minería de datos & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Consultas de predicción &#40;minería de datos&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

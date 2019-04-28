@@ -1,5 +1,5 @@
 ---
-title: Crear una dimensión mediante el uso de una tabla existente | Documentos de Microsoft
+title: Crear una dimensión mediante el uso de una tabla existente | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 70291e20f318830ca8cf83d48b5ee2e21f5cc6ce
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866993"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Crear una dimensión usando una tabla existente
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "34023901"
 -   La columna **Tipos de cuenta integrados** muestra los tipos de cuenta estándar correspondientes compatibles con el servidor. Si los datos de origen usan nombres estándar, el asistente asigna automáticamente el tipo de origen al tipo de servidor y rellena la columna **Tipos de cuenta integrados** con esta información. Si el servidor no asigna los tipos de cuenta o si usted quiere cambiar la asignación, seleccione un tipo diferente en la lista de la columna **Tipos de cuenta integrados** .  
   
 > [!NOTE]  
->  Si los tipos de cuenta no se asignan cuando el asistente crea una dimensión Accounts, use el Asistente de Business Intelligence para configurar las asignaciones una vez creada la dimensión. Para más información, vea [Agregar inteligencia de cuentas a una dimensión](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md).  
+>  Si los tipos de cuenta no se asignan cuando el asistente crea una dimensión Accounts, use el Asistente de Business Intelligence para configurar las asignaciones una vez creada la dimensión. Para obtener más información, vea [Agregar inteligencia de cuentas a una dimensión](../../analysis-services/multidimensional-models/bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## <a name="completing-the-wizard"></a>Finalizar el Asistente  
  El asistente examina las tablas de dimensiones para detectar las relaciones. El asistente creará automáticamente las relaciones de atributo entre los atributos clave de dimensiones de copo de nieve.  
@@ -81,10 +81,10 @@ ms.locfileid: "34023901"
  Para terminar el asistente, en la página **Finalización del asistente** , escriba un nombre para la nueva dimensión y revise la estructura de la dimensión.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear una dimensión generando una tabla no sea de tiempos en el origen de datos](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
+ [Crear una dimensión generando una tabla que no sea de tiempos en el origen de datos](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
  [Crear una dimensión de tiempo generando una tabla de tiempos](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [Referencia de propiedades de atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Referencia de las propiedades de los atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [Crear una dimensión de tiempo generando una tabla de tiempos](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [Crear una dimensión generando una tabla no sea de tiempos en el origen de datos](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [Crear una dimensión generando una tabla que no sea de tiempos en el origen de datos](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

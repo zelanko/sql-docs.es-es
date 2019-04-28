@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866206"
 ---
-# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Tarea 6: comprobar que se crea el atributo basado en dominio mediante Master Data Manager
+# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Tarea 6: Comprobación de que el atributo basado en dominio se crea mediante Master Data Manager
   En esta tarea, comprobará que se crea la entidad **Estado** en **MDS** y que el atributo **State** de la entidad **Proveedor** es un atributo basado en dominio que depende de la entidad **Estado** mediante **Master Data Manager**.  
   
 1.  Cambie a la aplicación web **Master Data Manager**.  
@@ -38,7 +38,7 @@ ms.locfileid: "56037736"
   
 8.  Repita los pasos anteriores para otros estados.  
   
-    |Código|Nombre|  
+    |Código|Name|  
     |----------|----------|  
     |CA|California|  
     |CO|Colorado|  

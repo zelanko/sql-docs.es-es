@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b1a14d1cf8c9eac0ace93e3aac6e16219fd60eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62961917"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,16 +51,16 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @table_name=] '*table_name*'  
  Es el nombre de la tabla remota para la que se proporciona información de índice. *table_name* es **sysname**, su valor predeterminado es null. Si es NULL, se devuelven todas las tablas de la base de datos especificada.  
   
- [ @table_schema=] '*table_schema*'  
+ [ @table_schema= ] '*table_schema*'  
  Especifica el esquema de la tabla. En el entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], corresponde al propietario de la tabla. *TABLE_SCHEMA* es **sysname**, su valor predeterminado es null.  
   
- [ @table_catalog=] '*table_db*'  
+ [ @table_catalog= ] '*table_db*'  
  Es el nombre de la base de datos en el que *table_name* reside. *table_db* es **sysname**, su valor predeterminado es null. Si es NULL, *table_db* el valor predeterminado es **maestro**.  
   
  [ @index_name=] '*index_name*'  
  Es el nombre del índice para el que se solicita información. *índice* es **sysname**, su valor predeterminado es null.  
   
- [ @is_unique=] '*is_unique*'  
+ [ @is_unique= ] '*is_unique*'  
  Es el tipo de índice para el que se devuelve información. *is_unique* es **bit**, su valor predeterminado es null, y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
@@ -85,7 +85,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |ASC_OR_DESC|**varchar**|Es el orden utilizado en la intercalación:<br /><br /> A = Ascendente<br /><br /> D = Descendente<br /><br /> NULL = No aplicable<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre devuelve A.|  
 |CARDINALITY|**int**|Es el número de filas de la tabla o valores únicos del índice.|  
 |PAGES|**int**|Número de páginas para el almacenamiento del índice o la tabla.|  
-|FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor.|  
+|FILTER_CONDITION|**nvarchar(** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor.|  
   
 ## <a name="permissions"></a>Permisos  
  Es necesario contar con un permiso de tipo SELECT sobre el esquema.  

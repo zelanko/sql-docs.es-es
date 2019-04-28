@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a43ac39754a5f5e83e664a2e21be904c2525bd53
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866389"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Tarea 7: agregar la transformación Limpieza de DQS al flujo de datos
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Tarea 7: Adición de la transformación Limpieza de DQS al flujo de datos
   En esta tarea, agregará la transformación Limpieza de DQS al flujo de datos para limpiar los datos de proveedor de entrada mediante DQS. Consulte **[transformación limpieza de DQS](https://msdn.microsoft.com/library/ee677619.aspx)** para obtener más información acerca de la transformación.  
   
 1.  Haga clic en **limpieza de DQS** en el **de flujo de datos** ficha y haga clic en **cambiar el nombre**. Tipo **limpiar datos de proveedor**y presione **ENTRAR**.  

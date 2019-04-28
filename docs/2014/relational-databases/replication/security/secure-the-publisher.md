@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 201b1496444888b207a1a72be640b9705ff1059d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960153"
 ---
 # <a name="secure-the-publisher"></a>Proteger el publicador
   Los siguientes agentes de replicación se conectan al publicador:  
@@ -60,13 +60,13 @@ ms.locfileid: "54127038"
  Para administrar la PAL, vea [Manage Logins in the Publication Access List](manage-logins-in-the-publication-access-list.md) (Administrar inicios de sesión en la lista de acceso a la publicación).  
   
 ## <a name="snapshot-agent"></a>Agente de instantáneas  
- Existe un Agente de instantáneas para cada publicación. Para obtener más información, consulte [Create a Publication](../publish/create-a-publication.md).  
+ Existe un Agente de instantáneas para cada publicación. Para obtener más información, vea [Crear una suscripción](../publish/create-a-publication.md).  
   
 ## <a name="ftp-snapshot-delivery"></a>Entrega de instantáneas a través de FTP  
  Si especifica que las instantáneas deben estar disponibles a través de un recurso compartido FTP en lugar de un recurso compartido UNC, es preciso indicar un inicio de sesión y una contraseña al configurar el acceso FTP. Para más información, vea [Deliver a Snapshot Through FTP](../publish/deliver-a-snapshot-through-ftp.md) (Entregar una instantánea mediante FTP).  
   
 ## <a name="log-reader-agent"></a>Agente de registro del LOG  
- Existe un Agente de registro del LOG para cada base de datos publicada para la replicación transaccional. Para obtener más información, consulte [Create a Publication](../publish/create-a-publication.md).  
+ Existe un Agente de registro del LOG para cada base de datos publicada para la replicación transaccional. Para obtener más información, vea [Crear una suscripción](../publish/create-a-publication.md).  
   
 ## <a name="queue-reader-agent"></a>Agente de lectura de cola  
  Existe un Agente de lectura de cola para todos los publicadores y publicaciones (que permite las suscripciones de actualización en cola) asociados a un distribuidor determinado. Para más información, vea [Enable Updating Subscriptions for Transactional Publications](../publish/enable-updating-subscriptions-for-transactional-publications.md) (Habilitar suscripciones actualizables para publicaciones transaccionales).  

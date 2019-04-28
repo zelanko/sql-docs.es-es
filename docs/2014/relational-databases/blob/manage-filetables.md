@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2e8522cde5be0ccc34f858ce6bff945433af11ac
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874788"
 ---
 # <a name="manage-filetables"></a>Administrar FileTables
   Describe las tareas administrativas comunes para administrar FileTables.  
@@ -138,7 +138,7 @@ GO
   
 -   El directorio de FileTable y los archivos y directorios que este contiene se vuelve visible en el sistema de archivos y están disponibles para el acceso E/S del archivo.  
   
-###  <a name="HowToEnableNS"></a> Cómo: Deshabilitar y volver a habilitar el espacio de nombres FileTable en el nivel de tabla  
+###  <a name="HowToEnableNS"></a> Cómo: Deshabilitar y volver a habilitar el Namespace FileTable en el nivel de tabla  
  Se llama a la instrucción ALTER TABLE con la opción **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** .  
   
  **Para deshabilitar el espacio de nombres de FileTable**  

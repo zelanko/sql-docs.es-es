@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64f3d3474ac812f07645cd3064c270ba10ad76c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729917"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Migrar PowerPivot a SharePoint 2013
   
@@ -68,7 +68,7 @@ ms.locfileid: "53368377"
   
 3.  Copia de los archivos de copia de seguridad de la base de datos (.bak) al servidor de destino deseado.  
   
-4.  **Restaurar:** Restaurar las bases de datos al destino [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. Este paso se puede realizar con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+4.  **Restore:** Restaurar las bases de datos al destino [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. Este paso se puede realizar con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
 5.  **Establecer base de datos de lectura y escritura:** Establecer el **base de datos de solo lectura** a **False**.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "53368377"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Solucionar problemas al intentar montar bases de datos  
  En esta sección se resumen los posibles problemas que pueden producirse al montar la base de datos.  
   
-1.  **Errores de autenticación:** si ve errores relacionados con la autenticación, revise el modo de autenticación que están usando las aplicaciones web de origen. El error puede deberse a una incoherencia en la autenticación entre la aplicación web de SharePoint 2013 y la aplicación web de SharePoint 2010. Vea [1) Preparar la granja de SharePoint 2013](#bkmk_prepare_sharepoint2013) para obtener más información.  
+1.  **Errores de autenticación:** Si ve errores relacionados con la autenticación, revise el modo de autenticación que se están usando las aplicaciones web de origen. El error puede deberse a una incoherencia en la autenticación entre la aplicación web de SharePoint 2013 y la aplicación web de SharePoint 2010. Vea [1) Preparar la granja de SharePoint 2013](#bkmk_prepare_sharepoint2013) para obtener más información.  
   
 2.  **Que faltan:** Si ve errores relacionados con archivos .dll de PowerPivot que faltan los **spPowerPivot.msi** no se instaló o [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] herramienta de configuración no se ha usado para configurar PowerPivot.  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f14294b76fc7977de256697c730f7dca31e7a469
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735137"
 ---
 # <a name="using-data-type-identifiers"></a>Usar identificadores de tipo de datos
 Las aplicaciones utilizar identificadores de tipo de datos de dos maneras: para describir sus búferes en el controlador y para recuperar metadatos sobre el conjunto de resultados desde el controlador para que pueda determinar qué tipo de C almacena en búfer para que use para almacenar los datos. Las aplicaciones llaman a las siguientes funciones para llevar a cabo estas tareas:  

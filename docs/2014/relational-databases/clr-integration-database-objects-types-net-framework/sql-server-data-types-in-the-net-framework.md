@@ -20,11 +20,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874540"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Tipos de datos de SQL Server en .NET Framework
   La biblioteca `SqlTypes` forma parte de la biblioteca de clase base de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Está diseñado para proporcionar a los tipos de datos la misma semántica y precisión que las encontradas en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En este tema se describe la nueva semántica para los programadores de .NET Framework y se muestran los tipos implementados en el espacio de nombres `System.Data.SqlTypes` incluido en la biblioteca `System.Data`.  

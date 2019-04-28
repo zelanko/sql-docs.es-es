@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832244"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Editor de tareas de generación de perfiles de datos (página General)
   Utilice la página **General** del **Editor de tareas de generación de perfiles de datos** para configurar las opciones siguientes:  
@@ -52,8 +52,8 @@ ms.locfileid: "58385362"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**FileConnection**|Guarde el perfil generado en un archivo de la ubicación que se especifica en un administrador de conexiones de archivos.<br /><br /> Nota: Especifique qué Administrador de conexiones de archivos para usar en el **destino** opción.|  
-|**Variable**|Guarde el perfil generado en una variable de paquete.<br /><br /> Nota: Especificar qué variable de paquete para usar en el **destino** opción.|  
+|**FileConnection**|Guarde el perfil generado en un archivo de la ubicación que se especifica en un administrador de conexiones de archivos.<br /><br /> Nota: Para especificar qué administrador de conexiones de archivos usar, utilice la opción **Destino**.|  
+|**Variable**|Guarde el perfil generado en una variable de paquete.<br /><br /> Nota: Para especificar qué variable de paquete usar, utilice la opción **Destination**.|  
   
  **Destino**  
  Especifique qué administrador de conexiones de archivos o variable de paquete contiene el perfil de datos generado:  

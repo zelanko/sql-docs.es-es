@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2a3861e7de24e4fdf43ea11cf447b448c9d17b48
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866438"
 ---
-# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Tarea 9: agregar la transformación Unión de todo para combinar los registros correctos y corregidos
+# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Tarea 9: Adición de la transformación Unión de todo para combinar los registros correctos y corregidos
   En esta tarea, agregará la transformación Unión de todo al flujo de datos. La transformación Unión de todo combina varias entradas en una salida. En su escenario, combina los registros Correctos y Corregidos en un flujo.  
   
 1.  Arrastrar y colocar **unión de todo** transformar de **común** sección de la **cuadro de herramientas de SSIS** a la **de flujo de datos** pestaña y colóquelo bajo **Elegir registros correctos y corregidos**.  

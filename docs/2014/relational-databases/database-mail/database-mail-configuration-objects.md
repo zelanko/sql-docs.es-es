@@ -33,11 +33,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872443"
 ---
 # <a name="database-mail-configuration-objects"></a>Objetos de configuración de Correo electrónico de base de datos
   Correo electrónico de base de datos tiene dos objetos de configuración: Los objetos de configuración de la base de datos proporcionan una manera para que pueda configurar las opciones de esa base de datos de correo electrónico debe usar al enviar un correo electrónico desde la aplicación de base de datos o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
@@ -127,7 +127,7 @@ ms.locfileid: "52772649"
   
 ### <a name="database-mail-settings"></a>Configuración de Correo electrónico de base de datos  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql)|Cambia los valores de configuración de Correo electrónico de base de datos.|  
 |[sysmail_help_configure_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql)|Muestra la configuración del Correo electrónico de base de datos.|  
@@ -149,7 +149,7 @@ ms.locfileid: "52772649"
   
 ### <a name="security"></a>Seguridad  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql)|Concede permiso a una entidad de seguridad de base de datos para utilizar un perfil del Correo electrónico de base de datos.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql)|Quita el permiso a un usuario de base de datos para utilizar un perfil público o privado del Correo electrónico de base de datos.|  
@@ -158,7 +158,7 @@ ms.locfileid: "52772649"
   
 ### <a name="system-state"></a>Estado del sistema  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql)|Inicia el programa externo de Correo electrónico de base de datos y la cola asociada de SQL Service Broker.|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql)|Detiene el programa externo de Correo electrónico de base de datos y la cola asociada de SQL Service Broker.|  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2f089f487586b6def3d2ddd4eecdbbde1532952b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855347"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Crear una solución y un origen de datos (tutorial intermedio de minería de datos)
   Para trabajar con minería de datos, primero debe crear un proyecto en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mediante la plantilla, **Proyecto multidimensional y de minería de datos de Analysis Services**. Cuando se abre la plantilla, esta carga en el diseñador todos los esquemas que podría necesitar para minería de datos: orígenes de datos, estructuras y modelos de minería de datos, e incluso cubos si su estructura de minería de datos usa datos multidimensionales.  

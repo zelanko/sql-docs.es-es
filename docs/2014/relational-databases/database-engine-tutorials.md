@@ -11,16 +11,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b1a6158dca30d6419be59cf5eb68dff9892cc2dc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872671"
 ---
 # <a name="database-engine-tutorials"></a>Tutoriales del motor de base de datos
   Esta sección contiene los tutoriales de [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
- [Tutorial: Introducción a con el motor de base de datos](tutorial-getting-started-with-the-database-engine.md)  
+ [Tutorial: Introducción al motor de base de datos](tutorial-getting-started-with-the-database-engine.md)  
  En este tutorial se enseña cómo conectarse a una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
  [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
@@ -32,13 +32,13 @@ ms.locfileid: "53360707"
  [Tutorial: Asistente para la optimización de motor de base de datos](../tools/dta/tutorial-database-engine-tuning-advisor.md)  
  En este tutorial se muestra cómo usar el asesor para examinar cómo se procesan las consultas, y se examinan después algunas recomendaciones para mejorar el rendimiento de las consultas.  
   
- [Tutorial: Usar el tipo de datos hierarchyid](tables/tutorial-using-the-hierarchyid-data-type.md)  
+ [Tutorial: Uso del tipo de datos hierarchyid](tables/tutorial-using-the-hierarchyid-data-type.md)  
  En este tutorial se enseña cómo convertir una tabla en una estructura jerárquica y cómo administrar los datos de la tabla.  
   
- [Tutorial: Procedimientos almacenados con un certificado de firma](tutorial-signing-stored-procedures-with-a-certificate.md)  
+ [Tutorial: Firmar procedimientos almacenados con un certificado](tutorial-signing-stored-procedures-with-a-certificate.md)  
  En este tutorial se describe cómo se firman los procedimientos almacenados con un certificado generado por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- [Tutorial: Las cadenas de propiedad y cambio de contexto](tutorial-ownership-chains-and-context-switching.md)  
+ [Tutorial: Cadenas de propiedad y cambio de contexto](tutorial-ownership-chains-and-context-switching.md)  
  En este tutorial se usa un escenario para ilustrar los conceptos de seguridad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] relacionados con las cadenas de propiedad y el cambio de contexto de usuario.  
   
  [Tutorial: Administrar servidores mediante administración basada en directivas](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "53360707"
  [Tutorial: Evaluar las prácticas recomendadas usando administración basada en directivas](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  En este tutorial se enseña a crear directivas que se pueden usar para analizar instancias del [!INCLUDE[ssDE](../includes/ssde-md.md)] y ver si hay problemas conocidos.  
   
- [Tutorial: SQL Server Backup and Restore al servicio de Windows Azure Blob Storage](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [Tutorial: copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  Este tutorial ilustra el modo de hacer una copia de seguridad y una restauración de SQL Server para el servicio Azure Blob Storage.  
   
  [Tutorial: Archivos de datos de SQL Server en el servicio de almacenamiento de Windows Azure](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
@@ -55,6 +55,6 @@ ms.locfileid: "53360707"
   
 ## <a name="see-also"></a>Vea también  
  [Tutoriales de SQL Server 2014](../tutorials/tutorials-for-sql-server-2014.md)   
- [WIKI de TechNet: Ejemplos de SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
+ [Wiki de TechNet: Ejemplos de SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

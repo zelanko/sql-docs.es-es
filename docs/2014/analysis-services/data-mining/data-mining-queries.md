@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 71704480c6c3258c2d6553c3328535ff4ea4a9cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722787"
 ---
 # <a name="data-mining-queries"></a>Consultas de minería de datos
   Las consultas de minería de datos son útiles para muchos propósitos. Puede hacer lo siguiente:  
@@ -62,7 +62,7 @@ ms.locfileid: "48197715"
   
      Consultas que devuelven metadatos, estadísticas y otra información sobre el propio modelo.  
   
--   [Las consultas de obtención de detalles &#40;minería de datos&#41;](drillthrough-queries-data-mining.md)  
+-   [Consultas de obtención de detalles &#40;minería de datos&#41;](drillthrough-queries-data-mining.md)  
   
      Consultas que pueden recuperar los datos de casos subyacentes del modelo o incluso los datos de la estructura que no se utilizó en el modelo.  
   
@@ -74,14 +74,14 @@ ms.locfileid: "48197715"
   
 -   Examine y explore cada tipo de modelo utilizando los visores de minería de datos personalizados que se proporcionan para cada tipo de algoritmo. Para más información, vea [Tareas y procedimientos del Visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md).  
   
--   Revise el contenido del modelo para cada tipo modelo, utilizando el **Visor de árbol de contenido genérico de Microsoft**. Para interpretar esta información, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+-   Revise el contenido del modelo para cada tipo modelo, utilizando el **Visor de árbol de contenido genérico de Microsoft**. Para interpretar esta información, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ##  <a name="bkmk_Interfaces"></a> Herramientas e interfaces de consulta  
  Puede compilar consultas de minería de datos de forma interactiva mediante una de las herramientas de consulta proporcionadas por SQL Server. El Generador de consultas de predicción gráfico está disponible en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Si no ha utilizado el Generador de consultas de predicción antes, recomendamos seguir los pasos de [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md) para familiarizarse con la interfaz. Para una introducción rápida a los pasos, vea [Crear una consulta de predicción con el Generador de consultas de predicción](create-a-prediction-query-using-the-prediction-query-builder.md).  
   
  El Generador de consultas de predicción es útil para iniciar consultas que personalizará después. Puede agregar orígenes de datos con facilidad y asignarlos a columnas y, a continuación, pasar a la vista DMX y personalizar la consulta agregando una cláusula WHERE u otras funciones.  
   
- Una vez familiarizado con los modelos de minería de datos y con el modo de compilar consultas, también puede escribir consultas directamente utilizando Extensiones de minería de datos (DMX). DMX es un lenguaje de consultas que es similar a Transact-SQL y que puede utilizar en muchos clientes diferentes. DMX es la herramienta adecuada para crear predicciones personalizadas y consultas complejas. Para una introducción a DMX, vea [Crear y consultar modelos de minería de datos con DMX: tutoriales &#40;Analysis Services - minería de datos&#41;](../../tutorials/create-query-data-mining-models-dmx-tutorials.md).  
+ Una vez familiarizado con los modelos de minería de datos y con el modo de compilar consultas, también puede escribir consultas directamente utilizando Extensiones de minería de datos (DMX). DMX es un lenguaje de consultas que es similar a Transact-SQL y que puede utilizar en muchos clientes diferentes. DMX es la herramienta adecuada para crear predicciones personalizadas y consultas complejas. Para obtener una introducción a DMX, vea [crear y consultar datos de modelos de minería con DMX: Tutoriales &#40;Analysis Services - minería de datos&#41;](../../tutorials/create-query-data-mining-models-dmx-tutorials.md).  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]disponen de editores DMX. También puede utilizar el Generador de consultas de predicción para iniciar sus consultas y, a continuación, cambiar la vista al editor de texto y copiar la instrucción DMX en otro cliente. Para obtener más información, consulte [Interfaces de consultas de minería de datos](data-mining-query-tools.md).  
   
@@ -96,14 +96,14 @@ ms.locfileid: "48197715"
   
  La siguiente lista proporciona un resumen de las funciones que puede utilizar en las consultas:  
   
--   **Funciones de predicción generales:** el `Predict` función es polimórfica, lo que significa que funciona con todos los tipos de modelo. Esta función detectará automáticamente el tipo de modelo con el que está trabajando y solicitará parámetros adicionales. Para más información, vea [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx).  
+-   **Funciones de predicción generales:** El `Predict` función es polimórfica, lo que significa que funciona con todos los tipos de modelo. Esta función detectará automáticamente el tipo de modelo con el que está trabajando y solicitará parámetros adicionales. Para más información, vea [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx).  
   
     > [!WARNING]  
     >  No todos los modelos se utilizan para realizar predicciones. Por ejemplo, puede crear un modelo de agrupación en clústeres que no tenga un atributo de predicción. Sin embargo, aun cuando un modelo no tenga un atributo de predicción, puede crear consultas de predicción que devuelvan otro tipo de información útil sobre el modelo.  
   
--   **Funciones de predicción personalizadas:** cada tipo modelo proporciona un conjunto de funciones de predicción diseñado para trabajar con los modelos creados por ese algoritmo.  
+-   **Funciones de predicción personalizadas:** Cada tipo modelo proporciona un conjunto de funciones de predicción diseñado para trabajar con los modelos creados por ese algoritmo.  
   
-     Por ejemplo, la función `Lag` se proporciona para los modelos de serie temporal, para que pueda ver los datos históricos utilizados para el modelo. Para los modelos de clústeres, las funciones como `ClusterDistance` tienen más sentido.  
+     Por ejemplo, la función `Lag` se proporciona para los modelos de serie temporal, para que pueda ver los datos históricos utilizados para el modelo. Para los modelos de agrupación en clústeres, las funciones como `ClusterDistance` tienen más sentido.  
   
      Para obtener más información sobre las funciones que se admiten para cada tipo de modelo, vea los siguientes vínculos:  
   
@@ -117,19 +117,19 @@ ms.locfileid: "48197715"
   
      También puede llamar a funciones VBA o crear sus propias funciones. Para más información, vea [Funciones &#40;DMX&#41;](/sql/dmx/functions-dmx).  
   
--   **Estadísticas generales:** hay varias funciones que se pueden utilizar con casi cualquier tipo de modelo, que devuelven un conjunto estándar de estadísticas descriptivas, como la desviación estándar.  
+-   **Estadísticas generales:** Hay una serie de funciones que puede utilizarse con casi cualquier tipo de modelo, que devuelven un conjunto estándar de Estadísticas descriptivas, como la desviación estándar.  
   
-     Por ejemplo, el `PredictHistogram` función devuelve una tabla que enumera todos los Estados de la columna especificada.  
+     Por ejemplo, la función `PredictHistogram` devuelve una tabla que enumera todos los estados de la columna especificada.  
   
      Para más información, vea [Funciones de predicción generales &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
   
--   **Estadísticas personalizadas:** se proporcionan funciones de apoyo adicionales para cada tipo de modelo, para generar estadísticas que sean pertinentes a la tarea analítica concreta.  
+-   **Estadísticas personalizadas:** Se proporcionan funciones de apoyo adicionales para que cada tipo de modelo para generar estadísticas que son relevantes para la tarea analítica concreta.  
   
-     Por ejemplo, cuando se trabaja con un modelo de agrupación en clústeres, puede usar la función, `PredictCaseLikelihood`, para devolver la puntuación de probabilidad asociada con un determinado caso y clúster. Sin embargo, si creara un modelo de regresión lineal, le interesaría más recuperar el coeficiente y la intersección, lo que puede hacer mediante una consulta de contenido.  
+     Por ejemplo, cuando trabaje con un modelo de agrupación en clústeres, puede utilizar la función `PredictCaseLikelihood` para devolver la puntuación de probabilidad asociada a un determinado caso y clúster. Sin embargo, si creara un modelo de regresión lineal, le interesaría más recuperar el coeficiente y la intersección, lo que puede hacer mediante una consulta de contenido.  
   
--   **Funciones de modelo de contenido:** el *contenido* de todos los modelos se representa en un formato normalizado que permite recuperar información con una consulta simple. Puede crear consultas en el modelo de contenido mediante DMX. También puede obtener algún tipo de contenido del modelo de minería de datos utilizando los conjuntos de filas de esquema de minería de datos.  
+-   **Funciones del contenido del modelo:** El *contenido* de todos los modelos se representa en un formato normalizado que permite recuperar información con una consulta simple. Puede crear consultas en el modelo de contenido mediante DMX. También puede obtener algún tipo de contenido del modelo de minería de datos utilizando los conjuntos de filas de esquema de minería de datos.  
   
-     En el contenido del modelo, el significado de cada fila o nodo de la tabla que se devuelve varía según el tipo de algoritmo que se utilizó para compilar el modelo, así como el tipo de datos de la columna. Para más información, vea [Content Queries &#40;Data Mining&#41;](content-queries-data-mining.md).  
+     En el contenido del modelo, el significado de cada fila o nodo de la tabla que se devuelve varía según el tipo de algoritmo que se utilizó para compilar el modelo, así como el tipo de datos de la columna. Para más información, vea [Consultas de contenido &#40;minería de datos&#41;](content-queries-data-mining.md).  
   
 ##  <a name="bkmk_Reqs"></a> Requisitos  
  Para poder crear una consulta en un modelo, el modelo de minería de datos se debe haber procesado. El procesamiento de objetos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] requiere permisos especiales. Para más información sobre el procesamiento de modelos de minería de datos, vea [Requisitos y consideraciones de procesamiento &#40;minería de datos&#41;](processing-requirements-and-considerations-data-mining.md).  
@@ -147,7 +147,7 @@ ms.locfileid: "48197715"
   
  [Consultas de contenido &#40;minería de datos&#41;](content-queries-data-mining.md)  
   
- [Las consultas de obtención de detalles &#40;minería de datos&#41;](drillthrough-queries-data-mining.md)  
+ [Consultas de obtención de detalles &#40;minería de datos&#41;](drillthrough-queries-data-mining.md)  
   
  [Consultas de definición de datos &#40;minería de datos&#41;](data-definition-queries-data-mining.md)  
   
@@ -159,16 +159,16 @@ ms.locfileid: "48197715"
 |Tareas|Vínculos|  
 |-----------|-----------|  
 |Ver tutoriales y visitas guiadas sobre las consultas de minería de datos|[Lección 6: Crear y trabajar con predicciones &#40;Tutorial de minería de datos básicos&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)<br /><br /> [Tutorial DMX de predicción de series temporales](../../tutorials/time-series-prediction-dmx-tutorial.md)|  
-|Usar las herramientas de consulta de minería de datos en SQL Server Management Studio y en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Crear una consulta DMX en SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Crear una consulta de predicción con el Generador de consultas de predicción](create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Aplicar funciones de predicción a un modelo](apply-prediction-functions-to-a-model.md)<br /><br /> [Editar manualmente una consulta de predicción](manually-edit-a-prediction-query.md)|  
+|Usar las herramientas de consulta de minería de datos en SQL Server Management Studio y en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Crear una consulta DMX en SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Crear una consulta de predicción con el Generador de consultas de predicción](create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Aplicar funciones de predicción a un modelo](apply-prediction-functions-to-a-model.md)<br /><br /> [Modificar manualmente una consulta de predicción](manually-edit-a-prediction-query.md)|  
 |Trabajar con los datos externos usados en consultas de predicción|[Elegir y asignar datos de entrada para una consulta de predicción](choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Elegir y asignar datos de entrada para una consulta de predicción](choose-and-map-input-data-for-a-prediction-query.md)|  
 |Trabajar con los resultados de las consultas|[Ver y guardar los resultados de una consulta de predicción](view-and-save-the-results-of-a-prediction-query.md)|  
-|Usar las plantillas de consultas DMX y XMLA proporcionadas en Management Studio|[Crear una consulta de predicción singleton desde una plantilla](create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Crear una consulta de minería de datos mediante XMLA](create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Uso de las plantillas de Analysis Services en SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Usar las plantillas de consultas DMX y XMLA proporcionadas en Management Studio|[Crear una consulta de predicción singleton desde una plantilla](create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Crear una consulta de minería de datos utilizando XMLA](create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Usar las plantillas de Analysis Services en SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Obtener más información acerca de las consultas de contenido y ver ejemplos|[Crear una consulta de contenido en un modelo de minería de datos](create-a-content-query-on-a-mining-model.md)<br /><br /> [Consultar los parámetros usados para crear un modelo de minería de datos](query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Consultas de contenido &#40;minería de datos&#41;](content-queries-data-mining.md)|  
 |Establecer opciones de consulta y solucionar problemas relacionados con los permisos y otros problemas de las consultas|[Cambiar el valor del tiempo de espera para las consultas de minería de datos](data-mining-queries.md)|  
 |Usar los componentes de minería de datos en Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)  
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)  
   
   

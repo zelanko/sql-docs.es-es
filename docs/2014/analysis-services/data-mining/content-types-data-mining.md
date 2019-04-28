@@ -28,11 +28,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ee6c08cf0b9c2cba8e8931e0949734f2afa66e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723137"
 ---
 # <a name="content-types-data-mining"></a>Tipos de contenido (minería de datos)
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede definir tanto el tipo de datos físico de una columna en una estructura de minería como un tipo de datos lógico de la columna cuando se utilice en un modelo.  
@@ -50,14 +50,14 @@ ms.locfileid: "48190095"
   
  Los valores de una columna de atributos discreta no pueden implicar la ordenación, aun cuando los valores sean numéricos. Además, aunque los valores utilizados para la columna discreta sean numéricos, no se pueden calcular valores fraccionarios. Los códigos telefónicos de cada zona son un buen ejemplo de datos numéricos discretos.  
   
- El `Discrete` tipo de contenido es compatible con todos los tipos de datos de minería de datos.  
+ El tipo de contenido `Discrete` es compatible con todos los tipos de datos de minería de datos.  
   
 ## <a name="continuous"></a>Continuous  
  *Continuo* indica que la columna contiene valores que representan datos numéricos en una escala que permite valores intermedios. A diferencia de una columna discreta, que representa datos numerables y finitos, una columna continua representa medidas escalables; además, es posible que los datos contengan un número infinito de valores fraccionarios. Una columna de temperaturas es un ejemplo de una columna de atributos continua.  
   
  Cuando una columna contiene datos numéricos y se sabe cómo deben distribuirse los datos, se podrían obtener análisis más exactos especificando la distribución prevista de los valores. La distribución de columnas se especifica en el nivel de la estructura de minería. Por lo tanto, la configuración se aplica a todos los modelos basados en la estructura. Para más información, vea [Distribuciones de columnas &#40;Minería de datos&#41;](column-distributions-data-mining.md).  
   
- El `Continuous` tipo de contenido es compatible con los siguientes tipos de datos: `Date`, `Double`, y `Long`.  
+ El tipo de contenido `Continuous` es compatible con los siguientes tipos de datos: `Date`, `Double` y `Long`.  
   
 ## <a name="discretized"></a>Discretized  
  La*discretización* es el proceso mediante el cual los valores de un conjunto de datos continuo se incluyen en depósitos para que haya un número limitado de valores posibles. Solo se pueden discretizar los datos numéricos.  
@@ -69,21 +69,21 @@ ms.locfileid: "48190095"
  El tipo de contenido `Discretized` es compatible con los siguientes tipos de datos: `Date`, `Double`, `Long` y `Text`.  
   
 ## <a name="key"></a>Key  
- El tipo de contenido *clave* indica que la columna identifica una fila de forma inequívoca. Normalmente, en una tabla de casos, la columna de clave es un identificador numérico o de texto. Establece el tipo de contenido en `key` para indicar que la columna no debe utilizarse para el análisis, solo para los registros de seguimiento.  
+ El tipo de contenido *clave* indica que la columna identifica una fila de forma inequívoca. Normalmente, en una tabla de casos, la columna de clave es un identificador numérico o de texto. Establezca el tipo de contenido en `key` para indicar que la columna no debe utilizarse para el análisis, sino para realizar el seguimiento de los registros.  
   
- Las tablas anidadas también tienen claves, pero el uso de la clave de tabla anidada es ligeramente diferente. Establece el tipo de contenido en `key` en una tabla anidada, si la columna es el atributo que desea analizar. Los valores de la clave de tabla anidada deben ser únicos para cada caso, pero puede haber duplicados en todo el conjunto de casos.  
+ Las tablas anidadas también tienen claves, pero el uso de la clave de tabla anidada es ligeramente diferente. En una tabla anidada debe establecer el tipo de contenido en `key` si la columna es el atributo que desea analizar. Los valores de la clave de tabla anidada deben ser únicos para cada caso, pero puede haber duplicados en todo el conjunto de casos.  
   
  Por ejemplo, si está analizando los productos que compran los clientes, debe establecer el tipo de contenido en Key para la columna **CustomerID** de la tabla de casos, y también debe establecer el tipo de contenido en Key para la columna **PurchasedProducts** de la tabla anidada.  
   
 > [!NOTE]  
 >  Las tablas anidadas solo están disponibles si utiliza los datos de un origen de datos externo definido como una vista del origen de datos (Analysis Services).  
   
- Este tipo de contenido es compatible con los siguientes tipos de datos: `Date`, `Double`, `Long`, y `Text`.  
+ Este tipo de contenido es compatible con los siguientes tipos de datos: `Date`, `Double`, `Long` y `Text`.  
   
 ## <a name="key-sequence"></a>Key Sequence  
  El tipo de contenido *secuencia de claves* solamente se puede utiliza en modelos de agrupación en clústeres de secuencia. Cuando se establece el tipo de contenido en `key sequence`, se indica que la columna contiene valores que representan una secuencia de eventos. Los valores están ordenados y no tienen que estar separados por una distancia equivalente.  
   
- Este tipo de contenido es compatible con los siguientes tipos de datos: `Double`, `Long`, `Text`, y `Date`.  
+ Este tipo de contenido es compatible con los siguientes tipos de datos: `Double`, `Long`, `Text` y `Date`.  
   
 ## <a name="key-time"></a>Key Time  
  El tipo de contenido *clave temporal* solamente se puede utilizar en modelos de serie temporal. Cuando se establece el tipo de contenido en `key time`, se indica que los valores están ordenados y que representan una escala de tiempo.  

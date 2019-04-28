@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 436610a4c52d213a2d5b80c4277988b615f81449
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732171"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Definir el comportamiento de suma parcial (Asistente de Business Intelligence)
   Use la página **Definir el comportamiento de suma parcial** para habilitar o deshabilitar el comportamiento de suma parcial en medidas. Este comportamiento determina cómo se agregan a una dimensión de tiempo las medidas que contiene un cubo.  
@@ -31,7 +31,7 @@ ms.locfileid: "48168015"
  Deshabilita el comportamiento de suma parcial en todas las medidas del cubo.  
   
  **El asistente ha detectado el \<nombre de la dimensión > dimensión de cuenta, que contiene miembros semiaditivos. El servidor realizará la agregación de los miembros de esta dimensión de acuerdo con el comportamiento de suma parcial especificado para cada tipo de cuenta.**  
- Habilita el comportamiento de suma parcial para las dimensiones de cuentas que contienen miembros de suma parcial. Al seleccionar esta opción establece la función de agregación de todas las medidas en grupos de medida que hacen referencia a la dimensión de cuenta para `ByAccount`.  
+ Habilita el comportamiento de suma parcial para las dimensiones de cuentas que contienen miembros de suma parcial. Al seleccionar esta opción, la función de agregación de todas las medidas de los grupos de medida que hacen referencia a la dimensión de cuentas se establece en `ByAccount`.  
   
  Para más información sobre las dimensiones de cuenta, vea [Crear una cuenta financiera de una dimensión de tipo primario-secundario](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48168015"
 >  Las selecciones realizadas para esta opción solo se aplican si se ha seleccionado **Define semiadditive behavior for individual members (Definir el comportamiento de suma parcial para miembros individuales)** .  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de Business Intelligence F1 Ayuda](business-intelligence-wizard-f1-help.md)   
+ [Asistente de Business Intelligence (Ayuda F1)](business-intelligence-wizard-f1-help.md)   
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

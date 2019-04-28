@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856162"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>Crear una estructura del modelo de minería de datos de distribución de correo directo (Tutorial básico de minería de datos)
   El primer paso para crear un escenario de correo directo (Targeted Mailing) consiste en usar el Asistente para minería de datos de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] con el fin de crear una estructura de minería de datos y un modelo de minería de datos de árbol de decisión.  

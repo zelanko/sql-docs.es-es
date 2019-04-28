@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: facd7ddd9f41d214485ea9a062c67cee2b920758
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722257"
 ---
 # <a name="linear-regression-model-query-examples"></a>Ejemplos de consultas de modelos de regresión lineal
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles de los patrones detectados durante el análisis, o de una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones de los nuevos datos. Por ejemplo, una consulta de contenido podría proporcionar detalles adicionales sobre la fórmula de regresión, mientras que una consulta de predicción podría indicar si un nuevo punto de datos se ajusta al modelo. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
@@ -45,11 +45,11 @@ ms.locfileid: "48201015"
  [Usar funciones de predicción con un modelo de regresión](#bkmk_Query5)  
   
 ##  <a name="bkmk_top"></a> Buscar información sobre el modelo de regresión lineal  
- La estructura de un modelo de regresión lineal es sumamente simple: el modelo de minería de datos representa los datos como un nodo único, que define la fórmula de regresión. Para más información, vea [Contenido del modelo de minería de datos para los modelos de regresión logística &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-logistic-regression-models.md).  
+ La estructura de un modelo de regresión lineal es sumamente simple: el modelo de minería de datos representa los datos como un nodo único, que define la fórmula de regresión. Para obtener más información, vea [Contenido del modelo de minería de datos para los modelos de regresión logística &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-logistic-regression-models.md).  
   
  [Volver al principio](#bkmk_top)  
   
-###  <a name="bkmk_Query1"></a> Consulta de ejemplo 1: usar el conjunto de filas de esquema de minería de datos para determinar los parámetros que se usan para un modelo  
+###  <a name="bkmk_Query1"></a> Consulta de ejemplo 1: Con los datos de filas de esquema de minería de datos para determinar los parámetros que se usan para un modelo  
  Al consultar el conjunto de filas de esquema de minería de datos, puede buscar los metadatos acerca del modelo. Podría incluirse cuándo se creó el modelo, cuándo se procesó en último lugar, el nombre de la estructura de minería de datos en la que se basa y el nombre de la columna que se usa como atributo de predicción. También se pueden devolver los parámetros que se utilizaron cuando se creó el modelo por primera vez.  
   
 ```  
@@ -69,7 +69,7 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
   
  [Volver al principio](#bkmk_top)  
   
-###  <a name="bkmk_Query2"></a> Consulta de ejemplo 2: recuperar la fórmula de regresión del modelo  
+###  <a name="bkmk_Query2"></a> Consulta de ejemplo 2: Recuperar la fórmula de regresión para el modelo  
  La consulta siguiente devuelve el contenido del modelo de minería de datos de un modelo de regresión lineal que se generó utilizando el mismo origen de datos que Targeted Mailing, que se utilizó en el [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md). Este modelo predice los ingresos de los clientes en función de la edad.  
   
  La consulta devuelve el contenido del nodo que contiene la fórmula de regresión. Cada variable y coeficiente están almacenados en una fila independiente de la tabla NODE_DISTRIBUTION anidada. Si quiere ver la fórmula de regresión completa, use el [Visor de árboles de Microsoft](browse-a-model-using-the-microsoft-tree-viewer.md), haga clic en el nodo **(Todo)** y abra la **Leyenda de minería de datos**.  
@@ -113,11 +113,11 @@ FROM LR_PredictIncome.CONTENT
 |9 (estadísticas)|  
 |11 (intersección)|  
   
- Para más información sobre los tipos de valor y las estadísticas usadas en modelos de regresión, vea [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
+ Para más información sobre los tipos de valor y las estadísticas usadas en modelos de regresión, vea [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
  [Volver al principio](#bkmk_top)  
   
-###  <a name="bkmk_Query3"></a> Consulta de ejemplo 3: devolver solo el coeficiente para el modelo  
+###  <a name="bkmk_Query3"></a> Consulta de ejemplo 3: Devolver solo el coeficiente para el modelo  
  Utilizando la enumeración VALUETYPE, puede devolver solo el coeficiente para la ecuación de regresión, como se muestra en la consulta siguiente:  
   
 ```  
@@ -146,7 +146,7 @@ FROM LR_PredictIncome.CONTENT
   
  [Volver al principio](#bkmk_top)  
   
-###  <a name="bkmk_Query4"></a> Consulta de ejemplo 4: predecir los ingresos utilizando una consulta singleton  
+###  <a name="bkmk_Query4"></a> Consulta de ejemplo 4: Predecir los ingresos utilizando una consulta Singleton  
  La manera más fácil de crear una sola consulta en un modelo de regresión es usar el cuadro de diálogo **Entrada de consulta singleton** . Por ejemplo, puede compilar la consulta DMX siguiente seleccionando el modelo de regresión adecuado, eligiendo **consulta Singleton**y, a continuación, escriba `20` como el valor de **Age**.  
   
 ```  
@@ -164,7 +164,7 @@ NATURAL PREDICTION JOIN
   
  [Volver al principio](#bkmk_top)  
   
-###  <a name="bkmk_Query5"></a> Consulta de prueba 5: usar funciones de predicción con un modelo de regresión  
+###  <a name="bkmk_Query5"></a> Consulta de ejemplo 5: Usar funciones de predicción con un modelo de regresión  
  Puede utilizar muchas de las funciones de predicción estándar con modelos de regresión lineal. En el ejemplo siguiente se muestra cómo agregar algunas estadísticas descriptivas a los resultados de las consultas de predicción. A partir de estos resultados, puede que hay una desviación considerable de la media para este modelo.  
   
 ```  
@@ -205,6 +205,6 @@ NATURAL PREDICTION JOIN
  [Algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm.md)   
  [Consultas de minería de datos](data-mining-queries.md)   
  [Referencia técnica del algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Contenido del modelo para los modelos de regresión lineal de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

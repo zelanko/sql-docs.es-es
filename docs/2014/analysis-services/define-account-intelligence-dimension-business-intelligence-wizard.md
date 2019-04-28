@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1adcc97430db480628b4b139ba12506766fe59fa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732446"
 ---
 # <a name="define-account-intelligence-dimension-business-intelligence-wizard"></a>Definir la inteligencia de cuentas (Dimensión del Asistente de Business Intelligence)
   Use esta página para seleccionar la dimensión a la que se aplicará la inteligencia de cuentas, incluida la configuración de tipo de atributo y dimensión, la definición de medidas de suma parcial y otras características.  
@@ -31,7 +31,7 @@ ms.locfileid: "48140134"
  Seleccione la dimensión a la que se aplicará la inteligencia de cuentas.  
   
 ## <a name="see-also"></a>Vea también  
- [Asistente de Business Intelligence F1 Ayuda](business-intelligence-wizard-f1-help.md)   
+ [Asistente de Business Intelligence (Ayuda F1)](business-intelligence-wizard-f1-help.md)   
  [Diseñador de cubos &#40;Analysis Services - datos multidimensionales&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Diseñador de dimensiones &#40;Analysis Services - datos multidimensionales&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

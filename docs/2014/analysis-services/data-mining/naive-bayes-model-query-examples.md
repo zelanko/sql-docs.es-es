@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 207e8dbd7ea9c0fcb2c453fb6611efcfc4ab7a16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733288"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Ejemplos de consultas del modelo Bayes naive
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre las reglas y los conjuntos de elementos detectados durante el análisis, o una consulta de predicción, que usa las asociaciones detectadas en los datos para realizar predicciones. También puede recuperar los metadatos sobre el modelo utilizando una consulta del conjunto de filas de esquema de minería de datos. En esta sección se explica cómo crear estas consultas para los modelos que se basan en el algoritmo Bayes naive de Microsoft.  
@@ -46,7 +46,7 @@ ms.locfileid: "48060455"
 ## <a name="finding-information-about-a-naive-bayes-model"></a>Buscar información sobre un modelo Bayes naive  
  El contenido de un modelo Bayes naive proporciona información agregada sobre la distribución de los valores en los datos de entrenamiento. También puede recuperar la información sobre los metadatos del modelo creando consultas con los conjuntos de filas de esquema de minería de datos.  
   
-###  <a name="bkmk_Query1"></a> Consulta de ejemplo 1: obtener metadatos del modelo usando DMX  
+###  <a name="bkmk_Query1"></a> Consulta de ejemplo 1: Obtener metadatos del modelo usando DMX  
  Al consultar el conjunto de filas de esquema de minería de datos, puede buscar los metadatos del modelo. Esto podría incluir cuándo se creó, cuándo se procesó en último lugar, el nombre de la estructura de minería de datos en la que se basa el modelo y el nombre de las columnas que se usan como atributos de predicción. También se pueden devolver los parámetros que se utilizaron cuando se creó el modelo.  
   
 ```  
@@ -70,7 +70,7 @@ WHERE MODEL_NAME = 'TM_NaiveBayes_Filtered'
   
  El modelo que se usa para este ejemplo está basado en el modelo Bayes naive que se crea en [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md), pero se modificó agregando un segundo atributo de predicción y aplicando un filtro a los datos de entrenamiento.  
   
-###  <a name="bkmk_Query2"></a> Consulta de ejemplo 2: recuperar un resumen de los datos de entrenamiento  
+###  <a name="bkmk_Query2"></a> Consulta de ejemplo 2: Recuperar un resumen de datos de entrenamiento  
  En un modelo Bayes naive, el nodo de estadísticas marginal almacena información agregada sobre la distribución de los valores de los datos de entrenamiento. Este resumen es cómodo y le evita tener que crear consultas SQL con los datos de entrenamiento para encontrar la misma información.  
   
  En el ejemplo siguiente se utiliza una consulta de contenido DMX para recuperar los datos del nodo (NODE_TYPE = 24). Dado que las estadísticas están almacenadas en una tabla anidada, la palabra clave FLATTENED se utiliza para facilitar la visualización de los resultados.  
@@ -87,7 +87,7 @@ WHERE NODE_TYPE = 26
   
  Resultados parciales:  
   
-|MODEL_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|MODEL_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-----------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |TM_NaiveBayes|Bike Buyer|Missing|0|0|1|  
 |TM_NaiveBayes|Bike Buyer|0|8869|0.507263784|4|  
@@ -100,7 +100,7 @@ WHERE NODE_TYPE = 26
   
  Para obtener una definición de los valores proporcionados en la tabla NODE_DISTRIBUTION en un modelo Bayes naive, vea [Contenido del modelo de minería de datos para los modelos Bayes naive &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md). Para más información sobre cómo afectan los valores que faltan a los cálculos de probabilidad y compatibilidad, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Query3"></a> Consulta de ejemplo 3: buscar más información sobre atributos  
+###  <a name="bkmk_Query3"></a> Consulta de ejemplo 3: Buscar más información sobre atributos  
  Dado que un modelo Bayes naive a menudo contiene información compleja sobre las relaciones entre atributos diferentes, la manera más fácil de ver estas relaciones es utilizar el [Visor Bayes naive de Microsoft](browse-a-model-using-the-microsoft-naive-bayes-viewer.md). Sin embargo, puede crear consultas DMX para devolver los datos.  
   
  En el ejemplo siguiente se muestra cómo devolver información del modelo sobre un atributo determinado, `Region`.  
@@ -147,7 +147,7 @@ ORDER BY MSOLAP_NODE_SCORE DESC
   
  Al examinar el contenido del modelo en el [Visor de árbol de contenido genérico de Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md), se hará una mejor idea de qué estadísticas podrían ser interesantes. Aquí se demostraron algunos ejemplos sencillos; más a menudo puede que tenga que ejecutar varias consultas o almacenar los resultados y procesarlos en el cliente.  
   
-###  <a name="bkmk_Query4"></a> Consulta de ejemplo 4: usar procedimientos almacenados del sistema  
+###  <a name="bkmk_Query4"></a> Consulta de ejemplo 4: Usar el sistema de procedimientos almacenados  
  Para explorar los resultados, puede utilizar algunos procedimientos almacenados de sistema de Analysis Services además de escribir sus propias consultas de contenido. Para utilizar un procedimiento almacenado de sistema, anteponga al nombre del procedimiento almacenado la palabra clave CALL:  
   
 ```  
@@ -168,7 +168,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
 ## <a name="using-a-naive-bayes-model-to-make-predictions"></a>Usar un modelo Bayes naive para realizar predicciones  
  El algoritmo Bayes naive de Microsoft se suele utilizar menos para la predicción que para la exploración de relaciones entre los atributos de predicción y la entrada. Sin embargo, el modelo admite el uso de funciones de predicción tanto para predicción como para asociación.  
   
-###  <a name="bkmk_Query5"></a> Consulta de ejemplo 5: predecir los resultados utilizando una consulta singleton  
+###  <a name="bkmk_Query5"></a> Consulta de ejemplo 5: Predecir los resultados utilizando una consulta Singleton  
  La consulta siguiente utiliza una consulta singleton para proporcionar un nuevo valor y predecir, según el modelo, si es probable que un cliente con estas características compre una bicicleta. La manera más fácil de crear una consulta singleton en un modelo de regresión es usar el cuadro de diálogo **Entrada de consulta singleton** . Por ejemplo, puede generar la consulta DMX siguiente seleccionando el modelo `TM_NaiveBayes` , eligiendo **Consulta singleton**y seleccionando los valores en las listas desplegables para `[Commute Distance]` y `Gender`.  
   
 ```  
@@ -189,7 +189,7 @@ NATURAL PREDICTION JOIN
   
  La función de predicción devuelve el valor más probable, en este caso 0, que significa que es improbable que este tipo de cliente compre una bicicleta.  
   
-###  <a name="bkmk_Query6"></a> Consulta de ejemplo 6: obtener predicciones con valores de probabilidad y compatibilidad  
+###  <a name="bkmk_Query6"></a> Consulta de ejemplo 6: Obtener predicciones con valores de probabilidad y soporte técnico  
  Además de predecir un resultado, a menudo desea conocer la precisión de la predicción. La consulta siguiente usa la misma consulta singleton que el ejemplo anterior, pero agrega la función de predicción [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx) para devolver una tabla anidada que contiene las estadísticas de la compatibilidad de la predicción.  
   
 ```  
@@ -213,8 +213,8 @@ NATURAL PREDICTION JOIN
   
  La fila final en la tabla muestra los ajustes para la compatibilidad y la probabilidad del valor que falta. Los valores de la desviación estándar y la varianza siempre son 0, porque los modelos Bayes naive no pueden modelar los valores continuos.  
   
-###  <a name="bkmk_Query7"></a> Consulta de ejemplo 7: predecir las asociaciones  
- El algoritmo Bayes naive de Microsoft se puede utilizar para el análisis de la asociación, si la estructura de minería de datos contiene una tabla anidada con el atributo de predicción como clave. Por ejemplo, podría crear un modelo Bayes naive al usar la estructura de minería de datos creada en [Lección 3: Generar un escenario de cesta de la compra &#40;Tutorial intermedio de minería de datos&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) del tutorial de minería de datos. El modelo utilizado en este ejemplo se modificó para agregar información sobre los ingresos y la región del cliente en la tabla de casos.  
+###  <a name="bkmk_Query7"></a> Consulta de ejemplo 7: Predecir asociaciones  
+ El algoritmo Bayes naive de Microsoft se puede utilizar para el análisis de la asociación, si la estructura de minería de datos contiene una tabla anidada con el atributo de predicción como clave. Por ejemplo, podría crear un modelo Bayes Naive utilizando la estructura de minería de datos creada en [lección 3: Generar un escenario de cesta &#40;Tutorial intermedio de minería de datos&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) del tutorial de minería de datos. El modelo utilizado en este ejemplo se modificó para agregar información sobre los ingresos y la región del cliente en la tabla de casos.  
   
  En el ejemplo de consulta siguiente se muestra una consulta singleton que predice los productos que están relacionados con las compras del producto, `'Road Tire Tube'`. Podría utilizar esta información para recomendar productos a un tipo específico de cliente.  
   
@@ -246,7 +246,7 @@ AS t
 |-|-|  
 |función de predicción|Uso|  
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Determina si un nodo es un elemento secundario de otro nodo del modelo.|  
-|[Predecir &#40;DMX&#41;](/sql/dmx/predict-dmx)|Devuelve un valor o un conjunto de valores predichos para una columna especificada.|  
+|[Predict &#40;DMX&#41;](/sql/dmx/predict-dmx)|Devuelve un valor o un conjunto de valores predichos para una columna especificada.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Devuelve la probabilidad ponderada.|  
 |[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Predice los miembros de un conjunto de datos asociativo.|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Devuelve el Node_ID de cada caso.|  
@@ -256,8 +256,8 @@ AS t
  Para ver la sintaxis de funciones específicas, vea [Referencia de funciones de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia técnica del algoritmo Bayes Naive de Microsoft](microsoft-naive-bayes-algorithm-technical-reference.md)   
- [Algoritmo Bayes Naive de Microsoft](microsoft-naive-bayes-algorithm.md)   
- [Para los modelos Bayes Naive contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Referencia técnica del algoritmo Bayes naive de Microsoft](microsoft-naive-bayes-algorithm-technical-reference.md)   
+ [Algoritmo Bayes naive de Microsoft](microsoft-naive-bayes-algorithm.md)   
+ [Contenido del modelo de minería de datos para los modelos Bayes naive &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722296"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de mejora respecto al modelo predictivo (Analysis Services - Minería de datos)
   Un **gráfico de elevación** gráficamente representa la mejora que un modelo de minería de datos proporciona cuando se compara con una estimación aleatoria, y mide el cambio en términos de un *elevación* puntuación. Al comparar las puntuaciones de elevación para las distintas partes del conjunto de datos y para los distintos modelos, puede determinar qué modelo es mejor, y qué porcentaje de los casos del conjunto de datos se beneficiaría de aplicar las predicciones del modelo.  

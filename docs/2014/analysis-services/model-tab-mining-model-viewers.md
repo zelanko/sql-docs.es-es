@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 173dd379ac2857cef0faafda27aa74d7026b791a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727841"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Pestaña Modelo (Visores de modelos de minería de datos)
   La pestaña **Modelo** del Visor de series temporales de Microsoft muestra una representación de una serie temporal como un nodo en un gráfico, similar a la utilizada en los modelos de árboles de decisión.  
   
  Utilice esta vista de un modelo de serie temporal para extraer información útil sobre el análisis de la serie temporal, incluida la ecuación del gráfico, los términos ARIMA y los coeficientes.  
   
- **Para obtener más información:** [Algoritmo de serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md), [Examinar un modelo usando el Visor de serie temporal de Microsoft](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [Algoritmo de serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md)  
+ **Para obtener más información:** [Algoritmo de serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md), [examinar un modelo usando el Visor de Series temporales de Microsoft](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [algoritmo de serie temporal de Microsoft](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del Visor**  
@@ -34,7 +34,7 @@ ms.locfileid: "48164175"
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos que desee ver. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Visor**  
+ **Viewer**  
  Elija un visor para explorar el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado de este tipo de modelo o el **Visor de árbol de contenido genérico de Microsoft** . También puede utilizar visores de complemento, si están disponibles.  
   
  **Acercar**  
@@ -71,7 +71,7 @@ ms.locfileid: "48164175"
  Cambie el número de niveles que se muestra en el árbol.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

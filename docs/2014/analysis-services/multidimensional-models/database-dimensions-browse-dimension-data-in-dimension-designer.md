@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2823f88c31fe69c6d39713580ee176d1e3190093
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726749"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>Examinar los datos de dimensiones en el Diseñador de dimensiones
   Puede examinar los datos de una dimensión mediante la vista **Explorador** del Diseñador de dimensiones, al que se obtiene acceso desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "48114195"
     >  Debe tener definida una traducción de la dimensión en el idioma seleccionado.  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción a las dimensiones &#40;Analysis Services - datos multidimensionales&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Introducción a las dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensiones en modelos multidimensionales](dimensions-in-multidimensional-models.md)  
   
   

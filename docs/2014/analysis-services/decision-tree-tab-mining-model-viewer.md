@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dbb34719b79ba5a12249cdb96187b178450d5802
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732686"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Pestaña Árbol de decisión (Visor de modelos de minería de datos)
   El panel **Árbol de decisión** muestra una representación visual de las reglas de decisión que se crean en un modelo de árbol de decisión. Las reglas de decisión describen las rutas hacia un determinado resultado.  
   
- **Para más información:** [Algoritmo de árboles de decisión de Microsoft](data-mining/microsoft-decision-trees-algorithm.md), [Examinar un modelo usando el Visor de árboles de Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **Para obtener más información:** [Algoritmo de árboles de decisión de Microsoft](data-mining/microsoft-decision-trees-algorithm.md), [examinar un modelo usando el Visor de árboles de Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>Opciones  
  **Actualizar el contenido del Visor**  
@@ -32,7 +32,7 @@ ms.locfileid: "48194495"
  **Modelo de minería de datos**  
  Elija un modelo de minería de datos de los de la estructura de minería de datos actual. El modelo de minería de datos se abrirá en el visor asociado.  
   
- **Visor**  
+ **Viewer**  
  Elija un visor para explorar el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado o el Visor de contenido de minería de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] . También puede utilizar visores de complemento si están disponibles.  
   
  **Acercar**  
@@ -66,7 +66,7 @@ ms.locfileid: "48194495"
  Mueva la barra deslizante a la derecha o izquierda para ajustar el número de niveles que se muestran en el gráfico de árbol. Para ver todos los nodos del modelo, deslice la barra hasta el extremo derecho.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos &#40;Diseñador de modelos de minería de datos&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visores de modelos de minería de datos](data-mining/data-mining-model-viewers.md)  
   

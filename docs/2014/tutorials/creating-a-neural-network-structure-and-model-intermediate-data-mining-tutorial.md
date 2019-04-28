@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856327"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Crear una estructura y un modelo de red neuronal (Tutorial intermedio de minería de datos)
   Para crear un modelo de minería de datos, debe usar en primer lugar el Asistente para minería de datos con el objeto de crear una nueva estructura de minería de datos basada en la nueva vista del origen de datos. En esta tarea, utilizará el asistente para crear una estructura de minería de datos y al mismo tiempo crear el modelo inicial de minería de datos que se basa en el algoritmo de red neuronal de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
@@ -96,15 +96,15 @@ ms.locfileid: "56037726"
     |AutomaticResponses|Continuous|Long|  
     |AverageTimePerIssue|Continuous|Long|  
     |Calls|Continuous|Long|  
-    |DayOfWeek|Discrete|Texto|  
+    |DayOfWeek|Discrete|Text|  
     |FactCallCenterID|Key|Long|  
     |IssuesRaised|Continuous|Long|  
     |LevelOneOperators|Continuous|Long|  
     |LevelTwoOperators|Continuous|Long|  
     |Orders|Continuous|Long|  
     |ServiceGrade|Continuous|Doble|  
-    |Shift|Discrete|Texto|  
-    |WageType|Discrete|Texto|  
+    |Shift|Discrete|Text|  
+    |WageType|Discrete|Text|  
   
 13. En el **crear pruebas establezca** página, desactive la opción, el cuadro de texto **porcentaje de datos de prueba**. Haga clic en **Siguiente**.  
   

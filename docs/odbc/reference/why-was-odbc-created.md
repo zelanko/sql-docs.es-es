@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 871919554975f04fae0aeaa1b8e6ec684c6650a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714152"
 ---
 # <a name="why-was-odbc-created"></a>¿Por qué se creó ODBC?
-Históricamente, las empresas usan un DBMS único. Todo el acceso de base de datos se realiza a través de la parte frontal de dicho sistema o las aplicaciones escritas para trabajar exclusivamente con ese sistema. Sin embargo, como el uso de los equipos que ha crecido y más software y hardware del equipo empezó a estar disponibles, las empresas se ha iniciado adquirir diferentes DBMS. Las razones por las que estaban muchas: personas compradas a lo que era más barato, lo que más rápida, lo que ya sabían, ¿cuál era más reciente en el mercado, lo que ha funcionado mejor para una sola aplicación. Otros motivos eran reorganizaciones y fusiones, donde los departamentos que anteriormente tenían un DBMS único ahora tenían varios.  
+Históricamente, las empresas usan un DBMS único. Todo el acceso de base de datos se realiza a través de la parte frontal de dicho sistema o las aplicaciones escritas para trabajar exclusivamente con ese sistema. Sin embargo, como el uso de los equipos que ha crecido y más software y hardware del equipo empezó a estar disponibles, las empresas se ha iniciado adquirir diferentes DBMS. Son muchos los motivos: Las personas que compró lo que era más barato, lo que más rápida, lo que ya sabían, ¿cuál era más reciente en el mercado, lo que ha funcionado mejor para una sola aplicación. Otros motivos eran reorganizaciones y fusiones, donde los departamentos que anteriormente tenían un DBMS único ahora tenían varios.  
   
  El problema que ha crecido incluso más complejo con la llegada de los equipos personales. Estos equipos han aportado una gran cantidad de herramientas para consultar, analizar y mostrar los datos, junto con un número de bases de datos económicas, fácil de usar. Desde ese momento, una empresa única a menudo tenía datos distribuidos en un gran número de equipos de escritorio, servidores y miniequipos, almacenados en una variedad de bases de datos incompatibles y accediendo a un gran número de herramientas diferentes, algunos de los cuales se podrían obtener en todos los datos.  
   

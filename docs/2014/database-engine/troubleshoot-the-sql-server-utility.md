@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842531"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Solucionar problemas de la Utilidad de SQL Server
   Se pueden citar como ejemplos de solución de problemas de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la resolución de una operación que no ha podido inscribir una instancia de SQL Server con un UCP, la resolución de un error de recopilación de datos que crea iconos deshabilitados en la vista de lista de instancias administradas de un UCP, la mitigación de cuellos de botella de rendimiento o la resolución de problemas de mantenimiento de recursos. Para obtener más información sobre cómo mitigar problemas de mantenimiento de recursos identificados por un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, vea [solucionar problemas de mantenimiento de recursos de SQL Server &#40;utilidad de SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
@@ -48,9 +48,9 @@ ms.locfileid: "53371067"
   
  Los mensajes de error simplificados son:  
   
- La ejecución del comando se detuvo porque la variable del shell "ErrorActionPreference" está establecida en Stop: Acceso denegado.  
+ Ejecución del comando se detuvo porque la variable del shell "ErrorActionPreference" está establecida en Stop: Acceso denegado.  
   
- ERROR: \<Fecha y hora (MM/DD/AAAA HH: mm:) >: Excepción detectada al recopilar las propiedades de la cpu.  Se podría haber producido un error en una consulta WMI.  ADVERTENCIA.  
+ ERROR: \<Fecha y hora (MM/DD/AAAA HH: mm:) >: Excepción detectada al recopilar propiedades de la cpu.  Se podría haber producido un error en una consulta WMI.  ADVERTENCIA.  
   
  Para resolver este problema, compruebe la configuración siguiente:  
   

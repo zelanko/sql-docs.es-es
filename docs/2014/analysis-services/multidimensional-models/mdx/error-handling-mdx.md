@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57b7320e8d09a3106d29a7f4c53c14a52afaadd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725673"
 ---
 # <a name="error-handling-mdx"></a>Control de errores (MDX)
-  Todos los cubos pueden controlar la forma en que se administran los errores de los scripts de expresiones multidimensionales (MDX). Control de errores se realiza a través de la `ScriptErrorHandlingMode` enumerador. Los valores posibles que admite este enumerador son los siguientes:  
+  Todos los cubos pueden controlar la forma en que se administran los errores de los scripts de expresiones multidimensionales (MDX). El control de errores se realiza mediante el enumerador `ScriptErrorHandlingMode`. Los valores posibles que admite este enumerador son los siguientes:  
   
  `IgnoreNone`  
  Hace que el servidor genere un error cuando [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] detecta un error en el script MDX.  

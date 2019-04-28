@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 70669026a7953ba1c2818ebc35b3d8fa7cb55427
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722888"
 ---
 # <a name="data-mining-tools"></a>Herramientas de minería de datos
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona las siguientes herramientas que puede utilizar para crear soluciones de minería de datos:  
@@ -43,7 +43,7 @@ ms.locfileid: "48171555"
 ## <a name="data-mining-wizard"></a>Asistente para minería de datos  
  Utilice el Asistente para minería de datos para empezar a crear soluciones de minería de datos. El asistente es rápido y sencillo, y le guía en el proceso de creación de una estructura de minería de datos y un modelo inicial de minería de datos relacionado. Asimismo, incluye las tareas necesarias para seleccionar un tipo de algoritmo y un origen de datos, y para definir los datos del caso usados para el análisis.  
   
- **Para más información:** [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining-wizard-analysis-services-data-mining.md).  
+ **Para obtener más información:** [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="data-mining-designer"></a>Data Mining Designer  
  Después de crear una estructura y modelo de minería de datos mediante el Asistente para minería de datos, puede utilizar el Diseñador de minería de datos desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para trabajar con las estructuras y modelos de minería de datos existentes.  
@@ -88,12 +88,12 @@ ms.locfileid: "48171555"
   
 -   Usar la regresión logística para segmentar los clientes de entrada por riesgo.  
   
- **Para más información:** [Proyectos relacionados para soluciones de minería de datos](data-mining-solutions.md)  
+ **Para obtener más información:** [Proyectos relacionados en las soluciones de minería de datos](data-mining-solutions.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; referencia](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Tareas del modelo de minería de datos y procedimientos](mining-model-tasks-and-how-tos.md)   
- [Tareas del Visor de modelo de minería de datos y procedimientos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Tareas y procedimientos de los modelos de minería de datos](mining-model-tasks-and-how-tos.md)   
+ [Tareas y procedimientos del Visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
  [Soluciones de minería de datos](data-mining-solutions.md)  
   
   

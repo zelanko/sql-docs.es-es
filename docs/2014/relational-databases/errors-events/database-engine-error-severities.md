@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62870983"
 ---
 # <a name="database-engine-error-severities"></a>Niveles de gravedad de error del motor de base de datos
   Cuando el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]muestra un error, la gravedad del error indica el tipo de problema detectado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

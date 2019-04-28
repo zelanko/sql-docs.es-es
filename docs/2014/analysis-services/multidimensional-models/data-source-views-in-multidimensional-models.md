@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c9f4a8c8c968bcd7a633b943ea8c42b08662a50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726819"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Vistas del origen de datos en modelos multidimensionales
   Una vista del origen de datos (DSV) es una abstracción de un origen de datos relacional que se convierte en la base de los cubos y dimensiones creadas en un proyecto multidimensional. La finalidad de una DSV es proporcionar el control sobre las estructuras de datos utilizadas en el proyecto, y trabajar independientemente de los orígenes de datos subyacentes (por ejemplo, la capacidad de cambiar de nombre o concatenar columnas sin modificar directamente el origen de datos original).  
@@ -32,9 +32,9 @@ ms.locfileid: "48126115"
  Puede crear varias vistas del origen de datos en un proyecto o una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en uno o varios orígenes de datos y crear cada una de ellas de forma que cumpla los requisitos de una solución distinta.  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Definir los datos de una vista del origen &#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
+ [Definir una vista del origen de datos &#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
   
- [Agregar o quitar tablas o vistas de datos de una vista del origen &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
  [Cambiar las propiedades de una vista del origen de datos &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   

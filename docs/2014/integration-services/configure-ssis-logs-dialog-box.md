@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dbba1b7712bcbdccc821e419b3101065c3164913
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834571"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>Configurar registros de SSIS, cuadro de diálogo
   Use el cuadro de diálogo **Configurar registros de SSIS** para definir las opciones de registro de un paquete.  
@@ -76,7 +76,7 @@ ms.locfileid: "58375222"
  **Configuración**  
  Seleccione un administrador de conexiones de la lista o haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones nuevo. En función del tipo de proveedor de registro, puede configurar un administrador de conexiones OLE DB o un administrador de conexiones de archivos. El proveedor de registro para Registro de eventos de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows no requiere conexión.  
   
- Temas relacionados: [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md) manager, [File Connection Manager](connection-manager/file-connection-manager.md)  
+ Temas relacionados: [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md), [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md)  
   
  **Eliminar**  
  Seleccione un proveedor de registro y haga clic en **Eliminar**.  

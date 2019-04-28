@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1ae1037a8b04ad1a16b8d42485105927015359a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717912"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificar relaciones mediante sql:relationship (SQLXML 4.0)
   Los elementos de un documento XML pueden estar relacionados. Los elementos pueden estar anidados jerárquicamente y pueden especificarse relaciones ID, IDREF o IDREFS entre los elementos.  
@@ -56,16 +56,16 @@ ms.locfileid: "52814877"
  **Parent**  
  Especifica a la relación principal (tabla). Es un atributo opcional; si no se especifica, el nombre de la tabla primaria se obtiene a partir de la información de la jerarquía secundaria del documento. Si el esquema especifica dos jerarquías de elementos primarios y secundarios que utilicen la misma  **\<SQL: Relationship >** pero elementos primarios diferentes, no se especifica el atributo primario en  **\<sql: relación >**. Esta información se obtiene de la jerarquía del esquema.  
   
- **clave primaria**  
+ **parent-key**  
  Especifica la clave principal del elemento primario. Si la clave principal se compone de varias columnas, los valores se especifican con un espacio entre ellos. Hay una asignación de posición entre los valores que se especifican para la clave de varias columnas y la clave secundaria correspondiente.  
   
- **elemento secundario**  
+ **Child**  
  Especifica la relación secundaria (tabla).  
   
- **clave secundaria**  
+ **child-key**  
  Especifica la clave secundaria del elemento secundario que hace referencia a la clave principal del elemento primario. Si la clave secundaria está compuesta de varios atributos (columnas), los valores de la clave del elemento secundario se especifican con un espacio entre ellos. Hay una asignación de posición entre los valores que se especifican para la clave de varias columnas y la clave principal correspondiente.  
   
- **Inverso**  
+ **Inverse**  
  Este atributo especificado en  **\<SQL: Relationship >** es utilizado por la actualización. Para obtener más información, consulte [especificar el atributo sql:inverse en SQL: Relationship](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
  El `sql:key-fields` anotación debe especificarse en un elemento que contiene un elemento secundario, que tiene un  **\<SQL: Relationship >** definida entre el elemento y el elemento secundario, y que no proporciona la clave principal de la tabla especificada en el elemento primario. Incluso si no especifica el esquema  **\<SQL: Relationship >**, debe especificar `sql:key-fields` para generar la jerarquía correcta. Para obtener más información, consulte [identificar columnas de clave mediante el uso de SQL: Key-campos](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  

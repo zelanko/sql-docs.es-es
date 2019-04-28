@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f21e65fab4cdedb37b2971e037f9b24c3b29fcd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62957140"
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ sp_linkedservers
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|Nombre del servidor vinculado.|  
-|**SRV_PROVIDERNAME**|**nvarchar (** 128 **)**|Nombre descriptivo del proveedor OLE DB que administra el acceso al servidor vinculado especificado.|  
-|**SRV_PRODUCT**|**nvarchar (** 128 **)**|Nombre de producto del servidor vinculado.|  
-|**INFORMACIÓN DE SRV_DATASOURCE**|**nvarchar (** 4000 **)**|Propiedad de origen de datos OLE DB correspondiente al servidor vinculado especificado.|  
-|**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|Propiedad de cadena del proveedor OLE DB correspondiente al servidor vinculado.|  
-|**SRV_LOCATION**|**nvarchar (** 4000 **)**|Propiedad de ubicación de OLE DB correspondiente al servidor vinculado especificado.|  
+|**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|Nombre descriptivo del proveedor OLE DB que administra el acceso al servidor vinculado especificado.|  
+|**SRV_PRODUCT**|**nvarchar(** 128 **)**|Nombre de producto del servidor vinculado.|  
+|**SRV_DATASOURCE**|**nvarchar(** 4000 **)**|Propiedad de origen de datos OLE DB correspondiente al servidor vinculado especificado.|  
+|**SRV_PROVIDERSTRING**|**nvarchar(** 4000 **)**|Propiedad de cadena del proveedor OLE DB correspondiente al servidor vinculado.|  
+|**SRV_LOCATION**|**nvarchar(** 4000 **)**|Propiedad de ubicación de OLE DB correspondiente al servidor vinculado especificado.|  
 |**SRV_CAT**|**sysname**|Propiedad de catálogo de OLE DB correspondiente al servidor vinculado especificado.|  
   
 ## <a name="permissions"></a>Permisos  

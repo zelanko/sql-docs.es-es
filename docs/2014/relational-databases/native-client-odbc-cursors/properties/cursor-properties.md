@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92ceb297f1004770903f4eadd7323bfef98e7cd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711470"
 ---
 # <a name="cursor-properties"></a>Propiedades de cursor
   Las características generales de un cursor se determinan estableciendo comportamientos de los tipos de cursores al estilo de ODBC o de cursores de SQL 92/ISO. En los temas siguientes se describen los atributos de conexión y de instrucción adicionales que afectan al comportamiento de un cursor.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3b063029126a8141e1a1a8044991a1653b536b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727981"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Medidas (pestaña Estructura de cubo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Medidas** para manipular grupos de medida y miembros en la pestaña **Estructura de cubo** del Diseñador de cubos.  
@@ -64,7 +64,7 @@ ms.locfileid: "48090325"
 |Opción|Definición|  
 |------------|----------------|  
 |**Árbol**|Muestra los grupos de medida y las medidas en una vista de árbol.|  
-|**Cuadrícula**|Muestra los grupos de medida y las medidas en una cuadrícula.|  
+|**Grid**|Muestra los grupos de medida y las medidas en una cuadrícula.|  
   
  **Cambiar el nombre**  
  Seleccione esta opción para cambiar el nombre del grupo de medida o de la medida seleccionados.  

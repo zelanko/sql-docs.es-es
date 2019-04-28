@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874500"
 ---
 # <a name="performance-of-clr-integration"></a>Rendimiento de la integración CLR
   En este tema se describe algunas de las opciones de diseño que mejoran el rendimiento de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integración con el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] common language runtime (CLR) de .NET Framework.  
@@ -54,7 +54,7 @@ ms.locfileid: "53368187"
 ### <a name="string-data"></a>Datos de cadena  
  Los datos de caracteres de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], como `varchar`, pueden ser del tipo SqlString o SqlChars en funciones administradas. Las variables SqlString crean una instancia del valor completo en la memoria. Las variables SqlChars proporcionan una interfaz de transmisión por secuencias que se puede utilizar para lograr mejores rendimiento y escalabilidad sin crear una instancia del valor completo en la memoria. Esto se vuelve especialmente importante para los datos de objetos grandes (LOB). Además, se puede tener acceso a los datos XML del servidor a través de una interfaz de transmisión por secuencias devuelta por `SqlXml.CreateReader()`.  
   
-### <a name="clr-vs-extended-stored-procedures"></a>CLR frente a Procedimientos almacenados extendidos  
+### <a name="clr-vs-extended-stored-procedures"></a>CLR vs. Procedimientos almacenados extendidos  
  Las interfaces de programación de aplicaciones (API) de Microsoft.SqlServer.Server que permiten a los procedimientos administrados devolver conjuntos de resultados al cliente funcionan mejor que las API de Servicios abiertos de datos (ODS) utilizadas por los procedimientos almacenados extendidos. Además, las API de System.Data.SqlServer admiten tipos de datos como `xml`, `varchar(max)`, `nvarchar(max)` y `varbinary(max)` introducidos en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], mientras que las API de ODS no se han ampliado para admitir los nuevos tipos de datos.  
   
  Con código administrado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] administra el uso de los recursos como la memoria, los subprocesos y la sincronización. Esto se debe a que las API administradas que exponen estos recursos se implementan sobre el administrador de recursos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En cambio, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no tiene ninguna vista o control sobre el uso de recursos del procedimiento almacenado extendido. Por ejemplo, si un procedimiento almacenado extendido usa demasiados recursos de la CPU o de la memoria, con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no hay ninguna manera de detectarlo o controlarlo. Sin embargo, con el código administrado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede detectar que un subproceso determinado no ha producido resultados durante un largo período de tiempo y, a continuación, puede obligar a la tarea a producir resultados para que se pueda programar otro trabajo. Por consiguiente, el uso de código administrado aporta una mayor escalabilidad y una mejor utilización de los recursos del sistema.  

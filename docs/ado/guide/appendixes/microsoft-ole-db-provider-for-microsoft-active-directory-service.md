@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855179"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Proveedor Microsoft OLE DB para el servicio de Microsoft Active Directory
 El proveedor de Interfaces de servicio de Active Directory (ADSI) permite ADO para conectarse a servicios de directorio heterogéneos a través de ADSI. Esto proporciona a las aplicaciones ADO acceso de solo lectura a los servicios de directorio de Microsoft Windows NT 4.0 y Microsoft Windows 2000, además de cualquier servicio de directorio compatible con LDAP y servicios de directorio Novell. ADSI se basa en un modelo de proveedor, por lo que si hay un nuevo proveedor proporcionar acceso a otro directorio, la aplicación ADO podrán acceder a él sin problemas. El proveedor ADSI es de subprocesamiento libre y está habilitado para Unicode.  
@@ -96,11 +96,11 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|lectura/escritura|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|solo lectura|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|  
-|[Marcador](../../../ado/reference/ado-api/bookmark-property-ado.md)|lectura/escritura|  
+|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|lectura/escritura|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lectura/escritura|  
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|siempre **adUseServer**|  
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|siempre **adOpenStatic**|  
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|siempre **adEditNone**|  
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|  
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|  
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|lectura/escritura|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lectura/escritura|  
@@ -132,8 +132,8 @@ objectClass='user' AND objectCategory='Person'"
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Sí|  
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|  
-|[Nueva consulta](../../../ado/reference/ado-api/requery-method.md)|Sí|  
-|[Resincronización](../../../ado/reference/ado-api/resync-method.md)|Sí|  
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|  
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|Sí|  
 |[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|No|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|  

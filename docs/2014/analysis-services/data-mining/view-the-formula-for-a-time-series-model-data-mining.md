@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9225b2eb95d267c78caaf7521a8dee0b436db08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733684"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Ver la fórmula de un modelo de serie temporal (Minería de datos)
   El [!INCLUDE[msCoName](../../includes/msconame-md.md)] inData de Visor de Series temporales Diseñador de minería de datos proporciona la manera más fácil de ver los detalles de la ecuación de regresión que se usa en un modelo de serie temporal.  
@@ -79,8 +79,8 @@ ms.locfileid: "48164005"
 5.  Si la **Leyenda de minería de datos** no está disponible, haga clic con el botón derecho en el nodo y seleccione **Mostrar leyenda**.  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas del Visor de modelo de minería de datos y procedimientos](mining-model-viewer-tasks-and-how-tos.md)   
- [Examinar un modelo usando el Visor de Series temporales de Microsoft](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Tareas y procedimientos del Visor de modelos de minería de datos](mining-model-viewer-tasks-and-how-tos.md)   
+ [Examinar un modelo usando el Visor de serie temporal de Microsoft](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Ejemplos de consultas de modelos de serie temporal](time-series-model-query-examples.md)  
   
   

@@ -18,12 +18,12 @@ ms.assetid: 3ebcf2f1-980f-4543-a84b-fbaeea54eeac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c36dfe992dc5abafa2eea78c72d1336bb33f7dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 136771c5bf691155b4547963fa2b6bd035f3f039
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62994234"
 ---
 # <a name="spchangelogshippingsecondarydatabase-transact-sql"></a>sp_change_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +52,11 @@ sp_change_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@restore_delay =** ] '*restore_delay*'  
- Cantidad de tiempo, en minutos, que espera el servidor secundario antes de restaurar un archivo de copia de seguridad dado. *restore_delay* es **int** y no puede ser NULL. El valor predeterminado es 0.  
+`[ @restore_delay = ] 'restore_delay'` La cantidad de tiempo, en minutos, que el servidor secundario espera antes de restaurar un archivo de copia de seguridad determinado. *restore_delay* es **int** y no puede ser NULL. El valor predeterminado es 0.  
   
- [  **@restore_all =** ] '*restore_all*'  
- Si se establece en 1, el servidor secundario restaura todas las copias de seguridad disponibles del registro de transacciones cuando se ejecuta el trabajo de restauración. De lo contrario, se detiene tras haber restaurado un archivo. *restore_all* es **bit** y no puede ser NULL.  
+`[ @restore_all = ] 'restore_all'` Si se establece en 1, el servidor secundario restaura todas las copias de seguridad de registro de transacciones disponibles cuando se ejecuta el trabajo de restauración. De lo contrario, se detiene tras haber restaurado un archivo. *restore_all* es **bit** y no puede ser NULL.  
   
- [  **@restore_mode =** ] '*restore_mode*'  
- Modo de restauración para la base de datos secundaria.  
+`[ @restore_mode = ] 'restore_mode'` El modo de restauración de la base de datos secundaria.  
   
  0 = Restaurar registro con NORECOVERY.  
   
@@ -67,29 +64,21 @@ sp_change_log_shipping_secondary_database
   
  *restaurar* es **bit** y no puede ser NULL.  
   
- [  **@disconnect_users =** ] '*disconnect_users*'  
- Si se establece en 1, los usuarios se desconecta de la base de datos secundaria cuando se realiza una operación de restauración. Valor predeterminado = 0. *disconnect_users* es **bit** y no puede ser NULL.  
+`[ @disconnect_users = ] 'disconnect_users'` Si se establece en 1, los usuarios se desconecta de la base de datos secundaria cuando se realiza una operación de restauración. Valor predeterminado = 0. *disconnect_users* es **bit** y no puede ser NULL.  
   
- [  **@block_size =** ] '*block_size*'  
- Tamaño, en bytes, que se utiliza como tamaño de bloque para el dispositivo de copia de seguridad. *block_size* es **int** con un valor predeterminado de -1.  
+`[ @block_size = ] 'block_size'` El tamaño, en bytes, que se usa como el tamaño de bloque para el dispositivo de copia de seguridad. *block_size* es **int** con un valor predeterminado de -1.  
   
- [  **@buffer_count =** ] '*buffer_count*'  
- Número total de búferes utilizados por la operación de copia de seguridad o restauración. *buffer_count* es **int** con un valor predeterminado de -1.  
+`[ @buffer_count = ] 'buffer_count'` El número total de búferes utilizados por la operación de copia de seguridad o restauración. *buffer_count* es **int** con un valor predeterminado de -1.  
   
- [  **@max_transfer_size =** ] '*max_transfer_size*'  
- Tamaño, en bytes, de la solicitud de entrada o salida máxima emitida por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al dispositivo de copia de seguridad. *max_transfersize* es **int** y puede ser NULL.  
+`[ @max_transfer_size = ] 'max_transfer_size'` El tamaño, en bytes, de la entrada máxima o la solicitud de salida emitida por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el dispositivo de copia de seguridad. *max_transfersize* es **int** y puede ser NULL.  
   
- [  **@restore_threshold =** ] '*restore_threshold*'  
- Número de minutos permitido entre las operaciones de restauración antes de que se genere una alerta. *restore_threshold* es **int** y no puede ser NULL.  
+`[ @restore_threshold = ] 'restore_threshold'` El número de minutos permitido entre las operaciones de restauración antes de que se genera una alerta. *restore_threshold* es **int** y no puede ser NULL.  
   
- [  **@threshold_alert =** ] '*threshold_alert*'  
- Es la alerta que se generará cuando se supere el umbral de restauración. *threshold_alert* es **int**, su valor predeterminado es 14420.  
+`[ @threshold_alert = ] 'threshold_alert'` Es la alerta que se genera cuando se supera el umbral de restauración. *threshold_alert* es **int**, su valor predeterminado es 14420.  
   
- [  **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
- Especifica si va a una alerta se genera cuando *restore_threshold*se supera. 1 = habilitadas; 0 = deshabilitadas. *threshold_alert_enabled* es **bit** y no puede ser NULL.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Especifica si va a una alerta se genera cuando *restore_threshold*se supera. 1 = habilitadas; 0 = deshabilitadas. *threshold_alert_enabled* es **bit** y no puede ser NULL.  
   
- [  **@history_retention_period =** ] '*history_retention_period*'  
- Es la cantidad de tiempo en minutos durante la que se retendrá el historial. *history_retention_period* es **int**. Si se especifica ninguno, se usará un valor de 1440.  
+`[ @history_retention_period = ] 'history_retention_period'` Es el período de tiempo en minutos en el que se retendrá el historial. *history_retention_period* es **int**. Si se especifica ninguno, se usará un valor de 1440.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

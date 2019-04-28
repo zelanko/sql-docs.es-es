@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 413272be4ac4ce913704494a26e9642666deeb92
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727320"
 ---
 # <a name="user-hierarchy-properties"></a>Propiedades de jerarquía de usuario
   En la siguiente tabla se describen las propiedades de una jerarquía definida por el usuario.  
@@ -32,7 +32,7 @@ ms.locfileid: "60154992"
 |DisplayFolder|Especifica la carpeta en la que se muestra la jerarquía a los usuarios.|  
 |Id.|Contiene el identificador único de la jerarquía.|  
 |MemberNamesUnique|Determina si los nombres de miembro de la jerarquía deben ser únicos. Los valores son True y False. El valor predeterminado es False.|  
-|Nombre|Contiene el nombre de la jerarquía.|  
+|Name|Contiene el nombre de la jerarquía.|  
   
 ## <a name="see-also"></a>Vea también  
  [Jerarquías de usuario](user-hierarchies.md)   

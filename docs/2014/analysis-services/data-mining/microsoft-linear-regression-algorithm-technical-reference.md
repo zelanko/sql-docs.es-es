@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a4bd34c0ce6a84ca4f9050f4c4b428123c379dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721907"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Referencia técnica del algoritmo de regresión lineal de Microsoft
   El algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es una versión especial del algoritmo de árboles de decisión de Microsoft que está optimizado para modelar pares de atributos continuos. Este tema explica la implementación del algoritmo, describe cómo personalizar su comportamiento y proporciona vínculos a información adicional sobre cómo consultar los modelos.  
@@ -60,7 +60,7 @@ ms.locfileid: "48106075"
 |Marca de modelado|Descripción|  
 |-------------------|-----------------|  
 |NOT NULL|Indica que la columna no puede contener un valor NULL. Se producirá un error si Analysis Services encuentra un valor NULL durante el entrenamiento del modelo.<br /><br /> Se aplica a las columnas de la estructura de minería de datos.|  
-|REGRESSOR|Indica que la columna contiene valores numéricos continuos que se deberían tratar como posibles variables independientes durante el análisis.<br /><br /> Nota: Al marcar una columna como regresor, no se asegura de que la columna se utilizará como regresor en el modelo final.<br /><br /> Se aplica a las columnas del modelo de minería de datos.|  
+|REGRESSOR|Indica que la columna contiene valores numéricos continuos que se deberían tratar como posibles variables independientes durante el análisis.<br /><br /> Nota: Al marcar una columna como regresor no garantiza que la columna se utilizará como regresor en el modelo final.<br /><br /> Se aplica a las columnas del modelo de minería de datos.|  
   
 ### <a name="regressors-in-linear-regression-models"></a>Regresores en modelos de regresión lineal  
  Los modelos de regresión lineal se basan en el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Sin embargo, aun cuando no utilice el algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , cualquier modelo de árbol de decisión puede contener un árbol o nodos que representen una regresión en un atributo continuo.  
@@ -83,11 +83,11 @@ ms.locfileid: "48106075"
 |Atributo de predicción|Continuo, cíclico y ordenado|  
   
 > [!NOTE]  
->  `Cyclical` y `Ordered` se admiten los tipos de contenido, pero el algoritmo los trata como valores discretos y no realizan ningún procesamiento especial.  
+>  Se admiten los tipos de contenido `Cyclical` and `Ordered`, pero el algoritmo los trata como valores discretos y no realiza un procesamiento especial.  
   
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de regresión lineal de Microsoft](microsoft-linear-regression-algorithm.md)   
- [Ejemplos de consultas de modelo de regresión lineal](linear-regression-model-query-examples.md)   
- [Contenido del modelo para los modelos de regresión lineal de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Ejemplos de consultas de modelos de regresión lineal](linear-regression-model-query-examples.md)   
+ [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

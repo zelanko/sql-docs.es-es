@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85f0c099aba12fe9a4049fe787e248cfe580ff3b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732010"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Buscar objetivo (escenario de Herramientas de análisis de tabla para Excel)
   ![Botón de búsqueda de objetivo en herramientas de análisis de tabla](media/tat-goalseek.gif "botón Buscar objetivo en herramientas de análisis de tabla")  

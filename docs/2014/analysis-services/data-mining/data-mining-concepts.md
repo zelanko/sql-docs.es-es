@@ -26,26 +26,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4bbc1e991787c9e2d98595ba61d4334dccf35f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723026"
 ---
 # <a name="data-mining-concepts"></a>Conceptos de minería de datos
   La minería de datos es el proceso de detectar la información procesable de los conjuntos grandes de datos. Utiliza el análisis matemático para deducir los patrones y tendencias que existen en los datos. Normalmente, estos patrones no se pueden detectar mediante la exploración tradicional de los datos porque las relaciones son demasiado complejas o porque hay demasiado datos.  
   
  Estos patrones y tendencias se pueden recopilar y definir como un *modelo de minería de datos*. Los modelos de minería de datos se pueden aplicar en escenarios como los siguientes:  
   
--   **Pronóstico**: cálculo de las ventas y predicción de las cargas del servidor o del tiempo de inactividad del servidor.  
+-   **Previsión**: Calcular las ventas y predicción de las cargas del servidor o el tiempo de inactividad del servidor  
   
--   **Riesgo y probabilidad**: elección de los mejores clientes para la distribución de correo directo, determinación del punto de equilibrio probable para los escenarios de riesgo, y asignación de probabilidades a diagnósticos y otros resultados.  
+-   **Riesgo y probabilidad**: Elegir a los mejores clientes para la distribución de correo directo, determinación del punto de equilibrio probable para escenarios de riesgo, y asignat probabilidades a diagnósticos y otros resultados  
   
--   **Recomendaciones**: determinación de los productos que se pueden vender juntos y generación de recomendaciones.  
+-   **Recomendaciones**: Determinar qué productos se pueden vender juntos y generación de recomendaciones  
   
--   **Búsqueda de secuencias**: análisis de los artículos que los clientes han introducido en el carrito de la compra y predicción de posibles eventos.  
+-   **Buscar secuencias**: Análisis de cliente en un carro de la compra, predicción de posibles eventos probables  
   
--   **Agrupación**: distribución de clientes o eventos en grupos de elementos relacionados, y análisis y predicción de afinidades.  
+-   **Agrupación**: Distribución de clientes o eventos de elementos relacionados, analizar y predecir afinidades en  
   
  La generación de un modelo de minería de datos forma parte de un proceso mayor que incluye desde la formulación de preguntas acerca de los datos y la creación de un modelo para responderlas, hasta la implementación del modelo en un entorno de trabajo. Este proceso se puede definir mediante los seis pasos básicos siguientes:  
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 704b775a881bc3c08f9789229231e05b56005257
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736793"
 ---
 # <a name="processing-analysis-services-objects"></a>Procesar objetos de Analysis Services
   El procesamiento afecta a los siguientes tipos de objetos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : cubos, dimensiones, grupos de medida, particiones, modelos y estructuras de minería de datos y bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Puede especificar el nivel de procesamiento de cada objeto, o bien puede especificar la opción Procesar predeterminado para permitir que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seleccione automáticamente el nivel óptimo de procesamiento. Para más información sobre los distintos niveles de procesamiento de cada objeto, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "48050975"
   
  El procesamiento de dimensiones no crea ni actualiza miembros calculados, que se definen en el nivel de cubo. Los miembros calculados se ven afectados cuando se actualiza la definición de cubo. Además, el procesamiento de dimensiones no crea ni actualiza agregaciones. Sin embargo, el procesamiento de dimensiones puede hacer que se quiten agregaciones. Las agregaciones se crean o actualizan únicamente durante el procesamiento de particiones.  
   
- Cuando procese una dimensión, tenga en cuenta que puede utilizarse en varios cubos. Cuando procesa la dimensión, estos cubos se marcan como no procesados y dejan de estar disponibles para consultas. Para procesar al mismo tiempo la dimensión y los cubos relacionados, use la configuración de procesamiento por lotes. Para más información, vea [Batch Processing &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
+ Cuando procese una dimensión, tenga en cuenta que puede utilizarse en varios cubos. Cuando procesa la dimensión, estos cubos se marcan como no procesados y dejan de estar disponibles para consultas. Para procesar al mismo tiempo la dimensión y los cubos relacionados, use la configuración de procesamiento por lotes. Para más información, vea [Procesamiento por lotes &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
   
 ##  <a name="bkmk_procmeasure"></a> Procesar un grupo de medida  
  Cuando se procesa un grupo de medida, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] procesa algunas o todas las particiones del grupo de medida, y cualquier dimensión no procesada que participe en ese grupo. Los detalles del trabajo de procesamiento dependen de la opción de procesamiento seleccionada. Puede procesar uno o más grupos de medida de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sin que afecte a otros grupos de medida de un cubo.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ecdc453b6498463e431cbad555af738fde2da1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725439"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE y FORMAT_STRING en FORMATED_VALUE
   La propiedad FORMATTED_VALUE se basa en las interacciones de las propiedades VALUE, LANGUAGE y FORMAT_STRING de la celda. En este tema se explica cómo interactúan estas propiedades para generar la propiedad FORMATTED_VALUE.  
@@ -34,7 +34,7 @@ ms.locfileid: "48052362"
  Especificación de la configuración regional que se va a aplicar junto a FORMAT_STRING para generar una versión localizada de FORMATTED_VALUE.  
   
 ## <a name="formattedvalue-constructed"></a>Composición de la propiedad FORMATTED_VALUE  
- La propiedad FORMATTED_VALUE se construye utilizando el valor de la propiedad VALUE y aplicando a dicho valor la plantilla de formato especificada en la propiedad FORMAT_STRING. Además, cada vez que el valor de formato es un `named formatting literal` la especificación de la propiedad LANGUAGE modifica la salida de FORMAT_STRING para adaptarse al uso del lenguaje del formato con nombre. Todos los literales del formato con nombre están definidos de forma que se pueden localizar. Por ejemplo, `"General Date"` es una especificación que puede adaptarse, a diferencia de la plantilla `"YYYY-MM-DD hh:nn:ss",` , que establece que la fecha debe presentarse tal y como se define en la plantilla con independencia de la especificación del idioma.  
+ La propiedad FORMATTED_VALUE se construye utilizando el valor de la propiedad VALUE y aplicando a dicho valor la plantilla de formato especificada en la propiedad FORMAT_STRING. Además, siempre que el valor de formato es `named formatting literal`, la especificación de la propiedad LANGUAGE modifica la salida de FORMAT_STRING para adaptarse al uso del lenguaje del formato con nombre. Todos los literales del formato con nombre están definidos de forma que se pueden localizar. Por ejemplo, `"General Date"` es una especificación que puede adaptarse, a diferencia de la plantilla `"YYYY-MM-DD hh:nn:ss",` , que establece que la fecha debe presentarse tal y como se define en la plantilla con independencia de la especificación del idioma.  
   
  Si surge algún conflicto entre la plantilla FORMAT_STRING y la especificación de LANGUAGE, la plantilla FORMAT_STRING invalida la especificación de LANGUAGE. Por ejemplo, si FORMAT_STRING="$ #0", LANGUAGE=1034 (España) y VALUE=123.456, el valor de FORMATTED_VALUE será "$ 123" en lugar de "€ 123", pues dado que el valor de la plantilla de formato invalida el idioma especificado, el formato esperado será en euros.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "48052362"
 |C|$5.040,00|FORMAT_STRING se establece en `$#,##0.00` e invalida a Currency (heredado de A) y LANGUAGE se establece explícitamente en `1034` (España). Dado que la propiedad FORMAT_STRING establece de forma explícita el símbolo de moneda en $, FORMATTED_VALUE se presenta con el signo $. Sin embargo, dado que `.` (punto) y `,` (coma) son respectivamente los marcadores de posición del separador decimal y el separador de miles, la especificación del lenguaje tiene efecto a la hora de generar una salida adaptada para el separador decimal y el separador de miles.|  
 |D|5.04E+03|FORMAT_STRING se establece en `Scientific` y LANGUAGE en `1033`, al heredar el valor de la configuración regional del sistema; por tanto, `.` (punto) será el separador decimal.|  
 |E|5,04E+03|FORMAT_STRING se establece en `Scientific` y LANGUAGE se establece explícitamente en `1034,` , por tanto, `,` (coma) será el separador decimal.|  
-|F|50,40 %|FORMAT_STRING se establece en `Percent` y LANGUAGE en `1033`, al heredar el valor de la configuración regional del sistema; por tanto, `.` (punto) será el separador decimal.<br /><br /> Observe que VALUE se ha modificado de 5040 a 0.5040|  
+|F|50,40 %|FORMAT_STRING se establece en `Percent` y LANGUAGE en `1033`, al heredar el valor de la configuración regional del sistema; por tanto, `.` (punto) será el separador decimal.<br /><br /> Observe que VALUE se ha modificado de 5040 a 0.5040|  
 |G|50,40 %|FORMAT_STRING se establece en `Percent`, al heredar de F, y LANGUAGE se establece explícitamente en `1034` ; por tanto, `,` (coma) será el separador decimal.<br /><br /> Observe que VALUE se ha heredado del valor F.|  
-|H|no|FORMAT_STRING se establece en `YES/NO`, VALUE se establece en 0 y LANGUAGE se establece explícitamente en `1034`; como no hay diferencia entre el inglés NO y el español NO, el usuario no puede apreciar ninguna diferencia en FORMATTED_VALUE.|  
+|H|No|FORMAT_STRING se establece en `YES/NO`, VALUE se establece en 0 y LANGUAGE se establece explícitamente en `1034`; como no hay diferencia entre el inglés NO y el español NO, el usuario no puede apreciar ninguna diferencia en FORMATTED_VALUE.|  
 |I|SI|FORMAT_STRING se establece en `YES/NO`, VALUE se establece en 59 y LANGUAGE se establece explícitamente en `1034`; tal y como se definió para el formato YES/NO, cualquier valor que no sea cero (0) es YES y, dado que el idioma está establecido en español, FORMATTED_VALUE es SI.|  
 |J|Desactivado|FORMAT_STRING se establece en `ON/OFF`, VALUE se establece en 0 y LANGUAGE se establece explícitamente en `1034`; tal y como se definió para el formato ON/OFF, cualquier valor igual a cero (0) es OFF y, dado que el idioma se estableció en español, FORMATTED_VALUE es Desactivado.|  
 |K|Activado|FORMAT_STRING se establece en `ON/OFF`, VALUE se establece en -312 y LANGUAGE se establece explícitamente en `1034`; tal y como se definió en el formato de ON/OFF, cualquier valor distinto de (0) es ON, y dado que el idioma está establecido en español, el valor de FORMATTED_VALUE es Activado.|  
@@ -144,8 +144,8 @@ ms.locfileid: "48052362"
   
 ## <a name="see-also"></a>Vea también  
  [FORMAT_STRING, contenido &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
- [Uso de las propiedades de celda &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
- [Creación y uso de los valores de propiedad &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
- [Aspectos básicos de consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Usar las propiedades de celda &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
+ [Crear y usar los valores de propiedad &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

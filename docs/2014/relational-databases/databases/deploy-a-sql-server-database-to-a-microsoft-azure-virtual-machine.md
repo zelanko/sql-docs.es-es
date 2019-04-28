@@ -44,11 +44,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40f1bf8c37ab27bc00fd291d6687737215519259
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871684"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implementar una base de datos de SQL Server en una máquina virtual de Microsoft Azure
   Use el asistente para **Implementar una base de datos de SQL Server en una máquina virtual de Windows Azure[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para implementar una base de datos desde una instancia del** en [!INCLUDE[ssDE](../../includes/ssde-md.md)] en una máquina virtual (VM) de Windows Azure. El asistente emplea una operación de copia de seguridad completa de la base de datos, por lo que siempre copia todo el esquema de la base de datos y los datos de una base de datos de usuario de SQL Server. El asistente también realiza toda la configuración de Azure VM, por lo que no se requiere ninguna configuración previa de la VM.  
@@ -89,9 +89,9 @@ ms.locfileid: "53357890"
   
  En los equipos que ejecutan sistemas operativos Windows Server, debe usar la configuración siguiente para ejecutar este asistente:  
   
--   Desactive la Configuración de seguridad mejorada:  Use el Administrador de servidor > servidor Local para establecer la configuración de seguridad mejorada de Internet Explorer (ESC) **OFF**.  
+-   Desactivar la configuración de seguridad mejorada:  Use el Administrador de servidor > servidor Local para establecer la configuración de seguridad mejorada de Internet Explorer (ESC) **OFF**.  
   
--   Habilite JavaScript:  Internet Explorer > Opciones de Internet > Seguridad > Nivel personalizado > Automatización > Active scripting: **Habilitar**.  
+-   Habilitar JavaScript:  Internet Explorer > Opciones de Internet > seguridad > Nivel personalizado > Scripting > Active Scripting: **Habilitar**.  
   
 ###  <a name="limitations"></a> Limitaciones y restricciones  
  La limitación de tamaño de la base de datos para esta operación es 1 TB.  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6a908fb7d309b9e41b7392f35efb25dadef04c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727871"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>Cuadro de diálogo Propiedades de la estructura de minería de datos (Analysis Services: minería de datos)
   Use el cuadro de diálogo **Propiedades de la estructura de minería de datos** en **SQL Server Management Studio** para establecer las propiedades de una estructura de minería de datos en una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Puede visualizar el cuadro de diálogo **Propiedades de la estructura de minería de datos** haciendo clic con el botón derecho en una estructura de minería de datos en el **Explorador de objetos** y seleccionando **Propiedades** en el menú contextual.  
@@ -35,6 +35,6 @@ ms.locfileid: "48177545"
 |**Configuración de errores**|Use la página **Configuración de errores** para visualizar y modificar las configuraciones de errores de la estructura de minería de datos. Para obtener más información sobre esta página, vea [Configuración de errores &#40;cuadro de diálogo Propiedades de la estructura de minería de datos&#41; &#40;Analysis Services: datos multidimensionales&#41;](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Vea también  
- [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

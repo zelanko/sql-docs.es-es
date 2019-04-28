@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2db75092ee2504fbd8f36a4bdf8f8e399f4841d8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834443"
 ---
 # <a name="configure-data-viewer-histogram-tab"></a>Configurar visor de datos (pestaña Histograma)
   Utilice la pestaña **Histograma** del cuadro de diálogo **Configurar visor de datos** para especificar la columna que se desea mostrar. Un histograma muestra valores de datos de una columna numérica como una distribución de los valores. El gráfico solo refleja el contenido de un búfer.  

@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5109e604c65d8a525e5c65127ca287c8e3b049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725249"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Administración de ensamblados de modelos multidimensionales
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona gran cantidad de funciones intrínsecas que se pueden usar con los lenguajes MDX (Expresiones multidimensionales) y DMX (Extensiones de minería de datos), y que están diseñadas para realizar multitud de tareas, desde cálculos estadísticos estándar hasta recorridos por los miembros de una jerarquía. No obstante, al igual que con cualquier otro producto complejo, existe siempre la necesidad de ampliar la funcionalidad.  
@@ -92,7 +92,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 |Configuración de permisos|Descripción|  
 |------------------------|-----------------|  
 |`Safe`|Proporciona permiso de cálculo interno. Este depósito de permisos no asigna permisos para el acceso a los recursos protegidos en .NET Framework. Se trata del depósito de permisos predeterminado para un ensamblado si no se especifica ninguno con la propiedad `PermissionSet`.|  
-|`ExternalAccess`|Proporciona el mismo acceso que el `Safe` establecer, con la capacidad adicional para tener acceso a recursos externos del sistema. Este depósito de permisos no ofrece garantías de seguridad (aunque se puede proteger este escenario), pero ofrece garantías de confiabilidad.|  
+|`ExternalAccess`|Proporciona el mismo acceso que la configuración `Safe`, con la posibilidad adicional de permitir el acceso a los recursos externos del sistema. Este depósito de permisos no ofrece garantías de seguridad (aunque se puede proteger este escenario), pero ofrece garantías de confiabilidad.|  
 |`Unsafe`|Sin restricciones. No se pueden ofrecer garantías de seguridad ni confiabilidad al código administrado que se ejecute en este conjunto de permisos. Otorga cualquier permiso al código que se ejecute en este nivel de confianza, incluso un permiso personalizado incluido por el administrador.|  
   
  Si CLR es hospedado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], la comprobación de permisos basada en el recorrido de la pila se detiene en el límite con el código de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nativo. Cualquier código administrado en los ensamblados de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] queda siempre en una de las tres categorías de permiso descritas anteriormente.  
@@ -100,13 +100,13 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  Las rutinas de ensamblado COM (o no administradas) no admiten el modelo de seguridad de CLR.  
   
 ### <a name="impersonation"></a>Suplantación  
- Siempre que exista código administrado que tenga acceso a cualquier recurso externo a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sigue las reglas asociadas a la configuración de la propiedad `ImpersonationMode` del ensamblado para asegurar que el acceso se produce en un contexto de seguridad de Windows adecuado. Porque los ensamblados que utilizan el `Safe` configuración de permisos no puede tener acceso a recursos fuera de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], estas reglas son aplicables solo a los ensamblados que utilizan el `ExternalAccess` y `Unsafe` configuración de permisos.  
+ Siempre que exista código administrado que tenga acceso a cualquier recurso externo a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sigue las reglas asociadas a la configuración de la propiedad `ImpersonationMode` del ensamblado para asegurar que el acceso se produce en un contexto de seguridad de Windows adecuado. Dado que los ensamblados que utilizan la configuración de permisos `Safe` no tienen acceso a los recursos externos a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], estas reglas solo se aplican a ensamblados que utilicen la configuración de permisos `ExternalAccess` y `Unsafe`.  
   
 -   Si el contexto de ejecución actual corresponde al inicio de sesión autenticado de Windows y es el mismo contexto del autor de la llamada original (es decir, EXECUTE AS no se encuentra en el medio), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suplantará el inicio de sesión autenticado de Windows para tener acceso al recurso.  
   
 -   Si hay un EXECUTE AS intermedio que ha cambiado el contexto del llamador original, se producirá un error al intentar obtener acceso al recurso externo.  
   
- El `ImpersonationMode` propiedad puede establecerse en `ImpersonateCurrentUser` o `ImpersonateAnonymous`. La configuración predeterminada, `ImpersonateCurrentUser`, ejecuta un ensamblado en la cuenta de inicio de sesión de red del usuario actual. Si el `ImpersonateAnonymous` es usar la configuración, el contexto de ejecución es corresponde a la cuenta de usuario de inicio de sesión de Windows IUSER_*servername* en el servidor. Se trata de la cuenta de invitado para Internet, que tiene privilegios limitados en el servidor. Un ensamblado que se ejecute en este contexto solamente podrá tener acceso a recursos limitados del servidor local.  
+ La propiedad `ImpersonationMode` se puede establecer en `ImpersonateCurrentUser` o `ImpersonateAnonymous`. La configuración predeterminada, `ImpersonateCurrentUser`, ejecuta un ensamblado en la cuenta de inicio de sesión en red del usuario actual. Si el `ImpersonateAnonymous` es usar la configuración, el contexto de ejecución es corresponde a la cuenta de usuario de inicio de sesión de Windows IUSER_*servername* en el servidor. Se trata de la cuenta de invitado para Internet, que tiene privilegios limitados en el servidor. Un ensamblado que se ejecute en este contexto solamente podrá tener acceso a recursos limitados del servidor local.  
   
 ### <a name="application-domains"></a>Dominios de aplicación  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no ofrece dominios de aplicación directamente. Dado que un conjunto de ensamblados se ejecuta en el mismo dominio de aplicación, los dominios de aplicación podrán descubrirse entre ellos en el tiempo de ejecución mediante el espacio de nombres `System.Reflection` de .NET Framework o de alguna otra forma, y podrán realizar en ellos llamadas enlazadas en tiempo de ejecución. Tales llamadas estarán sujetas a las comprobaciones de permiso utilizadas por la seguridad basada en autorizaciones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -115,6 +115,6 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 ## <a name="see-also"></a>Vea también  
  [Configurar la seguridad para procedimientos almacenados](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
- [Definición de procedimientos almacenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [Definir procedimientos almacenados](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

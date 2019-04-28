@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b877875c6a5c02b7d7715916d5515e93d95dbeb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725559"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>Establecer el contexto de cubo en una consulta (MDX)
   Las consultas de MDX se ejecutan en un contexto de cubo especificado. En este contexto se definen los miembros que se evalúan mediante las expresiones contenidas en la consulta.  
@@ -60,6 +60,6 @@ FROM [Adventure Works]
  Puede utilizar la función de MDX [LookupCube](/sql/mdx/lookupcube-mdx) para recuperar datos de cubos que se encuentren fuera del contexto de cubo. Además, funciones como [Filter](/sql/mdx/filter-mdx) están disponibles para permitir la restricción temporal del contexto mientras se evalúa la consulta.  
   
 ## <a name="see-also"></a>Vea también  
- [Aspectos básicos de consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

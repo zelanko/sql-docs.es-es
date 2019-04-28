@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 27b24a6e7686c136cf79fa882136a362c7560e42
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717422"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Realizar la carga masiva de datos XML (SQLXML 4.0)
   Carga masiva XML es un objeto COM independiente que permite cargar datos XML semiestructurados en tablas de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

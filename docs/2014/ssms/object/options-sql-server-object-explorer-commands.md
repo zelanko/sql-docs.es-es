@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999306"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>Opciones (SQL Server Explorador de objetos-comandos)
   Al hacer clic con el botón secundario en una tabla o una vista en el Explorador de objetos, se presentan las dos opciones siguientes para mostrar las filas en la tabla:  

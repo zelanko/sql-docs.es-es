@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11480432c19f84d58c5804927c3c22ac31be4342
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711819"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>Cambiar el valor del tiempo de espera para las consultas de minería de datos
   Al generar un gráfico de elevación o ejecutar una consulta de predicción, en ocasiones se necesita mucho tiempo para generar todos los datos requeridos para la predicción. Para evitar que se exceda el tiempo de espera de la consulta, puede cambiar el valor que controla cuánto tiempo debe esperar el servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para completar una consulta.  
@@ -36,7 +36,7 @@ ms.locfileid: "48077472"
 3.  Haga clic en el cuadro de texto **Tiempo de espera de la consulta** y escriba un valor para el número de segundos.  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas de consulta de minería de datos y procedimientos](data-mining-query-tasks-and-how-tos.md)   
+ [Tareas y procedimientos de Consulta de minería de datos](data-mining-query-tasks-and-how-tos.md)   
  [Consultas de minería de datos](data-mining-queries.md)  
   
   

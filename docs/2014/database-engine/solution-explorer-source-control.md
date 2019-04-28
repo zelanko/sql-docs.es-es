@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843117"
 ---
 # <a name="solution-explorer-source-control"></a>Control de código fuente del Explorador de soluciones
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] El Explorador de soluciones puede integrarse en un sistema de control de código fuente independiente. Una vez que una solución o un proyecto se integra en un sistema de control de código fuente, se pueden controlar el acceso de archivos y las versiones de los scripts y las consultas en los proyectos.  

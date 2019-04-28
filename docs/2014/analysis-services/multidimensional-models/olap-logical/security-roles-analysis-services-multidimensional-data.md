@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e63ef1a2463f65e108ade9a43b748e02831da57
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725259"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Roles de seguridad (Analysis Services - Datos multidimensionales)
   Los roles se usan en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para administrar la seguridad de los objetos y datos de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . En términos simples, un rol asocia los identificadores de seguridad (SID) de usuarios y grupos de Microsoft Windows que tienen derechos y permisos de acceso específicos a los objetos administrados por una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. En [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]se incluyen dos tipos de roles:  

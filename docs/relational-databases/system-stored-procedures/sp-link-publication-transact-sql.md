@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960185"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**0**|Usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación con el inicio de sesión especificado en este procedimiento almacenado como *inicio de sesión* y *contraseña*.<br /><br /> Nota: En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta opción se utiliza para especificar una llamada a procedimiento remoto (RPC) dinámico.|  
+|**0**|Usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación con el inicio de sesión especificado en este procedimiento almacenado como *inicio de sesión* y *contraseña*.<br /><br /> Nota: En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta opción se utiliza para especificar una llamada dinámica de procedimiento remoto (RPC).|  
 |**1**|Utiliza el contexto de seguridad (autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o autenticación de Windows) del usuario que realiza el cambio en el suscriptor.<br /><br /> Nota: Esta cuenta también debe existir en el publicador con privilegios suficientes. Al usar la autenticación de Windows, se debe admitir la delegación de cuentas de seguridad.|  
 |**2**|Utiliza una existente, definido por el usuario inicio de sesión vinculado creado mediante **sp_link_publication**.|  
   

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832582"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Visor y tarea de generación de perfiles de datos
   La tarea de generación de perfiles de datos proporciona la funcionalidad para generar perfiles de datos dentro del proceso de extracción, transformación y carga de datos. El uso de esta tarea le permitirá:  
@@ -55,12 +55,12 @@ ms.locfileid: "58379242"
 ## <a name="integration-services-and-data-profiling"></a>Integration Services y generación de perfiles de datos  
  En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el proceso de generación de perfiles de datos consta de los pasos siguientes:  
   
- **Paso 1: Configurar la tarea de generación de perfiles de datos**  
+ **Paso 1: Preparación de la tarea de generación de perfiles de datos**  
  La tarea de generación de perfiles de datos es una tarea que se utiliza para configurar los perfiles que se desean calcular. A continuación, se ejecuta el paquete que contiene la tarea de generación de perfiles de datos para calcular los perfiles. La tarea guarda el perfil generado en formato XML en un archivo o en una variable de paquete.  
   
  **Para obtener más información:** [Configuración de la tarea de generación de perfiles de datos](data-profiling-task.md)  
   
- **Paso 2: Revisar los perfiles calculados por la tarea de generación de perfiles de datos**  
+ **Paso 2: Revisión de los perfiles calculados por la tarea de generación de perfiles de datos**  
  Para ver los perfiles de datos calculados por la tarea de generación de perfiles de datos, se envía la salida a un archivo y, a continuación, se utiliza el Visor de perfil de datos. Este visor es una utilidad independiente que muestra el perfil generado tanto en formato resumen como en formato detallado, y que también permite la obtención de detalles.  
   
  **Para obtener más información:** [Visor de perfil de datos](data-profile-viewer.md)  

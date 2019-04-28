@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab92e158fe5da6312959cc0797ff48e1c44e0080
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835234"
 ---
 # <a name="common-properties"></a>Propiedades comunes
   Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tienen propiedades comunes y propiedades personalizadas en el nivel del componente, de las entradas y salidas, y de las columnas de entrada y de salida. Muchas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
@@ -114,7 +114,7 @@ ms.locfileid: "58378883"
 |Id.|Integer|Valor que identifica la entrada de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la entrada.|  
 |IsSorted|Boolean|Indica si los datos de la entrada están ordenados.|  
-|Nombre|String|Nombre de la entrada.|  
+|Name|String|Nombre de la entrada.|  
 |SourceLocale|Integer|El Id. de configuración regional (LCID) de los datos de entrada.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. . Los valores son `Fail component`, `Ignore failure` y `Redirect row`.|  
   
@@ -135,7 +135,7 @@ ms.locfileid: "58378883"
 |Id.|Integer|Valor que identifica la columna de entrada de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la columna de entrada.|  
 |LineageID|Integer|El Id. de columna para la columna de nivel superior.|  
-|Nombre|String|Nombre de la columna de entrada.|  
+|Name|String|Nombre de la columna de entrada.|  
 |SortKeyPosition|Integer|Valor que indica si una columna está ordenada, su criterio de ordenación y la secuencia en la que se ordenan varias columnas. El valor **0** indica que la columna no está ordenada.  Para obtener más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son `Fail component`, `Ignore failure` y `Redirect row`.|  
 |UpstreamComponentName|String|Nombre del componente de nivel superior.|  
@@ -179,7 +179,7 @@ ms.locfileid: "58378883"
 |Id.|Integer|Valor que identifica la columna de resultados de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la columna de resultados.|  
 |LineageID|Integer|El Id. de columna para la columna de resultados. Los componentes de nivel inferior hacen referencia a la columna utilizando este valor.|  
-|Nombre|String|Nombre de la columna de resultados.|  
+|Name|String|Nombre de la columna de resultados.|  
 |SortKeyPosition|Integer|Valor que indica si una columna está ordenada, su criterio de ordenación y la secuencia en la que se ordenan varias columnas. El valor **0** indica que la columna no está ordenada. Para más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |SpecialFlags|Integer|Un valor que contiene las marcas especiales de la columna de resultados.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son `Fail component`, `Ignore failure` y `Redirect row`. El valor predeterminado es `Fail component`.|  
@@ -196,7 +196,7 @@ ms.locfileid: "58378883"
 |Descripción|String|Describe la columna externa.|  
 |Id.|Integer|Valor que identifica la columna de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la columna.|  
-|Nombre|String|Nombre de la columna de externa.|  
+|Name|String|Nombre de la columna de externa.|  
   
  Las columnas de metadatos externos también incluyen un conjunto de propiedades de tipo de datos.  
   

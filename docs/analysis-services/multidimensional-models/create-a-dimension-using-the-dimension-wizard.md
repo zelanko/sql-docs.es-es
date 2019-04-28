@@ -1,5 +1,5 @@
 ---
-title: Crear una dimensión mediante el Asistente para dimensiones | Documentos de Microsoft
+title: Crear una dimensión mediante el Asistente para dimensiones | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ba906ab17169b2e2faf6bef54137fcc4e6210660
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866895"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>Crear una dimensión usando el Asistente para dimensiones
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -70,6 +70,6 @@ ms.locfileid: "34023272"
     >  Puede utilizar el Diseñador de dimensiones una vez finalizado el Asistente para dimensiones para agregar, quitar o configurar atributos y jerarquías de la dimensión.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear una dimensión mediante el uso de una tabla existente](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
+ [Crear una dimensión usando una tabla existente](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
   
   

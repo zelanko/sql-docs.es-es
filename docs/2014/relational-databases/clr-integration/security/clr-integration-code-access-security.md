@@ -18,22 +18,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873739"
 ---
 # <a name="clr-integration-code-access-security"></a>Seguridad de acceso del código de integración CLR
   Common Language Runtime (CLR) admite un modelo de seguridad denominado seguridad de acceso del código para el código administrado. En este modelo, se conceden permisos a los ensamblados basados en la identidad del código. Para obtener más información, vea la sección sobre seguridad de acceso del código en el kit de desarrollo de software de .NET Framework.  
   
  La directiva de seguridad que determina los permisos que se conceden a los ensamblados se define en tres sitios distintos:  
   
--   Directiva de equipo: es la directiva activa para todo el código administrado que se ejecuta en el equipo donde está instalado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Directiva de equipo: Esta es la directiva en vigor para todo el código administrado que se ejecuta en el equipo en el que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está instalado.  
   
--   Directiva de usuario: es la directiva activa para el código administrado que se hospeda en un proceso. Para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio se está ejecutando.  
+-   Directiva de usuario: Esta es la directiva en vigor para código administrado hospedado por un proceso. Para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] servicio se está ejecutando.  
   
--   Directiva de host: es la directiva configurada por el host de CLR (en este caso, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) que está activa para el código administrado que se ejecuta en ese host.  
+-   Directiva de host: Esta es la directiva configurada por el host de CLR (en este caso, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) que está en vigor para código administrado que se ejecuta en ese host.  
   
  El mecanismo de seguridad de acceso del código admitido por CLR se basa en el supuesto de que el tiempo de ejecución puede hospedar código de plena confianza y código de confianza parcial. Los recursos que están protegidos por la seguridad de acceso del código CLR normalmente se encapsulan las interfaces de programación de aplicaciones administradas que requirethe correspondiente permiso antes de permitir el acceso al recurso. El permiso demandfor solamente se satisface si todos los llamadores (en el nivel de ensamblado) en la pila de llamadas tienen el permiso de recurso correspondiente.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48076008"
 |Permiso|Valor(es)/descripción|  
 |----------------|-----------------------------|  
 |`SecurityPermission`|`Execution:` permiso para ejecutar el código administrado.|  
-|`SqlClientPermission`|`Context connection = true`, `context connection = yes`: solo puede usarse la conexión de contexto (context-connection) y la cadena de conexión solo puede especificar un valor "context connection=true" o "context connection=yes".<br /><br /> **AllowBlankPassword = false:** no se permiten contraseñas en blanco.|  
+|`SqlClientPermission`|`Context connection = true`, `context connection = yes`: Solo se puede usar la conexión de contexto y la cadena de conexión solo puede especificar un valor de "conexión de contexto = true" o "conexión de contexto = yes".<br /><br /> **AllowBlankPassword = false:**  No se permiten contraseñas en blanco.|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Los ensamblados EXTERNAL_ACCESS tienen los mismos permisos que `SAFE` ensamblados, con la capacidad adicional para tener acceso a recursos externos del sistema como archivos, redes, variables de entorno y el registro.  
@@ -108,9 +108,9 @@ ms.locfileid: "48076008"
 ||`SAFE`|`EXTERNAL_ACCESS`|`UNSAFE`|  
 |`Code Access Security Permissions`|Solo ejecución|Ejecución + acceso a recursos externos|Sin restringir (se incluye P/Invoke)|  
 |`Programming model restrictions`|Sí|Sí|Sin restricciones|  
-|`Verifiability requirement`|Sí|Sí|no|  
+|`Verifiability requirement`|Sí|Sí|No|  
 |`Local data access`|Sí|Sí|Sí|  
-|`Ability to call native code`|no|no|Sí|  
+|`Ability to call native code`|No|No|Sí|  
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad de la integración CLR](clr-integration-security.md)   

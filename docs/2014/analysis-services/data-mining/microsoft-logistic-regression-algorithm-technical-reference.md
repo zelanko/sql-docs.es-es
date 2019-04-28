@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 157baeb7e5bd8fb53b2435f55e3e71c098632002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733939"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Referencia técnica del algoritmo de regresión logística de Microsoft
   El algoritmo de regresión logística de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es una variación del algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , donde el parámetro *HIDDEN_NODE_RATIO* se establece en 0. Este valor creará un modelo de red neuronal que no contenga un nivel oculto y que, por consiguiente, sea equivalente a la regresión logística.  
@@ -61,7 +61,7 @@ ms.locfileid: "52518051"
   
  Μ = p - (la probabilidad anterior de un estado)  
   
- StdDev = sqrt(p(1-p))  
+ StdDev  = sqrt(p(1-p))  
   
  Valor está presente:     (1-μ)/σ / / (uno menos mu) dividido por sigma)  
   
@@ -85,7 +85,7 @@ WHERE NODE_TYPE = 23
   
  Para cada valor de salida, esta consulta devuelve los coeficientes y un identificador que señala al nodo de entrada relacionado. También devuelve una fila que contiene el valor de la salida y la intersección. Cada entrada X tiene su propio coeficiente (Ci), pero la tabla anidada también contiene un coeficiente "libre" (Co), calculado de acuerdo con la siguiente fórmula:  
   
- F (x) = X1 * C1 + X2\*C2 + … + Xn\*Cn + X0  
+ F(X) = X1*C1 + X2\*C2 + ... +Xn\*Cn + X0  
   
  Activación: exp(F(X)) / (1 + exp(F(X)) )  
   

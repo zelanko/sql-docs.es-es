@@ -15,18 +15,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4aaac5f66e8c01364419d8d2d9d5e853bf929ef7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878228"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>Establecer las propiedades de una variable definida por el usuario
   Para establecer las propiedades de una variable definida por el usuario en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], puede utilizar una de las características siguientes:  
   
 -   Ventana Variables.  
   
--   Ventana Propiedades. El **propiedades** ventana enumeran las propiedades para configurar variables que no están disponibles en el **Variables** ventana: Descripción, EvaluateAsExpression, Expression, ReadOnly, ValueType y IncludeInDebugDump.  
+-   Ventana Propiedades. En la ventana **Propiedades** se enumeran las propiedades para configurar variables que no están disponibles en la ventana **Variables**: Description, EvaluateAsExpression, Expression, ReadOnly, ValueType e IncludeInDebugDump.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] también proporciona un conjunto de variables del sistema cuyas propiedades no se pueden actualizar, excepto la propiedad de RaiseChangedEvent.  

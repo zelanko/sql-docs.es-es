@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874929"
 ---
 # <a name="designing-assemblies"></a>Diseñar ensamblados
   En este tema se describen los siguientes aspectos que se deben tener en cuenta al diseñar ensamblados:  
@@ -39,7 +39,7 @@ ms.locfileid: "48196245"
 -   Si parte del código administrado requiere un permiso de mayor nivel, es mejor separar ese código en un ensamblado diferente del correspondiente al código que no requiere ese nivel de permiso.  
   
 ## <a name="managing-assembly-security"></a>Administrar la seguridad de los ensamblados  
- Es posible controlar el grado de acceso de un ensamblado a los recursos protegidos mediante la seguridad de acceso del código de .NET mientras ejecuta código administrado. Para ello, tiene que especificar uno de estos tres conjuntos de permisos al crear o modificar un ensamblado: SAFE, EXTERNAL_ACCESS o UNSAFE.  
+ Es posible controlar el grado de acceso de un ensamblado a los recursos protegidos mediante la seguridad de acceso del código de .NET mientras ejecuta código administrado. Para ello, especificando uno de tres conjuntos de permisos al crear o modificar un ensamblado: SEGURO, EXTERNAL_ACCESS o UNSAFE.  
   
 ### <a name="safe"></a>SAFE  
  SAFE es el conjunto de permisos predeterminado y es el más restrictivo. El código ejecutado por un ensamblado con permisos SAFE no podrá tener acceso a recursos externos del sistema, como los archivos, la red, las variables de entorno o el registro. El código SAFE puede tener acceso a datos de las bases de datos locales de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o puede ejecutar cálculos y lógica de negocios que no impliquen acceso a recursos ajenos a las bases de datos locales.  

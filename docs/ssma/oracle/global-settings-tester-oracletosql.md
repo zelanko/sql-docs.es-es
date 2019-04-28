@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 0cbe66e8298053ef1682e25e97024fa0a96e9abb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864906"
 ---
 # <a name="global-settings-tester-oracletosql"></a>Configuración global (evaluador) (OracleToSQL)
 Use la página de la herramienta de comprobación de la **configuración Global** cuadro de diálogo para especificar la configuración de pruebas de SSMA.  
@@ -30,7 +30,7 @@ Las siguientes opciones están disponibles para esta configuración:
   
 1.  Sí  
   
-2.  no  
+2.  No  
   
 **Modo de ahorro de tablas auxiliares**  
 Esta configuración especifica cómo se guardan las tablas auxiliares internas creadas durante la ejecución del caso de prueba. Siguientes opciones se pueden establecer para esta configuración concreta:  
@@ -43,7 +43,7 @@ Esta configuración especifica cómo se guardan las tablas auxiliares internas c
   
 4.  Pedir el usuario si la comparación de la tabla no se pudo  
   
-La opción establecida de forma predeterminada es: **eliminar siempre**.  
+La opción establecida de forma predeterminada es: **Eliminar siempre**.  
   
 **Realizar reversión de datos**  
 Esta configuración especifica si se debe realizar una operación de reversión después de ejecutar cada caso de prueba. Conjunto de opciones de forma predeterminada es **No**.  
@@ -52,7 +52,7 @@ Las siguientes opciones están disponibles para esta configuración:
   
 1.  Sí  
   
-2.  no  
+2.  No  
   
 **Detener la ejecución de pruebas tras el primer error**  
 Esta configuración especifica si se debe detener la ejecución de caso de prueba actual, si se ha producido un error durante la ejecución. Conjunto de opciones de forma predeterminada es **Sí**.  
@@ -61,7 +61,7 @@ Las siguientes opciones están disponibles para esta configuración:
   
 1.  Sí  
   
-2.  no  
+2.  No  
   
 ## <a name="see-also"></a>Vea también  
 [Finalización de la preparación del caso de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  

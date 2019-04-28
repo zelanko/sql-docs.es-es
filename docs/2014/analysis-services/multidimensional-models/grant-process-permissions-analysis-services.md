@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 175e07432d3f67374710d6e33f3006f2b3b6bf68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726619"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Otorgar permisos de procesamiento (Analysis Services)
   Como administrador, puede crear un rol dedicado para las operaciones de procesamiento de Analysis Services, lo cual le permitirá delegar esa tarea en particular a otros usuarios o a aplicaciones destinadas al procesamiento programado desatendido. Los permisos de procesamiento pueden concederse en los niveles de base de datos, cubo, dimensión y estructura de minería de datos. Salvo que esté trabajando en una base de datos tabular o un cubo muy extenso, le recomendamos que otorgue derechos de procesamiento en el nivel de la base de datos, donde se engloben todos los objetos, incluso aquellos que tengan dependencias entre sí.  
@@ -27,9 +27,9 @@ ms.locfileid: "48181275"
  Los permisos se otorgan mediante roles que asocian objetos con permisos y cuentas de usuario o grupo de Windows. Recuerde que los permisos son acumulativos. Si un rol otorga permisos para procesar un cubo, y un segundo rol otorga al mismo usuario permiso para procesar una dimensión, los permisos de los dos roles diferentes se combinan para proporcionar al usuario permiso para procesar el cubo y para procesar la dimensión específica en la base de datos.  
   
 > [!IMPORTANT]  
->  Los usuarios cuyo rol solamente disponga de permisos Procesar podrán usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para conectarse a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y procesar objetos. Estas herramientas requieren la `Read Definition` permiso para acceder a los metadatos del objeto. Si no se pueden usar estas herramientas, será preciso usar un script XMLA para ejecutar las operaciones de procesamiento.  
+>  Los usuarios cuyo rol solamente disponga de permisos Procesar podrán usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para conectarse a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y procesar objetos. Estas herramientas necesitan el permiso `Read Definition` para tener acceso a los metadatos del objeto. Si no se pueden usar estas herramientas, será preciso usar un script XMLA para ejecutar las operaciones de procesamiento.  
 >   
->  También le recomendamos otorgue `Read Definition` permisos para realizar pruebas. Un usuario tenga ambas `Read Definition` y `Process Database` permisos pueden procesar objetos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de forma interactiva. Para obtener más información, vea [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) .  
+>  También le recomendamos que otorgue permisos de `Read Definition` con fines de prueba. Los usuarios que dispongan de permisos de `Read Definition` y de `Process Database` podrán procesar objetos en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de forma interactiva. Para obtener más información, vea [Otorgar permisos Leer definición en metadatos de objetos &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) .  
   
 ## <a name="set-processing-permissions-at-the-database-level"></a>Establecer permisos de procesamiento al nivel de la base de datos  
  En esta sección, se describe cómo habilitar el procesamiento por parte de usuarios que no sean administradores para todos los cubos, las dimensiones, las estructuras de minería de datos y los modelos de minería de datos en la base de datos.  
@@ -93,7 +93,7 @@ ms.locfileid: "48181275"
 ## <a name="see-also"></a>Vea también  
  [Procesar base de datos, tabla o partición](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Procesamiento de objetos de modelo multidimensional](processing-a-multidimensional-model-analysis-services.md)   
- [Conceder permisos de base de datos &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [Otorgar permisos Leer definición en metatados de objetos &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [Otorgar permisos de base de datos &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
+ [Otorgar permisos Leer definición en metadatos de objetos &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 623f3a4724de84dbb1e355ffbd64a6868ea0f12a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731876"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Pronóstico (Herramientas de análisis de tabla para Excel)
   ![Cinta de opciones de herramientas de botón de previsión de análisis de tabla](media/tat-forecast.gif "botón pronóstico en la cinta de opciones de herramientas de análisis de tabla")  

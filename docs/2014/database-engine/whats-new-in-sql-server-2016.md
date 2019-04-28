@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843445"
 ---
 # <a name="what39s-new-database-engine"></a>¿Qué&#39;nueva s (motor de base de datos)
   Esta última versión del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] incluye nuevas características y mejoras que aumentan la eficacia y la productividad de los arquitectos, desarrolladores y administradores que diseñan, desarrollan y mantienen sistemas de almacenamiento de datos. A continuación se muestran las áreas en las que ha mejorado el [!INCLUDE[ssDE](../includes/ssde-md.md)] .  
@@ -94,7 +94,7 @@ ms.locfileid: "53371557"
   
      Use un índice clúster de almacén de columnas para mejorar la compresión de datos y el rendimiento de las consultas para las cargas de trabajo de almacenamiento de datos que ejecutan principalmente cargas masivas y consultas de solo lectura. Puesto que el índice clúster de almacén de columnas es actualizable, la carga de trabajo puede realizar muchas operaciones de inserción, actualización y eliminación. Para obtener más información, consulte [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md) y [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
--   **PLAN DE PRESENTACIÓN**  
+-   **SHOWPLAN**  
   
      SHOWPLAN muestra información acerca de los índices de almacén de columnas. El **EstimatedExecutionMode** y **ActualExecutionMode** propiedades tienen dos valores posibles: **Batch** o **fila**.  El **almacenamiento** propiedad tiene dos valores posibles: **Almacén de filas** y **ColumnStore**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "53371557"
   
   
 ###  <a name="OnlineEvent"></a> Clase de eventos Online Index Operation  
- El informe de progreso para la clase de eventos Online Index Operation ahora tiene dos nuevas columnas de datos: **PartitionId** y **PartitionNumber**. Para obtener más información, consulte [informe de progreso: Clase de eventos Online Index Operation](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
+ El informe de progreso para la clase de eventos online index operation ahora tiene dos nuevas columnas de datos: **PartitionId** y **PartitionNumber**. Para obtener más información, consulte [informe de progreso: Clase de eventos Online Index Operation](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
   
   
 ###  <a name="Compat"></a> Nivel de compatibilidad de base de datos  

@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e5bfe2673b599a1da90c940015e5be84b361eb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726839"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Cambiar las propiedades de una vista del origen de datos (Analysis Services)
   Una vez que haya definido una vista del origen de datos mediante el Asistente para vistas del origen de datos y le haya agregado tablas, vistas, cálculos con nombre y consultas con nombre, podría interesarle cambiar las propiedades relativas a:  
@@ -48,7 +48,7 @@ ms.locfileid: "48153035"
 |--------------|-----------------|  
 |Origen de datos|Especifica el origen de datos de la vista del origen de datos cuyas propiedades está viendo.|  
 |Descripción|Especifica la descripción de la vista del origen de datos.|  
-|Nombre|Especifica el nombre de la vista del origen de datos que aparece en el Explorador de soluciones o la base de datos de Analysis Services. Puede cambiar el nombre de la vista del origen de datos aquí o en el Explorador de soluciones.|  
+|Name|Especifica el nombre de la vista del origen de datos que aparece en el Explorador de soluciones o la base de datos de Analysis Services. Puede cambiar el nombre de la vista del origen de datos aquí o en el Explorador de soluciones.|  
 |NameMatchingCriteria|Criterios de coincidencia de nombres del origen de datos. No hay valor predeterminado si el Asistente para vistas del origen de datos detecta relaciones entre claves principales y claves externas. Independientemente de que el Asistente para vistas del origen de datos haya establecido esta propiedad o no, aquí puede especificar un valor. Si hay relaciones de base de datos y especifica criterios de coincidencia de nombres, se usarán ambas cosas para deducir relaciones entre las tablas existentes y las que se agreguen.|  
 |RetrieveRelationships|Especifica si se recuperan relaciones de la base de datos. El valor predeterminado es True.|  
 |SchemaRestriction|Especifica las restricciones, si las hay, de los esquemas recuperados de un origen de datos. De manera predeterminada, no hay restricciones de esquema.|  
@@ -62,7 +62,7 @@ ms.locfileid: "48153035"
 |DataSource|Especifica el origen de datos para el objeto. Esta propiedad no se puede editar.|  
 |Descripción|Especifica la descripción de la tabla, vista o consulta con nombre. Si la tabla o vista de la base de datos subyacente tenía una descripción almacenada como propiedad extendida, se muestra este valor. Esta propiedad se puede editar.|  
 |FriendlyName|Especifica un nombre para la tabla o vista que es significativo para los usuarios o tiene relación con el asunto. De manera predeterminada, la propiedad **FriendlyName** de una tabla o vista es igual que la propiedad **Name** de la misma. La propiedad **FriendlyName** es utilizada por los objetos de minería de datos y OLAP al definir nombres de objeto basados en tablas o vistas. Esta propiedad se puede editar.|  
-|Nombre|Especifica el nombre de la tabla o vista subyacente, o el nombre de la consulta con nombre. La propiedad **Name** es utilizada por los objetos de minería de datos y OLAP al definir nombres de objeto basados en consultas con nombre. Esta propiedad solo se puede editar para las consultas con nombre.|  
+|Name|Especifica el nombre de la tabla o vista subyacente, o el nombre de la consulta con nombre. La propiedad **Name** es utilizada por los objetos de minería de datos y OLAP al definir nombres de objeto basados en consultas con nombre. Esta propiedad solo se puede editar para las consultas con nombre.|  
 |QueryDefinition|Especifica la definición de la consulta con nombre. Esta propiedad solo se puede aplicar a las consultas con nombre y no se puede editar directamente. Para editar esta propiedad, se edita la propia consulta con nombre.|  
 |esquema|Especifica el esquema de la base de datos aplicable a la tabla, vista o consulta con nombre. Esta propiedad no se puede editar.|  
 |TableType|Especifica el tipo de tabla de la tabla, vista o consulta con nombre. Esta propiedad no se puede editar.|  
@@ -78,7 +78,7 @@ ms.locfileid: "48153035"
 |Descripción|Especifica la descripción de la columna. Si la columna de la base de datos subyacente tenía una descripción almacenada como propiedad extendida, se muestra este valor. Esta propiedad se puede editar.|  
 |FriendlyName|Especifica el nombre para una columna de una tabla o vista que es significativo para los usuarios o tiene relación con el asunto. De manera predeterminada, la propiedad **FriendlyName** de una columna de una tabla o vista es igual que la propiedad **Name** de la columna. La propiedad **FriendlyName** es utilizada por los objetos de minería de datos y OLAP al definir atributos basados en columnas de tablas o vistas. Esta propiedad se puede editar.|  
 |Longitud|Especifica la longitud máxima de la columna, en función de los datos de la columna de la tabla o vista subyacente.|  
-|Nombre|Especifica el nombre de la columna subyacente, o el nombre del cálculo con nombre. La propiedad **Name** la usan los objetos de minería de datos y OLAP al definir atributos basados en cálculos con nombre. Esta propiedad solo se puede editar para los cálculos con nombre.|  
+|Name|Especifica el nombre de la columna subyacente, o el nombre del cálculo con nombre. La propiedad **Name** la usan los objetos de minería de datos y OLAP al definir atributos basados en cálculos con nombre. Esta propiedad solo se puede editar para los cálculos con nombre.|  
   
 ## <a name="see-also"></a>Vea también  
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)   

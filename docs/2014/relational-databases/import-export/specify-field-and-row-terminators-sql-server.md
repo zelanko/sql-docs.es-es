@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712812"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo y de fila (SQL Server)
   En los campos de datos de caracteres, los caracteres de terminación opcionales permiten marcar el final de cada campo de un archivo de datos con un *terminador de campo* y el final de cada fila con un *terminador de fila*. Los caracteres de terminación son una forma de indicar a los programas que leen el archivo de datos dónde termina un campo o una fila y dónde comienza otro.  
@@ -37,7 +37,7 @@ ms.locfileid: "52539749"
 |Pestaña|\t<br /><br /> Terminador de campo predeterminado.|  
 |Carácter de nueva línea|\n<br /><br /> Terminador de fila predeterminado.|  
 |Retorno de carro/avance de línea|\r|  
-|Barra diagonal inversa<sup>1</sup>|\\\|  
+|Backslash<sup>1</sup>|\\\|  
 |Terminador null (terminador invisible)<sup>2</sup>|\0|  
 |Cualquier carácter imprimible (los caracteres de control no se pueden imprimir, excepto los valores NULL, tabulaciones, caracteres de nueva línea y retornos de carro)|(*, A, t, l, etc.)|  
 |Una cadena de hasta 10 caracteres imprimibles, incluidos algunos o todos los terminadores enumerados anteriormente|(**\t\*\*, end, !!!!!!!!!!, \t-\n, etc.)|  

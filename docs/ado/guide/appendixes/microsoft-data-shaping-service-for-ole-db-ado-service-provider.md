@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 46f48aa117c18bcc7af28cdf7c676cf195b553f6
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719753"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>OLE DB Introducción al servicio para la forma de datos de Microsoft
 > [!IMPORTANT]
@@ -62,4 +62,4 @@ cn.Properties("Data Provider") = "MSDASQL"
  Para obtener más información sobre la forma de datos, vea [dar forma a datos](../../../ado/guide/data/data-shaping-overview.md).
 
 ## <a name="see-also"></a>Vea también
- [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

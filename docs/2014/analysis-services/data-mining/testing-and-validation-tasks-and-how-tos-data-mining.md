@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4697af2463587fcca244a291be0c8dace2907cc8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732846"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Tareas y procedimientos de prueba y validación (minería de datos)
   Puede utilizar la pestaña **Gráfico de precisión de minería de datos** del Diseñador de minería de datos en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para comparar la precisión predictiva de los modelos de minería de datos de su estructura de minería de datos.  
@@ -46,7 +46,7 @@ ms.locfileid: "48143295"
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Crear un gráfico de elevación, un gráfico de beneficios o una matriz de clasificación](create-a-lift-chart-profit-chart-or-classification-matrix.md)  
+-   [Crear un gráfico de mejora respecto al modelo predictivo, un gráfico de beneficios o una matriz de clasificación](create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   
 -   [Crear un informe de validación cruzada](create-a-cross-validation-report.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48143295"
   
 -   [Aplicar filtros a los datos de prueba del modelo](apply-filters-to-model-testing-data.md)  
   
--   [Elegir la columna que se va a usar para probar un modelo de minería de datos](choose-the-column-to-use-for-testing-a-mining-model.md)  
+-   [Elija la columna que se va a utilizar para probar un modelo de minería de datos](choose-the-column-to-use-for-testing-a-mining-model.md)  
   
 -   [Usar datos de tabla anidada como entrada para un gráfico de precisión](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
   

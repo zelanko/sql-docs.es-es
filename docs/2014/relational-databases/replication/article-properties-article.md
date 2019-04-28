@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721787"
 ---
 # <a name="article-properties---ltarticlegt"></a>Article Properties - &lt;Article&gt; (Propiedades del artículo: &lt;Artículo&gt;)
   El cuadro de diálogo **Propiedades del artículo** está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación** . Le permite ver y establecer propiedades para todos los tipos de artículo. Algunas propiedades solo se pueden establecer cuando se crea la publicación, mientras que otras se pueden establecer únicamente si la publicación no tiene suscripciones activas. Las propiedades que no se pueden establecer se muestran como de solo lectura.  
@@ -88,7 +88,7 @@ ms.locfileid: "54124995"
  Esta opción se aplica únicamente a los procedimientos de almacenamiento. Determina si se debe replicar la definición del procedimiento almacenado (instrucción CREATE PROCEDURE) o su ejecución. Si replica la ejecución del procedimiento, la definición del procedimiento se replica en el suscriptor cuando se inicializa la suscripción; cuando el procedimiento se ejecuta en el publicador, la replicación ejecuta el procedimiento correspondiente en el suscriptor. Esto puede mejorar notablemente el rendimiento para los casos en que se llevan a cabo grandes operaciones en lote. Para más información, consulte [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Opciones para publicaciones de combinación  
- El **propiedades del artículo** cuadro de diálogo para las publicaciones de combinación tiene dos pestañas: **Propiedades** y **resolución**.  
+ El cuadro de diálogo **Propiedades del artículo** para las publicaciones de mezcla tiene dos pestañas: **Propiedades** y **Solucionador**.  
   
 ### <a name="properties-tab"></a>Pestaña Propiedades  
  **Dirección de la sincronización**  
@@ -135,7 +135,7 @@ ms.locfileid: "54124995"
  Todos los solucionadores basados en COM proporcionados por [!INCLUDE[msCoName](../../includes/msconame-md.md)] están firmados. Seleccione esta opción para comprobar que el solucionador sea válido al sincronizar.  
   
 ## <a name="options-for-oracle-publications"></a>Opciones para las publicaciones de Oracle  
- El **propiedades del artículo** cuadro de diálogo para las publicaciones de Oracle tiene dos pestañas: **Propiedades** y **asignación datos**. Las publicaciones de Oracle no admiten todas las propiedades admitidas por las publicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información, consulte [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+ El cuadro de diálogo **Propiedades del artículo** para las publicaciones de Oracle tiene dos pestañas: **Propiedades** y **Asignación de datos**. Las publicaciones de Oracle no admiten todas las propiedades admitidas por las publicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información, consulte [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ### <a name="properties-tab"></a>Pestaña Propiedades  
  **Copiar los procedimientos almacenados INSERT, UPDATE y DELETE**  

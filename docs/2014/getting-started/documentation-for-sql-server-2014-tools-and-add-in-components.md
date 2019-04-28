@@ -11,11 +11,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76fb59923465023158d8e570d493a8fc0f37f6c9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843236"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>Documentación para los componentes de las herramientas y los complementos de SQL Server 2014
     

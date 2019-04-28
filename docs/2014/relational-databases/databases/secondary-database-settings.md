@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57131b757dfc66df990f0ddf8a3c5f28f4e04396
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871223"
 ---
 # <a name="secondary-database-settings"></a>Configuración de base de datos secundaria
   Utilice este cuadro de diálogo para configurar y modificar las propiedades de una base de datos secundaria en la configuración del trasvase de registros.  

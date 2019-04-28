@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d05632fd4546b18e0268307fc6a85a8719eadd5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834604"
 ---
 # <a name="complete-the-wizard-ssis-package-upgrade-wizard"></a>Finalización del asistente (Asistente para actualización del paquete SSIS)
   Utilice la página **Finalización del asistente** para revisar y confirmar las opciones de actualización del paquete que ha seleccionado. Ésta es la última página del asistente desde la que puede volver y cambiar las opciones de esta sesión del asistente.  

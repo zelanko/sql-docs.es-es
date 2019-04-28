@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ffd5b3ff4eb98c96e1832e353e64f1953bd62e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727991"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Grupos de medida (pestaña Particiones, Diseñador de cubos) (Analysis Services - Datos multidimensional)
   Use el panel **Grupos de medida** de la pestaña **Particiones** del Diseñador de cubos para administrar las particiones asociadas con cada grupo de medida del cubo.  

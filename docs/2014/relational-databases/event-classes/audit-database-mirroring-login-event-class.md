@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57ad0c696eb8c81a029160417a7d847d6e0600ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711829"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login, clase de eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Audit Database Mirroring Login** para informar de los mensajes de auditoría relacionados con la seguridad de transporte de la creación de reflejo de bases de datos.  
@@ -39,7 +39,7 @@ ms.locfileid: "52776488"
 |**FileName**|**nvarchar**|Método de autenticación admitido configurado en el extremo remoto de creación de reflejo de bases de datos. Cuando hay más de un método disponible, el extremo que acepte (el destino) determina el método que se intentará primero. Los valores posibles son:<br /><br /> **Ninguna**. No hay ningún método de autenticación configurado.<br /><br /> **NTLM**. Requiere autenticación NTLM.<br /><br /> **KERBEROS**. Requiere autenticación Kerberos.<br /><br /> **NEGOTIATE**. Windows negocia el método de autenticación.<br /><br /> **CERTIFICATE**. Requiere el certificado configurado para el extremo, que se almacena en la base de datos **maestra** .<br /><br /> **NTLM, CERTIFICATE**. Acepta NTLM o el certificado del extremo para la autenticación.<br /><br /> **KERBEROS, CERTIFICATE**. Acepta Kerberos o el certificado del extremo para la autenticación.<br /><br /> **NEGOTIATE, CERTIFICATE**. Windows negocia el método de autenticación, o se puede utilizar un certificado del extremo para la autenticación.<br /><br /> **CERTIFICATE, NTLM**. Acepta un certificado del extremo o NTLM para la autenticación.<br /><br /> **CERTIFICATE, KERBEROS**. Acepta un certificado de extremo o Kerberos para la autenticación.<br /><br /> **CERTIFICATE, NEGOTIATE**. Acepta un certificado del extremo para la autenticación o Windows negocia el método de autenticación.|36|No|  
 |**HostName**|**nvarchar**|No se utiliza en esta clase de evento.|8|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|No|  
-|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSid**|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario al que pertenece la conexión que generó este evento.|6|Sí|  
 |**ObjectName**|**nvarchar**|Cadena de conexión utilizada para esta conexión.|34|No|  
@@ -50,7 +50,7 @@ ms.locfileid: "52776488"
 |**SPID**|**int**|Identificador de proceso del servidor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**State**|**int**|Indica la ubicación en el código fuente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que produjo el evento. Cada lugar en el que se puede producir este evento tiene un código de estado diferente. Un ingeniero de soporte técnico de Microsoft puede utilizar este código de estado para buscar el lugar en que se produjo el evento.|30|No|  
-|**TargetUserName**|**nvarchar**|Estado del inicio de sesión. Una de las siguientes opciones:<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> error<br /><br /> <br /><br /> Nota: ISC = Initiate Security Context (Iniciar contexto de seguridad). ASC = Accept Security Context (Aceptar contexto de seguridad).|39|No|  
+|**TargetUserName**|**nvarchar**|Estado del inicio de sesión. Una de las siguientes opciones:<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> error<br /><br /> <br /><br /> Nota: ISC = iniciar contexto de seguridad. ASC = Accept Security Context (Aceptar contexto de seguridad).|39|No|  
 |**TransactionID**|**bigint**|Identificador de la transacción asignado por el sistema.|4|No|  
   
  En la tabla siguiente se presentan los valores de subclase de esta clase de evento.  

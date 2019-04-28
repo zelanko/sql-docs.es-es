@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dca11c580ea8427ce04619720af659f16d6df9ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877199"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Acciones de reglas de negocios (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], las acciones de regla de negocios son el resultado de las evaluaciones de condiciones de reglas de negocios. Si una condición es TRUE, se inicia la acción.  
@@ -50,7 +50,7 @@ ms.locfileid: "53357720"
 |**es obligatorio**|El atributo seleccionado **es obligatorio**, lo cual indica que no puede ser NULL ni estar vacío.<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
 |**no es válido**|El atributo seleccionado **no es válido**.<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
 |**debe contener el patrón**|El atributo seleccionado **debe contener el patrón** que se ha especificado. Use expresiones regulares de .NET Framework para especificar el patrón.<br /><br /> Para obtener más información sobre las expresiones regulares, consulte [Elementos del lenguaje de expresiones regulares](https://go.microsoft.com/fwlink/?LinkId=164401) en MSDN Library.<br /><br /> Esta acción es válida para los valores de texto y vínculo.|  
-|**debe ser único**|El atributo seleccionado **debe ser único** de forma independiente o en combinación con atributos definidos.<br /><br /> **Procedimiento recomendado:** Combine esta acción con una condición obligatoria para garantizar la validez de los campos de índice en los sistemas de suscripción.<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
+|**debe ser único**|El atributo seleccionado **debe ser único** de forma independiente o en combinación con atributos definidos.<br /><br /> **Procedimiento recomendado:** combine esta acción con una condición obligatoria para asegurarse de la validez de los campos de índice en los sistemas de suscripción.<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  
 |**debe tener uno de los siguientes valores**|El atributo seleccionado **debe tener uno de los valores** especificados en una lista.<br /><br /> Esta acción es válida para los valores de texto.|  
 |**debe ser mayor que**|El atributo seleccionado **debe ser mayor que** un atributo determinado, un valor de atributo concreto o estar en blanco.<br /><br /> Esta acción es válida para los valores de texto, número y fecha.|  
 |**debe ser igual que**|El atributo seleccionado **debe ser igual que** un valor de atributo definido, otro atributo o estar en blanco.<br /><br /> Esta acción es válida para los valores de texto, número, fecha y vínculo.|  

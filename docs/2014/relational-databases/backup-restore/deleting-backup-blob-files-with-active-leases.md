@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3066700945d2d6dad33f04c6bc905720daab61c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876175"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Eliminar archivos de blob de copia de seguridad con concesiones activas
   Cuando se hace copia de seguridad en el almacenamiento de Windows Azure, o cuando se restaura del mismo, SQL Server adquiere una concesión infinita con el fin de bloquear el acceso exclusivo al blob. Cuando el proceso de copia de seguridad o de restauración se ha completado correctamente, se libera la concesión. Si una copia de seguridad o una restauración dan error, el proceso de copia de seguridad intenta limpiar los blobs no válidos. Sin embargo, si el error de la copia de seguridad se debe a un error de conectividad en la red mantenido o prolongado, es posible que el proceso de copia de seguridad no pueda obtener acceso al blob y este podría quedar huérfano. Esto significa que no se puede escribir en el blob o que el blob no se puede eliminar hasta que no se libera la concesión. En este tema se describe cómo liberar la concesión y eliminar el blob.  
@@ -29,9 +29,9 @@ ms.locfileid: "53352660"
 ## <a name="managing-orphaned-blobs"></a>Administrar blobs huérfanos  
  En los pasos siguientes se describe cómo realizar la limpieza después de una actividad de copia de seguridad o restauración con errores. Todos los pasos se pueden realizar mediante scripts de PowerShell. En la sección siguiente se proporciona un ejemplo de código:  
   
-1.  **Identificar blobs que tienen concesiones:** Si tiene un script o un proceso que ejecuta los procesos de copia de seguridad, podría ser capaz de capturar el error dentro de la secuencia de comandos o el proceso y usarlo para limpiar los blobs.   También puede usar las propiedades LeaseStats y LeastState para identificar los blobs que tienen concesiones. Una vez identificados los blobs, se recomienda que revise la lista y compruebe la validez del archivo de copia de seguridad antes de eliminar el blob.  
+1.  **Identificar blobs que tienen concesiones:** si tiene un script o un proceso que ejecuta los procesos de copia de seguridad, es posible que pueda capturar el error dentro del script o del proceso, y usarlo para limpiar los blobs.   También puede usar las propiedades LeaseStats y LeastState para identificar los blobs que tienen concesiones. Una vez identificados los blobs, se recomienda que revise la lista y compruebe la validez del archivo de copia de seguridad antes de eliminar el blob.  
   
-2.  **Interrumpir la concesión:** Una solicitud autorizada puede interrumpir la concesión sin proporcionar un identificador de concesión. Vea [aquí](https://go.microsoft.com/fwlink/?LinkID=275664) para obtener más información.  
+2.  **Interrumpir la concesión:** una solicitud autorizada puede interrumpir la concesión sin proporcionar un identificador de concesión. Vea [aquí](https://go.microsoft.com/fwlink/?LinkID=275664) para obtener más información.  
   
     > [!TIP]  
     >  SQL Server emite un identificador de concesión para establecer acceso exclusivo durante la operación de restauración. El identificador de concesión de restauración es BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
@@ -80,7 +80,7 @@ ms.locfileid: "53352660"
   
      **Interrumpir concesiones**  
   
-     **La concesión de \<dirección URL del Blob > es una concesión de restauración: Verá este mensaje solo si tiene un blob con una concesión de restauración que todavía está activa.**  
+     **La concesión de \<dirección URL del blob> es una concesión de restauración: solo verá este mensaje si tiene un blob con una concesión de restauración que todavía esté activa.**  
   
      **La concesión en \<dirección URL del blob no es una concesión de restauración. Interrumpiendo la concesión en \<dirección URL del blob.**  
   

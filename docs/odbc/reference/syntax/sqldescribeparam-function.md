@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d61d43638c0ca6e3e43da83367dff461033463
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982291"
 ---
 # <a name="sqldescribeparam-function"></a>Función SQLDescribeParam
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: ODBC  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ODBC  
   
  **Resumen**  
  **SQLDescribeParam** devuelve la descripción de un marcador de parámetro asociado con una instrucción SQL preparada. Esta información también está disponible en los campos de la IPD.  
@@ -55,13 +55,13 @@ SQLRETURN SQLDescribeParam(
  [Entrada] Número de marcador de parámetro ordenados secuencialmente en orden creciente de los parámetros, empezando por 1.  
   
  *DataTypePtr*  
- [Salida] Puntero a un búfer en el que se va a devolver el tipo de datos SQL del parámetro. Lee este valor del campo de registro de la IPD SQL_DESC_CONCISE_TYPE. Se trata de uno de los valores en el [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) sección del apéndice D: tipos de datos o un tipo de datos SQL específicas del controlador.  
+ [Salida] Puntero a un búfer en el que se va a devolver el tipo de datos SQL del parámetro. Lee este valor del campo de registro de la IPD SQL_DESC_CONCISE_TYPE. Se trata de uno de los valores en el [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) sección del apéndice D: Tipos de datos o un tipo de datos SQL específicas del controlador.  
   
  En ODBC 3. *x*, se devolverán en SQL_TYPE_DATE, SQL_TYPE_TIME y SQL_TYPE_TIMESTAMP  *\*DataTypePtr* para fecha, hora o datos de marca de tiempo, respectivamente; en ODBC 2. *x*, SQL_DATE, SQL_TIME o SQL_TIMESTAMP se devolverá. El Administrador de controladores realiza las asignaciones necesarias cuando un ODBC 2. *x* aplicación funciona con una aplicación ODBC 3. *x* controlador o cuando una aplicación ODBC 3. *x* aplicación funciona con un ODBC 2. *x* controlador.  
   
  Cuando *ColumnNumber* es igual a 0 (para una columna de marcador), se devuelve SQL_BINARY en  *\*DataTypePtr* los marcadores de longitud variable. (SQL_INTEGER se devuelve si se utilizan marcadores por una aplicación ODBC 3. *x* la aplicación funciona con un ODBC 2. *x* controlador o por un ODBC 2. *x* la aplicación funciona con una aplicación ODBC 3. *x* controlador.)  
   
- Para obtener más información, consulte [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) en Apéndice D: tipos de datos. Para obtener información acerca de los tipos de datos SQL específicas del controlador, consulte la documentación del controlador.  
+ Para obtener más información, consulte [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md) en el apéndice D: Tipos de datos. Para obtener información acerca de los tipos de datos SQL específicas del controlador, consulte la documentación del controlador.  
   
  *ParameterSizePtr*  
  [Salida] Puntero a un búfer en el que se va a devolver el tamaño, en caracteres, de la columna o expresión de marcador de parámetro correspondiente, como se define en el origen de datos. Para obtener más información sobre el tamaño de columna, vea [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  

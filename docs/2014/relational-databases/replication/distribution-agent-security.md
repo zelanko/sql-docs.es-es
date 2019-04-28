@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e604ee6aac125f366ac2fca6444527340213019
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721494"
 ---
 # <a name="distribution-agent-security"></a>Seguridad del Agente de distribución
   El cuadro de diálogo **Seguridad del Agente de distribución** permite especificar la cuenta de Windows con la que se ejecuta el Agente de distribución. El Agente de distribución se ejecuta en el distribuidor para las suscripciones de inserción y en el suscriptor para las suscripciones de extracción. La cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows se denomina también *cuenta de proceso*porque el proceso del agente se ejecuta con dicha cuenta. Las opciones adicionales disponibles en el cuadro de diálogo dependen de cómo se tenga acceso al mismo:  
   
 -   Si se tiene acceso al cuadro de diálogo desde el Asistente para nueva suscripción, es posible especificar también el contexto en que el Agente de distribución realiza conexiones al suscriptor (para las suscripciones de inserción) o al distribuidor (para las suscripciones de extracción). La conexión se puede realizar suplantando la cuenta de Windows o en el contexto de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se especifique.  
   
--   Si se tiene acceso al cuadro de diálogo desde el cuadro de diálogo **Propiedades de la suscripción** , especifique el contexto en que el Agente de distribución realiza las conexiones haciendo clic en el botón de propiedades (**...**) de la fila **Conexión de suscriptor** o **Conexión del distribuidor** de ese cuadro de diálogo. Para obtener más información sobre el acceso a la **propiedades de suscripción** cuadro de diálogo, vea [ver y modificar propiedades de suscripción de inserción](view-and-modify-push-subscription-properties.md) y cómo: [Ver y modificar las propiedades de suscripción de extracción](view-and-modify-pull-subscription-properties.md).  
+-   Si se tiene acceso al cuadro de diálogo desde el cuadro de diálogo **Propiedades de la suscripción** , especifique el contexto en que el Agente de distribución realiza las conexiones haciendo clic en el botón de propiedades (**...**) de la fila **Conexión de suscriptor** o **Conexión del distribuidor** de ese cuadro de diálogo. Para más información sobre cómo acceder al cuadro de diálogo **Propiedades de la suscripción**, vea [Ver y modificar las propiedades de una suscripción de inserción](view-and-modify-push-subscription-properties.md) y cómo: [Ver y modificar las propiedades de una suscripción de extracción](view-and-modify-pull-subscription-properties.md).  
   
  Todas las cuentas deben ser válidas y se debe especificar la contraseña correcta para cada cuenta. Las cuentas y las contraseñas se validan cuando se ejecuta el agente.  
   

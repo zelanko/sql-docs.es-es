@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a9bad2db754aca80d6cf1501a0c178f694e9210
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728101"
 ---
-# <a name="lesson-9-defining-perspectives-and-translations"></a>Lección 9: Definir perspectivas y traducciones
+# <a name="lesson-9-defining-perspectives-and-translations"></a>Lección 9: Definición de perspectivas y traducciones
   En esta lección, aprenderá a definir perspectivas y traducciones. Puede definir perspectivas para reducir la complejidad aparente de un cubo y definir traducciones que permitan a los usuarios ver los metadatos del cubo en el idioma que desee.  
   
 > [!NOTE]  

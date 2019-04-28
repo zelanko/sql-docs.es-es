@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c68e181a1ad0992e85c638accad26a0418be4b5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715353"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Crear una consulta DMX en SQL Server Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un conjunto de características para ayudarle a crear consultas de predicción, consultas de contenido y consultas de definición de datos en los modelos y estructuras de minería de datos.  
@@ -87,6 +87,6 @@ ms.locfileid: "48101415"
   
 ## <a name="see-also"></a>Vea también  
  [Interfaces de consultas de minería de datos](data-mining-query-tools.md)   
- [Extensiones de minería de datos &#40;DMX&#41; referencia](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

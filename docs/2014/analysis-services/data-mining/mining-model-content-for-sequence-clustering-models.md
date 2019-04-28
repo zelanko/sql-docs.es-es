@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94224bbc5c254b01fab49c850b554427757b714b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733439"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia(Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de clústeres de secuencia de Microsoft. Para obtener una explicación de terminología general y de estadística relacionada con el contenido del modelo de minería de datos válida para todos los tipos de modelo, vea [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -231,7 +231,7 @@ ORDER BY Count(*) DESC
   
  En la tabla siguiente se muestran los resultados de la tabla NODE_DISTRIBUTION, junto con los valores de probabilidad redondeados que se muestran en el visor gráfico.  
   
-|Product|Compatibilidad (tabla NODE_DISTRIBUTION)|Probabilidad (tabla NODE_DISTRIBUTION))|Probabilidad (del gráfico)|  
+|Producto|Compatibilidad (tabla NODE_DISTRIBUTION)|Probabilidad (tabla NODE_DISTRIBUTION))|Probabilidad (del gráfico)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
 |Missing|48.447887|0.138028169|(no se muestra)|  
 |Cycling Cap|10.876056|0.030985915|0.03|  
@@ -262,8 +262,8 @@ ORDER BY Count(*) DESC
  Para conocer cómo obtener la lista de rutas de acceso observadas consultando el contenido del modelo y ver otros ejemplos de consultas en un modelo de agrupación en clústeres de secuencia, vea [Ejemplos de consultas de modelos de clústeres de secuencia](clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm.md)   
+ [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
  [Ejemplos de consultas de modelos de clústeres de secuencia](clustering-model-query-examples.md)  
   
   

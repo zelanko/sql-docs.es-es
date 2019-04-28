@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4be1c196adbe21635c1339da3d5ec7ca519001fc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876605"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Crear una copia de seguridad diferencial de una base de datos (SQL Server)
   En este tema se describe cómo crear una copia de seguridad de una base de datos diferencial en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  

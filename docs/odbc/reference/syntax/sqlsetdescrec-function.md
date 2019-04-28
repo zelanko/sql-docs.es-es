@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5288fe363350aebacba436cef388ae51e2bdd73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982167"
 ---
 # <a name="sqlsetdescrec-function"></a>Función SQLSetDescRec
 **Conformidad**  
- Versión introdujo: ODBC 3.0 normativo: 92 ISO  
+ Versión de introducción: Compatibilidad de ODBC 3.0 estándares: ISO 92  
   
  **Resumen**  
  El **SQLSetDescRec** función establece varios campos de descriptor que afectan al tipo de datos y búfer a una columna o parámetro de datos enlazados.  
@@ -61,7 +61,7 @@ SQLRETURN SQLSetDescRec(
  *Tipo*  
  [Entrada] El valor que se va a establecer el campo SQL_DESC_TYPE para el registro del descriptor.  
   
- *Subtipo*  
+ *SubType*  
  [Entrada] Los registros cuyo tipo es SQL_DATETIME o SQL_INTERVAL, este es el valor que se va a establecer el campo SQL_DESC_DATETIME_INTERVAL_CODE.  
   
  *Longitud*  

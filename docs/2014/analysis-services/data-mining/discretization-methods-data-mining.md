@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7cf775406905a920861236dafa8d740c9074101
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722731"
 ---
 # <a name="discretization-methods-data-mining"></a>Métodos de discretización (minería de datos)
   Algunos de los algoritmos que se utilizan para crear modelos de minería de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] requieren tipos de contenido específicos para poder funcionar correctamente. Por ejemplo, el algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] no puede utilizar columnas continuas como entrada ni predecir valores continuos. Además, algunas columnas pueden contener tal cantidad de valores que el algoritmo no puede identificar con facilidad patrones de interés en los datos para crear un modelo a partir de los mismos.  
@@ -51,19 +51,19 @@ ms.locfileid: "48187057"
   
 ## <a name="remarks"></a>Comentarios  
   
--   Puede usar el `EQUAL_AREAS` método para discretizar cadenas.  
+-   Puede utilizar el método `EQUAL_AREAS` para discretizar cadenas.  
   
--   El `CLUSTERS` método usa una muestra aleatoria de 1000 registros para discretizar los datos. Utilice el método `EQUAL_AREAS` si no desea que el algoritmo realice un muestreo de datos.  
+-   El método `CLUSTERS` usa una muestra aleatoria de 1000 registros para discretizar los datos. Utilice el método `EQUAL_AREAS` si no desea que el algoritmo realice un muestreo de datos.  
   
--   El tutorial del modelo de minería de datos de redes neuronales proporciona un ejemplo de cómo se puede personalizar la discretización. Para obtener más información, consulte [lección 5: creación de red neuronal y modelos de regresión logística &#40;Tutorial intermedio de minería de datos&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+-   El tutorial del modelo de minería de datos de redes neuronales proporciona un ejemplo de cómo se puede personalizar la discretización. Para obtener más información, consulte [lección 5: Creación de modelos de regresión logística y Red neuronal &#40;intermedio de Tutorial de minería de datos&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md)   
  [Tipos de contenido &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
  [Tipos de datos &#40;minería de datos&#41;](data-types-data-mining.md)   
- [Columnas de estructura de minería de datos](mining-structure-columns.md)   
+ [Columnas de la estructura de minería de datos](mining-structure-columns.md)   
  [Distribuciones de columnas &#40;minería de datos&#41;](column-distributions-data-mining.md)  
   
   

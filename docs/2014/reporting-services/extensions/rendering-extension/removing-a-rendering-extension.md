@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77a8a9ac44b35f338f978913985617e4f264ddb7
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988060"
 ---
 # <a name="removing-a-rendering-extension"></a>Quitar una extensión de representación
   Para quitar un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] extensión de representación, basta con quitar el `Extension` (elemento) para la extensión de representación del archivo rsreportserver.config, situado en **%ProgramFiles%\Microsoft SQL Server\MSRS10_50.\< Nombre de instancia > \Reporting** carpeta. Si efectuó entradas para un diseñador de informes, así como un servidor de informes, quite el `Extension` elemento desde el [RSReportDesigner Configuration File](../../report-server/rsreportdesigner-configuration-file.md) también. Después de quitar la información de configuración, la extensión de representación de datos ya no estará disponible en el componente.  

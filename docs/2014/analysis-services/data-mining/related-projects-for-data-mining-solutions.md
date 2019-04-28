@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733087"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Proyectos relacionados en las soluciones de minería de datos
   Lo mínimo que se requiere para una solución de minería de datos es el proyecto de minería de datos, que define los orígenes de datos, las vistas del origen de datos, las estructuras y los modelos de minería de datos. Sin embargo, cuando los modelos de minería de datos se utilizan en la toma de decisiones diaria, es importante que la minería de datos se integre con otra parte de una solución de predicción de análisis, que puede incluir estos procesos y componentes:  

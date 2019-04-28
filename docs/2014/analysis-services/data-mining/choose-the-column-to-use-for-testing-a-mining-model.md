@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 340080271318073983b29abebeab85122993b489
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715222"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Elija la columna que se va a utilizar para probar un modelo de minería de datos
   Para poder medir la exactitud de un modelo de minería de datos, debe decidir qué resultado desea devolver. La mayoría de los modelos de minería de datos requieren que seleccione al menos una columna para utilizarla como atributo de predicción al crear el modelo. Por consiguiente, al probar la precisión del modelo, normalmente debe seleccionar ese atributo para las pruebas.  

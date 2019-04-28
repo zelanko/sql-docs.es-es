@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3f0f24aec895c482ba357dbc4330baaf2798ba6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726259"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>Especificar la configuración para la implementación de soluciones
   El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente para implementación de lee la partición y el rol de las opciones de implementación que usan en el script de implementación de la \< *nombre del proyecto*> archivo configSettings. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crea este archivo cuando se genera el proyecto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa los valores de configuración del proyecto actual para crear el \< *nombre del proyecto*> archivo configSettings.  

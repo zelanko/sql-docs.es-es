@@ -1,5 +1,5 @@
 ---
-title: Registrar una instancia de Analysis Services en un grupo de servidores | Documentos de Microsoft
+title: Registrar una instancia de Analysis Services en un grupo de servidores | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 45edecf23d0db4580aad134780ee31ea938e887c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62708992"
 ---
 # <a name="register-an-analysis-services-instance-in-a-server-group"></a>Registrar una instancia de Analysis Services en un grupo de servidores
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Si tiene un gran número de instancias de servidor de Analysis Services, puede crear grupos de servidores en Management Studio para facilitar la administración de servidores. El objetivo de un grupo de servidores es proporcionar proximidad entre un grupo de servidores relacionados dentro del área de trabajo administrativo. Por ejemplo, suponga que se le encarga la tarea de administrar diez instancias independientes de Analysis Services. Agrupándolas según los criterios de tiempo de actividad y modo de servidor, o por departamento o región podría ver y conectarse a instancias que compartan las mismas características más fácilmente. También puede agregar información descriptiva que ayude a recordar cómo se utiliza el servidor.  
   
- ![Panel de servidor registrado con servidores miembro](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "panel servidores registrados con servidores miembro")  
+ ![Panel del servidor registrado con los servidores miembro](../../analysis-services/instances/media/ssas-ssms-registerserver.gif "panel servidores registrados con servidores miembro")  
   
  Los grupos de servidores pueden crearse en una estructura jerárquica. El grupo de servidores locales es el nodo raíz. Siempre contiene las instancias de Analysis Services que se ejecutan en el equipo local. Puede agregar servidores remotos a un grupo, incluyendo el grupo local.  
   

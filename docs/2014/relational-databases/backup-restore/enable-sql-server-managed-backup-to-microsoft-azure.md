@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 493f0b885f25cfba956fc8e03505b705c731cf2b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875804"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-windows-azure"></a>Configurar Copia de seguridad administrada de SQL Server para Microsoft Azure
   Este tema incluye dos tutoriales:  
@@ -46,13 +46,13 @@ ms.locfileid: "52413862"
     - SQL Server 2014 usa blobs en páginas, que son diferentes de bloque y blobs en anexos. Por lo tanto, debe crear una cuenta de uso general y no una cuenta de blob. Para obtener más información, consulte [cuentas de almacenamiento de Azure sobre](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Anote el nombre de la cuenta de almacenamiento y las claves de acceso. La información del nombre de cuenta y de la clave de acceso se utiliza para crear una credencial SQL. La credencial SQL se usa para autenticarse en la cuenta de almacenamiento.  
  
-2.  **Crear una credencial SQL:** Cree una credencial de SQL con el nombre de la cuenta de almacenamiento como identidad y la clave de acceso de almacenamiento como contraseña.  
+2.  **Crear una credencial SQL:** Crear una credencial de SQL con el nombre de la cuenta de almacenamiento que la identidad y la clave de acceso de almacenamiento como contraseña.  
   
-3.  **Asegúrese de que el servicio de agente SQL Server está iniciado y en ejecución:**  Iniciar el Agente SQL Server si no se está ejecutando.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requiere que el Agente SQL Server se ejecute en la instancia para realizar operaciones de copia de seguridad.  Puede ser conveniente configurar el Agente SQL Server para que se ejecute automáticamente con el fin de asegurarse de que las operaciones de copia de seguridad pueden realizarse periódicamente.  
+3.  **Asegúrese de que el servicio del Agente SQL Server está iniciado y en ejecutándose:**  inicie el Agente SQL Server si no se está ejecutando actualmente.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requiere que el Agente SQL Server se ejecute en la instancia para realizar operaciones de copia de seguridad.  Puede ser conveniente configurar el Agente SQL Server para que se ejecute automáticamente con el fin de asegurarse de que las operaciones de copia de seguridad pueden realizarse periódicamente.  
   
 4.  **Determine el período de retención:** Determine el período de retención para los archivos de copia de seguridad. El período de retención se especifica en días y puede abarcar de 1 a 30.  
   
-5.  **Habilitar y configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** Inicie SQL Server Management Studio y conéctese a la instancia donde está instalada la base de datos. En la ventana de consulta, ejecute la siguiente instrucción después de modificar los valores correspondientes al nombre de la base de datos, la credencial SQL, el período de retención y las opciones de cifrado según sus requisitos:  
+5.  **Habilitar y configurar[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:**  Inicie SQL Server Management Studio y conéctese a la instancia donde está instalada la base de datos. En la ventana de consulta, ejecute la siguiente instrucción después de modificar los valores correspondientes al nombre de la base de datos, la credencial SQL, el período de retención y las opciones de cifrado según sus requisitos:  
   
      Para obtener más información sobre cómo crear un certificado para el cifrado, vea la **crear un certificado de copia de seguridad** paso a paso [crear una copia de seguridad cifrada](create-an-encrypted-backup.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "52413862"
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitada ahora en la base de datos especificada. Puede tardarse hasta 15 minutos en que las operaciones de copia de seguridad de la base de datos empiecen a ejecutarse.  
   
-6.  **Revise la configuración predeterminada del evento extendido:** Revise la configuración de eventos extendidos ejecutando la siguiente instrucción transact-SQL.  
+6.  **Revise la configuración predeterminada del evento extendido:** Revise la configuración de eventos extendidos ejecutando la siguiente instrucción de transact-SQL.  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
@@ -87,7 +87,7 @@ ms.locfileid: "52413862"
   
     2.  Configure la notificación del Agente SQL Server para que use Correo electrónico de base de datos. Para más información, consulte [Configurar el Agente SQL Server para que use el Correo electrónico de base de datos](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Habilitar las notificaciones de correo electrónico para recibir advertencias y errores de copia de seguridad:** En la ventana de consulta, ejecute las siguientes instrucciones Transact-SQL:  
+    3.  **Habilite las notificaciones por correo electrónico para recibir advertencias y errores de copia de seguridad:** En la ventana de consulta, ejecute las instrucciones de Transact-SQL siguientes:  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -98,9 +98,9 @@ ms.locfileid: "52413862"
   
          Para obtener más información y un script de ejemplo completo, vea [Monitor de SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
-8.  **Ver archivos de copia de seguridad en la cuenta de almacenamiento de Microsoft Azure:** Conéctese a la cuenta de almacenamiento desde SQL Server Management Studio o el Portal de administración de Azure. Verá un contenedor para la instancia de SQL Server que hospeda la base de datos que configuró para utilizar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. También puede ver una base de datos y una copia de seguridad de registros antes de 15 minutos después de habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la base de datos.  
+8.  **Vea archivos de copia de seguridad en la cuenta de Microsoft Azure Storage:** Conectarse a la cuenta de almacenamiento desde SQL Server Management Studio o el Portal de administración de Azure. Verá un contenedor para la instancia de SQL Server que hospeda la base de datos que configuró para utilizar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. También puede ver una base de datos y una copia de seguridad de registros antes de 15 minutos después de habilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la base de datos.  
   
-9. **Supervisar el estado de mantenimiento:**  Puede supervisar a través de notificaciones de correo electrónico que configuró previamente o supervisar activamente los eventos registrados. Las siguientes son algunas instrucciones de Transact-SQL de ejemplo que se utilizan para ver los eventos:  
+9. **Supervise el estado de mantenimiento:**  puede supervisar a través de notificaciones por correo electrónico que ha configurado previamente, o bien supervisar los eventos registrados de forma activa. Las siguientes son algunas instrucciones de Transact-SQL de ejemplo que se utilizan para ver los eventos:  
   
     ```  
     --  view all admin events  
@@ -165,13 +165,13 @@ ms.locfileid: "52413862"
     - SQL Server 2014 usa blobs en páginas, que son diferentes de bloque y blobs en anexos. Por lo tanto, debe crear una cuenta de uso general y no una cuenta de blob. Para obtener más información, consulte [cuentas de almacenamiento de Azure sobre](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Anote el nombre de la cuenta de almacenamiento y las claves de acceso. La información del nombre de cuenta y de la clave de acceso se utiliza para crear una credencial SQL. La credencial SQL se usa para autenticarse en la cuenta de almacenamiento.  
   
-2.  **Crear una credencial SQL:** Cree una credencial de SQL con el nombre de la cuenta de almacenamiento como identidad y la clave de acceso de almacenamiento como contraseña.  
+2.  **Crear una credencial SQL:** Crear una credencial de SQL con el nombre de la cuenta de almacenamiento que la identidad y la clave de acceso de almacenamiento como contraseña.  
   
-3.  **Asegúrese de que el servicio de agente SQL Server está iniciado y en ejecución:** Iniciar el Agente SQL Server si no se está ejecutando. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requiere que el Agente SQL Server se ejecute en la instancia para realizar operaciones de copia de seguridad.  Puede ser conveniente configurar el Agente SQL Server para que se ejecute automáticamente con el fin de asegurarse de que las operaciones de copia de seguridad pueden realizarse periódicamente.  
+3.  **Asegúrese de que el servicio del Agente SQL Server está iniciado y en ejecutándose:** inicie el Agente SQL Server si no se está ejecutando actualmente. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] requiere que el Agente SQL Server se ejecute en la instancia para realizar operaciones de copia de seguridad.  Puede ser conveniente configurar el Agente SQL Server para que se ejecute automáticamente con el fin de asegurarse de que las operaciones de copia de seguridad pueden realizarse periódicamente.  
   
 4.  **Determine el período de retención:** Determine el período de retención para los archivos de copia de seguridad. El período de retención se especifica en días y puede abarcar de 1 a 30. Una vez que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] esté habilitada en el nivel de instancia con los valores predeterminados, todas las nuevas bases de datos creadas posteriormente heredarán los valores. Solo se admiten y se configurarán automáticamente las bases de datos configuradas para los modelos de recuperación completo u optimizado para cargas masivas de registro. Puede deshabilitar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para una base de datos específica en cualquier momento si no desea que se configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. También puede cambiar la configuración de una base de datos específica configurando [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] en el nivel de base de datos.  
   
-5.  **Habilitar y configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** Inicie SQL Server Management Studio y conéctese a una instancia de SQL Server. En la ventana de consulta, ejecute la siguiente instrucción después de modificar los valores correspondientes al nombre de la base de datos, la credencial SQL, el período de retención y las opciones de cifrado según sus requisitos:  
+5.  **Habilitar y configurar[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:**  Inicie SQL Server Management Studio y conéctese a la instancia de SQL Server. En la ventana de consulta, ejecute la siguiente instrucción después de modificar los valores correspondientes al nombre de la base de datos, la credencial SQL, el período de retención y las opciones de cifrado según sus requisitos:  
   
      Para obtener más información sobre cómo crear un certificado para el cifrado, vea la **crear un certificado de copia de seguridad** paso a paso [crear una copia de seguridad cifrada](create-an-encrypted-backup.md).  
   
@@ -216,7 +216,7 @@ ms.locfileid: "52413862"
   
     2.  Configure la notificación del Agente SQL Server para que use Correo electrónico de base de datos. Para más información, consulte [Configurar el Agente SQL Server para que use el Correo electrónico de base de datos](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Habilitar las notificaciones de correo electrónico para recibir advertencias y errores de copia de seguridad:** En la ventana de consulta, ejecute las siguientes instrucciones Transact-SQL:  
+    3.  **Habilite las notificaciones por correo electrónico para recibir advertencias y errores de copia de seguridad:** En la ventana de consulta, ejecute las instrucciones de Transact-SQL siguientes:  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -227,9 +227,9 @@ ms.locfileid: "52413862"
   
          Para obtener más información sobre cómo supervisar y un script de ejemplo completo, vea [Monitor de SQL Server Managed Backup to Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
-9. **Ver archivos de copia de seguridad en la cuenta de almacenamiento de Microsoft Azure:** Conéctese a la cuenta de almacenamiento desde SQL Server Management Studio o el Portal de administración de Azure. Verá un contenedor para la instancia de SQL Server que hospeda la base de datos que configuró para utilizar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. También puede ver una base de datos y una copia de seguridad de registros antes de 15 minutos después de crear una nueva base de datos.  
+9. **Vea archivos de copia de seguridad en la cuenta de Microsoft Azure Storage:** Conectarse a la cuenta de almacenamiento desde SQL Server Management Studio o el Portal de administración de Azure. Verá un contenedor para la instancia de SQL Server que hospeda la base de datos que configuró para utilizar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. También puede ver una base de datos y una copia de seguridad de registros antes de 15 minutos después de crear una nueva base de datos.  
   
-10. **Supervisar el estado de mantenimiento:**  Puede supervisar a través de notificaciones de correo electrónico que configuró previamente o supervisar activamente los eventos registrados. Las siguientes son algunas instrucciones de Transact-SQL de ejemplo que se utilizan para ver los eventos:  
+10. **Supervise el estado de mantenimiento:**  puede supervisar a través de notificaciones por correo electrónico que ha configurado previamente, o bien supervisar los eventos registrados de forma activa. Las siguientes son algunas instrucciones de Transact-SQL de ejemplo que se utilizan para ver los eventos:  
   
     ```  
     --  view all admin events  

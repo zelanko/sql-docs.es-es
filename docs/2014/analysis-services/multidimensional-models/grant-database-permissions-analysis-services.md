@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bac9958c7b906a52b5b0d9d28a37c31d280b836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726071"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Otorgar permisos de base de datos (Analysis Services)
   Si va a empezar a usar Analysis Services y tiene conocimientos sobre bases de datos relacionales, lo primero que necesita saber es que, en lo que respecta al acceso a datos, la base de datos no es el objeto protegible principal en Analysis Services.  
   
- La estructura de consultas primordial en Analysis Services son los cubos (o modelos tabulares), con los permisos de usuarios que se establecen en estos objetos en particular. En contraposición al motor de bases de datos relacionales, donde los inicios de sesión de base de datos y permisos de usuarios (por lo general `db_datareader`) se establecen en la propia base de datos, una base de datos de Analysis Services es sobre todo un contenedor para los objetos de consulta principales de un modelo de datos. Si su objetivo inmediato es habilitar el acceso a datos para un cubo o modelo tabular, por ahora puede omitir los permisos de base de datos y pasar directamente a este tema: [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
+ La estructura de consultas primordial en Analysis Services son los cubos (o modelos tabulares), con los permisos de usuarios que se establecen en estos objetos en particular. En contraposición al motor de bases de datos relacionales, donde los inicios de sesión de base de datos y permisos de usuarios (por lo general `db_datareader`) se establecen en la propia base de datos, una base de datos de Analysis Services es sobre todo un contenedor para los objetos de consulta principales de un modelo de datos. Si su objetivo inmediato es habilitar el acceso a datos para un cubo o modelo tabular, puede omitir los permisos de base de datos por ahora y vaya directamente a este tema: [Conceder permisos para cubos o modelos &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
  Los permisos de base de datos en Analysis Services habilitan las funciones administrativas; en general, como es el caso del permiso de base de datos Control total o de índole más granular si se trata de delegar operaciones de procesamiento. Los niveles de permiso para las bases de datos de Analysis Services se especifican en el panel **General** del cuadro de diálogo **Crear rol** , el cual se presenta en la ilustración siguiente y se describe a continuación.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48149015"
 > [!NOTE]  
 >  Los administradores de servidor (miembros del rol de administrador de servidor) también disponen de Control total implícito sobre todas las bases de datos del servidor.  
   
- `Process Database` : Este permiso se usa para delegar el procesamiento en el nivel de base de datos. Como administrador, puede descargar esta tarea si crea un rol que permita que otra persona o servicio invoque las operaciones de procesamiento para cualquier objeto en la base de datos. Si lo prefiere, puede crear roles que permitan realizar el procesamiento en objetos específicos. Vea [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) para obtener más información.  
+ `Process Database` : Este permiso se usa para delegar el procesamiento en el nivel de base de datos. Como administrador, puede descargar esta tarea si crea un rol que permita que otra persona o servicio invoque las operaciones de procesamiento para cualquier objeto en la base de datos. Si lo prefiere, puede crear roles que permitan realizar el procesamiento en objetos específicos. Vea [Otorgar permisos de procesamiento &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) para obtener más información.  
   
- `Read Definition` : Este permiso otorga la capacidad de leer los metadatos del objeto, pero no menos la capacidad de ver los datos asociados. Por lo general, este permiso se usa en roles que se crearon para el procesamiento dedicado, e incorpora la capacidad de usar herramientas como [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para procesar una base de datos de forma interactiva. Sin `Read Definition`, el permiso `Process Database` solamente resulta efectivo en escenarios con scripts. Si tiene previsto automatizar el procesamiento, quizás a través de SSIS u otro programador, probablemente desee crear un rol que tenga `Process Database` sin `Read Definition`. De lo contrario, es conveniente combinar las dos propiedades en el mismo rol para admitir el procesamiento desatendido e interactivo mediante herramientas de SQL Server que visualizan el modelo de datos en una interfaz de usuario.  
+ `Read Definition` : Este permiso otorga la capacidad de leer los metadatos del objeto, pero no menos la capacidad de ver los datos asociados. Por lo general, este permiso se usa en roles que se crearon para el procesamiento dedicado, e incorpora la capacidad de usar herramientas como [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para procesar una base de datos de forma interactiva. Sin `Read Definition`, el permiso `Process Database` solamente resulta efectivo en escenarios con scripts. Si tiene previsto automatizar el procesamiento, quizás a través de SSIS u otro programador, se recomienda crear un rol que tenga `Process Database` sin `Read Definition`. De lo contrario, es conveniente combinar las dos propiedades en el mismo rol para admitir el procesamiento desatendido e interactivo mediante herramientas de SQL Server que visualizan el modelo de datos en una interfaz de usuario.  
   
 ## <a name="full-control-administrator-permissions"></a>Permisos de Control total (administrador)  
  En [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], un administrador de base de datos es una identidad de usuario de Windows que se asigna a un rol y que incluye permisos de Control total (administrador). Un administrador de base de datos puede realizar cualquier tarea en la base de datos, lo cual incluye:  
@@ -80,6 +80,6 @@ ms.locfileid: "48149015"
   
 ## <a name="see-also"></a>Vea también  
  [Conceder permisos de administrador de servidor &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Conceder permisos de procesamiento &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ [Otorgar permisos de procesamiento &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

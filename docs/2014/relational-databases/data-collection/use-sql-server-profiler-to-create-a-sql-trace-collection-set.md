@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873349"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Usar SQL Server Profiler para crear un conjunto de recopilación de Seguimiento SQL (SQL Server Management Studio)
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] puede aprovechar la funcionalidad de seguimiento del lado servidor de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para exportar una definición de seguimiento y emplearla después para crear un conjunto de recopilación que use el tipo de recopilador genérico de Seguimiento de SQL. En este proceso hay dos partes:  

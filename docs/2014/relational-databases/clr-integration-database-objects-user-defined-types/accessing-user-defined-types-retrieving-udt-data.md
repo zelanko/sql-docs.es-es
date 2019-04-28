@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874642"
 ---
 # <a name="retrieving-udt-data"></a>Recuperar datos UDT
   Para crear un tipo definido por el usuario (UDT) en el cliente, el ensamblado que se registró como UDT en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe estar disponible para la aplicación cliente. El ensamblado UDT se puede colocar en el mismo directorio que la aplicación o en la caché de ensamblados global (GAC). También puede establecer una referencia al ensamblado en su proyecto.  

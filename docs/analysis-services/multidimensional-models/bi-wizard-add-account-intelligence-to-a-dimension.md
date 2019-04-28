@@ -1,5 +1,5 @@
 ---
-title: Agregar inteligencia de cuentas a una dimensión | Documentos de Microsoft
+title: Agregar inteligencia de cuentas a una dimensión | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5021d10832028f46d1d0b1a8f33dc01a75df5985
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717572"
 ---
-# <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>Asistente de BI - agregar inteligencia de cuentas a una dimensión
+# <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>Asistente de BI: Agregar la inteligencia de cuentas a una dimensión
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Agregue la mejora de inteligencia de cuentas a un cubo o dimensión para asignar las clasificaciones de cuenta estándar, como ingresos y gastos, a los miembros de un atributo de cuenta. Esta mejora también identifica los tipos de cuenta (como Asset y Liability) y asigna la agregación adecuada a cada tipo de cuenta. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede usar las clasificaciones para agregar cuentas con el tiempo.  
+  Agregue la mejora de inteligencia de cuentas a un cubo o dimensión para asignar las clasificaciones de cuenta estándar, como ingresos y gastos, a los miembros de un atributo de cuenta. Esta mejora también identifica los tipos de cuenta (como Asset y Liability) y asigna la agregación adecuada a cada tipo de cuenta. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede usar las clasificaciones para agregar cuentas a lo largo del tiempo.  
   
 > [!NOTE]  
 >  La inteligencia de cuentas solo está disponible en dimensiones basadas en los orígenes de datos existentes. En las dimensiones que se crearon sin utilizar un origen de datos, debe ejecutar el Asistente para generar esquemas para crear una vista del origen de datos antes de agregar la inteligencia de cuentas.  
@@ -40,7 +40,7 @@ ms.locfileid: "34023472"
   
 -   La columna **Tipos de cuenta de servidor** identifica el tipo de cuenta correspondiente que reconoce [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . La siguiente tabla muestra los tipos de cuenta que reconoce [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y la agregación predeterminada de cada tipo. Las selecciones se realizan automáticamente si la tabla de dimensión utiliza los mismos nombres de tipo de cuenta que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-    |Tipo de cuenta de servidor|Agregación|Description|  
+    |Tipo de cuenta de servidor|Agregación|Descripción|  
     |-------------------------|-----------------|-----------------|  
     |**Estadísticas**|**Ninguno**|Proporción calculada de algo o recuento de algo que no se agrega a lo largo del tiempo. Este tipo de cuenta no convierte distintas monedas con reglas de conversión.|  
     |**Liability**|**LastNonEmpty**|Dinero o valor de cosas debidas en un momento dado. Este tipo de cuenta no se acumula a lo largo del tiempo, por lo que no se agrega de forma natural a lo largo del tiempo. Por ejemplo, la cantidad Year es el valor del último mes con datos. Este tipo de cuenta convierte monedas con la tasa del final del período.|  

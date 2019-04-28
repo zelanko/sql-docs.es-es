@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 550914167b005803e7ff39ebbcf3727f7b6b0b8c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722776"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validación cruzada (Analysis Services - Minería de datos)
   La *validación cruzada* es una herramienta estándar de análisis que resulta muy útil a la hora de desarrollar y ajustar modelos de minería de datos. La validación cruzada se usa después de crear una estructura de minería de datos y los modelos de minería de datos relacionados para determinar la validez del modelo.  La validación cruzada tiene las aplicaciones siguientes:  

@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992361"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Usar el Asesor de actualizaciones para preparar las actualizaciones
   El Asesor de actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ayuda a preparar las actualizaciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esta herramienta analiza los componentes instalados de las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y genera un informe que identifica los problemas que han de solucionarse antes o después de la actualización.  

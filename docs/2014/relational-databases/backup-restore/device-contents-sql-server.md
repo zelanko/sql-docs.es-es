@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 890a03221888693c1696059ed5d31a9907ea2872
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876052"
 ---
 # <a name="device-contents-sql-server"></a>Contenido del dispositivo (SQL Server)
   Utilice este cuadro de diálogo para ver la información de copia de seguridad. Esta información describe el dispositivo, el medio, el conjunto de medios y los conjuntos de copias de seguridad.  
@@ -41,7 +41,7 @@ ms.locfileid: "48101695"
  **Conjunto de medios**  
  Un conjunto de medios es una colección ordenada de medios de copia de seguridad en la que se han grabado una o más operaciones de copia de seguridad mediante un número constante de dispositivos pertinentes.  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre del conjunto de medios.  
   
  **Descripción**  
@@ -53,11 +53,11 @@ ms.locfileid: "48101695"
  **Conjuntos de copia de seguridad**  
  Muestra la información acerca del conjunto o conjuntos de copia de seguridad que contiene el medio. Un conjunto de copia de seguridad es el resultado de una operación de copia de seguridad correcta, cuyo contenido se distribuye entre los medios del conjunto de dispositivos de copia de seguridad.  
   
-|Encabezado|Valores|  
+|Header|Valores|  
 |------------|------------|  
-|**Nombre**|Nombre del conjunto de copia de seguridad.|  
-|**Tipo**|Tipo de copia de seguridad realizada: Completa, Diferencial o Registro de transacciones.|  
-|**Componente**|Componente del que se realizó una copia de seguridad: Base de datos, Archivo o *\<en blanco>* (para registros de transacciones).|  
+|**Name**|Nombre del conjunto de copia de seguridad.|  
+|**Tipo**|El tipo de copia de seguridad realizada: Completa, diferencial o registro de transacciones.|  
+|**Componente**|El componente de copia de seguridad: Base de datos, archivo, o  *\<en blanco >* (para registros de transacciones).|  
 |**Server**|Nombre de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizó la operación de copia de seguridad.|  
 |**Base de datos**|Nombre de la base de datos de la que se realizó la copia de seguridad.|  
 |**Posición**|Posición del conjunto de copias de seguridad en el volumen.|  

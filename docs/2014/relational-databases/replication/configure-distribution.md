@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f001652af1f6ed627ded9be287b4910059cce9cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721720"
 ---
 # <a name="configure-distribution"></a>Configurar la distribución
   El distribuidor es un servidor que contiene la base de datos de distribución, que almacena metadatos y datos del historial de todos los tipos de replicación y transacciones para la replicación transaccional. Para configurar la replicación, debe configurar un distribuidor. Un publicador solamente se puede asignar a una instancia del distribuidor, aunque varios publicadores pueden compartir un distribuidor. El distribuidor utiliza estos recursos adicionales en el servidor en el que se encuentra:  

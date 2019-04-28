@@ -1,5 +1,5 @@
 ---
-title: Autorizar el acceso a objetos y operaciones (Analysis Services) | Documentos de Microsoft
+title: Autorizar el acceso a objetos y operaciones (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 88290b9598ffdbbcfc90a738654a9485107da464
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717602"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Cómo autorizar el acceso a objetos y operaciones (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,15 +41,15 @@ ms.locfileid: "34024042"
 ## <a name="top-down-overview-of-analysis-services-authorization"></a>Introducción general descendente a las autorizaciones en Analysis Services  
  Esta sección trata sobre el flujo de trabajo básico para configurar permisos.  
   
- **Paso 1: Administración de servidores**  
+ **Paso 1: Administración del servidor**  
   
  El primer paso es decidir quién tendrá derechos de administrador en el nivel de servidor. Durante la instalación, el administrador local que instala SQL Server debe especificar una o varias cuentas de Windows como el administrador de servidor de Analysis Services. Los administradores de servidor cuentan con todos los permisos posibles para un servidor, lo cual incluye los permisos para ver, modificar y eliminar cualquier objeto del servidor o para ver los datos asociados. Una vez se ha completado la instalación, los administradores de servidor pueden agregar o quitar cuentas para cambiar la pertenencia de este rol. Vea [Conceder permisos de administrador de servidor (Analysis Services)](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) para obtener más información sobre este nivel de permisos.  
   
- **Paso 2: Administración de bases de datos**  
+ **Paso 2: Administración de base de datos**  
   
  A continuación, después de crearse una solución tabular o multidimensional, se implementa en el servidor como base de datos. Un administrador de servidor puede delegar tareas de administración de base de datos; para ello, debe definir un rol que tenga permisos de Control total para la base de datos relevante. Los miembros que pertenecen a este rol pueden procesar o consultar objetos en la base de datos, así como crear roles adicionales para obtener acceso a cubos, dimensiones y otros objetos de la base de datos. Vea [Otorgar permisos de base de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md) para obtener más información.  
   
- **Paso 3: Permitir el acceso de cubos o modelos para las cargas de trabajo de procesamiento y consulta**  
+ **Paso 3: Habilitar el acceso de cubos o modelos para las cargas de trabajo de procesamiento y consulta**  
   
  De forma predeterminada, solo los administradores del servidor y la base de datos tienen acceso a los cubos o los modelos tabulares. Con el fin de que estas estructuras de datos se encuentren disponibles para otras personas de la organización, se deben hacer otras asignaciones de rol que hagan corresponder cuentas de usuario y grupo de Windows a cubos o modelos, junto con los permisos que especifiquen privilegios de **Read** . Vea [Otorgar permisos para cubos o modelos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) para obtener más información.  
   

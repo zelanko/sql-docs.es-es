@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876199"
 ---
 # <a name="online-restore-sql-server"></a>Restauración en línea (SQL Server)
   La restauración en línea solo se admite en la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En esta versión, la restauración de un archivo, una página o por etapas es en línea de manera predeterminada. Este tema es pertinente para las bases de datos que incluyen varios archivos o grupos de archivos y, en el modelo de recuperación simple, solo para grupos de archivos de solo lectura.  
@@ -77,13 +77,13 @@ ms.locfileid: "48060287"
 > [!NOTE]  
 >  La sintaxis de un flujo de restauración en línea es la misma que la de un flujo de restauración sin conexión.  
   
--   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Ejemplo: restauración por etapas de la base de datos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 -   [Ejemplo: restauración con conexión de un archivo de solo lectura &#40;modelo de recuperación simple&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Ejemplo: restauración por etapas de la base de datos &#40;modelo de recuperación completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación completa&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 620e74b3854b5cc590ffb84e2b8b70b33d0bfcd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732264"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>Características en desuso de Analysis Services en SQL Server 2014
   Este tema describe las características desusadas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que siguen estando disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
@@ -29,7 +29,7 @@ ms.locfileid: "48067715"
 ## <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Características no admitidas en la siguiente versión de SQL Server  
  Las características del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] siguientes no se admitirán en la siguiente versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No utilice estas características en nuevos trabajos de desarrollo y modifique lo antes posible las aplicaciones que las utilizan actualmente.  
   
-|Categoría|Característica desusada|Sustituta|  
+|Category|Característica desusada|Sustituta|  
 |--------------|------------------------|-----------------|  
 |Función MDX|Función CalculationPassValue|Ninguno. El motor de OLAP administra el paso de cálculo. Esta función ya no se necesita.|  
 |Función MDX|CalculationCurrentPass, función|Ninguno. El motor de OLAP administra el paso de cálculo. Esta función ya no se necesita.|  
@@ -40,7 +40,7 @@ ms.locfileid: "48067715"
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Características no admitidas en una versión futura de SQL Server  
  Las características del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] siguientes se admiten en la próxima versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], pero se quitarán en una versión posterior. No se ha determinado la versión específica de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-|Categoría|Característica desusada|Sustituta|  
+|Category|Característica desusada|Sustituta|  
 |--------------|------------------------|-----------------|  
 |Modelos multidimensionales|Particiones remotas|Ninguno. Use particiones locales en su lugar. Consulte [crear y administrar una partición Local &#40;Analysis Services&#41; ](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md) para obtener más información.|  
 |Modelos multidimensionales|Grupos de medida vinculados remotos|Un grupo de medida vinculado remoto es un grupo de medida vinculado que usa un origen de datos de un servidor remoto. Está previsto desusar la posibilidad de usar un origen de datos remoto para un grupo de medida vinculado.<br /><br /> No hay ningún reemplazo para esta característica. Se recomienda usar grupos de medida vinculados locales en su lugar. Consulte [Linked Measure Groups](multidimensional-models/linked-measure-groups.md) para obtener más información.|  

@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e2643488710548b3a773730e9b9898125783dc3
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714592"
 ---
 # <a name="olap-properties"></a>Propiedades OLAP
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor OLAP enumeradas en las tablas siguientes. Para obtener más información sobre otras propiedades de servidor y cómo establecerlas, vea [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **Se aplica a:** modo de servidor multidimensional  únicamente  
+ **Se aplica a:** Modo de servidor multidimensional únicamente  
   
 ## <a name="memory"></a>Memoria  
  **DefaultPageSizeForData**  

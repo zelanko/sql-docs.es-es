@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843754"
 ---
 # <a name="set-source-control-options"></a>Establecer las opciones de control de código fuente
   Antes de aprovechar las características de control de código fuente integradas en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], es necesario configurar las opciones de control de código fuente de los diversos entornos en los que trabaje.  
@@ -86,7 +86,7 @@ ms.locfileid: "53589899"
      Especifica que cuando el usuario proteja elementos para actualizar el almacén de control de código fuente, los elementos deben permanecer desprotegidos para el usuario. Si desea cambiar esta opción para una inserción en específico, haga clic en el **opciones** flecha en el **proteger** cuadro de diálogo y, a continuación, desactive la **Mantener desprotegido** casilla de verificación.  
   
      **Elementos protegidos**  
-     Muestra una lista de opciones que especifican la forma en que debe comportarse [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] cuando se intenta editar un elemento que no está desprotegido. En la siguiente tabla se describen las opciones disponibles.  
+     Muestra una lista de opciones que especifican cómo [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] debería comportarse al intentar editar un elemento que no está desprotegido. Las tablas siguientes describen las opciones disponibles.  
   
      **Al guardar**  
   

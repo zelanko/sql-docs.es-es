@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a772a80e6cb0e51682880c0579ec07914948372b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956139"
 ---
 # <a name="change-the-default-location-for-projects"></a>Cambiar la ubicación predeterminada de los proyectos
   La ubicación predeterminada de los archivos y los proyectos es la carpeta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Projects, en la carpeta Mis documentos.  

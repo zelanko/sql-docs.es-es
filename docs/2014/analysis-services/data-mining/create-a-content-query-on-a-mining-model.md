@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7ac547ffe8a4e102b4e3c4b0c29c6783e0c4857
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715242"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Crear una consulta de contenido en un modelo de minería de datos
   Puede consultar mediante programación el contenido del modelo de minería de datos utilizando AMO o XML/A, pero crear las consultas mediante DMX resulta más fácil. También puede crear consultas con los conjuntos de filas de esquema de minería de datos estableciendo una conexión a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y crear una consulta mediante la DMV que proporciona [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -76,7 +76,7 @@ ms.locfileid: "50148040"
      El panel Resultados muestra el contenido del modelo.  
   
     > [!NOTE]  
-    >  Para ver una lista de todos los conjuntos de filas de esquema que puede consultar en la instancia actual, use esta consulta: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. O bien, para obtener una lista de conjuntos de filas de esquema concretos de la minería de datos, vea [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
+    >  Para ver una lista de todos los conjuntos de filas de esquema que se pueden consultar en la instancia actual, utilice esta consulta: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. O bien, para obtener una lista de conjuntos de filas de esquema concretos de la minería de datos, vea [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md)   

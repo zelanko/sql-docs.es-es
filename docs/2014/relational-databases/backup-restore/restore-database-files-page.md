@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef7f15fc1b54d18c71d7fccfd379454911cb8961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874997"
 ---
 # <a name="restore-database-files-page"></a>Restaurar base de datos (página Archivos)
   Use la página **Archivos** del cuadro de diálogo **Restaurar base de datos** para administrar los archivos concretos que ha elegido restaurar dentro de la base de datos.  

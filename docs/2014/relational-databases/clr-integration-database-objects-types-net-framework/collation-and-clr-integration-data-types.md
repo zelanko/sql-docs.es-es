@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40c4abad803424ac9b274045f699785b85689644
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874847"
 ---
 # <a name="collation-and-clr-integration-data-types"></a>Intercalación y tipos de datos de integración CLR
   En [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], el objeto `CompareInfo` administra las intercalaciones. Las interfaces de programación de aplicaciones (API) de cadenas de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utilizan la propiedad `CompareInfo` asociada al objeto `CultureInfo` del subproceso actual para comparar las cadenas. El valor predeterminado de la `CultureInfo` objeto se basa en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] configuración regional de Windows para el equipo en el que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando. Esto determina la semántica de comparación predeterminada para comparar valores de `CultureInfo` si no se ha especificado ningún `System.String` concreto. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no cambia de forma explícita la propiedad `CompareInfo` para la intercalación de base de datos o de servidor. Si es necesario, los usuarios deben establecer la propiedad `CompareInfo` pertinente en sus rutinas.  

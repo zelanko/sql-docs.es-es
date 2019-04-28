@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10ad92286011f6f81fbaff5ab4908007e16bdd45
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62870955"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>Ver o cambiar las propiedades de una base de datos
   En este tema se describe cómo ver o cambiar las propiedades de una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Después de cambiar una propiedad de la base de datos, la modificación surte efecto de inmediato.  

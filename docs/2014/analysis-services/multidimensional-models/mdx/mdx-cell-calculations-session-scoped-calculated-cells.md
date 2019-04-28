@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17a132ea3a775104420640cab5f60cfdd0028fba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725409"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>Crear celdas calculadas de ámbito de sesión
     
@@ -76,7 +76,7 @@ FOR String_Expression AS 'MDX_Expression'
   
  El valor `String_Expression` contiene una lista de expresiones de conjunto MDX ortogonales de una sola dimensión, cada una de las cuales debe resolverse en alguna de las siguientes categorías de conjuntos que se indican en la siguiente tabla.  
   
-|Categoría|Descripción|  
+|Category|Descripción|  
 |--------------|-----------------|  
 |Conjunto vacío|Una expresión de conjunto MDX que se resuelve en un conjunto vacío. En este caso, el ámbito de la celda calculada es todo el cubo.|  
 |Conjunto de un solo miembro|Una expresión de conjunto MDX que se resuelve en un solo miembro.|  
@@ -84,6 +84,6 @@ FOR String_Expression AS 'MDX_Expression'
 |Conjunto de descendientes|Una expresión de conjunto MDX que se resuelve en los descendientes de un miembro determinado. Un ejemplo de esto es el `Descendants`(*Member_Expression*, *Level_Expression*, *Desc_Flag*) función MDX.<br /><br /> Para más información, vea [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
 ## <a name="see-also"></a>Vea también  
- [Creación de cálculos de celdas en MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [Generar cálculos de celdas en MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

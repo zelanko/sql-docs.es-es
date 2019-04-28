@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0136631904a9f4bf8a0cdb7c22e7c9241ba3aff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726282"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>Implementar soluciones con el Asistente para la implementación
   El Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza archivos de salida XML generados a partir de un proyecto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como archivos de entrada. Estos archivos de entrada se pueden modificar fácilmente para personalizar la implementación de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . El script de implementación generado puede ejecutarse inmediatamente o guardarse para su implementación posterior.  
@@ -37,13 +37,13 @@ ms.locfileid: "48087655"
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Ejecutar el Asistente para la implementación de Analysis Services](running-the-analysis-services-deployment-wizard.md)|Describe los diversos modos en los que se puede ejecutar el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|[Comprender los archivos de entrada usados para crear el script de implementación](deployment-script-files-input-used-to-create-deployment-script.md)|Describe qué archivos utiliza el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como valores de entrada, cuáles de esos archivos contiene, y proporciona vínculos con los temas que describen cómo modificar los valores de cada uno de los archivos de entrada.|  
+|[Comprender los archivos de entrada utilizados para crear el script de implementación](deployment-script-files-input-used-to-create-deployment-script.md)|Describe qué archivos utiliza el Asistente para la implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como valores de entrada, cuáles de esos archivos contiene, y proporciona vínculos con los temas que describen cómo modificar los valores de cada uno de los archivos de entrada.|  
 |[Descripción del script de implementación de Analysis Services](understanding-the-analysis-services-deployment-script.md)|Describe lo que contiene el script de implementación y cómo se ejecuta este.|  
   
 ## <a name="see-also"></a>Vea también  
  [Implementar soluciones de modelo mediante XMLA](deploy-model-solutions-using-xmla.md)   
  [Sincronizar bases de datos de Analysis Services](synchronize-analysis-services-databases.md)   
- [Comprender los archivos de entrada utilizados para crear el Script de implementación](deployment-script-files-input-used-to-create-deployment-script.md)   
+ [Comprender los archivos de entrada utilizados para crear el script de implementación](deployment-script-files-input-used-to-create-deployment-script.md)   
  [Implementar soluciones de modelos con la utilidad de implementación](deploy-model-solutions-with-the-deployment-utility.md)  
   
   

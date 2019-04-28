@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721505"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>Depurar un controlador de lógica de negocios (programación de la replicación)
   Use un controlador de lógica de negocios para invocar la lógica de negocios personalizada cuando se sincroniza una suscripción de mezcla. Para obtener más información, vea [Execute Business Logic During Merge Synchronization](merge/execute-business-logic-during-merge-synchronization.md) (Ejecutar lógica de negocios durante la sincronización de mezcla).  
@@ -31,7 +31,7 @@ ms.locfileid: "54128765"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>Para depurar un controlador de lógica de negocios en un equipo local  
   
-1.  Configure la publicación y la distribución, cree una publicación y cree una suscripción a la publicación. Para obtener más información, consulte [configurar la publicación y distribución](configure-publishing-and-distribution.md) y [crear una publicación](publish/create-a-publication.md).  
+1.  Configure la publicación y la distribución, cree una publicación y cree una suscripción a la publicación. Para más información, vea [Configuración de la publicación y la distribución](configure-publishing-and-distribution.md) y [Creación de una publicación](publish/create-a-publication.md).  
   
 2.  Cree y registre un controlador de lógica de negocios Para más información, consulte [Implementar un controlador de lógica de negocios para un artículo de mezcla](implement-a-business-logic-handler-for-a-merge-article.md).  
   

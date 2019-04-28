@@ -16,11 +16,11 @@ author: HJToland3
 ms.author: rajpo
 manager: craigg
 ms.openlocfilehash: 6d90a661c160fbbe473e6c30a8e45e9ea4f75056
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62706987"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Actualización local de SQL Server a SQL Server o SQL Server en máquinas virtuales de Azure mediante Data Migration Assistant
 

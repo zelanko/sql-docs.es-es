@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3b9d48c6bcdfd07599ded1b4a92955cc45abfec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721976"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Algoritmo de clústeres de Microsoft
-  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de clústeres es un algoritmo de segmentación suministrado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El algoritmo utiliza técnicas iterativas para agrupar los casos de un conjunto de datos dentro de clústeres que contienen características similares. Estas agrupaciones son útiles para la exploración de datos, la identificación de anomalías en los datos y la creación de predicciones.  
+  El algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de segmentación suministrado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El algoritmo utiliza técnicas iterativas para agrupar los casos de un conjunto de datos dentro de clústeres que contienen características similares. Estas agrupaciones son útiles para la exploración de datos, la identificación de anomalías en los datos y la creación de predicciones.  
   
  Los modelos de agrupación en clústeres identifican las relaciones en un conjunto de datos que no se podrían derivar lógicamente a través de la observación casual. Por ejemplo, puede discernir lógicamente que las personas que se desplazan a sus trabajos en bicicleta no viven, por lo general, a gran distancia de sus centros de trabajo. Sin embargo, el algoritmo puede encontrar otras características que no son evidentes acerca de los trabajadores que se desplazan en bicicleta. En el siguiente diagrama, el clúster A representa los datos sobre las personas que suelen conducir hasta el trabajo, en tanto que el clúster B representa los datos sobre las personas que van hasta allí en bicicleta.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48195105"
   
 -   **Columnas de entrada** Cada modelo debe tener al menos una columna de entrada que contenga los valores que se utilizan para generar los clústeres. Puede tener tantas columnas de entrada como desee, pero dependiendo del número de valores existentes en cada columna, la adición de columnas adicionales podría aumentar el tiempo necesario para entrenar el modelo.  
   
--   **Una columna de predicción opcional** El algoritmo no necesita una columna de predicción para generar el modelo, pero puede agregar una columna de predicción de casi cualquier tipo de datos. Los valores de la columna de predicción se pueden tratar como entradas del modelo de agrupación en clústeres, o se puede especificar que solo se utilicen para las predicciones. Por ejemplo, si desea predecir los ingresos del cliente agrupando en clústeres en datos demográficos como la región o la edad, especificaría ingresos como `PredictOnly` y agregar todas las demás columnas, por ejemplo, región o la edad, como entradas.  
+-   **Una columna de predicción opcional** El algoritmo no necesita una columna de predicción para generar el modelo, pero puede agregar una columna de predicción de casi cualquier tipo de datos. Los valores de la columna de predicción se pueden tratar como entradas del modelo de agrupación en clústeres, o se puede especificar que solo se utilicen para las predicciones. Por ejemplo, si desea predecir los ingresos del cliente agrupando en clústeres de acuerdo con datos demográficos como la región o la edad, se deben especificar los ingresos como `PredictOnly` y agregar todas las demás columnas, como la región o la edad, como entradas.  
   
  Para obtener información más detallada sobre los tipos de contenido y los tipos de datos compatibles con los modelos de agrupación en clústeres, vea la sección Requisitos de [Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md).  
   
@@ -83,9 +83,9 @@ ms.locfileid: "48195105"
 -   Admite el uso de modelos de minería de datos OLAP y la creación de dimensiones de minería de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md)   
- [Contenido del modelo de minería de datos para los modelos de clústeres &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [Algoritmos de minería de datos &#40;Analysis Services: Minería de datos&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Referencia técnica del algoritmo de clústeres de Microsoft](microsoft-clustering-algorithm-technical-reference.md)   
+ [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [Ejemplos de consultas de modelos de agrupación en clústeres](clustering-model-query-examples.md)  
   
   

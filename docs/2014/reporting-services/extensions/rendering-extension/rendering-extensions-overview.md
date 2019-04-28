@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5386c8db5c3d240533b21311794779905039e70a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985814"
 ---
 # <a name="rendering-extensions-overview"></a>Información general de las extensiones de representación
   Una extensión de representación es un componente o módulo de un servidor de informes que transforma los datos de informes y la información de diseño en un formato específico del dispositivo. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] incluye siete extensiones de representación: HTML, Excel, Word, CSV o texto, XML, imagen y PDF. Puede crear extensiones de representación adicionales para generar informes en otros formatos.  

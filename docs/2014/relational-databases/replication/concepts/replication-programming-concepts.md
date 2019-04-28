@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721813"
 ---
 # <a name="replication-programming-concepts"></a>Conceptos de la programación de replicación
   Antes de desarrollar una aplicación que utilice funcionalidades de replicación, debería seguir los pasos de planeamiento generales siguientes:  

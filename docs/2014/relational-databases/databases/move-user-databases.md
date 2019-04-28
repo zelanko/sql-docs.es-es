@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 602ac6de5a2b623e33b1b85b46a9f8cf31e0b225
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871729"
 ---
 # <a name="move-user-databases"></a>Mover bases de datos de usuario
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede mover los archivos de datos, del registro y del catálogo de texto completo de una base de datos de usuario a una nueva ubicación, especificando la nueva ubicación en la cláusula FILENAME de la instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) . Este método se aplica para mover archivos de la base de datos dentro de la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para mover una base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o a otro servidor, use las operaciones de [copias de seguridad y restauración](../backup-restore/back-up-and-restore-of-sql-server-databases.md) o [separar y adjuntar](move-a-database-using-detach-and-attach-transact-sql.md).  

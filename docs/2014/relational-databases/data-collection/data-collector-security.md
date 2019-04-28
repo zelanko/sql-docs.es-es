@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873619"
 ---
 # <a name="data-collector-security"></a>Seguridad del recopilador de datos
   El recopilador de datos utiliza el modelo de seguridad basada en roles implementado por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este modelo permite al administrador de bases de datos ejecutar las distintas tareas de recopilador de datos en un contexto de seguridad que solo tiene los permisos necesarios realizar dicha tarea. Este enfoque también se utiliza para operaciones que implican tablas internas, a las que solamente se puede tener acceso utilizando un procedimiento almacenado o vista. No se concede ningún permiso a las tablas internas. En lugar de ello, los permisos se comprueban en el usuario del procedimiento almacenado o vista que se utiliza para tener acceso a una tabla.  

@@ -1,5 +1,5 @@
 ---
-title: Agregar inteligencia de dimensiones a una dimensión | Documentos de Microsoft
+title: Agregar inteligencia de dimensiones a una dimensión | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad714bfefa8010664a8105eebf1f45d63799847c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717352"
 ---
-# <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>Asistente de BI - agregar inteligencia de dimensiones a una dimensión
+# <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>Asistente de BI: Agregar la inteligencia de dimensiones a una dimensión
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Agregar la mejora de inteligencia de dimensiones a un cubo o dimensión para especificar un tipo de negocio estándar para una dimensión. Esta mejora también especifica los tipos correspondientes para los atributos de dimensión. Las aplicaciones cliente pueden utilizar estas especificaciones de tipos al analizar datos.  
   

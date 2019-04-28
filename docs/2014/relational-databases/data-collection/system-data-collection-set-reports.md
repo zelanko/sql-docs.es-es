@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873413"
 ---
 # <a name="system-data-collection-set-reports"></a>Informes de conjuntos de recopilación de datos del sistema
   El recopilador de datos proporciona un informe histórico para cada uno de los conjuntos de recopilación de datos del sistema. Cada uno de los informes siguientes utiliza datos que están almacenados en el almacén de administración de datos:  
@@ -58,7 +58,7 @@ ms.locfileid: "54100500"
 #### <a name="disk-usage-for-database-databasename-subreport"></a>Subinforme Uso de disco para la base de datos : <nombre_de_base_de_datos>  
  El subinforme **Uso de disco para la base de datos:**_<nombre_de_base_de_datos>_ se muestra al hacer clic en un nombre de base de datos de la tabla de resumen del informe Conjunto de recopilación de uso de disco. Este informe proporciona un desglose numérico y gráfico del uso de espacio de los archivos del registro de transacciones y de datos. El uso de espacio de los archivos de datos se categoriza como un porcentaje asignado a las páginas de índice, el espacio sin asignar, a los datos y al espacio sin usar. Estas categorías se definen como se indica a continuación:  
   
-|Categoría|Definición|  
+|Category|Definición|  
 |--------------|----------------|  
 |Índice|Cantidad de espacio en disco utilizada para contener las páginas de índice.|  
 |Sin asignar|La cantidad de espacio en disco disponible para la base de datos pero que aún no se ha asignado a ningún objeto.|  
@@ -81,21 +81,21 @@ ms.locfileid: "54100500"
   
  **Botones de navegación y control de escala de tiempo**  
   
- Utilice el control de escala de tiempo y los botones de navegación para moverse a través de la escala de tiempo o seleccionar un intervalo de fechas. Los botones de dirección permiten el desplazamiento a la izquierda y a la derecha de modo que se pueda mover hacia atrás o hacia delante a través de la escala de tiempo. De forma predeterminada, las flechas se mueven a través de la escala de tiempo en incrementos de cuatro horas. Mediante los botones del Ampliador, puede expandir o contraer este incremento de tiempo a uno de los siguientes valores: 15 minutos, 1 hora, 4 horas, 12 horas o 24 horas. El intervalo temporal actualmente seleccionado se indica con la parte resaltada de la escala de tiempo y se muestra en el texto debajo de la escala de tiempo. Estos valores, así como los datos del informe, se actualizan cada vez que se hace clic en la escala de tiempo o se utilizan los botones de navegación.  
+ Utilice el control de escala de tiempo y los botones de navegación para moverse a través de la escala de tiempo o seleccionar un intervalo de fechas. Los botones de dirección permiten el desplazamiento a la izquierda y a la derecha de modo que se pueda mover hacia atrás o hacia delante a través de la escala de tiempo. De forma predeterminada, las flechas se mueven a través de la escala de tiempo en incrementos de cuatro horas. Con los botones del ampliador, puede expandir o acortar este incremento de tiempo en uno de los valores siguientes: 15 minutos, 1 hora, 4 horas, 12 horas o 24 horas. El intervalo temporal actualmente seleccionado se indica con la parte resaltada de la escala de tiempo y se muestra en el texto debajo de la escala de tiempo. Estos valores, así como los datos del informe, se actualizan cada vez que se hace clic en la escala de tiempo o se utilizan los botones de navegación.  
   
  **Botón de calendario**  
   
  Utilice el botón de calendario para especificar la fecha de inicio, la hora de inicio y la duración de los datos que desea notificar.  
   
 #### <a name="query-statistics-history-report"></a>Informe Historial de estadísticas de consultas  
- El gráfico Principales consultas por total de CPU muestra el gasto relativo de cada consulta para el intervalo de tiempo seleccionado según el uso total de CPU. Para mostrar una vista diferente del gasto relativo de la consulta, haga clic en uno de los hipervínculos que se proporcionan debajo del gráfico: **Duración**, **Total E/S**, **lecturas físicas**, o **escrituras lógicas**.  
+ El gráfico Principales consultas por total de CPU muestra el gasto relativo de cada consulta para el intervalo de tiempo seleccionado según el uso total de CPU. Para mostrar otra vista del gasto relativo de la consulta, haga clic en uno de los hipervínculos que se proporcionan debajo del gráfico: **Duración**, **Total E/S**, **Lecturas físicas** o **Escrituras lógicas**.  
   
  La tabla situada debajo del gráfico proporciona datos de consulta adicionales. Muestra el texto de cada consulta que se representa mediante un gráfico junto con información estadística detallada. Observe que las barras del gráfico son vínculos activos, como lo son cada una de las consultas que se muestran en la tabla. Al hacer clic en un vínculo activo, se abre el subinforme Detalles de consulta correspondiente a la consulta.  
   
 #### <a name="query-details-subreport"></a>Subinforme Detalles de consulta  
  El subinforme Detalles de consulta proporciona todo el texto de la consulta. Al lado de la consulta se encuentra el hipervínculo **Editar texto de consulta** . Puede hacer clic en este vínculo para abrir la consulta en el Editor de consultas. La tabla situada debajo de la consulta proporciona estadísticas de ejecución de la consulta, como el promedio de duración por cada ejecución de una consulta.  
   
- Se muestra un gráfico de los planes de consulta y el promedio de duración por cada ejecución. Para mostrar una vista diferente del costo relativo de la consulta del plan, haga clic en uno de los hipervínculos que se muestran debajo del gráfico: **Duración**, **lecturas físicas**, o **escrituras lógicas**. La línea del gráfico es un elemento activo y puede hacer clic en cualquier punto para abrir el subinforme Detalles del plan de consulta.  
+ Se muestra un gráfico de los planes de consulta y el promedio de duración por cada ejecución. Para mostrar otra vista del costo relativo del plan de consulta, haga clic en cualquiera de los hipervínculos que se muestran debajo del gráfico: **Duración**, **Lecturas físicas** o **Escrituras lógicas**. La línea del gráfico es un elemento activo y puede hacer clic en cualquier punto para abrir el subinforme Detalles del plan de consulta.  
   
  La tabla situada debajo del gráfico muestra los diez primeros planes de consulta según el uso de CPU por ejecución. Cada número de la columna **Nº de planes** es un vínculo activo en el que se puede hacer clic para abrir el subinforme Detalles del plan de consulta.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54100500"
   
  **Botones de navegación y control de escala de tiempo**  
   
- Utilice el control de escala de tiempo y los botones de navegación para moverse a través de la escala de tiempo o seleccionar un intervalo de fechas. Los botones de dirección permiten el desplazamiento a la izquierda y a la derecha de modo que se pueda mover hacia atrás o hacia delante a través de la escala de tiempo. De forma predeterminada, las flechas se mueven a través de la escala de tiempo en incrementos de cuatro horas. Mediante los botones del Ampliador, puede expandir o contraer este incremento de tiempo a uno de los siguientes valores: 15 minutos, 1 hora, 4 horas, 12 horas o 24 horas. El intervalo temporal actualmente seleccionado se indica con la parte resaltada de la escala de tiempo y se muestra en el texto debajo de la escala de tiempo. Estos valores, así como los datos del informe, se actualizan cada vez que se hace clic en la escala de tiempo o se utilizan los botones de navegación.  
+ Utilice el control de escala de tiempo y los botones de navegación para moverse a través de la escala de tiempo o seleccionar un intervalo de fechas. Los botones de dirección permiten el desplazamiento a la izquierda y a la derecha de modo que se pueda mover hacia atrás o hacia delante a través de la escala de tiempo. De forma predeterminada, las flechas se mueven a través de la escala de tiempo en incrementos de cuatro horas. Con los botones del ampliador, puede expandir o acortar este incremento de tiempo en uno de los valores siguientes: 15 minutos, 1 hora, 4 horas, 12 horas o 24 horas. El intervalo temporal actualmente seleccionado se indica con la parte resaltada de la escala de tiempo y se muestra en el texto debajo de la escala de tiempo. Estos valores, así como los datos del informe, se actualizan cada vez que se hace clic en la escala de tiempo o se utilizan los botones de navegación.  
   
  **Botón de calendario**  
   

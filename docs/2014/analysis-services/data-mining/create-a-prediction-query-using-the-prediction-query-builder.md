@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a3211e342528cea6b26630d06ae7b42baf5a6c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715152"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Crear una consulta de predicción con el Generador de consultas de predicción
   Puede crear consultas de predicción mientras está generando una solución de minería de datos en BI Development Studio o al hacer clic con el botón derecho en un modelo de minería de datos existente en SQL Server Management Studio y, después, elegir la opción **Generar consulta de predicción**.  
@@ -92,7 +92,7 @@ ms.locfileid: "48189695"
 8.  Ejecute la consulta haciendo clic en el primer botón de la barra de herramientas de la pestaña **Predicción de modelo de minería de datos** y seleccione **Resultado**.  
   
 ## <a name="see-also"></a>Vea también  
- [Crear una consulta Singleton en el Diseñador de minería de datos](create-a-singleton-query-in-the-data-mining-designer.md)   
+ [Crear una consulta singleton en el Diseñador de minería de datos](create-a-singleton-query-in-the-data-mining-designer.md)   
  [Consultas de minería de datos](data-mining-queries.md)  
   
   

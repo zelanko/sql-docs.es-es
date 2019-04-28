@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2d9711b5b9d079df0396ba9874b203a89f26344f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874807"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
   El almacén remoto de blobs RBS de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un componente complementario opcional que permite a los administradores de bases de datos almacenar directamente objetos binarios grandes en soluciones de almacenamiento de artículos en lugar de en el servidor de base de datos principal.  

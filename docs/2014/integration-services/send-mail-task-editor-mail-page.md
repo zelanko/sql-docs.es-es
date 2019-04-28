@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 57b0cfee4c9197a721e132a672e11364e8cd29c7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889050"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>Editor de la tarea Enviar correo (página Correo)
   Use la página **Correo** del cuadro de diálogo **Editor de la tarea Enviar correo** para especificar los destinatarios, el tipo de mensaje y la prioridad de un mensaje. También puede adjuntar archivos al mensaje. El texto del mensaje puede consistir en una cadena que proporcione, una conexión de archivo a un archivo con el texto o el nombre de una variable con el texto.  
@@ -79,13 +79,13 @@ ms.locfileid: "58384253"
  **MessageSource**  
  Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
   
- **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor del Administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = Variable  
  **MessageSource**  
  Seleccione una variable de la lista, o bien haga clic en \<**Nueva variable…**> para crear una.  
   
- **Temas relacionados:** [Servicios de integración &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [agregar Variable](../../2014/integration-services/add-variable.md)  
+ **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

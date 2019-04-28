@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4765c6b9ef6dce7511a2ffe120d60efe8b6d235
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721997"
 ---
 # <a name="articles"></a>Artículos
   En la página **Artículos** , puede especificar qué objetos de bases de datos desea incluir como artículos en la publicación. Para publicar un objeto de base de datos que depende de uno o más objetos de base de datos, debe publicar todos los objetos a los que se hace referencia. Por ejemplo, si publica una vista que depende de una tabla, también debe publicar la tabla.  

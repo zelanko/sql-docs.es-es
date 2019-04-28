@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89900ccb182c58041af7b428af336ddab217d245
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722477"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Consultas de obtención de detalles (minería de datos)
   Una *consulta de obtención de detalles* permite recuperar los detalles de los casos o de los datos de estructura subyacentes mediante el envío de una consulta al modelo de minería de datos. La obtención de detalles resulta útil para ver los casos usados para entrenar el modelo frente a los casos que se usaron para probarlo, o si desea revisar detalles adicionales de los datos de los casos.  

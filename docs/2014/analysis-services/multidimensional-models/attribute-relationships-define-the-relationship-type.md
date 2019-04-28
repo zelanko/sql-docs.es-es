@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cde44399dcee1492ab56fb2f32b2fd1da060c1c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726919"
 ---
 # <a name="define-the-relationship-type-of-an-attribute-relationship"></a>Definir el tipo de relación de una relación de atributo
   Puede definir el tipo de una relación de atributo utilizando la pestaña **Relación de los atributos** del Diseñador de dimensiones, al que se puede tener acceso desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

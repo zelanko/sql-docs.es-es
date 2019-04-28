@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ee721660c8d2b1740ba4ecdb24d47fb3dc8745a5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711480"
 ---
 # <a name="propertyname-property-servernetworkprotocolproperty-class"></a>Propiedad PropertyName (clase ServerNetworkProtocolProperty)
   Obtiene el nombre de la propiedad actual a la que se hace referencia.  

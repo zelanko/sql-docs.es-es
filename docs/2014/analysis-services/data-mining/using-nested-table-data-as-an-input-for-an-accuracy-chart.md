@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2cd9c01ada73773f826c8ff45c55687158480841
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732903"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Usar datos de tabla anidada como entrada para un gráfico de precisión
   Al probar la precisión de un modelo de minería de datos usando datos externos, si el modelo de minería de datos contiene tablas anidadas, los datos externos también deben contener una tabla de casos y una tabla anidada asociada.  

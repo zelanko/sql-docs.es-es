@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_transactions (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_transactions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e56e641a594d9a543c70485dc37daaf83f5e46f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724190"
 ---
 # <a name="sysdmdbxtptransactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47757366"
 |end_tsn|**bigint**|Número de serie de transacción de fin de la transacción.|  
 |state|**int**|Estado de la transacción:<br /><br /> 0=ACTIVA<br /><br /> 1=CONFIRMADA<br /><br /> 2=CANCELADA<br /><br /> 3=VALIDANDO|  
 |state_desc|**nvarchar**|Descripción del estado de la transacción.|  
-|result|**int**|El resultado de esta transacción. Los posibles valores son los siguientes.<br /><br /> 0 - EN CURSO<br /><br /> 1 - CORRECTO<br /><br /> 2 - ERROR<br /><br /> 3 - CONFIRMAR DEPENDENCIA<br /><br /> 4 - ERROR EN LA VALIDACIÓN (RR)<br /><br /> 5 - ERROR EN LA VALIDACIÓN (SR)<br /><br /> 6 - REVERTIR|  
+|resultado|**int**|El resultado de esta transacción. Los posibles valores son los siguientes.<br /><br /> 0 - EN CURSO<br /><br /> 1 - CORRECTO<br /><br /> 2 - ERROR<br /><br /> 3 - CONFIRMAR DEPENDENCIA<br /><br /> 4 - ERROR EN LA VALIDACIÓN (RR)<br /><br /> 5 - ERROR EN LA VALIDACIÓN (SR)<br /><br /> 6 - REVERTIR|  
 |result_desc|**nvarchar**|El resultado de esta transacción. Los posibles valores son los siguientes.<br /><br /> EN CURSO<br /><br /> CORRECTA<br /><br /> error<br /><br /> CONFIRMAR DEPENDENCIA<br /><br /> ERROR EN LA VALIDACIÓN (RR)<br /><br /> ERROR EN LA VALIDACIÓN (SR)<br /><br /> ROLLBACK|  
 |last_error|**int**|Exclusivamente para uso interno|  
 |is_speculative|**bit**|Exclusivamente para uso interno|  
@@ -66,14 +66,14 @@ ms.locfileid: "47757366"
 |scan_area|**int**|Exclusivamente para uso interno|  
 |scan_area_desc|**nvarchar**|Exclusivamente para uso interno|  
 |scan_location|**int**|Exclusivamente para uso interno.|  
-|dependent_1_address|**varbinary (8)**|Exclusivamente para uso interno|  
-|dependent_2_address|**varbinary (8)**|Exclusivamente para uso interno|  
-|dependent_3_address|**varbinary (8)**|Exclusivamente para uso interno|  
-|dependent_4_address|**varbinary (8)**|Exclusivamente para uso interno|  
-|dependent_5_address|**varbinary (8)**|Exclusivamente para uso interno|  
-|dependent_6_address|**varbinary (8)**|Exclusivamente para uso interno|  
-|dependent_7_address|**varbinary (8)**|Exclusivamente para uso interno|  
-|dependent_8_address|**varbinary (8)**|Exclusivamente para uso interno|  
+|dependent_1_address|**varbinary(8)**|Exclusivamente para uso interno|  
+|dependent_2_address|**varbinary(8)**|Exclusivamente para uso interno|  
+|dependent_3_address|**varbinary(8)**|Exclusivamente para uso interno|  
+|dependent_4_address|**varbinary(8)**|Exclusivamente para uso interno|  
+|dependent_5_address|**varbinary(8)**|Exclusivamente para uso interno|  
+|dependent_6_address|**varbinary(8)**|Exclusivamente para uso interno|  
+|dependent_7_address|**varbinary(8)**|Exclusivamente para uso interno|  
+|dependent_8_address|**varbinary(8)**|Exclusivamente para uso interno|  
   
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW DATABASE STATE en el servidor.  

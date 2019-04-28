@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724050"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_return=] *cursor_variable_name*salida  
  Es el nombre de una variable de cursor declarada. *cursor_variable_name* es **cursor**, no tiene ningún valor predeterminado. El cursor es un cursor desplazable, dinámico de solo lectura.  
   
- [ @cursor_scope=] *cursor_scope*  
+ [ @cursor_scope= ] *cursor_scope*  
  Especifica el nivel de los cursores que se notificarán. *cursor_scope* es **int**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
   
 |Valor|Descripción|  
@@ -76,7 +76,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |fetch_status|**smallint**|El estado de la última captura de este cursor. Para obtener más información, consulte [@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md):<br /><br /> 0 = Captura correcta.<br /><br /> -1 = Error en la captura o se sobrepasaron los límites del cursor<br /><br /> -2 = Falta la fila solicitada.<br /><br /> -9 = No se registró ninguna captura en el cursor.|  
 |column_count|**smallint**|El número de columnas del conjunto de resultados del cursor.|  
 |row_count|**smallint**|El número de filas afectadas por la última operación del cursor. Para obtener más información, consulte [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md).|  
-|last_operation|**smallint**|La última operación realizada en el cursor:<br /><br /> 0 = No se realizó ninguna operación en el cursor.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = INSERCIÓN<br /><br /> 4 = UPDATE<br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
+|last_operation|**smallint**|La última operación realizada en el cursor:<br /><br /> 0 = No se realizó ninguna operación en el cursor.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = INSERT<br /><br /> 4 = UPDATE<br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Un valor único que identifica el cursor dentro del ámbito del servidor.|  
   
 ## <a name="remarks"></a>Comentarios  

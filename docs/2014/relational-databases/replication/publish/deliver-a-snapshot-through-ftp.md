@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d1a8989492c9efb670b00bda00dbfa757c549fca
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960069"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Entregar una instantánea mediante FTP
   En este tema se describe cómo entregar una instantánea a través de FTP en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -68,7 +68,7 @@ ms.locfileid: "54130275"
     -   (Opcional) **@ftp_login** : una cuenta de inicio de sesión usada al conectar al servidor FTP    
     -   (Opcional) **@ftp_password** : la contraseña para el inicio de sesión de FTP  
   
-     Esto crea una publicación que usa FTP. Para obtener más información, consulte [Create a Publication](create-a-publication.md).  
+     Esto crea una publicación que usa FTP. Para obtener más información, vea [Crear una suscripción](create-a-publication.md).  
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>Para habilitar la entrega de instantáneas a través de FTP para una publicación de combinación  
   
@@ -80,7 +80,7 @@ ms.locfileid: "54130275"
     -   (Opcional) **@ftp_login** : una cuenta de inicio de sesión usada al conectar al servidor FTP    
     -   (Opcional) **@ftp_password** : la contraseña para el inicio de sesión de FTP  
   
-     Esto crea una publicación que usa FTP. Para obtener más información, consulte [Create a Publication](create-a-publication.md).  
+     Esto crea una publicación que usa FTP. Para obtener más información, vea [Crear una suscripción](create-a-publication.md).  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication-that-uses-ftp-snapshot-delivery"></a>Para crear una suscripción de extracción a una publicación transaccional o de instantáneas que usa la entrega de instantáneas a través de FTP  
   

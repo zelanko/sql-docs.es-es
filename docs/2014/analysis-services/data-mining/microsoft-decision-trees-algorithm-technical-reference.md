@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4e58f43c7004f94aeff81d9ac43a9c9c2804b184
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722007"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Referencia técnica del algoritmo de árboles de decisión de Microsoft
   El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo híbrido que incorpora distintos métodos para crear un árbol, y admite varias tareas de análisis, incluyendo la regresión, la clasificación y la asociación. El algoritmo de árboles de decisión de Microsoft admite el modelado de los atributos discretos y continuos.  
@@ -61,7 +61,7 @@ ms.locfileid: "53365407"
  Para obtener una explicación más detallada acerca de cómo los [!INCLUDE[msCoName](../../includes/msconame-md.md)] funciona el algoritmo de árboles de decisión con columnas de predicción discretas, vea [las redes bayesianas: La combinación de conocimiento y datos estadísticos](https://go.microsoft.com/fwlink/?LinkId=45963). Para más información sobre cómo funciona el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] con una columna de predicción continua, vea el apéndice del artículo [Autoregressive Tree Models for Time-Series Analysis](https://go.microsoft.com/fwlink/?LinkId=45966)(Modelos de árbol de regresión automática para el análisis de series temporales).  
   
 ### <a name="scoring-methods-and-feature-selection"></a>Métodos de puntuación y selección de características  
- El algoritmo de árboles de decisión de Microsoft ofrece tres fórmulas para puntuar la obtención de información: Entropía de Shannon, red bayesiana con prioridad K2 y red bayesiana con una distribución Dirichlet uniforme de prioridades. Los tres métodos están bien consolidados en el campo de la minería de datos. Se recomienda que experimente con parámetros y métodos de puntuación diferentes para determinar cuáles son los que proporcionan mejores resultados. Para obtener más información acerca de estos métodos de puntuación, vea [Feature Selection](../../sql-server/install/feature-selection.md).  
+ El algoritmo de árboles de decisión de Microsoft ofrece tres fórmulas para puntuar la obtención de información: De Shannon entropía, red bayesiana con prioridad K2 y red bayesiana con una distribución Dirichlet uniforme de prioridades. Los tres métodos están bien consolidados en el campo de la minería de datos. Se recomienda que experimente con parámetros y métodos de puntuación diferentes para determinar cuáles son los que proporcionan mejores resultados. Para obtener más información acerca de estos métodos de puntuación, vea [Feature Selection](../../sql-server/install/feature-selection.md).  
   
  Todos los algoritmos de minería de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usan automáticamente la selección de características para mejorar el análisis y reducir la carga de procesamiento. El método usado para la selección de características depende del algoritmo empleado para generar el modelo. Los parámetros del algoritmo que controlan la selección de características para el modelo de árboles de decisión son MAXIMUM_INPUT_ATTRIBUTES y MAXIMUM_OUTPUT.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "53365407"
  *SCORE_METHOD*  
  Determina el método usado para calcular el resultado de la división. Las siguientes opciones están disponibles:  
   
-|Id.|Nombre|  
+|Id.|Name|  
 |--------|----------|  
 |1|Entropía|  
 |3|Bayesiano con prioridad K2|  
@@ -163,7 +163,7 @@ ms.locfileid: "53365407"
  *SPLIT_METHOD*  
  Determina el método usado para dividir el nodo. Las siguientes opciones están disponibles:  
   
-|Id.|Nombre|  
+|Id.|Name|  
 |--------|----------|  
 |1|**Binario:** Indica que, independientemente del número real de valores para el atributo, el árbol se debería dividir en dos bifurcaciones.|  
 |2|**Complete:** Indica que el árbol puede crear tantas divisiones como valores de atributo.|  

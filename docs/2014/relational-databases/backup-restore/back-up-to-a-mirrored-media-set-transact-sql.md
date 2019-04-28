@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 88ea15fabe8e8fd6630d3430417879c7104dff67
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876993"
 ---
 # <a name="back-up-to-a-mirrored-media-set-transact-sql"></a>Realizar una copia de seguridad en un conjunto de medios reflejado (Transact-SQL)
   En este tema se describe cómo usar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)][de](/sql/t-sql/statements/backup-transact-sql) para especificar un conjunto de medios reflejado cuando se realiza una copia de seguridad de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En la instrucción BACKUP, especifique el primer reflejo en la cláusula TO. A continuación, especifique cada reflejo en su propia cláusula MIRROR TO. Las cláusulas TO y MIRROR TO deben especificar el mismo número y tipo de dispositivo de copia de seguridad.  

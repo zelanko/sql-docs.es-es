@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 1a38be84e5f1980b680d674e1c04c2ba95d1a537
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62994281"
 ---
 # <a name="spchangedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_changedbowner [ @loginame = ] 'login'
  [ @loginame=] '*inicio de sesión*'  
  Es el identificador de inicio de sesión del nuevo propietario de la base de datos actual. *inicio de sesión* es **sysname**, no tiene ningún valor predeterminado. *inicio de sesión* debe ser una ya existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión o usuario de Windows. *inicio de sesión* no puede ser el propietario de la base de datos actual si ya tiene acceso a la base de datos a través de una cuenta de seguridad de usuario existente dentro de la base de datos. Para evitar esto, quite antes el usuario de la base de datos actual.  
   
- [ @map=] *remap_alias_flag*  
+ [ @map= ] *remap_alias_flag*  
  El *remap_alias_flag* parámetro está obsoleto porque se han quitado los alias de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mediante el *remap_alias_flag* parámetro no se produce un error pero no tiene ningún efecto.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

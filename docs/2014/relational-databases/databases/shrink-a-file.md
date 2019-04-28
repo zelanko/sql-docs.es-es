@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f567c92632e99bef38fc1a6eb7a0179929f467c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871217"
 ---
 # <a name="shrink-a-file"></a>Reducir un archivo
   En este tema se describe cómo reducir un archivo de datos o de registro en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "52822549"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe pertenecer al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -127,7 +127,7 @@ ms.locfileid: "52822549"
   
 #### <a name="to-shrink-a-data-or-log-file"></a>Para reducir un archivo de datos o de registro  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   

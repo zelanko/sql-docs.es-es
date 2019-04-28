@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6f87cda5fb38fad586e5272d7d7c3ea255a478b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728341"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Procesar manualmente los datos (SSAS tabular)
   En este tema se describe cómo procesar manualmente los datos del área de trabajo en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "48189776"
   
 2.  En el cuadro de diálogo **Procesar particiones** , en **Modo**, seleccione uno de los siguientes modos de procesamiento:  
   
-    |Mode|Descripción|  
+    |Modo|Descripción|  
     |----------|-----------------|  
     |**Proceso predeterminado**|Detecta el estado de proceso de un objeto de partición y realiza el procesamiento necesario para devolver objetos de partición sin procesar o procesados parcialmente a un estado de procesamiento completo. Se cargan los datos de las tablas vacías y las particiones; se generan o se vuelven a generar las jerarquías, las columnas calculadas y las relaciones.|  
     |**Proceso completo**|Procesa un objeto de partición y todos los objetos que contiene. Cuando se ejecuta Proceso completo en un objeto que ya se ha procesado, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] quita todos los datos del objeto y, a continuación, lo procesa. Este tipo de procesamiento es necesario cuando se ha realizado un cambio estructural en un objeto.|  
@@ -74,7 +74,7 @@ ms.locfileid: "48189776"
  Haga clic aquí para detener la operación de procesamiento. Esta opción resulta útil si la operación tarda demasiado o hay demasiados errores.  
   
 ## <a name="see-also"></a>Vea también  
- [Procesar datos &#40;Tabular de SSAS&#41;](process-data-ssas-tabular.md)   
- [Solución de problemas de procesamiento de datos &#40;Tabular de SSAS&#41;](troubleshoot-process-data-ssas-tabular.md)  
+ [Procesar datos &#40;SSAS tabular&#41;](process-data-ssas-tabular.md)   
+ [Solucionar problemas del procesamiento de datos &#40;SSAS tabular&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

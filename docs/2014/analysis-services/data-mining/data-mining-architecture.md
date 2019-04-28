@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64e7e0fe7a8f68ce9248c02e3a59f34e1b7f65bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722657"
 ---
 # <a name="data-mining-architecture"></a>Arquitectura de minería de datos
   En esta sección se describe la arquitectura de las soluciones de minería de datos que se hospedan en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. En los temas de esta sección se describe la arquitectura lógica y física de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que admita la minería de datos, y también proporcionan información acerca de los clientes, los proveedores y los protocolos que se pueden utilizar para comunicarse con los servidores de minería de datos y trabajar con objetos de minería de datos tanto local como remotamente.  
@@ -29,14 +29,14 @@ ms.locfileid: "48121055"
   
  [Ubicación de almacenamiento de las bases de datos](../multidimensional-models/database-storage-location.md)  
   
- [Cambiar una base de datos de Analysis Services entre los modos ReadOnly y ReadWrite](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  Para obtener más información sobre cómo puede implementar la minería de datos en una solución de Business Intelligence, vea la sección Solution Guides de MSDN Library.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Arquitectura lógica &#40;Analysis Services - minería de datos&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [Arquitectura lógica &#40;Analysis Services - Minería de datos&#41;](logical-architecture-analysis-services-data-mining.md)  
   
- [Arquitectura física &#40;Analysis Services - minería de datos&#41;](physical-architecture-analysis-services-data-mining.md)  
+ [Arquitectura física &#40;Analysis Services - Minería de datos&#41;](physical-architecture-analysis-services-data-mining.md)  
   
  [Servicios de minería de datos y orígenes de datos](data-mining-services-and-data-sources.md)  
   

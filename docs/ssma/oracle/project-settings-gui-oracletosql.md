@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 90c6c1a75c975d8c4c79c87516ac628cfab15690
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62991466"
 ---
 # <a name="project-settings-gui-oracletosql"></a>Configuración del proyecto (GUI) (OracleToSQL)
 La configuración del proyecto de interfaz gráfica de usuario le permite configurar cómo aparecen los datos en el **datos** pestaña y si se debe mostrar el informe de evaluación después de la conversión o no.  

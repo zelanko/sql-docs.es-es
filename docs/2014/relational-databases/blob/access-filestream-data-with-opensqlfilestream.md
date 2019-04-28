@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c40d22c19f8398ef9499cb23c80ab80dab16b5b4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875102"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Obtener acceso a los datos FILESTREAM con OpenSqlFilestream
   La API OpenSqlFilestream Obtiene un identificador de archivos compatible con Win32 para un FILESTREAM objeto binario grande (BLOB) que se almacena en el sistema de archivos. El identificador se puede pasar a cualquiera de las API de Win32 siguientes: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426), o [ FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). Si pasa este identificador a cualquier otra API de Win32, se devuelve un error de ERROR_ACCESS_DENIED. El identificador se debe cerrar al pasarlo a la API Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) antes de que la transacción se confirme o se revierta. Si no se puede cerrar el identificador, se producirán pérdidas de los recursos del lado servidor.  
@@ -53,7 +53,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  *DesiredAccess*  
  [in] Establece el modo utilizado para tener acceso a los datos de BLOB FILESTREAM. Este valor se pasa a la [función DeviceIoControl](https://go.microsoft.com/fwlink/?LinkId=105527).  
   
-|Nombre|Valor|Significado|  
+|Name|Valor|Significado|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|Se pueden leer datos de este archivo.|  
 |SQL_FILESTREAM_WRITE|1|En este archivo se pueden escribir datos.|  

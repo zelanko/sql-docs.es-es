@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2c0c2154ce6c16e76c96f0aa9655d0a64bb2bf8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999893"
 ---
 # <a name="hide-system-objects-in-object-explorer"></a>Ocultar objetos del sistema en el Explorador de objetos
   En este tema se describe cómo ocultar objetos del sistema en el Explorador de objetos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. El nodo **Bases de datos** del Explorador de objetos contiene objetos del sistema tales como las bases de datos del sistema. Use las páginas **Herramientas**/**Opciones** para ocultar los objetos del sistema. Algunos objetos del sistema, por ejemplo, funciones del sistema y tipos de datos del sistema, no se ven afectados por esta configuración.  

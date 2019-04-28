@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 689290211033d85ea658004f6664eaebec193439
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722227"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Administración de las soluciones y los objetos de minería de datos
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona herramientas cliente que puede utilizar para administrar estructuras y modelos de minería de datos existentes. Esta sección describe las operaciones de administración que puede realizar con cada entorno.  
@@ -80,14 +80,14 @@ ms.locfileid: "50147580"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **Restricciones:** ninguna.  
+ **Restricciones:** Ninguno.  
   
 ### <a name="data-mining-extensions-dmx"></a>Extensiones de minería de datos (DMX)  
  Las extensiones de minería de datos (DMX) se pueden utilizar con otras interfaces de comandos, como [!INCLUDE[vstecado](../../includes/vstecado-md.md)] o ADOMD.Net para crear, eliminar y consultar estructuras y modelos de minería de datos.  
   
 -   [Instrucciones de definición de datos de Extensiones de minería de datos &#40;DMX&#41;](/sql/dmx/dmx-statements-data-definition)  
   
- **Restricciones:** algunas propiedades no se pueden cambiar utilizando DMX.  
+ **Restricciones:** Algunas propiedades no se puede cambiar utilizando DMX.  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XML for Analysis (XMLA) es el lenguaje de definición de datos para todos los Analysis Services. XMLA proporciona control sobre la mayoría de los objetos de minería de datos y las operaciones del servidor. Todas las operaciones de administración entre el cliente y el servidor se pueden realizar usando XMLA. Para su comodidad, puede usar el lenguaje de scripting de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL) para encapsular el XML.  

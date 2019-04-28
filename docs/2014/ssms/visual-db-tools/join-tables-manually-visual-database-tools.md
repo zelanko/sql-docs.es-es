@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0299be9a1cb480a567e0b166c990d25588598aba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711062"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>Combinar tablas manualmente (Visual Database Tools)
   Cuando se agregan dos o más tablas a una consulta, el [Diseñador de consultas y vistas](visual-database-tools.md) intenta combinarlas en función de datos comunes o de información almacenada en la base de datos acerca de cómo se relacionan las tablas. Para detalles, consulte [Combinar tablas automáticamente &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md). No obstante, si el Diseñador de consultas y vistas no ha combinado las tablas automáticamente o si desea crear otras condiciones de combinación entre tablas, puede combinar las tablas de forma manual.  

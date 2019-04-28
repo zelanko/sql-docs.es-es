@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0fc58cf501cf758c6b76a7445d0abfde3e227ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732674"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>Diseñador de vistas del origen de datos (Analysis Services - Datos multidimensionales)
   Una vista del origen de datos (DSV) es una vista lógica de un origen de datos relacional externo utilizado para crear cubos y dimensiones en un modelo multidimensional.  
@@ -54,6 +54,6 @@ ms.locfileid: "48075315"
   
 ## <a name="see-also"></a>Vea también  
  [Vistas del origen de datos en modelos multidimensionales](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Agregar o quitar tablas o vistas de datos de una vista del origen &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
   

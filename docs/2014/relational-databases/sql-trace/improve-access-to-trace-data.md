@@ -1,8 +1,9 @@
 ---
 title: Mejorar el acceso a los datos de seguimiento | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/01/2017
+ms.prod: sql
+ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
@@ -15,13 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 540a0bd9430a182ef3eda43fd816b4a495dc36b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714622"
 ---
 # <a name="improve-access-to-trace-data"></a>Mejorar el acceso a los datos de seguimiento
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] usa el espacio del directorio **temp** para mejorar el acceso a los datos de seguimiento. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] requiere al menos 10 megabytes (MB) de espacio libre. Si se redujera la cantidad de espacio disponible a menos de 10 MB mientras se utiliza el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], se detendrían todas las funciones del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
   
  Cuando el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] utiliza espacio del directorio **temp** , este uso de espacio puede dar lugar a que el directorio **temp** crezca rápidamente. Para evitar problemas del crecimiento de un archivo, puede colocar el directorio **temp** en una unidad que no pertenezca al sistema si cambia el valor de la variable de entorno TEMP.  

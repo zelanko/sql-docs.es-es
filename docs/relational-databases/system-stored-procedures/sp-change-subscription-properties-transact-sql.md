@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997101"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_login**||Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica.|  
 |**internet_password**||Contraseña que el Agente de mezcla utiliza cuando se conecta al servidor web que hospeda la sincronización web a través de la autenticación básica.|  
 |**internet_security_mode**|**1**|Se utiliza la autenticación de Windows integrada para la sincronización web. Se recomienda utilizar la autenticación básica con sincronización web. Para más información, consulte [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  
-||**0**|Se utiliza la autenticación básica para la sincronización web.<br /><br /> Nota: La sincronización web requiere una conexión SSL al servidor web.|  
+||**0**|Se utiliza la autenticación básica para la sincronización web.<br /><br /> Nota: La sincronización Web requiere una conexión SSL al servidor Web.|  
 |**internet_timeout**||Período de tiempo, en segundos, antes de que expire una solicitud de sincronización Web.|  
 |**internet_url**||URL que representa la ubicación de la escucha de replicación para la sincronización web.|  
 |**merge_job_login**||Inicio de sesión de la cuenta de Windows con la que se ejecuta el agente.|  

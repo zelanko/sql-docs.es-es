@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6968331bc7699334f61997ec6a16e521c158078a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721047"
 ---
-# <a name="lesson-3-validating-the-subscription-and-measuring-latency"></a>Lección 3: Validar la suscripción y medir la latencia
+# <a name="lesson-3-validating-the-subscription-and-measuring-latency"></a>Lección 3: Validación de la suscripción y medir la latencia
   En esta lección, utilizará testigos de seguimiento para comprobar que los cambios se replican en el suscriptor y para determinar la latencia, es decir, el tiempo que se requiere para que un cambio realizado en el publicador aparezca en el suscriptor. Esta lección es necesario que haya completado la lección anterior, [lección 2: Crear una suscripción a la publicación transaccional](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
 ### <a name="to-insert-a-tracer-token-and-view-information-on-the-token"></a>Para insertar un testigo de seguimiento y ver la información del token  
@@ -34,7 +34,7 @@ ms.locfileid: "54123976"
   
 4.  Haga clic en **Insertar seguimiento**.  
   
-5.  Vea el tiempo transcurrido para el testigo de seguimiento en las siguientes columnas: **Publicador a distribuidor**, **distribuidor a suscriptor**, **latencia Total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
+5.  Vea el tiempo transcurrido para el token de seguimiento de las columnas siguientes: **Publicador a distribuidor**, **Distribuidor a suscriptor**, **Latencia total**. El valor **Pendiente** indica que el testigo no ha alcanzado un punto específico.  
   
 ## <a name="next-steps"></a>Pasos siguientes  
  En esta lección, utilizó correctamente los testigos de seguimiento para comprobar que los cambios de datos se replican del publicador al suscriptor. También puede insertar, actualizar o eliminar datos en la tabla **Product** en el publicador y consultar la tabla **Product** en el suscriptor para ver esos cambios, una vez replicados.  

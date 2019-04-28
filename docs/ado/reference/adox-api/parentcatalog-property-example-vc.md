@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6df31a3de47ca9e8e792258a7123c8b20e7a35ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710030"
 ---
 # <a name="parentcatalog-property-example-vc"></a>Ejemplo de propiedad ParentCatalog (VC++)
 El código siguiente muestra cómo usar el [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) propiedad para tener acceso a una propiedad específica del proveedor antes de anexar una tabla a un catálogo. La propiedad es **AutoIncrement**, que crea un campo de incremento automático en una base de datos Microsoft Jet.  

@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4025a4812b7bb284d5fdf0540491d1506f05cdea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844291"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Editor de texto - Texto sin formato - Página Pestañas)
   Utilice este cuadro de diálogo para cambiar el comportamiento del tabulador del Editor de texto que se usa para editar un documento que no esté asociado a ningún lenguaje de desarrollo específico. Para mostrar estas opciones de configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda el **Editor de texto**, expanda **Texto sin formato**y, a continuación, haga clic en **Tabulaciones**.  
@@ -30,10 +30,10 @@ ms.locfileid: "48074776"
  **Ninguno**  
  No aplica ninguna sangría a la nueva línea que se crea al presionar ENTRAR. El cursor se coloca en la primera columna de la nueva línea.  
   
- **Bloque**  
+ **Block**  
  Aplica una sangría a la nueva línea que se crea al presionar ENTRAR a la misma distancia a la que se creó la sangría de la línea anterior.  
   
- **Inteligente**  
+ **Smart**  
  El editor de texto simple no admite este tipo de formato.  
   
 ## <a name="tabs"></a>Tabulaciones  

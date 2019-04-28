@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711440"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Configuración de los votos y modos de quórum WSFC (SQL Server)
   Tanto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] como las instancias de clúster de conmutación por error (FCI) de AlwaysOn aprovechan el Clúster de conmutación por error de Windows Server (WSFC) como tecnología de plataforma.  WSFC usa un método basado en quórum para supervisar el estado general del clúster y maximizar la tolerancia a errores en el nivel de nodo. Entender los modos de quórum WSFC y la configuración de las votaciones en los nodos es muy importante para el diseño, el funcionamiento y la solución de problemas de una solución de recuperación de desastres AlwaysOn de alta disponibilidad.  
@@ -48,7 +48,7 @@ ms.locfileid: "53349931"
 > [!IMPORTANT]  
 >  Si un clúster WSFC se pone sin conexión debido a un error del quórum, se requiere una intervención manual para volver a ponerlo en conexión.  
 >   
->  Para obtener más información, vea: [Recuperación ante desastres del clúster WSFC mediante quórum forzado &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
+>  Para obtener más información, vea: [Recuperación ante desastres del clúster WSFC mediante cuórum forzado &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md).  
   
 ##  <a name="QuorumModes"></a> Modos de quórum  
  Un *modo de quórum* se configura en el nivel de clúster WSFC que dicta la metodología que se usa para los votos de quórum.  La utilidad Administrador de clústeres de conmutación por error recomendará un modo de quórum basándose en el número de nodos del clúster.  
@@ -87,7 +87,7 @@ ms.locfileid: "53349931"
 > [!IMPORTANT]  
 >  Para usar la configuración de NodeWeight, se debe aplicar la siguiente revisión a todos los servidores del clúster de WSFC:  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): hay disponible una revisión para permitir configurar un nodo de clúster que no tiene votos de quórum en [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] y en [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036): Hay una revisión permitir configurar un nodo de clúster que no tiene los votos de quórum en [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] y en [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> Ajustes recomendados para la votación de quórum  
  Al habilitar o deshabilitar el voto de un nodo determinado de WSFC, siga estas instrucciones:  
@@ -130,7 +130,7 @@ ms.locfileid: "53349931"
   
 -   [Tecnologías de Windows Server:  Clústeres de conmutación por error](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [Guía paso a paso de clúster de conmutación por error: Configurar el quórum en un clúster de conmutación por error](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [Failover Cluster Step-by-Step Guide: Configuring the Quorum in a Failover Cluster](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx) (Guía paso a paso de clústeres de conmutación por error: Configuración del quórum en un clúster de conmutación por error)  
   
 ## <a name="see-also"></a>Vea también  
  [Recuperación ante desastres del clúster WSFC mediante cuórum forzado &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

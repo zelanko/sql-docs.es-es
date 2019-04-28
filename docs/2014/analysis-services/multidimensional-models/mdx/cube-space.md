@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 029492a13a3b332ba05ff7f0b84ea06a4d2a0fd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725590"
 ---
 # <a name="cube-space"></a>Espacio de cubo
   El espacio de cubo es el producto de los miembros de las jerarquías de atributo de un cubo con las medidas de un cubo. Por consiguiente, el espacio del cubo se determina con el producto combinatorio de todos los miembros de jerarquía de atributo en el cubo y las medidas del cubo, y define el tamaño máximo del cubo. Es importante tener en cuenta que este espacio incluye todas las posibles combinaciones de miembros de la jerarquía de atributos, incluso las que podrían ser consideradas como imposibles en el mundo real, es decir, aquellas en las que la ciudad es París y los países son Gran Bretaña, España, Japón, India, etc.  
@@ -130,12 +130,12 @@ FROM [Adventure Works]
 ## <a name="calculation-context"></a>Contexto de cálculo  
   
 ## <a name="see-also"></a>Vea también  
- [Conceptos clave para MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Conceptos clave de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Tuplas](tuples.md)   
  [Autoexists](autoexists.md)   
  [Trabajar con miembros, tuplas y conjuntos &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [Totales visuales y totales no visuales](visual-totals-and-non-visual-totals.md)   
  [Referencia del lenguaje MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Expresiones multidimensionales &#40;MDX&#41; referencia](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Referencia de expresiones multidimensionales &#40;MDX&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

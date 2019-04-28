@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 847b833d793d3b572b44bcb77903c534300109b7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721000"
 ---
 # <a name="lesson-3-synchronizing-the-subscription-to-the-merge-publication"></a>Lección 3: Sincronizar la suscripción con la publicación de combinación
   En esta lección iniciará el Agente de mezcla para inicializar la suscripción con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. También utilizará este procedimiento para sincronizar con el publicador. Esta lección es necesario que haya completado la lección anterior, [lección 2: Crear una suscripción a la publicación de combinación](lesson-2-creating-a-subscription-to-the-merge-publication.md).  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cbd4465152e3f862d53dec66bd7888c70b393a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728091"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Pestaña Gráfico de elevación (vista Gráfico de precisión de minería de datos)
   Utilice el panel **Gráfico de elevación** para ver un gráfico que compara todos los modelos de minería seleccionados en la estructura de minería de datos seleccionada.  
@@ -46,6 +46,6 @@ ms.locfileid: "48168135"
 ## <a name="see-also"></a>Vea también  
  [Diseñador gráfico de precisión de minería de datos &#40;minería de datos&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Pruebas y validación tareas y procedimientos &#40;minería de datos&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Pruebas y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

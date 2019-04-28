@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc091885b01821aaf8d2d12b9a321c6949d1523c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62959760"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Arquitectura de seguridad para la sincronización web
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite tener un control preciso de la configuración de la seguridad de la sincronización web. En este tema se proporciona una lista exhaustiva de todos los componentes que pueden incluirse en una configuración de la sincronización web e información acerca de las conexiones entre los componentes. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  

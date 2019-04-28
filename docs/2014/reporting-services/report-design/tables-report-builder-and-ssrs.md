@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7c5c384edbab7792f373b62417f7ad43832e1ff3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720749"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tablas (Generador de informes y SSRS)
   Use una tabla para mostrar datos detallados o datos agrupados, o una combinación de ambos. Puede agrupar los datos por un solo campo, por varios campos o escribiendo su propia expresión. Puede crear grupos anidados o grupos adyacentes independientes. Para mostrar los valores agregados para los datos agrupados, agregue totales a los grupos. Dé formato a las filas y columnas para resaltar los datos a los que desea dar énfasis. Puede ocultar inicialmente los datos detallados o agrupados, e incluir controles de alternancia de obtención de detalles para permitir a los usuarios elegir interactivamente cuántos datos se van a mostrar.  

@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c1f1c6644e14beaee7bdcab9e3f50129f73b7bc
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727399"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Atributos y jerarquías de atributos
   Las dimensiones son colecciones de atributos que están enlazados a una o varias columnas de una tabla o vista de la vista del origen de datos.  

@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873819"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restricciones del modelo de programación de la integración CLR
   Cuando se está generando un procedimiento almacenado administrado u otro objeto de base de datos administrado, hay realiza ciertas comprobaciones de código [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] realiza comprobaciones en el ensamblado de código administrado cuando se registra primero en la base de datos mediante el `CREATE ASSEMBLY` instrucción y también en tiempo de ejecución. El código administrado también se comprueba en tiempo de ejecución porque en un ensamblado puede haber rutas de acceso al código que nunca se hayan alcanzado realmente en tiempo de ejecución.  Esto proporciona flexibilidad para registrar ensamblados de terceros, de manera especial, de forma que no se debe bloquear un ensamblado donde haya un código 'no seguro' diseñado para que se ejecute en un entorno cliente pero nunca se ejecutaría en el CLR hospedado. Los requisitos que el código administrado debe cumplir dependen de si el ensamblado se registra como `SAFE`, `EXTERNAL_ACCESS`, o `UNSAFE`, `SAFE` que se va las más estrictas y, a continuación se enumeran.  

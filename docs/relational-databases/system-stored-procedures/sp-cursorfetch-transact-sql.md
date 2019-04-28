@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724580"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,17 @@ sp_cursorfetch cursor
  *cursor*  
  Es un *controlar* valor generado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y devuelve sp_cursoropen. *cursor* es un parámetro necesario que requiere un **int** valor de entrada. Para obtener más información, vea la sección Comentarios más adelante en este tema.  
   
- *fetchType*  
+ *fetchtype*  
  Especifica qué búfer de cursor se va a capturar. *fetchType* es un parámetro opcional que requiere uno de los siguientes valores de entrada de enteros.  
   
-|Valor|Nombre|Descripción|  
+|Valor|Name|Descripción|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Captura el primer búfer de *nrows* filas. Si *nrows* es igual a 0, el cursor se coloca antes del conjunto de resultados y se devuelve ninguna fila.|  
 |0x0002|NEXT|Captura el siguiente búfer de *nrows* filas.|  
-|0x0004|PREV|Captura el anterior búfer de *nrows* filas.<br /><br /> Nota: Al utilizar PREV para un cursor FORWARD_ONLY, se devuelve un mensaje de error porque FORWARD_ONLY solo permite el desplazamiento en una dirección.|  
-|0x0008|LAST|Captura el último búfer de *nrows* filas. Si *nrows* es igual a 0, el cursor se coloca después de que el conjunto de resultados y se devuelve ninguna fila.<br /><br /> Nota: Al utilizar LAST para un cursor FORWARD_ONLY, se devuelve un mensaje de error porque FORWARD_ONLY solo permite el desplazamiento en una dirección.|  
-|0x10|ABSOLUTE|Captura un búfer de *nrows* filas a partir de la *rownum* fila.<br /><br /> Nota: Al usar ABSOLUTE para un cursor DYNAMIC o FORWARD_ONLY, se devuelve un mensaje de error porque FORWARD_ONLY solo permite el desplazamiento en una dirección.|  
-|0x20|RELATIVE|Captura el búfer de *nrows* filas a partir de la fila que se especifica como el *rownum* valor de las filas de la primera fila en el bloque actual. En este caso *rownum* puede ser un número negativo.<br /><br /> Nota: Al utilizar RELATIVE para un cursor FORWARD_ONLY, se devuelve un mensaje de error porque FORWARD_ONLY solo permite el desplazamiento en una dirección.|  
+|0x0004|PREV|Captura el anterior búfer de *nrows* filas.<br /><br /> Nota: Al utilizar PREV para un cursor FORWARD_ONLY, devuelve un mensaje de error porque FORWARD_ONLY solo permite el desplazamiento en una dirección.|  
+|0x0008|LAST|Captura el último búfer de *nrows* filas. Si *nrows* es igual a 0, el cursor se coloca después de que el conjunto de resultados y se devuelve ninguna fila.<br /><br /> Nota: Al utilizar LAST para un cursor FORWARD_ONLY, devuelve un mensaje de error porque FORWARD_ONLY solo permite el desplazamiento en una dirección.|  
+|0x10|ABSOLUTE|Captura un búfer de *nrows* filas a partir de la *rownum* fila.<br /><br /> Nota: Al usar ABSOLUTE para un cursor dinámico o un cursor FORWARD_ONLY, devuelve un mensaje de error porque FORWARD_ONLY solo permite el desplazamiento en una dirección.|  
+|0x20|RELATIVE|Captura el búfer de *nrows* filas a partir de la fila que se especifica como el *rownum* valor de las filas de la primera fila en el bloque actual. En este caso *rownum* puede ser un número negativo.<br /><br /> Nota: Al utilizar RELATIVE para un cursor FORWARD_ONLY, devuelve un mensaje de error porque FORWARD_ONLY solo permite el desplazamiento en una dirección.|  
 |0x80|REFRESH|Rellena el búfer a partir de las tablas subyacentes.|  
 |0x100|INFO|Recupera información acerca del cursor. Esta información se devuelve mediante el uso de la *rownum* y *nrows* parámetros. Por lo tanto, cuando se especifica INFO, *rownum* y *nrows* se convierten en parámetros de salida.|  
 |0x200|PREV_NOADJUST|Se utiliza como PREV. Sin embargo, si el principio del conjunto de resultados se encontrara prematuramente, los resultados podrían variar.|  
@@ -68,7 +68,7 @@ sp_cursorfetch cursor
  *rownum*  
  Es un parámetro opcional que se utiliza para especificar la posición de fila para el ABSOLUTE e INFO *fetchtype* valores utilizando solo valores enteros para entrada o salida o ambos. *ROWNUM* actúa como el desplazamiento de fila para el *fetchtype* valor relativo de bits. *ROWNUM* se omite para todos los demás valores. Para obtener más información, vea la sección Comentarios más adelante en este tema.  
   
- *nRows*  
+ *nrows*  
  Es un parámetro opcional que se utiliza para especificar el número de filas que capturar. Si *nrows* no se especifica, el valor predeterminado es 20 filas. Para establecer la posición sin devolver los datos, especifique un valor de 0. Cuando *nrows* se aplica a la *fetchtype* consulta INFO, devuelve el número total de filas en la consulta.  
   
 > [!NOTE]  
@@ -82,16 +82,16 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >  :   Si se devuelve ninguna fila, el contenido del búfer permanece como estuviera.  
   
-|*\<ROWNUM >*|Establecer en|  
+|*\<rownum>*|Establecer en|  
 |------------------|------------|  
 |Si no está abierto|0|  
 |Si está colocado antes del conjunto de resultados|0|  
 |Si está colocado después del conjunto de resultados|-1|  
 |Para los cursores KEYSET y STATIC|Número de fila absoluto de la posición actual en el conjunto de resultados|  
 |Para los cursores DYNAMIC|1|  
-|Para ABSOLUTE|-1 devuelve la última fila de un conjunto.<br /><br /> -2 devuelve de la segunda a la última fila de un conjunto, etc.<br /><br /> Nota: Si se solicita capturar más de una fila en este caso, se devuelven las dos últimas filas del conjunto de resultados.|  
+|Para ABSOLUTE|-1 devuelve la última fila de un conjunto.<br /><br /> -2 devuelve de la segunda a la última fila de un conjunto, etc.<br /><br /> Nota: Si se solicita más de una fila que se capturará en este caso, se devuelven las dos últimas filas del conjunto de resultados.|  
   
-|*\<nRows >*|Establecer en|  
+|*\<nrows>*|Establecer en|  
 |-----------------|------------|  
 |Si no está abierto|0|  
 |Para los cursores KEYSET y STATIC|Normalmente, el tamaño del conjunto de claves actual.<br /><br /> **-m** si el cursor se crea de forma asincrónica con *m* filas encontradas en este punto.|  

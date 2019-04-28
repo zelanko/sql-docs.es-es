@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960845"
 ---
 # <a name="secure-the-subscriber"></a>Proteger el suscriptor
   Los agentes de mezcla y de distribución se conectan al suscriptor. Estas conexiones pueden realizarse en el contexto de un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de Windows. Es importante proporcionar un inicio de sesión apropiado para estos agentes, al mismo tiempo que se sigue el principio de conceder los derechos mínimos necesarios y proteger el almacenamiento de todas las contraseñas. Para obtener información acerca de los permisos necesarios para cada agente, vea [Replication Agent Security Model](replication-agent-security-model.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "54125455"
     > [!IMPORTANT]  
     >  Utilice la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para las conexiones con los suscriptores y especifique una cuenta distinta para la conexión con cada suscriptor. Si utiliza una suscripción de extracción, la replicación establece siempre la conexión para que utilice la autenticación de Windows (en las suscripciones de extracción, la replicación no tiene acceso a los metadatos de un suscriptor que deba usar la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ). En este caso, cambie la conexión para que use la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] después de configurar la suscripción.  
   
-     Para obtener más información, consulte Cómo: Crear una suscripción de actualización para una publicación transaccional (SQL Server Management Studio) y [ver y modificar la configuración de seguridad de replicación](view-and-modify-replication-security-settings.md).  
+     Para más información, vea: Cómo: Crear una suscripción de actualización en una publicación transaccional (SQL Server Management Studio) y [Ver y modificar la configuración de seguridad de la replicación](view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   

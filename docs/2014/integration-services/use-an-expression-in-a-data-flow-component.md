@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ece364cb1d0bbe2cc36b07de58873fc95acaed
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877932"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>utilizar una expresión en un componente de flujo de datos
   Este procedimiento describe cómo agregar una expresión a la transformación División condicional o a la transformación Columna derivada. La transformación División condicional utiliza expresiones para definir las condiciones que dirigen las filas de datos a una salida de transformación y la transformación Columna derivada utiliza expresiones para definir los valores asignados a las columnas.  

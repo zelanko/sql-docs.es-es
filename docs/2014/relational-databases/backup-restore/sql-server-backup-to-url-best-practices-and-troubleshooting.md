@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877097"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server
   Este tema incluye prácticas recomendadas y sugerencias para la solución de problemas de copias de seguridad y restauraciones de SQL Server en el servicio Blob de Windows Azure.  
@@ -24,7 +24,7 @@ ms.locfileid: "53349988"
   
 -   [Copia de seguridad y restauración de SQL Server con el servicio Windows Azure Blob Storage](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: SQL Server Backup and Restore al servicio de Windows Azure Blob Storage](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Administrar copias de seguridad  
  La lista siguiente incluye recomendaciones generales para administrar copias de seguridad:  
@@ -98,7 +98,7 @@ ms.locfileid: "53349988"
   
          Para resolver este error, vuelva a emitir la instrucción `BACKUP` especificando `BLOCKSIZE = 65536`.  
   
--   Error durante la copia de seguridad debido a los blobs que ellos tienen una concesión activa: Actividad de copia de seguridad con errores puede dar lugar a blobs con concesiones activas.  
+-   Error durante la copia de seguridad porque los blobs tienen una concesión activa: una actividad de copia de seguridad con errores puede dar como resultado blobs con concesiones activas.  
   
      Si se vuelve a intentar una instrucción de copia de seguridad, la operación de copia de seguridad puede producir un error similar al siguiente:  
   
@@ -117,7 +117,7 @@ ms.locfileid: "53349988"
   
  Los servidores proxy pueden tener configuraciones que limitan el número de conexiones por minuto. Copia de seguridad en URL es un proceso multiproceso y, por tanto, puede sobrepasar este límite. Si esto ocurre, el servidor proxy elimina la conexión. Para resolver este problema, cambie la configuración de proxy para que SQL Server no utilice el proxy.   A continuación se muestran algunos ejemplos de los tipos o mensajes de error que puede ver en el registro de errores:  
   
--   Escribir en "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" Error: BACKUP TO URL recibió una excepción del extremo remoto. Mensaje de excepción: No se puede leer datos de la conexión de transporte: La conexión se cerró.  
+-   Escribir en "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" Error: BACKUP TO URL recibió una excepción del extremo remoto. Mensaje de excepción: No se puede leer datos de la conexión de transporte: Se cerró la conexión.  
   
 -   Error de E/S irrecuperable en el archivo "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:". No se pudo recopilar el error del punto de conexión remoto.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "53349988"
   
      Fin anómalo de BACKUP DATABASE.  
   
--   Backupiorequest:: Reportioerror: error de escritura en el dispositivo de copia de seguridad http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Error de sistema operativo Copia de seguridad en URL recibió una excepción del extremo remoto. Mensaje de excepción: No se puede leer datos de la conexión de transporte: La conexión se cerró.  
+-   Backupiorequest:: Reportioerror: error de escritura en el dispositivo de copia de seguridad http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Error de sistema operativo Copia de seguridad en URL recibió una excepción del extremo remoto. Mensaje de excepción: No se puede leer datos de la conexión de transporte: Se cerró la conexión.  
   
  Si activa el registro detallado mediante la marca de seguimiento 3051, puede ver también el mensaje siguiente en los registros:  
   

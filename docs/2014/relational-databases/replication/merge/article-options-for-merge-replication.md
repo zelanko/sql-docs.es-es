@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7033db55df0dd9b25c3dee5accdd4259842a571b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999616"
 ---
 # <a name="article-options-for-merge-replication"></a>Opciones de artículos para replicación de mezcla
   Existen muchas opciones para los artículos de tablas de mezcla que le permiten personalizar el comportamiento de la replicación en función de las necesidades de sus aplicaciones. Con la replicación de mezcla, puede hacer lo siguiente:  
@@ -29,7 +29,7 @@ ms.locfileid: "54133325"
   
 -   Especificar que los desencadenadores y las tablas del sistema de replicación no realicen el seguimiento de las eliminaciones de uno o varios artículos. Esta opción puede ser útil en muchas situaciones. Como por ejemplo, cuando se usan eliminaciones por lotes que no es necesario replicar. Para más información, vea [Optimizar el rendimiento de la replicación de mezcla con seguimiento condicional de eliminaciones](optimize-merge-replication-performance-with-conditional-delete-tracking.md).  
   
--   Especifique el orden de procesamiento de los artículos para asegurarse de que los mismos se procesan en el orden requerido por la aplicación. Para obtener más información, consulte [las propiedades de replicación de mezcla especificar](../publish/specify-merge-replication-properties.md).  
+-   Especifique el orden de procesamiento de los artículos para asegurarse de que los mismos se procesan en el orden requerido por la aplicación. Para más información, vea [Specify merge replication properties](../publish/specify-merge-replication-properties.md) (Especificación de propiedades de replicación de mezcla).  
   
 -   Especificar que un conjunto de registros relacionados se procesen como una unidad (de manera predeterminada, la replicación de mezcla procesa los cambios de las tablas fila por fila). Para más información, vea [Agrupar cambios en filas relacionadas con registros lógicos](group-changes-to-related-rows-with-logical-records.md).  
   

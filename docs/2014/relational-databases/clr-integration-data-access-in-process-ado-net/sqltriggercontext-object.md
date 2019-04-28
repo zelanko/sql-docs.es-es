@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df384324ba16aac03a4c889cf4f3959c23374510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874691"
 ---
 # <a name="sqltriggercontext-object"></a>Objeto SqlTriggerContext
   La clase `SqlTriggerContext` proporciona información de contexto acerca del desencadenador. Esto incluye el tipo de acción que ha provocado la activación del desencadenador, las columnas que se modificaron en una operación UPDATE y, en el caso de un desencadenador de lenguaje de definición de datos (DDL), una estructura de XML `EventData` que describe la operación de desencadenamiento. Para obtener más información y ejemplos de cómo usar el `SqlTriggerContext` de clases, vea [desencadenadores CLR](../../database-engine/dev-guide/clr-triggers.md).  

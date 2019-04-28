@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982179"
 ---
 # <a name="sqlfetchscroll-function"></a>Función SQLFetchScroll
 **Conformidad**  
- Versión de introducción: Compatibilidad de ODBC 3.0 estándares: 92 ISO  
+ Versión de introducción: Compatibilidad de ODBC 3.0 estándares: ISO 92  
   
  **Resumen**  
  **SQLFetchScroll** recupera el conjunto especificado filas de datos del conjunto de resultados y devuelve datos para todas las columnas enlazadas. Los conjuntos de filas pueden especificarse en una posición absoluta o relativa, o por el marcador.  
@@ -164,7 +164,7 @@ SQLRETURN SQLFetchScroll(
 |Condición|Primera fila del conjunto de filas nuevas|  
 |---------------|-----------------------------|  
 |*Antes de comenzar*|1|  
-|*CurrRowsetStart + RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1] *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*Después de finales*|  
 |*Después de finales*|*Después de finales*|  
   
@@ -177,10 +177,10 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*Antes de comenzar*|*Antes de comenzar*|  
 |*CurrRowsetStart = 1*|*Antes de comenzar*|  
-|*1 < CurrRowsetStart < = RowsetSize* <sup>[2].</sup>|*1* <sup>[1]</sup>|  
+|*1 < CurrRowsetStart <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
 |*Después de la finalización y LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
-|*Después de finales LastResultRow y > = RowsetSize* <sup>[2]</sup>|*LastResultRow - RowsetSize + 1* <sup>[2].</sup>|  
+|*Después de finales LastResultRow y > = RowsetSize* <sup>[2]</sup>|*LastResultRow - RowsetSize + 1* <sup>[2]</sup>|  
   
  [1] **SQLFetchScroll** devuelve SQLSTATE 01S06 (intento de recuperación antes de que el conjunto de resultados devuelve el primer conjunto de filas) y SQL_SUCCESS_WITH_INFO.  
   
@@ -192,8 +192,8 @@ SQLRETURN SQLFetchScroll(
 |Condición|Primera fila del conjunto de filas nuevas|  
 |---------------|-----------------------------|  
 |*(Antes de iniciar y FetchOffset > 0) O (después de la finalización y FetchOffset < 0)*|*--* <sup>[1]</sup>|  
-|*BeforeStart y FetchOffset < = 0*|*Antes de comenzar*|  
-|*CurrRowsetStart = 1 FetchOffset AND < 0*|*Antes de comenzar*|  
+|*BeforeStart AND FetchOffset <= 0*|*Antes de comenzar*|  
+|*CurrRowsetStart = 1 AND FetchOffset < 0*|*Antes de comenzar*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Antes de comenzar*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
 |*1 < = CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
@@ -211,7 +211,7 @@ SQLRETURN SQLFetchScroll(
   
 |Condición|Primera fila del conjunto de filas nuevas|  
 |---------------|-----------------------------|  
-|*FetchOffset < 0 AND &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; <= LastResultRow*|*LastResultRow + FetchOffset + 1*|  
 |*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Antes de comenzar*|  
 |*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Antes de comenzar*|  
@@ -236,7 +236,7 @@ SQLRETURN SQLFetchScroll(
   
 |Condición|Primera fila del conjunto de filas nuevas|  
 |---------------|-----------------------------|  
-|*RowsetSize* <sup>[1]</sup> < = LastResultRow|*LastResultRow - RowsetSize + 1* <sup>[1]</sup>|  
+|*RowsetSize* <sup>[1]</sup> <= LastResultRow|*LastResultRow - RowsetSize + 1* <sup>[1]</sup>|  
 |*RowsetSize* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1] Si ha cambiado el tamaño del conjunto de filas desde la llamada anterior a capturar filas, se trata el nuevo tamaño del conjunto de filas.  

@@ -22,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb69c4b064329b53f9ab3efef62f0d1c54b897a9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990132"
 ---
 # <a name="understanding-security-policies"></a>Descripción de las directivas de seguridad
   Cualquier código ejecutado por un servidor de informes debe formar parte de una directiva de seguridad de acceso del código concreta. Estas directivas de seguridad constan de grupos de código que asignan evidencias a un conjunto de conjuntos de permisos con nombre. Con frecuencia, los grupos de código están asociados a un conjunto de permisos con nombre que especifica los permisos que puede tener el código de ese grupo. El motor en tiempo de ejecución usa las evidencias proporcionadas por un host de confianza o por el cargador para determinar a qué grupos de código pertenece el código y, por tanto, qué permisos se deben conceder al código. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] cumple esta arquitectura de la directiva de seguridad como lo define Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. En las secciones siguientes se describen los distintos tipos de código de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y las reglas de directivas asociadas a los mismos.  

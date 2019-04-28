@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f3e7c74fcaebb0aaaf246cba94e32c6b602b6e5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873590"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>Agregar un elemento de recopilación a un conjunto de recopilación (Transact-SQL)
   Puede agregar un elemento de recopilación a una conjunto de recopilación existente mediante los procedimientos almacenados que se proporcionan con el recopilador de datos.  

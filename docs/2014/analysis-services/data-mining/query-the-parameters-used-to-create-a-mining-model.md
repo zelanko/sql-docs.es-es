@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b10717491672e0323afb39ada55aafff5c056caf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733057"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>Consultar los parámetros usados para crear un modelo de minería de datos
   La composición de un modelo de minería de datos no solo se ve afectada por los casos de entrenamiento, sino también por los parámetros que se establecieron al crear el modelo. Por lo tanto, es posible que la recuperación de la configuración de parámetros de un modelo existente resulte de utilidad para comprender mejor el comportamiento del modelo. La recuperación de parámetros también resulta útil al documentar una versión determinada del modelo.  
@@ -68,7 +68,7 @@ WHERE MODEL_NAME = 'TM Clustering'
  CLUSTER_COUNT=10,CLUSTER_SEED=0,CLUSTERING_METHOD=1,MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_STATES=100,MINIMUM_SUPPORT=1,MODELLING_CARDINALITY=10,SAMPLE_SIZE=50000,STOPPING_TOLERANCE=10  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas de consulta de minería de datos y procedimientos](data-mining-query-tasks-and-how-tos.md)   
+ [Tareas y procedimientos de Consulta de minería de datos](data-mining-query-tasks-and-how-tos.md)   
  [Consultas de minería de datos](data-mining-queries.md)  
   
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ceba0cdab54d825cfc28e1c156ca33767dfb8b8f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62991654"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exportar a Microsoft Excel (Generador de informes y SSRS)
   La extensión de representación de Excel [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] representa un informe en el formato nativo de [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Con la extensión de representación de Excel, el ancho de las columnas de Excel refleja más exactamente el ancho de las columnas de los informes.  

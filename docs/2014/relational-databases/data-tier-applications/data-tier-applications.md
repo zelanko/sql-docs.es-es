@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873106"
 ---
 # <a name="data-tier-applications"></a>Aplicaciones de capa de datos
   Una aplicación de capa de datos (DAC) es una entidad de administración de bases de datos lógicas que define todos los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asociados a una base de datos de usuario, como tablas, vistas y objetos de instancia, incluidos los inicios de sesión. Una DAC es una unidad independiente de implementación de bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite a los desarrolladores y los administradores de bases de datos en el nivel de capa de datos empaquetar objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un artefacto portátil denominado paquete DAC y también conocido como DACPAC.  
@@ -108,7 +108,7 @@ ms.locfileid: "52540117"
   
 -   **IMPORT**: el usuario puede importar el esquema y los datos a una base de datos nueva en el servidor de host.  
   
- Ambas funciones son compatibles con las herramientas de administración de base de datos: Server Management Studio, el Portal de administración de SQL Azure y la API de DACFx.  
+ Las dos funciones son compatibles con las herramientas de administración de base de datos: Server Management Studio, el Portal de administración de SQL Azure y la API de DACFx.  
   
 ## <a name="permissions"></a>Permisos  
  Es necesario ser miembro del rol `dbmanager` o tener asignados permisos `CREATE DATABASE` para crear una base de datos, incluida la creación de una base de datos para implementar un paquete DAC. Es necesario ser miembro del rol `dbmanager` o tener asignados permisos `DROP DATABASE` para quitar una base de datos.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19d311a07eb11f1c5119a3c20d7536b5a2986b49
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719886"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Restaurar, sincronizar y realizar copias de seguridad de bases de datos (XMLA)
   En XML for Analysis, hay tres comandos que sirven para restaurar, sincronizar y realizar copias de seguridad de las bases de datos:  
@@ -54,7 +54,7 @@ ms.locfileid: "50145940"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|*skipMembership*|Incluye las definiciones de seguridad en el archivo de copia de seguridad, pero excluye la información de pertenencia.|  
+|*SkipMembership*|Incluye las definiciones de seguridad en el archivo de copia de seguridad, pero excluye la información de pertenencia.|  
 |*CopyAll*|Incluye las definiciones de seguridad y la información de pertenencia en el archivo de copia de seguridad.|  
 |*IgnoreSecurity*|Excluye las definiciones de seguridad del archivo de copia de seguridad.|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "50145940"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|*skipMembership*|Incluye las definiciones de seguridad en la base de datos, pero excluye la información de suscripción.|  
+|*SkipMembership*|Incluye las definiciones de seguridad en la base de datos, pero excluye la información de suscripción.|  
 |*CopyAll*|Incluye las definiciones de seguridad y la información de pertenencia en la base de datos.|  
 |*IgnoreSecurity*|Excluye las definiciones de seguridad de la base de datos.|  
   
@@ -122,7 +122,7 @@ ms.locfileid: "50145940"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|*skipMembership*|Incluye las definiciones de seguridad en la base de datos de destino, pero excluye la información de suscripción.|  
+|*SkipMembership*|Incluye las definiciones de seguridad en la base de datos de destino, pero excluye la información de suscripción.|  
 |*CopyAll*|Incluye las definiciones de seguridad y la información de pertenencia en la base de datos de destino.|  
 |*IgnoreSecurity*|Excluye las definiciones de seguridad de la base de datos de destino.|  
   

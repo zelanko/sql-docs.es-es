@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a4969e3665aca4ed5aef588fa9595e96b846e98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715427"
 ---
 # <a name="column-distributions-data-mining"></a>Distribuciones de columnas (minería de datos)
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]puede definir distribuciones de columnas en una estructura de minería de datos para modificar la forma en que los algoritmos procesan los datos de estas columnas cuando se crean modelos de minería de datos. Para algunos algoritmos, resulta útil definir la distribución de las columnas continuas antes de procesar el modelo, si se sabe que las columnas contienen distribuciones de valores comunes. Si no define las distribuciones, los modelos de minería de datos resultantes podrían generar predicciones menos precisas que si se definieran las distribuciones porque los algoritmos disponen de menos información con la que interpretar los datos.  
@@ -49,7 +49,7 @@ ms.locfileid: "48058640"
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md)   
- [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
  [Métodos de discretización &#40;minería de datos&#41;](discretization-methods-data-mining.md)   
  [Distribuciones &#40;DMX&#41;](/sql/dmx/distributions-dmx)   
  [Columnas de la estructura de minería de datos](mining-structure-columns.md)  

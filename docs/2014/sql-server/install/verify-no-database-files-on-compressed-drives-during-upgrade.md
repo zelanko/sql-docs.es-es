@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dd8a5524c5aede5538d77709f7b0ae7303d8191c
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990143"
 ---
 # <a name="verify-that-no-database-files-are-on-compressed-drives-during-the-upgrade-process"></a>Comprobar que ningún archivo de base de datos se encuentre en unidades comprimidas durante el proceso de actualización
   El Asesor de actualizaciones ha detectado archivos de base de datos en una unidad comprimida. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede crear o actualizar las bases de datos en unidades comprimidas.  

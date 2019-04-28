@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b30322bb48cfff6e0bca092d72aa9d5ad0990948
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875071"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>Restaurar archivos en una nueva ubicación (SQL Server)
   En este tema se describe cómo restaurar archivos en una nueva ubicación en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -89,7 +89,7 @@ ms.locfileid: "58527917"
     |**Restaurar**|Las casillas activadas indican los conjuntos de copias de seguridad que se restaurarán.|  
     |**Name**|Nombre del conjunto de copia de seguridad.|  
     |**Tipo de archivo**|Especifica el tipo de datos en la copia de seguridad: **Datos**, **registro**, o **datos Filestream**. Los datos contenidos en tablas están en archivos de **datos** . Los datos del registro de transacciones están en archivos de **registro** . Los datos de objetos binarios grandes (BLOB) que están almacenados en el sistema de archivos se encuentran en archivos de **datos de FILESTREAM** .|  
-    |**Tipo**|Tipo de copia de seguridad realizada: **Completa**, **Diferencial** o **Registro de transacciones**.|  
+    |**Tipo**|El tipo de copia de seguridad realizada: **Completa**, **Diferencial** o **Registro de transacciones**.|  
     |**Server**|Nombre de la instancia del motor de base de datos que ha realizado la operación de copia de seguridad.|  
     |**Nombre lógico de archivo**|Nombre lógico del archivo.|  
     |**Base de datos**|Nombre de la base de datos para la operación de copia de seguridad.|  

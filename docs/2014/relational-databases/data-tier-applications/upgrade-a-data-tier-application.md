@@ -25,18 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 553f35862684c7b7c860b70211f903dec253a799
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872661"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
   Use el Asistente Actualizar aplicación de capa de datos o un script de Windows PowerShell para cambiar el esquema y las propiedades de una aplicación de capa de datos (DAC) implementada actualmente para coincidir con el esquema y las propiedades definidas en una versión nueva de la DAC.  
   
--   **Antes de empezar:**  [Elegir opciones de actualización de DAC](#ChoseDACUpgOptions), [limitaciones y restricciones](#LimitationsRestrictions), [requisitos previos](#Prerequisites), [seguridad](#Security), [permisos](#Permissions)  
+-   **Antes de empezar:**  [Elegir opciones de actualización de DAC](#ChoseDACUpgOptions), [Limitaciones y restricciones](#LimitationsRestrictions), [Requisitos previos](#Prerequisites), [Seguridad](#Security), [Permisos](#Permissions)  
   
--   **Para actualizar una DAC, mediante:**  [El Asistente para aplicaciones de capa de datos actualización](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **Para actualizar una DAC mediante:**  [el Asistente Actualizar aplicación de capa de datos](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Una actualización de DAC es un proceso en contexto que modifica el esquema de la base de datos existente para coincidir con el esquema definido en una nueva versión de la DAC. La nueva versión de la DAC se proporciona en un archivo de paquete DAC. Para obtener más información sobre cómo crear un paquete DAC, vea [Aplicaciones de capa de datos](data-tier-applications.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "52774327"
 ###  <a name="Security"></a> Seguridad  
  Para mejorar la seguridad, los inicios de sesión de la autenticación de SQL Server están almacenados en un paquete DAC sin ninguna contraseña. Cuando el paquete se implementa o actualiza, el inicio de sesión se crea como un inicio de sesión deshabilitado con una contraseña generada. Para habilitar los inicios de sesión, use un inicio de sesión que disponga del permiso ALTER ANY LOGIN y emplee ALTER LOGIN para habilitar el inicio de sesión y asignar una nueva contraseña que pueda comunicar al usuario. Esto no se necesita para los inicios de sesión de Autenticación de Windows, porque SQL Server no administra sus contraseñas.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Una DAC solo la pueden actualizar miembros de los roles fijos de servidor **sysadmin** o **serveradmin** , o los inicios de sesión que pertenezcan al rol fijo de servidor **dbcreator** y dispongan de permisos ALTER ANY LOGIN. El inicio de sesión debe ser el propietario de la base de datos existente. La cuenta de administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrada denominada **sa** también puede actualizar una DAC.  
   
 ##  <a name="UsingDACUpgradeWizard"></a> Usar el Asistente Actualizar aplicación de capa de datos  

@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b87e497c6610a2d75daa9432246e4f4b4690bab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874448"
 ---
 # <a name="defining-udt-tables-and-columns"></a>Definir tablas y columnas de UDT
   Una vez que el ensamblado que contiene el tipo definido por el usuario (UDT) se ha registrado la definición en un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos, se puede utilizar en una definición de columna.  

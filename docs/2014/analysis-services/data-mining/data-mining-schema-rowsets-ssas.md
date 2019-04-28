@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8fef47b83e341e9c8fed6a4824da882550c9a892
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722627"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>Consultar los conjuntos de filas de esquema de minería de datos (Analysis Services - Minería de datos)
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],muchos de los conjuntos de filas de esquema de minería de datos de OLE DB existentes se han expuesto como un conjunto de tablas del sistema que puede consultar con facilidad utilizando las instrucciones de Extensiones de minería de datos (DMX). Creando consultas para el conjunto de filas de esquema de minería de datos, puede identificar los servicios que están disponibles, obtener actualizaciones sobre el estado de los modelos y estructuras, y obtener detalles sobre el contenido o los parámetros del modelo. Para obtener una descripción de los conjuntos de filas de esquema de minería de datos, vea [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "48173175"
 ## <a name="examples"></a>Ejemplos  
  En la sección siguiente se proporcionan algunos ejemplos de consultas para los conjuntos de filas de esquema de minería de datos.  
   
-### <a name="example-1-list-data-mining-services"></a>Ejemplo 1: lista de servicios de minería de datos  
+### <a name="example-1-list-data-mining-services"></a>Ejemplo 1: Servicios de minería de datos de lista  
  La consulta siguiente devuelve una lista de servicios de minería que están disponibles en el servidor actual, es decir, los algoritmos que están habilitados. Las columnas proporcionadas para cada servicio de minería incluyen las marcas de modelado y tipos de contenido que pueden ser utilizados por cada algoritmo, el GUID para cada servicio y los límites de predicción que se puede haber agregado para cada servicio.  
   
 ```  
@@ -60,7 +60,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>Ejemplo 2: lista de parámetros de modelo de minería  
+### <a name="example-2-list-mining-model-parameters"></a>Ejemplo 2: Lista de parámetros del modelo de minería de datos  
  En el ejemplo siguiente se devuelven los parámetros que se utilizaron para crear un modelo de minería concreto:  
   
 ```  
@@ -69,7 +69,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>Ejemplo 3: lista de todos los conjuntos de filas  
+### <a name="example-3-list-all-rowsets"></a>Ejemplo 3: Lista de todos los conjuntos de filas  
  En el ejemplo siguiente se devuelve una lista completa de los conjuntos de filas que están disponibles en el servidor actual:  
   
 ```  

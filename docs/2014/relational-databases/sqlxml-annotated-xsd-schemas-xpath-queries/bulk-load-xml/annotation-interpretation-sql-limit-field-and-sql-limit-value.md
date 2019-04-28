@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 608b14de16b338225be7e500a77cb612b5ee9312
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717798"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field y sql:limit-value (SQLXML 4.0)
   Carga masiva XML procesa las anotaciones `sql:limit-field` y `sql:limit-value` por su definición. Para obtener más información, consulte [filtrar valores mediante SQL: limit-campo y SQL: limit-valor &#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md).  

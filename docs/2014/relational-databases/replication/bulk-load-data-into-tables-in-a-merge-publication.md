@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09e535057fcf573dfa189b7e5fdc0e0df06e5d4a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721767"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication-replication-transact-sql-programming"></a>Realizar una carga masiva de datos en tablas de una publicación de mezcla (programación de la replicación con Transact-SQL)
   Cuando los datos se cargan en las tablas utilizando [bcp Utility](../../tools/bcp-utility.md) o el comando [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) de forma predeterminada, los desencadenadores de replicación de mezcla que mantienen datos del seguimiento en la tabla del sistema [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql) no se activan. Puede forzar a que se activen los desencadenadores de replicación de mezcla cuando se cargan los datos o puede insertar mediante programación los metadatos de la replicación generados después de la operación de copia masiva utilizando los procedimientos almacenados de replicación.  

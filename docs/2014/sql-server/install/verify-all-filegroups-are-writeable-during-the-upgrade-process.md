@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98633674559feead48a5b1c3cbe997863ad0f18a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985795"
 ---
 # <a name="verify-all-filegroups-are-writeable-during-the-upgrade-process"></a>Comprobar que es posible escribir en todos los grupos de archivos durante el proceso de actualización
   El Asesor de actualizaciones ha detectado una base de datos que tiene uno o más grupos de archivos de solo lectura. Todas las bases de datos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben tener los grupos de archivos establecidos en READ_WRITE antes de llevar a cabo la actualización.  

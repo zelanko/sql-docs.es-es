@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40cf44e416a7507693b44cc691a89ad3a5ac95af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726449"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definir relaciones lógicas en una vista del origen de datos (Analysis Services)
   El Asistente para vistas del origen de datos y el Diseñador de vistas del origen de datos definen automáticamente las relaciones entre las tablas agregadas a una vista del origen de datos (DSV), en función de las relaciones de la base de datos subyacente o de los criterios de coincidencia de nombres que se especifiquen.  

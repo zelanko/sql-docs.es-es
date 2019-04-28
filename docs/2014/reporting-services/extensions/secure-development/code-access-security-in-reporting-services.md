@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3dd8d60c975efa1e0a230a08cc6b1ab1a9ce149b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985741"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Seguridad de acceso del código en Reporting Services
   La seguridad de acceso del código se centra en torno a estos conceptos principales: evidencia, grupos de código y conjuntos de permisos con nombre. En [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], los componentes Administrador de informes, Diseñador de informes y Servidor de informes tienen cada uno de ellos un archivo de directiva que configura la seguridad de acceso del código para los ensamblados personalizados así como los datos, la entrega, la representación y las extensiones de seguridad. Las secciones siguientes proporcionan información general de seguridad de acceso del código. Para obtener información detallada sobre los temas tratados en esta sección, vea "Modelo de directiva de seguridad" en la documentación del SDK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  

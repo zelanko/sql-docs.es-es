@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acec8d8bb72566d00593634d7d2ee27a41fd9688
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715212"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Crear una consulta de minería de datos utilizando XMLA
   Puede crear diversas consultas con los objetos de minería de datos utilizando AMO, DMX o XML/A.  
@@ -75,7 +75,7 @@ ms.locfileid: "50148090"
   
      con la siguiente:  
   
-     **\<RequestType > DMSCHEMA_MINING_MODEL_CONTENT\</RequestType >**  
+     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</RequestType>**  
   
 2.  Cambie la lista de restricciones para especificar un modelo de minería de datos por el nombre, agregando una condición nueva a las listas de restricciones.  
   

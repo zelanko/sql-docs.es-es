@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1f80f07576caebe8f4612958edae2afa42fdf0d3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955884"
 ---
 # <a name="troubleshooting-rds"></a>Solución de problemas de RDS
 > [!IMPORTANT]
@@ -28,7 +28,7 @@ ms.locfileid: "51560402"
   
 -   [Configuración de RDS en Windows 2000](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
   
--   ["Error en servidor Internet: acceso denegado"](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
+-   ["Error de servidor de Internet: Acceso denegado"](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
   
 -   [RDS devuelve el error "Stream Not Read" (Objeto Stream no leído)](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a18669d646dcf6e46f609faeb0861e5fa9732850
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732574"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>Propiedades de la base de datos (cuadro de diálogo) (SSAS: multidimensional)
   Use el cuadro de diálogo **Propiedades de la base de datos** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para establecer las propiedades de una base de datos en una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para mostrar el cuadro de diálogo **Propiedades de la base de datos** , haga clic con el botón derecho en una base de datos del Explorador de objetos y seleccione **Propiedades**.  
@@ -27,7 +27,7 @@ ms.locfileid: "48196735"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Nombre**|Escriba un nombre para cambiar el nombre de la base de datos.|  
+|**Name**|Escriba un nombre para cambiar el nombre de la base de datos.|  
 |**ID**|Muestra el identificador de la base de datos.|  
 |**Descripción**|Escriba una descripción para cambiar la descripción de la base de datos.|  
 |**Marca de tiempo de creación**|Muestra la fecha y hora en que se creó la base de datos.|  
@@ -40,6 +40,6 @@ ms.locfileid: "48196735"
   
 ## <a name="see-also"></a>Vea también  
  [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Bases de datos modelo multidimensionales &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Bases de datos de modelos multidimensionales &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

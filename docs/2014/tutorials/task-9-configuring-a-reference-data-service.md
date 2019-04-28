@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: adbde32de86da407bdd2655f66d036021e6784f8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866240"
 ---
-# <a name="task-9-configuring-a-reference-data-service"></a>Tarea 9: configurar un servicio de datos de referencia
+# <a name="task-9-configuring-a-reference-data-service"></a>Tarea 9: Configuración de un servicio de datos de referencia
   En esta tarea, configurará DQS para que use un servicio de datos de referencia de Windows Azure Marketplace. En la siguiente tarea, configurará la **validación de direcciones** dominio para usar este servicio. En tiempo de ejecución, durante la actividad de limpieza, DQS pasa los valores de dominios en el **validación de direcciones** dominio al servicio para la limpieza. Consulte [configurar DQS para utilizar datos de referencia](https://msdn.microsoft.com/library/hh213070.aspx) para obtener más detalles.  
   
 1.  En la página principal de **cliente DQS**, en el **administración** panel, haga clic en **configuración**.  

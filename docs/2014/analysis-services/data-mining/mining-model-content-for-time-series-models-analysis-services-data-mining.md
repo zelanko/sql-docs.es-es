@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03d108e015b831f44c84747b48afd110bf3fe2f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733597"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de serie temporal (Analysis Services - Minería de datos)
   Todos los modelos de minería de datos utilizan la misma estructura para almacenar su contenido. Esta estructura se define según el conjunto de filas de esquema de contenido de minería de datos. Sin embargo, dentro de esa estructura estándar, los nodos que contienen información están organizados de maneras diferentes que representan varios tipos de árboles. En este tema se describe cómo se organizan los nodos, y lo que significa cada uno de ellos, para los modelos de minería de datos basados en el algoritmo de serie temporal [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -312,7 +312,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="bkmk_ARIMA_1"></a> Descripción del árbol ARIMA  
  Cada estructura en un modelo ARIMA se corresponde con una *periodicidad* o *estructura periódica*. Una estructura periódica es un patrón de datos que se repite a lo largo de la serie de datos. Se permite alguna variación secundaria en el patrón, dentro de los límites estadísticos. La periodicidad se mide según las unidades de tiempo predeterminadas que se utilizaron en los datos de entrenamiento. Por ejemplo, si los datos de entrenamiento proporcionan datos de ventas para cada día, la unidad de tiempo predeterminada será un día, y todas las estructuras periódicas se definirán como un número concreto de días.  
   
- Cada período que el algoritmo detecta obtiene su propio nodo de estructura. Por ejemplo, si se están analizando los datos de las ventas diarias, el modelo podría detectar estructuras periódicas que representen semanas. En este caso, el algoritmo crearía dos estructuras periódicas en el modelo terminado: uno para el período diario predeterminado, que se indica con la notación {1}, y otro para las semanas, que se indica mediante {7}.  
+ Cada período que el algoritmo detecta obtiene su propio nodo de estructura. Por ejemplo, si se están analizando los datos de las ventas diarias, el modelo podría detectar estructuras periódicas que representen semanas. En este caso, el algoritmo creará dos estructuras periódicas en el modelo terminado: uno para el período diario predeterminado, que se indica como {1}, y otra para las semanas, indicado por {7}.  
   
  Por ejemplo, la siguiente consulta devuelve todas las estructuras ARIMA de un modelo de minería de datos.  
   
@@ -336,7 +336,7 @@ WHERE NODE_TYPE = 27
 |Forecasting|R750 Europe:Quantity|TA00000006|27|ARIMA (2,1,1) X (1,1,5)(6)|  
 |Forecasting|T1000 Europe:Quantity|TA00000009|27|ARIMA (1,0,1)|  
 |Forecasting|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
-|Forecasting|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
+|Forecasting|T1'000 Pacífico: cantidad | TA0000000b | 27 | ARIMA (1,0,3)|  
   
  A partir de estos resultados, que también se pueden examinar mediante el [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](../microsoft-generic-content-tree-viewer-data-mining.md), se puede deducir de un vistazo qué series son completamente lineales, cuáles tienen varias estructuras periódicas y qué periodicidades se han detectado.  
   
@@ -385,7 +385,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Ecuación ARIMA:  
   
- ARIMA ({1,1}, 0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}): 56.8888888888889 de intercepción  
+ ARIMA ({1,1},0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept:56.8888888888889  
   
  Esta ecuación está en el formato ARIMA largo, que incluye los valores de los coeficientes y la intersección. El formato abreviado de esta ecuación sería {1,0,7}, donde 1 indica el período como un recuento de intervalos de tiempo, 0 indica el orden de diferencia de términos y 7 indica el número de coeficientes.  
   

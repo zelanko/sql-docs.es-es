@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4a0fc7a0eeb0cabd07a38f77d5024aac0eaebb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715182"
 ---
 # <a name="classified-columns-data-mining"></a>Columnas clasificadas (Minería de datos)
   Cuando se define una columna clasificada, se crea una relación entre la columna actual y otra columna de la estructura de minería de datos. La columna de la estructura de minería de datos que se designa como columna clasificada contiene información sobre categorías que describe los valores de otra columna de la estructura de minería de datos.  
@@ -61,7 +61,7 @@ ms.locfileid: "48193755"
   
 ## <a name="see-also"></a>Vea también  
  [Tipos de contenido &#40;minería de datos&#41;](content-types-data-mining.md)   
- [Estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md)   
  [Tipos de datos &#40;minería de datos&#41;](data-types-data-mining.md)  
   
   

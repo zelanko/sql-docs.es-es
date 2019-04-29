@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dfaf4fc00a203a67c62b68e1786ed3c53a3f26ba
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020576"
 ---
 # <a name="msreportserverconfigurationsetting-properties"></a>Propiedades MSReportServer_ConfigurationSetting
   La clase MSReportServer_ConfigurationSetting representa los parámetros de instalación y tiempo de ejecución de una instancia del servidor de informes. La configuración se guarda en el archivo de configuración RSReportServer.config.  

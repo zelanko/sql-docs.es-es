@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 674f6f53610c8bf864aba5a2b5c7310c10f969c2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049488"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Forzar el inicio de un clúster WSFC sin un quórum
   En este tema se describe cómo forzar que un nodo de clúster de los clústeres de conmutación por error de Windows Server (WSFC) se inicie sin un quórum.  Esto puede ser necesario en los escenarios de recuperación de desastres y de múltiples subredes para recuperar datos y reestablecer por completo la alta disponibilidad para las instancias de clúster de conmutación por error de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -27,7 +27,7 @@ ms.locfileid: "53376737"
   
 -   **Para forzar que un clúster se inicie sin un quórum con:**  [Mediante el Administrador de clústeres de conmutación por error](#FailoverClusterManagerProcedure), [mediante Powershell](#PowerShellProcedure), [usar Net.exe](#CommandPromptProcedure)  
   
--   **Sigue:**  [Seguimiento: Después de forzar que se inicie sin un quórum de clúster](#FollowUp)  
+-   **Sigue:**  [Sigue: Después de forzar que se inicie sin un quórum de clúster](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de empezar  
   
@@ -102,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> Sigue: Después de forzar que el clúster se inicie sin un quórum  
+##  <a name="FollowUp"></a> Seguimiento: Después de forzar que se inicie sin un quórum de clúster  
   
 -   Debe evaluar y configurar de nuevo los valores de NodeWeight para construir correctamente un nuevo quórum antes de volver a poner otros nodos en línea. De lo contrario, el clúster puede volver a estar sin conexión.  
   

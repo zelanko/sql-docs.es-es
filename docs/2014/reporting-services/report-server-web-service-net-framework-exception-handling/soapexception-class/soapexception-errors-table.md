@@ -13,11 +13,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f58f6a181d1c3bda8556d0ac07fd0f983cb8b52f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045997"
 ---
 # <a name="soapexception-errors-table"></a>Tabla de errores de SoapException
   El servidor de informes genera errores y mensajes de error en la excepción SOAP según los errores que se producen en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. En la tabla siguiente se muestran los errores que son accesibles desde métodos a través de un elemento **SoapException** en el servicio web del servidor de informes. Se organiza según el método o métodos que inician la excepción.  

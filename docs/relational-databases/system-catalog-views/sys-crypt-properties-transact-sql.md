@@ -1,5 +1,5 @@
 ---
-title: Sys.crypt_properties (Transact-SQL) | Microsoft Docs
+title: sys.crypt_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b006e2795a79f9a7cbaf3686113bb2f1c7ad8172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049742"
 ---
 # <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "47805443"
 |**class**|**tinyint**|Identifica la clase en que existe la propiedad.<br /><br /> 1 = Objeto o columna<br /> 5 = Ensamblado|  
 |**class_desc**|**nvarchar(60)**|Descripción de la clase en que existe la propiedad.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|Id. del elemento en que la propiedad existe, interpretado según la clase.|  
-|**Huella digital**|**varbinary(32)**|Algoritmo hash SHA-1 del certificado o la clave asimétrica usada.|  
-|**crypt_type**|**(4)**|Tipo de cifrado.<br /><br /> SPVC = Cifrado mediante clave privada de certificado<br /><br /> SPVC = Cifrado mediante clave privada asimétrica<br /><br /> SPVC = Contrafirma mediante clave privada de certificado<br /><br /> CPVA = Contrafirma mediante clave asimétrica|  
+|**thumbprint**|**varbinary(32)**|Algoritmo hash SHA-1 del certificado o la clave asimétrica usada.|  
+|**crypt_type**|**char(4)**|Tipo de cifrado.<br /><br /> SPVC = Cifrado mediante clave privada de certificado<br /><br /> SPVC = Cifrado mediante clave privada asimétrica<br /><br /> SPVC = Contrafirma mediante clave privada de certificado<br /><br /> CPVA = Contrafirma mediante clave asimétrica|  
 |**crypt_type_desc**|**nvarchar(60)**|Descripción del tipo de cifrado.<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  
 |**crypt_property**|**varbinary(max)**|Bits firmados o cifrados.|  
   

@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 44cda6a2ecb8cd81d477c87de0f52a3a9b80b657
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920656"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Habilitar los requisitos previos de FileTables
   Describe cómo habilitar los requisitos previos para crear y usar FileTables.  
@@ -54,7 +54,7 @@ ms.locfileid: "58538147"
 ##  <a name="BasicsNTAccess"></a> Habilitar el acceso no transaccional en el nivel de base de datos  
  Las FileTables permiten que las aplicaciones Windows obtengan un identificador de archivo de Windows en los datos FILESTREAM sin que sea necesaria ninguna transacción. Para permitir este acceso no transaccional a los archivos almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe especificar el nivel deseado de acceso no transaccional en el nivel de base de datos para cada base de datos que contenga FileTables.  
   
-###  <a name="HowToCheckAccess"></a> Cómo: Comprobar si el acceso no transaccional está habilitado en las bases de datos  
+###  <a name="HowToCheckAccess"></a> Cómo: Compruebe si el acceso no transaccional está habilitado en las bases de datos  
  Consulte la vista de catálogo [sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) y compruebe las columnas **non_transacted_access** y **non_transacted_access_desc**.  
   
 ```sql  

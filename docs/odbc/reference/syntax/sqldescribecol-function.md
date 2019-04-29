@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b8453d76dc2af0499dc8d8af2ca1ec3024aee83
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061880"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol (función)
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ISO 92  
   
  **Resumen**  
  **SQLDescribeCol** devuelve el descriptor de resultado - nombre de columna, tipo, tamaño de la columna, dígitos decimales y nulabilidad - para una columna del conjunto de resultados. Esta información también está disponible en los campos de IRD.  

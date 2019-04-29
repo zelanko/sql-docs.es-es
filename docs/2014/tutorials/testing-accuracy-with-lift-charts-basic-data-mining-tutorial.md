@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042694"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>Probar la exactitud con gráficos de mejora respecto al modelo predictivo (Tutorial básico de minería de datos)
   En el **gráfico de precisión de minería de datos** ficha del Diseñador de minería de datos, puede calcular el grado en cada uno de los modelos realiza predicciones y comparar los resultados de cada modelo directamente en los resultados de los otros modelos. Este método de comparación se conoce como un *gráfico de elevación*. Normalmente, la exactitud de la predicción de un modelo de minería de datos se cuantifica mediante la mejora respecto al modelo predictivo o la exactitud de la clasificación. En este tutorial utilizaremos solamente el gráfico de mejora respecto al modelo predictivo.  

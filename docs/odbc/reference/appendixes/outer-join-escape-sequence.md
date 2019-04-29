@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018365"
 ---
 # <a name="outer-join-escape-sequence"></a>Secuencia de escape de combinación externa
 ODBC utiliza secuencias de escape para las combinaciones externas. La sintaxis de esta secuencia de escape es como sigue:  
@@ -32,22 +32,22 @@ ODBC utiliza secuencias de escape para las combinaciones externas. La sintaxis d
 ## <a name="remarks"></a>Comentarios  
  En la notación de BNF, la sintaxis es como sigue:  
   
- *Outer-join-escape ODBC* :: =  
+ *ODBC-outer-join-escape* ::=  
   
  *Iniciador de esc de ODBC* jugo *combinación externa ODBC terminador esc*  
   
- *combinación externa* :: = *nombre-tabla* [*nombre de correlación*] {izquierda &#124; derecha &#124; completa}  
+ *outer-join* ::= *table-name* [*correlation-name*] {LEFT &#124; RIGHT &#124; FULL}  
   
  COMBINACIÓN externa {*nombre-tabla* [*nombre de correlación*] &#124; *combinación externa*} ON  
   
- *búsqueda:*  
+ *search-*  
   
- *condición*  
+ *condition*  
   
- *nombre de correlación* :: = *nombre definido por el usuario*  
+ *correlation-name* ::= *user-defined-name*  
   
- *Iniciador de esc de ODBC* :: = {  
+ *ODBC-esc-initiator* ::= {  
   
- *Terminador de esc de ODBC* :: =}  
+ *ODBC-esc-terminator* ::= }  
   
  Para determinar qué partes de esta instrucción son compatibles, una aplicación llama a **SQLGetInfo** con el tipo de información SQL_OJ_CAPABILITIES. Para las combinaciones externas, *condición de búsqueda* debe contener la condición de combinación entre especificado *nombres de tabla*.

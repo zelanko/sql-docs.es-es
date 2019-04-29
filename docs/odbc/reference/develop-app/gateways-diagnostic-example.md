@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5f4e17074616111ee93ce87c04036d1fc3fd48dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062423"
 ---
 # <a name="gateways-diagnostic-example"></a>Ejemplo de diagnóstico de las puertas de enlace
 En una arquitectura de puerta de enlace, un controlador envía solicitudes a una puerta de enlace que admite ODBC. La puerta de enlace envía las solicitudes a un DBMS. Dado que es el componente que interactúa con el Administrador de controladores, el controlador da formato y devuelve los argumentos para **SQLGetDiagRec**.  

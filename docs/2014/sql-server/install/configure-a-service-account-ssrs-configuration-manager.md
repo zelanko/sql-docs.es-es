@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 0ffc525e4d9ab516481eadf4cc303a704ce56da6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033635"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Configurar una cuenta de servicio (Administrador de configuración de SSRS)
   En una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el servicio web del servidor de informes, el Administrador de informes y la aplicación de procesamiento en segundo plano se ejecutan dentro de un único servicio. La cuenta en la que el servicio se ejecuta se define durante la instalación, al especificar la cuenta en la página Identidad de servicio, pero puede utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si desea usar una cuenta diferente o actualizar la contraseña.  
@@ -43,7 +43,7 @@ ms.locfileid: "48136385"
   
 3.  Si seleccionó una cuenta de usuario de Windows, especifique la nueva cuenta y la contraseña. La cuenta no puede tener más de 20 caracteres.  
   
-     Si el servidor de informes se implementa en una red que admite la autenticación Kerberos, debe registrar el Nombre principal de servicio (SPN) del servidor de informes con la cuenta de usuario de dominio recién especificada. Para más información, vea [Registrar un nombre de entidad de seguridad de servicio &#40;SPN&#41; para un servidor de informes](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
+     Si el servidor de informes se implementa en una red que admite la autenticación Kerberos, debe registrar el Nombre principal de servicio (SPN) del servidor de informes con la cuenta de usuario de dominio recién especificada. Para obtener más información, vea [Register a Service Principal Name &#40;SPN&#41; for a Report Server](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) (Registrar un nombre de entidad de seguridad de servicio &#40;SPN&#41; para un servidor de informes).  
   
 4.  Haga clic en **Aplicar**.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48136385"
 ## <a name="see-also"></a>Vea también  
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configurar una conexión de base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Cuenta de servicio &#40;modo nativo de SSRS&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

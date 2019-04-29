@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33116adaf74ed2d3fc52fec460859a7672ce2d0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057790"
 ---
 # <a name="odbc-glossary"></a>Glosario de ODBC
 ## <a name="a"></a>A  
@@ -38,7 +38,7 @@ ms.locfileid: "47693953"
  **API**  
  Interfaz de programación de aplicaciones. Un conjunto de rutinas que utiliza una aplicación para solicitar y llevar a cabo servicios de nivel inferior. La API de ODBC se compone de las funciones de ODBC.  
   
- **Aplicación**  
+ **application**  
  Un programa ejecutable que llama a funciones en la API de ODBC.  
   
  **descriptor de parámetro de aplicación (APD)**  
@@ -47,7 +47,7 @@ ms.locfileid: "47693953"
  **descriptor de fila de la aplicación (descartar)**  
  Un descriptor que representa los metadatos de columna y los datos en búferes de la aplicación, que describe una fila de datos después de cualquier conversión de datos especificado por la aplicación.  
   
- **DESCARTAR**  
+ **ARD**  
  *Consulte* descriptor de fila de la aplicación (descartar).  
   
  **modo de confirmación automática**  
@@ -60,7 +60,7 @@ ms.locfileid: "47693953"
  **Objeto binario grande (BLOB)**  
  Cualquier dato binario en un determinado número de bytes, como 255. Suele ser mucho mayor. Estos datos generalmente se envía al y recuperarse del origen de datos en partes. También se denomina *datos long*.  
   
- **enlace**  
+ **binding**  
  Como un verbo, el acto de asociación de una columna de un conjunto de resultados o un parámetro en una instrucción SQL con una variable de aplicación. Como un nombre, la asociación.  
   
  **desplazamiento de enlace**  
@@ -69,10 +69,10 @@ ms.locfileid: "47693953"
  **cursor de bloque**  
  Un cursor capaz de capturar más de una fila de datos cada vez.  
   
- **búfer**  
+ **buffer**  
  Una parte de memoria de la aplicación usa para pasar datos entre la aplicación y controlador. Los búferes suelen presentan en parejas: un *búfer de datos* y un *búfer de longitud de datos*.  
   
- **bytes**  
+ **byte**  
  Ocho bits o un octeto. *Vea también* octeto.  
   
 ## <a name="c"></a>C  
@@ -88,16 +88,16 @@ ms.locfileid: "47693953"
  **CLI**  
  *Consulte* API.  
   
- **cliente/servidor**  
+ **client/server**  
  Una estrategia de acceso de base de datos en el que uno o más clientes tener acceso a datos a través de un servidor. Normalmente, los clientes implementan la interfaz de usuario mientras que los controles de servidor acceso de base de datos.  
   
  **column**  
  El contenedor de un solo elemento de información en una fila. También se denomina *campo*.  
   
- **Confirmación**  
+ **commit**  
  Para realizar los cambios en una transacción permanentes.  
   
- **Simultaneidad**  
+ **concurrency**  
  La capacidad de más de una transacción para tener acceso a los mismos datos al mismo tiempo.  
   
  **nivel de cumplimiento**  
@@ -158,19 +158,19 @@ ms.locfileid: "47693953"
  **identificadores delimitados**  
  Un identificador que se incluye en los caracteres de comillas de identificador, por lo que puede contener caracteres especiales o coincidir con palabras clave (también conocido como un identificador entre comillas).  
   
- **Descriptor**  
+ **descriptor**  
  Una estructura de datos que contiene información sobre los datos de las columnas o parámetros dinámicos. La representación física del descriptor no está definida; las aplicaciones obtienen acceso directo a un descriptor de solo manipulando sus campos mediante una llamada a funciones ODBC con el identificador de descriptor.  
   
- **base de datos de escritorio**  
+ **desktop database**  
  Un DBMS diseñado para ejecutarse en un equipo personal. Por lo general, estos DBMS no proporcionan un motor de base de datos independiente y deben tener acceso a través de un controlador basado en archivos. Generalmente, los motores de estos controladores han reducido compatibilidad con SQL y las transacciones. Por ejemplo, dBASE, Paradox, Btrieve o Microsoft® FoxPro.  
   
- **Diagnóstico**  
+ **diagnostic**  
  Un registro que contiene información de diagnóstico sobre la última función llama usa un identificador determinado. Los registros de diagnóstico se asocian con el entorno, conexión, instrucción y los identificadores de descriptor.  
   
  **DML**  
  Lenguaje de manipulación de datos. Esas instrucciones en SQL que manipulan, en lugar de para definir los datos. Por ejemplo, **insertar**, **actualización**, **eliminar**, y **seleccione**.  
   
- **Controlador**  
+ **driver**  
  Una biblioteca de rutina que expone las funciones de la API de ODBC. Los controladores son específicos de un DBMS único.  
   
  **Administrador de controladores**  
@@ -186,10 +186,10 @@ ms.locfileid: "47693953"
  Un tipo de SQL incrustado en qué SQL instrucciones se crean y se compilan en tiempo de ejecución. *Vea también* SQL estático.  
   
 ## <a name="e"></a>E  
- **SQL incrustado**  
+ **embedded SQL**  
  Las instrucciones SQL que se incluyen directamente en un programa escrito en otro lenguaje, como COBOL o C. ODBC no utiliza SQL incrustado. *Vea también* SQL estático *y* SQL dinámico.  
   
- **Entorno**  
+ **environment**  
  Un contexto global en el que se va a obtener acceso a datos; asociado con el entorno es cualquier información que es global por naturaleza, como una lista de todas las conexiones en ese entorno.  
   
  **identificador de entorno**  
@@ -198,14 +198,14 @@ ms.locfileid: "47693953"
  **cláusula de escape**  
  Una cláusula en una instrucción SQL.  
   
- **Ejecutar**  
+ **execute**  
  Para ejecutar una instrucción SQL.  
   
 ## <a name="f"></a>F  
  **cursor grueso**  
  *Consulte* cursor de bloque.  
   
- **FETCH**  
+ **fetch**  
  Para recuperar una o varias filas de un conjunto de resultados.  
   
  **field**  
@@ -224,7 +224,7 @@ ms.locfileid: "47693953"
  Un cursor que sólo puede mover hacia delante a través del conjunto de resultados y generalmente captura solo una fila a la vez. La mayoría de bases de datos relacionales admiten solo los cursores de solo avance.  
   
 ## <a name="h"></a>H  
- **identificador**  
+ **handle**  
  Un valor que identifica de forma algo como una estructura de datos o archivo. Los identificadores son significativos sólo para el software que crea y usa pero que se pasa por otro software para identificar las cosas. ODBC define identificadores para los entornos, las conexiones, instrucciones y los descriptores.  
   
 ## <a name="i"></a>I  
@@ -243,7 +243,7 @@ ms.locfileid: "47693953"
  **nivel de conformidad con la interfaz**  
  El nivel de la interfaz ODBC 3.7 compatible con un controlador; puede ser Core, nivel 1 o nivel 2.  
   
- **Interoperabilidad**  
+ **interoperability**  
  La capacidad de una aplicación para usar el mismo código al obtener acceso a datos en diferentes DBMS.  
   
  **IPD**  
@@ -256,14 +256,14 @@ ms.locfileid: "47693953"
  Comisión Electrotécnica de estándares internacionales organización internacional. La API de ODBC se basa en la interfaz de nivel de llamada ISO/IEC.  
   
 ## <a name="j"></a>J  
- **combinación**  
+ **join**  
  Una operación en una base de datos relacional que vincula las filas de dos o más tablas haciendo coincidir valores en columnas especificadas.  
   
 ## <a name="k"></a>K  
- **Clave**  
+ **key**  
  Una o varias columnas cuyos valores identifican una fila. *Vea también* clave externa *y* clave principal.  
   
- **Conjunto de claves**  
+ **keyset**  
  Un conjunto de claves que usa un cursor controlado por conjunto de claves o mixto para capturar filas.  
   
  **cursor controlado por conjunto de claves**  
@@ -273,7 +273,7 @@ ms.locfileid: "47693953"
  **literal**  
  Una representación de caracteres de un valor de datos reales en una instrucción SQL.  
   
- **El bloqueo**  
+ **locking**  
  El proceso mediante el cual un DBMS restringe el acceso a una fila en un entorno multiusuario. El DBMS normalmente establece un bit en la página física que contiene una fila que indica la fila o una fila o página se bloquea.  
   
  **datos de tipo Long**  
@@ -286,7 +286,7 @@ ms.locfileid: "47693953"
  **Modo de confirmación manual**  
  Un modo de confirmación de transacción en el que las transacciones se deben confirmar explícitamente mediante una llamada a **SQLTransact**.  
   
- **Metadatos**  
+ **metadata**  
  Datos que describe un parámetro en una instrucción SQL o una columna de un conjunto de resultados. Por ejemplo, el tipo de datos, longitud de bytes y la precisión de un parámetro.  
   
  **controlador de varios niveles**  
@@ -297,7 +297,7 @@ ms.locfileid: "47693953"
  No tener ningún valor asignado explícitamente. En concreto, un valor NULL es diferente de cero o un espacio en blanco.  
   
 ## <a name="o"></a>O  
- **octeto**  
+ **octet**  
  Ocho bits o un byte. *Vea también* bytes.  
   
  **longitud en octetos**  
@@ -318,7 +318,7 @@ ms.locfileid: "47693953"
  **combinación externa**  
  Combinación en qué filas no coincidentes y coincidentes se devuelven. Los valores de todas las columnas de la tabla no coincidente en las filas no coincidentes se establecen en NULL.  
   
- **Propietario**  
+ **owner**  
  El propietario de una tabla.  
   
 ## <a name="p"></a>P  
@@ -346,7 +346,7 @@ ms.locfileid: "47693953"
  **instrucción delete posicionadas**  
  Una instrucción SQL que se usa para eliminar la fila actual.  
   
- **Preparar**  
+ **prepare**  
  Para compilar una instrucción SQL. Se crea un plan de acceso al preparar una instrucción SQL.  
   
  **Clave principal**  
@@ -359,20 +359,20 @@ ms.locfileid: "47693953"
  Un argumento en una llamada de procedimiento, el valor devuelto por un procedimiento o una columna en un conjunto de resultados creado por un procedimiento.  
   
 ## <a name="q"></a>Q  
- **Calificador**  
+ **qualifier**  
  Una base de datos que contiene una o varias tablas.  
   
- **Consulta**  
+ **query**  
  Una instrucción SQL. A veces se usan para referirse a un **seleccione** instrucción.  
   
  **quoted identifier**  
  Un identificador que se incluye en los caracteres de comillas de identificador, por lo que puede contener caracteres especiales o coincidir con palabras clave (también conocidas como un identificador delimitado de SQL-92).  
   
 ## <a name="r"></a>R  
- **base**  
+ **radix**  
  La base de un sistema de numeración. Por lo general, 2 ó 10.  
   
- **Registro**  
+ **record**  
  *Consulte* fila.  
   
  **conjunto de resultados**  
@@ -384,7 +384,7 @@ ms.locfileid: "47693953"
  **revertir**  
  Para devolver los valores modificados por una transacción a su estado original.  
   
- **Fila**  
+ **row**  
  Un conjunto de columnas relacionadas que describen una entidad específica. También se denomina un *registro*.  
   
  **descriptor de fila**  
@@ -396,7 +396,7 @@ ms.locfileid: "47693953"
  **matriz de Estados de fila**  
  Una matriz que contiene el estado de una fila después de llamar a **SQLFetch**, **SQLFetchScroll**, o **SQLSetPos**.  
   
- **Conjunto de filas**  
+ **rowset**  
  El conjunto de filas devueltas en una sola operación de obtención de un cursor de bloque.  
   
  **búferes del conjunto de filas**  
@@ -415,7 +415,7 @@ ms.locfileid: "47693953"
  **cursor desplazable**  
  Un cursor que puede desplazarse hacia delante o hacia atrás por el conjunto de resultados.  
   
- **seriabilidad**  
+ **serializability**  
  Si dos transacciones que se ejecutan simultáneamente producen un resultado que es el mismo que la ejecución de la serie (o secuencial) de esas transacciones. Las transacciones serializables están obligadas a mantener la integridad de la base de datos.  
   
  **base de datos del servidor**  
@@ -473,19 +473,19 @@ ms.locfileid: "47693953"
  **table**  
  Una colección de filas.  
   
- **código thunk**  
+ **thunking**  
  La conversión de 16 bits direcciones a las direcciones de 32 bits, o viceversa, cuando se usan las aplicaciones de 16 bits con controladores ODBC de 32 bits.  
   
- **Transacción**  
+ **transaction**  
  Una unidad atómica de trabajo. El trabajo en una transacción debe completarse como un todo; Si se produce un error en cualquier parte de la transacción, se produce un error en toda la transacción.  
   
  **aislamiento de transacción**  
  El acto de aislar una transacción de los efectos de todas las demás transacciones.  
   
  **nivel de aislamiento de transacción**  
- Una medida de lo bien una transacción está aislada. Hay cinco niveles de aislamiento de transacción: Read Uncommitted, Read Committed, Repeatable Read, Serializable y control de versiones.  
+ Una medida de lo bien una transacción está aislada. Hay cinco niveles de aislamiento de transacción: Read Uncommitted, leer Committed, Repeatable Read, Serializable y control de versiones.  
   
- **archivo DLL de traducción**  
+ **translator DLL**  
  Un archivo DLL que se usa para traducir datos de un juego de caracteres a otro.  
   
  **DLL de instalación de traductor**  
@@ -498,5 +498,5 @@ ms.locfileid: "47693953"
  Un valor entero pasa o devolver desde una función ODBC para indicar el tipo de datos de una variable de aplicación, un parámetro o una columna. ODBC define los indicadores de tipo para tipos de datos C y SQL.  
   
 ## <a name="v"></a>V  
- **Vista**  
+ **view**  
  Una manera alternativa de mirar los datos en una o varias tablas. Normalmente, se crea una vista como un subconjunto de las columnas de una o varias tablas. En ODBC, las vistas son generalmente son equivalentes a las tablas.

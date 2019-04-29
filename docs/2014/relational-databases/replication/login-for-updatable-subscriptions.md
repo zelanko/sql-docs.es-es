@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058101"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Inicio de sesión para suscripciones actualizables
   Si ha seleccionado **Replicar** en la página **Suscripciones actualizables** de este asistente, debe especificar una cuenta en el suscriptor bajo la que se realizan las conexiones al publicador para las suscripciones de actualización inmediata. Las conexiones las utilizan los desencadenadores que se activan en el suscriptor y propagan los cambios al publicador. Esta cuenta es necesaria aunque se haya seleccionado **Poner en cola cambios y confirmar cuando sea posible** en la página **Suscripciones actualizables** , porque, de forma predeterminada, el Asistente para nueva suscripción configura la actualización en cola con la capacidad para cambiar a actualización inmediata si es necesario.  
@@ -52,7 +52,7 @@ ms.locfileid: "54135375"
  Esta opción requiere un servidor vinculado o un servidor remoto que ya se ha definido. Para obtener más información, vea [Servidores vinculados &#40;motor de base de datos&#41;](../linked-servers/linked-servers-database-engine.md) y [Servidores remotos](../../database-engine/configure-windows/remote-servers.md). Asegúrese de que el inicio de sesión utilizado para el servidor vinculado o el servidor remoto tiene una contraseña segura y solo tiene los permisos descritos en este tema.  
   
 ## <a name="see-also"></a>Vea también  
- [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
+ [Crear una suscripción actualizable en una publicación transaccional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [View and Modify Replication Security Settings](security/view-and-modify-replication-security-settings.md)  (Ver y modificar la configuración de seguridad de la replicación)  
  [Suscripciones actualizables para replicación transaccional](transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Suscribirse a publicaciones](subscribe-to-publications.md)  

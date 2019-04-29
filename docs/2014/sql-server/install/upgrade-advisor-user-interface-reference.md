@@ -21,11 +21,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57259e3608dfe58df5ce88ca5a4009c8c3ec0241
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032049"
 ---
 # <a name="upgrade-advisor-user-interface-reference"></a>Referencia de la interfaz de usuario del Asesor de actualizaciones
   Esta sección incluye temas de ayuda para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor. Estos temas están disponibles en el Asistente para actualización de Advisor presionando la tecla F1 o haciendo clic en **ayuda** en las páginas del asistente y en los cuadros de diálogo.  

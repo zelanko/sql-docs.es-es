@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 217fc6d3d5a94fb443ea262563255c10bcfc2dda
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057963"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>Estado del servidor de informes (Modo nativo de SSRS)
   Utilice esta página para ver información sobre la instancia del servidor de informes a la que está conectado actualmente. Esta página es la página de inicio para la configuración del servidor de informes. Hay páginas adicionales disponibles para configurar las direcciones URL, la cuenta de servicio, la base de datos del servidor de informes, la distribución del correo electrónico del servidor de informes, una implementación que permita una ampliación con varios servidores y las claves de cifrado.  

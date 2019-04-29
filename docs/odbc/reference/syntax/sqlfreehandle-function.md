@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f63af414d59afed2bbe2e8eed3fba7a1362bb4bb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061483"
 ---
 # <a name="sqlfreehandle-function"></a>Función SQLFreeHandle
 **Conformidad**  
- Versión de introducción: Compatibilidad de ODBC 3.0 estándares: 92 ISO  
+ Versión de introducción: Compatibilidad de ODBC 3.0 estándares: ISO 92  
   
  **Resumen**  
  **SQLFreeHandle** libera los recursos asociados con un identificador específico del entorno, conexión, instrucción o descriptor.  

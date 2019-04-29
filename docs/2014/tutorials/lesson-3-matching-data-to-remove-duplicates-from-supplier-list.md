@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 65aa1b0531eb4ba30875e53a77551383b3f38579
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042361"
 ---
-# <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>Lección 3: buscar datos coincidentes para quitar duplicados de lista de proveedores
+# <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>Lección 3: Búsqueda de datos coincidentes para quitar duplicados de lista de proveedores
   Para preparar la base de conocimiento que se va a usar para realizar la actividad de coincidencia, hay que crear una directiva de coincidencia en la base de conocimiento. Solo puede haber una directiva de coincidencia en una base de conocimiento. Una directiva de coincidencia se compone de una o más reglas de coincidencia. Una regla identifica los dominios implicados en el proceso de coincidencia y especifica el peso que tiene cada valor de dominio sobre en el criterio de coincidencia. En la regla se debe especificar si los valores de dominio deben ser una coincidencia exacta o pueden ser similares, y hasta qué punto. También se especifica si una coincidencia de dominio es un requisito previo para el proceso de coincidencia. Puede probar cada regla por separado y probar toda la directiva con datos de ejemplo. El proceso de pruebas muestra los registros cuyas puntuaciones de coincidencia son mayores que el **puntuación de registro mínima** umbral especificado en la configuración de DQS en un clúster (grupo). Puede seguir modificando las reglas de la directiva hasta que esté satisfecho con los resultados.  
   
  Después de definir la directiva, creará un proyecto de calidad de los datos para ejecutar la actividad de coincidencia. El proyecto de búsqueda de coincidencias aplica las reglas de coincidencia de la directiva correspondiente al origen de datos que se va a evaluar. Este proceso evalúa la probabilidad de que dos filas cualesquiera sean coincidencias. Cuando DQS realiza el análisis de coincidencia, crea clústeres de registros que considera como coincidencias. DQS identifica de forma aleatoria uno de los registros como registro dinámico. Puede comprobar y rechazar los registros que no sean una coincidencia adecuada para el clúster. Consulte [crear una directiva de coincidencia](https://msdn.microsoft.com/library/hh270290.aspx) tema para obtener más detalles.  

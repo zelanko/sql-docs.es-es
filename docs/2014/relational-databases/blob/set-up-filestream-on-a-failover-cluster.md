@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ca95e56a965cb2dd967a673fb33688fd09981960
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920040"
 ---
 # <a name="set-up-filestream-on-a-failover-cluster"></a>Configurar FILESTREAM en un clúster de conmutación por error
   En este tema se describe cómo habilitar FILESTREAM en un clúster de conmutación por error. Antes de probar este procedimiento, debería conocer los [clústeres de conmutación por error](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) y tener habilitado FILESTREAM. Para obtener información sobre cómo habilitar FILESTREAM, vea [Habilitar y configurar FILESTREAM](enable-and-configure-filestream.md).  

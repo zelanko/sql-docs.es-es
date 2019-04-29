@@ -1,5 +1,5 @@
 ---
-title: Definir y examinar perspectivas | Documentos de Microsoft
+title: Definir y examinar perspectivas | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 46ce0cb6005ce6465c623fa51286061e8f1e89c5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017384"
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lección 9-1: definir y examinar perspectivas
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -171,7 +171,7 @@ En las tareas de este tema, definirá varias perspectivas diferentes y, a contin
   
 4.  Analizar en Excel le pedirá que elija qué perspectiva desea usar al examinar el modelo en Excel, como se muestra en la ilustración siguiente.  
   
-    ![Objetos de la perspectiva de ventas por Internet](../analysis-services/media/l9-perspectives-3.gif "objetos de la perspectiva venta por Internet")  
+    ![Objetos de la perspectiva venta por Internet](../analysis-services/media/l9-perspectives-3.gif "objetos para la perspectiva venta por Internet")  
   
 5.  Como alternativa, puede iniciar Excel en el menú Inicio de Windows, definir una conexión a la base de datos Tutorial de Analysis Services en localhost y elegir una perspectiva en el Asistente para la conexión de datos, como se muestra en la ilustración siguiente.  
   

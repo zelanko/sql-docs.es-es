@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c2f1c5a8ae897284f07c3fd6c65d9735099a41fa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042791"
 ---
 # <a name="lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial"></a>Lección 3: Creación de un escenario de Market Basket (Tutorial de minería de datos intermedios)
   El departamento de marketing de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] desea mejorar el sitio web de la empresa para promover las ventas cruzadas. Como parte de la actualización del sitio, desean contar con la capacidad de predecir los productos cuya adquisición podría interesar a los clientes, basándose en otros productos que ya se encuentran en sus cestas de la compra en línea. El departamento de marketing también desea comprender mejor el comportamiento de compra de los clientes, de forma que puedan diseñar el sitio web para que los elementos que tienden a comprarse juntos aparezcan agrupados. Han aprendido que la minería de datos resulta especialmente útil para este tipo de *análisis de la cesta de la compra* y le han solicitado el desarrollo de un modelo de minería de datos.  

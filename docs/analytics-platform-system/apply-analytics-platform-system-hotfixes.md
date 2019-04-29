@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019050"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Aplicación de las revisiones de Analytics Platform System
 En este artículo se describe cómo aplicar las revisiones para el software de Analytics Platform System.  

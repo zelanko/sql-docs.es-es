@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949e3ef39b0c3ef7b4fec6b3f99735dec287d5d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913369"
 ---
 # <a name="mssqlserver7936"></a>MSSQLSERVER_7936
     
@@ -30,7 +30,7 @@ ms.locfileid: "48123201"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|Texto del mensaje|Error de tabla: el id. de directorio FILESTREAM existe para el id. de columna C_ID del id. de objeto O_ID, id. de índice I_ID, id. de partición PN_ID, pero esa columna no es una columna FILESTREAM.|  
+|Texto del mensaje|Error de tabla: Directorio FileStream existe para la columna C_ID del Id. de objeto ID O_ID, ID. de partición PN_ID, índice, pero esa columna no es una columna Filestream.|  
   
 ## <a name="explanation"></a>Explicación  
  Durante DBCC CHECKDB, se encontró un directorio FILESTREAM para la columna especificada; sin embargo, la columna no es una columna `FILESTREAM`.  

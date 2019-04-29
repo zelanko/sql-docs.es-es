@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022514"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Consideraciones y limitaciones de diseño de los publicadores de Oracle
   La publicación de una base de datos de Oracle se diseña para que funcione casi idénticamente a la publicación de una base de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No obstante, debe tener en cuenta las siguientes limitaciones y problemas:  
@@ -103,7 +103,7 @@ ms.locfileid: "54136065"
   
  Considere también los siguientes problemas:  
   
--   Oracle y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratan NULL de manera diferente: Oracle permite varias filas con valores NULL para las columnas que admiten valores NULL y se incluyen en restricciones o índices únicos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplica la singularidad solo permitiendo una única fila con un valor NULL para la misma columna. No puede publicar un índice o restricción únicos que permita el valor NULL porque se produciría una infracción de restricción en el suscriptor si la tabla publicada contiene varias filas con valores NULL para cualquiera de las columnas incluidas en el índice o restricción.  
+-   Oracle y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tratan NULL de manera diferente: Oracle admite varias filas con valores NULL para las columnas que permiten NULL y se incluyen en restricciones o índices únicos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplica la singularidad solo permitiendo una única fila con un valor NULL para la misma columna. No puede publicar un índice o restricción únicos que permita el valor NULL porque se produciría una infracción de restricción en el suscriptor si la tabla publicada contiene varias filas con valores NULL para cualquiera de las columnas incluidas en el índice o restricción.  
   
 -   Al probar la unicidad, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] omite los espacios en blanco de un campo pero Oracle no.  
   

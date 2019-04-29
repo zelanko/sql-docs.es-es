@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13c1acf24212a236eae5e377a7febfd398e579c3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022011"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>Información de publicación, Todas las suscripciones (Publicación de combinación)
   En la pestaña **Todas las suscripciones** se muestra información sobre todas las suscripciones de la publicación de combinación seleccionada.  
@@ -25,13 +25,13 @@ ms.locfileid: "54135925"
 ## <a name="options"></a>Opciones  
  Para obtener información más detallada y las tareas de una suscripción, haga clic con el botón secundario en la fila de dicha suscripción y, a continuación, haga clic en una opción del menú contextual. Para cambiar la manera que la cuadrícula muestra los datos, haga clic con el botón secundario en la cuadrícula y, a continuación, haga clic en una de las opciones siguientes:  
   
--   **Ordenación**: Ordenar por una o varias columnas en el **ordenar columnas** cuadro de diálogo.  
+-   **Ordenar**: ordene por una o más columnas en el cuadro de diálogo **Ordenar columnas**.  
   
--   **Elegir columnas para mostrar**: Seleccionar qué columnas desea mostrar y el orden en que se mostrarán en el **Elegir columnas** cuadro de diálogo.  
+-   **Elegir columnas para mostrar**: seleccione las columnas que se van a mostrar y el orden en el que lo harán en el cuadro de diálogo **Elegir columnas**.  
   
--   **Filtro**: Filtrar las filas en la cuadrícula basándose en valores de columna en la **configuración del filtro** cuadro de diálogo.  
+-   **Filtro**: filtre las filas de la cuadrícula en función de los valores de columna del cuadro de diálogo **Configuración del filtro**.  
   
--   **Borrar filtro**: Borre cualquier configuración de la cuadrícula de filtro.  
+-   **Borrar filtro**: borre cualquier configuración de filtro para la cuadrícula.  
   
  La configuración del filtro es específica de cada cuadrícula. La selección y ordenación de las columnas se aplica a todas las cuadrículas del mismo tipo, como la cuadrícula de las publicaciones para cada Publicador.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "54135925"
  Los valores de estado **Con expiración en breve/Expirado** y **Mezcla de ejecución prolongada** solo se pueden mostrar si se han establecido umbrales. El valor de estado **Rendimiento crítico** solamente se puede mostrar después de realizar cinco sincronizaciones de suscripciones con el mismo tipo de conexión (acceso telefónico o LAN). Para obtener información sobre la medición del rendimiento y el establecimiento de umbrales, vea [Supervisar el rendimiento con el Monitor de replicación](monitor/monitor-performance-with-replication-monitor.md) y [Establecer umbrales y advertencias en el Monitor de replicación](monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
  **Suscripción**  
- El nombre de cada suscripción, en el formulario:*Nombredesuscriptor: Nombredebasededatosdesuscripción*.  
+ Nombre de cada suscripción, con el formato: *NombreDeSuscriptor: NombreDeBaseDeDatosDeSuscripción*.  
   
  **Nombre descriptivo**  
  Solo para[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. Descripción de cada suscripción. La descripción se escribe en el cuadro de diálogo **Propiedades de suscripción** o se especifica con el parámetro **@description** de [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) o [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Los usuarios normalmente usan la descripción como un "nombre descriptivo" o alias de la suscripción.  
@@ -103,7 +103,7 @@ ms.locfileid: "54135925"
   
 ## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
- [Ver información y realizar tareas con el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Visualización de información y realización de tareas mediante el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Monitoring Replication](monitoring-replication.md)  (Supervisar la replicación)  
  [Sincronización web para la replicación de mezcla](web-synchronization-for-merge-replication.md)  
   

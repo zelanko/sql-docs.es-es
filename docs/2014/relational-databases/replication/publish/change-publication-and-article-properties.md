@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 207f934a9fba6e60bf1903544b12c88b4924dc23
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021317"
 ---
 # <a name="change-publication-and-article-properties"></a>Cambiar las propiedades de la publicación y de los artículos
   Una vez creada una publicación, la mayoría de las propiedades de la publicación y de los artículos se pueden cambiar, aunque algunas requieren la regeneración de la instantánea o la reinicialización de las suscripciones. En este tema se ofrece información sobre todas las propiedades que requieren una de estas acciones o las dos si se cambian.  
@@ -93,7 +93,7 @@ ms.locfileid: "54135815"
 |Cambiar el propietario de la tabla de destino|**sp_changemergearticle**|**destination_owner**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
   
 ## <a name="see-also"></a>Vea también  
- [Preguntas más frecuentes sobre la administración de replicación](../administration/frequently-asked-questions-for-replication-administrators.md)   
+ [Preguntas más frecuentes para administradores de replicación](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Crear y aplicar una instantánea](../create-and-apply-the-snapshot.md)   
  [Reinicializar suscripciones](../reinitialize-subscriptions.md)   
  [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)   

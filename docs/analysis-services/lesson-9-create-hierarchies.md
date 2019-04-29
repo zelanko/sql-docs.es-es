@@ -1,5 +1,5 @@
 ---
-title: 'Lección 9: Creación de jerarquías | Microsoft Docs'
+title: 'Lección 9: Crear jerarquías | Microsoft Docs'
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: da8f3d0fb3f733c5a9307d633025bb67a1a4d8cb
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42791702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017264"
 ---
-# <a name="lesson-9-create-hierarchies"></a>Lección 9: Creación de jerarquías
+# <a name="lesson-9-create-hierarchies"></a>Lección 9: Crear jerarquías
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 En esta lección, creará jerarquías. Las jerarquías son grupos de columnas dispuestas en niveles; por ejemplo, una jerarquía Geografía puede tener subniveles para País, Provincia y Ciudad. Las jerarquías pueden aparecer por separado de otras columnas en una lista de campos de la aplicación cliente de informes, lo que facilita la navegación de los usuarios del cliente y su inclusión en un informe. Para obtener más información, consulte [jerarquías](../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
@@ -26,7 +26,7 @@ Para crear jerarquías, usará el Diseñador de modelos en *vista de diagrama*. 
 Tiempo estimado para completar esta lección: **20 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
-Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [lección 8: crear perspectivas](../analysis-services/lesson-8-create-perspectives.md).  
+Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 8: Crear perspectivas](../analysis-services/lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Crear jerarquías  
   
@@ -45,7 +45,7 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
   
 5.  Haga clic en el **ModelName** columna > **agregar a jerarquía**y, a continuación, seleccione **categoría**. Lo mismo para **EnglishProductName**. Cambiar el nombre de estas columnas en la jerarquía **modelo** y **producto**.  
 
-    ![como tabulares-lesson9-categorías](../analysis-services/media/as-tabular-lesson9-category.png)
+    ![as-tabular-lesson9-category](../analysis-services/media/as-tabular-lesson9-category.png)
   
 #### <a name="to-create-hierarchies-in-the-dimdate-table"></a>Para crear jerarquías en la tabla DimDate  
   
@@ -73,6 +73,6 @@ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe
     *  DayNumberOfWeek
   
  ## <a name="whats-next"></a>¿Qué sigue?
-Vaya a la siguiente lección: [lección 10: crear particiones](../analysis-services/lesson-10-create-partitions.md). 
+Vaya a la lección siguiente: [Lección 10: Crear particiones](../analysis-services/lesson-10-create-partitions.md). 
   
   

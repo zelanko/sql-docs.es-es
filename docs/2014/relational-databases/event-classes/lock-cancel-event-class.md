@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 909db99964faaf2fc3aec8196db929bf61fc7c09
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023494"
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel (clase de eventos)
   La clase de evento **Lock:Cancel** indica que se ha cancelado la adquisición de un bloqueo de un recurso; por ejemplo, debido a la cancelación de una consulta.  

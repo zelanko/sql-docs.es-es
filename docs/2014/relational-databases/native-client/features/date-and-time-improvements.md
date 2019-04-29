@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 23d25be8de243cab1e6620bb48c9568b96599a40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046224"
 ---
 # <a name="date-and-time-improvements"></a>Mejoras en la fecha y la hora
   En este tema se describe la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con los nuevos tipos de datos de fecha y hora que se introdujeron en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  

@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ddb50c8993de72230e97cdde729416258272bb1e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046384"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Obtener acceso a información de diagnóstico en el registro de eventos extendidos
   A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seguimiento de acceso a datos y Native Client ([seguimiento de acceso a datos](https://go.microsoft.com/fwlink/?LinkId=125805)) se han actualizado para que sea más fácil obtener información de diagnóstico acerca de errores de conexión desde el anillo de conectividad información de rendimiento de búfer y aplicación del registro de eventos extendidos.  
@@ -26,7 +26,7 @@ ms.locfileid: "53351493"
 >  Esta función está dirigida únicamente a la solución de problemas y al diagnóstico, además es posible que no sea adecuada para fines de auditoría o seguridad.  
   
 ## <a name="remarks"></a>Comentarios  
- Para las operaciones de conexión, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enviará un identificador de conexión de cliente. Si se produce un error en la conexión, puede tener acceso al búfer de anillo de conectividad ([solucionar problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](https://go.microsoft.com/fwlink/?LinkId=207752)) y busque el `ClientConnectionID` campo y obtener información de diagnóstico el Error de conexión. Los identificadores de conexión del cliente se registran en el búfer de anillo únicamente si se produce un error. (Si se produce un error en una conexión antes de enviar el paquete de inicio de sesión previo, no se generará un identificador de conexión del cliente.) El identificador de conexión del cliente es un GUID de 16 bytes. Asimismo, puede buscar el identificador de conexión del cliente en el destino de salida de eventos extendidos, si se agrega la acción `client_connection_id` a los eventos de una sesión de eventos extendidos. Puede habilitar el seguimiento de acceso a datos, volver a ejecutar el comando de conexión y observar el campo de `ClientConnectionID` en el seguimiento de acceso a datos de una operación que no se realizó correctamente, si necesita asistencia adicional de diagnóstico.  
+ Para las operaciones de conexión, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enviará un identificador de conexión de cliente. Si se produce un error en la conexión, puede tener acceso al búfer de anillo de conectividad ([solucionar problemas de conectividad en SQL Server 2008 con el búfer de anillo de conectividad](https://go.microsoft.com/fwlink/?LinkId=207752)) y busque el `ClientConnectionID` campo y obtener información de diagnóstico el Error de conexión. Los identificadores de conexión del cliente se registran en el búfer de anillo únicamente si se produce un error. (Si falla una conexión antes de enviar la estructura del paquete, un identificador de conexión de cliente no se generará.) El identificador de conexión de cliente es un GUID de 16 bytes. Asimismo, puede buscar el identificador de conexión del cliente en el destino de salida de eventos extendidos, si se agrega la acción `client_connection_id` a los eventos de una sesión de eventos extendidos. Puede habilitar el seguimiento de acceso a datos, volver a ejecutar el comando de conexión y observar el campo de `ClientConnectionID` en el seguimiento de acceso a datos de una operación que no se realizó correctamente, si necesita asistencia adicional de diagnóstico.  
   
  Si está utilizando ODBC en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client y una conexión se realiza correctamente, el cliente puede obtener Id. de conexión mediante el uso de la `SQL_COPT_SS_CLIENT_CONNECTION_ID` con el atributo [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md).  
   

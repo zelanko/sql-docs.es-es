@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: aa0e9f6eb8e2a02bb92db50eaf11dde60d8e8f12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913290"
 ---
 # <a name="mssqlserver7932"></a>MSSQLSERVER_7932
     
@@ -30,7 +30,7 @@ ms.locfileid: "48140885"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_FS_ROWSET_IN_WRONG_FILEGROUP|  
-|Texto del mensaje|Error de tabla: el id. de directorio FILESTREAM para el id. de objeto O_ID, id. de índice I_ID e id. de partición PN_ID está en el grupo de archivos FG_ID1, pero debería estar en el grupo de archivos FG_ID2.|  
+|Texto del mensaje|Error de tabla: El directorio FileStream F_ID de Id. de objeto ID O_ID, ID. de índice en el grupo de archivos FG_ID1 partición PN_ID, pero debe estar en el grupo de archivos FG_ID2.|  
   
 ## <a name="explanation"></a>Explicación  
  Durante DBCC CHECKDB, se detectó que el almacenamiento FILESTREAM para el objeto especificado estaba en un grupo de archivos incorrecto. Los metadatos del objeto podrían haberse dañado.  

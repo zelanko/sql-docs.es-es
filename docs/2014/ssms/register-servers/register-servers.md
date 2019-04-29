@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10cf7256c5190f9ba94dff70118f43f0ad926aa4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049321"
 ---
 # <a name="register-servers"></a>Registrar servidores
   Registrar un servidor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permite almacenar la información de conexión del servidor para futuras conexiones. Hay tres formas de registrar un servidor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

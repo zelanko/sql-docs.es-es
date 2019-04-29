@@ -1,23 +1,26 @@
 ---
 title: NS$&lt;nombre del servicio&gt; propiedades (pestaña servicio) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 1042eeefb53b16573fd13eb6f0449eeda4688f3a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049612"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>Propiedades de NS$&lt;nombre de servicio&gt; (pestaña Servicio)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Éste es el servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)] . Los valores de propiedades en color gris claro no se pueden modificar con esta aplicación.  
   
 ## <a name="options"></a>Opciones  
@@ -47,9 +50,9 @@ ms.locfileid: "52757667"
   
 -   Manual: Este servicio no se inicia automáticamente cuando se inicia el equipo. Debe iniciarlo mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otra herramienta.  
   
--   Automático: El servicio intenta iniciarse cuando se inicia el equipo.  
+-   Automático: Este servicio intenta iniciarse cuando se inicia el equipo.  
   
--   Deshabilitado: No se puede iniciar el servicio.  
+-   Deshabilitado: No se puede iniciar este servicio.  
   
  **Estado**  
  Indica si el servicio está en ejecución, detenido o deshabilitado.  

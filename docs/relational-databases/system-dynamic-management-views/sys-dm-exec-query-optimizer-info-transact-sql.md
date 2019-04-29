@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013213"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "47718643"
   
 |Nombre|Tipo de datos|Descripción|  
 |----------|---------------|-----------------|  
-|**Contador**|**nvarchar(4000)**|Nombre del evento de estadísticas del optimizador.|  
-|**aparición**|**bigint**|Número de repeticiones del evento de optimización para este contador.|  
-|**Valor**|**float**|Valor promedio de la propiedad por repetición del evento.|  
+|**counter**|**nvarchar(4000)**|Nombre del evento de estadísticas del optimizador.|  
+|**occurrence**|**bigint**|Número de repeticiones del evento de optimización para este contador.|  
+|**value**|**float**|Valor promedio de la propiedad por repetición del evento.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
 ## <a name="permissions"></a>Permisos  
@@ -78,7 +78,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE 
 |contains subquery|Número de optimizaciones de una consulta que contiene al menos una subconsulta.|No aplicable|  
 |unnest failed|Solo para uso interno|Solo para uso interno|  
 |tablas|Número total de optimizaciones.|Número promedio de tablas referenciadas por consulta optimizada.|  
-|sugerencias|Número de veces que se ha especificado alguna sugerencia. Las sugerencias contadas incluyen: sugerencias de consulta JOIN, GROUP, UNION y FORCE ORDER, la opción de conjunto FORCE PLAN y las sugerencias de combinación.|No aplicable|  
+|sugerencias|Número de veces que se ha especificado alguna sugerencia. Las sugerencias contadas incluyen: Sugerencias de consulta de combinación, grupo, UNION y FORCE ORDER, opción de conjunto FORCE PLAN y las sugerencias de combinación.|No aplicable|  
 |order hint|Número de veces que se ha especificado una sugerencia de orden forzada.|No aplicable|  
 |join hint|Número de veces que una sugerencia de combinación ha forzado el algoritmo de combinación.|No aplicable|  
 |view reference|Número de veces que se ha hecho referencia a una vista en una consulta|No aplicable|  
@@ -102,7 +102,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE 
 SELECT * FROM sys.dm_exec_query_optimizer_info;  
 ```  
   
-### <a name="b-viewing-the-total-number-of-optimizations"></a>B. Ver el número total de optimizaciones  
+### <a name="b-viewing-the-total-number-of-optimizations"></a>b. Ver el número total de optimizaciones  
  ¿Cuántas optimizaciones se realizan?  
   
 ```  

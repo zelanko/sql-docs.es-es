@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1cef615f2009809cb84d62b284d2c08167b6ba86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033207"
 ---
 # <a name="positions-collection-ado-md"></a>Colección de posiciones (ADO MD)
 Contiene el [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md) objetos que definen un punto de un eje.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e1c5cfeece57c200763402a1300a0f00afb92aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062702"
 ---
 # <a name="ado-md-object-model"></a>Modelo de objetos ADO MD
 Este tema describe cómo los objetos se representan y relacionados de ADO MD.  

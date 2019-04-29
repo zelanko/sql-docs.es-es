@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: e214a46adece1bcee940f57805db897d1c8c76db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011317"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server y claves de cifrado de base de datos (motor de base de datos)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa claves de cifrado para proteger los datos, las credenciales y la información de conexión que se almacena en una base de datos servidor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiene dos tipos de claves: *simétricas* y *asimétricas*. Las claves simétricas utilizan la misma contraseña para cifrar y descifrar los datos. Las claves asimétricas usan una contraseña para cifrar los datos (denominada clave *pública* ) y otra para descifrar los datos (denominada clave *privada* ).  
@@ -31,9 +31,9 @@ ms.locfileid: "48160705"
   
  La clave maestra de base de datos es una clave simétrica que se utiliza para proteger las claves privadas de certificados y las claves asimétricas presentes en la base de datos. También se puede utilizar para cifrar los datos, pero sus limitaciones de longitud hacen que sea más práctico utilizar una clave simétrica.  
   
- Al crearla, la clave maestra se cifra mediante el algoritmo Triple DES y una contraseña proporcionada por el usuario. Para habilitar el descifrado automático de la clave maestra, se cifra una copia de la clave mediante la SMK. Se almacena en la base de datos donde se utiliza y en el `master` base de datos del sistema.  
+ Al crearla, la clave maestra se cifra mediante el algoritmo Triple DES y una contraseña proporcionada por el usuario. Para habilitar el descifrado automático de la clave maestra, se cifra una copia de la clave mediante la SMK. Esta copia se almacena en la base de datos donde se utiliza y en la base de datos del sistema `master`.  
   
- La copia de la DMK almacenada en el `master` base de datos del sistema se actualiza automáticamente cada vez que se modifica la DMK. Sin embargo, se puede cambiar este comportamiento predeterminado mediante el uso de la `DROP ENCRYPTION BY SERVICE MASTER KEY` opción de la `ALTER MASTER KEY` instrucción. Para abrir una DMK que no se haya cifrado con la clave maestra de servicio, debe utilizarse la instrucción `OPEN MASTER KEY` y una contraseña.  
+ La copia de la DMK almacenada en la base de datos del sistema `master` se actualiza automáticamente siempre que se modifica la DMK. Sin embargo, este comportamiento predeterminado se puede cambiar con la opción `DROP ENCRYPTION BY SERVICE MASTER KEY` de la instrucción `ALTER MASTER KEY`. Para abrir una DMK que no se haya cifrado con la clave maestra de servicio, debe utilizarse la instrucción `OPEN MASTER KEY` y una contraseña.  
   
 ## <a name="managing-sql-server-and-database-keys"></a>Administrar las claves de SQL Server y las claves de las bases de datos  
  La administración de las claves de cifrado consiste en crear nuevas claves de base de datos, crear una copia de seguridad de las claves del servidor y de las bases de datos, y saber cuándo y cómo se deben restaurar, eliminar o cambiar dichas claves.  

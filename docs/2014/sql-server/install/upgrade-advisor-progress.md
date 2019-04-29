@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7efb9258203efcffeb98bf4404faee5f80aff9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016340"
 ---
 # <a name="upgrade-advisor-progress"></a>Progreso del Asesor de actualizaciones
   El análisis del Asesor de actualizaciones se inicia con un analizador dedicado que realiza un análisis de cada componente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que seleccionó. Cuando se analizan los componentes, se informa del progreso en el **progreso** cuadro de diálogo.  
@@ -47,8 +47,8 @@ ms.locfileid: "48160365"
 >  Los informes anteriores se guardan cada vez que se analice un servidor. Los informes se guardan con la marca de tiempo como nombre de archivo. El visor de informes muestra los cinco últimos informes guardados.  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo: iniciar el Asesor de actualizaciones](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
- [Cómo: ejecutar el Asistente para análisis del Asesor](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Cómo: Iniciar el Asesor de actualizaciones](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [Cómo: Ejecute al Asistente para análisis del Asesor](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Componentes de SQL Server](../../../2014/sql-server/install/sql-server-components.md)   
  [Actualización del Asistente para la referencia de la interfaz de usuario](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

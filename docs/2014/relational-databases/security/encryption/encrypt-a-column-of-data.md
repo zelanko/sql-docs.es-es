@@ -14,11 +14,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: c6615baf7d9a5bf228b75a0e8cf520f86bf2109c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011652"
 ---
 # <a name="encrypt-a-column-of-data"></a>Cifrar una columna de datos
   En este tema se describe cómo cifrar una columna de datos utilizando el cifrado simétrico en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -31,11 +31,11 @@ ms.locfileid: "48066521"
   
 -   [Para cifrar una columna de datos, usando Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Los siguientes permisos son necesarios para realizar los pasos siguientes:  
   
 -   Permiso CONTROL en la base de datos.  

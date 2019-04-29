@@ -1,5 +1,5 @@
 ---
-title: SQLPutData | Documentos de Microsoft
+title: SQLPutData | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046630"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   Las restricciones siguientes se aplican al usar SQLPutData para enviar más de 65.535 bytes de datos (para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 4. 21a) o 400 KB de datos (para SQL Server versión 6.0 y versiones posterior) para un SQL_LONGVARCHAR (`text`), SQL_WLONGVARCHAR (`ntext`) o SQL_LONGVARBINARY (`image`) columna:  

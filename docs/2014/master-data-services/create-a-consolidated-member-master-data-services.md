@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cf154f3437ed22be932fa37470f59049aea09850
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925340"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Crear un miembro consolidado (Master Data Services)
   En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cree un miembro consolidado si desea un nodo primario para una jerarquía explícita. Los miembros consolidados pueden tener sus propios atributos. Se utilizan para la agrupación. Tal y como se muestra en el ejemplo siguiente, los miembros consolidados pueden usarse para grupos de cuentas que tienen cuentas en ellos.  

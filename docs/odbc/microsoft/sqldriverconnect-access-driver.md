@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9a71874c91e48c25072fbfed8f66a312d65b4697
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048479"
 ---
 # <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect (controlador de Access)
 > [!NOTE]  
@@ -37,4 +37,4 @@ ms.locfileid: "47626389"
   
 |Controlador|Palabras clave necesarias|Ejemplos|  
 |------------|-----------------------|--------------|  
-|Microsoft Access|Controlador, DBQ|Driver = {controlador de Microsoft Access (*.mdb)}; DBQ = c:\\\temp\\\sample.mdb|
+|Microsoft Access|Controlador, DBQ|Driver={Microsoft Access Driver (*.mdb)}; DBQ=c:\\\temp\\\sample.mdb|

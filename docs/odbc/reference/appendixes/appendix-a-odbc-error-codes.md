@@ -1,5 +1,5 @@
 ---
-title: 'Apéndice A: códigos de Error ODBC | Microsoft Docs'
+title: 'Apéndice A: Códigos de Error ODBC | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e93e9dd8da111d367657d99dfba19513ff7f7539
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026792"
 ---
-# <a name="appendix-a-odbc-error-codes"></a>Apéndice A: Códigos de error ODBC 
+# <a name="appendix-a-odbc-error-codes"></a>Apéndice A: Códigos de error de ADO
 En este tema se describe los valores de SQLSTATE para ODBC 3. *x*. Para obtener más información sobre ODBC 3. *x* valores de SQLSTATE, consulte [asignaciones SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md).  
   
- **SQLGetDiagRec** o **SQLGetDiagField** devuelve los valores de SQLSTATE, tal como se define por Open Group *Data Management: lenguaje de consulta estructurado (SQL), versión 2* (marzo de 1995). Los valores SQLSTATE son cadenas que contiene cinco caracteres. En la tabla siguiente se muestra los valores SQLSTATE que puede devolver un controlador para **SQLGetDiagRec**.  
+ **SQLGetDiagRec** o **SQLGetDiagField** devuelve los valores de SQLSTATE, tal como se define por Open Group *administración de datos: Lenguaje de consulta (SQL), versión 2 estructurado* (marzo de 1995). Los valores SQLSTATE son cadenas que contiene cinco caracteres. En la tabla siguiente se muestra los valores SQLSTATE que puede devolver un controlador para **SQLGetDiagRec**.  
   
  El valor de cadena de caracteres devuelto para un SQLSTATE consta de un valor de la clase de dos caracteres seguido por un valor de subclase de tres caracteres. El valor de "01" clase indica una advertencia y está acompañado por un código de retorno SQL_SUCCESS_WITH_INFO. Los valores de clase que no sea "01", excepto la clase "IM", indican un error y están acompañados por un valor devuelto de SQL_ERROR. La clase "IM" es específica para las advertencias y errores que se derivan de la implementación del propio ODBC. El valor de subclase "000" en cualquier clase indica que no hay ninguna subclase para ese SQLSTATE. Define la asignación de valores de clase y subclase SQL-92.  
   
@@ -106,7 +106,7 @@ En este tema se describe los valores de SQLSTATE para ODBC 3. *x*. Para obtener 
 |HY011|Atributo no se puede establecer ahora|**SQLBulkOperations**<br /><br /> **SQLParamData**<br /><br /> **QLSetPos**<br /><br /> **SQLSetStmtAttr**|  
 |HY012|Código de operación de transacción no válido|**SQLEndTran**|  
 |HY013|Error de administración de memoria|Todas las funciones ODBC, excepto:<br /><br /> **SQLGetDiagField**<br /><br /> **SQLGetDiagRec**|  
-|HY014 SE|El límite de número de identificadores superado|**SQLAllocHandle**|  
+|HY014|El límite de número de identificadores superado|**SQLAllocHandle**|  
 |HY015|Nombre de cursor no disponible|**SQLGetCursorName**|  
 |HY016|No se puede modificar un descriptor de fila de implementación|**SQLCopyDesc**<br /><br /> **SQLSetDescField**<br /><br /> **SQLSetDescRec**|  
 |HY017|Uso no válido de un identificador de descriptor asignado automáticamente|**SQLFreeHandle**<br /><br /> **SQLSetStmtAttr**|  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 81cdf1738d35d89c35c34500900be79f7702f877
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045957"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Controladores de escritorio de la base de datos ODBC de Microsoft
 ODBC es una API que usa el lenguaje de consulta estructurado (SQL) como el idioma de acceso de la base de datos. Puede tener acceso a una amplia variedad de sistemas de administración de bases de datos (DBMS) con el mismo código de origen ODBC que directamente se incorpora en el código fuente de la aplicación. Con los controladores de base de datos de Microsoft ODBC escritorio, un usuario de una aplicación habilitada para ODBC puede abrir, consulta y actualizar una base de datos de escritorio a través de la interfaz ODBC.  
@@ -38,7 +38,7 @@ ODBC es una API que usa el lenguaje de consulta estructurado (SQL) como el idiom
   
 -   dBASE  
   
--   Texto  
+-   Text  
   
  Consulte [Visual FoxPro ODBC Driver](../../odbc/microsoft/visual-foxpro-odbc-driver.md) para obtener documentación detallada sobre el controlador de ODBC de Microsoft Visual FoxPro®.  
   

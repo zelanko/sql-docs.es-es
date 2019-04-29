@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 8cd45bd5a03cd50053ffe436fbf62d01019c2ae7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011558"
 ---
 # <a name="restore-a-database-master-key"></a>Restaurar una clave maestra de base de datos
   En este tema se describe cómo restaurar la clave maestra de una base de datos en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "48056995"
   
 -   [Para restaurar la clave maestra de una base de datos utilizando Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48056995"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Necesita el permiso CONTROL en la base de datos.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio con Transact-SQL  

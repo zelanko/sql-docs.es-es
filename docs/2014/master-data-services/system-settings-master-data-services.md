@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6e8f239afa5d26ee4a3d6d97a24f58a46f1e3334
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62923184"
 ---
 # <a name="system-settings-master-data-services"></a>Configuración del sistema (Master Data Services)
   Para todas las aplicaciones web y servicios web asociados a la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , puede configurar las opciones del sistema.  
@@ -106,7 +106,7 @@ ms.locfileid: "53370207"
 |**Dirección URL de Master Data Manager para notificaciones**|**MDMRootURL**|La dirección URL de la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], que se usa en el vínculo en las notificaciones por correo electrónico; por ejemplo, http://constoso/mds.|  
 |**Intervalo de las notificaciones de correo electrónico**|**NotificationInterval**|La frecuencia, en segundos, con la que se envían las notificaciones de correo electrónico. El valor predeterminado es **120** segundos (2 minutos).|  
 |**Número de notificaciones en un solo correo electrónico**|**NotificationsPerEmail**|El número máximo de problemas de validación que se enumerarán en un solo correo electrónico de notificación. Los problemas adicionales, si los hay, no se incluyen en el correo electrónico, pero están disponibles en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].|  
-|**Formato de correo electrónico predeterminado**|**EmailFormat**|El formato de todas las notificaciones de correo electrónico. El valor predeterminado es **HTML** o **1**. La configuración de la base de datos **2** indica **Texto**.<br /><br /> Nota: Puede invalidar esta opción para un usuario individual en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cambiando y guardando el **formato de correo electrónico** en el usuario **General** ficha.|  
+|**Formato de correo electrónico predeterminado**|**EmailFormat**|El formato de todas las notificaciones de correo electrónico. El valor predeterminado es **HTML** o **1**. La configuración de la base de datos **2** indica **Texto**.<br /><br /> Nota: Puede invalidar esta opción para un usuario individual en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], si cambia y guarda el **Formato de correo electrónico** en la pestaña **General** del usuario.|  
 |**Expresión regular para la dirección de correo electrónico**|**EmailRegExPattern**|En el área funcional de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , expresión regular que se utiliza para validar la dirección de correo electrónico escrita en la pestaña **General** del usuario. Para obtener más información sobre las expresiones regulares, consulte [Elementos del lenguaje de expresiones regulares](https://go.microsoft.com/fwlink/?LinkId=164401) en MSDN Library.|  
 |**Cuenta de Correo electrónico de base de datos**|**EmailProfilePrincipalAccount**|Muestra la cuenta de Correo electrónico de base de datos que utilizar al enviar notificaciones de correo electrónico. El perfil predeterminado es **mds_email_user**.|  
 |**Perfil de Correo electrónico de base de datos**|**DatabaseMailProfile**|El perfil de Correo electrónico de base de datos que utilizar al enviar notificaciones de correo electrónico. Está en blanco de forma predeterminada.|  

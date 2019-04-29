@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2835396a7b8266d812ca5a1049679c7d82549389
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63024356"
 ---
 # <a name="order-by-clause-limitations"></a>ORDEN por cláusula limitaciones
 Si una instrucción SELECT contiene una cláusula GROUP BY y una cláusula ORDER BY, la cláusula ORDER BY puede contener solo una columna del conjunto de resultados o una expresión en la cláusula GROUP BY.

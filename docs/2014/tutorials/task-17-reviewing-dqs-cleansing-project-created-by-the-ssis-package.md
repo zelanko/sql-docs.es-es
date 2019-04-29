@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4653ce040e19b82b9e70daa7ebfc02047d71b194
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057856"
 ---
-# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Tarea 17: revisar el proyecto de limpieza de DQS creado por el paquete SSIS
+# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Tarea 17: Revisión del proyecto de limpieza de DQS creado por el paquete SSIS
   En esta tarea, abrirá el proyecto de DQS creado por el paquete SSIS en el Cliente DQS, revisará los resultados del proceso de limpieza y, opcionalmente, realizará una limpieza interactiva y exportará los resultados.  
   
 1.  Iniciar **Data Quality Client**.  
@@ -26,7 +26,7 @@ ms.locfileid: "56024446"
   
 3.  Ordenar la lista según **hora de inicio de la actividad** para ver el registro más reciente.  
   
-4.  Observe que aparece un nombre de proyecto en el formato siguiente: **CleanseAndCurate.Cleanse Supplier Data.GUID**.  
+4.  Tenga en cuenta que ve el nombre del proyecto en el formato siguiente: **CleanseAndCurate.Cleanse Supplier Data.GUID**.  
   
      ![Proyecto de limpieza de DQS creado por paquete SSIS](../../2014/tutorials/media/et-reviewingdqscpcreatedbythessispackage.jpg "proyecto de limpieza de DQS creado por paquete SSIS")  
   
@@ -38,7 +38,7 @@ ms.locfileid: "56024446"
   
 8.  En la página principal de **cliente DQS**, haga clic en **Abrir proyecto de calidad de datos** en el **proyectos de calidad de datos** panel.  
   
-9. En la lista de proyectos, seleccione el proyecto creado por el componente Limpieza de DQS de SSIS. El nombre del proyecto debe tener este formato:  **CleanseAndCurate.Cleanse Supplier Data.GUID (en color rojo)**. Es posible que deba ordenar la lista según **fecha de creación** columna y buscar el registro más reciente.  
+9. En la lista de proyectos, seleccione el proyecto creado por el componente Limpieza de DQS de SSIS. El nombre del proyecto debe tener el formato:  **CleanseAndCurate.Cleanse Supplier Data.GUID (en color rojo)**. Es posible que deba ordenar la lista según **fecha de creación** columna y buscar el registro más reciente.  
   
 10. Haga clic en **Siguiente**.  
   

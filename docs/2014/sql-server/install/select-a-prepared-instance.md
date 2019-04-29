@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a956d03695eea8ed76151daf0d563ea649e5180
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931616"
 ---
 # <a name="select-a-prepared-instance"></a>Seleccionar una instancia preparada
   Use la página **Seleccionar una instancia preparada** para especificar la instancia preparada que desea completar.  
@@ -26,7 +26,7 @@ ms.locfileid: "48125243"
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  **Seleccione un identificador de instancia**  
- La lista incluye todas las instancias preparadas que puede completar en el equipo en el que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Seleccione una instancia preparada que desee completar.  
+ La lista incluye todas las instancias preparadas que puede completar en el equipo en el que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Seleccione una instancia preparada que desee completar.  
   
  **Instancias instaladas.**  
  Incluye las instancias instaladas, preparadas y completadas.  

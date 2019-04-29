@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062413"
 ---
 # <a name="sqldriverconnect-function"></a>Función SQLDriverConnect
 **Conformidad**  
@@ -147,11 +147,11 @@ SQLRETURN SQLDriverConnect(
   
  *cadena de conexión* :: = *cadena vacía*[;] &#124; *atributo*[;] &#124; *atributo*; *cadena de conexión*  
   
- *cadena vacía* :: =*atributo* :: = *palabra clave de atributo*=*atributo-valor* &#124; DRIVER = [{}] *valor del atributo*[}]  
+ *empty-string* ::=*attribute* ::= *attribute-keyword*=*attribute-value* &#124; DRIVER=[{]*attribute-value*[}]  
   
- *palabra clave de atributo* :: = DSN &#124; UID &#124; PWD &#124; *-definido-atributo-palabra clave driver*  
+ *attribute-keyword* ::= DSN &#124; UID &#124; PWD &#124; *driver-defined-attribute-keyword*  
   
- *valor del atributo* :: = *cadena de caracteres*  
+ *attribute-value* ::= *character-string*  
   
  *driver-defined-attribute-keyword* ::= *identifier*  
   
@@ -171,7 +171,7 @@ SQLRETURN SQLDriverConnect(
 |-------------|---------------------------------|  
 |**DSN**|Nombre de un origen de datos devuelto por **SQLDataSources** o el cuadro de diálogo orígenes de datos de **SQLDriverConnect**.|  
 |**FILEDSN**|Nombre de un archivo de DSN desde el que se generará una cadena de conexión del origen de datos. Estos orígenes de datos se denominan orígenes de datos de archivo.|  
-|**CONTROLADOR**|Descripción del controlador tal como lo devuelve el **SQLDrivers** función. Por ejemplo, Rdb o SQL Server.|  
+|**DRIVER**|Descripción del controlador tal como lo devuelve el **SQLDrivers** función. Por ejemplo, Rdb o SQL Server.|  
 |**UID**|Identificador de usuario.|  
 |**PWD**|La contraseña correspondiente para el identificador de usuario o una cadena vacía si no hay ninguna contraseña para el identificador de usuario (PWD =;).|  
 |**SAVEFILE**|El nombre de archivo de un archivo de DSN en el que se deben guardar los valores de atributo de palabras clave utilizadas en realizar la conexión correcta, está presente.|  

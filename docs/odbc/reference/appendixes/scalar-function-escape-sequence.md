@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0913458d683d7641145b262552e147033dbfc054
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032839"
 ---
 # <a name="scalar-function-escape-sequence"></a>Secuencia de Escape de la función escalar
 ODBC utiliza secuencias de escape para funciones escalares. La sintaxis de esta secuencia de escape es como sigue:  
@@ -36,12 +36,12 @@ ODBC utiliza secuencias de escape para funciones escalares. La sintaxis de esta 
   
  *Iniciador de esc de ODBC* fn *función escalar del terminador de esc de ODBC*  
   
- *función escalar* :: = *nombre de la función* (*lista de argumentos*)  
+ *scalar-function* ::= *function-name* (*argument-list*)  
   
- (Las definiciones de los elementos no terminales *nombre de la función* y *nombre de la función* (*lista de argumentos*) se derivan de la lista de funciones escalares en [ Apéndice E: funciones escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
+ (Las definiciones de los elementos no terminales *nombre de la función* y *nombre de la función* (*lista de argumentos*) se derivan de la lista de funciones escalares en [ Apéndice E: Funciones escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
   
- *Iniciador de esc de ODBC* :: = {  
+ *ODBC-esc-initiator* ::= {  
   
- *Terminador de esc de ODBC* :: =}  
+ *ODBC-esc-terminator* ::= }  
   
- Para determinar si el origen de datos es compatible con los procedimientos y el controlador admite la sintaxis de invocación del procedimiento ODBC, una aplicación puede llamar a **SQLGetInfo**. Para obtener más información, consulte [Apéndice E: funciones escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).
+ Para determinar si el origen de datos es compatible con los procedimientos y el controlador admite la sintaxis de invocación del procedimiento ODBC, una aplicación puede llamar a **SQLGetInfo**. Para obtener más información, consulte [Apéndice E: Funciones escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).

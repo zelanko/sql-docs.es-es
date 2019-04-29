@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c8e9ea6b068f39e9e1e63bb5e9831f977619367f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046160"
 ---
 # <a name="populate-full-text-indexes"></a>Rellenar índices de texto completo
   La creación y el mantenimiento de un índice de texto completo implica el rellenado del índice mediante un proceso denominado *rellenado* (también se denomina *rastreo*).  
@@ -211,7 +211,7 @@ GO
 ##  <a name="crawl"></a> Solución de problemas de errores en un rellenado de texto completo (rastreo)  
  Cuando se produce un error durante un rastreo, la función de registro de rastreo de la búsqueda de texto completo crea y mantiene un registro de rastreo, que es un archivo sin formato. Cada registro de rastreo se corresponde con un determinado catálogo de texto completo. En este caso, por los registros de rastreo de forma predeterminada para una instancia determinada, la primera instancia, se encuentran disponibles en %ProgramFiles%\Microsoft SQL Server\MSSQL12. Carpeta MSSQLSERVER\MSSQL\LOG. El archivo de registro de rastreo sigue el siguiente esquema de nomenclatura:  
   
- SQLFT\<DatabaseID >\<FullTextCatalogID >. REGISTRO [\<n >]  
+ SQLFT\<DatabaseID>\<FullTextCatalogID>.LOG[\<n>]  
   
  <`DatabaseID`>  
  El identificador de una base de datos. <`dbid`> es un número con ceros a cinco dígitos.  

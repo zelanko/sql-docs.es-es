@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53d8731ff9d5ef2484b652fc1c7c673ba9b3984
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061373"
 ---
-# <a name="tm-commit-tran-starting-event-class"></a>TM: COMMIT TRAN Starting, clase de evento
+# <a name="tm-commit-tran-starting-event-class"></a>TM: Clase de eventos Commit Tran Starting
   TM: Commit Tran Starting, clase de evento indica que se está iniciando una solicitud COMMIT TRANSACTION. La solicitud se envía desde el cliente a través de la interfaz de administración de transacciones. La columna EventSubClass indica si se reiniciará una nueva transacción una vez se confirme la transacción actual.  
   
 ## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM: COMMIT TRAN Starting columnas de datos de clase de eventos  

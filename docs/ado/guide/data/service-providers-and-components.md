@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 050d1c9ec8aa5a158d5c08fb77d3743e55567699
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062871"
 ---
 # <a name="service-providers-and-components"></a>Proveedores de servicios y componentes
 Los proveedores de servicios son componentes que extienden la funcionalidad de los proveedores de datos mediante la implementación de interfaces extendidas que no son compatibles de forma nativa con el almacén de datos.  
@@ -29,4 +29,4 @@ Los proveedores de servicios son componentes que extienden la funcionalidad de l
   
  Por ejemplo, un cursor de motor, como [el servicio de cursores para OLE DB](https://msdn.microsoft.com/57638feb-4ecd-4051-becb-8f828d21cf44), es un componente de servicio que puede consumir datos desde un almacén de datos secuencial, de solo avance para generar datos desplazables. Otros proveedores de servicio suele usadas ADO son el [proveedor Microsoft OLE DB persistencia (proveedor de servicios de ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (para guardar datos en un archivo), el [servicio de forma de datos de Microsoft para OLE DB (proveedor de servicios de ADO) ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (para jerárquica **conjuntos de registros**) y el [proveedor Microsoft OLE DB comunicación remota (proveedor de servicios de ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (para llamar a los proveedores de datos en un equipo remoto).  
   
- Para obtener más información acerca de los proveedores de servicio y los datos, vea [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md).
+ Para obtener más información acerca de los proveedores de servicio y los datos, vea [Apéndice A: Los proveedores](../../../ado/guide/appendixes/appendix-a-providers.md).

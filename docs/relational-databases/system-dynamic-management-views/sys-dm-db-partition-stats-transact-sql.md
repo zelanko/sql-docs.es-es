@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0221361bb3b2bb33748b20353c71931e07568f3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025126"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "47809183"
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Id. de la partición. Es único en la base de datos. Este es el mismo valor que el **partition_id** en el **sys.partitions** vista de catálogo|  
 |**object_id**|**int**|Id. de objeto de la tabla o vista indizada de la que esta partición forma parte.|  
-|**index_id**|**int**|Id. del montón o índice del que esta partición forma parte.<br /><br /> 0 = Montón<br /><br /> 1 = Índice clúster.<br /><br /> > 1 = Índice no clúster|  
+|**index_id**|**int**|Id. del montón o índice del que esta partición forma parte.<br /><br /> 0 = Montón<br /><br /> 1 = Índice clúster.<br /><br /> > 1 = índice no clúster|  
 |**partition_number**|**int**|Número de partición en base 1 en el índice o montón.|  
-|**in_row_data_page_count**|**bigint**|Número de páginas en uso para almacenar datos consecutivos en esta partición. Si la partición forma parte de un montón, el valor es el número de páginas de datos en el montón. Si la partición forma parte de un índice, el valor es el número de páginas en el nivel hoja. (Las páginas no hojas en B-tree no están incluidas en el recuento.) En cualquier caso, las páginas IAM (Mapa de asignación de índices) no están incluidas. Siempre es 0 para un índice de almacén de columnas optimizado de memoria xVelocity.|  
+|**in_row_data_page_count**|**bigint**|Número de páginas en uso para almacenar datos consecutivos en esta partición. Si la partición forma parte de un montón, el valor es el número de páginas de datos en el montón. Si la partición forma parte de un índice, el valor es el número de páginas en el nivel hoja. (Las páginas no hoja del árbol B no se incluyen en el recuento). No se incluyen las páginas IAM (mapa de asignación de índice) en cualquier caso. Siempre es 0 para un índice de almacén de columnas optimizado de memoria xVelocity.|  
 |**in_row_used_page_count**|**bigint**|Número total de páginas en uso para almacenar y administrar datos consecutivos en esta partición. Este recuento incluye páginas no hoja de árbol B, las páginas IAM y todas las páginas incluidas en el **in_row_data_page_count** columna. Siempre es 0 para un índice de almacén de columnas.|  
 |**in_row_reserved_page_count**|**bigint**|Número total de páginas reservadas para almacenar y administrar datos consecutivos en esta partición, independientemente de si las páginas están en uso o no. Siempre es 0 para un índice de almacén de columnas.|  
 |**lob_used_page_count**|**bigint**|Número de páginas en uso para almacenar y administrar fuera de la fila **texto**, **ntext**, **imagen**, **varchar (max)**, **nvarchar (máx.)** , **varbinary (max)**, y **xml** columnas dentro de la partición. Las páginas IAM están incluidas.<br /><br /> Número total de LOBs utilizados para almacenar y administrar el índice de almacén de columnas en la partición.|  
@@ -81,7 +81,7 @@ SELECT * FROM sys.dm_db_partition_stats;
 GO  
 ```  
   
-### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>B. Devolver todos los recuentos de todas las particiones de una tabla y sus índices  
+### <a name="b-returning-all-counts-for-all-partitions-of-a-table-and-its-indexes"></a>b. Devolver todos los recuentos de todas las particiones de una tabla y sus índices  
  En el siguiente ejemplo se muestran todos los recuentos de todas las particiones de la tabla `HumanResources.Employee` y sus índices.  
   
 ```  

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7362431d33af429090497e9502daf1e1730fb768
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62925217"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Crear un atributo de fecha (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un atributo de fecha cuando desee que los usuarios escriban una fecha como un valor de atributo.  

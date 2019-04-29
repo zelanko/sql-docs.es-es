@@ -1,5 +1,5 @@
 ---
-title: Representación de perspectiva (Tabular) | Documentos de Microsoft
+title: Representación de perspectiva (Tabular) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ee406b4a5f1f9e366457ac150f10da226551f79
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019306"
 ---
 # <a name="perspective-representation-tabular"></a>Representación de perspectiva (tabular)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Una perspectiva es un mecanismo para simplificar o centrar el modelo en una parte menor de él para la aplicación cliente.  
   
- Vea [representación de perspectiva (Tabular)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) para obtener una explicación detallada acerca de cómo crear y manipular la representación de perspectiva.  
+ Consulte [representación de perspectiva (Tabular)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/representation/perspective-representation-tabular.md) para obtener una explicación detallada sobre cómo crear y manipular la representación de perspectiva.  
   
 > [!WARNING]  
 >  Las perspectivas no son un mecanismo de seguridad. Se podrá tener acceso a los objetos que están fuera de la perspectiva mediante otras interfaces.  
@@ -29,7 +29,7 @@ ms.locfileid: "34039869"
  Por lo que respecta a los objetos de AMO, las representaciones de perspectivas tienen una relación de asignación uno a uno con <xref:Microsoft.AnalysisServices.Perspective> y no se necesitan otros objetos principales de AMO.  
   
 ### <a name="perspective-in-amo"></a>Perspectiva de AMO  
- En el fragmento de código siguiente se muestra cómo se crea una perspectiva en un modelo tabular. El elemento clave de este fragmento de código es perspectiveElements. Este objeto es una representación gráfica de todos los objetos del modelo tabular que se exponen al usuario. *perspectiveElements* contiene 4 columnas y para este escenario son relevantes únicamente las columnas 1, 2 y 3. La columna 1 contiene el tipo de elemento mostrado - elementTypeValue-; la columna 2 contiene el nombre completo del elemento --, que probablemente tendrá que analizarse para poder incorporar el elemento en la perspectiva; la columna 3 contiene un elemento de casilla - checkedElement-, que indica si el elemento forma parte de la perspectiva o no.  
+ En el fragmento de código siguiente se muestra cómo se crea una perspectiva en un modelo tabular. El elemento clave de este fragmento de código es perspectiveElements. Este objeto es una representación gráfica de todos los objetos del modelo tabular que se exponen al usuario. *perspectiveElements* contiene 4 columnas y para este escenario, solo las columnas 1, 2 y 3 son relevantes. La columna 1 contiene el tipo de elemento mostrado - elementTypeValue-; la columna 2 contiene el nombre completo del elemento --, que probablemente tendrá que analizarse para poder incorporar el elemento en la perspectiva; la columna 3 contiene un elemento de casilla - checkedElement-, que indica si el elemento forma parte de la perspectiva o no.  
   
 ```  
   

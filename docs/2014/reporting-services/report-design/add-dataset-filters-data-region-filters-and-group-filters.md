@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75136807b3bf87d143ef037dcdf4c865f73a1f48
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021306"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Agregar filtros de conjunto de datos, filtros de región de datos y filtros de grupo (Generador de informes y SSRS)
   En un informe, un filtro es una parte de un conjunto de datos, una región de datos o un grupo de regiones de datos que se crea para restringir los datos que se usan en el informe. Los filtros pueden ayudarle a controlar los datos de informe si no puede cambiar la consulta de conjunto de datos, por ejemplo si usa un conjunto de datos compartido.  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a99592210ff315db026d60b8743d4a3bca13c969
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061633"
 ---
 # <a name="fetching-rows-with-sqlbulkoperations"></a>Capturar filas con SQLBulkOperations
 Datos pueden ser volver a capturar en un conjunto de filas mediante marcadores mediante una llamada a **SQLBulkOperations.** Las filas que se capturará se identifican mediante los marcadores en una columna de marcador enlazado. Las columnas con un valor de SQL_COLUMN_IGNORE no se han recuperado.  

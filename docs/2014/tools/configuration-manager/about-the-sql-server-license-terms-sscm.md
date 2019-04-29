@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035324"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Acerca de los términos de licencia de SQL Server (SSCM)
   Los términos de licencia de software de [!INCLUDE[msCoName](../../includes/msconame-md.md)]se copian en el equipo local cuando se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el caso de que se instalen en el mismo equipo varias instancias de la misma edición e idioma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se aplicará una única copia de los términos de licencia a todas las instancias de esa edición e idioma. Los archivos se escriben en: %ProgramFiles%\Microsoft SQL Server\110\License Terms\ o en % ProgramFiles (x86) %\Microsoft SQL Server\110\License términos\\.  

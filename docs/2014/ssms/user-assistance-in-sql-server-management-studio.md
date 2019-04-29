@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9b972a1d2bb1f65a8b8e26005a3af8c10b2dc02f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016186"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Asistencia al usuario en SQL Server Management Studio
   En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], la asistencia al usuario está disponible mediante el menú Ayuda y los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. El menú Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ofrece diferentes rutas a la información sobre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. También proporciona acceso a la comunidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y a los recursos de MSDN Online no disponibles anteriormente desde el entorno de la Ayuda. Además, el entorno de la Ayuda ahora se puede configurar de modo que se inicie dentro del entorno de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o en una ventana externa asociada independiente.  

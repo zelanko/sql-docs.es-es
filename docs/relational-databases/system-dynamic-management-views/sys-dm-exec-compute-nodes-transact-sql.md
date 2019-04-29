@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_compute_nodes (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_compute_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f82087cc2549871147d0a85d6c36e9d8d211979
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013481"
 ---
 # <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "52416856"
 |Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|Identificador numérico único asociado al nodo. Clave para esta vista.|Único en clúster de escalabilidad horizontal, independientemente del tipo.|  
-|Tipo|**nvarchar(32)**|Tipo del nodo.|'COMPUTE', 'PRINCIPAL'|  
+|type|**nvarchar(32)**|Tipo del nodo.|'COMPUTE', 'PRINCIPAL'|  
 |NAME|**nvarchar(32)**|Nombre lógico del nodo.|Cualquier cadena de longitud adecuada.|  
 |address|**nvarchar(32)**|Dirección de P de este nodo.|Intervalo de direcciones IP|  
   

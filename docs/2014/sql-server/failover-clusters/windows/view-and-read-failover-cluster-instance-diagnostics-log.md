@@ -11,22 +11,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049341"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Ver y leer el registro de diagnósticos de la instancia de clúster de conmutación por error
   Todos los errores críticos y eventos de advertencia de la DLL de recursos de SQL Server se escriben en el registro de eventos de Windows. El procedimiento almacenado del sistema [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) captura un registro en ejecución de la información de diagnóstico específica de SQL Server y lo escribe en los archivos de registro de diagnósticos de clústeres de conmutación por error de SQL Server (también conocidos como registros *SQLDIAG*).  
   
--   **Antes de empezar:**  [Recomendaciones](#Recommendations), [Seguridad](#Security)  
+-   **Antes de empezar:**  [Recomendaciones](#Recommendations), [seguridad](#Security)  
   
 -   **Para ver el registro de diagnóstico, mediante:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Para configurar los valores del registro de diagnóstico, mediante:** [Transact-SQL](#TsqlConfigure)  
+-   **Para valores de configuración de registro de diagnóstico, mediante:** [Transact-SQL](#TsqlConfigure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
  De forma predeterminada, los SQLDIAG se almacenan en una carpeta LOG local del directorio de la instancia de SQL Server, por ejemplo, ' c:\Archivos de programa\Microsoft SQL Server\MSSQL12. \<NombreDeInstancia > \MSSQL\LOG' del nodo propietario de la instancia de clúster de conmutación por error (FCI) AlwaysOn. El tamaño de cada archivo de registro de SQLDIAG se fija en 100 MB. Diez archivos de registro se almacenan en el equipo antes de que se reciclen para los nuevos registros.  
@@ -35,7 +35,7 @@ ms.locfileid: "48098785"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  El permiso VIEW SERVER STATE es necesario para ejecutar **fn_xe_file_target_read_file**.  
   
  Abra SQL Server Management Studio como administrador.  
@@ -107,7 +107,7 @@ ORDER BY Time;
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-##### <a name="b-stopping-diagnostic-logging"></a>B. Detener el registro de diagnóstico  
+##### <a name="b-stopping-diagnostic-logging"></a>b. Detener el registro de diagnóstico  
  En el ejemplo siguiente se detiene el registro de los datos de diagnóstico.  
   
 ```  

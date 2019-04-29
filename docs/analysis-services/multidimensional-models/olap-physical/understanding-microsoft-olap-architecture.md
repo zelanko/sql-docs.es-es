@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd0d28a37a8080bcd44c521b2fc3b83192f61837
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020174"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Descripción de la arquitectura OLAP de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

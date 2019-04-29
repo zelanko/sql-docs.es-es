@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 911d0a740a20f74edf9e32d4a6ff69a8d6040f24
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022483"
 ---
 # <a name="backup-and-restore-for-oracle-publishers"></a>Copias de seguridad y restauración de publicadores de Oracle
   Siga estas instrucciones para hacer copias de seguridad y restaurar:  

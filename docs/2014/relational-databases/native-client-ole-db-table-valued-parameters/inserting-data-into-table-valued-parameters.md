@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71cd369568d8fc66764345038568818a551f9fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046600"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Insertar datos en parámetros con valores de tabla
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB admite dos modelos para el consumidor especifique datos para filas de parámetros con valores de tabla: un modelo de inserción y un modelo de extracción. Hay disponible un ejemplo que muestra el modelo de extracción; vea [Ejemplos de programación de datos de SQL Server](http://msftdpprodsamples.codeplex.com/).  
@@ -49,15 +49,15 @@ ms.locfileid: "48093845"
   
  Para usar el modelo de extracción, los consumidores deben proporcionar su propia implementación de un objeto de conjunto de filas. Cuando se usa el modelo de extracción con conjuntos de filas de parámetro con valores de tabla (CLSID_ROWSET_TVP), el consumidor se debe agregar el objeto de conjunto de filas de parámetro con valores de tabla que el proveedor expone a través de la ITableDefinitionWithConstraints:: Al método CreateTableWithConstraints o IOpenRowset:: OpenRowset. Solo se espera que el objeto de consumidor invalide la implementación de la interfaz IRowset. Debe invalidar las funciones siguientes:  
   
--   IRowset:: GetNextRows  
+-   IRowset::GetNextRows  
   
 -   IRowset::AddRefRows  
   
--   IRowset:: GetData  
+-   IRowset::GetData  
   
--   IRowset:: ReleaseRows  
+-   IRowset::ReleaseRows  
   
--   IRowset:: RestartPosition  
+-   IRowset::RestartPosition  
   
  El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client leerá una o varias filas del objeto de conjunto de filas del consumidor a la vez para admitir el comportamiento de transmisión por secuencias en parámetros con valores de tabla. Por ejemplo, el usuario puede tener los datos de conjunto de filas de parámetros con valores de tabla en el disco (no en la memoria) e implementar la funcionalidad necesaria para leer datos del disco cuando así lo requiera el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   

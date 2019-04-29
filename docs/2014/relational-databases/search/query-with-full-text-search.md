@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 244161359910896533a1d7179f2ce80b5cb03d86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046167"
 ---
 # <a name="query-with-full-text-search"></a>Consultar con búsqueda de texto completo
   Para definir búsquedas de texto completo, las consultas de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan los predicados (CONTAINS y FREETEXT) y las funciones (CONTAINSTABLE y FREETEXTTABLE) de texto completo. Estas funciones y predicados admiten la sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] enriquecida, que es compatible con diversos formatos de términos de consulta. Para escribir consultas de texto completo, es necesario saber cuándo y cómo deben usarse estos predicados y funciones.  

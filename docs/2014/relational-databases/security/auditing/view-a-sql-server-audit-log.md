@@ -15,11 +15,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fa30824e32faae5feee1612305c1ca292d44e8e4
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100170"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012017"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Ver un registro de SQL Server Audit
   Este tema describe cómo ver un registro de auditoría de SQL Server en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "54100170"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso `CONTROL SERVER`.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  

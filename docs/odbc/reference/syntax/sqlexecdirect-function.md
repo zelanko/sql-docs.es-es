@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 794dc83a27d3c4882b5df4edbb4f2a645cd5ca1c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061513"
 ---
 # <a name="sqlexecdirect-function"></a>Función SQLExecDirect
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ISO 92  
   
  **Resumen**  
  **SQLExecDirect** ejecuta una instrucción preparable, utilizando los valores actuales de las variables de marcador de parámetro, si existe algún parámetro en la instrucción. **SQLExecDirect** es la forma más rápida para enviar una instrucción SQL para ejecutar una sola vez.  
@@ -68,7 +68,7 @@ SQLRETURN SQLExecDirect(
 |01004|Datos de cadena derecha truncados|Cadena o datos binarios devuelven para una entrada y salida o parámetro de salida dieron como resultado el truncamiento de carácter no en blanco o datos binarios que no son NULL. Si fuese un valor de cadena, era truncado a la derecha. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01006|Privilegio no revocado|\**StatementText* contiene un **REVOCAR** instrucción y el usuario no tiene el privilegio especificado. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01007|Privilegio no concedido|*\*StatementText* era un **GRANT** instrucción y el usuario no se podrían conceder el privilegio especificado.|  
-|01S02|Valor de opción cambiado|Un atributo de instrucción especificado no era válido debido a las condiciones de trabajo de implementación, por lo que temporalmente se ha sustituido por un valor similar. (**SQLGetStmtAttr** se puede llamar para determinar cuál es el valor sustituido temporalmente.) El valor de reemplazo es válido para el *StatementHandle* hasta que se cierra el cursor, momento en que el atributo de instrucción revierte a su valor anterior. Los atributos de instrucción que se pueden cambiar son:<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT SQL_ ATTR_SIMULATE_CURSOR<br /><br /> (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01S02|Valor de opción cambiado|Un atributo de instrucción especificado no era válido debido a las condiciones de trabajo de implementación, por lo que temporalmente se ha sustituido por un valor similar. (**SQLGetStmtAttr** se puede llamar para determinar cuál es el valor sustituido temporalmente.) El valor de reemplazo es válido para el *StatementHandle* hasta que se cierra el cursor, momento en que el atributo de instrucción revierte a su valor anterior. Los atributos de instrucción que se pueden cambiar son:<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT  SQL_ ATTR_SIMULATE_CURSOR<br /><br /> (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01S07|Truncamiento fraccionario|Los datos devueltos para una entrada y salida o se truncó el parámetro de salida que se trunca la parte fraccionaria de un tipo de datos numéricos o se trunca la parte fraccionaria del componente de un tipo de datos de hora, marca de tiempo o intervalo de tiempo.<br /><br /> (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |07002|Campo COUNT incorrecto|El número de parámetros especificados en **SQLBindParameter** era menor que el número de parámetros en la instrucción SQL contenidas en \* *StatementText*.<br /><br /> **SQLBindParameter** se llamó con *ParameterValuePtr* establecido en un puntero nulo, *StrLen_or_IndPtr* no establecido en SQL_NULL_DATA o SQL_DATA_AT_EXEC, y *InputOutputType*  no se establece en SQL_PARAM_OUTPUT, para que el número de parámetros especificado en **SQLBindParameter** era mayor que el número de parámetros en la instrucción SQL contenidas en **StatementText* .|  
 |07006|Infracción del atributo de tipo de datos restringido|El valor de datos identificado por el *ValueType* argumento en **SQLBindParameter** para el parámetro dependiente no se pudo convertir al tipo de datos identificado por el *ParameterType*argumento en **SQLBindParameter**.<br /><br /> Devuelve el valor de datos para un parámetro de enlazado como SQL_PARAM_INPUT_OUTPUT o SQL_PARAM_OUTPUT no se pudo convertir al tipo de datos identificado por el *ValueType* argumento en **SQLBindParameter**.<br /><br /> (Si no se podrían convertir los valores de datos para una o varias filas, pero una o más filas se devolvieron correctamente, esta función devuelve SQL_SUCCESS_WITH_INFO).|  

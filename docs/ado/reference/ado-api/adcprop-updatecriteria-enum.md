@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 91b4d64095c02fbf3f969248fc78d375a191fe72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065290"
 ---
 # <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
 Especifica qué campos se pueden usar para detectar conflictos durante una actualización optimista de una fila del origen de datos con un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -36,7 +36,7 @@ Especifica qué campos se pueden usar para detectar conflictos durante una actua
 |**adCriteriaUpdCols**|2|Detecta conflictos si cualquiera de las columnas del origen de datos de la fila que se corresponden con campos actualizados de la **Recordset** han cambiado.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

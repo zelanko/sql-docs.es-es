@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0ec9f519b6326b0c2188663b558ff099cac75c78
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058094"
 ---
 # <a name="spcacheremove-event-class"></a>SP:CacheRemove [clase de eventos]
   La clase de eventos SP:CacheRemove indica que el procedimiento almacenado se ha quitado de la caché del plan.  
@@ -34,7 +34,7 @@ ms.locfileid: "52818327"
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta el procedimiento almacenado.|35|Sí|  
 |EventClass|`int`|Tipo de evento = 36.|27|No|  
 |EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
-|EventSubClass|`int`|Tipo de subclase de evento:<br /><br /> 1 = quitar plan compilado. Se ha quitado de la caché un plan de consulta compilado.<br /><br /> 2 = Vaciar caché de procedimientos. Se han quitado todas las entradas de la caché de procedimientos.|21|Sí|  
+|EventSubClass|`int`|Tipo de subclase de evento:<br /><br /> 1 = quitar plan compilado. Se ha quitado de la caché un plan de consulta compilado.<br /><br /> 2=Proc Cache Flush. Se han quitado todas las entradas de la caché de procedimientos.|21|Sí|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IsSystem|`int`|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  

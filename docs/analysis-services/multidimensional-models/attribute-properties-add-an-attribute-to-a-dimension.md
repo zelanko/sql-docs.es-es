@@ -1,5 +1,5 @@
 ---
-title: Agregar un atributo a una dimensión | Documentos de Microsoft
+title: Agregar un atributo a una dimensión | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 02773eadf282fe9ac25fa96543a86c5d3e77da4c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020613"
 ---
-# <a name="attribute-properties---add-an--attribute-to-a-dimension"></a>Atributo propiedades: agregar un atributo a una dimensión
+# <a name="attribute-properties---add-an--attribute-to-a-dimension"></a>Propiedades de atributos: Agregar un atributo a una dimensión
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Puede agregar un atributo a una dimensión automática o manualmente en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -27,6 +27,6 @@ ms.locfileid: "34021002"
  Para obtener más información, vea [Definir un nuevo atributo automáticamente](../../analysis-services/multidimensional-models/attribute-properties-define-a-new-attribute-automatically.md), [Enlazar un atributo a una columna de nombre](../../analysis-services/multidimensional-models/attribute-properties-bind-an-attribute-to-a-name-column.md)y [Modificar la propiedad KeyColumns de un atributo](../../analysis-services/multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de propiedades de atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Referencia de las propiedades de los atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

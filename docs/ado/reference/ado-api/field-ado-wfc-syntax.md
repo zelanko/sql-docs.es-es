@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea2245c3f57b5ad3b14847f15791575afde1043c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63031980"
 ---
 # <a name="field-ado---wfc-syntax"></a>Campo (ADO - sintaxis WFC)
-## <a name="package-commswfcdata"></a>paquete com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
   
 ### <a name="methods"></a>Métodos  
   

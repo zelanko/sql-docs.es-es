@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e8815522ee4f9a4221887696a23a201910d7cfad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062841"
 ---
 # <a name="static-cursors"></a>Cursores estáticos
-El cursor estático siempre muestra el resultado que establece que tenía cuando el cursor se abre por primera vez. Según la implementación, los cursores estáticos pueden ser de solo lectura o lectura/escritura y proporcionar desplazamiento hacia delante y hacia atrás. El cursor estático normalmente no detecta los cambios realizados en la pertenencia, orden o los valores del conjunto una vez abierto el cursor de resultados. Cursores estáticos pueden detectar sus propias actualizaciones, eliminaciones e inserciones, aunque no tienen que hacerlo.  
+El cursor estático siempre muestra el resultado que establece que tenía cuando el cursor se abre por primera vez. Según la implementación, los cursores estáticos pueden ser de solo lectura o lectura/escritura y proporcionar desplazamiento hacia delante y hacia atrás. El cursor estático normalmente no detecta los cambios realizados en la pertenencia, orden o los valores del conjunto una vez abierto el cursor de resultados. Los cursores estáticos pueden detectar sus propias operaciones de inserción, actualización y eliminación, aunque no está obligados a hacerlo.  
   
- Los cursores estáticos detectan nunca otras actualizaciones, eliminaciones e inserciones. Por ejemplo, suponga que un cursor estático recupera una fila y la otra aplicación, a continuación, actualiza esa fila. Si la aplicación vuelve a obtener la fila del cursor estático, los valores que ve son iguales, a pesar de los cambios realizados por la otra aplicación. Se admiten todos los tipos de desplazamiento, pero los proveedores pueden o no admitir marcadores.  
+ Los cursores estáticos detectan nunca otras actualizaciones, eliminaciones e inserciones. Por ejemplo, suponga que un cursor estático captura una fila y, después, otra aplicación la actualiza. Si la aplicación vuelve a capturar la fila del cursor estático, los valores que ve son iguales, a pesar de los cambios realizados por la otra aplicación. Se admiten todos los tipos de desplazamiento, pero los proveedores pueden o no admitir marcadores.  
   
  Si no necesita la aplicación detectar datos cambia y requiere que el desplazamiento, el cursor estático es la mejor opción. Utilice la **adOpenStatic CursorTypeEnum** para indicar que desea utilizar un cursor estático en ADO.  
   

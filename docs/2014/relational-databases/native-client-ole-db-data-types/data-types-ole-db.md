@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062147"
 ---
 # <a name="data-types-ole-db"></a>Tipos de datos (OLE DB)
   Para ejecutar [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones y procesar los resultados mediante el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client, debe saber cómo el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapas del proveedor OLE DB de Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos a tipos de datos OLE DB al enlazar los parámetros o columnas en un conjunto de filas y, cuando usa el **ITableDefinition** interfaz para crear una tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

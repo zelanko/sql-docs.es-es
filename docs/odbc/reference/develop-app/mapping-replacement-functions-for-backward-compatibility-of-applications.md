@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6cecc7fcd5ffa7234544dd0a9bc10407b1ea5cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032836"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Asignación de funciones de reemplazo para mantener la compatibilidad de aplicaciones
 Una aplicación ODBC 3 *.x* la aplicación funciona a través de los 3 ODBC *.x* funcionará el Administrador de controladores en un ODBC 2. *x* siempre y cuando no se usa ninguna característica nueva de controlador. Ambos duplican la funcionalidad y cambios de comportamiento, sin embargo,, afectan al modo en que el 3 de ODBC. *x* aplicación funciona en un ODBC 2. *x* controlador. Cuando se trabaja con un ODBC 2. *x* controlador, el Administrador de controladores asigna la siguiente ODBC 3. *x* funciones, que se reemplazaron uno o varios de ODBC 2. *x* funciones, en la correspondiente API ODBC 2. *x* funciones.  
@@ -452,11 +452,11 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |Búfer|Valor|  
 |------------|-----------|  
 |ColumnName|"" (cadena vacía)|  
-|* NameLengthPtr|0|  
-|* DataTypePtr|SQL_BINARY|  
-|* ColumnSizePtr|4|  
-|* DecimalDigitsPtr|0|  
-|* NullablePtr|SQL_NO_NULLS|  
+|*NameLengthPtr|0|  
+|*DataTypePtr|SQL_BINARY|  
+|*ColumnSizePtr|4|  
+|*DecimalDigitsPtr|0|  
+|*NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
  Cuando un ODBC 3. *x* la aplicación funciona con un ODBC 2. *x* controlador realiza la llamada siguiente a **SQLGetData** para recuperar un marcador:  

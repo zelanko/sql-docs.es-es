@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a834754a83339a989484ea6c0c0b94e313699023
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027623"
 ---
 # <a name="state-property-example-vb"></a>Ejemplo de la propiedad State (VB)
 Este ejemplo se usa el [estado](../../../ado/reference/ado-api/state-property-ado.md) propiedad para mostrar un mensaje mientras se están abriendo conexiones asincrónicas y se están ejecutando los comandos asincrónicos.  

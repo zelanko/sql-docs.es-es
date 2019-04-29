@@ -30,11 +30,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035424"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag , utilidad
   La utilidad **SQLdiag** es una herramienta de recopilación de diagnósticos de uso general que se puede ejecutar como una aplicación de consola o como un servicio. Puede usar **SQLdiag** para recopilar los archivos de datos y de registro de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y otros tipos de servidores, y para supervisar los servidores a lo largo del tiempo o solucionar problemas específicos de los mismos. **SQLdiag** se ha diseñado para acelerar y simplificar la recopilación de información de diagnóstico para los Servicios de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -111,7 +111,7 @@ ms.locfileid: "53590259"
 > [!NOTE]  
 >  **SQLdiag** no anexa la salida a la carpeta de salida actual cuando se inicia. Solo puede sobrescribir la carpeta de salida predeterminada (opción 1) o cambiar el nombre de la carpeta (opción 2) y, a continuación, escribir la salida en la nueva carpeta de salida predeterminada denominada SQLDIAG.  
   
- **/M** _machine1_ [ *machine2 ** machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2**machineN*] | *@machinelistfile*  
  Invalida los equipos especificados en el archivo de configuración. De forma predeterminada, el archivo de configuración es SQLDiag.Xml, o se establece con el parámetro **/I** . Al especificar más de un equipo, separe cada nombre de equipo con un espacio.  
   
  Con *@machinelistfile* se especifica un nombre de archivo de la lista de equipos que se va a almacenar en el archivo de configuración.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 203f90d8654d0465ed4e8ab5ba0f0b7e0747b7e0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062283"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Región de datos Tablix (Generador de informes y SSRS)
   La región de datos Tablix es un elemento de informe de diseño generalizado que muestra los datos del informe en celdas organizadas en filas y columnas. Los datos del informe pueden ser datos detallados tal y como se recuperan del origen de datos, o datos detallados agregados organizados en grupos previamente especificados. Cada celda de Tablix puede contener cualquier elemento de informe, como un cuadro de texto o una imagen, o bien otra región de datos, como una región de Tablix, un gráfico o un medidor. Para agregar varios elementos de informe a una celda, agregue primero un rectángulo que actúe como contenedor. Después, agregue los elementos de informe al rectángulo.  

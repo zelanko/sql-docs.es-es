@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1bc752afc0cb5214e629a343c35464e612b57c36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049845"
 ---
 # <a name="describing-parameters"></a>Descripciones de parámetros
 **SQLBindParameter** tiene argumentos que describen el parámetro: el tipo SQL, precisión y escala. El controlador utiliza esta información, o *metadatos,* para convertir el valor del parámetro al tipo necesario para el origen de datos. A primera vista, puede parecer que el controlador está en una mejor posición para saber los metadatos de parámetros de la aplicación; Después de todo, el controlador puede detectar fácilmente los metadatos para un resultado de conjunto de columnas. Según parece, esto no es el caso. En primer lugar, la mayoría de los orígenes de datos no proporcionan una manera para el controlador detectar los metadatos del parámetro. Segundo, mayoría de las aplicaciones ya conoce los metadatos.  

@@ -1,5 +1,5 @@
 ---
-title: Crear conjuntos con nombre | Documentos de Microsoft
+title: Crear conjuntos con nombre | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4eb82cba133f572e996f460be04661bfe511492e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020063"
 ---
 # <a name="create-named-sets"></a>Crear conjuntos con nombre
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34021582"
   
  Para crear un conjunto con nombre, utilice el comando **Nuevo conjunto con nombre** en la pestaña **Cálculos** del Diseñador de cubos. Este comando se puede invocar en el menú **Cubo** de la barra de herramientas de la pestaña **Cálculos** . Este comando muestra un formulario para especificar las siguientes opciones para el conjunto con nombre:  
   
- **Nombre**  
+ **Name**  
  Seleccione el nombre del conjunto con nombre. Éste es el nombre que ven los usuarios finales cuando examinan el cubo.  
   
  **Expresión**  
@@ -39,7 +39,7 @@ ms.locfileid: "34021582"
  Puede copiar o arrastrar los componentes del cubo desde la pestaña **Metadatos** del panel **Herramientas de cálculo** hasta el cuadro **Expresión** del panel **Editor de Formulario de conjuntos con nombres** . Puede copiar o arrastrar funciones desde la pestaña **Funciones** del panel **Herramientas de cálculo** al cuadro **Expresión** del panel **Editor de Formulario de conjuntos con nombres** .  
   
 > [!IMPORTANT]  
->  Si crea la expresión de conjunto nombrando explícitamente los miembros en el conjunto, incluya la lista de miembros de un par de llaves ({}).  
+>  Si crea la expresión de conjunto nombrando explícitamente los miembros del conjunto, incluya la lista de miembros en un par de llaves ({}).  
   
 ## <a name="see-also"></a>Vea también  
  [Cálculos en modelos multidimensionales](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  

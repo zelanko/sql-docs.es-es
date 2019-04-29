@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 88f9fff576b52e83073bbf917a43edf0a7648086
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023576"
 ---
 # <a name="mssqleng021797"></a>MSSQL_ENG021797
     
@@ -30,7 +30,7 @@ ms.locfileid: "52753787"
 |Origen del evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico||  
-|Texto del mensaje|'%s' debe ser un inicio de sesión de Windows válida en el formulario: 'MACHINE\Login' o 'DOMAIN\Login'. Vea la documentación de '%s'.|  
+|Texto del mensaje|'%s' debe ser un inicio de sesión de Windows válida en el formulario: "MACHINE\Login" o "DOMAIN\Login". Vea la documentación de '%s'.|  
   
 ## <a name="explanation"></a>Explicación  
  Este error lo generan los siguientes procedimientos almacenados de replicación si el valor especificado para el parámetro **@job_login** es nulo o no es válido. Este error puede producirse si un miembro del rol fijo de base de datos **db_owner** ejecuta scripts de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El modelo de seguridad de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ha cambiado, por lo que dichos scripts deben actualizarse.  

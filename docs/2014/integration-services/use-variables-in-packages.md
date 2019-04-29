@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 910d1699c8cd88f9f29d22b7f08a80337a25473d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926334"
 ---
 # <a name="use-variables-in-packages"></a>Usar variables en paquetes
   Las variables son una adición útil y flexible para los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ; las variables pueden permitir la comunicación entre los objetos del paquete, y entre los paquetes primarios y secundarios. También se pueden utiliza variables en expresiones y scripts.  

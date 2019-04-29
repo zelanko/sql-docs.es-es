@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6fbd4e3191f1cf115f157f7ff56c55f7b9ed96bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926316"
 ---
 # <a name="attributes-master-data-services"></a>Atributos (Master Data Services)
   Los atributos son objetos contenidos en entidades de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Los valores de atributo describen los miembros de la entidad. Un atributo se puede usar para describir un miembro hoja, un miembro consolidado o una colección.  
@@ -58,7 +58,7 @@ ms.locfileid: "52748068"
 -   Un valor podría no *hacer un ciclo de ida y vuelta* si contiene un número de punto flotante. Un valor coincide con el inicial si una operación convierte el número de coma flotante original en otro formato, una operación inversa transforma el formato convertido de nuevo a un número de coma flotante y el último número de coma flotante es igual que el original. Se podría producir un error en la ida y vuelta porque uno o más dígitos menos significativos se pierden o cambian en una conversión.  
   
 ## <a name="attribute-examples"></a>Ejemplos de atributo  
- En el ejemplo siguiente, la entidad tiene los atributos: Nombre, código, Subcategory, StandardCost, ListPrice y FilePhoto. Estos atributos describen los miembros. Cada miembro está representado por una fila única de valores de atributo.  
+ En el ejemplo siguiente, la entidad tiene los atributos: Name, Code, Subcategory, StandardCost, ListPrice y FilePhoto. Estos atributos describen los miembros. Cada miembro está representado por una fila única de valores de atributo.  
   
  ![Tabla de entidades de producto de bicicleta](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "Tabla de entidades de producto de bicicleta")  
   

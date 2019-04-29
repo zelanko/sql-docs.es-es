@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043769"
 ---
 # <a name="core-interface-conformance"></a>Conformidad de interfaz de núcleo
 Todos los controladores ODBC deben presentar como nivel básico al menos cumplimiento de la interfaz. Dado que las características en el nivel de núcleo son las necesarias en aplicaciones interoperables más genéricas, el controlador puede trabajar con dichas aplicaciones. Las características en el nivel de núcleo también corresponden a las características definidas en la especificación ISO CLI y a las características no opcionales definidas en la especificación de CLI de grupo abierto. Un controlador ODBC de función de la interfaz de nivel básico permite a la aplicación hacerlo siguiente:  

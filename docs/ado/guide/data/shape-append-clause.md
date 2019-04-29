@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13a91d6b8512b2c1287c3cc8e36e43a1317022d7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062861"
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND Shape
 La cláusula APPEND de comando de forma que anexa una o varias columnas a un **Recordset**. Con frecuencia, estas columnas son columnas de capítulo, que hacen referencia a un elemento secundario **Recordset**.  
@@ -34,7 +34,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
 ## <a name="description"></a>Descripción  
  Las partes de esta cláusula son los siguientes:  
   
- *comando primario*  
+ *parent-command*  
  Cero o uno de los siguientes (se puede omitir el *comando primario* completamente):  
   
 -   Un comando de proveedor entre llaves ("{}") que devuelve un **Recordset** objeto. El comando se emite al proveedor de datos subyacente, y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, aunque ADO no requiere ningún lenguaje de consulta determinada.  
@@ -43,10 +43,10 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
   
 -   La tabla (palabra clave), seguido del nombre de una tabla en el proveedor de datos.  
   
- *alias del primario*  
+ *parent-alias*  
  Un alias opcional que hace referencia al elemento primario **Recordset**.  
   
- *lista de columnas*  
+ *column-list*  
  Uno o varios de los siguientes:  
   
 -   Una columna agregada.  
@@ -75,19 +75,19 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   La tabla (palabra clave), seguido del nombre de una tabla en el proveedor de datos.  
   
- *alias de elemento secundario*  
+ *child-alias*  
  Un alias que hace referencia al elemento secundario **Recordset**.  
   
- *columna primaria*  
+ *parent-column*  
  Una columna en la **Recordset** devuelto por la *comando primario.*  
   
- *columna secundaria*  
+ *child-column*  
  Una columna en la **Recordset** devuelto por la *comando secundario*.  
   
- *número de parámetros*  
+ *param-number*  
  Consulte [funcionamiento de los comandos con parámetros](../../../ado/guide/data/operation-of-parameterized-commands.md).  
   
- *alias de capítulo*  
+ *chapter-alias*  
  Un alias que hace referencia a la columna de capítulo anexada al elemento primario.  
   
 > [!NOTE]

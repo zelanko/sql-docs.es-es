@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97179574407dca56026f9d5216e4978069cffc1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62942988"
 ---
 # <a name="errors-and-batches"></a>Errores y los lotes
 Cuando se produce un error al ejecutar un lote de instrucciones SQL, uno de los siguientes cuatro resultados son posibles. (Cada resultado posible es específica del origen de datos e incluso podría depender de las instrucciones incluidas en el lote).  

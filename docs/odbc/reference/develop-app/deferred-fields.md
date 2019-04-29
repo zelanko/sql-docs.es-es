@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1c7800e7da867b4eb0c34fa3feeba5edb2d41cd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049877"
 ---
 # <a name="deferred-fields"></a>Campos aplazados
 Los valores de *aplazada campos* no se usan cuando se establecen, pero el controlador guarda las direcciones de las variables para un efecto aplazada. Para un descriptor de parámetro de la aplicación, el controlador utiliza el contenido de las variables en el momento de la llamada a **SQLExecDirect** o **SQLExecute**. Para un descriptor de fila de la aplicación, el controlador utiliza el contenido de las variables en el momento de la operación de captura.  

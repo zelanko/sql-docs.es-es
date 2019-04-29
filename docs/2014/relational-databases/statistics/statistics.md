@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033735"
 ---
 # <a name="statistics"></a>Estadísticas
   El optimizador de consultas utiliza las estadísticas para crear planes de consulta que mejoren el rendimiento de las consultas. Para la mayoría de las consultas, el optimizador de consultas genera ya las estadísticas necesarias para un plan de consulta de alta calidad; en algunos casos, para obtener los mejores resultados, necesita crear estadísticas adicionales o modificar el diseño de la consulta. En este tema se explican los conceptos de estadísticas y se proporcionan directrices para usar las estadística de optimización de consultas de forma eficaz.  

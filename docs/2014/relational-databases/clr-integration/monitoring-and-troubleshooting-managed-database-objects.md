@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f03266a5460e9e34a404256e5df415f799b29d98
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918931"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Supervisar y solucionar problemas de objetos de base de datos administrados
   En este tema se proporciona información sobre las herramientas que se pueden utilizar para supervisar y solucionar problemas de los objetos de base de datos administrados y ensamblados que se ejecutan en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "48090655"
 ## <a name="performance-counters"></a>Performance Counters  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye objetos y contadores que puede utilizar el Monitor de sistema para supervisar la actividad de los equipos en los que se ejecute una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Un objeto es cualquier recurso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], como un bloqueo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o un proceso de Windows. Cada objeto contiene uno o más contadores que determinan diversos aspectos de los objetos que se van a supervisar. Para obtener más información, vea [Usar objetos de SQL Server](../performance-monitor/use-sql-server-objects.md).  
   
-|Objeto|Descripción|  
+|Object|Descripción|  
 |------------|-----------------|  
 |[CLR (objeto de SQL Server)](../performance-monitor/sql-server-clr-object.md)|Tiempo total de la ejecución en CLR.|  
   
@@ -57,16 +57,16 @@ ms.locfileid: "48090655"
   
 |Vista de catálogo|Descripción|  
 |------------------|-----------------|  
-|[Sys.Assemblies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assemblies-transact-sql)|Devuelve información sobre los ensamblados registrados en una base de datos.|  
-|[Sys.assembly_references &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-references-transact-sql)|Identifica ensamblados que hacen referencia a otros ensamblados.|  
+|[sys.assemblies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assemblies-transact-sql)|Devuelve información sobre los ensamblados registrados en una base de datos.|  
+|[sys.assembly_references &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-references-transact-sql)|Identifica ensamblados que hacen referencia a otros ensamblados.|  
 |[sys.assembly_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-modules-transact-sql)|Devuelve información sobre cada función, procedimiento almacenado y desencadenador definidos en un ensamblado.|  
-|[Sys.assembly_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)|Devuelve información sobre los archivos de ensamblado registrados en la base de datos.|  
-|[Sys.assembly_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-types-transact-sql)|Identifica los tipos definidos por el usuario (UDT) definidos por un ensamblado.|  
-|[Sys.module_assembly_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql)|Identifica los ensamblados donde se definen los módulos CLR.|  
-|[Sys.parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)|Devuelve información sobre los parámetros que son tipos definidos por el usuario.|  
+|[sys.assembly_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)|Devuelve información sobre los archivos de ensamblado registrados en la base de datos.|  
+|[sys.assembly_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-types-transact-sql)|Identifica los tipos definidos por el usuario (UDT) definidos por un ensamblado.|  
+|[sys.module_assembly_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql)|Identifica los ensamblados donde se definen los módulos CLR.|  
+|[sys.parameter_type_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql)|Devuelve información sobre los parámetros que son tipos definidos por el usuario.|  
 |[sys.server_assembly_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql)|Identifica el ensamblado donde se define un desencadenador CLR.|  
 |[sys.server_triggers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-triggers-transact-sql)|Identifica los desencadenadores DDL en el nivel de servidor de un servidor, incluidos los desencadenadores CLR.|  
-|[Sys.type_assembly_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql)|Identifica los ensamblados donde se definen los tipos definidos por el usuario.|  
+|[sys.type_assembly_usages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql)|Identifica los ensamblados donde se definen los tipos definidos por el usuario.|  
 |[sys.types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)|Devuelve los tipos definidos por el usuario y de sistema registrados en la base de datos.|  
   
 ## <a name="dynamic-management-views"></a>Vistas de administración dinámica  

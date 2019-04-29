@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027514"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurar PolyBase para obtener acceso a datos externos en Azure Blob storage
 
@@ -32,7 +32,7 @@ El artículo explica cómo usar PolyBase en una instancia de SQL Server para con
 
 En primer lugar, configure puntos de acceso para usar Azure Blob storage.
 
-1. Ejecute [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) con 'hadoop connectivity' establecido en un proveedor de almacenamiento de blobs de Azure. Para obtener el valor de proveedores, vea [configuración de PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+1. Ejecute [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) con 'hadoop connectivity' establecido en un proveedor de almacenamiento de blobs de Azure. Para hallar el valor de los proveedores, consulte [Configuración de la conectividad de PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
    ```sql  
    -- Values map to various external data sources.  
@@ -51,7 +51,7 @@ En primer lugar, configure puntos de acceso para usar Azure Blob storage.
 
 Para consultar los datos del almacenamiento de blobs de Azure, debe definir una tabla externa para usar en consultas de Transact-SQL. Los pasos siguientes describen cómo configurar la tabla externa.
 
-1. Cree una clave maestra de la base de datos. Es necesario para cifrar el secreto de credencial.
+1. Cree una clave maestra en la base de datos. Es necesario para cifrar el secreto de credencial.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -66,7 +66,7 @@ Para consultar los datos del almacenamiento de blobs de Azure, debe definir una 
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Crear un origen de datos externo con [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)...
+1. Cree un origen de datos externo con [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -78,7 +78,7 @@ Para consultar los datos del almacenamiento de blobs de Azure, debe definir una 
    );  
    ```
 
-1. Crear un formato de archivo externo con [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
+1. Cree un formato de archivo externo con [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
 
    ```sql
    -- FORMAT TYPE: Type of format in Azure Blob storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -89,7 +89,7 @@ Para consultar los datos del almacenamiento de blobs de Azure, debe definir una 
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. Crear una tabla externa que apunte a los datos almacenados en Azure storage con [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). En este ejemplo, los datos externos contienen datos de sensor del vehículo.
+1. Cree una tabla externa que señale a los datos almacenados en Azure Storage con [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). En este ejemplo, los datos externos contienen datos de sensor de vehículo.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -106,7 +106,7 @@ Para consultar los datos del almacenamiento de blobs de Azure, debe definir una 
    );  
    ```
 
-1. Crear estadísticas en una tabla externa.
+1. Cree estadísticas en una tabla externa.
 
    ```sql
    CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)  
@@ -117,10 +117,10 @@ Para consultar los datos del almacenamiento de blobs de Azure, debe definir una 
 PolyBase es adecuado para realizar tres funciones:  
   
 - Consultas ad hoc en tablas externas.  
-- Importación de datos.  
-- Exportación de datos.  
+- Importar datos.  
+- Exportar datos.  
 
-Las siguientes consultas proporcionan ejemplo con datos del sensor de vehículo ficticia.
+Las siguientes consultas proporcionan un ejemplo con datos de sensor de vehículo ficticios.
 
 ### <a name="ad-hoc-queries"></a>Consultas ad hoc  
 
@@ -179,5 +179,5 @@ En SQL Server Data Tools, las tablas externas se muestran en una carpeta indepen
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre PolyBase, consulte el [¿qué es PolyBase?](../relational-databases/polybase/polybase-guide.md). 
+Para más información sobre PolyBase, consulte [¿Qué es PolyBase?](../relational-databases/polybase/polybase-guide.md) 
 

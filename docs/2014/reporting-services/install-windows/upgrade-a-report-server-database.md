@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3ee79dc617ed6fc9f49c0b2f95d4df43fcaf9eb4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065343"
 ---
 # <a name="upgrade-a-report-server-database"></a>Actualizar una base de datos del servidor de informes
   La base de datos del servidor de informes proporciona almacenamiento para una o varias instancias del servidor de informes. Dado que el esquema de la base de datos del servidor de informes puede cambiar con cada versión nueva de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], es necesario que la versión de base de datos coincida con la versión de la instancia del servidor de informes que esté utilizando. En la mayoría de los casos, una base de datos del servidor de informes se puede actualizar automáticamente sin ninguna acción específica de su parte.  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6fec2cea71ba818e955e0b6c2ce31c58f2c07357
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043890"
 ---
 # <a name="connecting-using-file-data-sources"></a>Conectar con orígenes de datos de archivo
 La información de conexión para un origen de datos de archivo se almacena en un archivo DSN. Como resultado, la cadena de conexión se puede utilizar varias veces un único usuario o compartida entre varios usuarios si tienen instalado el controlador apropiado. El archivo contiene un nombre de controlador (u otro nombre de origen de datos en el caso de un origen de datos de archivo no se puede compartir) y si lo desea, una cadena de conexión que puede usarse por **SQLDriverConnect**. El Administrador de controladores se basa la cadena de conexión para la llamada a **SQLDriverConnect** en las palabras clave en el archivo DSN.  

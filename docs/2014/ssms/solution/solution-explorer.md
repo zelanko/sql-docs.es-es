@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8da0eccb7c8aee546c5e9265bc0cacb8fb49b7e7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63025721"
 ---
 # <a name="solution-explorer"></a>Explorador de soluciones
   El panel Explorador de soluciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona contenedores denominados proyectos para administrar elementos, tales como scripts de base de datos, consultas, conexiones de datos y archivos. Uno o varios proyectos que están relacionados entre sí se pueden combinar en un contenedor denominado solución.  

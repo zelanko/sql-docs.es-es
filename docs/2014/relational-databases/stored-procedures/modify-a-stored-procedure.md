@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7cbc7981817a6c62db378976fe36a4dc753c6b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015886"
 ---
 # <a name="modify-a-stored-procedure"></a>Modificar un procedimiento almacenado
     
@@ -27,9 +27,9 @@ ms.locfileid: "48110485"
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Seguridad](#Security)  
   
--   **Para modificar un procedimiento con**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Para modificar un procedimiento mediante:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] no se pueden modificar para que sean procedimientos almacenados CLR y viceversa.  
@@ -38,7 +38,7 @@ ms.locfileid: "48110485"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Es necesario el permiso ALTER PROCEDURE en el procedimiento.  
   
 ##  <a name="Procedures"></a> Cómo modificar un procedimiento almacenado  

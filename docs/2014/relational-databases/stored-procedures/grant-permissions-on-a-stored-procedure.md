@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47b8e4b87ab3150ae7bf67d3c3a2f9c5e0732294
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015592"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>Conceder permisos para un procedimiento almacenado
   En este tema se describe cómo conceder permisos para un procedimiento almacenado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se pueden conceder permisos a un usuario, un rol de base de datos o un rol de aplicación existentes en la base de datos.  

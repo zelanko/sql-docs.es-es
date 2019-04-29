@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e9d03ee424f9e192a7218f289bfe133456789d7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020774"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Listas (Generador de informes y SSRS)
   Una región de datos de lista se repite con cada grupo o fila del conjunto de datos de informe. Las listas se pueden utilizar para crear informes o formularios de forma libre, por ejemplo facturas, o conjuntamente con otras regiones de datos. Puede definir listas que contengan cualquier número de elementos de informe. Además, las listas pueden anidarse en otras listas a fin de conseguir varios grupos de datos.  

@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3301be2f0af9960a48602a1b540fa2cac2f39914
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021364"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication-sql-server-management-studio"></a>Agregar y quitar artículos de una publicación (SQL Server Management Studio)
   Agregue artículos a una publicación al principio, cuando la cree en el Asistente para nueva publicación. Para obtener más información sobre cómo usar este asistente, vea [Crear una publicación](create-a-publication.md).  

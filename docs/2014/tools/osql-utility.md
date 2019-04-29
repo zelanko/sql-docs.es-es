@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017190"
 ---
 # <a name="osql-utility"></a>osql (utilidad)
   La utilidad **osql** permite especificar archivos de script, procedimientos del sistema e instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] . Esta herramienta utiliza ODBC para comunicarse con el servidor.  
@@ -109,7 +109,7 @@ C:\>osql
  Especifica el número de segundos que tienen que transcurrir antes de que un comando exceda el tiempo de espera. Si no se especifica ningún valor para *time_out* , los comandos no tienen tiempo de espera.  
   
  **-h** _headers_  
- Especifica el número de filas que se van a imprimir entre los encabezados de las columnas. La opción predeterminada es imprimir los encabezados una vez para cada conjunto de resultados de la consulta. Utilice -1 para especificar que no desea imprimir los encabezados. Si se utiliza -1, no debe haber ningún espacio entre el parámetro y el valor (**-h-1**, no **-h -1**).  
+ Especifica el número de filas que se van a imprimir entre los encabezados de las columnas. La opción predeterminada es imprimir los encabezados una vez para cada conjunto de resultados de la consulta. Utilice -1 para especificar que no desea imprimir los encabezados. Si usa -1, no debe dejar espacio entre el parámetro y el valor (**-h-1**, no **-h -1**).  
   
  **-s** _col_separator_  
  Especifica el carácter separador de columnas que, de forma predeterminada, es un espacio en blanco. Use caracteres que tienen un significado especial para el sistema operativo (por ejemplo, |; & \< >), incluya el carácter de comillas dobles (").  
@@ -294,7 +294,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Ejecuta el lote y, a continuación, sale sin devolver ningún valor.  
   
--   SALIDA **(*`query`*)**  
+-   EXIT **(*`query`*)**  
   
 > [!NOTE]  
 >  Ejecuta el lote, incluida la consulta, y, a continuación, sale tras devolver el resultado de la consulta.  

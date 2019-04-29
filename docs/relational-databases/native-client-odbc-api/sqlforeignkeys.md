@@ -1,5 +1,5 @@
 ---
-title: SQLForeignKeys | Documentos de Microsoft
+title: SQLForeignKeys | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d59eb895b735771a94fa04745b492fc68eb2ea74
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014517"
 ---
 # <a name="sqlforeignkeys"></a>SQLForeignKeys
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51674559"
   
  **SQLForeignKeys** se puede ejecutar en un cursor de servidor estático. Un intento de ejecutar **SQLForeignKeys** en un cursor actualizable (dinámico o conjunto de claves) devuelve SQL_SUCCESS_WITH_INFO para indicar que la que se ha cambiado el tipo de cursor.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el *FKCatalogName* y *PKCatalogName* parámetros:  *Nombre_servidor_vinculado.nombre_catálogo*.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el *FKCatalogName* y *PKCatalogName* parámetros: *Nombre_servidor_vinculado.nombre_catálogo*.  
   
 ## <a name="see-also"></a>Vea también  
  [Función SQLForeignKeys](https://go.microsoft.com/fwlink/?LinkId=59344)   

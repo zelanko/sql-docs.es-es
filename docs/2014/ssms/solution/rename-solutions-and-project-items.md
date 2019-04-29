@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b6643499ac9df8bcfcb663baa5e9c0e5db19045e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035584"
 ---
 # <a name="rename-solutions-and-project-items"></a>Cambiar el nombre de las soluciones y los elementos de un proyecto
   Es posible cambiar el nombre de una solución y de los elementos de proyecto en el Explorador de soluciones.  

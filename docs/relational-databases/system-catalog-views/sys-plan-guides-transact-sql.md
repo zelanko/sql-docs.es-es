@@ -1,5 +1,5 @@
 ---
-title: Sys.plan_guides (Transact-SQL) | Microsoft Docs
+title: sys.plan_guides (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 75d95fbe9c289eab419360bef35263b41930c9f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032983"
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "47696484"
 |**create_date**|**datetime**|Fecha y hora de creación de la guía de plan.|  
 |**modify_date**|**Fecha y hora**|Fecha de la última modificación de la guía de plan.|  
 |**is_disabled**|**bit**|1 = La guía de plan está deshabilitada.<br /><br /> 0 = La guía de plan está habilitada.|  
-|**consulta**|**nvarchar(max)**|Es el texto de la consulta en que se crea la guía de plan.|  
+|**query_text**|**nvarchar(max)**|Es el texto de la consulta en que se crea la guía de plan.|  
 |**scope_type**|**tinyint**|Identifica el ámbito de la guía de plan.<br /><br /> 1 = OBJECT<br /><br /> 2 = SQL<br /><br /> 3 = TEMPLATE|  
 |**scope_type_desc**|**nvarchar(60)**|Descripción del ámbito de la guía de plan.<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
 |**scope_object_id**|**Int**|Id. del objeto que define el ámbito de la guía de plan si el ámbito es OBJECT.<br /><br /> Es NULL si el ámbito de la guía de plan no es OBJECT.|  
 |**scope_batch**|**nvarchar(max)**|Texto del lote si **scope_type** es SQL.<br /><br /> Es NULL si el tipo de lote no es SQL.<br /><br /> Si es NULL y **scope_type** es SQL, el valor de **query_text** se aplica.|  
 |**parameters**|**nvarchar(max)**|Es la cadena que define la lista de parámetros asociados a la guía de plan.<br /><br /> NULL = No se asocia ninguna lista de parámetros a la guía de plan.|  
-|**sugerencias**|**nvarchar(max)**|Son las sugerencias de la cláusula OPTION asociadas a la guía de plan.|  
+|**hints**|**nvarchar(max)**|Son las sugerencias de la cláusula OPTION asociadas a la guía de plan.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

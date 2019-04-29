@@ -10,22 +10,22 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034942"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>Instrucciones de T-SQL para almacenamiento de datos paralelos
 Instrucciones de Transact-SQL (T-SQL) para analíticas Platform System (APS) Parallel Data Warehouse (PDW de SQL Server).
 
 ## <a name="data-definition-language-ddl-statements"></a>Instrucciones de lenguaje de definición (DDL) de datos
-* [MODIFICAR BASE DE DATOS](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
+* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
 * [ALTER SCHEMA](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
-* [CREAR ÍNDICE DE ALMACÉN DE COLUMNAS](../t-sql/statements/create-columnstore-index-transact-sql.md)
+* [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
 * [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [CREAR BASE DE DATOS CON ÁMBITO DE CREDENCIAL](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [CREAR ORIGEN DE DATOS EXTERNO](../t-sql/statements/create-external-data-source-transact-sql.md)
@@ -34,7 +34,7 @@ Instrucciones de Transact-SQL (T-SQL) para analíticas Platform System (APS) Par
 * [CREAR FUNCIÓN](../t-sql/statements/create-function-sql-data-warehouse.md)
 * [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md)
 * [CREATE PROCEDURE](../t-sql/statements/create-procedure-transact-sql.md)
-* [CREAR ESQUEMA](../t-sql/statements/create-schema-transact-sql.md)
+* [CREATE SCHEMA](../t-sql/statements/create-schema-transact-sql.md)
 * [CREATE STATISTICS](../t-sql/statements/create-statistics-transact-sql.md)
 * [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)
 * [INSTRUCCIÓN CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
@@ -85,7 +85,7 @@ Instrucciones de Transact-SQL (T-SQL) para analíticas Platform System (APS) Par
 * [Subconsultas](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 
 ## <a name="security-statements"></a>Instrucciones de seguridad
-* Permisos: [GRANT](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [REVOCAR](../t-sql/statements/revoke-transact-sql.md)
+* Permisos: [GRANT](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [REVOKE](../t-sql/statements/revoke-transact-sql.md)
 * [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md)
 * [MODIFICAR CERTIFICADO](../t-sql/statements/alter-certificate-transact-sql.md)
 * [MODIFICAR CLAVE DE CIFRADO DE BASE DE DATOS](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
@@ -97,14 +97,14 @@ Instrucciones de Transact-SQL (T-SQL) para analíticas Platform System (APS) Par
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
 * [CREAR CERTIFICADO](../t-sql/statements/create-certificate-transact-sql.md)
 * [CREAR CLAVE DE CIFRADO DE BASE DE DATOS](../t-sql/statements/create-database-encryption-key-transact-sql.md)
-* [CREAR INICIO DE SESIÓN](../t-sql/statements/create-login-transact-sql.md)
-* [CREAR LA CLAVE MAESTRA](../t-sql/statements/create-master-key-transact-sql.md)
+* [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)
+* [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)
 * [CREAR ROL](../t-sql/statements/create-role-transact-sql.md)
 * [CREAR USUARIO](../t-sql/statements/create-user-transact-sql.md)
 * [QUITAR CERTIFICADO](../t-sql/statements/drop-certificate-transact-sql.md)
 * [DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
 * [DROP LOGIN](../t-sql/statements/drop-login-transact-sql.md)
-* [QUITAR LA CLAVE MAESTRA](../t-sql/statements/drop-master-key-transact-sql.md)
+* [DROP MASTER KEY](../t-sql/statements/drop-master-key-transact-sql.md)
 * [QUITAR ROL](../t-sql/statements/drop-role-transact-sql.md)
 * [QUITE EL USUARIO](../t-sql/statements/drop-user-transact-sql.md)
 * [OPEN MASTER KEY](../t-sql/statements/open-master-key-transact-sql.md)

@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: cba345eb7a5aec9ef857819a1f0499266649f6e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63040831"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Adquirir y configurar un servidor de copia de seguridad para el almacenamiento de datos paralelos
 En este artículo se describe cómo configurar un sistema de Windows que no sea de dispositivo como un servidor de copia de seguridad para su uso con las características de copia de seguridad y restauración en Analytics Platform System (APS) y almacenamiento de datos paralelos (PDW).  
@@ -61,7 +61,7 @@ Aunque no es necesario, InfiniBand es el tipo de conexión recomendado para serv
   
 3.  Adquirir 2 cables FDR InfiniBand para una tarjeta de puerto dual o 1 cable FDR InfiniBand para una tarjeta de puerto único. Los cables de InfiniBand FDR conectarán el servidor de carga a la red InfiniBand de dispositivo. La longitud del cable depende de la distancia entre el servidor de carga y los conmutadores de InfiniBand del equipo, según su entorno.  
   
-## <a name="Step3"></a>Paso 3: Conectar el servidor a las redes InfiniBand  
+## <a name="Step3"></a>Paso 3: Conecte el servidor a las redes InfiniBand  
 Siga estos pasos para conectarse al servidor de carga a la red InfiniBand. Si el servidor no está usando la red InfiniBand, omita este paso.  
   
 1.  Bastidor del servidor se cierre suficiente para el dispositivo para que se puede conectar a la red InfiniBand de dispositivo.  
@@ -76,7 +76,7 @@ Siga estos pasos para conectarse al servidor de carga a la red InfiniBand. Si el
   
 5.  Configurar las opciones de InfiniBand y DNS para los adaptadores de red. Para obtener instrucciones de configuración, consulte [configurar adaptadores de red de InfiniBand](configure-infiniband-network-adapters.md).  
   
-## <a name="Step4"></a>Paso 4: Configurar el recurso compartido de archivos de copia de seguridad  
+## <a name="Step4"></a>Paso 4: Configure el recurso compartido de archivos de copia de seguridad  
 PDW obtendrá acceso al servidor de copia de seguridad a través de un recurso compartido UNC. Para configurar el recurso compartido de archivos:  
   
 1.  Cree una carpeta en el servidor de copia de seguridad para almacenar las copias de seguridad.  
@@ -122,7 +122,7 @@ Para obtener más información, vea:
   
 -   [BASE DE DATOS DE COPIA DE SEGURIDAD](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
--   [RESTAURAR BASE DE DATOS](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
 ## <a name="Security"></a>Avisos de seguridad  
 El servidor de copia de seguridad no está unido al dominio privado para el dispositivo. Se encuentra en su propia red y no hay ninguna relación de confianza entre su propio dominio y privadas del dispositivo.  
@@ -147,7 +147,7 @@ Para obtener una lista de las credenciales de red almacenadas en PDW de SQL Serv
 Operaciones en el servidor de carga pueden usar una ruta de acceso UNC para extraer datos desde fuera de la red interna de confianza. Un atacante en la red o con la capacidad de influir en la resolución de nombres puede interceptar o modificar los datos enviados a PDW. Esto presenta un riesgo de divulgación de manipulación y la información. Para ayudar a mitigar el riesgo de alteración:
 
 - Requerir firma en la conexión. 
-- En el servidor de carga, establezca la siguiente opción de directiva de grupo de seguridad Settings\Local Policies\Security opciones: cliente de red Microsoft: firmar digitalmente las comunicaciones (siempre): habilitado.  
+- En el servidor de carga, establezca la siguiente opción de directiva de grupo de seguridad Settings\Local Policies\Security opciones:  Cliente de red Microsoft: Firmar digitalmente las comunicaciones (siempre): habilitada.  
   
 ## <a name="see-also"></a>Vea también  
 [Copias de seguridad y restauración](backup-and-restore-overview.md)  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b78abac5ccbade0b686176f432618b4abc35ccab
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062821"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Una cláusula COMPUTE de forma genera un elemento primario **Recordset**, cuyas columnas se componen de una referencia al elemento secundario **Recordset**; opcional columnas cuyo contenido se capítulo, nuevas o las columnas calculadas, o resultado de ejecutar las funciones de agregado en el elemento secundario **Recordset** o un previamente formados **Recordset**; y las columnas en el elemento secundario **Recordset** enumerados en la cláusula opcional.  
@@ -36,7 +36,7 @@ SHAPE child-command [AS] child-alias
 ## <a name="description"></a>Descripción  
  Las partes de esta cláusula son los siguientes:  
   
- *comando secundario*  
+ *child-command*  
  Consta de uno de los siguientes:  
   
 -   Un comando de consulta entre llaves ("{}") que devuelve un elemento secundario **Recordset** objeto. El comando se emite al proveedor de datos subyacente, y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, aunque ADO no requiere ningún lenguaje de consulta determinada.  
@@ -47,13 +47,13 @@ SHAPE child-command [AS] child-alias
   
 -   La tabla (palabra clave), seguido del nombre de una tabla en el proveedor de datos.  
   
- *alias de elemento secundario*  
+ *child-alias*  
  Un alias que se usa para hacer referencia a la **Recordset** devuelto por la *comando secundario.* El *alias secundario* se requiere en la lista de columnas en la cláusula COMPUTE y define la relación entre los primarios y secundarios **Recordset** objetos.  
   
  *appended-column-list*  
  Una lista en la que cada elemento define una columna en el objeto primario generado. Cada elemento contiene una columna de capítulo, una nueva columna, una columna calculada o un valor resultante de una función de agregado en el elemento secundario **Recordset**.  
   
- *lista de campos agrupados*  
+ *grp-field-list*  
  Una lista de columnas de los primarios y secundarios **Recordset** objetos que especifica cómo se deben agrupar filas en el elemento secundario.  
   
  Para cada columna de la *grp lista de campos,* hay una columna correspondiente en los primarios y secundarios **Recordset** objetos. Para cada fila en el elemento primario **Recordset**, el *lista de campos agrupados* columnas tienen valores únicos y el elemento secundario **Recordset** al que hace referencia el elemento primario fila se compone únicamente de secundarios las filas cuya *lista de campos agrupados* columnas tienen los mismos valores que la fila primaria.  

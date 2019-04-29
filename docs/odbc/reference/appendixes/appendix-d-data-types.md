@@ -1,5 +1,5 @@
 ---
-title: 'Apéndice D: Tipos de datos | Microsoft Docs'
+title: 'Apéndice D: Tipos de datos | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026770"
 ---
-# <a name="appendix-d-data-types"></a>Apéndice D: Tipos de datos
+# <a name="appendix-d-data-types"></a>Apéndice D: Tipos de datos
 ODBC define dos conjuntos de tipos de datos: Tipos de datos SQL y tipos de datos C. Tipos de datos SQL indican el tipo de datos de los datos almacenados en el origen de datos. Tipos de datos C indican el tipo de datos de los datos almacenados en los búferes de la aplicación.  
   
  Tipos de datos SQL se definen por cada DBMS según el estándar SQL-92. Para cada tipo de datos SQL especificado en el estándar SQL-92, ODBC define un identificador de tipo, que es un **#define** valor que se pasa como argumento en las funciones ODBC o devuelto en los metadatos de un conjunto de resultados. SQL-92 solo tipos de datos no compatibles con ODBC son bits (el tipo de ODBC SQL_BIT tiene características diferentes), BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE y NATIONAL_CHARACTER. Los controladores son responsables de la asignación de tipos de datos SQL específicas del origen de datos para los identificadores de tipo de datos SQL de ODBC e identificadores de tipo de datos específicos del controlador SQL. El tipo de datos SQL se especifica en el campo SQL_DESC_CONCISE_TYPE de un descriptor de implementación.  

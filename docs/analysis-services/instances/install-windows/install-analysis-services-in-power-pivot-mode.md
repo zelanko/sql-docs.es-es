@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054825"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Instalación de Analysis Services en el modo PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "52527750"
   
 -   **Servicios de back-end:** Si usas [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para que Excel crear libros que contienen datos analíticos, debe tener [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint tener acceso a esos datos en un entorno de servidor. Puede ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un equipo que tenga instalado SharePoint Server, o bien en un equipo diferente que no tenga ningún software de SharePoint. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no tiene ninguna dependencia en SharePoint.  
   
-     **Nota:** En este tema se describe la instalación del servidor y los servicios back-end de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+     **Nota:** En este tema se describe la instalación de la [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servidor y los servicios de back-end.  
   
 -   **Nivel intermedio:** Mejoras en el [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] experiencias en SharePoint, incluidas [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] galería, programar la actualización de datos, el panel de administración y proveedores de datos. Para obtener información acerca de la instalación y la configuración de nivel intermedio, vea lo siguiente:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52527750"
   
 9. Si vuelve a ver **Reglas auxiliares del programa de instalación**, revise las advertencias y seleccione **Siguiente**.  
   
-     **Nota:** Como Firewall de Windows está habilitado, verá una advertencia para que abra los puertos para habilitar el acceso remoto.  
+     **Nota:** Dado que Firewall de Windows está habilitado, verá una advertencia para abrir los puertos para habilitar el acceso remoto.  
   
 10. En la página **Rol de instalación** , seleccione **Instalación de características de SQL Server**.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "52527750"
   
 3.  Conéctese a la instancia de Analysis Services, por ejemplo, **[nombre de su servidor]\POWERPIVOT**. Si puede conectarse a la instancia, ha comprobado que el servicio se está ejecutando.  
   
-##  <a name="bkmk_config"></a> Paso 2: Configurar la integración básica de SharePoint de Analysis Services  
+##  <a name="bkmk_config"></a> Paso 2: Configurar la integración de SharePoint básica de Analysis Services  
  En los pasos siguientes se describen los cambios de configuración necesarios para poder interactuar con modelos de datos avanzados de Excel en una biblioteca de documentos de SharePoint. Complete estos pasos después de instalar SharePoint y SQL Server Analysis Services.  
   
 ### <a name="sharepoint-2016"></a>SharePoint 2016  
@@ -218,7 +218,7 @@ ms.locfileid: "52527750"
 ##  <a name="bkmk_verify"></a> Paso 3: Comprobar la integración  
  Los pasos siguientes le guían por la creación y carga de un nuevo libro para comprobar la integración de Analysis Services. Necesitará una base de datos de SQL Server para completar los pasos.  
   
-1.  **Nota:** Si ya tiene un libro avanzado con segmentaciones de datos o filtros, puede cargarlo en una biblioteca de documentos de SharePoint y comprobar que puede interactuar con las segmentaciones de datos y los filtros desde la vista de biblioteca de documentos.  
+1.  **Nota:** Si ya tiene un libro avanzado con segmentaciones de datos o filtros, puede cargarlo en la biblioteca de documentos de SharePoint y comprobar que puede interactuar con los filtros y segmentaciones de datos desde la vista de biblioteca de documentos.  
   
 2.  Inicie un nuevo libro en Excel.  
   

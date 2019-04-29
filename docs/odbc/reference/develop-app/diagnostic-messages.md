@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63034922"
 ---
 # <a name="diagnostic-messages"></a>Mensajes de diagnóstico
 Con cada SQLSTATE, se devuelve un mensaje de diagnóstico. A menudo se devuelve el mismo valor de SQLSTATE con un número de mensajes diferentes. Por ejemplo, se devuelve SQLSTATE 42000 (sintaxis o infracción de acceso) para la mayoría de los errores de sintaxis SQL. Sin embargo, cada error de sintaxis es probable que describirse mediante un mensaje diferente.  
@@ -33,21 +33,21 @@ Con cada SQLSTATE, se devuelve un mensaje de diagnóstico. A menudo se devuelve 
   
  Si el origen de un error o advertencia es un componente en Sí, el mensaje de diagnóstico debe explicar esto. Por lo tanto, el texto de mensajes tiene dos formatos diferentes. Para errores y advertencias que no se producen en un origen de datos, el mensaje de diagnóstico debe usar este formato:  
   
- **[** *identificador de proveedor* **] [** *identificador de componente de ODBC* **]** *texto proporcionado por el componente*  
+ **[** *vendor-identifier* **][** *ODBC-component-identifier* **]** *component-supplied-text*  
   
  Para errores y advertencias que se producen en un origen de datos, el mensaje de diagnóstico debe usar este formato:  
   
- **[** *identificador de proveedor* **] [** *identificador de componente de ODBC* **] [** *identificador de origen de datos*  **]** *datos-origen-texto proporcionado por:*  
+ **[** *vendor-identifier* **][** *ODBC-component-identifier* **][** *data-source-identifier* **]** *data-source-supplied-text*  
   
  En la tabla siguiente se muestra el significado de cada elemento.  
   
 |Elemento|Significado|  
 |-------------|-------------|  
-|*identificador de proveedor*|Identifica el proveedor del componente en el que se produjo el error o advertencia, o que recibió el error o advertencia directamente desde el origen de datos.|  
-|*Identificador de componente de ODBC*|Identifica el componente en el que se produjo el error o advertencia, o que recibió el error o advertencia directamente desde el origen de datos.|  
-|*identificador del origen de datos*|Identifica el origen de datos. Para los controladores basados en archivos, esto normalmente es un formato de archivo, como los controladores basados en DBMS de Xbase [1], este es el producto DBMS.|  
-|*texto proporcionado por el componente*|Generado por el componente ODBC.|  
-|*datos de origen-texto proporcionado por:*|Generado por el origen de datos.|  
+|*vendor-identifier*|Identifica el proveedor del componente en el que se produjo el error o advertencia, o que recibió el error o advertencia directamente desde el origen de datos.|  
+|*ODBC-component-identifier*|Identifica el componente en el que se produjo el error o advertencia, o que recibió el error o advertencia directamente desde el origen de datos.|  
+|*data-source-identifier*|Identifica el origen de datos. Para los controladores basados en archivos, esto normalmente es un formato de archivo, como los controladores basados en DBMS de Xbase [1], este es el producto DBMS.|  
+|*component-supplied-text*|Generado por el componente ODBC.|  
+|*data-source-supplied-text*|Generado por el origen de datos.|  
   
  [1] en este caso, el controlador actúa como el controlador y el origen de datos.  
   

@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0cadab8c51000270d218bea890d2c4e7077daae9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938653"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream y OLE DB
   Esta sección contiene cuatro ejemplos que muestran cómo utilizar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB con la característica de secuencia de archivo:  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90e9a4ae2d0d119f8992cf89cb388075c264c042
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020853"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Agregar y modificar una línea (Generador de informes y SSRS)
   Agregue una línea al informe cuando desee incluir en él un elemento gráfico para separar dos secciones. Puede personalizar el aspecto de la línea modificando sus propiedades, como el color o el estilo. Por ejemplo, puede incorporar los colores de la compañía en el informe.  

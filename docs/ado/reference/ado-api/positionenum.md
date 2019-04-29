@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21a2ea98ea4592d9900cd9623502a8d918b34c9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027847"
 ---
 # <a name="positionenum"></a>PositionEnum
 Especifica la posición actual del puntero de registro dentro de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -33,7 +33,7 @@ Especifica la posición actual del puntero de registro dentro de un [Recordset](
 |**adPosUnknown**|-1|Indica que el **Recordset** está vacío, la posición actual es desconocida, o el proveedor no admite la [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) o [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) propiedad.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

@@ -24,14 +24,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049447"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administración y mantenimiento de la instancia de clúster de conmutación por error
-  Se llevan a cabo tareas de mantenimiento, como agregar o quitar nodos de una instancia de clúster de conmutación por error (FCI) de AlwaysOn existente utilizando el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programa de instalación. Otras tareas de administración, como cambiar el recurso de dirección IP o recuperarse de determinados escenarios de la FCI, se llevan a cabo con el complemento Administrador de clústeres de conmutación por error, que es el complemento de administración del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
+  Las tareas de mantenimiento, como agregar o quitar nodos de una instancia de clúster de conmutación por error (FCI) AlwaysOn existente, se llevan a cabo mediante el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Otras tareas de administración, como cambiar el recurso de dirección IP o recuperarse de determinados escenarios de la FCI, se llevan a cabo con el complemento Administrador de clústeres de conmutación por error, que es el complemento de administración del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
   
 ## <a name="maintaining-a-failover-cluster-instance"></a>Realizar el mantenimiento de una instancia de clúster de conmutación por error  
  Después de instalar una FCI, puede cambiarla o repararla con el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Por ejemplo, puede agregar nodos adicionales a una FCI, ejecutar una FCI como instancia independiente o quitar un nodo de la configuración de una FCI.  
@@ -50,14 +50,14 @@ ms.locfileid: "48110545"
 > [!IMPORTANT]  
 >  No utilice la misma cuenta para la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y la cuenta de servicio de WSFC. Si la contraseña cambia en la cuenta de servicio de WSFC, la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no será satisfactoria.  
   
- En [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], se usan SID de servicio para las cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ En [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)], se usan SID de servicio para las cuentas de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [Configurar los permisos y las cuentas de servicio de Windows](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ## <a name="administering-a-failover-cluster-instance"></a>Administrar una instancia de clúster de conmutación por error  
   
 |Descripción de la tarea|Vínculo de tema|  
 |----------------------|----------------|  
 |Describe cómo agregar dependencias a un recurso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Agregar dependencias a un recurso de SQL Server](add-dependencies-to-a-sql-server-resource.md)|  
-|Kerberos es un protocolo de autenticación de red diseñado para proporcionar una autenticación firme para aplicaciones cliente/servidor. Kerberos ofrece una base para la interoperabilidad y ayuda a mejorar la seguridad de la autenticación de red de toda una empresa. Puede usar la autenticación Kerberos con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancias independientes o con fci AlwaysOn.|[Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
+|Kerberos es un protocolo de autenticación de red diseñado para proporcionar una autenticación firme para aplicaciones cliente/servidor. Kerberos ofrece una base para la interoperabilidad y ayuda a mejorar la seguridad de la autenticación de red de toda una empresa. Se puede usar la autenticación Kerberos con instancias independientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o con FCI AlwaysOn.|[Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).|  
 |Proporciona vínculos a contenido que describe cómo habilitar la autenticación Kerberos||  
 |Describe el procedimiento que se usa para recuperarse de un error de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Recuperarse de un error en una instancia de clúster de conmutación por error](recover-from-failover-cluster-instance-failure.md)|  
 |Describe el procedimiento que se usa para cambiar el recurso de dirección IP de una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Cambiar la dirección IP de una instancia de clúster de conmutación por error](change-the-ip-address-of-a-failover-cluster-instance.md)|  

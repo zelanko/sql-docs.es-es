@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bbe732e9f0d22047146edc3d37a049b7300db0b7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014117"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -126,7 +126,7 @@ ms.locfileid: "51667786"
   
  El tipo para SQL_SOPT_SS_PARAM_FOCUS es SQLULEN.  
   
- El valor predeterminado es 0, lo que significa que estas llamadas direccionan parámetros que corresponden a marcadores de parámetros en la instrucción SQL. Cuando se establecen en el número de parámetro de un parámetro con valores de tabla, estas llamadas direccionan columnas de ese parámetro con valores de tabla. Cuando se establece en un valor que no es el número de parámetro de un parámetro con valores de tabla, estas llamadas devuelven el error IM020: "El foco del parámetro no hace referencia a un parámetro de valores de tabla".  
+ El valor predeterminado es 0, lo que significa que estas llamadas direccionan parámetros que corresponden a marcadores de parámetros en la instrucción SQL. Cuando se establecen en el número de parámetro de un parámetro con valores de tabla, estas llamadas direccionan columnas de ese parámetro con valores de tabla. Cuando se establece en un valor que no es el número de parámetro de un parámetro con valores de tabla, estas llamadas devuelven el error IM020: "El foco del parámetro no hace referencia a un parámetro con valores de tabla".  
   
 ### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
  El atributo SQL_SOPT_SS_NAME_SCOPE especifica el ámbito de nombres para las llamadas posteriores a funciones de catálogo. El conjunto de resultados devuelto por SQLColumns depende del valor de SQL_SOPT_SS_NAME_SCOPE.  

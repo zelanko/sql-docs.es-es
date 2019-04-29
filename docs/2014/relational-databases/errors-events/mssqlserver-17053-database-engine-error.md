@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f86d2fe9f361470f96123f1035fe9ad51fc7cbe0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62915620"
 ---
 # <a name="mssqlserver17053"></a>MSSQLSERVER_17053
     
@@ -30,7 +30,7 @@ ms.locfileid: "48063875"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|OS_ERROR|  
-|Texto del mensaje|% ls: error %ls del sistema operativo.|  
+|Texto del mensaje|%ls: error %ls del sistema operativo.|  
   
 ## <a name="explanation"></a>Explicación  
  Se produjo un error genérico del sistema operativo.  No está claro cuál es el estado resultante.  

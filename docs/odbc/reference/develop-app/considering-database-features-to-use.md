@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042191"
 ---
 # <a name="considering-database-features-to-use"></a>Teniendo en cuenta las características de base de datos que se utilizan
-Una vez que se conoce el nivel básico de interoperabilidad, se deben considerar las características de base de datos usadas por la aplicación. Por ejemplo, ¿qué instrucciones SQL ejecutará la aplicación? ¿La aplicación van a usar los cursores desplazables? ¿Transacciones? ¿Procedimientos? ¿Datos de tipo Long? Para ideas acerca de las características que no es posible que sea compatible con todos los DBMS, consulte el [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), y [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) descripciones de las funciones y [ Apéndice C: gramática SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Las características necesarias para una aplicación podrían eliminar algunos de los DBMS en la lista de DBMS de destino. También es posible que muestran que la aplicación puede tener como destino muchos DBMS.  
+Una vez que se conoce el nivel básico de interoperabilidad, se deben considerar las características de base de datos usadas por la aplicación. Por ejemplo, ¿qué instrucciones SQL ejecutará la aplicación? ¿La aplicación van a usar los cursores desplazables? ¿Transacciones? ¿Procedimientos? ¿Datos de tipo Long? Para ideas acerca de las características que no es posible que sea compatible con todos los DBMS, consulte el [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), y [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) descripciones de las funciones y [ Apéndice C: Gramática de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Las características necesarias para una aplicación podrían eliminar algunos de los DBMS en la lista de DBMS de destino. También es posible que muestran que la aplicación puede tener como destino muchos DBMS.  
   
- Por ejemplo, si las características necesarias son sencillas, normalmente se pueden implementar con un alto grado de interoperabilidad. Una aplicación que se ejecuta un sencillo **seleccione** instrucción y recupera los resultados con un cursor de solo avance es probable que sea muy interoperable en virtud de su sencillez: casi todos los controladores y DBMS admiten la funcionalidad necesidades.  
+ Por ejemplo, si las características necesarias son sencillas, normalmente se pueden implementar con un alto grado de interoperabilidad. Una aplicación que se ejecuta un sencillo **seleccione** instrucción y recupera los resultados con un cursor de solo avance es probable que sea muy interoperable en virtud de su sencillez: Casi todos los controladores y DBMS admiten la funcionalidad que necesita.  
   
  Sin embargo, si las características necesarias son más complejas, como los cursores desplazables, actualización posicionada y las instrucciones delete y procedimientos, a menudo se deben realizar equilibrios. Hay varias causas posibles:  
   

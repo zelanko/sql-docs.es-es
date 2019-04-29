@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5b2d3f43067750d2fc70a86c6a23bc74dd3bbc4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063041"
 ---
 # <a name="ado-run-time-errors"></a>Errores de tiempo de ejecución de ADO
 Errores de ADO se notifican al programa como errores de tiempo de ejecución. Puede usar el mecanismo de intercepción de errores de su lenguaje de programación para interceptar y controlarlos. Por ejemplo, en Visual Basic, utilice el **On Error** instrucción. En Visual C++, lo depende del método que se usa para tener acceso a las bibliotecas de ADO. Con #import, utilice un **try-catch** bloque. En caso contrario, deben recuperar explícitamente el objeto de error mediante una llamada a los programadores de C++ **GetErrorInfo**. El siguiente procedimiento sub de Visual Basic muestra cómo interceptar un error de ADO:

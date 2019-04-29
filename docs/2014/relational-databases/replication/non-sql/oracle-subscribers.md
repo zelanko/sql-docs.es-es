@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022228"
 ---
 # <a name="oracle-subscribers"></a>Suscriptores de Oracle
   A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite las suscripciones de inserción a Oracle a través del proveedor Oracle OLE DB suministrado por Oracle.  
@@ -123,7 +123,7 @@ ms.locfileid: "52786375"
 |`nvarchar(1-1000)`|VARCHAR2(1-2000)|  
 |`nvarchar(1001-4000)`|NCLOB|  
 |`nvarchar(max)`|NCLOB|  
-|`real`|real|  
+|`real`|REAL|  
 |`smalldatetime`|DATE|  
 |`smallint`|NUMBER(5,0)|  
 |`smallmoney`|NUMBER(10,4)|  

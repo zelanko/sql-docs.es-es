@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cede9be7c484d40c2220fc891779f7dfb6e5a8df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028152"
 ---
 # <a name="filter-property"></a>Propiedad Filter
 Indica un filtro para los datos en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -30,9 +30,9 @@ Indica un filtro para los datos en un [Recordset](../../../ado/reference/ado-api
 
 Establece o devuelve un **Variant** valor, que puede contener uno de los siguientes elementos:  
   
--   **Cadena de criterios:** una cadena formada por uno o más cláusulas concatenadas con **AND** o **OR** operadores.  
+-   **Cadena de criterios:** Una cadena formada por uno o más cláusulas concatenadas con **AND** o **OR** operadores.  
   
--   **Matriz de marcadores:** que señalan a los registros de los valores de una matriz de marcador único el **Recordset** objeto.  
+-   **Matriz de marcadores:** Matriz de marcador único valores que señalan a los registros en el **Recordset** objeto.  
   
 -   Un [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) valor.  
   
@@ -46,7 +46,7 @@ La cadena de criterios se compone de las cláusulas en el formulario *NombreCamp
   
 -   Operador debe ser uno de los siguientes: \<, >, \<=, > =, <>, =, o **como**.  
   
--   Valor es el valor con el que se compararán los valores de campo (por ejemplo, "Smith", 24/8/95 #, 12.345 o 50,00 dólares). Use comillas simples con cadenas y símbolos de libra esterlina (#) con fechas. Puede usar para números, puntos decimales, signos de dólar y notación científica. Si es operador **como**, valor puede usar caracteres comodín. Se permiten solo el asterisco (*) ni caracteres comodín de signo de porcentaje (%), y deben ser el último carácter de la cadena. el valor no puede ser Null.  
+-   Valor es el valor con el que se compararán los valores de campo (por ejemplo, "Smith", 24/8/95 #, 12.345 o 50,00 dólares). Use comillas simples con cadenas y símbolos de libra esterlina (#) con fechas. Puede usar para números, puntos decimales, signos de dólar y notación científica. Si es operador **como**, valor puede usar caracteres comodín. Solo el asterisco (*) y el signo de porcentaje (%) se permiten caracteres comodín y deben ser el último carácter de la cadena. el valor no puede ser Null.  
   
 > [!NOTE]
 >  Para incluir las comillas simples (') en el valor de filtro, utilice dos comillas simples para representar una. Por ejemplo, debe ser la cadena de criterios para filtrar por o ' Malley, `"col1 = 'O''Malley'"`. Para incluir las comillas simples al principio y al final del valor de filtro, escriba la cadena con signos de número (#). Por ejemplo, para filtrar por '1', debe ser la cadena de criterios `"col1 = #'1'#"`.  

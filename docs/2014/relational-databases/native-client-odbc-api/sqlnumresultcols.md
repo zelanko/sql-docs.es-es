@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88edec63a97ff6c463f07add895ff8399fc4268a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046760"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
   Para las instrucciones ejecutadas, el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client no tiene acceso al servidor para notificar el número de columnas de un conjunto de resultados. En este caso, `SQLNumResultCols` no provoca un ida y vuelta del servidor. Al igual que [SQLDescribeCol](sqldescribecol.md) y [SQLColAttribute](sqlcolattribute.md), al llamar a `SQLNumResultCols` en preparado, pero las instrucciones ejecutadas no genera un ida y vuelta del servidor.  

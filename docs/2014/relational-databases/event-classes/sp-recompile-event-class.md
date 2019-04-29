@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f9d894eb3f38248e1f7af2b1f693f87bdfebefa9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050921"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile, clase de eventos
   La clase de eventos SP:Recompile indica que un procedimiento almacenado, desencadenador o función definida por el usuario se ha vuelto a compilar. Las recompilaciones notificadas por esta clase de eventos se producen en el nivel de instrucción.  

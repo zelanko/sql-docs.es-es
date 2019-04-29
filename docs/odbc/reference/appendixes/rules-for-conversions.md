@@ -17,26 +17,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3ecee500204303dfcbcd8e179b9cb9cb0a94bae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032918"
 ---
 # <a name="rules-for-conversions"></a>Reglas para conversiones
 Las reglas en esta sección se aplican las conversiones que involucran literales numéricos. Para los fines de estas reglas, se definen los términos siguientes:  
   
--   *Asignación de Store:* al enviar datos a una columna de tabla en una base de datos. Esto sucede durante las llamadas a **SQLExecute**, **SQLExecDirect**, y **SQLSetPos**. Durante la asignación de la tienda, "target" hace referencia a una columna de base de datos y "origen" hace referencia a los datos en búferes de la aplicación.  
+-   *Asignación de Store:* Al enviar datos a una columna de tabla en una base de datos. Esto sucede durante las llamadas a **SQLExecute**, **SQLExecDirect**, y **SQLSetPos**. Durante la asignación de la tienda, "target" hace referencia a una columna de base de datos y "origen" hace referencia a los datos en búferes de la aplicación.  
   
--   *Asignación de recuperación:* al recuperar datos de la base de datos en búferes de la aplicación. Esto sucede durante las llamadas a **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, y **SQLSetPos**. Durante la asignación de recuperación, "target" se refiere a los búferes de la aplicación y "origen" hace referencia a la columna de base de datos.  
+-   *Asignación de recuperación:* Al recuperar datos de la base de datos en búferes de la aplicación. Esto sucede durante las llamadas a **SQLFetch**, **SQLGetData**, **SQLFetchScroll**, y **SQLSetPos**. Durante la asignación de recuperación, "target" se refiere a los búferes de la aplicación y "origen" hace referencia a la columna de base de datos.  
   
--   *CS:* el valor en el origen del carácter.  
+-   *CS:* El valor en el origen del carácter.  
   
--   *NT:* el valor en el destino numérico.  
+-   *NT:* El valor en el destino numérico.  
   
--   *NS:* el valor en el origen numérico.  
+-   *NS:* El valor en el origen numérico.  
   
--   *CT:* el valor en el destino de caracteres.  
+-   *CT:* El valor en el destino de caracteres.  
   
 -   Precisión de un literal numérico exacto: el número de dígitos que lo contiene.  
   

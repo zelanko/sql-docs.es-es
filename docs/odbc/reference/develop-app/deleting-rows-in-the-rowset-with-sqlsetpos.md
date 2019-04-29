@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 78ee14838b467cfe6e555c97f1e74c65cccf98ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049835"
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>Eliminación de filas en el conjunto de filas con SQLSetPos
 La operación de eliminación de **SQLSetPos** hace que el origen de datos de eliminar una o varias filas seleccionadas de una tabla. Para eliminar filas con **SQLSetPos**, la aplicación llama a **SQLSetPos** con *operación* establecido en SQL_DELETE y *RowNumber* establecido en el número de la fila a eliminar. Si *RowNumber* es 0, se eliminan todas las filas del conjunto de filas.  

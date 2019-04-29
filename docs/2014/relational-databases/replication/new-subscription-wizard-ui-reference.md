@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ace6059545a4c46e3af279ad7c6104456478801c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022546"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Asistente para nueva suscripción (referencia de IU)
   En esta sección se ofrece información sobre las siguientes páginas del Asistente para nueva suscripción:  
@@ -43,7 +43,7 @@ ms.locfileid: "54125205"
 -   [Valores de HOST_NAME](host-name-values.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Crear una suscripción de extracción](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Suscribirse a publicaciones](subscribe-to-publications.md)   
 

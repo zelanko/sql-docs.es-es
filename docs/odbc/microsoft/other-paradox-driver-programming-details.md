@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a99861e41a8d64406cf3585f331e4b6f1ecc740e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63024133"
 ---
 # <a name="other-paradox-driver-programming-details"></a>Otros detalles de programación del controlador de Paradox
 > [!NOTE]  

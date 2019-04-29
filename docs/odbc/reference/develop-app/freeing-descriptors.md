@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d643ccad0110796127524a10e82aef7c3339b163
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061493"
 ---
 # <a name="freeing-descriptors"></a>Descriptores de liberación
 Descriptores asignados explícitamente pueden ser cualquiera liberar explícitamente, mediante una llamada a **SQLFreeHandle** con *HandleType* de SQL_HANDLE_DESC o implícita, cuando se libera el identificador de conexión. Cuando se libera un descriptor asignado explícitamente, todos los identificadores de instrucciones a la que el descriptor liberado aplicado automáticamente volver a los descriptores implícitamente asignados para ellos.  

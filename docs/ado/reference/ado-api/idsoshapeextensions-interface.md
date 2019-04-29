@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 36f91ea537b1ad2a5e52221400f41bf88dc544b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028042"
 ---
 # <a name="idsoshapeextensions-interface"></a>Interfaz IDSOShapeExtensions
 Obtiene el objeto de origen de datos OLE DB subyacente para el proveedor de formas.  
@@ -44,6 +44,6 @@ public:
 ## <a name="requirements"></a>Requisitos  
  **Versión:** ADO 2.0 y versiones posterior  
   
- **Biblioteca:** msado15.dll  
+ **Library:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4

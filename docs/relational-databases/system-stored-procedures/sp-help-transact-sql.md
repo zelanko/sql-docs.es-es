@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017757"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Longitud**|**smallint**|Longitud física del tipo de datos (en bytes).|  
     |**Prec**|**int**|Precisión (número total de dígitos).|  
     |**Escala**|**int**|Número de dígitos a la derecha del separador decimal.|  
-    |**Admisión de valores NULL**|**varchar(** 35 **)**|Indica si se permiten los valores NULL: Yes o No.|  
+    |**Admisión de valores NULL**|**varchar(** 35 **)**|Indica si se permiten valores NULL: Sí o no.|  
     |**Default_name**|**nvarchar(** 128 **)**|Nombre de un valor predeterminado enlazado a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
     |**Rule_name**|**nvarchar(** 128 **)**|Nombre de una regla enlazada a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
     |**Intercalación**|**sysname**|Intercalación del tipo de datos. NULL para tipos de datos que no sean de caracteres.|  
@@ -92,11 +92,11 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar(** 128 **)**|Nombre de columna.|  
         |**Tipo**|**nvarchar(** 128 **)**|Tipo de datos de la columna.|  
-        |**Calculado**|**varchar(** 35 **)**|Indica si se calculan los valores de la columna: Yes o No.|  
+        |**Calculado**|**varchar(** 35 **)**|Indica si se calculan los valores de la columna: Sí o no.|  
         |**Longitud**|**int**|Longitud de la columna en bytes.<br /><br /> Nota: Si el tipo de datos de columna es un tipo de valor grande (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**), el valor será se mostrará como -1.|  
         |**Prec**|**char(** 5 **)**|Precisión de columna.|  
         |**Escala**|**char(** 5 **)**|Escala de la columna.|  
-        |**Admisión de valores NULL**|**varchar(** 35 **)**|Indica si se permiten valores NULL en la columna. Yes o No.|  
+        |**Admisión de valores NULL**|**varchar(** 35 **)**|Indica si se permiten valores NULL en la columna: Sí o no.|  
         |**TrimTrailingBlanks**|**varchar(** 35 **)**|Recorta los espacios en blanco finales. Devuelve Yes o No.|  
         |**FixedLenNullInSource**|**varchar(** 35 **)**|Se conserva únicamente por compatibilidad con versiones anteriores.|  
         |**Intercalación**|**sysname**|Intercalación de la columna. NULL para los tipos de datos que no son caracteres.|  
@@ -120,7 +120,7 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Nombre de columna|Tipo de datos|Descripción|  
         |-----------------|---------------|-----------------|  
-        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|Grupo de archivos en el que se encuentran los datos: principal, secundario o registro de transacciones.|  
+        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|En el que se encuentran los datos del grupo de archivos: Principal, secundario o registro de transacciones.|  
   
     -   Conjunto de resultados adicional devuelto en los índices:  
   
@@ -138,7 +138,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**constraint_name**|**nvarchar(** 128 **)**|Nombre de la restricción.|  
         |**delete_action**|**nvarchar(** 9 **)**|Indica si la acción DELETE es: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o N/A.<br /><br /> Solo se aplica a las restricciones FOREIGN KEY.|  
         |**update_action**|**nvarchar(** 9 **)**|Indica si la acción UPDATE es: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o N/A.<br /><br /> Solo se aplica a las restricciones FOREIGN KEY.|  
-        |**status_enabled**|**varchar(** 8 **)**|Indica si la restricción está habilitada: Enabled, Disabled o N/A.<br /><br /> Solo se aplica a las restricciones CHECK y FOREIGN KEY.|  
+        |**status_enabled**|**varchar(** 8 **)**|Indica si la restricción está habilitada: Habilitado, Disabled o N/A.<br /><br /> Solo se aplica a las restricciones CHECK y FOREIGN KEY.|  
         |**status_for_replication**|**varchar(** 19 **)**|Indica si la restricción es para replicación.<br /><br /> Solo se aplica a las restricciones CHECK y FOREIGN KEY.|  
         |**constraint_keys**|**nvarchar(** 2078 **)**|Nombres de las columnas que componen la restricción o, en el caso de valores predeterminados y reglas, el texto que define el valor predeterminado o la regla.|  
   

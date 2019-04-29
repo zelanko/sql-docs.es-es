@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ddcc484c389025a8c4a22ef43d0a46c4f53cdba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062353"
 ---
 # <a name="resync-method-example-vb"></a>Ejemplo del método Resync (VB)
 En este ejemplo se muestra cómo utilizar el [Resync](../../../ado/reference/ado-api/resync-method.md) método para actualizar los datos en un conjunto de registros estático.  

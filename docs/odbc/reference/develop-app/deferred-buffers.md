@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b071494697d21a37f4420889a8f60cc35fe3d8b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049891"
 ---
 # <a name="deferred-buffers"></a>Búferes diferidos
 Un *búferes diferidos* es uno cuyo valor se utiliza en algún momento *después* se especifica en una llamada de función. Por ejemplo, **SQLBindParameter** se usa para asociar, o *enlazar,* un búfer de datos con un parámetro en una instrucción SQL. La aplicación especifica el número del parámetro y pasa la dirección, la longitud de bytes y el tipo del búfer. El controlador guarda esta información, pero no examina el contenido del búfer. Más adelante, cuando la aplicación ejecuta la instrucción, el controlador recupera la información y lo usa para recuperar los datos del parámetro y enviarlo al origen de datos. Por lo tanto, se aplaza la entrada de datos en el búfer. Dado que búferes diferidos se especifica en una función y se usa en otro, es un error de programación de aplicaciones para liberar un búfer aplazado mientras el controlador todavía espera que exista; Para obtener más información, consulte [asignar y liberar búferes](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md), más adelante en esta sección.  

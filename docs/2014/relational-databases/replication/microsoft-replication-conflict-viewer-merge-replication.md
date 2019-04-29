@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62938587"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visor de conflictos de replicación de Microsoft (Replicación de mezcla)
   El Visor de conflictos de replicación le permite ver los conflictos que hayan podido producirse durante la sincronización de la replicación. Los conflictos ocurren cuando los mismos datos se modifican en dos servidores diferentes, por ejemplo, en un publicador y en un suscriptor, o en dos suscriptores diferentes. La replicación soluciona automáticamente los conflictos mediante el solucionador de conflictos seleccionado durante la creación del artículo. Sin embargo, el Visor de conflictos de replicación le permite elegir una resolución diferente para el conflicto si fuese necesario. Pueden producirse los siguientes conflictos:  
@@ -71,7 +71,7 @@ ms.locfileid: "52756237"
  Seleccione esta opción para mostrar las cinco primeras columnas y otras columnas con conflictos. Resulta útil si las tablas presentan un número elevado de columnas y solo desea ver las columnas más importantes para solucionar el conflicto. Las cinco primeras columnas se incluyen en esta vista, como campos que identifican una fila, como la clave principal o campos de nombre, que con frecuencia se encuentran entre las cinco primeras columnas de la tabla.  
   
  **Mostrar información de columna** (**...**)  
- Haga clic aquí para ver la información de columna: **Nombre de la tabla**, **nombre de columna**, **tipo de datos**, y **valor de la columna**. Es posible editar**Valor de columna** excepto en el caso de que el valor se muestre como de solo lectura.  
+ Haga clic para ver la información de columna: **Nombre de la tabla**, **Nombre de columna**, **Tipo de datos** y **Valor de la columna**. Es posible editar**Valor de columna** excepto en el caso de que el valor se muestre como de solo lectura.  
   
  **Enviar ganador**  
  Haga clic en esta opción para conservar la fila que el solucionador de conflictos determinó ser la ganadora. Es posible cambiar el valor de las columnas que no se muestran como de solo lectura antes de hacer clic en este botón.  

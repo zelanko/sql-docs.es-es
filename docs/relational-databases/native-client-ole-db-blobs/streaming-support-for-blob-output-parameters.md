@@ -15,11 +15,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 78ee5038da9b5620c80097b0f34dd6f1002e88e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012696"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Compatibilidad con la transmisión por secuencias de parámetros de salida BLOB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47761593"
   
 ## <a name="example"></a>Ejemplo  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 // blob_out_param.cpp  

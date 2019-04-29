@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b420e0b4b9c9531209f3d3227f534116e26dd206
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63032427"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface, clase de eventos
   La clase de evento **OLEDB QueryInterface** se produce cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emite una llamada **QueryInterface** de OLE DB para consultas distribuidas y procedimientos almacenados remotos. Incluya esta clase de evento en los seguimientos que supervisan problemas asociados a consultas distribuidas y procedimientos almacenados remotos.  

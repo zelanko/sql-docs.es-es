@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 448eda8c3c77f410bedd88d1193f2302c926ee95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062931"
 ---
 # <a name="ado-fundamentals"></a>Conceptos básicos de ADO
 ADO ofrece a los desarrolladores un modelo de objetos lógica y eficaz para el acceso mediante programación a, editar y actualizar datos desde una amplia variedad de orígenes de datos a través de las interfaces del sistema de OLE DB. El uso más común de ADO es consultar una o varias tablas en una base de datos relacional, recuperar y mostrar los resultados en una aplicación y permiten a los usuarios quizás realiza y guarda los cambios en los datos. Otras tareas incluyen lo siguiente:  

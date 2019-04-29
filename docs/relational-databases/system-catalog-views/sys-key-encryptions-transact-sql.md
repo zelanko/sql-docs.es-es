@@ -1,5 +1,5 @@
 ---
-title: Sys.key_encryptions (Transact-SQL) | Microsoft Docs
+title: sys.key_encryptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8a8fb9b2103316219bcdac74c1b861ac0a2668cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63003556"
 ---
 # <a name="syskeyencryptions-transact-sql"></a>sys.key_encryptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47853693"
 |Nombres de columna|Tipos de datos|Descripción|  
 |------------------|----------------|-----------------|  
 |**key_id**|**int**|Id. de la clave cifrada.|  
-|**Huella digital**|**varbinary(32)**|Hash SHA-1 del certificado o GUID de la clave simétrica con el que se cifra la clave.|  
-|**crypt_type**|**(4)**|Tipo de cifrado:<br /><br /> ESKS = Cifrado mediante clave simétrica<br /><br /> ESP3, ESP2 o ESKP = cifrado mediante contraseña<br /><br /> EPUC = Cifrado mediante certificado<br /><br /> EPUA = Cifrado mediante clave asimétrica<br /><br /> ESKM = Cifrado mediante clave maestra|  
-|**crypt_type_desc**|**nvarchar(60)**|Descripción del tipo de cifrado:<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(A partir [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)], incluye un número de versión para su uso por CSS.)<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> Nota: Se usan Windows DPAPI para proteger la clave maestra de servicio.|  
+|**thumbprint**|**varbinary(32)**|Hash SHA-1 del certificado o GUID de la clave simétrica con el que se cifra la clave.|  
+|**crypt_type**|**char(4)**|Tipo de cifrado:<br /><br /> ESKS = Cifrado mediante clave simétrica<br /><br /> ESP3, ESP2 o ESKP = cifrado mediante contraseña<br /><br /> EPUC = Cifrado mediante certificado<br /><br /> EPUA = Cifrado mediante clave asimétrica<br /><br /> ESKM = Cifrado mediante clave maestra|  
+|**crypt_type_desc**|**nvarchar(60)**|Descripción del tipo de cifrado:<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(A partir [!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)], incluye un número de versión para su uso por CSS.)<br /><br /> ENCRYPTION BY CERTIFICATE<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> Nota: DPAPI de Windows se usa para proteger la clave maestra de servicio.|  
 |**crypt_property**|**varbinary(max)**|Bits firmados o cifrados.|  
   
 ## <a name="permissions"></a>Permisos  

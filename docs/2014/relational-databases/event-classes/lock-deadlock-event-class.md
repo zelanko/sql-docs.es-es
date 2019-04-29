@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1834a4d3044dc8c444486d727274d6fa72a56a2b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023431"
 ---
 # <a name="lockdeadlock-event-class"></a>Lock:Deadlock (clase de eventos)
   La clase de eventos Lock:Deadlock se produce cuando se cancela un intento de obtener un bloqueo porque dicho intento forma parte de un interbloqueo y se ha elegido como sujeto del interbloqueo.  

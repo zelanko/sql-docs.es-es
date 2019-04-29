@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 82f6c6d8e7ecfa3a1ca29805c186d601ed65bd00
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060364"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Introducción a los diagramas de actualización (SQLXML 4.0)
   Puede modificar (Insertar, actualizar o eliminar) una base de datos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde un documento XML de documentos mediante el uso de un diagrama de actualización o la OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] función.  
@@ -60,13 +60,13 @@ ms.locfileid: "52782937"
   
  Las definiciones siguientes describen el rol de cada uno de estos bloques:  
   
- **\<antes de >**  
+ **\<before>**  
  Identifica el estado existente (que también recibe el nombre de "estado before") de la instancia de registro.  
   
- **\<una vez >**  
+ **\<after>**  
  Identifica el nuevo estado al que van a cambiarse los datos.  
   
- **\<sincronización >**  
+ **\<sync>**  
  Contiene el  **\<antes >** y  **\<después >** bloques. Un  **\<sincronización >** bloque puede contener más de un conjunto de  **\<antes >** y  **\<después >** bloques. Si hay más de un conjunto de  **\<antes >** y  **\<después >** bloques, estos bloques (incluso si están vacías) debe especificarse como pares. Además, un diagrama de actualización puede tener más de un  **\<sincronización >** bloque. Cada  **\<sincronización >** bloque es una unidad de transacción (lo que significa que cualquier todo el contenido de la  **\<sincronización >** bloque se realiza o se hace nada). Si especifica varios  **\<sincronización >** bloques en un diagrama de actualización, el error de un  **\<sincronización >** bloque no afecta a la otra  **\<sincronización >** bloques.  
   
  Si un diagrama de actualización elimina, inserta o actualiza una instancia de registro depende del contenido de la  **\<antes >** y  **\<después >** bloques:  

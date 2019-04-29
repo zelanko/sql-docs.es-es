@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2860e10ef74676fb013b43e1740c9cf82223baa9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63000368"
 ---
 # <a name="audit-login-failed-event-class"></a>Audit Login Failed, clase de eventos
   La clase de eventos **Audit Login Failed** indica que un usuario ha intentado conectarse a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se ha producido un error. Los eventos de esta clase se activan mediante nuevas conexiones o mediante conexiones reutilizadas de un grupo de conexiones.  

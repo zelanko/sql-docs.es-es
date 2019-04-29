@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 224bfd47c31c94e19935a97c6ed1cc726e233bb2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061313"
 ---
-# <a name="tm-commit-tran-completed-event-class"></a>TM: Commit Tran Completed, clase de evento
+# <a name="tm-commit-tran-completed-event-class"></a>TM: Clase de eventos Commit Tran Completed
   TM: Commit Tran Completed, clase de evento indica que ha completado una solicitud COMMIT TRANSACTION. La solicitud fue enviada desde el cliente mediante la interfaz de administración de transacciones. La columna EventSubClass indica si se reiniciará una nueva transacción una vez se confirme la transacción actual.  
   
 ## <a name="tm-commit-tran-completed-event-class-data-columns"></a>TM: Commit Tran completado columnas de datos de clase de eventos  

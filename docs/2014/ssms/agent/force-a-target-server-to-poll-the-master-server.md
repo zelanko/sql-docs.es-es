@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044060"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Forzar que un servidor de destino sondee el servidor maestro
   En este tema se describe cómo forzar que un servidor de destino sondee el servidor maestro. El servidor de destino debe ser un servidor registrado en el servidor maestro.  
@@ -30,7 +30,7 @@ ms.locfileid: "52764217"
 > [!NOTE]  
 >  Si no es posible el acceso al servidor maestro cuando el servidor de destino intenta cargar el estado del trabajo, dicho estado de trabajo se coloca en la cola hasta que se pueda obtener acceso al servidor principal.  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [seguridad](#Security)  
+-   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Seguridad](#Security)  
   
 -   **Para forzar que un servidor de destino sondee el servidor maestro, utilizando:**  [SQL Server Management Studio](#SSMS)  
   

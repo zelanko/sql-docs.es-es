@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017176"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Tutorial intermedio de minería de datos (Analysis Services - Minería de datos)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Proporciona un entorno integrado para crear y trabajar con modelos de minería de datos. Puede crear fácilmente enlaces con orígenes de datos, crear y probar varios modelos basados en los mismos datos e implementar los modelos para utilizarlos en análisis predictivos.  

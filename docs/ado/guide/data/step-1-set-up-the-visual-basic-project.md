@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce9e337a1ea45db851bafd32e0af476ae33fd3c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062811"
 ---
-# <a name="step-1-set-up-the-visual-basic-project"></a>Paso 1: Configurar el proyecto de Visual Basic
+# <a name="step-1-set-up-the-visual-basic-project"></a>Paso 1: Configuración del proyecto de Visual Basic
 En este escenario, se supone que tiene Microsoft Visual Basic 6.0, ADO 2.5 o posterior y el proveedor Microsoft OLE DB para la publicación en Internet instalada en el sistema. Se cree primero un nuevo proyecto y, a continuación, agregue algunos controles al formulario predeterminado en el proyecto.  
   
 ### <a name="to-create-an-ado-project"></a>Para crear un proyecto de ADO:  

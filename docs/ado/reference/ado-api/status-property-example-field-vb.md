@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caf016190e585aa64ee24f81fdcc0c18a4dab93f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027590"
 ---
 # <a name="status-property-example-field-vb"></a>Ejemplo de la propiedad de estado (campo) (VB)
 El siguiente ejemplo abre un documento desde una carpeta de lectura/escritura mediante el [Internet Publishing Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). El [estado](../../../ado/reference/ado-api/status-property-ado-field.md) propiedad de un [campo](../../../ado/reference/ado-api/field-object.md) objeto de la [registro](../../../ado/reference/ado-api/record-object-ado.md) primero se establecerá en **adFieldPendingInsert**, a continuación, se puede actualizar a **adFieldOk**.  

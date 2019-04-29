@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022246"
 ---
 # <a name="non-sql-server-subscribers"></a>suscriptores que no son de SQL Server
   Los siguientes suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden suscribirse a publicaciones de instantáneas y transaccionales mediante suscripciones de inserción. Las suscripciones se admiten en las dos versiones más recientes de cada base de datos enumerada utilizando la versión más reciente del proveedor OLE DB indicado.  
@@ -69,7 +69,7 @@ ms.locfileid: "52763227"
   
 -   Si se agrega o elimina un artículo de una publicación, se deben reinicializar las suscripciones a suscriptores que no sean de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   Las únicas restricciones que admite para todos los que no sean de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] los suscriptores son: NULL y NOT NULL. Las restricciones de clave principal se replican como índices únicos.  
+-   Las únicas restricciones que admiten los suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] son: NULL y NOT NULL. Las restricciones de clave principal se replican como índices únicos.  
   
 -   El valor NULL se trata de manera distinta en diferentes bases de datos y esto afecta al modo de representar un valor en blanco, una cadena vacía y un valor NULL. A su vez, afecta al comportamiento de los valores insertados en columnas con restricciones únicas definidas. Por ejemplo, Oracle permite varios valores NULL en una columna considerada única, mientras que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solo permite un valor NULL en una columna única.  
   

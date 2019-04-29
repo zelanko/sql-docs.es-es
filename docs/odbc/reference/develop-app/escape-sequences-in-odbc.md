@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62942978"
 ---
 # <a name="escape-sequences-in-odbc"></a>Secuencias de escape de ODBC
 Un número de características del lenguaje, como las combinaciones externas y llamadas a funciones escalares, normalmente se implementa los DBMS. Sin embargo, la sintaxis para estas características suelen ser específicos para DBMS, incluso cuando la sintaxis estándares se definen mediante los diversos organismos de estándares. Por este motivo, ODBC define secuencias de escape que contienen sintaxis estándares para las siguientes características de lenguaje:  

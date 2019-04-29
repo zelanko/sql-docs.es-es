@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012027"
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
   En este tema se describe cómo crear un inicio de sesión en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un inicio de sesión es la identidad de la persona o proceso que se está conectando a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -73,7 +73,7 @@ ms.locfileid: "54131595"
   
      Si hace clic en **Buscar...**:  
   
-    1.  En **Seleccione este tipo de objeto**, haga clic en **tipos de objeto...**  para abrir el **tipos de objeto** diálogo cuadro y seleccione alguna o todas las opciones siguientes: **Entidades de seguridad integradas**, **grupos**, y **usuarios**. Las opciones**Entidades de seguridad integradas** y **Usuarios** están seleccionadas de forma predeterminada. Cuando termine, haga clic en **Aceptar**.  
+    1.  En **Seleccionar este tipo de objeto**, haga clic en **Tipos de objeto...** para abrir el cuadro de diálogo **Tipos de objetos** y seleccione alguna o todas las opciones siguientes: **Entidades de seguridad integradas**, **Grupos** y **Usuarios**. Las opciones**Entidades de seguridad integradas** y **Usuarios** están seleccionadas de forma predeterminada. Cuando termine, haga clic en **Aceptar**.  
   
     2.  En **Desde esta ubicación**, haga clic en **Ubicaciones...** para abrir el cuadro de diálogo **Ubicaciones** y seleccione una de las ubicaciones de servidor disponibles. Cuando termine, haga clic en **Aceptar**.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54131595"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opciones adicionales  
- El **inicio de sesión - nuevo** cuadro de diálogo también proporciona opciones en cuatro páginas adicionales: **Roles de servidor**, **asignación de usuarios**, **elementos protegibles**, y **estado**.  
+ En el cuadro de diálogo **Inicio de sesión - Nuevo** también se ofrecen opciones en cuatro páginas adicionales: **Roles de servidor**, **Asignación de usuarios**, **Elementos protegibles** y **Estado**.  
   
 ### <a name="server-roles"></a>Roles del servidor  
  La página **Roles de servidor** enumera todos los roles posibles que se pueden asignar al nuevo inicio de sesión. Las siguientes opciones están disponibles:  
@@ -176,7 +176,7 @@ ms.locfileid: "54131595"
   
 1.  Haga clic en **Buscar**.  
   
-2.  En el **agregar objetos** cuadro de diálogo, seleccione una de las siguientes opciones: **Objetos específicos...** , **Todos los objetos de los tipos...** , o **el servidor**_nombre_servidor_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  En el cuadro de diálogo **Agregar objetos**, seleccione una de las opciones siguientes: **Objetos específicos...** , **Todos los objetos de los tipos...** , o **el servidor**_nombre_servidor_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  Cuando se selecciona **El servidor**_nombre_servidor_, se rellena automáticamente la cuadrícula superior con todos los objetos protegibles de ese servidor.  
@@ -185,7 +185,7 @@ ms.locfileid: "54131595"
   
     1.  En el cuadro de diálogo **Seleccionar objetos**, en **Seleccionar estos tipos de objeto**, haga clic en **Tipos de objeto...**.  
   
-    2.  En el **seleccionar tipos de objeto** diálogo cuadro, seleccione alguno o todos los tipos de objeto siguientes: **Los puntos de conexión**, **inicios de sesión**, **servidores**, **grupos de disponibilidad**, y **roles de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  En el cuadro de diálogo **Seleccionar tipos de objeto**, seleccione alguno o todos los tipos de objeto siguientes: **Puntos de conexión**, **Inicios de sesión**, **Servidores**, **Grupos de disponibilidad** y **Roles de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     3.  En **Escribir los nombres de objeto para seleccionar (ejemplos)**, haga clic en **Examinar...**.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "54131595"
   
     5.  En el cuadro de diálogo **Seleccionar objetos** , haga clic en **Aceptar**.  
   
-4.  Si selecciona **todos los objetos de los tipos...** , en el **seleccionar tipos de objeto** diálogo cuadro, seleccione alguno o todos los tipos de objeto siguientes: **Los puntos de conexión**, **inicios de sesión**, **servidores**, **grupos de disponibilidad**, y **roles de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Si selecciona **Todos los objetos de los tipos...**, en el cuadro de diálogo **Seleccionar tipos de objeto**, seleccione alguno o todos los tipos de objeto siguientes: **Puntos de conexión**, **Inicios de sesión**, **Servidores**, **Grupos de disponibilidad** y **Roles de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Name**  
  El nombre de cada entidad de seguridad o elemento protegible que se agrega a la cuadrícula.  
@@ -278,7 +278,7 @@ ms.locfileid: "54131595"
   
  Para obtener más información, vea [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-##  <a name="FollowUp"></a> Sigue: Pasos que se deben realizar después de crear un inicio de sesión  
+##  <a name="FollowUp"></a> Seguimiento: Pasos para realizar después de crear un inicio de sesión  
  Después de crear un inicio de sesión, este puede conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], pero no necesariamente tiene permisos suficientes para realizar ningún trabajo útil. En la lista siguiente se proporcionan vínculos a las acciones de inicio de sesión comunes.  
   
 -   Para combinar el inicio de sesión con un rol, vea [Combinar un rol](join-a-role.md).  

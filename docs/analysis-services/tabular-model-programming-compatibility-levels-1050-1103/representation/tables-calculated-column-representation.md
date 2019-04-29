@@ -1,5 +1,5 @@
 ---
-title: Calcula la representación de la columna (Tabular) | Documentos de Microsoft
+title: Calcula la representación de la columna (Tabular) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b0f8e3ddd813366d713f438fc526985773abd611
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34046106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019256"
 ---
 # <a name="tables---calculated-column-representation"></a>Tablas: representación de la columna calculada
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

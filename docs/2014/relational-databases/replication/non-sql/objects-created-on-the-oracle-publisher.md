@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022146"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objects Created on the Oracle Publisher
   La replicación de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala objetos de base de datos en el publicador de Oracle para habilitar el seguimiento y reenvío de los cambios ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no instala ningún archivo binario en el publicador de Oracle). En la siguiente tabla se muestran los objetos que se crean en el publicador de Oracle cuando se identifica como publicador en el distribuidor [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Las descripciones de los objetos se proporcionan solo como información. Estos objetos no se deben modificar.  

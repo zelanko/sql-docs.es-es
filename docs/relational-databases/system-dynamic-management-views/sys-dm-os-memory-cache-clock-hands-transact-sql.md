@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_memory_cache_clock_hands (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_memory_cache_clock_hands (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b39f40a36a9b9a639b8b6c90f6a6a37f7a32a4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047194"
 ---
 # <a name="sysdmosmemorycacheclockhands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47815119"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**cache_address**|**varbinary (8)**|Dirección de la caché asociada al reloj. No admite valores NULL.|  
+|**cache_address**|**varbinary(8)**|Dirección de la caché asociada al reloj. No admite valores NULL.|  
 |**Nombre**|**nvarchar(256)**|Nombre de la caché. No admite valores NULL.|  
 |**Tipo**|**nvarchar(60)**|Tipo de almacén de la caché. Pueden existir varias cachés del mismo tipo. No admite valores NULL.|  
 |**clock_hand**|**nvarchar(60)**|Tipo de manecilla. Es uno de los siguientes:<br /><br /> External<br /><br /> Interno<br /><br /> No admite valores NULL.|  

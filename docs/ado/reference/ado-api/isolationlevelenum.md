@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 366892f51207e7d89f643510f9becb664bb098c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027925"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 Especifica el nivel de aislamiento de transacción para un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
@@ -39,7 +39,7 @@ Especifica el nivel de aislamiento de transacción para un [conexión](../../../
 |**adXactSerializable**|1048576|Igual que **adXactIsolated**.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

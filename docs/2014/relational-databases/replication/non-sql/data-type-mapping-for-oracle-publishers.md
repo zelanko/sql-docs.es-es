@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022643"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
   Los tipos de datos de Oracle y de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no siempre coinciden de forma exacta. En la medida de lo posible, el tipo de datos coincidentes se selecciona automáticamente al publicar en una tabla Oracle. En los casos en que no queda clara una asignación de tipos de datos única, se proporcionan asignaciones alternativas de tipos de datos. Para obtener información acerca de cómo seleccionar asignaciones alternativas, vea la sección "Especificar asignaciones de tipos de datos alternativas" más adelante en este tema.  
@@ -47,7 +47,7 @@ ms.locfileid: "52786657"
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Sí|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|No|  
 |RAW([1-2000])|VARBINARY([1-2000])|No|  
-|real|FLOAT|No|  
+|REAL|FLOAT|No|  
 |ROWID|CHAR(18)|No|  
 |timestamp|DATETIME|Sí|  
 |MARCA DE TIEMPO(0-7)|DATETIME|Sí|  

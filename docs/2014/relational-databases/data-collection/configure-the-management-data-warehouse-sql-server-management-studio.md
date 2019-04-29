@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62918816"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar el almacén de administración de datos (SQL Server Management Studio)
   En este tema se describe cómo configurar el almacén de administración de datos para admitir el almacenamiento de datos en una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que utilizan el recopilador de datos. Estas instancias pueden estar en el mismo servidor o en servidores diferentes. También se proporcionan descripciones de la interfaz de usuario del cuadro de diálogo [Asistente para configurar el almacén de administración de datos](#Wizard) . Para obtener información acerca de cómo configurar un recopilador de datos, vea [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md).  

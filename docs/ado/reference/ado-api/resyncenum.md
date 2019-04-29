@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aaf396e8969d490933e26652e18c0c070e030785
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060977"
 ---
 # <a name="resyncenum"></a>ResyncEnum
 Especifica si se sobrescriben los valores subyacentes mediante una llamada a [Resync](../../../ado/reference/ado-api/resync-method.md).  
@@ -32,7 +32,7 @@ Especifica si se sobrescriben los valores subyacentes mediante una llamada a [Re
 |**adResyncUnderlyingValues**|1|No sobrescribir los datos y no se cancelan las actualizaciones pendientes.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

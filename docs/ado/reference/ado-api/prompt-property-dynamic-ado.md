@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc11f2691613848865219f80b82a7d082803fa04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027761"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Propiedad-dinámica Prompt (ADO)
 Especifica si el proveedor OLE DB debe solicitar al usuario información de inicialización.  

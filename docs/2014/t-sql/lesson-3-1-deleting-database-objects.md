@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063126"
 ---
 # <a name="deleting-database-objects"></a>Eliminar objetos de base de datos
   Para quitar todas los seguimientos de este tutorial, podría eliminar únicamente la base de datos. No obstante, en este tema, recorrerá los pasos para revertir cada una de las acciones llevadas a cabo en el tutorial.  
@@ -100,7 +100,7 @@ ms.locfileid: "48092330"
  Esto finaliza el tutorial de escritura de instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] . Recuerde que este tutorial es una introducción breve y en él no se describen todas las opciones de las instrucciones que se usan. El diseño y la creación de una estructura de base de datos eficaz y la configuración del acceso seguro a los datos requiere una base de datos más compleja que la que se muestra en este tutorial.  
   
 ## <a name="return-to-sql-server-tools-portal"></a>Volver al portal de las herramientas de SQL Server  
- [Tutorial: Escribir instrucciones Transact-SQL](tutorial-writing-transact-sql-statements.md)  
+ [Tutorial: Escritura de instrucciones Transact-SQL](tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>Vea también  
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   

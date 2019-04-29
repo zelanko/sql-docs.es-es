@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046257"
 ---
 # <a name="changing-passwords-programmatically"></a>Cambiar las contraseñas mediante programación
   En versiones anteriores de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], cuando expiraba una contraseña de usuario, solo el administrador podía restablecerla. A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client permite administrar la caducidad de contraseña mediante programación a través de ambos el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client y el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client y a través de los cambios realizados en el **El inicio de sesión de SQL Server** cuadros de diálogo.  
@@ -40,12 +40,12 @@ ms.locfileid: "53370497"
 |Código de error de SQL Server|Mensaje de error|  
 |---------------------------|-------------------|  
 |15113|Error de inicio de sesión para el usuario ' %. *. motivo ls': Error de validación de contraseña. Se ha bloqueado la cuenta.|  
-|18463|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no se puede utilizar en este momento.|  
-|18464|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
-|18465|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
-|18466|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque no es bastante compleja.|  
-|18467|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. La contraseña no cumple los requisitos de la DLL de filtro de contraseña.|  
-|18468|Error de inicio de sesión del usuario '%.*ls'. Motivo: Error al cambiar la contraseña. Error inesperado durante la validación de la contraseña.|  
+|18463|Error de inicio de sesión del usuario '%.*ls'. Motivo: No se pudo cambiar la contraseña. La contraseña no se puede utilizar en este momento.|  
+|18464|Error de inicio de sesión del usuario '%.*ls'. Motivo: No se pudo cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
+|18465|Error de inicio de sesión del usuario '%.*ls'. Motivo: No se pudo cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque es demasiado larga.|  
+|18466|Error de inicio de sesión del usuario '%.*ls'. Motivo: No se pudo cambiar la contraseña. La contraseña no cumple los requisitos de directiva porque no es bastante compleja.|  
+|18467|Error de inicio de sesión del usuario '%.*ls'. Motivo: No se pudo cambiar la contraseña. La contraseña no cumple los requisitos de la DLL de filtro de contraseña.|  
+|18468|Error de inicio de sesión del usuario '%.*ls'. Motivo: No se pudo cambiar la contraseña. Error inesperado durante la validación de la contraseña.|  
 |18487|Error de inicio de sesión del usuario '%.*ls'. Motivo: La contraseña de la cuenta ha expirado.|  
 |18488|Error de inicio de sesión del usuario '%.*ls'. Motivo: Debe cambiarse la contraseña de la cuenta.|  
   

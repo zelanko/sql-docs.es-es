@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063101"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Las funciones de agregado, la función CALC y la palabra clave NEW
 La forma de datos admite las funciones siguientes. El nombre asignado al capítulo que contiene la columna que se opera es la *alias de capítulo*.  
@@ -30,21 +30,21 @@ La forma de datos admite las funciones siguientes. El nombre asignado al capítu
   
 |Funciones de agregado|Descripción|  
 |-------------------------|-----------------|  
-|SUM (*alias de capítulo*. *nombre de columna*)|Calcula la suma de todos los valores de la columna especificada.|  
+|SUM(*chapter-alias*.*column-name*)|Calcula la suma de todos los valores de la columna especificada.|  
 |AVG (*alias de capítulo*. *nombre de columna*)|Calcula el promedio de todos los valores de la columna especificada.|  
 |MAX (*alias de capítulo*. *nombre de columna*)|Calcula el valor máximo de la columna especificada.|  
 |MIN (*alias de capítulo*. *nombre de columna*)|Calcula el valor mínimo de la columna especificada.|  
 |RECUENTO (*alias de capítulo*[. *nombre de columna*])|Cuenta el número de filas en el alias especificado. Si se especifica una columna, solo las filas para los que esa columna es distinto de Null se incluyen en el recuento.|  
 |STDEV (*alias de capítulo*. *nombre de columna*)|Calcula la desviación estándar de la columna especificada.|  
-|CUALQUIER (*alias de capítulo*. *nombre de columna*)|Un valor de la columna especificada. ALGUNA tiene un valor de predicción solo cuando el valor de la columna es el mismo para todas las filas en el capítulo.<br /><br /> **Tenga en cuenta** si la columna no contiene el mismo valor para todas las filas en el capítulo, el comando SHAPE arbitrariamente devuelve uno de los valores que sea el valor de la función ANY.|  
+|ANY(*chapter-alias*.*column-name*)|Un valor de la columna especificada. ALGUNA tiene un valor de predicción solo cuando el valor de la columna es el mismo para todas las filas en el capítulo.<br /><br /> **Tenga en cuenta** si la columna no contiene el mismo valor para todas las filas en el capítulo, el comando SHAPE arbitrariamente devuelve uno de los valores que sea el valor de la función ANY.|  
   
 |Expresión calculada|Descripción|  
 |---------------------------|-----------------|  
-|CALC (*expresión*)|Calcula una expresión arbitraria, pero solo en la fila de la **Recordset** que contiene la función CALC. Cualquier expresión mediante estos [Visual Basic para aplicaciones (VBA) funciones](../../../ado/guide/data/visual-basic-for-applications-functions.md) está permitido.|  
+|CALC(*expression*)|Calcula una expresión arbitraria, pero solo en la fila de la **Recordset** que contiene la función CALC. Cualquier expresión mediante estos [Visual Basic para aplicaciones (VBA) funciones](../../../ado/guide/data/visual-basic-for-applications-functions.md) está permitido.|  
   
 |NUEVA palabra clave|Descripción|  
 |-----------------|-----------------|  
-|NUEVO *tipo de campo* [(*ancho* &#124; *escala* &#124; *precisión* &#124; *error*[, *escala* &#124; *error*])]|Agrega una columna vacía del tipo especificado a la **Recordset**.|  
+|NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|Agrega una columna vacía del tipo especificado a la **Recordset**.|  
   
  El *tipo de campo* pasa con la palabra clave NEW puede ser cualquiera de los siguientes tipos de datos.  
   
@@ -54,17 +54,17 @@ La forma de datos admite las funciones siguientes. El nombre asignado al capítu
 |DBTYPE_BOOL|adBoolean|  
 |DBTYPE_DECIMAL|adDecimal|  
 |DBTYPE_UI1|adUnsignedTinyInt|  
-|DBTYPE_I1|excepto adVarNumeric|  
+|DBTYPE_I1|adTinyInt|  
 |DBTYPE_UI2|adUnsignedSmallInt|  
 |DBTYPE_UI4|adUnsignedInt|  
 |DBTYPE_I8|adBigInt|  
 |DBTYPE_UI8|adUnsignedBigInt|  
 |DBTYPE_GUID|adGuid|  
-|DBTYPE_BYTES|adLongVarBinary adBinary, AdVarBinary,|  
-|DBTYPE_STR|Cada, parámetros, adLongVarChar|  
+|DBTYPE_BYTES|adBinary, AdVarBinary, adLongVarBinary|  
+|DBTYPE_STR|adChar, adVarChar, adLongVarChar|  
 |DBTYPE_WSTR|adWChar, adVarWChar, adLongVarWChar|  
 |DBTYPE_NUMERIC|adNumeric|  
-|DBTYPE_DBDATE|adDBData|  
+|DBTYPE_DBDATE|adDBDate|  
 |DBTYPE_DBTIME|adDBTime|  
 |DBTYPE_DBTIMESTAMP|adDBTimeStamp|  
 |DBTYPE_VARNUMERIC|adVarNumeric|  

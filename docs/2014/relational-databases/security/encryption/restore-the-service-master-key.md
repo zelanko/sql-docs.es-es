@@ -14,11 +14,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 17a404ef96b4800aa072b8f35c2d22c349361ca3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011547"
 ---
 # <a name="restore-the-service-master-key"></a>Restaurar la clave maestra de servicio
   En este tema se describe cómo restaurar la clave maestra de servicio en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "48229795"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso CONTROL SERVER en el servidor.  
   
 ##  <a name="SSMSProcedure"></a> Usar Transact-SQL  

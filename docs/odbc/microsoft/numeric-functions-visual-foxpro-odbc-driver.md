@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73379b769da61fe14ba18815446337d0172c2805
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63045490"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>Funciones numéricas (controlador ODBC de Visual FoxPro)
 La tabla siguiente describen las funciones numéricas de ODBC compatibles con el controlador ODBC de Visual FoxPro; Cuando la gramática de Visual FoxPro para la misma función difiere de la sintaxis ODBC, se muestra el equivalente de Visual FoxPro.  
@@ -36,18 +36,18 @@ La tabla siguiente describen las funciones numéricas de ODBC compatibles con el
 |CEILING *(numeric_exp)*||  
 |COS *(float_exp)*||  
 |COT *(float_exp)*||  
-|GRADOS *(numeric_exp)*|RTOD *(numeric_exp)*|  
+|DEGREES *(numeric_exp)*|RTOD *(numeric_exp)*|  
 |EXP *(float_exp)*||  
 |FLOOR *(numeric_exp)*||  
-|Registro *(float_exp)*||  
+|LOG *(float_exp)*||  
 |LOG10 *(float_exp)*||  
 |MOD *(integer_exp1, integer_exp2)*||  
-|PI *)*||  
-|RADIANES *(numeric_exp)*|DTOR *(numeric_exp)*|  
+|PI *( )*||  
+|RADIANS *(numeric_exp)*|DTOR *(numeric_exp)*|  
 |RAND *([integer_exp])*||  
 |REDONDEAR *(numeric_exp, integer_exp)*||  
-|Inicio de sesión *(numeric_exp)*||  
-|SENO *(float_exp)*||  
+|SIGN *(numeric_exp)*||  
+|SIN *(float_exp)*||  
 |SQRT *(float_exp)*||  
 |TAN *(float_exp)*||  
   
@@ -55,4 +55,4 @@ La tabla siguiente describen las funciones numéricas de ODBC compatibles con el
   
  POWER *(numeric_exp, integer_exp)*  
   
- TRUNCAR *(numeric_exp, integer_exp)*
+ TRUNCATE *(numeric_exp, integer_exp)*

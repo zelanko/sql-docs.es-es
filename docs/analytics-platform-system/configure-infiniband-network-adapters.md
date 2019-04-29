@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057221"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurar adaptadores de red InfiniBand para Analytics Platform System
 Describe cómo configurar los adaptadores de red InfiniBand en un servidor que no sea de dispositivo cliente para conectarse al nodo de Control en el almacenamiento de datos paralelos (PDW). Siga estas instrucciones para la conectividad básica y de alta disponibilidad, para que los procesos de copia de seguridad, la cargando y otros se conectan automáticamente a la red InfiniBand activa.  

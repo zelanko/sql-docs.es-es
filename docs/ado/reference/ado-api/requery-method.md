@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 433f5d279e638e3ccdf7ba3a7bb2590f80b04a6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062373"
 ---
 # <a name="requery-method"></a>Requery (método)
 Actualiza los datos en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto volviendo a ejecutar la consulta en el que se basa el objeto.  

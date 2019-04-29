@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e71776a43aa338246b4acb3b4d9f620c19234f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028142"
 ---
 # <a name="find-method-ado"></a>Find (método) (ADO)
 Busca un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) para la fila que cumple los criterios especificados. Opcionalmente, se puede especificar la dirección de la búsqueda, la fila inicial y el desplazamiento desde la fila inicial. Si se cumplen los criterios, la posición de fila actual se establece en el registro se encuentra; en caso contrario, se establece la posición al final (o inicio) de la **Recordset**.  
@@ -38,13 +38,13 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *Criterios*  
  Un **cadena** valor que contiene una instrucción que especifica el nombre de columna, el operador de comparación y el valor para usar en la búsqueda.  
   
- *Skiprows al*  
+ *SkipRows*  
  Opcional *.* Un **largo** valor, cuyo valor predeterminado es cero, que especifica el desplazamiento de fila de la fila actual o *iniciar* marcador para iniciar la búsqueda. De forma predeterminada, se iniciará la búsqueda en la fila actual.  
   
  *SearchDirection*  
  Opcional *.* Un [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valor que especifica si debe comenzar la búsqueda en la fila actual o la próxima fila disponible en la dirección de la búsqueda. Una búsqueda se detiene al final de la **Recordset** si el valor es **adSearchForward**. Una búsqueda se detiene al comienzo de la **Recordset** si el valor es **adSearchBackward**.  
   
- *Inicio*  
+ *Iniciar*  
  Opcional. Un **Variant** marcador que funciona como la posición inicial de la búsqueda.  
   
 ## <a name="remarks"></a>Comentarios  

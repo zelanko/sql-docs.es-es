@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab57e69118edfe4a647d6baeedf5a10ee8460247
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026462"
 ---
 # <a name="msmergetombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "52796265"
 |**rowguid**|**uniqueidentifier**|Identificador de fila.|  
 |**tablenick**|**int**|Alias de la tabla.|  
 |**Tipo**|**tinyint**|Tipo de eliminación:<br /><br /> 1 = Eliminación de usuario.<br /><br /> 5 = La fila ya no pertenece a la partición filtrada.<br /><br /> 6 = Eliminación de sistema.|  
-|**linaje**|**varbinary(249)**|Indica la versión del registro eliminada y las actualizaciones conocidas antes de su eliminación. Permite usar reglas para la resolución coherente de un conflicto cuando un suscriptor actualiza una fila mientras otro suscriptor la elimina.|  
-|**generación**|**int**|Se asigna cuando se elimina una fila. Si un suscriptor solicita la generación N, solamente se envían marcadores de exclusión con generación >= N.|  
+|**lineage**|**varbinary(249)**|Indica la versión del registro eliminada y las actualizaciones conocidas antes de su eliminación. Permite usar reglas para la resolución coherente de un conflicto cuando un suscriptor actualiza una fila mientras otro suscriptor la elimina.|  
+|**generation**|**int**|Se asigna cuando se elimina una fila. Si un suscriptor solicita la generación N, solo marcadores de exclusión con generación > = N se envían.|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|Identifica el registro lógico al que pertenece una fila eliminada.|  
 |**logical_record_lineage**|**Varbinary(501)**|El alias del suscriptor, pares de números de versión que se utilizan para mantener un historial de las eliminaciones del registro lógico al que pertenece esta fila.|  
   

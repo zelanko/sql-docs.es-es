@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b9e6c04a0ae0000284f3550d39e47c973adbe8ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061923"
 ---
 # <a name="processid-class-sqlservice-class"></a>Clase ProcessId (clase SqlService)
   Obtiene el id. del proceso del sistema que identifica un servicio de forma inequívoca.  

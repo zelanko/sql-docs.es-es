@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17b2e566be6bedbb032b7a4fc06c938075bd32e8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022453"
 ---
 # <a name="sql-server-replication-publication-properties"></a>Propiedades de la publicación de replicación de SQL Server 
   Esta sección proporciona información sobre todas las páginas de la **propiedades de la publicación** cuadro de diálogo. 
@@ -47,7 +47,7 @@ ms.locfileid: "54128385"
  Tipo de publicación (solo lectura).  
   
  **Expiración de la suscripción**  
- Seleccione una de las opciones de expiración de suscripción: **Las suscripciones no expiren nunca** o **las suscripciones expiran**, con un período de tiempo explícito (**intervalo**).  
+ Seleccione una de las opciones para la expiración de la suscripción: **Las suscripciones no expiran nunca** o **Las suscripciones expiran**, con un período de tiempo explícito (**Intervalo**).  
   
  En las publicaciones de instantáneas y transaccionales, [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que acepte la opción predeterminada **Las suscripciones no expiran nunca**.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "54128385"
  Este panel se llena con filtros según se agregan a los artículos de la tabla en la publicación. Las tablas con filtros de fila se muestran como nodos de nivel superior en el panel. En las publicaciones de combinación, las tablas cuyo filtro se ha ampliado a filtro de combinación se muestran como nodos secundarios.  
   
  **Agregar**  
- Haga clic en **Agregar** para abrir un cuadro de diálogo que permite filtrar artículos de la tabla. Si hace clic en **Agregar** en una publicación de instantáneas o transaccional, se abre inmediatamente un cuadro de diálogo. Al hacer clic en **agregar** para una combinación de publicación muestra tres opciones: **Agregar filtro**; **Agregar combinación para ampliar el filtro seleccionado**; **Generar filtros automáticamente**.  
+ Haga clic en **Agregar** para abrir un cuadro de diálogo que permite filtrar artículos de la tabla. Si hace clic en **Agregar** en una publicación de instantáneas o transaccional, se abre inmediatamente un cuadro de diálogo. Al hacer clic en **Agregar** para una publicación de mezcla se muestran tres opciones: **Agregar filtro**; **Agregar combinación para ampliar el filtro seleccionado**; **Generar filtros automáticamente**.  
   
 -   Seleccione **Agregar filtro** para abrir el cuadro de diálogo **Agregar filtro** . Este cuadro de diálogo permite aplicar filtros de fila a un artículo de la tabla. En el cuadro de diálogo **Agregar filtro** , por ejemplo, podría especificar que una tabla con datos de cliente solamente debe contener datos de los clientes franceses cuando se replique a los suscriptores.  
   

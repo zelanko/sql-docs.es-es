@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 812ba207d699cbbdb2156a4c5f3799cbfa8a74db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023441"
 ---
 # <a name="bitmap-warning-event-class"></a>Bitmap Warning, clase de eventos
   La clase de eventos **Bitmap Warning** se puede utilizar para supervisar el uso de filtros de mapas de bits en consultas. La subclase de evento se puede utilizar para notificar cuándo los filtros de mapas de bits se han deshabilitado en una consulta.  

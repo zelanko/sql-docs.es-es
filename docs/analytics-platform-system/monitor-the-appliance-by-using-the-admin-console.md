@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d094f809052222238806e679e38c6578422fd9aa
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027544"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Supervisar el dispositivo con la consola de administración - Analytics Platform System
 La consola de administración es una aplicación web de PDW de SQL Server que presenta la información de estado, el estado y rendimiento del dispositivo. Los usuarios conectarse a la consola de administración a través de Internet Explorer.  
@@ -85,7 +85,7 @@ La consola de administración proporciona la capacidad para supervisar lo siguie
 |-|-|  
 |**Tipo de información**|**Cómo obtener acceso a en la consola de administración**|  
 |Estado general del dispositivo|Haga clic en **estado de dispositivo** en el menú superior, o **inicio**.|  
-|Trabajos|Haga clic en **alertas**. Para obtener más información, consulte [información sobre las alertas de la consola de administrador &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
+|Alertas|Haga clic en **alertas**. Para obtener más información, consulte [información sobre las alertas de la consola de administrador &#40;Analytics Platform System&#41;](understanding-admin-console-alerts.md).|  
 |Componentes de dispositivo y su estado|Haga clic en **estado de dispositivo** en el menú superior, o **inicio**.|  
 |Solicitudes de monitor (incluidas las consultas, las cargas, las copias de seguridad y restauraciones)|Haga clic en **sesiones** para ver sesiones actualmente activas o recientes.<br /><br />Haga clic en **consultas** para ver consultas actualmente activas o recientes. La información que aparece para las consultas incluye cargas, las copias de seguridad y restauraciones.<br /><br />Haga clic en **bloqueos** para ver los bloqueos activos.|  
 |Supervisar la información adicional para las cargas, las copias de seguridad y restauraciones.|Haga clic en **cargas** o **copias de seguridad/restauraciones**.|  

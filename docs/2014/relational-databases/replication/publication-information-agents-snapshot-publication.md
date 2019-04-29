@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7d8b89024d27626516f99a5237c0efcd593bad0f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021786"
 ---
 # <a name="publication-information-agents-snapshot-publication"></a>Información de publicación, Agentes (Publicación de instantánea)
   La pestaña **Agentes** muestra información de resumen del Agente de instantáneas para la publicación seleccionada.  
@@ -25,13 +25,13 @@ ms.locfileid: "54135755"
 ## <a name="options"></a>Opciones  
  Para obtener información más detallada y las tareas relacionadas con el Agente de instantáneas, haga clic con el botón secundario en la fila del agente y, a continuación, haga clic en una opción del menú contextual. Para cambiar la manera que la cuadrícula muestra los datos, haga clic con el botón secundario en la cuadrícula y, a continuación, haga clic en una de las opciones siguientes:  
   
--   **Ordenación**: Ordenar por una o varias columnas en el **ordenar columnas** cuadro de diálogo.  
+-   **Ordenar**: ordene por una o más columnas en el cuadro de diálogo **Ordenar columnas**.  
   
--   **Elegir columnas para mostrar**: Seleccionar qué columnas desea mostrar y el orden en que se mostrarán en el **Elegir columnas** cuadro de diálogo.  
+-   **Elegir columnas para mostrar**: seleccione las columnas que se van a mostrar y el orden en el que lo harán en el cuadro de diálogo **Elegir columnas**.  
   
--   **Filtro**: Filtrar las filas en la cuadrícula basándose en valores de columna en la **configuración del filtro** cuadro de diálogo.  
+-   **Filtro**: filtre las filas de la cuadrícula en función de los valores de columna del cuadro de diálogo **Configuración del filtro**.  
   
--   **Borrar filtro**: Borre cualquier configuración de la cuadrícula de filtro.  
+-   **Borrar filtro**: borre cualquier configuración de filtro para la cuadrícula.  
   
  La configuración del filtro es específica de cada cuadrícula. La selección y ordenación de las columnas se aplica a todas las cuadrículas del mismo tipo, como la cuadrícula de las publicaciones para cada Publicador.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54135755"
 -   Completada  
   
  **Agente**  
- Agente de instantáneas. Éste es el único agente asociado con una publicación de instantáneas. El Agente de distribución está asociado con suscripciones a esta publicación. Para obtener más información, consulte [ver información y realizar tareas con el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ Agente de instantáneas. Éste es el único agente asociado con una publicación de instantáneas. El Agente de distribución está asociado con suscripciones a esta publicación. Para más información, vea [Visualización de información y realización de tareas mediante el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  **Última hora de inicio**  
  Hora en la que se inició el agente por última vez.  
@@ -60,7 +60,7 @@ ms.locfileid: "54135755"
   
 ## <a name="see-also"></a>Vea también  
  [Iniciar el Monitor de replicación](monitor/start-the-replication-monitor.md)   
- [Ver información y realizar tareas con el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Visualización de información y realización de tareas mediante el Monitor de replicación](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Supervisar la replicación](monitoring-replication.md)  
   
   

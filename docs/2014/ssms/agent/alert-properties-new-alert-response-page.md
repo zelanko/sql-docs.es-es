@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062196"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>Alerta de propiedades de nueva alerta (página respuesta)
   Use esta página para especificar el trabajo que desea ejecutar y obtener una lista de operadores a los que se notificará en respuesta a una alerta del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

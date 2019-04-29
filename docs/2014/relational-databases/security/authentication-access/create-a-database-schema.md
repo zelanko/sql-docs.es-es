@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3c3747149b23c6217f321eff9d19621189b89b66
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011987"
 ---
 # <a name="create-a-database-schema"></a>Crear un esquema de la base de datos
   En este tema se describe cómo crear un esquema en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "52541216"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
   
 -   Requiere el permiso CREATE SCHEMA en la base de datos.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "52541216"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Opciones adicionales  
- El **esquema-nuevo** cuadro de diálogo también proporciona opciones en dos páginas adicionales: **Permisos** y **propiedades extendidas**.  
+ En el cuadro de diálogo **Esquema - Nuevo** también se ofrecen opciones en dos páginas adicionales: **Permisos** y **Propiedades extendidas**.  
   
 -   La página **Permisos** muestra todos los elementos protegibles posibles y los permisos en esos elementos protegibles que se pueden conceder al inicio de sesión.  
   

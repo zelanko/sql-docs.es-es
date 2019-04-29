@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 142dd6544cafde4cea2839f955f23685a3a673f5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022503"
 ---
 # <a name="create-a-publication"></a>Create a Publication
   En este tema se describe cómo crear una publicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -45,7 +45,7 @@ ms.locfileid: "53365976"
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Los nombres de publicaciones y artículos no pueden contener ninguno de los siguientes caracteres: % , \* , [ , ] , | , : , " , ? , ', \, /, \< , >. Si los objetos de la base de datos incluyen cualquiera de estos caracteres y quiere replicarlos, debe especificar un nombre de artículo diferente del nombre del objeto del cuadro de diálogo **Propiedades del artículo: \<<artículo>**, que está disponible en la página **Artículos**.  
+-   Los nombres de publicaciones y artículos no pueden contener ninguno de los siguientes caracteres: % , \* , [ , ] , | , : , " , ? , ' , \ , / , \< , >. Si los objetos de la base de datos incluyen cualquiera de estos caracteres y quiere replicarlos, debe especificar un nombre de artículo diferente del nombre del objeto del cuadro de diálogo **Propiedades del artículo: \<<artículo>**, que está disponible en la página **Artículos**.  
   
 ###  <a name="Security"></a> Seguridad  
  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0588bdced4d8d11111b02eb7d6a1e1a892d1acb4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023930"
 ---
 # <a name="objectcreated-event-class"></a>Object:Created, clase de eventos
   La clase de eventos Object:Created indica que se ha creado un objeto; por ejemplo, por parte de la instrucción CREATE INDEX, la instrucción CREATE TABLE o la instrucción CREATE DATABASE.  

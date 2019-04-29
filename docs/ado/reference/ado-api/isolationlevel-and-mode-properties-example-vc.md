@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 928be152faec37ed1f954561a7f14f176c92cfbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027905"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>Ejemplo IsolationLevel y Mode propiedades (VC ++)
 Este ejemplo se usa el [modo](../../../ado/reference/ado-api/mode-property-ado.md) propiedad para abrir una conexión exclusiva y el [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propiedad para abrir una transacción que se lleva a cabo de forma aislada de otras transacciones.  
@@ -227,7 +227,7 @@ void PrintComError(_com_error &e) {
  **Modo de conexión es exclusivo**  
 **La transacción está aislado**  
 **Guía de base de datos del ocupado ejecutivo - empresarial**  
-**Cocinar con equipos: encubierta balances - empresarial**  
+**Cocinar con equipos: Encubierta balances - empresarial**  
 **¡Para combatir el estrés del equipo! -empresarial**  
 **Recta hablar sobre equipos - empresarial**  
 **Trata de Silicon Valley gastronomía - mod_cook**  
@@ -236,12 +236,12 @@ void PrintComError(_com_error &e) {
 **¿Pero es fácil de usar? -popular_comp**  
 **Secretos de Silicon Valley - popular_comp**  
 **Etiqueta de NET - popular_comp**  
-**Que no disfrutan de equipo y las personas que no disfrutan que no son: Variaciones de comportamiento - self_help**  
+**Personas Phobic y no que no disfrutan de equipo: Variaciones de comportamiento - self_help**  
 **¿Es ira el enemigo? -self_help**  
 **Vida sin temor - self_help**  
-**Privación de datos largos: Cuatro casos prácticos - self_help**  
+**Prolonga la privación de datos: Cuatro casos prácticos - self_help**  
 **Seguridad emocional: Un nuevo algoritmo - self_help**  
-**Las cebollas, los puerros y ajo: cocinar los secretos de los mares Mediterráneo - trad_cook**  
+**Las cebollas, los puerros y ajo: Cocinar los secretos de los mares Mediterráneo - trad_cook**  
 **Años cincuenta en Buckingham Palacio cocinas - trad_cook**  
 **¿Identidad (phishing), cualquier persona? -trad_cook**   
 ## <a name="see-also"></a>Vea también  

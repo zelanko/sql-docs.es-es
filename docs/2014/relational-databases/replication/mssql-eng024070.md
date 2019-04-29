@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63023915"
 ---
 # <a name="mssqleng024070"></a>MSSQL_ENG024070
     
@@ -35,7 +35,7 @@ ms.locfileid: "54123475"
 ## <a name="explanation"></a>Explicación  
  Se trata de un error general que puede producirse independientemente de que se esté usando replicación o no. Para un servidor de una topología de replicación, el error suele producirse porque la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se cambia con el Administrador de control de servicios de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en lugar del Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si intenta ejecutar un trabajo de agente después de cambiar la cuenta de servicio, es posible que el trabajo no progrese y aparezca un mensaje de error similar al siguiente:  
   
- "Ejecutado como usuario: \<CuentaDeUsuario >. Subsistema de instantánea de replicación: agente \<Nombreagente > no se pudo. Ejecutado como usuario: \<CuentaDeUsuario >. El cliente no dispone de un privilegio requerido. Error en el paso. `[SQLSTATE 42000] (Error 14151)`  Error en el paso."  
+ "Ejecutado como usuario: \<UserAccount>. Subsistema de instantánea de replicación: agente \<Nombreagente > no se pudo. Ejecutado como usuario: \<UserAccount>. El cliente no dispone de un privilegio requerido. Error en el paso. `[SQLSTATE 42000] (Error 14151)`  Error en el paso."  
   
  Este problema se produce porque el Administrador de control de servicios de Windows no puede conceder los permisos necesarios a la nueva cuenta de servicio para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

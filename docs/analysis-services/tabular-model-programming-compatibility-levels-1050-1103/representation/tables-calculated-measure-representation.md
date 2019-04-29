@@ -1,5 +1,5 @@
 ---
-title: Calcula la representación de la medida (Tabular) | Documentos de Microsoft
+title: Calcula la representación de la medida (Tabular) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb14a3114edde51f55a0d540a9ab7c8aa7578de2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34041939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019283"
 ---
 # <a name="tables---calculated-measure-representation"></a>Tablas: representación de la medida calculada
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34041939"
 ## <a name="calculated-measure-representation"></a>Representación de la medida calculada  
   
 ### <a name="calculated-measure-in-amo"></a>Medida calculada en AMO  
- Cuando se usa AMO para administrar una medida calculada de un modelo tabular, hay una correspondencia uno a uno entre el objeto lógico de medida calculada y una medida definida en un objeto <xref:Microsoft.AnalysisServices.Command> del objeto <xref:Microsoft.AnalysisServices.MdxScript>. Cada **medida calculada** se define como un **CREATE MEASURE** expresión dentro de un <xref:Microsoft.AnalysisServices.Command> de objetos y separados por un punto y coma. Todas las medidas calculan en un modelo tabular corresponden a la colección **CREATE MEASURE** cadena en un objeto de comando en un <xref:Microsoft.AnalysisServices.MdxScript> objeto. Para cada medida calculada, hay una asignación uno a uno con una <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ Cuando se usa AMO para administrar una medida calculada de un modelo tabular, hay una correspondencia uno a uno entre el objeto lógico de medida calculada y una medida definida en un objeto <xref:Microsoft.AnalysisServices.Command> del objeto <xref:Microsoft.AnalysisServices.MdxScript>. Cada **medida calculada** se define como un **CREATE MEASURE** expresión dentro de un <xref:Microsoft.AnalysisServices.Command> de objetos y separados por punto y coma. Todas las medidas calculan en un modelo tabular corresponden a la colección **CREATE MEASURE** cadena en un objeto de comando en un <xref:Microsoft.AnalysisServices.MdxScript> objeto. Para cada medida calculada, hay una asignación uno a uno con una <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
  En el fragmento de código siguiente se muestra cómo se crea una medida calculada.  
   

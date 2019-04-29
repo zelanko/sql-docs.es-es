@@ -11,16 +11,16 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c52c5a160148b914874d5b237ecfae7edf8518c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924152"
 ---
 # <a name="install-master-data-services"></a>Instalar Master Data Services
   El siguiente flujo de trabajo proporciona información general acerca de cómo instalar y configurar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] La instalación es un proceso que consta de tres partes:  
   
--   [Tareas de preinstalación](#preinstall): Compruebe los requisitos del sistema antes de instalar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+-   [Tareas previas a la instalación](#preinstall): Compruebe los requisitos del sistema antes de instalar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 -   [Operaciones de instalación](#install): Instalar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utilizando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el programa de instalación o la línea de comandos.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "53352861"
 |Acción|Detalles|Temas relacionados|  
 |------------|-------------|--------------------|  
 |Comprobar los requisitos de instalación|El equipo donde se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe cumplir los requisitos mínimos para:<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Los servicios web y la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .<br /><br /> La base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , si hospeda la base de datos en el mismo equipo que la aplicación web.<br /><br /> Tenga en cuenta que puede separar el equipo servidor web y el equipo del servidor de base de datos que se ejecuta el programa de instalación en sólo el equipo del servidor web y creando la [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] base de datos en un equipo remoto que ejecuta una versión y edición compatibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)<br /><br /> [Requisitos de hardware y software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [Requisitos de la aplicación web &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)<br /><br /> [Requisitos de base de datos &#40;Master Data Services&#41;](database-requirements-master-data-services.md)|  
-|Configurar los roles necesarios, servicios del rol y características|Antes de ejecutar el programa de instalación, configure el equipo con los roles de Windows, los servicios de rol y las características necesarios.<br /><br /> Nota: Aunque puede seguir este paso posteriormente en el flujo de trabajo, es útil configurar esto antes de ejecutar el programa de instalación para poder realizar tareas de configuración de web inmediatamente después de la instalación.|[Requisitos de la aplicación web &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)|  
+|Configurar los roles necesarios, servicios del rol y características|Antes de ejecutar el programa de instalación, configure el equipo con los roles de Windows, los servicios de rol y las características necesarios.<br /><br /> Nota: Aunque puede realizar este paso más adelante en el flujo de trabajo, es útil configurar esto antes de ejecutar el programa de instalación para que pueda realizar las tareas de configuración de web inmediatamente después de la instalación.|[Requisitos de la aplicación web &#40;Master Data Services&#41;](web-application-requirements-master-data-services.md)|  
 |Revisar las consideraciones de la compatibilidad con idiomas|Determine el idioma con el que desea instalar y ejecutar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .|[Implementaciones plurilingües y globales &#40;Master Data Services&#41;](multi-lingual-and-global-deployments-master-data-services.md)|  
   
 ##  <a name="install"></a> Operaciones de instalación  

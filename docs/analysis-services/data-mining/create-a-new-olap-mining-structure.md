@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d0a12d7fad2deb138d2dac445492ffce55f1493a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911318"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Crear una estructura de minería de datos OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "52390719"
   
     -   **Dimensión**: Elija una dimensión relacionada en la lista desplegable.  
   
-    -   **Jerarquía**:  Seleccione el nivel de la jerarquía de dimensión a la que desea aplicar el filtro. Por ejemplo, si realiza la segmentación por la dimensión [Geography], seleccionará un nivel de jerarquía como [Region Country Name].  
+    -   **Hierarchy**:  Seleccione el nivel de la jerarquía de dimensión a la que desea aplicar el filtro. Por ejemplo, si realiza la segmentación por la dimensión [Geography], seleccionará un nivel de jerarquía como [Region Country Name].  
   
     -   **Operador**: Elija un operador en la lista.  
   

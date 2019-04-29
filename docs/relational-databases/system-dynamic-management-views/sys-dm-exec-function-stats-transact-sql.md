@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_function_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_function_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013202"
 ---
-# <a name="sysdmexecfunctionstats-transact-sql"></a>Sys.dm_exec_function_stats (Transact-SQL)
+# <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Devuelve estadísticas de rendimiento para las funciones en caché agregado. La vista devuelve una fila por cada plan de función almacenado en caché, y la duración de la fila está siempre y cuando la función permanece en caché. Cuando se quita una función de la memoria caché, se elimina la fila correspondiente de esta vista. En ese momento, se produce un evento de seguimiento de SQL de estadísticas de rendimiento similar a **sys.dm_exec_query_stats**. Devuelve información acerca de las funciones escalares, incluidas las funciones de en memoria y las funciones escalares de CLR. No se devuelve información acerca de las funciones con valores de tabla.  
@@ -43,8 +43,8 @@ ms.locfileid: "52409742"
 |**object_id**|**int**|Número de identificación de objeto de la función.|  
 |**Tipo**|**char(2)**|Tipo del objeto:   FN = funciones con valores escalares|  
 |**type_desc**|**nvarchar(60)**|Descripción del tipo de objeto: SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary (64)**|Esto puede usarse para poner en correlación con las consultas en **sys.dm_exec_query_stats** que se ejecutaron desde dentro de esta función.|  
-|**plan_handle**|**varbinary (64)**|Identificador del plan en memoria. Este identificador es transitorio y permanece constante solo mientras el plan permanece en la memoria caché. Este valor se puede usar con el **sys.dm_exec_cached_plans** vista de administración dinámica.<br /><br /> Siempre será 0 x 000 cuando una tabla de consultas optimizadas en memoria de la función compilada de forma nativa.|  
+|**sql_handle**|**varbinary(64)**|Esto puede usarse para poner en correlación con las consultas en **sys.dm_exec_query_stats** que se ejecutaron desde dentro de esta función.|  
+|**plan_handle**|**varbinary(64)**|Identificador del plan en memoria. Este identificador es transitorio y permanece constante solo mientras el plan permanece en la memoria caché. Este valor se puede usar con el **sys.dm_exec_cached_plans** vista de administración dinámica.<br /><br /> Siempre será 0 x 000 cuando una tabla de consultas optimizadas en memoria de la función compilada de forma nativa.|  
 |**cached_time**|**datetime**|Hora en que se agregó la función a la memoria caché.|  
 |**last_execution_time**|**datetime**|Última hora en que se ejecutó la función.|  
 |**execution_count**|**bigint**|Número de veces que la función se ha ejecutado desde que se compiló por última vez.|  

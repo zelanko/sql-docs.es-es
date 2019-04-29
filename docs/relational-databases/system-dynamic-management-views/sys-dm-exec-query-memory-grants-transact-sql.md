@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013232"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52413421"
 |**session_id**|**smallint**|Id. (SPID) de la sesión en la que se está ejecutando esta consulta.|  
 |**request_id**|**int**|Identificador de la solicitud. Es único en el contexto de la sesión.|  
 |**scheduler_id**|**int**|Id. del programador que programa esta consulta.|  
-|**grado de paralelismo**|**smallint**|Grado de paralelismo de esta consulta.|  
+|**dop**|**smallint**|Grado de paralelismo de esta consulta.|  
 |**request_time**|**datetime**|Fecha y hora a la que esta consulta solicitó la concesión de memoria.|  
 |**grant_time**|**datetime**|Fecha y hora a la que se concedió la memoria para esta consulta. Es NULL si aún no se ha concedido la memoria.|  
 |**requested_memory_kb**|**bigint**|Memoria solicitada total en kilobytes.|  
@@ -53,13 +53,13 @@ ms.locfileid: "52413421"
 |**max_used_memory_kb**|**bigint**|Memoria física máxima usada hasta este momento en kilobytes.|  
 |**query_cost**|**float**|Costo estimado de la consulta.|  
 |**timeout_sec**|**int**|Tiempo de espera en segundos antes de que esta consulta abandone la solicitud de concesión de memoria.|  
-|**resource_semaphore_id**|**smallint**|Identificador no único del semáforo de recursos al que está esperando esta consulta.<br /><br /> **Nota:** Este Id. es único en versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Este cambio puede afectar a la solución de problemas de ejecución de consultas. Para obtener más información, vea la sección “Comentarios” más adelante en este tema.|  
+|**resource_semaphore_id**|**smallint**|Identificador no único del semáforo de recursos al que está esperando esta consulta.<br /><br /> **Nota:** Este identificador es único en las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que sean anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Este cambio puede afectar a la solución de problemas de ejecución de consultas. Para obtener más información, vea la sección “Comentarios” más adelante en este tema.|  
 |**queue_id**|**smallint**|Id. de la cola de espera en la que esta consulta espera las concesiones de memoria. Es NULL si ya se ha concedido la memoria.|  
-|**wait_order**|**int**|Orden secuencial de las consultas de espera especificado dentro de **queue_id**. Este valor puede cambiar para una determinada consulta si otras consultas obtienen concesiones de memoria o tiempos de espera. Es NULL si ya se ha concedido la memoria.|  
+|**wait_order**|**int**|Orden secuencial de las consultas de espera especificado dentro de **queue_id**. Si otras consultas obtienen concesiones de memoria o tiempo de espera, puede cambiar este valor para una consulta determinada. Es NULL si ya se ha concedido la memoria.|  
 |**is_next_candidate**|**bit**|Candidata para la siguiente concesión de memoria.<br /><br /> 1 = Sí<br /><br /> 0 = No<br /><br /> NULL = Ya se ha concedido la memoria.|  
 |**wait_time_ms**|**bigint**|Tiempo de espera en milisegundos. Es NULL si ya se ha concedido la memoria.|  
-|**plan_handle**|**varbinary (64)**|Identificador de este plan de consulta. Use **sys.dm_exec_query_plan** para extraer el plan XML real.|  
-|**sql_handle**|**varbinary (64)**|Identificador del texto de [!INCLUDE[tsql](../../includes/tsql-md.md)] de esta consulta. Use **sys.dm_exec_sql_text** para obtener los datos reales [!INCLUDE[tsql](../../includes/tsql-md.md)] texto.|  
+|**plan_handle**|**varbinary(64)**|Identificador de este plan de consulta. Use **sys.dm_exec_query_plan** para extraer el plan XML real.|  
+|**sql_handle**|**varbinary(64)**|Identificador del texto de [!INCLUDE[tsql](../../includes/tsql-md.md)] de esta consulta. Use **sys.dm_exec_sql_text** para obtener los datos reales [!INCLUDE[tsql](../../includes/tsql-md.md)] texto.|  
 |**group_id**|**int**|Id. para el grupo de cargas de trabajo donde se está ejecutando la consulta.|  
 |**pool_id**|**int**|Id. del grupo de recursos de servidor al que pertenece este grupo de cargas de trabajo.|  
 |**is_small**|**tinyint**|Cuando se establece en 1, indica que esta concesión utiliza el semáforo de recursos pequeño. Cuando se establece en 0, indica que se utiliza un semáforo normal.|  

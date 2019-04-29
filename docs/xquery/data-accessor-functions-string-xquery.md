@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4df87a9fedffa701858fef9101c58db12c1c3bf2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62934731"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>Funciones del descriptor de acceso a datos: string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ fn:string($arg as item()?) as xs:string
  En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-string-function"></a>A. Usar la función string  
- La consulta siguiente recupera el nodo de elemento secundario <`Features`> del elemento <`ProductDescription`>.  
+ La consulta siguiente recupera el <`Features`> nodo de elemento secundario de la <`ProductDescription`> elemento.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -98,7 +98,7 @@ These are the product highlights.
 3 yearsparts and labor...    
 ```  
   
-### <a name="b-using-the-string-function-on-various-nodes"></a>B. Usar la función string en varios nodos  
+### <a name="b-using-the-string-function-on-various-nodes"></a>b. Usar la función string en varios nodos  
  En el ejemplo siguiente, se asigna una instancia XML a una variable de tipo xml. Las consultas se especifican para ilustrar el resultado de aplicar **string()** a varios nodos.  
   
 ```  
@@ -119,7 +119,7 @@ just text
 select @x.query('string(/)')  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 This is a comment 10  
@@ -139,7 +139,7 @@ select @x.query('string(/processing-instruction()[1])')
 select @x.query('string(/comment()[1])')  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 This is a comment   

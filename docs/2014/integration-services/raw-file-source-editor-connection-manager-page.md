@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 233b46df580c12f86c87bbcee6af73438b9c6df2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889506"
 ---
 # <a name="raw-file-source-editor-connection-manager-page"></a>Editor de origen de archivos sin formato (página Administrador de conexiones)
   El origen de archivo sin formato lee datos sin formato de un archivo. Como la representación de los datos es la nativa del origen, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Para más información, consulte [Raw File Source](data-flow/raw-file-source.md).  

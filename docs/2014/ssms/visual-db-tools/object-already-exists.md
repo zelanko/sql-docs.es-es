@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7eade67861f20e744dc2ea706f4bc96304f30ae8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936414"
 ---
 # <a name="object-already-exists"></a>El objeto ya existe
   El objeto que intenta guardar tiene el mismo nombre que otro objeto de la base de datos. Elija otro nombre y continúe.  

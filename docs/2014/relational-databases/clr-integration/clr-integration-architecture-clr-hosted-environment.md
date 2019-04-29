@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922569"
 ---
 # <a name="clr-hosted-environment"></a>Entorno hospedado CLR
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR) es un entorno que ejecuta muchos lenguajes de programación modernos, incluidos [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++. CLR presenta memoria de recopilación de elementos no utilizados, subprocesamiento preferente, servicios de metadatos (reflexión de tipos), capacidad de comprobar el código y seguridad de acceso del código. CLR usa metadatos para localizar y cargar clases, colocar instancias en memoria, resolver invocaciones a métodos, generar código nativo, exigir mecanismos de seguridad y establecer los límites del contexto en tiempo de ejecución.  
@@ -100,7 +100,7 @@ ms.locfileid: "48129169"
 ## <a name="how-sql-server-and-the-clr-work-together"></a>Cómo trabajan juntos SQL Server y CLR  
  En esta sección se describe el modo en que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integra los modelos de subprocesamiento, programación, sincronización y administración de memoria de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y CLR. En concreto, en esta sección se examina la integración a la luz de los objetivos de escalabilidad, confiabilidad y seguridad. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] actúa esencialmente como sistema operativo para CLR cuando se hospeda en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. CLR llama a las rutinas de bajo nivel implementadas por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para el subprocesamiento, la programación, la sincronización y la administración de memoria. Éstos son los mismos tipos primitivos que usa el resto del motor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este enfoque proporciona varias ventajas de escalabilidad, confiabilidad y seguridad.  
   
-###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>Escalabilidad: subprocesamiento, programación y sincronización comunes  
+###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>Escalabilidad: Común de subprocesamiento, programación y sincronización  
  CLR llama a la API de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a fin de crear subprocesos para ejecutar código de usuario y para su propio uso interno. Para realizar una sincronización entre varios subprocesos, CLR llama a los objetos de sincronización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esto permite al programador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programar otras tareas cuando un subproceso espera en un objeto de sincronización. Por ejemplo, cuando CLR inicia la recolección de elementos no utilizados, todos sus subprocesos esperan a que finalice dicha recopilación de elementos no utilizados. Puesto que el programador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conoce los subprocesos CLR y los objetos de sincronización que están esperando, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede programar los subprocesos que están ejecutando otras tareas de base de datos no relacionadas con CLR. Esto también permite a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] detectar interbloqueos que implican bloqueos tomados por los objetos de sincronización CLR y emplear técnicas tradicionales para la eliminación de los interbloqueos.  
   
  El código administrado se ejecuta de forma preferente en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El programador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiene capacidad para detectar y detener subprocesos que no se han producido durante mucho tiempo. La capacidad de enlazar subprocesos CLR con subprocesos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implica que el programador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede identificar subprocesos consecutivos en CLR y administrar su prioridad. Dichos subprocesos consecutivos se suspenden y vuelven a colocarse en la cola. Los subprocesos que se identifican repetidamente como subprocesos consecutivos no tienen permiso para ejecutarse durante un período de tiempo determinado de manera que puedan ejecutarse otros subprocesos de trabajo en ejecución.  
@@ -108,24 +108,24 @@ ms.locfileid: "48129169"
 > [!NOTE]  
 >  El código administrado de ejecución prolongada que obtiene acceso a datos o asigna suficiente memoria para desencadenar la recolección de elementos no utilizados se producirá automáticamente. El código administrado de ejecución prolongada que no obtiene acceso a datos o no asigna suficiente memoria administrada para desencadenar la recolección de elementos no utilizados debe producirse explícitamente llamando a la función System.Thread.Sleep() de .NET Framework.  
   
-###### <a name="scalability-common-memory-management"></a>Escalabilidad: administración de memoria común  
+###### <a name="scalability-common-memory-management"></a>Escalabilidad: Administración de memoria común  
  CLR llama a los tipos primitivos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para asignar y anular la asignación de su memoria. Dado que la memoria usada por CLR se tiene en cuenta a efectos del uso de memoria total del sistema, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede permanecer dentro de sus límites de memoria configurados y asegurarse de que CLR y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no compitan entre sí por obtener más memoria. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] también puede rechazar las solicitudes de memoria de CLR cuando la memoria del sistema está restringida y solicitar a CLR que reduzca su uso de memoria cuando otras tareas necesiten memoria.  
   
-###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>Confiabilidad: dominios de aplicación y excepciones irrecuperables  
+###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>Confiabilidad: Dominios de aplicación y excepciones irrecuperables  
  Cuando el código administrado de las API de .NET Framework detecta excepciones críticas, como excepciones de memoria insuficiente o desbordamiento de pila, no siempre puede recuperarse de dichos errores y garantizar una semántica coherente y correcta para su implementación. Estas API generan una excepción de anulación de subprocesos en respuesta a estos errores.  
   
  Cuando se hospedan en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], dichas anulaciones de subprocesos se controlan de la siguiente forma: CLR detecta cualquier estado compartido en el dominio de aplicación en el que se produce la anulación del subproceso. Para ello, CLR comprueba la presencia de objetos de sincronización. Si hay un estado compartido en el dominio de aplicación, se descarga el propio dominio de aplicación. La descarga del dominio de aplicación detiene las transacciones de base de datos que se estén ejecutando en esos momentos en dicho dominio de aplicación. Dado que la presencia de estado compartido puede aumentar el impacto de dichas excepciones críticas en las sesiones de usuario distintas de la que desencadena la excepción, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y CLR han dado algunos pasos para reducir la probabilidad del estado compartido. Para obtener más información, vea la documentación de .NET Framework.  
   
-###### <a name="security-permission-sets"></a>Seguridad: conjuntos de permisos  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite a los usuarios especificar los requisitos de confiabilidad y seguridad para el código implementado en la base de datos. Cuando los ensamblados se cargan en la base de datos, el autor del ensamblado puede especificar uno de los tres conjuntos de permisos para dicho ensamblado: SAFE, EXTERNAL_ACCESS y UNSAFE.  
+###### <a name="security-permission-sets"></a>Seguridad: Conjuntos de permisos  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite a los usuarios especificar los requisitos de confiabilidad y seguridad para el código implementado en la base de datos. Cuando se cargan los ensamblados en la base de datos, el autor del ensamblado puede especificar uno de los tres conjuntos de permisos para dicho ensamblado: SEGURO, EXTERNAL_ACCESS y UNSAFE.  
   
 |||||  
 |-|-|-|-|  
 |Conjunto de permisos|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Seguridad de acceso del código|Solo ejecución|Ejecución + acceso a recursos externos|No restringida|  
 |Restricciones del modelo de programación|Sí|Sí|Sin restricciones|  
-|Requisito de capacidad de comprobación|Sí|Sí|no|  
-|Capacidad de llamar a código nativo|no|no|Sí|  
+|Requisito de capacidad de comprobación|Sí|Sí|No|  
+|Capacidad de llamar a código nativo|No|No|Sí|  
   
  SAFE es el modo más confiable y seguro, con restricciones asociadas relativas al modelo de programación permitido. Los ensamblados SAFE tienen permisos suficientes para la ejecución, realización de cálculos y obtención de acceso a la base de datos local. Los ensamblados SAFE deben tener capacidad para comprobar la seguridad de los tipos y no pueden llamar a código no administrado.  
   

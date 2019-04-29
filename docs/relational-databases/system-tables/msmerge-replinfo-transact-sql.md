@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cae6c84d0ca85a8cb27d8310bcc3cb02dca47f8c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903353"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "52775427"
 |**validation_level**|**int**|Tipo de validación que se llevará a cabo en la suscripción. El nivel de validación especificado puede ser uno de estos valores:<br /><br /> **0** no = ninguna validación.<br /><br /> **1** = validación solo del recuento de filas.<br /><br /> **2** = validación del recuento de filas y suma de comprobación.<br /><br /> **3** = recuento de filas y validación de suma de comprobación binaria.|  
 |**resync_gen**|**bigint**|El número de generación que se utiliza para volver a sincronizar la suscripción. Un valor de **-1** indica que la suscripción no está marcada para la resincronización.|  
 |**login_name**|**sysname**|Nombre del usuario que creó la suscripción.|  
-|**Nombre de host**|**sysname**|El valor que utiliza el filtro de fila con parámetros al generar la partición de la suscripción.|  
-|**merge_jobid**|**binary (16)**|Id. de trabajo de mezcla para esta suscripción.|  
+|**hostname**|**sysname**|El valor que utiliza el filtro de fila con parámetros al generar la partición de la suscripción.|  
+|**merge_jobid**|**binary(16)**|Id. de trabajo de mezcla para esta suscripción.|  
 |**sync_info**|**int**|Solo para uso interno.|  
   
 ## <a name="see-also"></a>Vea también  

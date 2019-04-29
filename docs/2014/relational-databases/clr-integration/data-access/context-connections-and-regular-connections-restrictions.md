@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919166"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>Restricciones en las conexiones normales y de contexto
   En este tema se describe las restricciones asociadas con la ejecución de código en el [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] procesos a través de conexiones normales y de contexto.  
@@ -47,7 +47,7 @@ ms.locfileid: "48163325"
 ## <a name="restrictions-on-regular-connections"></a>Restricciones en conexiones normales  
  Al desarrollar su aplicación, tenga en cuenta las siguientes restricciones que se aplican a las conexiones normales:  
   
--   No se admite la ejecución de comandos asincrónica en servidores internos. Si se incluye "async=true" en la cadena de conexión de un comando y después se ejecuta el comando, se inicia una excepción `System.NotSupportedException`. Aparece este mensaje: "No se admite el procesamiento asincrónico  al ejecutar el proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]".  
+-   No se admite la ejecución de comandos asincrónica en servidores internos. Si se incluye "async=true" en la cadena de conexión de un comando y después se ejecuta el comando, se inicia una excepción `System.NotSupportedException`. Aparece este mensaje: "No se admite el procesamiento asincrónico cuando se ejecuta en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proceso."  
   
 -   No se admite el objeto `SqlDependency`.  
   

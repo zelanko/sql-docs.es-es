@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4290f3d41cf4e5210a7fde98132db533f8336810
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62903709"
 ---
 # <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52817507"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Id. de la sesión de trabajo del Agente de mezcla.|  
-|**valor de agent_id**|**int**|El Id. del Agente de mezcla.|  
+|**agent_id**|**int**|El Id. del Agente de mezcla.|  
 |**start_time**|**datetime**|Hora a la que comenzó la ejecución del trabajo.|  
 |**end_time**|**datetime**|Hora a la que terminó la ejecución del trabajo.|  
 |**duration**|**int**|Duración acumulada, en segundos, de esta sesión de trabajo.|  
@@ -60,7 +60,7 @@ ms.locfileid: "52817507"
 |**runstatus**|**int**|Estado de ejecución:<br /><br /> **1** = inicio.<br /><br /> **2** = se realice correctamente.<br /><br /> **3** = en curso.<br /><br /> **4** = inactivo.<br /><br /> **5** = reintento.<br /><br /> **6** = error.|  
 |**estimated_upload_changes**|**int**|Número estimado de cambios que es necesario aplicar en el publicador.|  
 |**estimated_download_changes**|**int**|Número estimado de cambios que es necesario aplicar en el suscriptor.|  
-|**CONNECTION_TYPE**|**int**|Conexión utilizada en la carga:<br /><br /> **1** = red de área local (LAN).<br /><br /> **2** = conexión de red de acceso telefónico.<br /><br /> **3** = sincronización web.|  
+|**connection_type**|**int**|Conexión utilizada en la carga:<br /><br /> **1** = red de área local (LAN).<br /><br /> **2** = conexión de red de acceso telefónico.<br /><br /> **3** = sincronización web.|  
 |**timestamp**|**timestamp**|La columna de marca de tiempo de esta tabla.|  
   
 ## <a name="see-also"></a>Vea también  

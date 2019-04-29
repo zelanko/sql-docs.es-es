@@ -1,5 +1,5 @@
 ---
-title: Sys.fulltext_stopwords (Transact-SQL) | Microsoft Docs
+title: sys.fulltext_stopwords (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8395d9fe246d70843415079cdf188ac00817f51f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63008509"
 ---
 # <a name="sysfulltextstopwords-transact-sql"></a>sys.fulltext_stopwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "47832053"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|Identificador de la lista de palabras irrelevantes a la que pertenece **stopword** . El identificador es único en la base de datos.|  
-|**palabra irrelevante**|**Nvarchar (64)**|Término que se va a considerar como coincidencia de palabra irrelevante.|  
-|**Idioma**|**sysname**|Es el valor del alias en [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)corresponde al valor de identificador de configuración regional (**LCID**), o la representación de cadena del LCID numérico.|  
+|**stopword**|**nvarchar(64)**|Término que se va a considerar como coincidencia de palabra irrelevante.|  
+|**language**|**sysname**|Es el valor del alias en [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)corresponde al valor de identificador de configuración regional (**LCID**), o la representación de cadena del LCID numérico.|  
 |**language_id**|**int**|LCID utilizado para la separación de palabras.|  
   
 ## <a name="permissions"></a>Permisos  

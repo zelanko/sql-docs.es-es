@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18c269bfa245135e95a101d725ed4a592889e7a4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900207"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>Dimensión de variación lenta, transformación
   La transformación Dimensión de variación lenta coordina la actualización e inserción de registros en las tablas de dimensiones de almacenamiento de datos. Por ejemplo, puede usar esta transformación para configurar las salidas de transformación que insertan y actualizan registros en la tabla DimProduct de la base de datos [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] con datos de la tabla Production.Products de la base de datos OLTP AdventureWorks.  
@@ -46,7 +46,7 @@ ms.locfileid: "58388252"
   
 -   Los cambios de atributo variable sobrescriben los registros existentes. Este tipo de cambio es equivalente a un cambio del Tipo 1. La transformación Dimensión de variación lenta dirige estas filas a una salida llamada **Salida de actualizaciones de atributos variables**.  
   
--   Los cambios de atributo histórico crean nuevos registros en lugar de actualizar registros existentes. El único cambio que se permite en un registro existente es una actualización a una columna que indica si el registro está actualizado o expirado. Este tipo de cambio es equivalente a un cambio del tipo 2. La transformación dimensión de variación lenta dirige estas filas a dos salidas: **Salida de inserciones de atributos históricos** y **nueva salida**.  
+-   Los cambios de atributo histórico crean nuevos registros en lugar de actualizar registros existentes. El único cambio que se permite en un registro existente es una actualización a una columna que indica si el registro está actualizado o expirado. Este tipo de cambio es equivalente a un cambio del tipo 2. La transformación Dimensión de variación lenta dirige estas filas a dos salidas: **Salida de inserciones de atributos históricos** y **Nueva salida**.  
   
 -   Los cambios de atributo fijo indican que el valor de la columna no debe cambiar. La transformación Dimensión de variación lenta detecta cambios y puede dirigir las filas con cambios a una salida llamada **Salida de atributo fijo**.  
   

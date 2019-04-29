@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43481553088a1ca7ce32ab0f8b86eeb9869a5cb1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62927166"
 ---
 # <a name="ssis-upgrade-wizard-ssis-package-upgrade-wizard"></a>Asistente para actualización de SSIS (Asistente para actualización del paquete SSIS)
   Utilice el Asistente para actualizar paquetes de [!INCLUDE[ssIS](../includes/ssis-md.md)] si desea migrar los paquetes que se desarrollaron en [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] y [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] al formato de paquete utilizado por la versión actual de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f5e997f40f5af0a9f1c5cd0de4114714a1db8b2
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62897532"
 ---
 # <a name="month-ssis-expression"></a>MONTH (expresión de SSIS)
   Devuelve un entero que representa la parte del mes de una fecha.  
@@ -43,7 +43,7 @@ MONTH(date)
  Un literal de tipo fecha debe convertirse explícitamente en uno de los tipos de datos de fecha. Para obtener más información, vea [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
 > [!NOTE]  
->  La expresión no puede validarse cuando un literal de fecha se convierte explícitamente a uno de estos tipos de datos de fecha: DT_DBTIMESTAMPOFFSET y DT_DBTIMESTAMP2.  
+>  La expresión no puede validarse cuando un literal de fecha se convierte explícitamente en uno de estos tipos de datos de fecha: DT_DBTIMESTAMPOFFSET y DT_DBTIMESTAMP2.  
   
  Utilizar la función MONTH es más sencillo pero equivalente a utilizar la función DATEPART("Month", date).  
   

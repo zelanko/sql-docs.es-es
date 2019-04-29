@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8c77ba54e25c574d5f751febe8bdac3ba1dfbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911254"
 ---
 # <a name="msmergepartitiongroups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  El **MSmerge_partition_groups** tabla almacena una fila para cada partición precalculada de una base de datos. Además de las columnas enumeradas, en esta tabla se incluye una columna para cada función utilizada en un filtro de fila con parámetros. Por ejemplo, una columna denominada **HOST_NAME_FN** se agrega a la tabla si usa un filtro el [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función. Se almacena una fila para cada conjunto único de valores de función que se han sincronizado con este publicador. Si dos o más suscriptores se sincronizan exactamente con el mismo valor para todas estas funciones, compartirán la misma fila de esta tabla y, por tanto, compartirán el mismo identificador de partición. Esta tabla se almacena en la base de datos de publicación.  
+  El **MSmerge_partition_groups** tabla almacena una fila para cada partición precalculada de una base de datos. Además de las columnas enumeradas, en esta tabla se incluye una columna para cada función utilizada en un filtro de fila con parámetros. Por ejemplo, una columna denominada **HOST_NAME_FN** se agrega a la tabla si usa un filtro el [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función. Se almacena una fila para cada conjunto único de valores de función que se han sincronizado con este publicador. Dos o más suscriptores se sincronizan exactamente con el mismo valor para todas estas funciones, compartirán la misma fila en esta tabla y, por tanto, compartirán el mismo Id. de partición. Esta tabla se almacena en la base de datos de publicación.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

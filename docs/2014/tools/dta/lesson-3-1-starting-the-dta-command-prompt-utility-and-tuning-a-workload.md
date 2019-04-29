@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcd89e7473ba2fb2a27b827da26f3654ea9d9b87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63048972"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Iniciar la utilidad del símbolo del sistema dta y optimizar una carga de trabajo
   Esta tarea le guía por los pasos necesarios para iniciar la utilidad **dta**, ver su Ayuda y usarla para optimizar una carga de trabajo desde el símbolo del sistema. Se usará la carga de trabajo (MyScript.sql) que ha creado para la práctica sobre la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos: [Optimizar una carga de trabajo](lesson-1-1-tuning-a-workload.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "48171115"
   
 -   [dta (utilidad)](dta-utility.md) para obtener material de referencia sobre la utilidad de símbolo del sistema y el archivo XML opcional que puede usar para controlar el funcionamiento de la utilidad.  
   
- Para volver al principio del tutorial, consulte [Tutorial: Asistente para la optimización de motor de base de datos](tutorial-database-engine-tuning-advisor.md).  
+ Para volver al principio del tutorial, vea [Tutorial: Asistente para la optimización de motor de base de datos](tutorial-database-engine-tuning-advisor.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Tutoriales del motor de base de datos](../../relational-databases/database-engine-tutorials.md)  

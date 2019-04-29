@@ -1,5 +1,5 @@
 ---
-title: Implementar una solución de minería de datos en versiones anteriores de SQL Server | Documentos de Microsoft
+title: Implementar una solución de minería de datos para versiones anteriores de SQL Server | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df527197f0ddd1eacc2e86e59092f45b1ac78c9a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011029"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Implementar soluciones de minería de datos para versiones anteriores de SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,14 +48,14 @@ ms.locfileid: "34015102"
  Si el proveedor que se utiliza para el origen de datos del modelo es SQL Client Data Provider 10, también debe modificar la definición del origen de datos para especificar la versión anterior de SQL Server Native Client. De lo contrario, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] genera un error que indica que el proveedor no está registrado.  
   
 ##  <a name="bkmk_Holdout"></a> Implementar modelos con exclusión  
- Si crea una estructura de minería de datos que contiene una partición de exclusión que se usa para probar los modelos de minería de datos, la estructura de minería de datos se puede implementar en una instancia de SQL Server 2005, pero la información de partición se perderá.  
+ Si crea una estructura de minería de datos que contiene una partición de exclusión que se usa para probar los modelos de minería de datos, la estructura de minería de datos se puede implementar en una instancia de SQL Server 2005, pero se perderá la información de partición.  
   
  Al abrir la estructura de minería de datos en SQL Server 2005 Analysis Services, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] produce un error y, a continuación, vuelve a generar la estructura para quitar la partición de datos de exclusión.  
   
- Después de que se ha vuelto a generar la estructura, el tamaño de la partición de exclusión ya no está disponible en la ventana Propiedades; Sin embargo, el valor \<ddl100_100: holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) pueden estar aún presentes en el archivo de script ASSL.  
+ Después de que se ha vuelto a la estructura, el tamaño de la partición de exclusión ya no está disponible en la ventana Propiedades; Sin embargo, el valor \<ddl100_100: holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) todavía pueden estar presentes en el archivo de script ASSL.  
   
 ##  <a name="bkmk_Filter"></a> Implementar modelos con filtros  
- Si aplica un filtro a un modelo de minería de datos, se puede implementar el modelo a una instancia de SQL Server 2005, pero no se aplicará el filtro.  
+ Si aplica un filtro a un modelo de minería de datos, el modelo se puede implementar en una instancia de SQL Server 2005, pero no se aplicará el filtro.  
   
  Al abrir el modelo de minería de datos, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] produce un error y, a continuación, vuelve a generar el modelo para quitar el filtro.  
   

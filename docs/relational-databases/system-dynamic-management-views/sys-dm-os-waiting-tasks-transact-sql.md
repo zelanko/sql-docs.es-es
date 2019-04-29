@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_waiting_tasks (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_waiting_tasks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 10a17dba594359ca83fbc3b15e148fb72356e162
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998004"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,16 +38,16 @@ ms.locfileid: "47629523"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**waiting_task_address**|**varbinary (8)**|Dirección de la tarea a la espera.|  
+|**waiting_task_address**|**varbinary(8)**|Dirección de la tarea a la espera.|  
 |**session_id**|**smallint**|Id. de la sesión asociada a la tarea.|  
 |**exec_context_id**|**int**|Id. del contexto de ejecución asociado a la tarea.|  
 |**wait_duration_ms**|**bigint**|Tiempo de espera total para este tipo de espera, en milisegundos. Esta vez es de **signal_wait_time**.|  
 |**wait_type**|**nvarchar(60)**|Nombre del tipo de espera.|  
-|**resource_address**|**varbinary (8)**|Dirección del recurso por el que la tarea está esperando.|  
-|**blocking_task_address**|**varbinary (8)**|Tarea que alberga actualmente este recurso.|  
+|**resource_address**|**varbinary(8)**|Dirección del recurso por el que la tarea está esperando.|  
+|**blocking_task_address**|**varbinary(8)**|Tarea que alberga actualmente este recurso.|  
 |**blocking_session_id**|**smallint**|Id. de la sesión que bloquea la solicitud. Si esta columna es NULL, la solicitud no está bloqueada o la información de la sesión de bloqueo no está disponible (o no puede ser identificada).<br /><br /> -2 = El recurso de bloqueo es propiedad de una transacción distribuida huérfana.<br /><br /> -3 = El recurso de bloqueo es propiedad de una transacción de recuperación diferida.<br /><br /> -4 = No se pudo determinar el Id. de sesión del propietario del bloqueo temporal a causa de transiciones internas de estado del bloqueo temporal.|  
 |**blocking_exec_context_id**|**int**|Id. del contexto de ejecución de la tarea de bloqueo.|  
-|**resource_description**|**nvarchar (3072)**|Descripción del recurso utilizado. Para obtener más información, vea la siguiente lista:|  
+|**resource_description**|**nvarchar(3072)**|Descripción del recurso utilizado. Para obtener más información, vea la siguiente lista:|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
 ## <a name="resourcedescription-column"></a>Columna resource_description  
@@ -55,13 +55,13 @@ ms.locfileid: "47629523"
   
  **Propietario del recurso de grupo de subprocesos:**  
   
--   Id. de grupo de subprocesos = programador\<hex-address >  
+-   threadpool id=scheduler\<hex-address>  
   
  **Propietario del recurso de consulta en paralelo:**  
   
--   exchangeEvent id = {puerto | Canalización}\<hex-address > WaitType =\<tipo de espera de exchange > nodeId =\<Id. de nodo de exchange >  
+-   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
   
- **Exchange-espera-type:**  
+ **Exchange-wait-type:**  
   
 -   e_waitNone  
   
@@ -79,7 +79,7 @@ ms.locfileid: "47629523"
   
  **Propietario del recurso de bloqueo:**  
   
--   \<tipo-specific-description > Id. = bloqueo\<bloqueo-hex-address > modo =\<modo > associatedObjectId =\<asociados-obj-id >  
+-   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
   
      **\<tipo-specific-description > puede ser:**  
   
@@ -103,7 +103,7 @@ ms.locfileid: "47629523"
   
     -   Para HOBT: Hobtlock hobtid =\<hobt-id > subresource =\<hobt-subresource > dbid =\<db-id >  
   
-    -   Para ALLOCATION_UNIT: Allocunitlock hobtid =\<hobt-id > subresource =\<alloc-unit-subresource > dbid =\<db-id >  
+    -   For ALLOCATION_UNIT: allocunitlock hobtid=\<hobt-id> subresource=\<alloc-unit-subresource> dbid=\<db-id>  
   
      **\<modo > puede ser:**  
   
@@ -129,11 +129,11 @@ ms.locfileid: "47629523"
   
  **Propietario del recurso de bloqueo temporal:**  
   
--   \<DB-id >:\<archivo-id >:\<archivo de paginación >  
+-   \<db-id>:\<file-id>:\<page-in-file>  
   
--   \<GUID &GT;  
+-   \<GUID>  
   
--   \<clase de bloqueo temporal > (\<pestillo-address >)  
+-   \<latch-class> (\<latch-address>)  
   
 ## <a name="permissions"></a>Permisos
 

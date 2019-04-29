@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c64555e0035de8a06d3bb9227262f4202f73f9a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910469"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Registros y campos proporcionados por el proveedor
 Cuando un [registro](../../../ado/reference/ado-api/record-object-ado.md) se abre el objeto, su origen puede ser la fila actual de una abierta [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), una dirección URL absoluta o una dirección URL relativa junto con una apertura [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto .  
@@ -58,24 +58,24 @@ Cuando un [registro](../../../ado/reference/ado-api/record-object-ado.md) se abr
   
 |Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
-|RESOURCE_PARSENAME|adVarWChar|Solo lectura. Indica la dirección URL del recurso.|  
-|RESOURCE_PARENTNAME|adVarWChar|Solo lectura. Indica la dirección URL absoluta del registro primario.|  
-|RESOURCE_ABSOLUTEPARSENAME|adVarWChar|Solo lectura. Indica la dirección URL absoluta del recurso, que es la concatenación de PARENTNAME y PARSENAME.|  
-|VALOR DE RESOURCE_ISHIDDEN|adBoolean|True si el recurso está oculto. A menos que el comando que crea explícitamente el conjunto de filas selecciona filas donde el valor de RESOURCE_ISHIDDEN es True, no se devolverá ninguna fila.|  
-|RESOURCE_ISREADONLY|adBoolean|True si el recurso es de solo lectura. Si intenta abrir este recurso con DBBINDFLAG_WRITE, se producirá un error con DB_E_READONLY. Esta propiedad se puede editar incluso cuando el recurso solo se ha abierto para lectura.|  
-|RESOURCE_CONTENTTYPE|adVarWChar|Indica el uso probable del documento: por ejemplo, de un abogado. Esto es posible que se corresponde con la plantilla de Office que se usó para crear el documento.|  
-|RESOURCE_CONTENTCLASS|adVarWChar|Indica el tipo MIME del documento, que indica el formato, como "`text/html`".|  
-|RESOURCE_CONTENTLANGUAGE|adVarWChar|Indica el idioma en el que se almacena el contenido.|  
+|RESOURCE_PARSENAME|AdVarWChar|Solo lectura. Indica la dirección URL del recurso.|  
+|RESOURCE_PARENTNAME|AdVarWChar|Solo lectura. Indica la dirección URL absoluta del registro primario.|  
+|RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|Solo lectura. Indica la dirección URL absoluta del recurso, que es la concatenación de PARENTNAME y PARSENAME.|  
+|RESOURCE_ISHIDDEN|AdBoolean|True si el recurso está oculto. A menos que el comando que crea explícitamente el conjunto de filas selecciona filas donde el valor de RESOURCE_ISHIDDEN es True, no se devolverá ninguna fila.|  
+|RESOURCE_ISREADONLY|AdBoolean|True si el recurso es de solo lectura. Si intenta abrir este recurso con DBBINDFLAG_WRITE, se producirá un error con DB_E_READONLY. Esta propiedad se puede editar incluso cuando el recurso solo se ha abierto para lectura.|  
+|RESOURCE_CONTENTTYPE|AdVarWChar|Indica el uso probable del documento: por ejemplo, de un abogado. Esto es posible que se corresponde con la plantilla de Office que se usó para crear el documento.|  
+|RESOURCE_CONTENTCLASS|AdVarWChar|Indica el tipo MIME del documento, que indica el formato, como "`text/html`".|  
+|RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indica el idioma en el que se almacena el contenido.|  
 |RESOURCE_CREATIONTIME|adFileTime|Solo lectura. Indica una estructura FILETIME que contiene la hora en que se creó el recurso. El tiempo se expresa en formato de hora Universal coordinada (UTC).|  
-|RESOURCE_LASTACCESSTIME|adFileTime|Solo lectura. Indica una estructura FILETIME que contiene la hora de último acceso al recurso. La hora está en formato UTC. Los miembros FILETIME son cero si el proveedor no admite a este miembro de hora.|  
-|RESOURCE_LASTWRITETIME|adFileTime|Solo lectura. Indica una estructura FILETIME que contiene la hora en que se escribió por última vez el recurso. La hora está en formato UTC. Los miembros FILETIME son cero si el proveedor no admite a este miembro de hora.|  
+|RESOURCE_LASTACCESSTIME|AdFileTime|Solo lectura. Indica una estructura FILETIME que contiene la hora de último acceso al recurso. La hora está en formato UTC. Los miembros FILETIME son cero si el proveedor no admite a este miembro de hora.|  
+|RESOURCE_LASTWRITETIME|AdFileTime|Solo lectura. Indica una estructura FILETIME que contiene la hora en que se escribió por última vez el recurso. La hora está en formato UTC. Los miembros FILETIME son cero si el proveedor no admite a este miembro de hora.|  
 |RESOURCE_STREAMSIZE|asUnsignedBigInt|Solo lectura. Indica el tamaño de la secuencia predeterminada del recurso, en bytes.|  
-|RESOURCE_ISCOLLECTION|adBoolean|Solo lectura. True si el recurso es una colección, como un directorio. False si el recurso es un archivo simple.|  
-|RESOURCE_ISSTRUCTUREDDOCUMENT|adBoolean|True si el recurso es un documento estructurado. False si el recurso no es un documento estructurado. Podría ser una colección o un archivo simple.|  
-|DEFAULT_DOCUMENT|adVarWChar|Solo lectura. Indica que este recurso contiene una dirección URL al documento simple predeterminado de una carpeta o un documento estructurado. Se utiliza cuando se solicita la secuencia predeterminada de un recurso. Esta propiedad está en blanco para un archivo simple.|  
+|RESOURCE_ISCOLLECTION|AdBoolean|Solo lectura. True si el recurso es una colección, como un directorio. False si el recurso es un archivo simple.|  
+|RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|True si el recurso es un documento estructurado. False si el recurso no es un documento estructurado. Podría ser una colección o un archivo simple.|  
+|DEFAULT_DOCUMENT|AdVarWChar|Solo lectura. Indica que este recurso contiene una dirección URL al documento simple predeterminado de una carpeta o un documento estructurado. Se utiliza cuando se solicita la secuencia predeterminada de un recurso. Esta propiedad está en blanco para un archivo simple.|  
 |CHAPTERED_CHILDREN|adChapter|Solo lectura. Opcional. Indica el capítulo del conjunto de filas que contiene a los elementos secundarios del recurso. (El *proveedor OLE DB para la publicación en Internet* no utiliza esta columna.)|  
-|RESOURCE_DISPLAYNAME|adVarWChar|Solo lectura. Indica el nombre para mostrar del recurso.|  
-|RESOURCE_ISROOT|adBoolean|Solo lectura. True si el recurso es la raíz de una colección o documento estructurado.|  
+|RESOURCE_DISPLAYNAME|AdVarWChar|Solo lectura. Indica el nombre para mostrar del recurso.|  
+|RESOURCE_ISROOT|AdBoolean|Solo lectura. True si el recurso es la raíz de una colección o documento estructurado.|  
   
 ## <a name="see-also"></a>Vea también  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   

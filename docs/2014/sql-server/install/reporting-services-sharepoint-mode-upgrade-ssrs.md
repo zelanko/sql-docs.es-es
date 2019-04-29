@@ -15,11 +15,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fe7c3f16f608d0f6e890be74cd5ae48ec4d1a121
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913209"
 ---
 # <a name="reporting-services-sharepoint-mode-upgrade-ssrs"></a>Actualización del modo de SharePoint de Reporting Services (SSRS)
   Use la página **Modo de SharePoint de Reporting Services** para confirmar la actualización de todas las características compartidas. El modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es una característica compartida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se actualiza junto con todas las demás características compartidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite la actualización de una sola característica compartida. Todas las características compartidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se actualizan al mismo tiempo.  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_cursors (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_cursors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013418"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +51,8 @@ dm_exec_cursors (session_id | 0 )
 |**session_id**|**int**|Id. de la sesión que alberga este cursor.|  
 |**cursor_id**|**int**|Id. del objeto de cursor.|  
 |**Nombre**|**nvarchar(256)**|Nombre del cursor tal como lo ha definido el usuario.|  
-|**Propiedades**|**nvarchar(256)**|Especifica las propiedades del cursor. Los valores de las propiedades siguientes se concatenan para formar el valor de esta columna:<br />Interfaz de declaración<br />Tipo de cursor <br />Simultaneidad de cursor<br />Alcance del cursor<br />Nivel de anidamiento de cursor<br /><br /> Por ejemplo, el valor devuelto de esta columna podría ser "TSQL &#124; dinámica &#124; Optimistic &#124; Global (0)".|  
-|**sql_handle**|**varbinary (64)**|Identificador del texto del lote que declaró el cursor.|  
+|**properties**|**nvarchar(256)**|Especifica las propiedades del cursor. Los valores de las propiedades siguientes se concatenan para formar el valor de esta columna:<br />Interfaz de declaración<br />Tipo de cursor <br />Simultaneidad de cursor<br />Alcance del cursor<br />Nivel de anidamiento de cursor<br /><br /> Por ejemplo, el valor devuelto de esta columna podría ser "TSQL &#124; dinámica &#124; Optimistic &#124; Global (0)".|  
+|**sql_handle**|**varbinary(64)**|Identificador del texto del lote que declaró el cursor.|  
 |**statement_start_offset**|**int**|Número de caracteres en el lote que se está ejecutando actualmente o procedimiento almacenado en el que se inicia la instrucción que se está ejecutando actualmente. Puede utilizarse junto con el **sql_handle**, **statement_end_offset**y el [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) función de administración dinámica para recuperar el actualmente ejecutar la instrucción para la solicitud.|  
 |**statement_end_offset**|**int**|Número de caracteres en el lote que se está ejecutando actualmente o procedimiento almacenado en el que finaliza la instrucción que se está ejecutando actualmente. Puede utilizarse junto con el **sql_handle**, **statement_start_offset**y el **sys.dm_exec_sql_text** función de administración dinámica para recuperar el actualmente ejecutar la instrucción para la solicitud.|  
 |**plan_generation_num**|**bigint**|Número de secuencia que se puede usar para distinguir entre instancias de los planes después de una nueva compilación.|  
@@ -65,8 +65,8 @@ dm_exec_cursors (session_id | 0 )
 |**fetch_buffer_start**|**int**|Para cursores FAST_FORWARD y DYNAMIC, devuelve 0 si el cursor no está abierto o si se ha colocado antes de la primera fila. De lo contrario, devuelve -1.<br /><br /> Para cursores STATIC y KEYSET, devuelve 0 si el cursor no está abierto y -1 si se ha colocado después de la última fila.<br /><br /> De lo contrario, devuelve el número de fila en la que se ha colocado.|  
 |**ansi_position**|**int**|Posición del cursor en el búfer de lectura.|  
 |**worker_time**|**bigint**|Tiempo empleado, en microsegundos, por los trabajadores que ejecutan este cursor.|  
-|**Lecturas**|**bigint**|Número de lecturas realizadas por el cursor.|  
-|**operaciones de escritura**|**bigint**|Número de escrituras realizadas por el cursor.|  
+|**reads**|**bigint**|Número de lecturas realizadas por el cursor.|  
+|**writes**|**bigint**|Número de escrituras realizadas por el cursor.|  
 |**dormant_duration**|**bigint**|Milisegundos desde que se inició la última consulta (abierta o capturada) en este cursor.|  
   
 ## <a name="permissions"></a>Permisos  
@@ -85,7 +85,7 @@ dm_exec_cursors (session_id | 0 )
 |Tipo|Descripción|  
 |----------|-----------------|  
 |Keyset|El cursor se ha declarado como de conjunto de claves.|  
-|Dinámica|El cursor se ha declarado como dinámico.|  
+|Dinámico|El cursor se ha declarado como dinámico.|  
 |Snapshot|El cursor se ha declarado como instantánea o estático.|  
 |Fast_Forward|El cursor se ha declarado como de avance rápido.|  
   

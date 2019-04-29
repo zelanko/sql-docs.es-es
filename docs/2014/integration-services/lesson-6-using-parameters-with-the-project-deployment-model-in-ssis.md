@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890550"
 ---
-# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Lección 6: usar parámetros con el modelo de implementación de proyectos
+# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Lección 6: Uso de parámetros con el modelo de implementación de proyectos
   SQL Server 2012 presenta un nuevo modelo de implementación en el que puede implementar sus proyectos en el servidor de Integration Services. El servidor de Integration Services permite administrar y ejecutar paquetes, así como configurar valores en tiempo de ejecución para los paquetes.  
   
  En esta lección, modificará el paquete que creó en [lección 5: Agregar configuraciones de paquetes para el modelo de implementación de paquetes](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md) para utilizar el modelo de implementación del proyecto. Reemplazará el valor de configuración con un parámetro para especificar la ubicación de los datos de ejemplo. También puede copiar el paquete de la lección 5 completada que se incluye con el tutorial.  

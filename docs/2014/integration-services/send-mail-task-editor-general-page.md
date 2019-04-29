@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35b138d6d66d8f6c0b7edc78c9dd497622cd3214
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889228"
 ---
 # <a name="send-mail-task-editor-general-page"></a>Editor de la tarea Enviar correo (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Enviar correo** para asignar un nombre a la tarea Enviar correo y describirla.  

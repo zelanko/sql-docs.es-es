@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919290"
 ---
 # <a name="assembly-properties-general-page"></a>Propiedades del ensamblado (página General)
   Utilice esta página para ver o modificar propiedades del ensamblado.  
@@ -30,7 +30,7 @@ ms.locfileid: "48103275"
  Escriba el nombre del propietario o del esquema, o bien selecciónelo en la lista.  
   
  **Conjunto de permisos**  
- Establece el nivel de seguridad del ensamblado. Se proporcionan tres niveles de seguridad: **seguro**, **acceso externo**, y **Unsafe** acceso.  
+ Establece el nivel de seguridad del ensamblado. Se proporcionan tres niveles de seguridad: **Seguro**, **acceso externo**, y **Unsafe** acceso.  
   
  **Ruta de acceso al ensamblado**  
  Escriba la ruta de acceso al archivo de ensamblado.  

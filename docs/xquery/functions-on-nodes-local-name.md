@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 93f289ed165742ae8fdf8d49732186161a4a8b5d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936542"
 ---
 # <a name="functions-on-nodes---local-name"></a>Funciones usadas en nodos: local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -71,8 +71,8 @@ WHERE ProductModelID=7
 -- result = Location  
 ```  
   
-### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. Usar local-name sin argumento en un predicado  
- La siguiente consulta se especifica en la columna Instructions, escribió **xml** columna de la tabla ProductModel. La expresión devuelve todos los elementos secundarios del elemento <`root`> cuya parte de nombre local de QName es "Location". El **local-name()** función se especifica en el predicado y no tiene ningún argumento de la función usa el nodo de contexto.  
+### <a name="b-using-local-name-without-argument-in-a-predicate"></a>b. Usar local-name sin argumento en un predicado  
+ La siguiente consulta se especifica en la columna Instructions, escribió **xml** columna de la tabla ProductModel. La expresión devuelve todos los elementos secundarios de la <`root`> cuya parte del nombre local de QName es "Location" del elemento. El **local-name()** función se especifica en el predicado y no tiene ningún argumento de la función usa el nodo de contexto.  
   
 ```  
 SELECT Instructions.query('  
@@ -82,7 +82,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- La consulta devuelve todos los elementos secundarios <`Location`> del elemento <`root`>.  
+ La consulta devuelve todos los <`Location`> elementos secundarios de la <`root`> elemento.  
   
 ## <a name="see-also"></a>Vea también  
  [Funciones usadas en nodos](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   

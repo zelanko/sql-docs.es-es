@@ -1,5 +1,5 @@
 ---
-title: Tablas de representación (Tabular) | Documentos de Microsoft
+title: Las tablas (Tabular) de representación | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f84aed71870e71416b108f0348840f4cce983cd5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019271"
 ---
 # <a name="tables-representation-tabular"></a>Representación de tablas (tabular)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]

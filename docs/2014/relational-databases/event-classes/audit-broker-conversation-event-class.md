@@ -1,27 +1,27 @@
 ---
 title: Audit Broker Conversation (clase de eventos) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
 ms.topic: conceptual
-topic_type:
-- apiref
 helpviewer_keywords:
 - Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
 manager: craigg
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e92b8dacf3f1d4c9bf4992739acc7592f2135386
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62912200"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation, clase de eventos
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Audit Broker Conversation** para emitir mensajes de auditoría relacionados con la seguridad de diálogo de Service Broker.  
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Columnas de datos de la clase de evento Audit Broker Conversation  
@@ -48,7 +48,7 @@ ms.locfileid: "52795197"
 |**SPID**|**int**|Identificador de proceso del servidor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**State**|**int**|Indica la ubicación en el código fuente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que produjo el evento. Cada lugar en el que se puede producir este evento tiene un código de estado diferente. Un ingeniero de soporte técnico de Microsoft puede utilizar este código de estado para buscar el lugar en que se produjo el evento.|30|No|  
-|**TextData**|**ntext**|En el caso de errores, contiene un mensaje que describe el motivo. Los valores pueden ser los siguientes:<br /><br /> **No se encontró el certificado**. El usuario especificado para la seguridad del protocolo de diálogo no tiene ningún certificado.<br /><br /> **No se encuentra en un período de tiempo válido**. El usuario especificado para la seguridad del protocolo de diálogo tiene un certificado, pero ha expirado.<br /><br /> **Certificado demasiado grande para asignación de memoria**. El usuario especificado para la seguridad del protocolo de diálogo tiene un certificado, pero es demasiado grande. El tamaño máximo de certificado que admite Service Broker es de 32.768 bytes.<br /><br /> **No se encontró la clave privada del certificado**. El usuario especificado para la seguridad del protocolo de diálogo tiene un certificado, pero no hay ninguna clave privada asociada al mismo.<br /><br /> **El tamaño de la clave privada del certificado no es compatible con el proveedor de cifrado**. El tamaño de la clave privada del certificado no se puede procesar correctamente. Debe ser un múltiplo de 64 bytes.<br /><br /> **El tamaño de la clave pública del certificado no es compatible con el proveedor de cifrado**. El tamaño de la clave pública del certificado no se puede procesar correctamente. Debe ser un múltiplo de 64 bytes.<br /><br /> **El tamaño de la clave privada del certificado no es compatible con la clave de intercambio de claves cifradas**. El tamaño especificado en la clave de intercambio de claves no coincide con el de la clave privada del certificado. Esto suele indicar que el certificado del equipo remoto no coincide con el certificado de la base de datos.<br /><br /> **El tamaño de la clave pública del certificado no es compatible con la firma del encabezado de seguridad**. El encabezado de seguridad contiene una firma que no se puede validar con la clave pública del certificado. Esto suele indicar que el certificado del equipo remoto no coincide con el certificado de la base de datos.|1|Sí|  
+|**TextData**|**ntext**|En el caso de errores, contiene un mensaje que describe el motivo. Los valores pueden ser los siguientes:<br /><br /> <br /><br /> **No se encontró el certificado**. El usuario especificado para la seguridad del protocolo de diálogo no tiene ningún certificado.<br /><br /> **No se encuentra en un período de tiempo válido**. El usuario especificado para la seguridad del protocolo de diálogo tiene un certificado, pero ha expirado.<br /><br /> **Certificado demasiado grande para asignación de memoria**. El usuario especificado para la seguridad del protocolo de diálogo tiene un certificado, pero es demasiado grande. El tamaño máximo de certificado que admite Service Broker es de 32.768 bytes.<br /><br /> **No se encontró la clave privada del certificado**. El usuario especificado para la seguridad del protocolo de diálogo tiene un certificado, pero no hay ninguna clave privada asociada al mismo.<br /><br /> **El tamaño de la clave privada del certificado no es compatible con el proveedor de cifrado**. El tamaño de la clave privada del certificado no se puede procesar correctamente. Debe ser un múltiplo de 64 bytes.<br /><br /> **El tamaño de la clave pública del certificado no es compatible con el proveedor de cifrado**. El tamaño de la clave pública del certificado no se puede procesar correctamente. Debe ser un múltiplo de 64 bytes.<br /><br /> **El tamaño de la clave privada del certificado no es compatible con la clave de intercambio de claves cifradas**. El tamaño especificado en la clave de intercambio de claves no coincide con el de la clave privada del certificado. Esto suele indicar que el certificado del equipo remoto no coincide con el certificado de la base de datos.<br /><br /> **El tamaño de la clave pública del certificado no es compatible con la firma del encabezado de seguridad**. El encabezado de seguridad contiene una firma que no se puede validar con la clave pública del certificado. Esto suele indicar que el certificado del equipo remoto no coincide con el certificado de la base de datos.|1|Sí|  
   
  En la tabla siguiente se presentan los valores de subclase de esta clase de evento.  
   

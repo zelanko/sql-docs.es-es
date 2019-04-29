@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 78a89ddcb27111396ec279af0b418e8490780e6a
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62934597"
 ---
 # <a name="error-handling-xquery"></a>Control de errores (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "51291341"
  Los errores estáticos se devuelven utilizando el mecanismo de error de [!INCLUDE[tsql](../includes/tsql-md.md)]. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], los errores de tipo de XQuery se devuelven de forma estática. Para obtener más información, consulte [XQuery y tipos estáticos](../xquery/xquery-and-static-typing.md).  
   
 ## <a name="dynamic-errors"></a>Errores dinámicos  
- En XQuery, la mayoría de los errores dinámicos se asignan a una secuencia vacía ("()"). No obstante, existen dos excepciones: las condiciones de sobrecarga en funciones de agregado de XQuery y los errores de validación de XML-DML. Tenga en cuenta que la mayoría de los errores dinámicos se asignan a una secuencia vacía. De lo contrario, la ejecución de consultas que se aprovecha de los índices XML puede producir errores inesperados. Por tanto, para proporcionar una ejecución eficaz sin generar errores inesperados, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] asigna los errores dinámicos a ().  
+ En XQuery, la mayoría de los errores dinámicos se asignan a una secuencia vacía ("()"). Sin embargo, estas son las dos excepciones: Desbordamiento de las condiciones en las funciones de agregado de XQuery y errores de validación de XML-DML. Tenga en cuenta que la mayoría de los errores dinámicos se asignan a una secuencia vacía. De lo contrario, la ejecución de consultas que se aprovecha de los índices XML puede producir errores inesperados. Por tanto, para proporcionar una ejecución eficaz sin generar errores inesperados, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] asigna los errores dinámicos a ().  
   
  A menudo, en una situación en la que el error dinámico se produciría dentro de un predicado, no emitir el error es no cambiar la semántica, porque () se asigna a False. Sin embargo, en algunos casos, devolver () en lugar de un error dinámico puede dar lugar a resultados inesperados. Los ejemplos siguientes lo muestran.  
   
-### <a name="example-using-the-avg-function-with-a-string"></a>Ejemplo: utilizar la función avg() con una cadena  
+### <a name="example-using-the-avg-function-with-a-string"></a>Ejemplo: Utilizar la función avg() con una cadena  
  En el ejemplo siguiente, la [función avg](../xquery/aggregate-functions-avg.md) se llama para calcular el promedio de los tres valores. Uno de estos valores es una cadena. Puesto que la instancia XML en este caso no tiene tipo, todos los datos que contiene son de tipo atómico sin tipo. El **avg()** función convierte estos valores a **xs: Double** antes de calcular el promedio. Sin embargo, el valor, `"Hello"`, no se puede convertir a **xs: Double** y crea un error dinámico. En este caso, en lugar de devolver un error dinámico, la conversión de `"Hello"` a **xs: Double** hace que una secuencia vacía. El **avg()** función omite este valor, calcula el promedio de los otros dos valores y devuelve 150.  
   
 ```  
@@ -58,10 +58,10 @@ SET @x=N'<root xmlns:myNS="test">
 SELECT @x.query('avg(//*)')  
 ```  
   
-### <a name="example-using-the-not-function"></a>Ejemplo: utilizar la función not  
+### <a name="example-using-the-not-function"></a>Ejemplo: Uso no (función)  
  Cuando se usa el [no funcionen](../xquery/functions-on-boolean-values-not-function.md) en un predicado, por ejemplo, `/SomeNode[not(Expression)]`, y la expresión produce un error dinámico, se devolverá una secuencia vacía en lugar de un error. Aplicar **not()** a la secuencia vacía, devuelve True, en lugar de un error.  
   
-### <a name="example-casting-a-string"></a>Ejemplo: convertir una cadena  
+### <a name="example-casting-a-string"></a>Ejemplo: Convertir una cadena  
  En el ejemplo siguiente, la cadena literal "NaN" se convierte a xs:string, y después a xs:double. El resultado es un conjunto de filas vacío. Aunque la cadena "NaN" no se puede convertir correctamente a xs:double, esto no se puede determinar hasta el tiempo de ejecución, porque la cadena se convierte primero a xs:string.  
   
 ```  

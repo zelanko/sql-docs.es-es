@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900291"
 ---
 # <a name="lookup-transformation"></a>Transformación de búsqueda
   La transformación Búsqueda realiza búsquedas mediante la combinación de datos de columnas de entrada con columnas de un conjunto de datos de referencia. La búsqueda se utiliza para tener acceso a información adicional en una tabla relacionada que está basada en valores de columnas comunes.  
@@ -129,11 +129,11 @@ ms.locfileid: "58386553"
   
 ## <a name="related-content"></a>Contenido relacionado  
   
--   Vídeo [ Implementar una transformación Búsqueda en modo de caché completa](https://go.microsoft.com/fwlink/?LinkId=131031), en msdn.microsoft.com  
+-   Vídeo [ Cómo implementar una transformación Búsqueda en modo de memoria caché completa](https://go.microsoft.com/fwlink/?LinkId=131031), en msdn.microsoft.com  
   
 -   Entrada de blog, [Prácticas recomendadas para utilizar los modos de caché de la transformación Búsqueda](https://go.microsoft.com/fwlink/?LinkId=146623)(en inglés), en blogs.msdn.com  
   
--   Entrada de blog, [patrón de búsqueda: Distingue mayúsculas de minúsculas](https://go.microsoft.com/fwlink/?LinkId=157782), en blogs.msdn.com  
+-   Entrada de blog, [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782) (Patrón de búsqueda: falta de distinción entre mayúsculas y minúsculas), en blogs.msdn.com  
   
 -   Ejemplo, [Transformación de búsqueda](https://go.microsoft.com/fwlink/?LinkId=267528), en msftisprodsamples.codeplex.com.  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e3a9a9f8043a3251e928b7b13e706b407097894
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019238"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Compatibilidad de las fórmulas DAX en el modo DirectQuery 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -158,7 +158,7 @@ SQL Server procesa los valores NULL y los valores en blanco de forma diferente a
   
 `EXAMPLE: LOG(blank())`  
   
-Las mismas limitaciones se aplican al resto de funciones logarítmicas: LOG10 y LN.  
+Las mismas limitaciones se aplican a las demás funciones logarítmicas: LOG10 y LN.  
   
 Para más información sobre el tipo de datos **blank** de DAX, vea see [Especificación de sintaxis de DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
   
@@ -192,7 +192,7 @@ En general, dado que los intervalos de fechas aceptados son diferentes para Exce
   
 -   Primera fecha: 1 de marzo de 1990  
   
--   Última fecha: 31 de diciembre de 9999  
+-   Última fecha: El 31 de diciembre de 9999  
   
 Si cualquiera de las fechas utilizadas en las fórmulas queda fuera de este intervalo, la fórmula generará un error o los resultados no coincidirán.  
   
@@ -251,7 +251,7 @@ En el modo DirectQuery, si el resultado de una operación aritmética tiene el t
   
 -   Mínimo: -922337203685477.5808  
   
--   Máximo:  922337203685477.5807  
+-   Máximo: 922337203685477.5807  
   
 **Combinar tipos de datos de moneda y REAL**  
 EJEMPLO: `Currency sample 1`  

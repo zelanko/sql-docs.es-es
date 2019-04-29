@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919662"
 ---
 # <a name="user-defined-type-requirements"></a>Requisitos de tipos definidos por el usuario
   Debe realizar varias decisiones de diseño importante al crear un tipo definido por el usuario (UDT) se instale en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para la mayoría de los UDT, se recomienda la creación del UDT como una estructura, aunque también puede crearse como una clase. La definición del UDT debe cumplir las especificaciones de creación de los UDT a fin de registrarse con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -112,7 +112,7 @@ ms.locfileid: "49120102"
  Indica si todas las instancias de este UDT tienen la misma longitud.  
   
  `MaxByteSize`  
- Tamaño máximo de la instancia, expresado en bytes. Es preciso especificar `MaxByteSize` con el formato de serialización `UserDefined`. En el caso de un UDT que tenga especificada una serialización definida por el usuario, `MaxByteSize` hace referencia al tamaño total del UDT en su formato serializado, tal y como lo defina el usuario. El valor de `MaxByteSize` debe estar comprendido en el intervalo de 1 a 8000 o estar establecido en -1 para indicar que el UDT es superior a 8000 bytes (el tamaño total no puede superar el tamaño LOB máximo). Consideremos un UDT en el que la propiedad sea una cadena de 10 caracteres (`System.Char`). Cuando el UDT se serialice mediante BinaryWriter, el tamaño total de la cadena serializada será de 22 bytes: 2 bytes por carácter Unicode UTF-16, multiplicados por el número máximo de caracteres, más 2 bytes de control por la sobrecarga que se produce al serializar un flujo binario. De modo que, al determinar el valor de `MaxByteSize`, el tamaño total del UDT serializado debe considerarse como el tamaño de los datos serializados en formato binario más la sobrecarga producida por la serialización.  
+ Tamaño máximo de la instancia, expresado en bytes. Es preciso especificar `MaxByteSize` con el formato de serialización `UserDefined`. En el caso de un UDT que tenga especificada una serialización definida por el usuario, `MaxByteSize` hace referencia al tamaño total del UDT en su formato serializado, tal y como lo defina el usuario. El valor de `MaxByteSize` debe estar comprendido en el intervalo de 1 a 8000 o estar establecido en -1 para indicar que el UDT es superior a 8000 bytes (el tamaño total no puede superar el tamaño LOB máximo). Consideremos un UDT en el que la propiedad sea una cadena de 10 caracteres (`System.Char`). Cuando el UDT se serialice mediante BinaryWriter, el tamaño total de la cadena serializada es 22 bytes: 2 bytes por carácter Unicode UTF-16, multiplicado por el número máximo de caracteres, además de control de 2 bytes de sobrecarga que se produce al serializar un flujo binario. De modo que, al determinar el valor de `MaxByteSize`, el tamaño total del UDT serializado debe considerarse como el tamaño de los datos serializados en formato binario más la sobrecarga producida por la serialización.  
   
  `ValidationMethodName`  
  Nombre del método utilizado para validar las instancias del UDT.  
@@ -140,9 +140,9 @@ ms.locfileid: "49120102"
   
 -   Menor que (\<)  
   
--   Mayor o igual que (>=)  
+-   Mayor o igual que (> =)  
   
--   Menor o igual que (<=)  
+-   Menor o igual que (< =)  
   
 ### <a name="implementing-nullability"></a>Implementar la nulabilidad  
  Además de especificar correctamente los atributos de los ensamblados, la clase también debe admitir la nulabilidad. Se tiene en cuenta el valor NULL de los UDT cargados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero para que el UDT reconozca un valor NULL, es necesario que la clase implemente la interfaz `INullable`. Para obtener más información y un ejemplo de cómo implementar la nulabilidad en un UDT, vea [codificación de tipos](creating-user-defined-types-coding.md).  

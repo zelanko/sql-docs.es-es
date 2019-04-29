@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63020009"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bases de datos de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "50145920"
  Desactive el procesamiento diferido de agregaciones si lo está usando en el servidor de origen. Las agregaciones que se están procesando en segundo plano pueden interferir con la sincronización de base de datos. Para obtener más información acerca de la configuración de esta propiedad del servidor, vea [OLAP Properties](../../analysis-services/server-properties/olap-properties.md).  
   
 > [!NOTE]  
->  El tamaño de la base de datos es un factor que se debe tener en cuenta a la hora de determinar si la sincronización es un método adecuado. No existen requisitos generales, pero si la sincronización es demasiado lento, considere la posibilidad de sincronizar varios servidores en paralelo, como se describe en estas notas del producto: [Procedimientos recomendados para la sincronización de Analysis Services](http://go.microsoft.com/fwlink/?LinkID=253136).  
+>  El tamaño de la base de datos es un factor que se debe tener en cuenta a la hora de determinar si la sincronización es un método adecuado. No hay ningún requisito de disco duro, pero si la sincronización es demasiado lento, considere la posibilidad de sincronizar varios servidores en paralelo, como se describe en este documento técnico: [Procedimientos recomendados para la sincronización de Analysis Services](http://go.microsoft.com/fwlink/?LinkID=253136).  
   
 ## <a name="synchronize-database-wizard"></a>Asistente para sincronizar bases de datos  
  Use el Asistente para sincronizar bases de datos con el fin de realizar una sincronización unidireccional desde una base de datos de origen a una de destino o para generar un script que especifique una operación de sincronización de base de datos. Puede sincronizar tanto particiones locales como remotas durante el proceso de sincronización y elegir si desea incluir roles.  

@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 80bb427800f57ddaa07e5e53f21b03df9e8317d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62933691"
 ---
 # <a name="functions-on-sequences---id"></a>Funciones usadas en secuencias: id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ fn:id($arg as xs:IDREF*) as element()*
  En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** escriba columnas en el [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos.  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Recuperar elementos en función del valor del atributo IDREF  
- En el ejemplo siguiente se utiliza fn:id. para recuperar los elementos <`employee`>, en función del atributo IDREF manager. En este ejemplo, el atributo manager es de tipo IDREF y el atributo eid es de tipo ID.  
+ En el ejemplo siguiente se utiliza fn: Id. para recuperar el <`employee`> elementos, en función del atributo IDREF manager. En este ejemplo, el atributo manager es de tipo IDREF y el atributo eid es de tipo ID.  
   
  Para un valor de atributo administrador específico, el **ID** función busca el <`employee`> elemento cuyo valor del atributo de tipo ID coincide con el valor IDREF de entrada. En otras palabras, para un empleado concreto, el **ID** función devuelve employee manager.  
   
@@ -99,7 +99,7 @@ Go
  La consulta devuelve "Dave" como valor. Esto indica que Dave es el superior (manager) de Joe.  
   
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>b. Recuperar elementos en función del valor del atributo IDREFS OrderList  
- En el ejemplo siguiente, el atributo OrderList del elemento <`Customer`> es de tipo IDREFS. Enumera los Id. de orden del cliente en cuestión. Por cada id. de orden, existe un elemento secundario <`Order`> debajo del elemento <`Customer`> que proporciona el valor de orden.  
+ En el ejemplo siguiente, el atributo OrderList de la <`Customer`> elemento es un atributo de tipo IDREFS. Enumera los Id. de orden del cliente en cuestión. Para cada identificador de pedido, hay una <`Order`> elemento secundario bajo el <`Customer`> que proporciona el valor de orden.  
   
  La expresión de consulta, `data(CustOrders:Customers/Customer[1]/@OrderList)[1]`, recupera el primer valor de la lista IDRES para el primer cliente. Este valor, a continuación, se pasa a la **ID** función. La función, a continuación, busca el <`Order`> elemento cuyo valor de atributo OrderID coincide con la entrada a la **ID** función.  
   

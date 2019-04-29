@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013350"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introducción al uso de consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ ms.locfileid: "56041636"
   
  Cuando especifique consultas XPath en una plantilla, tenga en cuenta el siguiente comportamiento:  
   
--   XPath puede incluir caracteres como < o & que tienen significados especiales en XML (y una plantilla es un documento XML). Debe definir estos caracteres como caracteres de escape mediante la codificación de & en XML o especificar XPath en la dirección URL.  
+-   XPath puede contener caracteres como < o & que tienen significados especiales en XML (y la plantilla es un documento XML). Debe realizar el escape de estos caracteres mediante XML &-codificación o especificar XPath en la dirección URL.  
   
 ## <a name="see-also"></a>Vea también  
  [Utilizar consultas XPath en SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ee139dd652204c750c99d8bad8ab2b17c7c1ba1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007811"
 ---
 # <a name="calling-sqlclosecursor"></a>Al llamar a SQLCloseCursor
 Dado que **SQLCloseCursor** es prácticamente el mismo que **SQLFreeStmt** con SQL_CLOSE, el Administrador de controladores no se asigna esta función. Se asignan las funciones de reemplazo para que existente ODBC 2 *.x* aplicaciones pueden mover fácilmente a ODBC 3. *x* mediante el uso de las nuevas funciones. Este movimiento resulta más fácil para dichas aplicaciones empezar a usar el nuevo ODBC 3. *x* funcionalidad dentro de código condicional de manera modular. **SQLCloseCursor** no representa ninguna funcionalidad nueva. Una aplicación no obtener cualquier ventaja moviendo a **SQLCloseCursor** desde **SQLFreeStmt** con SQL_CLOSE.

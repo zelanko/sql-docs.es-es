@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbd920b77fd44eaf4765f0983d7d16feb31a4d91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63026589"
 ---
 # <a name="c-interval-structure"></a>Estructura de intervalo de C
 Cada uno de los tipos de datos del intervalo de C se enumeran en la [tipos de datos C](../../../odbc/reference/appendixes/c-data-types.md) sección usa la misma estructura que contiene el intervalo de datos. Cuando **SQLFetch**, **SQLFetchScroll**, o **SQLGetData** es llama, el controlador devuelve datos en la estructura SQL_INTERVAL_STRUCT, utiliza el valor que se especificó en el aplicación para los tipos de datos de C (en la llamada a **SQLBindCol**, **SQLGetData**, o **SQLBindParameter**) para interpretar el contenido de SQL_INTERVAL_STRUCT y rellena la *interval_type* campo de la estructura con la *enum* corresponde al tipo C de valor. Tenga en cuenta que los controladores no leen la *interval_type* campo para determinar el tipo del intervalo; recuperarán el valor del campo descriptor SQL_DESC_CONCISE_TYPE. Cuando se usa la estructura de datos del parámetro, el controlador utiliza el valor especificado por la aplicación en el campo SQL_DESC_CONCISE_TYPE del APD para interpretar el contenido de SQL_INTERVAL_STRUCT, incluso si la aplicación establece el valor de la  *interval_type* campo en un valor diferente.  

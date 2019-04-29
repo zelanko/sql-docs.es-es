@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef709a48f0c5c162e971cebbdf5d49c4417250ed
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889846"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Eventos registrados por un paquete de Integration Services
   Los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registran mensajes de eventos en el registro de eventos de aplicación Windows. Los paquetes registran estos mensajes cuando se inician, cuando se detienen y cuando se producen ciertos problemas.  
@@ -35,7 +35,7 @@ ms.locfileid: "58378994"
 > [!NOTE]  
 >  El paquete registrará los mensajes de la tabla siguiente aunque no se haya habilitado el registro.  
   
-|Identificador del evento|Nombre simbólico|Texto|Notas|  
+|Identificador del evento|Nombre simbólico|Text|Notas|  
 |--------------|-------------------|----------|-----------|  
 |12288|DTS_MSG_PACKAGESTART|Se ha iniciado el paquete "".|El paquete ha comenzado a ejecutarse.|  
 |12289|DTS_MSG_PACKAGESUCCESS|El paquete "" finalizó correctamente.|El paquete se ha ejecutado correctamente y ya no está ejecutándose.|  
@@ -55,7 +55,7 @@ ms.locfileid: "58378994"
   
 ### <a name="messages-about-the-stages-of-package-execution"></a>Mensajes sobre las fases de ejecución del paquete  
   
-|Identificador del evento|Nombre simbólico|Texto|Notas|  
+|Identificador del evento|Nombre simbólico|Text|Notas|  
 |--------------|-------------------|----------|-----------|  
 |12544|DTS_MSG_EVENTLOGENTRY|Nombre de evento: %1%r Mensaje: %9%r Operador: %2%r Nombre de origen: %3%r Id. de origen: %4%r Id. de ejecución: %5%r Hora de inicio: %6%r Hora de finalización: %7%r Código de datos: %8|Cuando se configura el registro de paquetes en el registro de eventos de aplicación, varios mensajes usan este formato genérico.|  
 |12556|DTS_MSG_EVENTLOGENTRY_PACKAGESTART|Nombre de evento: %1%r Mensaje: %9%r Operador: %2%r Nombre de origen: %3%r Id. de origen: %4%r Id. de ejecución: %5%r Hora de inicio: %6%r Hora de finalización: %7%r Código de datos: %8|El paquete se ha iniciado.|  
@@ -68,7 +68,7 @@ ms.locfileid: "58378994"
 ### <a name="messages-about-events-that-occur"></a>Mensajes sobre los eventos que se producen  
  En la tabla siguiente, se muestran solo algunos de los mensajes generados por eventos. Para consultar una lista más completa de los mensajes de error, advertencia e información que usa [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vea [Referencia de errores y mensajes de Integration Services](../integration-services-error-and-message-reference.md).  
   
-|Identificador del evento|Nombre simbólico|Texto|Notas|  
+|Identificador del evento|Nombre simbólico|Text|Notas|  
 |--------------|-------------------|----------|-----------|  
 |12251|DTS_MSG_EVENTLOGENTRY_TASKFAILED|Nombre de evento: %1%r Mensaje: %9%r Operador: %2%r Nombre de origen: %3%r Id. de origen: %4%r Id. de ejecución: %5%r Hora de inicio: %6%r Hora de finalización: %7%r Código de datos: %8|Error en la tarea.|  
 |12250|DTS_MSG_EVENTLOGENTRY_ERROR|Nombre de evento: %1%r Mensaje: %9%r Operador: %2%r Nombre de origen: %3%r Id. de origen: %4%r Id. de ejecución: %5%r Hora de inicio: %6%r Hora de finalización: %7%r Código de datos: %8|Este mensaje informa de que se ha producido un error.|  

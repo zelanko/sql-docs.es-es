@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919534"
 ---
 # <a name="using-systemtransactions"></a>Utilizar System.Transactions
   El espacio de nombres `System.Transactions` proporciona un nuevo marco de transacciones totalmente integrado con ADO.NET y la característica de integración con Common Language Runtime (CLR) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La clase `System.Transactions.TransactionScope` crea un bloque de código transaccional dando de alta implícitamente las conexiones en una transacción distribuida. Se debe llamar al método `Complete` al final del bloque de código marcado por `TransactionScope`. Se llama al método `Dispose` cuando la ejecución de programas deja un bloque de código, lo que hace que se interrumpa la transacción si no se llama al método `Complete`. Si se ha producido una excepción que hace que el código deje el ámbito, se considera que la transacción se ha interrumpido.  

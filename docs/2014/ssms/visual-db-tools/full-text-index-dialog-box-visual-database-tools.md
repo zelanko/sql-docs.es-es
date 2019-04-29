@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028422"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Índice de texto completo (cuadro de diálogo, Visual Database Tools)
   Este cuadro de diálogo permite crear un índice de texto completo para realizar búsquedas de texto completo en columnas basadas en texto de las tablas de base de datos. Un índice de texto completo se basa en un índice normal, por lo que deberá crear primero este último. El índice normal debe crearse en una sola columna sin valores NULL, y es conveniente elegir una columna con valores más pequeños que una con valores más grandes.  
@@ -63,7 +63,7 @@ ms.locfileid: "52822749"
  Indica si actualmente es posible realizar una búsqueda de texto completo mediante este índice de texto completo.  
   
  **Configuración de control de cambios**  
- Describe el estado de seguimiento de cambios para este índice: Manual, automático o desactivado.  
+ Describe el estado del seguimiento de cambios de este índice: Manual, Automático o Desactivado.  
   
  **Rastreo completado**  
  Muestra si ha finalizado el rastreo más reciente. Si el valor de esta propiedad es No, el proceso de rastreo estará en ejecución.  
@@ -87,7 +87,7 @@ ms.locfileid: "52822749"
  Muestra la fecha y la hora en que se va a iniciar el siguiente rastreo.  
   
  **Tipo de rastreo actual o último**  
- Muestra el tipo del rastreo actual o el más reciente: Completo, Incremental, actualización o autopropagación.  
+ Muestra el número de errores del rastreo actual o del más reciente: Completo, Incremental, Actualización o Autopropagación.  
   
  **Nombre de índice único**  
  Muestra una lista con todos los nombres de las columnas de esta base de datos que tienen índices únicos de una sola columna. Estas columnas se pueden utilizar para crear un índice de texto completo.  

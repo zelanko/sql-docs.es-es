@@ -32,11 +32,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1df89052e33f75921a45f124739e2a375dc2d2ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919935"
 ---
 # <a name="coding-user-defined-types"></a>Codificar tipos definidos por el usuario
   Al codificar la definición de un tipo definido por el usuario (UDT), debe implementar varias características, en función de si implementa el UDT como una clase o como una estructura, así como de las opciones de formato y serialización que haya elegido.  
@@ -138,7 +138,7 @@ public static Point Null
 }  
 ```  
   
-### <a name="is-null-vs-isnull"></a>IS NULL frente a IsNull  
+### <a name="is-null-vs-isnull"></a>IS NULL frente a. IsNull  
  Consideremos una tabla que contiene el esquema Points(id int, location Point), donde `Point` es un UDT de CLR, y consideremos las consultas siguientes:  
   
 ```  
@@ -493,7 +493,7 @@ public Int32 Y
  Cuando codifique los métodos UDT, tenga en cuenta si el algoritmo usado podría cambiar con el tiempo. En ese caso, es posible que desee considerar la posibilidad de crear una clase independiente para los métodos que usa el UDT. Si el algoritmo cambia, puede volver a compilar la clase con el nuevo código, así como cargar el ensamblado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin que esto afecte al UDT. En muchos casos, los UDT pueden volver a cargarse mediante la instrucción ALTER ASSEMBLY de [!INCLUDE[tsql](../../includes/tsql-md.md)], pero eso podría causar problemas con los datos existentes. Por ejemplo, el `Currency` UDT incluido con el **AdventureWorks** usos de la base de datos de ejemplo una **ConvertCurrency** función para convertir los valores de moneda, que se implementa en una clase independiente. Es posible que en un futuro los algoritmos de conversión cambien de modo impredecible o que se necesite nueva funcionalidad. Separar la **ConvertCurrency** funcionar desde el `Currency` implementación de UDT proporciona mayor flexibilidad al planear los cambios futuros.  
   
 ### <a name="example"></a>Ejemplo  
- El `Point` clase contiene tres métodos simples para calcular la distancia: **distancia**, **DistanceFrom** y **DistanceFromXY**. Cada uno de estos métodos devuelve un valor de tipo `double` y calcula la distancia de `Point` a cero, la distancia de un punto determinado a `Point` y la distancia de las coordenadas X e Y especificadas a `Point`, respectivamente. **Distancia** y **DistanceFrom** cada llamada **DistanceFromXY**y muestran cómo usar argumentos distintos para cada método.  
+ La `Point` clase contiene tres métodos simples para calcular la distancia: **Distancia**, **DistanceFrom** y **DistanceFromXY**. Cada uno de estos métodos devuelve un valor de tipo `double` y calcula la distancia de `Point` a cero, la distancia de un punto determinado a `Point` y la distancia de las coordenadas X e Y especificadas a `Point`, respectivamente. **Distancia** y **DistanceFrom** cada llamada **DistanceFromXY**y muestran cómo usar argumentos distintos para cada método.  
   
 ```vb  
 ' Distance from 0 to Point.  
@@ -543,7 +543,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  La clase `Microsoft.SqlServer.Server.SqlMethodAttribute` proporciona atributos personalizados que pueden usarse para marcar las definiciones de método a fin de especificar el determinismo en comportamientos de llamada NULL, así como para especificar si un método es un método mutador. Se asume el uso de valores predeterminados para estas propiedades y solamente se usa el atributo personalizado cuando se necesita un valor no predeterminado.  
   
 > [!NOTE]  
->  La clase `SqlMethodAttribute` se hereda de la clase `SqlFunctionAttribute`; por ello, `SqlMethodAttribute` hereda los campos `FillRowMethodName` y `TableDefinition` de `SqlFunctionAttribute`. Esto significa que es posible escribir un método con valores de tabla, que no es el caso. Compila el método y el ensamblado se implementa, pero un error sobre la `IEnumerable` devolver el tipo se genera en tiempo de ejecución con el siguiente mensaje: "método, propiedad o campo '\<nombre >' en la clase\<clase >' en el ensamblado '\<ensamblado >' tiene el tipo de valor devuelto no válido. "  
+>  La clase `SqlMethodAttribute` se hereda de la clase `SqlFunctionAttribute`; por ello, `SqlMethodAttribute` hereda los campos `FillRowMethodName` y `TableDefinition` de `SqlFunctionAttribute`. Esto significa que es posible escribir un método con valores de tabla, que no es el caso. Compila el método y el ensamblado se implementa, pero un error sobre el `IEnumerable` devolver el tipo se genera en tiempo de ejecución con el siguiente mensaje: "Método, propiedad o campo '\<nombre >' en la clase\<clase >' en el ensamblado '\<ensamblado >' tiene el tipo de valor devuelto no válido."  
   
  En la tabla siguiente se describen algunas de las propiedades más relevantes de `Microsoft.SqlServer.Server.SqlMethodAttribute` que pueden usarse en métodos UDT y se indican sus valores predeterminados.  
   

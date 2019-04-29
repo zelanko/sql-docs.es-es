@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad369e49298c4d39a7e936ce8acf47ca2035c8f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920018"
 ---
 # <a name="accessing-the-current-transaction"></a>Obtener acceso a la transacción actual
   Si una transacción se encuentra activa en el momento en que se escribe el código de Common Language Runtime (CLR) que se ejecuta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la transacción se expone a través de la clase `System.Transactions.Transaction`. La propiedad `Transaction.Current` permite obtener acceso a la transacción actual. En la mayoría de los casos, no es necesario obtener acceso a la transacción de forma explícita. Para las conexiones de bases de datos, ADO.NET comprueba `Transaction.Current` de forma automática cuando se llama al método `Connection.Open` y da de alta la conexión en esa transacción de forma transparente (a menos que la palabra clave `Enlist` esté establecida en False en la cadena de conexión).  

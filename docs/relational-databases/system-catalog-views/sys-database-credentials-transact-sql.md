@@ -1,5 +1,5 @@
 ---
-title: Sys.database_credentials (Transact-SQL) | Microsoft Docs
+title: sys.database_credentials (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 46c055e017c2cf5c06993f3e117010ac1621e175
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62936745"
 ---
-# <a name="sysdatabasecredentials-transact-sql"></a>Sys.database_credentials (Transact-SQL)
+# <a name="sysdatabasecredentials-transact-sql"></a>sys.database_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Devuelve una fila por cada base de datos con ámbito de credencial en la base de datos.  
@@ -40,7 +40,7 @@ ms.locfileid: "47607293"
 |credential_identity|**nvarchar(4000)**|Nombre de la identidad que se va a utilizar. Suele ser un usuario de Windows. No tiene que ser único.|  
 |create_date|**datetime**|Hora en que se creó la credencial con ámbito de base de datos.|  
 |modify_date|**datetime**|Hora a la que se modificó por última vez la credencial con ámbito de base de datos.|  
-|target_type|**Nvarchar (100)**|Credencial de ámbito del tipo de base de datos. Credenciales con ámbito devuelve NULL para la base de datos.|  
+|target_type|**nvarchar(100)**|Credencial de ámbito del tipo de base de datos. Credenciales con ámbito devuelve NULL para la base de datos.|  
 |target_id|**int**|Identificador del objeto asignado a la credencial con ámbito de base de datos. Credenciales con ámbito devuelve 0 para la base de datos|  
   
 ## <a name="permissions"></a>Permisos  

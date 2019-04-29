@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
+title: sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7f1be9ff365412444f87ef0abcc3795301d98cf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62948947"
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ SELECT sys.fn_cdc_get_min_lsn ('HumanResources_Employee')AS min_lsn;
   
 ```  
   
-### <a name="b-verifying-the-low-endpoint-of-a-query-range"></a>B. Comprobar el extremo inferior de un rango de consulta  
+### <a name="b-verifying-the-low-endpoint-of-a-query-range"></a>b. Comprobar el extremo inferior de un rango de consulta  
  El ejemplo siguiente utiliza el valor LSN mínimo devuelto por `sys.fn_cdc_get_min_lsn` para comprobar que el extremo inferior propuesto para una consulta de datos de cambio es válido para la escala de tiempo actual para la instancia de captura el `HumanResources_Employee`. Este ejemplo supone que el LSN del extremo alto anterior para la instancia de captura se guardó y está disponible para establecer la variable `@save_to_lsn`. Para los propósitos de este ejemplo, `@save_to_lsn` está establecido en 0x000000000000000000 para forzar la ejecución de la sección de control de errores.  
   
 ```  

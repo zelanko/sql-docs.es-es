@@ -11,20 +11,20 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 42006c68a50497034817cfe8df6c9172ea0cdc3b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931422"
 ---
-# <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Lección 2: limpiar datos de proveedor con la base de conocimiento Proveedores
+# <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Lección 2: Limpieza de datos de proveedor con la base de conocimiento Proveedores
   En esta lección, limpiar los datos de proveedor en un archivo de Excel mediante el **proveedores** base de conocimiento que ha creado en la primera lección. Limpieza de datos en DQS incluye un **proceso asistido por ordenador** que analiza cómo se ajustan los datos al conocimiento en una base de conocimiento y un **proceso interactivo** que le permite revisar y modificar resultados del proceso asistido por ordenador. La característica de limpieza de datos identifica los datos incorrectos en el origen de datos y después corrige o sugiere correcciones a los datos incorrectos. También normaliza y enriquece los datos de cliente usando valores de dominio, valores iniciales de sinónimos, reglas de dominio, relaciones basadas en términos y datos de referencia. Puede aprobar o rechazar interactivamente los cambios propuestos por el proceso asistido por PC. Consulte [limpieza de datos](https://msdn.microsoft.com/library/gg524800.aspx) para obtener más detalles.  
   
  El proceso asistido por PC emplea los valores de umbral siguientes que puede configurar mediante la opción Configuración de la página principal del Cliente DQS.  
   
--   **Puntuación mínima para sugerencias:** puntuación o nivel de confianza mínimo que DQS emplea para sugerir el reemplazo de un valor.  
+-   **Puntuación mínima para sugerencias:** La puntuación mínima o nivel de confianza que utiliza DQS para sugerir el reemplazo de un valor.  
   
--   **Puntuación mínima de correcciones automáticas:** puntuación o nivel de confianza mínimo que DQS emplea para corregir automáticamente un valor.  
+-   **Puntuación mínima de correcciones automáticas:** La puntuación mínima o nivel de confianza que utiliza DQS para corregir automáticamente un valor.  
   
  Consulte [configurar los valores de umbral para la limpieza y coincidencia](https://msdn.microsoft.com/library/hh510415.aspx) para obtener más información sobre cómo configurar estas opciones.  
   

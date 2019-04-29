@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9476f4f928890514354f97ce604f871bd8a06d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007893"
 ---
 # <a name="catalog-and-schema-usage"></a>Uso de esquema y catálogo
-Orígenes de datos no admiten necesariamente los nombres de catálogo y esquema como identificadores de nombre de objeto en todas las instrucciones SQL. Orígenes de datos podrían admitir los nombres de catálogo y esquema en una o varias de las siguientes clases de instrucciones SQL: lenguaje de manipulación de datos (DML) las instrucciones, las llamadas a procedimientos, instrucciones de definición de tabla, las instrucciones de definición de índice y definición de privilegios instrucciones. Para determinar las clases de instrucciones SQL en el catálogo y el esquema se pueden usar nombres, una aplicación llama a **SQLGetInfo** con las opciones SQL_CATALOG_USAGE y SQL_SCHEMA_USAGE.
+Orígenes de datos no admiten necesariamente los nombres de catálogo y esquema como identificadores de nombre de objeto en todas las instrucciones SQL. Orígenes de datos podrían admitir los nombres de catálogo y esquema en una o varias de las siguientes clases de instrucciones SQL: Instrucciones de lenguaje de manipulación (DML) de datos, las llamadas a procedimientos, instrucciones de definición de tabla, las instrucciones de definición de índice y las instrucciones de definición de privilegios. Para determinar las clases de instrucciones SQL en el catálogo y el esquema se pueden usar nombres, una aplicación llama a **SQLGetInfo** con las opciones SQL_CATALOG_USAGE y SQL_SCHEMA_USAGE.

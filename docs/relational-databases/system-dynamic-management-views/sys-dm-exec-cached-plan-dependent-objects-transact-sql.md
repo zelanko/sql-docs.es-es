@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1312312718a082aaf5b7f6a1e798d29db83a8bb8
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: f74b6b9fe659f6d2af0f30bd6a2b629939fc5628
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013549"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="arguments"></a>Argumentos  
 *plan_handle*  
-Identifica de forma exclusiva un plan de ejecución de consultas de un proceso por lotes que se ha ejecutado y cuyo plan reside en la caché del plan. *plan_handle* es **varbinary (64)**.   
+Es un token que identifica de forma exclusiva un plan de ejecución de consulta para un lote que se ha ejecutado y su plan reside en la caché del plan. *plan_handle* es **varbinary (64)**.   
 
 El *plan_handle* puede obtenerse de los objetos de administración dinámica siguientes:  
   
@@ -64,7 +64,7 @@ El *plan_handle* puede obtenerse de los objetos de administración dinámica sig
 |**cacheobjtype**|**nvarchar(50)**|El tipo de objeto de caché de Plan. La columna no acepta valores NULL. Los valores posibles son<br /><br /> Plan ejecutable<br /><br /> Función CLR compilada<br /><br /> Procedimiento CLR compilado<br /><br /> Cursor|  
   
 ## <a name="permissions"></a>Permisos  
- es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
+ Requiere el permiso `VIEW SERVER STATE` en el servidor.  
   
 ## <a name="physical-joins"></a>Combinaciones físicas  
  ![Diagrama de relaciones](../../relational-databases/system-dynamic-management-views/media/dm-dependent-objects.gif "diagrama de relaciones")  

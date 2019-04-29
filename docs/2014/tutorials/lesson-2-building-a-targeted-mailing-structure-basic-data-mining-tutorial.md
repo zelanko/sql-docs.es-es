@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 42893ce0b921f47a86e6a52f3262786ca8b82bb9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931505"
 ---
 # <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>Lección 2: Creación de una estructura de distribución de correo directo (Tutorial de minería de datos básicos)
   El departamento de marketing de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] desea aumentar las ventas dirigiendo una campaña de correo directo a clientes específicos. La base de datos de la empresa contiene una lista de clientes antiguos y otra de nuevos clientes potenciales. Mediante la investigación de los atributos de clientes antiguos, la empresa espera detectar los patrones que, a continuación, pueden aplicar a los clientes potenciales. Por ejemplo, podría usar las últimas tendencias para predecir qué clientes potenciales tienen más probables que adquieran una bicicleta de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], o crear segmentos de clientes para campañas de marketing futuras.  

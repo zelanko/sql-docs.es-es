@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 788defce7f897e4da3a3680118c573b5a73ac3b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62917058"
 ---
 # <a name="log-shipping-monitor-settings"></a>Configuración del monitor de trasvase de registros
   Utilice esta página para configurar y modificar las propiedades del servidor del monitor de trasvase de registros.  

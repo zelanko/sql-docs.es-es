@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916749"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar el tamaño de un montón
   Los siguientes pasos pueden utilizarse para calcular el espacio necesario para almacenar datos en un montón:  

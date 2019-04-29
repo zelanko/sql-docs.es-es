@@ -1,5 +1,5 @@
 ---
-title: Instalar Analysis Services | Documentos de Microsoft
+title: Instalar Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0904dc53e17ed140310df38d1f63dc9fe3fc45cb
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63054565"
 ---
 # <a name="install-sql-server-analysis-services"></a>Instalar SQL Server Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  SQL Server Analysis Services es un servidor de bases de datos analíticas que hospeda modelos tabulares, cubos multidimensionales y modelos de minería de datos que se pueden acceder desde informes, hojas de cálculo y paneles.  
+  SQL Server Analysis Services es un servidor de bases de datos analíticas que hospeda modelos tabulares, cubos multidimensionales y modelos de minería de datos que puede acceder desde informes, hojas de cálculo y paneles.  
   
- Analysis Services es varias instancias, lo que significan que puede instalar más de una copia en un único equipo o ejecutar versiones nuevas y antiguas en paralelo. Cualquier instancia que se instale se ejecuta en uno de tres modos, según lo que se determine durante la instalación: multidimensional y de minería de datos, tabular o SharePoint. Si quiere usar varios modos, necesitará una instancia independiente para cada uno.  
+ Analysis Services es de varias instancias, lo que significa que puede instalar más de una copia en un único equipo o ejecutar versiones nuevas y antiguas side-by-side. Cualquier instancia que instale se ejecuta en uno de estos tres modos, según lo determinado durante la instalación: Multidimensional y minería de datos, Tabular o SharePoint. Si quiere usar varios modos, necesitará una instancia independiente para cada uno.  
   
  Después de instalar el servidor en un modo determinado, puede usarlo para hospedar soluciones conformes con ese modo. Por ejemplo, se necesita un servidor de modo tabular para acceder a los datos de modelo tabulares a través de la red.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34708083"
   
 -   [Descargar SQL Server Data Tools (SSDT)](../../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
- Necesitará SSMS y SSDT para trabajar con datos e instancias de Analysis Services. Herramientas pueden instalarse en cualquier ubicación, pero no olvide configurar puertos en el servidor antes de intentar una conexión. Para obtener información detallada, vea [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
+ Necesitará SSMS y SSDT para trabajar con datos e instancias de Analysis Services. Las herramientas pueden instalarse en cualquier ubicación, pero no olvide configurar puertos en el servidor antes de intentar una conexión. Para obtener información detallada, vea [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
 ## <a name="install-using-a-wizard"></a>Instalar mediante un asistente  
  La siguiente lista muestra las páginas del Asistente para la instalación de SQL Server que se usan para instalar Analysis Services.  
@@ -42,11 +42,11 @@ ms.locfileid: "34708083"
   
 2.  En la página de configuración de Analysis Services, seleccione un modo. Modo tabular es el valor predeterminado...  
   
-     ![Página de configuración con opciones de configuración de Analysis Services](../../../analysis-services/instances/install-windows/media/ssas-setupasconfig.png "página de configuración con opciones de configuración de Analysis Services")  
+     ![Página de configuración con las opciones de configuración de Analysis Services](../../../analysis-services/instances/install-windows/media/ssas-setupasconfig.png "página de configuración con las opciones de configuración de Analysis Services")  
   
-  El modo tabular utiliza el motor de análisis en memoria xVelocity (VertiPaq), que es el almacenamiento predeterminado para los modelos tabulares. Después de implementar los modelos tabulares en el servidor, puede configurar selectivamente las soluciones tabulares para utilizar el almacenamiento de disco de DirectQuery como una alternativa al almacenamiento de límite de memoria.  
+  El modo tabular utiliza el motor de análisis en memoria xVelocity (VertiPaq), que es el almacenamiento predeterminado para los modelos tabulares. Después de implementar los modelos tabulares en el servidor, puede configurar selectivamente las soluciones tabulares para utilizar el almacenamiento de disco de DirectQuery como una alternativa al almacenamiento vinculado a la memoria.  
  
- Multidimensional y minería de datos de modo se usa MOLAP como almacenamiento predeterminado para los modelos implementados en Analysis Services. Después de implementar en el servidor, puede configurar una solución para usar ROLAP si quiere ejecutar consultas directamente en la base de datos relacional en lugar de almacenar los datos de la consulta en una base de datos multidimensional de Analysis Services.  
+ Multidimensional y minería de datos de modo uso MOLAP como almacenamiento predeterminado para los modelos implementados en Analysis Services. Después de implementar en el servidor, puede configurar una solución para usar ROLAP si quiere ejecutar consultas directamente en la base de datos relacional en lugar de almacenar los datos de la consulta en una base de datos multidimensional de Analysis Services.  
   
 
   
@@ -75,6 +75,6 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
 ## <a name="see-also"></a>Vea también  
  [Determinar el modo de servidor de una instancia de Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Creación de modelos tabular](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
+ [Modelado tabular](https://msdn.microsoft.com/library/hh212945(v=sql.110).aspx)  
   
   

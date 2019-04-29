@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035084"
 ---
 # <a name="sqllogship-application"></a>sqllogship (aplicación)
   La aplicación **sqllogship** realiza una operación de copia de seguridad, copia o restauración y las tareas de limpieza asociadas en una configuración de trasvase de registros. La operación se realiza en una instancia específica de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para una base de datos determinada.  
@@ -52,7 +52,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  Los archivos de copia de seguridad del directorio de destino creados después del punto de restauración más reciente se restauran en la base de datos o bases de datos secundarias. A continuación, la aplicación **sqllogship** limpia los archivos de copia de seguridad antiguos, basándose en el período de retención de archivos. Más tarde, la aplicación registra el historial de la operación de restauración en el servidor secundario y en el servidor de supervisión. Por último, la aplicación ejecuta **sp_cleanup_log_shipping_history**, que limpia la información del historial antigua, basándose en el período de retención.  
   
- **-verboselevel** _nivel_  
+ **-verboselevel** _level_  
  Especifica el nivel de mensajes agregados al historial de trasvase de registros. *level* es uno de los siguientes enteros:  
   
 |level|Descripción|  

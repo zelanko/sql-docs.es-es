@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_loaded_modules (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_loaded_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3967e3f8548a7b8ef804d054cf746243a8fb5b96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047198"
 ---
 # <a name="sysdmosloadedmodules-transact-sql"></a>sys.dm_os_loaded_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "47794323"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**base_address**|**varbinary (8)**|Dirección del módulo en proceso.|  
+|**base_address**|**varbinary(8)**|Dirección del módulo en proceso.|  
 |**file_version**|**varchar(23)**|Versión del archivo. Aparece en el siguiente formato:<br /><br /> x.x:x.x|  
 |**product_version**|**varchar(23)**|Versión del producto. Aparece en el siguiente formato:<br /><br /> x.x:x.x|  
-|**Depurar**|**bit**|1 = El módulo es una versión de depuración del módulo cargado.|  
-|**revisado**|**bit**|1 = El módulo se ha revisado.|  
-|**versión preliminar**|**bit**|1 = El módulo es una versión preliminar del módulo cargado.|  
+|**debug**|**bit**|1 = El módulo es una versión de depuración del módulo cargado.|  
+|**patched**|**bit**|1 = El módulo se ha revisado.|  
+|**prerelease**|**bit**|1 = El módulo es una versión preliminar del módulo cargado.|  
 |**private_build**|**bit**|1 = El módulo es una versión privada del módulo cargado.|  
 |**special_build**|**bit**|1 = El módulo es una versión especial del módulo cargado.|  
-|**Idioma**|**int**|Información del idioma de la versión del módulo.|  
-|**Empresa**|**nvarchar(256)**|Nombre de la compañía que ha creado el módulo.|  
-|**Descripción**|**nvarchar(256)**|Descripción del módulo.|  
+|**language**|**int**|Información del idioma de la versión del módulo.|  
+|**company**|**nvarchar(256)**|Nombre de la compañía que ha creado el módulo.|  
+|**description**|**nvarchar(256)**|Descripción del módulo.|  
 |**Nombre**|**nvarchar(255)**|Nombre del módulo. Incluye la ruta de acceso completa del módulo.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   

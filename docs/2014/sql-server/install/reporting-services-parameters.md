@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 662fe968faadf9d5a5bba10b934c421a5d3c3e95
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057583"
 ---
 # <a name="reporting-services-parameters"></a>Parámetros de Reporting Services
   Para analizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe especificar una instancia de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y proporcionan información sobre cómo conectarse a esa instancia.  

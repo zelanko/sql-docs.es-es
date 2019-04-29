@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da22ba86ea49532f460b081b13e18d6b7d95211c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042761"
 ---
 # <a name="copying-descriptors"></a>Descriptores de copias
 El **SQLCopyDesc** función se invoca para copiar los campos de descriptor de uno a otro descriptor. Los campos se pueden copiar solo a un descriptor de aplicación o un IPD, pero no a un IRD. Los campos se pueden copiar desde cualquier tipo de descriptor. Se copian solo los campos que se definen para los descriptores de origen y destino. **SQLCopyDesc** no copia el campo SQL_DESC_ALLOC_TYPE, porque no se puede cambiar el tipo de asignación de un descriptor. Campos copiados sobrescriben los campos existentes.  

@@ -1,5 +1,5 @@
 ---
-title: SQLMoreResults | Documentos de Microsoft
+title: SQLMoreResults | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85e0008e22e38b82fbd006a91eca80f67d7d8289
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046730"
 ---
 # <a name="sqlmoreresults"></a>SQLMoreResults
   **SQLMoreResults** permite que la aplicación recupere varios conjuntos de filas de resultados. Una instrucción SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] con una cláusula COMPUTE o un lote enviadoo de ODBC o instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , provocan que el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Cliente generen varios conjuntos de resultados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no permite la creación de un cursor de servidor para procesar los resultados en ninguno de los casos. Por consiguiente, el programador debe asegurarse de que la instrucción ODBC bloquea la tabla. El programador debe agotar los datos devueltos o cancelar la instrucción ODBC antes de procesar los datos de otras instrucciones activas en la conexión.  

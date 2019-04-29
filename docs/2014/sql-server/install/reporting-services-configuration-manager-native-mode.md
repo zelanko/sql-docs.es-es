@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 285170d1860d7ba19102e2476758ed951bfe06c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63057593"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Administrador de configuración de Reporting Services (modo nativo)
   Utilice el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo. Si ha instalado un servidor de informes usando la opción de instalación de solo archivos, debe usar el Administrador de configuración para configurar el servidor antes de poder usarlo. Si ha instalado un servidor de informes con la opción de instalación de configuración predeterminada, puede usar el Administrador de configuración para comprobar o modificar la configuración especificada durante la instalación. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se puede usar para configurar una instancia local o remota del servidor de informes.  
@@ -42,7 +42,7 @@ ms.locfileid: "48209795"
  [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
  Describe cómo crear una base de datos del servidor de informes, necesaria para almacenar objetos y metadatos de servidor.  
   
- [Configurar una conexión de base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  Describe cómo modificar la cadena de conexión que utiliza el servidor de informes para conectarse a la base de datos del servidor de informes.  
   
  [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
@@ -61,7 +61,7 @@ ms.locfileid: "48209795"
  Proporciona instrucciones paso a paso para la realización de tareas comunes.  
   
  [Temas de Ayuda de F1 de administrador de configuración de Reporting Services &#40;modo nativo de SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
- Proporciona temas de ayuda para las páginas en el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] herramienta de configuración.  
+ Proporciona temas de ayuda para las páginas de la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  **En este tema:**  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48209795"
   
 -   Configurar la cuenta del servicio del servidor de informes La cuenta se configura inicialmente durante la instalación, pero se puede modificar utilizando el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si se actualiza la contraseña o se desea utilizar otra cuenta.  
   
--   Crear y configurar direcciones URL. El servidor de informes y el Administrador de informes son [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] aplicaciones tiene acceso a través de direcciones URL. La dirección URL del servidor de informes proporciona acceso a los extremos SOAP del servidor de informes. La dirección URL del Administrador de informes sirve para abrir el Administrador de informes. Puede configurar una sola dirección URL o varias para cada aplicación.  
+-   Crear y configurar direcciones URL. El servidor de informes y el Administrador de informes son aplicaciones [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] a las que se tiene acceso a través de direcciones URL. La dirección URL del servidor de informes proporciona acceso a los extremos SOAP del servidor de informes. La dirección URL del Administrador de informes sirve para abrir el Administrador de informes. Puede configurar una sola dirección URL o varias para cada aplicación.  
   
 -   Crear y configurar la base de datos del servidor de informes El servidor de informes es un servidor sin estado que requiere una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenamiento interno. Puede utilizar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para crear y configurar una conexión con la base de datos del servidor de informes. También puede seleccionar una base de datos del servidor de informes existente que incluya el contenido que desea utilizar.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "48209795"
  El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no ayuda a administrar el contenido del servidor de informes, habilitar características adicionales ni conceder acceso al servidor. La implementación completa requiere que también se utilice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para habilitar características adicionales o modificar los valores predeterminados, así como el Administrador de informes para conceder a los usuarios acceso al servidor.  
   
 ##  <a name="bkmk_requirements"></a> Requisitos  
- El [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Administrador de configuración es específica de la versión. El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se instala con esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede usar para configurar una versión anterior de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si ejecuta versiones anteriores y más recientes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en paralelo en el mismo equipo, debe usar el Administrador de configuración de Reporting Services, que se incluye con cada versión para configurar cada instancia.  
+ El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es específico de la versión. El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se instala con esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede usar para configurar una versión anterior de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si ejecuta versiones anteriores y más recientes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en paralelo en el mismo equipo, debe usar el Administrador de configuración de Reporting Services, que se incluye con cada versión para configurar cada instancia.  
   
  Para utilizar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , debe disponer de lo siguiente:  
   
@@ -113,9 +113,9 @@ ms.locfileid: "48209795"
   
     -   En la pantalla de inicio de Windows, escriba **Administrador** y seleccione **Administrador de configuración de Reporting Services** en los resultados de búsqueda.  
   
-    -   Haga clic en **iniciar**, apunte a **todos los programas**, apunte a [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, a continuación, elija **herramientas de configuración**.  
+    -   Haga clic en **Inicio**, seleccione **Todos los programas**, seleccione [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, después, seleccione **Herramientas de configuración**.  
   
-         Si desea configurar una instancia del servidor de informes desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], abra la carpeta de programas correspondiente a esa versión. Por ejemplo, vaya a [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] en lugar de [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] para abrir las herramientas de configuración para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] componentes de servidor.  
+         Si desea configurar una instancia del servidor de informes desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], abra la carpeta de programas correspondiente a esa versión. Por ejemplo, seleccione [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] en lugar de [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] para abrir las herramientas de configuración de los componentes de servidor de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
          Haga clic en **Administrador de configuración de Reporting Services**.  
   
@@ -130,9 +130,9 @@ ms.locfileid: "48209795"
 6.  Haga clic en **Conectar**.  
   
 ## <a name="see-also"></a>Vea también  
- [El Administrador de informes &#40;modo nativo de SSRS&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Administrador de informes &#40;Modo nativo de SSRS&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
- [Configurar una conexión de base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Administrador de configuración de SQL Server](../../relational-databases/sql-server-configuration-manager.md)   
  [Configurar y administrar un servidor de informes &#40;modo nativo de SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
   

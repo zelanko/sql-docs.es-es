@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042350"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Descargue y aplique las actualizaciones de Microsoft para Analytics Platform System
 En este tema se describe cómo descargar actualizaciones desde el catálogo de Microsoft Update para Windows Server Update Services (WSUS) y esas actualizaciones se aplican a los servidores de Analytics Platform System appliance. Microsoft Update se instalará todas las actualizaciones aplicables para Windows y SQL Server. WSUS está instalado en la máquina virtual VMM del dispositivo.  
@@ -93,7 +93,7 @@ Antes de realizar estos pasos, necesitará:
   
 -  Compruebe el estado de todas las actualizaciones del archivo. Cada archivo debe tener un icono de flecha verde hacia la izquierda del título. Esto indica que el archivo está listo para la instalación.  
   
-    ![Estado del archivo es correcto](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUS_File_Status.png "SQL_Server_PDW_WSUS_File_Status")  
+    ![File status is successful](./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUS_File_Status.png "SQL_Server_PDW_WSUS_File_Status")  
   
     Antes de instalar las actualizaciones, asegúrese de que son todas descargado y está disponible en la consola de WSUS.  
   

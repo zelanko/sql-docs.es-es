@@ -1,6 +1,6 @@
 ---
-title: Elementos del lenguaje T-SQL - almacenamiento de datos paralelos | Documentos de Microsoft
-description: Elementos del lenguaje T-SQL para analítica Platform System (APS) SQL Server Parallel almacenamiento de datos (PDW).
+title: Elementos del lenguaje T-SQL - almacenamiento de datos paralelos | Microsoft Docs
+description: Elementos del lenguaje Transact-SQL para analíticas Platform System (APS) Parallel Data Warehouse (PDW de SQL Server).
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,31 +10,31 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035006"
 ---
-# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Elementos del lenguaje T-SQL para almacenamiento de datos paralelos
-Elementos del lenguaje T-SQL para analítica Platform System (APS) SQL Server Parallel almacenamiento de datos (PDW).
+# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Elementos del lenguaje Transact-SQL para el almacenamiento de datos paralelos
+Elementos del lenguaje Transact-SQL para analíticas Platform System (APS) Parallel Data Warehouse (PDW de SQL Server).
 
 ## <a name="core-elements"></a>Elementos básicos
-* [convenciones de sintaxis](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+* [Convenciones de sintaxis](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 * [reglas de nomenclatura de objetos](../relational-databases/databases/database-identifiers.md)
 * [palabras clave reservadas](../t-sql/language-elements/reserved-keywords-transact-sql.md)
 * [Intercalaciones](https://msdn.microsoft.com/library/ff848763.aspx)
-* [Comentarios](../t-sql/language-elements/comment-transact-sql.md)
-* [Constantes](../t-sql/data-types/constants-transact-sql.md)
+* [comments](../t-sql/language-elements/comment-transact-sql.md)
+* [constants](../t-sql/data-types/constants-transact-sql.md)
 * [Tipos de datos](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [Expresiones](../t-sql/language-elements/expressions-transact-sql.md)
+* [expressions](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
-* [Solución de la propiedad de identidad](../t-sql/statements/create-table-transact-sql-identity-property.md)
+* [Solución alternativa de propiedad de identidad](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
 * [USE](../t-sql/language-elements/use-transact-sql.md)
 
-## <a name="batches-control-of-flow-and-variables"></a>Lotes, el control de flujo y variables
+## <a name="batches-control-of-flow-and-variables"></a>Los lotes, control de flujo y variables
 * [BEGIN...END](../t-sql/language-elements/begin-end-transact-sql.md)
 * [BREAK](../t-sql/language-elements/break-transact-sql.md)
 * [DECLARE @local_variable](../t-sql/language-elements/declare-local-variable-transact-sql.md)
@@ -54,14 +54,14 @@ Elementos del lenguaje T-SQL para analítica Platform System (APS) SQL Server Pa
 * [/ (Dividir)](../t-sql/language-elements/divide-transact-sql.md)
 * [Módulo](../t-sql/language-elements/modulo-transact-sql.md)
 
-## <a name="wildcard-characters-to-match"></a>Caracteres de comodín para coincidir con
+## <a name="wildcard-characters-to-match"></a>Caracteres comodín que coincide con
 * [= (Es igual a)](../t-sql/language-elements/equals-transact-sql.md)
 * [> (Mayor que)](../t-sql/language-elements/greater-than-transact-sql.md)
 * [< (Menor que)](../t-sql/language-elements/less-than-transact-sql.md)
-* [> = (great o igual que)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
+* [> = (mayor o igual que)](../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)
 * [< = (menor o igual que)](../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)
-* [<> (No es igual a)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
-* [\!= (No es igual a)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
+* [<> (No igual a)](../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)
+* [\!= (No igual a)](../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)
 * [AND](../t-sql/language-elements/and-transact-sql.md)
 * [BETWEEN](../t-sql/language-elements/between-transact-sql.md)
 * [EXISTS](../t-sql/language-elements/exists-transact-sql.md)
@@ -69,7 +69,7 @@ Elementos del lenguaje T-SQL para analítica Platform System (APS) SQL Server Pa
 * [NO ES](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [O BIEN](../t-sql/language-elements/or-transact-sql.md)
+* [OR](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>Operadores bit a bit
 * [& (AND bit a bit)](../t-sql/language-elements/bitwise-and-transact-sql.md)
@@ -225,7 +225,7 @@ Elementos del lenguaje T-SQL para analítica Platform System (APS) SQL Server Pa
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>Transactions
-* [Transacciones](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>Sesiones de diagnóstico
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)
@@ -276,7 +276,7 @@ Elementos del lenguaje T-SQL para analítica Platform System (APS) SQL Server Pa
 * [SET XACT_ABORT](../t-sql/statements/set-xact-abort-transact-sql.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
-Para obtener información de referencia, vea [instrucciones T-SQL](tsql-statements.md) y [vistas del sistema de T-SQL](tsql-system-views.md).
+Para obtener más información de referencia, consulte [instrucciones T-SQL](tsql-statements.md) y [vistas del sistema T-SQL](tsql-system-views.md).
 
 <!--Image references-->
 

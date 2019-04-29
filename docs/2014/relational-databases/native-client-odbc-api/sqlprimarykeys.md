@@ -1,5 +1,5 @@
 ---
-title: SQLPrimaryKeys | Documentos de Microsoft
+title: SQLPrimaryKeys | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a12392f9e70fec2fae3b7790b43f12779b8868b5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046699"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   Una tabla puede tener una o varias columnas que pueden actuar como identificadores de fila únicos, y las tablas creadas sin una restricción PRIMARY KEY devuelven un conjunto a SQLPrimaryKeys de resultados vacío. La función ODBC [SQLSpecialColumns](sqlspecialcolumns.md) candidatos para las tablas sin claves principales del identificador de fila de los informes.  

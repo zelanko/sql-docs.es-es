@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5b3438e832f28329cb0fec764d3a4846bae18ede
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043121"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Descripción de los requisitos de un modelo de serie temporal (tutorial intermedio de minería de datos)
   Cuando vaya a preparar datos para un modelo de pronóstico, debe asegurarse de que los datos contengan una columna que se pueda usar para identificar los pasos en la serie temporal. Esa columna se definirá como columna `Key Time`. Dado que es una clave, la columna debe contener valores numéricos únicos.  

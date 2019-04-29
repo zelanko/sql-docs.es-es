@@ -18,11 +18,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1819fe94f3fac39d1697f2d4ee08738020e57d17
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63058141"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Opciones de configuración de Reporting Services (SSRS)
   Use la página **Configuración de Reporting Services** del Asistente para la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar la forma en que se instala y configura un servidor de informes. La disponibilidad de una opción de instalación depende de las opciones que se seleccionaron en la página **Selección de características** y de si también se está instalando una instancia local del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] al mismo tiempo que se instala el servidor de informes.  

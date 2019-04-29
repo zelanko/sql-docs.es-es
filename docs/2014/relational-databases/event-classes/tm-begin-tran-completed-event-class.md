@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54247d32ab508601fb6768e1de493a98a3369b65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061239"
 ---
-# <a name="tm-begin-tran-completed-event-class"></a>TM: Begin Tran Completed, clase de evento
+# <a name="tm-begin-tran-completed-event-class"></a>TM: Clase de eventos Begin Tran Completed
   TM: Clase de eventos Begin Tran Completed indica que se ha completado una solicitud BEGIN TRANSACTION. La solicitud fue enviada desde el cliente mediante la interfaz de administración de transacciones.  
   
 ## <a name="tm-begin-tran-completed-event-class-data-columns"></a>TM: Begin Tran completado columnas de datos de clase de eventos  

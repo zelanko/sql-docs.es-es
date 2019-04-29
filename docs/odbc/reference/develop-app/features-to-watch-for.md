@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061613"
 ---
 # <a name="features-to-watch-for"></a>Características para vigilar
 En esta sección se describe una serie de características que los desarrolladores de aplicaciones a menudo dan por sentado. De hecho, estas características varían considerablemente en soporte técnico y el modo de compatibilidad entre DBMS; es probable que causa problemas en aplicaciones interoperables error al código para ellos.  
   
- Esta sección no muestran todas las características que los desarrolladores de aplicaciones deben tener en cuenta. Para obtener esa información, consulte el [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), y [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) función descripciones, [Apéndice C: SQL gramática](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)y las secciones de este manual que tratan sobre cada característica.  
+ Esta sección no muestran todas las características que los desarrolladores de aplicaciones deben tener en cuenta. Para obtener esa información, consulte el [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), y [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) función descripciones, [Apéndice C: Gramática de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)y las secciones de este manual que tratan sobre cada característica.  
   
  Esta sección contiene los temas siguientes.  
   

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63047175"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,17 +68,17 @@ sp_depends [ @objname = ] '<object>'
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**nvarchar (257** **)**|Nombre del elemento que tiene una dependencia.|  
+|**Nombre**|**nvarchar(257** **)**|Nombre del elemento que tiene una dependencia.|  
 |**Tipo**|**nvarchar(16)**|Tipo del elemento.|  
-|**actualizado**|**nvarchar (7)**|Indica si el elemento está actualizado.|  
-|**seleccionado**|**nvarchar (8)**|Indica si el elemento se utiliza en una instrucción SELECT.|  
+|**updated**|**nvarchar(7)**|Indica si el elemento está actualizado.|  
+|**selected**|**nvarchar(8)**|Indica si el elemento se utiliza en una instrucción SELECT.|  
 |**column**|**sysname**|Columna o parámetro con el que existe la dependencia.|  
   
  El siguiente conjunto de resultados muestra los objetos que dependen de  *\<objeto >*.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**nvarchar (257** **)**|Nombre del elemento que tiene una dependencia.|  
+|**Nombre**|**nvarchar(257** **)**|Nombre del elemento que tiene una dependencia.|  
 |**Tipo**|**nvarchar(16)**|Tipo del elemento.|  
   
 ## <a name="permissions"></a>Permisos  
@@ -95,7 +95,7 @@ GO
 EXEC sp_depends @objname = N'Sales.Customer' ;  
 ```  
   
-### <a name="b-listing-dependencies-on-a-trigger"></a>B. Enumerar dependencias en un desencadenador.  
+### <a name="b-listing-dependencies-on-a-trigger"></a>b. Enumerar dependencias en un desencadenador.  
  En el ejemplo siguiente se enumeran los objetos de base de datos de los que depende el desencadenador `iWorkOrder`.  
   
 ```  
@@ -107,6 +107,6 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
+ [sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

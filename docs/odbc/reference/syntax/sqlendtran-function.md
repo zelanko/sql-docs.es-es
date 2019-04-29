@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062263"
 ---
 # <a name="sqlendtran-function"></a>Función SQLEndTran
 **Conformidad**  
- Versión de introducción: Compatibilidad de ODBC 3.0 estándares: 92 ISO  
+ Versión de introducción: Compatibilidad de ODBC 3.0 estándares: ISO 92  
   
  **Resumen**  
  **SQLEndTran** solicita una operación de confirmación o reversión para todas las operaciones activas en todas las instrucciones asociadas con una conexión. **SQLEndTran** también puede solicitar que se realiza una operación de confirmación o reversión para todas las conexiones asociadas con un entorno.  
@@ -54,7 +54,7 @@ SQLRETURN SQLEndTran(
  *Handle*  
  [Entrada] El identificador del tipo indicado por *HandleType*, que indica el ámbito de la transacción. Para obtener más información, vea "Comentarios".  
   
- *Sql_commit*  
+ *CompletionType*  
  [Entrada] Uno de los dos valores siguientes:  
   
  SQL_COMMIT SQL_ROLLBACK  

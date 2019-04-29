@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 89cdfa63bff88c4f4bb5954402034b31ad7f77ce
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060992"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>Propiedad ErrorControl (clase SqlService)
   Obtiene o establece la gravedad del error si el servicio no se puede iniciar durante el inicio.  

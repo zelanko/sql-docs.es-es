@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 105c5da23d5d827271c5c94c70b293acf051d1aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061345"
 ---
-# <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed, clase de eventos
+# <a name="tm-rollback-tran-completed-event-class"></a>TM: Clase de eventos Rollback Tran Completed
   TM: Clase de eventos de Rollback Tran Completed indica que finalizado una solicitud ROLLBACK TRANSACTION. La solicitud fue enviada desde el cliente mediante la interfaz de administración de transacciones. En la columna EventSubClass se indica si se iniciará una nueva transacción tras revertir la transacción actual.  
   
 ## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>TM: Rollback Tran Completed, columnas de datos de clase de eventos  

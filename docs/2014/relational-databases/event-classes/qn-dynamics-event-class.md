@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb59abed8be5649d9258bce0f279222e4498b547
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63035761"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics (clase de eventos)
   La clase de eventos QN:Dynamics ofrece información acerca de la actividad en segundo plano que realiza [!INCLUDE[ssDE](../../includes/ssde-md.md)] para admitir las notificaciones de consulta. En el [!INCLUDE[ssDE](../../includes/ssde-md.md)], un subproceso en segundo plano supervisa los tiempos de espera de las suscripciones, las suscripciones pendientes que se deben activar y la destrucción de tablas de parámetros.  
@@ -34,7 +34,7 @@ ms.locfileid: "53365877"
 |DatabaseName|`nvarchar`|Nombre de la base de datos en que se ejecuta la instrucción del usuario.|35|Sí|  
 |EventClass|`int`|Tipo de evento = 202|27|No|  
 |EventSequence|`int`|Número de secuencia de este evento.|51|No|  
-|EventSubClass|`nvarchar`|Tipo de subclase de evento que proporciona más información acerca de cada clase de evento. Esta columna puede incluir los valores siguientes:<br /><br /> Ejecución iniciada de reloj: Indica que se ha iniciado el subproceso en segundo plano de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que programa la limpieza de las tablas de parámetros expiradas.<br /><br /> Reloj ejecución finalizada: Indica que ha finalizado el subproceso en segundo plano de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que programa la limpieza de las tablas de parámetros expiradas.<br /><br /> Tarea de limpieza maestra iniciada: Indica cuándo empieza la limpieza (recolección de elementos no utilizados) para eliminar los datos de suscripciones a notificaciones de consulta expiradas.<br /><br /> Tarea de limpieza maestro finalizó: Indica cuándo finaliza la limpieza (recolección de elementos no utilizados) para eliminar los datos de suscripciones a notificaciones de consulta expiradas.<br /><br /> Se omitió la tarea de limpieza maestro: Indica que [!INCLUDE[ssDE](../../includes/ssde-md.md)] no realizó la limpieza (recolección de elementos no utilizados) para eliminar los datos de suscripciones a notificaciones de consulta expiradas.|21|Sí|  
+|EventSubClass|`nvarchar`|Tipo de subclase de evento que proporciona más información acerca de cada clase de evento. Esta columna puede incluir los valores siguientes:<br /><br /> Ejecución iniciada de reloj: Indica que el subproceso en segundo plano el [!INCLUDE[ssDE](../../includes/ssde-md.md)] que las programaciones expiradas tablas de parámetros para ha iniciado la limpieza.<br /><br /> Reloj ejecución finalizada: Indica que el subproceso en segundo plano el [!INCLUDE[ssDE](../../includes/ssde-md.md)] que las programaciones expiradas tablas de parámetros para ha finalizado la limpieza.<br /><br /> Tarea de limpieza maestra iniciada: Indica cuándo empieza la limpieza (recolección de elementos) para eliminar los datos de suscripciones de notificación de consulta expiradas.<br /><br /> Tarea de limpieza maestro finalizó: Indica cuándo finaliza la limpieza (recolección de elementos) para eliminar los datos de suscripciones de notificación de consulta expiradas.<br /><br /> Se omitió la tarea de limpieza maestro: Indica que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] no realizó la limpieza (recolección de elementos) para eliminar los datos de suscripción de notificaciones de consulta expiradas.|21|Sí|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IsSystem|`int`|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario.<br /><br /> 0 = usuario<br /><br /> 1 = sistema|60|No|  

@@ -34,11 +34,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8c890bb596c83c75330165ae1105f97df83ef69b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63060347"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Insertar datos con diagramas de actualización XML (SQLXML 4.0)
   Un diagrama de actualización indica una operación de inserción cuando una instancia de registro aparece en el  **\<después >** bloque pero no en las correspondientes  **\<antes >** bloque. En este caso, el diagrama de actualización inserta el registro en el  **\<después >** bloque en la base de datos.  

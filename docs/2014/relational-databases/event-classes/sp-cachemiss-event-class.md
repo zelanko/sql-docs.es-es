@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f3d74cad3f462d9bd8d2d57cc3b6e37c4739598
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63050931"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss [clase de eventos]
   La clase de eventos SP:CacheMiss indica que el procedimiento no se encuentra en la caché. Si la clase de eventos SP:CacheMiss se produce con frecuencia, puede indicar que es necesario asignar más memoria a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y aumentar así el tamaño de la caché de procedimientos.  

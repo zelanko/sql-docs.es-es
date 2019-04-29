@@ -1,5 +1,5 @@
 ---
-title: Modificar los nombres de tabla predeterminados | Documentos de Microsoft
+title: Modificar los nombres de tabla predeterminados | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 40d580a79371cfb73dd38bc92a0dd69c50df1cd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63053138"
 ---
-# <a name="lesson-1-4---modifying-default-table-names"></a>Lección 1-4 - modificar nombres de tabla predeterminados
+# <a name="lesson-1-4---modifying-default-table-names"></a>Lección 1-4: modificación de nombres de tabla predeterminados
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Puede cambiar el valor de la propiedad **FriendlyName** para los objetos de la vista del origen de datos para que sean más fáciles de identificar y usar.  

@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8c468b71b4c4126386d75c02b368cba9965fe1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043340"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Conectarse a datos de un origen o el controlador
 Una aplicación se puede conectar a cualquier número de controladores y orígenes de datos. Puede tratarse de una variedad de orígenes de datos y los controladores, el mismo controlador y una variedad de orígenes de datos o incluso de varias conexiones con el mismo controlador y el origen de datos.  

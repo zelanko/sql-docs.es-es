@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5645e00d9e3f93b2479c88ba37ec4ccf6fc5d295
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049771"
 ---
 # <a name="general-error-checks"></a>Comprobaciones de errores generales
-El Administrador de controladores comprueba un error general. Siempre devuelve SQL_ERROR cuando encuentra el siguiente error: la función debe ser compatibles con el controlador.
+El Administrador de controladores comprueba un error general. Siempre devuelve SQL_ERROR cuando encuentra el siguiente error: La función debe ser compatibles con el controlador.

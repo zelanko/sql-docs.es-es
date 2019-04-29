@@ -1,5 +1,5 @@
 ---
-title: Agregar atributos a dimensiones | Documentos de Microsoft
+title: Agregar atributos a dimensiones | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 753aad68d1c6fc9fb6fe53efb3b73ae767b4570e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63046017"
 ---
-# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Lección 2: 3: agregar atributos a dimensiones
+# <a name="lesson-2-3---adding-attributes-to-dimensions"></a>Lección 2-3: agregar atributos a dimensiones
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Ahora que ha definido las dimensiones, puede rellenarlas con atributos que representan cada elemento de datos de la dimensión. Los atributos suelen estar basados en campos de una vista del origen de datos. Al agregar atributos a una dimensión, puede incluir campos de cualquier tabla de la vista del origen de datos.  
@@ -124,10 +124,10 @@ En esta tarea, usará el Diseñador de dimensiones para agregar atributos a las 
 5.  En el menú Archivo, haga clic en **Guardar todo**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
-[Revisar las propiedades de dimensión y el cubo](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
+[Revisar las propiedades de cubo y dimensión](../analysis-services/lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Vea también  
-[Referencia de propiedades de atributos de dimensión](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+[Referencia de las propiedades de los atributos de dimensión](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   
   

@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a761d04ebb9bef40deacb19081d7dfdf6a329ea4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63061274"
 ---
-# <a name="tm-rollback-tran-starting-event-class"></a>TM: Rollback Tran Starting, clase de evento
+# <a name="tm-rollback-tran-starting-event-class"></a>TM: Clase de eventos Rollback Tran Starting
   TM: Clase de eventos de Rollback Tran Starting indica que se está iniciando una solicitud ROLLBACK TRANSACTION. El cliente envía la solicitud a través de la interfaz de administración de transacciones. En la columna EventSubClass se indica si se iniciará una nueva transacción tras revertir la transacción actual.  
   
 ## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>TM: Rollback Tran a partir de columnas de datos de clase de eventos  

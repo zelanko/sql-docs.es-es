@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 330e302d1832f8ec5c3e76f961e4e68cf16726af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748877"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Cálculo de predicción (Herramientas de análisis de tabla para Excel)
   ![Herramienta cálculo de predicción](media/tat-predcal.gif "herramienta cálculo de predicción")  
@@ -140,7 +140,7 @@ ms.locfileid: "48060025"
 |Cars|2|50|  
 |Commute Distance|0-1 Miles|99|  
 |Region|North America|0|  
-|Age|37: 46|5|  
+|Age|37 - 46|5|  
 |Total||491|  
 |Prediction for 'Yes'||FALSE|  
   

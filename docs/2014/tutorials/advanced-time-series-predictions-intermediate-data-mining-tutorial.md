@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3db82b977725bdcb615ec67bd66e530b38f385c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822454"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Predicciones de serie temporal avanzadas (Tutorial intermedio de minería de datos)
   Al explorar el modelo de predicción, observó que, aunque las ventas de la mayoría de las regiones siguen un patrón similar, algunas regiones y algunos modelos, como el modelo M200 en la región del Pacífico, muestran tendencias muy diferentes. Esto no le sorprende, ya que sabe que las diferencias entre regiones son comunes y pueden deberse a muchos factores, como las promociones de marketing, los informes inexactos o los acontecimientos geopolíticos.  

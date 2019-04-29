@@ -13,7 +13,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5e13ec1359e2072c92ffa06e218228730f323222
 ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/22/2019
 ms.locfileid: "56676284"
@@ -32,7 +32,7 @@ En este tema se enumeran las opciones que se permiten en la matriz asociativa (a
 |Intención de aplicaciones|String|Declara el tipo de carga de trabajo de la aplicación al conectarse a un servidor. Los valores posibles son ReadOnly y ReadWrite.<br /><br />Para más información sobre la compatibilidad con [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] para [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consulte [Compatibilidad con alta disponibilidad y recuperación ante desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|  
 |AttachDBFileName|String|Especifica qué archivo de base de datos debe asociar el servidor.|Sin establecer.|  
 |Autenticación|Una de las siguientes cadenas:<br /><br />"SqlPassword"<br /><br />'ActiveDirectoryPassword'<br /><br />'ActiveDirectoryMsi'|Especifica el modo de autenticación.<br /><br />Para obtener más información, consulte [Connect Using Azure Active Directory Authentication](../../connect/php/azure-active-directory.md)|Sin establecer.|
-|CharacterSet<br /><br />(no compatible con el controlador PDO_SQLSRV)|String|Especifica el juego de caracteres que se utiliza para enviar datos al servidor.<br /><br />Los valores posibles son SQLSRV_ENC_CHAR y UTF-8. Para obtener más información, consulte [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
+|CharacterSet<br /><br />(no compatible con el controlador PDO_SQLSRV)|String|Especifica el juego de caracteres que se utiliza para enviar datos al servidor.<br /><br />Los valores posibles son SQLSRV_ENC_CHAR y UTF-8. Para obtener más información, consulte [Cómo: enviar y recuperar UTF-8 datos utilizando UTF-8 compatibilidad integrada](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|**Habilitado** o **Deshabilitado**|Especifica si la característica Always Encrypted está habilitada o no. |Deshabilitado|  
 |ConnectionPooling|1 o **True** para activar la agrupación de conexiones.<br /><br />0 o **False** para desactivar la agrupación de conexiones.|Especifica si la conexión se asigna desde una agrupación de conexiones (1 o **true**) o no (**0 o**false<sup>) 1</sup>.|**true** (1)|  
 |ConnectRetryCount|Número entero comprendido entre 0 y 255 (ambos inclusive)|El número máximo de intentos para restablecer una conexión interrumpida antes de desistir. De forma predeterminada, se realiza un intento único para restablecer una conexión cuando ha interrumpido. Un valor de 0 significa que no se intentará ninguna reconexión.|1|  

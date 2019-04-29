@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35ffa7a1a9a5f914d95c13d0ada205d2dc0db483
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62932422"
 ---
 # <a name="audit-change-database-owner-event-class"></a>Audit Change Database Owner, clase de eventos
   La clase de eventos **Audit Change Database Owner** tiene lugar cuando se utiliza la instrucción ALTER AUTHORIZATION para cambiar el propietario de una base de datos y se comprueban los permisos necesarios para hacerlo.  
@@ -38,7 +38,7 @@ ms.locfileid: "52822419"
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
 |**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con el formato DOMINIO\nombreDeUsuario).|11|Sí|  
-|**LoginSid**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSid**|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**IdSolicitud**|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
@@ -48,7 +48,7 @@ ms.locfileid: "52822419"
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**Correcto**|**int**|1 = correcto. 0 = error Por ejemplo, el valor 1 indica que la comprobación de permisos ha sido correcta y el valor 0 que la comprobación no ha sido correcta.|23|Sí|  
 |**TargetLoginName**|**nvarchar**|Para las acciones que se dirigen a un inicio de sesión, nombre del inicio de sesión de destino.|42|Sí|  
-|**TargetLoginSid**|**imagen**|Para las sesiones que se dirigen a un inicio de sesión, número de identificación de seguridad (SID) del inicio de sesión de destino.|43|Sí|  
+|**TargetLoginSid**|**image**|Para las sesiones que se dirigen a un inicio de sesión, número de identificación de seguridad (SID) del inicio de sesión de destino.|43|Sí|  
 |**TargetUserName**|**nvarchar**|Para acciones dirigidas a un usuario de base de datos (por ejemplo, conceder permiso a un usuario), el nombre del usuario.|39|Sí|  
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |**XactSequence**|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  

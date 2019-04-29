@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bc1a379d2e171855f616482d4bb3029c6708f800
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924185"
 ---
 # <a name="import-statuses-master-data-services"></a>Estados de importación (Master Data Services)
   En el área funcional **Administración de integraciones** , en la página **Lotes de almacenamiento provisional** , son posibles los estados siguientes.  

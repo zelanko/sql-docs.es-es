@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84b5d71a14c08c47d630ed834ef0a6e436b52edd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726292"
 ---
 # <a name="define-semiadditive-behavior"></a>Define Semiadditive Behavior
   Las medidas semiaditivas, que no agregan uniformemente en todas las dimensiones, son muy comunes en muchas situaciones empresariales. Todos los cubos que se basan en instantáneas de saldos a lo largo del tiempo presentan este problema. Se pueden encontrar estas instantáneas en las aplicaciones que manejan títulos y valores, saldos de cuentas bancarias, presupuestos, recursos humanos, pólizas y siniestros de seguros y muchos otros ámbitos comerciales.  
@@ -35,7 +35,7 @@ ms.locfileid: "48190275"
  En la página **Definir el comportamiento de suma parcial** del asistente, seleccione cómo definir la suma parcial eligiendo una de las siguientes opciones:  
   
  **Desactivar el comportamiento de suma parcial**  
- Elimina el comportamiento de suma parcial de un cubo en el que se definió anteriormente el comportamiento de suma parcial. Esta selección restablece una medida en `SUM` si se establece en cualquiera de los siguientes tipos de función de agregación:  
+ Elimina el comportamiento de suma parcial de un cubo en el que se definió anteriormente el comportamiento de suma parcial. Esta selección restablece una medida en `SUM` si se establece en uno de los siguientes tipos de función de agregación:  
   
 -   By Account  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48190275"
   
  Esta opción no cambia las medidas con una función de agregación normal: `Sum`, `Min`, `Max`, `Count`, o `Distinct``Count`.  
   
- **El asistente ha detectado una dimensión de cuentas "Cuenta", que contiene miembros de suma parcial. El servidor realizará la agregación de los miembros de esta dimensión de acuerdo con el comportamiento de suma parcial especificado para cada tipo de cuenta.**  
+ **El asistente ha detectado la "cuenta" dimensión de cuenta, que contiene miembros semiaditivos. El servidor realizará la agregación de los miembros de esta dimensión de acuerdo con el comportamiento de suma parcial especificado para cada tipo de cuenta.**  
  Hace que el sistema establezca todas las medidas de un grupo de medida con una dimensión de tipo Cuenta en la función de agregación By Account; el servidor agregará los miembros de dimensión según el comportamiento de suma parcial especificado para cada tipo de cuenta.  
   
 > [!NOTE]  

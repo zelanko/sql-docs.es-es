@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62830586"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach
   Los procedimientos de este tema explican cómo crear bucles entre libros de Excel en una carpeta o entre tablas en un libro de Excel, mediante el contenedor de bucles Foreach con el enumerador correspondiente.  

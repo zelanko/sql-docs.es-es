@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04a5bf6b80e95df3b01ac73fd4580813c0709fe9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731487"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>Asistente para estimación (Complementos de minería de datos para Excel)
   ![Asistente para estimación en la cinta de opciones minería de datos](media/dmc-estimate.gif "Asistente para estimación en la cinta de opciones minería de datos")  

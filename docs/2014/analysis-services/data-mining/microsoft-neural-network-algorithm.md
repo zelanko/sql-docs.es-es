@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 551a0cce8326c4727efcc1d348be5019809f0506
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734916"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
   En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de red neuronal combina cada posible estado del atributo de entrada con cada posible estado del atributo predecible y usa los datos de entrenamiento para calcular las probabilidades. Posteriormente, puede usar estas probabilidades para la clasificación o la regresión, así como para predecir un resultado del atributo de predicción basándose en los atributos de entrada.  
@@ -52,13 +52,13 @@ ms.locfileid: "48203485"
 -   Cualquier modelo de predicción que analice relaciones complejas entre muchas entradas y relativamente pocas salidas.  
   
 ## <a name="how-the-algorithm-works"></a>Cómo funciona el algoritmo  
- El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de red neuronal crea una red que se compone de tres niveles de neuronas. Estos niveles son: un nivel de entrada, un nivel oculto opcional y un nivel de salida.  
+ El algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] crea una red formada por hasta tres niveles de neuronas. Estos niveles son: un nivel de entrada, un nivel oculto opcional y un nivel de salida.  
   
- **Nivel de entrada:** las neuronas de entrada definen todos los valores de atributo de entrada para el modelo de minería de datos así como sus probabilidades.  
+ **Nivel de entrada:** Neuronas de entrada definen todos los valores de atributo de entrada para el modelo de minería de datos así como sus probabilidades.  
   
- **Nivel oculto:** las neuronas ocultas reciben entradas de neuronas de entrada y proporcionan salidas a las neuronas de salida. El nivel oculto es donde se asignan pesos a las distintas probabilidades de las entradas. Un peso describe la relevancia o importancia de una entrada determinada para la neurona oculta. Cuanto mayor sea el peso asignado a una entrada, más importante será el valor de dicha entrada. Los pesos pueden ser negativos, lo que significa que la entrada puede impedir, en lugar de activar, un resultado concreto.  
+ **Capa oculta:** Las neuronas ocultas reciben entradas de las neuronas de entrada y proporcionan salidas a las neuronas de salida. El nivel oculto es donde se asignan pesos a las distintas probabilidades de las entradas. Un peso describe la relevancia o importancia de una entrada determinada para la neurona oculta. Cuanto mayor sea el peso asignado a una entrada, más importante será el valor de dicha entrada. Los pesos pueden ser negativos, lo que significa que la entrada puede impedir, en lugar de activar, un resultado concreto.  
   
- **Nivel de salida:** neuronas de salida representan valores de atributo de predicción para el modelo de minería de datos.  
+ **Nivel de salida:** Las neuronas de salida representan valores de atributo de predicción para el modelo de minería de datos.  
   
  Para obtener una explicación detallada sobre cómo se construyen y puntúan los niveles de entrada, los niveles de salida y los niveles ocultos, vea [Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md).  
   
@@ -91,8 +91,8 @@ ms.locfileid: "48203485"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia técnica del algoritmo de red neuronal de Microsoft](microsoft-neural-network-algorithm-technical-reference.md)   
- [Los modelos de red neuronal contenido del modelo de minería de datos &#40;Analysis Services - minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Ejemplos de consultas de modelo de red neuronal](neural-network-model-query-examples.md)   
+ [Contenido del modelo de minería de datos para los modelos de red neuronal &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Ejemplos de consultas de modelos de red neuronal](neural-network-model-query-examples.md)   
  [Algoritmo de regresión logística de Microsoft](microsoft-logistic-regression-algorithm.md)  
   
   

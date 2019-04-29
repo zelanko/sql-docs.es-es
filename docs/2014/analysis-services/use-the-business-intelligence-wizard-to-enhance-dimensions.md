@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3da3588c59dfe98ee92baf6a34274696bffc9d5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793364"
 ---
 # <a name="use-the-business-intelligence-wizard-to-enhance-dimensions"></a>Usar el Asistente de Business Intelligence para mejorar dimensiones
   Además de modificar las propiedades de las dimensiones y los objetos de dimensión directamente, también puede usar el Asistente de Business Intelligence para configurar y mejorar dimensiones.  
@@ -37,7 +37,7 @@ ms.locfileid: "48173785"
   
 ## <a name="see-also"></a>Vea también  
  [Definir dimensiones de base de datos](multidimensional-models/define-database-dimensions.md)   
- [Referencia de propiedades de atributos de dimensión](multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Referencia de las propiedades de los atributos de dimensión](multidimensional-models/dimension-attribute-properties-reference.md)   
  [Crear jerarquías definidas por el usuario](multidimensional-models/user-defined-hierarchies-create.md)   
  [Definir relaciones de atributo](multidimensional-models/attribute-relationships-define.md)   
  [Dimensiones en modelos multidimensionales](multidimensional-models/dimensions-in-multidimensional-models.md)  

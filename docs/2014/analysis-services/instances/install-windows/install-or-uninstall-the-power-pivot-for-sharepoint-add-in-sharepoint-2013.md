@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3a4ec824c5681cdb5d76310ec67cd1b37ba6898
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704699"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>Instalar o desinstalar el complemento PowerPivot para SharePoint (SharePoint 2013)
   [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] es una colección de componentes de servidor de aplicaciones y servicios back-end que ofrecen acceso a datos de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] en una granja de [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] . El complemento [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint (**spPowerpivot.msi**) es un paquete de instalación que se usa para instalar los componentes de servidor de aplicaciones.  
@@ -25,7 +25,7 @@ ms.locfileid: "53350403"
   
 -   El complemento no es obligatorio en una implementación de servidor única que incluya SharePoint 2013 y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de SharePoint. Los componentes que instala el complemento se incluyen al instalar un servidor de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de SharePoint. Para consultar diagramas de implementaciones de ejemplo con el complemento, vea [Deployment Topologies for SQL Server BI Features in SharePoint](../../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).  
   
- **Nota:** en este tema se describe la instalación de los archivos de solución de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] y de la herramienta de configuración de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2013. Después de la instalación, vea el tema siguiente para obtener información sobre la herramienta de configuración y características adicionales, [soluciones de implementar y configurar PowerPivot &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
+ **Nota:** En este tema se describe la instalación del [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] archivos de solución y [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para la herramienta de configuración de SharePoint 2013. Después de la instalación, vea el tema siguiente para obtener información sobre la herramienta de configuración y características adicionales, [soluciones de implementar y configurar PowerPivot &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).  
   
  Para obtener información sobre cómo descargar **spPowerPivot.msi**, vea [Microsoft® SQL Server® 2014 PowerPivot® de Microsoft SharePoint®](https://go.microsoft.com/fwlink/?LinkID=324854).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "53350403"
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Analysis Management Objects.  
   
--   **Servicios de back-end:** si usa [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel con el fin de crear libros que contienen datos analíticos, debe tener Excel Services configurado con un servidor de BI que ejecute [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de SharePoint para obtener acceso a esos datos en un entorno de servidor. Puede ejecutar el programa de instalación de SQL Server en un equipo que tenga instalado SharePoint Server 2013 o en un equipo diferente que no tenga ningún software de SharePoint. Analysis Services no tiene ninguna dependencia en SharePoint.  
+-   **Servicios de back-end:** Si usas [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para que Excel crear libros que contienen datos analíticos, debe tener Excel Services configurado con un servidor de BI que ejecute [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en el modo de SharePoint para tener acceso a esos datos en un entorno de servidor. Puede ejecutar el programa de instalación de SQL Server en un equipo que tenga instalado SharePoint Server 2013 o en un equipo diferente que no tenga ningún software de SharePoint. Analysis Services no tiene ninguna dependencia en SharePoint.  
   
      Para obtener información acerca de la instalación, la desinstalación y la configuración de los servicios back-end, vea lo siguiente:  
   
@@ -68,12 +68,12 @@ ms.locfileid: "53350403"
 ##  <a name="bkmk_where_to_install"></a> ¿Dónde instalar spPowerPivot.msi?  
  Se recomienda instalar **spPowerPivot.msi** en todos los servidores de la granja de servidores de SharePoint para mantener la coherencia de la configuración, incluidos los servidores de aplicaciones y los servidores front-end web. El paquete del instalador incluye los proveedores de datos de Analysis Services y la herramienta de configuración de [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] . Al instalar **spPowerPivot.msi** puede personalizar la instalación si excluye componentes individuales.  
   
- **Proveedores de datos:** varias tecnologías de SharePoint y SQL Server usan los proveedores de datos de Analysis Services, incluidos Excel Services, PerformancePoint Services y Power View. La instalación de **spPowerPivot.msi** en todos los servidores de SharePoint asegura que todo el conjunto de proveedores de datos de Analysis Services y la conectividad de PowerPivot están disponibles de forma coherente en toda la granja de servidores.  
+ **Proveedores de datos:** Varias tecnologías de SharePoint y SQL Server usan los proveedores de datos de Analysis Services como Excel Services, PerformancePoint Services y Power View. La instalación de **spPowerPivot.msi** en todos los servidores de SharePoint asegura que todo el conjunto de proveedores de datos de Analysis Services y la conectividad de PowerPivot están disponibles de forma coherente en toda la granja de servidores.  
   
 > [!NOTE]  
 >  Debe instalar los proveedores de datos de Analysis Services en un servidor de SharePoint 2013 mediante **spPowerPivot.msi**. No se admiten otros paquetes de instalador disponibles en el Feature Pack de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] porque estos paquetes no incluyen los archivos auxiliares de SharePoint 2013 que los proveedores de datos necesitan en este entorno.  
   
- **Herramienta de configuración:** la herramienta de configuración de PowerPivot para SharePoint 2013 solo es necesaria en uno de los servidores de SharePoint. Sin embargo, en granjas con varios servidores se recomienda instalar la herramienta de configuración al menos en dos servidores para poder tener acceso a dicha herramienta si uno de los dos servidores está sin conexión.  
+ **Herramienta de configuración:** Se requiere la herramienta de PowerPivot para SharePoint 2013 configuración solo en uno de los servidores de SharePoint. Sin embargo, en granjas con varios servidores se recomienda instalar la herramienta de configuración al menos en dos servidores para poder tener acceso a dicha herramienta si uno de los dos servidores está sin conexión.  
   
 ##  <a name="bkmk_prereq"></a> Requisitos y requisitos previos  
   
@@ -83,7 +83,7 @@ ms.locfileid: "53350403"
   
 -   Servidor de [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] en modo PowerPivot. Excel Services usará la instancia de SQL Server Analysis Services como un servidor de PowerPivot. Analysis Services se puede ejecutar en un equipo local o remoto.  
   
--   **Permisos:** Para instalar [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)], el usuario actual debe ser administrador del equipo y miembro de un grupo de administradores de la granja de servidores de SharePoint.  
+-   **Permisos:** Para instalar [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)], el usuario actual debe ser un administrador en el equipo y un grupo de administradores de la granja de SharePoint.  
   
 -   Para obtener más información sobre [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] requisitos y requisitos previos, vaya a [requisitos de Hardware y Software para el servidor de Analysis Services en modo de SharePoint &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md).  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f35be763558ecfab37b799b776eb5661ea32ca8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729898"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Cuadro de diálogo Insertar función (SSAS)
   El cuadro de diálogo **Insertar función** le permite elegir funciones en una lista y usarlas para generar fórmulas. Para obtener acceso a este cuadro de diálogo desde el diseñador de modelos, haga clic en el botón de función (**fx**) de la barra de fórmulas situada encima de cada tabla. Para obtener más información sobre cómo elegir las funciones que puede usar en las fórmulas, vea Introducción a DAX y Generar una fórmula.  
@@ -45,12 +45,12 @@ ms.locfileid: "48125951"
   
  Estadísticas  
   
- Texto  
+ Text  
   
 ## <a name="measures-and-formulas"></a>Medidas y fórmulas  
  El cuadro de diálogo **Insertar función** solo está disponible cuando se está generando una fórmula. Puede crear los cálculos en una columna calculada, en una tabla dinámica o en un gráfico dinámico. Las fórmulas que genera expresamente para usarse en una tabla dinámica también se denominan *medidas*. Para obtener más información, vea [Crear una columna calculada &#40;SSAS tabular&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md) y [Crear y administrar medidas &#40;SSAS tabular&#41;](tabular-models/measures-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Cálculos &#40;Tabular de SSAS&#41;](tabular-models/calculations-ssas-tabular.md)  
+ [Cálculos &#40;SSAS tabular&#41;](tabular-models/calculations-ssas-tabular.md)  
   
   

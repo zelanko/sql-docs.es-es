@@ -72,7 +72,7 @@ Para obtener información sobre la compatibilidad con versiones anteriores, vea 
   
 -   [Definir y modificar un filtro de columna](publish/define-and-modify-a-column-filter.md)    
 -   [Definir y modificar un filtro de fila estático](publish/define-and-modify-a-static-row-filter.md)    
--   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [Optimizar los filtros de fila con parámetros](publish/optimize-parameterized-row-filters.md)    
 -   [Definir y modificar un filtro de combinación entre artículos de mezcla](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   

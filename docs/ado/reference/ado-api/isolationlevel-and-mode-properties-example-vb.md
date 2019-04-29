@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b17fc32998a00d011bfcf305c3ebcdf4d79a76b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028022"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>Ejemplo IsolationLevel y Mode propiedades (VB)
 Este ejemplo se usa el [modo](../../../ado/reference/ado-api/mode-property-ado.md) propiedad para abrir una conexión exclusiva y el [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propiedad para abrir una transacción que se lleva a cabo de forma aislada de otras transacciones.  

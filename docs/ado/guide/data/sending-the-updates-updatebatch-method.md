@@ -1,5 +1,5 @@
 ---
-title: 'Enviar actualizaciones: método UpdateBatch | Microsoft Docs'
+title: 'Envío de actualizaciones: Método UpdateBatch | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,13 +12,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3da407de4489ec829151696793f547e31541e6df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63062881"
 ---
-# <a name="sending-the-updates-updatebatch-method"></a>Enviar actualizaciones: método UpdateBatch
+# <a name="sending-the-updates-updatebatch-method"></a>Envío de actualizaciones: Método UpdateBatch
 El código siguiente abre un conjunto de registros en modo por lotes estableciendo la propiedad LockType en adLockBatchOptimistic y CursorLocation adUseClient. Agrega dos registros nuevos y cambia el valor de un campo en un registro existente y guarda los valores originales y, a continuación, llama al método UpdateBatch para enviar que los cambios de vuelta al origen de datos.  
   
 ## <a name="remarks"></a>Comentarios  

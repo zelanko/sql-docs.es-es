@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782388"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Conectarse a SQL Server cuando los administradores del sistema no tienen acceso
   En este tema se describe cómo puede recobrar el acceso a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] como administrador del sistema. Un administrador del sistema puede perder el acceso a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debido a una de las razones siguientes:  
@@ -61,7 +61,7 @@ ms.locfileid: "52641566"
 5.  En el **parámetros de inicio** ficha la **especificar un parámetro de inicio** , escriba `-m` y, a continuación, haga clic en `Add`. (Es un guion y a continuación una letra m minúscula).  
   
     > [!NOTE]  
-    >  En algunas versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hay ninguna pestaña **Parámetros de inicio** . En ese caso, en la pestaña Opciones avanzadas** , haga doble clic en **Parámetros de inicio**. Los parámetros se abrirán en una ventana muy pequeña. Tenga cuidado de no cambiar ninguno de los parámetros existentes. Al final, agregue un nuevo parámetro `;-m` y haga clic en `OK`. (Es un punto y coma, después un guion y a continuación una letra m minúscula).  
+    >  En algunas versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hay ninguna pestaña **Parámetros de inicio** . En ese caso, en la pestaña **Opciones avanzadas** , haga doble clic en **Parámetros de inicio**. Los parámetros se abrirán en una ventana muy pequeña. Tenga cuidado de no cambiar ninguno de los parámetros existentes. Al final, agregue un nuevo parámetro `;-m` y haga clic en `OK`. (Es un punto y coma, después un guion y a continuación una letra m minúscula).  
   
 6.  Haga clic en `OK`y después el mensaje para reiniciar, haga clic en el nombre del servidor y, a continuación, haga clic en **reiniciar**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "52641566"
 11. En el **parámetros de inicio** ficha la **parámetros existentes** cuadro, seleccione `-m` y, a continuación, haga clic en `Remove`.  
   
     > [!NOTE]  
-    >  En algunas versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hay ninguna pestaña **Parámetros de inicio** . En ese caso, en la pestaña Opciones avanzadas** , haga doble clic en **Parámetros de inicio**. Los parámetros se abrirán en una ventana muy pequeña. Quitar el `;-m` que agregó anteriormente y, a continuación, haga clic en `OK`.  
+    >  En algunas versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hay ninguna pestaña **Parámetros de inicio** . En ese caso, en la pestaña **Opciones avanzadas** , haga doble clic en **Parámetros de inicio**. Los parámetros se abrirán en una ventana muy pequeña. Quitar el `;-m` que agregó anteriormente y, a continuación, haga clic en `OK`.  
   
 12. Haga clic con el botón derecho en el nombre del servidor y, después, haga clic en **Reiniciar**.  
   

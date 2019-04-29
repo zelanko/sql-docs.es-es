@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c8ec7fa93dd583b0f79de00f70451eef24976dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731286"
 ---
 # <a name="filter-members-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Filtrar miembros (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Filtrar miembros** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para filtrar los miembros de dimensión por título del miembro, nombre del miembro, nombre exclusivo del miembro, valor de columna de clave o valor de columna de valor para el nivel actual mientras busca una dimensión en la pestaña **Examinador** del **Diseñador de dimensiones**.  
@@ -29,7 +29,7 @@ ms.locfileid: "48075056"
   
 |Término|Definición|  
 |----------|----------------|  
-|**Expresión de filtro**|Muestra una cuadrícula de propiedades, operadores y valores utilizados para construir una expresión de filtro. Una vez que se ha agregado una fila, no se puede eliminar. Debe cerrar y volver a abrir el cuadro de diálogo para especificar una expresión de filtro nueva. La cuadrícula contiene las columnas siguientes:<br /><br /> **Propiedad**: seleccione la propiedad del miembro que se usará para la expresión de filtro.<br /><br /> **Operador**: seleccione el operador que se usará para la expresión de filtro.<br /><br /> **Valor**: escriba el valor de la propiedad seleccionada en **propiedad** para evaluar utilizando el operador especificado en **operador**.|  
+|**Expresión de filtro**|Muestra una cuadrícula de propiedades, operadores y valores utilizados para construir una expresión de filtro. Una vez que se ha agregado una fila, no se puede eliminar. Debe cerrar y volver a abrir el cuadro de diálogo para especificar una expresión de filtro nueva. La cuadrícula contiene las columnas siguientes:<br /><br /> **Propiedad**: Seleccione la propiedad del miembro que se va a usar para la expresión de filtro.<br /><br /> **Operador**: Seleccione el operador que se va a usar para la expresión de filtro.<br /><br /> **Valor**: escriba el valor de la propiedad seleccionada en **Propiedad** que se va a evaluar con el operador especificado en **Operador**.|  
 |**Panel de prueba**|Al hacer clic en **Probar** , este panel muestra los miembros devueltos por la expresión de filtro. Si no se devuelve ningún miembro utilizando el criterio especificado en **Expresión de filtro**, se muestra una advertencia.|  
 |**Prueba**|Haga clic para probar el criterio especificado en **Expresión de filtro**.|  
   

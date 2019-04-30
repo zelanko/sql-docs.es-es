@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 90f76ef4d52fd5a1b7ed04d268954d0fed756324
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183070"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>Configuración de la migración de datos (MySQLToSQL)
   
@@ -48,9 +48,9 @@ ms.locfileid: "51681153"
   
 Hay dos botones que presentes viz.:  
   
--   **Aplicar:** haga clic en **aplicar** para aplicar la configuración que han cambiado.  
+-   **Se aplican:** Haga clic en **aplicar** para aplicar la configuración que han cambiado.  
   
--   **Cancelar:** haga clic en **cancelar** para restaurar los valores de configuración antes de que se realizan los cambios.  
+-   **Cancelar:** Haga clic en **cancelar** para restaurar los valores de configuración antes de que se realizan los cambios.  
   
 ## <a name="see-also"></a>Vea también  
 [Migrar datos de MySQL a SQL Server o SQL Azure](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  

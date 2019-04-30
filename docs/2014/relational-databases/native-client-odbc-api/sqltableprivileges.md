@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 51492e55fd3c34c099a5f53187d1b2a9875ce7e3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188641"
 ---
 # <a name="sqltableprivileges"></a>SQLTablePrivileges
   **SQLTablePrivileges** se puede ejecutar en un cursor estático. Un intento de ejecutar **SQLTablePrivileges** en un cursor actualizable (dinámico o dinámico) devuelve SQL_SUCCESS_WITH_INFO para indicar que el tipo de cursor ha cambiado.  

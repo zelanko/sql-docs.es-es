@@ -29,11 +29,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35860cfd893342d76074b6d49d0417484672030c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186142"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Agregar, cambiar o eliminar un mapa o una capa de mapa (Generador de informes y SSRS)
   Un mapa es una colección de capas. Al agregar un mapa a un informe, define la primera capa. Puede crear capas adicionales con el Asistente para capas de mapa.  

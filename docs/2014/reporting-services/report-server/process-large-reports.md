@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9eebb080589287839db8951bbac1e715585161e9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190972"
 ---
 # <a name="process-large-reports"></a>Procesar informes grandes
   Los informes de gran tamaño presentan determinados problemas de procesamiento y requieren determinadas configuraciones para que se ejecuten correctamente. Estos informes no deben ejecutarse a petición a menos que estén configurados para admitir paginación.  

@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 05afd5377ee1d64a28349b46fbc79a9f048c5577
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144356"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>Lección 3: Crear una credencial de SQL Server
   En esta lección, creará una credencial para almacenar la información de seguridad usada para tener acceso a la cuenta de almacenamiento de Windows Azure.  

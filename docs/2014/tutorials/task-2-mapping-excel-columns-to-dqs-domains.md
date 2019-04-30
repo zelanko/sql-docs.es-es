@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e9bc721869c1287be709c594fd60aad511709e46
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198855"
 ---
-# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Tarea 2: asignar columnas de Excel a dominios de DQS
+# <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Tarea 2: Asignación de columnas de Excel a dominios de DQS
     
 1.  En la página **Asignación** , seleccione **Archivo de Excel** en **Origen de datos**.  
   

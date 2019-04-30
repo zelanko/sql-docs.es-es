@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199211"
 ---
 # <a name="c-data-types-in-odbc"></a>Tipos de datos C en ODBC
-ODBC define los tipos de datos de C que usan las variables de aplicación y sus identificadores de tipo correspondiente. Se usan por los búferes que están enlazados a columnas del conjunto de resultados y parámetros de la instrucción. Por ejemplo, suponga que una aplicación que desea recuperar los datos de una columna de conjunto de resultados en formato de caracteres. Declara una variable con el SQLCHAR * tipo de datos y enlaza esta variable a la columna del conjunto de resultados con un identificador de tipo de SQL_C_CHAR. Para obtener una lista completa de tipos de datos de C y los identificadores de tipo, consulte [apéndice D: tipos de datos](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
+ODBC define los tipos de datos de C que usan las variables de aplicación y sus identificadores de tipo correspondiente. Se usan por los búferes que están enlazados a columnas del conjunto de resultados y parámetros de la instrucción. Por ejemplo, suponga que una aplicación que desea recuperar los datos de una columna de conjunto de resultados en formato de caracteres. Declara una variable con el SQLCHAR * tipo de datos y enlaza esta variable a la columna del conjunto de resultados con un identificador de tipo de SQL_C_CHAR. Para obtener una lista completa de tipos de datos de C y los identificadores de tipo, consulte [apéndice D: Tipos de datos](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  ODBC también define una asignación predeterminada de cada tipo de datos SQL a un tipo de datos C. Por ejemplo, un entero de 2 bytes en el origen de datos se asigna a un entero de 2 bytes en la aplicación. Para usar la asignación predeterminada, una aplicación especifica el identificador del tipo SQL_C_DEFAULT. Sin embargo, se desaconseja el uso de este identificador por motivos de interoperabilidad.  
   

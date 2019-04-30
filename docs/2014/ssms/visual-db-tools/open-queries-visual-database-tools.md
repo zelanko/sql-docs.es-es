@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48d0e96f2cd7b37683399c599f336f78e1ede3fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195037"
 ---
 # <a name="open-queries-visual-database-tools"></a>Abrir consultas (Visual Database Tools)
   Puede abrir una consulta existente en el Diseñador de consultas y vistas mediante el comando **Abrir** .  

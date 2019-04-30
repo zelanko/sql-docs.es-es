@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34583128e3da1bec00003fe194d3387783815275
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181101"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 Especifica el estado de edición de un registro.  
@@ -34,7 +34,7 @@ Especifica el estado de edición de un registro.
 |**adEditDelete**|4|Indica que se ha eliminado el registro actual.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

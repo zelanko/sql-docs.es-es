@@ -1,5 +1,5 @@
 ---
-title: SQLSetEnvAttr | Documentos de Microsoft
+title: SQLSetEnvAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47b0d30ac70ff3b7974f7d0530b9fb50494ac424
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188744"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
   La [Referencia del programador de ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) define cómo deben interpretar los controladores ODBC las especificaciones del atributo **SQLSetEnvAttr** desde aplicaciones escritas para la API de ODBC 2.*x* u ODBC 3.*x* . El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client cumple esas reglas.  

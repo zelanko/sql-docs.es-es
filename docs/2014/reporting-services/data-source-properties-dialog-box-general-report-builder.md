@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7f5aa4efa9170e9b51e583aedada909d756edeb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164993"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Propiedades del origen de datos (cuadro de diálogo), General (Generador de informes)
   Seleccione **General** en el cuadro de diálogo **Propiedades del origen de datos** para seleccionar un origen de datos compartido desde un servidor de informes o para crear o modificar información de conexión de un origen de datos incrustado en el informe.  

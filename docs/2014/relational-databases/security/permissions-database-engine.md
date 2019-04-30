@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128769"
 ---
 # <a name="permissions-database-engine"></a>Permisos (motor de base de datos)
   Todos los elementos protegibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen permisos asociados que se pueden conceder a una entidad de seguridad. Este tema proporciona la siguiente información:  

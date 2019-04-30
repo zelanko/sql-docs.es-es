@@ -24,11 +24,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 04299edc56a8b09d47cfd82d41a348b8fe2f7778
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190236"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)
 
@@ -108,7 +108,7 @@ ms.locfileid: "56802452"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a> Opciones de configuración para la configuración de la que: de un mensaje  
+##  <a name="bkmk_setting_TO_field"></a> Opciones de configuración para la configuración de la que: Campo de un mensaje  
  Las suscripciones definidas por el usuario creadas según los permisos otorgados por la tarea **Administrar suscripciones individuales** contienen un nombre de usuario establecido previamente basado en la cuenta de usuario de dominio. Cuando el usuario crea la suscripción, el nombre del destinatario del campo **Para:** se rellena automáticamente mediante la cuenta de usuario de dominio de la persona que está creando la suscripción.  
   
  Si está utilizando un servidor SMTP o reenviador que emplee cuentas de correo electrónico distintas a la cuenta de usuario de dominio, la entrega del informe generará un error cuando el servidor SMTP intente entregar el informe al usuario.  
@@ -180,13 +180,13 @@ ms.locfileid: "56802452"
   
 2.  Abra el archivo RSReportServer.config en un editor de texto.  
   
-3.  Compruebe que <`UrlRoot`> se haya establecido en la dirección URL del servidor de informes. Este valor se establece al configurar el servidor de informes y debe mostrar la dirección. Si no es así, escriba la dirección URL del servidor de informes.  
+3.  Compruebe que <`UrlRoot`> se establece en la dirección URL del servidor. Este valor se establece al configurar el servidor de informes y debe mostrar la dirección. Si no es así, escriba la dirección URL del servidor de informes.  
   
-4.  En la sección Entrega, busque <`ReportServerEmail`>.  
+4.  En la sección entrega, busque <`ReportServerEmail`>.  
   
-5.  En <`SMTPServer`>, proporcione el nombre del servidor SMTP. Este valor puede ser una dirección IP, un nombre UNC de un equipo de la intranet corporativa o un nombre de dominio completo.  
+5.  En <`SMTPServer`>, escriba el nombre del servidor SMTP. Este valor puede ser una dirección IP, un nombre UNC de un equipo de la intranet corporativa o un nombre de dominio completo.  
   
-6.  Compruebe que <`SendUsing`> se haya establecido en 2. Si se especifica otro valor, el servidor de informes no se habrá configurado para utilizar un servicio SMTP remoto.  
+6.  Compruebe que <`SendUsing`> está establecido en 2. Si se especifica otro valor, el servidor de informes no se habrá configurado para utilizar un servicio SMTP remoto.  
   
 7.  En <`From`>, escriba el nombre de una cuenta que tenga permiso para enviar correo electrónico desde el servidor SMTP.  
   

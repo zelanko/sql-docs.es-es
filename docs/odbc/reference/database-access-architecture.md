@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43c6ffd93020b1db1b90ad1768822075299d16b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186277"
 ---
 # <a name="database-access-architecture"></a>Arquitectura de acceso a base de datos
 Una de las preguntas en el desarrollo de ODBC era qué parte de la arquitectura de acceso de base de datos a estandarizar. Las interfaces de programación de SQL que se describen en la sección anterior, SQL incrustado, los módulos SQL y CLI - son solo una parte de esta arquitectura. De hecho, dado que ODBC se diseñó principalmente para conectarse a aplicaciones basadas en el equipo personal para minicomputadoras y mainframe DBMS, también había una serie de componentes de red, algunas de las cuales podrían estar estandarizado.  

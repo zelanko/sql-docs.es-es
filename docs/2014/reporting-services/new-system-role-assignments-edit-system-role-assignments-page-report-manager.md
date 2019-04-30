@@ -1,5 +1,5 @@
 ---
-title: 'Nueva asignación de roles de sistema: Editar página de asignaciones de rol de sistema (Administrador de informes) | Microsoft Docs'
+title: 'Asignaciones de nuevo rol del sistema: Editar página de asignaciones de rol de sistema (Administrador de informes) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 18adcf15f92ded91a4bacc5342162b82b4aec375
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188408"
 ---
-# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Nueva asignación de roles de sistema: Editar página de asignaciones de rol de sistema (Administrador de informes)
+# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Asignaciones de nuevo rol del sistema: Editar página de asignaciones de rol de sistema (Administrador de informes)
   Use la página Nueva asignación de roles del sistema o Editar asignaciones de roles del sistema para definir la seguridad del servidor de informes. Toda la seguridad se define a través de asignaciones de roles, que asocian usuarios o grupos específicos a las tareas que pueden realizar. La lista de tareas se presenta como una definición de roles que se selecciona cuando se realiza una asignación de roles.  
   
  Las asignaciones de roles que se crean o modifican en el nivel de sistema se aplican al servidor de informes como un conjunto. Por ejemplo, la posibilidad de crear programaciones compartidas se especifica en el nivel de sistema porque estas programaciones se utilizan en todo el sistema.  

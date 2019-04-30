@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc0bcf6a191f67b87b422b17778f56feda1f5227
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238089"
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
 >  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: completo  
+ Soporte técnico: Completo  
   
- Conformidad de ODBC API: Nivel 1  
+ Conformidad de la API de ODBC: Nivel 1  
   
  Se conecta a un origen de datos existente, que puede ser un [base de datos](../../odbc/microsoft/visual-foxpro-terminology.md) o un directorio de [libre tablas](../../odbc/microsoft/visual-foxpro-terminology.md). Se omiten las palabras clave de atributo ODBC UID y PWD. En la tabla siguiente se enumera las palabras clave de atributo compatibles adicionales.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "47792723"
 |Descripción||  
 |Exclusivo|"Sí" o "No"|  
 |SourceDB|Una ruta de acceso completa a un directorio que contiene cero o más [libre tablas](../../odbc/microsoft/visual-foxpro-terminology.md), o el nombre de archivo y ruta absoluto para un [base de datos](../../odbc/microsoft/visual-foxpro-terminology.md).|  
-|Tipo de origen|"DBC" o "DBF"|  
+|SourceType|"DBC" o "DBF"|  
 |Versión||  
   
  Si no se especifica el nombre del origen de datos, el Administrador de controladores pide al usuario la información (según la configuración de la *fDriverCompletion* argumento) y, a continuación, continúa. Si se necesita más información, el controlador ODBC de Visual FoxPro muestra el cuadro de diálogo.  

@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 878f103e236a198ff71181a64b39400c8f6ea0ca
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187622"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Manipulación de datos de MDX: UPDATE CUBE
 
 
-  La instrucción UPDATE CUBE se emplea para reescribir datos en cualquier celda de un cubo que se agrega a su primario mediante la agregación SUM. Para obtener más información y un ejemplo, vea "Descripción de las asignaciones" en esta entrada de blog: [compilar una aplicación de reescritura con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
+  La instrucción UPDATE CUBE se emplea para reescribir datos en cualquier celda de un cubo que se agrega a su primario mediante la agregación SUM. Para obtener más información y un ejemplo, vea "Descripción de las asignaciones" en esta entrada de blog: [Compilar una aplicación de reescritura con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -47,7 +47,7 @@ UPDATE [ CUBE ] Cube_Name
  *Tuple_Expression*  
  Expresión MDX válida que devuelve una tupla.  
   
- *Archivo_ini*  
+ *New_Value*  
  Una expresión numérica válida.  
   
  *Weight_Expression*  
@@ -60,7 +60,7 @@ UPDATE [ CUBE ] Cube_Name
   
  La siguiente es una descripción de los métodos de asignación.  
   
- **USE_EQUAL_ALLOCATION:** cada celda hoja que contribuye a la celda actualizada se asignará un valor igual basado en la siguiente expresión.  
+ **USE_EQUAL_ALLOCATION:** Cada celda hoja que contribuye a la celda actualizada se asignará un valor igual basado en la siguiente expresión.  
   
 ```  
 <leaf cell value> =   
@@ -75,13 +75,13 @@ UPDATE [ CUBE ] Cube_Name
 Count(leaf cells contained in <tuple>)  
 ```  
   
- **USE_WEIGHTED_ALLOCATION:** cada celda hoja que contribuye a la celda actualizada se asignará un valor igual a la que se basa en la siguiente expresión.  
+ **USE_WEIGHTED_ALLOCATION:** Cada celda hoja que contribuye a la celda actualizada se asignará un valor igual a la que se basa en la siguiente expresión.  
   
 ```  
 <leaf cell value> = < New Value> * Weight_Expression  
 ```  
   
- **USE_WEIGHTED_INCREMENT:** cada celda hoja que contribuye a la celda actualizada se cambiará de acuerdo con la siguiente expresión.  
+ **USE_WEIGHTED_INCREMENT:** Cada celda hoja que contribuye a la celda actualizada se cambiará de acuerdo con la siguiente expresión.  
   
 ```  
 <leaf cell value> = <leaf cell value> +   

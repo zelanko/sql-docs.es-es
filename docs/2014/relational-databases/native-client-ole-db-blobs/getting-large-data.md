@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63195226"
 ---
 # <a name="getting-large-data"></a>Obtener datos grandes
   En general, los consumidores deben aislar el código que crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de almacenamiento de proveedor OLE DB de Native Client desde otro código que controla los datos no se hace referencia a través de un **ISequentialStream** puntero de interfaz.  

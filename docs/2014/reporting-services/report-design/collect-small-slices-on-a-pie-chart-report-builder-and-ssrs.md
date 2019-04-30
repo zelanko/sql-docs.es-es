@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c85692c3ae50df88c59d2622fc1ca06925413ba2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185584"
 ---
 # <a name="collect-small-slices-on-a-pie-chart-report-builder-and-ssrs"></a>Recopilar segmentos pequeños en un gráfico circular (Generador de informes y SSRS)
   Si los gráficos circulares muestran demasiados puntos de datos, pueden parecer desordenados. Para resolver este problema, puede mostrar como un único sector en el gráfico circular todos los datos que estén por debajo de un determinado valor.  

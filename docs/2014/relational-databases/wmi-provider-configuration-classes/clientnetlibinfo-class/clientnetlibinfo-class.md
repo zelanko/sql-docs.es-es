@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f7c2e734fdb332199595a0236d7d86666f4429fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191342"
 ---
 # <a name="clientnetlibinfo-class"></a>Clase ClientNetLibInfo
   La [clase ClientNetLibInfo](clientnetlibinfo-class.md) representa información sobre la biblioteca de red del cliente.  

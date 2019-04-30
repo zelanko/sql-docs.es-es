@@ -1,5 +1,5 @@
 ---
-title: CalculationCurrentPass (MDX) | Documentos de Microsoft
+title: CalculationCurrentPass (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2ef0a07cde73b74ee459e7391f8f99c25e4dc11b
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181610"
 ---
 # <a name="calculationcurrentpass-mdx"></a>CalculationCurrentPass (MDX)
 
@@ -28,8 +28,8 @@ ms.locfileid: "34739355"
 CalculationCurrentPass()  
 ```  
   
-## <a name="remarks"></a>Notas  
- El **CalculationCurrentPass** función devuelve el índice de base cero del pase de cálculo para el contexto de consulta actual. Con resolución automática de recursividad, esta función tiene muy poco uso práctico.  
+## <a name="remarks"></a>Comentarios  
+ El **CalculationCurrentPass** función devuelve el índice de base cero del pase de cálculo para el contexto de consulta actual. Con la resolución automática de recursividad, esta función tiene muy poco uso práctico.  
   
 ## <a name="see-also"></a>Vea también  
  [CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)   

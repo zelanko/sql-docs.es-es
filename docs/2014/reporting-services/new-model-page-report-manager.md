@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b0d571210c44026fc34ab43cb07e18bbd8526ed5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188421"
 ---
 # <a name="new-model-page-report-manager"></a>Página Nuevo modelo (Administrador de informes)
   Use esta página para generar un modelo de informe predeterminado desde un origen de datos compartido. Solo puede generar modelos de informe desde orígenes de datos multidimensionales de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , orígenes de datos relacionales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y orígenes de datos relacionales de Oracle.  

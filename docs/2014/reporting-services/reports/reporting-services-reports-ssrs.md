@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0ae207d14e45c51cee51190bdf0849f0e49d8c05
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63189238"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Informes de Reporting Services (SSRS)
   Los informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] son definiciones de informe basadas en XML que incluyen los datos y elementos de diseño de los informes. En un sistema de archivos de cliente, las definiciones de informe tienen la extensión de archivo .rdl. Una vez que se publica un informe, se convierte en un elemento de informe que se almacena en el servidor de informes o en el sitio de SharePoint. Los informes constituyen un único componente de la plataforma de generación de informes basada en servidor que proporciona [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

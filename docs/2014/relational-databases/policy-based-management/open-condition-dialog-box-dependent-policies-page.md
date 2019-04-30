@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182933"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Cuadro de diálogo Abrir condición, página Directivas dependientes
   Use este cuadro de diálogo para mostrar una lista de las directivas que hacen referencia actualmente a esta condición de administración basada en directivas. Para obtener más información sobre cómo se relacionan las condiciones con las facetas y las directivas, vea [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md).  

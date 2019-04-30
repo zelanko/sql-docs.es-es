@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: faf887ab5e03d2d0ca8702dc9bd35d0ba094ece4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183671"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Capturar una única fila con IRow
   El **IRow** implementación en la interfaz del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor Native Client OLE DB se ha simplificado para aumentar el rendimiento. **IRow** permite un acceso directo a las columnas de un único objeto de fila. Si sabe de antemano que el resultado de una ejecución de comandos generará exactamente una fila, **IRow** recuperará las columnas de esa fila. Si el conjunto de resultados incluye varias filas, **IRow** solo expondrá la primera.  
   
- La implementación de **IRow** no permite cualquier navegación de la fila. Solo se obtiene acceso una vez a cada columna de la fila, con una excepción: se puede obtener acceso a una columna una primera vez para buscar el tamaño de la columna y una segunda vez para capturar los datos.  
+ La implementación de **IRow** no permite cualquier navegación de la fila. Cada columna de la fila se tiene acceso a solo una vez con una excepción: Una columna puede tener acceso una vez para averiguar el tamaño de columna y otra para capturar los datos.  
   
 > [!NOTE]  
 >  **IRow::Open** solo permite la apertura de objetos de tipo DBGUID_STREAM y DBGUID_NULL.  

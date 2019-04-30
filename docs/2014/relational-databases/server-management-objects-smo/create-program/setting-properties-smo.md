@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f07d9b2f613ca1face8be3bb23bac78202da6655
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192154"
 ---
 # <a name="setting-properties"></a>Establecer propiedades
   Las propiedades son valores que almacenan información descriptiva sobre el objeto. Por ejemplo, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] las opciones de configuración se representan mediante el <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> propiedades del objeto. Se puede tener acceso a las propiedades de forma directa o indirecta mediante la colección de propiedades. Para tener acceso directamente a las propiedades, se utiliza la sintaxis siguiente:  

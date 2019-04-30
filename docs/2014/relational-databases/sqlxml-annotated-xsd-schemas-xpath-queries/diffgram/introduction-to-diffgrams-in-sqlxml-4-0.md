@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: f772e860509275c70ae4db05b2da0aa0b0d5418a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127711"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>Introducción a los DiffGrams en SQLXML 4.0
   En este tema se ofrece una breve introducción a los DiffGrams.  
@@ -47,10 +47,10 @@ ms.locfileid: "52777097"
   
  El formato de un DiffGram consta de estos bloques:  
   
- **\<DataInstance >**  
+ **\<DataInstance>**  
  El nombre de este elemento, **DataInstance**, se utiliza con fines explicativos en esta documentación. Por ejemplo, si el DiffGram se generaron a partir de un conjunto de datos en .NET Framework, el valor de la **nombre** propiedad del conjunto de datos que se usará como el nombre de este elemento. Este bloque contiene todos los datos relevantes tras el cambio, y es posible que incluya incluso los datos que no se han modificado. La lógica de procesamiento de DiffGram omite los elementos de este bloque para el que el **diffgr: HasChanges** no se especifica el atributo.  
   
- **\<diffgr: antes de >**  
+ **\<diffgr:before>**  
  Este bloque opcional contiene las instancias de registro (elementos) originales que deben actualizarse o eliminarse. Las tablas de la base de datos que se va a modificar (actualizar o eliminar) el DiffGram deben aparecer como elementos de nivel superior en el  **\<antes >** bloque.  
   
  **\<diffgr:errors>**  

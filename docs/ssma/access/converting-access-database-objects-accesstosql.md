@@ -31,11 +31,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63139031"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Convertir objetos de base de datos de Access (AccessToSQL)
 Una vez que haya agregado las bases de datos de Access y conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, SSMA muestra los metadatos para el acceso y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u objetos de base de datos de SQL Azure. Puede seleccionar ahora obtener acceso a objetos de base de datos y, a continuación, convertir los esquemas a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o esquemas de SQL Azure.  
@@ -63,7 +63,7 @@ La siguiente tabla muestra qué objetos de acceso se convierten y resultante [!I
 |Query|ver<br /><br />Las consultas más SELECT se convierten en las vistas. Otras consultas, como consultas de actualización, no se migran.<br /><br />No se convierten las consultas SELECT que toman parámetros ni son consultas cruzadas.|  
 |informe|no convertir|  
 |Formulario|no convertir|  
-|Macro|no convertir|  
+|macro|no convertir|  
 |módulo|no convertir|  
 |Valor predeterminado|Valor predeterminado|  
 |Permitir cero propiedad de columna de longitud|restricción CHECK|  

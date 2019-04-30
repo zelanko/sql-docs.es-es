@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a031a71fd482eadb9d27861d436b7245017ee8e9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232231"
 ---
 # <a name="sample-odbc-program"></a>Programa de ejemplo de ODBC
 El [código de ejemplo ODBC](https://go.microsoft.com/fwlink/?LinkId=244831) le pedirá un nombre de origen de datos ODBC.  A continuación, se pedirá que escriba una consulta y el ejemplo mostrará los resultados de la consulta.

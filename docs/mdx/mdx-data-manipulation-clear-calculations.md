@@ -1,5 +1,5 @@
 ---
-title: CLEAR CALCULATIONS (instrucción, MDX) | Documentos de Microsoft
+title: CLEAR CALCULATIONS (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cdc4b2d3e948f0123eb15e38a6140e63009907bc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187669"
 ---
-# <a name="mdx-data-manipulation---clear-calculations"></a>Manipulación de datos MDX - CLEAR CALCULATIONS
+# <a name="mdx-data-manipulation---clear-calculations"></a>Manipulación de datos de MDX: CLEAR CALCULATIONS
 
 
   Quita todos los cálculos del cubo y devuelve el cubo al paso de cálculo 0.  
@@ -32,7 +32,7 @@ CLEAR CALCULATIONS [FROMCube_Expression]
  *Cube_Expression*  
  Una expresión de cubo de MDX (Expresiones multidimensionales) válida.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **FROM** cláusula puede omitirse cuando el contexto del cubo es conocido, como en un script MDX.  
   
 > [!NOTE]  

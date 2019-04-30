@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b26b05f41b23d1626fe3d9f7704d334bfe650098
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070973"
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>Mostrar propiedades del diagrama (Visual Database Tools)
   Puede mostrar las propiedades de un diagrama de base de datos en la ventana Propiedades.  

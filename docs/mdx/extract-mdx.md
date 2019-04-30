@@ -1,5 +1,5 @@
 ---
-title: Extraer (MDX) | Documentos de Microsoft
+title: Extraer (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3c58799cc3e95efd7d49b3aff0bf31a1fce22b1
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155204"
 ---
 # <a name="extract-mdx"></a>Extract (MDX)
 
@@ -38,13 +38,13 @@ Extract(Set_Expression, Hierarchy_Expression1 [,Hierarchy_Expression2, ...n] )
  *Hierarchy_Expression2*  
  Expresión MDX válida que devuelve una jerarquía.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **extraer** función devuelve un conjunto que consta de tuplas de los elementos de jerarquía extraídos. En cada tupla del conjunto especificado, se extraen los miembros de las jerarquías especificadas en nuevas tuplas en el conjunto de resultados. Esta función quita siempre las tuplas duplicadas.  
   
  El **extraer** función realiza la acción opuesta el [Crossjoin](../mdx/crossjoin-mdx.md) función.  
   
 ## <a name="examples"></a>Ejemplos  
- La consulta siguiente muestra cómo utilizar el **extraer** función en un conjunto de tuplas devuelto por la **NonEmpty** función:  
+ La consulta siguiente muestra cómo usar el **extraer** función en un conjunto de tuplas devueltas por la **NonEmpty** función:  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193332"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar los resultados de FOR XML en el código de aplicación
   Al utilizar cláusulas FOR XML con consultas SQL, se pueden recuperar e incluso convertir los resultados de la consulta como datos XML. Esta funcionalidad permite realizar las siguientes operaciones cuando los resultados de las consultas FOR XML se pueden utilizar en el código de aplicación XML:  
@@ -157,17 +157,17 @@ ms.locfileid: "58532847"
   
 -   **AnnualRevenue:** 150000  
   
--   **BankName:** International principal  
+-   **BankName:** Primary International  
   
 -   **BusinessType:** OS  
   
 -   **YearOpened:** 1974  
   
--   **Especialidad:** Road  
+-   **Specialty:** Road  
   
 -   **SquareFeet:** 38000  
   
--   **Marcas:** 3  
+-   **Brands:** 3  
   
 -   **Internet:** DSL  
   

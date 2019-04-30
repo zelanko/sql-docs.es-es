@@ -12,11 +12,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 57a745385de80a3040897310ddc5b43b1301ea86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138765"
 ---
 # <a name="connect-to-azure-sql-db-accesstosql"></a>Conectarse a Azure SQL DB (AccessToSQL)
 Utilice la conexión al cuadro de diálogo de SQL Azure para conectarse a la base de datos de SQL Azure que desea migrar.  
@@ -60,7 +60,7 @@ Para crear una nueva base de datos de azure, siga los pasos siguientes
   
 3.  En el momento de creación de la base de datos, estos dos parámetros se proporciona como entrada.  
   
-    1.  **Nombre de la base de datos:** escriba el nombre de la base de datos.  
+    1.  **Nombre de la base de datos:** Escriba el nombre de la base de datos.  
   
-    2.  **Tamaño de la base de datos:** seleccionar el tamaño de base de datos que se debe crear en la cuenta de SQL Azure.  
+    2.  **Tamaño de la base de datos:** Seleccione el tamaño de base de datos que necesita para crear en la cuenta de SQL Azure.  
   

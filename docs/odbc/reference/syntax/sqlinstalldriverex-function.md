@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec40b97f8953f114081292ac82069fd4a81692a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132716"
 ---
 # <a name="sqlinstalldriverex-function"></a>Función SQLInstallDriverEx
 **Conformidad**  
@@ -100,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Comentarios  
  El *lpszDriver* argumento es una lista de atributos en forma de pares de palabra clave y valor. Cada par se termina con un byte nulo y se termina toda la lista con un byte nulo. (Es decir, dos bytes nulos marcan el final de la lista). El formato de esta lista es como sigue:  
   
- _controlador desc_ **\\**0Driver**=**_nombre del controlador de archivo DLL_ **\\**0 [programa de instalación**=**_nombre del programa de instalación de archivo DLL_<b>\\</b>0]  
+ _driver-desc_ **\\**0Driver**=**_driver-DLL-filename_**\\**0[Setup**=**_setup-DLL-filename_<b>\\</b>0]  
   
- [_controlador-attr-palabraclave1_**=**_value1_<b>\\</b>0] [_controlador-attr-palabraclave2_  **=** _value2_<b>\\</b>0]... <b> \\ </b>0  
+ [_driver-attr-keyword1_**=**_value1_<b>\\</b>0][_driver-attr-keyword2_**=**_value2_<b>\\</b>0]...<b>\\</b>0  
   
  donde \0 es un byte nulo y *controlador-attr-keywordn* es cualquier palabra clave de atributo de controlador. Las palabras clave deben aparecer en el orden especificado. Por ejemplo, suponga que un controlador de archivos de texto con formato tiene las DLL de instalación y de controlador independiente y puede utilizar archivos con las extensiones .txt y. csv. El *lpszDriver* argumento para este controlador puede ser como sigue:  
   

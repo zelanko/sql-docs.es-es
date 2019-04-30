@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 28256433802d686f4362b2b733fc2d2b13e65302
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149136"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>Instrucciones SQL escritas por el usuario
 Las aplicaciones que realizan análisis ad hoc también suele permiten al usuario que escriba las instrucciones SQL directamente. Por ejemplo:  

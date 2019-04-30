@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150647"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar y utilizar el Asistente para la optimización de motor de base de datos
   En este tema se describe cómo iniciar y usar el Asistente para la optimización de motor de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información sobre cómo ver y trabajar con los resultados después de optimizar una base de datos, vea [Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos](database-engine-tuning-advisor.md).  
@@ -443,7 +443,7 @@ database_name.owner_name.table_name
  Solo se incluyen recomendaciones para agregar vistas indizadas. No se recomiendan los clúster y no clúster.  
   
  **Incluir índices filtrados**  
- Se incluyen recomendaciones para agregar índices filtrados. Esta opción está disponible si selecciona una de estas estructuras de diseño físico: **Índices y vistas indizadas**, **índices**, o **índices no clúster**.  
+ Se incluyen recomendaciones para agregar índices filtrados. Esta opción está disponible si selecciona una de estas estructuras de diseño físico: **índices y vistas indexadas**, **índices** o **índices no agrupados**.  
   
  **Índices**  
  Solo se incluyen recomendaciones para agregar clúster y no clúster. No se recomiendan las vistas indizadas.  

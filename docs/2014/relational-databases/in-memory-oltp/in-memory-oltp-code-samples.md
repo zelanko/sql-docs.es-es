@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ff7af7c8fd578d29254c8c34fe946246fa275120
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157885"
 ---
 # <a name="in-memory-oltp-code-samples"></a>Ejemplos de código de OLTP en memoria
   Esta sección contiene ejemplos de código que muestran el uso de OLTP en memoria:  

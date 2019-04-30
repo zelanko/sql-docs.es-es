@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd25cd3ba339ebd27430bfeea2e634a6ad8f2ff4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130732"
 ---
 # <a name="getting-started-in-visual-c-net"></a>Introducción a Visual C# .NET
   [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET es uno de los lenguajes de programación administrados compatibles con common language runtime (CLR) en [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . NET. Para obtener más información acerca del lenguaje C#, vea la documentación de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET. Puede utilizar [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] y [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] para desarrollar aplicaciones SMO.  

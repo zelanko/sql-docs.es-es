@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63072394"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
   El recopilador de rendimiento de transacción en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] permite evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos. El informe de análisis del rendimiento de las transacciones indica también la cantidad de trabajo que debe realizar para habilitar OLTP en memoria en la aplicación. Después de identificar una tabla basada en disco para convertirla a OLTP en memoria, puede usar el [Asistente de optimización de memoria](memory-optimization-advisor.md)para que le ayude a migrar la tabla. De manera similar, el [Native Compilation Advisor](native-compilation-advisor.md) le permitirá convertir un procedimiento almacenado en un procedimiento almacenado compilado de forma nativa.  
@@ -83,7 +83,7 @@ ms.locfileid: "53377497"
 ### <a name="configure-management-data-warehouse"></a>Configurar el almacén de administración de datos  
  El almacén de administración de datos se debe configurar para utilizar el recopilador de rendimiento de las transacciones.  
   
- La versión de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la que recopilará los datos (perfil) debe ser la misma o una más antigua que la de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde se configura el almacén de administración de datos.  
+ La versión de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la que recopilará los datos (perfil) debe ser la misma o una más antigua que la de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde se ha configurado el almacén de administración de datos.  
   
 1.  En el Explorador de objetos, expanda **Administración**.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "53377497"
   
 5.  Seleccione otra instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y una base de datos del almacén de administración de datos en dicha instancia.  
   
-     La versión de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la que recopilará los datos (perfil) debe ser la misma o una más antigua que la de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde se configura el almacén de administración de datos.  
+     La versión de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la que recopilará los datos (perfil) debe ser la misma o una más antigua que la de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde se ha configurado el almacén de administración de datos.  
   
 6.  En el cuadro etiquetado **seleccionar conjuntos de recopiladores de datos que desea habilitar**, seleccione **conjuntos de recopilación de rendimiento de transacción**.  
   

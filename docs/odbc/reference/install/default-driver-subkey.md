@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d78101fd564e18467e6833f480cec2409dc2c44b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198309"
 ---
 # <a name="default-driver-subkey"></a>Subclave de controlador predeterminada
 La subclave predeterminada contiene un valor único que describe el controlador utilizado por el origen de datos de forma predeterminada. El formato de este valor se muestra en la tabla siguiente.  
   
-|Nombre|Tipo de datos|data|  
+|Name|Tipo de datos|Datos|  
 |----------|---------------|----------|  
-|**Controlador**|REG_SZ|*Descripción del controlador predeterminado*|  
+|**Controlador**|REG_SZ|*default-driver-description*|  
   
  El *descripción del controlador predeterminado* nombre es el mismo que el nombre del valor bajo la subclave de controladores ODBC que describe el controlador.  
   

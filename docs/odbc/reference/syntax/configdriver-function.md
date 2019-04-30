@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d69db144a460bb2f662c8ba906bf0302cdf98388
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232070"
 ---
 # <a name="configdriver-function"></a>Función ConfigDriver
 **Conformidad**  
- Versión introdujo: ODBC 2.5  
+ Versión de introducción: ODBC 2.5  
   
  **Resumen**  
  **ConfigDriver** permite que un programa de instalación realizar la instalación y desinstalación de funciones sin necesidad de que el programa para llamar a **ConfigDSN**. Esta función llevará a cabo funciones específicas del controlador como crear información específica del controlador del sistema y realizar conversiones de DSN durante la instalación, así como para limpiar las modificaciones de información del sistema durante la desinstalación. Esta función se expone mediante la configuración del controlador de archivo DLL o un archivo DLL de configuración independiente.  

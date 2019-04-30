@@ -16,22 +16,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9867946ce84163a504582c8a9575100c3c9aacd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63069824"
 ---
 # <a name="odbc-data-sources-subkey"></a>Subclave de orígenes de datos de ODBC
 Los valores bajo la subclave de orígenes de datos ODBC enumeran los orígenes de datos. El formato de estos valores es como se muestra en la tabla siguiente.  
   
-|Nombre|Tipo de datos|data|  
+|Nombre|Tipo de datos|Datos|  
 |----------|---------------|----------|  
-|*nombre del origen de datos*|REG_SZ|*Descripción del controlador*|  
+|*data-source-name*|REG_SZ|*driver-description*|  
   
  El *nombre del origen de datos* valor está definido por el programa de administración (que normalmente se solicita al usuario para él), y *descripción del controlador* definido por el programador del controlador (suele ser el nombre de la DBMS asociado con el controlador).  
   
- Por ejemplo, supongamos que se han definido tres orígenes de datos: inventario, que usa SQL Server; Nómina, que usa dBASE; y personal, que usa archivos de texto en formato. Los valores bajo la subclave de orígenes de datos ODBC podrían ser como sigue:  
+ Por ejemplo, supongamos que tres se han definido los orígenes de datos: Inventario, que usa SQL Server; Nómina, que usa dBASE; y personal, que usa archivos de texto en formato. Los valores bajo la subclave de orígenes de datos ODBC podrían ser como sigue:  
   
 ```  
 Inventory : REG_SZ : SQL Server  

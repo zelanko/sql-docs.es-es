@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 80d69d377948ebb85c907edb195807abf26ee33b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165110"
 ---
 # <a name="dependent-items-page-report-manager"></a>Página de elementos dependientes (Administrador de informes)
   Use la página Elementos dependientes para ver una lista de informes y modelos que hacen referencia a un origen de datos compartido. El icono de cada tipo de elemento indica si se trata de un informe o de un modelo. Esta página puede mostrarse en la vista de lista o en la vista Detalles. Use la vista Detalles para mostrar más información sobre cada elemento. Esta vista también incluye opciones de página adicionales. Para ayudarle a administrar el origen de datos compartido, esta página proporciona vínculos a los informes y modelos que usan el origen de datos, las métricas sobre cuándo se ejecutó o modificó el informe o el modelo por última vez, y los botones Eliminar y Mover de manera que pueda quitar los informes y modelos con facilidad que ya no se usan, o moverlos a una ubicación diferente mientras determina si todavía son necesarios.  

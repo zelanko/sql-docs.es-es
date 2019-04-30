@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126308"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>Ejecución de la consola de SSMA (SybaseToSQL)
 Microsoft proporciona un sólido conjunto de script de comandos del archivo para ejecutar y controlar las actividades SSMA. Las secciones que detallan la misma.  
@@ -35,14 +35,14 @@ La aplicación de consola utiliza ciertos comandos del archivo de script estánd
 ## <a name="project-commands"></a>Comandos de proyecto  
 Los comandos de proyecto controlan la creación de proyectos, abrir, guardar y salir de proyectos.  
   
-### <a name="create-new-project"></a>creación de nuevos proyectos  
+### <a name="create-new-project"></a>create-new-project  
 Este comando crea un nuevo proyecto SSMA.  
   
 -   `project-folder` indica la carpeta del proyecto que se crean.  
   
 -   `project-name` indica el nombre del proyecto. {string}  
   
--   `overwrite-if-exists`Atributo opcional indica si se debe sobrescribir un proyecto existente. {valor} booleano  
+-   `overwrite-if-exists`Atributo opcional indica si se debe sobrescribir un proyecto existente. {boolean}  
   
 -   `project-type:`Atributo opcional. Indica el tipo de proyecto, que es "sql-server-2005" proyecto o proyecto de "sql-server-2008" o "sql-server-2012" proyecto "sql-server-2014" proyecto o proyecto "sql azure". Valor predeterminado es "sql-server-2008".  
   
@@ -64,7 +64,7 @@ Es el atributo 'sobrescribir-if-exists' **false** de forma predeterminada.
   
 Atributo de tipo de proyecto es **sql-server-2008** de forma predeterminada.  
   
-### <a name="open-project"></a>Abrir proyecto  
+### <a name="open-project"></a>open-project  
 Este comando abre el proyecto.
 
 -   `project-folder` indica la carpeta del proyecto que se crean. El comando produce un error si la carpeta especificada no existe.  {string}  
@@ -85,7 +85,7 @@ Este comando abre el proyecto.
 > [!NOTE]  
 > SSMA para la aplicación de consola de SAP ASE admite la compatibilidad con versiones anteriores. Puede usarlo para abrir proyectos creados con una versión anterior de SSMA.  
   
-### <a name="save-project"></a>Guardar proyecto  
+### <a name="save-project"></a>save-project  
 Este comando guarda el proyecto de migración.  
   
 **Ejemplo de sintaxis:**  
@@ -94,7 +94,7 @@ Este comando guarda el proyecto de migración.
 <save-project/>  
 ```  
   
-### <a name="close-project"></a>Cerrar proyecto  
+### <a name="close-project"></a>close-project  
 Este comando cierra el proyecto de migración.  
   
 **Ejemplo de sintaxis:**  
@@ -113,7 +113,7 @@ Los comandos de conexión de base de datos ayudan a conectar a la base de datos.
 > - El **examinar** no se admite la característica de la interfaz de usuario en la consola.  
 > - Para obtener más información en "Crear archivos de Script", consulte [crear archivos de Script &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
   
-### <a name="connect-source-database"></a>datos de origen conectarse  
+### <a name="connect-source-database"></a>connect-source-database  
 Este comando realiza la conexión a la base de datos de origen y carga los metadatos de alto nivel de la base de datos de origen, pero no todos los metadatos.
   
 Si no se puede establecer la conexión al origen, se genera un error y la aplicación de consola detiene la ejecución.
@@ -126,7 +126,7 @@ El atributo de nombre definido para cada conexión en la sección servidor de ar
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="force-load-sourcetarget-database"></a>Force-load-origen/destino-database  
+### <a name="force-load-sourcetarget-database"></a>force-load-source/target-database  
 Este comando carga los metadatos de origen, y resulta útil para trabajar en el proyecto de migración sin conexión.  
   
 Si no se puede establecer la conexión con el origen o destino, se genera un error y la aplicación de consola detiene la ejecución.  
@@ -143,7 +143,7 @@ Este comando requiere uno o varios nodos de la metabase como parámetro de líne
 </force-load>  
 ```  
   
-### <a name="reconnect-source-database"></a>datos de origen volver a conectar  
+### <a name="reconnect-source-database"></a>reconnect-source-database  
 Este comando vuelve a conectarse a la base de datos de origen, pero no carga los metadatos a diferencia del comando de base de datos connect-origen.  
   
 Si no puede establecerse (la conexión con el origen re), se genera un error y la aplicación de consola detiene la ejecución.  
@@ -154,7 +154,7 @@ Si no puede establecerse (la conexión con el origen re), se genera un error y l
 <reconnect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="connect-target-database"></a>base de destino conectarse  
+### <a name="connect-target-database"></a>connect-target-database  
 Este comando se conecta a la base de datos de SQL Server de destino y carga los metadatos de alto nivel de la base de datos de destino pero no los metadatos por completo.  
   
 Si no se puede establecer la conexión con el destino, se genera un error y la aplicación de consola detiene la ejecución.  
@@ -167,7 +167,7 @@ El atributo de nombre definido para cada conexión en la sección servidor de ar
 <connect-target-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="reconnect-target-database"></a>base de destino vuelva a conectar  
+### <a name="reconnect-target-database"></a>reconnect-target-database  
   
 Este comando vuelve a conectarse a la base de datos de destino pero no carga los metadatos, a diferencia del comando de base de destino de connect.  
   
@@ -182,7 +182,7 @@ Si no puede establecerse (re) de la conexión con el destino, se genera un error
 ## <a name="report-commands"></a>Comandos de informes  
 Los comandos de informe generan informes sobre el rendimiento de diversas actividades de la consola SSMA.  
   
-### <a name="generate-assessment-report"></a>informe de evaluación generar  
+### <a name="generate-assessment-report"></a>generate-assessment-report  
   
 Este comando genera informes de evaluación de la base de datos de origen.  
   
@@ -251,7 +251,7 @@ o Administrador de configuración de
 ## <a name="migration-commands"></a>Comandos de migración  
 Los comandos de migración conversión el esquema de base de datos de destino en el esquema de origen y migración datos al servidor de destino.  
   
-### <a name="convert-schema"></a>convertir esquema  
+### <a name="convert-schema"></a>convert-schema  
 Este comando realiza la conversión de esquema de origen al esquema de destino.  
   
 Si no se realiza la conexión de base de datos de origen o de destino antes de ejecutar este comando o se produce un error en la conexión con el servidor de base de datos de origen o destino durante la ejecución del comando, se genera un error y se cierra la aplicación de consola.  
@@ -372,7 +372,7 @@ El comando de preparación de la migración inicia la asignación de esquema ent
 > [!NOTE]  
 > La salida de consola predeterminada para los comandos de migración es el informe de salida 'Full' con ningún informe de error detallado: Resumen solo al nodo raíz del árbol de objeto de origen.  
   
-### <a name="map-schema"></a>esquema de asignación  
+### <a name="map-schema"></a>map-schema  
 Este comando proporciona la asignación de esquema de la base de datos de origen al esquema de destino.  
   
 -   `source-schema` Especifica el esquema de origen para migrar.  
@@ -406,11 +406,11 @@ Si no se realiza la conexión de base de datos de destino antes de ejecutar este
   
 -   `on-error:` Especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
   
-    -   total de informes como advertencia  
+    -   report-total-as-warning  
   
-    -   informes-each-como-warning  
+    -   report-each-as-warning  
   
-    -   Error de script  
+    -   fail-script  
   
 -   `report-errors-to:` Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional). Si solo se proporciona la ruta de acceso de carpeta, a continuación, archivos por nombre **TargetSynchronizationReport.XML** se crea.  
   
@@ -454,7 +454,7 @@ o Administrador de configuración de
 </synchronize-target>  
 ```  
   
-### <a name="refresh-from-database"></a>actualización de base de datos  
+### <a name="refresh-from-database"></a>refresh-from-database  
 Este comando actualiza los objetos de base de datos de origen.  
   
 Si este comando se ejecuta en la base de datos de destino, se genera un error.  
@@ -467,11 +467,11 @@ Este comando requiere uno o varios nodos de la metabase como parámetro de líne
   
 -   `on-error:` Especifica si se debe llamar a los errores de actualización como advertencias o errores. Opciones disponibles para en caso de error:  
   
-    -   total de informes como advertencia  
+    -   report-total-as-warning  
   
-    -   informes-each-como-warning  
+    -   report-each-as-warning  
   
-    -   Error de script  
+    -   fail-script  
   
 -   `report-errors-to:` Especifica la ubicación del informe de errores para la operación de actualización (atributo opcional). Si solo se proporciona la ruta de acceso de carpeta, a continuación, archivos por nombre **SourceDBRefreshReport.XML** se crea.  
   
@@ -562,7 +562,7 @@ o Administrador de configuración de
 </save-as-script>  
 ```  
   
-### <a name="convert-sql-statement"></a>instrucción CONVERT-sql
+### <a name="convert-sql-statement"></a>convert-sql-statement
 Este comando convierte la instrucción SQL.  
   
 -   `context` Especifica el nombre del esquema.  

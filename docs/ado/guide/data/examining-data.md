@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9382835ffc0a92ee572df07aee8cabb8fa762182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161596"
 ---
 # <a name="examining-data"></a>Examinar los datos
 El [obtención de datos](../../../ado/guide/data/getting-data.md) sección explica cómo recuperar datos de un origen de datos como uno o más **Recordset** objetos. En esta sección se tratará **Recordset** con más detalle, incluido cómo navegar por la **Recordset** y ver sus datos.  

@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e9ee204d55114b7e31a9a9550d86cae3baa4dffc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63130369"
 ---
 # <a name="capture-logon-trigger-event-data"></a>Capturar datos de eventos de desencadenador logon
   Para capturar datos XML acerca de los eventos LOGON para utilizarlos dentro de los desencadenadores logon, utilice la función [EVENTDATA](/sql/t-sql/functions/eventdata-transact-sql) . El evento LOGON devuelve el siguiente esquema de datos de eventos:  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6e0cf91fe697458854a57e1d57099c7cb1bf6a3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164758"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>Cuadro de diálogo Definir parámetros de consulta (Generador de informes)
   Use el cuadro de diálogo **Definir parámetros de consulta** cuando desee especificar valores de parámetros mientras ejecuta una consulta en un diseñador de consultas en tiempo de diseño a fin de ver datos de ejemplo. Los parámetros de consulta filtran los datos del origen de datos y ayudan a limitar la cantidad de datos que un informe procesa. Estos valores no se guardan en la definición de informe.  

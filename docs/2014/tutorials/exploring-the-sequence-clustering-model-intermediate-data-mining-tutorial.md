@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164055"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Explorar el modelo de agrupación en clústeres de secuencia (Tutorial intermedio de minería de datos)
   Ahora que ha creado el **Sequence Clustering with Region** modelo, puede explorar utilizando el [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de clústeres de secuencia en el **Visor de modelos de minería de datos** ficha del Diseñador de minería de datos. El [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de clústeres de secuencia contiene cinco pestañas: **Diagrama del clúster**, **perfiles del clúster**, **características del clúster**, **ClusterDiscrimination**, y **transicionesdeestado**. Para obtener más información sobre cómo usar este visor, vea [examinar un modelo usando el Visor de clústeres de secuencia de Microsoft](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
@@ -149,7 +149,7 @@ ms.locfileid: "56025006"
   
 4.  Una fila de transición contiene el texto transición en el **Variables** columna y una combinación de valores de atributo secuenciales en el **valor** columna. La secuencia también puede contener los puntos iniciales y los valores que faltan.  
   
-     Por ejemplo, suponga que la transición tiene el valor, [Inicio] -> Road Tire Tube. Esto significa que los clientes de este clúster con frecuencia incluyen primero el artículo Road Tire Tube en su cesta de la compra. Esto podría significar que el producto es un elemento popular que los clientes buscan en primer lugar o podría indicar simplemente que el producto es fácil de encontrar en el lugar de compra.  
+     Por ejemplo, suponga que la transición tiene el valor, [inicio] -> Road Tire Tube. Esto significa que los clientes de este clúster con frecuencia incluyen primero el artículo Road Tire Tube en su cesta de la compra. Esto podría significar que el producto es un elemento popular que los clientes buscan en primer lugar o podría indicar simplemente que el producto es fácil de encontrar en el lugar de compra.  
   
 5.  Desplácese por la lista hasta que encuentre la primera transición que no tiene **[inicio]** o **falta** en ella.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "56025006"
   
 8.  Haga clic en el nodo de Touring Tire y mueva el control deslizante de nuevo hacia abajo, hasta su posición media.  
   
-     Al principio, hay muchas líneas de transición que conectan Touring Tire con otros productos, pero al aumentar el umbral de probabilidad, se eliminan del gráfico las transiciones menos probables, por lo que únicamente se mantiene la transición Touring Tire > Touring Tire Tube. Esta transición significa que si el cliente incluye un artículo Touring Tire en la cesta de la compra, existe una gran probabilidad de que incluya a continuación el producto Touring Tire Tube.  
+     En primer lugar, hay muchas líneas de transición que conectan Touring Tire con otros productos, pero cuando se eleva el umbral de probabilidad, se eliminan las transiciones menos probables del gráfico, dejando sólo la transición Touring Tire > Touring Tire Tube. Esta transición significa que si el cliente incluye un artículo Touring Tire en la cesta de la compra, existe una gran probabilidad de que incluya a continuación el producto Touring Tire Tube.  
   
  [Volver al principio](#bkmk_CDiagram)  
   

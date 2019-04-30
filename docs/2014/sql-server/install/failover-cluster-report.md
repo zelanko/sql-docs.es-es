@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6ab4f714182a7433c6a8fdea2ee68d17673b710
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63066433"
 ---
 # <a name="failover-cluster-report"></a>Informe de clústeres de conmutación por error
   Use la página Informe de clústeres de conmutación por error para ver el resultado del informe procedente del examen realizado por el programa de instalación para esta operación.  

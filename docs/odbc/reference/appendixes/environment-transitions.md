@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ed2bbf40ac333db34d3920b2ed2ec688c344bfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188994"
 ---
 # <a name="environment-transitions"></a>Transiciones de entorno
 Entornos de ODBC tienen los siguientes tres estados.  
@@ -37,9 +37,9 @@ Entornos de ODBC tienen los siguientes tres estados.
   
 |E0<br /><br /> Sin asignar|E1<br /><br /> asignado|E2<br /><br /> Conexión|  
 |------------------------|----------------------|-----------------------|  
-|E1 [1]|--[4]|--[4]|  
-|(IH) [2]|E2 [5]<br />(HY010) [6]|--[4]|  
-|(IH) [3]|(IH)|--[4]|  
+|E1[1]|--[4]|--[4]|  
+|(IH)[2]|E2[5]<br />(HY010)[6]|--[4]|  
+|(IH)[3]|(IH)|--[4]|  
   
  [1] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_ENV.  
   
@@ -57,7 +57,7 @@ Entornos de ODBC tienen los siguientes tres estados.
   
 |E0<br /><br /> Sin asignar|E1<br /><br /> asignado|E2<br /><br /> Conexión|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|--[1]<br />(HY010) [2]|--[1]<br />(HY010) [2]|  
+|(IH)|--[1]<br />(HY010)[2]|--[1]<br />(HY010)[2]|  
   
  [1], el atributo de entorno SQL_ATTR_ODBC_VERSION tenía se ha establecido en el entorno.  
   
@@ -67,8 +67,8 @@ Entornos de ODBC tienen los siguientes tres estados.
   
 |E0<br /><br /> Sin asignar|E1<br /><br /> asignado|E2<br /><br /> Conexión|  
 |------------------------|----------------------|-----------------------|  
-|(IH) [1]|--[3]<br />(HY010) [4]|--[3]<br />(HY010) [4]|  
-|(IH) [2]|(IH)|--|  
+|(IH)[1]|--[3]<br />(HY010)[4]|--[3]<br />(HY010)[4]|  
+|(IH)[2]|(IH)|--|  
   
  [1] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_ENV.  
   
@@ -82,9 +82,9 @@ Entornos de ODBC tienen los siguientes tres estados.
   
 |E0<br /><br /> Sin asignar|E1<br /><br /> asignado|E2<br /><br /> Conexión|  
 |------------------------|----------------------|-----------------------|  
-|(IH) [1]|E0|(HY010)|  
-|(IH) [2]|(IH)|--[4]<br />E1 [5]|  
-|(IH) [3]|(IH)|--|  
+|(IH)[1]|E0|(HY010)|  
+|(IH)[2]|(IH)|--[4]<br />E1[5]|  
+|(IH)[3]|(IH)|--|  
   
  [1] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_ENV.  
   
@@ -100,8 +100,8 @@ Entornos de ODBC tienen los siguientes tres estados.
   
 |E0<br /><br /> Sin asignar|E1<br /><br /> asignado|E2<br /><br /> Conexión|  
 |------------------------|----------------------|-----------------------|  
-|(IH) [1]|--|--|  
-|(IH) [2]|(IH)|--|  
+|(IH)[1]|--|--|  
+|(IH)[2]|(IH)|--|  
   
  [1] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_ENV.  
   
@@ -111,7 +111,7 @@ Entornos de ODBC tienen los siguientes tres estados.
   
 |E0<br /><br /> Sin asignar|E1<br /><br /> asignado|E2<br /><br /> Conexión|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|--[1]<br />(HY010) [2]|--|  
+|(IH)|--[1]<br />(HY010)[2]|--|  
   
  [1], el atributo de entorno SQL_ATTR_ODBC_VERSION tenía se ha establecido en el entorno.  
   
@@ -121,7 +121,7 @@ Entornos de ODBC tienen los siguientes tres estados.
   
 |E0<br /><br /> Sin asignar|E1<br /><br /> asignado|E2<br /><br /> Conexión|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|--[1]<br />(HY010) [2]|(HY011)|  
+|(IH)|--[1]<br />(HY010)[2]|(HY011)|  
   
  [1], el atributo de entorno SQL_ATTR_ODBC_VERSION tenía se ha establecido en el entorno.  
   

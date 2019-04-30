@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1474eeb0ac4df68b72406379f5edaada5cc83dbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183913"
 ---
 # <a name="command-property-adox"></a>Command (propiedad, ADOX)
 Especifica un ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto que puede usarse para crear o ejecutar el procedimiento.  

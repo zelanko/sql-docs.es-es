@@ -21,21 +21,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff7d1349666d236e640d8de3524a7d069662ec86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226354"
 ---
 # <a name="sqlcolattributes-function"></a>Función SQLColAttributes
 **Conformidad**  
- Versión introdujo: Cumplimiento de estándares 1.0 de ODBC: desusado  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: Obsoleto  
   
  **Resumen**  
  En ODBC 3. *x*, la función ODBC 2.0 **SQLColAttributes** ha sido reemplazado por **SQLColAttribute**. Para obtener más información, consulte [función SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md).  
   
 > [!NOTE]  
->  Para obtener más información sobre lo que el Administrador de controladores asigna esta función cuando un ODBC 2. *x* aplicación funciona con una aplicación ODBC 3. *x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en Apéndice G: directrices de controlador para la compatibilidad con versiones anteriores.  
+>  Para obtener más información sobre lo que el Administrador de controladores asigna esta función cuando un ODBC 2. *x* aplicación funciona con una aplicación ODBC 3. *x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) en Apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores.  
   
  Consulte [información ODBC 64-Bit](../../../odbc/reference/odbc-64-bit-information.md), si la aplicación se ejecutará en un sistema operativo de 64 bits.  
   

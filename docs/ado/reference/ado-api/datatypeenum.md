@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc18212852954accfddd9f3082b5c8f8a5485b58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140282"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Especifica el tipo de datos de un [campo](../../../ado/reference/ado-api/field-object.md), [parámetro](../../../ado/reference/ado-api/parameter-object.md), o [propiedad](../../../ado/reference/ado-api/property-object-ado.md). El indicador de tipo OLE DB correspondiente se muestra entre paréntesis en la columna de descripción de la tabla siguiente.  
@@ -37,7 +37,7 @@ Especifica el tipo de datos de un [campo](../../../ado/reference/ado-api/field-o
 |**adChar**|129|Indica un valor de cadena (DBTYPE_STR).|  
 |**adCurrency**|6|Indica un valor de moneda (DBTYPE_CY). Moneda es un número de punto fijo con cuatro dígitos a la derecha del separador decimal. Se almacena en un entero con signo de ocho bytes escalado por 10.000.|  
 |**adDate**|7|Indica un valor de fecha (DBTYPE_DATE). Una fecha se almacena como un valor double, la parte entera es el número de días transcurridos desde el 30 de diciembre de 1899 y la parte fraccionaria de los cuales es la fracción de un día.|  
-|**adDBData**|133|Indica un valor de fecha (aaaammdd) (DBTYPE_DBDATE).|  
+|**adDBDate**|133|Indica un valor de fecha (aaaammdd) (DBTYPE_DBDATE).|  
 |**adDBTime**|134|Indica un valor de hora (hhmmss) (DBTYPE_DBTIME).|  
 |**adDBTimeStamp**|135|Indica una marca de fecha y hora (aaaammddhhmmss más una fracción de miles de millones) (DBTYPE_DBTIMESTAMP).|  
 |**adDecimal**|14|Indica un valor numérico exacto con una precisión y escala fijas (DBTYPE_DECIMAL).|  
@@ -47,8 +47,8 @@ Especifica el tipo de datos de un [campo](../../../ado/reference/ado-api/field-o
 |**adFileTime**|64|Indica un valor de 64 bits que representa el número de intervalos de 100 nanosegundos desde el 1 de enero de 1601 (DBTYPE_FILETIME).|  
 |**adGUID**|72|Indica un identificador único global (GUID) (DBTYPE_GUID).|  
 |**adIDispatch**|9|Indica un puntero a un **IDispatch** interfaz en un objeto COM (DBTYPE_IDISPATCH).<br /><br /> **Tenga en cuenta** ADO no admite actualmente este tipo de datos. Uso puede provocar resultados imprevisibles.|  
-|**son también tipos**|3|Indica un entero de cuatro bytes con signo (DBTYPE_I4).|  
-|**adChapter**|13|Indica un puntero a un **IUnknown** interfaz en un objeto COM (DBTYPE_IUNKNOWN).<br /><br /> **Tenga en cuenta** ADO no admite actualmente este tipo de datos. Uso puede provocar resultados imprevisibles.|  
+|**adInteger**|3|Indica un entero de cuatro bytes con signo (DBTYPE_I4).|  
+|**adIUnknown**|13|Indica un puntero a un **IUnknown** interfaz en un objeto COM (DBTYPE_IUNKNOWN).<br /><br /> **Tenga en cuenta** ADO no admite actualmente este tipo de datos. Uso puede provocar resultados imprevisibles.|  
 |**adLongVarBinary**|205|Indica un valor binario long.|  
 |**adLongVarChar**|201|Indica un valor de cadena larga.|  
 |**adLongVarWChar**|203|Indica un valor de cadena Unicode terminada en null larga.|  
@@ -70,7 +70,7 @@ Especifica el tipo de datos de un [campo](../../../ado/reference/ado-api/field-o
 |**adWChar**|130|Indica un caracteres de Unicode terminada en null, cadena (DBTYPE_WSTR).|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

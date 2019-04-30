@@ -22,11 +22,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238135"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Grupos de acciones y acciones de SQL Server Audit
   La característica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit permite auditar grupos de eventos y eventos individuales de nivel de servidor y de base de datos. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](sql-server-audit-database-engine.md).  
@@ -80,8 +80,8 @@ ms.locfileid: "48222995"
 |DATABASE_CHANGE_GROUP|Este evento se desencadena al crear, modificar o quitar una base de datos. Este evento se desencadena al crear, modificar o quitar cualquier base de datos. Equivalente a [Audit Database Management Event Class](../../event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Este evento se desencadena cuando el usuario de una base de datos independiente cierra la sesión de una base de datos. Equivalente a la clase de eventos de auditoría de cierre de sesión de base de datos.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Este evento se provoca para notificar mensajes de auditoría relacionados con la seguridad de transporte en la creación de reflejo de la base de datos. Equivalente a [Audit Database Mirroring Login Event Class](../../event-classes/audit-database-mirroring-login-event-class.md).|  
-|DATABASE_OBJECT_ACCESS_GROUP|Este evento se desencadena siempre que se tenga acceso a los objetos de la base de datos tales como el tipo de mensaje, ensamblado o contrato.<br /><br /> Este evento se desencadena para cualquier tipo de acceso a cualquier base de datos. **Nota:** Esto puede conducir a los registros de auditoría de gran tamaño. <br /><br /> Equivalente a [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md).|  
-|DATABASE_OBJECT_CHANGE_GROUP|Este evento se desencadena al ejecutar una instrucción CREATE, ALTER o DROP en objetos de base de datos como, por ejemplo, esquemas. Este evento se desencadena al crear, modificar o quitar cualquier objeto de base de datos. **Nota:** Esto podría provocar grandes cantidades de registros de auditoría. <br /><br /> Equivalente a [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md).|  
+|DATABASE_OBJECT_ACCESS_GROUP|Este evento se desencadena siempre que se tenga acceso a los objetos de la base de datos tales como el tipo de mensaje, ensamblado o contrato.<br /><br /> Este evento se desencadena para cualquier tipo de acceso a cualquier base de datos. **Nota:**  Esto puede generar registros de auditoría de gran tamaño. <br /><br /> Equivalente a [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md).|  
+|DATABASE_OBJECT_CHANGE_GROUP|Este evento se desencadena al ejecutar una instrucción CREATE, ALTER o DROP en objetos de base de datos como, por ejemplo, esquemas. Este evento se desencadena al crear, modificar o quitar cualquier objeto de base de datos. **Nota:**  Esto podría provocar grandes cantidades de registros de auditoría. <br /><br /> Equivalente a [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Este evento se provoca al cambiar el propietario de los objetos en el ámbito de la base de datos. Este evento se provoca para cualquier cambio de propiedad de objetos en cualquier base de datos del servidor. Equivalente a [Audit Database Object Take Ownership Event Class](../../event-classes/audit-database-object-take-ownership-event-class.md).|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|Este evento se desencadena al emitir una instrucción GRANT, REVOKE o DENY para los objetos de bases de datos, como los ensamblados y los esquemas. Este evento se desencadena para cualquier cambio de permisos de objetos en cualquier base de datos del servidor. Equivalente a [Audit Database Object GDR Event Class](../../event-classes/audit-database-object-gdr-event-class.md).|  
 |DATABASE_OPERATION_GROUP|Este evento se desencadena cuando se realizan operaciones en una base de datos, como un punto de comprobación o una notificación de consulta de suscripción. Este evento tiene lugar en cualquier operación de base de datos y en cualquier base de datos. Equivalente a [Audit Database Operation Event Class](../../event-classes/audit-database-operation-event-class.md).|  
@@ -160,7 +160,7 @@ ms.locfileid: "48222995"
 |SELECT|Este evento se desencadena al emitir una instrucción SELECT.|  
 |UPDATE|Este evento se desencadena al emitir una instrucción UPDATE.|  
 |INSERT|Este evento se desencadena al emitir una instrucción INSERT.|  
-|Delete|Este evento se desencadena al emitir una instrucción DELETE.|  
+|SUPRIMIR|Este evento se desencadena al emitir una instrucción DELETE.|  
 |Ejecute|Este evento se desencadena al emitir una instrucción EXECUTE.|  
 |RECEIVE|Este evento se desencadena al emitir una instrucción RECEIVE.|  
 |REFERENCES|Este evento se desencadena al comprobar un permiso REFERENCES.|  

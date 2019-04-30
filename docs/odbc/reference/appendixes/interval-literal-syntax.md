@@ -16,65 +16,65 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188816"
 ---
 # <a name="interval-literal-syntax"></a>Sintaxis de literales de intervalo
 La siguiente sintaxis se utiliza para los literales de intervalo en ODBC.  
   
- *literal de intervalo:: = intervalo* [+*&#124;*-] *calificador de intervalo de cadena del intervalo*  
+ *interval-literal ::= INTERVAL* [+*&#124;*-] *interval-string interval-qualifier*  
   
- *intervalo de cadena* :: = *oferta* { *literal del mes de año* &#124; *literal de hora del día* } *oferta*  
+ *interval-string* ::= *quote* { *year-month-literal* &#124; *day-time-literal* } *quote*  
   
- *literal de mes del año* :: = *años valor* &#124; [*años valor* -] *valor de los meses*  
+ *year-month-literal* ::= *years-value* &#124; [*years-value* -] *months-value*  
   
- *literal de hora del día* :: = *intervalo de tiempo del día* &#124; *intervalo de tiempo*  
+ *day-time-literal* ::= *day-time-interval* &#124; *time-interval*  
   
  *intervalo de tiempo del día* :: = *días valor* [*horas valor* [:*minutos valor*[:*segundos valor*]]]  
   
- *intervalo de tiempo* :: = *horas valor* [:*minutos valor* [:*segundos valor* ]]  
+ *time-interval* ::= *hours-value* [:*minutes-value* [:*seconds-value* ] ]  
   
- &#124;*minutos valor* [:*segundos valor* ]  
+ &#124; *minutes-value* [:*seconds-value* ]  
   
- &#124;*valor de segundos*  
+ &#124; *seconds-value*  
   
- *valor del año* :: = *valor de fecha y hora*  
+ *years-value* ::= *datetime-value*  
   
- *valor de los meses* :: = *valor de fecha y hora*  
+ *months-value* ::= *datetime-value*  
   
- *valor de días* :: = *valor de fecha y hora*  
+ *days-value* ::= *datetime-value*  
   
  *valor de horas* :: = *valor de fecha y hora*  
   
  *valor de minutos* :: = *valor de fecha y hora*  
   
- *valor de segundos* :: = *valor del entero de segundos* [. [ *fracción de segundos*]]  
+ *seconds-value* ::= *seconds-integer-value* [.[*seconds-fraction*] ]  
   
- *valor de entero de segundos* :: = *entero sin signo*  
+ *seconds-integer-value* ::= *unsigned-integer*  
   
- *fracción de segundos* :: = *entero sin signo*  
+ *seconds-fraction* ::= *unsigned-integer*  
   
- *valor de fecha y hora* :: = *entero sin signo*  
+ *datetime-value* ::= *unsigned-integer*  
   
  *calificador de intervalo* :: = *inicio campo* TO *final campo* &#124; *único campo de fecha y hora*  
   
- *campo de inicio* :: = *segundo no-datetime-campo* [(*intervalo líderes campo precisión* )]  
+ *start-field* ::= *non-second-datetime-field* [(*interval-leading-field-precision* )]  
   
  *campo de finalización* :: = *segundo no-datetime-campo* &#124; segundo [(*intervalo de fracciones de segundos-precisión*)]  
   
  *único campo de fecha y hora* :: = *segundo no-datetime-campo* [(*intervalo líderes campo precisión*)] &#124; segundo [(*intervalo líderes campo precisión*  [, (*intervalo de fracciones de segundos-precisión*)]  
   
- *campo de fecha y hora* :: = *segundo no-datetime-campo* &#124; segundo  
+ *datetime-field* ::= *non-second-datetime-field* &#124; SECOND  
   
- *segundo no-datetime-campo* :: = año &#124; mes &#124; día &#124; hora &#124; minuto  
+ *non-second-datetime-field* ::= YEAR &#124; MONTH &#124; DAY &#124; HOUR &#124; MINUTE  
   
- *intervalo de fracciones de segundos-precisión* :: = *entero sin signo*  
+ *interval-fractional-seconds-precision* ::= *unsigned-integer*  
   
- *intervalo inicial campo precisión* :: = *entero sin signo*  
+ *interval-leading-field-precision* ::= *unsigned-integer*  
   
- *oferta* :: = '  
+ *quote* ::= '  
   
  *entero unsigned* :: = *dígitos...*

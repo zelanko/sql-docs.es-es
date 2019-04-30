@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6054953ba980be5c8c2c12b6a309f64ddaae4e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138655"
 ---
 # <a name="move-method-example-vbscript"></a>Ejemplo del método Move (VBScript)
 Este ejemplo se usa el [mover](../../../ado/reference/ado-api/move-method-ado.md) método para colocar el puntero de registro, en función de entrada del usuario.  

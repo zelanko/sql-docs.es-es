@@ -1,5 +1,5 @@
 ---
-title: Instrucción CREATE GLOBAL CUBE (MDX) | Documentos de Microsoft
+title: Instrucción CREATE GLOBAL CUBE (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6fb1bc0055748c711762d89ad2757a12d1161254
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181442"
 ---
-# <a name="mdx-data-definition---create-global-cube"></a>Definición de datos MDX - Crear cubo GLOBAL
+# <a name="mdx-data-definition---create-global-cube"></a>Definición de datos de MDX: CREATE GLOBAL CUBE
 
 
-  Crea y rellena un cubo guardado de forma local basado en un subcubo de un cubo del servidor. No es necesaria una conexión al servidor para conectarse al cubo almacenado de forma local. Para obtener más información acerca de los cubos locales, consulte [cubos locales &#40;Analysis Services - datos multidimensionales&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
+  Crea y rellena un cubo guardado de forma local basado en un subcubo de un cubo del servidor. No es necesaria una conexión al servidor para conectarse al cubo almacenado de forma local. Para obtener más información acerca de los cubos locales, consulte [los cubos locales &#40;Analysis Services - datos multidimensionales&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -105,19 +105,19 @@ FROM source_cube_name (<param list>)
  dimension_name  
  Nombre de la dimensión del cubo local.  
   
- DESDE \<dim cláusula from >  
+ DESDE \<dim from (cláusula) >  
  Especificación válida únicamente para la definición de la dimensión derivada.  
   
  NOT_RELATED_TO_FACTS  
  Especificación válida únicamente para la definición de la dimensión derivada.  
   
- \<tipo de nivel >  
+ \<nivel de tipo >  
  Especificación válida únicamente para la definición de la dimensión derivada.  
   
-## <a name="remarks"></a>Notas  
- Un cubo local es definedin términos de las medidas y las definiciones que lo definen. Existen dos tipos de dimensiones.  
+## <a name="remarks"></a>Comentarios  
+ Un cubo local es definedin términos de las medidas y definiciones que lo definen. Existen dos tipos de dimensiones.  
   
--   Dimensiones de origen: se trata de dimensiones que formaban parte de uno de varios cubos de origen  
+-   Dimensiones de origen: estas son las dimensiones que formaban parte de uno de varios cubos de origen  
   
 -   Dimensiones derivadas: se trata de las dimensiones que proporcionan nuevas capacidades de análisis. Una dimensión derivada puede ser una dimensión normal definida en función de una dimensión de origen segmentada vertical u horizontalmente, o que contiene una agrupación personalizada de miembros de dimensión. Una dimensión derivada también puede ser una dimensión de minería de datos basada en un modelo de minería de datos.  
   
@@ -134,7 +134,7 @@ FROM source_cube_name (<param list>)
   
  La instrucción CREATE GLOBAL CUBE sigue estas reglas:  
   
--   La instrucción CREATE GLOBAL CUBE copia automáticamente todos los comandos, como las medidas calculadas o acciones, al cubo local. Si un comando contiene una expresión MDX (Expresiones multidimensionales) que hace referencia explícita al cubo primario, el cubo local no podrá ejecutar el comando. Para evitar este problema, utilice la **CURRENTCUBE** palabra clave para definir expresiones de MDX para los comandos. El **CURRENTCUBE** palabra clave usa el contexto de cubo actual cuando se hace referencia a un cubo de una expresión MDX.  
+-   La instrucción CREATE GLOBAL CUBE copia automáticamente todos los comandos, como las medidas calculadas o acciones, al cubo local. Si un comando contiene una expresión MDX (Expresiones multidimensionales) que hace referencia explícita al cubo primario, el cubo local no podrá ejecutar el comando. Para evitar este problema, utilice el **CURRENTCUBE** palabra clave para definir expresiones MDX para los comandos. El **CURRENTCUBE** palabra clave usa el contexto del cubo actual cuando se hace referencia a un cubo dentro de una expresión MDX.  
   
 -   No es posible guardar en el mismo archivo de cubo local un cubo global creado desde un cubo global existente en un archivo de cubo local. Por ejemplo, puede crear un cubo global con el nombre SalesLocal1 y guardarlo en el archivo C:\SalesLocal.cub. A continuación, puede conectarse al archivo C:\SalesLocal.cub y crear un segundo cubo global con el nombre SalesLocal2. Si intenta guardar el cubo global SalesLocal2 en el archivo C:\SalesLocal.cub, se mostrará un error. Sin embargo, puede guardar el cubo global SalesLocal2 en otro archivo de cubo local.  
   

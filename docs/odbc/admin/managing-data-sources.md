@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198759"
 ---
 # <a name="managing-data-sources"></a>Administrar orígenes de datos
 Después de haber instalado a un controlador ODBC desde el programa de instalación del controlador, puede definir uno o varios orígenes de datos para él. El nombre del origen de datos (DSN) debe proporcionar una descripción única de los datos; Por ejemplo, *nóminas* o *cuentas por pagar*. Se enumeran los orígenes de datos de usuario y del sistema que se definen para todos los controladores instalados actualmente en el **DSN de usuario** o **DSN de sistema** pestañas de la **Administrador de orígenes de datos ODBC**cuadro de diálogo. Los orígenes de datos de archivo en un directorio determinado se muestran en el **DSN de archivo** pestaña; se especifica el directorio que se mostrará en el **buscar en** cuadro el **DSN de archivo** ficha.  

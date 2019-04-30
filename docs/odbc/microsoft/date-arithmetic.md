@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7227198eab5508666cf22f62d8d223251ae79049
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126904"
 ---
 # <a name="date-arithmetic"></a>Aritmética de fecha
 El controlador admite sumar y restar un número entero de una columna de fecha, hora o marca de tiempo. Para una columna de fecha, el entero que especifica el número de días que desea agregar o restar. Para una columna de hora o marca de tiempo, el entero que especifica el número de segundos para agregar o restar.

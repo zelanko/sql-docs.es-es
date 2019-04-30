@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140443"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Devolver datos de un procedimiento almacenado
   Existen dos formas de devolver conjuntos de resultados o datos de un procedimiento a un programa de llamada: parámetros de salida y códigos de retorno. En este tema se proporciona información sobre ambos enfoques.  
@@ -74,10 +74,10 @@ GO
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] pueden usar los procedimientos del `cursor` solo para los parámetros de salida de tipo de datos. Si el `cursor` se especifica el tipo de datos para un parámetro, se deben especificar palabras clave tanto el VARYING y OUTPUT para ese parámetro en la definición del procedimiento. Se puede especificar un parámetro como una salida única, pero si se especifica la palabra clave VARYING en la declaración de parámetro, el tipo de datos debe ser `cursor` y también se debe especificar la palabra clave OUTPUT.  
   
 > [!NOTE]  
->  El `cursor` tipo de datos no se puede enlazar a variables de aplicación a través de la base de datos de las API como OLE DB, ODBC, ADO y DB-Library. Dado que los parámetros de salida deben estar enlazados antes de que una aplicación pueda ejecutar un procedimiento, dichos procedimientos con `cursor` los parámetros de salida no se puede llamar desde la API de base de datos. Estos procedimientos pueden llamarse desde [!INCLUDE[tsql](../../../includes/tsql-md.md)] procesos por lotes, procedimientos, o solo cuando se desencadena el `cursor` variable de salida se asigna a un [!INCLUDE[tsql](../../../includes/tsql-md.md)] local `cursor` variable.  
+>  El tipo de datos `cursor` no se puede enlazar a variables de aplicación a través de las API de bases de datos tales como OLE DB, ODBC, ADO y DB-Library. Debido a que los parámetros OUTPUT deben estar enlazados antes de que una aplicación pueda ejecutar un procedimiento, dichos procedimientos con parámetros `cursor` OUTPUT no pueden llamarse desde las API de bases de datos. Estos procedimientos solo pueden llamarse desde procesos por lotes, procedimientos o desencadenadores [!INCLUDE[tsql](../../../includes/tsql-md.md)] cuando la variable `cursor` OUTPUT esté asignada a una variable `cursor` local de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 ### <a name="rules-for-cursor-output-parameters"></a>Reglas para parámetros de salida de cursor  
- Las reglas siguientes se aplican a `cursor` parámetros de salida cuando se ejecuta el procedimiento:  
+ Las siguientes reglas se aplican a los parámetros `cursor` OUTPUT cuando se ejecuta el procedimiento:  
   
 -   Para un cursor de solo avance, las filas devueltas en el conjunto de resultados del cursor son solo aquellas filas que estén en la posición del cursor y hacia delante al concluir la ejecución del procedimiento, por ejemplo:  
   

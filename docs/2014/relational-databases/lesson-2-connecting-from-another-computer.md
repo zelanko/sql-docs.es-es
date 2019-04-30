@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Conectarse desde otro equipo | Microsoft Docs'
+title: 'Lección 2: Conexión desde otro equipo | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144803"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conectarse desde otro equipo
+# <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conexión desde otro equipo
   Para mejorar la seguridad, no se puede obtener acceso a [!INCLUDE[ssDE](../includes/ssde-md.md)] de las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express y Evaluation desde otro equipo cuando se instala inicialmente. En esta lección se muestra cómo habilitar los protocolos, configurar los puertos y configurar el Firewall de Windows para conectarse desde otros equipos.  
   
  Esta lección contiene las siguientes tareas:  
@@ -127,6 +127,6 @@ ms.locfileid: "54127215"
  Con esto finaliza este breve tutorial sobre la conectividad básica.  
   
 ## <a name="return-to-tutorials-portal"></a>Volver al portal de tutoriales  
- [Tutorial: Introducción a con el motor de base de datos](tutorial-getting-started-with-the-database-engine.md)  
+ [Tutorial: Introducción al motor de base de datos](tutorial-getting-started-with-the-database-engine.md)  
   
   

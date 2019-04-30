@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5485a0b5ff39f8517ff6e73113f7405cab0a923c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59952311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188199"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades del marcador de posición, General (Generador de informes y SSRS)
   Use el cuadro de diálogo **Propiedades del marcador de posición** para cambiar el valor, la información sobre herramientas y las opciones de marcado de un marcador de posición en un cuadro de texto.  

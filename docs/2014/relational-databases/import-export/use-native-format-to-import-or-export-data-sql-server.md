@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2dee0f6a337cab7713862e662e06bb94a0b34a5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065761"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Usar el formato nativo para importar o exportar datos (SQL Server)
   Se recomienda usar el formato nativo cuando se realice una transferencia masiva de datos entre varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando un archivo de datos que no contiene caracteres extendidos o de doble byte (DBCS).  
@@ -60,13 +60,13 @@ ms.locfileid: "48124305"
      Al principio de cada `char` o `varchar` campo, **bcp** agrega la longitud del prefijo.  
   
     > [!IMPORTANT]  
-    >  Cuando se usa el modo nativo, de forma predeterminada, el **bcp** utilidad convierte los caracteres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en caracteres OEM antes de copiarlos en un archivo de datos. El **bcp** utilidad convierte caracteres de un archivo de datos en caracteres ANSI antes de importarlos masivamente en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla. Durante estas conversiones, se pueden perder datos que tengan caracteres extendidos. Para caracteres extendidos, utilice el formato nativo Unicode o especifique una página de códigos.  
+    >  Cuando se utiliza el modo nativo, de manera predeterminada, la utilidad **bcp** convierte los caracteres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en caracteres OEM antes de copiarlos en el archivo de datos. La utilidad **bcp** convierte caracteres de un archivo de datos en caracteres ANSI antes de realizar la importación masiva de los mismos a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Durante estas conversiones, se pueden perder datos que tengan caracteres extendidos. Para caracteres extendidos, utilice el formato nativo Unicode o especifique una página de códigos.  
   
--   `sql_variant` Datos  
+-   Datos `sql_variant`  
   
-     Si `sql_variant` datos se almacenan como SQLVARIANT en un archivo de datos con formato nativo, los datos mantienen todas sus características. Los metadatos que registran el tipo de datos de cada valor de datos se almacenan junto con el valor de los datos. Estos metadatos se usan para volver a crear el valor de datos con el mismo tipo de datos en un destino `sql_variant` columna.  
+     Si se almacenan datos `sql_variant` como SQLVARIANT en un archivo de datos con formato nativo, los datos mantienen todas sus características. Los metadatos que registran el tipo de datos de cada valor de datos se almacenan junto con el valor de los datos. Estos metadatos se utilizan para crear de nuevo el valor de los datos con el mismo tipo de datos en una columna `sql_variant` de destino.  
   
-     Si el tipo de datos de la columna de destino no es `sql_variant`, cada valor de dato se convierte al tipo de datos de la columna de destino, las reglas normales de conversión implícita de datos. Si se produce un error durante la conversión de los datos, se revierte el lote actual. Los valores `char` y `varchar` que se transfieren entre columnas `sql_variant` pueden tener problemas de conversión de página de códigos.  
+     Si el tipo de datos de la columna de destino no es `sql_variant`, cada valor de dato se convierte al tipo de datos de la columna de destino, con las reglas normales de conversión implícita de datos. Si se produce un error durante la conversión de los datos, se revierte el lote actual. Los valores `char` y `varchar` que se transfieren entre columnas `sql_variant` pueden tener problemas de conversión de página de códigos.  
   
      Para obtener más información sobre la conversión de datos, vea [Conversiones de tipos de datos &#40;motor de base de datos&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   

@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: abfaedbc8eb415d00b1947fe36bef0a51716f536
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144773"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Abrir un editor (SQL Server Management Studio)
   En este tema se describe cómo abrir el editor de consultas, MDX, DMX o XML/A de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cuando se abre, cada ventana del editor aparece como una pestaña en el panel central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "52513006"
 ### <a name="permissions"></a>Permisos  
  Las operaciones que realiza en un editor de código están sujetas a los permisos concedidos a la cuenta de autenticación que usó para iniciar sesión. Por ejemplo, si abre una ventana del editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] mediante la autenticación de Windows, no puede ejecutar instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que hacen referencia a los objetos para los que no tiene acceso la cuenta de inicio de sesión de Windows.  
   
-## <a name="how-to-open-editors"></a>Cómo: Abrir editores  
+## <a name="how-to-open-editors"></a>Procedimientos: Abrir editores  
  En esta sección se explica cómo abrir varios editores en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="using-the-filenew-menu"></a>Mediante el menú Archivo/Nuevo  

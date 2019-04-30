@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184838"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Escenario de persistencia del conjunto de registros XML
 En este escenario, creará una aplicación de páginas Active Server (ASP) que guarda el contenido de un objeto de conjunto de registros directamente en el objeto de respuesta de ASP.  
@@ -38,7 +38,7 @@ En este escenario, creará una aplicación de páginas Active Server (ASP) que g
   
 -   Recibir y mostrar los datos  
   
-## <a name="step-1-set-up-the-application"></a>Paso 1: Configurar la aplicación  
+## <a name="step-1-set-up-the-application"></a>Paso 1: Configuración de la aplicación  
  Cree un directorio virtual denominado "XMLPersist", con permisos de la secuencia de comandos. Cree dos nuevos archivos de texto en la carpeta a la que señala el directorio virtual, una con nombre "XMLResponse.asp," el otro denominado "Default.htm".  
   
 ## <a name="step-2-get-the-data"></a>Paso 2: Obtener los datos  

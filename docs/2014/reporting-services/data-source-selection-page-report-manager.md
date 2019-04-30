@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf5feafd69cb16e1989496de90ce9e7af4df3687
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165013"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Selección de origen de datos (página del Administrador de informes)
   Use la página Selección de origen de datos para seleccionar un elemento de origen de datos compartido existente con el fin de usarlo con un informe o modelo de informe. También puede usar esta página para seleccionar un origen de datos diferente. Para ver el tipo de origen de datos o la cadena de conexión, debe navegar al origen de datos compartido y abrir las páginas de propiedades.  

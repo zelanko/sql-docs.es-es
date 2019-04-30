@@ -1,5 +1,5 @@
 ---
-title: 'Paso 4b: capturar el recuento de filas | Microsoft Docs'
+title: 'Paso 4b: Capturar el recuento de filas | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3091d379bca6c061437e7767fdf6f99d69dc9861
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149152"
 ---
-# <a name="step-4b-fetch-the-row-count"></a>Paso 4b: capturar el recuento de filas
+# <a name="step-4b-fetch-the-row-count"></a>Paso 4b: Captura del recuento de filas
 El paso siguiente es capturar el recuento de filas, como se muestra en la siguiente ilustración.  
   
  ![Muestra cómo recuperar el recuento de filas](../../../odbc/reference/develop-app/media/pr15.gif "pr15")  

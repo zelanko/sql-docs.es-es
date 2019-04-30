@@ -12,20 +12,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3118d85b3b17bef5a0095445f50b7193123e6d91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144668"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Generar scripts (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona dos mecanismos para generar scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Puede crear scripts para varios objetos con el **Asistente Generar y publicar scripts**. También puede generar un script para objetos individuales o varios objetos con el menú **Incluir como** del **Explorador de objetos**.  
   
-1.  **Elegir un método:**  [Asistente generar y publicar scripts](#GenPubScriptWiz), [Menú Incluir como del Explorador de objetos](#OEScriptAsMenu)  
+1.  **Elegir un método:**  [Generar y publicar Scripts asistente](#GenPubScriptWiz), [incluir como del menú del explorador de objetos](#OEScriptAsMenu)  
   
-2.  **Para usar el script como menú:**  [Generar un script de un solo objeto](#ScriptSingleObject), [Generar un script de dos objetos mediante el Explorador de objetos](#ScriptTwoObjectsOE), [Generar un script de dos objetos usando los detalles del Explorador de objetos](#ScriptTwoObjectsOED)  
+2.  **Para usar el Script como menú:**  [Un único objeto de script](#ScriptSingleObject), [dos objetos usando el Explorador de objetos de Script](#ScriptTwoObjectsOE), [dos objetos usando detalles del explorador de objetos de Script](#ScriptTwoObjectsOED)  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  Elija el mecanismo que mejor cumpla sus requisitos.  
   
 ###  <a name="GenPubScriptWiz"></a> Asistente generar y publicar scripts  

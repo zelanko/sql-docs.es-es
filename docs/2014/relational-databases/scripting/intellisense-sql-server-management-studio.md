@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b43d901205e13f4e0e728705e3764512dc26647
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143703"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
   Los editores de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] admiten las opciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense que reducen las tareas de escritura, proporcionan acceso rápido a la información de sintaxis o facilitan la visualización de los delimitadores de expresiones complejas.  

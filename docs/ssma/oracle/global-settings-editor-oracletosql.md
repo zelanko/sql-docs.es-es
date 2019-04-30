@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: bb07c2ca671fccbfdb737004ea0786359873a179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138857"
 ---
 # <a name="global-settings-editor-oracletosql"></a>Configuración global (editor) (OracleToSQL)
 Utilice la página del Editor de la **configuración Global** cuadro de diálogo para especificar la configuración de ventanas del editor de código.  

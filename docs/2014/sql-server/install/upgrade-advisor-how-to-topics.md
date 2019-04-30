@@ -15,27 +15,27 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bffee33dd49dcae44f8bd2e9d6b5350bc7253f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185443"
 ---
 # <a name="upgrade-advisor-how-to-topics"></a>Temas de procedimiento del Asesor de actualizaciones
   Esta sección contiene los procedimientos comunes para utilizar el Asesor de actualizaciones.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Instalar el Asesor de actualizaciones](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)  
+ [Cómo: Instalar el Asesor de actualizaciones](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)  
   
- [Cómo iniciar el Asesor de actualizaciones](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)  
+ [Cómo: Iniciar el Asesor de actualizaciones](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)  
   
- [Cómo ejecutar el Asistente para análisis del Asesor de actualizaciones](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)  
+ [Cómo: Ejecute al Asistente para análisis del Asesor](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)  
   
- [Cómo ver un informe del Asesor de actualizaciones](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+ [Cómo: Ver un informe del Asesor de actualizaciones](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
- [Cómo filtrar informes](../../../2014/sql-server/install/how-to-filter-reports.md)  
+ [Cómo: Informes de filtro](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
- [Cómo exportar informes](../../../2014/sql-server/install/how-to-export-reports.md)  
+ [Cómo: Exportar informes](../../../2014/sql-server/install/how-to-export-reports.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

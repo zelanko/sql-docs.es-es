@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d6860e41991d00e6cd0c2869413dca110422c4e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226011"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configuración avanzada de varios sitios web (Modo nativo de SSRS)
   Utilice este cuadro de diálogo para crear y administrar las direcciones URL que se usan para tener acceso a un servidor de informes o al Administrador de informes. El cuadro de diálogo **Configuración avanzada de varios sitios web** se utiliza para crear direcciones URL adicionales y direcciones URL personalizadas que incluyen un nombre de encabezado de host, o para especificar una dirección IP en el formato de IPv4 o IPv6.  
@@ -27,7 +27,7 @@ ms.locfileid: "48185375"
   
  Crear varias direcciones URL resulta útil si desea configurar maneras diferentes de acceso a un servidor de informes. Por ejemplo, el acceso al servidor de informes a través de una conexión de una intranet o de una extranet suele requerir direcciones URL diferentes para cada tipo de conexión.  
   
- Para abrir el **configuración avanzada de varios sitios Web** cuadro de diálogo, haga clic en **avanzadas** en el **dirección URL del servicio Web** o **Report Manager URL**página en el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Cuando se abra el cuadro de diálogo **Configuración avanzada de varios sitios web** , puede hacer clic en **Agregar** o en **Modificar** para definir direcciones URL nuevas o para modificar o eliminar las existentes.  
+ Para abrir el cuadro de diálogo **Configuración avanzada de varios sitios web** , haga clic en **Opciones avanzadas** en la página **Dirección URL del servicio web** o **Dirección URL del Administrador de informes** del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Cuando se abra el cuadro de diálogo **Configuración avanzada de varios sitios web** , puede hacer clic en **Agregar** o en **Modificar** para definir direcciones URL nuevas o para modificar o eliminar las existentes.  
   
  Haga clic en **Aceptar** para guardar los cambios. Si agrega o quita direcciones URL, pero a continuación cierra el cuadro de diálogo sin hacer clic en **Aceptar**primero, los cambios se perderán.  
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ddf5fff0974c9a7ae92b5d44372f0d71fecf712
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191797"
 ---
 # <a name="running-business-objects-in-component-services"></a>Ejecución de objetos de negocios en servicios de componentes
 > [!IMPORTANT]

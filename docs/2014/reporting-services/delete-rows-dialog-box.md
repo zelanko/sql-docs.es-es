@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b3c7d20d92b56de299f25665701a295e54fce89
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164584"
 ---
 # <a name="delete-rows-dialog-box"></a>Eliminar filas (cuadro de diálogo)
   Use el cuadro de diálogo **Eliminar filas** para eliminar filas de una región de datos de tabla, matriz o lista. Si las filas están asociadas a grupos, también puede eliminar las definiciones de grupo.  

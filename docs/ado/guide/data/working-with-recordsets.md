@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184827"
 ---
 # <a name="working-with-recordsets"></a>Trabajar con conjuntos de registros
 El **Recordset** objeto tiene características integradas que permiten reorganizar el orden de los datos en el conjunto de resultados para buscar un registro específico en función de criterios que suministran e incluso a optimizar estas operaciones de búsqueda mediante índices. Si estas características están disponibles para su uso depende del proveedor y en algunos casos - como los de la [índice](../../../ado/reference/ado-api/index-property.md) propiedad - la estructura del origen de datos propia.  
@@ -90,7 +90,7 @@ El **Recordset** objeto tiene características integradas que permiten reorganiz
   
 -   *Operador* debe ser uno de los siguientes: **\<**, **>**, **\< =**, **>=** , **<>**, **=**, o **como**.  
   
--   *Valor* es el valor con el que se compararán los valores de campo (por ejemplo, `'Smith'`, `#8/24/95#`, `12.345`, o `$50.00`). Utilice las comillas simples (') con las cadenas y signos de número (`#`) con fechas. Puede usar para números, puntos decimales, signos de dólar y notación científica. Si *operador* es **como**, *valor* puede usar caracteres comodín. Solo el asterisco (\*) y caracteres comodín (%) que se permiten caracteres de signo de porcentaje y deben ser el último carácter de la cadena. *Valor* no puede ser null.  
+-   *Valor* es el valor con el que se compararán los valores de campo (por ejemplo, `'Smith'`, `#8/24/95#`, `12.345`, o `$50.00`). Utilice las comillas simples (') con las cadenas y signos de número (`#`) con fechas. Puede usar para números, puntos decimales, signos de dólar y notación científica. Si *operador* es **como**, *valor* puede usar caracteres comodín. Solo el asterisco (\*) y signo de porcentaje (%) se permiten caracteres comodín y deben ser el último carácter de la cadena. *Valor* no puede ser null.  
   
     > [!NOTE]
     >  Para incluir las comillas simples (') en el filtro *valor*, utilice dos comillas simples para representar una. Por ejemplo, para filtrar según *o ' Malley*, debe ser la cadena de criterios `"col1 = 'O''Malley'"`. Para incluir las comillas simples al principio y al final del valor de filtro, incluya la cadena de signos de número (#). Por ejemplo, para filtrar según *'1'*, debe ser la cadena de criterios `"col1 = #'1'#"`.  

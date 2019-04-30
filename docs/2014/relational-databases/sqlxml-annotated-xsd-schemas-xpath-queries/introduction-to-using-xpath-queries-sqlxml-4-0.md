@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 775e9ac76d6c3b16d2c9ba6ce688a2a3dfbf48d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127708"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introducción al uso de consultas XPath (SQLXML 4.0)
   Una consulta XPath (Lenguaje de rutas XML) puede especificarse como parte de una dirección URL o dentro de una plantilla. El esquema de asignación determina la estructura de este fragmento resultante y los valores se recuperan de la base de datos. Este proceso es conceptualmente similar a crear vistas utilizando la instrucción CREATE VIEW y escribir consultas SQL en ellas.  
@@ -116,7 +116,7 @@ ms.locfileid: "52753377"
   
  Cuando especifique consultas XPath en una plantilla, tenga en cuenta el siguiente comportamiento:  
   
--   XPath puede incluir caracteres como < o & que tienen significados especiales en XML (y una plantilla es un documento XML). Debe definir estos caracteres como caracteres de escape mediante la codificación de & en XML o especificar XPath en la dirección URL.  
+-   XPath puede contener caracteres como < o & que tienen significados especiales en XML (y la plantilla es un documento XML). Debe realizar el escape de estos caracteres mediante XML &-codificación o especificar XPath en la dirección URL.  
   
 ## <a name="see-also"></a>Vea también  
  [Utilizar consultas XPath en SQLXML 4.0](using-xpath-queries-in-sqlxml-4-0.md)  

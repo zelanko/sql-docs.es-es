@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e33beff29463172a26d53953dd5f563fe1f3f5c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240960"
 ---
 # <a name="elements-used-in-sql-statements"></a>Elementos que se usan en instrucciones SQL
 Los elementos siguientes se usan en las instrucciones SQL mencionadas anteriormente.  
@@ -32,25 +32,25 @@ Los elementos siguientes se usan en las instrucciones SQL mencionadas anteriorme
   
  *factor de booleano* :: = [NOT] *principal de un valor booleano*  
   
- *un valor booleano principal* :: = comparación *-predicado* &#124; ( *condición de búsqueda* )  
+ *boolean-primary* ::= comparison *-predicate* &#124; ( *search-condition* )  
   
  *valor booleano término* :: = *factor de booleano* [AND *término de valor booleano*]  
   
- *literal de cadena de caracteres* :: = '' {*carácter*}...'' (*carácter* es cualquier carácter del juego de caracteres del origen de datos del controlador. Para incluir un carácter de comilla literal (") en un literal de cadena de caracteres, use dos caracteres de comilla literal ['' '].)  
+ *character-string-literal* ::= ''{*character*}...'' (*carácter* es cualquier carácter del juego de caracteres del origen de datos del controlador. Para incluir un carácter de comilla literal (") en un literal de cadena de caracteres, use dos caracteres de comilla literal ['' '].)  
   
- *identificador de la columna* :: = *nombre definido por el usuario*  
+ *column-identifier* ::= *user-defined-name*  
   
  *nombre de columna* :: = [*nombre-tabla*.] *identificador de columna*  
   
- *operador de comparación* :: = < &#124; > &#124; \<= &#124; > = &#124; = &#124; <>  
+ *comparison-operator* ::= < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
   
  *predicado de comparación* :: = *expresión* expresión de operador de comparación  
   
  *tipo de datos* :: = *tipo de cadena de caracteres* (*tipo de cadena de caracteres* es cualquier tipo de datos para que la columna "" DATA_TYPE"" en el conjunto de resultados devuelto por SQLGetTypeInfo es cualquier SQL_CHAR o SQL_VARCHAR.)  
   
- *dígito* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
+ *digit* ::= 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
   
- *¿parámetros dinámicos* :: =?  
+ *dynamic-parameter* ::= ?  
   
  *expresión* :: = término &#124; expresión {+&#124;-} término  
   
@@ -58,50 +58,50 @@ Los elementos siguientes se usan en las instrucciones SQL mencionadas anteriorme
   
  *valor de inserción* :: =  
   
- *parámetros dinámicos*  
+ *dynamic-parameter*  
   
- &#124;*literal*  
+ &#124; *literal*  
   
- &AMP;#124;ES NULL  
+ &#124; NULL  
   
  &AMP;#124;USUARIO  
   
- *letra* :: = *minúsculas caso letras &#124; superior minúscula*  
+ *letter* ::= *lower-case-letter &#124; upper-case-letter*  
   
- *literal* :: = *literal de cadena de caracteres*  
+ *literal* ::= *character-string-literal*  
   
  *minúsculas caso letras* :: = un &#124; b &#124; c &#124; d. &#124; e &#124; f &#124; g &#124; h &#124; &#124; j &#124; k &#124; l &#124; m &#124; n &#124; o &#124; p &#124; q &#124; r &#124; s &#124; t &#124; u &#124; v &#124; w &#124; x &#124; y &#124; z  
   
  *cláusula ORDER by* :: = ORDER BY *especificación de ordenación* [, *especificación de ordenación*]...  
   
- *principal* :: = *nombre de columna*  
+ *primary* ::= *column-name*  
   
- &#124;*parámetros dinámicos*  
+ &#124; *dynamic-parameter*  
   
- &#124;*literal*  
+ &#124; *literal*  
   
- &#124;( *expresión* )  
+ &#124; ( *expression* )  
   
  *condición de búsqueda* :: = *booleano término* [o *condición de búsqueda*]  
   
  *lista de selección* :: = \* &#124; *seleccione sublista* [, *seleccione sublista*]...  (*lista de selección* no puede contener parámetros.)  
   
- *Seleccione sublista* :: = *expresión*  
+ *select-sublist* ::= *expression*  
   
- *especificación de ordenación* :: = {*entero sin signo &#124; nombre-columna*} [*ASC &#124; DESC*]  
+ *sort-specification* ::= {*unsigned-integer &#124; column-name*} [*ASC &#124; DESC*]  
   
- *identificador de tabla* :: = *nombre definido por el usuario*  
+ *table-identifier* ::= *user-defined-name*  
   
- *nombre de la tabla* :: = *identificador de tabla*  
+ *table-name* ::= *table-identifier*  
   
- *referencia de tabla* :: = *nombre de tabla*  
+ *table-reference* ::= *table-name*  
   
  *lista de referencias de tabla* :: = *referencia de tabla* [,*referencia de tabla*]...  
   
- *término* :: = *factor* &#124; *término* {\*&#124;*/*} *factor*  
+ *term* ::= *factor* &#124; *term* {\*&#124;*/*} *factor*  
   
- *entero unsigned* :: = {*dígitos*}  
+ *unsigned-integer* ::= {*digit*}  
   
  *superior minúscula* :: = *A &#124; B &#124; C &#124; d. &#124; E &#124; F &#124; G &#124; H &#124; me &#124; J &#124; K &#124; L &#124; M &#124; N &#124; O &#124; P &#124;Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; Y &#124; Z*  
   
- *nombre definido por el usuario* :: = *letra*[*dígitos* &#124; *letra* &#124; *_*]...
+ *user-defined-name* ::= *letter*[*digit* &#124; *letter* &#124; *_*]...

@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0bc45169a3c5eee2e23f581a66d5232c22e89b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199261"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>Cursores de bloque y los cursores desplazables, compatibilidad con versiones anteriores de las aplicaciones ODBC 3.x
 La existencia de ambas **SQLFetchScroll** y **SQLExtendedFetch** representa divide entre la aplicación de interfaz de programación (API), que es el conjunto de funciones ODBC sin cifrar primero el las llamadas de aplicación y la interfaz de proveedor de servicio (SPI), que es el conjunto de funciones implementa el controlador. Esta división es necesario para equilibrar el requisito en ODBC 3. *x*, que usa **SQLFetchScroll**para alinearse con los estándares y ser compatible con ODBC 2. *x*, que usa **SQLExtendedFetch**.  
   
  El 3 de ODBC *.x* API, que es el conjunto de funciones de la aplicación llama, incluye **SQLFetchScroll** y relacionados con los atributos de instrucción. El 3 de ODBC *.x* SPI, que es el conjunto de funciones implementa el controlador, incluye **SQLFetchScroll**, **SQLExtendedFetch**y relacionados con los atributos de instrucción. Dado que ODBC no aplica esta diferencia entre la API y el SPI formalmente, es posible que ODBC 3 *.x* las aplicaciones llamen a **SQLExtendedFetch** y relacionados con los atributos de instrucción. Sin embargo, no hay ninguna razón para ODBC 3 *.x* aplicaciones para hacer esto. Para obtener más información acerca de las API y SPI, vea la introducción a [arquitectura ODBC](../../../odbc/reference/odbc-architecture.md).  
   
- Para obtener información acerca de cómo el ODBC 3. *x* Driver Manager asigna las llamadas a ODBC 2. *x* y ODBC 3. *x* controladores y qué funciones y la declaración de atributos de una aplicación ODBC 3. *x* controlador debe implementar para los cursores desplazables y de bloque, vea [lo que el controlador hace](../../../odbc/reference/appendixes/what-the-driver-does.md) en Apéndice G: directrices de controlador para la compatibilidad con versiones anteriores.  
+ Para obtener información acerca de cómo el ODBC 3. *x* Driver Manager asigna las llamadas a ODBC 2. *x* y ODBC 3. *x* controladores y qué funciones y la declaración de atributos de una aplicación ODBC 3. *x* controlador debe implementar para los cursores desplazables y de bloque, vea [lo que el controlador hace](../../../odbc/reference/appendixes/what-the-driver-does.md) en Apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores.  
   
  En la tabla siguiente se resume las funciones y atributos de instrucción de una aplicación ODBC 3. *x* aplicación debe usar con los cursores desplazables y de bloque. También se muestran los cambios entre el 2 de ODBC. *x* y ODBC 3. *x* en esta área que ODBC 3. *x* deben ser conscientes de las aplicaciones que sean compatibles con ODBC 2. *x* controladores.  
   

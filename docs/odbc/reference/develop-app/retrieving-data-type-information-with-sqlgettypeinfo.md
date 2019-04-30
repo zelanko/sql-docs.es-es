@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c69113e4bb5457cb997f832179e5c1aab2841d82
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199094"
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>Al recuperar la información de tipo de datos con SQLGetTypeInfo
 Dado que las asignaciones de tipos de datos SQL subyacentes a los identificadores de tipo ODBC son aproximadas, ODBC proporciona una función (**SQLGetTypeInfo**) a través de que un controlador completamente puede describir cada tipo de datos SQL en el origen de datos. Esta función devuelve un conjunto de resultados, cada fila de los cuales describe las características de un tipo de datos único, como nombre, identificador de tipo, precisión, escala y la nulabilidad.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4f13a77a9f03aa76fccc41a1fa19878dd935db0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187803"
 ---
 # <a name="recordset-related-error-information"></a>Información de Error relacionado con el conjunto de registros
 Durante el procesamiento por lotes, el **estado** propiedad de la **Recordset** objeto proporciona información sobre los registros individuales de la **Recordset**. Antes de que una actualización por lotes, el **estado** propiedad de la **Recordset** refleja información acerca de los registros para agregar, cambiar y eliminar. Después de **UpdateBatch** se ha llamado el **estado** propiedad indica el éxito o fracaso de la operación. Mientras se desplaza por los registros en el **Recordset**, el valor de la **estado** los cambios de propiedad para describir el estado del registro actual.

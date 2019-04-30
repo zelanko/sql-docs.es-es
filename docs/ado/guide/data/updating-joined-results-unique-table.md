@@ -1,5 +1,5 @@
 ---
-title: 'Actualización unido a resultados: Tabla única | Microsoft Docs'
+title: 'Actualización de resultados unidos: Tabla única | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a01c9dd672193a91c494ccdf098375e9a64d5b3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63184973"
 ---
-# <a name="updating-joined-results-unique-table"></a>Actualización unido a resultados: Tabla única
+# <a name="updating-joined-results-unique-table"></a>Actualización de resultados unidos: Tabla única
 ADO permite controlar las modificaciones realizadas en una tabla base concreta en un conjunto de registros que se ha formado por una operación de combinación en varias tablas base mediante la propiedad dinámica de tabla única. Para obtener más información sobre el uso de tabla única, consulte Temas de referencia del programador de ADO en las propiedades Unique Table y resincronización de la actualización dinámicas.  
   
 ## <a name="see-also"></a>Vea también  

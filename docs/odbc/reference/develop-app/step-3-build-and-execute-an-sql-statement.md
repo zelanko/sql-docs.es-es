@@ -1,5 +1,5 @@
 ---
-title: 'Paso 3: Crear y ejecutar una instrucción SQL | Microsoft Docs'
+title: 'Paso 3: Compilar y ejecutar una instrucción SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3427057e70ee27fe1108fde71c833f0c511836b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148964"
 ---
-# <a name="step-3-build-and-execute-an-sql-statement"></a>Paso 3: Compilar y ejecutar una instrucción SQL
+# <a name="step-3-build-and-execute-an-sql-statement"></a>Paso 3: Compilación y ejecución de una instrucción SQL
 El tercer paso es compilar y ejecutar una instrucción SQL, como se muestra en la siguiente ilustración. Es probable que los métodos utilizados para realizar este paso variar enormemente. La aplicación podría solicitar al usuario que escriba una instrucción SQL, genere una instrucción SQL basada en la entrada de usuario, o utilizar una instrucción SQL codificadas de forma rígida. Para obtener más información, consulte [construir instrucciones SQL](../../../odbc/reference/develop-app/constructing-sql-statements.md).  
   
  ![Muestra la creación y ejecución de una instrucción SQL](../../../odbc/reference/develop-app/media/pr13.gif "pr13")  
@@ -36,6 +36,6 @@ El tercer paso es compilar y ejecutar una instrucción SQL, como se muestra en l
   
 |Tipo de instrucción SQL|Vaya al|  
 |---------------------------|----------------|  
-|**Seleccione** o función de catálogo|[El paso 4a: capturar los resultados](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
-|**ACTUALIZACIÓN**, **eliminar**, o **insertar**|[Paso 4b: capturar el recuento de filas](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
-|Todas las demás instrucciones SQL|Paso 3: Crear y ejecutar una instrucción SQL (en este tema) o [paso 5: confirmar la transacción](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
+|**Seleccione** o función de catálogo|[Paso 4a: Capturar los resultados](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
+|**ACTUALIZACIÓN**, **eliminar**, o **insertar**|[Paso 4b: Capturar el recuento de filas](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
+|Todas las demás instrucciones SQL|Paso 3: Compilar y ejecutar una instrucción SQL (en este tema) o [paso 5: Confirmar la transacción](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|

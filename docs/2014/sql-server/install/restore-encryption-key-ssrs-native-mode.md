@@ -14,14 +14,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9e85f9c17a28ba5c416bcab4853af9bdd823611f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126928"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>Restaurar clave de cifrado (Modo nativo de SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utiliza una clave de cifrado para proteger datos confidenciales que se almacenan en la base de datos del servidor de informes. Para asegurarse de que dispone de acceso continuado a los datos cifrados, es importante que cree una copia de seguridad de la clave de cifrado por si necesita restaurarla posteriormente debido a cambios de la cuenta de servicio o como parte de una migración planeada. En este tema es una visión general de cómo usar el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para restaurar las claves.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utiliza una clave de cifrado para proteger datos confidenciales que están almacenados en la base de datos del servidor de informes. Para asegurarse de que dispone de acceso continuado a los datos cifrados, es importante que cree una copia de seguridad de la clave de cifrado por si necesita restaurarla posteriormente debido a cambios de la cuenta de servicio o como parte de una migración planeada. Este tema contiene información general sobre cómo usar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para restaurar claves.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -29,19 +29,19 @@ ms.locfileid: "48220091"
   
  Para comprobar si restauró una clave válida, utilice el Administrador de informes para ver suscripciones o cualquier informe que tenga un origen de datos que utilice las credenciales almacenadas. Si recibe el error "El servidor de informes no puede tener acceso a los datos cifrados" al intentar abrir una página de definición de suscripción, o si el sistema solicita que escriba las credenciales al abrir un informe que previamente utilizaba las credenciales almacenadas para el origen de datos del informe, entonces restauró una clave no válida.  
   
- Si restaura una clave no válida que sea diferente de la que se usó para cifrar datos, no se podrán descifrar los datos que estén almacenados actualmente en la base de datos del servidor de informes. Si restaura una clave no válida, debería restaurar una copia de seguridad de la clave correcta inmediatamente, si está disponible. Si no dispone de una copia de seguridad de la  clave que se usó para cifrar los datos, debe eliminar todos los datos cifrados. Haga clic en el **eliminar** situado en la [las claves de cifrado](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) página para realizar este paso. Después de eliminar el contenido cifrado, debe actualizar manualmente todas las suscripciones y volver a especificar todas las credenciales almacenadas que se hayan definido para los informes y las suscripciones controladas por datos del servidor de informes.  
+ Si restaura una clave no válida que sea diferente de la que se usó para cifrar datos, no se podrán descifrar los datos que estén almacenados actualmente en la base de datos del servidor de informes. Si restaura una clave no válida, debería restaurar una copia de seguridad de la clave correcta inmediatamente, si está disponible. Si no dispone de una copia de seguridad de la  clave que se usó para cifrar los datos, debe eliminar todos los datos cifrados. Haga clic en el botón **Eliminar** de la página [Claves de cifrado](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md) para realizar este paso. Después de eliminar el contenido cifrado, debe actualizar manualmente todas las suscripciones y volver a especificar todas las credenciales almacenadas que se hayan definido para los informes y las suscripciones controladas por datos del servidor de informes.  
   
 ## <a name="restore-encryption-key-dialog"></a>Cuadro de diálogo Restaurar clave de cifrado  
  Para obtener información sobre dónde encontrar el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, vea [Reporting Services Configuration Manager &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
- Para abrir el cuadro de diálogo Restaurar clave de cifrado, haga clic en **las claves de cifrado** en el panel de navegación de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager y, a continuación, haga clic en **restaurar**. Este cuadro de diálogo también aparece al actualizar la cuenta de servicio con la página cuenta de servicio en la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. Para obtener más información sobre  
+ Para abrir el cuadro de diálogo Restaurar clave de cifrado, haga clic en **Claves de cifrado** en el panel de navegación del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y, a continuación, haga clic en **Restaurar**. Este cuadro de diálogo también aparece al actualizar la cuenta de servicio desde la página Cuenta de servicio del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información sobre  
   
 ## <a name="options"></a>Opciones  
  **Ubicación del archivo**  
  Seleccione el archivo protegido mediante contraseña que contenga una copia de la clave simétrica. La extensión de archivo predeterminada es .snk.  
   
  **Contraseña**  
- Escriba la contraseña que desbloquea el archivo. Solo los usuarios que conocen la contraseña pueden restaurar la clave. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exige una directiva de contraseña segura. La contraseña debe contener ocho caracteres, como mínimo, e incluir una combinación de caracteres alfanuméricos en mayúsculas y minúscula, y al menos un carácter de símbolo.  
+ Escriba la contraseña que desbloquea el archivo. Solo los usuarios que conocen la contraseña pueden restaurar la clave. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] exige una directiva de contraseñas segura. La contraseña debe contener ocho caracteres, como mínimo, e incluir una combinación de caracteres alfanuméricos en mayúsculas y minúscula, y al menos un carácter de símbolo.  
   
 ## <a name="see-also"></a>Vea también  
  [Temas de Ayuda de F1 de administrador de configuración de Reporting Services &#40;modo nativo de SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   

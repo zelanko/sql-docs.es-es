@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f641b27357e75db0fb0f6ef71ff701d4f04b45a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154569"
 ---
 # <a name="save-metadata--mysqltosql"></a>Guardar metadatos (MySQLToSQL)
 El **guardar metadatos** cuadro de diálogo le pide que cargar los metadatos en su proyecto SSMA antes de guardarlo. Esto le permite tener un archivo de proyecto completo que se puede usar sin conexión y enviar a otras personas, como el personal de soporte técnico.  
@@ -23,7 +23,7 @@ El **guardar metadatos** cuadro de diálogo le pide que cargar los metadatos en 
 Para tener acceso a la **guardar metadatos** cuadro de diálogo, guarde el proyecto. Si falta cualquier metadato SSMA mostrará el **guardar metadatos** cuadro de diálogo.  
   
 ## <a name="options"></a>Opciones  
-**Nombre**  
+**Name**  
 El nombre de cada base de datos en el proyecto.  
   
 **Estado**  

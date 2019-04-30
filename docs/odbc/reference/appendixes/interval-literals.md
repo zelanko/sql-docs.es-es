@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc5d09bca83724bb956d39512c51c3dc47db1bad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188804"
 ---
 # <a name="interval-literals"></a>Literales de intervalo
 ODBC exige que todos los controladores para admiten la conversión del tipo de datos SQL_CHAR o SQL_VARCHAR a todos los tipos de datos de intervalo de C. Sin embargo, si el origen de datos subyacente no admite tipos de datos interval, el controlador necesita conocer el formato correcto del valor en el campo SQL_CHAR para admitir estas conversiones. De forma similar, ODBC requiere que se debe tener cualquier tipo ser convertible a SQL_CHAR o SQL_VARCHAR, por lo que necesita saber qué formato de un intervalo que se almacena en el campo de carácter un controlador de C de ODBC. En esta sección se describe la sintaxis de literales de intervalo, que debe usar para validar los campos SQL_CHAR durante la conversión a o desde tipos de datos de intervalo de C el escritor de controlador.  
   
 > [!NOTE]  
->  La sintaxis completa de BNF para literales de intervalo se muestra en la sección [sintaxis de literales de intervalo](../../../odbc/reference/appendixes/interval-literal-syntax.md) en Apéndice C: SQL gramática.  
+>  La sintaxis completa de BNF para literales de intervalo se muestra en la sección [sintaxis de literales de intervalo](../../../odbc/reference/appendixes/interval-literal-syntax.md) en el apéndice C: Gramática de SQL.  
   
  Para pasar los literales de intervalo como parte de una instrucción SQL, se define una sintaxis de cláusulas de escape para literales de intervalo. Para obtener más información, consulte [fecha, hora y marca de tiempo literales](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   

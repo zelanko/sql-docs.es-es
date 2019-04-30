@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee21b5c88649c02d4a78f2336c616261ce54744d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198584"
 ---
 # <a name="accessing-visual-foxpro-data-from-microsoft-office"></a>Acceso a datos de Visual FoxPro desde Microsoft Office
 Puede usar el controlador ODBC de Microsoft Visual FoxPro para tener acceso a datos de Visual FoxPro desde su Microsoft Office para las aplicaciones de Windows 95 o Windows 98.  
@@ -32,4 +32,4 @@ Puede usar el controlador ODBC de Microsoft Visual FoxPro para tener acceso a da
 |--------|---------|  
 |Utilizar Microsoft Access|[Consultar y actualizar datos de Visual FoxPro desde Access](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md)<br /><br /> [Importar datos de Visual FoxPro en Microsoft Access](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md)|  
 |Usar Microsoft Excel|[Obtiene acceso a un origen de datos de Visual FoxPro desde Microsoft Excel](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)<br /><br /> [Importar datos a Microsoft Excel desde una base de datos de Visual FoxPro](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)|  
-|Utilizar Microsoft Word|[Crear etiquetas postales en Microsoft Word usando datos de Visual FoxPro](../../odbc/microsoft/creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data.md)|
+|Use Microsoft Word|[Crear etiquetas postales en Microsoft Word usando datos de Visual FoxPro](../../odbc/microsoft/creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data.md)|

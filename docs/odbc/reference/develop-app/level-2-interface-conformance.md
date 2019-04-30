@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bff3de6a9b9ec57f1ea96d6db17b9b30c5a22996
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63179823"
 ---
 # <a name="level-2-interface-conformance"></a>Cumplimiento de la interfaz de nivel 2
 El nivel de conformidad de interfaz de nivel 2 incluye la funcionalidad de nivel de cumplimiento de la interfaz de nivel 1 y las características siguientes:  

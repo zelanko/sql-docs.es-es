@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0865502928e98329764ae6085ab2b67aa26f0517
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63128035"
 ---
 # <a name="drop-table-command"></a>Comando DROP TABLE
 Quita una tabla de la base de datos especificado con el origen de datos y lo elimina del disco.  
@@ -51,4 +51,4 @@ DROP TABLE TableName | FileName | ?
 |Sintaxis de ODBC|Origen de datos|Sintaxis de Visual FoxPro|  
 |-----------------|-----------------|--------------------------|  
 |DROP TABLE *nombre de la tabla de base*|Base de datos (archivo .dbc)|Quitar tabla *TableName* eliminar|  
-||Directorio de tablas libres (archivos)|Borrar *dbfName*<br /><br /> Borrar *cdxName*<br /><br /> Borrar *fptName*|
+||Directorio de tablas libres (archivos)|Borrar *dbfName*<br /><br /> ERASE *cdxName*<br /><br /> Borrar *fptName*|

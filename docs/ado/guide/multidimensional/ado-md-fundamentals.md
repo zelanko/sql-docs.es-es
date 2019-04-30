@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ceb1bcf0e05a667372aefa625c40d4ef0238661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240024"
 ---
 # <a name="ado-md-fundamentals"></a>Conceptos básicos de ADO MD
 Microsoft® ActiveX® Data Objects (Multidimensional) (ADO MD) proporciona un acceso sencillo a datos multidimensionales de lenguajes como Microsoft Visual Basic®, Microsoft Visual C++®. ADO MD amplía Microsoft ActiveX® Data Objects (ADO) para incluir objetos específicos de datos multidimensionales, como el [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) y [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objetos. Con ADO MD puede examinar el esquema multidimensional, un cubo de consulta y recuperar los resultados.  

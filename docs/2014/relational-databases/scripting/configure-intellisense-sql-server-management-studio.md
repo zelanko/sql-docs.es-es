@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cafcf49f5552f9de1e94cf6978924e88246ec075
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067641"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>Configurar IntelliSense (SQL Server Management Studio)
   La mayoría de las opciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense están activadas de forma predeterminada. Es posible desactivar una opción e invocarla mediante un comando de menú o una combinación de teclas.  

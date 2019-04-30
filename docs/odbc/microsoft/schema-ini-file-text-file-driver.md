@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127909"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Archivo Schema.ini (controlador de archivo de texto)
 Cuando se usa el controlador de texto, el formato del archivo de texto se determina mediante el uso de un archivo de información de esquema. El archivo de información de esquema es siempre denominado Schema.ini y siempre se mantiene en el mismo directorio que el origen de datos de texto. El archivo de información de esquema proporciona la IISAM con información sobre el formato general del archivo, el nombre de columna y la información de tipo de datos y varias otras características de datos. Un archivo Schema.ini siempre es necesario para tener acceso a datos de longitud fija. Debe usar un archivo Schema.ini cuando la tabla de texto contiene la fecha y hora, moneda, o datos Decimal o siempre que desee más control sobre la administración de los datos en la tabla.  
@@ -54,10 +54,10 @@ Cuando se usa el controlador de texto, el formato del archivo de texto se determ
   
 |Especificador de formato|Formato de tabla|En la instrucción Schema.ini Format|  
 |----------------------|------------------|---------------------------------|  
-|**Delimitado por tabulaciones**|Campos en el archivo están delimitados por tabulaciones.|Formato = TabDelimited|  
-|**COMAS**|Campos en el archivo están delimitados por comas (valores separados por comas).|Formato = CSVDelimited|  
-|**Personalizado**|Campos en el archivo se delimitan mediante cualquier carácter que se elija para introducir en el cuadro de diálogo. Todos excepto las comillas dobles (") se permiten, incluidos en blanco.|Formato = delimitado (*carácter personalizado*)<br /><br /> -o bien-<br /><br /> Sin delimitador especificado:<br /><br /> Formato = delimitado (de)|  
-|**Longitud fija**|Son campos en el archivo de longitud fija.|Formato = FixedLength|  
+|**Delimitado por tabulaciones**|Campos en el archivo están delimitados por tabulaciones.|Format=TabDelimited|  
+|**COMAS**|Campos en el archivo están delimitados por comas (valores separados por comas).|Format=CSVDelimited|  
+|**Personalizado**|Campos en el archivo se delimitan mediante cualquier carácter que se elija para introducir en el cuadro de diálogo. Todos excepto las comillas dobles (") se permiten, incluidos en blanco.|Formato = delimitado (*carácter personalizado*)<br /><br /> -o bien-<br /><br /> Sin delimitador especificado:<br /><br /> Format=Delimited( )|  
+|**Longitud fija**|Son campos en el archivo de longitud fija.|Format=FixedLength|  
   
 ## <a name="specifying-the-fields"></a>Especificar los campos  
  Puede especificar los nombres de campo en un archivo de texto delimitado por el carácter de dos maneras:  
@@ -100,7 +100,7 @@ n=ColumnNametype [#]
 |Parámetro|Descripción|  
 |---------------|-----------------|  
 |*ColumnName*|El nombre de la columna de texto. Si el nombre de columna contiene espacios incrustados, debe encerrarlo entre comillas dobles.|  
-|*Tipo*|Tipos de datos son los siguientes:<br /><br /> **Tipos de datos Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Moneda<br /><br /> Único<br /><br /> Doble<br /><br /> DateTime<br /><br /> Texto<br /><br /> Memorándum<br /><br /> **Tipos de datos ODBC** Char (igual que el texto)<br /><br /> Float (igual que Double)<br /><br /> Entero (igual que Short)<br /><br /> LongChar (igual que Memo)<br /><br /> Fecha *formato de fecha*|  
+|*Tipo*|Tipos de datos son los siguientes:<br /><br /> **Tipos de datos Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Moneda<br /><br /> Único<br /><br /> Doble<br /><br /> Datetime<br /><br /> Text<br /><br /> Memorándum<br /><br /> **Tipos de datos ODBC** Char (igual que el texto)<br /><br /> Float (igual que Double)<br /><br /> Entero (igual que Short)<br /><br /> LongChar (igual que Memo)<br /><br /> Fecha *formato de fecha*|  
 |**Width**|El valor de cadena literal `Width`. Indica que el número siguiente designa el ancho de la columna (opcional para archivos delimitados por caracteres; necesario para los archivos de longitud fija).|  
 |*#*|El valor entero que designa el ancho de la columna (obligatorio si **ancho** se especifica).|  
   
@@ -123,7 +123,7 @@ CharacterSet=ANSI
 |**CurrencySymbol**|Indica el símbolo de moneda que se puede usar para los valores de moneda en el archivo de texto. Algunos ejemplos son el signo de dólar ($) y minería de datos.|  
 |**CurrencyPosFormat**|Se puede establecer en cualquiera de los siguientes valores:<br /><br /> -Prefijo de símbolo de moneda sin separación ($1)<br />-Sufijo de símbolo de moneda sin separación (1$)<br />-Prefijo de símbolo de moneda con separación de un carácter ($ 1)<br />-Sufijo con separación de un carácter de símbolo de moneda (1 $)|  
 |**CurrencyDigits**|Especifica el número de dígitos utilizados para la parte fraccionaria de un importe de divisa.|  
-|**CurrencyNegFormat**|Puede presentar uno de los siguientes valores:<br /><br /> -   ($1)<br />--$1<br />-$1<br />-$1:<br />-   (1$)<br />--1$<br />-1$<br />-$- de 1<br />--1 $<br />--$ 1<br />-$- de 1<br />-$ 1:<br />-$ -1<br />-1 $<br />-   ($ 1)<br />-   (1 $)<br /><br /> En este ejemplo se muestra el signo de dólar, pero se debe reemplazar con los valores adecuados **CurrencySymbol** valor en el programa real.|  
+|**CurrencyNegFormat**|Puede presentar uno de los siguientes valores:<br /><br /> -   ($1)<br />-   -$1<br />-   $-1<br />-   $1-<br />-   (1$)<br />-   -1$<br />-   1-$<br />-   1$-<br />-   -1 $<br />-   -$ 1<br />-   1 $-<br />-   $ 1-<br />-   $ -1<br />-   1- $<br />-   ($ 1)<br />-   (1 $)<br /><br /> En este ejemplo se muestra el signo de dólar, pero se debe reemplazar con los valores adecuados **CurrencySymbol** valor en el programa real.|  
 |**CurrencyThousandSymbol**|Indica el símbolo de carácter único que puede usarse para separar los valores de moneda en el archivo de texto miles.|  
 |**CurrencyDecimalSymbol**|Puede establecerse en cualquier carácter individual que se usa para separar la totalidad de la parte fraccionaria de un importe de divisa.|  
   

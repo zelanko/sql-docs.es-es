@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 85df40b07542e1af144796d4e8b5f9fb33cdc7c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065773"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Usar el formato de caracteres Unicode para importar o exportar datos (SQL Server)
   El formato de caracteres Unicode se recomienda para las transferencias masivas de datos entre varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un archivo de datos que contenga caracteres DBCS o extendidos. El formato de datos de caracteres Unicode permite exportar datos desde un servidor mediante una página de códigos utilizada por el cliente que está realizando la operación. En esos casos, el uso del formato de caracteres Unicode tiene las siguientes ventajas:  
@@ -32,9 +32,9 @@ ms.locfileid: "48191775"
 > [!IMPORTANT]  
 >  Para que un archivo de formato trabaje con un archivo de datos de caracteres Unicode, todos los campos de entrada deben ser cadenas de texto Unicode (es decir, de tamaño fijo o cadenas Unicode terminadas en caracteres).  
   
- El `sql_variant` datos que se almacenan en un archivo de datos de formato de caracteres Unicode funciona en la misma manera funciona en un archivo de datos de formato de caracteres, excepto en que los datos se almacenan como `nchar` en lugar de `char` datos. Para obtener más información sobre el formato de caracteres, consulte [Compatibilidad con la intercalación y Unicode](../collations/collation-and-unicode-support.md).  
+ Los datos `sql_variant` almacenados en un archivo de datos con formato de caracteres Unicode funcionan de la misma forma que en un archivo de datos en modo de caracteres, con la excepción de que los datos se almacenan como `nchar` en lugar de `char`. Para obtener más información sobre el formato de caracteres, consulte [Compatibilidad con la intercalación y Unicode](../collations/collation-and-unicode-support.md).  
   
- Para usar un terminador de campo o de fila distinto al predeterminado que se proporciona con el formato de caracteres Unicode, consulte [especificar terminadores de campo y fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
+ Para usar un terminador de campo o de fila distinto al predeterminado que se proporciona con el formato de caracteres Unicode, vea [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).  
   
 ## <a name="command-options-for-unicode-character-format"></a>Opciones de comando para el formato de caracteres Unicode  
  Puede importar datos del formato de caracteres Unicode en una tabla mediante **bcp**, BULK INSERT o INSERT... SELECT \* FROM OPENROWSET(BULK...). Para un comando **bcp** o una instrucción BULK INSERT, puede especificar el formato de datos en la línea de comandos. Para una instrucción INSERT ... SELECT * FROM OPENROWSET(BULK...), debe especificar el formato de los datos en un archivo de formato.  
@@ -55,7 +55,7 @@ ms.locfileid: "48191775"
  En los siguientes ejemplos se muestra el modo de exportar datos de forma masiva con formato de datos de caracteres Unicode mediante **bcp** e importar masivamente los mismos datos mediante BULK INSERT.  
   
 ### <a name="sample-table"></a>Tabla de ejemplo  
- Los ejemplos requieren una tabla denominada `myTestUniCharData` se crea una tabla en la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos de ejemplo en el `dbo` esquema. Antes de poder ejecutar los ejemplos, debe crear esta tabla. Para crear esta tabla, en el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , ejecute:  
+ Los ejemplos requieren la creación de una tabla denominada `myTestUniCharData` en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] , bajo el esquema `dbo` . Antes de poder ejecutar los ejemplos, debe crear esta tabla. Para crear esta tabla, en el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , ejecute:  
   
 ```  
 USE AdventureWorks2012;  
@@ -84,7 +84,7 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 |Calificadores|Descripción|  
 |----------------|-----------------|  
 |**-w**|Especifica el formato de caracteres Unicode.|  
-|**-t** `,`|Especifica una coma (`,`) como terminador de campo.<br /><br /> Nota: El terminador de campo predeterminado es la ficha carácter Unicode (\t). Para obtener más información, vea [Specify Field and Row Terminators &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
+|**-t** `,`|Especifica una coma (`,`) como terminador de campo.<br /><br /> Nota: El terminador de campo predeterminado es la ficha carácter Unicode (\t). Para obtener más información, vea [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
 |**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T** , es necesario especificar **-U** y **-P** para iniciar sesión correctamente.|  
   
  En el siguiente ejemplo se exportan masivamente datos en formato de caracteres Unicode desde la tabla `myTestUniCharData` en un nuevo archivo de datos denominado `myTestUniCharData-w.Dat` que usa la coma (`,`) como terminador de campo. En el símbolo del sistema de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, especifique:  

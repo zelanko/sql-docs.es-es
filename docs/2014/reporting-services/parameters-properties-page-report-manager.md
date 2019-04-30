@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f83e66d238aa67b28bf547540c5a6b5dfcc9c92d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188289"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Parámetros (página de propiedades del Administrador de informes)
   Utilice la página de propiedades Parámetros para ver o modificar la configuración de los parámetros de un informe con parámetros.  

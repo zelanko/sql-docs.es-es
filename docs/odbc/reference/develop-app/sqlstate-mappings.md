@@ -1,5 +1,5 @@
 ---
-title: Asignaciones SQLSTATE | Microsoft Docs
+title: SQLSTATE Mappings | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89be9c958cb848384a67e7eaf74cfecc72f07c35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148880"
 ---
 # <a name="sqlstate-mappings"></a>Asignaciones SQLSTATE
-En este tema se describe los valores de SQLSTATE para ODBC 2. *x* y ODBC 3. *x*. Para obtener más información sobre ODBC 3. *x* valores de SQLSTATE, consulte [Apéndice A: códigos de Error de ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
+En este tema se describe los valores de SQLSTATE para ODBC 2. *x* y ODBC 3. *x*. Para obtener más información sobre ODBC 3. *x* valores de SQLSTATE, consulte [Apéndice A: Códigos de Error ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
   
  En ODBC 3. *x*HYxxx SQLSTATE se devuelven en lugar de S1xxx y 42Sxx SQLSTATE se devuelve en lugar de S00XX. Esto se hace para que se correspondan con los estándares de Open Group e ISO. En muchos casos, la asignación no es uno a uno porque los estándares han redefinido la interpretación de SQLSTATE de varias.  
   
@@ -31,7 +31,7 @@ En este tema se describe los valores de SQLSTATE para ODBC 2. *x* y ODBC 3. *x*.
   
  Cuando se establece el atributo de entorno SQL_ATTR_ODBC_VERSION en SQL_OV_ODBC2, el controlador envía ODBC 2. *x* SQLSTATE en lugar de ODBC 3. *x* SQLSTATEs cuando **SQLGetDiagField** o **SQLGetDiagRec** se llama. Una asignación determinada puede determinarse mediante la anotación de la API ODBC 2 *.x* SQLSTATE en la columna 1 de la siguiente tabla se corresponde con el ODBC 3. *x* SQLSTATE en la columna 2.  
   
-|ODBC 2. *x* SQLSTATE|ODBC 3. *x* SQLSTATE|Comentarios|  
+|ODBC 2.*x* SQLSTATE|ODBC 3.*x* SQLSTATE|Comentarios|  
 |-------------------------|-------------------------|--------------|  
 |01S03|01001||  
 |01S04|01001||  

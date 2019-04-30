@@ -11,18 +11,18 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6eea9f96939f61da77262b549e2ec966ae9a957b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137439"
 ---
-# <a name="lesson-4-storing-supplier-data-in-mds"></a>Lección 4: almacenar datos de proveedor en MDS
+# <a name="lesson-4-storing-supplier-data-in-mds"></a>Lección 4: Almacenamiento de datos de proveedor en MDS
   Master Data Services (MDS) es la solución de SQL Server para la administración de datos maestros. La administración de datos maestros (MDM) describe los esfuerzos realizados por una organización para detectar y definir listas no transaccionales de datos.  
   
  Los modelos son el nivel superior de la organización de Master Data Services y organizan la estructura de los datos maestros. La implementación de MDS puede tener uno o varios modelos, donde cada modelo agrupa datos similares. En general, los datos maestros se pueden clasificar en una de estas cuatro categorías: personas, lugares, cosas o conceptos. Por ejemplo, puede crear un modelo Producto que vaya a contener datos relacionados con productos o un modelo Cliente para que contenga datos relacionados con clientes. Vea [Modelos (Master Data Services)](https://msdn.microsoft.com/library/ee633746.aspx) para obtener más detalles.  
   
- Un modelo puede contener una o varias entidades. Cada entidad tiene atributos (columnas) y miembros (filas). Cada fila contiene los datos maestros. En esta lección, creará un modelo Proveedores con dos entidades denominadas Proveedor y Estado. La entidad Proveedor tendrá los atributos siguientes: Código, Nombre, Nombre de contacto, Apellido de contacto, Dirección de correo electrónico de contacto, Línea de dirección, Ciudad, Estado, Código postal y País. Vea [Atributos (Master Data Services)](https://msdn.microsoft.com/library/ee633745.aspx) para obtener más detalles sobre los atributos en general. Los atributos Código y Nombre corresponden a las columnas SupplierID y Supplier Name del archivo de Excel Cleansed and Matched Suppliers.  
+ Un modelo puede contener una o varias entidades. Cada entidad tiene atributos (columnas) y miembros (filas). Cada fila contiene los datos maestros. En esta lección, creará un modelo Proveedores con dos entidades denominadas Proveedor y Estado. La entidad proveedor tendrá los siguientes atributos: Código, nombre, póngase en contacto con nombre, apellidos del contacto, póngase en contacto con la dirección de correo electrónico, línea de dirección, ciudad, estado, postal y país. Vea [Atributos (Master Data Services)](https://msdn.microsoft.com/library/ee633745.aspx) para obtener más detalles sobre los atributos en general. Los atributos Código y Nombre corresponden a las columnas SupplierID y Supplier Name del archivo de Excel Cleansed and Matched Suppliers.  
   
  Un atributo basado en dominio es un atributo con valores rellenados por miembros de otra entidad. Los atributos basados en dominio impiden que los usuarios escriban valores de atributo que no sean válidos. Un valor de atributo solo se puede seleccionar en la lista desplegable rellena por otra entidad. En este tutorial, el atributo Estado de la entidad Proveedor es un atributo basado en dominio con valores de la entidad Estado. Solo puede cambiar el valor del atributo Estado de la entidad Proveedor a uno de los valores de la entidad Estado. Vea [Atributos basados en dominio](../master-data-services/domain-based-attributes-master-data-services.md) para obtener más detalles.  
   

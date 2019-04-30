@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6ad253c2d0603846d6d1f795f6115e7bb727b3da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238048"
 ---
 # <a name="driver-manager-diagnostic-example"></a>Ejemplo de diagnóstico del Administrador de controladores
 El Administrador de controladores puede generar también mensajes de diagnóstico. Por ejemplo, si una aplicación pasa de una opción de dirección no válida para **SQLDataSources**, el Administrador de controladores podría dar formato y devolver los valores siguientes de **SQLGetDiagRec**:  

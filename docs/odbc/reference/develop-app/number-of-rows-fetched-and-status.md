@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab4830ddd56335959dd7049a1dabdcc3a0354213
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149331"
 ---
 # <a name="number-of-rows-fetched-and-status"></a>Número de filas recuperadas y estado
 Si se ha establecido el atributo SQL_ATTR_ROWS_FETCHED_PTR la instrucción, especifica un búfer que devuelve el número de filas recuperadas por la llamada a **SQLFetch** o **SQLFetchScroll**y las filas de error. (Este número es un recuento de todas las filas que no tienen el estado SQL_ROW_NO_ROWS). Después de llamar a **SQLBulkOperations** o **SQLSetPos**, el búfer contiene el número de filas afectadas por una operación masiva realizada por la función. Si se ha establecido el atributo de instrucción SQL_ATTR_ROW_STATUS_PTR, **SQLFetch** o **SQLFetchScroll** devuelve el *matriz de Estados de fila,* que proporciona el estado de cada fila devuelta. Ambos de los búferes apuntados a estos campos asignados por la aplicación y rellenados por el controlador. Una aplicación debe asegurarse de que estos punteros siguen siendo válidos hasta que se cierra el cursor.  

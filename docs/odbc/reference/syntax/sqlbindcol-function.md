@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab434e90f1b92911bfdfb9f66da67244e26ef776
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63129834"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol (función)
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ISO 92  
   
  **Resumen**  
  **SQLBindCol** enlaza los búferes de datos de aplicación a las columnas del conjunto de resultados.  
@@ -184,7 +184,7 @@ SQLRETURN SQLBindCol(
 ## <a name="column-wise-binding"></a>El enlace  
  En el enlace, la aplicación enlaza separar los datos y matrices de longitud/indicador para cada columna.  
   
- Para usar el enlace, la aplicación primero establece el atributo de instrucción SQL_ATTR_ROW_BIND_TYPE en SQL_BIND_BY_COLUMN. (Es el valor predeterminado.) Para que enlazar cada columna, la aplicación realiza los pasos siguientes:  
+ Para usar el enlace, la aplicación primero establece el atributo de instrucción SQL_ATTR_ROW_BIND_TYPE en SQL_BIND_BY_COLUMN. (Esto es el valor predeterminado). Para que enlazar cada columna, la aplicación realiza los pasos siguientes:  
   
 1.  Asigna una matriz de búferes de datos.  
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 809f893a38af6f269899e8e9d5913116b32864cc
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164803"
 ---
 # <a name="data-alert-messages"></a>Mensajes de alertas de datos
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] alertas de datos envían a dos tipos de datos de mensajes de alerta por correo electrónico: Mensajes con resultados de alertas de datos y los mensajes con descripciones de errores. Los mensajes con resultados informan a todos los destinatarios de los cambios realizados en los datos del informe que sean de interés común e importantes para las decisiones empresariales. Si por alguna razón se produce un error y los resultados no están disponibles, se envía en su lugar el mensaje de error.  

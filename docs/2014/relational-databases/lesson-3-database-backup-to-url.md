@@ -1,5 +1,5 @@
 ---
-title: 'Lección 4: Creación de una base de datos en almacenamiento de Windows Azure | Microsoft Docs'
+title: 'Lección 4: Crear una base de datos de Azure Storage | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181991"
 ---
-# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Lección 4: Crear una base de datos de Azure Storage
+# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>Lección 4: Creación de una base de datos en Windows Azure Storage
   En esta lección, aprenderá a crear una base de datos mediante la característica Archivos de datos de SQL Server en Windows Azure. Tenga en cuenta que, antes que esta lección, debe completar las lecciones 1, 2 y 3. La lección 3 es un paso muy importante porque tiene que almacenar la información sobre el contenedor de Almacenamiento de Windows Azure, su nombre de directiva asociado y la clave SAS en el almacén de credenciales de SQL Server antes de pasar a la lección 4.  
   
  Para cada contenedor de almacenamiento utilizado por un archivo de datos o de registro, debe crear una credencial de SQL Server cuyo nombre coincida con la ruta de acceso del contenedor. Después, crea una nueva base de datos de Azure Storage  
@@ -33,7 +33,7 @@ ms.locfileid: "48063015"
   
 -   Ha creado una credencial de SQL Server en el equipo de origen.  
   
- Para crear una base de datos en Windows Azure usando la característica Archivos de datos de SQL Server en Windows Azure, siga estos pasos:  
+ Para crear una base de datos en Microsoft Azure usando la característica Archivos de datos de SQL Server en Microsoft Azure, siga estos pasos:  
   
 1.  Conéctese a SQL Server Management Studio.  
   
@@ -86,11 +86,11 @@ ms.locfileid: "48063015"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **Nota:** si hay referencias activas a archivos de datos en un contenedor, cualquier intento de eliminar el asociado de SQL Server se produce un error de credenciales. De igual forma, si ya hay una concesión en un archivo de base de datos específico de un blob y desea eliminarlo, primero debe interrumpirla en el blob. Para interrumpir la concesión, puede usar [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
+ **Nota:** Si hay referencias activas a archivos de datos en un contenedor, cualquier intento de eliminar la credencial asociada de SQL Server produce un error. De igual forma, si ya hay una concesión en un archivo de base de datos específico de un blob y desea eliminarlo, primero debe interrumpirla en el blob. Para interrumpir la concesión, puede usar [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx).  
   
- Mediante esta nueva característica, puede configurar SQL Server de modo que cualquier instrucción CREATE DATABASE será, de forma predeterminada, una base de datos habilitada para la nube. Es decir, puede establecer los datos predeterminados y las ubicaciones del registro en las propiedades de la instancia de SQL Server Management Studio Server de modo que, cuando cree una base de datos, todos los archivos de base de datos (.mdf, .ldf) se crean como blobs de página en Almacenamiento de Windows Azure.  
+ Mediante esta nueva característica, puede configurar SQL Server de modo que cualquier instrucción CREATE DATABASE será, de forma predeterminada, una base de datos habilitada para la nube. Es decir, puede establecer los datos predeterminados y las ubicaciones del registro en las propiedades de la instancia de SQL Server Management Studio Server de modo que, cuando cree una base de datos, todos los archivos de base de datos (.mdf,.ldf) se crean como blobs de página en Azure Storage.  
   
- Para crear una base de datos de Almacenamiento de Windows Azure con la interfaz de usuario de SQL Server Management Studio, siga estos pasos:  
+ Para crear una base de datos de Azure Storage con la interfaz de usuario de SQL Server Management Studio, siga estos pasos:  
   
 1.  En el Explorador de objetos, conéctese a una instancia del Motor de base de datos de SQL Server y, a continuación, expándala.  
   

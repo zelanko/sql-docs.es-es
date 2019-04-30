@@ -1,5 +1,5 @@
 ---
-title: Instrucción SCOPE (MDX) | Documentos de Microsoft
+title: ÁMBITO (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 497fdfb11ec186ffba56470f2b0ede2ed2f4221a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187528"
 ---
-# <a name="mdx-scripting---scope"></a>Scripting de MDX: ámbito
+# <a name="mdx-scripting---scope"></a>Scripting de MDX: SCOPE
 
 
   Limita el ámbito de las instrucciones de Expresiones multidimensionales (MDX) especificadas a un subcubo especificado.  
@@ -73,7 +73,7 @@ Limited_Set ::=
  *single_tuple*  
  Una tupla sencilla.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La instrucción SCOPE determina el subcubo que se verá afectado por la ejecución de una o más de las instrucciones MDX. A menos que una instrucción MDX esté contenida en una instrucción SCOPE, el ámbito implícito de una instrucción MDX es la totalidad del cubo.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ Limited_Set ::=
  Los miembros calculados y los conjuntos con nombre creados en una instrucción SCOPE no se ven afectados por la instrucción SCOPE.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo, desde el script de cálculo MDX en la solución de ejemplo Adventure Works, define el ámbito actual como fiscal quarter del año fiscal 2005 y la medida sales amount quota y, a continuación, asigna un valor a las celdas en el ámbito actual mediante el uso de la **ParallelPeriod** (función). En el ejemplo, a continuación, modifica el ámbito mediante otra instrucción SCOPE y, a continuación, realiza otra asignación mediante el [This (MDX)](../mdx/this-mdx.md) (función).  
+ Solución de ejemplo el siguiente ejemplo, desde el script de cálculo MDX en el de Adventure Works, define el ámbito actual como fiscal quarter del año fiscal 2005 y la medida sales amount quota y, a continuación, asigna un valor a las celdas en el ámbito actual mediante el uso de la  **ParallelPeriod** función. En el ejemplo, a continuación, modifica el ámbito mediante otra instrucción SCOPE y, a continuación, realiza otra asignación mediante el [This (MDX)](../mdx/this-mdx.md) función.  
   
 ```  
 Scope   
@@ -115,6 +115,6 @@ End Scope ;
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Instrucciones de Scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
+ [Instrucciones para scripting de MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

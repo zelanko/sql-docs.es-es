@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 249616f2f08b8b8f6138ce13621d26c5f7af9e1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213348"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
 Especifica cómo heredan los permisos establecidos con los objetos [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md).  
@@ -32,7 +32,7 @@ Especifica cómo heredan los permisos establecidos con los objetos [SetPermissio
 |**adInheritContainers**|2|Otros contenedores que se encuentran en el objeto principal heredan la entrada.|  
 |**adInheritNone**|0|Predeterminado: Se produce ninguna herencia.|  
 |**adInheritNoPropagate**|4|El **marcas adInheritObjects** y **adInheritContainers** marcas no se propagan a una entrada heredada.|  
-|**marcas adInheritObjects**|1|Objetos que no son contenedores en el contenedor heredan los permisos.|  
+|**adInheritObjects**|1|Objetos que no son contenedores en el contenedor heredan los permisos.|  
   
 ## <a name="applies-to"></a>Se aplica a  
  [SetPermissions (método, ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)

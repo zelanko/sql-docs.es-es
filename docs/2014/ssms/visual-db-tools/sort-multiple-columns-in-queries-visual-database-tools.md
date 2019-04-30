@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b91bff77f3df9e1416837dead0c0261bf6473e34
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63070914"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>Ordenar varias columnas en las consultas (Visual Database Tools)
   Puede especificar el orden en el que desea usar las columnas para ordenar los datos utilizando la columna **Criterio de ordenación** en el [panel Criterios](visual-database-tools.md).  

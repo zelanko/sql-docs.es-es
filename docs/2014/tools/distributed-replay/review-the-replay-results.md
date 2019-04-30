@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149705"
 ---
 # <a name="review-the-replay-results"></a>Revisar los resultados de la reproducción
   Una vez que la característica de reproducción distribuida de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completa una reproducción distribuida, la actividad de reproducción de cada cliente se puede capturar y guardar en los archivos de seguimiento de resultados de cada cliente. Para capturar esta actividad, debe usar el parámetro **-o** al ejecutar la herramienta de administración con la opción **replay**. Para obtener más información sobre la opción replay, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "52792837"
 ## <a name="event-classes-captured-in-result-trace-files"></a>Clases de eventos capturadas en los archivos de seguimiento de resultados  
  En la tabla siguiente se enumeran todas las clases de eventos que se capturan el los datos de seguimiento de resultados.  
   
-|Categoría|Nombre de clase de eventos|Frecuencia de captura|Punto de captura|  
+|Category|Nombre de clase de eventos|Frecuencia de captura|Punto de captura|  
 |--------------|---------------------|-----------------------|----------------------|  
 |Eventos reproducibles|Audit Login|Una vez por cada evento Audit Login en los datos de seguimiento originales|Al completar el evento correctamente o con error|  
 ||Audit Logout|Una vez por cada evento Audit Logout en los datos de seguimiento originales|Al completar el evento correctamente o con error|  

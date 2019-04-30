@@ -1,5 +1,5 @@
 ---
-title: ValidMeasure (MDX) | Documentos de Microsoft
+title: ValidMeasure (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ddcc65d93ebd9d1ea1e9465b40fe1e6027834e37
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140244"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure (MDX)
 
@@ -32,14 +32,14 @@ ValidMeasure(Tuple_Expression)
  *Tuple_Expression*  
  Expresión MDX válida que devuelve una tupla.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **ValidMeasure** función devuelve el valor de una tupla, omitiendo los atributos que no tienen relación con el grupo de medida de la medida cuyo valor devuelve la tupla. Un atributo puede no estar relacionado con una medida por dos razones:  
   
 -   La dimensión del atributo no tiene ninguna relación con el grupo de medida de la medida de la tupla.  
   
 -   La dimensión del atributo no tiene una relación con el grupo de medida de la medida, pero el atributo de granularidad no es el atributo clave y el atributo de granularidad no tiene una relación directa con el atributo en la tupla.  
   
- El comportamiento especificado por esta función es el comportamiento predeterminado del servidor y se controla mediante la **IgnoreUnrelatedDimensions** propiedad en el objeto de grupo de medida.  
+ El comportamiento especificado por esta función es el comportamiento de servidor predeterminado y se controla mediante el **IgnoreUnrelatedDimensions** propiedad del objeto de grupo de medida.  
   
  En cada atributo de la tupla especificada con granularidad (es decir, donde el miembro de la tupla no es el miembro All), la coordenada actual de cada uno de esos atributos se mueve de la siguiente manera:  
   

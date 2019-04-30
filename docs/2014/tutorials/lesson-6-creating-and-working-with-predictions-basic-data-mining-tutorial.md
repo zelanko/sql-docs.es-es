@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185397"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>Lección 6: Crear y trabajar con predicciones (Tutorial de minería de datos básicos)
   Ha entrenado, probado y explorado los modelos de minería de datos que creó. Ahora ya puede usar los modelos para identificar a las personas que es más probable que respondan a la nueva campaña de envío de correo directo.  

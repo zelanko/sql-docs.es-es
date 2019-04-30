@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d85f9fcf788dc5ccbba4b2675cbd7caa34dd242c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63132771"
 ---
 # <a name="sqlgetstmtattr-function"></a>Función SQLGetStmtAttr
 **Conformidad**  
- Versión de introducción: Compatibilidad de ODBC 3.0 estándares: 92 ISO  
+ Versión de introducción: Compatibilidad de ODBC 3.0 estándares: ISO 92  
   
  **Resumen**  
  **SQLGetStmtAttr** devuelve el valor actual de un atributo de instrucción.  

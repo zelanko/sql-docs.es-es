@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b310b51c32e4a0b3254035311c7a10182c06e550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154720"
 ---
 # <a name="working-with-upgrade-advisor"></a>Trabajar con el Asesor de actualizaciones
   Para asegurarse de que la actualización a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se realice correctamente, el Asesor de actualizaciones proporciona una consola central que permite identificar los problemas que se deben tratar en las instalaciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 7e308589ab565b5702bbf2cba939835a50c08d8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126657"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>Introducción a SSMA para SAP ASE (SybaseToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para SAP ASE permite rápidamente convertir esquemas de base de datos de SAP Adaptive Server Enterprise (ASE) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o esquemas de base de datos de SQL Azure, cargue los esquemas resultantes a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database, y migrar datos desde SAP ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database.  
@@ -64,7 +64,7 @@ Puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el Explor
 Para obtener más información, consulte [cargar objetos de base de datos para convertir a SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md).  
   
 ### <a name="metadata"></a>Metadatos  
-A la derecha de cada explorador de metadatos son las pestañas que describen el objeto seleccionado. Por ejemplo, si selecciona una tabla en el Explorador de metadatos de Sybase, seis pestañas aparecen: **tabla**, **SQL**, **Type Mapping**, **datos**,  **Propiedades**, y **informe**. El **informe** pestaña contiene información solo cuando se crea un informe que contiene el objeto seleccionado. Si selecciona una tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o explorador de metadatos de SQL Azure, aparezcan como tres fichas: **tabla**, **SQL**, y **datos**.  
+A la derecha de cada explorador de metadatos son las pestañas que describen el objeto seleccionado. Por ejemplo, si selecciona una tabla en el Explorador de metadatos de Sybase, aparecen seis pestañas: **Tabla**, **SQL**, **asignación de tipos de**, **datos**, **propiedades**, y **informe**. El **informe** pestaña contiene información solo cuando se crea un informe que contiene el objeto seleccionado. Si selecciona una tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o explorador de metadatos de SQL Azure, aparezcan como tres fichas: **Tabla**, **SQL**, y **datos**.  
   
 La mayoría de los metadatos configuración es de solo lectura. Sin embargo, puede modificar los metadatos siguientes:  
   
@@ -97,7 +97,7 @@ SSMA contiene los siguientes menús:
 |--------|---------------|  
 |**Archivo**|Contiene comandos para trabajar con proyectos, conectarse a SAP ASE y conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL Database.|  
 |**Editar**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] desde el panel de detalles SQL. También contiene el **administrar marcadores** opción, donde puede ver una lista de los marcadores existentes. Puede usar los botones en el lado derecho del cuadro de diálogo para administrar los marcadores.|  
-|**Ver**|Contiene el **sincronizar metadatos Explorers** comando. Esto sincroniza los objetos entre el Explorador de metadatos de Sybase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el Explorador de metadatos de SQL Azure. También contiene comandos para mostrar y ocultar el **salida** y **lista de errores** paneles y una opción **diseños** para administrar los diseños.|  
+|**Vista**|Contiene el **sincronizar metadatos Explorers** comando. Esto sincroniza los objetos entre el Explorador de metadatos de Sybase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el Explorador de metadatos de SQL Azure. También contiene comandos para mostrar y ocultar el **salida** y **lista de errores** paneles y una opción **diseños** para administrar los diseños.|  
 |**Herramientas**|Contiene comandos para crear informes, exportar los datos y migrar objetos y datos. También proporciona acceso a la **configuración Global** y **configuración del proyecto** cuadros de diálogo.|  
 |**Herramienta de comprobación**|Contiene comandos para crear casos de prueba, ver resultados de pruebas y comandos para la administración de copia de seguridad de base de datos.|  
 |**Ayuda**|Proporciona acceso para ayudar a SSMA y a la **sobre** cuadro de diálogo.|  
@@ -111,4 +111,4 @@ El **vista** menú proporciona comandos para alternar la visibilidad de los pane
   
 ## <a name="see-also"></a>Vea también  
 [Migrar bases de datos de ASE de SAP a SQL Server: base de datos SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
-[Referencia de la interfaz de usuario &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+[User Interface Reference &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  

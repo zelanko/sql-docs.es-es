@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 275b7cd57336c22b6d1f67206d1e1cdb0b7d2abd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222703"
 ---
-# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>Tarea 1: crear el modelo Proveedores mediante Master Data Manager
+# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>Tarea 1: Creación del modelo Proveedores mediante Master Data Manager
   En esta tarea, creará un modelo denominado **proveedores** en MDS mediante **Master Data Manager**.  
   
 1.  Vaya a [ http://localhost/mds ](http://localhost/mds) para iniciar **Master Data Manager**. Reemplace la dirección URL si ha configurado la aplicación web con un nombre diferente o en un sitio web diferente.  

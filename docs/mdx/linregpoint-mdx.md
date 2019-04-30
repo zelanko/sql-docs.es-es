@@ -1,5 +1,5 @@
 ---
-title: LinRegPoint (MDX) | Documentos de Microsoft
+title: LinRegPoint (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc47b5910f0d5323b1b7e29cd3313b36d615265c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63136077"
 ---
 # <a name="linregpoint-mdx"></a>LinRegPoint (MDX)
 
 
-  Calcula la regresión lineal de un conjunto y devuelve el valor de la *intercepción* en la recta de regresión y = ax + b. para un determinado valor de x.  
+  Calcula la regresión lineal de un conjunto y devuelve el valor de la *intercepción* en la recta de regresión y = ax + b para un determinado valor de x.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -41,7 +41,7 @@ LinRegPoint(Slice_Expression_x, Set_Expression, Numeric_Expression_y [ ,Numeric_
  *Numeric_Expression_x*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número que representa los valores del eje X.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La regresión lineal, que utiliza el método de mínimos cuadrados, calcula la ecuación de la recta de regresión (es decir, la de mejor ajuste para un conjunto de puntos). La recta de regresión tiene la siguiente ecuación, donde una es la pendiente y b es la intersección:  
   
  y = ax+b  
@@ -51,7 +51,7 @@ LinRegPoint(Slice_Expression_x, Set_Expression, Numeric_Expression_y [ ,Numeric_
  Una vez que se ha calculado la recta de regresión lineal, se calcula el valor de la ecuación para la primera expresión numérica y, a continuación, se devuelve.  
   
 > [!NOTE]  
->  El **LinRegPoint** función omite las celdas vacías o celdas que contienen texto. No obstante, la función incluye celdas con valor de cero.  
+>  El **LinRegPoint** función la omite las celdas vacías o las celdas que contienen texto. No obstante, la función incluye celdas con valor de cero.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve el valor predicho de las ventas por unidad de los últimos diez períodos según la relación estadística entre Unit Sales y Store Sales.  

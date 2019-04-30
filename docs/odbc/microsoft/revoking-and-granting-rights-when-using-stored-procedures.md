@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e881201e4653a168faff2fa438be19c1ca37e9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127967"
 ---
 # <a name="revoking-and-granting-rights-when-using-stored-procedures"></a>Revocación y conceder derechos al usar procedimientos almacenados
 > [!IMPORTANT]  
@@ -27,7 +27,7 @@ ms.locfileid: "47792233"
   
  El controlador ODBC de Microsoft para Oracle devuelve el siguiente mensaje de error cuando se conceden derechos de usuario y se revocar, a continuación, en una tabla que tiene acceso a un procedimiento almacenado:  
   
- SQL_ERROR =-1  
+ SQL_ERROR=-1  
   
  szErrorMsg = "[Microsoft] [controlador ODBC para Oracle] número de parámetros incorrecto"  
   

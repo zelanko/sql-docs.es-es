@@ -1,5 +1,5 @@
 ---
-title: Seguimiento | Microsoft Docs
+title: Tracing | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b96d86952b2d8be152aefad584e85104accb7cee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148985"
 ---
 # <a name="tracing"></a>Seguimiento
 El Administrador de controladores ODBC tiene una utilidad de seguimiento que permite la secuencia de llamadas de función realizadas por una aplicación ODBC se graben y transcripción en un archivo de registro. Realizar el seguimiento de un archivo DLL que captura las llamadas entre la aplicación y el Administrador de controladores y entre el Administrador de controladores y el controlador de seguimiento. Este método de seguimiento reemplaza el seguimiento realizado por el 2 de ODBC *.x* realizan el Administrador de controladores y el seguimiento de ODBC 2 *.x* por ODBC Spy.  

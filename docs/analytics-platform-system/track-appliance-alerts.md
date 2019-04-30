@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f38f76975290538a35203ddbbed84b9354285edc
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156991"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Realizar un seguimiento de las alertas del dispositivo en Analytics Platform System
 En este tema se explica cómo usar la consola de administración y las vistas del sistema para realizar un seguimiento de las alertas en un dispositivo PDW de SQL Server.  
@@ -27,7 +27,7 @@ PDW de SQL Server registra las alertas en el [sys.dm_pdw_component_health_alerts
 ### <a name="view-alerts-by-using-the-admin-console"></a>Ver alertas mediante el uso de la consola de administración  
 Hay un **alertas** ficha para la región PDW y para la región de tejido del dispositivo. Después de producirse la conmutación por error, el evento de conmutación por error se incluye en el número de alertas en la página. Hay una página de la región PDW y la región de tejido del dispositivo. Cada página de mantenimiento tiene una pestaña. Para obtener más información sobre una alerta, haga clic en el **mantenimiento** página, el **alertas** pestaña y, a continuación, haga clic en una alerta.  
   
-![Alertas de consola de administración PDW](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
+![PDW Admin Console Alerts](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
 En el **alertas** página:  
   

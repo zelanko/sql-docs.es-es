@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 041356f05daaaef50e6e81d995209ab5379fc901
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192825"
 ---
 # <a name="row-property-ado"></a>Propiedad de las filas (ADO)
 Obtiene o establece OLE DB **fila** objeto desde o en un [Interfaz ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md) objeto. Cuando usas **put_Row** para establecer un **fila** objeto, una fila se convierte en ADO **registro** objeto.  
   
-## <a name="readwritesyntax"></a>Lectura/escritura. Sintaxis  
+## <a name="readwritesyntax"></a>Read/write.Syntax  
   
 ```  
 HRESULT get_Row([out, retval] IUnknown** ppRow);  
@@ -41,7 +41,7 @@ HRESULT put_Row([in] IUnknown* pRow);
  *ppRow*  
  Puntero a OLE DB **fila** objeto.  
   
- *pRow*  
+ *PRow*  
  OLE DB **fila** objeto.  
   
 ## <a name="return-values"></a>Valores devueltos  

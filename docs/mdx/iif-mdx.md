@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125481"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -31,7 +31,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ## <a name="arguments"></a>Argumentos  
  La función IIf toma tres argumentos: iif (\<condición >, \<rama, a continuación, >, \<else branch >).  
   
- *Filter*  
+ *Logical_Expression*  
  Una condición que se evalúa como **true** (1) o **false** (0). Debe ser expresión lógica MDX (Expresiones multidimensionales) válida.  
   
  *Sugerencia expression1 [diligente | Strict | Diferida]]*  

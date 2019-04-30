@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 628e9cb70e17271f34ce9b2c7573e918bd9009bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186953"
 ---
 # <a name="administrative-password"></a>Contraseña administrativa
   Si en la página **Distribuidores** de este asistente ha seleccionado un distribuidor remoto para este publicador, debe escribir una contraseña para la replicación de conexión entre el publicador y el distribuidor utilizando el inicio de sesión **distributor_admin** . La contraseña debe coincidir con la especificada en la página **Contraseña del distribuidor** del Asistente para configurar la distribución o en la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor** .  

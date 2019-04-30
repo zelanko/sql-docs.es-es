@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63137051"
 ---
 # <a name="extended-events-tools"></a>Herramientas de eventos extendidos
   Puede utilizar las siguientes herramientas para crear y administrar sesiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events:  
@@ -38,7 +38,7 @@ ms.locfileid: "52789995"
 ## <a name="ddl-statements"></a>Instrucciones DDL  
  Utilice las instrucciones DDL siguientes para crear, cambiar y quitar una sesión de eventos extendidos.  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)|Crea un objeto de sesión de eventos extendidos que identifica el origen de los eventos, los destinos de la sesión de eventos y los parámetros de la sesión de eventos.|  
 |[ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)|Inicia o detiene una sesión de eventos, o cambia la configuración de una sesión de eventos.|  
@@ -61,7 +61,7 @@ ms.locfileid: "52789995"
 > [!NOTE]  
 >  Estas vistas no contienen datos de sesión hasta que se inicia una sesión.  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql)|Devuelve información sobre los grupos de distribuidores de la sesión.|  
 |[sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)|Devuelve una fila por cada objeto expuesto por un paquete de eventos.|  
@@ -77,7 +77,7 @@ ms.locfileid: "52789995"
 ## <a name="system-tables"></a>Tablas del sistema  
  Las tablas del sistema siguientes se utilizan para obtener información sobre los equivalentes de eventos extendidos para columnas y clases de eventos de Seguimiento de SQL.  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |[trace_xe_event_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-event-map)|Contiene una fila para cada evento de eventos extendidos que está asignado a una clase de eventos de Seguimiento de SQL.|  
 |[trace_xe_action_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/extended-events-tables-trace-xe-action-map)|Contiene una fila para cada acción de eventos extendidos que se asigna a un identificador de columna de Seguimiento de SQL.|  

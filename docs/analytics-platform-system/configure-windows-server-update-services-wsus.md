@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134957"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurar Windows Server Update Services (WSUS) de Analytics Platform System
 Estas instrucciones le guiarán a través de los pasos para usar al Asistente para que configuración de Windows Server Update Services (WSUS) para configurar WSUS para Analytics Platform System. Deberá configurar WSUS antes de aplicar las actualizaciones de software para el dispositivo. WSUS se ha instalado en la máquina virtual VMM del dispositivo.  
@@ -133,7 +133,7 @@ Para configurar WSUS, deberá:
   
     Seleccione **inglés**y, a continuación, haga clic en **siguiente**.  
   
-    ![Elegir idiomas](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
+    ![Choose languages](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
   
 8.  Elija los productos.  
   
@@ -153,13 +153,13 @@ Para configurar WSUS, deberá:
   
     Seleccione **actualizaciones críticas** y **las actualizaciones de seguridad** para las actualizaciones que se sincronizarán para el dispositivo de Analytics Platform System y, a continuación, haga clic en **siguiente**.  
   
-    ![Elegir clasificaciones](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![Choose classifications](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
 10. Configure la programación de sincronización.  
   
     Seleccione **sincronizar manualmente**y, a continuación, haga clic en **siguiente**.  
   
-    ![Establecer programación de sincronización](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
+    ![Set sync schedule](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
   
 11. Iniciar la sincronización inicial.  
   
@@ -179,7 +179,7 @@ Después de configurar WSUS para Analytics Platform System, el siguiente paso es
   
 1.  Abra la consola WSUS, haga clic en **todos los equipos** y, a continuación, haga clic en **Agregar grupo de equipos**.  
   
-    ![Agregar un grupo de equipos. ](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
+    ![Add a computer group.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
   
 2.  Escriba el nombre "AP" para el grupo de equipos y, a continuación, haga clic en **agregar**.  
   
@@ -195,7 +195,7 @@ Después de configurar WSUS para Analytics Platform System, el siguiente paso es
   
 5.  Seleccione el nuevo grupo de equipos que ha creado haciendo clic en la casilla de verificación y, a continuación, haga clic en **Aceptar**.  
   
-    ![Pertenencia al grupo de equipos del conjunto](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
+    ![Set Computer Group Membership](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
   
 6.  Seleccione el nuevo grupo de equipos, cambiar su **estado** a **cualquier**y, a continuación, haga clic en **actualizar**. Todos los equipos ahora deben ser asignados a este grupo y aparece en el panel derecho. Por lo general es seguro continuar cuando los nodos muestran las advertencias como **este nodo no ha notificado estado aún**.  
   

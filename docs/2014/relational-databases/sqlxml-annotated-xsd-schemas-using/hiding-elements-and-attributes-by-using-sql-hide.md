@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 541f5ccff727552730e4648552ad5126fdfd4858
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228475"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Ocultar elementos y atributos mediante sql:hide
   Cuando se ejecuta una consulta XPath en un esquema XSD, el documento XML resultante tiene elementos y atributos que se especifican en el esquema. Es posible especificar que algunos elementos y atributos se oculten en el esquema utilizando la anotación `sql:hide`. Esto resulta muy útil cuando los criterios de selección de la consulta requieren determinados elementos o atributos en el esquema, pero no desea que se devuelvan en el documento XML que se genera.  
@@ -42,7 +42,7 @@ ms.locfileid: "52793617"
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Especificar sql:hide en un atributo  
  El esquema XSD en este ejemplo consta de un  **\<Person.Contact >** elemento con **ContactID**, **FirstName**, y **LastName** atributos.  
   
- El  **\<Person.Contact >** elemento es de tipo complejo y, por lo tanto, se asigna a la tabla del mismo nombre (asignación predeterminada). Todos los atributos de  **\<Person.Contact >** elemento son de tipo simple y se asignan a columnas con los mismos nombres en el Person.Contacttable en la base de datos AdventureWorks. En el esquema, el `sql:hide` anotación se especifica en el **ContactID** atributo. Cuando se especifica una consulta XPath en este esquema, el **ContactID** no se devuelve en el documento XML.  
+ El **\<Person.Contact >** elemento es de tipo complejo y, por lo tanto, se asigna a la tabla del mismo nombre (asignación predeterminada). Todos los atributos de  **\<Person.Contact >** elemento son de tipo simple y se asignan a columnas con los mismos nombres en el Person.Contacttable en la base de datos AdventureWorks. En el esquema, el `sql:hide` anotación se especifica en el **ContactID** atributo. Cuando se especifica una consulta XPath en este esquema, el **ContactID** no se devuelve en el documento XML.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

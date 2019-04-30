@@ -17,25 +17,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b15aa278e2fe38afe93f5628433a6c8f4b41cd8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198318"
 ---
 # <a name="driver-specification-subkeys"></a>Subclaves de la especificación del controlador
 Cada controlador mostrado en la subclave de controladores ODBC tiene una subclave de su propio. Esta subclave tiene el mismo nombre que el valor correspondiente en la subclave de controladores ODBC. Las rutas de acceso completas del controlador y el controlador de archivos DLL, los valores de las palabras clave de controlador devueltos por la instalación de la lista de los valores bajo esta subclave **SQLDrivers**y el recuento de uso. Los formatos de los valores son como se muestra en la tabla siguiente.  
   
-|Nombre|Tipo de datos|data|  
+|Name|Tipo de datos|Datos|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|ConnectFunctions|REG_SZ|{**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**} {**Y**&AMP;#124;**N**}|  
-|CreateDSN|REG_SZ|*Descripción del controlador*|  
-|Controlador|REG_SZ|*ruta de archivo DLL del controlador*|  
+|ConnectFunctions|REG_SZ|{**Y**&#124;**N**}{**Y**&#124;**N**}{**Y**&#124;**N**}|  
+|CreateDSN|REG_SZ|*driver-description*|  
+|Controlador|REG_SZ|*driver-DLL-path*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  
 |FileExtns|REG_SZ|**\*.** *archivo extension1*[**,\*.** *archivo extension2*]...|  
 |FileUsage|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|ssNoVersion|REG_SZ|*ruta de DLL de instalación*|  
+|Programa de instalación|REG_SZ|*setup-DLL-path*|  
 |SQLLevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |UsageCount|REG_DWORD|*Recuento*|  
   

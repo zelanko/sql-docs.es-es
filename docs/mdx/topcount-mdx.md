@@ -1,5 +1,5 @@
 ---
-title: TopCount (MDX) | Documentos de Microsoft
+title: TopCount (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fa8edcf8af510a41affdcbcc9924edf69cf4c220
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228044"
 ---
 # <a name="topcount-mdx"></a>TopCount (MDX)
 
@@ -32,19 +32,19 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Recuento*  
+ *Count*  
  Expresión numérica válida que especifica el número de tuplas que serán devueltas.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Notas  
- Si se especifica una expresión numérica, la **TopCount** función clasifica, en orden descendente, las tuplas del conjunto especificado por el conjunto especificado según el valor especificado por la expresión numérica, según se ha evaluado sobre el conjunto especificado. Después de ordenar el conjunto, la **TopCount** función, a continuación, devuelve el número especificado de tuplas con el valor más alto.  
+## <a name="remarks"></a>Comentarios  
+ Si se especifica una expresión numérica, la **TopCount** función clasifica, en orden descendente, las tuplas del conjunto especificado por el conjunto especificado de acuerdo con el valor especificado por la expresión numérica, según se ha evaluado sobre especificado conjunto. Después de ordenar el conjunto, la **TopCount** función, a continuación, devuelve el número especificado de tuplas con el valor más alto.  
   
 > [!IMPORTANT]  
->  Al igual que el [BottomCount](../mdx/bottomcount-mdx.md) función, el **TopCount** función siempre rompe la jerarquía.  
+>  Al igual que el [BottomCount](../mdx/bottomcount-mdx.md) función, el **TopCount** siempre rompe la jerarquía.  
   
- Si no se especifica una expresión numérica, la función devuelve el conjunto de miembros en orden natural, sin ordenamiento, comportándose como la [Head (MDX)](../mdx/head-mdx.md) (función).  
+ Si no se especifica una expresión numérica, la función devuelve el conjunto de miembros en orden natural, sin ordenamiento, comportándose como la [Head (MDX)](../mdx/head-mdx.md) función.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se devuelven las 10 fechas superiores según Internet Sales Amount:  

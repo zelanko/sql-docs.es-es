@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00bc66f116a489858d6383d90a17e730792e6325
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59941641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165364"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Orígenes de datos (página de propiedades del Administrador de informes)
   Use la página de propiedades Orígenes de datos para definir la manera en que el informe actual se conecta a un origen de datos externo. Puede reemplazar la información de conexión con el origen de datos originalmente publicada con el informe. Si se utilizan varios orígenes de datos con un informe, cada uno tiene su propia sección en la página de propiedades. Los orígenes de datos se muestran en el orden en que se definieron en el informe.  

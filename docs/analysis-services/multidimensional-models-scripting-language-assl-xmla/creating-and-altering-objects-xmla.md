@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 86f52c2ea61b8b62ea9bfe5ffe6b3c7b06977740
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231948"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Crear y modificar objetos (XMLA)
   Los objetos principales se pueden crear, modificar y eliminar de forma independiente. Entre los objetos principales se incluyen los siguientes:  
@@ -88,7 +88,7 @@ ms.locfileid: "50145150"
 ### <a name="description"></a>Descripción  
  En el ejemplo siguiente se crea un origen de datos relacional que hace referencia a la [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] ejemplo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos.  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -113,7 +113,7 @@ ms.locfileid: "50145150"
 ### <a name="description"></a>Descripción  
  En el ejemplo siguiente se modifica el origen de datos relacional creado en el ejemplo anterior para establecer en 30 segundos el tiempo de espera de consulta para el origen de datos.  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 <Alter ObjectExpansion="ObjectProperties" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

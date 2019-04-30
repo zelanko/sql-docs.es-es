@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239383"
 ---
 # <a name="integrated-terminal"></a>Terminal integrado
 
@@ -96,12 +96,12 @@ A continuación se muestran los métodos abreviados de teclado para desplazarse 
 
 Key|Comando
 ---|---
-**CTRL +'**|Mostrar el terminal integrado
-**CTRL + MAYÚS +'**|Crear nueva terminal
+**CTRL +'**| Mostrar el terminal integrado
+**CTRL + MAYÚS +'**| Crear nueva terminal
 **Ctrl+flecha arriba**|Desplácese hacia arriba
 **Ctrl+flecha abajo**|Desplácese hacia abajo
-**Ctrl + RePág**|Desplazar página hacia arriba
-**Ctrl + AvPág**|Desplazar página hacia abajo
+**Ctrl+PageUp**|Desplazar página hacia arriba
+**Ctrl+PageDown**|Desplazar página hacia abajo
 **CTRL + Inicio**|Desplácese hasta la parte superior
 **CTRL + fin**|Desplácese hacia abajo
 **CTRL + K**|Desactive el terminal

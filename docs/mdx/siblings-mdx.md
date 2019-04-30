@@ -1,5 +1,5 @@
 ---
-title: Elementos del mismo nivel (MDX) | Documentos de Microsoft
+title: Elementos del mismo nivel (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a4414e134d3b837406c3cb72566084029cf522c9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149248"
 ---
 # <a name="siblings-mdx"></a>Siblings (MDX)
 
@@ -29,7 +29,7 @@ Member_Expression.Siblings
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expresión_miembro*  
+ *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
 ### <a name="example"></a>Ejemplo  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee1d76052402ab775e9e8de20e1ef6da07e23432
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214795"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Configuración de RDS en Windows 2000
 Si experimenta dificultades para conseguir que RDS funcione correctamente después de actualizar a Windows 2000, siga estos pasos para solucionar el problema:  
@@ -29,7 +29,7 @@ Si experimenta dificultades para conseguir que RDS funcione correctamente despu�
   
 3.  Mediante la utilidad RegEdit, vaya a "Registro hasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DataFactory\HandlerInfo" y asegúrese de que **HandlerRequired** se establece en 0 y **DefaultHandler** es "" (cadena nula).  
   
-     **Tenga en cuenta** si realiza cambios en esta sección del registro, debe detener y reiniciar el servicio de publicación World Wide Web escribiendo los siguientes comandos en un símbolo del sistema: "NET detener W3SVC" y "NET iniciar W3SVC".  
+     **Tenga en cuenta** si realiza cambios en esta sección del registro, debe detener y reiniciar el servicio de publicación World Wide Web escribiendo los siguientes comandos en un símbolo del sistema: "NET STOP W3SVC" y "NET iniciar W3SVC".  
   
 4.  Con la utilidad RegEdit, navegue en el registro a "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch" y compruebe que existe una clave denominada **RDSServer.Datafactory**. Si no es así, crearla.  
   

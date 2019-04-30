@@ -1,5 +1,5 @@
 ---
-title: Palabras reservadas de MDX | Documentos de Microsoft
+title: Palabras reservadas de MDX | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5eec141a82b4cf7aca5fd8c112249c362a1242d4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187581"
 ---
 # <a name="mdx-reserved-words"></a>Palabras reservadas de MDX
 
@@ -59,7 +59,7 @@ ms.locfileid: "34742294"
 |CHILDREN|HEAD|PARENT|UPDATE|  
 |CLEAR|HIDDEN|PASS|USE|  
 |CLOSINGPERIOD|HIERARCHIZE|PERIODSTODATE|USE_EQUAL_ALLOCATION|  
-|COALESCEEMPTY|HIERARCHY|POST|USE_WEIGHTED_ALLOCATION|  
+|COALESCEEMPTY|HIERARCHY|EXPONER|USE_WEIGHTED_ALLOCATION|  
 |COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
 |COLUMNS|IIF|PREVMEMBER|USERNAME|  
 |CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
@@ -79,7 +79,7 @@ ms.locfileid: "34742294"
 |DEFAULTMEMBER|LEAD|SELF_AND_BEFORE||  
   
 ## <a name="see-also"></a>Vea también  
- [Palabras clave reservadas &#40;sintaxis MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
+ [Palabras clave reservadas &#40;sintaxis de MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
  [Referencia del lenguaje MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

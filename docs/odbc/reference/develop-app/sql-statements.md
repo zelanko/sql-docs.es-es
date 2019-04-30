@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1445f89200a876b5ac945ea1a577d6cc3f7445a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149259"
 ---
 # <a name="sql-statements"></a>Instrucciones SQL
 Las aplicaciones ODBC realizan casi todos los accesos de base de datos mediante la ejecución de instrucciones SQL. El formato de estas instrucciones - codificado de forma rígida o construidas en tiempo de ejecución, interoperable o específicas del origen de datos y así sucesivamente - depende de las necesidades de la aplicación.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cec3e79e3d37f064cb742588519a374737e01319
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191808"
 ---
 # <a name="required-client-settings"></a>Configuración de cliente requerida
 > [!IMPORTANT]
@@ -69,7 +69,7 @@ rs.CursorLocation = adUseClient
   
  Especifique el [propiedad de controlador (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) propiedad o la palabra clave; el [propiedad de proveedor (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) propiedad o la palabra clave; y la *CustomerById* y  *CustomerDatabase* identificadores. A continuación, abra el **Recordset** objeto  
   
- RS. Abra "CustomerById (4)", "controlador = MSDFMAP. Controlador;"& _  
+ rs.Open "CustomerById(4)", "Handler=MSDFMAP.Handler;" & _  
   
 ```vb
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c4910ebd2c6dd988e937f1e9d6a3281bb0e9741
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192320"
 ---
 # <a name="limitations-of-using-keyset-driven-cursors"></a>Limitaciones del uso de los cursores controlados por conjunto de claves
 > [!IMPORTANT]  
@@ -30,4 +30,4 @@ ms.locfileid: "47668113"
  Además, si la aplicación usa los alias de tabla, los cursores dinámicos no funcionará; se requieren tipos de cursor estático o de solo avance. Mediante el conjunto de claves, el tipo de cursor con alias de tabla provocará el siguiente error: "[Microsoft] [controlador ODBC para Oracle] no puede usar cursores dinámicos en una combinación con union, intersect o menos, o de solo lectura de conjunto de resultados."  
   
 > [!NOTE]  
->  Debido al modo en que el controlador controla la instrucción SQL que se envía al servidor de Oracle, Oracle internamente devuelve el siguiente mensaje de error: "ORA-00964: tabla nombre no está en el de la lista."
+>  Debido al modo en que el controlador controla la instrucción SQL que se envía al servidor de Oracle, Oracle internamente devuelve el mensaje de error siguiente: "ORA-00964: tabla nombre no está en el de la lista."

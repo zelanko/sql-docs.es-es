@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9cf188964290652d9b98e55e3f646d83337dafe1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188389"
 ---
 # <a name="new-folder-page-report-manager"></a>Página Nueva carpeta (Administrador de informes)
   Use la página Nueva carpeta para crear una carpeta nueva en la jerarquía de carpetas del servidor de informes. La carpeta será una carpeta virtual que se almacenará en una base de datos del servidor de informes. No se crea en el sistema de archivos del equipo.  

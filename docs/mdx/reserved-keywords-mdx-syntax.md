@@ -1,5 +1,5 @@
 ---
-title: (Sintaxis de MDX) de palabras clave reservadas | Documentos de Microsoft
+title: (Sintaxis de MDX) de palabras clave reservadas | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2f50b0292b9139dcbb2b3a5652ad41136b31702a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149868"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Palabras clave reservadas (sintaxis de MDX)
 
@@ -30,6 +30,6 @@ ms.locfileid: "34742634"
 -   Use una convención de nomenclatura que evite la utilización de palabras clave reservadas. Si el nombre de un objeto debe parecerse a una palabra clave reservada, se pueden quitar las consonantes o vocales.  
   
 ## <a name="see-also"></a>Vea también  
- [Elementos de sintaxis MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Los elementos de sintaxis MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

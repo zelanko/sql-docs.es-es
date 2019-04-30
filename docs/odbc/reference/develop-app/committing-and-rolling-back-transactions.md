@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 194a90482946814995ca1963f7c8fc4bce48d223
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126368"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>Confirmar y revertir las transacciones
 Para confirmar o revertir una transacción en modo de confirmación manual, una aplicación llama a **SQLEndTran**. Controladores para DBMS que admiten transacciones suelen implementan esta función mediante la ejecución de un **confirmar** o **reversión** instrucción. El Administrador de controladores no llama a **SQLEndTran** cuando la conexión está en modo de confirmación automática; simplemente devuelve SQL_SUCCESS, incluso si la aplicación intenta revertir la transacción. Dado que los controladores para DBMS que no admiten transacciones siempre están en modo de confirmación automática, puede implementar **SQLEndTran** para devolver SQL_SUCCESS sin hacer nada o no implementarlo.  

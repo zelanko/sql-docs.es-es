@@ -29,11 +29,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150715"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Supervisión y optimización del rendimiento
   El objetivo de supervisar bases de datos es evaluar el rendimiento de un servidor. Una supervisión eficaz implica tomar instantáneas periódicas del rendimiento actual para aislar procesos que causan problemas y recopilar datos de forma continua a lo largo del tiempo para realizar el seguimiento de las tendencias de rendimiento.  
@@ -71,7 +71,7 @@ ms.locfileid: "52797405"
 |[Establecer una línea base del rendimiento](establish-a-performance-baseline.md)|Proporciona información acerca de cómo establecer una línea base de rendimiento.|  
 |[Aislar problemas de rendimiento](isolate-performance-problems.md)|Describe cómo aislar problemas de rendimiento de base de datos.|  
 |[Identificar los cuellos de botella](identify-bottlenecks.md)|Describe cómo supervisar y seguir el rendimiento del servidor para identificar cuellos de botella.|  
-|[Supervisión de la actividad y el rendimiento del servidor](server-performance-and-activity-monitoring.md)|Describe cómo usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las herramientas de supervisión de rendimiento y actividad de Windows.|  
+|[Supervisión de la actividad y rendimiento del servidor](server-performance-and-activity-monitoring.md)|Describe cómo usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las herramientas de supervisión de rendimiento y actividad de Windows.|  
 |[Mostrar y guardar planes de ejecución](display-and-save-execution-plans.md)|Describe cómo mostrar y guardar planes de ejecución en un archivo de formato XML.|  
 |[Supervisar el rendimiento mediante el almacén de consultas](monitoring-performance-by-using-the-query-store.md)|El almacén de consultas captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución las conserva para su revisión.|  
   

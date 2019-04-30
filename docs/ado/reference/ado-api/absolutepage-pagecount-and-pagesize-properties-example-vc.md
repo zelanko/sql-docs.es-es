@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 707d8ca7db6d61e324c0c97839711965801a0433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155213"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage, PageCount y ejemplo de las propiedades PageSize (VC ++)
 Este ejemplo se usa el [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), y [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) propiedades para mostrar los nombres y las fechas de contratación del ***empleado*** tabla de cinco registros a la vez.  

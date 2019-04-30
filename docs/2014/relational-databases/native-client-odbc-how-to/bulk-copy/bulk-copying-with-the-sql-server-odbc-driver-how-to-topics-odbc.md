@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c2cca868cbbdeddc98264160e646dde3676c585
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63126118"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>Temas de procedimientos de copia masiva con el controlador ODBC de SQL Server (ODBC)
   Cuando se usa con Microsoft?? SQL Server??? 2005, el controlador ODBC de SQL Server admite las mismas funciones de copia masiva compatibles con la API de DB-Library.  

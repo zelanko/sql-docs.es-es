@@ -1,5 +1,5 @@
 ---
-title: SUM (MDX) | Documentos de Microsoft
+title: Sum (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bdf003a65e6923acf2bbf5c17e93d412e2d194fa
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241380"
 ---
 # <a name="sum-mdx"></a>Sum (MDX)
 
@@ -32,10 +32,10 @@ Sum( Set_Expression [ , Numeric_Expression ] )
  *Set_Expression*  
  Una expresión de conjunto de MDX (Expresiones multidimensionales) válida.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si se especifica una expresión numérica, ésta se evalúa en el conjunto y, a continuación, se suma. Si no se especifica una expresión numérica, el conjunto especificado se evalúa en el contexto actual de los miembros del conjunto y, a continuación, se suma. Si la función SUM se aplica a una expresión no numérica, los resultados quedarán sin definir.  
   
 > [!NOTE]  
@@ -67,7 +67,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
- En el ejemplo siguiente se utiliza la palabra clave WITH MEMBER y **suma** función para definir un miembro calculado en la dimensión Measures que contiene la suma de la medida Reseller Sales Amount para los miembros Canada y United States de la jerarquía de atributo Country de la dimensión Geography.  
+ En el ejemplo siguiente se usa la palabra clave WITH MEMBER y **suma** función para definir un miembro calculado en la dimensión Measures que contiene la suma de la medida Reseller Sales Amount para los miembros Canada y United States de la Jerarquía de atributo Country de la dimensión Geography.  
   
 ```  
 WITH MEMBER Measures.NorthAmerica AS SUM   
@@ -81,7 +81,7 @@ SELECT {[Measures].[NorthAmerica]} ON 0,
 FROM [Adventure Works]  
 ```  
   
- A menudo, el **suma** función se utiliza con la **CURRENTMEMBER** función o las funciones como **YTD** que devuelve un conjunto que varía según el miembro actual de una jerarquía. Por ejemplo, la siguiente consulta devuelve la suma de la medida Internet Sales Amount para todas las fechas desde principio del año natural hasta la fecha mostrada en el eje de filas:  
+ A menudo, el **suma** función se utiliza con el **CURRENTMEMBER** función o funciones como **YTD** que devuelve un conjunto que varía según el miembro actual de una jerarquía. Por ejemplo, la siguiente consulta devuelve la suma de la medida Internet Sales Amount para todas las fechas desde principio del año natural hasta la fecha mostrada en el eje de filas:  
   
  `WITH MEMBER MEASURES.YTDSUM AS`  
   

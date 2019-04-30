@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 589d94d83bb23dcf6753e49dd8ea2e77276dd616
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63183888"
 ---
 # <a name="create-method-example-vc"></a>Ejemplo de método Create (VC++)
 El código siguiente muestra cómo crear una nueva base de datos Microsoft Jet con el [Create](../../../ado/reference/adox-api/create-method-adox.md) método.  

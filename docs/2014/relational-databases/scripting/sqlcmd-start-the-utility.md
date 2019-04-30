@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3098b4f768089c06c3c0ba9f38d1201e4ed15f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63135363"
 ---
 # <a name="start-the-sqlcmd-utility"></a>Iniciar la utilidad sqlcmd
   Para empezar a usar `sqlcmd`, primero debe iniciar la utilidad y conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede conectarse a una instancia con nombre o a la instancia predeterminada. El primer paso consiste en iniciar la utilidad `sqlcmd`.  
@@ -49,7 +49,7 @@ ms.locfileid: "48228355"
   
 2.  Presione ENTRAR.  
   
-     El símbolo del sistema de `sqlcmd` (1>) indica que está conectado con la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     El `sqlcmd` símbolo del sistema (1 >) indica que está conectado a la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
     >  Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] escritas están almacenadas en un búfer. Se ejecutan como un lote cuando se encuentra el comando GO.  

@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181415"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
 >  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: completo  
+ Soporte técnico: Completo  
   
- Conformidad de ODBC API: Nivel 1  
+ Conformidad de la API de ODBC: Nivel 1  
   
  Devuelve información sobre los tipos de datos admitidos por un origen de datos. El controlador devuelve la información en un conjunto de resultados SQL. En la tabla siguiente se enumera los tipos de datos ODBC y el tipo de datos de Visual FoxPro correspondiente.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "47733063"
 |SQL_REAL|Doble|  
 |SQL_SMALLINT|Integer|  
 |SQL_TIME|No compatible. No hay ningún Visual FoxPro *tiempo* tipo.|  
-|SQL_TIMESTAMP|DateTime|  
+|SQL_TIMESTAMP|Datetime|  
 |SQL_TINYINT|Integer|  
 |SQL_VARBINARY|Memorando (binario) *, General|  
 |SQL_VARCHAR|Carácter|  

@@ -1,5 +1,5 @@
 ---
-title: CREAR KPI (instrucción, MDX) | Documentos de Microsoft
+title: CREAR KPI (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a905c223418392ee9d3bd45dffbfe2ab821a298
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181533"
 ---
-# <a name="mdx-data-definition---create-kpi"></a>Definición de datos MDX - crear KPI
+# <a name="mdx-data-definition---create-kpi"></a>Definición de datos de MDX: CREATE KPI
 
 
   Crea un indicador clave de rendimiento (KPI). Un KPI es un conjunto de cálculos asociados a un grupo de medida de un cubo, que se utilizan para evaluar el éxito de una empresa o escenario.  
@@ -30,19 +30,19 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Nombre_kpi*  
+ *KPI_Name*  
  Cadena válida que proporciona un nombre de KPI.  
   
  *KPI_Value*  
  Una expresión MDX (Expresiones multidimensionales) válida que devuelve un valor numérico.  
   
- *Property_name*  
+ *Property_Name*  
  Cadena válida que proporciona el nombre de una propiedad de KPI.  
   
  *Property_Value*  
  Expresión escalar válida que define el valor de la propiedad de KPI.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si especifica un cubo distinto del que está conectado actualmente, se genera un error. Por lo tanto, debe utilizar CURRENTCUBE en lugar de un nombre de cubo para indicar el cubo actual.  
   
 ## <a name="kpi-properties"></a>Propiedades de KPI   
@@ -62,7 +62,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |DISPLAY_FOLDER|Cadena que especifica la ruta de acceso a la carpeta donde la aplicación cliente mostrará el KPI. La aplicación cliente define el separador de niveles de carpetas. Para las herramientas y clientes proporcionados por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la barra diagonal inversa (\\) es el separador de niveles. Para proporcionar varias carpetas para mostrar de un miembro definido, utilice un punto y coma (;) para separar las carpetas|  
 |ASSOCIATED_MEASURE_GROUP|Cadena que especifica el nombre del grupo de medida al que deberían remitirse todos los cálculos MDX.|  
   
- Los valores para las propiedades GOAL, STATUS y TREND son expresiones MDX que se deberían evaluar entre -1 y 1. Sin embargo, es la aplicación cliente la que define el intervalo de valores real para estas propiedades. Cuando usa las herramientas y clientes proporcionados por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para examinar los KPI, los valores menores que -1 se tratan como -1 y los valores mayores que 1 se tratan como 1.  
+ Los valores para las propiedades GOAL, STATUS y TREND son expresiones MDX que se deberían evaluar entre -1 y 1. Sin embargo, es la aplicación cliente la que define el intervalo de valores real para estas propiedades. Cuando usa las herramientas y clientes proporcionados por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para examinar KPIs, los valores menores que -1 se tratan como -1, y los valores mayores que 1 se tratan como 1.  
   
  STATUS_GRAPHIC y TREND_GRAPHIC son valores de cadena que utiliza la aplicación cliente para identificar el conjunto de imágenes que se ha de mostrar. Estas cadenas definen también el comportamiento de la función de visualización. Este comportamiento incluye el número de estados que se pueden mostrar (normalmente, éste es un número impar) y qué imágenes se han de utilizar para cada uno de esos estados.  
   
@@ -96,7 +96,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |Tendencia|Caras|3|  
   
 ## <a name="see-also"></a>Vea también  
- [Instrucción de DROP KPI &#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
+ [DROP KPI, instrucción &#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
  [Instrucciones de definición de datos MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

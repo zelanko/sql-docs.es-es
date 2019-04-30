@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: ad23c4add9b6e7ea9999a434261a95282f129935
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63182069"
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>Eliminación de los componentes de SSMA para MySQL (MySQLToSql)
 Cuando haya terminado de migrar bases de datos de MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es posible que desee desinstalar componentes de SSMA. Puede desinstalar los componentes de cliente en cualquier momento. Sin embargo, si desinstala el paquete de extensiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a continuación, SSMA ya no será compatible con migración de datos de MySQL para la base de datos de destino (SQL Server o SQL Azure) mediante el motor de migración de datos del servidor.  

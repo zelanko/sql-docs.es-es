@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3aded281e57e284253c5d0c122b377bddbe0eb0d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165006"
 ---
 # <a name="dataset-properties-dialog-box-options"></a>Propiedades del conjunto de datos (cuadro de diálogo), Opciones
   Seleccione **opciones** en el **DatasetProperties** cuadro de diálogo para cambiar las opciones de datos, como las opciones de intercalación y los subtotales, para la consulta. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../relational-databases/collations/collation-and-unicode-support.md).  

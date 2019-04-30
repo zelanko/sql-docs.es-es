@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 260406eddd6caef88035376a764c3e140547e6c4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186133"
 ---
 # <a name="sqlprocedures-function"></a>Función SQLProcedures
 **Conformidad**  
@@ -135,7 +135,7 @@ SQLRETURN SQLProcedures(
 |NUM_OUTPUT_PARAMS (ODBC 2.0)|5|N/D|Reservado para uso futuro. Las aplicaciones no deben depender de los datos devueltos en estas columnas de resultados.|  
 |NUM_RESULT_SETS (ODBC 2.0)|6|N/D|Reservado para uso futuro. Las aplicaciones no deben depender de los datos devueltos en estas columnas de resultados.|  
 |COMENTARIOS (ODBC 2.0)|7|Varchar|Descripción del procedimiento.|  
-|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|Define el tipo de procedimiento:<br /><br /> SQL_PT_UNKNOWN: No se puede determinar si el procedimiento devuelve un valor.<br /><br /> SQL_PT_PROCEDURE: El objeto devuelto es un procedimiento; es decir, no tiene un valor devuelto.<br /><br /> A SQL_PT_FUNCTION: El objeto devuelto es una función; es decir, tiene un valor devuelto.|  
+|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|Define el tipo de procedimiento:<br /><br /> SQL_PT_UNKNOWN: No se puede determinar si el procedimiento devuelve un valor.<br /><br /> SQL_PT_PROCEDURE: El objeto devuelto es un procedimiento; es decir, no tiene un valor devuelto.<br /><br /> SQL_PT_FUNCTION: El objeto devuelto es una función; es decir, tiene un valor devuelto.|  
   
  El *SchemaName* y *ProcName* argumentos aceptan modelos de búsqueda. Para obtener más información acerca de los patrones de búsqueda válidos, vea [argumentos de valor de patrón](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   

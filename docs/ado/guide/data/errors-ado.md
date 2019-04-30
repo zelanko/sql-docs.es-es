@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b81b6d1e28b37947f10a9ec78c8c97f60119841
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161615"
 ---
 # <a name="errors-ado"></a>Errores (ADO)
 Cualquier operación que implica objetos ADO puede generar uno o varios errores del proveedor. Cuando se produce cada error, uno o varios **Error** objetos se colocan en el **errores** colección de la **conexión** objeto. Para obtener más información sobre el control de advertencias y errores en una aplicación ADO, vea [Error Handling](../../../ado/guide/data/error-handling.md).  

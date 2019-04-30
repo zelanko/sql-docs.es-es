@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: fbfc160f495f9717645c8417f11f67f572271d9b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157618"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Cargador de línea de comandos para el almacenamiento de datos paralelo de dwloader
 **dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelos (PDW) que carga filas de la tabla de forma masiva en una tabla existente. Cuando se cargan filas, puede agregar todas las filas al final de la tabla (*modo append* o *modo fastappend*), anexará filas nuevas y actualizar las filas existentes (*modo upsert*), o eliminar todos existentes filas antes de la carga y, a continuación, insertar todas las filas en una tabla vacía (*recargar modo*).  
@@ -221,11 +221,11 @@ Especifica un tipo de codificación de caracteres para los datos van a cargar de
 **-t** *field_delimiter*  
 El delimitador para cada campo (columna) en la fila. El delimitador de campo es uno o varios de estos caracteres de escape de ASCII o los valores hexadecimales de ASCII...  
   
-|Nombre|Carácter de escape|Carácter hexadecimal|  
+|Name|Carácter de escape|Carácter hexadecimal|  
 |--------|--------------------|-----------------|  
-|Pestaña|\t|0 x 09|  
-|Retorno de carro (CR)|\r|0x0D|  
-|Avance de línea (LF)|\n|0x0A|  
+|Pestaña|\t|0x09|  
+|Retorno de carro (CR)|\r|0x0d|  
+|Avance de línea (LF)|\n|0x0a|  
 |CRLF|\r\n|0x0d0x0a|  
 |Coma|','|0x2c|  
 |comilla doble|\\"|0x22|  
@@ -258,13 +258,13 @@ Ejemplos de CR / LF:
   
 Ejemplos de CR:  
   
-\r - r  
+-r \r  
   
 -r 0x0d  
   
 Ejemplos de LF:  
   
-\n - r  
+-r \n  
   
 -r 0x0a  
   
@@ -277,7 +277,7 @@ Ejemplos:
   
 -s *  
   
--s 0 x 22  
+-s 0x22  
   
 < fixed_width_column_options>  
 Las opciones de un archivo de datos de origen que tiene columnas de longitud fija. De forma predeterminada, *source_data_file_name* contiene caracteres ASCII en columnas de longitud variable.  
@@ -327,25 +327,25 @@ Ejemplos de CR / LF:
   
 Ejemplos de CR:  
   
-\r - r  
+-r \r  
   
 -r 0x0d  
   
 Ejemplos de LF:  
   
-\n - r  
+-r \n  
   
 -r 0x0a  
   
 Falta un LF para Unix. Falta un CR para Windows.  
   
-**-D** { **AMD** | ydm | mdy | myd |  DMY | DAM | *custom_date_format* }  
+**-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
 Especifica el orden de mes (m), (d) del día y año (y) para todos los campos de fecha y hora en el archivo de entrada. El orden predeterminado es AMD. Para especificar varios formatos de orden para el mismo archivo de origen, use la opción -dt.  
   
-AMD | DMA  
+ymd | dmy  
 ADM y dmy permiten a los mismos formatos de entrada. Ambos permiten el año estar al principio o al final de la fecha. Por ejemplo, para ambos **ydm** y **dmy** , los formatos de fecha podría tener 03-02-2013 o 2013-03-02 del archivo de entrada.  
   
-ADM  
+ydm  
 Solo puede cargar la entrada con formato ADM en columnas de tipo de datos datetime y smalldatetime. No se puede cargar los valores de ADM en una columna del tipo de datos datetimeoffset, fecha o datetime2.  
   
 mdy  
@@ -362,10 +362,10 @@ Ejemplos de datos de entrada de MDA para el 1 de enero de 1975:
 -   01011975  
   
 mad  
-Ejemplos de archivos de entrada para marzo 04,2010: 2010-03-04, 3/4/2010  
+Ejemplos de archivos de entrada para marzo 04,2010: 03-2010-04, 3/2010/4  
   
 dam  
-Ejemplos de archivo de entrada para 04 de marzo de 2010: 2010-04-03, 4/3/2010  
+Ejemplos de archivo de entrada para 04 de marzo de 2010: 04-2010-03, 4/2010/3  
   
 *custom_date_format*  
 *custom_date_format* es un formato de fecha personalizado (p. ej., MM/dd/aaaa) y se incluye por razones de compatibilidad. dwloader hace no enfoce el formato de fecha personalizada. En su lugar, cuando se especifica un formato de fecha personalizada **dwloader** se convertirá en el valor correspondiente de AMD, ADM, mdy, myd, DAM o DMA.  
@@ -425,7 +425,7 @@ Si el tipo de carga es FASTAPPEND, el *batchsize* se aplica a la carga de datos 
 <reject_options>  
 Especifica opciones para determinar el número de errores de carga que permitirá que el cargador. Si los errores de carga superan el umbral, el cargador se detiene y no confirmar todas las filas.  
   
-**-rt** { **valor** | porcentaje}  
+**-rt** { **value** | percentage }  
 Especifica si el -*reject_value* en el **-rv** *reject_value* opción es un número de filas (valor) literal o una tasa de error (porcentaje). El valor predeterminado es.  
   
 La opción de porcentaje es un cálculo en tiempo real que se produce a intervalos de acuerdo con la opción - rs.  
@@ -554,10 +554,10 @@ El modo append carga datos en dos fases. La primera fase carga los datos del arc
 |Montón|Sí|No|Sí|mínimo|  
 |Montón|No|Sí|No|mínimo|  
 |Montón|No|No|No|mínimo|  
-|CL|Sí|Sí|No|mínimo|  
-|CL|Sí|No|Sí|Completo|  
-|CL|No|Sí|No|mínimo|  
-|CL|No|No|Sí|Completo|  
+|Cl|Sí|Sí|No|mínimo|  
+|Cl|Sí|No|Sí|Completo|  
+|Cl|No|Sí|No|mínimo|  
+|Cl|No|No|Sí|Completo|  
   
 Se muestra en la tabla anterior **dwloader** utilizando el modo append cargar en un montón o una tabla de índice agrupado (CI), con o sin la marca transaccional múltiple y cargar en una tabla vacía o una tabla no vacía. El bloqueo y el comportamiento de cada combinación de este tipo de carga de registro se muestra en la tabla. Por ejemplo, cargar fase (2) con el modo append en un índice clúster sin modo multi-transaccional y en un valor vacío tabla tendrá PDW crear un bloqueo exclusivo en la tabla y el registro es mínimo. Esto significa que un cliente no podrá cargar (2) fase y consultas simultáneamente en una tabla vacía. Sin embargo, cuando se cargan con la misma configuración en una tabla no vacía, PDW no emitirá un bloqueo exclusivo en la tabla y es posible la simultaneidad. Lamentablemente, se produce un registro completo, ralentizan el proceso.  
   

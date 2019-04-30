@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f6540789cbd05f2a7c5e5b61bf5597221dc3305f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162470"
 ---
 # <a name="database-engine-upgrade-issues"></a>Problemas de actualización del motor de la base de datos
   En los temas de esta sección se describen los problemas de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que pueden afectar a una actualización a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Estos temas describen acciones que se pueden llevar a cabo para mitigar el efecto de estos cambios en el entorno.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1fb077261eda4b2e013abd6d87e894637a29216a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181233"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>Códigos de error de la biblioteca de cursores ODBC
 > [!IMPORTANT]  
@@ -38,10 +38,10 @@ ms.locfileid: "47691133"
 |01000|No utilizada la biblioteca de cursores. Soporte de controlador insuficiente.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|No utilizada la biblioteca de cursores. Discrepancia de versiones con el Administrador de controladores.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|Controlador devuelve SQL_SUCCESS_WITH_INFO. Se ha perdido el mensaje de advertencia.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|S1000|Error general: no se puede crear el búfer de archivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Error general: no se puede leer desde el búfer de archivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Error general: no se puede escribir en el búfer de archivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|Error general: no se puede cerrar o eliminar el búfer de archivo.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
+|S1000|Error general: No se puede crear el búfer de archivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Error general: No se puede leer desde el búfer de archivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Error general: No se puede escribir en el búfer de archivo.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|Error general: No se puede cerrar o eliminar el búfer de archivo.|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
 |SL001|Solicitud posicionada no se puede realizar porque no hay columnas de búsqueda se enlazaron.|**SQLExecDirect**<br /><br /> **SQLGetData**<br /><br /> **SQLPrepare**|  
 |SL002|No se pudo realizar la solicitud posicionada porque se creó el conjunto de resultados por una condición de combinación.|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
 |SL003|Dependiente búfer supera el tamaño máximo de segmento.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  

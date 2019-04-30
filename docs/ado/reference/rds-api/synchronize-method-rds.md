@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8481d843ce49227c343b71111c0f56a8af00a5e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134349"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize (método) (RDS)
 Sincronizar el conjunto de registros determinado con la base de datos especificada por la cadena de conexión para su uso en ADO 2.5 y versiones posterior.  

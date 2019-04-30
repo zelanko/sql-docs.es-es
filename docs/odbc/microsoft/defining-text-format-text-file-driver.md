@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 00d20f8a6dd4d79b3100549d9286e7534bc8ce6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240376"
 ---
 # <a name="defining-text-format-text-file-driver"></a>Definir el formato de texto (controlador de archivo de texto)
 Cuando se usa el controlador de texto, puede usar el **Definir formato de texto** cuadro de diálogo para definir el formato de columnas en un archivo seleccionado. Este cuadro de diálogo permite especificar el esquema para cada tabla de datos. Esta información se escribe en un archivo Schema.ini en el directorio de origen de datos. Se crea un archivo Schema.ini independiente para cada directorio de origen de datos de texto.  
@@ -40,7 +40,7 @@ Cuando se usa el controlador de texto, puede usar el **Definir formato de texto*
 |**Formato**|Longitud delimitado o fijo. Si es delimitado, indica el tipo de delimitador utilizado: por comas (CSV), ficha o un carácter especial (personalizado). El valor predeterminado es **delimitado CSV** si el formato del elemento seleccionado en el **tablas** lista no se ha definido anteriormente en este cuadro de diálogo.<br /><br /> Si **formato** tiene una longitud fija y **encabezado de nombre de columna** es TRUE, la primera línea debe estar delimitado por comas.|  
 |**Estimación**|Genera automáticamente los valores de ancho, nombre y tipo de datos de la columna para las columnas de la tabla seleccionada mediante el examen de contenido de la tabla según el **formato** cuadro de selección. Habilitado cuando se delimita el formato de tabla. Ninguno definido previamente las columnas de la **columnas** lista se borran y se reemplazan con nuevas entradas. Si **encabezado de nombre de columna** está desactivada, los nombres de columna se generan automáticamente como "F1", "F2" y así sucesivamente. Ningún valor predeterminado se muestra en el **tipo de datos** cuadro.<br /><br /> Esta funcionalidad solo funciona en las columnas que son menos de 64,513 bytes.|  
 |**Modificar**|Modifica la columna seleccionada con los valores de **tipo de datos**, **nombre**, y **ancho**.|  
-|**Nombre**|Muestra el nombre de la columna seleccionada. Puede usarse para especificar un nuevo nombre de columna para una columna existente o una nueva columna.<br /><br /> Si **encabezado de nombre de columna** es TRUE, la columna se omite el nombre mostrado.|  
+|**Name**|Muestra el nombre de la columna seleccionada. Puede usarse para especificar un nuevo nombre de columna para una columna existente o una nueva columna.<br /><br /> Si **encabezado de nombre de columna** es TRUE, la columna se omite el nombre mostrado.|  
 |**Quitar**|Elimina la columna seleccionada.|  
 |**Filas para explorar**|El número de filas que la configuración o el controlador explorarán al establecer las columnas y tipos de datos de columna basados en datos existentes.<br /><br /> Puede escribir un número comprendido entre 1 y 32767 para el número de filas que se va a analizar. El valor predeterminado es 25 if el formato del elemento seleccionado en el **tablas** lista no se ha definido anteriormente en este cuadro de diálogo. (Un número fuera del límite devolverá un error).|  
 |**Tablas**|Contiene una lista de todos los archivos en el directorio seleccionado en el **instalación texto** cuadro de diálogo que coinciden con la lista de las extensiones especificadas.<br /><br /> Cuando \<predeterminado > está seleccionada, y uno de los siguientes es true, los valores de los atributos de tabla en la **tablas** grupo se escriben en Schema.ini (no hay otras entradas de Schema.ini se modifican):<br /><br /> -No hay ningún Schema.ini en el directorio especificado.<br />-El archivo Schema.ini existe, pero no hay ninguna sección de Schema.ini para uno de los archivos de texto (con la extensión especificada) en el directorio.<br />-La sección de un archivo de texto existe en Schema.ini, pero el cuerpo está vacío.<br /><br /> Cuando \<predeterminado > está seleccionada, el **columnas** grupo está deshabilitado.|  

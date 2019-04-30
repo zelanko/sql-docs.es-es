@@ -1,5 +1,5 @@
 ---
-title: Crear una tarea de secuencia de comandos con el adaptador de destino de SSIS PDW | Documentos de Microsoft
+title: Crear una tarea script con el adaptador de destino de SSIS PDW | Microsoft Docs
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
 manager: craigg
@@ -10,26 +10,26 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 4f1f668c0fca14c81173141df3767319f987c9a9
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142307"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>Crear una tarea de secuencia de comandos que usa el adaptador de destino de almacenamiento de datos paralelos de SSIS
-Este código de script de paquete SSIS es un ejemplo de código para usar el adaptador de destino de SSIS PDW.  La tarea de secuencia de comandos de Integration Services permite realizar prácticamente cualquier operación que se pueden realizar en una aplicación de .net en el contexto de un flujo de control SSIS. 
+Este código de script de paquete SSIS es un ejemplo de código para usar el adaptador de destino de SSIS PDW.  La tarea de secuencia de comandos de Integration Services permite realizar prácticamente cualquier operación que se puede realizar en una aplicación .net en el contexto de un flujo de control SSIS. 
   
 ## <a name="sample-code"></a>Código muestra  
   
-1.  Crear una tarea de Script en blanco en SSIS.  
+1.  Crear una tarea Script en blanco en SSIS.  
   
-2.  Abra la tarea en el **Editor de la tarea de secuencia de comandos**y haga clic en **editar Script**.  
+2.  Abra la tarea en el **Editor de la tarea Script**y haga clic en **editar Script**.  
   
-3.  Edite el script para utilizar el código que se proporciona a continuación. Personalizar la secuencia de comandos en el entorno mediante la realización de los siguientes cambios:  
+3.  Edite el script para usar el código que se proporciona a continuación. Personalizar la secuencia de comandos a su entorno mediante la realización de los siguientes cambios:  
   
-    -   Debe conservar el espacio de nombres de la secuencia de comandos creado por la tarea de secuencia de comandos. Tenga en cuenta el nombre del espacio de nombres `namespace ST_<GUID>` y editar la secuencia de comandos a continuación, cambiar *ST_<GUID>*  a la versión original *GUID* de la tarea de secuencia de comandos.  
+    -   Debe conservar el espacio de nombres de la secuencia de comandos creado por la tarea script. Tenga en cuenta el nombre del espacio de nombres `namespace ST_<GUID>` y edite el script, a continuación, cambiar *ST_<GUID>*  al original *GUID* de la tarea script.  
   
-    -   Reemplazar las cuatro instancias del valor de marcador de posición *XXXXXXXX* con los valores apropiados para su entorno y deseada según sea necesario.  
+    -   Reemplazar las cuatro repeticiones del valor de marcador de posición *XXXXXXXX* con los valores adecuados a la acción del entorno y está pensado.  
   
     ```c#  
     #region Help:  Introduction to the script task  

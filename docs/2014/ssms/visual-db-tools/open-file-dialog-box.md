@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63138902"
 ---
 # <a name="open-file-dialog-box"></a>Cuadro de diálogo Abrir archivo
   Use el cuadro de diálogo **Abrir archivo** para abrir un archivo existente en el disco. Este cuadro de diálogo también se puede utilizar para abrir un archivo ya abierto mediante opciones de codificación de lenguaje distintas.  

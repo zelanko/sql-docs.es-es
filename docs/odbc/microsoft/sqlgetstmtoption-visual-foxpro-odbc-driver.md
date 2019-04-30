@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 373f5e13712ef7b0864401ea3d2c204cb03ebb09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240254"
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
 >  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: completo  
+ Soporte técnico: Completo  
   
- Conformidad de la API de ODBC: Uno de nivel  
+ Conformidad de la API de ODBC: Nivel uno  
   
  Devuelve el valor actual de una opción de instrucción.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "47647003"
 |---------------|-------------|  
 |SQL_GET_BOOKMARK|valor entero de 32 bits que es el marcador para el número de registro actual|  
 |SQL_ROW_NUMBER|entero de 32 bits que especifica la posición de la fila actual en el resultado establecido|  
-|SQL_TRANSLATE_DLL|Error: "el controlador no capaz."|  
+|SQL_TRANSLATE_DLL|Error: "No compatible con el controlador"|  
   
  El controlador ODBC de Visual FoxPro no tiene ninguna traducción de archivos DLL.  
   

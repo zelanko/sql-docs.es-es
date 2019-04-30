@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4949d84f75483bd4379366621e4a8921d9b4de39
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186038"
 ---
 # <a name="sqlremovedrivermanager-function"></a>Función SQLRemoveDriverManager
 **Conformidad**  
@@ -81,13 +81,13 @@ BOOL SQLRemoveDriverManager(
   
 |||  
 |-|-|  
-|ODBC32DLL|ODBCCP32. ARCHIVO DLL|  
-|ODBCCR32. ARCHIVO DLL|ODBC16GT. ARCHIVO DLL|  
-|ODBCCU32. ARCHIVO DLL|ODBC32GT. ARCHIVO DLL|  
-|ODBCINT. ARCHIVO DLL|DS16GT. ARCHIVO DLL|  
+|ODBC32DLL|ODBCCP32.DLL|  
+|ODBCCR32.DLL|ODBC16GT.DLL|  
+|ODBCCU32.DLL|ODBC32GT.DLL|  
+|ODBCINT.DLL|DS16GT. ARCHIVO DLL|  
 |ODBCTRAC. ARCHIVO DLL|DS32GT. ARCHIVO DLL|  
-|MSVCRT40. ARCHIVO DLL|ODBCAD32. EXE|  
-|ODBCCP32. CPL||  
+|MSVCRT40.DLL|ODBCAD32.EXE|  
+|ODBCCP32.CPL||  
   
  **SQLRemoveDriverManager** también se denomina como parte de un proceso de actualización. Si una aplicación detecta que tiene que realizar una actualización y que previamente haya instalado al controlador, se debe quitar y volver a instalar el controlador.  
   

@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9e18bd902635a8016234ec714d9929bb48ffbfbc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127664"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Aplicar una transformación XSL (clases administradas de SQLXML)
   En este ejemplo se ejecuta una consulta SQL en la base de datos AdventureWorks. La transformación XSL se aplica al resultado de la consulta para generar una tabla de dos columnas con los nombres y los apellidos de los empleados.  

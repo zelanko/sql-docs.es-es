@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b24db48d6a76c221e72944e8e5e6826cb8d5d55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127987"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>Mensajes de error (el controlador ODBC de Visual FoxPro)
 Cuando se produce un error, el controlador de Visual FoxPro devuelve la siguiente información:  
@@ -43,7 +43,7 @@ Cuando se produce un error, el controlador de Visual FoxPro devuelve la siguient
 ## <a name="syntax"></a>Sintaxis  
  Los mensajes de error tienen el formato siguiente:  
   
- **[** *proveedor* **] [** *ODBC_component* **]** *error_message*  
+ **[** *vendor* **][** *ODBC_component* **]** *error_message*  
   
  Los prefijos de corchetes ([]) identifican el origen del error, tal como se define en la tabla siguiente.  
   

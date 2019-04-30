@@ -17,11 +17,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58bf23c84914d7df4b9f2637cc7682de2021bf08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155500"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *índice columnstore en memoria* almacena y administra datos mediante el uso de almacenamiento de datos basado en columnas y el procesamiento de consultas basado en columnas. Los índices de almacén de columnas funcionan correctamente para las cargas de trabajo de almacenamiento de datos que ejecutan principalmente cargas masivas y consultas de solo lectura. Use el índice de almacén de columnas para aumentar **hasta en diez veces el rendimiento de las consultas** en relación con el almacenamiento tradicional orientado a filas, y hasta **en siete veces la compresión de datos** en relación con el tamaño de los datos sin comprimir.  
@@ -40,7 +40,7 @@ ms.locfileid: "48109813"
 -   [Los temas y las tareas relacionadas](#related)  
   
 ##  <a name="basics"></a> Conceptos básicos  
- Un *columnstore index* es una tecnología de almacenamiento, recuperación y administración de datos que emplea un formato de datos en columnas denominado almacén de columnas. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite índices agrupados y no agrupados de almacén de columnas. Ambos usan la misma tecnología de almacén de columnas en memoria, pero tienen algunas diferencias en cuanto a su propósito y las funciones que admiten.  
+ Un *columnstore index* es una tecnología de almacenamiento, recuperación y administración de datos que emplea un formato de datos en columnas denominado almacén de columnas. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite índices clúster y no clúster de almacén de columnas. Ambos usan la misma tecnología de almacén de columnas en memoria, pero tienen algunas diferencias en cuanto a su propósito y las funciones que admiten.  
   
 ###  <a name="benefits"></a> Ventajas  
  Los índices de almacén de columnas funcionan correctamente con la mayoría de las consultas de solo lectura que realizan análisis en conjuntos de datos grandes. A menudo, se trata de consultas de cargas de trabajo de almacenamiento de datos. Los índices de almacén de columnas ofrecen alto rendimiento para las consultas que usan recorridos de tabla completos y no son adecuados para las consultas que buscan un valor concreto en los datos.  
@@ -64,7 +64,7 @@ ms.locfileid: "48109813"
 |-|  
 |**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].|  
   
- En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un índice de almacén de columnas agrupado:  
+ En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un índice clúster de almacén de columnas:  
   
 -   Está disponible en las ediciones Enterprise, Developer y Evaluation.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48109813"
 |-|  
 |**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].|  
   
- En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un índice de almacén:  
+ En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un índice no clúster de almacén de columnas:  
   
 -   Puede indizar un subconjunto de columnas del índice clúster o el montón. Por ejemplo, puede indizar las columnas usadas con frecuencia.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48109813"
  Los términos y conceptos clave siguientes están asociados a los índices de almacén de columnas.  
   
  columnstore index  
- Un *columnstore index* es una tecnología de almacenamiento, recuperación y administración de datos que emplea un formato de datos en columnas denominado almacén de columnas. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite índices agrupados y no agrupados de almacén de columnas. Ambos usan la misma tecnología de almacén de columnas en memoria, pero tienen algunas diferencias en cuanto a su propósito y las funciones que admiten.  
+ Un *columnstore index* es una tecnología de almacenamiento, recuperación y administración de datos que emplea un formato de datos en columnas denominado almacén de columnas. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite índices clúster y no clúster de almacén de columnas. Ambos usan la misma tecnología de almacén de columnas en memoria, pero tienen algunas diferencias en cuanto a su propósito y las funciones que admiten.  
   
  almacén de columnas  
  Un *almacén de columnas* son datos organizados lógicamente como una tabla con filas y columnas, y almacenados físicamente en un formato de columnas.  
@@ -157,12 +157,12 @@ ms.locfileid: "48109813"
   
  Una tabla con un índice no clúster de almacén de columnas es de solo lectura hasta que se quita o se deshabilita el índice. Para actualizar la tabla y el índice no clúster de almacén de columnas puede intercambiar las particiones. También puede deshabilitar el índice, actualizar la tabla y regenerar el índice.  
   
- Para obtener más información, consulte [Using Nonclustered Columnstore Indexes](indexes.md)  
+ Para obtener más información, vea [Using Nonclustered Columnstore Indexes](indexes.md)  
   
 ###  <a name="dataload_cci"></a> Cargar datos en un índice agrupado de almacén de columnas  
  ![Carga en un índice agrupado de almacén de columnas](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Carga en un índice agrupado de almacén de columnas")  
   
- Como sugiere el diagrama, para cargar datos en un índice agrupado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ Como se muestra en el diagrama, para cargar datos en un índice clúster de almacén de columnas, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 1.  Inserta grupos de filas con el tamaño máximo directamente en el almacén de columnas. A medida que se cargan los datos, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] asigna las filas de datos a un grupo de filas abierto por orden de llegada.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "48109813"
   
     2.  Si el número de filas es menor que el número mínimo de filas necesario para formar un grupo de filas, las filas se agregan al almacén delta.  
   
- Para obtener más información acerca de procesos y tareas de almacén delta, vea [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md)  
+ Para obtener más información acerca de las tareas y los procesos de almacén delta, vea [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).  
   
 ##  <a name="performance"></a> Sugerencias de rendimiento  
   
@@ -196,7 +196,7 @@ ms.locfileid: "48109813"
 ##  <a name="related"></a> Los temas y las tareas relacionadas  
   
 ### <a name="nonclustered-columnstore-indexes"></a>Índices no clúster de almacén de columnas  
- Para tareas comunes, consulte [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md).  
+ Para las tareas comunes, vea [Using Nonclustered Columnstore Indexes](../../database-engine/using-nonclustered-columnstore-indexes.md).  
   
 -   [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
@@ -205,9 +205,9 @@ ms.locfileid: "48109813"
 -   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
 ### <a name="clustered-columnstore-indexes"></a>Índices clúster de almacén de columnas  
- Para tareas comunes, consulte [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).  
+ Para las tareas comunes, vea [Using Clustered Columnstore Indexes](../../database-engine/using-clustered-columnstore-indexes.md).  
   
--   [CREAR el índice de almacén de columnas agrupado &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
+-   [CREATE CLUSTERED COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)  
   
 -   [ALTER INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql) con REBUILD o REORGANIZE.  
   

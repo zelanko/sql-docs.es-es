@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155302"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construcciones Transact-SQL no admitidas por OLTP en memoria
   Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no admiten el área expuesta completa de [!INCLUDE[tsql](../../includes/tsql-md.md)]; sin embargo, las tablas basadas en disco y los procedimientos almacenados interpretados de [!INCLUDE[tsql](../../includes/tsql-md.md)] sí la admiten. Cuando se intenta usar una de las características no admitidas, el servidor devuelve un error.  
@@ -35,7 +35,7 @@ ms.locfileid: "52541236"
 ## <a name="databases-that-use-in-memory-oltp"></a>Bases de datos que utilizan OLTP en memoria  
  En la siguiente tabla se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto del mensaje de error que implica una base de datos OLTP en memoria.  
   
-|Tipo|Nombre|Solución|  
+|Tipo|Name|Solución|  
 |----------|----------|----------------|  
 |Opción|AUTO_CLOSE|La opción de base de datos AUTO_CLOSE=ON no se admite con las bases de datos que tienen un grupo de archivos MEMORY_OPTIMIZED_DATA.|  
 |Opción|ATTACH_REBUILD_LOG|La opción de base de datos ATTACH_REBUILD_LOG de CREATE no se admite con las bases de datos que tienen un grupo de archivos MEMORY_OPTIMIZED_DATA.|  
@@ -46,12 +46,12 @@ ms.locfileid: "52541236"
 ## <a name="memory-optimized-tables"></a>Tablas con optimización para memoria  
  En la tabla siguiente se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto de un mensaje de error relacionado con una tabla optimizada para memoria, así como la acción correctiva para resolver el error.  
   
-|Tipo|Nombre|Solución|  
+|Tipo|Name|Solución|  
 |----------|----------|----------------|  
 |Característica|ON|Las tablas con optimización para memoria no se pueden colocar en un grupo de archivos ni en un esquema de partición. Quite la cláusula ON de la instrucción `CREATE TABLE`.|  
 |Tipo de datos|*Nombre del tipo de datos*|No se admite el tipo de datos indicado. Reemplace el tipo por uno de los tipos de datos admitidos. Para obtener más información, consulte [Supported Data Types](supported-data-types-for-in-memory-oltp.md).|  
 |Característica|Columnas calculadas|Las tablas optimizadas para memoria no admiten columnas calculadas. Quite las columnas calculadas de la instrucción `CREATE TABLE`.|  
-|Característica|REPLICATION|La replicación no es compatible con las tablas optimizadas para memoria.|  
+|Característica|Replicación|La replicación no es compatible con las tablas optimizadas para memoria.|  
 |Característica|FILESTREAM|Las columnas de las tablas optimizadas para memoria no admiten el almacenamiento FILESTREAM. Quite la palabra clave `FILESTREAM` de la definición de columna.|  
 |Característica|SPARSE|Las columnas de las tablas optimizadas para memoria no se pueden definir como columnas SPARSE. Quite la palabra clave `SPARSE` de la definición de columna.|  
 |Característica|ROWGUIDCOL|Las columnas de las tablas optimizadas para memoria no admiten la opción ROWGUIDCOL. Quite la palabra clave `ROWGUIDCOL` de la definición de columna.|  
@@ -84,7 +84,7 @@ ms.locfileid: "52541236"
 ## <a name="indexes-on-memory-optimized-tables"></a>Índices de las tablas con optimización para memoria  
  En la tabla siguiente se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto de un mensaje de error relacionado con un índice de una tabla optimizada para memoria, así como la acción correctiva para resolver el error.  
   
-|Tipo|Nombre|Solución|  
+|Tipo|Name|Solución|  
 |----------|----------|----------------|  
 |Característica|Índice filtrado|Las tablas optimizadas para memoria no admiten índices filtrados. Omita la cláusula `WHERE` en la especificación de índice.|  
 |Característica|UNIQUE|Las tablas optimizadas para memoria no admiten índices únicos. Quite el argumento `UNIQUE` de la especificación de índice.|  
@@ -98,7 +98,7 @@ ms.locfileid: "52541236"
 ## <a name="nonclustered-hash-indexes"></a>Índices de hash no clúster  
  En la tabla siguiente se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto de un mensaje de error relacionado con un índice de hash no clúster, así como la acción correctiva para resolver el error.  
   
-|Tipo|Nombre|Solución|  
+|Tipo|Name|Solución|  
 |----------|----------|----------------|  
 |Opción|ASC/DESC|Los índices de hash no clúster no se ordenan. Quite las palabras clave `ASC` y `DESC` de la especificación de clave de índice.|  
   
@@ -199,7 +199,7 @@ ms.locfileid: "52541236"
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transacciones que tienen acceso a tablas con optimización para memoria  
  En la tabla siguiente se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto de un mensaje de error relacionado con transacciones que tienen acceso a tablas optimizadas para memoria, así como la acción correctiva para resolver el error.  
   
-|Tipo|Nombre|Solución|  
+|Tipo|Name|Solución|  
 |----------|----------|----------------|  
 |Característica|punto de retorno|No se pueden crear puntos de retorno explícitos en transacciones que tienen acceso a tablas optimizadas para memoria.|  
 |Característica|Transacción enlazada|Las sesiones enlazadas no pueden participar en transacciones que tienen acceso a tablas optimizadas para memoria. No enlace la sesión antes de ejecutar el procedimiento.|  

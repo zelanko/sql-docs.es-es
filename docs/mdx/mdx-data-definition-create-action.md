@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233626"
 ---
 # <a name="mdx-data-definition---create-action"></a>Definición de datos de MDX: CREATE ACTION
 
@@ -87,7 +87,7 @@ FOR
 |**HTML**|La cadena de acción que se devuelve es un script HTML. La cadena debe guardarse en un archivo y ese archivo debe representarse mediante un explorador de Internet. En este caso, un script completo debe ejecutarse como parte del HTML generado.|  
 |**INSTRUCCIÓN**|La cadena de acción devuelta es una instrucción que se debe ejecutar estableciendo el **SetText** método de un objeto de comando a la cadena y llamar a la **ICommand:: Execute**método. Si el comando no ha funcionado, se muestra un error.|  
 |**CONJUNTO DE DATOS**|La cadena de acción devuelta es una instrucción MDX que debe ejecutarse estableciendo el **SetText** método de un objeto de comando a la cadena y llamar a la **ICommand:: Execute** método. La interfaz solicitada debe ser el identificador (IID) **IDataset**. El comando tiene éxito si se ha creado un conjunto de datos. La aplicación cliente debe permitir al usuario explorar el conjunto de datos devuelto.|  
-|**CONJUNTO DE FILAS**|Similar a **DATASET**, pero en lugar de solicitar un IID de **IDataset**, la aplicación cliente debe solicitar un IID de **IRowset**. El comando tiene éxito si se ha creado un conjunto de filas. La aplicación cliente debe permitir al usuario explorar el conjunto de filas devuelto.|  
+|**ROWSET**|Similar a **DATASET**, pero en lugar de solicitar un IID de **IDataset**, la aplicación cliente debe solicitar un IID de **IRowset**. El comando tiene éxito si se ha creado un conjunto de filas. La aplicación cliente debe permitir al usuario explorar el conjunto de filas devuelto.|  
 |**LÍNEA DE COMANDOS**|La aplicación cliente debe ejecutar la cadena de acción. La cadena es una línea de comandos.|  
 |**PROPIETARIO**|Una aplicación cliente no debe mostrar, ni ejecutar la acción a menos que la aplicación tenga un conocimiento personalizado y no genérico de la acción específica. Las acciones de propietario no se devuelven a la aplicación cliente a menos que la aplicación cliente lo solicite explícitamente mediante el establecimiento de la restricción adecuada en el **APPLICATION_NAME**.|  
   
@@ -96,15 +96,15 @@ FOR
   
 |Tipo de invocación|Descripción|  
 |---------------------|-----------------|  
-|**INTERACTIVO**|La aplicación cliente debe invocar la acción mediante la interacción del usuario.|  
+|**INTERACTIVE**|La aplicación cliente debe invocar la acción mediante la interacción del usuario.|  
 |**ON_OPEN**|La aplicación cliente debe invocar la acción cuando se abre el objeto de destino. Este tipo de invocación no está implementada actualmente.|  
-|**PROCESO POR LOTES**|La aplicación cliente debe invocar la acción cuando el objeto de destino esté relacionado con una operación por lotes, según determine la aplicación cliente. Este tipo de invocación no está implementada actualmente.|  
+|**BATCH**|La aplicación cliente debe invocar la acción cuando el objeto de destino esté relacionado con una operación por lotes, según determine la aplicación cliente. Este tipo de invocación no está implementada actualmente.|  
   
 ### <a name="scope"></a>Ámbito  
  Cada acción se define para un cubo específico y tiene un nombre único en ese cubo. Uno de los ámbitos de la acción puede aparecer enumerado en la tabla siguiente.  
   
  Ámbito de cubo  
- Para las acciones con independencia de dimensiones, miembros o celdas concretos; por ejemplo: "Iniciar la emulación de terminal para el sistema de producción de AS/400."  
+ Para las acciones con independencia de dimensiones específicas, los miembros o celdas; Por ejemplo: "Iniciar la emulación de terminales para AS / 400 sistema de producción".  
   
  Ámbito de dimensión  
  La acción se aplica a una dimensión específica. Estas acciones no dependen de la selección específica de niveles o miembros.  

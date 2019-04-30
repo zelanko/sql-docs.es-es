@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93ddc3881796aee3194ec5268afc68ecbab1a487
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233008"
 ---
 # <a name="create-index-statement"></a>Instrucción CREATE INDEX
 La sintaxis de la instrucción CREATE INDEX es:  
   
  Crear índice [UNIQUE] *nombre del índice* ON *nombre-tabla* (*identificador de columna* [ASC] [DESC] [, *identificador de columna* [ASC][DESC]...]) CON \< *lista de opciones de índice*>  
   
- donde \< *lista de opciones de índice*> puede ser: principal &#124; DISALLOW NULL &#124; IGNORE NULL  
+ donde \< *lista de opciones de índice*> puede ser: PRIMARY &#124; DISALLOW NULL &#124; IGNORE NULL  
   
  Solo el controlador de Microsoft Access utiliza las opciones de índice no permitir NULL e IGNORE NULL. Los controladores de Paradox y dBASE aceptan la sintaxis, pero omitir la presencia de cualquiera de las opciones.  
   

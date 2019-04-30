@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 66b4e98e08db2799d2038973db815b73ece63f53
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237706"
 ---
 # <a name="search-page-report-manager"></a>Buscar (página del Administrador de informes)
   Use la página Resultados de la búsqueda para ver los resultados de una operación de búsqueda especificada para un informe, un informe vinculado, un modelo de informe, un origen de datos compartido, una carpeta o un recurso. Los resultados de la búsqueda se muestran ordenados alfabéticamente. Se pueden ordenar por tipo, nombre o descripción.  

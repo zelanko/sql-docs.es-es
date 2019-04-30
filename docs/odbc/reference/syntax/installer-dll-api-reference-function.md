@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14a89c859e98a069106b79c9289187a64c310fa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232820"
 ---
 # <a name="installer-dll-api-reference-function"></a>Función de referencia de API de DLL de instalador
 En esta sección se describe la sintaxis de las funciones en el instalador de la API de DLL. El instalador de la API de DLL se compone de 20 funciones. Tres de estas funciones, **SQLGetTranslator**, **SQLRemoveDSNFromIni**, y **SQLWriteDSNToIni**, solo llama a las DLL de instalación. Las demás funciones son llamadas por los programas de instalación y administración.  

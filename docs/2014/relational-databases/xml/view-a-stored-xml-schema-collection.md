@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8cde5898fc4c9ae8b71452bfb22ff58e0c3c9725
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233601"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Ver una colección de esquemas XML almacenada
   Después de importar una colección de esquemas XML mediante [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql), los componentes del esquema se almacenan en los metadatos. Puede usar la función intrínseca [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)para reconstruir la colección de esquemas XML. La función devuelve una instancia de tipo de datos `xml`.  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238011"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>Fecha y hora y conjuntos de filas de esquema
   En este tema se proporciona información sobre los conjuntos de filas COLUMNS y PROCEDURE_PARAMETERS. Esta información está relacionada con las mejoras realizadas en la fecha y la hora de OLE DB introducidas en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -27,10 +27,10 @@ ms.locfileid: "52774757"
   
 |Tipo de columna|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|Date|DBTYPE_DBDATE|Desactivar|0|  
+|date|DBTYPE_DBDATE|Desactivar|0|  
 |time|DBTYPE_DBTIME2|Establecer|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Desactivar|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|Desactivar|3|  
+|datetime|DBTYPE_DBTIMESTAMP|Desactivar|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Establecer|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Establecer|0..7|  
   
@@ -64,9 +64,9 @@ ms.locfileid: "52774757"
 ## <a name="providertypes-rowset"></a>Conjunto de filas PROVIDER_TYPES  
  Para los tipos de fecha y hora se devuelven las siguientes filas:  
   
-|Tipo -><br /><br /> columna|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Tipo -><br /><br /> columna|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -78,7 +78,7 @@ ms.locfileid: "52774757"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|Date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  

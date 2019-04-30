@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc566c7cfd86e76df5389e56b7465dcd04b76f51
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237887"
 ---
 # <a name="sqlbindparameter-function"></a>Función SQLBindParameter
 
@@ -334,7 +334,7 @@ SQLRETURN SQLBindParameter(
 
  En el enlace, la aplicación enlaza el parámetro independiente y matrices de longitud/indicador para cada parámetro.  
   
- Para usar el enlace, la aplicación primero establece el atributo de instrucción SQL_ATTR_PARAM_BIND_TYPE en SQL_PARAM_BIND_BY_COLUMN. (Es el valor predeterminado.) Para que enlazar cada columna, la aplicación realiza los pasos siguientes:  
+ Para usar el enlace, la aplicación primero establece el atributo de instrucción SQL_ATTR_PARAM_BIND_TYPE en SQL_PARAM_BIND_BY_COLUMN. (Esto es el valor predeterminado). Para que enlazar cada columna, la aplicación realiza los pasos siguientes:  
   
 1.  Asigna una matriz de búferes de parámetros.  
   

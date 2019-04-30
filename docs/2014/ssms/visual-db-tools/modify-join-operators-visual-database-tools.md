@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232847"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modificar operadores de combinación (Visual Database Tools)
   De forma predeterminada, el [Diseñador de consultas y vistas](visual-database-tools.md) combina tablas usando un signo igual (una combinación de igualdad), que compara los valores de las dos columnas de combinación. Si lo desea, puede cambiar el operador utilizado para comparar valores de las columnas de combinación.  

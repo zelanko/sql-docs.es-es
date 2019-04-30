@@ -11,11 +11,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84c8d4f9ed6eccbf7e58be46a9b84c53559a317d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232414"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>Acceso al proveedor WMI mediante programación
   Este tema se está elaborando.  

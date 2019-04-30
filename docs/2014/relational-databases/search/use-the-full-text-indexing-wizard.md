@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 767c83b5eb6483ca4804e8602886932ff8e40793
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237828"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar el Asistente para indización de texto completo
   El Asistente para indización de texto completo le guía por una serie de pasos diseñados para ayudarle a crear un índice de texto completo.  
@@ -79,7 +79,7 @@ ms.locfileid: "48054305"
     |-|-|  
     |**Crear un nuevo catálogo**|Seleccione esta opción para crear un nuevo catálogo de texto completo.|  
   
-     **Nombre**  
+     **Name**  
      Escriba un nombre para el nuevo catálogo de texto completo.  
   
      **Establecer como catálogo predeterminado**  
@@ -95,7 +95,7 @@ ms.locfileid: "48054305"
   
     |Valor|Descripción|  
     |-----------|-----------------|  
-    |**\<predeterminada >**|Si la tabla o la vista no tienen particiones, seleccione este valor para usar el mismo grupo de archivos que la tabla o vista subyacente. Si la tabla o la vista tienen particiones, se usa el grupo de archivos principal.|  
+    |**\<default>**|Si la tabla o la vista no tienen particiones, seleccione este valor para usar el mismo grupo de archivos que la tabla o vista subyacente. Si la tabla o la vista tienen particiones, se usa el grupo de archivos principal.|  
     |**PRIMARY**|Seleccione este valor para usar el grupo de archivos principal para el nuevo índice de texto completo.|  
     |*grupo de archivos predeterminado especificado por el usuario*|Si existe una lista de palabras irrelevantes predeterminada definida por el usuario, seleccione su nombre en la lista con el fin de utilizar ese grupo de archivos para el nuevo índice de texto completo.|  
   
@@ -108,8 +108,8 @@ ms.locfileid: "48054305"
   
     |Valor|Descripción|  
     |-----------|-----------------|  
-    |**\<sistema >**|Seleccione este valor para utilizar la lista de palabras irrelevantes del sistema en el nuevo índice de texto completo. Este es el valor predeterminado.|  
-    |**\<desactivar >**|Seleccione este valor para deshabilitar las listas de palabras irrelevantes para el nuevo índice de texto completo.|  
+    |**\<system>**|Seleccione este valor para utilizar la lista de palabras irrelevantes del sistema en el nuevo índice de texto completo. Este es el valor predeterminado.|  
+    |**\<off>**|Seleccione este valor para deshabilitar las listas de palabras irrelevantes para el nuevo índice de texto completo.|  
     |*user-defined-stoplist-name*|La lista muestra el nombre de cada lista de palabras irrelevantes definida por el usuario, si hay alguna, que se haya creado en la base de datos. Seleccione la lista de palabras irrelevantes definida por el usuario que desee para utilizarla para el nuevo índice de texto completo.|  
   
 4.  Opcionalmente, defina la programación de rellenado. Las operaciones de indización comenzarán inmediatamente, a menos que se hayan programado para que se ejecuten posteriormente. Las programaciones se crearán inmediatamente, aunque no se ejecuten hasta la hora programada.  

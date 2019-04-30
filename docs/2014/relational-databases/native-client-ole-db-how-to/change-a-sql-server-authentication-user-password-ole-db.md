@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9bef75196b2106fd72e3f1f4989e70b994508723
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233068"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>Cambiar una contraseña de usuario de autenticación de SQL Server (OLE DB)
   En este ejemplo se muestra cómo usar OLE DB para cambiar la contraseña de una cuenta de usuario bajo autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

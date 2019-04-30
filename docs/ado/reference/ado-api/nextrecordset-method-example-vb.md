@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 848034e40a4b3a7c98cd59eb7204c7f00b147b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242713"
 ---
 # <a name="nextrecordset-method-example-vb"></a>Ejemplo del método NextRecordset (VB)
 Este ejemplo se usa el [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) método para ver los datos en un conjunto de registros que se utiliza una instrucción compuesta formada por tres independiente **seleccione** instrucciones.  

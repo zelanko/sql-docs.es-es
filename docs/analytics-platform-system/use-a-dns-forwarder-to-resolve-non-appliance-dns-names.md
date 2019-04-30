@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63243792"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Usar un reenviador DNS para resolver nombres DNS que no sea de dispositivo de Analytics Platform System
 Se puede configurar un reenviador DNS en los nodos de Active Directory Domain Services (**_dispositivo\_dominio_-AD01** y  **_dispositivo\_ dominio_-AD02**) de la aplicación Analytics Platform System para permitir que los scripts y aplicaciones de software para tener acceso a servidores externos.  

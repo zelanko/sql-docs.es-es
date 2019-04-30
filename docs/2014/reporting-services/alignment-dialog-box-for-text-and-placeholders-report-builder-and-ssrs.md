@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0663bfce435187be66889858316b5ced0573f149
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233453"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>Cuadro de diálogo Alineación para texto y marcadores de posición (Generador de informes y SSRS)
   Seleccione la pestaña **Alineación** para situar los valores dentro de una celda o región de datos seleccionada. En un cuadro de texto, solo se puede establecer la alineación horizontal del texto individual. Si desea establecer los valores de relleno en el cuadro de texto o la alineación vertical, use las propiedades de cuadro de texto correspondientes. Para obtener más información, consulte [cuadro de diálogo Propiedades de cuadro de texto, alineación &#40;generador de informes y SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md).  

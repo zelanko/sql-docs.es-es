@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 83d02accf46a1939a1bd90e6de4d61154ea8100f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237917"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Lista de comprobación de implementación: Instalación en varios servidores de PowerPivot para SharePoint 2010
   Esta lista de comprobación le guiará por los pasos para agregar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint a una granja de SharePoint 2010 de tres niveles que crea desde el principio. Una granja de tres niveles cuenta con los niveles de base de datos, de aplicación y de web. Agregar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para esta topología exige la ejecución del programa de instalación de SQL Server para instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] en la capa de aplicación. Archivos de programa de PowerPivot se agregan al nivel web, pero sólo como una tarea posterior a la instalación cuando se la implementar solución de aplicación web. Si bien existen pasos de implementación, no hay ningún paso de instalación independiente en los niveles web o de datos. El paso de instalación única que debe realizar es instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] en los servidores de aplicaciones.  

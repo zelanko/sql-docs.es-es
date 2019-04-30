@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232405"
 ---
 # <a name="use-nested-for-xml-queries"></a>Usar consultas FOR XML anidadas
   El `xml` tipo de datos y el [directiva TYPE en consultas FOR XML](type-directive-in-for-xml-queries.md) permiten que el XML devuelto por las consultas FOR XML para procesarse en el servidor, así como en el cliente.  

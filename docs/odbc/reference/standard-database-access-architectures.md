@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5a0a8457dfde0090ac0d88d12079e88995b39efb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232394"
 ---
 # <a name="standard-database-access-architectures"></a>Arquitecturas de acceso a base de datos estándar
 Observar los componentes de acceso de la base de datos que se describe en la sección anterior, pero resulta que dos de ellos - programación e interfaces de protocolos de transmisión de datos: son buenos candidatos para la estandarización. Los otros dos componentes: mecanismo IPC y protocolos de red: no sólo residen en un nivel demasiado bajo, pero son ambos sumamente dependiente de la red y el sistema operativo. También hay un tercer enfoque - puertas de enlace - que ofrece posibilidades de normalización.  

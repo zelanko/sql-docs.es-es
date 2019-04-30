@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dbad3b1e6dda82a9f9fc584683e53f8e2a109cca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63233595"
 ---
 # <a name="odbc-jet-sqlconfigdatasource-excel-driver"></a>ODBC Jet SQLConfigDataSource (controlador de Excel)
 > [!NOTE]  
@@ -30,7 +30,7 @@ ms.locfileid: "47715393"
 |Palabra clave|Descripción|  
 |-------------|-----------------|  
 |DBQ|Para el controlador de Microsoft Excel al acceder a Microsoft Excel 5.0 o posterior archivos, el nombre del archivo de libro.<br /><br /> Esto establece la misma opción como **base de datos** en el cuadro de diálogo programa de instalación.|  
-|VALOR DE ESTA OPCIÓN|La especificación de ruta de acceso al directorio.<br /><br /> Esto establece la misma opción como **Seleccionar directorio** o **Seleccionar libro** en el cuadro de diálogo programa de instalación.|  
+|DEFAULTDIR|La especificación de ruta de acceso al directorio.<br /><br /> Esto establece la misma opción como **Seleccionar directorio** o **Seleccionar libro** en el cuadro de diálogo programa de instalación.|  
 |DESCRIPTION|Una descripción de los datos del origen de datos.<br /><br /> Esto establece la misma opción como **descripción** en el cuadro de diálogo programa de instalación.|  
 |DRIVER|La especificación de ruta de acceso a la DLL del controlador.|  
 |DRIVERID|Un identificador entero para el controlador.<br /><br /> 534 (Microsoft Excel 3.0)<br /><br /> 278 (Microsoft Excel 4.0)<br /><br /> 22 (5.0 o 7.0 de Microsoft Excel)<br /><br /> 790 (Microsoft Excel 97-2003)|  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9781519c0ea8f13a1cad7987f3e451f6d55f86c5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63237774"
 ---
 # <a name="rgdi-device-information-settings"></a>Configuración de la información del dispositivo RGDI
   En la tabla siguiente se muestra la configuración de la información de dispositivo para la representación en formato RGDI.  

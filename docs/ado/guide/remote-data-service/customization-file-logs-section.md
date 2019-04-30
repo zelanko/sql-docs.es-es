@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 71a9130c385032acfad7c0c1040b293486bff525
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214902"
 ---
 # <a name="customization-file-logs-section"></a>Sección de registros del archivo de personalización
 El **registros** sección contiene una entrada de archivo de registro, que especifica el nombre de un archivo que registra los errores durante la operación de la **DataFactory**.  
@@ -41,7 +41,7 @@ FileName
   
 |Parte|Descripción|  
 |----------|-----------------|  
-|**Err**|Una cadena literal que indica que esta es una entrada de archivo de registro.|  
+|**err**|Una cadena literal que indica que esta es una entrada de archivo de registro.|  
 |*FileName*|Un nombre de archivo y ruta completando. El nombre de archivo suele **c:\msdfmap.log**.|  
   
  El archivo de registro contendrá el nombre de usuario, HRESULT, fecha y hora de cada error.  

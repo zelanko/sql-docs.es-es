@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88e3593276851b6ab38fde0472a70be31b7cbf34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199453"
 ---
 # <a name="binding-columns"></a>Enlazar columnas
 Datos capturados desde el origen de datos se devuelven a la aplicación en las variables que ha asignado la aplicación para este propósito. Antes de ello, debe asociar la aplicación, o *enlazar*, establecen estas variables a las columnas del resultado; conceptualmente, este proceso es el mismo que el enlace de variables de aplicación para los parámetros de la instrucción. Cuando la aplicación enlaza una variable a una columna del conjunto de resultados, describe esa variable - dirección, tipo de datos etc. - al controlador. El controlador almacena esta información en la estructura se mantiene para esa instrucción y usa la información para devolver el valor de la columna cuando se captura la fila.  

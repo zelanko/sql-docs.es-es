@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c62ca169091e1ac33815c3c8a4b0c7bf771a1adf
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209421"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Coincidencia automática de pares en la sintaxis
   La coincidencia automática de pares en la sintaxis informa de manera inmediata sobre si están escritos correctamente los elementos de sintaxis que deben ir emparejados en el código. Esto se conoce como coincidencia de delimitadores en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , coincidencia de llaves en el Editor de consultas XMLA de Analysis Services y coincidencia de paréntesis en los editores MDX y DMX.  
@@ -70,6 +70,6 @@ ms.locfileid: "49085121"
 -   Comillas de apertura y de cierre en los atributos.  
   
 ## <a name="mdx-and-dmx-editor-parenthesis-matching"></a>Coincidencia de paréntesis de los editores MDX y DMX  
- Los editores de expresiones de minería de datos (DMX) y expresiones multidimensionales (MDX) hace coincidir automáticamente los pares de paréntesis en las funciones.  
+ El Editor MDX (Expresiones multidimensionales) y el Editor DMX (Expresiones de minería de datos) comprueban automáticamente la coincidencia de los pares de paréntesis en las funciones.  
   
   

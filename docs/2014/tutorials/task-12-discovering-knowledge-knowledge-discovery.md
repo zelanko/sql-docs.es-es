@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 478634dce86c8ccb0cf36d4d558be3826048983e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223461"
 ---
-# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tarea 12: detectar conocimiento (detección de conocimiento)
+# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tarea 12: Detección de conocimiento
   En esta tarea, realizará la **Knowledgediscovery** actividad en **Id. de proveedor** y **Supplier Name** dominios. En este escenario, el proceso de detección de conocimiento importa principalmente valores de estos dos dominios.  
   
  En este tutorial, empezó a crear la base de conocimiento desde el principio. También puede empezar a crear una base de conocimiento realizando una actividad de detección de conocimiento. Al hacer clic en **crear una Base de conocimiento** en la página principal, el cliente DQS le lleva a una página con **Domain Management** actividad seleccionada para la actividad. Puede cambiar el **actividad** a **Knowledgediscovery** y, a continuación, en la página siguiente puede crear dominios como parte del proceso de detección de conocimiento. Consulte [Perform Knowledge Discovery](https://msdn.microsoft.com/library/hh510398.aspx) para obtener más detalles.  

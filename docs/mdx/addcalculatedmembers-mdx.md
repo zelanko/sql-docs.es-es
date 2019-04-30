@@ -1,5 +1,5 @@
 ---
-title: AddCalculatedMembers (MDX) | Documentos de Microsoft
+title: AddCalculatedMembers (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18ccf4ad808c15945d82f1ca05616f0da878a7ca
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201617"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
 
@@ -32,8 +32,8 @@ AddCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
-## <a name="remarks"></a>Notas  
- De forma predeterminada, MDX excluye los miembros calculados cuando resuelve funciones de conjunto. El **AddCalculatedMembers** función examina la expresión de conjunto especificada en *función,* e incluye miembros calculados que son del mismo nivel de los miembros incluidos dentro del ámbito de esa expresión de conjunto.  
+## <a name="remarks"></a>Comentarios  
+ De forma predeterminada, MDX excluye los miembros calculados cuando resuelve funciones de conjunto. El **AddCalculatedMembers** función examina la expresión de conjunto especificada en *expresión_conjunto,* e incluye miembros calculados que están relacionados con los miembros incluidos dentro del ámbito de ese conjunto expresión.  
   
 > [!NOTE]  
 >  Esta función puede utilizarse solo con expresiones de conjunto de una dimensión.  

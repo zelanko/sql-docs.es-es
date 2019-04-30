@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3493657fb537057f7c0ff8e126582ceb6faccc11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238391"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Buscar palabras cerca de otra palabra con NEAR
   Puede usar un término de proximidad (NEAR) en un predicado [CONTAINS](/sql/t-sql/queries/contains-transact-sql) o en una función [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) para buscar palabras o frases que están cerca unas de otras. También puede especificar el número máximo de términos de no búsqueda que separan el primero y el último término de búsqueda. Además, puede buscar palabras o frases en cualquier orden o puede buscar palabras y frases en el orden en el que las especifique. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite tanto el anterior [término de proximidad genérico](#Generic_NEAR), que está en desuso y el [término de proximidad personalizado](#Custom_NEAR), que es nuevo en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -55,7 +55,7 @@ ms.locfileid: "52502837"
   
  |  
   
- (*término_búsqueda* [,... *n* ]) [, < distancia_máxima > [, < orden_coincidencia >]]  
+ (*search_term* [ ,...*n* ] ) [, <maximum_distance> [, <match_order> ] ]  
   
  }  
   
@@ -160,7 +160,7 @@ GO
   
  Un término de proximidad genérico indica que todos los términos de búsqueda especificados deben estar en un documento para que se devuelva una coincidencia, independientemente del número de términos de no búsqueda (la *distancia*) que haya entre los términos de búsqueda. La sintaxis básica es:  
   
- { *término_búsqueda* {NEAR | ~} *término_búsqueda* } [,... *n* ]  
+ { *search_term* { NEAR | ~ } *search_term* } [ ,...*n* ]  
   
  Por ejemplo, en los ejemplos siguientes deben aparecer las palabras 'fox' y 'chicken', en cualquier orden, para que se genere una coincidencia:  
   

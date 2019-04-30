@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 359acef5bc6f6015a6404a3cb4f3605cdcd07b4b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201180"
 ---
 # <a name="report-designer-f1-help"></a>Diseñador de informes (Ayuda F1)
   En esta sección se proporciona Ayuda F1 para los asistentes, vistas y cuadros de diálogo del Generador de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . También puede abrir la Ayuda F1 mientras trabaja en un cuadro de diálogo; para ello, presione F1 o haga clic en el botón Ayuda que se muestra en el cuadro de diálogo.  

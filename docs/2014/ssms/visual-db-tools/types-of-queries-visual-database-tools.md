@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63204592"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>Tipos de consultas (Visual Database Tools)
   El Diseñador de consultas y vistas proporciona características integradas para algunos tipos de consulta (Select, Insert Results, Insert Values, Update, Delete y Make Table) y admite también las consultas UNION, las búsquedas de texto completo y las consultas de expresiones CASE.  

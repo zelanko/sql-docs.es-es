@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99094f6e0edc60dfa6ce77474c52f1cf9dfc50fa
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231294"
 ---
 # <a name="add-reference-dialog-box"></a>Agregar referencia (cuadro de diálogo)
   Utilice el cuadro de diálogo **Agregar referencia** para agregar al informe referencias a un ensamblado o componente de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] personalizado. Después de agregar una referencia de ensamblado, puede escribir expresiones o código personalizado incrustado que incluya referencias completas a clases o métodos en el ensamblado o componente. Para más información, vea [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) o [Agregar una referencia de ensamblado a un informe &#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md).  

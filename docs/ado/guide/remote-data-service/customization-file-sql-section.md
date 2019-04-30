@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5efa6587ade3a15ce4b45b7247da1c3a896f69ee
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214764"
 ---
 # <a name="customization-file-sql-section"></a>Sección de SQL del archivo de personalización
 El **sql** sección puede contener una cadena SQL nueva que reemplaza la cadena de comandos de cliente. Si no hay ninguna cadena SQL en la sección, se omitirá la sección.  
@@ -43,13 +43,13 @@ SQL = " "
 ## <a name="syntax"></a>Sintaxis  
  Un entrada de la cadena SQL de reemplazo tiene el formato:  
   
- **SQL =**   
- ***SqlString***  
+ **SQL=**   
+ ***sqlString***  
   
 |Parte|Descripción|  
 |----------|-----------------|  
 |**SQL**|Una cadena literal que indica que esta es una entrada de la sección SQL.|  
-|***SqlString***|Una cadena SQL que reemplaza la cadena de cliente.|  
+|***sqlString***|Una cadena SQL que reemplaza la cadena de cliente.|  
   
 ## <a name="see-also"></a>Vea también  
  [Sección de conexión del archivo de personalización](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   

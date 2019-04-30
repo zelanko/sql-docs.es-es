@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231818"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Configuración del proyecto (asignación de tipo) (MySQLToSQL)
 La configuración del proyecto de asignación de tipos le permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA.  
@@ -58,101 +58,101 @@ La siguiente tabla muestra las asignaciones predeterminadas entre tipos de datos
 |archivo binario [de 0.. 1]|binario [1]|  
 |binario [2..255]|binario [*]|  
 |bit|binario [1]|  
-|bits [0..8]|binario [1]|  
-|bits [17..24]|binario [3]|  
-|bits [25..32]|binario [4]|  
-|bits [33..40]|binario [5]|  
-|bits [41..48]|binario [6]|  
-|bits [49..56]|binario [7]|  
-|bits [57..64]|binario [8]|  
-|bits [9..16]|binario [2]|  
+|bit[0..8]|binario [1]|  
+|bit[17..24]|binario [3]|  
+|bit[25..32]|binario [4]|  
+|bit[33..40]|binario [5]|  
+|bit[41..48]|binario [6]|  
+|bit[49..56]|binario [7]|  
+|bit[57..64]|binario [8]|  
+|bit[9..16]|binario [2]|  
 |blob|varbinary(max)|  
-|BLOB [de 0.. 1]|varbinary [1]|  
+|blob[0..1]|varbinary [1]|  
 |blob[2..8000]|varbinary [*]|  
 |blob[8001..*]|varbinary(max)|  
 |bool|bit|  
 |boolean|bit|  
-|char|nchar [1]|  
-|bytes de char|binario [1]|  
-|bytes del carácter [de 0.. 1]|binario [1]|  
+|char|nchar[1]|  
+|char byte|binario [1]|  
+|char byte[0..1]|binario [1]|  
 |bytes de Char [2..255]|binario [*]|  
-|char [de 0.. 1]|nchar [1]|  
-|Char [2..255]|nchar [*]|  
-|character|nchar [1]|  
+|char[0..1]|nchar[1]|  
+|char[2..255]|nchar [*]|  
+|character|nchar[1]|  
 |caracteres distintos de [0.. 1]|nvarchar [1]|  
 |carácter variable [2..255]|NVARCHAR|  
-|carácter [de 0.. 1]|nchar [1]|  
-|caracteres [2..255]|nchar [*]|  
-|Date|Date|  
-|DATETIME|datetime2 [0]|  
+|character[0..1]|nchar[1]|  
+|character[2..255]|nchar [*]|  
+|date|date|  
+|datetime|datetime2 [0]|  
 |dec|Decimal|  
 |DEC [*.. 65]|decimal[*][0]|  
 |DEC [*.. 65] [\*... 30]|decimal [*] [\*]|  
 |Decimal|Decimal|  
-|decimal [*.. 65]|decimal[*][0]|  
+|decimal[*..65]|decimal[*][0]|  
 |decimal [*.. 65] [\*... 30]|decimal [*] [\*]|  
-|double|float [53]|  
-|doble precisión|float [53]|  
+|double|float[53]|  
+|doble precisión|float[53]|  
 |doble precisión [*.. 255] [\*... 30]|numérico [*] [\*]|  
 |Double [*.. 255] [\*... 30]|numérico [*] [\*]|  
 |se ha corregido|NUMERIC|  
 |se ha corregido [*.. 65] [\*... 30]|numérico [*] [\*]|  
-|FLOAT|float [24]|  
+|FLOAT|float[24]|  
 |float [*.. 255] [\*... 30]|numérico [*] [\*]|  
-|float [*.. 53]|float [53]|  
+|float [*.. 53]|float[53]|  
 |INT|INT|  
-|int [*.. 255]|INT|  
+|int[*..255]|INT|  
 |integer|INT|  
-|entero [*.. 255]|INT|  
+|integer[*..255]|INT|  
 |longblob|varbinary(max)|  
-|LONGTEXT|nvarchar(max)|  
+|longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
 |mediumint|INT|  
 |mediumint [*.. 255]|INT|  
 |mediumtext|nvarchar(max)|  
-|carácter nacional|nchar [1]|  
-|carácter nacional [de 0.. 1]|nchar [1]|  
+|carácter nacional|nchar[1]|  
+|carácter nacional [de 0.. 1]|nchar[1]|  
 |carácter nacional [2..255]|nchar [*]|  
-|carácter nacional|nchar [1]|  
+|carácter nacional|nchar[1]|  
 |national character varying de|nvarchar [1]|  
 |carácter nacional distintos [de 0.. 1]|nvarchar [1]|  
 |carácter nacional varying [2..4000]|nvarchar [*]|  
 |national character varying de [4001.. *]|nvarchar(max)|  
-|carácter nacional [de 0.. 1]|nchar [1]|  
+|carácter nacional [de 0.. 1]|nchar[1]|  
 |carácter nacional [2..255]|nchar [*]|  
 |varchar nacional|nvarchar [1]|  
 |varchar nacional [de 0.. 1]|nvarchar [1]|  
 |National varchar [2..4000]|nvarchar [*]|  
 |National varchar [4001.. *]|nvarchar(max)|  
-|NCHAR|nchar [1]|  
+|NCHAR|nchar[1]|  
 |nchar varchar|nvarchar [1]|  
-|nchar varchar [de 0.. 1]|nvarchar [1]|  
-|nchar varchar [2..4000]|nvarchar [*]|  
-|nchar varchar [4001.. *]|nvarchar(max)|  
-|nchar [de 0.. 1]|nchar [1]|  
-|nchar [2..255]|nchar [*]|  
+|nchar varchar[0..1]|nvarchar [1]|  
+|nchar varchar[2..4000]|nvarchar [*]|  
+|nchar varchar[4001..*]|nvarchar(max)|  
+|nchar[0..1]|nchar[1]|  
+|nchar[2..255]|nchar [*]|  
 |NUMERIC|NUMERIC|  
 |numérico [*.. 65]|numérico [*] [0]|  
 |numérico [*.. 65] [\*... 30]|numérico [*] [\*]|  
 |NVARCHAR|nvarchar [1]|  
-|nvarchar [de 0.. 1]|nvarchar [1]|  
-|nvarchar [2..4000]|nvarchar [*]|  
-|nvarchar [4001.. *]|nvarchar(max)|  
-|REAL|float [53]|  
+|nvarchar[0..1]|nvarchar [1]|  
+|nvarchar[2..4000]|nvarchar [*]|  
+|nvarchar[4001..*]|nvarchar(max)|  
+|REAL|float[53]|  
 |real [*.. 255] [\*... 30]|numérico [*] [\*]|  
 |serie|BIGINT|  
 |SMALLINT|SMALLINT|  
 |smallint [*.. 255]|SMALLINT|  
 |texto|nvarchar(max)|  
-|texto [de 0.. 1]|nvarchar [1]|  
-|texto [2..4000]|nvarchar [*]|  
-|texto [4001.. *]|nvarchar(max)|  
+|text[0..1]|nvarchar [1]|  
+|text[2..4000]|nvarchar [*]|  
+|text[4001..*]|nvarchar(max)|  
 |time|time|  
-|TIMESTAMP|DATETIME|  
-|tinyblob|varbinary [255]|  
+|TIMESTAMP|datetime|  
+|tinyblob|varbinary[255]|  
 |TINYINT|SMALLINT|  
 |tinyint [*.. 255]|SMALLINT|  
-|tinytext|nvarchar [255]|  
+|tinytext|nvarchar[255]|  
 |bigint sin signo|BIGINT|  
 |bigint sin signo [*.. 255]|BIGINT|  
 |dec sin signo|Decimal|  
@@ -161,15 +161,15 @@ La siguiente tabla muestra las asignaciones predeterminadas entre tipos de datos
 |decimal sin signo|Decimal|  
 |decimal sin signo [*.. 65]|decimal[*][0]|  
 |decimal sin signo [*.. 65] [\*... 30]|decimal [*] [\*]|  
-|doble sin signo|float [53]|  
-|sin signo de precisión doble|float [53]|  
+|doble sin signo|float[53]|  
+|sin signo de precisión doble|float[53]|  
 |sin signo de precisión doble [*.. 255] [\*... 30]|numérico [*] [\*]|  
 |unsigned double [*.. 255] [\*... 30]|numérico [*] [\*]|  
 |unsigned fijo|NUMERIC|  
 |unsigned fijo [*.. 65] [\*... 30]|numérico [*] [\*]|  
-|float sin signo|float [24]|  
+|float sin signo|float[24]|  
 |float sin signo [*.. 255] [\*... 30]|numérico [*] [\*]|  
-|float sin signo [*.. 53]|float [53]|  
+|float sin signo [*.. 53]|float[53]|  
 |unsigned int|BIGINT|  
 |int sin signo [*.. 255]|BIGINT|  
 |entero sin signo|BIGINT|  
@@ -179,7 +179,7 @@ La siguiente tabla muestra las asignaciones predeterminadas entre tipos de datos
 |numérico sin signo|NUMERIC|  
 |numérico sin signo [*.. 65]|numérico [*] [0]|  
 |numérico sin signo [*.. 65] [\*... 30]|numérico [*] [\*]|  
-|real sin signo|float [53]|  
+|real sin signo|float[53]|  
 |unsigned real [*.. 255 [[\*... 30]|numérico [*] [\*]|  
 |smallint sin signo|INT|  
 |smallint sin signo [*.. 255]|INT|  
@@ -188,11 +188,11 @@ La siguiente tabla muestra las asignaciones predeterminadas entre tipos de datos
 |varbinary [de 0.. 1]|varbinary [1]|  
 |varbinary [2..8000]|varbinary [*]|  
 |varbinary [8001.. *]|varbinary(max)|  
-|varchar [de 0.. 1]|nvarchar [1]|  
-|varchar [2..4000]|nvarchar [*]|  
-|varchar [4001.. *]|nvarchar(max)|  
+|varchar[0..1]|nvarchar [1]|  
+|varchar[2..4000]|nvarchar [*]|  
+|varchar[4001..*]|nvarchar(max)|  
 |year|SMALLINT|  
-|año [2..2]|SMALLINT|  
+|year[2..2]|SMALLINT|  
 |año [4..4]|SMALLINT|  
   
 ##### <a name="add"></a>Agregar  

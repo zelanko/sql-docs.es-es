@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 68e3d7a53f96216d158ddbdb1d1d0ca59db5f81f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200255"
 ---
 # <a name="allocating-a-statement-handle"></a>Asignar un identificador de instrucción
   Antes de que una aplicación pueda ejecutar una instrucción, debe asignar un identificador de instrucción. Esto hace una llamada a **SQLAllocHandle** con el *HandleType* parámetro establecido en SQL_HANDLE_STMT y *InputHandle* que apunta a un identificador de conexión.  

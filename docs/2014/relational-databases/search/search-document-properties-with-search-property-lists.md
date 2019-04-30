@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ec774e4c8500df0fe9af42bf6cf48f5f691f72bc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239258"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Buscar propiedades de documento con listas de propiedades de búsqueda
   Anteriormente, el contenido de las propiedades de documento no podían distinguirse del contenido del cuerpo del documento. Esta limitación restringía las consultas de texto completo a búsquedas genéricas en documentos enteros. Sin embargo, ahora puede configurar un índice de texto completo para realizar búsquedas referentes a determinadas propiedades, como Author y Title, en los tipos de documento admitidos con una columna de datos binarios `varbinary`, `varbinary(max)` (incluido `FILESTREAM`) o `image`. Esta forma de búsqueda se denomina *búsqueda de propiedades*.  

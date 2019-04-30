@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db287e729678f54aaf637950c89c724724678f08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208396"
 ---
 # <a name="was-a-result-set-created"></a>¿Era un conjunto creado de resultados?
-En la mayoría de los casos, los programadores de aplicaciones saben si las instrucciones que se ejecuta su aplicación va a crear un conjunto de resultados. Esto sucede si la aplicación usa las instrucciones SQL codificadas de forma rígida escritas por el programador. Normalmente es el caso cuando la aplicación crea instrucciones SQL en tiempo de ejecución: el programador fácilmente puede incluir código que identifica si un **seleccione** instrucción o un **insertar** instrucción se va a construido. En algunas situaciones, el programador no puede saber si una instrucción creará un conjunto de resultados. Esto es cierto si la aplicación proporciona una forma para el usuario escribir y ejecutar una instrucción SQL. También es true cuando la aplicación crea una instrucción en tiempo de ejecución para ejecutar un procedimiento.  
+En la mayoría de los casos, los programadores de aplicaciones saben si las instrucciones que se ejecuta su aplicación va a crear un conjunto de resultados. Esto sucede si la aplicación usa las instrucciones SQL codificadas de forma rígida escritas por el programador. Normalmente es el caso cuando la aplicación crea instrucciones SQL en tiempo de ejecución: El programador fácilmente puede incluir código que identifica si un **seleccione** instrucción o un **insertar** instrucción se está construyendo. En algunas situaciones, el programador no puede saber si una instrucción creará un conjunto de resultados. Esto es cierto si la aplicación proporciona una forma para el usuario escribir y ejecutar una instrucción SQL. También es true cuando la aplicación crea una instrucción en tiempo de ejecución para ejecutar un procedimiento.  
   
  En tales casos, la aplicación llama a **SQLNumResultCols** para determinar el número de columnas del conjunto de resultados. Si es 0, la instrucción no ha creado un conjunto de resultados; Si es cualquier otro número, la instrucción ha creado un conjunto de resultados.  
   

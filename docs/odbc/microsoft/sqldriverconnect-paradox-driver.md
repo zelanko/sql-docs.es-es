@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (controlador de Paradox) | Microsoft Docs
+title: SQLDriverConnect (Paradox Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bae4a842729c8d302731ebf5fec22abb817f4c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238378"
 ---
 # <a name="sqldriverconnect-paradox-driver"></a>SQLDriverConnect (controlador de Paradox)
 > [!NOTE]  
@@ -40,4 +40,4 @@ ms.locfileid: "47654763"
   
 |Controlador|Palabras clave necesarias|Ejemplo|  
 |------------|-----------------------|-------------|  
-|Paradox|Controlador, DriverID|Driver = {Microsoft Paradox Driver (*.db)}; DBQ = c:\temp; DriverID = 26|
+|Paradox|Controlador, DriverID|Driver={Microsoft Paradox Driver (*.db )}; DBQ=c:\temp;DriverID=26|

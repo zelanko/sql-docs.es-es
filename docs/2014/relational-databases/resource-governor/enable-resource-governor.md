@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216026"
 ---
 # <a name="enable-resource-governor"></a>Habilitar el regulador de recursos
   El regulador de recursos está desactivado de forma predeterminada. Puede habilitar el regulador de recursos utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [permisos](#Permissions)  
+-   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
   
--   **Para habilitar el regulador de recursos, mediante:**  [Explorador de objetos](#RGOnObjEx), [propiedades del Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
+-   **Para habilitar Resource Governor, mediante:**  [Explorador de objetos](#RGOnObjEx), [propiedades de Resource Governor](#RGOnProp), [Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Habilitar el regulador de recursos tiene como consecuencia lo siguiente:  
@@ -38,7 +38,7 @@ ms.locfileid: "52806187"
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  No puede utilizar la instrucción `ALTER RESOURCE GOVERNOR` para habilitar el regulador de recursos durante una transacción del usuario.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Habilitar el regulador de recursos requiere el permiso CONTROL SERVER.  
   
 ##  <a name="RGOnObjEx"></a> Habilitar el regulador de recursos mediante el Explorador de objetos  

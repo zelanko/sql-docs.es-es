@@ -1,5 +1,5 @@
 ---
-title: Uso de SQLBindCol | Microsoft Docs
+title: Using SQLBindCol | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208476"
 ---
 # <a name="using-sqlbindcol"></a>Uso de SQLBindCol
 La aplicación enlaza las columnas mediante una llamada a **SQLBindCol**. Esta función enlaza una columna a la vez. Con ella, la aplicación especifica lo siguiente:  
   
 -   El número de columna. 0 es la columna de marcador; Esta columna no se incluye en algunos conjuntos de resultados. Todas las demás columnas se numeran comenzando por el número 1. Es un error al enlazar una columna con el número más alto que columnas hay en el conjunto de resultados; Este error no se puede detectar hasta que se ha creado el conjunto de resultados, por lo que es devuelto por **SQLFetch**, no **SQLBindCol**.  
   
--   La longitud de bytes, la dirección y el tipo de datos C de la variable enlazada a la columna. Es un error especificar un tipo de datos C a la que no se puede convertir el tipo de datos SQL de la columna; Este error podría no detectarse hasta que se ha creado el conjunto de resultados, por lo que es devuelto por **SQLFetch**, no **SQLBindCol**. Para obtener una lista de conversiones admitidas, vea [convertir datos de SQL a tipos de datos C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) en Apéndice D: tipos de datos. Para obtener información acerca de la longitud en bytes, consulte [longitud del búfer de datos](../../../odbc/reference/develop-app/data-buffer-length.md).  
+-   La longitud de bytes, la dirección y el tipo de datos C de la variable enlazada a la columna. Es un error especificar un tipo de datos C a la que no se puede convertir el tipo de datos SQL de la columna; Este error podría no detectarse hasta que se ha creado el conjunto de resultados, por lo que es devuelto por **SQLFetch**, no **SQLBindCol**. Para obtener una lista de conversiones admitidas, vea [convertir datos de SQL a tipos de datos C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) en el apéndice D: Tipos de datos. Para obtener información acerca de la longitud en bytes, consulte [longitud del búfer de datos](../../../odbc/reference/develop-app/data-buffer-length.md).  
   
 -   La dirección de un búfer de longitud/indicador. El búfer de longitud/indicador es opcional. Sirve para devolver la longitud de bytes de datos de caracteres o binarios o de SQL_NULL_DATA devuelto si los datos son NULL. Para obtener más información, consulte [con valores de longitud/indicador](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   

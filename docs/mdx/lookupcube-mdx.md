@@ -1,5 +1,5 @@
 ---
-title: LookupCube (MDX) | Documentos de Microsoft
+title: LookupCube (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8f8338a542bf9e15816205930704c45a536a5629
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208518"
 ---
 # <a name="lookupcube-mdx"></a>LookupCube (MDX)
 
@@ -33,26 +33,26 @@ LookupCube(Cube_Name, String_Expression )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Restricciones obligatorias Cube_Name*  
+ *Cube_Name*  
  Expresión de cadena válida que especifica el nombre de un cubo.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
  *String_Expression*  
  Expresión de cadena válida que suele ser una expresión MDX (Expresiones multidimensionales) válida de las coordenadas de celdas que devuelven una cadena.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si se especifica una expresión numérica, la **LookupCube** función evalúa la expresión numérica especificada en el cubo especificado y devuelve el valor numérico resultante.  
   
- Si se especifica una expresión de cadena, la **LookupCube** función evalúa la expresión de cadena especificada en el cubo especificado y devuelve el valor de cadena resultante.  
+ Si se especifica una expresión de cadena, el **LookupCube** función evalúa la expresión de cadena especificada en el cubo especificado y devuelve el valor de cadena resultante.  
   
  El **LookupCube** función funciona con cubos de la misma base de datos como el cubo de origen en el que la consulta de MDX que contiene el **LookupCube** función se está ejecutando.  
   
 > [!IMPORTANT]  
 >  Debe proporcionar los miembros actuales necesarios en la expresión numérica o de cadena debido a que el contexto de la consulta actual no se mantiene en el cubo que se consulta.  
   
- Los cálculos que usen la **LookupCube** función es probable que experimenten un bajo rendimiento. En lugar de utilizar esta función, considere volver a diseñar la solución para que todos los datos que necesite se encuentren en un cubo.  
+ Los cálculos que usen el **LookupCube** función es probable que experimenten un bajo rendimiento. En lugar de utilizar esta función, considere volver a diseñar la solución para que todos los datos que necesite se encuentren en un cubo.  
   
 ## <a name="examples"></a>Ejemplos  
  En la consulta siguiente se muestra el uso de LookupCube:  

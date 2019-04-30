@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eda13c16caf3f123887da00e2c7896d36b8bf7ed
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226028"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lección 3: Definir una suscripción controlada por datos
   En esta lección, utilizará las páginas de suscripción controladas por datos para conectar a un origen de datos de suscripción, crear una consulta que recupera datos de suscripción y asignar el conjunto de resultados a las opciones de informe y entrega.  

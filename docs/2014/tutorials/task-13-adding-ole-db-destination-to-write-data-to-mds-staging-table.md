@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 34f68c4604d70dc83579f8c9284802b82cc6291d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222596"
 ---
-# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tarea 13: agregar el destino de OLE DB para escribir datos en la tabla de ensayo de MDS
+# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tarea 13: Adición del destino de OLE DB para escribir datos en la tabla de ensayo de MDS
   Ahora que ha agregado **ImportType** y **BatchTag** valores de todos los registros, está listo para enviarlos a MDS para el almacenamiento provisional. En esta tarea, utilice el destino de OLE DB para escribir los datos en **stg.supplier_Leaf** tabla de ensayo.  
   
 1.  Arrastre **destino de OLE DB** desde **otros destinos** sección la **cuadro de herramientas de SSIS** a la **de flujo de datos** pestaña y colóquelo en  **Agregar columnas necesarias en MDS**.  

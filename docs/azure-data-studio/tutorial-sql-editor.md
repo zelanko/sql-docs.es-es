@@ -12,11 +12,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240865"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutorial: Utilice el editor de Transact-SQL para crear objetos de base de datos: [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -68,7 +68,7 @@ Este tutorial requiere SQL Server o Azure SQL Database *TutorialDB*. Para crear 
 
 2. Tipo **sql** en el editor, la flecha hacia abajo para **sqlCreateStoredProcedure**y presione la *ficha* clave (o *ENTRAR*) para cargar el crear almacenado fragmento de código de procedimiento.
 
-   ![lista de fragmentos](./media/tutorial-sql-editor/snippet-list.png)
+   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
 
 3. El fragmento de código de procedimiento almacenado de crear tiene dos campos que se configure para su edición rápida, *StoredProcedureName* y *SchemaName*. Seleccione *StoredProcedureName*, con el botón secundario y seleccione **cambiar todas las apariciones**. Ahora escriba *getCustomer* y todos los *StoredProcedureName* cambian las entradas a *getCustomer*.
 

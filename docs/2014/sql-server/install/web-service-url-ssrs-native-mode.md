@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5371060acadc0def9a8105616b36d8687eb5a87e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131182"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Dirección URL del servicio web (Modo nativo de SSRS)
   Utilice la página Dirección URL del servicio web para configurar o modificar la dirección URL que se usa para tener acceso al servidor de informes. Se creará una *reserva de direcciones URL* dependiendo de la dirección URL que especifique. La reserva de direcciones URL define la sintaxis y las reglas de todas las direcciones URL que se pueden utilizar posteriormente para tener acceso al servicio web del servidor de informes. Especifica el prefijo, host, puerto y directorio virtual para el servicio web del servidor de informes. Según cómo especifique el host, podría haber varias direcciones URL posibles para una única reserva. El valor predeterminado para el host especifica un carácter comodín seguro. Un carácter comodín seguro permite especificar en una dirección URL cualquier nombre de host que se pueda resolver como el equipo que hospeda el servidor de informes. Para obtener más información acerca de la configuración de dirección URL y las reservas de direcciones, vea [configurar una dirección URL &#40;SSRS Configuration Manager&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) y [configurar direcciones URL del servidor de informes &#40;SSRS Configuration Manager&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "53203365"
  **Puerto SSL**  
  Especifica el puerto para las conexiones SSL.  
   
- **Direcciones URL**  
+ **URLs**  
  Muestra las direcciones URL definidas para la instancia actual del servidor de informes.  
   
  **Avanzadas**  

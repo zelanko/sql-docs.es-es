@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217883"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>Crear predicciones para los modelos de centro de llamadas (Tutorial intermedio de minería de datos)
   Ahora que ha aprendido algo acerca de las interacciones entre los turnos, el número de operadores, las llamadas y el grado de servicio, está en disposición de crear algunas consultas de predicción que se puedan usar en el análisis y el planeamiento empresarial. Primero, creará algunas predicciones en el modelo de exploración para probar varias suposiciones. A continuación, creará predicciones masivas usando el modelo de regresión logística.  
@@ -183,9 +183,9 @@ ms.locfileid: "56025416"
 ## <a name="remarks"></a>Comentarios  
  Los complementos de minería de datos para Excel 2007 ofrecen asistentes de regresión logística que facilitan el poder responder a cuestiones complejas, como cuántos operadores de nivel dos se necesitarían para mejorar el grado de servicio a un nivel determinado para un turno concreto. Los complementos de minería de datos se pueden descargar de forma gratuita e incluyen asistentes que se basan en los algoritmos de red neuronal o de regresión logística. Para obtener más información, vea los siguientes vínculos:  
   
--   [SQL Server 2005 Data minería complementos para Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): análisis de los escenarios de búsqueda de objetivos y probabilidades  
+-   [SQL Server 2005 Data minería complementos para Office 2007](https://www.microsoft.com/sql/technologies/dm/addins.mspx): Buscar objetivo y ¿qué ocurre si el análisis de escenario  
   
--   [SQL Server 2008 datos minería complementos para Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): análisis de los escenarios de búsqueda de objetivos, probabilidades y cálculo de predicción  
+-   [SQL Server 2008 datos minería complementos para Office 2007](https://go.microsoft.com/fwlink/?LinkID=117790): Buscar objetivo análisis de escenario, ¿qué ocurre si el análisis de escenario y cálculo de predicción  
   
 ## <a name="conclusion"></a>Conclusión  
  Ha aprendido a crear, personalizar e interpretar los modelos de minería de datos que se basan en los algoritmos de red neuronal y/o de regresión logística de Microsoft. Estos tipos de modelos son sofisticados y permiten una variedad casi infinita de análisis, y, por tanto, pueden ser complejos y difíciles de dominar.  

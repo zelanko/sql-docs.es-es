@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 96e28a50e58693bbb297bd1e80335482cdd9e82b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213279"
 ---
 # <a name="executing-statements-odbc"></a>Ejecución de instrucciones (ODBC)
 Las aplicaciones ODBC realizan casi todos los accesos de base de datos mediante la ejecución de instrucciones SQL. La secuencia general de eventos es asignar un identificador de instrucción, establezca los atributos de instrucción, ejecute la instrucción, recuperar los resultados y liberar el identificador de instrucción.  

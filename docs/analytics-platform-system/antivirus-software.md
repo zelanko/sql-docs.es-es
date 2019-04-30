@@ -10,11 +10,11 @@ ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199610"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Software antivirus para Analytics Platform System
 Si su centro de datos requiere un software antivirus, use estas instrucciones para instalar el software antivirus en Analytics Platform System. Se recomienda no instalar el software antivirus a menos que sea un requisito firme de su centro de datos.  
@@ -62,11 +62,11 @@ Para instalar el software antivirus en las máquinas virtuales, excluya la sigui
   
 -   G:\  
   
-**_appliance_domain_- VMM**  
+**_appliance_domain_-VMM**  
   
 -   Sin restricciones  
   
-**_appliance_domain_- WDS**  
+**_appliance_domain_-WDS**  
   
 -   Sin restricciones  
   

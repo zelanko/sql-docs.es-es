@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35092821d2407e90e550a4351f186de6a585cd64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63071800"
 ---
 # <a name="show-query-properties-visual-database-tools"></a>Mostrar propiedades de la consulta (Visual Database Tools)
   Puede mostrar las propiedades de una consulta en la ventana Propiedades desde el Diseñador de consultas y vistas.  

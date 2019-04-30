@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 302ac36150d21dfecca1e6c6edfbcf6fd86c42f0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63226141"
 ---
 # <a name="setboolvalue-method-sqlserviceadvancedproperty-class"></a>Método SetBoolValue (clase SqlServiceAdvancedProperty)
   Establece el valor booleano de una propiedad.  
@@ -44,7 +44,7 @@ object
   
 |Parámetro|Descripción|  
 |---------------|-----------------|  
-|*ValorBOOL*|Valor booleano que especifica el valor de la propiedad avanzada.|  
+|*BoolValue*|Valor booleano que especifica el valor de la propiedad avanzada.|  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor `uint32` que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  

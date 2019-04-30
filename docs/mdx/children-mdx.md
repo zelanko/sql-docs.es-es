@@ -1,5 +1,5 @@
 ---
-title: Los elementos secundarios (MDX) | Microsoft Docs
+title: Children (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 03c96a1c90f7ca0a18bd49c371a2ec90582b38f1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208782"
 ---
 # <a name="children-mdx"></a>Children (MDX)
 

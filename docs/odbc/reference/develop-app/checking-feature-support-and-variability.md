@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b9af2cfd73556baca4870428cdcdfcee3e07191d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217609"
 ---
 # <a name="checking-feature-support-and-variability"></a>Comprobación de compatibilidad con las características y la variabilidad
 Para comprobar la compatibilidad con las características y la variabilidad, las aplicaciones llaman a generalmente **SQLGetInfo**, **SQLGetFunctions**, y **SQLGetTypeInfo**. Un buen punto de partida es niveles de compatibilidad de gramática SQL y de API del controlador. Estos describen amplia niveles de compatibilidad de características. A continuación, puede llamar la aplicación **SQLGetInfo** con otras opciones para determinar el soporte técnico o la variabilidad de las características que necesita, **SQLGetFunctions** para determinar si las funciones necesita más allá de los datos devueltos se admiten el nivel de cumplimiento, y **SQLGetTypeInfo** para determinar qué tipos de datos SQL son compatibles.  

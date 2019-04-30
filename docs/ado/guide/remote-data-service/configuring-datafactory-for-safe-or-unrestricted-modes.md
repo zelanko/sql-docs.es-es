@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 32b87f7ddcd871748adbba66eb0a64a10204f0c1
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214851"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>Configuración de DataFactory para los modos seguro o sin restricciones
 > [!IMPORTANT]
@@ -36,7 +36,7 @@ ms.locfileid: "51559918"
   
  Se ha proporcionado el handsafe.reg del archivo de registro para configurar las entradas de registro del controlador para una configuración segura. Para ejecutar en modo seguro, ejecute handsafe.reg.  
   
- Después de ejecutar handsafe.reg, debe detener y reiniciar el servicio de publicación World Wide Web en el servidor Web escribiendo los siguientes comandos en una ventana del símbolo del sistema: "NET detener W3SVC" y "NET iniciar W3SVC".  
+ Después de ejecutar handsafe.reg, debe detener y reiniciar el servicio de publicación World Wide Web en el servidor Web escribiendo los siguientes comandos en una ventana del símbolo del sistema: "NET STOP W3SVC" y "NET iniciar W3SVC".  
   
 ## <a name="see-also"></a>Vea también  
  [Personalización de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 960bdc184d4d71015a3d5dd1530929ccb9b9f01e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209898"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>Comandos de menú y otras teclas de acceso directo (OracleToSQL)
 Las secciones siguientes describen los métodos abreviados de teclado para tener acceso a comandos de menú y otras teclas de método abreviado que se usa en varios cuadros de diálogo de SSMA para la aplicación de Oracle.  
@@ -29,7 +29,7 @@ Para obtener acceso a los menús archivo, usa el método abreviado de teclado es
 |Mostrar el cuadro de diálogo Abrir proyecto.|ALT + F + O|  
 |Cierre el proyecto actual.|ALT + F + C|  
 |Mostrar la operación de guardar cuadro de diálogo de proyecto.|ALT + F + S|  
-|Mostrar el conectar o volver a conectar con el cuadro de diálogo de Oracle.|ALT + F, T|  
+|Mostrar el conectar o volver a conectar con el cuadro de diálogo de Oracle.|ALT + F + T|  
 |Mostrar el conectar o volver a conectar con el cuadro de diálogo de SQL Server o SQL Azure.|ALT + F + Q|  
 |Proyectos recientes de acceso.|ALT + F + P|  
 |Salga de la aplicación de SSMA.|ALT + F + X|  

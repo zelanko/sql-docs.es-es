@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6db04be0a40a71528e325ca314a9224d1d7c6817
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63225821"
 ---
 # <a name="onerror-event-rds"></a>onError (evento, RDS)
 El **onError** se llama al evento cada vez que se produce un error durante una operación.  

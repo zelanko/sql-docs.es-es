@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 835e5fae4717748664affef9491ea1f7eeaec8b2
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199923"
 ---
 # <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntrvalue"></a>Modificar las aplicaciones para obtener valores bigint de sysperfinfo.cntr_value
   sysperfinfo devuelve un `bigint` valor para la columna cntr_value.  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d5a4394a9fbbf9ff7daa54ed7ba6a8b28921bd5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59945311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223297"
 ---
 # <a name="sharepoint-integration-with-2008-and-2008-r2--report-servers"></a>Integración de SharePoint con servidores de informes 2008 y 2008 R2
   En la versión [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] se introdujo una arquitectura en la que el modo de SharePoint se basa ahora en un servicio compartido de SharePoint. Administración de la nueva funcionalidad se ha completado en Administración Central de SharePoint en el **administrar servicios** y **administrar aplicaciones de servicio** páginas. El [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] arquitectura anterior para la integración de SharePoint sigue siendo compatible con la [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] complemento para productos de SharePoint 2010 para SharePoint 2010 que pueda integrar con versiones anteriores de un servidor de informes.  

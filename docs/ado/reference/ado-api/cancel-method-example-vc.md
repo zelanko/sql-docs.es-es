@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 32751ae891da27602dc80aa9dc3b54990b3e27a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239917"
 ---
 # <a name="cancel-method-example-vc"></a>Ejemplo del método Cancel (VC ++)
 Este ejemplo se usa el [cancelar](../../../ado/reference/ado-api/cancel-method-ado.md) método para cancelar un comando que se ejecuta en un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto si la conexión está ocupada.  

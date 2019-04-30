@@ -1,5 +1,5 @@
 ---
-title: Aggregate (MDX) | Documentos de Microsoft
+title: Agregado (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 11e10d5a03702329a5ed59ed42acee0abc2d27c8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200626"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 
@@ -32,17 +32,17 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si se especifica un conjunto de tuplas vacías o un conjunto vacío, esta función devuelve un valor vacío.  
   
  La tabla siguiente describe cómo el **agregado** función se comporta con distintas funciones de agregación.  
   
 |Operador de agregación|Resultado|  
 |--------------------------|------------|  
-|SUM|Devuelve la suma de valores del conjunto.|  
+|Sum|Devuelve la suma de valores del conjunto.|  
 |Count|Devuelve el recuento de valores del conjunto.|  
 |Max|Devuelve el valor máximo del conjunto.|  
 |Min|Devuelve el valor mínimo del conjunto.|  
@@ -56,7 +56,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Asignaciones|Las asignaciones se agregan de acuerdo con la función de agregación de medida. Si la función de agregación de medida es un recuento distintivo, se suma la asignación.|  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se devuelve la suma de la `Measures.[Order Quantity]` miembro, que se agrega en los primeros ocho meses del año 2003 incluidos en el `Date` dimensión, desde el **Adventure Works** cubo.  
+ El ejemplo siguiente devuelve la suma de los `Measures.[Order Quantity]` miembro, se agregan durante los primeros ocho meses del año 2003 incluidos en el `Date` dimensión, desde el **Adventure Works** cubo.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -94,7 +94,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- El ejemplo siguiente devuelve el recuento de los distribuidores cuyas ventas han disminuido en el período de tiempo anterior, de acuerdo con los valores de los miembros State-Province seleccionados por el usuario evaluados mediante la función Aggregate. El **Hierarchize** y **DrillDownLevel** funciones se utilizan para devolver valores para las ventas de categorías de producto de la dimensión Product que han disminuido.  
+ El ejemplo siguiente devuelve el recuento de los distribuidores cuyas ventas han disminuido en el período de tiempo anterior, de acuerdo con los valores de los miembros State-Province seleccionados por el usuario evaluados mediante la función Aggregate. El **Hierarchize** y **DrillDownLevel** las funciones se usan para devolver valores para las ventas de categorías de producto de la dimensión Product que han disminuido.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -124,13 +124,13 @@ WHERE ([Geography].[State-Province].x,
   
 ## <a name="see-also"></a>Vea también  
  [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
- [Elementos secundarios &#40;MDX&#41;](../mdx/children-mdx.md)   
+ [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
  [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Recuento de &#40;establecer&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Filtro &#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
  [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [Propiedades &#40;MDX&#41;](../mdx/properties-mdx.md)   
+ [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
  [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   

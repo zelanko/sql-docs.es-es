@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2bf3deb1614e586e38ce05f7016e92ec3f802e1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63216090"
 ---
 # <a name="last-function-report-builder-and-ssrs"></a>Función Last (Generador de informes y SSRS)
   Devuelve el último valor de la expresión especificada en el ámbito especificado.  

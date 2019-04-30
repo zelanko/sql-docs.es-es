@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 75feaf114355c3a23abad6ec23be9011e0de5e06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209713"
 ---
 # <a name="disable-resource-governor"></a>Deshabilitar el regulador de recursos
   Puede deshabilitar el regulador de recursos utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o Transact-SQL.  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [permisos](#Permissions)  
+-   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
   
--   **Para deshabilitar el regulador de recursos, mediante:**  [Explorador de objetos](#RGOffObjEx), [propiedades del Resource Governor](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
+-   **Para deshabilitar Resource Governor con:**  [Explorador de objetos](#RGOffObjEx), [Propiedades de Resource Governor](#RGOffProp), [Transact-SQL](#RGOffTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Deshabilitar el regulador de recursos tiene como consecuencia lo siguiente:  
@@ -46,7 +46,7 @@ ms.locfileid: "52761427"
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  No puede utilizar la instrucción `ALTER RESOURCE GOVERNOR` para deshabilitar el regulador de recursos durante una transacción del usuario.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Deshabilitar el regulador de recursos requiere el permiso CONTROL SERVER.  
   
 ##  <a name="RGOffObjEx"></a> Deshabilitar el regulador de recursos mediante el Explorador de objetos  

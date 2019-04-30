@@ -11,13 +11,13 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
-ms.sourcegitcommit: d040bab6f826f0c37cd207a6c7cef04a8963c5d3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240225"
 ---
-# <a name="sql-server-migration-assistant"></a>Asistente para migración de SQL Server
+# <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) es una herramienta diseñada para automatizar la migración de base de datos a SQL Server desde Microsoft Access, DB2, MySQL, Oracle y SAP ASE.  
   
 ## <a name="migration-sources"></a>Orígenes de migración  
@@ -82,7 +82,7 @@ A menos que se indique lo contrario, los nombres de ejemplos de compañías, org
   
 Microsoft puede tener patentes, solicitudes de patentes, marcas, derechos de autor y otros derechos de propiedad intelectual sobre la materia objeto de esta documentación. La entrega de esta documentación no le otorga ninguna licencia sobre dichas patentes, marcas, derechos de autor u otros derechos de propiedad intelectual, a menos que así se prevea en un contrato por escrito de licencia de Microsoft a usted.  
   
-© Microsoft Corporation de 2019. Todos los derechos reservados.  
+© 2019 Microsoft Corporation. Todos los derechos reservados.  
   
 Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System y WinFX son marcas registradas o marcas comerciales de Microsoft Corporation en los Estados Unidos y/o en otros países o regiones.  
   

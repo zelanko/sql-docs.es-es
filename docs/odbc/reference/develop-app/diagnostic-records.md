@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 928e9ffa4701568aac8c519a23e7e371596a36eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242342"
 ---
 # <a name="diagnostic-records"></a>Registros de diagnóstico
 Asociado con cada entorno, conexión, la instrucción y el identificador de descriptor son *los registros de diagnóstico*. Estos registros contienen información de diagnóstico sobre la última función denominada que usa un identificador determinado. Se reemplazan los registros solo cuando se llama a otra función con el mismo identificador. No hay ningún límite al número de registros de diagnóstico que se pueden almacenar en cualquier momento.  

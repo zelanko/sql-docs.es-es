@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15dfb65dc7cb51311e60112145623eeda50339e7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63067491"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>Mostrar nombres de columna en el panel Diagrama (Visual Database Tools)
   Puede decidir si desea ocultar o mostrar los nombres de columna de las tablas en el **panel Diagrama** del Diseñador de consultas y vistas.  

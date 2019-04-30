@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82e71e6849902eb2f02423560c534056112a139a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208384"
 ---
 # <a name="when-to-use-procedures"></a>Cuándo se debe utilizar procedimientos
 Hay una serie de ventajas de utilizar los procedimientos, todos basada en el hecho de que el uso de procedimientos mueve las instrucciones SQL desde la aplicación en el origen de datos. Lo que queda en la aplicación es una llamada a procedimiento interoperable. Estas ventajas incluyen:  

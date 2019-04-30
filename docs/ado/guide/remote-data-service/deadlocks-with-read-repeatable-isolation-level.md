@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a063bfa08ee0c405b52c123f0af03397751a2289
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214873"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>Interbloqueos con nivel de aislamiento de lectura repetible
 Si un objeto comercial personalizado utiliza un nivel de aislamiento de lectura repetible para tener acceso a un servidor SQL Server y el objeto de negocios se llama al mismo tiempo dos clientes que envían una consulta y se actualizan en la misma transacción, es posible un interbloqueo. Servicio de datos remoto está diseñado para permitir que uno de los procesos en tiempo de espera para liberar el interbloqueo, pero se producirá un error de la actualización para el cliente.  

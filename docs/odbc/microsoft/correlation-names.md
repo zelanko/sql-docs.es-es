@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b8a253f9d252beb42080d2085adb962206ebd94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232311"
 ---
 # <a name="correlation-names"></a>Nombres de correlación
 Nombres de correlación son totalmente compatibles, incluidos dentro de la lista de tabla. Por ejemplo, en la siguiente cadena, E1 es el nombre de correlación para la tabla denominada Emp:  

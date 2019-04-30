@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63232293"
 ---
 # <a name="create-table---sql-command"></a>Crear tabla - comando SQL
 Crea una tabla que tiene los campos especificados.  
@@ -55,10 +55,10 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  Los nombres largos pueden contener hasta 128 caracteres y pueden usarse en lugar de nombres cortos de archivo en la base de datos.  
   
- GRATUITO  
+ FREE  
  Especifica que la tabla no se agregarán a una base de datos abierta. GRATIS no es necesario si una base de datos no está abierto.  
   
- *(Nombredecampo1 FieldType* [( *nFieldWidth* [, *nPrecision*])]  
+ *(FieldName1 FieldType* [( *nFieldWidth* [, *nPrecision*])]  
  Especifica el nombre de campo, tipo de campo, ancho de campo y precisión del campo (número de posiciones decimales), respectivamente.  
   
  *FieldType* es una letra única que indica el campo [tipo de datos](../../odbc/microsoft/visual-foxpro-field-data-types.md). Algunos tipos de campo de datos requieren que se especifique *nFieldWidth* o *nPrecision* o ambos.  
@@ -73,7 +73,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  Si omite NULL y NOT NULL, el valor actual de SET NULL determina si se permiten valores null en el campo. Sin embargo, si omite NULL y NOT NULL e incluye la clave principal o única cláusula, se omite el valor actual de SET NULL y el campo de valor predeterminado es NOT NULL.  
   
- COMPROBAR *lExpression1*  
+ CHECK *lExpression1*  
  Especifica una regla de validación para el campo. *lExpression1* puede ser una función definida por el usuario. Siempre que se anexa un registro en blanco, se comprueba la regla de validación. Se genera un error si la regla de validación no permite que un valor de campo en blanco en un registro anexado.  
   
  ERROR *cMessageText1*  
@@ -115,7 +115,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Dado que una tabla puede tener un solo índice principal, no puede incluir esta cláusula si ya ha creado un índice principal para un campo. Visual FoxPro genera un error si incluye más de una cláusula de clave principal en CREATE TABLE.  
   
- ÚNICO *eExpression3*etiqueta *TagName3*  
+ UNIQUE *eExpression3*TAG *TagName3*  
  Crea un índice de candidato. *eExpression3* especifica cualquier campo o una combinación de campos de la tabla. Sin embargo, si ha creado un índice principal con una de las opciones de clave principal, no puede incluir el campo que se especificó para el índice principal. Etiqueta *TagName3* especifica un nombre de etiqueta de la etiqueta de índice candidato que se crea. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres.  
   
  Una tabla puede tener varios índices candidatos.  
@@ -125,7 +125,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Puede crear varios índices externos para la tabla, pero las expresiones de índice externo deben especificar los distintos campos en la tabla.  
   
- REFERENCIAS *TableName3*[etiqueta *TagName5*]  
+ REFERENCES *TableName3*[TAG *TagName5*]  
  Especifica la tabla primaria a la que se establece una relación persistente. Incluir etiqueta *TagName5* para establecer una relación basada en una etiqueta de índice para la tabla primaria. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres. De forma predeterminada, si se omite la etiqueta *TagName5,* la relación se establece mediante la clave de índice principal de la tabla primaria.  
   
  COMPROBAR *eExpression2*[ERROR *cMessageText2*]  
@@ -151,7 +151,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 |Sintaxis de ODBC|Sintaxis de Visual FoxPro|  
 |-----------------|--------------------------|  
-|CREATE TABLE *nombre de la tabla de base*<br /><br /> (*identificador de la columna tipo de datos*<br /><br /> [NO NULO]<br /><br /> [,*identificador de la columna tipo de datos*<br /><br /> [NO NULL]...)|Crear tabla *TableName1* [nombre *LongTableName*]<br /><br /> (*Nombredecampo1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NO NULL)]|  
+|CREATE TABLE *nombre de la tabla de base*<br /><br /> (*identificador de la columna tipo de datos*<br /><br /> [NO NULO]<br /><br /> [,*identificador de la columna tipo de datos*<br /><br /> [NO NULL]...)|Crear tabla *TableName1* [nombre *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NO NULL)]|  
   
  Cuando se crea una tabla con el controlador, el controlador de la tabla cierra inmediatamente después de crear para permitir el acceso a la tabla por otros usuarios. Esto difiere de Visual FoxPro, lo que deja abierto exclusivamente al crear la tabla. Sin embargo, si se ejecuta un procedimiento almacenado en el origen de datos que contiene una instrucción CREATE TABLE, la tabla está abierta.  
   

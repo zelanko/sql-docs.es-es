@@ -1,5 +1,5 @@
 ---
-title: Identificadores (MDX) | Documentos de Microsoft
+title: Identificadores (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7562beb2cccd94853c346aaf2f1be1886a2e3ac5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224955"
 ---
 # <a name="identifiers-mdx"></a>Identificadores (MDX)
 
@@ -24,7 +24,7 @@ ms.locfileid: "34740814"
  En función del nombre del objeto, el identificador del objeto será bien un identificador normal o delimitado.  
   
 > [!NOTE]  
->  Identificadores, normales y delimitados deben contener entre 1 y 100 caracteres.  
+>  Los identificadores normales y delimitados deben contener entre 1 y 100 caracteres.  
   
 ## <a name="using-regular-identifiers"></a>Usar identificadores normales  
  Un identificador normal es un nombre de objeto que cumple las siguientes reglas de formato para identificadores normales. Los identificadores normales pueden usarse con o sin delimitadores.  
@@ -33,11 +33,11 @@ ms.locfileid: "34740814"
   
 1.  El primer carácter debe ser alguno de los siguientes:  
   
-    -   Una letra, tal como se define por el estándar Unicode 2.0. Además de letras de otros idiomas, la definición Unicode de letras incluye caracteres latinos de la "a" a la "z" y de la "A" a la "Z".  
+    -   Una letra, como se define en el estándar Unicode 2.0. Además de letras de otros idiomas, la definición Unicode de letras incluye caracteres latinos de la "a" a la "z" y de la "A" a la "Z".  
   
     -   El carácter de subrayado (_).  
   
-2.  Los caracteres subsiguientes pueden ser:  
+2.  Los caracteres siguientes pueden ser:  
   
     -   Letras, tal como se define en el estándar Unicode 2.0.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "34740814"
   
 -   Cuando el nombre de un objeto o parte del nombre incluye palabras reservadas.  
   
-     Se recomienda no utilizar palabras clave reservadas como nombres de objeto. Las bases de datos actualizadas desde versiones anteriores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] podrían contener identificadores que incluyan palabras que no estaban reservadas en la versión anterior, pero ahora están reservados. Hasta que pueda cambiar el identificador del objeto, puede hacer referencia al objeto mediante un identificador delimitado.  
+     Se recomienda no utilizar palabras clave reservadas como nombres de objeto. Las bases de datos actualizadas desde versiones anteriores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] podrían contener identificadores que incluyen palabras reservadas no en la versión anterior, pero ahora están reservados. Hasta que pueda cambiar el identificador del objeto, puede hacer referencia al objeto mediante un identificador delimitado.  
   
 -   Cuando el nombre de un objeto contiene caracteres no incluidos en la lista de identificadores calificados.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "34740814"
   
 ## <a name="see-also"></a>Vea también  
  [Referencia del lenguaje MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Aspectos básicos de consulta MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [Elementos de sintaxis MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [Los elementos de sintaxis MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

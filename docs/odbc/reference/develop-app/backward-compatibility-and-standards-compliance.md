@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c644f7ad008efb10d0397cccb00432da684295fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63201573"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Compatibilidad con versiones anteriores y el cumplimiento de estándares
-Compatibilidad con versiones anteriores es la capacidad de los componentes más recientes de ODBC para trabajar con componentes ODBC anteriores. Las secciones siguientes describen cómo estos componentes se ven afectados por los cambios en ODBC 3 *.x*. Direcciones de la información contenida en ellos principalmente la escritura de una aplicación ODBC 3 *.x* aplicación y cómo hacia atrás se administran los problemas de compatibilidad con controladores ODBC. Para obtener instrucciones específicas sobre la compatibilidad con versiones anteriores cómo afectan los problemas de la escritura de una aplicación ODBC 3 *.x* controladores, consulte [apéndice G: directrices de controlador para la compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
+Compatibilidad con versiones anteriores es la capacidad de los componentes más recientes de ODBC para trabajar con componentes ODBC anteriores. Las secciones siguientes describen cómo estos componentes se ven afectados por los cambios en ODBC 3 *.x*. Direcciones de la información contenida en ellos principalmente la escritura de una aplicación ODBC 3 *.x* aplicación y cómo hacia atrás se administran los problemas de compatibilidad con controladores ODBC. Para obtener instrucciones específicas sobre la compatibilidad con versiones anteriores cómo afectan los problemas de la escritura de una aplicación ODBC 3 *.x* controladores, consulte [apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  
   
  Esta sección contiene los temas siguientes.  
   

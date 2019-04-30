@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 560e95bdafe3f5bbae82b200d8f7db0dcb121911
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63217721"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 Especifica si un objeto está abierto o cerrado, conectarse a un origen de datos, ejecutar un comando o la recuperación de datos.  
@@ -35,7 +35,7 @@ Especifica si un objeto está abierto o cerrado, conectarse a un origen de datos
 |**adStateFetching**|8|Indica que se recuperan las filas del objeto.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

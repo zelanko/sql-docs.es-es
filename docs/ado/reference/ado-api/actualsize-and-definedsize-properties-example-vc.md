@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63065470"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>Ejemplo ActualSize y DefinedSize propiedades (VC ++)
 Este ejemplo se usa el [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) y [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propiedades para mostrar el tamaño definido y el tamaño real de un campo.  
@@ -129,23 +129,23 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **Nombre Store: Eric los libros de lectura**  
-**Define el tamaño: 40**  
+ **Nombre de Store: Eric los libros de lectura**  
+**Tamaño definido: 40**  
 **Tamaño real: 19**  
-**Nombre Store: De Barnum**  
-**Define el tamaño: 40**  
+**Nombre de Store: De Barnum**  
+**Tamaño definido: 40**  
 **Tamaño real: 8**  
-**Nombre Store: Noticias y pimientos**  
-**Define el tamaño: 40**  
+**Nombre de Store: Noticias y pimientos**  
+**Tamaño definido: 40**  
 **Tamaño real: 12**  
-**Nombre de Store: Doc-U-Mat: ropa de calidad y los libros en pantalla**  
-**Define el tamaño: 40**  
+**Nombre de Store: Doc-U-Mat: Los libros en pantalla y ropa de calidad**  
+**Tamaño definido: 40**  
 **Tamaño real: 36**  
 **Nombre de Store: Faríngea Bookshop**  
-**Define el tamaño: 40**  
+**Tamaño definido: 40**  
 **Tamaño real: 18**  
-**Store nombre: Bookbeat**  
-**Define el tamaño: 40**  
+**Nombre de Store: Bookbeat**  
+**Tamaño definido: 40**  
 **Tamaño real: 8**   
 ## <a name="see-also"></a>Vea también  
  [Propiedad ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   

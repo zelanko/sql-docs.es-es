@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c994a04f41b548599deff4ff5a0a99ba89be6c7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63064591"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantener valores de identidad al importar datos de forma masiva (SQL Server)
   Los archivos de datos contienen valores de identidad que pueden importarse de forma masiva en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De manera predeterminada, los valores de la columna de identidad del archivo de datos que se importa se omiten y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente valores únicos. Los valores únicos se basan en los valores de inicialización y de incremento especificados durante la creación de la tabla.  
@@ -30,7 +30,7 @@ ms.locfileid: "48159635"
   
 |Comando|Calificador para mantener la identidad|Tipo de calificador|  
 |-------------|------------------------------|--------------------|  
-|`bcp`|**-E**|Switch|  
+|`bcp`|**-E**|Modificador|  
 |BULK INSERT|KEEPIDENTITY|Argumento|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|KEEPIDENTITY|Sugerencia de tabla|  
   
@@ -74,7 +74,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
  Para obtener más información sobre cómo crear un archivo de formato, vea [Crear un archivo de formato &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
 ### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Usar bcp y mantener valores de identidad  
- En el siguiente ejemplo se muestra cómo mantener valores de identidad al usar `bcp` para importar datos de forma masiva. El `bcp` comando usa el archivo de formato, `myDepartment-f-n-x.Xml`y contiene los siguientes modificadores:  
+ En el siguiente ejemplo se muestra cómo mantener valores de identidad al usar `bcp` para importar datos de forma masiva. El comando `bcp` usa el archivo de formato, `myDepartment-f-n-x.Xml`, y contiene los siguientes modificadores:  
   
 |Calificadores|Descripción|  
 |----------------|-----------------|  
@@ -88,7 +88,7 @@ bcp AdventureWorks.HumanResources.myDepartment in C:\myDepartment-n.Dat -f C:\my
   
 ```  
   
-### <a name="b-using-bulk-insert-and-keeping-identity-values"></a>B. Usar BULK INSERT y mantener valores de identidad  
+### <a name="b-using-bulk-insert-and-keeping-identity-values"></a>b. Usar BULK INSERT y mantener valores de identidad  
  En el siguiente ejemplo se utiliza BULK INSERT para realizar una importación masiva de datos desde el archivo `myDepartment-c.Dat` en la tabla `AdventureWorks.HumanResources.myDepartment` . La instrucción utiliza el archivo de formato `myDepartment-f-n-x.Xml` e incluye la opción KEEPIDENTITY para que se mantengan todos los valores de identidad del archivo de datos.  
   
  En el Editor de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], ejecute:  

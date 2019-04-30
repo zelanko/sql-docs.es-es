@@ -13,18 +13,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd58bdb611a070c812364baf2fa3e1544c2ffdc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228966"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Campos de descriptor de parámetros con valores de tabla
   La compatibilidad con los parámetros con valores de tabla incluye nuevos campos específicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en descriptores de parámetros de aplicación ODBC (APD) y descriptores de parámetros de implementación (IPD).  
   
 ## <a name="remarks"></a>Comentarios  
   
-|Nombre|Ubicación|Tipo|Descripción|  
+|Name|Location|Tipo|Descripción|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Nombre del tipo de servidor del parámetro con valores de tabla.<br /><br /> Cuando se especifica un nombre de tipo del parámetro con valores de tabla en una llamada a SQLBindParameter, siempre debe especificarse como un valor Unicode, incluso en aplicaciones que se crean como aplicaciones de ANSI. El valor utilizado para el parámetro *StrLen_or_IndPtr* debería ser SQL_NTS o la longitud de cadena del nombre multiplicada por sizeof (WCHAR).<br /><br /> Cuando se especifica un nombre de tipo de parámetro con valores de tabla a través de SQLSetDescField, se puede especificar mediante el uso de un valor literal que se ajusta a la forma en que la aplicación se ha creado. El administrador de controladores ODBC realizará cualquier conversión Unicode que sea necesaria.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (solo lectura)|IPD|SQLTCHAR*|Catálogo donde se define el tipo.|  
@@ -34,9 +34,9 @@ ms.locfileid: "48138245"
   
  Cuando el enfoque del parámetro se establece en un parámetro con valores de tabla, se aplican los siguientes campos de encabezado de descriptor y atributos de instrucción a los parámetros con valores de tabla:  
   
-|Nombre|Ubicación|Tipo|Descripción|  
+|Name|Location|Tipo|Descripción|  
 |----------|--------------|----------|-----------------|  
-|SQL_ATTR_PARAMSET_SIZE<br /><br /> (Equivalente a SQL_DESC_ARRAY_SIZE en el APD.)|APD|SQLUINTEGER|Tamaño de matriz de las matrices de búfer de un parámetro con valores de tabla. Éste es el número máximo de filas que los búferes pueden incluir o el tamaño de los búferes en filas; el propio valor de parámetro con valores de tabla puede tener más o menos filas de las que pueden incluir los búferes. El valor predeterminado es 1. **Nota:** si SQL_SOPT_SS_PARAM_FOCUS se establece en su valor predeterminado de 0, SQL_ATTR_PARAMSET_SIZE hace referencia a la instrucción y especifica el número de conjuntos de parámetros. Si SQL_SOPT_SS_PARAM_FOCUS se establece en el ordinal de un parámetro con valores de tabla, hace referencia al parámetro con valores de tabla y especifica el número de filas por conjunto de parámetros del parámetro con valores de tabla.|  
+|SQL_ATTR_PARAMSET_SIZE<br /><br /> (Equivalente a SQL_DESC_ARRAY_SIZE en el APD.)|APD|SQLUINTEGER|Tamaño de matriz de las matrices de búfer de un parámetro con valores de tabla. Éste es el número máximo de filas que los búferes pueden incluir o el tamaño de los búferes en filas; el propio valor de parámetro con valores de tabla puede tener más o menos filas de las que pueden incluir los búferes. El valor predeterminado es 1. **Nota:**  Si SQL_SOPT_SS_PARAM_FOCUS se establece en su valor predeterminado de 0, SQL_ATTR_PARAMSET_SIZE hace referencia a la instrucción y especifica el número de conjuntos de parámetros. Si SQL_SOPT_SS_PARAM_FOCUS se establece en el ordinal de un parámetro con valores de tabla, hace referencia al parámetro con valores de tabla y especifica el número de filas por conjunto de parámetros del parámetro con valores de tabla.|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|El valor predeterminado es SQL_PARAM_BIND_BY_COLUMN.<br /><br /> Para seleccionar el enlace de modo de fila, este campo se establece en la longitud de la estructura o en una instancia de un búfer que se enlazará a un conjunto de filas de parámetro con valores de tabla. Esta longitud debe incluir el espacio para todas las columnas enlazadas y cualquier relleno de la estructura o búfer. De esta forma se garantiza que, cuando la dirección de una columna enlazada se incrementa con la longitud especificada, el resultado señalará al principio de la misma columna en la fila siguiente. Cuando se utiliza el operador `sizeof` en ANSI C, se garantiza este comportamiento.|  
 |SQL_ATTR_PARAM_BIND_OFFSET_PTR|APD|SQLINTEGER*|El valor predeterminado es un puntero NULL.<br /><br /> Si este campo es no NULL, el controlador elimina las referencias el puntero, agrega el valor sin referencia a cada uno de los campos aplazados del registro de descriptor (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR) y utiliza los nuevos valores de puntero para tener acceso a los valores de datos.|  
   

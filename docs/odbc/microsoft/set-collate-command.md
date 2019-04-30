@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127830"
 ---
 # <a name="set-collate-command"></a>Comando COLLATE Set
 Especifica una secuencia de intercalación para los campos de carácter en posteriores de indización y operaciones de ordenación.  
@@ -34,7 +34,7 @@ SET COLLATE TO cSequenceName
  *cSequenceName*  
  Especifica una secuencia de intercalación. Se describen las opciones de la secuencia de intercalación disponible en la tabla siguiente.  
   
-|Opciones|Idioma|  
+|Opciones|Lenguaje|  
 |-------------|--------------|  
 |HOLANDÉS|Neerlandés|  
 |GENERAL|Inglés, francés, alemán, español moderno, portugués y otros idiomas de Europa occidental|  

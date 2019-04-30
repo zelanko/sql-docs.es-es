@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b93ee4ab5b57414d8c8d640bc12a5ebbff882c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206371"
 ---
 # <a name="ado-glossary"></a>Glosario de términos de ADO
 En este tema se define términos relacionados con ADO.  
@@ -74,7 +74,7 @@ En este tema se define términos relacionados con ADO.
   
  Columnas de capítulo permiten definir una *elementos primarios y secundarios* relación donde la *primario* es el **Recordset** que contiene la columna de capítulo y el  *secundarios* es el **Recordset** representado por el capítulo.  
   
- alias de capítulo  
+ chapter-alias  
  Un alias que hace referencia a la columna anexada al elemento primario.  
   
  juego de caracteres  
@@ -183,7 +183,7 @@ En este tema se define términos relacionados con ADO.
  jerarquía  
  En general, una jerarquía es una estructura con una nivel superior de nivel y niveles subordinados. En ADO, jerárquica **conjuntos de registros** se utilizan para representar la relación de elementos primarios y secundarios entre un registro y un capítulo. También en ADO, **registro** y **Stream** objetos pueden utilizarse para tener acceso a las estructuras de árbol jerárquica, como documentos y una carpeta. ADO MD también incluye **jerarquía** objetos para representar una relación entre los niveles de una dimensión en un cubo OLAP. Vea también: conjuntos de registros jerárquicos, relación de elementos primarios y secundarios, capítulo y árbol.  
   
-## <a name="i-l"></a>-L  
+## <a name="i-l"></a>I-L  
  ISAPI (interfaz de programación de aplicaciones de servidor de Internet)  
  Un conjunto de funciones para servidores de Internet, como un Windows NT® Server o Windows 2000 Server ejecuta Microsoft® Internet Information Services (IIS).  
   
@@ -230,7 +230,7 @@ En este tema se define términos relacionados con ADO.
  primario  
  La parte que controla una relación jerárquica. En una estructura jerárquica, un elemento primario tiene uno o más nodos secundarios debajo de ella en la jerarquía. Vea también alias del primario, relación de elementos primarios y secundarios y secundarios.  
   
- alias del primario  
+ parent-alias  
  Un alias que hace referencia al elemento primario. Vea también alias, elemento primario.  
   
  relación de elementos primarios y secundarios  

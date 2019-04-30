@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e559eab5787a64b6bdf0850147d7d9128fc435c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208579"
 ---
 # <a name="writing-an-interoperable-application"></a>Escribir una aplicación Interoperable
 Cada vez que una aplicación utiliza el mismo código con más de un controlador, que el código debe ser interoperable entre esos controladores. En la mayoría de los casos, esto es una tarea fácil. Por ejemplo, el código para capturar las filas con un cursor de solo avance es el mismo para todos los controladores. En algunos casos, esto puede ser más difícil. Por ejemplo, el código para construir los identificadores para su uso en instrucciones SQL debe considerar el caso del identificador entrecomillado y las convenciones de nomenclatura de tres partes, dos partes y una parte.  

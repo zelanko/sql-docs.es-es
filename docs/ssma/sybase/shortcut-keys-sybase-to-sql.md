@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: b918534fc70cbe2e707f4e2e32d1818ac8dea277
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63214296"
 ---
 # <a name="shortcut-keyssybase-to-sql"></a>Teclas de acceso directo (SybaseToSQL)
 Puede usar métodos abreviados de teclado para navegar a través de la aplicación de SSMA. Para obtener más información, vea los siguientes temas.  

@@ -12,17 +12,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b78764e1dccb7118d43cc967f3b03838366d6eb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224522"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback (función)
 **Conformidad**  
- Versión introdujo: ODBC 3.8  
+ Versión de introducción: ODBC 3.8  
   
- Cumplimiento de estándares: ninguno  
+ Cumplimiento de estándares: None  
   
  **Resumen**  
  **SQLAsyncNotificationCallback** permite que el controlador para volver a llamar al administrador de controladores cuando hay cierto progreso de la operación asincrónica actual después de que el controlador devuelve SQL_STILL_EXECUTING. **SQLAsyncNotificationCallback** puede solo llama el controlador.  

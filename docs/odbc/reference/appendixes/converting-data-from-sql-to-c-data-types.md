@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224482"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Convertir datos de SQL a tipos de datos C
 Cuando una aplicación llama **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**, el controlador recupera los datos del origen de datos. Si es necesario, convierte los datos del tipo de datos en el que el controlador recupera para el tipo de datos especificado por el *TargetType* argumento en **SQLBindCol** o **SQLGetData.** Por último, almacena los datos en la ubicación señalada por el *TargetValuePtr* argumento en **SQLBindCol** o **SQLGetData** (y el campo SQL_DESC_DATA_PTR de la descartar).  
@@ -49,28 +49,28 @@ Cuando una aplicación llama **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**,
   
 -   **Longitud de bytes de caracteres** es el número total de bytes necesarios para mostrar los datos en formato de caracteres. Esto es como se define para cada tipo de datos C en la sección [Mostrar tamaño](../../../odbc/reference/appendixes/display-size.md), salvo que la longitud de bytes del carácter está en bytes, mientras que el tamaño de pantalla es en caracteres.  
   
--   Es decir, en *cursiva* representan los argumentos de función o elementos de la gramática de SQL. Para obtener la sintaxis de elementos de gramática, consulte [Apéndice C: SQL gramática](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+-   Es decir, en *cursiva* representan los argumentos de función o elementos de la gramática de SQL. Para obtener la sintaxis de elementos de gramática, consulte [Apéndice C: Gramática de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  Esta sección contiene los temas siguientes.  
   
--   [SQL a C: caracteres](../../../odbc/reference/appendixes/sql-to-c-character.md)  
+-   [SQL a C: Carácter](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [SQL a C: numérico](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [SQL a C: Numérico](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
--   [SQL a C: bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
+-   [SQL a C: Bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
--   [SQL a C: binario](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
+-   [SQL a C: archivo binario](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   
--   [SQL a C: fecha](../../../odbc/reference/appendixes/sql-to-c-date.md)  
+-   [SQL a C: Fecha](../../../odbc/reference/appendixes/sql-to-c-date.md)  
   
 -   [SQL a C: GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
   
--   [SQL a C: hora](../../../odbc/reference/appendixes/sql-to-c-time.md)  
+-   [SQL a C: Tiempo](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
 -   [SQL a C: marca de tiempo](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
--   [SQL a C: intervalos de año y mes](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
+-   [SQL a C: Intervalos de mes del año](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   
--   [SQL a C: intervalos de día y hora](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
+-   [SQL a C: Intervalos de tiempo del día](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
 -   [SQL a los ejemplos de conversión de datos de C](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)

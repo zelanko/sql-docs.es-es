@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3936047c89a76181710fa3bba04cc20b95ef70b9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222953"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>Propiedades del origen de datos compartidos (cuadro de diálogo), General
   Use el cuadro de diálogo **Propiedades del origen de datos compartidos** para mostrar y modificar la información de conexión de un origen de datos compartido del informe.  

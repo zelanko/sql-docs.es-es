@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241000"
 ---
 # <a name="decimal-digits"></a>Dígitos decimales
 El *dígitos decimales* de datos decimal y numeric tipos se define como el número máximo de dígitos a la derecha del separador decimal, o la escala de los datos. Columnas de número de punto flotante aproximadas o los parámetros, la escala está definida porque el número de dígitos a la derecha del separador decimal no es fijo. Para los datos de fecha y hora o el intervalo que contiene un componente de segundos, los dígitos decimales se define como el número de dígitos a la derecha del separador decimal en el componente de segundos de los datos.  

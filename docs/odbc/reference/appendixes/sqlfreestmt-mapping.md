@@ -1,5 +1,5 @@
 ---
-title: Asignación de SQLFreeStmt | Microsoft Docs
+title: SQLFreeStmt Mapping | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1872806265470327f3e7bff468be2ba6d9011421
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199422"
 ---
 # <a name="sqlfreestmt-mapping"></a>Asignación de SQLFreeStmt
 Cuando una aplicación llama **SQLFreeStmt** con un *opción* argumento de SQL_DROP a través de una aplicación ODBC 3 *.x* controlador, la llamada a  

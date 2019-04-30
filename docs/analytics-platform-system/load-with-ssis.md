@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213374"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Carga de datos con Integration Services para almacenamiento de datos paralelos
 Proporciona información de referencia e implementación para cargar datos en almacenamiento de datos paralelos de SQL Server mediante el uso de paquetes de SQL Server Integration Services (SSIS).  
@@ -84,7 +84,7 @@ A continuación, se asignan los datos de Integration Services a tipos de datos d
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|real|DT_R4|  
+|REAL|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -218,9 +218,9 @@ Especifique el destino del flujo de datos.
   
 5.  Rellene la información de la base de datos de destino, usuario, contraseña y servidor con información específica de su dispositivo. (Los ejemplos se muestran a continuación). A continuación, haga clic en **Aceptar**.  
   
-    Para las conexiones InfiniBand, **nombre del servidor**: escriba < nombre del dispositivo >-SQLCTL01, 17001.  
+    Para las conexiones InfiniBand, **nombre del servidor**: Escriba < nombre del dispositivo >-SQLCTL01, 17001.  
   
-    Para las conexiones Ethernet, **nombre del servidor**: escriba la dirección IP del clúster de nodo de Control, comas, el puerto 17001. Por ejemplo, 10.192.63.134,17001.  
+    Para las conexiones Ethernet, **nombre del servidor**: Escriba la dirección IP del clúster de nodo de Control, comas, el puerto 17001. Por ejemplo, 10.192.63.134,17001.  
   
     **Usuario:**`user1`  
   

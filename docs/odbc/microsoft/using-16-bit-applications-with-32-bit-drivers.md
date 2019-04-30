@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209972"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Uso de las aplicaciones de 16 bits con controladores de 32 bits
 > [!IMPORTANT]  
@@ -44,7 +44,7 @@ ms.locfileid: "47752933"
   
  En Windows en Windows (thunk de 16 bits a 32 bits), una DLL thunk adicional denominada convierte Ds32gt.dll valores de argumento de 16 bits que se pasan a través de un programa de instalación de 32 bits DLL apoyar a 16 bits.  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>Componentes  
  El componente de ODBC de los SDK de MDAC 2.8 SP1 incluye los siguientes archivos para ejecutar aplicaciones de 16 bits con controladores de 32 bits. Estos componentes están en el directorio \Redist.  
   
 |Nombre de archivo|Descripción|  
@@ -55,12 +55,12 @@ ms.locfileid: "47752933"
 |Odbcad32.exe|programa del Administrador de 32 bits|  
 |Odbcinst.hlp|Archivo de Ayuda del instalador|  
 |Ds16gt.dll|instalación del controlador de 16 bits genérica thunk DLL|  
-|Archivo Ctl3d32.dll|biblioteca de estilo de ventana tridimensional de 32 bits|  
+|Ctl3d32.dll|biblioteca de estilo de ventana tridimensional de 32 bits|  
   
  Además, los siguientes archivos junto con el Administrador de controlador de ODBC 2.10 de 16 bits, que no forman parte de ODBC 3.51, se requieren y deben instalarse con la aplicación de 16 bits.  
   
 |Nombre de archivo|Descripción|  
 |---------------|-----------------|  
-|ODBC.dll|Administrador de controladores de 16 bits|  
+|Odbc.dll|Administrador de controladores de 16 bits|  
 |Odbcinst.dll|DLL de instalador de 16 bits|  
 |Odbcadm.exe|programa de administrador de ODBC de 16 bits|

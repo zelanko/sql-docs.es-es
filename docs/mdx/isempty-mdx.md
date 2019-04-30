@@ -1,5 +1,5 @@
 ---
-title: IsEmpty (MDX) | Documentos de Microsoft
+title: IsEmpty (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dbed0eba3fec73d7134b1ce21275c28dbd387fcd
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224961"
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
 
@@ -32,7 +32,7 @@ IsEmpty(Value_Expression)
  *Value_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que normalmente devuelve las coordenadas de celda de un miembro o una tupla.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **IsEmpty** función devuelve **true** si la expresión evaluada es un valor de celda vacía. En caso contrario, esta función devuelve **false**.  
   
 > [!NOTE]  

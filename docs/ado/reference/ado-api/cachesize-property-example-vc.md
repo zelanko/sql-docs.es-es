@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ab5188ec0854eb52c5edf736ee94e67d50cadcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239829"
 ---
 # <a name="cachesize-property-example-vc"></a>Ejemplo de la propiedad CacheSize (VC ++)
 Este ejemplo se usa el [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propiedad para mostrar la diferencia en el rendimiento de una operación se realiza con y sin una caché de registro de 30.  

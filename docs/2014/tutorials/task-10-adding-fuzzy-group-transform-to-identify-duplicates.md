@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6e5e6478bc1b424a8744a17f2e67d2bd74b9e70d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63223384"
 ---
-# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Tarea 10: agregar la transformación Agrupación aproximada para identificar duplicados
+# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Tarea 10: Adición de la transformación Agrupación aproximada para identificar duplicados
   En esta tarea, agregará una transformación Agrupación aproximada al flujo de datos. La transformación Agrupación aproximada puede ayudar a identificar duplicados en los datos de origen. Consulte [la transformación Agrupación aproximada](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) para obtener más detalles.  
   
 1.  Arrastrar y colocar **agrupación aproximada** transformar en **otras transformaciones** en el **cuadro de herramientas de SSIS** a la **de flujo de datos** pestaña  **Combinar registros correctos y corregidos**.  

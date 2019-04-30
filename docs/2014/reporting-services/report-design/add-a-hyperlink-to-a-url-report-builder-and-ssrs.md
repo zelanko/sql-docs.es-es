@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2dae0498da8fe1387b6b082d7cc6ae37af27d464
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206936"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Agregar un hipervínculo a una dirección URL (Generador de informes y SSRS)
   Puede agregar un hipervínculo a un elemento de informe si desea que los usuarios puedan hacer clic en un vínculo de un informe y abrir el explorador para la dirección URL especificada. Los hipervínculos pueden ser una dirección URL estática o una expresión que se evalúe como una dirección URL. Si un campo de una base de datos contiene direcciones URL, una expresión pueden contener dicho campo, lo que dará lugar a una lista dinámica de hipervínculos en el informe. Puede agregar hipervínculos a cuadros de texto, imágenes, gráficos y medidores. Debe asegurarse de que los usuarios tienen acceso a la dirección URL proporcionada.  

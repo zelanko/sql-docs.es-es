@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: eec9e3e211c68b7f56fe6829a70064317b96e646
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63221986"
 ---
 # <a name="determine-polling-frequency"></a>Determinar la frecuencia de sondeo
 En este artículo se explica cómo determinar la frecuencia de sondeo para las alertas de Analytics Platform System appliance.  

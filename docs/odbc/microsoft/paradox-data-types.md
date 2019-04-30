@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208410"
 ---
 # <a name="paradox-data-types"></a>Tipos de datos de Paradox
 El controlador ODBC Paradox asigna tipos de datos de Paradox a tipos de datos SQL de ODBC. En la tabla siguiente se enumera todos los tipos de datos de Paradox y muestra el SQL de ODBC se asignan a los tipos de datos.  
@@ -32,13 +32,13 @@ El controlador ODBC Paradox asigna tipos de datos de Paradox a tipos de datos SQ
 |-----------------------|--------------------|  
 |ALFANUMÉRICO|SQL_VARCHAR|  
 |[1] DE INCREMENTO AUTOMÁTICO|SQL_INTEGER|  
-|BCD [1]|SQL_DOUBLE|  
+|BCD[1]|SQL_DOUBLE|  
 |BYTES [1]|SQL_BINARY|  
 |DATE|SQL_DATE|  
 |IMAGEN DE [2]|SQL_LONGVARBINARY|  
-|LÓGICO [1]|SQL_BIT|  
-|LONG [1]|SQL_INTEGER|  
-|MEMORANDO [2]|SQL_LONGVARCHAR|  
+|LOGICAL[1]|SQL_BIT|  
+|LONG[1]|SQL_INTEGER|  
+|MEMO[2]|SQL_LONGVARCHAR|  
 |MONEY [1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
 |CORTO|SQL_SMALLINT|  

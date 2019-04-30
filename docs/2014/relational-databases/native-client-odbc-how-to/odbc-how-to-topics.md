@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200376"
 ---
 # <a name="odbc-how-to-topics"></a>Temas de procedimientos de ODBC
-  Para usar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC, debe ser capaz de crear orígenes de datos ODBC y asegúrese de que el servidor tiene la versión correcta de los procedimientos almacenados de catálogo. Para codificar una aplicación ODBC que usa SQL Server, debe saber cómo asignar identificadores de ODBC, establecer atributos, conectarse a una instancia de SQL Server, ejecutar consultas y procesar resultados.  
+  Para poder usar el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es necesario que sea capaz de crear orígenes de datos ODBC y que se asegure de que el servidor tiene la versión correcta de los procedimientos almacenados de catálogo. Para codificar una aplicación ODBC que usa SQL Server, debe saber cómo asignar identificadores de ODBC, establecer atributos, conectarse a una instancia de SQL Server, ejecutar consultas y procesar resultados.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

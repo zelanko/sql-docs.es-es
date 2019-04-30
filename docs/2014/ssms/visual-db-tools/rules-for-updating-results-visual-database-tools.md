@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f1814c96a5f58052be6271d2a35c1bbf78f87b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63066483"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>Reglas para actualizar resultados (Visual Database Tools)
   En muchos casos, puede actualizar el conjunto de resultados mostrado en el [panel Resultados](visual-database-tools.md). Sin embargo, en algunos casos no es posible realizar esta actualización.  
@@ -34,7 +34,7 @@ ms.locfileid: "52792435"
   
  La siguiente tabla resume casos específicos en los que sería posible o no actualizar los resultados de la consulta en el panel Resultados. En muchos casos, la base de datos que se utiliza establece si se pueden actualizar los resultados de la consulta.  
   
-|Consulta|¿Pueden actualizarse los resultados?|  
+|Consultar|¿Pueden actualizarse los resultados?|  
 |-----------|-----------------------------|  
 |Consulta basada en una tabla con clave principal en la lista de resultados|Sí (con la excepción de lo mostrado a continuación).|  
 |Consulta basada en una tabla sin índice único y sin clave principal|Depende de la consulta y de la base de datos. Algunas bases de datos permiten actualizaciones si hay suficiente información disponible para identificar registros de forma exclusiva.|  

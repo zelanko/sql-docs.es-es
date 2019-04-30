@@ -1,5 +1,5 @@
 ---
-title: LinRegVariance (MDX) | Documentos de Microsoft
+title: LinRegVariance (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b3ae56238623c41d29ccb388a5aaa178352af196
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208749"
 ---
 # <a name="linregvariance-mdx"></a>LinRegVariance (MDX)
 
@@ -38,17 +38,17 @@ LinRegVariance(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] ] 
  *Numeric_Expression_x*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número que representa los valores del eje X.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La regresión lineal, que utiliza el método de mínimos cuadrados, calcula la ecuación de la recta de regresión (es decir, la de mejor ajuste para un conjunto de puntos). La recta de regresión tiene la siguiente ecuación, donde una es la pendiente y b es la intersección:  
   
  y = ax+b  
   
- El **LinRegVariance** función evalúa el setagainst especificado la primera expresión numérica para obtener los valores del eje y. La función, a continuación, evalúa el setagainst especificado la expresión numérica en segundo lugar, si se especifica, para obtener los valores del eje x. Si no se especifica el segundo expressionis numérico, la función utiliza el contexto actual de las celdas del conjunto especificado como valores para el eje x. No se especifica el argumento del eje x se suele usar con la dimensión de tiempo.  
+ El **LinRegVariance** función evalúa el setagainst especificada la primera expresión numérica para obtener los valores del eje y. La función, a continuación, evalúa el setagainst especificado la expresión numérica en segundo lugar, si se especifica, para obtener los valores del eje x. Si no especifica el segundo expressionis numérica, la función utiliza el contexto actual de las celdas del conjunto especificado como valores para el eje x. No se especifica el argumento del eje x se suele usar con la dimensión de tiempo.  
   
  Después de obtener el conjunto de puntos, la **LinRegVariance** función devuelve la varianza estadística que describe el ajuste de la ecuación lineal a los puntos.  
   
 > [!NOTE]  
->  El **LinRegVariance** función omite las celdas vacías o celdas que contienen texto o valores lógicos. No obstante, la función incluye celdas con valor de cero.  
+>  El **LinRegVariance** función la omite las celdas vacías o las celdas que contienen texto o valores lógicos. No obstante, la función incluye celdas con valor de cero.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve la varianza estadística que describe la adecuación de la ecuación lineal a los puntos de las medidas de ventas por unidad y ventas por tienda.  

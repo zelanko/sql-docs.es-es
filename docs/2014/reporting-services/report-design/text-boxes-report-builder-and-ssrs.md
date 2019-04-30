@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 66dadc7a6163b8da7024818a9ecee16d5b3df696
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63215067"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Cuadros de texto (Generador de informes y SSRS)
   Al pensar en un cuadro de texto, probablemente se imagina un cuadro independiente que contiene el texto en una superficie como la de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. En el Generador de informes algunos cuadros de texto son así y pueden mostrar el texto literal de títulos, descripciones y etiquetas, o texto dinámico basado en expresiones. Además, todas las celdas de una tabla o una matriz (región de datos de Tablix) contienen un cuadro de texto, al que se puede dar formato de la misma manera que a los cuadros de texto independientes de un informe.  

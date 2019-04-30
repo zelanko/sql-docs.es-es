@@ -1,5 +1,5 @@
 ---
-title: Niveles (MDX) | Documentos de Microsoft
+title: Niveles (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e8edfdc3c6888c34dd789c521bc42c6b919e1a4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269954"
 ---
 # <a name="levels-mdx"></a>Levels (MDX)
 
@@ -42,10 +42,10 @@ Hierarchy_Expression.Levels( Level_Name )
  *Level_Name*  
  Expresión de cadena válida que especifica un nombre de nivel.  
   
-## <a name="remarks"></a>Notas  
- Si se especifica un número de nivel, la **niveles** función devuelve el nivel asociado a la posición de base cero especificada.  
+## <a name="remarks"></a>Comentarios  
+ Si se especifica un número de nivel, el **niveles** función devuelve el nivel asociado con la posición de base cero especificada.  
   
- Si se especifica un nombre de nivel, la **niveles** función devuelve el nivel especificado.  
+ Si se especifica un nombre de nivel, el **niveles** función devuelve el nivel especificado.  
   
 > [!NOTE]  
 >  Utilice la sintaxis de expresión de cadena para funciones definidas por el usuario.  

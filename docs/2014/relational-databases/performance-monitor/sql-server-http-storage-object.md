@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a33585b216da10bd09a604905c50ce97b528de49
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250540"
 ---
 # <a name="sql-server-httpstorageobject"></a>SQL Server, HTTP_STORAGE_OBJECT
   El objeto de rendimiento de **SQLServer:HTTP_STORAGE_OBJECT** está compuesto de contadores de rendimiento que supervisan la cuenta de almacenamiento de Microsoft Azure. Uso de [archivos de datos de SQL Server en Windows Azure](../databases/sql-server-data-files-in-microsoft-azure.md) característica, puede almacenar los archivos de base de datos en almacenamiento de Blobs de Windows Azure. Este objeto de rendimiento trata cada cuenta de Almacenamiento de Windows Azure como una unidad diferente.  

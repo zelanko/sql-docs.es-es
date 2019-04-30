@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 4a423404a8f5db4e20331c3b187365a889bea48a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261819"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Configuración del proyecto (migración) (MySQLToSQL)
 La página de migración de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA migra los datos desde MySQL a SQL Server.  

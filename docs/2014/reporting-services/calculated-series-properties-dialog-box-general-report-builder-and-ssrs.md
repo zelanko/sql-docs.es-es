@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9cc02b99c77f35ad803f6e975ae445a50ccf718d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266370"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de la serie calculada, General (Generador de informes y SSRS)
   Seleccione **Fórmula** en el cuadro de diálogo **Propiedades de la serie calculada** para agregar o modificar una serie que se calculará en función de fórmulas integradas que usan datos de series existentes como entrada.  

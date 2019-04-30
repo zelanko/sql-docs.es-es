@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a6b4b76edb7eb7761511e39ba97b811dcf3d5e99
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260670"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Página de propiedades generales, recursos (Administrador de informes)
   Use la página de propiedades General de los recursos para cambiar de nombre, eliminar, mover o reemplazar un recurso. En la parte superior de la página, se muestra información sobre quién agregó el recurso o modificó las propiedades.  

@@ -1,5 +1,5 @@
 ---
-title: Usar expresiones de tupla | Documentos de Microsoft
+title: Usar expresiones de tupla | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f5fae4c4351cc8e443523e54e2bc8b88f89ad098
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251503"
 ---
 # <a name="using-tuple-expressions"></a>Usar expresiones de tupla
 
@@ -26,7 +26,7 @@ ms.locfileid: "34743694"
   
  La expresión completa de un identificador de tupla está formada por uno o más miembros especificados de forma explícita entre paréntesis:  
   
- (*Expresión_miembro* [,*expresión_miembro* ...])  
+ (*Member_expression* [,*Member_expression* ...])  
   
  Una tupla puede especificarse de forma completa y puede incluir miembros implícitos o un solo miembro.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "34743694"
   
 -   Si la jerarquía a la que se hace referencia implícitamente tiene un miembro predeterminado, éste se agrega a la tupla.  
   
--   Si la jerarquía con referencia implícita no tiene ningún miembro predeterminado, el **(All)** se utiliza el miembro de la jerarquía de manera predeterminada.  
+-   Si la jerarquía con referencia implícita no tiene ningún miembro predeterminado, el **(All)** se utiliza el miembro de la jerarquía de forma predeterminada.  
   
 -   Cuando la jerarquía con referencia implícita no tiene ningún miembro predeterminado, se utiliza el primer miembro del nivel superior de la jerarquía.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "34743694"
  Si la expresión de tupla tiene un solo miembro, MDX convierte el miembro en una tupla de un solo miembro a fin de evaluar la expresión. Es decir, funcionalmente es lo mismo utilizar la expresión de miembro `[Measures].[TestMeasure]` en lugar de la expresión de tupla que utilizar la expresión de tupla `( [Measures].[TestMeasure] ).`.  
   
 ## <a name="see-also"></a>Vea también  
- [Expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)   
+ [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

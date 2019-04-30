@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e6e3ecc4b125d226fc2cdf6dbe241e0ce017eae6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245936"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>Establecer un filtro de seguimiento (Transact-SQL)
   En este tema se describe el modo de utilizar procedimientos almacenados para crear un filtro que solo recupere la información necesaria en un evento que se está trazando.  
@@ -30,7 +30,7 @@ ms.locfileid: "54126695"
 2.  Ejecute **sp_trace_setfilter** para configurar el tipo de información que se debe recuperar para el evento objeto del seguimiento.  
   
 > [!IMPORTANT]
->  A diferencia de los procedimientos almacenados normales, los parámetros de todos los [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] procedimientos almacenados (<strong>sp_trace_*xx*</strong>) deben escribirse y no admiten la conversión de tipo de datos automática. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devolverá un error.  
+>  A diferencia de los procedimientos almacenados normales, los parámetros de todos los procedimientos almacenados de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (<strong>sp_trace_*xx*</strong>) tienen establecimiento inflexible de tipos y no admiten la conversión automática de tipos de datos. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devolverá un error.  
   
 ## <a name="see-also"></a>Vea también  
  [Filtrar un seguimiento](../../relational-databases/sql-trace/filter-a-trace.md)   

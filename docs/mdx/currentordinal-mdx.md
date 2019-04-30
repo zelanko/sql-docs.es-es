@@ -1,5 +1,5 @@
 ---
-title: CurrentOrdinal (MDX) | Documentos de Microsoft
+title: CurrentOrdinal (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d6fe956591b6bde0c5e6b074115fec8724995a59
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248201"
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal (MDX)
 
@@ -32,8 +32,8 @@ Set_Expression.CurrentOrdinal
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
-## <a name="remarks"></a>Notas  
- Al recorrer en iteración un conjunto, como con la [Filter (MDX)](../mdx/filter-mdx.md) o [Generate (MDX)](../mdx/generate-mdx.md) funciones, la **CurrentOrdinal** función devuelve el número de iteración.  
+## <a name="remarks"></a>Comentarios  
+ Al recorrer en iteración a través de un conjunto, como con el [Filter (MDX)](../mdx/filter-mdx.md) o [Generate (MDX)](../mdx/generate-mdx.md) funciones, la **CurrentOrdinal** función devuelve el número de iteración.  
   
 ## <a name="examples"></a>Ejemplos  
  El siguiente ejemplo simple muestra cómo **CurrentOrdinal** puede utilizarse con **generar** para devolver una cadena que contiene el nombre de cada elemento de un conjunto con su posición en el conjunto:  
@@ -48,7 +48,7 @@ Set_Expression.CurrentOrdinal
   
  `FROM [Adventure Works]`  
   
- El uso práctico de CurrentOrdinal se limita a cálculos muy complejos. El ejemplo siguiente devuelve el número de productos en el conjunto que son únicos, con el **orden** función para ordenar las tuplas de no vacío antes de utilizar el **filtro** función. El **CurrentOrdinal** función se utiliza para comparar y eliminar valores equivalentes.  
+ El uso práctico de CurrentOrdinal se limita a cálculos muy complejos. El ejemplo siguiente devuelve el número de productos del conjunto que son únicos, con el **orden** función para ordenar las tuplas no vacía antes de utilizar el **filtro** función. El **CurrentOrdinal** función se utiliza para comparar y eliminar valores equivalentes.  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  

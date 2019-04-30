@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252857"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Administración de inicios de sesión y trabajos tras la conmutación de roles (SQL Server)
   Al implementar una solución de alta disponibilidad o de recuperación ante desastres para una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es importante reproducir información relevante que se almacena para dicha base de datos en las bases de datos **master** o **msdb** . Generalmente, la información relevante incluye los trabajos de la base de datos principal y los inicios de sesión de los usuarios o los procesos que necesitan conectarse con la base de datos. Debe duplicar esta información en las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeden una base de datos reflejada o secundaria. Si es posible, tras la conmutación de roles es mejor reproducir mediante programación la información en la nueva base de datos principal.  

@@ -1,5 +1,5 @@
 ---
-title: Actual (MDX) | Documentos de Microsoft
+title: Actual (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e4962dfd9eba7d3a21710fef33aa39256dcfbfa
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249664"
 ---
 # <a name="current-mdx"></a>Current (MDX)
 
@@ -32,16 +32,16 @@ Set_Expression.Current
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  En cada paso de una iteración, la tupla sobre la que se opera es la tupla actual. El **actual** función devuelve dicha tupla. Esta función solo es válida durante una iteración sobre un conjunto.  
   
- Funciones MDX que recorrer en iteración un conjunto incluyen la [generar](../mdx/generate-mdx.md) función.  
+ Incluyen funciones MDX que recorrer un conjunto el [generar](../mdx/generate-mdx.md) función.  
   
 > [!NOTE]  
 >  Esta función solo funciona con conjuntos con nombre, ya sea mediante un alias de conjunto o al definir un conjunto con nombre.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se muestra cómo utilizar el **actual** función dentro de **generar**:  
+ El ejemplo siguiente muestra cómo usar el **actual** función dentro de **generar**:  
   
  `WITH`  
   

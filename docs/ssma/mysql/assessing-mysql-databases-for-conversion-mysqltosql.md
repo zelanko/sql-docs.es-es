@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 9983edb500e424be6bbb4f85ff005af00fd65aaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253250"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>Evaluación de las bases de datos de MySQL para la conversión (MySQLToSQL)
 Antes de cargar los objetos y migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, debe determinar cómo compleja será la migración y cuánto tiempo tardará la migración. SSMA puede crear un informe de evaluación que muestra el porcentaje de objetos que se convertirán correctamente. SSMA también le permite ver los problemas específicos que provocan errores de conversión.  

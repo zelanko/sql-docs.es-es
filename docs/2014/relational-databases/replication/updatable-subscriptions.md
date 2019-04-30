@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00d51c24583231f28ec15dd86c1848ba95c345d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255390"
 ---
 # <a name="updatable-subscriptions"></a>Suscripciones actualizables
   Con la replicación transaccional, los datos replicados deben tratarse como de solo lectura; sin embargo, puede modificarlos en un suscriptor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante suscripciones actualizables. Si necesita modificar datos en el suscriptor, elija una de las siguientes opciones en función de sus necesidades.  
@@ -36,9 +36,9 @@ ms.locfileid: "52771007"
 -   Seleccione **Poner en cola cambios y confirmar cuando sea posible** para realizar una suscripción de actualización en cola.  
   
 ## <a name="see-also"></a>Vea también  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Crear una suscripción de extracción](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [Suscribirse a publicaciones](subscribe-to-publications.md)   
  [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

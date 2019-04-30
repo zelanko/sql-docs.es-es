@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4c0c7a5626f3eb48509d7a4cfbf239f7cb931da
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250647"
 ---
 # <a name="sql-server-databases-object"></a>Databases (objeto de SQL Server)
   El objeto **SQLServer:Databases** de SQL Server proporciona contadores para supervisar las operaciones de copia masiva, el rendimiento de las copias de seguridad y restauración, y las actividades del registro de transacciones. La supervisión de las transacciones y del registro de transacciones determina el volumen de actividad de los usuarios en la base de datos y el espacio libre que queda en el registro de transacciones. El volumen de actividad de los usuarios puede determinar el rendimiento de la base de datos y puede afectar al tamaño del registro, los bloqueos y la replicación. La supervisión de la actividad de registro de bajo nivel para medir la actividad de los usuarios y el uso de los recursos puede ayudar a identificar cuellos de botella en el rendimiento.  

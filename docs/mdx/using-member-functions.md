@@ -1,5 +1,5 @@
 ---
-title: Mediante las funciones miembro | Documentos de Microsoft
+title: Mediante las funciones miembro | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1c9979b6b9fcb04115695cbe8d9c224e1c6c1f57
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251585"
 ---
 # <a name="using-member-functions"></a>Usar funciones de miembro
 
 
   Una función miembro es una función MDX (Expresiones multidimensionales) que devuelve un miembro. Las funciones de  miembro, al igual que las funciones de tupla y de conjunto, son esenciales para negociar las estructuras multidimensionales de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- De las muchas funciones de miembro en MDX, el más importante es la **CurrentMember** función, que se usa para determinar el miembro actual en una jerarquía. La consulta siguiente muestra cómo se usa, junto con el **primario**, **antecesor**, y **Prevmember** funciones:  
+ De las muchas funciones de miembro de MDX, el más importante es la **CurrentMember** función, que se usa para determinar el miembro actual en una jerarquía. La consulta siguiente muestra cómo se usa, junto con el **primario**, **antecesor**, y **Prevmember** funciones:  
   
  `WITH`  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34743644"
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones &#40;sintaxis MDX&#41;](../mdx/functions-mdx-syntax.md)   
+ [Funciones &#40;sintaxis de MDX&#41;](../mdx/functions-mdx-syntax.md)   
  [Usar funciones de tupla](../mdx/using-tuple-functions.md)   
  [Uso de funciones de conjuntos](../mdx/using-set-functions.md)  
   

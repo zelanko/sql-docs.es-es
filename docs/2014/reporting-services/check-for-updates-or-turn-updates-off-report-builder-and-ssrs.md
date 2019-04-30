@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae7f72240148291504654fffa304ebda252178ba
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266068"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Buscar o desactivar actualizaciones (Generador de informes y SSRS)
   Cada vez que abre un informe, el Generador de informes comprueba si las instancias publicadas de los elementos de informe se han actualizado en el servidor de informes o en el sitio de SharePoint integrado con un servidor de informes. También comprueba los cambios de los elementos dependientes de elementos de informe, como el conjunto de datos y los parámetros. Si algún elemento de informe o sus dependencias se han actualizado en el servidor o en el sitio, una barra de información del informe muestra el número de componentes actualizados. Puede elegir ver, y aceptar o rechazar las actualizaciones, o bien descartar la barra de información.  

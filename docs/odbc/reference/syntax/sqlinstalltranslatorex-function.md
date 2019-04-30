@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242314"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>Función SQLInstallTranslatorEx
 **Conformidad**  
@@ -56,7 +56,7 @@ BOOL SQLInstallTranslatorEx(
   
  El **traductor** y **instalación** palabras clave que deben incluirse en el *lpszTranslator* cadena. La traducción de archivo DLL se muestra con la **traductor** palabra clave y el programa de instalación de traductor DLL aparece con el **instalación** palabra clave. Cada par se termina con un byte NULL, y toda la lista se termina con un byte NULL. (Es decir, dos bytes NULL marcan el final de la lista). El formato de *lpszTranslator* es como sigue:  
   
- \0Translator=*traductor-DLL-filename*\0[Setup=*nombre del programa de instalación de archivo DLL*\0]\0  
+ \0Translator=*translator-DLL-filename*\0[Setup=*setup-DLL-filename*\0]\0  
   
  *lpszPathIn*  
  [Entrada] Ruta de acceso completa de un puntero nulo o donde es el traductor para instalarse. Si *lpszPath* es un puntero nulo, se instalarán los traductores en el directorio del sistema.  

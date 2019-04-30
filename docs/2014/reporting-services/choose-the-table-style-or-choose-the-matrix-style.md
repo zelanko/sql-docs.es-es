@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2153c8d47afdf0770b03509554d9aa46673956ec
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266085"
 ---
 # <a name="choose-the-table-style-or-choose-the-matrix-style"></a>Elegir el estilo de la tabla o Elegir el estilo de la matriz
   Utilice estas páginas del Asistente para informes para seleccionar los estilos de línea y texto para el informe. La lista de estilos se basa en una plantilla que se puede configurar. El Diseñador de informes proporciona las plantillas iniciales siguientes: Pizarra, bosque, corporativo, negrita, Océano y genérico.  

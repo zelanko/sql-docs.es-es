@@ -12,11 +12,11 @@ author: rachel-msft
 ms.author: raagyema
 manager: craigg
 ms.openlocfilehash: e25dd1c244766e1409e14747722fe53b3583c9a0
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252831"
 ---
 # <a name="postgresql-extension-preview"></a>Extensión de PostgreSQL (versión preliminar)
 

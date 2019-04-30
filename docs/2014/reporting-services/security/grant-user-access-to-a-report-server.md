@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebb42ac44d26e9ad8a091795eb3f8ab7283f6bcb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242869"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>Conceder a un usuario acceso a un servidor de informes (Administrador de informes)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la seguridad basada en roles para conceder a un usuario acceso a un servidor de informes. En una nueva instalación del servidor de informes, solo los usuarios que son miembros del grupo local de administradores tienen los permisos para acceder a las operaciones y al contenido del servidor de informes. Para hacer que el servidor de informes esté disponible para otros usuarios, debe crear asignaciones de roles que asignen cuentas de usuario o de grupo a un rol predefinido que especifique una recopilación de tareas.  

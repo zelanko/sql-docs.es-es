@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273743"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Tutorial: Agregar y modificar un diagrama de base de datos
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Tutorial: Incorporación y cambio de un diagrama de base de datos
   En este tutorial se muestra cómo crear y modificar un diagrama de base de datos, así como la forma de realizar cambios en la base de datos mediante el componente Diagramas de base de datos. También se explica cómo agregar tablas al diagrama, crear relaciones entre las tablas, crear restricciones e índices en las columnas y modificar el nivel de información que puede verse en cada tabla.  
   
 ## <a name="prerequisites"></a>Requisitos previos  

@@ -12,11 +12,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: d368f38589530f27db98c3c61b9cec4610818ae4
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255963"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Inicio rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse y consultar la base de datos SQL de Azure
 

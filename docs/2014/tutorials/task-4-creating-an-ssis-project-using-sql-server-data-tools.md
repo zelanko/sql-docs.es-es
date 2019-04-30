@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21a7b32332c2fe8c4a37831a3fdd745016503087
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249954"
 ---
-# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Tarea 4: crear un proyecto de SSIS con SQL Server Data Tools
+# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Tarea 4: Creación de un proyecto de SSIS con SQL Server Data Tools
   En esta tarea, creará un proyecto de SSIS usando **SQL Server Data Tools** para automatizar la limpieza y la búsqueda de coincidencias de los datos de proveedor.  
   
 1.  Inicie **SQL Server Data Tools**. Haga clic en Inicio, seleccione **Todos los programas**, expanda **Microsoft SQL Server 2012**y, a continuación, haga clic en **SQL Server Data Tools**.  

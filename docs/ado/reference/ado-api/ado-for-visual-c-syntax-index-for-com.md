@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae03c7dccdc702ccb4deae068013a69d7852d623
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248912"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO para el índice de sintaxis de Visual C++ para COM
 Este índice es una referencia cruzada a la referencia del lenguaje ADO basado en Microsoft Visual C++.  

@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267478"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Filtrar un tabla anidada en un modelo de minería de datos (tutorial intermedio de minería de datos)
   Una vez creado y explorado el modelo, tal vez decida centrarse en un subconjunto de datos del cliente. Por ejemplo, es posible que solo desee analizar las cestas que contienen un producto específico o los datos demográficos de los clientes que no han realizado ninguna compra en un determinado período.  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona la capacidad de filtrar los datos que se emplean en un modelo de minería de datos. Esta característica es útil porque no es necesario configurar una nueva vista del origen de datos se utilizan datos diferentes. En el Tutorial básico de minería de datos aprendió a filtrar datos de una tabla plana aplicando condiciones a la tabla de casos. En esta tarea, creará un filtro que se aplica a una tabla anidada.  
   
-## <a name="filters-on-nested-vs-case-tables"></a>Comparación de los filtros en tablas anidadas y en tablas de casos  
+## <a name="filters-on-nested-vs-case-tables"></a>Filtros en vs anidados. Tablas de casos  
  Si la vista del origen de datos contiene una tabla de casos y una tabla anidada, como la vista del origen de datos utilizada en el modelo de asociación, puede filtrar valores de la tabla de casos, comprobar la presencia o ausencia de un valor en la tabla anidada o alguna combinación de ambos.  
   
  En esta tarea, primero realizará una copia del modelo de asociación y, a continuación, agregará los atributos IncomeGroup y Region al nuevo modelo relacionado, para que pueda crear un filtro a partir de esos atributos en la tabla de casos.  

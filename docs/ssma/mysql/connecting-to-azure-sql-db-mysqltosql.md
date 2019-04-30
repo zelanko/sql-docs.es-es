@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 23d018a8d551a5c3a7f2978339b6cf7612f378fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253281"
 ---
 # <a name="connecting-to-azure-sql-db-mysqltosql"></a>Conexión a Azure SQL DB (MySQLToSQL)
 Para migrar bases de datos MySQL a SQL Azure, debe conectarse a la instancia de destino de SQL Azure. Cuando se conecta, SSMA obtiene metadatos acerca de todas las bases de datos en la instancia de SQL Azure y muestra los metadatos de la base de datos en el Explorador de metadatos de SQL Azure. SSMA almacena la información de la instancia de SQL Azure está conectado a, pero no almacena las contraseñas.  

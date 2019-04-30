@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249400"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Personalizar y procesar el modelo de pronóstico (tutorial intermedio de minería de datos)
   El algoritmo de serie temporal de [!INCLUDE[msCoName](../includes/msconame-md.md)] proporciona varios parámetros que afectan al modo de creación de un modelo y al modo en que se analizan los datos temporales. Cambiar estas propiedades puede afectar de forma significativa a la manera en que el modelo de minería de datos realiza las predicciones.  

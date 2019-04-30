@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b593c3bd8619f0fbba47357f312479c2cd14063b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254236"
 ---
 # <a name="driver-architecture"></a>Arquitectura de controladores
 Arquitectura de controladores se divide en dos categorías, dependiendo de qué instrucciones SQL de procesos de software:  

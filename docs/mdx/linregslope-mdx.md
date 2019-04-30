@@ -1,5 +1,5 @@
 ---
-title: LinRegSlope (MDX) | Documentos de Microsoft
+title: LinRegSlope (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aa1c24076f76c4f61692deac69741d8cf1557462
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241060"
 ---
 # <a name="linregslope-mdx"></a>LinRegSlope (MDX)
 
@@ -38,7 +38,7 @@ LinRegSlope(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  *Numeric_Expression_x*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número que representa los valores del eje X.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La regresión lineal, que utiliza el método de mínimos cuadrados, calcula la ecuación de la recta de regresión (es decir, la de mejor ajuste para un conjunto de puntos). La recta de regresión tiene la siguiente ecuación, donde una es la pendiente y b es la intersección:  
   
  y = ax+b  
@@ -48,7 +48,7 @@ LinRegSlope(Set_Expression, Numeric_Expression_y [ ,Numeric_Expression_x ] )
  Después de obtener el conjunto de puntos, la **LinRegSlope** función devuelve la pendiente de la recta de regresión (una en la ecuación anterior).  
   
 > [!NOTE]  
->  El **LinRegSlope** función omite las celdas vacías o celdas que contienen texto o valores lógicos. No obstante, la función incluye celdas con valor de cero.  
+>  El **LinRegSlope** función la omite las celdas vacías o las celdas que contienen texto o valores lógicos. No obstante, la función incluye celdas con valor de cero.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve la pendiente de una recta de regresión para las medidas de ventas por unidad y por tienda.  

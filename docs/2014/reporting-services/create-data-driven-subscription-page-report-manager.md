@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 625afedabdb376f913d3353e2bda343bba66e3e1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265949"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Página Crear suscripción controlada por datos (Administrador de informes)
   Use las páginas Crear suscripción controlada por datos para generar o modificar una suscripción que consulte una base de datos de suscriptor cada vez que se ejecuta la suscripción. Las suscripciones controladas por datos usan los resultados de la consulta para determinar los destinatarios de la suscripción, la configuración de entrega y los valores de parámetro de informe. En tiempo de ejecución, el servidor de informes ejecuta una consulta para obtener los valores utilizados para la configuración de la suscripción. Puede usar las páginas Crear suscripción controlada por datos para definir la consulta y asignar los valores de consulta a la configuración de suscripción. Los valores y las opciones que se especifican para una suscripción controlada por datos se reparten entre varias páginas, de manera similar a un asistente. En total, hay siete páginas.  

@@ -1,5 +1,5 @@
 ---
-title: VarP (MDX) | Documentos de Microsoft
+title: VarP (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc1e6276de9a03af9800b9e242d54130c4241732
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251482"
 ---
 # <a name="varp-mdx"></a>VarP (MDX)
 
@@ -32,10 +32,10 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **VarP** función devuelve la varianza sesgada de una expresión numérica especificada, evaluada sobre un conjunto especificado.  
   
  El **VarP** función usa la población sesgada fórmulas, mientras el [Var](../mdx/var-mdx.md) función utiliza la fórmula de población no sesgada.  

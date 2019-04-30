@@ -17,18 +17,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb86b01a42a097210801fd3654ff2af80df24e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63242446"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 Especifica el comportamiento de la [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) método.  
   
 |Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
-|**adMoveUnspecified**|-1|Predeterminado: Realiza la operación de movimiento predeterminado: la operación se produce un error si el archivo de destino o directorio ya existe, y la operación actualiza los vínculos de hipertexto.|  
+|**adMoveUnspecified**|-1|Predeterminado: Realiza la operación de movimiento predeterminado: La operación produce un error si el archivo de destino o directorio ya existe, y la operación actualiza los vínculos de hipertexto.|  
 |**adMoveOverWrite**|1|Sobrescribe el archivo de destino o el directorio, incluso si ya existe.|  
 |**adMoveDontUpdateLinks**|2|Modifica el comportamiento predeterminado de **MoveRecord** método si no actualiza los vínculos de hipertexto del origen de **registro**. El comportamiento predeterminado depende de las capacidades del proveedor. Mover la operación actualiza los vínculos si es compatible con el proveedor. Si el proveedor no puede reparar los vínculos, o si no se especifica este valor, el cambio tiene éxito incluso cuando vínculos no se han corregido.|  
 |**adMoveAllowEmulation**|4|Solicitudes que el proveedor intenta simular el movimiento (mediante operaciones de eliminación, carga y descarga). Si el intento de mover el **registro** produce un error porque la dirección URL de destino está en un servidor diferente o atendida por un proveedor diferente de origen, esto provocaría un mayor latencia o pérdida de datos debido a las capacidades del proveedor diferente cuando mover recursos entre los proveedores.|  

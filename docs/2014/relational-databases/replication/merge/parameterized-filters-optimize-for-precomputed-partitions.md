@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250546"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente
   Las particiones precalculadas son una optimización del rendimiento que se puede utilizar con publicaciones de combinación filtradas. Las particiones precalculadas son también un requisito para utilizar registros locales en publicaciones filtradas. Para obtener más información sobre los registros lógicos, vea [Agrupar cambios en filas relacionadas con registros lógicos](group-changes-to-related-rows-with-logical-records.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "52800195"
   
  No obstante, si el publicador y el suscriptor se están ejecutando en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior y utiliza particiones precalculadas, la pertenencia a particiones de todos los cambios efectuados en el publicador se calcula previamente y se mantiene en el momento en que se realizan los cambios. Como resultado, cuando un suscriptor se sincroniza con el publicador, puede empezar a descargar inmediatamente los cambios relativos a su partición sin tener que pasar por el proceso de evaluación de particiones. Esto puede producir importantes mejoras de rendimiento cuando una publicación tiene un número elevado de cambios, suscriptores o artículos.  
   
- Además de utilizar particiones precalculadas, genere instantáneas previamente o permita a los suscriptores que soliciten la generación y aplicación de instantáneas la primera vez que se sincronizan. Utilice una de estas opciones o las dos para proporcionar instantáneas para publicaciones que utilicen filtros con parámetros. Si no especifica una de estas opciones, las suscripciones se inicializan utilizando una serie de instrucciones SELECT e INSERT, en lugar de la utilidad **bcp** ; este proceso es mucho más lento. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Además de utilizar particiones precalculadas, genere instantáneas previamente o permita a los suscriptores que soliciten la generación y aplicación de instantáneas la primera vez que se sincronizan. Utilice una de estas opciones o las dos para proporcionar instantáneas para publicaciones que utilicen filtros con parámetros. Si no especifica una de estas opciones, las suscripciones se inicializan utilizando una serie de instrucciones SELECT e INSERT, en lugar de la utilidad **bcp** ; este proceso es mucho más lento. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
  **Para utilizar particiones precalculadas**  
   

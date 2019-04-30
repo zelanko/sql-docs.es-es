@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 91def0dda11d1a16ceaac4d12a3c9294a084d247
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250391"
 ---
 # <a name="replication-over-the-internet"></a>Replicación por Internet
   La replicación de datos por Internet permite a usuarios desconectados y remotos obtener acceso a los datos cuando los necesiten, por medio de una conexión a Internet. Los datos se replican a través de Internet mediante:  

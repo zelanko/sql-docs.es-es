@@ -22,14 +22,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 70f459f60616e7edd77078a7e9653ab9dff097e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248346"
 ---
 # <a name="establishing-a-connection"></a>Establecer una conexión
-Después de asignar identificadores de entorno y de conexión y establecer los atributos de conexión, la aplicación está lista para conectarse al origen de datos o al controlador. Hay tres funciones distintas de la aplicación puede usar para hacer esto: **SQLConnect** (nivel de conformidad con la interfaz de núcleo), **SQLDriverConnect** (Core), y **SQLBrowseConnect**(Nivel 1). Cada uno de los tres está diseñado para usarse en un escenario diferente. Antes de conectarse, la aplicación puede determinar cuál de estas funciones es compatible con la **ConnectFunctions** palabra clave devuelto por **SQLDrivers**.  
+Después de asignar identificadores de entorno y de conexión y establecer los atributos de conexión, la aplicación está lista para conectarse al origen de datos o al controlador. Hay tres funciones diferentes, que la aplicación puede usar para hacer esto: **SQLConnect** (nivel de conformidad con la interfaz de núcleo), **SQLDriverConnect** (Core), y **SQLBrowseConnect** (nivel 1). Cada uno de los tres está diseñado para usarse en un escenario diferente. Antes de conectarse, la aplicación puede determinar cuál de estas funciones es compatible con la **ConnectFunctions** palabra clave devuelto por **SQLDrivers**.  
   
 > [!NOTE]  
 >  Algunos controladores de limitan el número de conexiones activas que admiten. Una aplicación llama a **SQLGetInfo** con la opción SQL_MAX_DRIVER_CONNECTIONS para determinar cuántas conexiones activas que admite un controlador determinado.  

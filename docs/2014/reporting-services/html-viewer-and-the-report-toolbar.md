@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86ac5b6da861477bfd5b8e92feac97068ca5adc9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261254"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visor HTML y la barra de herramientas del informe
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona un Visor HTML que se usa para mostrar informes a petición conforme se solicitan del servidor de informes. El Visor HTML ofrece un marco para ver informes en HTML. Incluye una barra de herramientas de informe, una sección de parámetros, una sección de credenciales y un mapa del documento. La barra de herramientas de informe del Visor HTML incluye características que se pueden usar para trabajar con un informe, incluidas las opciones de exportación para verlo con formatos distintos de HTML. La sección de parámetros y el mapa del documento solamente aparecen cuando se abren informes configurados para usar parámetros y un control de mapa de documento.  

@@ -1,5 +1,5 @@
 ---
-title: Usar funciones de tupla | Documentos de Microsoft
+title: Usar funciones de tupla | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 578192fa982b8bbf65527f4ff1d71b6595a2400d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251641"
 ---
 # <a name="using-tuple-functions"></a>Usar funciones de tupla
 
@@ -48,8 +48,8 @@ ms.locfileid: "34743830"
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vea también  
- [Funciones &#40;sintaxis MDX&#41;](../mdx/functions-mdx-syntax.md)   
- [Usar funciones de miembro](../mdx/using-member-functions.md)   
+ [Funciones &#40;sintaxis de MDX&#41;](../mdx/functions-mdx-syntax.md)   
+ [Uso de funciones de miembro](../mdx/using-member-functions.md)   
  [Uso de funciones de conjuntos](../mdx/using-set-functions.md)  
   
   

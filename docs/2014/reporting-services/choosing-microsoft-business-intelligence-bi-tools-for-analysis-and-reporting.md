@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 8ef547b99b7e51fa1f642fa11442e9eea466c6dd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266146"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Análisis e informes con herramientas de Microsoft Business Intelligence (BI)
 

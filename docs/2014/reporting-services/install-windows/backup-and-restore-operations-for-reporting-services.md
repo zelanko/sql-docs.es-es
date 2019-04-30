@@ -21,11 +21,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a11b10ae1403911c7593e9f6cccd21d1fdb8fd16
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59934351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261945"
 ---
 # <a name="backup-and-restore-operations-for-reporting-services"></a>Operaciones de copia de seguridad y restauración de Reporting Services
   En este tema se ofrece información general acerca de todos los archivos de datos que se usan en una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y se describe cuándo y cómo se debe realizar una copia de seguridad de los mismos. La parte más importante de una estrategia de recuperación es desarrollar un plan de copias de seguridad y restauración de los archivos de base de datos del servidor de informes. Sin embargo, una estrategia de recuperación más completa incluiría copias de seguridad de las claves de cifrado, extensiones o ensamblados personalizados, archivos de configuración y archivos de origen para informes y modelos.  

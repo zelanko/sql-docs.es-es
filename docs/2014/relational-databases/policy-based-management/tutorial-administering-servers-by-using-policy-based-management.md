@@ -14,13 +14,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63256058"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: Administrar servidores mediante administración basada en directivas
+# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: Administración de servidores mediante la administración basada en directivas
   Éste es el tutorial Administrar servidores mediante administración basada en directivas. Este tutorial está destinado a los usuarios que conocen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero que no tienen experiencia con la administración basada en directivas.  
   
 ## <a name="what-you-will-learn"></a>Aprendizaje  
@@ -31,7 +31,7 @@ ms.locfileid: "52754207"
  [Lección 1: Crear y aplicar una directiva predeterminada desactivado de forma](lesson-1-create-and-apply-an-off-by-default-policy.md)  
  En esta lección se crea una directiva que especifica que Correo electrónico de base de datos no está habilitado en el servidor. A continuación, se comprueba si el servidor cumple la directiva y se configura el servidor deshabilitando Correo electrónico de base de datos.  
   
- [Lección 2: Crear y aplicar una directiva de normas de nomenclatura](lesson-2-create-and-apply-a-naming-standards-policy.md)  
+ [Lección 2: Creación y aplicación de una directiva de normas de denominación](lesson-2-create-and-apply-a-naming-standards-policy.md)  
  En esta lección se crea una directiva que define y exige una denominación estándar para las tablas.  
   
 ## <a name="requirements"></a>Requisitos  

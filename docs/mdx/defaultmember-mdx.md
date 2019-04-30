@@ -1,5 +1,5 @@
 ---
-title: DefaultMember (MDX) | Documentos de Microsoft
+title: DefaultMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3a0c11acadcbdcadfd9398baff09db9292c87eb2
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248129"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (MDX)
 
@@ -32,7 +32,7 @@ Hierarchy_Expression.DefaultMember
  *Hierarchy_Expression*  
  Expresión MDX válida que devuelve una jerarquía.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El miembro predeterminado de un atributo se utiliza para evaluar expresiones cuando un atributo no está incluido en una consulta.  
   
 ## <a name="example"></a>Ejemplo  
@@ -47,6 +47,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Definir a un miembro predeterminado](../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)  
+ [Definir un miembro predeterminado](../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)  
   
   

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9100405c91387faa66b714a94b8259167ae31899
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267655"
 ---
 # <a name="ddl-statements"></a>Instrucciones DDL
 Instrucciones de lenguaje de definición (DDL) de datos varían enormemente según DBMS. SQL de ODBC define las instrucciones para las operaciones más comunes de definición de datos: crear y quitar tablas, índices y vistas; modificar tablas; conceder y revocar los privilegios. Todas las demás instrucciones de DDL son específicas del origen de datos. Por lo tanto, las aplicaciones interoperables no pueden realizar algunas operaciones de definición de datos. En general, esto no supone un problema, porque estas operaciones tienden a ser muy específicos para DBMS y son más adecuadas izquierda para el software de administración de base de datos propietaria se incluye con la mayoría de los DBMS o el programa de instalación se incluye con el controlador.  

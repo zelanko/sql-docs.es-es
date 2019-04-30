@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aee8914493c66ff451d7bca7f56fc8723d2a7ca0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254138"
 ---
 # <a name="return-codes-odbc"></a>Códigos de retorno de ODBC
 Cada función de ODBC devuelve un código, conocido como su *código de retorno y* que indica el éxito o fracaso de la función global. La lógica del programa se suele basar en códigos de retorno.  
@@ -51,6 +51,6 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_SUCCESS_WITH_INFO|Función que se ha completado correctamente, posiblemente con un error recuperable (advertencia). La aplicación llama a **SQLGetDiagRec** o **SQLGetDiagField** para recuperar información adicional.|  
 |SQL_ERROR|Error de la función. La aplicación llama a **SQLGetDiagRec** o **SQLGetDiagField** para recuperar información adicional. El contenido de cualquier parámetro de salida a la función es indefinido.|  
 |SQL_INVALID_HANDLE|Función falló debido a un identificador de entorno, conexión, instrucción o descriptor no válido. Esto indica un error de programación. No hay información adicional está disponible en **SQLGetDiagRec** o **SQLGetDiagField**. Este código solo se devuelve cuando el identificador es un puntero nulo o no es del tipo correcto, por ejemplo, cuando se pasa un identificador de instrucción para un argumento que requiere un identificador de conexión.|  
-|SQL_NO_DATA|No hay más datos no estaban disponibles. La aplicación llama a **SQLGetDiagRec** o **SQLGetDiagField** para recuperar información adicional. Se pueden devolver uno o más registros de estado definidos por el controlador de clase 02xxx. **Nota:** en ODBC 2. *x*, este devolverá el código se denominaba SQL_NO_DATA_FOUND.|  
+|SQL_NO_DATA|No hay más datos no estaban disponibles. La aplicación llama a **SQLGetDiagRec** o **SQLGetDiagField** para recuperar información adicional. Se pueden devolver uno o más registros de estado definidos por el controlador de clase 02xxx. **Nota:**  En ODBC 2. *x*, este devolverá el código se denominaba SQL_NO_DATA_FOUND.|  
 |SQL_NEED_DATA|Se necesitan más datos, por ejemplo, cuando se envían los datos del parámetro en tiempo de ejecución o se necesita información de conexión adicionales. La aplicación llama a **SQLGetDiagRec** o **SQLGetDiagField** para recuperar información adicional, si existe.|  
 |SQL_STILL_EXECUTING|Todavía se está ejecutando una función que se inició de forma asincrónica. La aplicación llama a **SQLGetDiagRec** o **SQLGetDiagField** para recuperar información adicional, si existe.|

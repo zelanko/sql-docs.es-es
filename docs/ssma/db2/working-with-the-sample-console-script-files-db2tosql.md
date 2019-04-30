@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: dc7976fae322dddc24eda7cf6ef84ef20a7a9e61
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259010"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Trabajar con los archivos de secuencia de comandos de consola de ejemplo (DB2ToSQL)
 Se han proporcionado algunos archivos de ejemplo junto con el producto para la referencia de usuario y el uso. Esta sección describe la manera de personalizar fácilmente estos scripts para satisfacer las necesidades del usuario final.  

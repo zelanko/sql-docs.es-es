@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3835f83efff9e720f7f8631d527b9547e3b4239a
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245610"
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>Ver el registro de errores del Agente SQL Server (SQL Server Management Studio)
   En este tema se describe el modo de ver el registro de errores del Agente  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -45,7 +45,7 @@ ms.locfileid: "54100780"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para realizar sus funciones, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe configurarse de modo que use las credenciales de una cuenta que sea miembro del rol fijo de servidor **sysadmin** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cuenta debe tener los siguientes permisos de Windows:  
   
 -   Iniciar sesión como servicio (SeServiceLogonRight)  
@@ -70,7 +70,7 @@ ms.locfileid: "54100780"
   
 4.  Haga clic con el botón derecho en el registro de errores que desea ver y seleccione **Ver registro del agente**.  
   
-     Las siguientes opciones están disponibles en el **Log File Viewer -**_nombre_servidor_ cuadro de diálogo:  
+     Las opciones siguientes están disponibles en el cuadro de diálogo **Visor de archivos de registro -**_nombre_de_servidor_:  
   
      **Cargar registro**  
      Abre un cuadro de diálogo donde puede especificar un archivo de registro para cargar.  

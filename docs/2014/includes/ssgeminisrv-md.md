@@ -1,1 +1,9 @@
-Servicio Analysis Services
+---
+ms.openlocfilehash: efe248e774c238a7bd95a08533c17f7d68827cb0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656775"
+---
+ Servicio Analysis Services 

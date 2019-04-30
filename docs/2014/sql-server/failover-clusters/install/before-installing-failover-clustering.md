@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190335"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar los clústeres de conmutación por error
   Antes de instalar un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe seleccionar el hardware y el sistema operativo en el que se ejecutará [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. También deberá configurar el servicio de clústeres de conmutación por error de Windows Server (WSFC), así como revisar la red, la seguridad y las consideraciones relativas al resto del software que se ejecutará en los clústeres de conmutación por error.  
@@ -47,9 +47,9 @@ ms.locfileid: "53355794"
   
     -   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala .NET Framework 3.5 SP1 pero quizá se necesite al instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en los sistemas operativos Windows anteriores. Para más información, consulte las [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Notas de la versión](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Paquete de actualización:** Para evitar el reinicio del equipo debida a la instalación de .NET Framework 4 durante la instalación, el programa de instalación de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] requiere la instalación de una actualización de [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  Si va a instalar [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] en Windows 7 SP1 o [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, esta actualización se incluye. Si instala en un sistema operativo Windows anterior, descárguelo desde [Microsoft Update para .NET Framework 4.0 en Windows Vista y Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Paquete de actualización:** Para evitar el reinicio del equipo debido a la instalación de .NET Framework 4, el programa de instalación de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] requiere la instalación de una actualización de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] en el equipo.  Si va a instalar [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] en Windows 7 SP1 o [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, esta actualización se incluye. Si instala en un sistema operativo Windows anterior, descárguelo desde [Microsoft Update para .NET Framework 4.0 en Windows Vista y Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
-    -   .NET Framework 4: El programa de instalación instala .NET Framework 4 en un sistema operativo en clúster. Para reducir el tiempo total de instalación, considere la instalación de .NET Framework 4 antes de ejecutar el programa de instalación principal.  
+    -   .NET Framework 4: el programa de instalación instala .NET Framework 4 en un sistema operativo en clúster. Para reducir el tiempo total de instalación, considere la instalación de .NET Framework 4 antes de ejecutar el programa de instalación principal.  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Puede instalar estos archivos ejecutando el archivo SqlSupport.msi ubicado en el soporte físico de instalación de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   

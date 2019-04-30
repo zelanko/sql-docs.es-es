@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 591d86011ee769d054c069db98a40e2765b1ec27
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157818"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>Implementar IDENTITY en una tabla con optimización para memoria
   IDENTITY(1, 1) se admite en una tabla optimizada para memoria. Sin embargo, las columnas de identidad con la definición de IDENTITY(x, y) donde x != 1 o y != 1 no se admiten en las tablas optimizadas para memoria. La solución para los valores de IDENTITY utiliza el objeto SEQUENCE ([Sequence Numbers](../sequence-numbers/sequence-numbers.md)).  

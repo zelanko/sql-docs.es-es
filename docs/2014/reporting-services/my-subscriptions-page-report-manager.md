@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d2d29838c371559c54163eb8e5488d198cf28345
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59943921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188545"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Mis suscripciones (página del Administrador de informes)
   Use la página Mis suscripciones para ver todas sus suscripciones en un solo lugar. Desde esta página, puede obtener acceso a cualquier suscripción de su propiedad, modificarla o eliminarla. Es propietario solamente de las suscripciones que ha creado. No puede obtener acceso a las suscripciones de otros usuarios, ni siquiera aunque las utilice (por ejemplo, si se ha agregado su nombre a una suscripción existente definida por otro usuario). Desde esta página no se pueden crear suscripciones. Para obtener más información sobre cómo crear suscripciones, vea el [página nueva suscripción o Editar suscripción &#40;el Administrador de informes&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  

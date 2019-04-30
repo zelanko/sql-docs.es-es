@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8d7dc9fdf5a6cd6e52261c0d2327676db79508c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239140"
 ---
 # <a name="monitor-memory-usage"></a>Supervisar el uso de la memoria
   Supervise una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periódicamente para confirmar que la utilización de la memoria se encuentra dentro de los intervalos normales.  
@@ -37,13 +37,13 @@ ms.locfileid: "52801567"
   
 -   **Memoria: Bytes disponibles**  
   
--   **Memoria: Páginas/seg.**  
+-   **Memoria: Páginas/s**  
   
  El contador **Bytes disponibles** indica en bytes la memoria disponible actualmente para procesos. El contador **Páginas/s** indica el número de páginas que se han recuperado del disco debido a errores de página no recuperables o que se han escrito en disco para liberar espacio en el espacio de trabajo debido a errores de página.  
   
- Un valor bajo en el contador **Bytes disponibles** puede indicar una escasez general de memoria en el equipo o que un programa no está liberando memoria. Un valor alto en el contador **Páginas/s** puede indicar una paginación excesiva. Supervisar la **memoria: Errores de página/s** contador para asegurarse de que la actividad del disco no está causada por la paginación.  
+ Un valor bajo en el contador **Bytes disponibles** puede indicar una escasez general de memoria en el equipo o que un programa no está liberando memoria. Un valor alto en el contador **Páginas/s** puede indicar una paginación excesiva. Monitor del **memoria: Errores de página/s** para asegurarse de que la actividad del disco no está causada por la paginación.  
   
- Una tasa baja de paginación (y por tanto, de errores de página) es normal, incluso si el equipo tiene mucha memoria disponible. El Administrador de memoria virtual (VMM) de Microsoft Windows sustrae páginas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y otros procesos a medida que recorta los tamaños del espacio de trabajo para estos procesos, lo que suele provocar errores de página. Para determinar si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otro proceso son la causa de una paginación excesiva, supervise el **proceso: Errores de página/s** contador para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de proceso.  
+ Una tasa baja de paginación (y por tanto, de errores de página) es normal, incluso si el equipo tiene mucha memoria disponible. El Administrador de memoria virtual (VMM) de Microsoft Windows sustrae páginas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y otros procesos a medida que recorta los tamaños del espacio de trabajo para estos procesos, lo que suele provocar errores de página. Para determinar si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otro proceso son la causa de la paginación excesiva, supervise el **proceso: Errores de página/s** para la instancia del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Para obtener más información acerca de cómo solucionar la paginación excesiva, vea la documentación del sistema operativo Windows.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "52801567"
   
  Para supervisar la cantidad de memoria que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , examine los siguientes contadores de rendimiento:  
   
--   **Proceso: Espacio de trabajo**  
+-   **Proceso: espacio de trabajo**  
   
--   **SQL Server: administrador de búfer: Frecuencia de aciertos de caché del búfer**  
+-   **SQL Server: Administrador de búfer: frecuencia de aciertos de caché del búfer**  
   
--   **SQL Server: administrador de búfer: Páginas de base de datos**  
+-   **SQL Server: Administrador de búfer: páginas de base de datos**  
   
--   **SQL Server: administrador de memoria: Memoria total del servidor (KB)**  
+-   **SQL Server: Administrador de memoria: memoria total del servidor (KB)**  
   
  El contador **Espacio de trabajo** muestra la cantidad de memoria que usa un proceso. Si este número es constantemente inferior a la cantidad de memoria establecida en las opciones del servidor **min server memory** y **max server memory** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para utilizar más memoria de la que necesita.  
   

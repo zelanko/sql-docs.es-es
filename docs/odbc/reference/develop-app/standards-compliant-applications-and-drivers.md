@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8937c2b9c80209975d03963acb19ab5da9c99e39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148912"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Controladores y aplicaciones compatibles con estándares
-Un controlador o aplicación compatible con los estándares es aquella que se ajusta a la especificación de CAE grupo Open "datos de administración: SQL nivel de llamada interfaz (CLI)" y la norma ISO/IEC 9075-3:1995 interfaz de nivel de llamada (E) (SQL/CLI).  
+Un controlador o aplicación compatible con los estándares es aquella que cumple la especificación de CAE grupo abierto "gestión de datos: Interfaz de nivel de llamada SQL (CLI)"y la norma ISO/IEC 9075-3:1995 (E) interfaz de nivel de llamada (SQL/CLI).  
   
  ODBC 3 *.x* garantiza las siguientes características:  
   
@@ -37,7 +37,7 @@ Un controlador o aplicación compatible con los estándares es aquella que se aj
   
 -   Si llama una aplicación compatible con los estándares **SQLAllocEnv** (lo que puede producirse porque **SQLAllocEnv** es una función válida en el grupo de abierto y ISO CLI), la llamada se asigna a  **SQLAllocHandleStd** en tiempo de compilación. Como resultado, en tiempo de ejecución llama la aplicación **SQLAllocHandleStd**. Durante el transcurso de procesamiento de esta llamada, el Administrador de controladores establece el atributo de entorno SQL_ATTR_ODBC_VERSION en SQL_OV_ODBC3. Una llamada a **SQLAllocHandleStd** es equivalente a una llamada a **SQLAllocHandle** con un *HandleType* de SQL_HANDLE_ENV y una llamada a **SQLSetEnvAttr** establecer SQL_ATTR_ODBC_VERSION en SQL_OV_ODBC3.  
   
--   Si llama una aplicación compatible con los estándares **SQLBindParam** (lo que puede producirse porque **SQLBindParam** es una función válida en el grupo de abierto y ISO CLI), el 3 de ODBC *.x* Administrador de controladores se asigna la llamada a la llamada equivalente en **SQLBindParameter**. (Consulte [asignación de SQLBindParam](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) en Apéndice G: directrices de controlador para la compatibilidad con versiones anteriores.)  
+-   Si llama una aplicación compatible con los estándares **SQLBindParam** (lo que puede producirse porque **SQLBindParam** es una función válida en el grupo de abierto y ISO CLI), el 3 de ODBC *.x* Administrador de controladores se asigna la llamada a la llamada equivalente en **SQLBindParameter**. (Consulte [asignación de SQLBindParam](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) en el apéndice G: Directrices de controlador para compatibilidad con versiones anteriores.)  
   
 -   Para alinear con la CLI de ISO, el 3 de ODBC *.x* archivos de encabezado contienen un alias para los tipos de información que se usa en llamadas a **SQLGetInfo**. Una aplicación compatible con los estándares puede usar estos alias en lugar de los 3 ODBC *.x* tipos de información. Para obtener más información, vea el tema siguiente, [archivos de encabezado](../../../odbc/reference/develop-app/header-files.md).  
   

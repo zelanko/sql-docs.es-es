@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155716"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Construcciones admitidas en procedimientos almacenados compilados de forma nativa
   En este tema contiene una lista de características admitidas en procedimientos almacenados compilados de forma nativa ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -81,13 +81,13 @@ ms.locfileid: "58527147"
 ##  <a name="bfncsp"></a> Funciones integradas en procedimientos almacenados compilados de forma nativa  
  Se admiten las funciones siguientes en restricciones DEFAULT de tablas optimizadas para memoria y procedimientos almacenados compilados de forma nativa.  
   
--   Funciones matemáticas: ACOS, ASIN, ATAN, ATN2, COS, COT, DEGREES, EXP, LOG, LOG10, PI, POWER, RADIANS, RAND, SIN, SQRT, SQUARE y TAN  
+-   Funciones matemáticas: ACOS, ASIN, ATAN, ATN2, COS, COT, grados, EXP, LOG, LOG10, PI, POWER, radianes, RAND, SIN, SQRT, SQUARE y TAN  
   
--   Funciones de fecha: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME y YEAR.  
+-   Funciones de fecha: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, día, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME y YEAR.  
   
 -   Funciones de cadena: LEN, LTRIM, RTRIM y SUBSTRING  
   
--   Función de identidad: SCOPE_IDENTITY  
+-   Función IDENTITY: SCOPE_IDENTITY  
   
 -   Funciones NULL: ISNULL  
   
@@ -172,13 +172,13 @@ ms.locfileid: "58527147"
 ##  <a name="los"></a> Limitaciones de ordenación  
  Puede ordenar más de 8000 filas en una consulta que use [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). Pero sin la [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) puede ordenar hasta 8000 filas (si hay combinaciones, menos filas).  
   
- Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas obtiene el mensaje de error: **Mensaje 41398, nivel 16, estado 1, procedimiento  *\<NombreDeProcedimiento >*, línea  *\<lineNumber >* el operador TOP puede devolver un máximo de 8192 filas;  *\<número >* se solicitó.**  
+ Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas obtendrá el mensaje de error: **Mensaje 41398, nivel 16, estado 1, procedimiento  *\<NombreDeProcedimiento >*, línea  *\<lineNumber >* el operador TOP puede devolver un máximo de 8192 filas;  *\<número >* se solicitó.**  
   
  Si no tiene una cláusula TOP, puede ordenar cualquier número de filas con ORDER BY.  
   
  Si no utiliza una cláusula ORDER BY, puede utilizar un valor entero con el operador TOP.  
   
- Ejemplo con TOP n = 8192: se compila  
+ Ejemplo con TOP N = 8192: Compila  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -191,7 +191,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- Ejemplo con TOP n > 8192: no se compila.  
+ Ejemplo con TOP N > 8192: No se puede compilar.  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -206,7 +206,7 @@ GO
   
  La limitación de 8192 filas solo se aplica a `TOP N` donde `N` es una constante, como en los ejemplos anteriores.  Si necesita un número `N` mayor que 8192 puede asignar el valor a una variable y utilizar esa variable con `TOP`.  
   
- Ejemplo con una variable: se compila  
+ Ejemplo de uso de una variable: Compila  
   
 ```sql  
 CREATE PROCEDURE testTop  
@@ -220,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **Limitaciones para las filas devueltas:** hay dos casos en los que se puede reducir el número de filas que puede devolver el operador TOP:  
+ **Limitaciones para las filas devueltas:** Hay dos casos en los que pueden reducir el número de filas que pueden ser devueltos por el operador TOP:  
   
 -   Usar JOIN en la consulta.  El efecto de JOIN en la limitación depende del plan de consulta.  
   

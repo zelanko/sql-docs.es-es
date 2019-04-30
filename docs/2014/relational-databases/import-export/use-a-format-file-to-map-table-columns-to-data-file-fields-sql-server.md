@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 26db59ba5dbfc6f7be8d827a86dabb1cdd845d03
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155809"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Usar un archivo de formato para asignar columnas de tabla a campos de un archivo de datos (SQL Server)
   Un archivo de datos puede contener campos organizados en un orden diferente al de las columnas correspondientes en la tabla. Este tema trata los archivos de formato XML y no XML que se han modificado para alojar un archivo de datos cuyos campos están organizados en un orden diferente al de las columnas de la tabla. El archivo de formato modificado asigna los campos de datos a las columnas correspondientes de la tabla.  

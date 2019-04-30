@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab648d7fe60a27d36e55cd3d859d0a8c442eef50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240333"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 Especifica opciones para abrir un [registro](../../../ado/reference/ado-api/record-object-ado.md). Estos valores se pueden combinar mediante el uso de o.  

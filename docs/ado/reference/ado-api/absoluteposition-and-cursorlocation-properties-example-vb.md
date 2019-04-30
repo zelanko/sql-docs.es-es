@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a22afb8e59d692ae4fae010adc819cd930b8ab46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155242"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>Ejemplo AbsolutePosition y CursorLocation propiedades (VB)
 Este ejemplo se muestra cómo el [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) propiedad puede seguir el progreso de un bucle que enumera todos los registros de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa el [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad para habilitar el **AbsolutePosition** propiedad estableciendo el cursor en un cursor de cliente.  

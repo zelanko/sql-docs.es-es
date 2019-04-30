@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e83cb131f37dd2901b77e70d19f5ed95ef596bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63151291"
 ---
 # <a name="cursor-type-and-concurrency-combinations"></a>Tipo de cursor y combinaciones de simultaneidad
 > [!IMPORTANT]  
@@ -33,7 +33,7 @@ ms.locfileid: "47628623"
 |-----------------|------------------------------------|  
 |SQL_CURSOR_FORWARD_ONLY|SQL_CONCUR_READ_ONLY|  
 |SQL_CURSOR_STATIC|SQL_CONCUR_READ_ONLY|  
-|SQL_CURSOR_KEYSET_DRIVEN<sup>[1]</sup>|SQL_CONCUR_LOCK SQL_CONCUR_READ_ONLY<sup>[2]</sup> SQL_CONCUR_VALUES|  
+|SQL_CURSOR_KEYSET_DRIVEN<sup>[1]</sup>|SQL_CONCUR_READ_ONLY SQL_CONCUR_LOCK<sup>[2]</sup> SQL_CONCUR_VALUES|  
   
  <sup>[1] </sup> Vea [limitaciones del uso de los cursores dinámicos](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md).  
   

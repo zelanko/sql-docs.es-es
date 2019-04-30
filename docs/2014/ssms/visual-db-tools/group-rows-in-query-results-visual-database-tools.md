@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cd80e7d999314c549df4ebb5e51aa2a0ca2d3f8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154820"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Agrupar filas en los resultados de la consulta (Visual Database Tools)
   Si desea crear subtotales o mostrar otra información de resumen para los subconjuntos de una tabla, debe crear grupos mediante una consulta de funciones agregadas. Cada grupo resume los datos para todas las filas de la tabla que tienen el mismo valor.  

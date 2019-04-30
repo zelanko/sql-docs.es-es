@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: acee0f51707a0535f0d6f63152cdf461ad50f46c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188437"
 ---
 # <a name="move-items-page-report-manager"></a>Mover elementos (página del Administrador de informes)
   Use la página Mover elementos para mover un informe, una carpeta u otro elemento a una nueva ubicación del servidor de informes. Puede escribir la ruta de acceso a la nueva ubicación o utilizar la vista de árbol para desplazarse hasta la nueva ubicación en el espacio de nombres del servidor de informes. Solo puede mover los elementos para los que tenga permiso para mover y que estén almacenados en el servidor de informes actual.  

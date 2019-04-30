@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1dbc3dd467aab0cf60cdb255165767fc12a0f518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156773"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Prácticas recomendadas para llamar a un procedimiento almacenado compilado de forma nativa
   Los procedimientos almacenados compilados de forma nativa:  
@@ -48,7 +48,7 @@ ms.locfileid: "48048535"
   
  El uso de parámetros con nombre (ineficaces) con procedimientos almacenados compilados de forma nativa se puede detectar con el XEvent `hekaton_slow_parameter_passing`, con `reason=named_parameters`.  
   
- De forma similar, puede detectar el uso de tipos no coincidentes a través del mismo XEvent `hekaton_slow_parameter_passing`, con `reason=parameter_conversion`.  
+ Asimismo, puede detectar el uso de tipos no coincidentes a través del mismo XEvent `hekaton_slow_parameter_passing`, con `reason=parameter_conversion`.  
   
  Puesto que necesitará implementar lógica de reintentos cuando use tablas optimizadas para memoria (en varios escenarios), y como necesitará evitar ciertas limitaciones de la característica, puede ser conveniente crear un procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretado por el contenedor. Para obtener un ejemplo, vea [Guidelines for Retry Logic para las transacciones en tablas optimizadas para memoria](memory-optimized-tables.md).  
   

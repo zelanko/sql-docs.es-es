@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 70ec1c794e86782551099b4fb5d8459c8bae6191
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157457"
 ---
 # <a name="start-report-builder-report-builder"></a>Iniciar el Generador de informes (Generador de informes)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] incluye independiente y [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] versiones del generador de informes. La versión [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] se puede usar con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] instalado en modo nativo o en modo integrado de SharePoint.  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2b4df18cf783e23792b51fb2c437b82c6a8ec52
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63239991"
 ---
 # <a name="openschema-method"></a>Método OpenSchema
 Obtiene información de esquema de base de datos del proveedor.  
@@ -62,10 +62,10 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 >  **Uso del servicio de datos remoto** el **OpenSchema** método no está disponible en un cliente [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
   
 > [!NOTE]
->  En Visual Basic, las columnas que tienen un entero sin signo de cuatro bytes (DBTYPE UI4) en el **Recordset** devuelto desde el **OpenSchema** método en el **conexión** no objeto se compara con otras variables. Para obtener más información acerca de los tipos de datos OLE DB, consulte [tipos de datos de OLE DB (OLE DB)](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) y [Apéndice A: tipos de datos](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) en referencia de Microsoft OLE DB del programador.  
+>  En Visual Basic, las columnas que tienen un entero sin signo de cuatro bytes (DBTYPE UI4) en el **Recordset** devuelto desde el **OpenSchema** método en el **conexión** no objeto se compara con otras variables. Para obtener más información acerca de los tipos de datos OLE DB, consulte [tipos de datos de OLE DB (OLE DB)](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) y [Apéndice A: Tipos de datos](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) en referencia del programador de OLE DB de Microsoft.  
   
 > [!NOTE]
->  **Los usuarios de Visual C/C ++** al no utilizar cursores de cliente, recuperando "ORDINAL_POSITION" de un esquema de columna en ADO devuelve una variante de tipo VT_R8 en Windows Data Access Components (Windows DAC) 6.0, mientras que el tipo utilizado en MDAC, MDAC 2.8 y MDAC 2.7 2.6 era VT_I4. Los programas escritos para MDAC 2.6 que solo buscan una variante devuelven de tipo que VT_I4 obtendría un cero por cada ordinal si se ejecutan en MDAC 2.7, MDAC 2.8 y 6.0 de Windows DAC sin ninguna modificación. Este cambio se realizó porque el tipo de datos OLE DB devuelve es DBTYPE_UI4 y, en el tipo con signo de VT_I4 no hay espacio suficiente para contener todos los valores posibles sin truncamiento, posiblemente, que se producen y lo que provocaría una pérdida de datos.  
+>  **Visual C /C++ usuarios** al no utilizar cursores de cliente, recuperando "ORDINAL_POSITION" de un esquema de columna en ADO devuelve una variante de tipo VT_R8 en Windows Data Access Components (Windows DAC) 6.0, mientras que el tipo utilizado, MDAC 2.8 y MDAC 2.7 en la versión 2.6 de MDAC era VT_I4. Los programas escritos para MDAC 2.6 que solo buscan una variante devuelven de tipo que VT_I4 obtendría un cero por cada ordinal si se ejecutan en MDAC 2.7, MDAC 2.8 y 6.0 de Windows DAC sin ninguna modificación. Este cambio se realizó porque el tipo de datos OLE DB devuelve es DBTYPE_UI4 y, en el tipo con signo de VT_I4 no hay espacio suficiente para contener todos los valores posibles sin truncamiento, posiblemente, que se producen y lo que provocaría una pérdida de datos.  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
@@ -77,4 +77,4 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  [Método Open (Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Método Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Método Open (Stream de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

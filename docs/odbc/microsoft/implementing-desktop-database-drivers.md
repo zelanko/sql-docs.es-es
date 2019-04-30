@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c8be5ffca0ad28793b1b5e22bbeabca05001e361
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127259"
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementación de controladores de escritorio de la base de datos
 Instrucciones y notas técnicas sobre cómo implementar y configurar los controladores de base de datos de escritorio de Microsoft ODBC pueden encontrarse en la Ayuda en pantalla de administrador de orígenes de datos ODBC. Este archivo puede obtenerse durante las rutinas de instalación de controlador desde la [Administrador de orígenes de datos ODBC de Microsoft](../../odbc/admin/odbc-data-source-administrator.md).  
@@ -31,7 +31,7 @@ Instrucciones y notas técnicas sobre cómo implementar y configurar los control
   
 -   [Archivos de componentes ODBC](../../odbc/microsoft/odbc-component-files.md)  
   
--   [Requisitos de hardware y de software](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
+-   [Requisitos de hardware y software](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
 -   [Descriptores con controladores de escritorio de la base de datos](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   

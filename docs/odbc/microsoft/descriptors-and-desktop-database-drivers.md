@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17058af1d7f0ab1e35c2d6b31c0337daed4c9e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63240386"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Descriptores de y controladores de escritorio de la base de datos
 Un descriptor es una estructura de datos que contiene información sobre los datos de las columnas o parámetros dinámicos. **SQLGetDescField** puede usarse para recuperar los descriptores compatibles enumerados a continuación. Los descriptores de parámetros de implementación (IPD) no se rellenan automáticamente porque **SQLDescribeParam** no se admite. Tampoco se admiten campos de descriptor que no están disponibles a través de Jet (por ejemplo, SQL_DESC_BASE_TABLE_NAME).  

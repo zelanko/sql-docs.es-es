@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d1c31ef622281b4f52f62ca3867c5afa7dcae8ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194417"
 ---
 # <a name="updating-data-with-sqlsetpos"></a>Actualizar datos con SQLSetPos
 Pueden actualizar o eliminar cualquier fila del conjunto de filas con las aplicaciones **SQLSetPos**. Una llamada a **SQLSetPos** es una buena alternativa para crear y ejecutar una instrucción SQL. Permite que un controlador ODBC admiten las actualizaciones posicionadas incluso cuando el origen de datos no admite instrucciones SQL posicionadas. Es parte del paradigma de conseguir acceso a la base de datos completa por medio de las llamadas de función.  

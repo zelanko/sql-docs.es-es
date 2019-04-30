@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7dbb3fafd32ead6587d9c64eb6ccf2294ed4918b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161808"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Requisitos de espacio en disco para operaciones DDL de índice
   El espacio en disco es una consideración importante a la hora de crear, volver a generar o quitar índices. Un espacio en disco inadecuado puede degradar el rendimiento e incluso provocar errores en las operaciones de índice. En este tema se proporciona información general que puede ayudar a determinar la cantidad de espacio necesario para las operaciones de lenguaje de definición de datos (DDL).  

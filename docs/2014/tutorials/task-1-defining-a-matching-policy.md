@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222781"
 ---
-# <a name="task-1-defining-a-matching-policy"></a>Tarea 1: definir una directiva de coincidencia
+# <a name="task-1-defining-a-matching-policy"></a>Tarea 1: Definición de una directiva de coincidencia
   En esta tarea, creará una directiva de coincidencia que contiene una regla. La regla tendrá un requisito previo: **Id. de proveedor**, lo que significa que debe coincidir con los identificadores de proveedor antes de usar los demás dominios de la regla. La regla usa otros dos dominios: **Nombre de proveedor** con **similitud** valor establecido en **70%** y **correo electrónico de contacto** con **similitud** valor establecido en **30%**.  
   
 1.  En la página principal de **cliente DQS**, haga clic en **flecha derecha** junto a **proveedores** knowledge base y, a continuación, seleccione **directiva de coincidencia**.  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224609"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Explorar los modelos Market Basket (tutorial intermedio de minería de datos)
   Ahora que ha creado el `Association` modelo, puede explorar utilizando el [!INCLUDE[msCoName](../includes/msconame-md.md)] Visor de asociación de la **Visor de modelos de minería de datos** ficha del Diseñador de minería de datos. Este tutorial le guía a través del uso del visor para explorar las relaciones entre los elementos. El visor le ayuda a saber de un vistazo qué productos tienden a aparecer juntos y a obtener una idea general de los patrones que surgen.  
@@ -37,7 +37,7 @@ ms.locfileid: "56035306"
   
  Una línea que conecta dos elementos significa que es probable que aparezcan juntos en una transacción. En otras palabras, es probable que los clientes compren estos elementos conjuntamente. El control deslizante se asocia con la probabilidad de una regla. Mueva el control deslizante arriba o abajo para filtrar las asociaciones débiles, lo que significa que las reglas tienen una probabilidad baja.  
   
- El gráfico de red de dependencias muestra las reglas por parejas, lo que se puede representar lógicamente como A->B y significa que, si se compra el producto A, es probable que se compre después el producto B. El gráfico no puede mostrar reglas del tipo AB ->C. Si mueve el control deslizante para mostrar todas las reglas pero sigue sin ver ninguna línea en el gráfico, significa que no hubo ninguna pareja de reglas que cumplieran los criterios de los parámetros del algoritmo.  
+ El gráfico de red de dependencias muestra las reglas en pares, que se pueden representar lógicamente como A -> B, lo que significa que si se adquiere un producto, el producto B es probable. El gráfico no se puede mostrar reglas del tipo AB -> C. Si mueve el control deslizante para mostrar todas las reglas pero sigue sin ver ninguna línea en el gráfico, significa que no hubo ninguna pareja de reglas que cumplieran los criterios de los parámetros del algoritmo.  
   
  También puede buscar los nodos por nombre, escribiendo las primeras letras del nombre de atributo. Para más información, vea [Cuadro de diálogo Buscar nodo &#40;Visor de modelos de minería de datos&#41;](../../2014/analysis-services/find-node-dialog-box-mining-model-viewer.md).  
   

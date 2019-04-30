@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 509dd17efeeb982c51938d7a18fad99a2e84ba5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148930"
 ---
 # <a name="testing-interoperable-applications"></a>Probar aplicaciones interoperables
 En el mejor lleva un tiempo probar aplicaciones interoperables empresariales y en el peor caso posible dado que los nuevos controladores que continuamente aparecen en el mercado. Sin embargo, un nivel razonable de las pruebas es posible. Solo se necesitan probar aplicaciones con interoperabilidad baja o limitada en aquellos controladores que se garantiza la compatibilidad. Sin embargo, debe ser probados completamente contra estos controladores.  

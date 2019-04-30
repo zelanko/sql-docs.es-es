@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97272209c1ceba780711ecf4a07178ddf8943d49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156726"
 ---
 # <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>Actualizar todos los servidores de destino antes de actualizar el servidor maestro
   Antes de actualizar el servidor maestro, actualice todos los equipos que ejecuten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y estén configurados como servidores de destino.  
@@ -37,7 +37,7 @@ ms.locfileid: "48061959"
 ## <a name="corrective-action"></a>Acción correctora  
  Si no puede actualizar todos los servidores de destino antes de actualizar el servidor maestro, debe dar de baja todos los servidores de destino y volverlos a dar de alta una vez haya llevado a cabo la actualización.  
   
- Para obtener más información, vea los temas "Automatizar la administración en una empresa", "Cómo dar de baja un servidor de destino en un servidor maestro" y "Cómo dar de alta un servidor de destino en un servidor maestro" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para obtener más información, vea los temas "Automatizar la administración a través de una empresa", "Cómo: Dar de baja un servidor de destino desde un servidor maestro,"y" Cómo: Dar de alta un servidor de destino a un patrón" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla.  
   
 ## <a name="see-also"></a>Vea también  
  [Problemas de actualización de agente SQL Server](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)   

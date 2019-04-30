@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4540cdd9d0d8c196e9f304508fd60edd99f2174
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63156551"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Cuadro de diálogo Opciones del Generador de informes, Configuración (Generador de informes)
   Haga clic en el **Report Builder** botón y, a continuación, haga clic en **opciones** para establecer las opciones para mostrar archivos recientes y las conexiones. También puede cambiar el servidor de informes predeterminado o agregar uno si no lo tiene predeterminado.  

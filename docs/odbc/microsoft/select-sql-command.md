@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127875"
 ---
 # <a name="select---sql-command"></a>Seleccione - comando SQL
 Recupera datos de una o varias tablas.  
@@ -97,7 +97,7 @@ FROM [DatabaseName!]Table [Local_Alias]
  AS *Column_Name*  
  Especifica el encabezado de una columna en la salida de la consulta. Esto es útil cuando *Select_Item* es una expresión o contiene un campo de función y desea asignar un nombre descriptivo a la columna. *Column_name* puede ser una expresión, pero no puede contener caracteres (por ejemplo, espacios en blanco) que no están permitidos en nombres de campos de tabla.  
   
- DESDE [*DatabaseName*!] *Tabla* [*Local_Alias*] [, [*DatabaseName*!] *Tabla* [*Local_Alias*]...]  
+ FROM [*DatabaseName*!]*Table* [*Local_Alias*]   [, [*DatabaseName*!]*Table* [*Local_Alias*] ...]  
  Enumera las tablas que contienen los datos que recupera la consulta. Si no hay ninguna tabla está abierta, Visual FoxPro muestra el **abrir** cuadro de diálogo para que pueda especificar la ubicación del archivo. Después de que se ha abierto, la tabla permanece abierta después de completar la consulta.  
   
  *DatabaseName*! Especifica el nombre de una base de datos distinto del especificado con el origen de datos. Debe incluir el nombre de la base de datos que contiene la tabla si no se especifica la base de datos con el origen de datos. Incluir el delimitador de signo de exclamación (!) después del nombre de la base de datos y antes del nombre de tabla.  
@@ -259,7 +259,7 @@ WHERE customer.cust_id NOT IN ;
     > [!NOTE]  
     >  Los marcadores de posición deben ser del mismo tipo que los campos que representan. Si el campo es un tipo de fecha, el marcador de posición debe ser {/ /}. Si el campo es un campo de caracteres, el marcador de posición debe ser una cadena vacía ("").  
   
- Ordenar por *Order_Item* [ASC &#124; DESC] [, *Order_Item* [ASC &#124; DESC]...]  
+ ORDER BY *Order_Item* [ASC &#124; DESC] [, *Order_Item* [ASC &#124; DESC] ...]  
  Ordena los resultados de consulta en función de los datos en una o varias columnas. Cada *Order_Item* debe corresponder a una columna de resultados de la consulta y puede ser uno de los siguientes:  
   
 -   Un campo en una tabla FROM que también es un elemento seleccionado en la cláusula SELECT principal (no en una subconsulta).  
@@ -284,5 +284,5 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="see-also"></a>Vea también  
  [CREAR TABLA - SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT - SQL](../../odbc/microsoft/insert-sql-command.md)   
- [CONJUNTO ANSI](../../odbc/microsoft/set-ansi-command.md)   
+ [SET ANSI](../../odbc/microsoft/set-ansi-command.md)   
  [ESTABLECER EXACTA](../../odbc/microsoft/set-exact-command.md)

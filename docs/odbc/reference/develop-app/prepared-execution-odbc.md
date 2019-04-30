@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c7bd6bc8281dd6bdc3bcfbd437380b2d5269ee43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199103"
 ---
 # <a name="prepared-execution-odbc"></a>Ejecución preparada ODBC
 Ejecución preparada es una manera eficaz para ejecutar una instrucción más de una vez. En primer lugar se compila la instrucción, o *preparado,* en un plan de acceso. El plan de acceso es, a continuación, ejecuta uno o más veces en un momento posterior. Para obtener más información acerca de los planes de acceso, consulte [procesar una instrucción SQL](../../../odbc/reference/processing-a-sql-statement.md).  

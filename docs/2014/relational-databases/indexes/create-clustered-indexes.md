@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155372"
 ---
 # <a name="create-clustered-indexes"></a>Crear índices clúster
   Puede crear índices clúster en las tablas de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Con pocas excepciones, todas las tablas deben tener un índice clúster. Además de mejorar el rendimiento de las consultas, un índice clúster se puede recompilar o reorganizar a petición para controlar la fragmentación de las tablas. También se puede crear un índice clúster en una vista. (Los índices agrupados se definen en el tema [Índices agrupados y no agrupados descritos](clustered-and-nonclustered-indexes-described.md)).  
@@ -71,7 +71,7 @@ ms.locfileid: "54126165"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  

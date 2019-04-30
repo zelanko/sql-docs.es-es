@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5f034eaea1faeb1547a3697bec4dab50090864d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157939"
 ---
 # <a name="implementing-a-case-statement"></a>Implementar una instrucción CASE
   No se admiten instrucciones CASE en procedimientos almacenados compilados de forma nativa. En el ejemplo siguiente se muestra una forma de implementar la funcionalidad de una instrucción CASE en un procedimiento almacenado compilado de forma nativa.  

@@ -1,5 +1,5 @@
 ---
-title: SetToArray (MDX) | Documentos de Microsoft
+title: SetToArray (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e545cb4b41f1a0d60e471c15753a82079978ee5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149296"
 ---
 # <a name="settoarray-mdx"></a>SetToArray (MDX)
 
@@ -35,10 +35,10 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
  *Set_Expression2*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **SetToArray** función convierte uno o más conjuntos en una matriz para su uso en una función definida por el usuario. El número de dimensiones de la matriz resultante es el mismo que el número de conjuntos especificados.  
   
  La expresión numérica opcional puede proporcionar los valores en las celdas de la matriz. Si no se especifica una expresión numérica, la combinación cruzada de los conjuntos se evalúa en el contexto actual.  
@@ -51,7 +51,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
 ```  
   
 > [!NOTE]  
->  El tipo de valor devuelto de la **SetToArray** función es el tipo VARIANT, VT_ARRAY. Por lo tanto, el resultado de la **SetToArray** función debe usarse únicamente como entrada para una función definida por el usuario.  
+>  El tipo de valor devuelto de la **SetToArray** función es del tipo VARIANT, VT_ARRAY. Por lo tanto, el resultado de la **SetToArray** función debe usarse solo como entrada para una función definida por el usuario.  
   
 ## <a name="example"></a>Ejemplo  
  El siguiente ejemplo devuelve una matriz.  

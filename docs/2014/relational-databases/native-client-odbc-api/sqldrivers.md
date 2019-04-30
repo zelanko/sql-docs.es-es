@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87b7f550bf63c9cf14f16c829932398470848e6f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192335"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
   El Administrador de controladores ODBC devuelve todas las cadenas de especificación de atributos de **SQLDrivers** . Para obtener más información sobre la definición de valores y cadenas de atributos, vea en línea el [Centro para programadores de acceso a datos y almacenamiento](https://go.microsoft.com/fwlink/?LinkId=4173)o la [Referencia del programador de ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) .  

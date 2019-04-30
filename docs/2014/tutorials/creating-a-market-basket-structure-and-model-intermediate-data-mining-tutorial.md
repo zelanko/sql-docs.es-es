@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63190833"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Crear una estructura y un modelo de cesta de la compra (Tutorial intermedio de minería de datos)
   Ahora que ha creado una vista del origen de datos, utilizará el Asistente para minería de datos con el fin de crear una nueva estructura de minería de datos. En esta tarea, creará una estructura y un modelo de minería de datos que se basen en el algoritmo de asociación de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
@@ -55,11 +55,11 @@ ms.locfileid: "56019457"
   
     |Columnas|Tipo de contenido|Tipo de datos|  
     |-------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Texto|  
-    |Número de pedido|Key|Texto|  
-    |Region|Discrete|Texto|  
+    |IncomeGroup|Discrete|Text|  
+    |Número de pedido|Key|Text|  
+    |Region|Discrete|Text|  
     |vAssocSeqLineItems|||  
-    |Modelo|Key|Texto|  
+    |Modelo|Key|Text|  
   
 12. En el **crear pruebas establezca** página, el valor predeterminado para la opción **porcentaje de datos de prueba** es 30 por ciento. Cámbielo a **0**. Haga clic en **Siguiente**.  
   

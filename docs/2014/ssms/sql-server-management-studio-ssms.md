@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63154994"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] es un entorno integrado para administrar la infraestructura de SQL Server. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] proporciona herramientas para configurar, para supervisar, y administrar instancias de SQL Server. También proporciona herramientas para implementar, supervisar y actualizar los componentes de capa de datos, como bases de datos y almacenamientos de datos usados por aplicaciones, y para compilar consultas y scripts.  

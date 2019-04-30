@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4145c76666b1f0da2b50f3a48ae5553a21ba2748
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209651"
 ---
 # <a name="color-coding-in-query-editors"></a>Codificación de colores en el Editor de consultas
   El texto especificado en los editores de código se asigna a una categoría; cada categoría está identificada por un color. Los colores ayudan a encontrar texto rápidamente en el código. Por ejemplo, los comentarios se resaltan en verde oscuro. En la tabla siguiente se muestran los colores más comunes. Puede ver la lista completa de colores y sus categorías, así como configurar una combinación de colores personalizada, usando el menú **Herramientas**, **Opciones** . Para obtener más información sobre cómo cambiar los colores predeterminados, vea [Change Font Color, Size, and Style](change-font-color-size-and-style.md).  
   
 ## <a name="default-code-colors"></a>Colores predeterminados para el código  
   
-|Color|Categoría|  
+|Color|Category|  
 |-----------|--------------|  
 |Rojo|Cadena de SQL|  
 |Verde oscuro|Comentario|  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17cf661e092e253e206b595dec5d807a35b895fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161450"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Fabricación de conjuntos de registros jerárquicos
 El ejemplo siguiente muestra cómo crear un conjunto de registros jerárquico sin un origen de datos subyacente mediante el uso de los datos de la gramática para definir columnas de primarios, secundarios y secundarios de forma **conjuntos de registros**.  

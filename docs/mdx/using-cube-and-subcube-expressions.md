@@ -1,5 +1,5 @@
 ---
-title: Uso de expresiones de subcubo y cubo | Documentos de Microsoft
+title: Uso de expresiones de cubo y subcubo | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f13d92c114783646bbeab9451c3d212ff01b8f8c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63125431"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Usar expresiones de cubo y de subcubo
 
@@ -24,7 +24,7 @@ ms.locfileid: "34743384"
 ## <a name="cube-expressions"></a>Expresiones de cubo  
  Las expresiones de cubo contienen un identificador de cubo o la palabra clave CURRENTCUBE y, por lo tanto, solo pueden ser expresiones simples. Muchas instrucciones MDX usan la palabra clave CURRENTCUBE para identificar el contexto del cubo actual, en lugar de requerir un identificador de cubo.  
   
- Un identificador de cubo aparece como *restricciones obligatorias Cube_Name* en las descripciones de la notación de BNF de instrucciones MDX.  
+ Aparece un identificador de cubo como *Cube_Name* en las descripciones de notación de BNF de las instrucciones MDX.  
   
  Las expresiones de cubo pueden aparecer en varios lugares. En una instrucción MDX SELECT, especifican el cubo del que van a recuperarse los datos. En la consulta de ejemplo siguiente, la expresión [Adventure Works] hace referencia al cubo de ese nombre:  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34743384"
  [Consulta de MDX básica &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
  [Generar subcubos en MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
  [Instrucción CREATE SUBCUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
- [Expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)   
- [Instrucción SCOPE &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
+ [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)   
+ [SCOPE &#40;Instrucción, MDX&#41;](../mdx/mdx-scripting-scope.md)  
   
   

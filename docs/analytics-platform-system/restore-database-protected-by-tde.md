@@ -1,6 +1,6 @@
 ---
-title: Restaurar una base de datos protegida por TDE - almacenamiento de datos paralelos | Documentos de Microsoft
-description: Siga estos pasos para restaurar una base de datos que se cifra mediante el cifrado transparente de los datos en almacenamiento de datos paralelos de sistema de plataforma de análisis.
+title: Restaurar una base de datos protegida por TDE - almacenamiento de datos paralelos | Microsoft Docs
+description: Siga estos pasos para restaurar una base de datos se cifra mediante cifrado de datos transparente en Analytics Platform System Parallel Data Warehouse.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: a791d4110dc70c506025f8f11fb06b9ba2e5dcb3
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157015"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Restaurar una base de datos protegida por TDE en almacenamiento de datos paralelos
-Siga estos pasos para restaurar una base de datos que se cifra mediante el cifrado de datos transparente.  
+Siga estos pasos para restaurar una base de datos se cifra mediante cifrado de datos transparente.  
   
-El [usar cifrado de datos transparente](transparent-data-encryption.md#using-tde) en el ejemplo se incluye código para habilitar TDE en la `AdventureWorksPDW2012` base de datos. El código siguiente continúa ese ejemplo, crear una copia de seguridad de la base de datos en el dispositivo Analytics Platform System (APS) original y, a continuación, restaurar el certificado y la base de datos en otro dispositivo.  
+El [utilizando el cifrado de datos transparente](transparent-data-encryption.md#using-tde) ejemplo tiene código para habilitar TDE en el `AdventureWorksPDW2012` base de datos. El código siguiente continúa ese ejemplo, mediante la creación de una copia de seguridad de la base de datos en el dispositivo de Analytics Platform System (APS) original y, a continuación, restaurar el certificado y la base de datos en otro dispositivo.  
   
 El primer paso es crear una copia de seguridad de la base de datos de origen.  
   
@@ -28,7 +28,7 @@ BACKUP DATABASE AdventureWorksPDW2012
 TO DISK = '\\SECURE_SERVER\Backups\AdventureWorksPDW2012';  
 ```  
   
-Preparar el nuevo SQL Server PDW para TDE, cree una clave maestra, habilitar el cifrado y crear una credencial de red.  
+Prepare el nuevo SQL Server PDW para TDE mediante la creación de una clave maestra, habilitar el cifrado y crear una credencial de red.  
   
 ```sql  
 USE master;  
@@ -45,7 +45,7 @@ GO
 EXEC sp_pdw_add_network_credentials 'SECURE_SERVER', '<domain>\<Windows_user>', '<password>';  
 ```  
   
-Los dos últimos pasos volver a crear el certificado mediante el uso de las copias de seguridad de la versión original de SQL Server PDW. Use la contraseña que utilizó cuando creó la copia de seguridad del certificado.  
+Los dos últimos pasos volver a crear el certificado mediante el uso de las copias de seguridad de la versión original de SQL Server PDW. Use la contraseña que usó cuando creó la copia de seguridad del certificado.  
   
 ```sql  
 -- Create certificate in master  
@@ -64,5 +64,5 @@ RESTORE DATABASE AdventureWorksPDW2012
 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [CREAR CERTIFICADO](../t-sql/statements/create-certificate-transact-sql.md)  
-[RESTAURAR BASE DE DATOS](../t-sql/statements/restore-database-parallel-data-warehouse.md)
+[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)
   

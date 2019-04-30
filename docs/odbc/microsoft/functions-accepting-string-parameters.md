@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61bb013885238492d9c7324658ede198c489361d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127323"
 ---
 # <a name="functions-accepting-string-parameters"></a>Aceptar parámetros de cadena de funciones
 Todas las funciones que toman parámetros de cadena se convierten a Unicode. (Se exportará la forma "W" de la función.) Recuento de bytes se convierte al recuento de caracteres para las API de ODBC aplicable. Esto se aplica a las funciones siguientes:  
@@ -47,9 +47,9 @@ Todas las funciones que toman parámetros de cadena se convierten a Unicode. (Se
   
 -   **SQLGetInfo**  
   
--   **SQLGetStmtOption** (se convierte en **SQLGetStmtAttr**)  
+-   **SQLGetStmtOption** (becomes **SQLGetStmtAttr**)  
   
--   **SQLSetStmtOption** (se convierte en **SQLSetStmtAttr**)  
+-   **SQLSetStmtOption** (becomes **SQLSetStmtAttr**)  
   
 -   **SQLGetConnectOption**  
   

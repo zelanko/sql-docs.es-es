@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e1a59377a075d7db189b91543590aee8c2cb0013
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144465"
 ---
 # <a name="replace-in-files"></a>Reemplazar en archivos
   La pestaña **Reemplazar en archivos** de la ventana Buscar y reemplazar permite buscar una cadena o expresión en el código de un conjunto específico de archivos y cambiar algunas o todas las coincidencias halladas. Las coincidencias que se encuentran y las acciones que se toman aparecen en la ventana Resultados de la búsqueda seleccionada en **Opciones de resultados**.  

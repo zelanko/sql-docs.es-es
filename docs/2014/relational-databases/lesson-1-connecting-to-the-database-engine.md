@@ -11,13 +11,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63145492"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: conectarse al motor de base de datos
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: Conexión al Motor de base de datos
   Al instalar [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], las herramientas instaladas dependen de la edición y de las opciones que seleccione al realizar la instalación. En esta lección se revisan las herramientas principales y se muestra cómo conectarse y realizar una función básica (autorizar a más usuarios).  
   
   
@@ -101,6 +101,6 @@ ms.locfileid: "53375307"
 >  Esta información es básica para empezar. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona un completo entorno de seguridad y, obviamente, la seguridad es un aspecto importante de las operaciones de base de datos.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Conectarse desde otro equipo](lesson-2-connecting-from-another-computer.md)  
+ [Lección 2: Conexión desde otro equipo](lesson-2-connecting-from-another-computer.md)  
   
   

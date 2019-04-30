@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158000"
 ---
 # <a name="memory-optimization-advisor"></a>Asesor de optimización de memoria
   La herramienta de informes de rendimiento de las transacciones (vea [Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) le informa sobre qué tablas de la base de datos se beneficiarían de una conversión para utilizar OLTP en memoria. Después de identificar la tabla que desea convertir para que utilice OLTP en memoria, puede usar el Asistente de optimización de memoria para que le ayude a migrar la tabla de base de datos basada en disco a OLTP en memoria.  

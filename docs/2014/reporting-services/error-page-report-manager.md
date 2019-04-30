@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b5e8c919b496ea739b6152a6159b5ffae62dfbd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164667"
 ---
 # <a name="error-page-report-manager"></a>Página Error (Administrador de informes)
   Use la página Error para ver detalles acerca de una condición de error. Basado en sesión o servidor errores aparecen en esta página. Los errores de validación relacionados con controles específicos de la página se muestran insertados junto al control que corresponda.  

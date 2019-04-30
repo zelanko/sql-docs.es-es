@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63158800"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor
   Un grupo de recursos de servidor representa un subconjunto de recursos físicos que se pueden regular. De forma predeterminada, las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están enlazadas a los recursos del grupo de recursos de servidor predeterminado y los consumen. Para proteger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera que una o más tablas optimizadas para memoria no consuman sus recursos, y evitar que otros usuarios consuman memoria que las tablas optimizadas para memoria necesitan, debe crear un grupo de recursos de servidor diferente para administrar el consumo de memoria para la base de datos con tablas optimizadas para memoria.  
@@ -63,7 +63,7 @@ En este ejemplo supondremos que en sus cálculos ha determinado que las tablas y
 ### <a name="create-a-resource-pool-and-configure-memory"></a>Crear un grupo de recursos de servidor y configurar la memoria  
  A la hora de configurar memoria para las tablas optimizadas para memoria, el planeamiento de capacidad debe realizarse en función de MIN_MEMORY_PERCENT, no de MAX_MEMORY_PERCENT.  Vea [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-pool-transact-sql) para obtener más información sobre MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT. Esto proporciona una disponibilidad de memoria más predecible en las tablas optimizadas para memoria, ya que MIN_MEMORY_PERCENT produce presión de memoria en otros grupos de recursos de servidor para asegurarse de que se respeta. Para asegurarse de que hay memoria disponible e impedir condiciones de memoria insuficiente, los valores de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT deben ser iguales. Vea la tabla [Porcentaje de memoria disponible para tablas e índices optimizados para memoria](#percent-of-memory-available-for-memory-optimized-tables-and-indexes) de abajo para conocer el porcentaje de memoria disponible para las tablas optimizadas para memoria según la cantidad de memoria asignada.  
   
- Vea [Prácticas recomendadas: Usar OLTP en memoria en un entorno de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información sobre cómo trabajar en un entorno de máquina virtual.  
+ Consulte [procedimientos recomendados: Usar OLTP en memoria en un entorno de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información sobre cómo trabajar en un entorno de máquina virtual.  
   
  El siguiente código [!INCLUDE[tsql](../../includes/tsql-md.md)] crea un grupo de recursos de servidor denominado Pool_IMOLTP con la mitad de memoria disponible para su uso.  Una vez creado el grupo, hay que reconfigurar el Regulador de recursos para incluir Pool_IMOLTP.  
   
@@ -119,7 +119,7 @@ GO
  Ahora, la base de datos está enlazada al grupo de recursos de servidor.  
   
 ## <a name="change-min-memory-percent-and-max-memory-percent-on-an-existing-pool"></a>Cambiar el porcentaje de memoria mínima y porcentaje de memoria máxima en un grupo existente  
- Si agrega memoria adicional al servidor o si cambia la cantidad de memoria necesaria para las tablas optimizadas para memoria, puede ser necesario modificar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT. Los pasos siguientes muestran cómo modificar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo de recursos de servidor. Vea la próxima sección para obtener información sobre qué valores se deben usar para MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT.  Vea el tema [Prácticas recomendadas: Usar OLTP en memoria en un entorno de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información.  
+ Si agrega memoria adicional al servidor o si cambia la cantidad de memoria necesaria para las tablas optimizadas para memoria, puede ser necesario modificar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT. Los pasos siguientes muestran cómo modificar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo de recursos de servidor. Vea la próxima sección para obtener información sobre qué valores se deben usar para MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT.  Vea el tema [prácticas recomendadas: Usar OLTP en memoria en un entorno de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información.  
   
 1.  Utilice `ALTER RESOURCE POOL` para cambiar el valor de MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT.  
   

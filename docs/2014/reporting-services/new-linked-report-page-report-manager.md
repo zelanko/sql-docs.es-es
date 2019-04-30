@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9f55c1fb1b90f676f3e1867c6aefdd13889c2cce
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188379"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Nuevo informe vinculado (página del Administrador de informes)
   Use la página Nuevo informe vinculado para crear un informe vinculado. Un informe vinculado es un informe con una configuración y propiedades propias pero que está vinculado a la definición de otro informe. Los informes vinculados son de gran utilidad cuando se dispone de un informe base que se desea modificar para determinados grupos o usuarios; por ejemplo, un informe regional que devuelva datos diferentes en función del código de región que especifique como parámetro. Normalmente, un informe vinculado se crea a partir de un informe parametrizado cuando se desea modificar y después guardar distintos valores de parámetro con cada instancia del informe. No obstante, se puede crear un informe vinculado a partir de cualquier informe al que se tenga acceso.  

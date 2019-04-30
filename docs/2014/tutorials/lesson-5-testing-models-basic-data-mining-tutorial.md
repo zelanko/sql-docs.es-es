@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 88a9d564b297d277d1566152cc11599bec912ddc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63185425"
 ---
 # <a name="lesson-5-testing-models-basic-data-mining-tutorial"></a>Lección 5: Probar modelos (Tutorial de minería de datos básicos)
   Ahora que ha procesado el modelo utilizando el conjunto de entrenamiento del escenario de distribución de correo directo, probará sus modelos con el conjunto de pruebas. La validación es un paso importante del proceso de minería de datos. Es importante conocer cómo se comportan con datos reales los modelos de minería de datos de distribución de correo directo antes de implementarlos en un entorno de producción.  

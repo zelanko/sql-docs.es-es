@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a1e7e685e9d3f23d4d1c3317e24f63d7bdac23db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63180744"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 Especifica opciones para abrir un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto. Los valores se pueden combinar con una operación de OR.  

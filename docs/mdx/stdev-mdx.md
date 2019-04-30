@@ -1,5 +1,5 @@
 ---
-title: STDEV (MDX) | Documentos de Microsoft
+title: Stdev (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a1ef1d720928298e8a44e075f45937903d178ef6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150246"
 ---
 # <a name="stdev-mdx"></a>Stdev (MDX)
 
@@ -32,11 +32,11 @@ Stdev(Set_Expression [ ,Numeric_Expression ] )
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Notas  
- El **Stdev** función usa la población no sesgada fórmulas, mientras el [StdevP](../mdx/stdevp-mdx.md) función utiliza la fórmula de población sesgada.  
+## <a name="remarks"></a>Comentarios  
+ El **Stdev** función usa el llenado no sesgada fórmulas, mientras el [StdevP](../mdx/stdevp-mdx.md) función utiliza la fórmula de población sesgada.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve la desviación estándar para Internet Order Quantity evaluada en los primeros tres meses del año 2003 mediante la fórmula de población no sesgada.  

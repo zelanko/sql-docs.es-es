@@ -1,5 +1,5 @@
 ---
-title: Operadores de concatenación | Documentos de Microsoft
+title: Operadores de concatenación | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8eacfc08fdeb0f92874758d0f95e5cde3e6b295a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181479"
 ---
 # <a name="concatenation-operators"></a>Operadores de concatenación
 
@@ -36,7 +36,7 @@ FROM [Adventure Works]
  Cuando las cadenas que se utilizan en la concatenación tienen la misma intercalación, la cadena resultante tiene la misma intercalación que las entradas. Cuando las cadenas usadas en una concatenación tienen distintas intercalaciones, las reglas de prioridad de intercalación determinan la intercalación de la cadena concatenada resultante. Para más información, vea [Idiomas e intercalaciones &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Operadores &#40;sintaxis MDX&#41;](../mdx/operators-mdx-syntax.md)  
+ [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Operadores &#40;sintaxis de MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

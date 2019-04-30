@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c71967bd72f7f13a725d47517cb9e66eee7da87f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199396"
 ---
 # <a name="binding-parameter-markers"></a>Marcadores de parámetros de enlace
 La aplicación enlaza los parámetros mediante una llamada a **SQLBindParameter**. **SQLBindParameter** enlaza un parámetro a la vez. Con ella, la aplicación especifica lo siguiente:  
@@ -28,7 +28,7 @@ La aplicación enlaza los parámetros mediante una llamada a **SQLBindParameter*
   
 -   El tipo de parámetro (entrada, entrada/salida o de salida). Salvo por los parámetros en las llamadas a procedimiento, todos los parámetros son parámetros de entrada. Para obtener más información, consulte [parámetros de procedimiento](../../../odbc/reference/develop-app/procedure-parameters.md), más adelante en esta sección.  
   
--   La longitud de bytes, la dirección y el tipo de datos C de la variable enlazada al parámetro. El controlador debe ser capaz de convertir los datos del tipo de datos C en el tipo de datos SQL o se devuelve un error. Para obtener una lista de conversiones admitidas, vea [convertir datos de C a tipos de datos SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) en Apéndice D: tipos de datos.  
+-   La longitud de bytes, la dirección y el tipo de datos C de la variable enlazada al parámetro. El controlador debe ser capaz de convertir los datos del tipo de datos C en el tipo de datos SQL o se devuelve un error. Para obtener una lista de conversiones admitidas, vea [convertir datos de C a tipos de datos SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) en el apéndice D: Tipos de datos.  
   
 -   El tipo de datos SQL, precisión y escala del parámetro en sí mismo.  
   

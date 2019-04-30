@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63142974"
 ---
 # <a name="visual-c-ado-programming"></a>Programación ADO en Visual C++
 La referencia de API de ADO describe la funcionalidad de la interfaz de programación de aplicaciones (API) de ADO mediante una sintaxis similar a Microsoft Visual Basic. Aunque el público objetivo son todos los usuarios, los programadores de ADO emplean diversos lenguajes como Visual Basic, Visual C++ (con y sin la **#import** directiva) y Visual J ++ (con el paquete de clase ADO y WFC).  
@@ -325,7 +325,7 @@ Dim fld As ADODB.Field
 End Sub  
 ```
   
- El siguiente ejemplo de Visual C++, se muestra cómo utilizar un **SafeArray** usa con un **_variant_t**.  
+ El siguiente objeto Visual C++ en el ejemplo se muestra cómo utilizar un **SafeArray** usa con un **_variant_t**.  
   
 #### <a name="notes"></a>Notas  
  Las notas siguientes corresponden a secciones comentadas en el ejemplo de código.  

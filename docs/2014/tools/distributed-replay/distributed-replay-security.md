@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150349"
 ---
 # <a name="distributed-replay-security"></a>Seguridad de reproducción distribuida
   Antes de instalar y usar la característica [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay, debe revisar la importante información de seguridad en este tema. Aquí se describen los pasos para la configuración de seguridad posteriores a la instalación, necesarios para poder utilizar Distributed Replay. En este tema también se describen consideraciones importantes relacionadas con la protección de datos y pasos importantes de eliminación.  
@@ -29,7 +29,7 @@ ms.locfileid: "53350825"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|Puede ser una cuenta de usuario de dominio o una cuenta de usuario local. Si usa una cuenta de usuario local, el controlador, el cliente, y el destino SQL Server deben ejecutarse en el mismo equipo.<br /><br /> **\*\* Nota de seguridad \*\*** Se recomienda que la cuenta no sea un miembro del grupo local Administradores de Windows.|  
 |Cuenta de usuario interactivo que se usa para ejecutar la herramienta de administración de Distributed Replay|Puede ser una cuenta de usuario local o de usuario de dominio. Para utilizar una cuenta de usuario local, la herramienta de administración y el controlador se deben estar ejecutando en el mismo equipo.|  
   
- **Importante**: Al configurar Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:  
+ **Importante**: Al configurar Distributed Replay controller, puede especificar una o varias cuentas de usuario que se usará para ejecutar servicios de Distributed Replay client. La lista siguiente es una relación de las cuentas admitidas:  
   
 -   Cuenta de usuario de dominio  
   

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 973ad34d5d24eecd0c3af0e0451b0d2ba9058222
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63194919"
 ---
 # <a name="sql-editor-visual-database-tools"></a>Editor SQL (Visual Database Tools)
   Utilice el Editor SQL para editar procedimientos almacenados, funciones, desencadenadores y scripts SQL existentes. Esta ventana aparece al abrir cualquiera de estos objetos. Si desea crear una instrucción SQL nueva para ejecutarla en el origen de datos, use el [panel SQL](visual-database-tools.md) del Diseñador de consultas.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc62e7b5225c434bac33630f2f0cf8f39c72bfc9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199291"
 ---
 # <a name="block-cursors"></a>Cursores de bloque
 Muchas aplicaciones dedican una cantidad considerable de tiempo que lleva los datos a través de la red. Parte de este tiempo se dedica a traer realmente los datos a través de la red, y parte de él se dedica a red sobrecarga, por ejemplo, la llamada realizada por el controlador para solicitar una fila de datos. Puede reducir el tiempo último si la aplicación realiza un uso eficaz de *bloque,* o *fat,* *cursores,* que puede devolver más de una fila a la vez.  

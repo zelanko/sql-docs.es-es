@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63155152"
 ---
 # <a name="supported-data-types"></a>Tipos de datos admitidos
   Los siguientes tipos de datos se **admiten** en las tablas optimizadas para memoria y los procedimientos almacenados compilados de forma nativa:  
@@ -40,22 +40,22 @@ ms.locfileid: "48075305"
 |Tipo de datos|Para obtener más información|  
 |---------------|--------------------------|  
 |char(n)|[char y varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
-|varchar (n) <sup>1</sup>|[char y varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
+|varchar(n) <sup>1</sup>|[char y varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
 |nchar(n)|[nchar y nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
-|nvarchar (n) <sup>1</sup>|[nchar y nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
+|nvarchar(n) <sup>1</sup>|[nchar y nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |sysname|[nchar y nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
  <sup>1</sup> limitación es de 8060 bytes por fila en total, contando (n) en los tipos de longitud variable.  
   
- Para obtener información sobre las intercalaciones admitidas, consulte [intercalaciones y páginas de códigos](../../database-engine/collations-and-code-pages.md).  
+ Para obtener información sobre las intercalaciones admitidas, consulte [Collations and Code Pages](../../database-engine/collations-and-code-pages.md).  
   
  **Tipos de datos de fecha y hora**  
   
 |Tipo de datos|Para obtener más información|  
 |---------------|--------------------------|  
-|Date|[fecha &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
+|date|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
 |time|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
-|DATETIME|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
+|datetime|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
 |datetime2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
 |smalldatetime|[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
   

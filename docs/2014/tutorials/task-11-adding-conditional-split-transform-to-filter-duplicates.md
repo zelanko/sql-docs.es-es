@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e2b5fc47b6823a91dd4bb7f74d3ea65fca13bce9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222563"
 ---
-# <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>Tarea 11: agregar la transformación División condicional para filtrar duplicados
+# <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>Tarea 11: Adición de la transformación División condicional para filtrar duplicados
   En esta tarea, agregará la transformación División condicional al flujo de datos. Esta transformación ayuda a filtrar duplicados del conjunto de registros de entrada. La transformación Agrupación aproximada agrupa los registros que son coincidentes y elige uno de ellos como registro dinámico. Todos los registros de un grupo tienen el mismo valor _key_out. El registro dinámica del grupo tiene el mismo valor de _key_in que de _key_out. Los demás registros del grupo tienen valores diferentes para _key_in y _key_out. Por tanto, cuando se filtra mediante la condición _key_in==_key_out, solo se obtiene la fila dinámica del grupo.  
   
 1.  Arrastrar y colocar **división condicional** transformar de **común** sección la **cuadro de herramientas de SSIS** a la **de flujo de datos** ficha.  

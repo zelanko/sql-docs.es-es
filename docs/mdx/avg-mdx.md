@@ -1,5 +1,5 @@
 ---
-title: AVG (MDX) | Documentos de Microsoft
+title: Avg (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7d6b2e91504c2c9ba796d2c0a55ba19fb3f6493e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181696"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
 
@@ -32,23 +32,23 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  *Set_Expression*  
  Expresión MDX válida que devuelve un conjunto  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Notas  
- Si se especifica un conjunto de tuplas vacías o un conjunto vacío, la **Avg** función devuelve un valor vacío.  
+## <a name="remarks"></a>Comentarios  
+ Si se especifica un conjunto de tuplas vacías o un conjunto vacío, el **Avg** función devuelve un valor vacío.  
   
- El **Avg** función calcula el promedio de los valores no vacíos de las celdas del conjunto especificado al calcular la suma de valores en las celdas del conjunto especificado en primer lugar y, a continuación, dividir la suma calculada por el número de celdas no vacías en el conjunto especificado.  
+ El **Avg** función calcula el promedio de los valores no vacíos de las celdas del conjunto especificado al calcular la suma de valores en las celdas del conjunto especificado en primer lugar y, a continuación, dividir la suma calculada por el recuento de celdas no vacías el conjunto especificado.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] omite los valores NULL al calcular el promedio de un conjunto de números.  
   
- Si no se especifica una expresión numérica concreta (normalmente una medida), el **Avg** función calcula el promedio de cada medida dentro del contexto de consulta actual. Si se proporciona una medida específica, el **Avg** función primero evalúa la medida en el conjunto y, a continuación, la función calcula el promedio basado en la medida especificada.  
+ Si no se especifica una expresión numérica concreta (normalmente una medida), el **Avg** función calcula el promedio de cada medida dentro del contexto de consulta actual. Si se proporciona una medida específica, la **Avg** función primero evalúa la medida en el conjunto y, a continuación, la función calcula el promedio basado en la medida especificada.  
   
 > [!NOTE]  
->  Cuando se usa el **CurrentMember** función en una instrucción de miembro calculado, debe especificar una expresión numérica porque no existe ninguna medida predeterminada para la coordenada actual en este contexto de consulta.  
+>  Cuando se usa el **CurrentMember** función en una declaración de miembro calculado, debe especificar una expresión numérica, porque no existe ninguna medida predeterminada para la coordenada actual en este contexto de consulta.  
   
- Para forzar la inclusión de celdas vacías, la aplicación debe utilizar el [CoalesceEmpty](../mdx/coalesceempty-mdx.md) de función o especifique una válida *Numeric_Expression* que proporciona un valor de cero (0) para los valores vacíos. Para obtener más información acerca de las celdas vacías, consulte la documentación de OLE DB.  
+ Para forzar la inclusión de las celdas vacías, la aplicación debe utilizar el [CoalesceEmpty](../mdx/coalesceempty-mdx.md) función o especifique una válida *Numeric_Expression* que proporcione un valor de cero (0) para los valores vacíos. Para obtener más información acerca de las celdas vacías, consulte la documentación de OLE DB.  
   
 ## <a name="examples"></a>Ejemplos  
  El siguiente ejemplo devuelve el promedio de una medida sobre un conjunto especificado. Tenga en cuenta que la medida especificada puede ser la medida predeterminada para los miembros del conjunto especificado o una medida especificada.  

@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213328"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
 >  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: completo  
+ Soporte técnico: Completo  
   
- Conformidad de ODBC API: Nivel 1  
+ Conformidad de la API de ODBC: Nivel 1  
   
  Devuelve la información general sobre el controlador ODBC de Visual FoxPro y el origen de datos asociado con un identificador de conexión, *hdbc*. En la lista siguiente se muestra el valor devuelto por el controlador ODBC de Visual FoxPro para cada *fInfoType* argumento y comentarios acerca de los valores devueltos.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "47855423"
   
  SQL_GROUP_BY devuelve SQL_GB_NO_RELATION.  
   
-## <a name="i-j"></a>I Y J  
+## <a name="i-j"></a>I-J  
  SQL_IDENTIFIER_CASE devuelve SQL_IC_MIXED.  
   
  Devuelve SQL_IDENTIFIER_QUOTE_CHAR '.  
@@ -179,19 +179,19 @@ ms.locfileid: "47855423"
   
  SQL_MAX_COLUMN_NAME_LEN devuelve 128.  
   
- SQL_MAX_COLUMNS_IN_GROUP_BY devuelve 16.  
+ SQL_MAX_COLUMNS_IN_GROUP_BY returns 16.  
   
- SQL_MAX_COLUMNS_IN_ORDER_BY devuelve 16.  
+ SQL_MAX_COLUMNS_IN_ORDER_BY returns 16.  
   
- SQL_MAX_COLUMNS_IN_INDEX devuelve 0.  
+ SQL_MAX_COLUMNS_IN_INDEX returns 0.  
   
- SQL_MAX_COLUMNS_IN_SELECT devuelve 254.  
+ SQL_MAX_COLUMNS_IN_SELECT returns 254.  
   
- SQL_MAX_COLUMNS_IN_TABLE devuelve 254.  
+ SQL_MAX_COLUMNS_IN_TABLE returns 254.  
   
  SQL_MAX_CURSOR_NAME_LEN devuelve 254.  
   
- SQL_MAX_INDEX_SIZE devuelve 0.  
+ SQL_MAX_INDEX_SIZE returns 0.  
   
  SQL_MAX_OWNER_NAME_LEN devuelve 0.  
   
@@ -199,15 +199,15 @@ ms.locfileid: "47855423"
   
  SQL_MAX_QUALIFIER_NAME_LEN devuelve la longitud máxima del sistema operativo.  
   
- SQL_MAX_ROW_SIZE devuelve 254 ^ 2.  
+ SQL_MAX_ROW_SIZE returns 254^2.  
   
- Devuelve SQL_MAX_ROW_SIZE_INCLUDES_LONG ' n '.  
+ SQL_MAX_ROW_SIZE_INCLUDES_LONG returns 'N'.  
   
  SQL_MAX_STATEMENT_LEN devuelve 8192.  
   
  SQL_MAX_TABLE_NAME_LEN devuelve 128.  
   
- SQL_MAX_TABLES_IN_SELECT devuelve 16.  
+ SQL_MAX_TABLES_IN_SELECT returns 16.  
   
  SQL_MAX_USER_NAME_LEN devuelve 0.  
   
@@ -279,7 +279,7 @@ ms.locfileid: "47855423"
   
  SQL_ODBC_VER se implementa mediante el Administrador de controladores.  
   
- Devuelve SQL_ORDER_BY_COLUMNS_IN_SELECT "N".  
+ SQL_ORDER_BY_COLUMNS_IN_SELECT returns "N".  
   
  Devuelve SQL_OUTER_JOINS "N".  
   
@@ -384,7 +384,7 @@ ms.locfileid: "47855423"
   
  SQL_TIMEDATE_ADD_INTERVALS devuelve:  
   
--   SEGUNDO SQL_FN_TSI_  
+-   SQL_FN_TSI_ SECOND  
   
 -   SQL_FN_TSI_MINUTE  
   
@@ -406,7 +406,7 @@ ms.locfileid: "47855423"
   
  SQL_TIMEDATE_DIFF_INTERVALS devuelve:  
   
--   SEGUNDO SQL_FN_TSI_  
+-   SQL_FN_TSI_ SECOND  
   
 -   SQL_FN_TSI_MINUTE  
   
@@ -446,7 +446,7 @@ ms.locfileid: "47855423"
   
 -   SQL_FN_TD_TIMESTAMPDIFF  
   
--   SQL_FN_TD_YEAR.  
+-   SQL_FN_TD_YEAR .  
   
  SQL_TXN_CAPABLE devuelve SQL_TC_DML.  
   

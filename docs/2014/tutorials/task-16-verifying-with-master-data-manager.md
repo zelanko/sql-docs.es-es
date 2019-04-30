@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3b9e24e062695c3b8b4c1aacd37b464fafd99558
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63222541"
 ---
-# <a name="task-16-verifying-with-master-data-manager"></a>Tarea 16: comprobar con Master Data Manager
+# <a name="task-16-verifying-with-master-data-manager"></a>Tarea 16: Comprobación con Master Data Manager
   En esta tarea, comprobará el estado del trabajo por lotes enviado por el paquete de SSIS y comprobará que los datos se cargaron en el servidor de MDS con Master Data Manager.  
   
 1.  Iniciar **Master Data Manager** ([http://localhost/MDS](http://localhost/MDS)). Si ya está abierto, haga clic en **Microsoft SQL Server Master Data Services** en la parte superior para cambiar a la **página principal**.  

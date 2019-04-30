@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8864ac47f3fa212cc6c204cc79d587b8952512cd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140161"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Método Delete (colección de parámetros de ADO)
 Elimina un objeto desde el [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección.  

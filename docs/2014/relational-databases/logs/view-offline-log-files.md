@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144601"
 ---
 # <a name="view-offline-log-files"></a>Ver sin conexión archivos de registro
   A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], los archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden ver desde una instancia local o remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando la instancia de destino está sin conexión o no se puede iniciar.  
@@ -45,7 +45,7 @@ ms.locfileid: "52818298"
   
 -   [SqlErrorLogFile Class](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (en este tema se muestra cómo recuperar información sobre todos los archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
-##  <a name="BeforeYouBegin"></a> Permissions  
+##  <a name="BeforeYouBegin"></a> Permisos  
  Para conectarse a un archivo de registro sin conexión, debe tener los siguientes permisos en los equipos local y remoto:  
   
 -   Acceso de lectura al espacio de nombres de WMI **raíz\Microsoft\SqlServer\ComputerManagement12** . De forma predeterminada, todos tienen acceso de lectura mediante el permiso Habilitar cuenta. Para obtener más información, vea el procedimiento sobre comprobación de permisos de WMI más adelante en esta sección.  

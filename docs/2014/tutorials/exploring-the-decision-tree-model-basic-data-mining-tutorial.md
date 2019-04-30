@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63224597"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Explorar el modelo de árbol de decisión (tutorial básico de minería de datos)
   El algoritmo de árboles de decisión de [!INCLUDE[msCoName](../includes/msconame-md.md)] predice qué columnas influyen en la decisión de comprar una bicicleta en función de las columnas restantes del conjunto de entrenamiento.  

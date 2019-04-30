@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162453"
 ---
 # <a name="indexes-on-computed-columns"></a>Índices en columnas calculadas
   Los índices se pueden definir en columnas calculadas si se cumplen estos requisitos:  
@@ -70,7 +70,7 @@ ms.locfileid: "48049576"
   
 -   No es una expresión del tipo de datos `float` o `real`.  
   
--   No se utiliza un `float` o `real` tipo de datos en su definición. Por ejemplo, en la siguiente instrucción, columna `y` es `int` y determinista, pero no precisa.  
+-   No utiliza en su definición un tipo de datos `float` o `real`. Por ejemplo, en la instrucción siguiente, la columna `y` es `int` y determinista, pero no precisa.  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -82,7 +82,7 @@ ms.locfileid: "48049576"
     ```  
   
 > [!NOTE]  
->  Cualquier `float` o `real` expresión se consideran imprecisa y no puede ser una clave de un índice; una `float` o `real` expresión puede utilizarse en una vista indizada, pero no como una clave. Esto también se aplica a las columnas calculadas. Cualquier función, una expresión o una función definida por el usuario se considerarán imprecisa si incluyen `float` o `real` expresiones. Esto incluye a las lógicas (comparaciones).  
+>  Las expresiones `float` o `real` se consideran imprecisas y no pueden ser la clave de un índice; una expresión `float` o `real` puede utilizarse en una vista indizada, pero no como clave. Esto también se aplica a las columnas calculadas. Las funciones, expresiones o funciones definidas por el usuario se considerarán imprecisas si incluyen expresiones `float` o `real`. Esto incluye a las lógicas (comparaciones).  
   
  La propiedad **IsPrecise** de la función COLUMNPROPERTY informa de si una expresión *computed_column_expression* es precisa.  
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198574"
 ---
 # <a name="delete---sql-command"></a>ELIMINAR, comando SQL
 Marca los registros para su eliminación.  
@@ -37,9 +37,9 @@ DELETE FROM [DatabaseName!]TableName
  DESDE [ *DatabaseName!*] *TableName*  
  Especifica la tabla en la que los registros se marcan para su eliminación.  
   
- *¡DatabaseName!* Especifica el nombre de una base de datos que contiene la tabla si la base de datos que lo contiene no es la base de datos especificado con el origen de datos. Debe incluir el nombre de una base de datos que contiene la tabla si la base de datos no es la base de datos especificado con el origen de datos. Incluir el delimitador de signo de exclamación (!) después del nombre de la base de datos y antes del nombre de tabla.  
+ *DatabaseName!* Especifica el nombre de una base de datos que contiene la tabla si la base de datos que lo contiene no es la base de datos especificado con el origen de datos. Debe incluir el nombre de una base de datos que contiene la tabla si la base de datos no es la base de datos especificado con el origen de datos. Incluir el delimitador de signo de exclamación (!) después del nombre de la base de datos y antes del nombre de tabla.  
   
- DONDE *FilterCondition1*[AND &#124; o *FilterCondition2*...]  
+ WHERE *FilterCondition1*[AND &#124; OR *FilterCondition2*...]  
  Especifica que Visual FoxPro marcar determinados registros para su eliminación.  
   
  *FilterCondition* especifica los criterios que los registros deben cumplir para que se ha marcado para su eliminación. Puede incluir como muchas condiciones de filtro como desee, conectan con AND u operador OR. También puede usar el operador NOT para anular el valor de una expresión lógica, o puede usar **vacía**() para comprobar si un campo vacío.  

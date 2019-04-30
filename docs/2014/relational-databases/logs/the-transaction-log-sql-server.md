@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63144621"
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
   Todas las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen un registro de transacciones que registra todas las transacciones y las modificaciones que cada transacción realiza en la base de datos. El registro de transacciones se debe truncar periódicamente para evitar que se llene. Sin embargo, algunos factores pueden retrasar el truncamiento del registro, por lo que es importante supervisar el tamaño del registro. Algunas operaciones se pueden registrar mínimamente para reducir su impacto sobre el tamaño del registro de transacciones.  
@@ -41,7 +41,7 @@ ms.locfileid: "52807017"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Ventajas: Operaciones compatibles con el registro de transacciones  
+##  <a name="Benefits"></a> Ventajas: Operaciones admitidas por el registro de transacciones  
  El registro de transacciones permite las siguientes operaciones:  
   
 -   Recuperación de transacciones individuales.  
@@ -93,7 +93,7 @@ ms.locfileid: "52807017"
 |12|-|Exclusivamente para uso interno.|  
 |13|OLDEST_PAGE|Si una base de datos está configurada para usar puntos de comprobación indirectos, la página más antigua de la base de datos podría ser anterior al LSN del punto de comprobación. En este caso, la página más antigua puede retrasar el truncamiento del registro. (Todos los modelos de recuperación)<br /><br /> Para obtener más información sobre los puntos de comprobación indirectos, vea [Database Checkpoints &#40;SQL Server&#41;](database-checkpoints-sql-server.md).|  
 |14|OTHER_TRANSIENT|No se utiliza este valor actualmente.|  
-|16|XTP_CHECKPOINT|Cuando una base de datos tiene un grupo de archivos optimizados para memoria, el registro de transacciones no se puede truncar hasta que el punto de comprobación [!INCLUDE[hek_2](../../includes/hek-2-md.md)] automático se desencadena (lo que sucede cada 512 MB de crecimiento de los registros).<br /><br /> Nota: Para truncar el registro de transacción antes de un tamaño de 512 MB, activa el comando Checkpoint manualmente en la base de datos en cuestión.|  
+|16|XTP_CHECKPOINT|Cuando una base de datos tiene un grupo de archivos optimizados para memoria, el registro de transacciones no se puede truncar hasta que el punto de comprobación [!INCLUDE[hek_2](../../includes/hek-2-md.md)] automático se desencadena (lo que sucede cada 512 MB de crecimiento de los registros).<br /><br /> Nota: Para truncar el registro de transacciones antes de 512 MB de tamaño, se activan el comando Checkpoint manualmente en la base de datos en cuestión.|  
   
 ##  <a name="MinimallyLogged"></a> Operaciones que pueden registrar mínimamente  
  El*registro mínimo* implica registrar únicamente la cantidad de información necesaria para recuperar la transacción sin permitir la recuperación a un momento dado. En este tema se identifican las operaciones que se registran mínimamente en el modelo de recuperación optimizado para cargas masivas de registros (y en el modelo de recuperación simple, excepto cuando se está ejecutando una copia de seguridad).  

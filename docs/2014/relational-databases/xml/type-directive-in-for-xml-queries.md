@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193286"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directiva TYPE en consultas FOR XML
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibilidad con la [xml &#40;Transact-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) le permite solicitar el resultado de una consulta FOR XML se devuelven como `xml` tipo de datos mediante la especificación de la directiva TYPE. Esto permite procesar el resultado de una consulta FOR XML en el servidor. Por ejemplo, puede especificar una XQuery en el mismo, asignar el resultado a un `xml` variable de tipo, o escribir [consultas FOR XML anidadas](use-nested-for-xml-queries.md).  

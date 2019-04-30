@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d62c0864678e116e30a0673bdf2625d70de0cedd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199609"
 ---
 # <a name="binding-parameters-odbc"></a>Enlazar parámetros ODBC
 Cada parámetro en una instrucción SQL debe estar asociado, o *enlazado,* a una variable en la aplicación antes de que se ejecuta la instrucción. Cuando la aplicación enlaza una variable a un parámetro, describe esa variable - dirección, tipo de datos C etc. - al controlador. También se describe el propio parámetro - tipo de datos SQL, precisión y así sucesivamente. El controlador almacena esta información en la estructura se mantiene para esa instrucción y usa la información para recuperar el valor de la variable cuando se ejecuta la instrucción.  

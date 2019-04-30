@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63162404"
 ---
 # <a name="disable-indexes-and-constraints"></a>Deshabilitar índices y restricciones
   En este tema se describe cómo deshabilitar un índice o restricciones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al deshabilitar un índice, se impide que el usuario pueda tener acceso al mismo y, en el caso de los índices clúster, a los datos de la tabla subyacente. La definición del índice se conserva en los metadatos y las estadísticas de índice se mantienen en índices no clúster. La deshabilitación de un índice clúster o no clúster en una vista elimina físicamente los datos del índice. Al deshabilitar un índice clúster en una tabla, se impide el acceso a los datos, que siguen en la tabla pero dejan de estar disponibles para las operaciones de lenguaje de manipulación de datos (DML) hasta que se quite o recompile el índice.  
@@ -47,7 +47,7 @@ ms.locfileid: "48050568"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48050568"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para ejecutar ALTER INDEX, se necesita, como mínimo, el permiso ALTER en la tabla o en la vista.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -127,7 +127,7 @@ ms.locfileid: "48050568"
  Muestra el nombre de la tabla o vista en la que se ha creado el índice.  
   
  **Tipo de índice**  
- Muestra el tipo de índice: **Agrupado**, **No agrupado**, **Espacial**o **XML**.  
+ Muestra el tipo del índice: **Clúster**, **Nonclustered**, **espacial**, o **XML**.  
   
  **Estado**  
  Muestra el estado de la operación de deshabilitación. Los valores posibles tras la ejecución son:  

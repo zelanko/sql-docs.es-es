@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231269"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar el modo EXPLICIT con FOR XML
   Como se describe en el tema [Generar XML mediante FOR XML](../xml/for-xml-sql-server.md), los modos RAW y AUTO no proporcionan demasiado control sobre la forma del XML generado a partir del resultado de una consulta. Sin embargo, el modo EXPLICIT ofrece la máxima flexibilidad para generar el XML que se desee a partir del resultado de una consulta.  
@@ -147,25 +147,25 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>En esta sección  
  Los siguientes ejemplos ilustran el uso del modo EXPLICIT.  
   
--   [Ejemplo: Al recuperar la información de empleado](../xml/example-retrieving-employee-information.md)  
+-   [Ejemplo: Recuperación de información de los empleados](../xml/example-retrieving-employee-information.md)  
   
--   [Ejemplo: Especificar la directiva ELEMENT](../xml/example-specifying-the-element-directive.md)  
+-   [Ejemplo: Especificación de la directiva ELEMENT](../xml/example-specifying-the-element-directive.md)  
   
--   [Ejemplo: Especificar la directiva ELEMENTXSINIL](../xml/example-specifying-the-elementxsinil-directive.md)  
+-   [Ejemplo: Especificación de la directiva ELEMENTXSINIL](../xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [Ejemplo: Construir elementos del mismo nivel con el modo EXPLICIT](../xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [Ejemplo: Construcción de elementos del mismo nivel con el modo EXPLICIT](../xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Ejemplo: Especificar las directivas ID e IDREF](../xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Ejemplo: Especificación de las directivas ID e IDREF](../xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [Ejemplo: Especificar las directivas ID e IDREFS](../xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [Ejemplo: Especificación de las directivas ID e IDREFS](../xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Ejemplo: Especificar la directiva HIDE](../xml/example-specifying-the-hide-directive.md)  
+-   [Ejemplo: Especificación de la directiva HIDE](../xml/example-specifying-the-hide-directive.md)  
   
--   [Ejemplo: Especificar la directiva ELEMENT y la codificación de entidades](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Ejemplo: Especificación de la directiva ELEMENT y la codificación de entidades](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [Ejemplo: Especificar la directiva CDATA](../xml/example-specifying-the-cdata-directive.md)  
+-   [Ejemplo: Especificación de la directiva CDATA](../xml/example-specifying-the-cdata-directive.md)  
   
--   [Ejemplo: Especificar la directiva XMLTEXT](../xml/example-specifying-the-xmltext-directive.md)  
+-   [Ejemplo: Especificación de la directiva XMLTEXT](../xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Usar el modo RAW con FOR XML](../xml/use-raw-mode-with-for-xml.md)   

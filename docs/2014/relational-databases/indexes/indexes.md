@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58d4d71189598a6fd101e6db0a40b8c8b0a3b903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161852"
 ---
 # <a name="indexes"></a>Índices
   En la tabla siguiente se indican los tipos de índice disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se proporcionan vínculos a información adicional.  
@@ -34,7 +34,7 @@ ms.locfileid: "48101165"
 |Índice en columnas calculadas|Índice de una columna que se deriva del valor de una o varias columnas, o algunas entradas deterministas.|[Índices en columnas calculadas](indexes-on-computed-columns.md)|  
 |Filtrado|Índice no clúster optimizado, especialmente indicado para cubrir consultas que seleccionan de un subconjunto bien definido de datos. Utiliza un predicado de filtro para indizar una parte de las filas de la tabla. Un índice filtrado bien diseñado puede mejorar el rendimiento de las consultas y reducir los costos de almacenamiento del índice en relación con los índices de tabla completa, así como los costos de mantenimiento.|[Crear índices filtrados](create-filtered-indexes.md)|  
 |Espacial|Un índice espacial permite realizar de forma más eficaz determinadas operaciones en objetos espaciales (*datos espaciales*) en una columna del tipo de datos de **geometry** . El índice espacial reduce el número de objetos a los que es necesario aplicar las operaciones espaciales, que son relativamente costosas.|[Información general sobre los índices espaciales](../spatial/spatial-indexes-overview.md)|  
-|XML|Una representación dividida y persistente, de los XML objetos binarios grandes (BLOB) en el `xml` columna tipo de datos.|[Índices XML &#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
+|XML|Representación dividida y persistente de los objetos binarios grandes (BLOB) XML de la columna de tipo de datos `xml`.|[Índices XML &#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
 |Texto completo|Tipo especial de índice funcional basado en símbolos (token) que compila y mantiene el motor de texto completo de Microsoft para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Proporciona la compatibilidad adecuada para búsquedas de texto complejas en datos de cadenas de caracteres.|[Rellenar índices de texto completo](../search/populate-full-text-indexes.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  

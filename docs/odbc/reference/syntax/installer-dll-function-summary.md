@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecb486f51caa97c715d54885c34575a60bfdfb83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231841"
 ---
 # <a name="installer-dll-function-summary"></a>Resumen de funciones DLL de instalador
 En la tabla siguiente describe las funciones en el archivo DLL de instalador. Para obtener más información sobre la sintaxis y semántica para cada función, vea [referencia de API de DLL de instalador](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  

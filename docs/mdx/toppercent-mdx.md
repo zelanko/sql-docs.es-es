@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0093da0a4f69d8a1e4cf178959d28509eef15b75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208415"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -38,7 +38,7 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
 > [!IMPORTANT]  
 >  *Porcentaje* debe ser un valor positivo; los valores negativos generan un error.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
 ## <a name="remarks"></a>Comentarios  

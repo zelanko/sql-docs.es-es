@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 6541cae5271e35fd5ad0030ffc8625fc97a46149
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231147"
 ---
 # <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>Crear script de implementación de SQL Server grupo de disponibilidad AlwaysOn
 
@@ -64,13 +64,13 @@ az aks get-credentials --resource-group=<GroupName> --name=<ClusterName>
 
 Los ejemplos siguientes muestran cómo ejecutar `deploy-ag.py`.
 
-### <a name="help"></a>Ayuda
+### <a name="help"></a>Help
 
 ```cmd
 python ./deploy-ag.py --help
 ```
 
-* **uso**: `deploy-ag.py [-h] {deploy | failover} ...`
+* **usage**: `deploy-ag.py [-h] {deploy | failover} ...`
 * **argumentos opcionales**:
   * `-h, --help` Mostrar este mensaje de ayuda y salir
 * **subcomandos**:
@@ -90,7 +90,7 @@ python ./deploy-ag.py --help
 python ./deploy-ag.py deploy --help
 ```
 
-* **uso**:
+* **usage**:
 
   ```
   python ./deploy-ag.py deploy [-h] [--verbose] [--ag AG] [-n NAMESPACE]
@@ -129,7 +129,7 @@ python ./deploy-ag.py deploy --help
   
   `-p SA_PASSWORD, --sa-password SA_PASSWORD`
   
-  Contraseña de SA. Valor predeterminado = 'SAPassword2018'
+  Contraseña de SA. Default='SAPassword2018'
   
   `-e {ON_PREM,AKS}, --env {ON_PREM,AKS}`
   
@@ -142,7 +142,7 @@ python ./deploy-ag.py deploy --help
 ```cmd
 python ./deploy-ag.py failover --help
 ```
-* **uso**: 
+* **usage**: 
 
   ```cmd
   python deploy-ag.py failover [-h] [--verbose] [--ag AG]

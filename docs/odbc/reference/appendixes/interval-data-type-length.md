@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16d0590d3297b52891bf399822ce984674022583
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188920"
 ---
 # <a name="interval-data-type-length"></a>Longitud del tipo de datos de intervalo
 Las reglas siguientes se usan para determinar la longitud de un tipo de datos de intervalo de caracteres. Está expresado en número de caracteres. El número de bytes depende el juego de caracteres. La longitud incluye los siguientes valores que suman:  

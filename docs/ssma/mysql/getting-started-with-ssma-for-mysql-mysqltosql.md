@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187152"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introducción a SSMA para MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) para MySQL le permite convertir los esquemas de base de datos MySQL a esquemas de SQL Server o Azure SQL DB, cargar los esquemas resultantes en SQL Server o Azure SQL DB y migrar datos desde MySQL a SQL Server o Azure SQL DB rápidamente.  
@@ -76,7 +76,7 @@ Puede usar el Explorador de metadatos para seleccionar los objetos de base de da
 Para obtener más información, consulte [sincronización (MySQL a SQL Server / base de datos de SQL Azure)](https://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 ### <a name="metadata"></a>Metadatos  
-A la derecha de cada explorador de metadatos son las pestañas que describen el objeto seleccionado. Por ejemplo, si selecciona una tabla en el Explorador de metadatos de MySQL, nueve pestañas aparecerán: **tabla**, **SQL**, **Type Mapping**, **datos**,  **Configuración de**, **Charset asignación**, **modos SQL**, **propiedades**, y **informe**. El **informe** pestaña contiene información únicamente después de crear un informe que contiene el objeto seleccionado. Si selecciona una tabla en el Explorador de metadatos de SQL Server, aparecerán tres fichas: **tabla**, **SQL** y **datos**.  
+A la derecha de cada explorador de metadatos son las pestañas que describen el objeto seleccionado. Por ejemplo, si selecciona una tabla en el Explorador de metadatos de MySQL, aparecerán las pestañas de nueve: **Tabla**, **SQL**, **asignación de tipos de**, **datos**, **configuración**, **Charset asignación**, **Modos SQL**, **propiedades**, y **informe**. El **informe** pestaña contiene información únicamente después de crear un informe que contiene el objeto seleccionado. Si selecciona una tabla en el Explorador de metadatos de SQL Server, aparecerán tres fichas: **Tabla**, **SQL** y **datos**.  
   
 La mayoría de los metadatos configuración es de solo lectura. Sin embargo, puede modificar los metadatos siguientes:  
   
@@ -97,7 +97,7 @@ La siguiente tabla muestra los comandos de la barra de herramientas de la migrac
   
 |||  
 |-|-|  
-|**Botón**|**Función**|  
+|**Button**|**Función**|  
 |**Crear informe**|Convierte los objetos seleccionados de MySQL a SQL Server o Azure SQL DB objetos y, a continuación, crea un informe que muestra cómo se realiza correctamente la conversión.<br /><br />Este comando está deshabilitado a menos que los objetos seleccionados en el Explorador de metadatos de MySQL.|  
 |**Convertir esquema**|Convierte los objetos seleccionados de MySQL a SQL Server o Azure SQL DB objetos.<br /><br />Este comando está deshabilitado a menos que los objetos seleccionados en el Explorador de metadatos de MySQL.|  
 |**Migración de datos**|Migra los datos de la base de datos MySQL a SQL Server o Azure SQL DB. Antes de ejecutar este comando, debe convertir los esquemas de MySQL a esquemas de SQL Server o Azure SQL DB y, a continuación, cargar los objetos en SQL Server o Azure SQL DB.<br /><br />Este comando está deshabilitado a menos que los objetos seleccionados en el Explorador de metadatos de MySQL.|  
@@ -111,7 +111,7 @@ La siguiente tabla muestra los menús SSMA.
 |**Menú**|**Descripción**|  
 |**Archivo**|Contiene comandos para trabajar con proyectos, conectar con MySQL y conectarse a SQL Server o Azure SQL DB.|  
 |**Editar**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles. Para abrir **administrar marcadores** cuadro de diálogo, en el menú Edición, haga clic en Administrar marcadores. En el cuadro de diálogo, verá una lista de los marcadores existentes. Puede usar los botones en el lado derecho del cuadro de diálogo para administrar los marcadores.|  
-|**Ver**|Contiene el **sincronizar metadatos Explorers** comando. Sincroniza los objetos entre el Explorador de metadatos de MySQL y SQL Server o el Explorador de metadatos de Azure SQL DB. También contiene comandos para mostrar y ocultar el **salida** y **lista de errores** paneles y una opción **diseños** para administrar con los diseños.|  
+|**Vista**|Contiene el **sincronizar metadatos Explorers** comando. Sincroniza los objetos entre el Explorador de metadatos de MySQL y SQL Server o el Explorador de metadatos de Azure SQL DB. También contiene comandos para mostrar y ocultar el **salida** y **lista de errores** paneles y una opción **diseños** para administrar con los diseños.|  
 |**Herramientas**|Contiene comandos para crear informes, convertir el esquema, actualizar desde la base de datos, migrar objetos y los datos y guardar como secuencia de comandos. También proporciona acceso a la **configuración Global, la configuración predeterminada del proyecto** y **configuración del proyecto** cuadros de diálogo.|  
 |**Ayuda**|Proporciona acceso para ayudar a SSMA y a la **sobre** cuadro de diálogo.|  
   

@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec4d66af36ff74b5b0a9160529990c9fc52fc961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63200277"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Usar parámetros con valores de tabla (ODBC)
   Este ejemplo muestra cómo utilizar los parámetros de valores de tabla para insertar varias filas, con varias columnas, mediante una llamada al servidor.  
   
- Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Para obtener más ejemplos del uso de parámetros con valores de tabla, vea [Valued Parameter Programming Examples](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md).  
+ Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Para obtener más ejemplos del uso de parámetros con valores de tabla, vea [ODBC Table-Valued Parameter Programming Examples](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md).  
   
 ## <a name="example"></a>Ejemplo  
  También necesitará un origen de datos ODBC denominado TVPDemo. La base de datos predeterminada para TVPDemo puede ser cualquier base de datos de prueba del equipo. Este origen de datos debe estar basado en el controlador ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

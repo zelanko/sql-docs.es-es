@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ab80d077af7db8fe1162a725bb94f9eec032061c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231266"
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>Propiedad FriendlyName (clase SecurityCertificate)
   Obtiene o establece un nombre descriptivo alternativo para el certificado de seguridad.  

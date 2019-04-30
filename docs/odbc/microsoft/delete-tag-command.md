@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eabecbc399751f03e9e5c25b32423ce0839072dc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198252"
 ---
 # <a name="delete-tag-command"></a>Eliminar etiqueta, comando
 Quita una etiqueta o etiquetas de un archivo de índice compuesto (.cdx).  

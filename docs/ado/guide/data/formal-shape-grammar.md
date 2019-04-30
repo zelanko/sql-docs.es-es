@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3b26eaeb804f8d92a7122814641cadf5889b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161417"
 ---
 # <a name="formal-shape-grammar"></a>Gramática formal de forma
 Se trata de la gramática formal para crear cualquier comando shape:  
@@ -42,31 +42,31 @@ Se trata de la gramática formal para crear cualquier comando shape:
   
 |Término|Definición|  
 |----------|----------------|  
-|\<comando de Shape >|FORMA [\<tabla exp > [[AS] \<alias >]] [\<forma Acción >]|  
-|\<exp de tabla >|{\<texto de comando de proveedor >}&#124;<br /><br /> (\<forma comando >)&#124;<br /><br /> TABLA \<quoted-name >&#124;<br /><br /> \<QUOTED-name >|  
-|\<forma Acción >|ANEXAR \<lista de campos de un alias >&#124;<br /><br /> PROCESO \<lista de campos de un alias > [BY \<lista de campos >]|  
-|\<lista de campos de un alias >|\<un alias de campo > [, \<un alias de campo... >]|  
-|\<un alias de campo >|\<campo: exp > [[AS] \<alias >]|  
-|\<campo: exp >|(\<relación exp >)&#124;<br /><br /> \<exp calculado >&#124;<br /><br /> \<agregado exp >&#124;<br /><br /> \<nueva exp >|  
-|<relation_exp>|\<tabla exp > [[AS] \<alias >]<br /><br /> RELACIONAR \<relación-cond-list >|  
-|\<relación-cond-list >|\<relación cond > [, \<relación cond >...]|  
-|\<relación cond >|\<nombre de campo > TO \<secundarios ref >|  
-|\<secundario-ref >|\<nombre de campo >&#124;<br /><br /> PARÁMETRO \<-ref param >|  
-|\<-ref param >|\<número >|  
-|\<lista de campos >|\<nombre de campo > [, \<nombre de campo >]|  
-|\<agregado exp >|SUM (\<nombre de campo completo >)&#124;<br /><br /> AVG (\<nombre de campo completo >)&#124;<br /><br /> MIN (\<nombre de campo completo >)&#124;<br /><br /> MAX (\<nombre de campo completo >)&#124;<br /><br /> RECUENTO (\<calificado-alias > &#124; \<calificado-name >)&#124;<br /><br /> STDEV (\<nombre de campo completo >)&#124;<br /><br /> CUALQUIER (\<nombre de campo completo >)|  
-|\<exp calculado >|CALC (\<expresión >)|  
-|\<nombre del campo calificado >|\<alias>.[\<alias>...]\<field-name>|  
-|\<alias >|\<QUOTED-name >|  
-|\<nombre de campo >|\<QUOTED-name > [[AS] \<alias >]|  
-|\<QUOTED-name >|"\<string >"&#124;<br /><br /> '\<cadena >'&#124;<br /><br /> [\<cadena >]&#124;<br /><br /> \<Nombre >|  
-|\<nombre completo de >|alias [.alias...]|  
-|\<Nombre >|alfa [alpha &#124; dígitos &#124; _ &#124; # &#124; : &#124; ...]|  
-|\<número >|dígito [dígitos...]|  
-|\<nueva exp >|NUEVO \<tipo de campo > [(\<número > [, \<número >])]|  
-|\<tipo de campo >|Un tipo de datos OLE DB o ADO.|  
-|\<cadena >|-char Unicode [-char unicode...]|  
-|\<expresión >|Un objeto Visual expresión Basic para aplicaciones cuyos operandos son otras columnas no calculadas en la misma fila.|  
+|\<shape-command>|SHAPE [\<table-exp> [[AS] \<alias>]][\<shape-action>]|  
+|\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<shape-command>) &#124;<br /><br /> TABLA \<quoted-name >&#124;<br /><br /> \<quoted-name>|  
+|\<shape-action>|ANEXAR \<lista de campos de un alias >&#124;<br /><br /> COMPUTE \<aliased-field-list> [BY \<field-list>]|  
+|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
+|\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
+|\<field-exp>|(\<relation-exp>) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
+|<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> RELACIONAR \<relación-cond-list >|  
+|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
+|\<relation-cond>|\<nombre de campo > TO \<secundarios ref >|  
+|\<child-ref>|\<field-name> &#124;<br /><br /> PARÁMETRO \<-ref param >|  
+|\<param-ref>|\<number>|  
+|\<field-list>|\<field-name> [, \<field-name>]|  
+|\<aggregate-exp>|SUM(\<qualified-field-name>) &#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
+|\<calculated-exp>|CALC(\<expression>)|  
+|\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
+|\<alias>|\<quoted-name>|  
+|\<field-name>|\<quoted-name> [[AS] \<alias>]|  
+|\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<name>|  
+|\<qualified-name>|alias[.alias...]|  
+|\<name>|alpha [ alpha &#124; digit &#124; _ &#124; # &#124; : &#124; ...]|  
+|\<number>|dígito [dígitos...]|  
+|\<new-exp>|NEW \<field-type> [(\<number> [, \<number>])]|  
+|\<field-type>|Un tipo de datos OLE DB o ADO.|  
+|\<string>|-char Unicode [-char unicode...]|  
+|\<expression>|Un objeto Visual expresión Basic para aplicaciones cuyos operandos son otras columnas no calculadas en la misma fila.|  
   
 ## <a name="see-also"></a>Vea también  
  [Acceso a las filas en un conjunto de registros jerárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

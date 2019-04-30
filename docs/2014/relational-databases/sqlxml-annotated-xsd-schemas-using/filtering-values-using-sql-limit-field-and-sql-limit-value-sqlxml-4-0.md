@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: df5907c3d61de7e3d1ce552c65fb5188f1ab33f9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228894"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtras valores mediante sql:limit-field y sql:limit-value (SQLXML 4.0)
   Puede limitar filas devueltas de una consulta de base de datos en base a algún valor de limitación. Las anotaciones `sql:limit-field` y `sql:limit-value` se usan para identificar la columna de base de datos que contiene valores de limitación y para especificar un valor de limitación concreto que se va a usar para filtrar los datos devueltos.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a5c5a0d7d51acfd2ecf6d0ffda945a6223c7e04f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63228107"
 ---
 # <a name="understanding-cursors-and-locks"></a>Descripción de los cursores y bloqueos
 Es importante comprender cómo funcionan los cursores para que pueda seleccionar el tipo de cursor mejor y más eficaz para los requisitos de acceso a datos de la aplicación. Una configuración menos óptima de cursor puede hacer que las operaciones de acceso a datos sean extremadamente lentas.  

@@ -20,11 +20,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63187927"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuración de visibilidad de los metadatos
   La visibilidad de los metadatos se limita a los elementos protegibles que son propiedad de un usuario o sobre los que el usuario tienen algún permiso. Por ejemplo, la siguiente consulta devuelve una fila si se ha concedido al usuario un permiso como SELECT o INSERT sobre la tabla `myTable`.  

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127050"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Métodos abreviados de teclado de SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ofrece a los usuarios dos esquemas de teclado. De forma predeterminada, usa el esquema [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , con métodos abreviados de teclado basados en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece un esquema del teclado similar al esquema estándar de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para cambiar el esquema de teclado o agregar otros métodos abreviados de teclado, haga clic en **Opciones** en el menú **Herramientas**. Seleccione el esquema de teclado deseado en la página **Entorno**, **Teclado** .  

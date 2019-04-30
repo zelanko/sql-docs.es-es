@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f91799e5d484a763c23fcc132232a8a35fc6152c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63186113"
 ---
 # <a name="sqlputdata-function"></a>Función SQLPutData
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ISO 92  
   
  **Resumen**  
  **SQLPutData** permite que una aplicación enviar datos de un parámetro o columna a del controlador en el tiempo de ejecución de la instrucción. Esta función puede utilizarse para enviar los valores de caracteres o datos binarios en partes a una columna con un tipo de datos específicos del origen de carácter, binario o datos (por ejemplo, los parámetros de los tipos de SQL_LONGVARBINARY y SQL_LONGVARCHAR). **SQLPutData** admite el enlace a un tipo de datos Unicode C, incluso si el controlador subyacente no admite datos Unicode.  

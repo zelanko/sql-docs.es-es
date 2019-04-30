@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f5355af9adb2ae2a06fab1041b22959165dfaf2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63165049"
 ---
 # <a name="migrating-computed-columns"></a>Migrar columnas calculadas
   Las tablas optimizadas para memoria no admiten columnas calculadas. Sin embargo, puede simular una columna calculada.  

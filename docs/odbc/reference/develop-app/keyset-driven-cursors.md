@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be6dc5a164220befb534368eace4f51f4dbd84e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63213444"
 ---
 # <a name="keyset-driven-cursors"></a>Cursores controlados por conjunto de claves
 Un cursor dinámico se sitúa entre estático y un cursor dinámico en su capacidad para detectar los cambios. Al igual que un cursor estático, no siempre detecta los cambios realizados en la pertenencia y el orden del conjunto de resultados. Como un cursor dinámico, detecta cambios en los valores de las filas del conjunto de resultados (de acuerdo con el nivel de aislamiento de la transacción, según lo establecido por el atributo de conexión SQL_ATTR_TXN_ISOLATION).  
   
  Cuando se abre un cursor dinámico, guarda las claves para el conjunto de resultados completo; Esto corrige la aparente pertenencia y el orden del conjunto de resultados. A medida que el cursor se desplaza por el conjunto de resultados, utiliza las claves en este *keyset* para recuperar los valores de cada fila de datos actual. Por ejemplo, suponga que un cursor controlado por captura una fila y la otra aplicación, a continuación, actualiza esa fila. Si el cursor vuelve a obtener la fila, los valores que ve son los nuevos porque volver a capturar la fila con su clave. Por este motivo, los cursores controlados por siempre puede detectar los cambios realizados por sí mismos y otros.  
   
- Cuando el cursor se intenta recuperar una fila que se ha eliminado, esta fila aparece como un "agujero" en el conjunto de resultados: la clave para la fila existe en el conjunto de claves, pero la fila ya no existe en el conjunto de resultados. Si se actualizan los valores de clave en una fila, la fila se considera que se han eliminado y, a continuación, inserta, por lo que dichas filas también aparecen como agujeros en el conjunto de resultados. Mientras que un cursor dinámico siempre puede detectar las filas eliminadas por otros usuarios, puede quitar opcionalmente las claves para las filas elimina a sí mismo desde el conjunto de claves. Los cursores dinámicos que ello no pueden detectar sus propias eliminaciones. Si un cursor controlado por determinado detecta su propio eliminaciones se notifica a través de la opción SQL_STATIC_SENSITIVITY en **SQLGetInfo**.  
+ Cuando el cursor se intenta recuperar una fila que se ha eliminado, esta fila aparece como un "agujero" en el conjunto de resultados: La clave para la fila existe en el conjunto de claves, pero la fila ya no existe en el conjunto de resultados. Si se actualizan los valores de clave en una fila, la fila se considera que se han eliminado y, a continuación, inserta, por lo que dichas filas también aparecen como agujeros en el conjunto de resultados. Mientras que un cursor dinámico siempre puede detectar las filas eliminadas por otros usuarios, puede quitar opcionalmente las claves para las filas elimina a sí mismo desde el conjunto de claves. Los cursores dinámicos que ello no pueden detectar sus propias eliminaciones. Si un cursor controlado por determinado detecta su propio eliminaciones se notifica a través de la opción SQL_STATIC_SENSITIVITY en **SQLGetInfo**.  
   
  Las filas insertadas por otros usuarios nunca son visibles para un cursor dinámico porque no hay claves de estas filas existen en el conjunto de claves. Sin embargo, un cursor dinámico, opcionalmente, puede agregar las claves para las filas se inserta en el conjunto de claves. Los cursores dinámicos que ello pueden detectar sus propias inserciones. Si un cursor controlado por determinado detecta su propio inserciones se notifica a través de la opción SQL_STATIC_SENSITIVITY en **SQLGetInfo**.  
   

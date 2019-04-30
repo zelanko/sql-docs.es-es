@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b92f317d72410a5dff56652dd9de1e3b2ba5c9cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63199276"
 ---
 # <a name="binding-result-set-columns"></a>Columnas del conjunto de resultados de enlace
 Las aplicaciones pueden enlazar como muchos o tan pocos columnas del conjunto de resultados como que elijan, incluidos el enlace en absoluto ninguna columna. Cuando se captura una fila de datos, el controlador devuelve los datos de las columnas enlazadas a la aplicación. Si la aplicación enlaza todas las columnas del conjunto de resultados depende de la aplicación. Por ejemplo, las aplicaciones que generan los informes suelen tengan un formato fijo; Estas aplicaciones creación un conjunto de resultados que contiene todas las columnas utilizadas en el informe y, a continuación, enlazar y recuperarán los datos de todas estas columnas. Aplicaciones que se muestran a veces pantallas completas de los datos permiten al usuario decidir qué columnas desea mostrar; Estas aplicaciones crean un conjunto que contiene todas las columnas, es posible que desee, pero enlazar y recuperar los datos solo para las columnas elegidas por el usuario de resultados.  

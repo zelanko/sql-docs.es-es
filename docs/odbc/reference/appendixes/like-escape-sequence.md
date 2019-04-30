@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 65447904f32b7e0457ed807f18e942b334ddc236
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63188807"
 ---
 # <a name="like-escape-sequence"></a>Secuencia de escape LIKE
 ODBC utiliza secuencias de escape para la cláusula LIKE. La sintaxis de esta secuencia de escape es como sigue:  
@@ -36,10 +36,10 @@ ODBC utiliza secuencias de escape para la cláusula LIKE. La sintaxis de esta se
   
  *Iniciador de esc de ODBC* escape '*carácter de escape*' *terminador de esc de ODBC*  
   
- *carácter de escape* :: = *caracteres*  
+ *escape-character* ::= *character*  
   
- *Iniciador de esc de ODBC* :: = {  
+ *ODBC-esc-initiator* ::= {  
   
- *Terminador de esc de ODBC* :: =}  
+ *ODBC-esc-terminator* ::= }  
   
  Para determinar si el controlador admite el escape LIKE secuencia, puede llamar una aplicación **SQLGetInfo** con el tipo de información SQL_LIKE_ESCAPE_CLAUSE.

@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 85142b248fe8e734aeb1700d8eee353df1684d51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63131191"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Esquemas XSD anotados en SQLXML 4.0
   Esta sección proporciona información sobre cómo utilizar esquemas XDR anotados en SQLXML 4.0. En versiones anteriores de SQLXML, se proporcionaba funcionalidad similar con esquemas reducidos de datos XML (XDR). En esta sección también se proporciona información XDR para aplicaciones heredadas.  

@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161909"
 ---
 # <a name="index-properties-f1-help"></a>Propiedades del índice (Ayuda F1)
   Las secciones de este tema hacen referencia a las distintas propiedades de índice disponibles mediante cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -52,7 +52,7 @@ ms.locfileid: "48084709"
  Muestra el nombre del índice. Este campo es de solo lectura para un índice existente. Si está creando un nuevo índice, escriba el nombre del índice.  
   
  **Tipo de índice**  
- Indica el tipo de índice. Para los índices nuevos, indica el tipo de índice seleccionado al abrir el cuadro de diálogo. Los índices pueden ser: **Clúster**, **No agrupado**, **XML principal**, **XML secundario**, **Espacial**o **Almacén de columnas en clúster**o **Almacén de columnas no clúster**.  
+ Indica el tipo de índice. Para los índices nuevos, indica el tipo de índice seleccionado al abrir el cuadro de diálogo. Los índices pueden ser: **Clúster**, **Nonclustered**, **XML principal**, **XML secundario**, **espacial**, **en clúster almacén de columnas**, o **Nonclustered Columnstore**.  
   
  **Nota** : solo se permite un índice clúster por tabla. Solo se permite un índice de almacén de columnas optimizado de memoria one xVelocity por tabla.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48084709"
   
  Un índice espacial solo se puede definir en una única columna que contenga un tipo de datos espaciales (una *columna espacial*).  
   
- **Nombre**  
+ **Name**  
  Muestra el nombre de la columna que participa en la clave de índice.  
   
  **Criterio de ordenación**  
@@ -116,7 +116,7 @@ ms.locfileid: "48084709"
  **casilla**  
  Seleccione esta opción para agregar columnas.  
   
- **Nombre**  
+ **Name**  
  Nombre de la columna.  
   
  **Tipo de datos**  
@@ -169,7 +169,7 @@ ms.locfileid: "48084709"
 >  Esta opción no estará disponible para los índices XML ni cuando el índice sea un índice clúster deshabilitado.  
   
  **Establecer grado máximo de paralelismo**  
- Limita el número de procesadores que se van a utilizar durante la ejecución de planes paralelos. El valor predeterminado es 0, que utiliza el número real de CPU disponibles. Si el valor se establece en 1, se suprime la generación de planes paralelos; si el valor se establece en un número mayor que 1, se restringe el número máximo de procesadores que se utilizan en la ejecución de una única consulta. Esta opción solo está disponible si el cuadro de diálogo está en los estados **Volver a generar** o **Volver a crear** . Para más información, consulte [PerformanceEstablecer la opción Grado máximo de paralelismo para lograr un rendimiento óptimo](../policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+ Limita el número de procesadores que se van a utilizar durante la ejecución de planes paralelos. El valor predeterminado es 0, que utiliza el número real de CPU disponibles. Si el valor se establece en 1, se suprime la generación de planes paralelos; si el valor se establece en un número mayor que 1, se restringe el número máximo de procesadores que se utilizan en la ejecución de una única consulta. Esta opción solo está disponible si el cuadro de diálogo está en los estados **Volver a generar** o **Volver a crear** . Para más información, consulte [Establecer la opción Grado máximo de paralelismo para lograr un rendimiento óptimo](../policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
   
 > [!NOTE]  
 >  Si especifica un valor superior al número de CPU disponibles, se utilizará el número real de CPU disponibles.  
@@ -199,7 +199,7 @@ ms.locfileid: "48084709"
  Indica el esquema de teselación del índice. Los esquemas de teselación admitidos son los siguientes.  
   
  **Cuadrícula de geometría**  
- Especifica el esquema de teselación de cuadrícula de geometría, que se aplica a una columna de la `geometry` tipo de datos.  
+ Especifica el esquema de teselación de cuadrícula de geometría, que se aplica a una columna del tipo de datos `geometry`.  
   
  **Cuadrícula automática de geometría**  
  Esta opción está habilitada para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando el nivel de compatibilidad de base de datos se ha establecido en 110 o superior.  

@@ -1,5 +1,5 @@
 ---
-title: 'Paso 6: Desconectar del origen de datos | Microsoft Docs'
+title: 'Paso 6: Desconectarse del origen de datos | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a42465e763f8f6d520ed9c1dac42612aa1b28575
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63149234"
 ---
-# <a name="step-6-disconnect-from-the-data-source"></a>Paso 6: Desconectar del origen de datos
+# <a name="step-6-disconnect-from-the-data-source"></a>Paso 6: Desconexión del origen de datos
 El último paso es desconectarse del origen de datos, como se muestra en la siguiente ilustración. En primer lugar, la aplicación libera los identificadores de instrucciones mediante una llamada a **SQLFreeHandle**. Para obtener más información, consulte [liberar un identificador de instrucciones](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md).  
   
  ![Muestra la desconexión de un origen de datos](../../../odbc/reference/develop-app/media/pr17.gif "pr17")  

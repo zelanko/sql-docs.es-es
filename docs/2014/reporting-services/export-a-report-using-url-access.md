@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 80238e8edb5b84bc353eca63d63491a8ee74c8ad
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63164001"
 ---
 # <a name="export-a-report-using-url-access"></a>Exportar un informe mediante el acceso URL
   Opcionalmente, puede especificar el formato en el que se va a representar un informe de utilizando el *rs: Format* parámetro. Por ejemplo, para obtener una copia PDF de un informe directamente desde un servidor de informes en modo nativo:  

@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2ff246d01254ceb2b526b5118553d72cc499046
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63161647"
 ---
 # <a name="keyset-cursors"></a>Cursores KEYSET
 El cursor keyset proporciona la funcionalidad entre estático y un cursor dinámico en su capacidad para detectar los cambios. Al igual que un cursor estático, no siempre detecta los cambios realizados en la pertenencia y el orden del conjunto de resultados. Como un cursor dinámico, detecta cambios en los valores de las filas del conjunto de resultados.  
   
- Los cursores dinámicos se controlan mediante un conjunto de identificadores únicos (claves), conocido como el conjunto de claves. Las claves se generan a partir de un conjunto de columnas que identifican las filas del conjunto de resultados de forma unívoca. El conjunto de claves es el conjunto de valores de clave de todas las filas devueltas por la instrucción de consulta.  
+ Los cursores controlados por conjunto de claves se supervisan mediante un conjunto de identificadores únicos (claves) denominado conjunto de claves. Las claves se generan a partir de un conjunto de columnas que identifican las filas del conjunto de resultados de forma unívoca. El conjunto de claves es el conjunto de valores de clave de todas las filas devueltas por la instrucción de consulta.  
   
- Con los cursores dinámicos, una clave es creada y guarda para cada fila del cursor y almacenada en la estación de trabajo cliente o en el servidor. Cuando tenga acceso a cada fila, la clave almacenada se utiliza para capturar los valores de datos actual desde el origen de datos. En un cursor dinámico, pertenencia al conjunto de resultados se inmoviliza cuando se completa el conjunto de claves. A partir de entonces, las adiciones o actualizaciones que afectan a la pertenencia no forman parte del conjunto de resultados hasta que se vuelve a abrir.  
+ Con los cursores controlados por conjunto de claves, se crea y se guarda una clave para cada fila del cursor y se almacena en la estación de trabajo cliente o en el servidor. Al acceder a cada fila, se usa la clave almacenada para capturar los valores de datos actuales desde el origen de datos. En un cursor controlado por conjunto de claves, la pertenencia al conjunto de resultados se inmoviliza cuando se completa totalmente el conjunto de claves. Por tanto, las adiciones o actualizaciones que afectan a la pertenencia no forman parte del conjunto de resultados hasta que se vuelva a abrir.  
   
- Cambios en los valores de datos (realizados por el propietario del conjunto de claves o por otros procesos) son visibles cuando el usuario se desplaza por el conjunto de resultados. Inserciones realizadas fuera del cursor (por otros procesos) son visibles solo si el cursor se cierra y vuelve a abrir. Las inserciones realizadas desde dentro del cursor son visibles al final del conjunto de resultados.  
+ Cambios en los valores de datos (realizados por el propietario del conjunto de claves o por otros procesos) son visibles cuando el usuario se desplaza por el conjunto de resultados. Las operaciones de inserción realizadas fuera del cursor (por otros procesos) son visibles solo si el cursor se cierra y se vuelve a abrir. Las operaciones de inserción realizadas desde dentro del cursor son visibles al final del conjunto de resultados.  
   
  Cuando un cursor controlado por intenta recuperar una fila que se ha eliminado, la fila aparece como un "agujero" en el conjunto de resultados. La clave para la fila existe en el conjunto de claves, pero la fila ya no existe en el conjunto de resultados. Si se actualizan los valores de clave en una fila, la fila se considera que se han eliminado y, a continuación, inserta, por lo que dichas filas también aparecen como agujeros en el conjunto de resultados. Mientras que un cursor dinámico siempre puede detectar las filas eliminadas por otros procesos, opcionalmente pueden quitar las claves para las filas que elimina a sí mismo. Los cursores dinámicos que ello no pueden detectar sus propias eliminaciones porque se ha quitado la evidencia.  
   

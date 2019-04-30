@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d546fff544c616d4f2750dba76c4b8e68d21aab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241011"
 ---
 # <a name="datetime-data-types"></a>Tipos de datos de fecha y hora
 En ODBC 3 *.x*, los identificadores de fecha, hora y tipos de datos SQL de marca de tiempo que han cambiado desde SQL_DATE, SQL_TIME y SQL_TIMESTAMP (con las instancias de **#define** en el archivo de encabezado de 9, 10 y 11) a SQL_ TYPE_DATE, SQL_TYPE_TIME y SQL_TYPE_TIMESTAMP (con las instancias de **#define** en el archivo de encabezado de 93, 91 y 92), respectivamente. El tipo C correspondiente identificadores han cambiado desde SQL_C_DATE SQL_C_TIME y SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME y SQL_C_TYPE_TIMESTAMP, respectivamente y las instancias de **#define** han cambiado en consecuencia.  
   
- Devuelven el tamaño de la columna y los dígitos decimales para los tipos de datos datetime SQL de ODBC 3 *.x* son el mismo que la precisión y escala devuelto para ellos en ODBC 2. *x*. Estos valores son diferentes de los valores de los campos de descriptor SQL_DESC_PRECISION y SQL_DESC_SCALE. (Para obtener más información, consulte [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) en Apéndice D: tipos de datos.)  
+ Devuelven el tamaño de la columna y los dígitos decimales para los tipos de datos datetime SQL de ODBC 3 *.x* son el mismo que la precisión y escala devuelto para ellos en ODBC 2. *x*. Estos valores son diferentes de los valores de los campos de descriptor SQL_DESC_PRECISION y SQL_DESC_SCALE. (Para obtener más información, consulte [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) en el apéndice D: Tipos de datos).  
   
  Estos cambios afectan a **SQLDescribeCol**, **SQLDescribeParam**, y **SQLColAttributes**; **SQLBindCol**, **SQLBindParameter**, y **SQLGetData**; y **SQLColumns**, **SQLGetTypeInfo** , **SQLProcedureColumns**, **SQLStatistics**, y **SQLSpecialColumns**.  
   

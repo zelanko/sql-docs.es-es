@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ab3a21bf110b26237858078d4b482328fc493f59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63198518"
 ---
 # <a name="viewing-drivers"></a>Visualización de controladores
 Para configurar orígenes de datos, debe tener instalada a al menos un controlador en el sistema. El **controladores** pestaña en el **Administrador de orígenes de datos ODBC** cuadro de diálogo muestra todos los controladores instalados en el equipo, incluidos el nombre, versión, empresa, nombre de archivo y fecha de creación del archivo de cada controlador. Debe usar el programa de instalación del controlador para agregar o eliminar un controlador del sistema. Para obtener más información acerca de cómo modificar los controladores, consulte [administrar orígenes de datos](../../odbc/admin/managing-data-sources.md).

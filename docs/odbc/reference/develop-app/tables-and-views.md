@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9949332d33f2d2a07e485bc0ff06c5c489df6440
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63148888"
 ---
 # <a name="tables-and-views"></a>Tablas y vistas
 En las funciones ODBC, tablas y vistas son intercambiables. El término *tabla* se utiliza para las tablas y vistas, excepto donde el término *vista* se usa de forma explícita.

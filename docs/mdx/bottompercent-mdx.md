@@ -1,5 +1,5 @@
 ---
-title: BottomPercent (MDX) | Documentos de Microsoft
+title: BottomPercent (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a627ea8e5dd7a8f8266fcf0ea374e6abcde4bdc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63208796"
 ---
 # <a name="bottompercent-mdx"></a>BottomPercent (MDX)
 
@@ -35,14 +35,14 @@ BottomPercent(Set_Expression, Percentage, Numeric_Expression)
  *Porcentaje*  
  Expresión numérica válida que especifica el porcentaje de tuplas que serán devueltas.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **BottomPercent** función calcula la suma de la expresión numérica especificada evaluada sobre un conjunto especificado, ordenando el conjunto en orden ascendente. A continuación, la función devuelve los elementos con los valores más bajos cuyo porcentaje acumulado del valor total sumado sea al menos el porcentaje especificado. Esta función devuelve el subconjunto más pequeño de un conjunto cuyo total acumulado sea al menos el porcentaje especificado. Los elementos devueltos se ordenan de mayor a menor.  
   
 > [!IMPORTANT]  
->  El **BottomPercent** funcione, al igual que el [TopPercent](../mdx/toppercent-mdx.md) , siempre rompe la jerarquía. Para obtener más información, vea la función Order.  
+>  El **BottomPercent** funcione, como el [TopPercent](../mdx/toppercent-mdx.md) , siempre rompe la jerarquía. Para obtener más información, vea la función Order.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve, para la categoría Bike, el conjunto más pequeño de miembros del nivel City de la jerarquía Geography de la dimensión Geography para el año fiscal 2003, cuyo total acumulado mediante la medida Reseller Sales Amount sea al menos el 15% del total acumulado (empezando con los miembros de este conjunto con la cifra de ventas más baja).  

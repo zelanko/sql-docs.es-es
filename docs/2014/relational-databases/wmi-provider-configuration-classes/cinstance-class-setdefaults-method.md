@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2a105fd636c454ab236764611f1e57729ccad6ac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63192446"
 ---
 # <a name="setdefaults-method-cinstance-class"></a>Método SetDefaults (clase CInstance)
   Establece todos los valores predeterminados de la instancia del cliente de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la opción para sobrescribir los datos existentes.  

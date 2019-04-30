@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aa05b8b4be3c155c7ca59132892e0863dda60a5f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63134419"
 ---
 # <a name="datacontrol-object-rds"></a>Objeto DataControl (RDS)
 Enlaza una consulta de datos [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) a uno o varios controles (por ejemplo, un cuadro de texto, control de cuadrícula o cuadro combinado) para mostrar el **Recordset** datos en una página Web.  

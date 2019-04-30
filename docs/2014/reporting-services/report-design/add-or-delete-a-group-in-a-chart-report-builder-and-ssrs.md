@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 89dc9cf211a9ab66c5617b6ef545795f332546f0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63206486"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Agregar o eliminar un grupo en un gráfico (Generador de informes y SSRS)
   Haga clic en la región de datos del gráfico para mostrar el panel **Datos del gráfico** . Cree grupos arrastrando los campos del conjunto de datos a las áreas **Grupos de categorías** y **Grupos de series** . Para agregar grupos anidados, agregue varios campos al área.  

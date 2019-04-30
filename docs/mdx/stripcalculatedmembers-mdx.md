@@ -1,5 +1,5 @@
 ---
-title: StripCalculatedMembers (MDX) | Documentos de Microsoft
+title: StripCalculatedMembers (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ef9eb558c2f73c51c78f1464ed7951c743bc4ef0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63150196"
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers (MDX)
 
@@ -32,8 +32,8 @@ StripCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
-## <a name="remarks"></a>Notas  
- El **StripCalculatedMembers** función quita miembros calculados de un conjunto. Calculados se pueden agregar miembros a un conjunto utilizando la [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) función, que devuelve los miembros calculados que se definen en el servidor o los miembros calculados que se han agregado dentro de la propia consulta mediante la sintaxis WITH MEMBER.  
+## <a name="remarks"></a>Comentarios  
+ El **StripCalculatedMembers** función quita miembros calculados de un conjunto. Calcula los miembros se pueden agregar a un conjunto mediante la [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) función, que devuelve los miembros calculados que se definen en el servidor o los miembros calculados que se agregaron dentro de la propia consulta mediante el uso de WITH Sintaxis de miembro.  
   
 ## <a name="example"></a>Ejemplo  
  En el siguiente ejemplo se quitan todos los miembros calculados de la consulta.  

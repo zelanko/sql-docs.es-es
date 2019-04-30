@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e54298e9c25777f10b92f322f1b1e6a3d94c243
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63191760"
 ---
 # <a name="concurrency-control"></a>Control de simultaneidad
 *Simultaneidad* es la capacidad de dos transacciones utilizan los mismos datos al mismo tiempo, y con transacciones mayor aislamiento normalmente viene una simultaneidad reducida. Esto es porque normalmente se implementa el aislamiento de transacción por bloqueo de filas y como se bloquean más filas, menos transacciones pueden realizarse sin que se bloquee temporalmente al menos una fila bloqueada. Mientras una simultaneidad reducida generalmente se acepta como Equilibrio de los mayores niveles de aislamiento de transacción necesarios para mantener la integridad de la base de datos, puede resultar un problema en las aplicaciones interactivas con actividad alta de lectura/escritura que usan los cursores.  

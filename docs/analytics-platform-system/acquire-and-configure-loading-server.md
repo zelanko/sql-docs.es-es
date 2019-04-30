@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: da404aa881f3ff7af26a681751aae12a45f2628f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63231104"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Adquirir y configurar un servidor de carga para el almacenamiento de datos paralelos
 En este artículo se describe cómo adquirir y configurar un servidor de carga como un sistema de Windows que no sea de dispositivo para enviar cargas de datos con el almacén de datos paralelos (PDW).  
@@ -60,7 +60,7 @@ Para preparar una conexión de Windows Server 2012 o Windows Server 2012 R2 Infi
   
 3.  Adquirir 2 cables FDR InfiniBand para una tarjeta de puerto dual o 1 cable FDR InfiniBand para una tarjeta de puerto único. Los cables de InfiniBand FDR conectarán el servidor de carga a la red InfiniBand de dispositivo. La longitud del cable depende de la distancia entre el servidor de carga y los conmutadores de InfiniBand del equipo, según su entorno.  
   
-## <a name="Step3"></a>Paso 3: Conectar el servidor a las redes InfiniBand  
+## <a name="Step3"></a>Paso 3: Conecte el servidor a las redes InfiniBand  
 Siga estos pasos para conectarse al servidor de carga a la red InfiniBand. Si el servidor no está usando la red InfiniBand, omita este paso.  
   
 1.  Bastidor del servidor se cierre suficiente para el dispositivo para que se puede conectar a la red InfiniBand de dispositivo.  
@@ -85,7 +85,7 @@ Si tiene previsto usar Integration Services para cargar, deberá instalar Integr
 <!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
 --> 
   
-## <a name="Step5"></a>Paso 5: Iniciar la carga  
+## <a name="Step5"></a>Paso 5: Iniciar carga  
 Ahora está listo para iniciar la carga de datos. Para obtener más información, vea:  
   
 1.  [Herramienta de carga de la línea de comandos de dwloader](dwloader.md)  
@@ -107,7 +107,7 @@ Para reducir los riesgos de seguridad con los datos, se recomienda lo siguiente:
   
 -   Designar un usuario PDW que tenga permisos para cargar los datos. Dependiendo de los requisitos de seguridad, podría tener un usuario específico por base de datos.  
   
--   Operaciones en el servidor de carga pueden aceptar una ruta de acceso UNC desde la que extraer datos desde fuera de la red interna de confianza. Y un atacante en la red o con la capacidad de influir en la resolución de nombres puede interceptar o modificar los datos enviados a SQL Server PDW. Esto presenta un riesgo de divulgación de manipulación y la información. Manipulación debe reducirse al requerir firma en la conexión. Para ayudar a mitigar este riesgo, establezca la siguiente opción de directiva de grupo **seguridad Settings\Local Policies\Security opciones** en el servidor de carga: **cliente de red Microsoft: firmar digitalmente las comunicaciones (siempre): Habilitado**  
+-   Operaciones en el servidor de carga pueden aceptar una ruta de acceso UNC desde la que extraer datos desde fuera de la red interna de confianza. Y un atacante en la red o con la capacidad de influir en la resolución de nombres puede interceptar o modificar los datos enviados a SQL Server PDW. Esto presenta un riesgo de divulgación de manipulación y la información. Manipulación debe reducirse al requerir firma en la conexión. Para ayudar a mitigar este riesgo, establezca la siguiente opción de directiva de grupo **seguridad Settings\Local Policies\Security opciones** en el servidor de carga:  **Cliente de red Microsoft: Firmar digitalmente las comunicaciones (siempre): Habilitado**  
   
 -   Desactivar la inicialización instantánea de archivos en Windows Server 2012 y versiones posteriores. Se trata de un equilibrio entre rendimiento y seguridad, como se indicó en la sección rendimiento. Debe decidir lo que es mejor según sus requisitos de seguridad.  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6bfb6ff3ba39400278db23931b4c9420e506c973
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127946"
 ---
 # <a name="scalar-function-limitations"></a>Limitaciones de la función escalar
 Se admiten funciones escalares sólo mediante el formato canónico de ODBC.

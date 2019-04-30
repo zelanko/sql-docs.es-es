@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5c95c4e28a5f32131307daeaa61e214af887b577
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63069709"
 ---
 # <a name="odbc-core-subkey"></a>Subclave de ODBC Core
 El valor bajo la subclave de ODBC Core ofrece el recuento de utilización de los componentes principales (Administrador de controladores, biblioteca de cursores, installer, DLL etc.). El formato de este valor se muestra en la tabla siguiente.  
   
-|Nombre|Tipo de datos|data|  
+|Name|Tipo de datos|Datos|  
 |----------|---------------|----------|  
 |UsageCount|REG_DWORD|*Recuento*|  
   

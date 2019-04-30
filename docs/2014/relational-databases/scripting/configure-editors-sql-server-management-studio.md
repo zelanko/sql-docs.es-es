@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 263cdf9ddd1c140a4cb2d3142c8b3db29e558791
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63181797"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurar editores (SQL Server Management Studio)
   El funcionamiento de los editores de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puede personalizarse configurando las opciones de cada editor.  

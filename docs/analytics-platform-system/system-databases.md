@@ -1,6 +1,6 @@
 ---
-title: Bases de datos de sistema - almacenamiento de datos paralelos | Documentos de Microsoft
-description: Bases de datos de sistema de almacenamiento de datos paralelo (PDW).
+title: Las bases de datos del sistema - almacenamiento de datos paralelos | Microsoft Docs
+description: Bases de datos del sistema en el almacenamiento de datos paralelos (PDW).
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: eafd857bdc4e9b997b8bc3bca587843f6dff30f7
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63157006"
 ---
-# <a name="system-databases-in-parallel-data-warehouse-pdw"></a>Bases de datos del sistema en el almacenamiento de datos paralelo (PDW)
-Las bases de datos del sistema son bases de datos PDW de SQL Server usa para administrar usuarios, bases de datos y los datos temporales. PDW de SQL Server incluye las siguientes bases de datos de sistema: master y tempdb.  
+# <a name="system-databases-in-parallel-data-warehouse-pdw"></a>Bases de datos del sistema en el almacenamiento de datos paralelos (PDW)
+Las bases de datos del sistema son las bases de datos PDW de SQL Server usa para administrar usuarios, las bases de datos y los datos temporales. PDW de SQL Server incluye las siguientes bases de datos del sistema: master y tempdb.  
   
-## <a name="system-database-topics"></a>Temas de base de datos del sistema  
+## <a name="system-database-topics"></a>Temas de la base de datos de sistema  
   
 -   [Base de datos maestra](master-database.md)  
   

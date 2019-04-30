@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8e6464fee5779e35559b6eca23981aa09312aeb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63193266"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Usar el modo AUTO con FOR XML
   Tal como se describe en [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md), el modo AUTO devuelve los resultados de la consulta como elementos XML anidados. Esto no ofrece un gran control sobre la forma del XML generado a partir del resultado de una consulta. Las consultas en modo AUTO son útiles si desea generar jerarquías sencillas. Pero [Usar el modo EXPLICIT con FOR XML](use-explicit-mode-with-for-xml.md) y [Usar el modo PATH con FOR XML](use-path-mode-with-for-xml.md) ofrecen mayor control y flexibilidad a la hora de decidir la forma del XML procedente del resultado de una consulta.  
@@ -136,7 +136,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [Heurística del modo AUTO para dar forma al XML devuelto](auto-mode-heuristics-in-shaping-returned-xml.md)  
   
--   [Ejemplos: Usar el modo AUTO](examples-using-auto-mode.md)  
+-   [Ejemplos: Uso del modo AUTO](examples-using-auto-mode.md)  
   
 ## <a name="see-also"></a>Vea también  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   

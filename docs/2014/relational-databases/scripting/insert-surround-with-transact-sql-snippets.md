@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80018ea80f80f7c17412572005b8e8fb43004285
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63143673"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Insertar fragmentos de código de Transact-SQL para rodear
   Un fragmento de código rodea con es una plantilla que puede utilizar como punto inicial al agregar un conjunto de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] en un bloque BEGIN, IF o WHILE.  

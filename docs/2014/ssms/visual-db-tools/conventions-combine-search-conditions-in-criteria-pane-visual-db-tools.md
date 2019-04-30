@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63140377"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Convenciones para combinar condiciones de búsqueda en el panel Criterios (Visual Database Tools)
   Puede crear consultas que incluyan un número arbitrario de condiciones de búsqueda vinculadas con un número arbitrario de operadores AND y OR. Una consulta con una combinación de cláusulas AND y OR puede llegar a ser compleja, por lo que le será de ayuda entender cómo se interpreta una consulta cuando se ejecuta y cómo se representa en el [panel Criterios](visual-database-tools.md) y en el [panel SQL](sql-pane-visual-database-tools.md).  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f7564a37766972782a5c118ced64298b7f4ce076
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63209273"
 ---
 # <a name="managing-report-parts"></a>Administrar elementos de informe
   A partir [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], elementos de informe pueden ser publicados en los servidores de informes y volver a utilizar en otros informes y otros usuarios si tienen los permisos adecuados.  
@@ -54,7 +54,7 @@ ms.locfileid: "59962531"
   
 |Property|Descripción|Elemento de informe<br /><br /> Criterios de búsqueda de la galería|  
 |--------------|-----------------|---------------------------------------------|  
-|Nombre|Este es uno de los criterios que un usuario puede buscar en la Galería de elementos de informe.|Sí|  
+|Name|Este es uno de los criterios que un usuario puede buscar en la Galería de elementos de informe.|Sí|  
 |Descripción|Puede ser conveniente organizar los nombres de los elementos de informe de una manera que facilite a los usuarios la búsqueda en la galería. Por ejemplo, puede buscar la descripción que empiece con "Ventas>>" para encontrar los elementos de informe que tengan que ver con los datos relacionados con las ventas y su presentación.|Sí|  
 |CreatedBy|Identificador del usuario que agregó el elemento de informe a la base de datos del servidor de informes. El formato exacto depende del método de autenticación. Por ejemplo, algunos métodos de autenticación provocan que se muestre el nombre de usuario precedido por el dominio completo en los campos CreatedBy y ModifiedBy.|Sí|  
 |CreationDate|Fecha en que originalmente se creó el elemento de informe.<br /><br /> Este es uno de los criterios que un usuario puede buscar en la Galería de elementos de informe.|Sí|  

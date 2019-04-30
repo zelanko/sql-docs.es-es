@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2bc6e2b1becdcecdd6ef7eef5635b6460440b40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63227009"
 ---
 # <a name="view-join-properties-visual-database-tools"></a>Ver las propiedades de una combinación (Visual Database Tools)
   En la ventana Propiedades, puede ver una colección de propiedades de una vista.  

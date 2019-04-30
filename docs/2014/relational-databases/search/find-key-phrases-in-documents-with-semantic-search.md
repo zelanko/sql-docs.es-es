@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 81b43a14a2410fc24bcc1bcd6968b9d87181cefa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63218154"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Buscar frases clave en documentos con la búsqueda semántica
   Describe cómo buscar las frases clave en documentos o columnas de texto configurados para la indización semántica estadística.  

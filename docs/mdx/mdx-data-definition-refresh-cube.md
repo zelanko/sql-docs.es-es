@@ -1,5 +1,5 @@
 ---
-title: Instrucción REFRESH CUBE (MDX) | Documentos de Microsoft
+title: REFRESH CUBE (instrucción, MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dafc13dda1f8ecab1400a88d1ca66eff5f317e43
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285080"
 ---
-# <a name="mdx-data-definition---refresh-cube"></a>Definición de datos MDX - actualización de cubo
+# <a name="mdx-data-definition---refresh-cube"></a>Definición de datos de MDX: REFRESH CUBE
 
 
   Actualiza la caché de cliente para un cubo.  
@@ -29,11 +29,11 @@ REFRESH CUBECube_Name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Restricciones obligatorias Cube_Name*  
+ *Cube_Name*  
  Expresión de cadena válida que proporciona un nombre de cubo.  
   
-## <a name="remarks"></a>Notas  
- Para las aplicaciones cliente conectadas a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], esta instrucción hace que la memoria caché en la aplicación cliente se sincronicen con el servidor. Mientras que esto normalmente se detectará y actualizará automáticamente, el período de tiempo antes de que esto suceda depende de la configuración de la cadena de conexión del cliente. La instrucción REFRESH CUBE actualiza inmediatamente los datos.  
+## <a name="remarks"></a>Comentarios  
+ Las aplicaciones cliente conectadas a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], esta instrucción hace que la memoria caché en la aplicación cliente se sincronice con el servidor. Mientras que esto normalmente se detectará y actualizará automáticamente, el período de tiempo antes de que esto suceda depende de la configuración de la cadena de conexión del cliente. La instrucción REFRESH CUBE actualiza inmediatamente los datos.  
   
  En las aplicaciones cliente conectadas a un cubo local, la instrucción REFRESH CUBE hace que el archivo de cubo local se vuelva a generar.  
   

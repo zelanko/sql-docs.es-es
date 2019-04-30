@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7f76a4c0d2e9cc3bd2d5591a704491a4bed0ebfb
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266137"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Página (Administrador de informes) Informes click-through
   Un informe click-through muestra una tabla de datos relacionados cuando se hace clic en los datos interactivos incluidos en el informe. El servidor de informes genera estos informes basándose en la información incluida en el modelo usado para crear el informe. Si no desea usar los informes click-through que el servidor de informes genera, puede crear informes personalizados que publica en un servidor de informes y asigna a los puntos de datos interactivos definidos en el modelo. Los informes personalizados se deben crear en el Generador de informes desde el mismo modelo y, a continuación, se deben publicar en el servidor de informes. Para asignar informes personalizados a los elementos del modelo, use la página Informes click-through en el Administrador de informes.  

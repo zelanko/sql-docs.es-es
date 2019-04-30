@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2d01c25044bf7b03e2fabe9c615668fc7837312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313249"
 ---
 # <a name="sqlextendedfetch-visual-foxpro-odbc-driver"></a>SQLExtendedFetch (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
 >  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: completo  
+ Soporte técnico: Completo  
   
- Conformidad de la API de ODBC: 2 de nivel  
+ Conformidad de la API de ODBC: Nivel 2  
   
  Similar a [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) pero devuelve varias filas utilizando una matriz para cada columna. El conjunto de resultados es desplazable de avance y se puede realizar con versiones anteriores desplazable si el cursor se define como estático, no sólo hacia delante.  
   

@@ -1,5 +1,5 @@
 ---
-title: Nombre de usuario (MDX) | Documentos de Microsoft
+title: Nombre de usuario (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8c08855d70d6a880607cc4310e6adcabbf7d9ad
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298032"
 ---
 # <a name="username-mdx"></a>UserName (MDX)
 
@@ -28,10 +28,10 @@ ms.locfileid: "34743484"
 UserName [ ( ) ]  
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor devuelto es una cadena con el siguiente formato:  
   
- *nombre de dominio ombre de usuario*  
+ *domain-name\user-name*  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve el nombre de usuario del usuario que ejecuta la consulta.  

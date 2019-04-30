@@ -1,26 +1,26 @@
 ---
-title: 'Extensión del lenguaje Java en SQL Server 2019: SQL Server Machine Learning Services'
+title: Extensión del lenguaje Java en SQL Server 2019 - extensiones de lenguaje de SQL Server
 description: Instalar, configurar y validar la extensión del lenguaje Java en SQL Server 2019 para los sistemas Linux y Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 725aebbcd40adf0c571dd6b99b68cf1be389af8b
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: db57689227445b0f50d6ff59fbf81e1d84ecacdb
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582095"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473413"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>Extensión del lenguaje Java en SQL Server 2019 
 
-A partir de SQL Server 2019 preview en Windows y Linux, puede ejecutar código de Java personalizado en el [marco de extensibilidad](../concepts/extensibility-framework.md) como complemento a la instancia del motor de base de datos. 
+A partir de SQL Server 2019 preview en Windows y Linux, puede ejecutar código personalizado Java mediante el [marco de extensibilidad](../concepts/extensibility-framework.md) como complemento a la instancia del motor de base de datos.
 
-El marco de extensibilidad es una arquitectura para la ejecución de código externo: Java (a partir de SQL Server 2019), [Python (a partir de SQL Server 2017)](../concepts/extension-python.md), y [R (a partir de SQL Server 2016)](../concepts/extension-r.md). Ejecución de código está aislada de los procesos del motor principal, pero totalmente integrada con la ejecución de consultas de SQL Server. Esto significa que puede insertar los datos de cualquier consulta de SQL Server para el tiempo de ejecución externo y consumir o conservar los resultados de vuelta en SQL Server.
+El marco de extensibilidad es una arquitectura para la ejecución de código externo: Java (a partir de SQL Server 2019), [Python (a partir de SQL Server 2017)](../concepts/extension-python.md), y [R (a partir de SQL Server 2016)](../concepts/extension-r.md). Ejecución de código está aislada de los procesos del motor de core, pero totalmente integrada con la ejecución de consultas de SQL Server. Esto significa que puede insertar los datos de cualquier consulta de SQL Server para el tiempo de ejecución externo (Java) y consumir o conservar los resultados de vuelta en SQL Server.
 
 Al igual que con cualquier extensión del lenguaje de programación, el procedimiento almacenado del sistema [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) es la interfaz para ejecutar código de Java compilado previamente.
 
@@ -28,9 +28,9 @@ Al igual que con cualquier extensión del lenguaje de programación, el procedim
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Se requiere una instancia de la versión preliminar de SQL Server 2019. Las versiones anteriores no tienen integración con Java.
+Se requiere una instancia de la versión preliminar de SQL Server 2019. Las versiones anteriores no tiene la integración de Java.
 
-Es compatible con Java 8. El requisito mínimo es de Java Runtime Environment (JRE), pero es útil si necesita el compilador de Java o los paquetes de desarrollo JDK. Dado el JDK es totalmente inclusivo, si instala el JDK y JRE no es necesario.
+Java 8 actualmente es la versión admitida. Las versiones más recientes, como Java 11, debería con la extensión del lenguaje, pero no se admite actualmente. El requisito mínimo es de Java Runtime Environment (JRE), pero es útil si tiene los paquetes de desarrollo y el compilador de Java JDK. Dado el JDK es totalmente inclusivo, si instala el JDK y JRE no es necesario.
 
 Puede usar su distribución preferida de Java 8. A continuación se muestran dos distribuciones sugeridas:
 
@@ -39,7 +39,7 @@ Puede usar su distribución preferida de Java 8. A continuación se muestran dos
 | [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows y Linux | Sí | Sí |
 | [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows y Linux | Sí | No |
 
-En Linux, el **mssql-server-extensibilidad-java** paquete instala automáticamente el JRE 8 si ya no está instalado. Scripts de instalación también agregar la ruta de acceso JVM a una variable de entorno denominada variable.
+En Linux, actualmente la **mssql-server-extensibilidad-java** paquete instala automáticamente el JRE 8 si ya no está instalado. Scripts de instalación también agregar la ruta de acceso JVM a una variable de entorno denominada variable.
 
 En Windows, se recomienda instalar el JDK en el valor predeterminado `/Program Files/` carpeta si es posible. En caso contrario, se requiere configuración adicional para conceder permisos a los archivos ejecutables. Para obtener más información, consulte el [conceder permisos (Windows)](#perms-nonwindows) sección en este documento.
 
@@ -63,7 +63,7 @@ sudo apt-get install mssql-server-extensibility-java
 sudo zypper install mssql-server-extensibility-java
 ```
 
-Al instalar **mssql-server-extensibilidad-java**, el paquete instala automáticamente el JRE 8 si ya no está instalado. También agregará la ruta de acceso JVM para una variable de entorno llamada JAVA_HOME.
+Al instalar **mssql-server-extensibilidad-java**, el paquete instala automáticamente el JRE 8 si ya no está instalado. También agregará la ruta de acceso JVM para una variable de entorno denominada variable.
 
 Después de completar la instalación, el siguiente paso es [configurar ejecución de scripts externos](#configure-script-execution).
 
@@ -76,14 +76,13 @@ No es necesario realizar este paso si está utilizando bibliotecas externas. La 
 
 Si no usa bibliotecas externas, deberá proporcionar a SQL Server con permisos para ejecutar las clases de Java en su archivo jar.
 
-Para conceder acceso y ejecución para el archivo del producto, ejecute el siguiente **chmod** comando en el archivo jar. Se recomienda colocar siempre los archivos de clase en un archivo jar cuando se trabaja con SQL Server. Para obtener ayuda acerca de la creación de un archivo jar, consulte [cómo crear un archivo jar](#create-jar).
+Para conceder la lectura y acceso de ejecución a un archivo jar, ejecute el siguiente **chmod** comando en el archivo jar. Se recomienda colocar siempre los archivos de clase en un archivo jar cuando se trabaja con SQL Server. Para obtener ayuda acerca de la creación de un archivo jar, consulte [cómo crear un archivo jar](#create-jar).
 
 ```cmd
 chmod ug+rx <MyJarFile.jar>
 ```
+
 También deberá conceder permisos de mssql_satellite el archivo jar para lectura y ejecución.
-
-
 
 ```cmd
 chown mssql_satellite:mssql_satellite <MyJarFile.jar>
@@ -105,12 +104,12 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 ### <a name="add-the-jrehome-variable"></a>Agregue la variable de la variable
 
-Variable es una variable de entorno que especifica la ubicación del intérprete de Java. En este paso, creará una variable de entorno del sistema para él en Windows.
+Variable es una variable de entorno del sistema que especifica la ubicación del intérprete de Java. En este paso, creará una variable de entorno del sistema para él en Windows.
 
 1. Busque y copie la ruta de acceso principal de JRE (por ejemplo, `C:\Program Files\Zulu\zulu-8\jre\`).
 
-    Dependiendo de su distribución preferida de Java, la ubicación del JDK o JRE puede ser diferente de la ruta de acceso de ejemplo anterior. 
-    Incluso si tiene un JDK instalado, a menudo horas obtendrá una subcarpeta JRE como parte de esa instalación. 
+    Dependiendo de su distribución preferida de Java, la ubicación del JDK o JRE puede ser diferente de la ruta de acceso de ejemplo anterior.
+    Incluso si tiene un JDK instalado, a menudo tiempos se obtiene una subcarpeta JRE como parte de esa instalación, por lo que apunte a la carpeta de jre en ese caso.
     La extensión de Java intentará cargar el jvm.dll desde la ruta de acceso % JRE_HOME%\bin\server.
 
 2. En el Panel de Control, abra **sistema y seguridad**, abra **sistema**y haga clic en **propiedades avanzadas de sistema**.
@@ -129,7 +128,7 @@ Variable es una variable de entorno que especifica la ubicación del intérprete
 
 ### <a name="grant-access-to-non-default-jre-folder-windows-only"></a>Conceder acceso a la carpeta JRE no predeterminada (solo Windows)
 
-Ejecute el **icacls** comandos desde un *con privilegios elevados* línea para conceder acceso a la **SQLRUsergroup** y cuentas de servicio de SQL Server (en **ALL_APPLICATION_ Los paquetes**) para tener acceso a la versión de JRE. Los comandos realizará de forma recursiva conceder acceso a todos los archivos y carpetas bajo la ruta de acceso del directorio dado.
+Si no ha instalado el JDK o JRE en archivos de programa, debe realizar los pasos siguientes. Ejecute el **icacls** comandos desde un *con privilegios elevados* línea para conceder acceso a la **SQLRUsergroup** y cuentas de servicio de SQL Server (en **ALL_APPLICATION_ Los paquetes**) para tener acceso a la versión de JRE. Los comandos realizará de forma recursiva conceder acceso a todos los archivos y carpetas bajo la ruta de acceso del directorio dado.
 
 #### <a name="sqlrusergroup-permissions"></a>SQLRUserGroup permisos
 
@@ -151,7 +150,7 @@ icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 ## <a name="configure-script-execution"></a>Configurar la ejecución del script
 
-En este momento, está casi listo para ejecutar código de Java en Linux o Windows. Como último paso, cambiar a SQL Server Management Studio u otra herramienta que se ejecuta el script de Transact-SQL para habilitar la ejecución de scripts externos.
+En este momento, está casi listo para ejecutar código de Java en Linux o Windows. Como último paso, cambiar a SQL Server Management Studio, studio de datos de Azure, SQL CMD u otra herramienta que le permite ejecutar el script de Transact-SQL para habilitar la ejecución de scripts externos.
 
   ```sql
   EXEC sp_configure 'external scripts enabled', 1
@@ -161,13 +160,13 @@ En este momento, está casi listo para ejecutar código de Java en Linux o Windo
 
 ## <a name="verify-installation"></a>Comprobar la instalación
 
-Para confirmar la instalación está operativa, crear y ejecutar un [aplicación de ejemplo](java-first-sample.md) utilizando el JDK que se ha instalado, la colocación de los archivos en la ruta de clase que configuró anteriormente.
+Para confirmar la instalación está operativa, crear y ejecutar un [aplicación de ejemplo](java-first-sample.md) con el tiempo de ejecución de Java que acaba de instala y agrega a la variable.
 
-## <a name="differences-in-ctp-24"></a>Diferencias en CTP 2.4
+## <a name="differences-in-ctp-25"></a>Diferencias en CTP 2.5
 
 Si ya está familiarizado con Machine Learning Services, ha cambiado el modelo de autorización y aislamiento para las extensiones en esta versión. Para obtener más información, consulte [diferencias en una instalación de SQL Server Machine Learning de 2019 Services](../install/sql-machine-learning-services-ver15.md).
 
-## <a name="limitations-in-ctp-24"></a>Limitaciones en CTP 2.4
+## <a name="limitations-in-ctp-25"></a>Limitaciones en CTP 2.5
 
 * No puede superar el número de valores de los búferes de entrada y salidos `MAX_INT (2^31-1)` , ya que es el número máximo de elementos que se pueden asignar en una matriz en Java.
 
@@ -194,4 +193,5 @@ Asegúrese de que la ruta de acceso **jar.exe** forma parte de la variable de ru
 
 + [Cómo llamar a Java en SQL Server](howto-call-java-from-sql.md)
 + [Ejemplo de Java en SQL Server](java-first-sample.md)
++ [Extensibilidad de Microsoft SDK para Java para Microsoft SQL Server](java-sdk.md)
 + [Tipos de datos de SQL Server y Java](java-sql-datatypes.md)

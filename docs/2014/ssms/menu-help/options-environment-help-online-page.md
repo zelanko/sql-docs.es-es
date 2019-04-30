@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d40c0397b0a43f8cd17a53ee9be3f738bbe8500c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283316"
 ---
 # <a name="options-environment-help-online-page"></a>Options (Environment-Help-Online Page)
   El cuadro de diálogo **Opciones** le permite especificar los orígenes de la Ayuda que se van a utilizar para las búsquedas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , incluida la Ayuda F1. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** , seleccione **Ayuda**y, a continuación, haga clic en **En línea**. Si la página **En línea** no aparece en la lista, active la casilla **Mostrar todas las configuraciones** en el cuadro de diálogo **Opciones** .  

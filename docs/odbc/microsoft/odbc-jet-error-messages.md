@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec549f256caeab598f6e49632b2a50cfa5841710
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244617"
 ---
 # <a name="odbc-jet-error-messages"></a>Mensajes de Error de Jet de ODBC
 Para los errores que se producen en el origen de datos, el controlador ODBC devuelve un mensaje de error devuelto por la biblioteca de archivos de ODBC. Errores que se producen en el controlador ODBC o el Administrador de controladores, las devoluciones de controlador un mensaje de error según el texto asociado con el valor de SQLSTATE.  
@@ -36,4 +36,4 @@ Para los errores que se producen en el origen de datos, el controlador ODBC devu
 |Mensaje de error|Ubicación del error|  
 |-------------------|--------------------|  
 |[Microsoft] [Administrador de controladores ODBC] *texto del mensaje*|Administrador de controladores (Odbc32.dll)|  
-|[Microsoft] [ODBC *nombre del controlador*]*texto del mensaje*|El controlador ISAM (consulte el controlador ISAM)|
+|[Microsoft][ODBC *driver-name*]*message-text*|El controlador ISAM (consulte el controlador ISAM)|

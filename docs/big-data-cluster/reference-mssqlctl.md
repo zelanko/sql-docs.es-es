@@ -5,16 +5,16 @@ description: Artículo de referencia para los comandos mssqlctl.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b050638ee0ca600c5df0ecdbe5616b801f41e7a8
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: ebd3b63d641c77dae1afbff21264ec4fe34df4d0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860357"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473471"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -22,77 +22,73 @@ ms.locfileid: "58860357"
 
 El siguiente artículo proporciona la referencia para la **mssqlctl** herramienta para [clústeres de macrodatos de 2019 de SQL Server (versión preliminar)](big-data-cluster-overview.md). Para obtener más información sobre cómo instalar el **mssqlctl** herramienta, consulte [instalar mssqlctl para administrar clústeres de SQL Server 2019 macrodatos](deploy-install-mssqlctl.md).
 
-## <a id="commands"></a> Comandos
-
-|||
-|---|---|
-| [app](reference-mssqlctl-app.md) | Crear, eliminar, ejecutar y administrar aplicaciones. |
-| [cluster](reference-mssqlctl-cluster.md) | Seleccione, administrar y operar los clústeres. |
-| [login](#login) | Inicie sesión en el clúster. |
-| [logout](#logout) | Cerrar la sesión de clúster. |
-| [storage](reference-mssqlctl-storage.md) | Administrar el almacenamiento de clúster. |
-
-## <a id="login"></a> inicio de sesión mssqlctl
-
+## <a name="commands"></a>Comandos
+|     |     |
+| --- | --- |
+|[aplicación mssqlctl](reference-mssqlctl-app.md) | Crear, eliminar, ejecutar y administrar aplicaciones. |
+|[clúster mssqlctl](reference-mssqlctl-cluster.md) | Seleccione, administrar y operar los clústeres. |
+[inicio de sesión mssqlctl](#mssqlctl-login) | Inicie sesión en el clúster.
+[mssqlctl logout](#mssqlctl-logout) | Cerrar la sesión de clúster.
+|[mssqlctl storage](reference-mssqlctl-storage.md) | Administrar el almacenamiento de clúster. |
+## <a name="mssqlctl-login"></a>inicio de sesión mssqlctl
 Inicie sesión en el clúster.
-
+```bash
+mssqlctl login [--username -u] 
+               [--password -p]  
+               [--endpoint -e]
 ```
-mssqlctl login
-   --endpoint
-   --password
-   --username
-```
-
-### <a name="parameters"></a>Parámetros
-
-| Parámetro | Descripción |
-|---|---|
-|**--endpoint -e**| Clúster de host y puerto (ex) `http://host:port"`. |
-|**--password -p**| Credenciales de contraseña. |
-|**--username -u**| Usuario de la cuenta. |
-
 ### <a name="examples"></a>Ejemplos
-
 Sesión de forma interactiva.
-
-```
+```bash
 mssqlctl login
 ```
-
 Inicie sesión con el nombre de usuario y contraseña.
-
-```
+```bash
 mssqlctl login -u johndoe@contoso.com -p VerySecret
 ```
-
 Inicie sesión con el nombre de usuario, contraseña y el punto de conexión de clúster.
-
-```
+```bash
 mssqlctl login -u johndoe@contoso.com -p VerySecret --endpoint https://host.com:12800
 ```
-
-## <a id="logout"></a> mssqlctl logout
-
+### <a name="optional-parameters"></a>Parámetros opcionales
+#### `--username -u`
+Usuario de la cuenta.
+#### `--password -p`
+Credenciales de contraseña.
+#### `--endpoint -e`
+Clúster de host y puerto (ex) "http://host:port".
+### <a name="global-arguments"></a>Argumentos globales
+#### `--debug`
+Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+#### `--help -h`
+Mostrar este mensaje de ayuda y salir.
+#### `--output -o`
+Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
+#### `--query -q`
+Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+#### `--verbose`
+Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+## <a name="mssqlctl-logout"></a>Cierre de sesión mssqlctl
 Cerrar la sesión de clúster.
-
+```bash
+mssqlctl logout 
 ```
-mssqlctl logout
-   --username
-```
-
-### <a name="parameters"></a>Parámetros
-
-| Parámetros | Descripción |
-|---|---|
-| **--username -u** | Usuario de la cuenta, si faltan, cierre de sesión la cuenta activa actual. |
-
 ### <a name="examples"></a>Ejemplos
-
 Cierra la sesión este usuario.
-
+```bash
+mssqlctl logout
 ```
-mssqlctl logout --username admin
-```
+### <a name="global-arguments"></a>Argumentos globales
+#### `--debug`
+Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+#### `--help -h`
+Mostrar este mensaje de ayuda y salir.
+#### `--output -o`
+Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
+#### `--query -q`
+Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+#### `--verbose`
+Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

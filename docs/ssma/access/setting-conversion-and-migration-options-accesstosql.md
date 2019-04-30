@@ -18,17 +18,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2cf8e07b15db7f4c2c7807c75a9862c26a92edcb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299101"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>Conversión de la configuración y opciones de migración (AccessToSQL)
 Para cada proyecto SSMA, puede establecer las opciones de nivel de proyecto. Estas opciones especifican cómo se convierten los objetos, cómo migrar los datos y cómo se asignan los tipos de datos de origen a tipos de datos de destino. Antes de convertir los objetos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure o migrar los datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, compruebe que las opciones de configuración son adecuadas para el proyecto.  
   
 ## <a name="configuration-options-and-modes"></a>Los modos y opciones de configuración  
-SSMA tiene cuatro conjuntos de opciones de configuración y los cuatro modos para configurar estas opciones: de forma predeterminada, Optimistic, completa y personalizada. Se recomienda el modo predeterminado para la mayoría de los usuarios. Use el modo optimista para conversiones sencillas. Use el modo completo si desea ver todos los mensajes. En el modo personalizado, establezca las opciones.  
+SSMA tiene cuatro conjuntos de opciones de configuración y los cuatro modos para configurar estas opciones: Default, optimista, completa y personalizada. Se recomienda el modo predeterminado para la mayoría de los usuarios. Use el modo optimista para conversiones sencillas. Use el modo completo si desea ver todos los mensajes. En el modo personalizado, establezca las opciones.  
   
 La configuración se describe en la sección "Referencia de la interfaz de usuario" de esta documentación. Para obtener más información sobre la configuración y cómo se aplica la configuración en cada modo, consulte los temas siguientes:  
   

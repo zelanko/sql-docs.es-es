@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249340"
 ---
 # <a name="activity-monitor"></a>Monitor de actividad
   El Monitor de actividad muestra información acerca de los procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el modo en que estos afectan a la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="benefits-of-activity-monitor"></a>Ventajas del Monitor de actividad  
- Monitor de actividad es una ventana de documento con pestañas que tiene los siguientes paneles pueden expandibles y contraer: **Información general sobre**, **tareas de usuario activas**, **esperas de recursos**, **de E/S de archivos de datos**, y **consultas costosas recientes**. Cuando un panel está expandido, el Monitor de actividad consulta la instancia en busca de información. Si el panel está contraído, cualquier actividad de consulta se detiene en ese panel. Se pueden expandir uno o varios paneles al mismo tiempo para ver diferentes tipos de actividad de la instancia.  
+ Monitor de actividad es una ventana de documento con pestañas que tiene los siguientes paneles pueden expandibles y contraer: **Información general**, **Tareas de usuario activas**, **Esperas de recursos**, **E/S de archivos de datos** y **Consultas costosas recientes**. Cuando un panel está expandido, el Monitor de actividad consulta la instancia en busca de información. Si el panel está contraído, cualquier actividad de consulta se detiene en ese panel. Se pueden expandir uno o varios paneles al mismo tiempo para ver diferentes tipos de actividad de la instancia.  
   
  Para las columnas que se incluyen en el **tareas de usuario activas**, **esperas de recursos**, **E/S de archivos de datos**, y **consultas costosas recientes** paneles, puede personalizar la presentación de las maneras siguientes:  
   

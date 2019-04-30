@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07865f96b0e4086af346ffc076b1df6d07cda6cd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59955161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265969"
 ---
 # <a name="create-a-model-using-report-manager"></a>Crear un modelo con el Administrador de informes
   Puede generar modelos a partir de un cubo de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o una base de datos de Oracle mediante el Administrador de informes. Los modelos de informe se generan a partir de orígenes de datos compartidos que se han publicado en el servidor de informes. Si no tiene un origen de datos compartido, deberá crearlo.  

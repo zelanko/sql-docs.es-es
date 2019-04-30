@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 53e1afcc780ff06d1d453f94deac984163099444
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248279"
 ---
 # <a name="executing-batches"></a>Ejecución de lotes
 Antes de que una aplicación ejecuta un lote de instrucciones, en primer lugar debe comprobar si son compatibles. Para ello, la aplicación llama a **SQLGetInfo** con las opciones SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS y SQL_PARAM_ARRAY_SELECTS. La primera opción devuelve si generadora de recuento de filas y resultado de la generación de conjunto de instrucciones son compatibles con lotes explícitos y procedimientos, mientras que las dos últimas opciones devuelven información acerca de la disponibilidad de los recuentos de filas y el resultado se establece en parámetros ejecución.  

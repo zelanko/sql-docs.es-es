@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 324801cbfc97db4e2a1137fa04df0c74dc1897a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280401"
 ---
 # <a name="reshaping"></a>Cambiar la forma
 Un **Recordset** creado por una cláusula de una forma de comando se puede asignar un *alias* nombre (normalmente con la palabra clave AS). El alias de una forma **Recordset** puede hacer referencia a un comando completamente diferente. Es decir, puede volver a utilizar, o *reshape*, una forma anteriormente **Recordset** en un nuevo comando de forma. Para admitir esta característica, ADO proporciona una propiedad, [Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  

@@ -11,17 +11,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d6a8943ab1cc22da90208c10a5dcbfe5b8f5e369
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312016"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>Nuevo proyecto (SSMA) (MySQLToSQL)
 Use la **nuevo proyecto** cuadro de diálogo para crear un nuevo proyecto SSMA. Para tener acceso a la **nuevo proyecto** cuadro de diálogo el **archivo** menú, haga clic en **nuevo proyecto**.  
   
 ## <a name="options"></a>Opciones  
-**Nombre**  
+**Name**  
   
 Escriba el nombre del proyecto. SSMA anexará la extensión de archivo.  
   
@@ -29,7 +29,7 @@ Escriba el nombre del proyecto. SSMA anexará la extensión de archivo.
   
 Escriba o busque la carpeta o ubicación de red para guardar el proyecto.  
   
-**Migrara**  
+**MigrateTo**  
   
 Seleccione uno de la versión de la base de datos de destino desde abajo de la lista:  
   

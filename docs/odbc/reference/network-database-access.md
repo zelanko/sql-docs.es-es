@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ff13d2e46377b0d29c9bbc8e8ad1705dedc048b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272881"
 ---
 # <a name="network-database-access"></a>Acceso a la base de datos de red
 Acceso a una base de datos a través de una red, requiere una serie de componentes, cada uno de los cuales es independiente de y resida en la interfaz de programación. Estos componentes se muestran en la ilustración siguiente.  

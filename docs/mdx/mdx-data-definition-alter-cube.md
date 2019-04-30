@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9a15108875c7e519948f0e73e0a87d08b70c975
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315288"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Definición de datos de MDX: ALTER CUBE
 
 
-  Altera la estructura de un cubo especificado, que normalmente se usa para admitir la reescritura en la dimensión. Para obtener más información sobre el uso de la escritura diferida en una aplicación, consulte esta entrada de blog: [compilar una aplicación de reescritura con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  Altera la estructura de un cubo especificado, que normalmente se usa para admitir la reescritura en la dimensión. Para obtener más información sobre el uso de la escritura diferida en una aplicación, consulte este blog: [Compilar una aplicación de reescritura con Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  Tenga en cuenta que las reescrituras en dimensiones simultáneas pueden producir un interbloqueo, donde la primera reescritura no se puede confirmar debido al bloqueo compartido que mantiene la segunda reescritura. En esta situación no se genera ningún error, pero ninguna de las operaciones puede progresar. Al final, ambas operaciones agotan el tiempo de espera y se revierten los cambios.  
   
@@ -98,7 +98,7 @@ CELL CALCULATION Calculation_Name
  *Key_Value*  
  Expresión escalar válida que define el valor de clave del nuevo miembro de dimensión.  
   
- *Property_name*  
+ *Property_Name*  
  Identificador de expresión MDX válido que representa una propiedad de miembro.  
   
  *Property_Value*  

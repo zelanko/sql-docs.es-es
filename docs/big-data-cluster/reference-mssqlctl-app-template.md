@@ -5,16 +5,16 @@ description: Artículo de referencia para los comandos de plantilla de aplicaci�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c67ed74750ac36d1a5c79503417414a9dd8ab6b5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 0b4cbae0ba35c0cef777b3535b2012ab78f8e6da
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860106"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473429"
 ---
 # <a name="mssqlctl-app-template"></a>Plantilla de aplicación mssqlctl
 
@@ -22,81 +22,79 @@ ms.locfileid: "58860106"
 
 El siguiente artículo proporciona la referencia para la **plantilla de aplicación** comandos en el **mssqlctl** herramienta. Para obtener más información acerca de otros **mssqlctl** comandos, consulte [mssqlctl referencia](reference-mssqlctl.md).
 
-## <a id="commands"></a> Comandos
-
-|||
-|---|---|
-| [list](#list) | Obtener plantillas compatibles. |
-| [pull](#pull) | Descargue plantillas compatibles. |
-
-## <a id="list"></a> lista de plantillas de aplicación mssqlctl
-
-Obtener plantillas compatibles.
-
+## <a name="commands"></a>Comandos
+|     |     |
+| --- | --- |
+[lista de plantillas de aplicación mssqlctl](#mssqlctl-app-template-list) | Obtener plantillas compatibles.
+[incorporación de cambios de plantilla de aplicación de mssqlctl](#mssqlctl-app-template-pull) | Descargue plantillas compatibles.
+## <a name="mssqlctl-app-template-list"></a>lista de plantillas de aplicación mssqlctl
+Obtener plantillas compatibles en el repositorio de github [URL] especificado.
+```bash
+mssqlctl app template list [--url -u] 
+                           
 ```
-mssqlctl app template list
-   --url
-```
-
-### <a name="parameters"></a>Parámetros
-
-| Parámetros | Descripción |
-|---|---|
-| **--url -u** | Especifique una ubicación de repositorio de plantillas diferentes. Valor predeterminado: https://github.com/Microsoft/sql-server-samples.git. |
-
 ### <a name="examples"></a>Ejemplos
-
 Capturar todas las plantillas en la ubicación predeterminada del repositorio de plantillas.
-
-```
+```bash
 mssqlctl app template list
 ```
-
 Capturar todas las plantillas en una ubicación de otro repositorio.
-
-```
+```bash
 mssqlctl app template list --url https://github.com/diffrent/templates.git
 ```
-
-## <a id="pull"></a> incorporación de cambios de plantilla de aplicación de mssqlctl
-
-Descargue plantillas compatibles.
-
+### <a name="optional-parameters"></a>Parámetros opcionales
+#### `--url -u`
+Especifique una ubicación de repositorio de plantillas diferentes. Valor predeterminado: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+### <a name="global-arguments"></a>Argumentos globales
+#### `--debug`
+Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+#### `--help -h`
+Mostrar este mensaje de ayuda y salir.
+#### `--output -o`
+Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
+#### `--query -q`
+Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+#### `--verbose`
+Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+## <a name="mssqlctl-app-template-pull"></a>incorporación de cambios de plantilla de aplicación de mssqlctl
+Descargue plantillas compatibles en el repositorio de github [URL] especificado.
+```bash
+mssqlctl app template pull [--name -n] 
+                           [--url -u]  
+                           [--destination -d]
 ```
-mssqlctl app template pull
-   --destination
-   --name
-   --url
-```
-
-### <a name="parameters"></a>Parámetros
-
-| Parámetros | Descripción |
-|---|---|
-| **--destino -d** | Dónde colocar la plantilla de aplicación esqueleto.  Valor predeterminado:. / plantillas. |
-| **--name -n** | Nombre de la plantilla. Para obtener una lista completa desactivar los nombres de plantilla admitidos, ejecute `mssqlctl app template list`. |
-| **--url -u** | Especifique una ubicación de repositorio de plantillas diferentes. Predeterminado:
-https://github.com/Microsoft/sql-server-samples.git  |
-
 ### <a name="examples"></a>Ejemplos
-
 Descargar todas las plantillas en la ubicación predeterminada del repositorio de plantillas.
-
-```
+```bash
 mssqlctl app template pull
 ```
-
 Descargar todas las plantillas en una ubicación de otro repositorio.
-
-```
+```bash
 mssqlctl app template list --url https://github.com/diffrent/templates.git
 ```
-
 Descargar plantilla individual por nombre.
-
+```bash
+mssqlctl app template pull --name ssis            
 ```
-mssqlctl app template pull --name ssis
-```
+### <a name="optional-parameters"></a>Parámetros opcionales
+#### `--name -n`
+Nombre de la plantilla. Para obtener una lista completa Desactivar namesrun plantilla compatible `mssqlctl app template list`
+#### `--url -u`
+Especifique una ubicación de repositorio de plantillas diferentes. Valor predeterminado: https://github.com/Microsoft/SQLBDC-AppDeploy.git
+#### `--destination -d`
+Dónde colocar la plantilla de aplicación esqueleto.
+`./templates`
+### <a name="global-arguments"></a>Argumentos globales
+#### `--debug`
+Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+#### `--help -h`
+Mostrar este mensaje de ayuda y salir.
+#### `--output -o`
+Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
+#### `--query -q`
+Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+#### `--verbose`
+Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

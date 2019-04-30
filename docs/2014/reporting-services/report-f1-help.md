@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb40a0e2a41e638c4e7058f296badc4feeb9aa60
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306693"
 ---
 # <a name="report-f1-help"></a>Ayuda F1 del informe
   Los temas de esta sección proporcionan información acerca de las opciones que se pueden establecer en informe en el cuadro de diálogo **Propiedades del informe** . Para abrir el cuadro de diálogo **Propiedades del informe** , haga clic con el botón secundario en el fondo del Diseñador de informes y haga clic en **Propiedades del informe**.  

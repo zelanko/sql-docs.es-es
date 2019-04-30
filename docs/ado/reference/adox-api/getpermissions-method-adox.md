@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6517b09e682853492cd129e0c43abfd7164ed2e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313270"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions (método, ADOX)
 Devuelve los permisos para un [grupo](../../../ado/reference/adox-api/group-object-adox.md) o [usuario](../../../ado/reference/adox-api/user-object-adox.md) en un objeto o un contenedor de objetos.  
@@ -33,20 +33,20 @@ Devuelve los permisos para un [grupo](../../../ado/reference/adox-api/group-obje
   
 ```  
   
-ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])  
+ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])  
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un **largo** valor que especifica una máscara de bits que contiene los permisos que tiene el usuario o grupo en el objeto. Este valor puede ser uno o varios de los [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) constantes.  
   
 #### <a name="parameters"></a>Parámetros  
- *Nombre*  
+ *Name*  
  Un **Variant** valor que especifica el nombre del objeto que se va a establecer permisos. Establecer *nombre* en un valor nulo si desea obtener los permisos para el contenedor de objetos.  
   
  *ObjectType*  
  Un **largo** valor puede ser uno de los [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) constantes, que especifica el tipo del objeto que se va a obtener los permisos.  
   
- *Valor de ObjectTypeId*  
+ *ObjectTypeId*  
  Opcional. Un **Variant** valor que especifica el GUID para un tipo de objeto de proveedor no definido por la especificación de OLE DB. Este parámetro es obligatorio si *ObjectType* está establecido en **adPermObjProviderSpecific**; en caso contrario, no se utiliza.  
   
 ## <a name="applies-to"></a>Se aplica a  

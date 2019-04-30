@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312558"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>Seleccionar el esquema de métodos abreviados de teclado
   En lugar de la combinación de teclado estándar de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , puede configurar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para usar una combinación de teclado compatible con [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  

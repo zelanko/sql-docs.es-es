@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63245343"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Servidores de destino (pestaña Descargar instrucciones)
   Utilice esta página para mostrar y actualizar las instrucciones de descarga de uno o más servidores de destino.  

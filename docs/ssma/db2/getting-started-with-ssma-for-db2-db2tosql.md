@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 86a931c9132a23d9ceb3d46b48fbdce23bf76f92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298870"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Introducción a SSMA para DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para DB2 permite rápidamente convertir esquemas de base de datos de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas, cargar los esquemas resultantes a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y migrar datos desde DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -54,13 +54,13 @@ Explorador de metadatos de DB2 se muestra información acerca de los esquemas de
   
 -   Seleccionar tablas para la migración de datos y, a continuación, migrar los datos de esas tablas a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [migrar bases de datos DB2 a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md).  
   
-#### <a name="sql-server-metadata-explorer"></a>Explorador de metadatos SQL Server  
+#### <a name="sql-server-metadata-explorer"></a>SQL Server Metadata Explorer  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos muestra información acerca de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA recupera los metadatos sobre esa instancia y la almacena en el archivo de proyecto.  
   
 Puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos para seleccionar los objetos de base de datos de DB2 convertidos y, a continuación, sincroniza esos objetos con la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="metadata"></a>Metadatos  
-A la derecha de cada explorador de metadatos son las pestañas que describen el objeto seleccionado. Por ejemplo, si selecciona una tabla en el Explorador de metadatos de DB2, seis pestañas aparecerán: **tabla**, **SQL**, **asignación de tipos, el informe**, **propiedades**, y **datos**. El **informe** pestaña contiene información únicamente después de crear un informe que contiene el objeto seleccionado. Si selecciona una tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el Explorador de metadatos, aparecerán tres fichas: **tabla**, **SQL**, y **datos**.  
+A la derecha de cada explorador de metadatos son las pestañas que describen el objeto seleccionado. Por ejemplo, si selecciona una tabla en el Explorador de metadatos de DB2, aparecerán seis pestañas: **Tabla**, **SQL**, **asignación, el informe de tipo**, **propiedades**, y **datos**. El **informe** pestaña contiene información únicamente después de crear un informe que contiene el objeto seleccionado. Si selecciona una tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el Explorador de metadatos, aparecerán tres fichas: **Tabla**, **SQL**, y **datos**.  
   
 La mayoría de los metadatos configuración es de solo lectura. Sin embargo, puede modificar los metadatos siguientes:  
   
@@ -93,7 +93,7 @@ La siguiente tabla muestra los menús SSMA.
 |----|-----------|  
 |**Archivo**|Contiene comandos para trabajar con proyectos, conectar a DB2 y conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Editar**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles, como copiar [!INCLUDE[tsql](../../includes/tsql-md.md)] desde el panel de detalles SQL. También contiene el **administrar marcadores** opción, donde podrá ver una lista de los marcadores existentes. Puede usar los botones en el lado derecho del cuadro de diálogo para administrar los marcadores.|  
-|**Ver**|Contiene el **sincronizar metadatos Explorers** comando. Que sincroniza los objetos entre el Explorador de metadatos de DB2 y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos. También contiene comandos para mostrar y ocultar el **salida** y **lista de errores** paneles y una opción **diseños** para administrar los diseños.|  
+|**Vista**|Contiene el **sincronizar metadatos Explorers** comando. Que sincroniza los objetos entre el Explorador de metadatos de DB2 y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorador de metadatos. También contiene comandos para mostrar y ocultar el **salida** y **lista de errores** paneles y una opción **diseños** para administrar los diseños.|  
 |**Herramientas**|Contiene comandos para crear informes y migrar objetos y datos. También proporciona acceso a la **configuración Global** y **configuración del proyecto** cuadros de diálogo.|  
 |**Ayuda**|Proporciona acceso para ayudar a SSMA y a la **sobre** cuadro de diálogo.|  
   

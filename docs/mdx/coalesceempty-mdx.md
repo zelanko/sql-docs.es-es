@@ -1,5 +1,5 @@
 ---
-title: CoalesceEmpty (MDX) | Documentos de Microsoft
+title: CoalesceEmpty (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 78e4f59ab1e994e34a7f0b1a0c519f34e20a2bd4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306695"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
 
@@ -39,14 +39,14 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  *Numeric_Expression2*  
  Expresión numérica válida que suele ser un valor numérico especificado.  
   
- *Expression1*  
+ *String_Expression1*  
  Expresión de cadena válida que suele ser una expresión MDX (Expresiones multidimensionales) de las coordenadas de celdas que devuelven una cadena.  
   
- *Expression2*  
+ *String_Expression2*  
  Expresión de cadena válida que suele ser un valor de cadena especificado sustituido por un valor NULL devuelto por la primera expresión de cadena.  
   
-## <a name="remarks"></a>Notas  
- Si se especifican uno o más expresiones numéricas, la **CoalesceEmpty** función devuelve el valor numérico de la primera expresión numérica (de izquierda a derecha) que se pueda resolver como un valor no vacío. Si ninguna de las expresiones numéricas especificadas puede resolverse en un valor no vacío, la función devuelve el valor de la celda vacía. Normalmente, el valor de la segunda expresión numérica es el valor numérico sustituido por un valor NULL devuelto por la primera expresión numérica.  
+## <a name="remarks"></a>Comentarios  
+ Si se especifican uno o más expresiones numéricas, la **CoalesceEmpty** función devuelve el valor numérico de la primera expresión numérica (de izquierda a derecha) que se puede resolver como un valor no vacío. Si ninguna de las expresiones numéricas especificadas puede resolverse en un valor no vacío, la función devuelve el valor de la celda vacía. Normalmente, el valor de la segunda expresión numérica es el valor numérico sustituido por un valor NULL devuelto por la primera expresión numérica.  
   
  Si se especifican una o más expresiones de cadena, la función devuelve el valor de cadena de la primera expresión de cadena (de izquierda a derecha) que puede resolverse en un valor no vacío. Si ninguna de las expresiones de cadena especificadas puede resolverse en un valor no vacío, la función devuelve el valor de la celda vacía. Normalmente, el valor de la segunda expresión de cadena es el valor de cadena sustituido por un valor NULL devuelto por la primera expresión de cadena.  
   
@@ -55,7 +55,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  Para obtener más información acerca de las celdas vacías, consulte la documentación de OLE DB.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente ejemplo se consulta la **Adventure Works** cubo. Este ejemplo devuelve la cantidad de pedido de cada producto y el porcentaje de cantidades de pedido por categoría. El **CoalesceEmpty** función garantiza que los valores null se representan como cero (0) al dar formato a los miembros calculados.  
+ El ejemplo siguiente se consulta el **Adventure Works** cubo. Este ejemplo devuelve la cantidad de pedido de cada producto y el porcentaje de cantidades de pedido por categoría. El **CoalesceEmpty** función garantiza que los valores null se representan como cero (0) al dar formato a los miembros calculados.  
   
 ```  
 WITH   

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 450d800a474d00cf2ac5692d9994fce5d73861f2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260649"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Cuadro de diálogo de Propiedades de la imagen, Tamaño (Generador de informes y SSRS)
   Seleccione **Tamaño** en el cuadro de diálogo **Propiedades de la imagen** para configurar el tamaño de las imágenes mostradas en un campo o en el área de diseño, o para cambiar la cantidad de espacio adicional entre el borde de una celda o un cuadro de texto y la imagen o el valor contenido dentro de la celda o el cuadro de texto.  

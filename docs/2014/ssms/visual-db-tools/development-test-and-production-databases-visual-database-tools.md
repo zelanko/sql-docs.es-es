@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 13ec879395358536485fb0d80e7ab1a2a19d4823
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316466"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>Bases de datos de desarrollo, pruebas y producción (Visual Database Tools)
   Si dispone de dos bases de datos con idéntica estructura, puede realizar cambios en una base de datos y propagar los cambios a la otra base de datos. Por ejemplo, si dispone de una base de datos de desarrollo personal y una base de datos de pruebas de grupo, puede modificar la base de datos de desarrollo y, a continuación, propagar los cambios a la base de datos de pruebas.  

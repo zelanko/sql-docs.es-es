@@ -1,5 +1,5 @@
 ---
-title: Y (MDX) | Documentos de Microsoft
+title: AND (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 30cb8be449c58e10da5c2e91ebec936b3547581d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249881"
 ---
 # <a name="and-mdx"></a>AND (MDX)
 
@@ -38,8 +38,8 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>Valor devuelto  
  Un valor booleano que devuelve true si ambos parámetros se evalúan como **true**; en caso contrario, **false**.  
   
-## <a name="remarks"></a>Notas  
- El **AND** operador trata a ambas expresiones como valores booleanos (cero, 0, como **false**; en caso contrario, **true**) antes de que el operador realice la conjunción lógica. La tabla siguiente se muestra cómo el **AND** operador realiza la conjunción lógica.  
+## <a name="remarks"></a>Comentarios  
+ El **AND** operador trata ambas expresiones como valores booleanos (cero, 0, como **false**; en caso contrario, **true**) antes de que el operador realice la conjunción lógica. La tabla siguiente se muestra cómo el **AND** operador realiza la conjunción lógica.  
   
 |*Expression1*|*Expression2*|Valor devuelto|  
 |-------------------|-------------------|------------------|  
@@ -69,6 +69,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

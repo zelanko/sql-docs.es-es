@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fe3426b6e4ef8f2174cf12ba4db8883e4a5a83a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308776"
 ---
 # <a name="value-property-ado-md"></a>Value (propiedad) (ADO MD)
 Indica el valor del elemento actual [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  

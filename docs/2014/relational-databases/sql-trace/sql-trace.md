@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63286531"
 ---
 # <a name="sql-trace"></a>Seguimiento de SQL
   En Seguimiento de SQL, los eventos se recopilan si se enumeran instancias de clases de eventos en la definición del seguimiento. Estos eventos pueden filtrarse para quitarlos del seguimiento o ponerse en cola para su destino. El destino puede ser un archivo u Objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO), que pueden usar la información del seguimiento en aplicaciones que administran [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c49b343e9eb04a349219b9a5a752496c9bc0abda
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297576"
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>Agregar tablas relacionadas a diagramas (Visual Database Tools)
   Puede agregar rápidamente a un diagrama de base de datos todas las tablas que están relacionadas con una tabla seleccionada.  

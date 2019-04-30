@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 74c122819980abaa328db5ad46f240cae24b92d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280588"
 ---
 # <a name="returning-sqlnodata"></a>Devuelve SQL_NO_DATA
 Cuando un ODBC 2. *x* aplicación se trabaja con una aplicación ODBC 3 *.x* controlador llama a **SQLExecDirect**, **SQLExecute**, o **SQLParamData**, y se ha ejecutado una instrucción de eliminación o actualización por búsqueda, pero no afectó a ninguna fila en el origen de datos, el 3 de ODBC *.x* controlador debería devolver SQL_SUCCESS. Cuando una aplicación ODBC 3 *.x* la aplicación funciona con una aplicación ODBC 3 *.x* controlador llama a **SQLExecDirect**, **SQLExecute**, o  **SQLParamData** con el mismo resultado, el 3 de ODBC *.x* controlador debería devolver SQL_NO_DATA.  

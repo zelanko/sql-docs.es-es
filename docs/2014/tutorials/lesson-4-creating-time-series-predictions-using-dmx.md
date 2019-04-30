@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312088"
 ---
-# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Lección 4: Crear predicciones de serie temporal con DMX
+# <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Lección 4: Creación de predicciones de serie temporal con DMX
   En esta lección y en la siguiente lección, usará las extensiones de minería de datos (DMX) para crear diferentes tipos de predicciones basados en los modelos de serie temporal que creó en [lección 1: Creación de una serie temporal del modelo de minería de datos y la estructura de minería de datos](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) y [lección 2: Agregar modelos de minería de datos a la estructura de minería de datos de serie temporal](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
   
  Con un modelo de serie temporal, tiene muchas opciones para realizar predicciones:  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2523909f2719fb8316acecf8ad0b56ddbe086a36
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260807"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Página Propiedades generales, Modelos (Administrador de informes)
   Use la página Propiedades generales para los modelos de informes con el fin de cambiar el nombre, eliminar, mover o reemplazar el archivo de definición de modelo (.smdl). En la parte superior de la página, se incluye información detallada de quién creó o modificó el modelo, y cuándo tuvieron lugar los cambios.  

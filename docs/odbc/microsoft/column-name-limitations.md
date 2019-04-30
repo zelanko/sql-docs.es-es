@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8a80ed397ae494bc686ef76aaeeef10b61662f19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301808"
 ---
 # <a name="column-name-limitations"></a>Limitaciones de nombre de columna
 Los nombres de columna pueden contener cualquier carácter válido (por ejemplo, espacios en blanco). Si los nombres de columna contienen cualquier carácter excepto letras, números y caracteres de subrayado, el nombre debe estar delimitado escribiéndolo en el back-comillas (').  

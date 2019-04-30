@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfb5c03a9de4a5864984fb10d92d7069d8f38fbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302462"
 ---
 # <a name="clone-method-example-vc"></a>Ejemplo del método Clone (VC ++)
 Este ejemplo se usa el [clon](../../../ado/reference/ado-api/clone-method-ado.md) método para crear copias de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y permite al usuario, a continuación, colocar el puntero de registro de cada copia de forma independiente.  

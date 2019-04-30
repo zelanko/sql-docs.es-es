@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 3fd443ff2ad58aa503fac2960016cb55f35b8a7f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298372"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>Creación de casos de prueba (SybaseToSQL)
 Use el Asistente de caso de prueba para crear una prueba. Este asistente le permite crear casos de prueba eligiendo probados y comprobados los objetos y especificando los parámetros de pruebas.  

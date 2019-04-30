@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270603"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Panel Criterios (Visual Database Tools)
   El panel Criterios permite definir las opciones de consulta (como qué columnas de datos se van a mostrar, cómo se van a ordenar los resultados y qué filas se van a seleccionar); para ello, las opciones se deben escribir en una cuadrícula con forma de hoja de cálculo. En el panel Criterios, puede especificar:  
@@ -60,7 +60,7 @@ ms.locfileid: "52797917"
 |columna|All|Muestra el nombre de una columna de datos utilizada para la consulta o la expresión de una columna calculada. Esta columna está bloqueada de modo que sea siempre visible a medida que se desplaza horizontalmente.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Especifica un nombre alternativo para una columna o el nombre que puede utilizar para una columna calculada.|  
 |Table|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Especifica el nombre de la tabla u objeto con estructura de tabla para la columna de datos asociada. Esta columna está en blanco para las columnas calculadas.|  
-|Salida|SELECT, INSERT FROM, MAKE TABLE|Especifica si una columna de datos aparece en los resultados de consulta.<br /><br /> Nota: Si la base de datos lo permite, puede utilizar una columna de datos para las cláusulas de orden o búsqueda sin mostrarla en el conjunto de resultados.|  
+|Salida|SELECT, INSERT FROM, MAKE TABLE|Especifica si una columna de datos aparece en los resultados de consulta.<br /><br /> Nota: Si permite que la base de datos, puede usar una columna de datos para las cláusulas de orden o búsqueda sin mostrarla en el conjunto de resultados.|  
 |Tipo de orden|SELECT, INSERT FROM|Especifica que se utiliza la columna de datos asociada para ordenar los resultados de una consulta y si el orden es ascendente o descendente.|  
 |Criterio de ordenación|SELECT, INSERT FROM|Especifica la prioridad de orden de las columnas de datos utilizadas para ordenar el conjunto de resultados. Cuando cambia el criterio de ordenación de una columna de datos, el criterio de ordenación del resto de las columnas se actualiza en consecuencia.|  
 |Agrupar por|SELECT, INSERT FROM, MAKE TABLE|Especifica que la columna de datos asociada se está utilizando para crear una consulta de funciones agregadas. Esta columna de cuadrícula aparece solamente si ha elegido **Agrupar por** en el menú **Herramientas** o si ha agregado una cláusula GROUP BY al panel SQL.<br /><br /> De forma predeterminada, el valor de esta columna se establece en **Agrupar por**y la columna se incluye en la cláusula GROUP BY.<br /><br /> Al moverse a una celda de esta columna y seleccionar una función de agregado para aplicar a la columna de datos asociada, se agrega la expresión resultante de forma predeterminada como una columna de resultados para el conjunto de resultados.|  

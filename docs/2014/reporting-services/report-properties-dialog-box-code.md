@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c751702b49846d80faa0295c5e245594c897efd
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302409"
 ---
 # <a name="report-properties-dialog-box-code"></a>Propiedades del informe (cuadro de diálogo), Código
   Seleccione **Código**en el cuadro de diálogo **Propiedades del informe** para definir el código personalizado que usarán las expresiones en el informe.  

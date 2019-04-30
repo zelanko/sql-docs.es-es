@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7ff0bd2988460596623eb47ded276392dc3d443
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270978"
 ---
 # <a name="sql-to-c-bit"></a>SQL a C: bit
 El identificador para el tipo de datos SQL de ODBC de bits es:  
@@ -31,10 +31,10 @@ El identificador para el tipo de datos SQL de ODBC de bits es:
   
 |Identificador de tipo de C|Prueba|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR<br /><br /> SQL_C_WCHAR|*BufferLength* 1 ><br /><br /> *BufferLength* < = 1|data<br /><br /> No definido|1<br /><br /> No definido|n/d<br /><br /> 22003|  
-|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE<br /><br /> SQL_C_NUMERIC|[A] ninguno|data|Tamaño del tipo de datos C|n/d|  
-|SQL_C_BIT|[A] ninguno|data|1 [b]|n/d|  
-|SQL_C_BINARY|*BufferLength* > = 1<br /><br /> *BufferLength* < 1|data<br /><br /> No definido|1<br /><br /> No definido|n/d<br /><br /> 22003|  
+|SQL_C_CHAR<br /><br /> SQL_C_WCHAR|*BufferLength* 1 ><br /><br /> *BufferLength* < = 1|Datos<br /><br /> No definido|1<br /><br /> No definido|n/d<br /><br /> 22003|  
+|SQL_C_STINYINT<br /><br /> SQL_C_UTINYINT<br /><br /> SQL_C_TINYINT<br /><br /> SQL_C_SBIGINT<br /><br /> SQL_C_UBIGINT<br /><br /> SQL_C_SSHORT<br /><br /> SQL_C_USHORT<br /><br /> SQL_C_SHORT<br /><br /> SQL_C_SLONG<br /><br /> SQL_C_ULONG<br /><br /> SQL_C_LONG<br /><br /> SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE<br /><br /> SQL_C_NUMERIC|[A] ninguno|Datos|Tamaño del tipo de datos C|n/d|  
+|SQL_C_BIT|[A] ninguno|Datos|1[b]|n/d|  
+|SQL_C_BINARY|*BufferLength* > = 1<br /><br /> *BufferLength* < 1|Datos<br /><br /> No definido|1<br /><br /> No definido|n/d<br /><br /> 22003|  
   
  [a] el valor de *BufferLength* se omite para esta conversión. El controlador se da por supuesto que el tamaño de **TargetValuePtr* es el tamaño del tipo de datos C.  
   

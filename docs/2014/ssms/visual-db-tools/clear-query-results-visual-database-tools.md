@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c53b87f01cd8bbcba4ff8377a98606737654877
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255786"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Borrar los resultados de una consulta (Visual Database Tools)
   Después de ejecutar una consulta en el **Diseñador de consultas y vistas**, puede borrar el panel Resultados. Este procedimiento se aplica a las consultas creadas mediante las opciones **Abrir vista** o **Abrir tabla** del Explorador de objetos. En[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], después de ejecutar una consulta en el Editor de consultas, el panel Resultados no se puede borrar excepto si se cierra la ventana Editor de consultas o se ejecuta otra consulta.  

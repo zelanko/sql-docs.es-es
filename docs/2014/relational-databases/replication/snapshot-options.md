@@ -1,5 +1,5 @@
 ---
-title: Modificar las opciones de inicialización instantánea de replicación de SQL | Microsoft Docs
+title: Modificación de las opciones de inicialización de instantáneas para la replicación de SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a611de458537156740521dae8b732eed3e2653c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270260"
 ---
-# <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modificar las opciones de inicialización instantánea de replicación de SQL
+# <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modificación de las opciones de inicialización de instantáneas para la replicación de SQL
 
 Este artículo describe cómo modificar una serie de opciones cuando [inicializar una suscripción con una instantánea](initialize-a-subscription-with-a-snapshot.md).
 
@@ -40,7 +40,7 @@ Especifique la ubicación predeterminada de instantáneas (SQL Server Management
   
  Modifique la ubicación de instantáneas predeterminada en la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor \<distribuidor>**. Para obtener más información, vea [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md) (Ver y modificar las propiedades del distribuidor y del publicador). Establezca la carpeta de instantáneas para cada publicación en el cuadro de diálogo **Propiedades de la publicación - \<publicación>**. Para más información, consulte [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
-#### <a name="modify-the-default-snapshot-location"></a>Modificar la ubicación predeterminada de instantáneas  
+#### <a name="modify-the-default-snapshot-location"></a>Modificación de la ubicación predeterminada de instantáneas  
   
 1.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>**, haga clic en el botón de propiedades (**...**) correspondiente al publicador para el que quiera cambiar la ubicación de instantáneas predeterminada.    
 2.  En el cuadro de diálogo **Propiedades del publicador - \<publicador>**, escriba un valor para la propiedad **Carpeta de instantáneas predeterminada**.
@@ -80,7 +80,7 @@ Especifique que se deben comprimir los archivos en la página **Instantánea** d
 2.  Active **Comprimir archivos de instantánea en esta carpeta**.    
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
-## <a name="execute-scripts-before-and-after-snapshot-is-applied"></a>Ejecutar scripts antes y después de aplica la instantánea
+## <a name="execute-scripts-before-and-after-snapshot-is-applied"></a>Ejecución de scripts antes y después de aplicar una instantánea
 
  Puede especificar scripts que se ejecuten en el suscriptor antes o después de aplicar la instantánea. Los scripts pueden utilizarse por distintos motivos, por ejemplo, para crear inicios de sesión y esquemas (propietarios de objetos) en cada suscriptor.  
   

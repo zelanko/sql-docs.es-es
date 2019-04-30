@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8245c048d4c1a1314835ad70fc7305c7afabd3f1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284472"
 ---
 # <a name="save-queries-visual-database-tools"></a>Guardar consultas (Visual Database Tools)
   Guarde su consulta si desea trabajar con ella más adelante. Observe que, al ejecutar la consulta, no se guardan los cambios.  

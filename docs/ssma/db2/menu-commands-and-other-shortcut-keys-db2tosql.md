@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 9879a065db11bb8e8b8ddff9c57376faf36fe151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280326"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Comandos de menú y otras teclas de método abreviado (DB2ToSQL)
 Las secciones siguientes describen los métodos abreviados de teclado para tener acceso a comandos de menú y otras teclas de método abreviado que se usa en varios cuadros de diálogo de SSMA para DB2 aplicación.  
@@ -29,7 +29,7 @@ Para obtener acceso a los menús archivo, usa el método abreviado de teclado es
 |Mostrar el cuadro de diálogo Abrir proyecto.|ALT + F + O|  
 |Cierre el proyecto actual.|ALT + F + C|  
 |Mostrar la operación de guardar cuadro de diálogo de proyecto.|ALT + F + S|  
-|Mostrar el conectar o volver a conectar con el cuadro de diálogo de DB2.|ALT + F, T|  
+|Mostrar el conectar o volver a conectar con el cuadro de diálogo de DB2.|ALT + F + T|  
 |Mostrar el conectar o volver a conectar con el cuadro de diálogo de SQL Server o SQL Azure.|ALT + F + Q|  
 |Proyectos recientes de acceso.|ALT + F + P|  
 |Salga de la aplicación de SSMA.|ALT + F + X|  

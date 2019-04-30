@@ -1,5 +1,5 @@
 ---
-title: Operadores unarios | Documentos de Microsoft
+title: Operadores unarios | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6704d9a2fad8b1b19d7757c0e6de40bfccdcc1f8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287801"
 ---
 # <a name="unary-operators"></a>Operadores unarios
 
@@ -44,6 +44,6 @@ WHERE [Product].[Category].[Bikes]
  Además, MDX utiliza operadores unarios especiales para determinar la operación de agregación realizada por el [RollupChildren](../mdx/rollupchildren-mdx.md) función. Para obtener más información sobre estos operadores unarios especiales, consulte [agregar una agregación personalizada a una dimensión](../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Operadores &#40;sintaxis MDX&#41;](../mdx/operators-mdx-syntax.md)  
+ [Operadores &#40;sintaxis de MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

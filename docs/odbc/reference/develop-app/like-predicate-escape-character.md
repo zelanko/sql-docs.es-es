@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30547551cc1793622eaa981c07bbc002d07a094d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312919"
 ---
 # <a name="like-predicate-escape-character"></a>COMO carácter de Escape de predicado
-En un **como** predicado, el signo de porcentaje (%) de coincide con cero o más de cualquier carácter y el carácter de subrayado (_) coincide con cualquier carácter. Para buscar un signo de porcentaje real o un carácter de subrayado en un **como** predicado, un carácter de escape debe ir antes del signo de porcentaje o el carácter de subrayado. La secuencia de escape que define el **como** carácter de escape de predicado es:  
+En un **como** predicado, el signo de porcentaje (%) coincide con cero o más de cualquier carácter y el carácter de subrayado (_) coincide con cualquier carácter. Para buscar un signo de porcentaje real o un carácter de subrayado en un **como** predicado, un carácter de escape debe ir antes del signo de porcentaje o el carácter de subrayado. La secuencia de escape que define el **como** carácter de escape de predicado es:  
   
- **{escape '** *carácter de escape* **'}**  
+ **{escape '** *escape-character* **'}**  
   
  donde *carácter de escape* es cualquier carácter compatible con el origen de datos.  
   
- Para obtener más información sobre el tipo de secuencia de escape, consulte [como secuencia de Escape](../../../odbc/reference/appendixes/like-escape-sequence.md) en Apéndice C: SQL gramática.  
+ Para obtener más información sobre el tipo de secuencia de escape, consulte [como secuencia de Escape](../../../odbc/reference/appendixes/like-escape-sequence.md) en el apéndice C: Gramática de SQL.  
   
  Por ejemplo, las siguientes instrucciones SQL crean el mismo conjunto de resultados del cliente de nombres que empiezan con los caracteres "% AAA". La primera instrucción usa la sintaxis de la secuencia de escape. La segunda instrucción utiliza la sintaxis nativa para Microsoft® Access y no es interoperable. Tenga en cuenta que el segundo carácter de porcentaje de cada **como** predicado es un carácter comodín que coincide con cero o más de cualquier carácter.  
   

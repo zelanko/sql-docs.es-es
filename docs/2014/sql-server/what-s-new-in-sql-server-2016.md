@@ -18,11 +18,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 26d0c84194f6f2aafb8bc499ff5404a1438ee577
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295245"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>¿Qué&#39;s de SQL Server 2014
   En este tema se resume detallados vínculos a las nuevas características de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] y resume los paquetes de servicios para [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  

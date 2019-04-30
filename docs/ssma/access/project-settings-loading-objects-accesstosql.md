@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 90a47a7586d0f3c6b5bd0fee28ed01f3b292a92e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299454"
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>(Carga de objetos) de configuración del proyecto (AccessToSQL)
 La configuración del proyecto al cargar objetos permite configurar cómo obtener acceso a objetos de base de datos se sincronizan con objetos de base de datos de SQL Server.  

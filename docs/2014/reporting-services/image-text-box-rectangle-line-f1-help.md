@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa841b0fc86fd7c6525187d08b1fbe143b8e3ee4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260720"
 ---
 # <a name="image-text-box-rectangle-line-f1-help"></a>Imagen, Cuadro de texto, Rectángulo, Línea (Ayuda F1)
   Los temas de esta sección proporcionan información acerca de las opciones que se pueden establecer en imágenes, cuadros de texto, rectángulos y líneas de los cuadros de diálogo del Diseñador de informes.  

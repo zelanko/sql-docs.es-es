@@ -1,5 +1,5 @@
 ---
-title: Instrucción DROP SET (MDX) | Documentos de Microsoft
+title: Instrucción DROP SET (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26c5ebe206ed9d8530a7158b464e974920dd878e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284966"
 ---
-# <a name="mdx-data-definition---drop-set"></a>Definición de datos MDX: conjunto de destino
+# <a name="mdx-data-definition---drop-set"></a>Definición de datos de MDX: DROP SET
 
 
   Quita un conjunto con nombre.  
@@ -34,13 +34,13 @@ DROP [SESSION] SET
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Restricciones obligatorias Cube_Name*  
+ *Cube_Name*  
  Expresión de cadena válida que proporciona el nombre del cubo.  
   
  *Set_Name*  
  Expresión de cadena válida que proporciona el nombre del conjunto con nombre que se va a quitar.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Para obtener más información sobre los conjuntos con nombre, vea [Crear conjuntos con nombre en MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
   
 ## <a name="see-also"></a>Vea también  

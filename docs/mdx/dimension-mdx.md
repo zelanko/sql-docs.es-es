@@ -1,5 +1,5 @@
 ---
-title: Dimensión (MDX) | Documentos de Microsoft
+title: Dimensión (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cee82f3baa95df1d8636e314bfbb0798efe9527a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248218"
 ---
 # <a name="dimension-mdx"></a>Dimension (MDX)
 
@@ -43,7 +43,7 @@ Member_Expression.Dimension
  *Level_Expression*  
  Expresión MDX válida que devuelve un nivel.  
   
- *Expresión_miembro*  
+ *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
 ### <a name="examples"></a>Ejemplos  
@@ -63,7 +63,7 @@ SELECT measures.x on 0
 FROM [Adventure Works]  
 ```  
   
- En el ejemplo siguiente se usa el **dimensión** función, junto con el **miembros** y **recuento** funciones, para devolver el número de miembros en la jerarquía que contiene el miembro especificado.  
+ En el ejemplo siguiente se usa el **dimensión** función, junto con el **miembros** y **recuento** las funciones para devolver el número de miembros de la jerarquía que contiene al miembro especificado.  
   
 ```  
 WITH member measures.x as [Product].[Product Model Lines].[Model].&[HL Road Tire].Dimension.Members.Count  
@@ -72,8 +72,8 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Recuento de &#40;niveles de jerarquía&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Recuento de &#40;establecer&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Recuento &#40;los niveles de jerarquía&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
  [Niveles &#40;MDX&#41;](../mdx/levels-mdx.md)   
  [Los miembros &#40;establecer&#41; &#40;MDX&#41;](../mdx/members-set-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  

@@ -1,5 +1,5 @@
 ---
-title: Descendientes (MDX) | Documentos de Microsoft
+title: Descendants (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 013b7a7a2124788f3f1bcaa6d09b8ef7b10562e4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248105"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 
@@ -40,7 +40,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expresión_miembro*  
+ *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
  *Set_Expression*  
@@ -55,14 +55,14 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Desc_Flag*  
  Expresión de cadena válida que especifica una marca de descripción que distingue entre posibles conjuntos de descendientes.  
   
-## <a name="remarks"></a>Notas  
- Si se especifica un nivel, el **descendientes** función devuelve un conjunto que contiene los descendientes del miembro especificado o los miembros del conjunto especificado, en un nivel especificado, modificado opcionalmente mediante una marca especificada en *Desc_Flag*.  
+## <a name="remarks"></a>Comentarios  
+ Si se especifica un nivel, el **descendientes** función devuelve un conjunto que contiene los descendientes del miembro especificado o los miembros del conjunto especificado, en un nivel especificado, modificado opcionalmente mediante una marca especificada en  *Desc_Flag*.  
   
- Si *distancia* se especifica, el **descendientes** función devuelve un conjunto que contiene los descendientes del miembro especificado o los miembros del conjunto especificado que son el número especificado de niveles fuera de la jerarquía del miembro especificado, modificado opcionalmente mediante una marca especificada en *Desc_Flag*. Esta función se suele utilizar con el argumento Distance para tratar con jerarquías desiguales. Si la distancia especificada es cero (0), la función devuelve un conjunto que consta solamente del miembro especificado o el conjunto especificado.  
+ Si *distancia* se especifica, el **descendientes** función devuelve un conjunto que contiene los descendientes del miembro especificado o los miembros del conjunto especificado que son el número especificado de niveles de distancia de la jerarquía del miembro especificado, modificado opcionalmente mediante una marca especificada en *Desc_Flag*. Esta función se suele utilizar con el argumento Distance para tratar con jerarquías desiguales. Si la distancia especificada es cero (0), la función devuelve un conjunto que consta solamente del miembro especificado o el conjunto especificado.  
   
- Si se especifica una expresión de conjunto, la **descendientes** función se resuelve individualmente para cada miembro del conjunto y se volverá a crear el conjunto. En otras palabras, la sintaxis utilizada para la **descendientes** función es funcionalmente equivalente a MDX [generar](../mdx/generate-mdx.md) función.  
+ Si se especifica una expresión de conjunto, la **descendientes** función se resuelve individualmente para cada miembro del conjunto y se vuelve a crear el conjunto. En otras palabras, la sintaxis usada para el **descendientes** función es funcionalmente equivalente a MDX [generar](../mdx/generate-mdx.md) función.  
   
- Si no se especifica ningún nivel o distancia, el valor predeterminado para el nivel utilizado por la función se determina mediante una llamada a la [nivel](../mdx/level-mdx.md) (función) (<\<miembro >>. Nivel) para el miembro especificado (si se especifica un miembro) o mediante una llamada a la **nivel** funcione para cada miembro del conjunto especificado (si se especifica un conjunto). Si no se especifican una expresión de nivel, una distancia o marcas, la función tiene el mismo efecto que el uso de la sintaxis siguiente:  
+ Si no se especifica ningún nivel o distancia, el valor predeterminado del nivel utilizado por la función se determina mediante una llamada a la [nivel](../mdx/level-mdx.md) (función) (<\<miembro >>. Nivel) para el miembro especificado (si se especifica un miembro) o mediante una llamada a la **nivel** función para cada miembro del conjunto especificado (si se especifica un conjunto). Si no se especifican una expresión de nivel, una distancia o marcas, la función tiene el mismo efecto que el uso de la sintaxis siguiente:  
   
  `Descendants`  
   
@@ -90,7 +90,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  `)`  
   
- Mediante la modificación del valor de la marca de descripción, puede incluir o excluir descendientes en el nivel o distancia especificados, el elemento secundario anterior o posterior al nivel o distancia especificados (hasta el nodo hoja), así como los elementos secundarios hoja, independientemente del nivel o distancia especificados. La tabla siguiente describe las marcas permitidas en el *Desc_Flag* argumento.  
+ Mediante la modificación del valor de la marca de descripción, puede incluir o excluir descendientes en el nivel o distancia especificados, el elemento secundario anterior o posterior al nivel o distancia especificados (hasta el nodo hoja), así como los elementos secundarios hoja, independientemente del nivel o distancia especificados. La tabla siguiente describen las marcas permitidas en el *Desc_Flag* argumento.  
   
 |Marca|Descripción|  
 |----------|-----------------|  

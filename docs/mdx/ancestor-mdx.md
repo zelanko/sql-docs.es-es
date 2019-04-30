@@ -1,5 +1,5 @@
 ---
-title: Antecesor (MDX) | Documentos de Microsoft
+title: Antecesor (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 464f8504850c6aa13f1cf040f9429be56f7181be
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298499"
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
 
@@ -33,7 +33,7 @@ Ancestor(Member_Expression, Distance)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expresión_miembro*  
+ *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
  *Level_Expression*  
@@ -42,18 +42,18 @@ Ancestor(Member_Expression, Distance)
  *distancia*  
  Expresión numérica válida que especifica la distancia desde el miembro especificado.  
   
-## <a name="remarks"></a>Notas  
- Con el **antecesor** función, se proporciona la función con una expresión de miembro MDX y, a continuación, se proporciona una expresión MDX de un nivel que sea un antecesor del miembro o una expresión numérica que representa el número de niveles por encima de ese miembro. Con esta información, el **antecesores** función devuelve el miembro antecesor en ese nivel.  
+## <a name="remarks"></a>Comentarios  
+ Con el **antecesor** función, se proporciona la función con una expresión de miembro MDX y, a continuación, se proporciona una expresión MDX de un nivel que sea un antecesor del miembro o una expresión numérica que representa el número de niveles por encima ese miembro. Con esta información, el **antecesores** función devuelve el miembro antecesor en ese nivel.  
   
 > [!NOTE]  
->  Para devolver un conjunto que contiene el miembro antecesor, en lugar de simplemente el miembro antecesor, utilice la [antecesores &#40;MDX&#41; ](../mdx/ancestors-mdx.md) (función).  
+>  Para devolver un conjunto que contiene el miembro antecesor, en lugar de simplemente el miembro antecesor, utilice el [antecesores &#40;MDX&#41; ](../mdx/ancestors-mdx.md) función.  
   
- Si se especifica una expresión de nivel, la **antecesor** función devuelve el antecesor del miembro especificado en el nivel especificado. Si el miembro especificado no se encuentra dentro de la misma jerarquía que el nivel especificado, la función devuelve un error.  
+ Si se especifica una expresión de nivel, el **antecesor** función devuelve el antecesor del miembro especificado en el nivel especificado. Si el miembro especificado no se encuentra dentro de la misma jerarquía que el nivel especificado, la función devuelve un error.  
   
- Si se especifica una distancia, la **antecesor** función devuelve el antecesor del miembro especificado que corresponde al número de pasos especificado hacia arriba en la jerarquía especificada por la expresión de miembro. Se puede especificar un miembro como miembro de una jerarquía de atributo, una jerarquía definida por el usuario o, en algunos casos, una jerarquía de elementos primarios y secundarios. El número 1 devuelve un elemento primario del miembro y el número 2 devuelve un elemento primario de segundo nivel (si existe) del miembro. El número 0 devuelve el propio miembro.  
+ Si se especifica una distancia, el **antecesor** función devuelve el antecesor del miembro especificado que es el número de pasos especificado hacia arriba en la jerarquía especificada por la expresión de miembro. Se puede especificar un miembro como miembro de una jerarquía de atributo, una jerarquía definida por el usuario o, en algunos casos, una jerarquía de elementos primarios y secundarios. El número 1 devuelve un elemento primario del miembro y el número 2 devuelve un elemento primario de segundo nivel (si existe) del miembro. El número 0 devuelve el propio miembro.  
   
 > [!NOTE]  
->  Utilice este formulario de la **antecesor** función para los casos en que el nivel del elemento primario es desconocido o no se puede llamar.  
+>  Utilice este formulario de la **antecesor** función para los casos en que el nivel del elemento primario es desconocido o no se puede nombrar.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente utiliza una expresión de nivel y devuelve el valor Internet Sales Amount para cada State-Province de Australia, junto con su porcentaje del total de Internet Sales Amount para Australia.  

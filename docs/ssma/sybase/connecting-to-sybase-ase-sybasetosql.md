@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d9c76a33a650284fde21b28af3a61b197829ef98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298541"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Conexión a Sybase ASE (SybaseToSQL)
 Para migrar bases de datos de Sybase Adaptive Server Enterprise (ASE) a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, debe conectarse al servidor adaptable que contiene las bases de datos que desea migrar. Cuando se conecta, SSMA obtiene metadatos sobre todas las bases de datos en el servidor adaptable y muestra los metadatos de la base de datos en el panel Explorador de metadatos de Sybase. SSMA almacena información sobre el servidor de base de datos, pero no almacena las contraseñas.  
@@ -29,21 +29,21 @@ Los metadatos del servidor adaptable no se actualizan automáticamente. En su lu
 ## <a name="required-ase-permissions"></a>Permisos necesarios de ASE  
 La cuenta que se usa para conectarse a la instancia de ASE debe tener al menos **pública** acceso a la base de datos maestra y a las bases de datos de origen para migrarlos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Además, para seleccionar los permisos en las tablas que se van a migrar, el usuario debe tener permisos SELECT en las tablas del sistema siguientes:  
   
--   .dbo.sysobjects [source_db]  
+-   [source_db].dbo.sysobjects  
   
--   .dbo.syscolumns [source_db]  
+-   [source_db].dbo.syscolumns  
   
--   .dbo.sysusers [source_db]  
+-   [source_db].dbo.sysusers  
   
--   .dbo.systypes [source_db]  
+-   [source_db].dbo.systypes  
   
--   .dbo.sysconstraints [source_db]  
+-   [source_db].dbo.sysconstraints  
   
--   .dbo.syscomments [source_db]  
+-   [source_db].dbo.syscomments  
   
 -   [source_db].dbo.sysindexes  
   
--   .dbo.sysreferences [source_db]  
+-   [source_db].dbo.sysreferences  
   
 -   master.dbo.sysdatabases  
   

@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: a3c304302f17c360dd9bb3a0ac51c7ea50bce40d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268659"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Consideraciones de seguridad sobre la carga masiva (SQLXML 4.0)
   A continuación se muestran una serie de instrucciones de seguridad para utilizar la carga masiva XML:  

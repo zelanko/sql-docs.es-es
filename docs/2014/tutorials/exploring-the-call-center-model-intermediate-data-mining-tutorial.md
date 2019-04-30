@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315081"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Explorar el modelo de centro de llamadas (Tutorial intermedio de minería de datos)
   Ahora que ha creado el modelo de exploración, puede usarlo para obtener más información sobre los datos mediante las herramientas siguientes que se proporcionan en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -43,7 +43,7 @@ ms.locfileid: "56037766"
     > [!NOTE]  
     >  Los valores exactos de este intervalo pueden variar según la configuración del modelo.  
   
-2.  Para **valor 2**, seleccione el intervalo con los valores más altos. Por ejemplo, el intervalo con el valor >=0,12 representa las tasas mayores de abandono y, por lo tanto, el peor grado de servicio. En otras palabras, el 12% de los clientes que llamaron durante este turno colgaron antes de hablar con un agente.  
+2.  Para **valor 2**, seleccione el intervalo con los valores más altos. Por ejemplo, el intervalo con el valor > = 0,12 representa las tasas mayores de abandono y, por lo tanto, el peor grado de servicio. En otras palabras, el 12% de los clientes que llamaron durante este turno colgaron antes de hablar con un agente.  
   
      El contenido de la **Variables** panel se actualizan para comparar los atributos que contribuyen a los valores de resultado. Por lo tanto, la columna de la izquierda muestra los atributos asociados al mejor grado de servicio y la columna de la derecha los atributos asociados al peor grado de servicio.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "56037766"
   
  Sin embargo, según se sigue mirando la lista de factores que influyen, se ven algunos otros factores con efectos que son más sutiles y más difíciles de interpretar. Por ejemplo, el turno parece influir en el servicio, pero las puntuaciones de mejora con respecto al modelo predictivo y las probabilidades relativas indican que no es un factor importante.  
   
-|Attribute|Valor|Favorece \< 0,07|Favorece >= 0,12|  
+|Attribute|Valor|Favorece \< 0,07|Favorece > = 0,12|  
 |---------------|-----------|--------------------|----------------------|  
 |Average Time Per Issue|89.087 - 120.000||Puntuación:  100<br /><br /> Probabilidad de Value1: 4.45 %<br /><br /> Probabilidad de Value2: 51.94 %<br /><br /> Elevación de Value1: 0.19<br /><br /> Elevación de Value2: 1.94|  
 |Average Time Per Issue|44.000 - 70.597|Puntuación: 92.35<br /><br /> Probabilidad de Value1: 60.06 %<br /><br /> Probabilidad de Value2: 8.30 %<br /><br /> Elevación de Value1: 2.61<br /><br /> Elevación de Value2: 0.31||  

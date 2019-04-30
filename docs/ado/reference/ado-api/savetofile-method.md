@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6afe36c7b3923c9ebf33fd615a1c21e34955e62d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315218"
 ---
 # <a name="savetofile-method"></a>Método SaveToFile
 Guarda el contenido binario de un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) a un archivo.  
@@ -38,7 +38,7 @@ Stream.SaveToFile FileName, SaveOptions
  *FileName*  
  Un **cadena** valor que contiene el nombre completo del archivo al que el contenido de la **Stream** se guardarán. Puede guardar en cualquier ubicación local válida o cualquier ubicación tiene acceso a través de un valor UNC.  
   
- *Objeto SaveOptions*  
+ *SaveOptions*  
  Un [SaveOptionsEnum](../../../ado/reference/ado-api/saveoptionsenum.md) valor que especifica si se debe crear un nuevo archivo por **SaveToFile**, si aún no existe. Valor predeterminado es **adSaveCreateNotExists**. Con estas opciones puede especificar que se produce un error si el archivo especificado no existe. También puede especificar que **SaveToFile** sobrescribe el contenido actual de un archivo existente.  
   
 > [!NOTE]

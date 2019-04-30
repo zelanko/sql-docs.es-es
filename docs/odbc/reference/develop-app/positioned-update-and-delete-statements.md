@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312490"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Actualización posicionada y las instrucciones Delete
 Las aplicaciones pueden actualizar o eliminar la fila actual de un conjunto de resultados con una actualización por posición o la instrucción delete. Posicionadas update y delete se admiten las instrucciones por algunos orígenes de datos, pero no todos ellos. Para determinar si un origen de datos admite coloca instrucciones update y delete, una aplicación llama a **SQLGetInfo** con el SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (según el tipo del cursor). Tenga en cuenta que la biblioteca de cursores ODBC simula coloca instrucciones update y delete.  
@@ -40,9 +40,9 @@ Las aplicaciones pueden actualizar o eliminar la fila actual de un conjunto de r
   
  **ACTUALIZACIÓN** *nombre de tabla*  
   
- **ESTABLECER** *identificador de columna* **=** {*expresión* &#124; **NULL**}  
+ **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
- [**,** *identificador de columna* **=** {*expresión* &#124; **NULL**}]...  
+ [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *nombre de cursor*  
   

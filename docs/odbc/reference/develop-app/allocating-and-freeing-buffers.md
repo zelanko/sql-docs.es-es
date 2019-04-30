@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 388147de8935d36180ba9845c8353bbf3dd6edc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288082"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Asignar y liberar búferes
 Todos los búferes se asigna y libera la aplicación. Si no se aplaza un búfer, sólo debe existir para el tiempo que dure la llamada a una función. Por ejemplo, **SQLGetInfo** devuelve el valor asociado con una opción concreta en el búfer señalado por el *InfoValuePtr* argumento. Este búfer se puede liberar inmediatamente después de llamar a **SQLGetInfo**, tal y como se muestra en el ejemplo de código siguiente:  

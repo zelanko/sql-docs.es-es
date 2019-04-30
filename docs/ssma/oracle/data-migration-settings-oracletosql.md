@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 96b60573b81625c8896fb9022a6a718770f349ed
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287183"
 ---
 # <a name="data-migration-settings-oracletosql"></a>Configuración de la migración de datos (SybaseToSQL)
   
@@ -48,9 +48,9 @@ ms.locfileid: "51656143"
   
 Hay dos botones que presentes viz.:  
   
--   **Aplicar:** haga clic en **aplicar** para aplicar la configuración que han cambiado.  
+-   **Se aplican:** Haga clic en **aplicar** para aplicar la configuración que han cambiado.  
   
--   **Cancelar:** haga clic en **cancelar** para restaurar los valores de configuración antes de que se realizan los cambios.  
+-   **Cancelar:** Haga clic en **cancelar** para restaurar los valores de configuración antes de que se realizan los cambios.  
   
 ## <a name="see-also"></a>Vea también  
 [Migrar datos de Oracle a SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  

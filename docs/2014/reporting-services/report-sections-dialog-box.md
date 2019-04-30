@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 47bd8d2b6912d28d992a0655b33396ce9042c1af
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306361"
 ---
 # <a name="report-sections-dialog-box"></a>Cuadro de diálogo Secciones del informe
   Al abrir un informe, el Diseñador de informes comprueba que el informe contiene un único lenguaje RDL (Report Definition)  **\<sección >** elemento. No se permite abrir un informe con varios elementos **\<Section>**.  

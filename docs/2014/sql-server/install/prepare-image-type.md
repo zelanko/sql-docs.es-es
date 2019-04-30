@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1706a5d953a46871e6e65484e757a4c45d764cd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277831"
 ---
 # <a name="prepare-image-type"></a>Tipo de imagen para preparar
   Use la página **Tipo de imagen para preparar** del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar si desea instalar una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o agregar características a una instancia existente.  
@@ -26,7 +26,7 @@ ms.locfileid: "48070544"
   
 -   Preparar una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Agregar características a una instancia preparada existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   Agregar características a una instancia preparada existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
      Si selecciona la opción para agregar características a una instancia existente, use la lista desplegable para elegir la instancia preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea actualizar.  
   

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273478"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Crear una estructura del modelo de minería de datos de agrupación en clústeres de secuencia (Tutorial intermedio de minería de datos)
   El primer paso para crear un modelo de minería de datos de agrupación en clústeres de secuencia es utilizar el Asistente para minería de datos con el objeto de crear una nueva estructura de minería de datos y un modelo de minería basados en el algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
@@ -71,12 +71,12 @@ ms.locfileid: "56039357"
   
     |Tablas y columnas|Tipo de contenido|Tipo de datos|  
     |---------------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Texto|  
-    |OrderNumber|Key|Texto|  
-    |Region|Discrete|Texto|  
+    |IncomeGroup|Discrete|Text|  
+    |OrderNumber|Key|Text|  
+    |Region|Discrete|Text|  
     |vAssocSeqLineItems|||  
     |Line Number|Key Sequence|Long|  
-    |Modelo|Discrete|Texto|  
+    |Modelo|Discrete|Text|  
   
 9. En el **crear conjunto de pruebas** página, cambie la **porcentaje de datos de prueba** a 20 y, a continuación, haga clic en **siguiente**.  
   

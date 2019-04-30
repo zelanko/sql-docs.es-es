@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306300"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Ejecución asincrónica (método de sondeo)
 Antes de ODBC 3.8 y el SDK de Windows 7, las operaciones asincrónicas se permiten solo en las funciones de la instrucción. Para obtener más información, consulte el **ejecutar operaciones de instrucción de forma asincrónica**, más adelante en este tema.  

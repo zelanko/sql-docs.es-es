@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a210cea5407bc56e45c4ea8cc12a578ed488b59c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280688"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Utilizar la ventana Propiedades en Management Studio
   La ventana Propiedades describe el estado de un elemento de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], como una conexión o un operador de plan de presentación, además de proporcionar información acerca de objetos de la base de datos, como tablas, vistas y diseñadores.  

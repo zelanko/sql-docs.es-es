@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 383a7b2bbd6e8ebaab5f1e66b10a10c9584800ee
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309226"
 ---
-# <a name="sql-server-dacpac-extension-preview"></a>Extensión de dacpac de SQL Server (versión preliminar)
+# <a name="sql-server-dacpac-extension-preview"></a>Extensión dacpac de SQL Server (versión preliminar)
 
 **El Asistente para aplicaciones de capa de datos** proporciona una experiencia fácil de usar para implementar y extraer archivos .dacpac, importar y exportar archivos bacpac.
 

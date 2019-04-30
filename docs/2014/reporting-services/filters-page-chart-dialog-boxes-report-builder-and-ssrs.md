@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cf8757eb1c2bdf7e1642aa16d24b7adae40680a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261268"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>Cuadros de diálogo de Gráfico, página Filtros (Generador de informes y SSRS)
   Haga clic en **Filtros** en  

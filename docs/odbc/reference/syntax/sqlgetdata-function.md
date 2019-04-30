@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b42339c74102b86fe08c84b15da3266a1040dfd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258958"
 ---
 # <a name="sqlgetdata-function"></a>Función SQLGetData
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ISO 92  
   
  **Resumen**  
  **SQLGetData** recupera datos de una sola columna del conjunto de resultados o para un único parámetro después **SQLParamData** devuelve SQL_PARAM_DATA_AVAILABLE. Se puede llamar varias veces para recuperar datos de longitud variable en partes.  

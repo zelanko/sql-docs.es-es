@@ -1,5 +1,5 @@
 ---
-title: KPIStatus (MDX) | Documentos de Microsoft
+title: KPIStatus (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2c0824a9235aa7fd949910800d1e8ce20eab709e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272899"
 ---
 # <a name="kpistatus-mdx"></a>KPIStatus (MDX)
 
@@ -29,10 +29,10 @@ KPIStatus(KPI_Name)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Nombre_kpi*  
+ *KPI_Name*  
  Expresión de cadena válida que especifica el nombre del KPI.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El valor de estado suele ser un valor normalizado entre -1 y 1.  
   
 ## <a name="example"></a>Ejemplo  

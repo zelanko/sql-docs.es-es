@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312872"
 ---
 # <a name="odbc-dynamic-cursors"></a>Cursores dinámicos de ODBC
-Un cursor dinámico es justamente eso: dinámica. Puede detectar los cambios realizados en la pertenencia, el orden y los valores del conjunto una vez abierto el cursor de resultados. Por ejemplo, suponga que un cursor dinámico obtiene dos filas y otra aplicación, a continuación, actualiza una de esas filas y elimina la otra. Si el cursor dinámico, a continuación, intenta volver a obtener esas filas, no encontrará la fila eliminada pero devolverá los nuevos valores de la fila actualizada.  
+Un cursor dinámico es justamente eso: dinámica. Puede detectar los cambios realizados en la pertenencia, el orden y los valores del conjunto una vez abierto el cursor de resultados. Por ejemplo, suponga que un cursor dinámico captura dos filas y después otra aplicación actualiza una de esas filas y elimina la otra. Si el cursor dinámico, a continuación, intenta volver a obtener esas filas, no encontrará la fila eliminada pero devolverá los nuevos valores de la fila actualizada.  
   
  Los cursores dinámicos detectan todas las actualizaciones, eliminaciones e inserciones, tanto sus propios y los realizados por otros usuarios. (Esto está sujeto al aislamiento de nivel de la transacción, según lo establecido por el atributo de conexión SQL_ATTR_TXN_ISOLATION.) La matriz de Estados de fila especificada por el atributo de instrucción SQL_ATTR_ROW_STATUS_PTR refleja estos cambios y puede contener SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO, SQL_ROW_ERROR, SQL_ROW_UPDATED y SQL_ROW_ADDED. No se devolverá SQL_ROW_DELETED porque un cursor dinámico no devuelve las filas eliminadas fuera del conjunto de filas y, por tanto, ya no reconoce la existencia de la fila eliminada en el conjunto de resultados o su elemento correspondiente en la matriz de Estados de fila. SQL_ROW_ADDED solo se devuelve cuando se actualiza una fila mediante una llamada a **SQLSetPos**, no cuando se actualiza mediante otro cursor.  
   

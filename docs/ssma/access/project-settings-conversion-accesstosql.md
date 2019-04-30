@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2489442eb8de9d8d0ebfb5d8ed902dd2792e22f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299151"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Configuración del proyecto (conversión) (AccessToSQL)
 La configuración del proyecto de conversión le permite configurar cómo se convierten los objetos de objetos de base de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u objetos de base de datos de SQL Azure.  
@@ -42,11 +42,11 @@ Crea una nueva clave principal en la [!INCLUDE[ssNoVersion](../../includes/ssnov
 Cuando se conecta a SQL Azure, es True de forma predeterminada. **Agregar columnas de marca de tiempo**  
 Especifica si SSMA debe crear un valor de marca de tiempo si es necesario.  
   
--   **Modo predeterminado**: SSMA permiten decidir  
+-   **Modo predeterminado**: Permitir SSMA decidir  
   
--   **Modo optimista**: nunca  
+-   **Modo optimista**: Never  
   
--   **Modo completo**: SSMA permiten decidir  
+-   **Modo completo**: Permitir SSMA decidir  
   
 **Incluir un informe de evaluación de datos con los informes de evaluación de conversión**  
 Incluye una evaluación de datos en el informe de evaluación.  
@@ -60,7 +60,7 @@ Incluye una evaluación de datos en el informe de evaluación.
 **Tipo de mensaje cuando una clave principal incluye columnas que aceptan valores null**  
 Especifica el tipo de mensaje (Error, advertencia o Nothing) SSMA se muestra en el panel de salida cuando encuentra las claves principales con las columnas que aceptan valores NULL.  
   
--   **Modo predeterminado**: advertencia  
+-   **Modo predeterminado**: Advertencia  
   
 -   **Modo optimista**: ningún mensaje  
   
@@ -69,7 +69,7 @@ Especifica el tipo de mensaje (Error, advertencia o Nothing) SSMA se muestra en 
 **Tipo de mensaje cuando tienen tamaños diferentes columnas de clave externa**  
 Especifica el tipo de mensaje (Error, advertencia o Nothing) SSMA se muestra en el panel de salida cuando encuentra una clave externa de texto incorrecta.  
   
--   **Modo predeterminado**: advertencia  
+-   **Modo predeterminado**: Advertencia  
   
 -   **Modo optimista**: ningún mensaje  
   
@@ -78,7 +78,7 @@ Especifica el tipo de mensaje (Error, advertencia o Nothing) SSMA se muestra en 
 **Tipo de mensaje cuando se indizan las columnas memorando**  
 Especifica el tipo de mensaje (Error, advertencia o Nothing) SSMA se muestra en el panel de salida cuando encuentra un índice que contenga un **memorando** columna.  
   
--   **Modo predeterminado**: advertencia  
+-   **Modo predeterminado**: Advertencia  
   
 -   **Modo optimista**: ningún mensaje  
   

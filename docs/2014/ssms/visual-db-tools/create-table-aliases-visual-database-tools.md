@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e7172a7b9b17dfa4553d3179d8cc1a880040f13
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306525"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>Crear alias de tabla (Visual Database Tools)
   Los alias facilitan el trabajo con nombres de tabla. El uso de alias es útil cuando:  

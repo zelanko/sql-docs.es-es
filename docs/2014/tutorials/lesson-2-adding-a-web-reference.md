@@ -11,18 +11,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316008"
 ---
-# <a name="lesson-2-adding-a-web-reference"></a>Lección 2: Agregar una referencia web
+# <a name="lesson-2-adding-a-web-reference"></a>Lección 2: Adición de una referencia web
   Se llama detección de servicios web al proceso por el que un cliente busca un servicio web y obtiene la descripción del servicio. El proceso de detección de servicios web en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] conlleva la interrogación de un sitio web de acuerdo con un algoritmo predeterminado. El objetivo del proceso es encontrar la descripción del servicio, que es un documento XML que utiliza el Lenguaje de descripción de servicios web (WSDL).  
   
  En la descripción del servicio, se explican los servicios disponibles y la forma de interactuar con ellos. Sin una descripción del servicio, no se puede interactuar con el servicio web mediante programación.  
   
- La aplicación debe disponer de un método para comunicarse con el servicio web y buscarlo en tiempo de ejecución. Esto se consigue agregando al proyecto una referencia del servicio web, porque se genera una clase proxy que sirve de interfaz con el servicio web y proporciona una representación local del servicio web. Para obtener más información, vea: "Cómo: Generar un Proxy de servicio Web XML"en su [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] documentación.  
+ La aplicación debe disponer de un método para comunicarse con el servicio web y buscarlo en tiempo de ejecución. Esto se consigue agregando al proyecto una referencia del servicio web, porque se genera una clase proxy que sirve de interfaz con el servicio web y proporciona una representación local del servicio web. Para obtener más información, vea "Cómo: Generar un Proxy de servicio Web XML"en su [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] documentación.  
   
 ### <a name="to-add-a-web-reference"></a>Para agregar una referencia web  
   

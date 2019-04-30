@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408322"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473527"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Ejecución de la consola SSMA (AccessToSQL)
 Microsoft le proporciona un sólido conjunto de comandos del archivo de secuencia de comandos y opciones de línea de comandos para ejecutar y controlar las actividades SSMA. Las secciones que detallan la misma.  
@@ -25,7 +25,7 @@ Los comandos de proyecto controlan la creación de proyectos, abrir, guardar y s
   
 **Command**  
   
-creación de nuevos proyectos: Crea un nuevo proyecto SSMA.  
+create-new-project: Crea un nuevo proyecto SSMA.  
   
 **Script**  
   
@@ -33,21 +33,21 @@ creación de nuevos proyectos: Crea un nuevo proyecto SSMA.
   
 -   `project-name` indica el nombre del proyecto. {string}  
   
--   `overwrite-if-exists`Atributo opcional indica si se debe sobrescribir un proyecto existente. {valor} booleano  
+-   `overwrite-if-exists`Atributo opcional indica si se debe sobrescribir un proyecto existente. {boolean}  
   
 -   `project-type` es un atributo opcional.  Las siguientes opciones están disponibles para el tipo de proyecto:  
   
-    -   SQL-server-2005  
+    -   sql-server-2005  
   
-    -   SQL-server-2008  
+    -   sql-server-2008  
   
-    -   SQL-server-2012  
+    -   sql-server-2012  
   
-    -   SQL-server-2014  
+    -   sql-server-2014  
   
-    -   SQL-server-2016  
+    -   sql-server-2016  
   
-    -   SQL azure  
+    -   sql-azure  
   
     Valor predeterminado es "sql-server-2008".  
   
@@ -72,7 +72,7 @@ Atributo de tipo de proyecto es **sql-server-2008** de forma predeterminada.
   
 **Command**  
   
-Abrir proyecto: Abre un proyecto existente.  
+open-project: Abre un proyecto existente.  
   
 **Script**  
   
@@ -95,7 +95,7 @@ Abrir proyecto: Abre un proyecto existente.
   
 **Command**  
   
-Guardar proyecto: Guarda el proyecto de migración.  
+save-project: Guarda el proyecto de migración.  
   
 **Script**  
   
@@ -106,7 +106,7 @@ Guardar proyecto: Guarda el proyecto de migración.
 ```  
 **Command**  
   
-proyecto de cierre: Cierra el proyecto de migración.  
+close-project: Cierra el proyecto de migración.  
   
 **Script**  
   
@@ -132,7 +132,7 @@ Para obtener más información en "Crear archivos de Script", consulte [crear ar
   
 **Command**  
   
-datos de origen conectarse  
+connect-source-database  
   
 -   Realiza la conexión a la base de datos de origen y carga los metadatos de nivel alto de la base de datos de origen, pero no todos los metadatos.  
   
@@ -171,7 +171,7 @@ o Administrador de configuración de
 ```  
 **Command**  
   
-Force-load-origen/destino-database  
+force-load-source/target-database  
   
 -   Carga los metadatos de origen.  
   
@@ -203,7 +203,7 @@ o Administrador de configuración de
 ```  
 **Command**  
   
-datos de origen volver a conectar  
+reconnect-source-database  
   
 -   Vuelve a conectarse a la base de datos de origen pero no carga los metadatos a diferencia del comando de base de datos connect-origen.  
   
@@ -218,7 +218,7 @@ datos de origen volver a conectar
 ```  
 **Command**  
   
-base de destino conectarse  
+connect-target-database  
   
 -   Se conecta a la base de datos de SQL Server o SQL Azure de destino y carga los metadatos de nivel alto de la base de datos de destino pero no los metadatos por completo.  
   
@@ -235,7 +235,7 @@ Definición de servidor se recupera desde el atributo de nombre definido para ca
 ```  
 **Command**  
   
-base de destino vuelva a conectar  
+reconnect-target-database  
   
 -   Vuelve a conectarse a la base de datos de destino pero no carga los metadatos, a diferencia del comando de base de destino de connect.  
   
@@ -254,7 +254,7 @@ Los comandos de informe generan informes sobre el rendimiento de diversas activi
   
 **Command**  
   
-informe de evaluación generar  
+generate-assessment-report  
   
 -   Genera informes de evaluación de la base de datos de origen.  
   
@@ -329,7 +329,7 @@ La salida de consola predeterminada para los comandos de migración es el inform
   
 **Command**  
   
-convertir esquema  
+convert-schema  
   
 -   Realiza la conversión de esquema de origen al esquema de destino.  
   
@@ -478,7 +478,7 @@ o Administrador de configuración de
 ```  
 **Command**  
   
-Desvincular: tablas: Este comando desvincula la tabla de origen (acceso) de la tabla de destino.  
+unlink-tables: Este comando desvincula la tabla de origen (acceso) de la tabla de destino.  
   
 **Script**  
   
@@ -508,7 +508,7 @@ El comando de preparación de la migración inicia la asignación de esquema ent
   
 **Command**  
   
-esquema de asignación: Asignación de esquema de base de datos de origen al esquema de destino.  
+map-schema: Asignación de esquema de base de datos de origen al esquema de destino.  
   
 **Script**  
   
@@ -547,11 +547,11 @@ sincronizar de destino
   
 3.  `on-error:` Especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
   
-    -   total de informes como advertencia  
+    -   report-total-as-warning  
   
-    -   informes-each-como-warning  
+    -   report-each-as-warning  
   
-    -   Error de script  
+    -   fail-script  
   
 4.  `report-errors-to:` Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional) si solo se proporciona la ruta de acceso de carpeta, a continuación, archivos por nombre **TargetSynchronizationReport.XML** se crea.  
   
@@ -596,7 +596,7 @@ o Administrador de configuración de
 ```  
 **Command**  
   
-actualización de base de datos  
+refresh-from-database  
   
 -   Actualiza los objetos de base de datos de origen.  
   
@@ -612,11 +612,11 @@ Requiere uno o varios nodos de la metabase como parámetro de línea de comandos
   
 3.  `on-error:` Especifica si se debe especificar la actualización de errores como advertencias o errores. Opciones disponibles para en caso de error:  
   
-    -   total de informes como advertencia  
+    -   report-total-as-warning  
   
-    -   informes-each-como-warning  
+    -   report-each-as-warning  
   
-    -   Error de script  
+    -   fail-script  
   
 4.  `report-errors-to:` Especifica la ubicación del informe de errores para la operación de actualización (atributo opcional) si solo se proporciona la ruta de acceso de carpeta, a continuación, archivos por nombre **SourceDBRefreshReport.XML** se crea.  
   

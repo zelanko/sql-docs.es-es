@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: ver un informe del Asesor de actualizaciones | Microsoft Docs'
+title: 'Procedimientos: Ver un informe del Asesor de actualizaciones | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,13 +18,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90b9ca2879897bb427981e92d610a7f09916c68e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294550"
 ---
-# <a name="how-to-view-an-upgrade-advisor-report"></a>Cómo ver un informe del Asesor de actualizaciones
+# <a name="how-to-view-an-upgrade-advisor-report"></a>Procedimientos: Ver un informe del Asesor de actualizaciones
   El Asesor de actualizaciones crea informes de cada componente que haya seleccionado para su análisis. En este tema se describe cómo ver un informe del Asesor de actualizaciones desde la página de inicio de este último.  
   
 > [!IMPORTANT]  
@@ -74,8 +74,8 @@ ms.locfileid: "48201935"
 >  Es posible que el informe contenga elementos correspondientes a problemas indetectables. Se trata de problemas que no se pueden detectar o que generarían demasiados resultados positivos falsos. Haga clic en el **más información sobre este problema y cómo resolverlo** vínculo para ver una lista de problemas no detectables para el componente.  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo: exportar informes](../../../2014/sql-server/install/how-to-export-reports.md)   
- [Cómo: ejecutar el Asistente para análisis del Asesor](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Cómo: Exportar informes](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [Cómo: Ejecute al Asistente para análisis del Asesor](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Resolver problemas de actualización](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Actualizar temas de procedimientos del Asesor de actualizaciones](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

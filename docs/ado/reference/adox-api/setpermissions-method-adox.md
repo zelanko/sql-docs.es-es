@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d3ff679af7a577433a8191d3beca10eed1d22cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281900"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions (método, ADOX)
 Especifica los permisos para un [grupo](../../../ado/reference/adox-api/group-object-adox.md) o [usuario](../../../ado/reference/adox-api/user-object-adox.md) en un objeto.  
@@ -37,7 +37,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Nombre*  
+ *Name*  
  Un **cadena** valor que especifica el nombre del objeto que se va a establecer permisos.  
   
  *ObjectType*  
@@ -52,7 +52,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *Heredar*  
  Opcional. Un **largo** valor puede ser uno de los [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) constantes, que especifica cómo los objetos heredará estos permisos. El valor predeterminado es **adInheritNone**.  
   
- *Valor de ObjectTypeId*  
+ *ObjectTypeId*  
  Opcional. Un **Variant** valor que especifica el GUID para un tipo de objeto de proveedor que no se define mediante la especificación de OLE DB. Este parámetro es obligatorio si *ObjectType* está establecido en **adPermObjProviderSpecific**; en caso contrario, no se utiliza.  
   
 ## <a name="remarks"></a>Comentarios  

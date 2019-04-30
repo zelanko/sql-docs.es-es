@@ -14,15 +14,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce48e7aa89451131b7ed483fa5132af22565c170
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252746"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>Función SQLCleanupConnectionPoolID
 **Conformidad**  
- Versión introdujo: ODBC 3,81 normativo: ODBC  
+ Versión de introducción: Cumplimiento de estándares 3,81 de ODBC: ODBC  
   
  **Resumen**  
  **SQLCleanupConnectionPoolID** informa a un controlador que se agotó un Id. de grupo. Un grupo de identificador puede tiempo de espera siempre que todas las conexiones en un grupo asociado con ese Id. de grupo eran agotó el tiempo de espera. Consulte [agrupación en el Microsoft Data Access Components](https://msdn.microsoft.com/library/ms810829.aspx) para obtener más información sobre el tiempo de espera de conexión.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f24ffa490ac8ae5b88809b89eed8a188b86fabb
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248867"
 ---
 # <a name="ado-properties"></a>Propiedades de ADO
 
@@ -81,7 +81,7 @@ ms.locfileid: "55044680"
 |[RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md)|Indica el tipo de **registro** objeto.|  
 |[Fila](../../../ado/reference/ado-api/row-property-ado.md)|Obtiene o establece OLE DB **fila** objeto desde/en un **ADORecordConstruction** objeto.|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Obtiene o establece OLE DB **RowPosition** objeto desde/en un **ADORecordsetConstruction** objeto.|  
-|[Conjunto de filas](../../../ado/reference/ado-api/rowset-property-ado.md)|Obtiene o establece OLE DB **conjunto de filas** objeto desde/en un **ADORecordsetConstruction** objeto.|  
+|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Obtiene o establece OLE DB **conjunto de filas** objeto desde/en un **ADORecordsetConstruction** objeto.|  
 |[Origen (Error de ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)|Indica el nombre del objeto o la aplicación que ha generado un error.|  
 |[Origen (Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)|Indica la entidad representada por el **registro** objeto.|  
 |[Origen (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)|Indica el origen de datos en un **Recordset** objeto|  

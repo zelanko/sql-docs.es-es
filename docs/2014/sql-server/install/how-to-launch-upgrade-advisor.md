@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: iniciar el Asesor de actualizaciones | Microsoft Docs'
+title: 'Procedimientos: Iniciar el Asesor de actualizaciones | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5523f40b556e654ee6ef71041c648b757a2d766a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63295120"
 ---
-# <a name="how-to-launch-upgrade-advisor"></a>Cómo iniciar el Asesor de actualizaciones
+# <a name="how-to-launch-upgrade-advisor"></a>Procedimientos: Iniciar el Asesor de actualizaciones
   El Asesor de actualizaciones proporciona una consola central que puede utilizar para iniciar el Asistente para análisis del Asesor de actualizaciones y el Visor de informes del Asesor de actualizaciones. En este tema se describe cómo iniciar el Asesor de actualizaciones.  
   
 ### <a name="to-launch-upgrade-advisor"></a>Para iniciar el Asesor de actualizaciones  

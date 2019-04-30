@@ -14,21 +14,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62f1033abeaa32499602534f7f43b17fefe55ce9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313177"
 ---
 # <a name="sqlgetconnectoption-visual-foxpro-odbc-driver"></a>SQLGetConnectOption (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
 >  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: parcial  
+ Soporte técnico: Parcial  
   
- Conformidad de ODBC API: Nivel 1  
+ Conformidad de la API de ODBC: Nivel 1  
   
- Devuelve el valor actual de una opción de conexión. Esta función es parcialmente compatible: el controlador es compatible con todos los valores para el *fOption* argumento pero no admite algunos de *vParam* valores para el *fOption* argumento SQL_TXN_ISOLATION.  
+ Devuelve el valor actual de una opción de conexión. Esta función se admite parcialmente: El controlador es compatible con todos los valores para el *fOption* argumento pero no admite algunos de *vParam* valores para el *fOption* argumento SQL_TXN_ISOLATION.  
   
  En la tabla siguiente se describe solo esos argumentos con el comportamiento específico de la implementación del controlador ODBC de Visual FoxPro de **SQLGetConnectOption**.  
   

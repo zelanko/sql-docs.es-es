@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7512f456d1423caf6318903119c2ad55c1938dec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301289"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Especifica cómo un proveedor debe ejecutar un comando.  
@@ -34,10 +34,10 @@ Especifica cómo un proveedor debe ejecutar un comando.
 |**adExecuteNoRecords**|0x80|Indica que el texto del comando es un comando o procedimiento almacenado que no devuelve filas (por ejemplo, un comando que sólo inserta datos). Si se recuperan las filas, se descartan y no se devuelve.<br /><br /> **adExecuteNoRecords** sólo se puede pasar como un parámetro opcional para el **comando** o **conexión ejecute** método.|  
 |**adExecuteStream**|0x400|Indica que se deben devolver los resultados de una ejecución de comandos como una secuencia.<br /><br /> **adExecuteStream** sólo se puede pasar como un parámetro opcional para el **ejecutar comando** método.|  
 |**adExecuteRecord**||Indica que el **CommandText** es un comando o procedimiento almacenado que devuelve una sola fila que se debe devolver como un **registro** objeto.|  
-|**realiza la consulta**|-1|Indica que el comando no está especificado.|  
+|**adOptionUnspecified**|-1|Indica que el comando no está especificado.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

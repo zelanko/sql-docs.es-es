@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 34539c79bc0e2d90841837abef895bdceb2eb20d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250848"
 ---
 # <a name="sql-server-agent-statistics-object"></a>Statistics (objeto del Agente SQL Server)
   El objeto de rendimiento **Statistics** del Agente SQL Server contiene contadores de rendimiento que proporcionan información acerca del Agente SQL Server.  
   
  La tabla siguiente muestra los contadores **SQLAgent:Statistics** .  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |**SQL Server reiniciado**|Número de veces que el Agente SQL Server ha reiniciado correctamente Microsoft SQL Server desde la última vez que se inició el Agente SQL Server.|  
   

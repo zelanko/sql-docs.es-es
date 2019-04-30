@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87d961e9613aa390b3001219f88808c8d4ac6ed7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63246147"
 ---
 # <a name="performing-asynchronous-operations"></a>Realizar operaciones asincrónicas
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite a las aplicaciones realizar operaciones de base de datos asincrónicas. El procesamiento asincrónico permite a los métodos devolver resultados inmediatamente sin bloquear el subproceso que hace la llamada. Esto hace posible gran parte de la potencia y la flexibilidad del subprocesamiento múltiple, sin que el programador tenga que crear explícitamente subprocesos o administrar la sincronización. Las aplicaciones solicitan el procesamiento asincrónico al inicializar una conexión a la base de datos, o al inicializar el resultado de la ejecución de un comando.  
@@ -60,7 +60,7 @@ ms.locfileid: "48110685"
   
  Las interfaces **ISSAsynchStatus** e **IDBAsynchStatus** se pueden obtener al consultar la interfaz de varios resultados mediante **QueryInterface**.  
   
- Una vez completada la ejecución del comando, **IMultipleResults** se puede usar de forma normal, con una excepción del caso sincrónico: se puede devolver DB_S_ASYNCHRONOUS, en cuyo caso se puede usar **IDBAsynchStatus** o **ISSAsynchStatus** para determinar cuándo se ha completado la operación.  
+ Cuando el comando ha terminado de ejecutarse, **IMultipleResults** puede usarse como normal, con una excepción en el caso sincrónico: Se puede devolver DB_S_ASYNCHRONOUS, en cuyo caso **IDBAsynchStatus** o **ISSAsynchStatus** puede usarse para determinar cuándo se completa la operación.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente, la aplicación llama a un método de no bloqueo, realiza algún otro procesamiento y, después, vuelve a procesar los resultados. **ISSAsynchStatus::WaitForAsynchCompletion** espera en el objeto de evento interno hasta que se completa la operación de ejecución asincrónica o transcurre el tiempo especificado por *dwMilisecTimeOut*.  

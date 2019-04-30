@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 884474398abc9f449e5f6bd82c9f4b981f9a3a43
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261697"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Controlar errores y advertencias (XMLA)
   Control de errores es necesario cuando un documento de XML for Analysis (XMLA) [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) o [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) llamada al método no se ejecuta, se ejecuta correctamente, pero genera errores o advertencias, o se ejecuta correctamente pero devuelve resultados que contienen errores.  
@@ -41,7 +41,7 @@ ms.locfileid: "50144930"
   
 |Nombre de columna|Tipo|Descripción|Permitida NULL<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|**ErrorCode**|**UnsignedInt**|Código de retorno que indica la ejecución correcta o el error del método. El valor hexadecimal debe convertirse en un **UnsignedInt** valor.|no|  
+|**ErrorCode**|**UnsignedInt**|Código de retorno que indica la ejecución correcta o el error del método. El valor hexadecimal debe convertirse en un **UnsignedInt** valor.|No|  
 |**WarningCode**|**UnsignedInt**|Código de retorno que indica una condición de advertencia. El valor hexadecimal debe convertirse en un **UnsignedInt** valor.|Sí|  
 |**Descripción**|**String**|Texto y descripción del error o la advertencia devueltos por el componente que generó el error.|Sí|  
 |**Source**|**String**|Nombre del componente que generó el error o la advertencia.|Sí|  

@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: af3859f5e402dce2854cce02439ff6cb26529f46
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299505"
 ---
 # <a name="new-project-ssma-accesstosql"></a>Nuevo proyecto (SSMA) (AccessToSQL)
 Use la **nuevo proyecto** cuadro de diálogo para crear un nuevo proyecto SSMA. Para tener acceso a la **nuevo proyecto** cuadro de diálogo el **archivo** menú, haga clic en **nuevo proyecto**.  
@@ -31,7 +31,7 @@ Escriba el nombre del proyecto. SSMA anexará la extensión de archivo.
   
 Escriba o busque la carpeta o ubicación de red para guardar el proyecto.  
   
-**Migrara**  
+**MigrateTo**  
   
 Seleccione uno de la versión de la base de datos de destino desde abajo de la lista  
   

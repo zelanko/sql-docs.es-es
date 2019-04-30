@@ -22,11 +22,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 9495ff7a58da124255cc6bf5674d92ebeef4c2b0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299479"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Preparar las bases de datos de acceso para la migración (AccessToSQL)
 Antes de migrar bases de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe determinar qué bases de datos para migrar y asegúrese de que esas bases de datos están preparados para la migración.  

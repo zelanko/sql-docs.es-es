@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298139"
 ---
 # <a name="ado-glossary-terms"></a>Términos del glosario de ADO
 En este tema se define términos relacionados con ADO.
@@ -137,7 +137,7 @@ En este tema se define términos relacionados con ADO.
 
  jerarquía en general, una jerarquía es una estructura con una nivel superior de nivel y niveles subordinados. En ADO, jerárquica **conjuntos de registros** se utilizan para representar la relación de elementos primarios y secundarios entre un registro y un capítulo. También en ADO, **registro** y **Stream** objetos pueden utilizarse para tener acceso a las estructuras de árbol jerárquica, como documentos y una carpeta. ADO MD también incluye **jerarquía** objetos para representar una relación entre los niveles de una dimensión en un cubo OLAP. Vea también: conjuntos de registros jerárquicos, relación de elementos primarios y secundarios, capítulo y árbol.
 
-## <a name="i-l"></a>-L
+## <a name="i-l"></a>I-L
  ISAPI (Internet Server Application Programming Interface) un conjunto de funciones para servidores de Internet, como un Windows NT® Server o Windows 2000 Server ejecuta Microsoft® Internet Information Services (IIS).
 
  La clave de una o varias columnas en una tabla que identifican de forma única una fila; a menudo se usa para indexar una tabla.

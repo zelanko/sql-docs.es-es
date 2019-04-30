@@ -1,5 +1,5 @@
 ---
-title: 'C a SQL: hora | Microsoft Docs'
+title: 'C a SQL: Tiempo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ea11803847505698ea42d13727b6177f3a24bda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316530"
 ---
-# <a name="c-to-sql-time"></a>C a SQL: hora
+# <a name="c-to-sql-time"></a>C a SQL: Time
 El identificador para el tipo de datos ODBC C de tiempo es:  
   
  SQL_C_TYPE_TIME  

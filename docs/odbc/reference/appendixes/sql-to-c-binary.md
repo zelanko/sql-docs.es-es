@@ -1,5 +1,5 @@
 ---
-title: 'SQL a C: binario | Microsoft Docs'
+title: 'SQL a C: Binario | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 16112ca3b66e0218efd54d3bf385e04cb654e3e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270958"
 ---
-# <a name="sql-to-c-binary"></a>SQL a C: binario
+# <a name="sql-to-c-binary"></a>SQL a C: Binario
 Los identificadores de los tipos de datos SQL de ODBC binarios son:  
   
  SQL_BINARY  
@@ -36,9 +36,9 @@ Los identificadores de los tipos de datos SQL de ODBC binarios son:
   
 |Identificador de tipo de C|Prueba|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|(Longitud de bytes de datos) \* 2 < *BufferLength*<br /><br /> (Longitud de bytes de datos) \* 2 > = *BufferLength*|data<br /><br /> Datos truncados|Longitud de datos en bytes<br /><br /> Longitud de datos en bytes|n/d<br /><br /> 01004|  
-|SQL_C_WCHAR|(Caracteres de longitud de datos) \* 2 < *BufferLength*<br /><br /> (Caracteres de longitud de datos) \* 2 > = *BufferLength*|data<br /><br /> Datos truncados|Longitud de datos de caracteres<br /><br /> Longitud de datos de caracteres|n/d<br /><br /> 01004|  
-|SQL_C_BINARY|Longitud de bytes de datos < = *BufferLength*<br /><br /> Longitud de bytes de datos > *BufferLength*|data<br /><br /> Datos truncados|Longitud de datos en bytes<br /><br /> Longitud de datos en bytes|n/d<br /><br /> 01004|  
+|SQL_C_CHAR|(Longitud de bytes de datos) \* 2 < *BufferLength*<br /><br /> (Longitud de bytes de datos) \* 2 > = *BufferLength*|Datos<br /><br /> Datos truncados|Longitud de datos en bytes<br /><br /> Longitud de datos en bytes|n/d<br /><br /> 01004|  
+|SQL_C_WCHAR|(Caracteres de longitud de datos) \* 2 < *BufferLength*<br /><br /> (Caracteres de longitud de datos) \* 2 > = *BufferLength*|Datos<br /><br /> Datos truncados|Longitud de datos de caracteres<br /><br /> Longitud de datos de caracteres|n/d<br /><br /> 01004|  
+|SQL_C_BINARY|Longitud de bytes de datos < = *BufferLength*<br /><br /> Longitud de bytes de datos > *BufferLength*|Datos<br /><br /> Datos truncados|Longitud de datos en bytes<br /><br /> Longitud de datos en bytes|n/d<br /><br /> 01004|  
   
  Cuando los datos binarios de SQL se convierten en datos de caracteres de C, cada byte (8 bits) de datos de origen se representa como dos caracteres ASCII. Estos caracteres son la representación de carácter ASCII del número en formato hexadecimal. Por ejemplo, un 00000001 binario se convierte en "01" y un binario 11111111 se convierte en "FF".  
   

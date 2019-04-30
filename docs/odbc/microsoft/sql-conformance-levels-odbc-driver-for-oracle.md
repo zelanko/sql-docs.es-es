@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0bf63b831dace7678f5d3fdf952a9d6d5f60aa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313387"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>Niveles de compatibilidad de SQL (controlador ODBC para Oracle)
 > [!IMPORTANT]  
@@ -39,7 +39,7 @@ ms.locfileid: "47669373"
     |Abs|Log|round|tan|  
     |límite superior|LOG10|second|truncate|  
     |Cos|Mod|inicio de sesión||  
-    |Exp|PI|sin||  
+    |Exp|Pi|sin||  
     |Floor|Power|sqrt||  
   
 -   Funciones de fecha:  
@@ -55,8 +55,8 @@ ms.locfileid: "47669373"
   
     |||||  
     |-|-|-|-|  
-    |ASCII|Izquierda|Correcto|UCase|  
-    |Char|Longitud|RTrim||  
+    |Ascii|Izquierda|Correcto|UCase|  
+    |Char|Longitud|rtrim||  
     |Concat|Ltrim|SOUNDEX||  
     |Lcase|Reemplazar|substring||  
   

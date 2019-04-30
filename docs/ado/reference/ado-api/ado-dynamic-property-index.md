@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60347cbffcc169c47149e27cf1064cd9c68494f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249555"
 ---
 # <a name="ado-dynamic-property-index"></a>Índice de propiedades dinámicas de ADO
-Proveedores de datos, los proveedores de servicios y componentes de servicio pueden agregar propiedades dinámicas a la **propiedades** colecciones de la no abierto [conexión](../../../ado/reference/ado-api/connection-object-ado.md) y [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos. Un proveedor determinado también puede insertar propiedades adicionales cuando se abren estos objetos. Algunas de estas propiedades se muestran en el [propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) sección. Aparecen más bajo los proveedores concretos en el [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md) sección.  
+Proveedores de datos, los proveedores de servicios y componentes de servicio pueden agregar propiedades dinámicas a la **propiedades** colecciones de la no abierto [conexión](../../../ado/reference/ado-api/connection-object-ado.md) y [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objetos. Un proveedor determinado también puede insertar propiedades adicionales cuando se abren estos objetos. Algunas de estas propiedades se muestran en el [propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) sección. Aparecen más bajo los proveedores concretos en el [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md) sección.  
   
  Las tablas siguientes son cross-indexes de nombres ADO y OLE DB para cada propiedad dinámica del proveedor OLE DB estándar. Los proveedores pueden agregar más propiedades a las enumeradas aquí. Para obtener la información específica acerca de las propiedades dinámicas específicas del proveedor, consulte la documentación del proveedor.  
   
@@ -52,12 +52,12 @@ Proveedores de datos, los proveedores de servicios y componentes de servicio pue
 |Niveles de aislamiento|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |Retención de aislamiento|DBPROP_SUPPORTEDTXNISORETAIN|  
 |Identificador de configuración regional|DBPROP_INIT_LCID|  
-|Ubicación|DBPROP_INIT_LOCATION|  
+|Location|DBPROP_INIT_LOCATION|  
 |Tamaño máximo de índice|DBPROP_MAXINDEXSIZE|  
 |Tamaño máximo de fila|DBPROP_MAXROWSIZE|  
 |Tamaño máximo de fila incluye BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |Número máximo de tablas en SELECT|DBPROP_MAXTABLESINSELECT|  
-|Mode|DBPROP_INIT_MODE|  
+|Modo|DBPROP_INIT_MODE|  
 |Varios conjuntos de parámetros|DBPROP_MULTIPLEPARAMSETS|  
 |Varios resultados|DBPROP_MULTIPLERESULTS|  
 |Varios objetos de almacenamiento|DBPROP_MULTIPLESTORAGEOBJECTS|  

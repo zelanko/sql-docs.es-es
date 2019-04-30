@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e3a0a7036d67716a3d90bd8953a3c7ba2c575c92
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259512"
 ---
 # <a name="sql-to-c-character"></a>SQL a C: Carácter
 
@@ -67,7 +67,7 @@ La siguiente tabla muestra los tipos de datos a la que se pueden convertir los d
 
 Espacios iniciales y finales se omiten cuando los datos de caracteres SQL se convierte en cualquiera de los siguientes tipos:
 
-- Date
+- date
 - NUMERIC
 - time
 - TIMESTAMP

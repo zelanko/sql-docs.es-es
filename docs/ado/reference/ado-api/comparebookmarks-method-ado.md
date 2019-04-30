@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85ca76678c0d3e75a106164626c4e3c3a81bd7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315975"
 ---
 # <a name="comparebookmarks-method-ado"></a>Método CompareBookmarks (ADO)
 Compara dos marcadores y devuelve una indicación de sus valores relativos.  
@@ -39,7 +39,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  Devuelve un [CompareEnum](../../../ado/reference/ado-api/compareenum.md) valor que indica la posición de fila relativa de dos registros representados por sus marcadores.  
   
 #### <a name="parameters"></a>Parámetros  
- *Marcador Bookmark1*  
+ *Bookmark1*  
  El marcador de la primera fila.  
   
  *Bookmark2*  
@@ -52,7 +52,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
   
  Dado que el tipo de datos de un marcador es específico para cada proveedor, ADO lo expone como un **Variant**. Por ejemplo, los marcadores de SQL Server son de tipo DBTYPE_R8 (**doble**). ADO expondrá este tipo como un **Variant** con un subtipo de **doble**.  
   
- Cuando se comparan marcadores, ADO no realiza ningún tipo de conversión. Los valores se pasan simplemente al proveedor que se produce la comparación. Si los marcadores que se pasan a la **CompareBookmarks** método se almacenan en variables de diferentes tipos, puede generar el siguiente error de coincidencia de tipo: "argumentos son del tipo incorrecto, están fuera del intervalo aceptable o están en conflicto entre ellos."  
+ Cuando se comparan marcadores, ADO no realiza ningún tipo de conversión. Los valores se pasan simplemente al proveedor que se produce la comparación. Si los marcadores que se pasan a la **CompareBookmarks** método se almacenan en variables de diferentes tipos, puede generar el error de coincidencia de tipo siguientes: "Argumentos son del tipo incorrecto, están fuera del intervalo aceptable o que están en conflicto entre sí".  
   
  Marcador que no es válido o con formato incorrecto producirá un error.  
   

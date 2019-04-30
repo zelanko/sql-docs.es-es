@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0d957d6091dc5fa29ee8a0b707c0e7fe7dfc7c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302040"
 ---
 # <a name="arithmetic-errors"></a>Errores aritméticos
 El controlador ODBC se evalúa como la cláusula WHERE de una instrucción SELECT cuando recupera cada fila. Si una fila contiene un valor que se produce un error aritmético, como desbordamiento numérico o de división por cero, el controlador devuelve todas las filas, pero devuelve errores para las columnas con los errores aritméticos. Al insertar o actualizar, sin embargo, el controlador ODBC deja de inserción o actualización de datos cuando se encuentra el primer error aritmético.

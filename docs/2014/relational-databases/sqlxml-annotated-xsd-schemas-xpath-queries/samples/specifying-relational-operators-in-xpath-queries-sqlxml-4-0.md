@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2189c2efbdf7c67399c8a06e5823f073b69c82b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63268609"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Especificar operadores relacionales en consultas XPath (SQLXML 4.0)
   En los siguientes ejemplos se muestra cómo especificar operadores relacionales en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [esquema de XSD anotado de ejemplo para obtener ejemplos de XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -92,7 +92,7 @@ ms.locfileid: "52804453"
 ```  
   
 > [!NOTE]  
->  Cuando esta consulta se especifica en una plantilla, el carácter < debe codificarse por entidad porque el carácter < tiene un significado especial en un documento XML. En una plantilla, utilice `<` para especificar el carácter <.  
+>  Cuando se especifica esta consulta en una plantilla, el < debe codificada por entidad porque el < carácter tiene un significado especial en un documento XML. En una plantilla, use `<` para especificar el < carácter.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   

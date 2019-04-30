@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a72f9d943a883a70c7dcf0476b92c6cb5b678f21
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63265991"
 ---
 # <a name="control-report-distribution"></a>Controlar la distribución de informes
   Puede configurar un servidor de informes para reducir los riesgos de seguridad asociados a la distribución por correo electrónico y a recursos compartidos de archivos.  

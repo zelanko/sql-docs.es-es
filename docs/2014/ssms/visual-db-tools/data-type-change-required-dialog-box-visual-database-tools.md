@@ -1,8 +1,9 @@
 ---
 title: Se requiere cambio en el tipo de datos (cuadro de diálogo, Visual Database Tools) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 01/19/2017
+ms.prod: sql
+ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
@@ -14,20 +15,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b04814ed725dde1a579ed969000b280816c1880a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270566"
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>Se requiere cambio en el tipo de datos (cuadro de diálogo, Visual Database Tools)
-  Aparece cuando se cambia el tipo de datos, la longitud, la escala, la precisión o la intercalación de una columna que participa en una relación.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Aparece cuando se cambia el tipo de datos, la longitud, la escala, la precisión o la intercalación de una columna que participa en una relación.  
   
 ## <a name="options"></a>Opciones  
- **Sí**  
- Cambia la propiedad de tipo de datos de las columnas relacionadas mostradas en la lista, de forma que se mantienen las relaciones existentes.  
+**Sí**  
+Cambia la propiedad de tipo de datos de las columnas relacionadas mostradas en la lista, de forma que se mantienen las relaciones existentes.  
   
- **No**  
- Cancela el cambio en el tipo de datos y restaura el tipo de datos anterior en la columna que se acaba de modificar.  
-  
+**No**  
+Cancela el cambio en el tipo de datos y restaura el tipo de datos anterior en la columna que se acaba de modificar.  
   

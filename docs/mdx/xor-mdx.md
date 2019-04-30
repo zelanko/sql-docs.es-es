@@ -1,5 +1,5 @@
 ---
-title: XOR (MDX) | Documentos de Microsoft
+title: XOR (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f9115fc1e226e05c788206706d59a5435bfd1c5d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251476"
 ---
 # <a name="xor-mdx"></a>XOR (MDX)
 
@@ -37,10 +37,10 @@ Expression1 XOR Expression2
  Expresión MDX válida que devuelve un valor numérico.  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un valor booleano que devuelve **true** si uno y solo un argumento se evalúa como **true**; en caso contrario, **false**.  
+ Un valor booleano que devuelve **true** si se evalúa como un solo argumento **true**; en caso contrario, **false**.  
   
-## <a name="remarks"></a>Notas  
- El **XOR** operador trata a ambos operadores como valores booleanos (cero, 0, como **false**; en caso contrario, **true**) antes de que el operador realice la exclusión lógica. La tabla siguiente se muestra cómo el **XOR** operador realiza la exclusión lógica.  
+## <a name="remarks"></a>Comentarios  
+ El **XOR** operador trata los dos parámetros como valores booleanos (cero, 0, como **false**; en caso contrario, **true**) antes de que el operador realice la exclusión lógica. La tabla siguiente se muestra cómo el **XOR** operador realiza la exclusión lógica.  
   
 |*Expression1*|*Expression2*|Valor devuelto|  
 |-------------------|-------------------|------------------|  
@@ -50,6 +50,6 @@ Expression1 XOR Expression2
 |**False**|**False**|**False**|  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

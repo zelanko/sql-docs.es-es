@@ -1,5 +1,5 @@
 ---
-title: VisualTotals (MDX) | Documentos de Microsoft
+title: VisualTotals (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e4732425d0e400ef7247ae133b5713949664e0f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251410"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (MDX)
 
@@ -35,13 +35,13 @@ VisualTotals(Set_Expression[,Pattern])
  *Patrón*  
  Expresión de cadena válida para el miembro primario del conjunto que contiene un asterisco (*) como carácter de sustitución para el nombre primario.  
   
-## <a name="remarks"></a>Notas  
- La expresión de conjunto especificada puede especificar un conjunto que contenga miembros en cualquier nivel de una única dimensión, generalmente miembros con una relación antecesor-descendiente. El **VisualTotals** función suma los valores de los miembros secundarios en el conjunto especificado y omite los miembros secundarios que no están en el conjunto de calcular los resultados totales. Se suman visualmente los totales de los conjuntos ordenados jerárquicamente. Si el orden de los miembros de los conjuntos rompe la jerarquía, los resultados no son totales visuales. Por ejemplo, VisualTotals (USA, WA, CA, Seattle) no devuelve WA como Seattle. En cambio, devuelve los valores para WA, CA y Seattle y suma estos valores como el total visual para USA, contando dos veces las ventas para Seattle.  
+## <a name="remarks"></a>Comentarios  
+ La expresión de conjunto especificada puede especificar un conjunto que contenga miembros en cualquier nivel de una única dimensión, generalmente miembros con una relación antecesor-descendiente. El **VisualTotals** función suma los valores de los miembros secundarios del conjunto especificado y omite los miembros secundarios que no están en el conjunto en calcular los resultados totales. Se suman visualmente los totales de los conjuntos ordenados jerárquicamente. Si el orden de los miembros de los conjuntos rompe la jerarquía, los resultados no son totales visuales. Por ejemplo, VisualTotals (USA, WA, CA, Seattle) no devuelve WA como Seattle. En cambio, devuelve los valores para WA, CA y Seattle y suma estos valores como el total visual para USA, contando dos veces las ventas para Seattle.  
   
 > [!NOTE]  
->  Aplicar el **VisualTotals** función a los miembros de dimensión que no están relacionadas con una medida o están bajo la granularidad del grupo de medida hará que los valores se sustituyan por un valor nulo.  
+>  Aplicar el **VisualTotals** función a los miembros de dimensión que no están relacionadas con una medida o están bajo la granularidad del grupo de medida hará que los valores que se reemplace con null.  
   
- *Patrón de*, que es opcional, especifica el formato de la etiqueta de totales. *Patrón de* exige un asterisco (*) como carácter de sustitución para el miembro primario y el resto del texto de la cadena aparece en el resultado concatenado con el nombre primario. Para mostrar un asterisco literal, utilice dos asteriscos (\*\*).  
+ *Patrón*, que es opcional, especifica el formato de la etiqueta de totales. *Patrón* exige un asterisco (*) como carácter de sustitución para el miembro primario y el resto del texto de la cadena aparece en el resultado concatenado con el nombre primario. Para mostrar un asterisco literal, utilice dos asteriscos (\*\*).  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve el total visual del tercer trimestre del año 2001, de acuerdo con el único descendiente especificado (el mes de julio).  

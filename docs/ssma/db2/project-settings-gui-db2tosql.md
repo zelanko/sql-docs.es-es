@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 84a8c5aa7fa12ea0763dc47635c4c6fbbf772a42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272769"
 ---
 # <a name="project-settings-gui-db2tosql"></a>Configuración del proyecto (GUI) (DB2ToSQL)
 La configuración del proyecto de interfaz gráfica de usuario le permite configurar cómo aparecen los datos en el **datos** pestaña y si se debe mostrar el informe de evaluación después de la conversión o no.  

@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63313772"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Trabajar con datos en el panel Resultados (Visual Database Tools)
   Después de ejecutar una consulta o vista, los resultados se muestran en el panel Resultados. A continuación, puede trabajar con esos resultados. Por ejemplo, puede agregar y eliminar filas, especificar o modificar datos y navegar fácilmente entre conjuntos de resultados de gran tamaño.  

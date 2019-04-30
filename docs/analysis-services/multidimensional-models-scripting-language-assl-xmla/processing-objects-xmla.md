@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 59a581f7e70f3fc1afd7eb7c1eaf4751d32719d0
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261663"
 ---
 # <a name="processing-objects-xmla"></a>Procesar objetos (XMLA)
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], procesar es el paso o serie de pasos que permiten convertir datos en información para análisis de negocios. El procesamiento varía en función del tipo de objeto, pero siempre forma parte de la conversión de datos en información.  
@@ -103,7 +103,7 @@ ms.locfileid: "50145390"
 ### <a name="description"></a>Descripción  
  En el ejemplo siguiente se procesa completamente la base de datos de ejemplo [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 <Process xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -118,7 +118,7 @@ ms.locfileid: "50145390"
 ### <a name="description"></a>Descripción  
  El ejemplo siguiente se procesa de forma incremental el **Internet_Sales_2004** de partición en la **Internet Sales** grupo de medida de la **Adventure Works DW** cubo en el [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] ejemplo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos. El **proceso** comando es agregar agregaciones para el orden de fechas posterior al 31 de diciembre de 2006 a la partición mediante el uso de un enlace de consultas fuera de línea de la **enlaces** propiedad de la **proceso**  comando para recuperar las filas de tabla de hechos desde el que se va a generar las agregaciones para agregar a la partición.  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 <Process ProcessAffectedObjects="true" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

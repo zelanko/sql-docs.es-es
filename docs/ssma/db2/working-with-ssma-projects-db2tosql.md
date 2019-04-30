@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d3ccc9fe24d770fa64b2bef86feabab0dd2e7fba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63244651"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Trabajar con proyectos de SSMA (DB2ToSQL)
 Para migrar bases de datos DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], creará primero un proyecto de SSMA. El proyecto es un archivo que contiene la información siguiente:  
@@ -76,7 +76,7 @@ Para migrar datos desde bases de datos DB2 a [!INCLUDE[ssNoVersion](../../includ
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Base de datos SQL Azure  
+    -   Azure SQL DB  
   
 ## <a name="customizing-project-settings"></a>Personalizar la configuración de proyecto  
 Además de definir la configuración predeterminada del proyecto que se aplica a todos los nuevos proyectos SSMA, puede personalizar la configuración para cada proyecto. Para obtener más información, consulte [definir opciones de proyecto &#40;OracleToSQL&#41; ](../../ssma/oracle/setting-project-options-oracletosql.md) y secciones relacionadas.  
@@ -96,7 +96,7 @@ Cuando se guarda un proyecto, SSMA conserva la configuración del proyecto y, op
   
         Guardar metadatos podría tardar varios minutos. Si no desea guardar los metadatos aún, no seleccione las casillas de verificación.  
   
-    2.  Haga clic en el **guardar** botón.  
+    2.  Haga clic en el botón **Guardar**.  
   
         SSMA analizará los esquemas de DB2 y guardar los metadatos en el archivo de proyecto.  
   

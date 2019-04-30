@@ -1,5 +1,5 @@
 ---
-title: Elemento (tupla) (MDX) | Documentos de Microsoft
+title: Item (tupla) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58cb48c467bbd3ca1c929da1fdff4881086d2e1d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273077"
 ---
 # <a name="item-tuple-mdx"></a>Item (Tuple) (MDX)
 
@@ -36,21 +36,21 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Expression1*  
+ *String_Expression1*  
  Expresión de cadena válida que suele ser una tupla expresada en una cadena.  
   
- *Expression2*  
+ *String_Expression2*  
  Expresión de cadena válida que suele ser una tupla expresada en una cadena.  
   
  *Index*  
  Expresión numérica válida que especifica la tupla concreta mediante la posición dentro del conjunto que se devolverá.  
   
-## <a name="remarks"></a>Notas  
- El **elemento** función devuelve una tupla del conjunto especificado. Hay tres formas de llamar a la **elemento** función:  
+## <a name="remarks"></a>Comentarios  
+ El **elemento** función devuelve una tupla del conjunto especificado. Hay tres maneras posibles para llamar a la **elemento** función:  
   
 -   Si se especifica una expresión de cadena único, el **elemento** función devuelve la tupla especificada. Por ejemplo, "([2005].Q3, [Store05])".  
   
--   Si se especifica más de una expresión de cadena, la **elemento** función devuelve la tupla definida por las coordenadas especificadas. El número de cadenas debe coincidir con el número de ejes y cada cadena deben identificar una jerarquía única. Por ejemplo, "[2005].Q3", "[Store05]".  
+-   Si se especifica más de una expresión de cadena, el **elemento** función devuelve la tupla definida por las coordenadas especificadas. El número de cadenas debe coincidir con el número de ejes y cada cadena deben identificar una jerarquía única. Por ejemplo, "[2005].Q3", "[Store05]".  
   
 -   Si se especifica un entero, el **elemento** función devuelve la tupla que se encuentra en la posición de base cero especificada por *índice*.  
   

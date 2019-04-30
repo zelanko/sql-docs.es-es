@@ -1,5 +1,5 @@
 ---
-title: (División) (MDX) | Documentos de Microsoft
+title: (Divide) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ba8cdf3a403d5673dc3114e88251f9b47f1f6e09
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248180"
 ---
-# <a name="divide---mdx-operator-reference"></a>División - referencia de operadores MDX
+# <a name="divide---mdx-operator-reference"></a>Dividir - referencia de operadores de MDX
 
 
   Realiza una operación aritmética que divide un número por otro número.  
@@ -29,17 +29,17 @@ Dividend / Divisor
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *dividendo*  
+ *Dividendo*  
  Una expresión MDX (Expresiones multidimensionales) válida que devuelve un valor numérico.  
   
- *divisor*  
+ *Divisor*  
  Expresión MDX válida que devuelve un valor numérico.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Un valor con el tipo de datos del parámetro que tiene mayor precedencia.  
   
-## <a name="remarks"></a>Notas  
- El valor real devuelto por la **/ (dividir)** operador representa el cociente de la primera expresión, dividida por la segunda expresión.  
+## <a name="remarks"></a>Comentarios  
+ El valor real devuelto por la **/ (dividir)** operador representa el cociente de la primera expresión dividida por la segunda expresión.  
   
  Ambas expresiones deben ser del mismo tipo de datos o una se debe poder convertir implícitamente en el tipo de datos de la otra. Si *Divisor* se evalúa como un valor null, el operador genera un error. Si ambos *Divisor* y *dividendo* evaluar en un valor null, el operador devuelve un valor null.  
   
@@ -101,6 +101,6 @@ WHERE
   
 ## <a name="see-also"></a>Vea también  
  [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

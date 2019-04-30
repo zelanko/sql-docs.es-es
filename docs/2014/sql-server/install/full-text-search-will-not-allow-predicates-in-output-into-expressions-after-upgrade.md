@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77d26b41bdb848d487f144b40e86f1c00ad60880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297551"
 ---
 # <a name="after-upgrade-full-text-search-will-not-allow-predicates-in-output-into-expression"></a>Después de la actualización, la búsqueda de texto completo no permitirá los predicados en la expresión OUTPUT INTO
   Los predicados de texto completo no están permitidos en la cláusula OUTPUT cuando el nivel de compatibilidad de la base de datos está establecido en 100 o superior.  

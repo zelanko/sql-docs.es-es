@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ba39c4bdc2bffc3198d780aa155e9ee60000d88a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308728"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 Especifica qué funcionalidad el [admite](../../../ado/reference/ado-api/supports-method.md) debería probar método.  
@@ -43,7 +43,7 @@ Especifica qué funcionalidad el [admite](../../../ado/reference/ado-api/support
 |**adUpdateBatch**|0x10000|Admite actualización por lotes ([UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) y [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) métodos) para transmitir los grupos de los cambios en el proveedor.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

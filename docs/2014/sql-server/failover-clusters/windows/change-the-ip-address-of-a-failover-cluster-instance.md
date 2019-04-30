@@ -16,23 +16,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a9a93c9c6efdd5a864b5ab3ce0beacb7cbf1632
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63049632"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>Cambiar la dirección IP de una instancia de clúster de conmutación por error
   En este tema se describe cómo se cambia el recurso de dirección IP de una instancia de clúster de conmutación por error (FCI) AlwaysOn con el complemento Administrador de clústeres de conmutación por error. El complemento Administrador de clústeres de conmutación por error es la aplicación de administración de clústeres del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
   
--   **Before you begin:**  [Security](#Security)  
+-   **Antes de empezar:**  [Seguridad](#Security)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
- Antes de comenzar, revise el siguiente tema de los Libros en pantalla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : [Antes de instalar los clústeres de conmutación por error](../install/before-installing-failover-clustering.md).  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+ Antes de comenzar, revise los siguientes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tema de libros en pantalla: [Antes de instalar los clústeres de conmutación por error](../install/before-installing-failover-clustering.md).  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para mantener o actualizar una DCI, debe ser administrador local y tener permisos para iniciar sesión como servicio en todos los nodos de la FCI.  
   
 ##  <a name="WSFC"></a> Usar el complemento Administrador de clústeres de conmutación por error  

@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplos: Usar OPENXML | Microsoft Docs'
+title: 'Ejemplos: Uso de OPENXML | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -27,13 +27,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63205107"
 ---
-# <a name="examples-using-openxml"></a>Ejemplos: Usar OPENXML
+# <a name="examples-using-openxml"></a>Ejemplos: Uso de OPENXML
   Los ejemplos de este tema muestran cómo se utiliza OPENXML para crear una vista de conjunto de filas de un documento XML. Para obtener más información sobre la sintaxis de OPENXML, vea [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Los ejemplos muestran todos los aspectos de OPENXML, pero no especifican metapropiedades en OPENXML. Para obtener más información sobre cómo especificar metapropiedades en OPENXML, vea [Especificar metapropiedades en OPENXML](specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Ejemplos  

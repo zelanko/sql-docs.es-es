@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4db6133a486e77369630dc717fab02b3be7f8e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729301"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Revisar las propiedades de cubo y dimensión
   Después de definir un cubo, se pueden revisar los resultados mediante el Diseñador de cubos. En la tarea siguiente, revisará la estructura del cubo del proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -35,7 +35,7 @@ ms.locfileid: "48196275"
   
 4.  En el panel **Dimensiones** de la pestaña **Estructura de cubo** , expanda **Customer**y, a continuación, haga clic en **Editar Customer** para abrir la dimensión en el Diseñador de dimensiones.  
   
-     El Diseñador de dimensiones contiene estas pestañas: **Estructura de dimensión**, **Relaciones de atributo**, **Traducciones**y **Explorador**. Tenga en cuenta que la pestaña **Estructura de dimensión** incluye tres paneles: **Atributos**, **Jerarquías**y **Vista del origen de datos**. Los atributos que contiene la dimensión aparecen en el panel **Atributos** . Para obtener más información, consulte [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md), [jerarquías definidas por el usuario](multidimensional-models/user-defined-hierarchies-create.md).  
+     Diseñador de dimensiones contiene estas pestañas: **Estructura de dimensión**, **relaciones de atributo**, **traducciones**, y **explorador**. Tenga en cuenta que el **estructura de dimensión** ficha incluye tres paneles: **Atributos**, **jerarquías**, y **vista del origen de datos**. Los atributos que contiene la dimensión aparecen en el panel **Atributos** . Para obtener más información, consulte [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md), [jerarquías definidas por el usuario](multidimensional-models/user-defined-hierarchies-create.md).  
   
 5.  Para cambiar al Diseñador de cubos, haga clic con el botón derecho en el cubo **Tutorial de Analysis Services** del nodo **Cubos** en el Explorador de soluciones y, después, haga clic en **Ver diseñador**.  
   

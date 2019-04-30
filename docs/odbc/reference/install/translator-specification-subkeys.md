@@ -17,19 +17,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a3c5ad31437cf2639d6b8478d173c7522fa3e9fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272938"
 ---
 # <a name="translator-specification-subkeys"></a>Subclaves de la especificación del traductor
 Traductor enumerado en la subclave de traductores de ODBC tiene una subclave de su propio. Esta subclave tiene el mismo nombre que el valor correspondiente en la subclave de traductores de ODBC. Los valores bajo esta subclave enumeran las rutas de acceso completas de traductor y las DLL de instalación de traductor y el recuento de uso. Los formatos de los valores son como se muestra en la tabla siguiente.  
   
-|Nombre|Tipo de datos|data|  
+|Nombre|Tipo de datos|Datos|  
 |----------|---------------|----------|  
-|Traductor|REG_SZ|*ruta de DLL de traductor*|  
-|ssNoVersion|REG_SZ|*ruta de DLL de instalación*|  
+|Traductor|REG_SZ|*translator-DLL-path*|  
+|Programa de instalación|REG_SZ|*setup-DLL-path*|  
 |UsageCount|REG_DWORD|*Recuento*|  
   
  Para obtener información sobre recuentos de uso, consulte [recuento de uso](../../../odbc/reference/install/usage-counting.md) anteriormente en esta sección.  

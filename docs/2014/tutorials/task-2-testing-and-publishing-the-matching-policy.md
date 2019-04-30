@@ -11,24 +11,24 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21f0cf5a4d096bfa0f4b673fdd716e2e48ee1396
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250297"
 ---
-# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tarea 2: probar y publicar la directiva de coincidencia
+# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tarea 2: Prueba y publicación de la directiva de coincidencia
   En esta tarea, probará y publicará el **quitar proveedores duplicados** directiva de coincidencia.  
   
 1.  En el **resultados coincidentes** página, haga clic en **iniciar** para probar la directiva completa. En su caso, solo tiene una regla en la directiva, por lo que los resultados de probar la regla y la directiva deben ser iguales.  
   
 2.  Examine todos los registros coincidentes y su puntuación de coincidencia en el cuadro de lista. Un registro que tiene un **verde** icono asociado a ella es un duplicado del registro dinámico que lo precede. He aquí un par de ejemplos:  
   
-    1.  El registro que tiene **Id. de registro: 1000005** es una coincidencia del registro con **Id. de registro: 1000004** con **puntuación: 100%** porque ambos registros tienen los mismos valores para **SupplierID (requisito previo)**, **Supplier Name**, y **ContactEmailAddress columnas**. DQS elige aleatoriamente un registro como registro dinámico para un clúster.  
+    1.  El registro con **Id. de registro: 1000005** es una coincidencia del registro con **Id. de registro: 1000004** con **puntuación: 100%** porque ambos registros tienen los mismos valores para **SupplierID (requisito previo)**, **Supplier Name**, y **ContactEmailAddress columnas**. DQS elige aleatoriamente un registro como registro dinámico para un clúster.  
   
     2.  El registro **1000023** es una coincidencia del registro **1000022** con la puntuación de coincidencia: 93% porque los dos registros tienen los mismos valores para **SupplierID (requisito previo)** y **Supplier Name** columnas, pero valores diferentes para el **ContactEmailAddress** columna.  
   
-    3.  Desplácese hasta la parte inferior de la lista para ver dos registros cuyos identificadores son **1000051** y **1000052**. Registro **1000052** se considera una coincidencia con la puntuación de coincidencia **91%** porque los dos registros tienen los mismos valores para el **SupplierID** y  **ContactEmailAddress** columnas, pero valores diferentes para el **Supplier Name** columna.  
+    3.  Desplácese hasta la parte inferior de la lista para ver dos registros cuyos identificadores: **1000051** y **1000052**. Registro **1000052** se considera una coincidencia con la puntuación de coincidencia **91%** porque los dos registros tienen los mismos valores para el **SupplierID** y  **ContactEmailAddress** columnas, pero valores diferentes para el **Supplier Name** columna.  
   
      ![Definición de directiva - resultados de directivas de](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-01.jpg "definición de directiva - resultados de directivas")  
   

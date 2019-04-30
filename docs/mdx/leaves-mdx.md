@@ -1,5 +1,5 @@
 ---
-title: Deja (MDX) | Documentos de Microsoft
+title: Deja (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b18f283dce1ed5d0d3099dbdc26e27e8aff39ffc
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270449"
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
 
@@ -32,7 +32,7 @@ Leaves( [ Dimension_expression ] )
  *Dimension_Expression*  
  Expresión MDX válida que devuelve una dimensión.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los miembros hoja son tuplas formadas por la combinación cruzada del nivel inferior de todas las jerarquías de atributo. Se excluyen los miembros calculados.  
   
 -   Si se especifica un nombre de dimensión, el **deja** función devuelve un conjunto que contiene los miembros hoja del atributo clave de la dimensión especificada.  

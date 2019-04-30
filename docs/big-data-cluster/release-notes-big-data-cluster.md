@@ -5,17 +5,17 @@ description: En este artículo se describe las últimas actualizaciones y proble
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/28/2018
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3c999d82df4e8b73e290456ad5d3601712747ef9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: a3148b9e3d7b2797684c2330e231640fb9ac2a1d
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860536"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473541"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas de la versión para los clústeres de datos de gran tamaño en SQL Server
 
@@ -24,6 +24,99 @@ ms.locfileid: "58860536"
 En este artículo se enumeran las actualizaciones y saber que los problemas de las versiones más recientes de los clústeres de macrodatos de SQL Server.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+## <a id="ctp25"></a> CTP 2.5 (abril)
+
+Las secciones siguientes describen las nuevas características y problemas conocidos de clústeres de macrodatos en 2.5 de CTP de SQL Server de 2019.
+
+### <a name="whats-new"></a>What's New
+
+| Nueva característica o la actualización | Detalles |
+|:---|:---|
+| Perfiles de implementación | Usar valor predeterminado y personalizar [archivos JSON de configuración de implementación](deployment-guidance.md#configfile) para las implementaciones de clústeres de datos de gran tamaño en lugar de las variables de entorno. |
+| Implementaciones solicitadas | `mssqlctl cluster create` Ahora le pide los valores necesarios para las implementaciones de forma predeterminada. |
+| Cambios de nombre de punto de conexión de servicio y pod | Los puntos de conexión externos siguientes han cambiado los nombres:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
+| **mssqlctl** improvements | Use **mssqlctl** a [lista de puntos de conexión externos](deployment-guidance.md#endpoints) y comprobar la versión de **mssqlctl** con el `--version` parámetro. |
+| Instalación sin conexión | Guía para las implementaciones de clústeres de datos de gran tamaño sin conexión. |
+| Mejoras en los niveles de HDFS | Los niveles S3, el almacenamiento en caché de montaje y OAuth compatibilidad con ADLS Gen2. |
+| Nuevo `mssql` conector de Spark SQL Server | |
+
+### <a name="known-issues"></a>Problemas conocidos
+
+Las secciones siguientes describen los problemas conocidos y limitaciones con esta versión.
+
+#### <a name="deployment"></a>Implementación
+
+- No se admite la actualización de un clúster de macrodatos datos desde una versión anterior.
+
+   > [!IMPORTANT]
+   > Debe los datos de copia de seguridad y, a continuación, eliminar el clúster existente de datos de gran tamaño (con la versión anterior de **mssqlctl**) antes de implementar la versión más reciente. Para obtener más información, consulte [actualizar a una nueva versión](deployment-upgrade.md).
+
+- Después de implementar en AKS, es posible que vea los siguientes dos eventos de advertencia de la implementación. Ambos de estos eventos son problemas conocidos, pero no podrá implementar correctamente el clúster de macrodatos en AKS.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- Si se produce un error en la implementación de un clúster de macrodatos, no se quita el espacio de nombres asociado. Esto podría dar lugar a un espacio de nombres huérfano en el clúster. Una solución consiste en eliminar el espacio de nombres manualmente antes de implementar un clúster con el mismo nombre.
+
+
+
+#### <a id="externaltablesctp24"></a> Tablas externas
+
+- Implementación del clúster de macrodatos ya no crea el **SqlDataPool** y **SqlStoragePool** orígenes de datos externos. Puede crear estos orígenes de datos manualmente para admitir la virtualización de datos para el grupo de datos y el grupo de almacenamiento.
+
+   ```sql
+   -- Create the SqlDataPool data source:
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+
+   -- Create the SqlStoragePool data source:
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+   BEGIN
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
+   END
+   ```
+
+- Es posible crear una tabla externa de grupo de datos para una tabla que tiene no compatibles de tipos de columna. Si consulta la tabla externa, recibirá un mensaje similar al siguiente:
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- Si consulta una tabla externa del grupo de almacenamiento, podría obtener un error si se está copiando el archivo subyacente en HDFS al mismo tiempo.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- Si va a crear una tabla externa a Oracle que usan tipos de datos de caracteres, el Asistente para la virtualización de Azure Data Studio interpreta estas columnas como VARCHAR en la definición de tabla externa. Esto provocará un error en el DDL de tabla externa. Modifique el esquema de Oracle para usar el tipo NVARCHAR2, o crear manualmente las instrucciones de la tabla externa y especificar NVARCHAR en lugar de usar al asistente.
+
+#### <a name="application-deployment"></a>Implementación de la aplicación
+
+- Al llamar a una aplicación de R, Python o MLeap desde la API de REST, la llamada a veces horizontal en 5 minutos.
+
+#### <a name="spark-and-notebooks"></a>Spark y cuadernos
+
+- Pueden cambiar las direcciones IP de POD en el entorno de Kubernetes como reinicios de PODs. En el escenario donde se reinicia el patrón de pod, puede producir un error de la sesión de Spark con `NoRoteToHostException`. Esto se produce por las cachés JVM que no se actualiza con la nueva dirección IP direcciones.
+
+- Si tiene Jupyter ya instalado y un independiente de Python en Windows, se pueden producir un error en cuadernos de Spark. Para solucionar este problema, actualice Jupyter a la versión más reciente.
+
+- En un bloc de notas, si hace clic en el **agregar texto** comando, se agrega el texto de la celda en modo de vista previa en lugar de en modo de edición. Puede hacer clic en el icono de vista previa para activar o desactivar para el modo de edición y editar la celda.
+
+#### <a name="hdfs"></a>HDFS
+
+- Si hace clic derecho en un archivo de HDFS para obtener la vista previa, puede aparecer el siguiente error:
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   Actualmente no hay ninguna manera de obtener una vista previa de los archivos mayores de 30 MB en Azure Data Studio.
+
+- No se admiten los cambios de configuración HDFS que implican cambios en hdfs-site.xml.
+
+#### <a name="security"></a>Seguridad
+
+- El contraseña_sa forma parte del entorno y reconocibles (por ejemplo, en un archivo de volcado de cable). Debe restablecer el contraseña_sa en la instancia principal después de la implementación. Esto no es un error, pero un paso de seguridad. Para obtener más información sobre cómo cambiar el contraseña_sa en un contenedor de Linux, consulte [cambiar la contraseña de SA](../linux/quickstart-install-connect-docker.md#sapassword).
+
+- Los registros AKS pueden contener la contraseña de SA para las implementaciones de clústeres de datos de gran tamaño.
 
 ## <a id="ctp24"></a> CTP 2.4 (marzo)
 
@@ -49,7 +142,7 @@ Las secciones siguientes describen los problemas conocidos y limitaciones con es
 - No se admite la actualización de un clúster de macrodatos datos desde una versión anterior.
 
    > [!IMPORTANT]
-   > Debe los datos de copia de seguridad y, a continuación, eliminar el clúster existente de datos de gran tamaño (con la versión anterior de **mssqlctl**) antes de implementar la versión más reciente. Para obtener más información, consulte [actualizar a una nueva versión](deployment-guidance.md#upgrade).
+   > Debe los datos de copia de seguridad y, a continuación, eliminar el clúster existente de datos de gran tamaño (con la versión anterior de **mssqlctl**) antes de implementar la versión más reciente. Para obtener más información, consulte [actualizar a una nueva versión](deployment-upgrade.md).
 
 - Después de implementar en AKS, es posible que vea los siguientes dos eventos de advertencia de la implementación. Ambos de estos eventos son problemas conocidos, pero no podrá implementar correctamente el clúster de macrodatos en AKS.
 
@@ -193,7 +286,7 @@ Las secciones siguientes describen los problemas conocidos y limitaciones con es
 - No se admite la actualización de un clúster de macrodatos datos desde una versión anterior.
 
    > [!IMPORTANT]
-   > Debe los datos de copia de seguridad y, a continuación, eliminar el clúster existente de datos de gran tamaño (con la versión anterior de **mssqlctl**) antes de implementar la versión más reciente. Para obtener más información, consulte [actualizar a una nueva versión](deployment-guidance.md#upgrade).
+   > Debe los datos de copia de seguridad y, a continuación, eliminar el clúster existente de datos de gran tamaño (con la versión anterior de **mssqlctl**) antes de implementar la versión más reciente. Para obtener más información, consulte [actualizar a una nueva versión](deployment-upgrade.md).
 
 - El **ACCEPT_EULA** variable de entorno debe ser "yes" o "Sí" para aceptar los términos de licencia. Las versiones anteriores permiten "y" e "Y", pero estos ya no se aceptan y producirá un error de implementación.
 
@@ -243,7 +336,7 @@ Si usa kubeadm para implementación de Kubernetes en varios equipos, el portal d
    mssqlctl cluster create --name <cluster_name>
    ```
 
-- Para obtener información importante sobre cómo actualizar a la versión más reciente de los clústeres de macrodatos y **mssqlctl**, consulte [actualizar a una nueva versión](deployment-guidance.md#upgrade).
+- Para obtener información importante sobre cómo actualizar a la versión más reciente de los clústeres de macrodatos y **mssqlctl**, consulte [actualizar a una nueva versión](deployment-upgrade.md).
 
 #### <a name="external-tables"></a>Tablas externas
 
@@ -302,7 +395,7 @@ Las secciones siguientes describen los problemas conocidos y limitaciones con es
 
 #### <a name="deployment"></a>Implementación
 
-- No se admite la actualización de un clúster de macrodatos datos desde una versión anterior. Debe de copia de seguridad y eliminar cualquier clúster de macrodatos existente antes de implementar la versión más reciente. Para obtener más información, consulte [actualizar a una nueva versión](deployment-guidance.md#upgrade).
+- No se admite la actualización de un clúster de macrodatos datos desde una versión anterior. Debe de copia de seguridad y eliminar cualquier clúster de macrodatos existente antes de implementar la versión más reciente. Para obtener más información, consulte [actualizar a una nueva versión](deployment-upgrade.md).
 
 - Después de implementar en AKS, es posible que vea los siguientes dos eventos de advertencia de la implementación. Ambos de estos eventos son problemas conocidos, pero no podrá implementar correctamente el clúster de macrodatos en AKS.
 
@@ -370,7 +463,7 @@ Las secciones siguientes proporcionan los problemas conocidos para los clústere
 
 #### <a name="deployment"></a>Implementación
 
-- No se admite la actualización de un clúster de macrodatos datos desde una versión anterior. Debe de copia de seguridad y eliminar cualquier clúster de macrodatos existente antes de implementar la versión más reciente. Para obtener más información, consulte [actualizar a una nueva versión](deployment-guidance.md#upgrade).
+- No se admite la actualización de un clúster de macrodatos datos desde una versión anterior. Debe de copia de seguridad y eliminar cualquier clúster de macrodatos existente antes de implementar la versión más reciente. Para obtener más información, consulte [actualizar a una nueva versión](deployment-upgrade.md).
 
 - Después de implementar en AKS, es posible que vea los siguientes dos eventos de advertencia de la implementación. Ambos de estos eventos son problemas conocidos, pero no podrá implementar correctamente el clúster de macrodatos en AKS.
 

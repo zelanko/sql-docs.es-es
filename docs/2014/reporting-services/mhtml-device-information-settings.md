@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 196afebcabea54fda1b315b1c2f17c0029842f07
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59949801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280386"
 ---
 # <a name="mhtml-device-information-settings"></a>Configuración de la información del dispositivo MHTML
   En la tabla siguiente se muestra una lista de la configuración de información de dispositivos para representar los informes en formato de archivo web (MHTML).  

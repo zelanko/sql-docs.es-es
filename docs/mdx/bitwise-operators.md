@@ -1,5 +1,5 @@
 ---
-title: Operadores bit a bit | Documentos de Microsoft
+title: Operadores bit a bit | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1d82ab7eb58b9c7aa76683e09b8017fb21799eef
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284936"
 ---
 # <a name="bitwise-operators"></a>Operadores bit a bit
 
@@ -32,7 +32,7 @@ ms.locfileid: "34739424"
 |[XOR](../mdx/xor-mdx.md)|Realiza una exclusión lógica de dos expresiones numéricas.|  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Operadores &#40;sintaxis MDX&#41;](../mdx/operators-mdx-syntax.md)  
+ [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Operadores &#40;sintaxis de MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

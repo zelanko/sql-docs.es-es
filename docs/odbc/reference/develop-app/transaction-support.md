@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be133079c1b6beffd484942eb9ae058c14dd5c1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306036"
 ---
 # <a name="transaction-support"></a>Compatibilidad con transacciones
 El grado de compatibilidad con transacciones es definido por el controlador. ODBC está diseñada para implementarse en una base de datos de usuario único o de escritorio que no tiene necesidad de administrar varias actualizaciones a sus datos. Además, algunas bases de datos que admiten transacciones realizar por lo que solo para las instrucciones de lenguaje de manipulación de datos (DML) de SQL; hay restricciones o semántica de transacción especial con respecto al uso del lenguaje de definición de datos (DDL) cuando una transacción está activa. Es decir, puede haber compatibilidad con transacciones para varias actualizaciones simultáneas en tablas pero no para cambiar el número y la definición de tablas durante una transacción.  

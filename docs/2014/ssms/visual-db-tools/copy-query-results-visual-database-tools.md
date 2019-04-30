@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c078597954ac6754966a1a485ac03fc19f817618
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269895"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Copiar los resultados de una consulta (Visual Database Tools)
   El conjunto de resultados se puede copiar como texto separado por tabulaciones desde el panel **Resultados** . Puede copiar el conjunto de resultados completo, o las filas o celdas contiguas o no contiguas que desee.  

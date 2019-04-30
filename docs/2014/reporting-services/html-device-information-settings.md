@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e5f34ac12dd76de22e53be72e04d51d0cef8be1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63260843"
 ---
 # <a name="html-device-information-settings"></a>Configuración de la información del dispositivo HTML
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato HTML.  

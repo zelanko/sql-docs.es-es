@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 078b48c36d0ee2a1b3f368b8e6baf7346ed343fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248932"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Interfaz ADORecordsetConstruction
 El **ADORecordsetConstruction** interfaz se usa para construir un ADO **Recordset** objeto de OLE DB **conjunto de filas** objeto en una aplicación de C o C++.  
@@ -34,7 +34,7 @@ El **ADORecordsetConstruction** interfaz se usa para construir un ADO **Recordse
 |-|-|  
 |[Capítulo](../../../ado/reference/ado-api/chapter-property-ado.md)|Lectura/escritura.<br />Obtiene o establece OLE DB **capítulo** objeto desde/en este ADO **Recordset** objeto.|  
 |[RowPosition](../../../ado/reference/ado-api/rowposition-property-ado.md)|Lectura/escritura.<br />Obtiene o establece OLE DB **RowPosition** objeto desde/en este ADO **Recordset** objeto.|  
-|[Conjunto de filas](../../../ado/reference/ado-api/rowset-property-ado.md)|Lectura/escritura.<br />Obtiene o establece OLE DB **conjunto de filas** objeto desde/en este ADO **Recordset** objeto.|  
+|[Rowset](../../../ado/reference/ado-api/rowset-property-ado.md)|Lectura/escritura.<br />Obtiene o establece OLE DB **conjunto de filas** objeto desde/en este ADO **Recordset** objeto.|  
   
 ## <a name="methods"></a>Métodos  
  Ninguno.  
@@ -75,7 +75,7 @@ El **ADORecordsetConstruction** interfaz se usa para construir un ADO **Recordse
 ## <a name="requirements"></a>Requisitos  
  **Versión:** ADO 2.0 y versiones posterior  
   
- **Biblioteca:** msado15.dll  
+ **Library:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   

@@ -1,5 +1,5 @@
 ---
-title: Las funciones de VBA en MDX y DAX | Documentos de Microsoft
+title: Funciones de VBA en MDX y DAX | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251544"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funciones de VBA en MDX y DAX
 
 
-  Este documento contiene una referencia cruzada de todas las funciones VBA disponibles en [de Visual Basic para aplicaciones de funciones](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) que se admiten en MDX; Además, la lista incluye una nota cuando hay una equivalencia funcional con el lenguaje DAX .  
+  Este documento contiene una referencia cruzada de todas las funciones VBA disponibles en [Visual Basic para aplicaciones de funciones](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) que se admiten en MDX; Además, la lista incluye una nota cuando hay una equivalencia funcional con el lenguaje DAX .  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Referencia de funciones de Visual Basic para Aplicaciones  
   
@@ -51,8 +51,8 @@ ms.locfileid: "34743894"
 |CurDir|No compatible||  
 |CVar|Solo MDX||  
 |CVErr|No compatible||  
-|date|Solo MDX|**Advertencia** DAX implementa otra función con el mismo nombre; la función de fecha (año, mes, día), utilizada para generar un valor de tipo de fecha de los argumentos proporcionados|  
-|DateAdd|Solo MDX|**Advertencia** DAX implementa otra función con el mismo nombre; el DATEADD (\<fechas >, < number_of_intervals >\<intervalo >) función, que se usa para desplazar las fechas proporcionadas por un número de intervalos especificado|  
+|date|Solo MDX|**Advertencia** DAX implementa otra función con el mismo nombre; la función DATE (Year, Month, Day), utilizada para generar un valor de tipo de fecha de los argumentos proporcionados|  
+|DateAdd|Solo MDX|**Advertencia** DAX implementa otra función con el mismo nombre; el DATEADD (\<fechas >, < number_of_intervals >,\<intervalo >) función, utilizada para desplazar las fechas proporcionadas por un número de intervalos especificado|  
 |DateDiff]|Solo MDX||  
 |DatePart|Solo MDX||  
 |DateSerial|Solo MDX||  
@@ -68,7 +68,7 @@ ms.locfileid: "34743894"
 |FileAttr|No compatible||  
 |FileDateTime|No compatible||  
 |FileLen|No compatible||  
-|Filter|No compatible|**Advertencia** MDX implementa otra función con el mismo nombre; la función FILTER (función, Filter) devuelve el conjunto resultante de filtrar un conjunto especificado en función de una condición de búsqueda de los argumentos proporcionados<br /><br /> **Advertencia** DAX implementa otra función con el mismo nombre; el filtro (\<tabla >,\<filtro >) función devuelve una tabla que representa un subconjunto de otra tabla o expresión de los argumentos proporcionados|  
+|Filter|No compatible|**Advertencia** MDX implementa otra función con el mismo nombre; la función de filtro (expresión_conjunto, Filter) devuelve el conjunto resultante de filtrar un conjunto especificado según una condición de búsqueda de los argumentos proporcionados<br /><br /> **Advertencia** DAX implementa otra función con el mismo nombre; el filtro (\<tabla >,\<filtro >) función devuelve una tabla que representa un subconjunto de otra tabla o expresión de los argumentos proporcionados|  
 |Fix|Solo MDX||  
 |Format (Visual Basic para Aplicaciones)|DAX, MDX||  
 |FormatCurrency|No compatible||  
@@ -83,7 +83,7 @@ ms.locfileid: "34743894"
 |GetSetting|No compatible||  
 |Hex|Solo MDX||  
 |Hour|DAX, MDX||  
-|Iif|Solo MDX|**Advertencia** DAX implementa una función similar con el nombre: IF (logical_test, value_if_true, value_if_false) (función).|  
+|Iif|Solo MDX|**Advertencia** DAX implementa una función similar con el nombre: IF (logical_test, value_if_true, value_if_false) función.|  
 |IMEStatus|No compatible||  
 |Entrada|No compatible||  
 |InputBox|No compatible||  
@@ -146,9 +146,9 @@ ms.locfileid: "34743894"
 |Str|Solo MDX||  
 |StrComp|Solo MDX||  
 |StrConv|Solo MDX||  
-|Cadena]|Solo MDX||  
+|String]|Solo MDX||  
 |StrReverse|No compatible||  
-|Switch|Solo MDX||  
+|Modificador|Solo MDX||  
 |SYD|Solo MDX||  
 |Pestaña|No compatible||  
 |Tan|Solo MDX||  

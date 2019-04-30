@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f46f391e905ed8ea0bce4aaa4d692e2b79de4ac7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276477"
 ---
 # <a name="product-key"></a>Clave de producto
   Use la página Clave del producto para validar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o especificar la edición gratuita de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que va a instalar.  

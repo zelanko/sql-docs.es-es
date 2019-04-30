@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76e4a4efeeb8ca71b4591bdaaa3e06dcab71d144
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281148"
 ---
 # <a name="cancelupdate-method-rds"></a>Método CancelUpdate (RDS)
 Cancela los cambios realizados en la fila nueva o actual de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  

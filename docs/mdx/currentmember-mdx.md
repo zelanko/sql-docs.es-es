@@ -1,5 +1,5 @@
 ---
-title: CurrentMember (MDX) | Documentos de Microsoft
+title: CurrentMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7d47e12b95a92930bbdfceaba5cc8997c286eec
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248887"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 
@@ -32,7 +32,7 @@ Hierarchy_Expression.CurrentMember
  *Hierarchy_Expression*  
  Expresión MDX válida que devuelve una jerarquía.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  En cada paso de una iteración en un conjunto de miembros de jerarquía, el miembro con el que se está trabajando es el miembro actual. El **CurrentMember** función devuelve ese miembro.  
   
 > [!IMPORTANT]  
@@ -75,7 +75,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- El miembro actual cambia en una jerarquía que se utiliza en un eje en una consulta. Por lo tanto, también puede cambiar el miembro actual en otras jerarquías de la misma dimensión que no se utilizan en un eje; Este comportamiento se denomina 'Autoexist' y pueden encontrar más detalles en [conceptos clave de MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Por ejemplo, la consulta siguiente muestra cómo el miembro actual en la jerarquía Calendar Year de la dimensión Date cambia con el miembro actual en la jerarquía Calendar, cuando el último se muestra en el eje de filas:  
+ El miembro actual cambia en una jerarquía que se utiliza en un eje en una consulta. Por lo tanto, también puede cambiar el miembro actual en otras jerarquías de la misma dimensión que no se utilizan en un eje; Este comportamiento se denomina 'Autoexist' y se pueden encontrar más detalles en [conceptos clave de MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Por ejemplo, la consulta siguiente muestra cómo el miembro actual en la jerarquía Calendar Year de la dimensión Date cambia con el miembro actual en la jerarquía Calendar, cuando el último se muestra en el eje de filas:  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -93,7 +93,7 @@ Hierarchy_Expression.CurrentMember
   
  `FROM [Adventure Works]`  
   
- **CurrentMember** es muy importante para realizar cálculos que dependen del contexto de la consulta que se utilizan en. En el ejemplo siguiente se devuelve la cantidad del pedido de cada producto y el porcentaje de cantidades de pedido por categoría y modelo, de la **Adventure Works** cubo. El **CurrentMember** función identifica el producto cuya cantidad de pedido es que se usará durante el cálculo.  
+ **CurrentMember** es muy importante para realizar cálculos que dependen del contexto de la consulta se utilizan en. El ejemplo siguiente devuelve la cantidad del pedido de cada producto y el porcentaje de cantidades de pedido por categoría y modelo, desde el **Adventure Works** cubo. El **CurrentMember** función identifica el producto cuya cantidad de pedido es que se usará durante el cálculo.  
   
 ```  
 WITH   

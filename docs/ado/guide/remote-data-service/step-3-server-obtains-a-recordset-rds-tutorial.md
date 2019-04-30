@@ -1,5 +1,5 @@
 ---
-title: 'Paso 3: El servidor obtiene un conjunto de registros (Tutorial de RDS) | Microsoft Docs'
+title: 'Paso 3: Servidor obtiene un conjunto de registros (Tutorial de RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5dc57cd55667691433515319762f9c4727060cdf
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316773"
 ---
-# <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Paso 3: el servidor obtiene un conjunto de registros (Tutorial de RDS)
+# <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Paso 3: Obtención de un conjunto de registros por parte del servidor (Tutorial de RDS)
 El programa de servidor usa el texto de cadena y el comando connect para consultar el origen de datos para las filas deseadas. Normalmente se utiliza ADO para recuperar este **Recordset**, aunque otros datos de Microsoft acceder a las interfaces, tales como OLE DB, se puede usar.  
   
 > [!IMPORTANT]
@@ -39,5 +39,5 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Paso 4: El servidor devuelve el conjunto de registros (Tutorial de RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
+ [Paso 4: Servidor devuelve el conjunto de registros (Tutorial de RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
  [Tutorial de RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

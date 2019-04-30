@@ -15,11 +15,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 210f25b55c2cc2536d4c6f00f215b27eac5f7be0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287230"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>Ejecución de la consola de SSMA (OracleToSQL)
 Microsoft proporciona un sólido conjunto de script de comandos del archivo para ejecutar y controlar las actividades SSMA. La aplicación de consola utiliza ciertos comandos del archivo de script estándar como enumerados en esta sección.  
@@ -29,7 +29,7 @@ Los comandos de proyecto controlan la creación de proyectos, abrir, guardar y s
   
 **Command**  
   
-creación de nuevos proyectos  
+create-new-project  
                   : Crea un nuevo proyecto SSMA.  
   
 **Script**  
@@ -38,7 +38,7 @@ creación de nuevos proyectos
   
 -   `project-name` indica el nombre del proyecto. {string}  
   
--   `overwrite-if-exists`Atributo opcional indica si se debe sobrescribir un proyecto existente. {valor} booleano  
+-   `overwrite-if-exists`Atributo opcional indica si se debe sobrescribir un proyecto existente. {boolean}  
   
 -   `project-type:`Atributo opcional. Indica el tipo de proyecto, es decir, "sql-server-2005" proyecto o proyecto de "sql-server-2008" proyecto "sql-server-2012" o "sql-server-2014" proyecto o "sql azure". El valor predeterminado es "sql-server-2014".  
   
@@ -63,7 +63,7 @@ Atributo de tipo de proyecto es **sql-server-2008** de forma predeterminada.
   
 **Command**  
   
-Abrir proyecto: Abre un proyecto existente.  
+open-project: Abre un proyecto existente.  
   
 **Script**  
   
@@ -86,7 +86,7 @@ SSMA para la aplicación de consola de Oracle admite la compatibilidad con versi
   
 **Command**  
   
-Guardar proyecto  
+save-project  
   
 Guarda el proyecto de migración.  
   
@@ -99,7 +99,7 @@ Guarda el proyecto de migración.
 ```  
 **Command**  
   
-Cerrar proyecto  
+close-project  
   
 Cierra el proyecto de migración.  
   
@@ -124,7 +124,7 @@ Los comandos de conexión de base de datos ayudan a conectar a la base de datos.
   
 **Command**  
   
-datos de origen conectarse  
+connect-source-database  
   
 -   Realiza la conexión a la base de datos de origen y carga los metadatos de nivel alto de la base de datos de origen, pero no todos los metadatos.  
   
@@ -141,7 +141,7 @@ Definición de servidor se recupera el atributo de nombre definido para cada con
 ```  
 **Command**  
   
-Force-load-origen/destino-database  
+force-load-source/target-database  
   
 -   Carga los metadatos de origen.  
   
@@ -171,7 +171,7 @@ o Administrador de configuración de
 ```  
 **Command**  
   
-datos de origen volver a conectar  
+reconnect-source-database  
   
 -   Vuelve a conectarse a la base de datos de origen pero no carga los metadatos a diferencia del comando de base de datos connect-origen.  
   
@@ -186,7 +186,7 @@ datos de origen volver a conectar
 ```  
 **Command**  
   
-base de destino conectarse  
+connect-target-database  
   
 -   Se conecta a la base de datos de SQL Server de destino y carga los metadatos de nivel alto de la base de datos de destino pero no los metadatos por completo.  
   
@@ -203,7 +203,7 @@ Definición de servidor se recupera desde el atributo de nombre definido para ca
 ```  
 **Command**  
   
-base de destino vuelva a conectar  
+reconnect-target-database  
   
 -   Vuelve a conectarse a la base de datos de destino pero no carga los metadatos, a diferencia del comando de base de destino de connect.  
   
@@ -222,7 +222,7 @@ Los comandos de informe generan informes sobre el rendimiento de diversas activi
   
 **Command**  
   
-informe de evaluación generar  
+generate-assessment-report  
   
 -   Genera informes de evaluación de la base de datos de origen.  
   
@@ -298,7 +298,7 @@ La salida de consola predeterminada para los comandos de migración es el inform
   
 **Command**  
   
-convertir esquema  
+convert-schema  
   
 -   Realiza la conversión de esquema de origen al esquema de destino.  
   
@@ -436,7 +436,7 @@ El comando de preparación de la migración inicia la asignación de esquema ent
   
 **Command**  
   
-esquema de asignación  
+map-schema  
   
 Asignación de esquema de base de datos de origen al esquema de destino.  
   
@@ -479,11 +479,11 @@ sincronizar de destino
   
 -   `on-error:` Especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
   
-    -   total de informes como advertencia  
+    -   report-total-as-warning  
   
-    -   informes-each-como-warning  
+    -   report-each-as-warning  
   
-    -   Error de script  
+    -   fail-script  
   
 -   `report-errors-to:` Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional) si solo se proporciona la ruta de acceso de carpeta, a continuación, archivos por nombre **TargetSynchronizationReport.XML** se crea.  
   
@@ -528,7 +528,7 @@ o Administrador de configuración de
 ```  
 **Command**  
   
-actualización de base de datos  
+refresh-from-database  
   
 -   Actualiza los objetos de base de datos de origen.  
   
@@ -544,11 +544,11 @@ Requiere uno o varios nodos de la metabase como parámetro de línea de comandos
   
 -   `on-error:` Especifica si se debe especificar la actualización de errores como advertencias o errores. Opciones disponibles para en caso de error:  
   
-    -   total de informes como advertencia  
+    -   report-total-as-warning  
   
-    -   informes-each-como-warning  
+    -   report-each-as-warning  
   
-    -   Error de script  
+    -   fail-script  
   
 -   `report-errors-to:` Especifica la ubicación del informe de errores para la operación de actualización (atributo opcional) si solo se proporciona la ruta de acceso de carpeta, a continuación, archivos por nombre **SourceDBRefreshReport.XML** se crea.  
   
@@ -645,7 +645,7 @@ o Administrador de configuración de
 ```  
 **Command**  
   
-instrucción CONVERT-sql  
+convert-sql-statement  
   
 -   `context` Especifica el nombre del esquema.  
   

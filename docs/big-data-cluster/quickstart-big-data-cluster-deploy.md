@@ -5,17 +5,17 @@ description: Tutorial de una implementación de clústeres de macrodatos de 2019
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 854f49af195e465271e3cd14bf21c49dd3469495
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 7ff31cac18eddcd45f310d78910ba83b783b1b1e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582919"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473480"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Inicio rápido: Implementar el clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
@@ -60,7 +60,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 ## <a name="run-the-deployment-script"></a>Ejecute el script de implementación
 
-Utilice los pasos siguientes para ejecutar el script de implementación. Este script creará un servicio AKS en Azure y, a continuación, implementar un clúster de macrodatos de 2019 de SQL Server en AKS. También puede modificar el script con otros [variables de entorno](deployment-guidance.md#env) para crear una implementación personalizada.
+Utilice los pasos siguientes para ejecutar el script de implementación. Este script creará un servicio AKS en Azure y, a continuación, implementar un clúster de macrodatos de 2019 de SQL Server en AKS. También puede modificar el script con otros [variables de entorno](deployment-guidance.md#configfile) para crear una implementación personalizada.
 
 1. Ejecute el script con el siguiente comando:
 
@@ -114,7 +114,7 @@ Después de 10 a 20 minutos, se debería notificar que se está ejecutando el po
 ```
 
 > [!IMPORTANT]
-> Toda la implementación puede tardar mucho tiempo debido al tiempo necesario para descargar las imágenes de contenedor para los componentes del clúster de macrodatos. Sin embargo, no debería tardar varias horas. Si experimenta problemas con la implementación, consulte el [solución de problemas de implementación](deployment-guidance.md#troubleshoot) sección del artículo de guía de implementación.
+> Toda la implementación puede tardar mucho tiempo debido al tiempo necesario para descargar las imágenes de contenedor para los componentes del clúster de macrodatos. Sin embargo, no debería tardar varias horas. Si experimenta problemas con la implementación, consulte [supervisión y solución de problemas de clústeres de SQL Server macrodatos](cluster-troubleshooting-commands.md).
 
 ## <a name="inspect-the-cluster"></a>Inspeccionar el clúster
 
@@ -149,20 +149,20 @@ Abra una ventana de comandos para usar **kubectl** durante el proceso de impleme
    ```
 
 > [!TIP]
-> Para obtener más información acerca de cómo supervisar y solucionar problemas de una implementación, consulte el [solución de problemas de implementación](deployment-guidance.md#troubleshoot) sección del artículo de guía de implementación.
+> Para obtener más información acerca de cómo supervisar y solucionar problemas de una implementación, consulte [supervisión y solución de problemas de clústeres de SQL Server macrodatos](cluster-troubleshooting-commands.md).
 
 ### <a name="use-the-cluster-administration-portal"></a>Usar el Portal de administración de clúster
 
-Una vez que se está ejecutando el pod del controlador, también puede usar el Portal de administración de clúster para supervisar la implementación. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `endpoint-service-proxy` (por ejemplo: **https://\<ip-address\>: 30777/portal**). Las credenciales usadas para iniciar sesión en el portal coinciden con los valores para **controlador para el usuario** y **contraseña** que especificó en el script de implementación.
+Una vez que se está ejecutando el pod del controlador, también puede usar el Portal de administración de clúster para supervisar la implementación. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `mgmtproxy-svc-external` (por ejemplo: **https://\<ip-address\>: 30777/portal**). Las credenciales usadas para iniciar sesión en el portal coinciden con los valores para **controlador para el usuario** y **contraseña** que especificó en el script de implementación.
 
-Puede obtener la dirección IP de la **proxy de servicio de punto de conexión** servicio, ejecute este comando en una ventana cmd o bash:
+Puede obtener la dirección IP de la **mgmtproxy-svc-external** servicio, ejecute este comando en una ventana cmd o bash:
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <your-cluster-name>
+kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> En CTP 2.4, verá una advertencia de seguridad al obtener acceso a la página web, porque los clústeres de macrodatos actualmente está usando certificados SSL generados automáticamente.
+> En CTP 2.5, verá una advertencia de seguridad al obtener acceso a la página web, porque los clústeres de macrodatos actualmente está usando certificados SSL generados automáticamente.
 
 ## <a name="connect-to-the-cluster"></a>Conéctese al clúster
 

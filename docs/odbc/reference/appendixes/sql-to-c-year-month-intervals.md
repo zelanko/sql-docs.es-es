@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01af57739f23db586991f8a54d14b90b47f15933
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259574"
 ---
-# <a name="sql-to-c-year-month-intervals"></a>SQL a C: Intervalos de mes del año
+# <a name="sql-to-c-year-month-intervals"></a>SQL a C: Intervalos de mes y año
 
 Los identificadores de los tipos de datos SQL de ODBC de año y mes intervalo son los siguientes:
 

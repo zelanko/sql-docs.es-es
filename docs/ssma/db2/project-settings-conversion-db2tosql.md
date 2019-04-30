@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273020"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Configuración del proyecto (conversión) (DB2ToSQL)
 La página de conversión de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte la sintaxis de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintaxis.  
@@ -358,7 +358,7 @@ Define el tipo de conversión de DB2 anidados subprograma (declarado en el proce
   
 Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la siguiente configuración:  
   
-**Modo predeterminado/optimista/completo:** En línea  
+**Modo predeterminado/optimista/completo:** en línea  
   
 ### <a name="use-isnull-in-string-concatenation"></a>Usar ISNULL de concatenación de cadenas  
 DB2 y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolver resultados diferentes cuando concatenaciones de cadenas incluyen valores NULL. DB2 trata el valor NULL como un juego de caracteres vacía. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Devuelve NULL.  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21054bdb3f869a0f06349b32e481144b3582de4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258817"
 ---
 # <a name="sql-to-c-guid"></a>SQL a C: GUID
 El identificador para el tipo de datos SQL de ODBC GUID es:  
@@ -31,13 +31,13 @@ El identificador para el tipo de datos SQL de ODBC GUID es:
   
 |Identificador de tipo de C|Prueba|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > longitud de bytes de caracteres|data|36|n/d|  
+|SQL_C_CHAR|*BufferLength* > longitud de bytes de caracteres|Datos|36|n/d|  
 ||*BufferLength* < 37|No definido|No definido|22003|  
-|SQL_C_WCHAR|*BufferLength* > longitud de caracteres|data|36|n/d|  
+|SQL_C_WCHAR|*BufferLength* > longitud de caracteres|Datos|36|n/d|  
 ||*BufferLength* < 37|No definido|No definido|22003|  
-|SQL_C_BINARY|Longitud de bytes de datos \< =  *BufferLength*|data|Longitud de datos en bytes|n/d|  
+|SQL_C_BINARY|Longitud de bytes de datos \< =  *BufferLength*|Datos|Longitud de datos en bytes|n/d|  
 ||Longitud de bytes de datos > *BufferLength*|No definido|No definido|22003|  
-|SQL_C_GUID|[A] ninguno|data|16 [b]|n/d|  
+|SQL_C_GUID|[A] ninguno|Datos|16[b]|n/d|  
   
  [a] el valor de *BufferLength* se omite para esta conversión. El controlador se da por supuesto que el tamaño de **TargetValuePtr* es el tamaño del tipo de datos C.  
   

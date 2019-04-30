@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262431"
 ---
-# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Tarea 9: crear una jerarquía derivada mediante Master Data Manager
+# <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Tarea 9: Creación de una jerarquía derivada mediante Master Data Manager
   En esta tarea, creará una jerarquía derivada mediante Master Data Manager. Esta jerarquía derivada se deriva de las relaciones de atributo basado en dominio entre la **proveedor** y **estado** entidades.  
   
 1.  Cambie a la página principal de **Master Data Manager** haciendo **SQL Server 2012 Master Data Services** en la parte superior de la página.  

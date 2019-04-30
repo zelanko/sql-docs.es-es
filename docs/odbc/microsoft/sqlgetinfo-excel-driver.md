@@ -1,5 +1,5 @@
 ---
-title: SQLGetInfo (controlador de Excel) | Microsoft Docs
+title: SQLGetInfo (Excel Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a2524c51f1b4b9297b6e3483a27fd78e6c1836e9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301986"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (controlador de Excel)
 > [!NOTE]  
@@ -45,7 +45,7 @@ ms.locfileid: "52541845"
 ||97/2000|08.00.0000|  
   
 ## <a name="sqlfileusage"></a>SQL_FILE_USAGE  
- SQL_FILE_TABLE (Excel 3.0 y 4.0)  
+ SQL_FILE_TABLE (Excel 3.0/4.0)  
   
  SQL_FILE_CATALOG (Excel 5.0/7.0)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "52541845"
  "Libro" (5.0/7.0/97 Excel)  
   
 ## <a name="sqlcatalogusage"></a>SQL_CATALOG_USAGE  
- SQL_QU_DML_STATEMENTS &AMP;#124; SQL_QU_TABLE_DEFINITION  
+ SQL_QU_DML_STATEMENTS &#124; SQL_QU_TABLE_DEFINITION  
   
 ## <a name="sqltimedatefunctions"></a>SQL_TIMEDATE_FUNCTIONS  
  SQL_FN_TD_CURDATE &AMP;#124; SQL_FN_TD_CURTIME &AMP;#124; SQL_FN_TD_DAYOFMONTH &AMP;#124; SQL_FN_TD_DAYOFWEEK &AMP;#124; SQL_FN_TD_DAYOFYEAR &AMP;#124; SQL_FN_TD_HOUR &AMP;#124; SQL_FN_TD_MINUTE &AMP;#124; SQL_FN_TD_MONTH &AMP;#124; SQL_FN_TD_NOW &AMP;#124; SQL_FN_TD_SECOND &AMP;#124; SQL_FN_TD_WEEK &AMP;#124; SQL_FN_TD_YEAR

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bafbd9240cb1686f14b50ed5f11dc82c59ba41cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281448"
 ---
 # <a name="table-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Table
 ## <a name="propertiescollections"></a>Propiedades y colecciones  

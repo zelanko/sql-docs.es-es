@@ -30,11 +30,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269860"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Compatibilidad con las reglas, desencadenadores, valores predeterminados y los procedimientos almacenados (controlador ODBC de Visual FoxPro)
 No se puede crear reglas de Visual FoxPro, desencadenadores, valores predeterminados o procedimientos almacenados mediante el controlador ODBC de Visual FoxPro. Sin embargo, la aplicación podría interactuar con los procedimientos almacenados, desencadenadores, valores predeterminados o reglas existentes como inserta, actualiza o elimina datos de Visual FoxPro almacenados en una base de datos.  
@@ -132,7 +132,7 @@ No se puede crear reglas de Visual FoxPro, desencadenadores, valores predetermin
   
 ||||  
 |-|-|-|  
-|RECOPILAR el comando|Función GETNEXTMODIFIED)|Comando GO/GOTO|  
+|RECOPILAR el comando|Función GETNEXTMODIFIED)|GO/GOTO Command|  
 |Función GETFLDSTATE)|Función GOMONTH)||  
 |Función GETCP)|GETENV (función))||  
   
@@ -221,10 +221,10 @@ No se puede crear reglas de Visual FoxPro, desencadenadores, valores predetermin
   
 ||||  
 |-|-|-|  
-|EXAMEN... Comando ENDSCAN|Comando de DISPERSIÓN|Función de seg.)|  
+|SCAN ... Comando ENDSCAN|Comando de DISPERSIÓN|Función de seg.)|  
 |Función de segundos)|Comando Buscar|SEEK (función))|  
 |Seleccione el comando|Función SELECT (de)|Comando SELECT-SQL|  
-|Comando BLOCKSIZE Set|Comando de ACARREO Set.|Comando de siglo Set.|  
+|Comando BLOCKSIZE Set|SET CARRY Command|Comando de siglo Set.|  
 |Comando COLLATE Set|CONJUNTO de comandos de base de datos|CONJUNTO de comandos de fecha|  
 |Comando de conjunto predeterminado|Comando de eliminaciones de Set|Comando exacto de conjunto|  
 |Comando exclusivo de Set|Comando FDOW Set.|Comando de conjunto de campos|  

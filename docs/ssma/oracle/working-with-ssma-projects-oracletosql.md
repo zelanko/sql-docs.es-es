@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 3ec3a2f9bcdf43657649263d77eff3b31c9a57a3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283562"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Proyectos de SSMA (OracleToSQL)
 Para migrar bases de datos de Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], creará primero un proyecto de SSMA. El proyecto es un archivo que contiene la información siguiente:  
@@ -80,7 +80,7 @@ Para migrar datos desde bases de datos de Oracle para [!INCLUDE[ssNoVersion](../
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Base de datos SQL Azure  
+    -   Azure SQL DB  
   
 ## <a name="customizing-project-settings"></a>Personalizar la configuración de proyecto  
 Además de definir la configuración predeterminada del proyecto que se aplica a todos los nuevos proyectos SSMA, puede personalizar la configuración para cada proyecto. Para obtener más información, consulte [definir opciones de proyecto &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md).  
@@ -100,7 +100,7 @@ Cuando se guarda un proyecto, SSMA conserva la configuración del proyecto y, op
   
         Guardar metadatos podría tardar varios minutos. Si no desea guardar los metadatos aún, no seleccione las casillas de verificación.  
   
-    2.  Haga clic en el **guardar** botón.  
+    2.  Haga clic en el botón **Guardar**.  
   
         SSMA analizará los esquemas de Oracle y guardar los metadatos en el archivo de proyecto.  
   

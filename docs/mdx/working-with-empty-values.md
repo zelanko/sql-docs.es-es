@@ -1,5 +1,5 @@
 ---
-title: Trabajar con valores vacíos | Documentos de Microsoft
+title: Trabajar con valores vacíos | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4551e452a7e2cbdf636e1c12441ff254ccbba2e7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63251446"
 ---
 # <a name="working-with-empty-values"></a>Trabajar con valores vacíos
 
@@ -46,10 +46,10 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  La siguiente información se aplica a los valores vacíos:  
   
--   El [IsEmpty](../mdx/isempty-mdx.md) función devuelve **TRUE** si y solo si la celda indicada en la tupla especificada en la función está vacía. En caso contrario, la función devuelve **FALSE**.  
+-   El [IsEmpty](../mdx/isempty-mdx.md) función devuelve **TRUE** si y solo si la celda indicada en la tupla especificada en la función está vacía. En caso contrario, devuelve la función **FALSE**.  
   
     > [!NOTE]  
-    >  El **IsEmpty** función no se puede determinar si una expresión de miembro devuelve un valor null. Para determinar si un miembro null se devuelve desde una expresión, use el [IS](../mdx/is-mdx.md)operador.  
+    >  El **IsEmpty** función no se puede determinar si una expresión de miembro devuelve un valor null. Para determinar si un miembro null se devuelve en una expresión, use el [IS](../mdx/is-mdx.md)operador.  
   
 -   Si el valor de la celda vacía es un operando correspondiente a cualquier de los operadores numéricos (+, -, *, /), el valor de la celda vacía se trata como si fuera un cero cuando el otro operando no es un valor no vacío. Si ambos operandos están vacíos, el operador numérico devuelve el valor de la celda vacía.  
   
@@ -64,7 +64,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 ## <a name="dealing-with-empty-values-in-mdx-statements-and-cubes"></a>Administrar valores vacíos de instrucciones MDX y cubos  
  En las instrucciones de expresiones multidimensionales (MDX) se pueden buscar valores vacíos para luego realizar determinados cálculos en las celdas con datos válidos (es decir, no vacías). La eliminación de los valores vacíos para realizar cálculos puede ser importante porque algunos cálculos (como los promedios) pueden ser incorrectos si se incluyen valores de celdas vacías.  
   
- Si los valores vacíos están almacenados en los datos de la tabla de hechos subyacente, se convertirán en ceros de forma predeterminada cuando se procese el cubo. Puede usar el **procesamiento de valores Null** opción en una medida para controlar si los hechos null se convierten en 0, convertir en un valor vacío o incluso que genere un error durante el procesamiento. Si no desea que aparezcan valores de celdas vacías en los resultados de la consulta, debe crear consultas, miembros calculados o instrucciones de script MDX que eliminen los valores vacíos o que los reemplacen por algún otro valor.  
+ Si los valores vacíos están almacenados en los datos de la tabla de hechos subyacente, se convertirán en ceros de forma predeterminada cuando se procese el cubo. Puede usar el **procesamiento Null** opción en una medida para controlar si los hechos null se convierten en 0, convertir en un valor vacío o incluso que genere un error durante el procesamiento. Si no desea que aparezcan valores de celdas vacías en los resultados de la consulta, debe crear consultas, miembros calculados o instrucciones de script MDX que eliminen los valores vacíos o que los reemplacen por algún otro valor.  
   
  Para quitar las filas o columnas vacías de una consulta, puede usar la instrucción NON EMPTY previamente a la definición del conjunto de ejes. Por ejemplo, la consulta siguiente solo devuelve la categoría de productos Bikes (bicicletas) porque es la única categoría que se vendió en el año 2001:  
   
@@ -124,7 +124,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |y|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
 |**TRUE**|TRUE|FALSE|FALSE|  
-|**VACÍA**|FALSE|EMPTY|FALSE|  
+|**VACÍO**|FALSE|EMPTY|FALSE|  
 |**FALSE**|FALSE|FALSE|FALSE|  
   
  En la siguiente tabla se muestra el resultado de aplicar un operador OR a dos operandos booleanos.  
@@ -132,7 +132,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |O BIEN|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
-|**VACÍA**|TRUE|TRUE|  
+|**VACÍO**|TRUE|TRUE|  
 |**FALSE**|TRUE|FALSE|  
   
  En esta tabla se muestra cómo el operador NOT niega, o invierte, el resultado de un operador booleano.  
@@ -145,7 +145,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

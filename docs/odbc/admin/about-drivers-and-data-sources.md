@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69516a613cbd9071686067350ced2ce5ca166a27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294452"
 ---
 # <a name="about-drivers-and-data-sources"></a>Acerca de controladores y orígenes de datos
 *Controladores* son los componentes que procesan las solicitudes ODBC y devuelvan datos a la aplicación. Si es necesario, los controladores de modificar la solicitud de la aplicación en un formato que entienda el origen de datos. Debe usar el programa de instalación del controlador para agregar o eliminar un controlador desde su equipo.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 288168b2a4b47c8a73612bd89a6f1987e2808475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314906"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
 Especifica si se debe crear o sobrescribir al guardar desde un archivo de un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto. Los valores pueden ser **adSaveCreateNotExist** o **adSaveCreateOverWrite**...  

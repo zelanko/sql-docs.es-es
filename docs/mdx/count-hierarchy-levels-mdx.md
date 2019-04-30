@@ -1,5 +1,5 @@
 ---
-title: Count (niveles de jerarquía) (MDX) | Documentos de Microsoft
+title: Count (niveles de jerarquía) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 657ce658704b519c31dfaa2186429a7df4110308
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306810"
 ---
 # <a name="count-hierarchy-levels-mdx"></a>Count (niveles de jerarquía) (MDX)
 
@@ -32,7 +32,7 @@ Hierarchy_Expression.Levels.Count
  *Hierarchy_Expression*  
  Expresión MDX válida que devuelve una jerarquía.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Devuelve el número de niveles de una jerarquía, incluido, si procede, el nivel `[All]`.  
   
 > [!IMPORTANT]  
@@ -49,9 +49,9 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Recuento de &#40;dimensión&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
- [Recuento de &#40;tupla&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [Recuento de &#40;establecer&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Recuento &#40;dimensión&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
+ [Recuento &#40;tupla&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

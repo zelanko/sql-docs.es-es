@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63254171"
 ---
 # <a name="multiple-results"></a>Varios resultados
 Un *resultado* algo devuelto por el origen de datos después de ejecutar una instrucción. ODBC tiene dos tipos de resultados: conjuntos de resultados y recuentos de filas. *Recuento de filas* son el número de filas afectadas por una actualización, eliminación o instrucción insert. Los lotes, se describe en [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md), puede generar varios resultados.  
@@ -31,8 +31,8 @@ Un *resultado* algo devuelto por el origen de datos después de ejecutar una ins
   
 |Tipo de lote|Recuentos de filas|Conjuntos de resultados|  
 |----------------|----------------|-----------------|  
-|Explícito de lotes|SQL_BATCH_ROW_COUNT [a]|--[b].|  
-|Procedimiento|SQL_BATCH_ROW_COUNT [a]|--[b].|  
+|Explícito de lotes|SQL_BATCH_ROW_COUNT[a]|--[b]|  
+|Procedimiento|SQL_BATCH_ROW_COUNT[a]|--[b]|  
 |Matrices de parámetros|SQL_PARAM_ARRAYS_ROW_COUNTS|SQL_PARAM_ARRAYS_SELECTS|  
   
  [a] fila pueden admitir la generación de recuento de instrucciones en un lote, aunque la devolución de los recuentos de filas no admite. La opción SQL_BATCH_SUPPORT en **SQLGetInfo** indica si se permiten las instrucciones de generación de recuento de filas en lotes; la opción SQL_BATCH_ROW_COUNTS indica si estos recuentos de filas se devuelven a la aplicación.  

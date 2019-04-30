@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a17e09df7c7235e1361aae79bd89152c290b1bdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294408"
 ---
 # <a name="adding-records-to-a-recordset"></a>Agregar registros a un conjunto de registros
 Use la **AddNew** método para crear e inicializar un nuevo registro en una existente **Recordset**. Puede usar el **admite** método con un **CursorOptionEnum** valor **adAddNew** para comprobar si puede agregar registros a la actual **delconjuntoderegistros** objeto.

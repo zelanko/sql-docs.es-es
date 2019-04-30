@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281054"
 ---
 # <a name="createobject-method-rds"></a>CreateObject (método) (RDS)
 Crea al proxy para el objeto de negocios de destino y devuelve un puntero a él. El proxy paquetes y ordena los datos en el código auxiliar del lado servidor para las comunicaciones con el objeto de negocios enviar solicitudes y datos a través de Internet. Para los objetos del componente en proceso, se utiliza ningún proxy, se proporciona solo un puntero al objeto.  
@@ -30,7 +30,7 @@ Crea al proxy para el objeto de negocios de destino y devuelve un puntero a él.
 ## <a name="syntax"></a>Sintaxis  
  Servicio de datos remoto admite los siguientes protocolos: HTTP, HTTPS (HTTP sobre capa de sockets seguros), DCOM y en proceso.  
   
-|Protocolo|Sintaxis|  
+|Protocol|Sintaxis|  
 |--------------|------------|  
 |HTTP|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "https\://awebsrvr")|  
 |HTTPS|Objeto de conjunto = DataSpace.CreateObject ("ProgId", "https\://awebsrvr")|  

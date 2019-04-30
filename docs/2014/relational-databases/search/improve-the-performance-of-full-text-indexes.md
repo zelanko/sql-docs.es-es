@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 88629dc1457d148b4a8e01537e35f2f5ccfbbdb3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273149"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Mejorar el rendimiento de los índices de texto completo
   El rendimiento de la indización y las búsquedas de texto completo se ve afectado por los recursos de hardware; por ejemplo, la memoria, la velocidad de disco y de CPU, y la arquitectura del equipo.  
@@ -105,7 +105,7 @@ ms.locfileid: "54128621"
   
  La cantidad de memoria (en bytes) consumida por el host de demonio de filtro puede calcularse de forma aproximada utilizando esta fórmula:  
   
- *number_of_crawl_ranges* \`ism_size'*max_outstanding_isms* \* 2  
+ *number_of_crawl_ranges* \`ism_size`*max_outstanding_isms*\* 2  
   
  Los valores predeterminados de las variables de la fórmula anterior son los siguientes:  
   

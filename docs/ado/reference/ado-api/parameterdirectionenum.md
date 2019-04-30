@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01f423652f32b9afe801ef99e299f65a6a860a8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314832"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Especifica si el [parámetro](../../../ado/reference/ado-api/parameter-object.md) representa un parámetro de entrada, un parámetro de salida, una entrada y un parámetro de salida o el valor devuelto de un procedimiento almacenado.  
@@ -35,7 +35,7 @@ Especifica si el [parámetro](../../../ado/reference/ado-api/parameter-object.md
 |**adParamUnknown**|0|Indica que la dirección del parámetro es desconocida.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

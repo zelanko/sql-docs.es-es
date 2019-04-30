@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 15107082c9556b42e53a0746c8400e83f22abf3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261804"
 ---
 # <a name="project-settings-gui--mysqltosql"></a>Configuración del proyecto (GUI) (MySQLToSQL)
 La configuración del proyecto de interfaz gráfica de usuario le permite configurar cómo aparecen los datos en el **datos** pestaña y si se incluyen los informes de datos con informes de evaluación.  

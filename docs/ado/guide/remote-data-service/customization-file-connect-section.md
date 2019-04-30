@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627bbbafd272b6bb7682b776132445041207f8e1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281934"
 ---
 # <a name="customization-file-connect-section"></a>Sección de conexión del archivo de personalización
 El comportamiento predeterminado del controlador es Denegar todas las conexiones. El **conectar** sección especifica las excepciones de ese comportamiento. Por ejemplo, si todos los **conectar** secciones están ausentes o vacías y, después, de forma predeterminada se pudo establecer ninguna conexión.  
@@ -57,7 +57,7 @@ connectionString
 |Parte|Descripción|  
 |----------|-----------------|  
 |**Conectar**|Una cadena literal que indica que esta es una entrada de cadena de conexión.|  
-|**_ConnectionString_**|Cadena que reemplaza la cadena de conexión de cliente completa.|  
+|**_connectionString_**|Cadena que reemplaza la cadena de conexión de cliente completa.|  
 |**Acceso**|Una cadena literal que indica que esta es una entrada de acceso.|  
 |**_accessRight_**|Uno de los derechos de acceso siguiente:<br /><br /> -   **NoAccess** -usuario no puede obtener acceso al origen de datos.<br />-   **ReadOnly** -usuario puede leer el origen de datos.<br />-   **Lectura y escritura** -usuario puede leer o escribir en el origen de datos.|  
   

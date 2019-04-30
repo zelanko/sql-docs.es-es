@@ -10,11 +10,11 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266823"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planear la compatibilidad del explorador de Reporting Services y Power View (Reporting Services 2014)
   En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], se puede usar un explorador web para ver informes y ejecutar el Administrador de informes. No todos los exploradores admiten toda la funcionalidad de informes. En este tema se describe la compatibilidad y los requisitos de las características de administración del Administrador de informes, cómo ver informes y los controles del visor de informes en Visual Studio. En el tema también se resume la disponibilidad de características para los exploradores compatibles, los requisitos de autenticación y los requisitos de script.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 426fd1fdcd3931981037b346b048de816e8596d0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63280876"
 ---
 # <a name="converttostring-method-rds"></a>Método ConvertToString (RDS)
 Convierte un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en una cadena MIME que representa los datos del conjunto de registros.  
@@ -35,10 +35,10 @@ DataFactory.ConvertToString(Recordset)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Data Factory*  
+ *DataFactory*  
  Una variable de objeto que representa un [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto.  
   
- *Conjunto de registros*  
+ *Recordset*  
  Una variable de objeto que representa un **Recordset** objeto.  
   
 ## <a name="remarks"></a>Comentarios  

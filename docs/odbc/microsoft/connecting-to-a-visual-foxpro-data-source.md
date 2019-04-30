@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eacb57e4db5d312d04fdcd1e3b06b446f62635cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301511"
 ---
 # <a name="connecting-to-a-visual-foxpro-data-source"></a>Conectarse a un origen de datos de Visual FoxPro
 Puede conectarse a un origen de datos de Visual FoxPro mediante la aplicación de Microsoft Office o con la API de SQL.  

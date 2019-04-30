@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284576"
 ---
 # <a name="procedure-calls"></a>Llamadas a procedimientos
 Un *procedimiento* es un objeto ejecutable almacenado en el origen de datos. Normalmente, se trata de una o varias instrucciones SQL compiladas. Es la secuencia de escape para llamar a un procedimiento  
   
- **{**[**? =**]**llamar** *nombre del procedimiento*[**(**[*parámetro*] [**,**[*parámetro*]]... **)**]**}**  
+ **{**[**?=**]**call** *procedure-name*[**(**[*parameter*][**,**[*parameter*]]...**)**]**}**  
   
  donde *nombre del procedimiento* especifica el nombre de un procedimiento y *parámetro* especifica un parámetro de procedimiento.  
   
- Para obtener más información acerca de la secuencia de escape de llamada de procedimiento, consulte [secuencia de Escape de llamar al procedimiento](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md) en la gramática de SQL de apéndice C:.  
+ Para obtener más información acerca de la secuencia de escape de llamada de procedimiento, consulte [secuencia de Escape de llamar al procedimiento](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md) en el apéndice C: Gramática de SQL.  
   
  Un procedimiento puede tener cero o más parámetros. También puede devolver un valor, como se indica por el marcador de parámetro opcional **? =** al principio de la sintaxis. Si *parámetro* es una entrada o un parámetro de entrada/salida, puede ser un literal o un marcador de parámetro. Sin embargo, las aplicaciones interoperables siempre deben usar marcadores de parámetros debido a algunos orígenes de datos no aceptan valores de parámetro literal. Si *parámetro* es un parámetro output, debe ser un marcador de parámetro. Marcadores de parámetros deben enlazarse a **SQLBindParameter** antes de la llamada de procedimiento se ejecuta la instrucción.  
   

@@ -1,5 +1,5 @@
 ---
-title: '&lt; (Menor que) (MDX) | Documentos de Microsoft'
+title: '&lt; (Menor que) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 111c3aae92839ff9f1574da6420d096d31517c80
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241049"
 ---
 # <a name="lt-less-than-mdx"></a>&lt; (Menor que) (MDX)
 
@@ -35,9 +35,9 @@ MDX_Expression < MDX_Expression
 ## <a name="return-value"></a>Valor devuelto  
  Un valor booleano basado en las condiciones siguientes:  
   
--   **True** si ambos parámetros son distintos de null y el primer parámetro tiene un valor que es menor que el valor del segundo parámetro.  
+-   **True** si ambos parámetros son no null y el primer parámetro tiene un valor que es menor que el valor del segundo parámetro.  
   
--   **false** si ambos parámetros son distintos de null y el primer parámetro tiene un valor que es igual o mayor que el valor del segundo parámetro.  
+-   **false** si ambos parámetros son no null y el primer parámetro tiene un valor que es igual o mayor que el valor del segundo parámetro.  
   
 -   valor NULL si uno de los parámetros (o ambos) se evalúa en un valor NULL.  
   
@@ -62,6 +62,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia de operadores MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

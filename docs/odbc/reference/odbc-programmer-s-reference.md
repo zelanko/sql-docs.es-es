@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273037"
 ---
 # <a name="odbc-programmer39s-reference"></a>Programador de ODBC&#39;s referencia
 El *referencia del programador de ODBC* contiene las siguientes secciones.  
@@ -78,13 +78,13 @@ El *referencia del programador de ODBC* contiene las siguientes secciones.
   
 -   Emerson, L. Sandra, Darnovsky, María y Bowman, Judith S.: *El manual de SQL práctico* (Addison-Wesley, 1989).  
   
--   Groff, R. James y Weinberg, Paul N.: *Mediante SQL* (Osborne McGraw-Hill, 1990).  
+-   Groff, James R. and Weinberg, Paul N.: *Mediante SQL* (Osborne McGraw-Hill, 1990).  
   
 -   Gruber, Martin: *Descripción de SQL* (Sybex, 1990).  
   
 -   Hursch, Jack l y J. Carolina: *SQL, el lenguaje de consulta estructurado* (PESTAÑA libros, 1988).  
   
--   Melton, Jim y Simon, R. Alan: *Cómo entender el nuevo SQL: Una guía completa* (Morgan Kaufmann Publishers, 1993).  
+-   Melton, Jim y Simon, R. Alan: *Cómo entender el nuevo SQL: A Complete Guide* (Morgan Kaufmann Publishers, 1993).  
   
 -   Fabian de Pascal: *SQL y los conceptos básicos de relacionales* (M & T libros, 1990).  
   
@@ -100,7 +100,7 @@ El *referencia del programador de ODBC* contiene las siguientes secciones.
   
 -   Gris, N. J. y Reuter, Andreas: *Procesamiento de transacciones: Conceptos y técnicas* (Morgan Kaufmann Publishers, 1993).  
   
--   Hackathorn, Richard D.: *Conectividad de base de datos empresarial* (Wiley & Sons, 1993).  
+-   Hackathorn, Richard D.: *Enterprise Database Connectivity* (Wiley & Sons, 1993).  
   
  Para obtener más información sobre las Interfaces de nivel de llamada, están disponibles los siguientes estándares:  
   
@@ -112,7 +112,7 @@ El *referencia del programador de ODBC* contiene las siguientes secciones.
   
 -   Geiger, Kyle: *Dentro de ODBC* (Microsoft Press®, 1995).  
   
--   Gryphon, Robert, Charpentier, Luc, Oelschlager, Jon, Shoemaker, Andrew, cruz, Jim y Lilley, W. Albert: *Uso de ODBC 2* (Que, 1994).  
+-   Gryphon, Robert, Charpentier, Luc, Oelschlager, Jon, Shoemaker, Andrew, Cross, Jim, and Lilley, Albert W.: *Uso de ODBC 2* (Que, 1994).  
   
 -   Johnston, Tom y Osborne, marca: *Guía para desarrolladores de ODBC* (Howard W. Sams & compañía, 1994).  
   

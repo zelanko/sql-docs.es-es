@@ -1,5 +1,5 @@
 ---
-title: 'Apéndice F: biblioteca de cursores ODBC | Microsoft Docs'
+title: 'Apéndice F: Biblioteca de cursores ODBC | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c27845976651b0d68b91b6269a21d1cae3518df8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267799"
 ---
-# <a name="appendix-f-odbc-cursor-library"></a>Apéndice F: Biblioteca de cursores ODBC
+# <a name="appendix-f-odbc-cursor-library"></a>Apéndice F: Biblioteca de cursores ODBC
 > [!IMPORTANT]  
 >  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad de cursor del controlador.  
   

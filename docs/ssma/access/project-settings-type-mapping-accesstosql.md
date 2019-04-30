@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299130"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Configuración del proyecto (asignación de tipo) (AccessToSQL)
 La configuración del proyecto de asignación de tipos le permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA. También puede especificar asignaciones de tipos para objetos de base de datos individual. Para obtener más información, consulte [tipos de datos de destino y origen de asignación](mapping-source-and-target-data-types-accesstosql.md).  
@@ -44,22 +44,22 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
   
 |Tipo de datos de Access|Tipo de datos de SQL Server|  
 |--------------------|------------------------|  
-|**binario [\*... \*]**|**varbinary [\*]**|  
+|**binario [\*... \*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
-|**bytes**|**tinyint**|  
-|**Moneda**|**money**|  
+|**byte**|**tinyint**|  
+|**currency**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
-|**GUID**|**uniqueidentifier**|  
+|**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**Long**|**int**|  
-|**LONGBINARY**|**varbinary(max)**|  
-|**Memorando**|**nvarchar(max)**|  
+|**long**|**int**|  
+|**longbinary**|**varbinary(max)**|  
+|**memo**|**nvarchar(max)**|  
 |**memorando** : para Access 97|**ntext**|  
-|**único**|**real**|  
-|**texto [\*... \*]**|**nvarchar [\*]**|  
-|**texto [\*... \*]** : para Access 97|**varchar [\*]**|  
+|**single**|**real**|  
+|**text[\*..\*]**|**nvarchar[\*]**|  
+|**texto [\*... \*]** : para Access 97|**varchar[\*]**|  
   
 **Agregar**  
 Haga clic para agregar un tipo de datos a la lista de asignación.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10e3726d26e03da2f9f731babc105244dbf1ff05
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267730"
 ---
 # <a name="data-returned-by-catalog-functions"></a>Datos devueltos por las funciones de catálogo
 Cada función de catálogo devuelve datos como un conjunto de resultados. Este conjunto de resultados no es diferente de cualquier otro conjunto de resultados. Por lo general se genera por predefinido, parametrizada **seleccione** instrucción que está codificado de forma rígida en el controlador o están almacenados en un procedimiento en el origen de datos. Para obtener información acerca de cómo recuperar datos de un conjunto de resultados, vea [fue un resultado se establece crean?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  

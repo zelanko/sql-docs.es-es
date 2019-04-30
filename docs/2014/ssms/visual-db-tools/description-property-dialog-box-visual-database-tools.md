@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 88134b2bcad38bda180b7a6102df04a9766f392a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316078"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>Propiedad Description (cuadro de diálogo, Visual Database Tools)
   El cuadro de diálogo **Propiedad Description** incluye un área modificable en la que se puede escribir una descripción detallada de los objetos de base de datos, como tablas, columnas y restricciones FOREIGN KEY. Se puede obtener acceso a este cuadro de diálogo desde la ventana Propiedades de ciertos objetos, como tablas y vistas, cuando están seleccionados en un diseñador, desde los cuadros de diálogo de otros objetos, como índices y restricciones CHECK, y desde la pestaña **Propiedades de columna** del Diseñador de tablas para las columnas de las tablas. La descripción se almacena como una propiedad extendida del objeto.  

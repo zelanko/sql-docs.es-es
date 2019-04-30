@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7dc613dd6dcb7e639fff247a84a73812d023fb5c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255748"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>Elegir tabla de destino para Insertar valores (cuadro de diálogo, Visual Database Tools)
   Este cuadro de diálogo permite especificar la tabla que se va a actualizar con una consulta INSERT VALUES. Este cuadro de diálogo aparece si se muestra más de una tabla en el **panel Diagrama** al cambiar el tipo de una consulta a una consulta INSERT VALUES.  

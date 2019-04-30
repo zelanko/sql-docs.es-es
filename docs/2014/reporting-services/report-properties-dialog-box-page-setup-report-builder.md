@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d24e05e13827624c7bb1b2d771ed1641c8e9ee13
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306560"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>Propiedades del informe (cuadro de diálogo), Configurar página (Generador de informes)
   Seleccione **Configurar página** en el **propiedades del informe**, cuadro de diálogo para establecer las opciones de página para todo el informe.  

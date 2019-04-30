@@ -1,5 +1,5 @@
 ---
-title: Cousin (MDX) | Documentos de Microsoft
+title: Cousin (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad604900ac31cbcfb7e9a68fba4241c5f539b491
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63284977"
 ---
 # <a name="cousin-mdx"></a>Cousin (MDX)
 
@@ -29,13 +29,13 @@ Cousin( Member_Expression , Ancestor_Member_Expression )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expresión_miembro*  
+ *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
  *Ancestor_Member_Expression*  
  Expresión de miembro MDX válida que devuelve un miembro antecesor.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Esta función actúa sobre el orden y la posición de los miembros dentro de los niveles. Si existen dos jerarquías y la primera tiene cuatro niveles mientras que la segunda tiene cinco, el elemento Cousin del tercer nivel de la primera jerarquía es el tercer nivel de la segunda jerarquía.  
   
 ## <a name="examples"></a>Ejemplos  

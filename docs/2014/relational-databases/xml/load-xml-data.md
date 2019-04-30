@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63241286"
 ---
 # <a name="load-xml-data"></a>Cargar datos XML
   Puede transferir los datos XML a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de varias maneras. Por ejemplo:  
@@ -32,7 +32,7 @@ ms.locfileid: "58526437"
 ## <a name="bulk-loading-xml-data"></a>Carga masiva de datos XML  
  Puede realizar una carga masiva de datos XML en el servidor mediante las funciones de carga masiva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como bcp. OPENROWSET permite cargar datos en una columna XML desde archivos. El siguiente ejemplo muestra esta función.  
   
-##### <a name="example-loading-xml-from-files"></a>Ejemplo: Cargar XML desde archivos  
+##### <a name="example-loading-xml-from-files"></a>Ejemplo: Carga de XML desde archivos  
  Este ejemplo muestra cómo insertar una fila en la tabla T. El valor de la columna XML se carga desde el archivo C:\MyFile\xmlfile.xml como CLOB y se suministra el valor 10 a la columna de enteros.  
   
 ```  
@@ -52,7 +52,7 @@ FROM    (SELECT *
   
 -   Para usar una codificación explícita, utilice el tipo `varbinary()`, que no tiene interacción con páginas de códigos, o un tipo de cadena de la página de códigos apropiada. A continuación, asigne los datos a una columna, una variable o un parámetro XML.  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>Ejemplo: Especificar explícitamente una codificación  
+### <a name="example-explicitly-specifying-an-encoding"></a>Ejemplo: Especificación explícita de una codificación  
  Suponga que tiene un documento XML, vcdoc, almacenado como `varchar(max)`, que no dispone de una declaración XML explícita. La instrucción siguiente agrega una declaración XML con la codificación "iso8859-1", concatena el documento XML, convierte el resultado a `varbinary(max)` de modo que se preserve la representación de bytes y, finalmente, lo convierte a XML. De este modo, se habilita el procesador XML para analizar los datos según la codificación especificada "iso8859-1" y generar la representación UTF-16 correspondiente para los valores de cadena.  
   
 ```  

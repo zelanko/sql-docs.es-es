@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 713a0ba96a2e82f10d4150b337d51f9f1774548f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63253148"
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Conectarse a Azure SQL DB (MySQLToSQL)
 Utilice la conexión al cuadro de diálogo de SQL Azure para conectarse a la base de datos de SQL Azure que desea migrar.  
@@ -61,7 +61,7 @@ Para crear una nueva base de datos por primera vez, siga los pasos siguientes
   
 3.  En el momento de creación de la base de datos, los dos parámetros siguientes se proporcionan como entrada:  
   
-    1.  **Nombre de la base de datos:** escriba el nombre de la base de datos.  
+    1.  **Nombre de la base de datos:** Escriba el nombre de la base de datos.  
   
-    2.  **Tamaño de la base de datos:** seleccionar el tamaño de base de datos que se debe crear en la cuenta de SQL Azure.  
+    2.  **Tamaño de la base de datos:** Seleccione el tamaño de base de datos que necesita para crear en la cuenta de SQL Azure.  
   

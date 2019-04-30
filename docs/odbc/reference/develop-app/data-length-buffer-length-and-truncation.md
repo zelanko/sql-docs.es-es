@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ed2e5ca1fdaba97dde64329c5e8e1b692f43158
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267744"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Longitud de los datos, la longitud de búfer y truncamiento
 El *longitud de datos* es la longitud de bytes de los datos tal como se almacenaría en búfer de datos de la aplicación, no cuando se almacenan en el origen de datos. Esta distinción es importante porque los datos se almacenan a menudo en los diferentes tipos en el búfer de datos que en el origen de datos. Por lo tanto para datos que se envían al origen de datos, esto es la longitud de bytes de los datos antes de la conversión al tipo del origen de datos. Para los datos recuperados del origen de datos, esto es la longitud de bytes de los datos después de la conversión al tipo de búfer de datos y antes de realiza cualquier truncamiento.  

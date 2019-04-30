@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd0f4faad24b492b1e5f216260861d0dc3c1e0b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301888"
 ---
 # <a name="base-address-of-drivers"></a>Dirección base de controladores
 Cada uno de los controladores de base de datos de escritorio de ODBC se ha vinculado con una dirección base del 0x04c0000.

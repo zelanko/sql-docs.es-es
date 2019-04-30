@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e8994c441c2c0de82ff89029a489e5ff3d3a7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259369"
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>Con el atributo de cadena de conexión ExtendedAnsiSQL (controlador de Access)
 Jet 4.0 tiene varias características nuevas que no están habilitadas de forma predeterminada en los controladores de base de datos de escritorio ODBC versión 4.0. Para aprovechar las ventajas de estas nuevas características, una aplicación tendrá que establecer un nuevo atributo de conexión, agregue un nuevo atributo a la cadena de conexión o establezca el atributo en un DSN. El atributo se denomina ExtendedAnsiSQL y se aplica solo a la base de datos de escritorio Microsoft ODBC Drivers 4.0 y versiones posteriores.  

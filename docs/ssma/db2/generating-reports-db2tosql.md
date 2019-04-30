@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2186599ac56be3d3adca986ae8f087ecb3b2218c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299084"
 ---
 # <a name="generating-reports-db2tosql"></a>Generación de informes (DB2ToSQL)
 Se generan los informes de ciertas actividades realizadas mediante comandos en la consola de SSMA en nivel de árbol de objetos.  
@@ -29,12 +29,12 @@ Use el procedimiento siguiente para generar informes:
     ||||  
     |-|-|-|  
     |**SL. No.**|**Command**|**Título de informe**|  
-    |1|informe de evaluación generar|AssessmentReport&lt;n&gt;. XML|  
-    |2|convertir esquema|SchemaConversionReport&lt;n&gt;. XML|  
-    |3|migrar datos|DataMigrationReport&lt;n&gt;. XML|  
-    |4|instrucción CONVERT-sql|ConvertSQLReport&lt;n&gt;. XML|  
-    |5|sincronizar de destino|TargetSynchronizationReport&lt;n&gt;. XML|  
-    |6|actualización de base de datos|SourceDBRefreshReport&lt;n&gt;. XML|  
+    |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
+    |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
+    |3|migrar datos|DataMigrationReport&lt;n&gt;.XML|  
+    |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
+    |5|sincronizar de destino|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
     > Un informe de salida es distinto de informe de evaluación. El primero es un informe sobre el rendimiento de un comando ejecutado al, el segundo es un informe XML para su consumo mediante programación.  
@@ -46,8 +46,8 @@ Use el procedimiento siguiente para generar informes:
     ||||  
     |-|-|-|  
     |**SL. No.**|**Parámetros y comandos**|**Descripción de salida**|  
-    |1|detallado = "false"|Genera un informe resumido de la actividad.|  
-    |2|detallado = "true"|Genera un informe de estado resumido y detallado para cada actividad.|  
+    |1|verbose="false"|Genera un informe resumido de la actividad.|  
+    |2|verbose="true"|Genera un informe de estado resumido y detallado para cada actividad.|  
   
     > [!NOTE]  
     > La configuración de nivel de detalle del informe especificada anteriormente son aplicable para el informe de evaluación generar, esquema de convert, migrar datos, los comandos de la instrucción convert-sql.  
@@ -57,8 +57,8 @@ Use el procedimiento siguiente para generar informes:
     ||||  
     |-|-|-|  
     |**SL. No.**|**Parámetros y comandos**|**Descripción de salida**|  
-    |1|informe de errores = "false"|No hay detalles de un error / advertencia / mensajes de información.|  
-    |2|informe de errores = "true"|Error detallado / advertencia / mensajes de información.|  
+    |1|report-errors="false"|No hay detalles de un error / advertencia / mensajes de información.|  
+    |2|report-errors="true"|Error detallado / advertencia / mensajes de información.|  
   
     > [!NOTE]  
     > La configuración de informe de errores especificados anteriormente son aplicable para el informe de evaluación generar, esquema de convert, migrar datos, los comandos de la instrucción convert-sql.  
@@ -99,15 +99,15 @@ El comando **destino sincronizar** tiene **informe de errores a** parámetro, qu
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**nombre del objeto:** Especifica los objetos que se consideran para la sincronización (también puede tener nombres de objeto de la emisora o un nombre de objeto de grupo).  
+**object-name:** Especifica los objetos que se consideran para la sincronización (también puede tener nombres de objeto de la emisora o un nombre de objeto de grupo).  
   
-**en caso de error:** Especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
+**on-error:** Especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
   
--   total de informes como advertencia  
+-   report-total-as-warning  
   
--   informes-each-como-warning  
+-   report-each-as-warning  
   
--   Error de script  
+-   fail-script  
   
 ### <a name="refresh-from-database"></a>actualización-de-database:  
 El comando **actualización de base de datos** tiene **informe de errores a** parámetro, que especifica la ubicación del informe de errores para la operación de actualización. A continuación, un archivo con nombre **SourceDBRefreshReport&lt;n&gt;. XML** se crea en la ubicación especificada, donde **&lt;n&gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
@@ -127,15 +127,15 @@ El comando **actualización de base de datos** tiene **informe de errores a** pa
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**nombre del objeto:** Especifica los objetos que se consideran para la actualización (también puede tener nombres de objeto de la emisora o un nombre de objeto de grupo).  
+**object-name:** Especifica los objetos que se consideran para la actualización (también puede tener nombres de objeto de la emisora o un nombre de objeto de grupo).  
   
-**en caso de error:** Especifica si se debe especificar la actualización de errores como advertencias o errores. Opciones disponibles para en caso de error:  
+**on-error:** Especifica si se debe especificar la actualización de errores como advertencias o errores. Opciones disponibles para en caso de error:  
   
--   total de informes como advertencia  
+-   report-total-as-warning  
   
--   informes-each-como-warning  
+-   report-each-as-warning  
   
--   Error de script  
+-   fail-script  
   
 ## <a name="see-also"></a>Vea también  
 [Ejecución de la consola de SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  

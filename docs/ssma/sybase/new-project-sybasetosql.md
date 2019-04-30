@@ -11,17 +11,17 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 853483d2149cc159395fae9fda10f6f84a245151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278841"
 ---
 # <a name="new-project-sybasetosql"></a>Nuevo proyecto (SybaseToSQL)
 Use la **nuevo proyecto** cuadro de diálogo para crear un nuevo proyecto SSMA. Para tener acceso a la **nuevo proyecto** cuadro de diálogo el **archivo** menú, haga clic en **nuevo proyecto**.  
   
 ## <a name="options"></a>Opciones  
-**Nombre**  
+**Name**  
 Escriba el nombre del proyecto. SSMA anexará la extensión de archivo.  
   
 **Ubicación**  

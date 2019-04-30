@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee08f42a4ccd7eb51f45e1654f20e264f80c49d2
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270432"
 ---
-# <a name="sql-to-c-day-time-intervals"></a>SQL a C: Intervalos de tiempo del día
+# <a name="sql-to-c-day-time-intervals"></a>SQL a C: Intervalos de día y hora
 
 Los identificadores de los tipos de datos SQL de ODBC de intervalo de día y hora son los siguientes:
 

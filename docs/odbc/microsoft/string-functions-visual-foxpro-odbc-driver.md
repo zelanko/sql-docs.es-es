@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1a9e1c94eec150cc24522cd6e4c57eb35b4a2126
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63270914"
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>Funciones de cadena (el controlador ODBC de Visual FoxPro)
 En la tabla siguiente se muestra funciones de manipulación de cadena ODBC compatibles con el controlador ODBC de Visual FoxPro; Cuando la gramática de Visual FoxPro para la misma función difiere de la sintaxis ODBC, se muestra el equivalente de Visual FoxPro.  
@@ -31,14 +31,14 @@ En la tabla siguiente se muestra funciones de manipulación de cadena ODBC compa
 |ASCII *(string_exp)*|ASC *(string_exp)*|  
 |CHAR *(código)*|CHR *(string_exp)*|  
 |CONCAT *(string_exp1, string_exp2)*|*string_exp1 + string_exp2*|  
-|DIFERENCIA *(string_exp1, string_exp2)*||  
+|DIFFERENCE *(string_exp1, string_exp2)*||  
 |Insertar *(string_exp1, inicio, longitud, string_exp2)*|MATERIAL *(string_exp1, inicio, longitud, string_exp2)*|  
-|LCASE *(string_exp)*|INFERIOR *(string_exp)*|  
+|LCASE *(string_exp)*|LOWER *(string_exp)*|  
 |IZQUIERDA *(string_exp, recuento)*||  
-|LONGITUD *(string_exp)*|LEN *(string_exp)*|  
+|LENGTH *(string_exp)*|LEN *(string_exp)*|  
 |LTRIM *(string_exp)*||  
 |Repita *(string_exp, recuento)*|REPLICAR *(string_exp, recuento)*|  
-|Reemplace *(string_exp1, string_exp2, string_exp3)*|STRTRAN *(string_exp1, string_exp2, string_exp3)*|  
+|REPLACE *(string_exp1, string_exp2, string_exp3)*|STRTRAN *(string_exp1, string_exp2, string_exp3)*|  
 |DERECHA *(string_exp, recuento)*||  
 |RTRIM *(string_exp)*||  
 |SOUNDEX *(string_exp)*||  

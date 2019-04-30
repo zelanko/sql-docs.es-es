@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b29dc4e8f6dc32a1bda1ace7f029e77d8b1a45b9
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63301467"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>Las tablas de historial de restauración o copia de seguridad de gran tamaño hacen que la actualización aparentemente no responda
   En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se han agregado nuevas columnas a algunas de las tablas de historial de restauración y copia de seguridad. Al actualizar estas tablas, es necesario modificarlas para agregar las nuevas columnas. Si una o varias de estas tablas contienen un gran número de filas, la actualización se detendrá durante un periodo de tiempo importante cuando se ejecute la instrucción ALTER TABLE que agrega las columnas a esa tabla.  

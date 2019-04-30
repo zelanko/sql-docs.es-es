@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5e03e29d5c9696efb55ef5ce6ec47fcf28fc0467
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63249028"
 ---
 # <a name="append-method-ado"></a>Append (método) (ADO)
 Anexa un objeto a una colección. Si la colección es [campos](../../../ado/reference/ado-api/fields-collection-ado.md), un nuevo [campo](../../../ado/reference/ado-api/field-object.md) se puede crear el objeto antes de se anexa a la colección.  
@@ -35,16 +35,16 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *colección*  
+ *collection*  
  Un objeto de colección.  
   
- *Campos*  
+ *fields*  
  Un **campos** colección.  
   
  *object*  
  Una variable de objeto que representa el objeto que se va a anexar.  
   
- *Nombre*  
+ *Name*  
  Un **cadena** valor que contiene el nombre del nuevo **campo** de objetos, y no debe ser el mismo nombre como cualquier otro objeto en *campos*.  
   
  *Tipo*  

@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250488"
 ---
 # <a name="replication-backward-compatibility"></a>Compatibilidad con versiones anteriores de replicación
   Los temas de la sección de compatibilidad con versiones anteriores describen cambios de comportamiento entre versiones de la replicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Es importante entender la compatibilidad con versiones anteriores si realiza una actualización o si tiene más de una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una topología de replicación.  

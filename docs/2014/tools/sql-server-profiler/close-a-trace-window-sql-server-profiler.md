@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 19e4ca323ff61f9a5629706e3dcfad7cb7c51688
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316203"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>Cerrar una ventana de seguimiento (SQL Server Profiler)
   En este tema se describe el modo utilizar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]para cerrar la ventana de los seguimientos que están en ejecución o de seguimientos guardados que se están viendo.  

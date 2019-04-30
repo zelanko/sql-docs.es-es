@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 43b45b7e1bd2d8a4ba10870cc442e73aecbbc618
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283588"
 ---
 # <a name="reporting-services-site-collection-features"></a>Características de la colección de sitios Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint proporciona tres características de la colección de sitios de SharePoint. Las características admiten el entorno de informes de modo SharePoint de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] general, [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], una característica del Complemento [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition, y las operaciones de administración para [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en Administración central de SharePoint.  

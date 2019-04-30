@@ -1,5 +1,5 @@
 ---
-title: UniqueName (MDX) | Documentos de Microsoft
+title: UniqueName (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 41642dc8bcaed03faaffdf9a16d8fc465aa2d360
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306480"
 ---
 # <a name="uniquename-mdx"></a>UniqueName (MDX)
 
@@ -48,10 +48,10 @@ Member_Expression.UniqueName
  *Level_Expression*  
  Expresión MDX válida que devuelve un nivel.  
   
- *Expresión_miembro*  
+ *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **UniqueName** función devuelve el nombre único del objeto, no el nombre devuelto por la [nombre](../mdx/name-mdx.md) función. El nombre devuelto no incluye el nombre del cubo. Los resultados devueltos dependen de la configuración del servidor o de la propiedad de cadena de conexión MDX Unique Name Style.  
   
 ## <a name="example"></a>Ejemplo  

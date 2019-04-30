@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 216e0182c9226306fb2feafe9dee6e8fb13562ad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298469"
 ---
 # <a name="disconnect-from-a-registered-server-sql-server-management-studio"></a>Desconectarse de un servidor registrado (SQL Server Management Studio)
   En este tema se describe cómo desconectar el Explorador de objetos de un servidor en cualquier momento en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Al desconectar el Explorador de objetos no se desconectan otros componentes de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , como el Editor SQL.  

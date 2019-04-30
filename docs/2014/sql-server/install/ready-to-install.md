@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e9c8f954d5c9839b732912e8f747a443b57f7bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276087"
 ---
 # <a name="ready-to-install"></a>Listo para instalar
   La página Listo para instalar proporciona un resumen de las características que el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] va a instalar o cambiar.  

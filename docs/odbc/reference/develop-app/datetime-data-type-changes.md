@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a5a87a1cbfbdff5eb428e73d74cdd1199955d673
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267696"
 ---
 # <a name="datetime-data-type-changes"></a>Cambia el tipo de datos de fecha y hora
 En ODBC 3. *x*, los identificadores de fecha, hora y tipos de datos SQL de marca de tiempo que han cambiado desde SQL_DATE, SQL_TIME y SQL_TIMESTAMP (con las instancias de **#define** en el archivo de encabezado de 9, 10 y 11) a SQL_TYPE_DATE, SQL_TYPE_TIME y SQL_TYPE_TIMESTAMP (con las instancias de **#define** en el archivo de encabezado de 93, 91 y 92), respectivamente. Los identificadores de tipo C correspondientes han cambiado desde SQL_C_DATE SQL_C_TIME y SQL_C_TIMESTAMP SQL_C_TYPE_DATE, SQL_C_TYPE_TIME y SQL_C_TYPE_TIMESTAMP, respectivamente.  

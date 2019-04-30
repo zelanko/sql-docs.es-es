@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a042229e3149f97b72b6e86b485771966eb80c30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63305614"
 ---
 # <a name="types-of-descriptors"></a>Tipos de descriptores de
 Un descriptor se utiliza para describir uno de los siguientes:  
@@ -46,7 +46,7 @@ Un descriptor se utiliza para describir uno de los siguientes:
 |**Búfer de aplicación**|descriptor de fila de la aplicación (descartar)|descriptor de parámetro de aplicación (APD)|  
 |**Búfer de implementación**|descriptor de fila de implementación (IRD)|descriptor de parámetro de implementación (IPD)|  
   
- Para el parámetro o los búferes de fila, si la aplicación especifica los diferentes tipos de datos en los registros correspondientes de los descriptores de implementación y aplicación, el controlador realiza la conversión de datos cuando se usan los descriptores. Por ejemplo, que puede convertir los valores numéricos y de fecha y hora en formato de cadena de caracteres. (Para conversiones válidas, vea [apéndice D: tipos de datos](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
+ Para el parámetro o los búferes de fila, si la aplicación especifica los diferentes tipos de datos en los registros correspondientes de los descriptores de implementación y aplicación, el controlador realiza la conversión de datos cuando se usan los descriptores. Por ejemplo, que puede convertir los valores numéricos y de fecha y hora en formato de cadena de caracteres. (Para conversiones válidas, vea [apéndice D: Tipos de datos](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
   
  Un descriptor de puede realizar distintos roles. Instrucciones diferentes pueden compartir cualquier descriptor que la aplicación se asigna explícitamente. Un descriptor de filas en una sola instrucción puede actuar como un descriptor de parámetro en otra instrucción.  
   

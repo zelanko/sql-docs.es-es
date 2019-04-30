@@ -1,5 +1,5 @@
 ---
-title: Recuento (Dimension) (MDX) | Documentos de Microsoft
+title: Count (dimensión) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6ee8fe09f7a840d32511d3a208a4621612ee9939
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63285050"
 ---
 # <a name="count-dimension-mdx"></a>Count (Dimension) (MDX)
 
@@ -28,7 +28,7 @@ ms.locfileid: "34740154"
 Dimensions.Count   
 ```  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Devuelve el número de jerarquías de un cubo, incluida la jerarquía `[Measures].[Measures]`.  
   
 ## <a name="example"></a>Ejemplo  
@@ -42,9 +42,9 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Recuento de &#40;tupla&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [Recuento de &#40;niveles de jerarquía&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Recuento de &#40;establecer&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Recuento &#40;tupla&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
+ [Recuento &#40;los niveles de jerarquía&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
+ [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

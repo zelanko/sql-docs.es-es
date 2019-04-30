@@ -1,5 +1,5 @@
 ---
-title: Ordinal (MDX) | Documentos de Microsoft
+title: Ordinal (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 83036ec2ee0fa69c9ebb8cc2a905361eeae0aafa
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278116"
 ---
 # <a name="ordinal-mdx"></a>Ordinal (MDX)
 
@@ -32,8 +32,8 @@ Level_Expression.Ordinal
  *Level_Expression*  
  Expresión MDX válida que devuelve un nivel.  
   
-## <a name="remarks"></a>Notas  
- El **Ordinal** función se utiliza habitualmente junto con el **IIF** y **CurrentMember** funciones para mostrar condicionalmente distintos valores en diferentes niveles de jerarquía, basándose en la posición ordinal de cada celda específica en el resultado de la consulta. Por ejemplo, puede usar el **Ordinal** función para realizar cálculos en ciertos niveles y mostrará el valor predeterminado "N/A" en otros niveles.  
+## <a name="remarks"></a>Comentarios  
+ El **Ordinal** función se utiliza con frecuencia junto con el **IIF** y **CurrentMember** funciones para mostrar condicionalmente distintos valores en diferentes niveles de jerarquía, según la posición ordinal de cada celda específica en el resultado de la consulta. Por ejemplo, puede usar el **Ordinal** función para realizar cálculos en ciertos niveles y mostrar su valor predeterminado "N/A" en otros niveles.  
   
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente devuelve el número ordinal del nivel Calendar Quarter de la jerarquía Calendar.  

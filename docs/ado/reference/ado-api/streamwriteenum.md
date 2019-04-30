@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d0f42561d7b324a13068c14d0fc7971d3d46d83b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63311781"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
 Especifica si se agrega un separador de línea a la cadena escrita en un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  

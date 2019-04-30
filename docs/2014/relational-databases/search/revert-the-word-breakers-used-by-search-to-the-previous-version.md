@@ -11,11 +11,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: eb78a5a7179caf7a42173c2fd752708c0434d2b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63238435"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Revertir los separadores de palabras usados por las búsquedas a la versión anterior
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala y habilita una versión de los separadores de palabras y lematizadores para todos los idiomas admitidos por búsqueda de texto completo, a excepción del coreano. En este tema se describe cómo pasar de esta versión de estos componentes a la versión previa o viceversa.  
@@ -56,7 +56,7 @@ ms.locfileid: "48186455"
   
  **Lista de idiomas afectados**  
   
-|Idioma|Abreviatura<br />utilizada en el<br />Registro|LCID|  
+|Lenguaje|Abreviatura<br />utilizada en el<br />Registro|LCID|  
 |--------------|---------------------------------------|----------|  
 |Bengalí|ben|1093|  
 |Búlgaro|bgr|1026|  
@@ -127,7 +127,7 @@ ms.locfileid: "48186455"
   
  **Lista de idiomas afectados**  
   
-|Idioma|Abreviatura<br />utilizada en el<br />Registro|LCID|  
+|Lenguaje|Abreviatura<br />utilizada en el<br />Registro|LCID|  
 |--------------|---------------------------------------|----------|  
 |Árabe|ara|1025|  
 |German|deu|1031|  
@@ -152,7 +152,7 @@ ms.locfileid: "48186455"
     > [!WARNING]  
     >  Este cambio afecta a todos los idiomas que utilizan NaturalLanguage6.dll en la versión actual y en la anterior.  
   
-5.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+5.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 6.  Siga estos pasos para agregar nuevas claves a los COM ClassID de las interfaces de separadores de palabras y lematizadores en el idioma seleccionado:  
   
@@ -164,7 +164,7 @@ ms.locfileid: "48186455"
   
     4.  Si el idioma seleccionado utiliza un lematizador, actualice los datos (predeterminados) de ese valor de clave con el nombre de archivo del lematizador anterior de la tabla.  
   
-7.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<raízDeInstancia\>\MSSearch\Language\\<clave_idioma>**. *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
+7.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
   
 8.  Actualice el valor de clave de **WBreakerClass** con el valor de la tabla para el separador de palabras actual.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "48186455"
     > [!WARNING]  
     >  Este cambio afecta a todos los idiomas que utilizan NaturalLanguage6.dll en la versión actual y en la anterior.  
   
-3.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<raízDeInstancia\>\MSSearch\CLSID**.  
+3.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 4.  Si las siguientes claves no existen, siga estos pasos para agregar nueva claves para los ClassID COM de las interfaces de separadores de palabras y lematizadores actuales en el idioma seleccionado:  
   
@@ -193,7 +193,7 @@ ms.locfileid: "48186455"
   
     4.  Si el idioma seleccionado utiliza un lematizador, actualice los datos (predeterminados) de ese valor de clave con el nombre de archivo del lematizador actual de la tabla.  
   
-5.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<raízDeInstancia\>\MSSearch\Language\\<clave_idioma>**. *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
+5.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
   
 6.  Actualice el valor de clave de **WBreakerClass** con el valor de la tabla para el separador de palabras anterior.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "48186455"
 |CLSID anterior|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |Nombre de archivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID actual|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|Nombre de archivo actual|MsWb7.dll|MSWB7.dll|  
+|Nombre de archivo actual|MSWB7.dll|MSWB7.dll|  
   
  **Japonés (jpn), LCID 1041**  
   
@@ -240,7 +240,7 @@ ms.locfileid: "48186455"
 |CLSID anterior|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |Nombre de archivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID actual|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|Nombre de archivo actual|MsWb7.dll|MSWB7.dll|  
+|Nombre de archivo actual|MSWB7.dll|MSWB7.dll|  
   
  **Ruso (rus), LCID 1049**  
   
@@ -249,14 +249,14 @@ ms.locfileid: "48186455"
 |CLSID anterior|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |Nombre de archivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID actual|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|Nombre de archivo actual|MsWb7.dll|MSWB7.dll|  
+|Nombre de archivo actual|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> Idiomas para los que ni el nombre de archivo anterior ni el actual es NaturalLanguage6.dll  
  Para los idiomas en la tabla siguiente, los nombres de archivo de los separadores de palabras y los lematizadores anteriores son diferentes de los nombres de archivo de las nuevas versiones. Ni el nombre de archivo anterior ni el actual es NaturalLanguage6.dll. No tendrá que reemplazar los archivos, porque la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copia la versión actual y las anteriores de los componentes en la carpeta Binn. Sin embargo, tendrá que cambiar un conjunto de entradas del Registro para especificar la versión anterior o actual de los componentes.  
   
  **Lista de idiomas afectados**  
   
-|Idioma|Abreviatura<br />utilizada en el<br />Registro|LCID|  
+|Lenguaje|Abreviatura<br />utilizada en el<br />Registro|LCID|  
 |--------------|---------------------------------------|----------|  
 |Chino simplificado|chs|2052|  
 |Chino tradicional|cht|1028|  
@@ -273,7 +273,7 @@ ms.locfileid: "48186455"
   
 1.  No elimine los archivos de la versión actual de los componentes de la carpeta Binn.  
   
-2.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+2.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 3.  Siga estos pasos para agregar nuevas claves a los COM ClassID de las interfaces de separadores de palabras y lematizadores en el idioma seleccionado:  
   
@@ -285,7 +285,7 @@ ms.locfileid: "48186455"
   
     4.  Si el idioma seleccionado utiliza un lematizador, actualice los datos (predeterminados) de ese valor de clave con el nombre de archivo del lematizador anterior de la tabla.  
   
-4.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<raízDeInstancia\>\MSSearch\Language\\<clave_idioma>**. *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
+4.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
   
 5.  Actualice el valor de clave de **WBreakerClass** con el valor de la tabla para el separador de palabras actual.  
   
@@ -297,7 +297,7 @@ ms.locfileid: "48186455"
   
 1.  No elimine los archivos de la versión anterior de los componentes de la carpeta Binn.  
   
-2.  En el Registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
+2.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 3.  Si las siguientes claves no existen, siga estos pasos para agregar nueva claves para los ClassID COM de las interfaces de separadores de palabras y lematizadores actuales en el idioma seleccionado:  
   
@@ -309,7 +309,7 @@ ms.locfileid: "48186455"
   
     4.  Si el idioma seleccionado utiliza un lematizador, actualice los datos (predeterminados) de ese valor de clave con el nombre de archivo del lematizador actual de la tabla.  
   
-4.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<raízDeInstancia\>\MSSearch\Language\\<clave_idioma>**. *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
+4.  En el Registro, navegue al siguiente nodo: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>**. *<clave_idioma>* representa la abreviatura del idioma que se usa en el Registro; por ejemplo, "fra" para francés y "esn" para español.  
   
 5.  Actualice el valor de clave de **WBreakerClass** con el valor de la tabla para el separador de palabras anterior.  
   

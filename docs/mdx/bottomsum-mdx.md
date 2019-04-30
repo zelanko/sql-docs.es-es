@@ -1,5 +1,5 @@
 ---
-title: BottomSum (MDX) | Documentos de Microsoft
+title: BottomSum (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f923761144389a97962f7269cc5164d0dbdbf51
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63306717"
 ---
 # <a name="bottomsum-mdx"></a>BottomSum (MDX)
 
@@ -32,17 +32,17 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Value*  
+ *Valor*  
  Expresión numérica válida que especifica el valor con el que se compara cada tupla.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **BottomSum** función calcula la suma de una medida especificada evaluada sobre un conjunto especificado, ordenando el conjunto en orden ascendente. A continuación, la función devuelve los elementos con los valores más bajos cuyo total de la expresión numérica especificada es al menos el valor especificado (suma). Esta función devuelve el subconjunto más pequeño de un conjunto cuyo total acumulado es al menos el valor especificado. Los elementos devueltos se ordenan de menor a mayor.  
   
 > [!IMPORTANT]  
->  El **BottomSum** funcione, al igual que el [TopSum](../mdx/topsum-mdx.md) , siempre rompe la jerarquía.  
+>  El **BottomSum** funcione, como el [TopSum](../mdx/topsum-mdx.md) , siempre rompe la jerarquía.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve, para la categoría Bike, el conjunto más pequeño de miembros del nivel City de la jerarquía Geography de la dimensión Geography para el año fiscal 2003, cuyo total acumulado mediante la medida Reseller Sales Amount es al menos la suma de 50.000 (empezando por los miembros de este conjunto que tengan la cifra de ventas más baja):  

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a50b1b947ce82eb38ef7c7f6fd026bc9f83376f4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63261096"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>Página Propiedades generales, Orígenes de datos compartidos (Administrador de informes)
   Use la página de propiedades General para ver o modificar las propiedades de un elemento de origen de datos compartido. Al hacer clic en **Aplicar**, los cambios efectuados en las propiedades afectan a todos los informes que hagan referencia al elemento.  

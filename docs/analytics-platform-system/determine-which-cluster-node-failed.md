@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 4fd739e55725a3138a22539ef837088f86c8d8b9
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63283146"
 ---
 # <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Determinar qué clúster de nodo no se pudo para Analytics Platform System
 Este tema describe cómo determinar el nombre del nodo de Analytics Platform System (APS) que se produjo un error después de que se ha producido un clúster de conmutación por error y se ha generado una alerta de conmutación por error de clúster. Como parte de la solución de problemas de un clúster de conmutación por error, debe determinar el nombre del nodo con error antes de ponerse en contacto con Microsoft para ayudar a resolver el problema.  

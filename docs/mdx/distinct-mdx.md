@@ -1,5 +1,5 @@
 ---
-title: DISTINCT (MDX) | Documentos de Microsoft
+title: DISTINCT (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fc3e4680991f88743bbab8eec1de3bb629c94b66
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248268"
 ---
 # <a name="distinct-mdx"></a>Distinct (MDX)
 
@@ -32,8 +32,8 @@ Distinct(Set_Expression)
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
-## <a name="remarks"></a>Notas  
- Si el **Distinct** función encuentra tuplas duplicadas en el conjunto especificado, la función conserva únicamente la primera repetición de la tupla duplicada dejando intacto el orden del conjunto.  
+## <a name="remarks"></a>Comentarios  
+ Si el **Distinct** función encuentra tuplas duplicadas del conjunto especificado, la función conserva sólo la primera instancia de la tupla duplicada dejando intacto el orden del conjunto.  
   
 ## <a name="examples"></a>Ejemplos  
  La consulta de ejemplo siguiente muestra el modo de usar la función Distinct con un conjunto con nombre, así como el modo de usarla junto con la función Count para buscar el número de tuplas distintas de un conjunto:  

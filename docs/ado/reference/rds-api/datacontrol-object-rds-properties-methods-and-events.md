@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4fd09586dc50326e64aa603a76fb10580e138489
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63297698"
 ---
 # <a name="datacontrol-object-rds-properties-methods-and-events"></a>Eventos, métodos y propiedades de objeto DataControl (RDS)
 > [!IMPORTANT]

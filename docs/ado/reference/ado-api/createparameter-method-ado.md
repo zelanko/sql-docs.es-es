@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b150fe1c0c7260960140558eeff74b54c0798d80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63308614"
 ---
 # <a name="createparameter-method-ado"></a>Método CreateParameter (ADO)
 Crea un nuevo [parámetro](../../../ado/reference/ado-api/parameter-object.md) objeto con las propiedades especificadas.  
@@ -38,7 +38,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  Devuelve un **parámetro** objeto.  
   
 #### <a name="parameters"></a>Parámetros  
- *Nombre*  
+ *Name*  
  Opcional. Un **cadena** valor que contiene el nombre de la **parámetro** objeto.  
   
  *Tipo*  
@@ -50,7 +50,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Tamaño*  
  Opcional. Un **largo** valor que especifica la longitud máxima para el valor del parámetro en caracteres o bytes.  
   
- *Value*  
+ *Valor*  
  Opcional. Un **Variant** que especifica el valor para el **parámetro** objeto.  
   
 ## <a name="remarks"></a>Comentarios  

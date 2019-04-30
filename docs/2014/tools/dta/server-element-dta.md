@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6c73db809e81cc9b6d1ee182227078a83688384
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273429"
 ---
 # <a name="server-element-dta"></a>Server (DTA, elemento)
   Contiene la información de identificación del servidor en el que residen las bases de datos que se desean optimizar.  

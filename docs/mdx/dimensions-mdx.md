@@ -1,5 +1,5 @@
 ---
-title: Dimensiones (MDX) | Documentos de Microsoft
+title: Dimensiones (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2703122b67debf0749abcd2ea01114fb6ecaa06
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248145"
 ---
 # <a name="dimensions-mdx"></a>Dimensions (MDX)
 
@@ -39,16 +39,16 @@ Dimensions(Hierarchy_Name)
  *Hierarchy_Name*  
  Expresión de cadena válida que especifica un nombre de jerarquía.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si se especifica un número de jerarquía, el **dimensiones** función devuelve una jerarquía cuya posición de base cero dentro del cubo es especifica el número de jerarquía.  
   
  Si se especifica un nombre de jerarquía, el **dimensiones** función devuelve la jerarquía especificada. Normalmente, se utiliza esta versión de cadena de la **dimensiones** función con funciones definidas por el usuario.  
   
 > [!NOTE]  
->  El **medidas** dimensión siempre está representada por `Dimensions(0)`.  
+>  El **medidas** dimensión se representa siempre por `Dimensions(0)`.  
   
 ## <a name="examples"></a>Ejemplos  
- Los ejemplos siguientes usan el **dimensiones** función para devolver el nombre, el número de niveles y el recuento de miembros de una jerarquía especificada, mediante una expresión numérica y una expresión de cadena.  
+ Los ejemplos siguientes usan la **dimensiones** función para devolver el nombre, el número de niveles y el recuento de miembros de una jerarquía especificada, mediante una expresión numérica y una expresión de cadena.  
   
 ```  
 WITH MEMBER Measures.x AS Dimensions  

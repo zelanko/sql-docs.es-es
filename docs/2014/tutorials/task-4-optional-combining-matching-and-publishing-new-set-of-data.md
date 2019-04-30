@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 429608f066b0c99c9677a0e35f0b8925e58c7dff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250079"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tarea 4 (opcional): combinar, buscar coincidencias y publicar un conjunto de datos nuevo
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tarea 4 (opcional): Combinación, búsqueda de coincidencias y publicación de un conjunto de datos nuevo
   Con el tiempo, le interesará agregar más datos al repositorio MDS. Antes de agregar datos, puede ser útil comparar los nuevos datos a los datos que ya se administran en MDS, para asegurarse de que no se agregan datos duplicados o imprecisos. En el complemento Master Data Services para Excel, puede combinar datos de dos hojas de cálculo y comparar los datos para identificar y quitar duplicados antes de publicar los datos en MDS. La característica de búsqueda de coincidencias del complemento MDS para Excel emplea la funcionalidad de coincidencia de DQS para identificar coincidencias en los datos. En esta tarea, combinará datos de dos hojas de cálculo en una y después buscará coincidencias para identificar y quitar duplicados antes de publicar los datos en MDS. Consulte [coincidencia de calidad de datos en el complemento MDS para Excel](https://msdn.microsoft.com/library/hh548681.aspx) y [combinar datos](https://msdn.microsoft.com/library/hh548680.aspx) temas para obtener más detalles.  
   
 1.  Inicie una nueva instancia de **Excel**. Haga clic en **iniciar**, apunte a **ejecutar**, tipo **Excel**y haga clic en **Aceptar**.  
@@ -30,7 +30,7 @@ ms.locfileid: "56014296"
   
 4.  Debería ver el **Explorador de datos maestros** panel a la derecha. Si no ve el Explorador de datos maestros, haga clic en **Mostrar explorador** botón en la cinta de opciones.  
   
-5.  En el **Explorador de datos maestros** ventana, seleccione **proveedores** en la lista desplegable para la **modelo**. Observe que el modelo tiene una entidad: **Proveedor**.  
+5.  En el **Explorador de datos maestros** ventana, seleccione **proveedores** en la lista desplegable para la **modelo**. Debería ver que el modelo tiene una entidad: **Proveedor**.  
   
      ![Excel - ventana del explorador de datos maestros](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel - ventana del explorador de datos maestros")  
   
@@ -90,7 +90,7 @@ ms.locfileid: "56014296"
   
 25. Haga clic en **Aceptar**.  
   
-26. El proceso de coincidencia debe identificar un duplicado para el proveedor que tiene **Code: S1**.  
+26. El proceso de coincidencia debe identificar un duplicado para el proveedor con **código: S1**.  
   
      ![Excel - resultados coincidentes](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel - resultados coincidentes")  
   

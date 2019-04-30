@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789033"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63312368"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Asignación de juegos de caracteres de MySQL y de SQL Server (MySQLToSQL)
 Juego de caracteres (juego de caracteres) puede especificarse para los tipos de datos de caracteres, expresiones y literales de MySQL.  
@@ -56,11 +56,11 @@ Asignación del juego de caracteres varía en los niveles de otro nodo, a saber:
 >   
 > Estas sobrecargas son:  
 >   
-> 1.  **Se aplican:** aplica los cambios realizados por el usuario, se habilita solo cuando charset asignación editado y todavía no se han guardado.  
-> 2.  **Cancelar:** cancela los cambios realizados por el usuario. El botón se habilita cuando la asignación del juego de caracteres se modifica, pero no guardado.  
-> 3.  **Restablecer valores predeterminados:** restablece todas las asignaciones a los valores predeterminados.  
+> 1.  **Se aplican:** Aplica los cambios realizados por el usuario, se habilita solo cuando charset asignación editado y todavía no se han guardado.  
+> 2.  **Cancelar:** Cancela los cambios realizados por el usuario. El botón se habilita cuando la asignación del juego de caracteres se modifica, pero no guardado.  
+> 3.  **Restablecer valores predeterminados:** Restablece todas las asignaciones a los valores predeterminados.  
   
-1.  **Nivel de nodo de metadatos de raíz en:** Charset cuadrícula de asignación contiene la cuadrícula de juego de caracteres con una columna independiente para cada juego de caracteres. Las columnas de la cuadrícula son:  
+1.  **En el nivel de nodo de metadatos de raíz:**  Cuadrícula de asignación del juego de caracteres contiene cuadrícula de juego de caracteres con una columna independiente para cada juego de caracteres. Las columnas de la cuadrícula son:  
   
     1.  La primera columna de la cuadrícula denominada **nombre Charset** contiene el nombre del juego de caracteres.  
   
@@ -80,28 +80,28 @@ Asignación del juego de caracteres varía en los niveles de otro nodo, a saber:
     ||||  
     |-|-|-|  
     |**Nombre del juego de caracteres**|**Descripción de juego de caracteres**|**Tipo de juego de caracteres de destino (valor predeterminado)**|  
-    |Big5|Chino tradicional Big5|NCHAR/NVARCHAR (valor predeterminado)|  
+    |big5|Chino tradicional Big5|NCHAR/NVARCHAR (valor predeterminado)|  
     |dec8|Europeo occidental Dic|CHAR o VARCHAR (valor predeterminado)|  
-    |CP850|Europeo occidental de denegación de servicio|CHAR o VARCHAR (valor predeterminado)|  
-    |hp8|Europeo occidental de HP|CHAR o VARCHAR (valor predeterminado)|  
+    |cp850|Europeo occidental de denegación de servicio|CHAR o VARCHAR (valor predeterminado)|  
+    |hp8|HP West European|CHAR o VARCHAR (valor predeterminado)|  
     |koi8r|KOI8-R Relcom ruso|CHAR o VARCHAR (valor predeterminado)|  
     |Latín 1|Europeo occidental de CP1252|CHAR o VARCHAR (valor predeterminado)|  
-    |Latin2|ISO 8859-2 Centroeuropeo|CHAR o VARCHAR (valor predeterminado)|  
+    |Latin2|ISO 8859-2 Central European|CHAR o VARCHAR (valor predeterminado)|  
     |swe7|Sueco de 7 bits.|CHAR o VARCHAR (valor predeterminado)|  
-    |ASCII|ASCII DE EE. UU.|CHAR o VARCHAR (valor predeterminado)|  
+    |ascii|ASCII DE EE. UU.|CHAR o VARCHAR (valor predeterminado)|  
     |ujis|EUC-JP japonés|NCHAR/NVARCHAR (valor predeterminado)|  
     |SJIS|Japonés Shift-JIS|NCHAR/NVARCHAR (valor predeterminado)|  
     |Hebreo|ISO 8859-8 Hebreo|CHAR o VARCHAR (valor predeterminado)|  
     |tis620|TIS620 tailandés|CHAR o VARCHAR (valor predeterminado)|  
-    |eucKR|Coreano EUC-KR|NCHAR/NVARCHAR (valor predeterminado)|  
+    |euckr|Coreano EUC-KR|NCHAR/NVARCHAR (valor predeterminado)|  
     |koi8u|Ukrainian KOI8-U|CHAR o VARCHAR (valor predeterminado)|  
     |gb2312|GB2312 Chino simplificado|NCHAR/NVARCHAR (valor predeterminado)|  
     |Griego|ISO 8859-7 Griego|CHAR o VARCHAR (valor predeterminado)|  
-    |CP 1250|Centroeuropeo de Windows|CHAR o VARCHAR (valor predeterminado)|  
-    |GBK|GBK chino simplificado|NCHAR/NVARCHAR (valor predeterminado)|  
+    |cp 1250|Centroeuropeo de Windows|CHAR o VARCHAR (valor predeterminado)|  
+    |gbk|GBK chino simplificado|NCHAR/NVARCHAR (valor predeterminado)|  
     |Latin5|ISO 8859-9 Turco|CHAR o VARCHAR (valor predeterminado)|  
     |armscii8|Armenio ARMSCII-8|CHAR o VARCHAR (valor predeterminado)|  
-    |UTF8|Unicode UTF-8|NCHAR/NVARCHAR (valor predeterminado)|  
+    |utf8|Unicode UTF-8|NCHAR/NVARCHAR (valor predeterminado)|  
     |ucs2|Unicode UCS-2|NCHAR/NVARCHAR (valor predeterminado)|  
     |cp866|Ruso de denegación de servicio|CHAR o VARCHAR (valor predeterminado)|  
     |keybcs2|Denegación de servicio Kamenicky checo-eslovaco|CHAR o VARCHAR (valor predeterminado)|  
@@ -109,15 +109,15 @@ Asignación del juego de caracteres varía en los niveles de otro nodo, a saber:
     |MacRoman|Europeo occidental de Mac|CHAR o VARCHAR (valor predeterminado)|  
     |cp852|Denegación de servicio Central europea|CHAR o VARCHAR (valor predeterminado)|  
     |Latin7|ISO 8859-13 Báltico|CHAR o VARCHAR (valor predeterminado)|  
-    |CP 1251|Windows cirílico|CHAR o VARCHAR (valor predeterminado)|  
-    |CP 1256|Árabe de Windows|CHAR o VARCHAR (valor predeterminado)|  
-    |CP 1257|Windows Báltico|CHAR o VARCHAR (valor predeterminado)|  
+    |cp 1251|Windows Cyrillic|CHAR o VARCHAR (valor predeterminado)|  
+    |cp 1256|Árabe de Windows|CHAR o VARCHAR (valor predeterminado)|  
+    |cp 1257|Windows Báltico|CHAR o VARCHAR (valor predeterminado)|  
     |binary|Juego de caracteres binarios pseudo|CHAR o VARCHAR (valor predeterminado)|  
     |geostd8|Georgiano GEOSTD8|CHAR o VARCHAR (valor predeterminado)|  
     |cp932|SJIS en japonés de Windows|NCHAR/NVARCHAR (valor predeterminado)|  
     |eucjpms|UJIS en japonés de Windows|NCHAR/NVARCHAR (valor predeterminado)|  
   
-2.  **En la base de datos, categoría o los niveles de nodos de objeto:** en el nivel de base de datos, categoría o nodos de objeto, cuadrícula de asignación del juego de caracteres contiene las mismas filas que del nivel raíz del nodo de metadatos, viz.:  
+2.  **En la base de datos, categoría o los niveles de nodos de objeto:** En el nivel de base de datos, categoría o nodos de objeto, cuadrícula de asignación del juego de caracteres contiene las mismas filas que del nivel raíz del nodo de metadatos, viz.:  
   
     1.  La primera columna de la cuadrícula titulada **nombre del conjunto de caracteres** contiene el nombre del juego de caracteres.  
   

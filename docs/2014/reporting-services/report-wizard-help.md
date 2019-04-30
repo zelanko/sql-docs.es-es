@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 869286901a428cf2b327fe65ba8c46877df092d3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59971591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255119"
 ---
 # <a name="report-wizard-help"></a>Ayuda del Asistente para informes
   En esta sección se proporciona Ayuda del Asistente para informes al utilizar la tecla F1. El Asistente para informes automatiza el proceso de creación de informes tabulares y de matriz. En la tabla siguiente se describen los temas de esta sección.  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a03a18bb5231ebf40c91a6cc94b0bb78aa536c16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298781"
 ---
 # <a name="global-settings-editor-db2tosql"></a>Configuración global (Editor) (DB2ToSQL)
 Utilice la página del Editor de la **configuración Global** cuadro de diálogo para especificar la configuración de ventanas del editor de código.  

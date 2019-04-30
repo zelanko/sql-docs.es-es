@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplos: Usar el modo PATH | Microsoft Docs'
+title: 'Ejemplos: Uso del modo PATH | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287782"
 ---
-# <a name="examples-using-path-mode"></a>Ejemplos: Usar el modo PATH
+# <a name="examples-using-path-mode"></a>Ejemplos: Uso del modo PATH
   El ejemplo siguiente ilustra el uso del modo PATH en la creación de XML a partir de una consulta SELECT. Muchas de estas consultas se especifican usando los documentos XML de instrucciones de fabricación de bicicletas almacenados en la columna Instructions de la tabla ProductModel.  
   
 ## <a name="specifying-a-simple-path-mode-query"></a>Especificar una consulta sencilla de modo PATH  

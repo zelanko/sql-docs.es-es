@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d12ff5f349d5b7328af7e47dbfc7724420d6fb15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63269879"
 ---
 # <a name="save-metadata-db2tosql"></a>Guardar metadatos (DB2ToSQL)
 El **guardar metadatos** cuadro de diálogo le pide que cargar los metadatos en su proyecto SSMA antes de guardarlo. Esto le permite tener un archivo de proyecto completo que se puede usar sin conexión y enviar a otras personas, como el personal de soporte técnico.  
@@ -23,7 +23,7 @@ El **guardar metadatos** cuadro de diálogo le pide que cargar los metadatos en 
 Para tener acceso a la **guardar metadatos** cuadro de diálogo, guarde el proyecto. Si falta cualquier metadato SSMA mostrará el **guardar metadatos** cuadro de diálogo.  
   
 ## <a name="options"></a>Opciones  
-**Nombre**  
+**Name**  
 El nombre de cada base de datos en el proyecto.  
   
 **Estado**  

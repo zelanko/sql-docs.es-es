@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7105160c7008d6f36d1c4e01faf8b1631080b8d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248988"
 ---
 # <a name="ado-code-examples"></a>Ejemplos de código ADO
 Utilice los siguientes ejemplos de código para obtener información sobre cómo usar los objetos, métodos, propiedades y eventos de ADO.  

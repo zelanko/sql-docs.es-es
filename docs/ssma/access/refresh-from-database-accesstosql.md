@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 29dd391a094f37334008e98af60bcdc2396a997a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63299117"
 ---
 # <a name="refresh-from-database-accesstosql"></a>Actualizar desde la base de datos (AccessToSQL)
 El **actualizar desde la base de datos** cuadro de diálogo le permite seleccionar los objetos que desea actualizar desde la base de datos de Access. Las filas en el cuadro de diálogo están codificados con colores según el estado de los metadatos:  

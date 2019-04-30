@@ -1,5 +1,5 @@
 ---
-title: 'Apéndice C: programar con ADO | Microsoft Docs'
+title: 'Apéndice C: Programar con ADO | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63dfa7de6bd952f86718b90ce446868c9d74be10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63302331"
 ---
-# <a name="appendix-c-programming-with-ado-in-development-environments"></a>Apéndice C: programar con ADO en entornos de desarrollo
+# <a name="appendix-c-programming-with-ado-in-development-environments"></a>Apéndice C: Programar con ADO en entornos de desarrollo
 ADO es un componente de interfaz de automatización COM que se puede usar con muchos lenguajes de programación, incluidos Microsoft Visual Basic, VBScript, JScript y Visual C++. Hay instalada una versión de ADO con cada una de estas herramientas y otras aplicaciones, como Microsoft Office y Microsoft SQL Server.
 
  La biblioteca para ADO es msado15.dll y el prefijo de identificador (ProgID) del programa es "ADODB." Por ejemplo, para hacer referencia explícita a ADO [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), utilice `ADODB.Recordset`.
@@ -34,4 +34,4 @@ ADO es un componente de interfaz de automatización COM que se puede usar con mu
 -   [Usar ADO con Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)
 
 ## <a name="see-also"></a>Vea también
- [Referencia de API de ADO](../../../ado/reference/ado-api/ado-api-reference.md) [apéndice D: ADO ejemplos](../../../ado/guide/appendixes/appendix-d-ado-samples.md) [configurar RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [Apéndice A: proveedores ](../../../ado/guide/appendixes/appendix-a-providers.md) [Historial de ADO](../../../ado/guide/ado-history.md)
+ [Referencia de API de ADO](../../../ado/reference/ado-api/ado-api-reference.md) [apéndice D: Ejemplos de ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md) [configurar RDS](../../../ado/guide/remote-data-service/configuring-rds.md) [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [Apéndice A: Proveedores de](../../../ado/guide/appendixes/appendix-a-providers.md) [historial de ADO](../../../ado/guide/ado-history.md)

@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0e345ca44b152986e0e8c7eae87d8a2a50481c8f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278989"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>Cuadro de diálogo Propiedades de ventanilla de mapa, Centrar y hacer zoom
   Seleccione **Centrar y hacer zoom** en el cuadro de diálogo **Propiedades de ventanilla de mapa** para establecer la vista de centro y el factor de zoom de un mapa. Después de especificar un origen de datos de mapa y los límites del mapa que desee incluir en el informe, puede especificar el centro de la vista y el factor de zoom para controlar más la presentación del mapa. Las opciones cambian en función de qué método se use para especificar los valores del centro y el zoom. Haga clic en el botón **Expresión** (*fx*) para modificar una expresión que establezca el valor de la opción.  

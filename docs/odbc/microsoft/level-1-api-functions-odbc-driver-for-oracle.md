@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a70116fb0e8ef1236b18cb478184e96fe08fce5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63262228"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Funciones de API de nivel 1 (controlador ODBC para Oracle)
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ ms.locfileid: "47829423"
 |**SQLGetTypeInfo**|Devuelve información sobre los tipos de datos admitidos por un origen de datos. El controlador devuelve la información en un conjunto de resultados SQL.|  
 |**SQLParamData**|Usar junto con **SQLPutData** para especificar los datos de parámetro en tiempo de ejecución de la instrucción.|  
 |**SQLPutData**|Permite que una aplicación enviar datos de un parámetro o columna a del controlador en el tiempo de ejecución de la instrucción.|  
-|**SQLSetConnectOption**|Proporciona acceso a las opciones que controlan aspectos de la conexión. Esta función es parcialmente compatible: el controlador es compatible con todos los valores para el *fOption* argumento pero no admite algunos *vParam* valores para el *fOption* argumento [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). Para obtener más información, consulte [las opciones de conexión](../../odbc/microsoft/connect-options.md).|  
+|**SQLSetConnectOption**|Proporciona acceso a las opciones que controlan aspectos de la conexión. Esta función se admite parcialmente: El controlador es compatible con todos los valores para el *fOption* argumento pero no admite algunos *vParam* valores para el *fOption* argumento [SQL_TXN_ISOLATION ](../../odbc/microsoft/connect-options.md). Para obtener más información, consulte [las opciones de conexión](../../odbc/microsoft/connect-options.md).|  
 |**SQLSetStmtOption**|Establece las opciones relacionadas con un identificador de instrucción, *hstmt*. Para obtener más información, consulte [opciones de la instrucción](../../odbc/microsoft/statement-options.md).|  
 |**SQLSpecialColumns**|Recupera el conjunto óptimo de columnas que identifica de forma única una fila en la tabla.|  
 |**SQLStatistics**|Recupera una lista de las estadísticas sobre una sola tabla y los índices o los nombres de etiqueta, asociados a la tabla. El controlador devuelve la información como un conjunto de resultados.|  

@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 788e749d7fbfe62e61bedb57b53c994351427be3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59962181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63266286"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>Selección de cubo (cuadro de diálogo del Generador de informes)
   Use el cuadro de diálogo **Selección de cubo** para seleccionar otro cubo como origen de datos para un informe. Al seleccionar otro cubo, es posible que la consulta deje de ser válida.  

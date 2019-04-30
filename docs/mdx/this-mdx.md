@@ -1,5 +1,5 @@
 ---
-title: Este (MDX) | Documentos de Microsoft
+title: Este (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77db403ee016283a565a6bc86d2f6857de0eff45
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63259028"
 ---
 # <a name="this-mdx"></a>This (MDX)
 
@@ -28,8 +28,8 @@ ms.locfileid: "34743254"
 This   
 ```  
   
-## <a name="remarks"></a>Notas  
- El **esto** función puede utilizarse en lugar de cualquier expresión de subcubo para proporcionar el subcubo actual en el ámbito actual dentro de la secuencia de comandos de cálculo MDX. El **esto** función debe usarse en el lado izquierdo de una asignación.  
+## <a name="remarks"></a>Comentarios  
+ El **esto** función puede utilizarse en lugar de cualquier expresión de subcubo para proporcionar el subcubo actual en el ámbito actual dentro del script de cálculo MDX. El **esto** función debe usarse en el lado izquierdo de una asignación.  
   
 ## <a name="examples"></a>Ejemplos  
  El siguiente fragmento de script MDX muestra el modo de usar la palabra clave This con instrucciones SCOPE para realizar asignaciones a subcubos:  

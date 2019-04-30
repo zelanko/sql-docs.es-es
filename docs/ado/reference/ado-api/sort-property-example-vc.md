@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 623afddc5f9490afd1b0e162025641112fb36300
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63315158"
 ---
 # <a name="sort-property-example-vc"></a>Ejemplo de la propiedad Sort (VC ++)
 Este ejemplo se usa el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [ordenación](../../../ado/reference/ado-api/sort-property.md) propiedad volver a ordenar las filas de una **Recordset** derivado de la ***autores*** tabla de el **Pubs** base de datos. Una rutina de la utilidad secundaria imprime cada fila.  

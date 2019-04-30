@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc8072a6d7291a546f0f12256aa4b336da037a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281088"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Crear instrucciones SQL Interoperable
 Como se mencionó en las secciones anteriores, las aplicaciones interoperables deben usar la gramática de SQL de ODBC. Sin embargo, mediante el uso de esta gramática, un número de problemas adicionales se enfrenta las aplicaciones interoperables. Por ejemplo, ¿qué hace una aplicación si quiere usar una característica, como las combinaciones externas, que no es compatible con todos los orígenes de datos?  

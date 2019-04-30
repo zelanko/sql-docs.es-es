@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 53dde66e84dd7304f81c4b6fd7de8dbe939d22d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250135"
 ---
-# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Tarea 3: limpiar datos con la base de conocimiento Proveedores
+# <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Tarea 3: Limpieza de datos en la base de conocimiento Proveedores
   En esta tarea, ejecutará el proceso de limpieza asistida por PC. DQS emplea algoritmos avanzados y niveles de confianza basados en los valores de umbral especificados para analizar los datos comparándolos con la base de conocimiento seleccionada; a continuación, los limpia. Vea [Limpiar datos mediante el conocimiento de DQS (interno)](https://msdn.microsoft.com/library/hh213061.aspx) para obtener más detalles.  
   
 1.  Haga clic en **Iniciar** para iniciar el proceso de limpieza asistido por PC.  

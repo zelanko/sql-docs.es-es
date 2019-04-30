@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: acf31c29b498562708c7cb049e89a0a7425fd31f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63288462"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Evaluación de esquemas de Oracle para la conversión (OracleToSQL)
 Antes de cargar los objetos y migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debería determinar lo complejo que será la migración y cuánto tiempo tardará la migración. SSMA puede crear un informe de evaluación que muestra el porcentaje de objetos que se convertirán correctamente. SSMA también le permite ver los problemas específicos que provocan errores de conversión.  
@@ -37,7 +37,7 @@ Al crear este informe de evaluación, SSMA convierte los objetos seleccionados d
   
     SSMA mostrará el progreso en la barra de estado en la parte inferior de la ventana. Si está visible el panel de resultados, también verá los mensajes en el panel de salida.  
   
-    Una vez completada la evaluación, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant para Oracle: aparecerá la ventana de informe de evaluación.  
+    Una vez completada la evaluación, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant para Oracle: Aparecerá la ventana de informe de evaluación.  
   
 ## <a name="using-assessment-reports"></a>Uso de informes de evaluación  
 La ventana de informe de evaluación contiene tres paneles:  

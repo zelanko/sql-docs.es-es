@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250270"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>Propiedades de suscripción de replicación de SQL Server 
 Esta sección proporciona información sobre la **propiedades de suscripción** cuadro de diálogo. 
@@ -43,7 +43,7 @@ Esta sección proporciona información sobre la **propiedades de suscripción** 
   
  Para obtener más información acerca de los permisos necesarios para cada agente, vea [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
-### <a name="publisher-options-for-transactional-subscriptions"></a>Opciones de publicador para suscripciones transaccionales  
+### <a name="publisher-options-for-transactional-subscriptions"></a>Opciones de publicador para las suscripciones transaccionales  
  **Impedir bucles de transacciones**  
  Determina si el agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor. Esta opción se utiliza para la replicación transaccional bidireccional. Para más información, consulte [Bidirectional Transactional Replication](transactional/bidirectional-transactional-replication.md).  
   
@@ -52,7 +52,7 @@ Esta sección proporciona información sobre la **propiedades de suscripción** 
   
 ### <a name="options-for-merge-subscriptions"></a>Opciones para suscripciones de mezcla  
  **Definición de partición (HOST_NAME)**  
- Para una publicación que utiliza filtros con parámetros, la replicación de mezcla evalúa una de sistema de dos funciones (o ambas si el filtro hace referencia a ambas funciones) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME ()** o **HOST_NAME ()**. De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()**, vea [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Para una publicación en la que se usan filtros con parámetros, la replicación de mezcla evalúa una de dos funciones del sistema (o ambas si el filtro hace referencia a las dos) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME()** o **HOST_NAME()**. De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()**, vea [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de suscripción** y **Prioridad**  
  Muestra si la suscripción es una suscripción de cliente o de servidor (no podrá cambiarse una vez creada la suscripción). Las suscripciones de servidor pueden volver a publicar datos en otros suscriptores y es posible asignarles una prioridad para la resolución de conflictos.  
@@ -86,7 +86,7 @@ Esta sección proporciona información sobre la **propiedades de suscripción** 
   
 -   **Ubicación predeterminada**: muestra la ubicación predeterminada, definida al configurar el distribuidor. Para obtener más información, consulte [especificar la ubicación de instantáneas predeterminada](snapshot-options.md#snapshot-folder-locations).    
 -   **Carpeta alternativa**: muestra una ubicación alternativa, que puede especificarse en el cuadro de diálogo **Propiedades de la publicación** . Para más información, consulte [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md).    
--   **Carpeta de instantáneas dinámicas**: muestra una ubicación de instantáneas para las publicaciones de combinación que utilizan filtros de fila con parámetros. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   **Carpeta de instantáneas dinámicas**: muestra una ubicación de instantáneas para las publicaciones de combinación que utilizan filtros de fila con parámetros. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](snapshots-for-merge-publications-with-parameterized-filters.md).  
 -   **Carpeta FTP**: carpeta desde la que se tiene acceso al servidor Protocolo de transferencia de archivos (FTP). Para más información, vea [Transferir instantáneas mediante FTP](transfer-snapshots-through-ftp.md).  
   
  **Carpeta de instantáneas**  
@@ -110,7 +110,7 @@ Esta sección proporciona información sobre la **propiedades de suscripción** 
   
 ### <a name="options-for-merge-subscriptions"></a>Opciones para suscripciones de mezcla  
  **Definición de partición (HOST_NAME)**  
- Para una publicación que utiliza filtros con parámetros, la replicación de mezcla evalúa una de sistema de dos funciones (o ambas si el filtro hace referencia a ambas funciones) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME ()** o **HOST_NAME ()**. De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()**, vea [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+ Para una publicación en la que se usan filtros con parámetros, la replicación de mezcla evalúa una de dos funciones del sistema (o ambas si el filtro hace referencia a las dos) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME()** o **HOST_NAME()**. De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()**, vea [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de suscripción** y **Prioridad**  
  Muestra si la suscripción es una suscripción de cliente o de servidor (no podrá cambiarse una vez creada la suscripción). Las suscripciones de servidor pueden volver a publicar datos en otros suscriptores y es posible asignarles una prioridad para la resolución de conflictos.  

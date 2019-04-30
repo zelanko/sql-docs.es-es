@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 0cf828263d8d3c70fc9b972bbc584b73397cbf91
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63252618"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Vistas del sistema para el almacenamiento de datos paralelos de Analytics Platform System
 Vistas del sistema para analíticas Platform System (APS) Parallel Data Warehouse (PDW de SQL Server).
@@ -222,7 +222,7 @@ Cada una de estas DMV tiene una columna específica denominada pdw_node_id. Este
 * [TABLAS](../relational-databases/system-information-schema-views/tables-transact-sql.md)
 * [VIEW_COLUMN_USAGE](../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)
 * [VIEW_TABLE_USAGE](../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)
-* [VISTAS](../relational-databases/system-information-schema-views/views-transact-sql.md)
+* [VIEWS](../relational-databases/system-information-schema-views/views-transact-sql.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
 Para obtener más información de referencia, consulte [elementos del lenguaje T-SQL](tsql-language-elements.md) y [instrucciones T-SQL](tsql-statements.md).

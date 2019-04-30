@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: filtrar informes | Microsoft Docs'
+title: 'Procedimientos: Filtrar los informes | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8eb337798afec3311b6e31027b7acbff96b8d8a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63294851"
 ---
-# <a name="how-to-filter-reports"></a>Cómo filtrar informes
+# <a name="how-to-filter-reports"></a>Procedimientos: Filtrar informes
   En este tema se describe cómo puede usar el Visor de informes del Asesor de actualizaciones para aplicar filtros a un informe.  
   
 ### <a name="to-filter-reports"></a>Para filtrar informes  
   
-1.  En el visor de informes, muestre el informe que desee filtrar. Para obtener instrucciones, consulte [Cómo: ver un informe del Asesor de actualización](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
+1.  En el visor de informes, muestre el informe que desee filtrar. Para obtener instrucciones, consulte [Cómo: Ver un informe del Asesor de actualizaciones](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
   
 2.  En el **filtrar por** lista, seleccione un tipo de problema que desea ver:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48222145"
     -   **Problemas sin resolver**. Con esta opción se muestran todos los problemas que aún no se han resuelto.  
   
 ## <a name="see-also"></a>Vea también  
- [Cómo: ejecutar el Asistente para análisis del Asesor](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Cómo: Ejecute al Asistente para análisis del Asesor](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Resolver problemas de actualización](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Actualizar temas de procedimientos del Asesor de actualizaciones](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Trabajar con el Asesor de actualizaciones](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

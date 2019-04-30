@@ -1,5 +1,5 @@
 ---
-title: 'Ejemplos: Usar el modo AUTO | Microsoft Docs'
+title: 'Ejemplos: Uso del modo AUTO | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63287809"
 ---
-# <a name="examples-using-auto-mode"></a>Ejemplos: Usar el modo AUTO
+# <a name="examples-using-auto-mode"></a>Ejemplos: Uso del modo AUTO
   Los siguientes ejemplos ilustran el uso del modo AUTO. Muchas de estas consultas se especifican utilizando los documentos XML de instrucciones de fabricación de bicicletas almacenados en la columna Instructions de la tabla ProductModel en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Ejemplo: Recuperación de cliente, pedido e información detallada de pedidos  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Ejemplo: Recuperación de información de cliente, pedido y detalle del pedido  
  Esta consulta recupera información del cliente, pedidos y pedidos detallados de un cliente específico.  
   
 ```  
@@ -93,7 +93,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>Ejemplo: Especificar GROUP BY y funciones de agregado  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>Ejemplo: Especificación de GROUP BY y funciones de agregado  
  La consulta siguiente devuelve los identificadores de cliente individuales y el número de pedidos que ha solicitado el cliente.  
   
 ```  
@@ -113,7 +113,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>Ejemplo: Especificar columnas calculadas en el modo AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Ejemplo: Especificación de columnas calculadas en el modo AUTO  
  Esta consulta devuelve nombres de cliente individuales concatenados y la información de los pedidos. La columna calculada se asigna al nivel más interno de ese punto, el elemento <`SOH`> en este ejemplo. Los nombres de cliente concatenados se agregan como atributos del elemento <`SOH`> en el resultado.  
   
 ```  
@@ -166,7 +166,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>Ejemplo: Devolver datos binarios  
+## <a name="example-returning-binary-data"></a>Ejemplo: Devolución de datos binarios  
  Esta consulta devuelve una fotografía del producto de la tabla `ProductPhoto` . `ThumbNailPhoto` es una columna `varbinary(max)` de la tabla `ProductPhoto`. De manera predeterminada, el modo `AUTO` devuelve a los datos binarios una referencia que es una dirección URL relativa de la raíz virtual de la base de datos donde se ejecuta la consulta. Se debe especificar el atributo clave `ProductPhotoID` para identificar la imagen. Al recuperar la referencia de una imagen como se muestra en este ejemplo, también debe especificarse la clave principal en la cláusula `SELECT` para identificar una fila de forma única.  
   
 ```  

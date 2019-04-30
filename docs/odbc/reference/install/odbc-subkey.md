@@ -16,19 +16,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ee7cf624e7c118a5d9ef36738c810aecc4ec5684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63281008"
 ---
 # <a name="odbc-subkey"></a>Subclave ODBC
 Los valores bajo la subclave ODBC especifican las opciones de seguimiento de ODBC. Estas opciones se establecen a través de la ficha trazas del cuadro de diálogo Administrador de orígenes de datos ODBC muestra **SQLManageDataSources**. La propia subclave ODBC es opcional. El formato de estos valores es como se muestra en la tabla siguiente.  
   
-|Nombre|Tipo de datos|data|  
+|Name|Tipo de datos|Datos|  
 |----------|---------------|----------|  
 |Trace|REG_SZ|**0** &#124; **1**|  
-|TraceFile|REG_SZ|*ruta de acceso de archivo de seguimiento*|  
+|TraceFile|REG_SZ|*tracefile-path*|  
   
  Los valores tienen los significados que se describen en la tabla siguiente.  
   

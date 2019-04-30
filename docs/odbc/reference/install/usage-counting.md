@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273391"
 ---
 # <a name="usage-counting"></a>Recuento de uso
 > [!NOTE]  
@@ -60,9 +60,9 @@ ms.locfileid: "47664633"
   
  En la tabla siguiente se muestra el formato del valor de recuento de uso del archivo.  
   
-|Nombre|Tipo de datos|data|  
+|Name|Tipo de datos|Datos|  
 |----------|---------------|----------|  
-|*ruta de acceso completa*|REG_DWORD|*Recuento*|  
+|*full-path*|REG_DWORD|*Recuento*|  
   
  Por ejemplo, suponga que un controlador para Informix usa los archivos Infrmx32.dll y Infrmx32.hlp y supongamos que este controlador se ha instalado dos veces. Los valores bajo la subclave SharedDlls para el controlador de Informix sería como sigue:  
   

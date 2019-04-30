@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo configurar minikube para las imple
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b091ec919c928f7c78eb37feca2543f06fe4f584
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: afa5c3bae6eb7898ccaedf534382c9aeb467f01c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860696"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473497"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>Configurar minikube para las implementaciones de clústeres de macrodatos de SQL Server
 
@@ -27,7 +27,7 @@ En este artículo se describe cómo configurar **minikube** en una única máqui
 
 - 32 GB de memoria (64 GB recomendado).
 
-- Si el equipo tiene solo el mínimo de memoria recomendado, a continuación, configurar la implementación de clúster tenga la instancia del grupo de 1 almacenamiento, 1 instancia del grupo de datos y solo 1 instancia de grupo de proceso. Esta configuración solo debe usar para entornos de evaluación donde la durabilidad y disponibilidad de los datos no son importantes. Consulte la [documentación de implementación](deployment-guidance.md#env) para obtener más información sobre las variables de entorno para establecer el número de réplicas para grupos de datos de configuración, calcular los grupos y grupos de almacenamiento.
+- Si el equipo tiene solo el mínimo de memoria recomendado, a continuación, configurar la implementación de clúster tenga la instancia del grupo de 1 almacenamiento, 1 instancia del grupo de datos y solo 1 instancia de grupo de proceso. Esta configuración solo debe usar para entornos de evaluación donde la durabilidad y disponibilidad de los datos no son importantes. Consulte la [documentación de implementación](deployment-guidance.md#configfile) para obtener más información sobre las variables de entorno para establecer el número de réplicas para grupos de datos de configuración, calcular los grupos y grupos de almacenamiento.
 
 - Virtualización AMD-v o VT-x debe habilitarse en el BIOS del equipo.
 
@@ -44,11 +44,11 @@ En este artículo se describe cómo configurar **minikube** en una única máqui
    - Para Linux, instale [VirtualBox](https://www.virtualbox.org/wiki/Downloads) o [KVM](https://www.linux-kvm.org/).
    - Para Windows, instale [VirtualBox](https://www.virtualbox.org/wiki/Downloads) o [Hyper-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install). Si no tiene un conmutador externo configurado en hyper-v, a continuación, cree uno que tenga acceso a la red externa.  Vea cómo [crear conmutador externo de hyper-v para minikube](https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/).
 
-## <a name="install-minikube"></a>Instalar Minikube
+## <a name="install-minikube"></a>Instalar minikube
 
-Instalar Minikube según las instrucciones para la [v0.28.2 versión](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). El clúster de macrodatos de 2019 de SQL Server (versión preliminar) solo funciona con la versión v0.24.1 y posteriores.
+Instalar minikube según las instrucciones para la [v0.28.2 versión](https://github.com/kubernetes/minikube/releases/tag/v0.28.2). El clúster de macrodatos de 2019 de SQL Server (versión preliminar) solo funciona con la versión v0.24.1 y posteriores.
 
-## <a name="create-a-minikube-cluster"></a>Crear un clúster de Minikube
+## <a name="create-a-minikube-cluster"></a>Crear un clúster de minikube
 
 El comando siguiente crea un clúster de minikube en una máquina virtual de Hyper-V con 8 CPU, 28 GB de memoria y el tamaño del disco de 100 GB. El tamaño del disco no es un espacio reservado.  Lo crece hasta que el tamaño en disco según sea necesario.  Se recomienda no cambiar el disco espacio a algo menos de 100 GB, tal como hemos tenido problemas con esto en las pruebas. También especifica el conmutador de hyper-v con acceso externo explícitamente.
 
@@ -58,7 +58,7 @@ Cambiar los parámetros como **--memoria** según sea necesario en función del 
 minikube start --vm-driver="hyperv" --cpus 8 --memory 28672 --disk-size 100g --hyperv-virtual-switch "External"
 ```
 
-Si usas Minikube con VirtualBox el comando tendría este aspecto:
+Si usas minikube con VirtualBox el comando tendría este aspecto:
 
 ```base
 minikube start --cpus 8 --memory 28672 --disk-size 100g
@@ -74,6 +74,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Los pasos descritos en este artículo, configuran un clúster de Minikube. El siguiente paso es implementar el clúster de macrodatos de SQL Server 2019. Para obtener instrucciones, consulte el artículo siguiente:
+Los pasos descritos en este artículo, configuran un clúster de minikube. El siguiente paso es implementar el clúster de macrodatos de SQL Server 2019. Para obtener instrucciones, consulte el artículo siguiente:
 
 [Implementar clústeres de SQL Server 2019 macrodatos en Kubernetes](deployment-guidance.md#deploy)

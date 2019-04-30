@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258832"
 ---
 # <a name="sqlgetcursorname-function"></a>Función SQLGetCursorName
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: 92 ISO  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ISO 92  
   
  **Resumen**  
  **SQLGetCursorName** devuelve el nombre del cursor asociado con una instrucción especificada.  
@@ -49,7 +49,7 @@ SQLRETURN SQLGetCursorName(
  *StatementHandle*  
  [Entrada] Identificador de instrucción.  
   
- *cursorName*  
+ *CursorName*  
  [Salida] Puntero a un búfer en el que se va a devolver el nombre del cursor.  
   
  Si *CursorName* es NULL, *NameLengthPtr* devolverá el número total de caracteres (excepto el carácter de terminación null para los datos de caracteres) disponibles para devolver en el búfer señalado por *CursorName*.  

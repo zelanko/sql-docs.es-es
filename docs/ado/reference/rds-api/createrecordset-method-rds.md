@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8646fba41809fe3ed6a062e7a066ed0dce5c007
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63298916"
 ---
 # <a name="createrecordset-method-rds"></a>Ejemplo del método CreateRecordset (RDS)
 Crea una vacía, desconectado [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -70,7 +70,7 @@ object.CreateRecordset(ColumnInfos)
 |------------|--------------|------------|------------------|  
 |Fixed|**adTinyInt**|16||  
 |Fixed|**adSmallInt**|2||  
-|Fixed|**son también tipos**|3||  
+|Fixed|**adInteger**|3||  
 |Fixed|**adBigInt**|20||  
 |Fixed|**adUnsignedTinyInt**|17||  
 |Fixed|**adUnsignedSmallInt**|18||  
@@ -85,7 +85,7 @@ object.CreateRecordset(ColumnInfos)
 |Fixed|**adError**|10||  
 |Fixed|**adGuid**|72||  
 |Fixed|**adDate**|7||  
-|Fixed|**adDBData**|133||  
+|Fixed|**adDBDate**|133||  
 |Fixed|**adDBTime**|134||  
 |Fixed|**adDBTimestamp**|135|7|  
 |Variable|**adBSTR**|8|130|  

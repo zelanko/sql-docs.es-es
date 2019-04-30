@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250586"
 ---
 # <a name="replication-snapshot-agent"></a>Agente de instantáneas de replicación
   El Agente de instantáneas de replicación es un archivo ejecutable que prepara archivos de instantáneas que contienen el esquema y los datos de las tablas y objetos de base de datos publicados, almacena los archivos en la carpeta de instantáneas y registra los trabajos de sincronización en la base de datos de distribución.  
@@ -87,7 +87,7 @@ ms.locfileid: "54132285"
  **-70Subscribers**  
  Se debe usar si algún suscriptor ejecuta la versión 7.0 de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- **-BcpBatchSize** _bcp_ \_ *batch* \_ *tamaño*  
+ **-BcpBatchSize** _tamaño_\_ *lote*\_ *bcp*  
  Es el número de filas para enviar en una operación de copia masiva. Al realizar una operación **bcp in** , el tamaño del lote es el número de filas para enviar al servidor como una transacción y también el número de filas que se deben enviar antes de que el Agente de distribución registre un mensaje de progreso de **bcp** . Al realizar una operación **bcp out** , se usa un tamaño de lote fijo de 1000. Un valor 0 indica que no se registran mensajes.  
   
  **-DefinitionFile** _def_path_and_file_name_  
@@ -196,7 +196,7 @@ ms.locfileid: "54132285"
 |**2**|Se imprimen todos los mensajes de error y mensajes del informe de progreso, la información útil para depurar.|  
 
  **-PrefetchTables** [ **0**| **1**]  
- Parámetro opcional que especifica si se va a realizar una captura previa de los objetos de la tabla y se almacenarán en caché.  El comportamiento predeterminado es la captura previa de determinadas propiedades de tabla mediante el componente SMO basado en un cálculo interno.  Este parámetro puede ser útil en escenarios donde SMO captura previa operación tarda mucho ya en ejecución. Si no se utiliza este parámetro, esta decisión se toma en tiempo de ejecución en función del porcentaje de tablas que se agregan como artículos a la publicación.  
+ Parámetro opcional que especifica si se va a realizar una captura previa de los objetos de la tabla y se almacenarán en caché.  El comportamiento predeterminado es la captura previa de determinadas propiedades de tabla mediante el componente SMO basado en un cálculo interno.  Este parámetro puede ser útil en escenarios en los que la operación de captura previa de SMO tarda bastante más tiempo en ejecutarse. Si no se utiliza este parámetro, esta decisión se toma en tiempo de ejecución en función del porcentaje de tablas que se agregan como artículos a la publicación.  
   
 |Valor OutputVerboseLevel|Descripción|  
 |------------------------------|-----------------|  

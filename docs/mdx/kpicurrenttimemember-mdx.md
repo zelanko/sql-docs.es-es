@@ -1,5 +1,5 @@
 ---
-title: KPICurrentTimeMember (MDX) | Documentos de Microsoft
+title: KPICurrentTimeMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 34fb8bbfbda3f6fcab865697749aca3f76ae2603
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63273132"
 ---
 # <a name="kpicurrenttimemember-mdx"></a>KPICurrentTimeMember (MDX)
 
@@ -32,7 +32,7 @@ KPICurrentTimeMember(KPI_Name)
  *KPI_Nam*e  
  Expresión de cadena válida que especifica el nombre del KPI.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Un identificador KPI puede tener un miembro de hora distinto del miembro predeterminado de la dimensión de hora.  
   
 ## <a name="see-also"></a>Vea también  

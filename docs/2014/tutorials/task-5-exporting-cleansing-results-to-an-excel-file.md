@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aab1eff896ba602f118606b8f80894260e26f7ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63276764"
 ---
-# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Tarea 5: exportar los resultados de la limpieza a un archivo de Excel
+# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Tarea 5: Exportación de los resultados de la limpieza a un archivo de Excel
   En esta tarea, exportará los resultados de la actividad de limpieza a un archivo de Excel. Consulte [fase de exportación](https://msdn.microsoft.com/library/hh213061.aspx#Export) tema para obtener más detalles.  
   
 1.  En el panel derecho, seleccione **Excel** para el **tipo de destino**.  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22fae65a5e62be579f751dd3d6d3d0c9a73e7409
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316395"
 ---
 # <a name="script-a-table"></a>Incluir una tabla en un script
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puede crear scripts para seleccionar, insertar, actualizar y eliminar tablas, y para crear, modificar, quitar o ejecutar procedimientos almacenados.  
@@ -26,9 +26,9 @@ ms.locfileid: "48091555"
   
 #### <a name="to-create-the-insert-script-for-a-table"></a>Para crear un script de inserción para una tabla  
   
-1.  En el Explorador de objetos, expanda el servidor, **Bases de datos**, [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] y **Tablas**; haga clic con el botón derecho en **HumanResources.Employee** y, después, señale **Incluir tabla como**.  
+1.  En el Explorador de objetos, expanda el servidor, **Bases de datos**, [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]y **Tablas**; haga clic con el botón derecho en **HumanResources.Employee**y, después, señale **Incluir tabla como**.  
   
-2.  El menú contextual tiene siete opciones de scripting disponibles: **CREATE To**, **DROP To**, **DROP y CREATE To**, **SELECT To**, **INSERT To**, **UPDATE To**y **DELETE To**. Seleccione **UPDATE To**y haga clic en **Nueva ventana del Editor de consultas**.  
+2.  El menú contextual tiene siete opciones de scripting disponibles: **CREAR a**, **DROP a**, **DROP y CREATE To**, **Seleccione esta opción para**, **Insertar a**, **actualización**, y **eliminar a**. Seleccione **UPDATE To**y haga clic en **Nueva ventana del Editor de consultas**.  
   
 3.  Se abre una ventana nueva del Editor de consultas que establece una conexión y presenta la instrucción completa actualizada.  
   

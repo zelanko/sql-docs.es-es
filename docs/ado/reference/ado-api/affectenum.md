@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bf8f067cd223bb9064e5e44734b9765cc8b41c79
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63248820"
 ---
 # <a name="affectenum"></a>AffectEnum
 Especifica qué registros se ven afectados por una operación.  
@@ -34,7 +34,7 @@ Especifica qué registros se ven afectados por una operación.
 |**adAffectGroup**|2|Afecta a solo los registros que cumplen actual [filtro](../../../ado/reference/ado-api/filter-property.md) configuración de la propiedad. Debe establecer el **filtro** propiedad a un **FilterGroupEnum** valor o una matriz de **marcadores** para usar esta opción.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

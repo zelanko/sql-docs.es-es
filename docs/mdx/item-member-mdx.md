@@ -1,5 +1,5 @@
 ---
-title: Elemento (miembro) (MDX) | Documentos de Microsoft
+title: Item (miembro) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 92745085a408503a2b435eb160daf431c7fdaa32
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63272841"
 ---
 # <a name="item-member-mdx"></a>Item (Member) (MDX)
 
@@ -35,7 +35,7 @@ Tuple_Expression.Item( Index )
  *Index*  
  Expresión numérica válida que especifica el miembro concreto mediante la posición en la tupla que se devolverá.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **elemento** función devuelve un miembro de la tupla especificada. La función devuelve el miembro que se encuentra en la posición de base cero especificada por *índice*.  
   
 ## <a name="example"></a>Ejemplo  

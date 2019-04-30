@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63255226"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Cuadro de diálogo Crear nueva directiva o Abrir directiva, página Descripción
   Utilice este cuadro de diálogo para agregar una descripción e información adicional a una directiva de administración basada en directivas.  

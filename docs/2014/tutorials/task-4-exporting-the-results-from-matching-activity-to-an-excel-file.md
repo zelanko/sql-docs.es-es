@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c9424f2ba21fb4b93e359c8662974a82c62b4895
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63250893"
 ---
-# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Tarea 4: exportar los resultados de la actividad de coincidencia a un archivo de Excel
+# <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Tarea 4: Exportación de los resultados de la actividad de coincidencia a un archivo de Excel
   En esta tarea, exportará los resultados de la actividad de coincidencia a un archivo de Excel.  
   
 1.  En el **exportar** página, seleccione **archivo de Excel** para el **tipo de destino**.  
@@ -30,11 +30,11 @@ ms.locfileid: "56020446"
   
 5.  Confirme que **registro dinámico** está seleccionada para la **regla de permanencia**. Al seleccionar esta opción, se elige el registro dinámico de cada clúster para la salida de un clúster. Las demás opciones de la regla de supervivencia son las siguientes:  
   
-    1.  **Registro más completo:** el registro de permanencia es el que tiene el mayor número de campos rellenos.  
+    1.  **Registro más completo:** El registro de permanencia es el que tiene el mayor número de campos rellenos.  
   
-    2.  **Registro más largo:** el registro de permanencia es el que tiene el mayor número de términos en los campos de origen.  
+    2.  **Registro más largo:** El registro de permanencia es el que tiene el mayor número de términos en campos de origen.  
   
-    3.  **Registro más completo y más largo:** el registro de supervivencia es el que tiene el mayor número de campos rellenos y el mayor número de términos en cada campo.  
+    3.  **Registro más completo y más largo:** El registro de permanencia es el que tiene el mayor número de campos rellenos y con el mayor número de términos en cada campo.  
   
      ![Exportar los resultados de la página coincidencia](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "exportar los resultados de la página coincidencia")  
   

@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 909f9b3e7c8087add8eb66ca2f5c15253026304c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63267651"
 ---
 # <a name="default-data-source"></a>Origen de datos predeterminado
 El controlador puede seleccionar un origen de datos, denominado el origen de datos de forma predeterminada, en algunos casos donde la aplicación no especifica explícitamente uno:  

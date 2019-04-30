@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f8c585bc758b74c666c8da625c1e57af7af2582
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63258802"
 ---
 # <a name="sqlgetdescrec-function"></a>Función SQLGetDescRec
 **Conformidad**  
- Versión introdujo: ODBC 3.0 normativo: 92 ISO  
+ Versión de introducción: Compatibilidad de ODBC 3.0 estándares: ISO 92  
   
  **Resumen**  
  **SQLGetDescRec** devuelve la configuración actual o los valores de varios campos de un registro del descriptor. Los campos devueltos describen el nombre, tipo de datos y almacenamiento de datos de columna o parámetro.  
@@ -59,7 +59,7 @@ SQLRETURN SQLGetDescRec(
  *RecNumber*  
  [Entrada] Indica que el registro de descriptor de la que la aplicación busca información. Registros de descriptor se numeran de 1, con el número de registro 0 es el registro del marcador. El *RecNumber* argumento debe ser menor o igual que el valor de SQL_DESC_COUNT. Si *RecNumber* es menor o igual que SQL_DESC_COUNT pero la fila no contiene datos de una columna o parámetro, una llamada a **SQLGetDescRec** devolverá los valores predeterminados de los campos. (Para obtener más información, consulte "Inicialización de campos de Descriptor" en [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   
- *Nombre*  
+ *Name*  
  [Salida] Un puntero a un búfer en el que se va a devolver el campo SQL_DESC_NAME para el registro del descriptor.  
   
  Si *nombre* es NULL, *StringLengthPtr* devolverá el número total de caracteres (excepto el carácter de terminación null para los datos de caracteres) disponibles para devolver en el búfer señalado por  *Nombre*.  

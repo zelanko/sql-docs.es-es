@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c579c824d65d50dfd1b222615f247d97209db37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314677"
 ---
 # <a name="sort-property"></a>Propiedad de ordenación
 Indica uno o más nombres de campo en el que el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) está ordenada, y si cada campo está ordenado en orden ascendente o descendente.  

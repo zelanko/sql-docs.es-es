@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 40919c7b300ffed0bdc84f4214b28c8ea71b15b8
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 5953b5b36639438d80805bfb3dacc850d8c67dce
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582450"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472234"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Cómo implementar una aplicación en clúster de macrodatos de SQL Server (versión preliminar)
 
@@ -45,7 +45,7 @@ Se admiten los siguientes tipos de aplicaciones:
 
 ## <a name="capabilities"></a>Capabilities
 
-En SQL Server 2019 CTP 2.4 (versión preliminar) puede crear, eliminar, describir, inicializar, lista ejecutar y actualizar la aplicación. En la tabla siguiente se describe los comandos de implementación de aplicación que puede usar con **mssqlctl**.
+En SQL Server 2019 CTP 2.5 (versión preliminar) puede crear, eliminar, describir, inicializar, lista ejecutar y actualizar la aplicación. En la tabla siguiente se describe los comandos de implementación de aplicación que puede usar con **mssqlctl**.
 
 |Comando |Descripción |
 |:---|:---|
@@ -68,19 +68,19 @@ Las secciones siguientes describen estos comandos en más detalle.
 
 ## <a name="sign-in"></a>Iniciar sesión
 
-Antes de implementar o interactuar con las aplicaciones, primero inicie sesión en un clúster de macrodatos con SQL Server la `mssqlctl login` comando. Especifique la dirección IP externa de la `endpoint-service-proxy` servicio (por ejemplo: `https://ip-address:30777`) junto con el nombre de usuario y la contraseña para el clúster.
+Antes de implementar o interactuar con las aplicaciones, primero inicie sesión en un clúster de macrodatos con SQL Server la `mssqlctl login` comando. Especifique la dirección IP externa de la `mgmtproxy-svc-external` servicio (por ejemplo: `https://ip-address:30777`) junto con el nombre de usuario y la contraseña para el clúster.
 
 ```bash
-mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
+mssqlctl login -e https://<ip-address-of-mgmtproxy-svc-external>:30777 -u <user-name> -p <password>
 ```
 
 ## <a name="aks"></a>AKS
 
-Si usa AKS, deberá ejecutar el comando siguiente para obtener la dirección IP de la `endpoint-service-proxy` servicio, ejecute este comando en una ventana cmd o bash:
+Si usa AKS, deberá ejecutar el comando siguiente para obtener la dirección IP de la `mgmtproxy-svc-external` servicio, ejecute este comando en una ventana cmd o bash:
 
 
 ```bash
-kubectl get svc endpoint-service-proxy -n <name of your cluster>
+kubectl get svc mgmtproxy-svc-external -n <name of your cluster>
 ```
 
 ## <a name="kubeadm-or-minikube"></a>Kubeadm o Minikube

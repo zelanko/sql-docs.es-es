@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc3faf212a1777938194927b364c29750113196d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953381"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63460998"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Establecer permisos para las operaciones del servidor de informes en una aplicación web de SharePoint
   En el caso de un servidor de informes que se ejecuta en el modo integrado de SharePoint, la configuración de seguridad definida en el sitio de SharePoint determina el modo en que se ven y administran los informes, los modelos de informe y los orígenes de datos compartidos. Si usa los grupos, niveles de permiso y asignaciones de permiso predeterminados de SharePoint, puede trabajar con informes y otros documentos mediante la configuración de seguridad actual.  

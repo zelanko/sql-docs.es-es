@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 10cf92089a87f2d57fc303d8b722df70941fb455
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819503"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453450"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Comandos de menú y otras teclas de método abreviado (AccessToSQL)
 Las secciones siguientes describen los métodos abreviados de teclado para tener acceso a comandos de menú y otras teclas de método abreviado que se usa en varios cuadros de diálogo de SSMA para la aplicación de Access.  

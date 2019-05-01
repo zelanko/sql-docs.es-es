@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ff7ffb1b57c8af38e1b2eeebc64f2a3e753fc5b3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278488"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 
@@ -36,7 +36,7 @@ MemberToStr(Member_Expression)
  Esta función devuelve una cadena que contiene el nombre único de un miembro. Normalmente se usa para pasar el nombre único de un miembro a una función externa.  
   
 ## <a name="example"></a>Ejemplo  
- El ejemplo siguiente devuelve la cadena [Geography].[Geography].[Country].&[United States] :  
+ El ejemplo siguiente devuelve la cadena [Geography]. [Geography]. [Country]. & [United States]:  
   
  `WITH MEMBER Measures.x AS MemberToStr`  
   

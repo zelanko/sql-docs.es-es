@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6e044c4a2cda01fcc9cbba2667beaae75a12caf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772733"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459333"
 ---
 # <a name="seekenum"></a>SeekEnum
 Especifica el tipo de [Seek](../../../ado/reference/ado-api/seek-method.md) para ejecutar.  
@@ -36,7 +36,7 @@ Especifica el tipo de [Seek](../../../ado/reference/ado-api/seek-method.md) para
 |**adSeekBefore**|32|Busca una clave justo antes de que una coincidencia con *KeyValues* habría producido.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Paquete: **com.ms.wfc.data**  
+ Package: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

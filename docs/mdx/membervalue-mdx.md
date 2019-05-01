@@ -1,5 +1,5 @@
 ---
-title: MemberValue (MDX) | Documentos de Microsoft
+title: MemberValue (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 73a54986a951095b16465cd4934b4dfd447d38bb
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742174"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63456709"
 ---
 # <a name="membervalue-mdx"></a>MemberValue (MDX)
 
@@ -29,7 +29,7 @@ Member_Expression.MemberValue
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expresión_miembro*  
+ *Member_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que se evalúa en un miembro.  
   
 ## <a name="return-value"></a>Valor devuelto  

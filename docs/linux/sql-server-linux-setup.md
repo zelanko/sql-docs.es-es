@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
-ms.translationtype: MT
+ms.openlocfilehash: 1edc63d4dc29e05a914bbfbd891df06a4b3a7255
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280629"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63455086"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guía de instalación para SQL Server en Linux
 
@@ -109,7 +109,7 @@ Estos comandos, descargue el paquete más reciente y reemplace los archivos bina
 
 Para revertir o degradación de SQL Server a una versión anterior, siga estos pasos:
 
-1. Identifique el número de versión para el paquete de SQL Server que desea cambiar. Para obtener una lista de números de paquete, consulte el [notas de la versión](sql-server-linux-release-notes.md).
+1. Identifique el número de versión para el paquete de SQL Server que desea cambiar. Para obtener una lista de números de paquete, consulte el [notas de la versión](../linux/sql-server-linux-release-notes.md).
 
 1. Cambiar a una versión anterior de SQL Server. En los siguientes comandos, reemplace `<version_number>` con el número de versión de SQL Server que identificó en el paso uno.
 
@@ -178,7 +178,7 @@ Si su equipo Linux no tiene acceso a los repositorios en línea que se usan en e
 > [!TIP]
 > Si ha instalado correctamente mediante los pasos descritos en las guías de inicio rápido, no es necesario descargar o instalar manualmente los paquetes de SQL Server. En esta sección es solo para el escenario sin conexión.
 
-1. **Descargue el paquete del motor de base de datos para su plataforma**. Buscar vínculos de descarga del paquete en la sección de detalles del paquete de la [notas de la versión](sql-server-linux-release-notes.md).
+1. **Descargue el paquete del motor de base de datos para su plataforma**. Buscar vínculos de descarga del paquete en la sección de detalles del paquete de la [notas de la versión](../linux/sql-server-linux-release-notes.md).
 
 1. **Mover el paquete descargado a su equipo Linux**. Si usa un equipo diferente para descargar los paquetes, es una manera de mover los paquetes a la máquina Linux con la **scp** comando.
 

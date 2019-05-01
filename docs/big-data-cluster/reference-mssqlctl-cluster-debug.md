@@ -1,20 +1,20 @@
 ---
 title: referencia de depuración de clúster mssqlctl
 titleSuffix: SQL Server big data clusters
-description: Artículo de referencia para los comandos de clúster mssqlctl.
+description: Artículo de referencia de comandos de depuración de clúster mssqlctl.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b12b0421cf32a36cfd6d681bc90ad9ca7c3f9209
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 5099a9ac611602e0c4c8d7f0103421e34b7fa8a2
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860556"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473288"
 ---
 # <a name="mssqlctl-cluster-debug"></a>Depuración de clúster mssqlctl
 
@@ -22,54 +22,69 @@ ms.locfileid: "58860556"
 
 El siguiente artículo proporciona la referencia para la **depuración clúster** comandos en el **mssqlctl** herramienta. Para obtener más información acerca de otros **mssqlctl** comandos, consulte [mssqlctl referencia](reference-mssqlctl.md).
 
-## <a id="commands"></a> Comandos
-
-|||
-|---|---|
-| [copy-logs](#copy-logs) | Copiar los registros. |
-| [dump](#dump) | Volcado del registro de desencadenador. |
-
-## <a id="copy-logs"></a> registros de copia de depuración del clúster
-
-Copiar los registros.
-
+## <a name="commands"></a>Comandos
+|     |     |
+| --- | --- |
+[depuración mssqlctl copia-registros de clúster](#mssqlctl-cluster-debug-copy-logs) | Copiar los registros.
+[volcado de depuración de clúster mssqlctl](#mssqlctl-cluster-debug-dump) | Volcado del registro de desencadenador.
+## <a name="mssqlctl-cluster-debug-copy-logs"></a>depuración mssqlctl copia-registros de clúster
+Copiar los registros de depuración desde el clúster.
+```bash
+mssqlctl cluster debug copy-logs --namespace -n 
+                                 [--container -c]  
+                                 [--target-folder -d]  
+                                 [--pod -p]  
+                                 [--timeout -t]
 ```
-mssqlctl cluster debug copy-logs
-   --namespace
-   [--container]
-   [--pod]
-   [--target-folder]
-   [--timeout]
+### <a name="required-parameters"></a>Parámetros necesarios
+#### `--namespace -n`
+Nombre del clúster, usado para el espacio de nombres de kubernetes.
+### <a name="optional-parameters"></a>Parámetros opcionales
+#### `--container -c`
+Copiar los registros para los contenedores con un nombre similar, opcional, de forma predeterminada copia los registros para todos los contenedores. No se puede especificar varias veces. Si especifica varias veces, por última vez una se usará
+#### `--target-folder -d`
+Ruta de acceso de carpeta de destino para copiar los registros a. Opcional, crea el resultado en la carpeta local de forma predeterminada.  No se puede especificar varias veces. Si especifica varias veces, por última vez una se usará
+#### `--pod -p`
+Copiar los registros para los pods con un nombre similar. Opcional, en los registros de copias de forma predeterminada para todos los pods. No se puede especificar varias veces. Si especifica varias veces, por última vez una se usará
+#### `--timeout -t`
+El número de segundos que deben transcurrir para que se complete el comando. El valor predeterminado es 0, lo que es ilimitado
+### <a name="global-arguments"></a>Argumentos globales
+#### `--debug`
+Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+#### `--help -h`
+Mostrar este mensaje de ayuda y salir.
+#### `--output -o`
+Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
+#### `--query -q`
+Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+#### `--verbose`
+Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+## <a name="mssqlctl-cluster-debug-dump"></a>volcado de depuración de clúster mssqlctl
+Desencadenar el registro de volcado de memoria y copiarla desde el contenedor.
+```bash
+mssqlctl cluster debug dump --namespace -n 
+                            --container -c  
+                            [--target-folder -d]
 ```
-
-### <a name="parameters"></a>Parámetros
-
-| Parámetros | Descripción |
-|---|---|
-| **--namespace -n** | Nombre del clúster, usado para el espacio de nombres de kubernetes. Requerido. |
-| **--container -c** | Copiar los registros para los contenedores con un nombre similar, opcional, de forma predeterminada copia los registros para todos los contenedores. No se puede especificar varias veces. Si especifica varias veces, por última vez una se usará. |
-| **--pod -p** | Copiar los registros para los pods con un nombre similar. Opcional, en los registros de copias de forma predeterminada para todos los pods. No se puede especificar varias veces. Si especifica varias veces, por última vez una se usará. |
-| **--target-folder -d** | Ruta de acceso de carpeta de destino para copiar los registros a. Opcional, crea el resultado en la carpeta local de forma predeterminada.  No se puede especificar varias veces. Si especifica varias veces, por última vez una se usará. |
-| **--timeout -t** | El número de segundos que deben transcurrir para que se complete el comando. El valor predeterminado es 0, lo que es ilimitado. |
-
-## <a id="dump"></a> volcado de depuración de clúster
-
-Volcado del registro de desencadenador.
-
-```
-mssqlctl cluster debug dump
-   [--container]
-   [--namespace]
-   --target-folder
-```
-
-### <a name="parameters"></a>Parámetros
-
-| Parámetros | Descripción |
-|---|---|
-| **--container -c** | Copiar los registros para los contenedores con un nombre similar, opcional, de forma predeterminada copia los registros para todos los contenedores. No se puede especificar varias veces. Si especifica varias veces, por última vez una se usará.  Los valores permitidos: mssql-controller. |
-| **--namespace -n** | Nombre del clúster, usado para el espacio de nombres de kubernetes. Requerido. |
-| **--target-folder -d** | Ruta de acceso de carpeta de destino para copiar los registros a. Opcional, crea el resultado en la carpeta local de forma predeterminada.  No se puede especificar varias veces. Si especifica varias veces, por última vez una se usará.  Valor predeterminado: `./output/dump`. Requerido. |
+### <a name="required-parameters"></a>Parámetros necesarios
+#### `--namespace -n`
+Nombre del clúster, usado para el espacio de nombres de kubernetes.
+#### `--container -c`
+Copiar los registros para los contenedores con un nombre similar, opcional, de forma predeterminada copia los registros para todos los contenedores. No se puede especificar varias veces. Si especifica varias veces, por última vez una se usará
+### <a name="optional-parameters"></a>Parámetros opcionales
+#### `--target-folder -d`
+Ruta de acceso de carpeta de destino para copiar los registros a. Opcional, crea el resultado en la carpeta local de forma predeterminada.  No se puede especificar varias veces. Si especifica varias veces, por última vez una se usará `./output/dump`
+### <a name="global-arguments"></a>Argumentos globales
+#### `--debug`
+Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+#### `--help -h`
+Mostrar este mensaje de ayuda y salir.
+#### `--output -o`
+Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
+#### `--query -q`
+Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+#### `--verbose`
+Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

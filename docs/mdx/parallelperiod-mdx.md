@@ -1,5 +1,5 @@
 ---
-title: ParallelPeriod (MDX) | Documentos de Microsoft
+title: ParallelPeriod (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1f495ce1fad9a318ea5e6c1f3fadd88f8313cd6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742374"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473072"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
 
@@ -35,17 +35,17 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  *Index*  
  Expresión numérica válida que especifica el número de períodos paralelos que se van a retrasar.  
   
- *Expresión_miembro*  
+ *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Notas  
- Aunque es similar a la [Cousin](../mdx/cousin-mdx.md) función, el **ParallelPeriod** función está más estrechamente relacionado con serie temporal. El **ParallelPeriod** función toma el antecesor del miembro especificado en el nivel especificado, busca el elemento del mismo nivel del antecesor con el intervalo especificado y por último, devuelve el período paralelo del miembro especificado entre los descendientes del nodo relacionado.  
+## <a name="remarks"></a>Comentarios  
+ Aunque es similar a la [Cousin](../mdx/cousin-mdx.md) función, el **ParallelPeriod** función está más estrechamente relacionada con serie temporal. El **ParallelPeriod** función toma el antecesor del miembro especificado en el nivel especificado, busca del mismo nivel el antecesor con el retraso especificado y, por último, devuelve el período paralelo del miembro especificado entre los descendientes del nodo relacionado.  
   
  El **ParallelPeriod** función tiene los siguientes valores predeterminados:  
   
--   Si se especifica una expresión de nivel ni una expresión de miembro, el valor del miembro predeterminado es el miembro actual de la primera jerarquía en la primera dimensión con un tipo de *tiempo* en el grupo de medida.  
+-   Si se especifica una expresión de nivel ni una expresión de miembro, el valor del miembro predeterminado es el miembro actual de la primera jerarquía de la primera dimensión con un tipo de *tiempo* en el grupo de medida.  
   
--   Si se especifica una expresión de nivel, pero no se especifica una expresión de miembro, el valor de miembro predeterminado es *Level_Expression*. **Hierarchy.CurrentMember**.  
+-   Si se especifica una expresión de nivel, pero no se especifica una expresión de miembro, el valor del miembro predeterminado es *Level_Expression*. **Hierarchy.CurrentMember**.  
   
 -   El valor de índice predeterminado es 1.  
   

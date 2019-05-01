@@ -1,5 +1,5 @@
 ---
-title: Elemento primario (MDX) | Documentos de Microsoft
+title: Elemento primario (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 16de50e05bf139d590f90630e338fdb7cbb428e5
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278424"
 ---
 # <a name="parent-mdx"></a>Parent (MDX)
 
@@ -29,10 +29,10 @@ Member_Expression.Parent
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expresión_miembro*  
+ *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **primario** función devuelve el miembro primario del miembro especificado.  
   
 ## <a name="examples"></a>Ejemplos  

@@ -1,31 +1,30 @@
 ---
-title: Use kubectl para solucionar problemas de monitor /
+title: Supervisión y solución de problemas
 titleSuffix: SQL Server big data clusters
-description: En este artículo se proporcionan comandos de kubectl útil para la supervisión y solución de problemas de un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
+description: Este artículo proporciona comandos útiles para la supervisión y solución de problemas de un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8b9be0566725822e0241c65c7f8324b153cca072
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.openlocfilehash: 0548176a191d5c2b16b113b5a931a1ed0435741c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954111"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472295"
 ---
-# <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>Comandos de Kubectl para la supervisión y solución de problemas de clústeres de macrodatos de SQL Server
+# <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Supervisión y solución de problemas de clústeres de macrodatos de SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describe varios comandos útiles de Kubernetes que puede usar para supervisar y solucionar problemas de un clúster de macrodatos de 2019 de SQL Server (versión preliminar). Este artículo tratan las tareas comunes, como copiar archivos a o desde un contenedor que ejecuta uno de los servicios de clúster de macrodatos de SQL Server. También muestra cómo ver información detallada de un pod u otros artefactos de Kubernetes que se encuentran en el clúster de macrodatos.
+En este artículo se describe varios comandos útiles de Kubernetes que puede usar para supervisar y solucionar problemas de un clúster de macrodatos de 2019 de SQL Server (versión preliminar). Muestra cómo ver información detallada de un pod u otros artefactos de Kubernetes que se encuentran en el clúster de macrodatos. Este artículo también tratan tareas comunes, como copiar archivos a o desde un contenedor que ejecuta uno de los servicios de clúster de macrodatos de SQL Server.
 
-## <a name="kubectl-command-examples"></a>Ejemplos de comandos de Kubectl
-
-Ejecute el siguiente **kubectl** comandos en un equipo cliente de Linux (bash) o Windows (cmd o PS). Requiere autenticación anterior en el clúster y ejecutar en un contexto de clúster. Por ejemplo, para un clúster AKS creado previamente puede ejecutar `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` para descargar el archivo de configuración de clúster de Kubernetes y establecer el contexto de clúster.
+> [!TIP]
+> Ejecute el siguiente **kubectl** comandos en un equipo cliente de Linux (bash) o Windows (cmd o PS). Requiere autenticación anterior en el clúster y ejecutar en un contexto de clúster. Por ejemplo, para un clúster AKS creado previamente puede ejecutar `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` para descargar el archivo de configuración de clúster de Kubernetes y establecer el contexto de clúster.
 
 ## <a name="get-status-of-pods"></a>Obtener estado de pods
 
@@ -41,56 +40,101 @@ kubectl get pods --all-namespaces
 
 ### <a name="show-status-of-all-pods-in-the-sql-server-big-data-cluster"></a>Mostrar el estado de todos los pods en el clúster de macrodatos de SQL Server
 
-Use el `-n` parámetro para especificar un espacio de nombres específico. Tenga en cuenta que se crean los pods del clúster de macrodatos en un nuevo espacio de nombres que se crea en tiempo de arranque del clúster de SQL Server se basa en el nombre de clúster especificado en el `mssqlctl cluster create --name <cluster_name>` comando.
+Use el `-n` parámetro para especificar un espacio de nombres específico. Tenga en cuenta que los pods de clúster de macrodatos de SQL Server se crean en un espacio de nombres nuevo creado en tiempo de arranque del clúster según el nombre de clúster especificado en el archivo de configuración de implementación. El nombre predeterminado, `mssql-cluster`, se usa aquí.
 
 ```bash
-kubectl get pods -n <namespace_name>
+kubectl get pods -n mssql-cluster
 ```
 
-Por ejemplo, el siguiente comando muestra el estado de pods en un clúster de macrodatos denominado `big_data_cluster`:
+Debería ver resultados similares a la lista siguiente para un clúster de macrodatos funcionamiento:
 
-```bash
-kubectl get pods -n big_data_cluster
+```output
+PS C:\> kubectl get pods -n mssql-cluster
+NAME              READY   STATUS    RESTARTS   AGE
+appproxy-f2qqt    2/2     Running   0          110m
+compute-0-0       3/3     Running   0          110m
+control-zlncl     4/4     Running   0          118m
+data-0-0          3/3     Running   0          110m
+data-0-1          3/3     Running   0          110m
+gateway-0         2/2     Running   0          109m
+logsdb-0          1/1     Running   0          112m
+logsui-jtdnv      1/1     Running   0          112m
+master-0          7/7     Running   0          110m
+metricsdb-0       1/1     Running   0          112m
+metricsdc-shv2f   1/1     Running   0          112m
+metricsui-9bcj7   1/1     Running   0          112m
+mgmtproxy-x6gcs   2/2     Running   0          112m
+nmnode-0-0        1/1     Running   0          110m
+storage-0-0       7/7     Running   0          110m
+storage-0-1       7/7     Running   0          110m
 ```
+
+> [!NOTE]
+> Durante la implementación, pods con un **estado** de **ContainerCreating** todavía próximamente. Si la implementación se bloquea por cualquier motivo, esto puede darle una idea donde podría ser el problema. Examine también el **listo** columna. Esto indica cuántos contenedores se han iniciado en el pod. Tenga en cuenta que las implementaciones pueden tardar 30 minutos o más dependiendo de su configuración y la red. Gran parte de este tiempo se dedica a descargar las imágenes de contenedor para los distintos componentes.
 
 ## <a name="get-pod-details"></a>Obtener detalles de pod
 
-Ejecute el siguiente comando para obtener una descripción detallada de un pod específico en la salida del formato json. Incluye detalles como el nodo actual de Kubernetes que se coloca el pod, los contenedores que se ejecutan en el pod y la imagen que se utiliza para arrancar los contenedores. También se muestran otros detalles, como etiquetas, estado y conserva las notificaciones de los volúmenes que están asociadas con el pod.
+Ejecute el siguiente comando para obtener una descripción detallada de un pod específico en la salida del formato JSON. Incluye detalles como el nodo actual de Kubernetes que se coloca el pod, los contenedores que se ejecutan en el pod y la imagen que se utiliza para arrancar los contenedores. También se muestran otros detalles, como etiquetas, estado y conserva las notificaciones de los volúmenes que están asociadas con el pod.
 
 ```bash
 kubectl describe pod  <pod_name> -n <namespace_name>
 ```
 
-El ejemplo siguiente muestra los detalles de la `mssql-data-pool-master-0` pod en un clúster de macrodatos denominado `big_data_cluster`:
+El ejemplo siguiente muestra los detalles de la `master-0` pod en un clúster de macrodatos denominado `mssql-cluster`:
 
 ```bash
-kubectl describe pod  mssql-data-pool-master-0 -n big_data_cluster
+kubectl describe pod  master-0 -n mssql-cluster
 ```
 
-## <a name="get-status-of-services"></a>Obtener el estado de servicios
+Si ha habido algún error, a veces puede ver el error en los eventos recientes para el pod.
 
-Ejecute el siguiente comando para obtener detalles de los servicios de clúster de macrodatos. Estos detalles incluyen su tipo y las direcciones IP asociadas con puertos y los servicios correspondientes. Tenga en cuenta que los servicios de clúster de macrodatos de SQL Server se crean en un espacio de nombres nuevo creado en tiempo de arranque del clúster según el nombre de clúster especificado en el `mssqlctl cluster create --name <cluster_name>` comando.
+## <a name="get-pod-logs"></a>Obtener registros del pod
+
+Puede recuperar los registros de contenedores que se ejecutan en un pod. El comando siguiente recupera los registros para todos los contenedores que se ejecutan en el pod denominado `master-0` y la envía a un nombre de archivo `master-0-pod-logs.txt`:
+
+```bash
+kubectl logs master-0 --all-containers=true -n mssql-cluser > master-0-pod-logs.txt
+```
+
+## <a id="services"></a> Obtener el estado de servicios
+
+Ejecute el siguiente comando para obtener detalles de los servicios de clúster de macrodatos. Estos detalles incluyen su tipo y las direcciones IP asociadas con puertos y los servicios correspondientes. Tenga en cuenta que los servicios de clúster de macrodatos de SQL Server se crean en un espacio de nombres nuevo creado en tiempo de arranque del clúster según el nombre de clúster especificado en el archivo de configuración de implementación.
 
 ```bash
 kubectl get svc -n <namespace_name>
 ```
 
-En el ejemplo siguiente se muestra el estado de los servicios en un clúster de macrodatos denominado `big_data_cluster`:
+En el ejemplo siguiente se muestra el estado de los servicios en un clúster de macrodatos denominado `mssql-cluster`:
 
 ```bash
-kubectl get svc -n big_data_cluster
+kubectl get svc -n mssql-cluster
 ```
+
+Los siguientes servicios admiten conexiones externas al clúster de macrodatos:
+
+| ssNoVersion | Descripción |
+|---|---|
+| **master-svc-external** | Proporciona acceso a la instancia maestra.<br/>(**EXTERNAL-IP, 31433** y **SA** usuario) |
+| **controller-svc-external** | Es compatible con las herramientas y los clientes que administran el clúster. |
+| **mgmtproxy-svc-external** | Proporciona acceso a la [Portal de administración de clúster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal) |
+| **gateway-svc-external** | Proporciona acceso a la puerta de enlace de Spark o HDFS.<br/>(**EXTERNAL-IP** y **raíz** usuario) |
+| **appproxy-svc-external** | Admite escenarios de implementación de la aplicación. |
+
+> [!TIP]
+> Se trata de una manera de ver los servicios con **kubectl**, pero también es posible usar `mssqlctl cluster endpoints list` comando para ver estos puntos de conexión. Para obtener más información, consulte [obtener puntos de conexión de clúster de macrodatos](deployment-guidance.md#endpoints).
 
 ## <a name="get-service-details"></a>Obtener detalles de servicio
 
-Ejecute este comando para obtener una descripción detallada de un servicio en la salida del formato json. Se incluyen detalles como etiquetas, selector, IP, external-IP (si el servicio es de tipo de equilibrador de carga), el puerto, etcetera.
-```
-kubectl describe pod  <pod_name> -n <namespace_name>
+Ejecute este comando para obtener una descripción detallada de un servicio en la salida del formato JSON. Se incluyen detalles como etiquetas, selector, IP, external-IP (si el servicio es de tipo de equilibrador de carga), el puerto, etcetera.
+
+```bash
+kubectl describe service <service_name> -n <namespace_name>
 ```
 
-Ejemplo:
-```
-kubectl describe pod  mssql-data-pool-master-0 -n big_data_cluster
+En el ejemplo siguiente se recuperan los detalles de la **master-svc-external** servicio:
+
+```bash
+kubectl describe service master-svc-external -n mssql-cluster
 ```
 
 ## <a name="run-commands-in-a-container"></a>Ejecute los comandos en un contenedor
@@ -107,10 +151,10 @@ Las dos secciones siguientes proporcionan dos ejemplos de ejecutar un comando en
 
 ### <a id="restartsql"></a> Inicie sesión en un contenedor específico y reinicie el proceso de SQL Server
 
-El ejemplo siguiente muestra cómo reiniciar el proceso de SQL Server en el `mssql-server` contenedor en el `mssql-master-pool-0` pod:
+El ejemplo siguiente muestra cómo reiniciar el proceso de SQL Server en el `mssql-server` contenedor en el `master-0` pod:
 
 ```bash
-kubectl exec -it mssql-master-pool-0  -c mssql-server -n big_data_cluster -- /bin/bash 
+kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
 supervisorctl restart mssql
 ```
 
@@ -119,7 +163,7 @@ supervisorctl restart mssql
 El ejemplo siguiente muestra cómo reiniciar todos los servicios administrados por **supervisord**: 
 
 ```bash
-kubectl exec -it mssql-master-pool-0  -c mssql-server -n big_data_cluster -- /bin/bash 
+kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
 supervisorctl -c /opt/supervisor/supervisord.conf reload
 ```
 
@@ -140,17 +184,17 @@ kubectl cp <source_local_file_path> <pod_name>:<target_container_path> -c <conta
 ### <a id="copyfrom"></a> Copiar archivos desde un contenedor
 
 El siguiente ejemplo copia los archivos de registro de SQL Server desde el contenedor para el `~/temp/sqlserverlogs` ruta de acceso en el equipo local (en este ejemplo en el equipo local es un cliente Linux):
- 
+
 ```bash
-kubectl cp mssql-master-pool-0:/var/opt/mssql/log -c mssql-server -n big_data_cluster ~/tmp/sqlserverlogs
+kubectl cp master-0:/var/opt/mssql/log -c mssql-server -n mssql-cluster ~/tmp/sqlserverlogs
 ```
 
 ### <a id="copyinto"></a> Copie los archivos de contenedor
 
-Las copias de ejemplo siguiente la **AdventureWorks2016CTP3.bak** archivo desde el equipo local en el contenedor de la instancia principal de SQL Server (`mssql-server`) en el `mssql-master-pool-0` pod. El archivo se copia en el `/tmp` directorio en el contenedor. 
+Las copias de ejemplo siguiente la **AdventureWorks2016CTP3.bak** archivo desde el equipo local en el contenedor de la instancia principal de SQL Server (`mssql-server`) en el `master-0` pod. El archivo se copia en el `/tmp` directorio en el contenedor. 
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c mssql-server -n big_data_cluster
+kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n mssql-cluster
 ```
 
 ## <a id="forcedelete"></a> Forzar la eliminación un pod
@@ -161,10 +205,10 @@ No se recomienda para forzar la eliminación de un pod. Pero para las pruebas de
 kubectl delete pods <pod_name> -n <namespace_name> --grace-period=0 --force
 ```
 
-En el ejemplo siguiente se elimina el pod del grupo de almacenamiento, `mssql-storage-pool-default-0`:
+En el ejemplo siguiente se elimina el pod del grupo de almacenamiento, `storage-0-0`:
 
 ```bash
-kubectl delete pods mssql-storage-pool-default-0 -n big_data_cluster --grace-period=0 --force
+kubectl delete pods storage-0-0 -n mssql-cluster --grace-period=0 --force
 ```
 
 ## <a id="getip"></a> Obtener dirección IP de pod
@@ -175,20 +219,24 @@ Para solucionar problemas, deberá obtener la dirección IP del nodo que se est�
 kubectl get pods <pod_name> -o yaml -n <namespace_name> | grep hostIP
 ```
 
-En el ejemplo siguiente se obtiene la dirección IP del nodo que la `mssql-master-pool-0` pod se ejecuta en:
+En el ejemplo siguiente se obtiene la dirección IP del nodo que la `master-0` pod se ejecuta en:
 
 ```bash
-kubectl get pods mssql-master-pool-0 -o yaml -n big_data_cluster | grep hostIP
+kubectl get pods master-0 -o yaml -n mssql-cluster | grep hostIP
 ```
 
-## <a name="start-the-kubernetes-dashboard"></a>Iniciar el panel de Kubernetes
+## <a name="cluster-administration-portal"></a>Portal de administración de clústeres
+
+Use la [portal de administración de clúster](cluster-admin-portal.md) para supervisar el estado del clúster de macrodatos. Por ejemplo, durante las implementaciones, puede usar el **implementación** ficha. Tendrá que esperar el **mgmtproxy-svc-external** que se inicie antes de acceder a este portal, por lo que no estará disponible al principio de una implementación de servicio.
+
+## <a name="kubernetes-dashboard"></a>Panel de Kubernetes
 
 Puede iniciar el panel de Kubernetes para obtener más información sobre el clúster. Las siguientes secciones explican cómo iniciar el panel de Kubernetes en AKS y de Kubernetes kubeadm de arrancar.
  
 ### <a name="start-dashboard-when-cluster-is-running-in-aks"></a>Iniciar panel cuando el clúster se ejecuta en AKS
 
 Para iniciar el panel de Kubernetes que ejecute:
- 
+
 ```bash
 az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
@@ -198,7 +246,7 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 
 Al iniciar el panel del explorador, podría obtener advertencias permiso debido a que se está habilitado de forma predeterminada en los clústeres de AKS de RBAC y la cuenta de servicio usada por el panel no tiene permisos suficientes para tener acceso a todos los recursos (por ejemplo,  *está prohibido Pods: Usuario "del sistema: serviceaccount:kube-kubernetes: sistema-panel" no se pueden enumerar los pods en el espacio de nombres "predeterminado"*). Ejecute el comando siguiente para conceder los permisos necesarios para `kubernetes-dashboard`y, a continuación, reinicie el panel:
 
-```
+```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
 ```
 
@@ -206,10 +254,10 @@ kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterr
 
 Para obtener instrucciones detalladas para implementar y configurar el panel en el clúster de Kubernetes, consulte [la documentación de Kubernetes](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/). Para iniciar el panel de Kubernetes, ejecute este comando:
 
-```
+```bash
 kubectl proxy
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para la supervisión y solución de problemas que es específica de SQL Server macrodatos clústeres, consulte el [portal de administración de clúster](cluster-admin-portal.md).
+Para obtener más información acerca de los clústeres de datos de gran tamaño, vea [¿cuáles son los clústeres de SQL Server macrodatos](big-data-cluster-overview.md).

@@ -1,5 +1,5 @@
 ---
-title: Predecir (MDX) | Documentos de Microsoft
+title: Predict (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca47db953df9889cb1d72d0add45f2b0ed681980
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277482"
 ---
 # <a name="predict-mdx"></a>Predict (MDX)
 
@@ -41,8 +41,8 @@ Predict(Mining_Model_Name,String_Expression)
  *String_Expression*  
  Expresión de cadena válida que se evalúa como una expresión DMX válida para el modelo de minería de datos especificado.  
   
-## <a name="remarks"></a>Notas  
- El **Predict** función evalúa la expresión de cadena especificada en el contexto del modelo de minería de datos especificado.  
+## <a name="remarks"></a>Comentarios  
+ El **Predict** función evalúa la expresión de cadena especificada dentro del contexto del modelo de minería de datos especificado.  
   
  La sintaxis y las funciones de minería de datos se documentan en la referencia de Expresiones de minería de datos (DMX).  
   

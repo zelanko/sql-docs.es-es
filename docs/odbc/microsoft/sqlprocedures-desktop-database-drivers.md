@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f5d27a09715259bf6adf08cb9b9de1d01ffa228a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813640"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63457398"
 ---
 # <a name="sqlprocedures-desktop-database-drivers"></a>SQLProcedures (controladores de escritorio de la base de datos)
 **SQLProcedures** solo devolverá las filas para los procedimientos que tengan al menos un argumento. Se tratan los procedimientos que no tienen ningún argumento como vistas.  

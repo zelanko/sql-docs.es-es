@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c8bfe0781af1bf3ca5dcd4ae642ffb49ef81817
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63314707"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Ejemplo del método Seek y de la propiedad Index (VC ++)
 Este ejemplo se usa el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [Seek](../../../ado/reference/ado-api/seek-method.md) método y [índice](../../../ado/reference/ado-api/index-property.md) propiedad junto con un determinado ***Id. de empleado***, para buscar el nombre del empleado en el ***empleados*** tabla de la base de datos Neptuno.  

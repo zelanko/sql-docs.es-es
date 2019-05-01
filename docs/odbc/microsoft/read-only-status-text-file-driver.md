@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0d5e53ac34c6c8224ca312929a7a7556e2507f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63316706"
 ---
 # <a name="read-only-status-text-file-driver"></a>Estado de solo lectura (controlador de archivo de texto)
 Cuando se usa el controlador de texto, tablas de origen de datos son de solo lectura. Sin embargo, las aplicaciones pueden realizar inserciones para las tablas de texto.

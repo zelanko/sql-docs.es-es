@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: aa590c0286f437efb80ad92503e5bfefb62692ce
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63309810"
 ---
 # <a name="filtercolumn-property-rds"></a>Propiedad FilterColumn (RDS)
 Indica la columna en la que se va a evaluar los criterios de filtro.  

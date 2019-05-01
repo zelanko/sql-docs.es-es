@@ -1,5 +1,5 @@
 ---
-title: Orden (MDX) | Documentos de Microsoft
+title: Order (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 43a75f4a42193c231c1acc710512b05537675991
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277846"
 ---
 # <a name="order-mdx"></a>Order (MDX)
 
@@ -39,19 +39,19 @@ Order(Set_Expression, String_Expression
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expresión numérica válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número.  
   
  *String_Expression*  
  Expresión de cadena válida que suele ser una expresión MDX de las coordenadas de celdas que devuelven un número expresado como una cadena.  
   
-## <a name="remarks"></a>Notas  
- El **orden** función puede ser jerárquica (como se especifica mediante el uso de la **ASC** o **DESC** marca) o no jerárquica (como se especifica mediante el uso de la **BASC** o **BDESC** marca; el **B** es el acrónimo "jerarquía de salto"). Si **ASC** o **DESC** se especifica, el **orden** función primero organiza los miembros según su posición en la jerarquía y, a continuación, ordena cada nivel. Si **BASC** o **BDESC** se especifica, el **orden** función organiza los miembros del conjunto sin tener en cuenta la jerarquía. Se especifica ninguna marca, **ASC** es el valor predeterminado.  
+## <a name="remarks"></a>Comentarios  
+ El **orden** función pueden ser jerárquica (como se especifica mediante el uso de la **ASC** o **DESC** marca) o no jerárquica (como se especifica mediante el uso de la **BASC**  o **BDESC** marca; el **B** "jerarquía de salto" es el acrónimo). Si **ASC** o **DESC** se especifica, el **orden** función primero organiza los miembros según su posición en la jerarquía y, a continuación, ordena cada nivel. Si **BASC** o **BDESC** se especifica, el **orden** función organiza los miembros del conjunto sin tener en cuenta la jerarquía. Se especifica ninguna marca, **ASC** es el valor predeterminado.  
   
- Si el **orden** función se utiliza con un conjunto donde dos o más jerarquías están Unidos y la **DESC** marca se utiliza, solo los miembros de la última jerarquía del conjunto se ordenan. Este es un cambio con respecto a Analysis Services 2000 donde todas las jerarquías del conjunto estaban ordenadas.  
+ Si el **orden** función se utiliza con un conjunto donde dos o más jerarquías son ejecutar la función Crossjoin y el **DESC** marca se utiliza, solo los miembros de la última jerarquía del conjunto se ordenan. Este es un cambio con respecto a Analysis Services 2000 donde todas las jerarquías del conjunto estaban ordenadas.  
   
 ## <a name="examples"></a>Ejemplos  
- El ejemplo siguiente devuelve, desde el **Adventure Works** del cubo, el número de pedidos de distribuidores para todos los trimestres naturales de la jerarquía de calendario en la dimensión Date. El **orden** función vuelve a ordenar el conjunto para el eje de filas. El **orden** función ordena el conjunto por `[Reseller Order Count]` en orden jerárquico descendente según lo determinado por la `[Calendar]` jerarquía.  
+ El ejemplo siguiente devuelve, desde el **Adventure Works** del cubo, el número de pedidos del distribuidor para todos los trimestres naturales de la jerarquía Calendar de la dimensión Date. El **orden** función vuelve a ordenar el conjunto para el eje ROWS. El **orden** función ordena el conjunto por `[Reseller Order Count]` en orden jerárquico descendente según lo determinado por la `[Calendar]` jerarquía.  
   
  `SELECT`  
   
@@ -69,7 +69,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- Observe cómo en este ejemplo, cuando la **DESC** marca se cambia a **BDESC**, se interrumpe la jerarquía y la lista de trimestres naturales se devuelve sin tener en cuenta para la jerarquía:  
+ Observe cómo en este ejemplo, cuando el **DESC** marca se cambia a **BDESC**, se rompe la jerarquía y la lista de trimestres naturales se devuelve sin tener en cuenta para la jerarquía:  
   
  `SELECT`  
   
@@ -87,7 +87,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- El ejemplo siguiente devuelve la medida Reseller Sales de las cinco subcategorías de productos más vendidos, independientemente de su jerarquía, de acuerdo con Reseller Gross Profit. El **subconjunto** función se utiliza para devolver solo las 5 primeras tuplas del conjunto después de que el resultado se ordena mediante la **orden** función.  
+ El ejemplo siguiente devuelve la medida Reseller Sales de las cinco subcategorías de productos más vendidos, independientemente de su jerarquía, de acuerdo con Reseller Gross Profit. El **subconjunto** función se utiliza para devolver solo las 5 primeras tuplas del conjunto una vez que el resultado se ordena mediante la **orden** función.  
   
  `SELECT Subset`  
   
@@ -109,7 +109,7 @@ Order(Set_Expression, String_Expression
   
  `FROM [Adventure Works]`  
   
- En el ejemplo siguiente se usa el **rango** función para clasificar los miembros de la jerarquía City, en función de la medida Reseller Sales Amount y mostrarlos en un orden de rango. Mediante el uso de la **orden** funcionar al primer pedido el conjunto de miembros de la jerarquía City, la ordenación se realiza una sola vez y, a continuación, seguida de una exploración lineal antes de que se presentan en orden alfabético.  
+ En el ejemplo siguiente se usa el **rango** función para clasificar los miembros de la jerarquía City, según la medida Reseller Sales Amount y, a continuación, se muestra en el orden de rango. Mediante el uso de la **orden** función en primer lugar el conjunto de miembros de la jerarquía City, la ordenación se realiza solo una vez y, a continuación, seguida de una exploración lineal antes de que se presentan en orden alfabético.  
   
 ```  
 WITH   
@@ -127,7 +127,7 @@ SELECT {[Measures].[City Rank],[Measures].[Reseller Sales Amount]}  ON 0
 FROM [Adventure Works]  
 ```  
   
- El ejemplo siguiente devuelve el número de productos en el conjunto que son únicos, con el **orden** función para ordenar las tuplas de no vacío antes de utilizar el **filtro** función. El **CurrentOrdinal** función se utiliza para comparar y eliminar valores equivalentes.  
+ El ejemplo siguiente devuelve el número de productos del conjunto que son únicos, con el **orden** función para ordenar las tuplas no vacía antes de utilizar el **filtro** función. El **CurrentOrdinal** función se utiliza para comparar y eliminar valores equivalentes.  
   
 ```  
 WITH MEMBER [Measures].[PrdTies] AS Count  
@@ -175,7 +175,7 @@ FROM [Adventure Works]
   
 ```  
   
- En el eje de las filas puede ver que los Sales Territory Groups se han clasificado en orden descendente por Tax Amount, como sigue: North America, Europe, Pacific, NA. Ahora vea lo que ocurre si se combinación cruzada del conjunto de Sales Territory Groups con el conjunto de subcategorías de productos y aplicar el **orden** función de la misma manera, como se indica a continuación:  
+ En el eje de filas puede ver que los Sales Territory Groups se han clasificado en orden descendente por Tax Amount, como sigue: North America, Europe, Pacific, NA. Ahora vea lo que sucede si nos combinación cruzada del conjunto de Sales Territory Groups con el conjunto de Product Subcategories y aplicar el **orden** funcione de la misma manera, como se indica a continuación:  
   
 ```  
   
@@ -191,7 +191,7 @@ FROM [Adventure Works]
   
 ```  
   
- Aunque el conjunto de Product Subcategories se ha clasificado ahora en orden jerárquico descendente, los Sales Territory Groups están ordenados y ahora aparecen en el mismo orden que en la jerarquía: Europe, NA, North America y Pacific. Esto se debe a que solo está ordenada la última jerarquía del conjunto de tuplas, Product Subcategories. Para reproducir el comportamiento de Analysis Services 2000, use una serie de anidar **generar** funciones para ordenar cada conjunto antes de ejecutar la función Crossjoin, por ejemplo:  
+ Mientras que el conjunto de Product Subcategories se ha ordenado en orden jerárquico descendente los Sales Territory Groups ahora no están ordenados y aparecen en el orden en que aparecen en la jerarquía: Europa, NA, Norteamérica y Pacífico. Esto se debe a que solo está ordenada la última jerarquía del conjunto de tuplas, Product Subcategories. Para reproducir el comportamiento de Analysis Services 2000, utilice una serie de anidado **generar** funciones para ordenar cada conjunto antes de ejecutar la función Crossjoin, por ejemplo:  
   
 ```  
   

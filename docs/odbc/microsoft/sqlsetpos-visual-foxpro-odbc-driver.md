@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 299a4c6379f1323128e28dc992e18fd7228014ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669303"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63473112"
 ---
 # <a name="sqlsetpos-visual-foxpro-odbc-driver"></a>SQLSetPos (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
 >  Este tema contiene información específica del controlador ODBC de Visual FoxPro. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Soporte técnico: completo  
+ Soporte técnico: Completo  
   
- Conformidad de la API de ODBC: 2 de nivel  
+ Conformidad de la API de ODBC: Nivel 2  
   
  Establece la posición del cursor en un conjunto de filas. Puede usar **SQLSetPos** con [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) para recuperar filas de las columnas sin enlazar después de colocar el cursor a una fila específica en el conjunto de filas.  
   

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9873268608072ed7f2d6cdb4d0026ba62e5d090
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810697"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63459974"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Crear tabla (cuadro de diálogo, Visual Database Tools)
   Permite denominar una tabla creada en la que se copian filas. Este cuadro de diálogo aparece al cambiar el tipo de una consulta para convertirla en consulta MAKE TABLE. Para cambiar el tipo de una consulta, en el menú **Diseñador de consultas** , seleccione **Cambiar tipo**y, a continuación, haga clic en **Crear tabla**.  

@@ -6,17 +6,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fbb43d39e28a8b99e49a4dcaf0b2b4f0fc83e670
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 3e0f3c939f4d20e65262453e23ac127b02c6d212
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582241"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472138"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Cómo usar el portal de administración de clúster para supervisar un clúster de macrodatos de SQL Server
 
@@ -35,10 +35,10 @@ El portal de administración de clúster le permite:
 
 Siga el [inicio rápido para implementar el clúster de macrodatos](quickstart-big-data-cluster-deploy.md) hasta llegar a la **portal de administración de clúster** sección. Una vez que el clúster de macrodatos que se está ejecutando con mssqlctl, siga estas instrucciones:
 
-Una vez que se está ejecutando el pod del controlador, puede usar el portal de administración de clúster para supervisar la implementación. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `endpoint-service-proxy` (por ejemplo: **https://\<ip-address\>: 30777/portal**). Las credenciales de acceso al portal de administración es los valores de `CONTROLLER_USERNAME` y `CONTROLLER_PASSWORD` variables de entorno proporcionadas anteriormente.
+Una vez que se está ejecutando el pod del controlador, puede usar el portal de administración de clúster para supervisar la implementación. Se puede acceder al portal mediante el número de puerto y dirección IP externo para la `mgmtproxy-svc-external` (por ejemplo: **https://\<ip-address\>: 30777/portal**). Las credenciales de acceso al portal de administración es los valores de `CONTROLLER_USERNAME` y `CONTROLLER_PASSWORD` variables de entorno proporcionadas anteriormente.
 
 > [!NOTE]
-> Para CTP 2.4, hay una advertencia de seguridad al obtener acceso a la página web, dado que usa certificados SSL generados automáticamente.
+> Para CTP 2.5, hay una advertencia de seguridad al obtener acceso a la página web, dado que usa certificados SSL generados automáticamente.
 
 ## <a name="overview"></a>Información general
 

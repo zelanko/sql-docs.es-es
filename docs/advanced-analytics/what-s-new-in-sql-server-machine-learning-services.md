@@ -1,7 +1,7 @@
 ---
 title: Novedades - servicios de SQL Server Machine Learning | Microsoft Docs
 description: Anuncios sobre nuevas características para cada versión de SQL Server 2016 R Services, R Server, SQL Server 2017 Machine Learning Services.
-ms.date: 03/29/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 64fbf68f09f685223ba42d9d2b79d5a8454f7125
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
-ms.translationtype: MT
+ms.openlocfilehash: a1990a96b1257fcd566536e846892c3946448818
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645527"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63458793"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades de SQL Server Machine Learning Services
 
@@ -30,7 +30,8 @@ Esta versión agrega las características más solicitadas para las operaciones 
 
 | Versión | Actualización de características |
 |---------|----------------|
-| CTP 2.4 | Linux support para [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) para R, Python y Java. |
+| CTP 2.5 | Nuevo [extensibilidad de Microsoft SDK para Java](java/java-sdk.md). |
+| CTP 2.4 | Linux support para [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) para R, Python y Java. |
 | | La variable de entorno que especifica la ubicación del intérprete de Java se ha cambiado de `JAVA_HOME` a `JRE_HOME`. |
 | CTP 2.3 | Admitidas [tipos de datos Java](java/java-sql-datatypes.md). |
 | | En Windows solo, puede obtenerse el código de Java en una biblioteca externa con la [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) instrucción. Una funcionalidad equivalente estará disponible en Linux en una próxima versión de CTP. Más información: [Cómo llamar a Java desde SQL Server](java/howto-call-java-from-sql.md). |

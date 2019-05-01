@@ -1,5 +1,5 @@
 ---
-title: PrevMember (MDX) | Documentos de Microsoft
+title: PrevMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19aecc4dc642e9aee636c860f63b9b39e0471fa4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63278041"
 ---
 # <a name="prevmember-mdx"></a>PrevMember (MDX)
 
@@ -29,14 +29,14 @@ Member_Expression.PrevMember
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expresión_miembro*  
+ *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **PrevMember** función devuelve el miembro anterior en el mismo nivel que el miembro especificado.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se muestra una consulta simple que usa el **PrevMember** función para mostrar el nombre del miembro inmediatamente anterior al miembro actual en el eje de filas:  
+ El ejemplo siguiente muestra una consulta simple que usa el **PrevMember** función para mostrar el nombre del miembro inmediatamente anterior al miembro actual en el eje de filas:  
   
  `WITH MEMBER MEASURES.PREVMEMBERDEMO AS`  
   
@@ -48,7 +48,7 @@ Member_Expression.PrevMember
   
  `FROM [Adventure Works]`  
   
- El ejemplo siguiente devuelve el recuento de los distribuidores cuyas ventas han disminuido en el período de tiempo anterior, de acuerdo con los valores de los miembros State-Province seleccionados por el usuario evaluados mediante la función Aggregate. El **Hierarchize** y **DrillDownLevel** funciones se utilizan para devolver valores para las ventas de categorías de producto de la dimensión Product que han disminuido. El **PrevMember** función se utiliza para comparar el período de tiempo actual con el período de tiempo anterior.  
+ El ejemplo siguiente devuelve el recuento de los distribuidores cuyas ventas han disminuido en el período de tiempo anterior, de acuerdo con los valores de los miembros State-Province seleccionados por el usuario evaluados mediante la función Aggregate. El **Hierarchize** y **DrillDownLevel** las funciones se usan para devolver valores para las ventas de categorías de producto de la dimensión Product que han disminuido. El **PrevMember** función se utiliza para comparar el período de tiempo actual con el período de tiempo anterior.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   

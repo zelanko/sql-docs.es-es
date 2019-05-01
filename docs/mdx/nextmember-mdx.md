@@ -1,5 +1,5 @@
 ---
-title: NextMember (MDX) | Documentos de Microsoft
+title: NextMember (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4535b837d81db10f41f1445a7051678ce4fdd688
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277854"
 ---
 # <a name="nextmember-mdx"></a>NextMember (MDX)
 
@@ -29,10 +29,10 @@ Member_Expression.NextMember
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Expresión_miembro*  
+ *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  El **NextMember** función devuelve el miembro siguiente, en el mismo nivel, que contiene el miembro especificado.  
   
 ## <a name="example"></a>Ejemplo  

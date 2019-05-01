@@ -6,23 +6,23 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4dba3e620ae3e6cd9aa6c09eb6196ac37acd77a7
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
-ms.translationtype: MT
+ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583408"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472165"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>¿Qué es el controlador en un clúster de macrodatos de SQL Server?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-El controlador hospeda la lógica básica para implementar y administrar un clúster de macrodatos. Se encarga de todas las interacciones con Kubernetes, las instancias de SQL Server que forman parte del clúster y otros componentes, como HDFS y Spark. 
+El controlador hospeda la lógica básica para implementar y administrar un clúster de macrodatos. Se encarga de todas las interacciones con Kubernetes, las instancias de SQL Server que forman parte del clúster y otros componentes, como HDFS y Spark.
 
 El servicio del controlador proporciona la funcionalidad siguiente:
 
@@ -31,9 +31,10 @@ El servicio del controlador proporciona la funcionalidad siguiente:
 - Administración de grupos de proceso, datos y almacenamiento
 - Exponer las herramientas de supervisión para observar el estado del clúster
 - Exponer las herramientas de solución de problemas para detectar y reparar problemas inesperados
-- Administrar seguridad del clúster: asegúrese de puntos de conexión del clúster seguro, administrar usuarios y roles, configurar las credenciales para la comunicación dentro del clúster
-- Administrar el flujo de trabajo de actualización de modo que se implementan de forma segura (no disponible en CTP 2.4)
-- Administración de alta disponibilidad y recuperación ante desastres para los servicios con estado en el clúster (no están disponibles en CTP 2.4)
+- Administrar seguridad del clúster:
+  - Asegúrese de puntos de conexión del clúster seguro
+  - Administrar usuarios y roles
+  - Configurar las credenciales para la comunicación dentro del clúster
 
 ## <a name="deploying-the-controller-service"></a>Implementar el servicio de controlador
 

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: d0c2fa02eaf5ec72c31bd733401ff93ee259a9cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754633"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63453480"
 ---
 # <a name="project-settings-gui-accesstosql"></a>Configuración del proyecto (GUI) (AccessToSQL)
 La configuración del proyecto de interfaz gráfica de usuario le permite configurar cómo aparecen los datos en el **datos** pestaña y si se incluyen los informes de datos con informes de evaluación.  

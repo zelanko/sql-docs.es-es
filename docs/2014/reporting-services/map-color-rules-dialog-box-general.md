@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40c592cd753c5c6b4e88fbf66d9b81ebc4aa2fb5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963701"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63461865"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Cuadro de diálogo de Reglas de color de mapa, General
   Seleccione **General** en el cuadro de diálogo **Propiedades de reglas de color** para definir las opciones de color de los elementos de mapa en esta capa. Entre los elementos de mapa se incluyen los polígonos, líneas y puntos. Las reglas de color se pueden aplicar cuando se haya creado una relación entre los elementos de mapa basada en los datos espaciales y los datos analíticos desde un campo de conjunto de datos o desde un campo de origen de datos espaciales.  

@@ -1,86 +1,83 @@
 ---
-title: Agregar datos de orígenes de datos externos (SSRS) | Microsoft Docs
-ms.custom: ''
-ms.date: 04/27/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+title: Agregar datos de orígenes de datos externos (SSRS)
+ms.prod: reporting-services
+ms.technology: reporting-services-native
 ms.topic: conceptual
-ms.assetid: 924a2ec3-150c-4bb2-83c9-4c7b440e8c03
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41e26379dc21e4dd8bfd416009bf9ba333dbb448
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
-ms.translationtype: MT
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/27/2017
+ms.openlocfilehash: c82d8295ec4a8293abc822900e25e654447a492c
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59937287"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63462192"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Agregar datos de orígenes de datos externos (SSRS)
-  Para recuperar datos de un origen de datos externo, use una conexión de datos. La información de la conexión de datos la suele proporcionar el propietario del origen de datos externo, que es responsable de otorgar los permisos y de especificar qué tipos de credenciales se han de usar. La información de la conexión de datos se guarda como un origen de datos de informe. El tipo de origen de datos especifica qué extensión de datos usar para recuperar los datos.  
-  
 
-  
+Para recuperar datos de un origen de datos externo, use una conexión de datos. La información de la conexión de datos la suele proporcionar el propietario del origen de datos externo, que es responsable de otorgar los permisos y de especificar qué tipos de credenciales se han de usar. La información de la conexión de datos se guarda como un origen de datos de informe. El tipo de origen de datos especifica qué extensión de datos usar para recuperar los datos.  
+
 ##  <a name="DataAccess"></a> Descripción de la tecnología de acceso a datos  
- Recuperar los datos para un conjunto de datos de informe requiere varios niveles de software de acceso a datos. La siguiente lista proporciona una descripción simple de cómo funcionan los informes con las tecnologías de acceso a datos:  
-  
+
+Recuperar los datos para un conjunto de datos de informe requiere varios niveles de software de acceso a datos. La siguiente lista proporciona una descripción simple de cómo funcionan los informes con las tecnologías de acceso a datos:  
+
 -   **Aplicación e interfaz de usuario:** la aplicación Generador de informes que utiliza para crear un origen de datos, agregar una referencia a un origen de datos compartido, agregar un conjunto de datos compartido o agregar un elemento de informe que incluya los orígenes de datos y conjuntos de datos de los que depende.  
-  
+
 -   **Elementos de la definición de informe:** los conjuntos de datos y orígenes de datos forman parte de la definición del informe. Una vez publicado un informe en un servidor de informes, los orígenes de datos compartidos y los conjuntos de datos compartidos se administran con independencia desde la definición de informe.  
-  
-    -   **Origen de datos y origen de datos compartidos:** el elemento de una definición de informe que incluye la información sobre el tipo de extensión de procesamiento de datos, la información de conexión y la autenticación.  
-  
-    -   **Colección de campos y conjuntos de datos:** elemento de una definición de informe que incluye la consulta, la colección de campos y los tipos de datos de campo.  
-  
+
+  -   **Origen de datos y origen de datos compartidos:** el elemento de una definición de informe que incluye la información sobre el tipo de extensión de procesamiento de datos, la información de conexión y la autenticación.  
+
+  -   **Colección de campos y conjuntos de datos:** elemento de una definición de informe que incluye la consulta, la colección de campos y los tipos de datos de campo.  
+
 -   **Extensiones de datos de Reporting Services:** extensiones de datos integrados que se instalan con el Generador de informes. Una extensión de datos proporciona una funcionalidad que controla los parámetros de autenticación, agregados de servidor y parámetros de varios valores.  
-  
+
 -   **Proveedor de datos:** el software que administra la conexión y recuperación de datos desde el origen de datos externo. El proveedor de datos define la sintaxis de la cadena de conexión. La mayoría de las extensiones de datos se compilan sobre una capa del proveedor de datos.  
-  
+
 -   **Origen de datos externo:** de dónde recuperar los datos de informe; por ejemplo, una base de datos, un archivo, un cubo o un servicio web.  
-  
+
 > [!NOTE]  
 >  Al no estar conectado a un servidor de informes, puede elegir desde las extensiones de datos que se instalan con el Generador de informes. Obtiene acceso a los datos como un usuario único utilizando las credenciales de su equipo. Al estar conectado a un servidor de informes, puede elegir desde las extensiones de datos que se instalan en el servidor de informes. Obtiene acceso a los datos como uno de los diferentes usuarios que ejecutan el informe, para lo que utiliza las credenciales del servidor de informes. Para más información, vea [Especificar credenciales en el Generador de informes](../specify-credentials-in-report-builder.md).  
-  
+
 ##  <a name="ReportData"></a> Descripción de los datos de informe  
- En su forma más simple, un informe muestra los datos desde un conjunto de datos de informe de una región de datos de la página del informe, es decir, de una tabla única, gráfico, matriz u otro tipo de región de datos del informe. Los datos de un conjunto de datos de informe proceden del primer conjunto de resultados que se devuelve desde un comando de consulta único que ejecuta desde un acceso de solo lectura a un origen de datos externo. Todas las regiones de datos se expanden lo necesario para mostrar todos los datos del conjunto de datos.  
-  
- Los datos de un conjunto de datos suelen ser tabulares. Las columnas son los campos de la consulta del conjunto de datos. Las filas proceden de las filas del conjunto de resultados. Puede utilizar los siguientes tipos generalizados de datos en un informe:  
-  
+En su forma más simple, un informe muestra los datos desde un conjunto de datos de informe de una región de datos de la página del informe, es decir, de una tabla única, gráfico, matriz u otro tipo de región de datos del informe. Los datos de un conjunto de datos de informe proceden del primer conjunto de resultados que se devuelve desde un comando de consulta único que ejecuta desde un acceso de solo lectura a un origen de datos externo. Todas las regiones de datos se expanden lo necesario para mostrar todos los datos del conjunto de datos.  
+
+Los datos de un conjunto de datos suelen ser tabulares. Las columnas son los campos de la consulta del conjunto de datos. Las filas proceden de las filas del conjunto de resultados. Puede utilizar los siguientes tipos generalizados de datos en un informe:  
+
 -   Datos rectangulares. Datos de un conjunto de resultados que tiene el mismo número de columnas en cada fila.  
-  
+
 -   Los datos jerárquicos se admiten como un conjunto de filas planas.  
-  
-    -   No se admiten jerarquías desiguales, en las que hay un número diferente de columnas en cada fila de datos. Para algunas extensiones de datos, esto tiene algunas implicaciones.  
-  
-    -   Las extensiones de datos que funcionan con orígenes de datos multidimensionales usan XML para el protocolo Analysis y recuperan los datos como un conjunto de filas plano, no como un conjunto de celdas.  
-  
-    -   La extensión de datos XML aplana automáticamente los datos XML que se van a usar en un informe. Si la primera instancia de un elemento XML no incluye todos los atributos o subelementos, es posible que los datos no estén disponibles como datos de informe.  
-  
+
+  -   No se admiten jerarquías desiguales, en las que hay un número diferente de columnas en cada fila de datos. Para algunas extensiones de datos, esto tiene algunas implicaciones.  
+
+  -   Las extensiones de datos que funcionan con orígenes de datos multidimensionales usan XML para el protocolo Analysis y recuperan los datos como un conjunto de filas plano, no como un conjunto de celdas.  
+
+  -   La extensión de datos XML aplana automáticamente los datos XML que se van a usar en un informe. Si la primera instancia de un elemento XML no incluye todos los atributos o subelementos, es posible que los datos no estén disponibles como datos de informe.  
+
 -   Se admiten los datos recursivos. Un conjunto de resultados que contiene una jerarquía de datos recursiva incluye toda la información sobre la estructura de jerarquía en un conjunto de resultados rectangular. Por ejemplo, el informe a estructurar en una compañía puede ser representado por una tabla que incluya dos columnas: un empleado y un administrador. Cada administrador también es un empleado con un administrador. El administrador superior normalmente contiene un null o algún otro identificador que indique que este empleado no tiene ningún administrador.  
-  
 
-  
+
+
 ##  <a name="DataTypes"></a> Trabajar con tipos de datos  
- Cuando se crea un conjunto de datos, los tipos de datos de los campos se asignan a un subconjunto de tipos de datos de Common Language Runtime (CLR) de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Los tipos de datos que no pueden asignarse claramente se devuelven como cadenas. Para obtener más información sobre cómo trabajar con tipos de datos de campo, vea [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md). Cuando se crea un parámetro, el tipo de datos debe ser un tipo de datos de definición de informe compatible. Para obtener más información sobre cómo asignar tipos de datos del proveedor de datos a un parámetro de informe, vea [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md).  
-  
+Cuando se crea un conjunto de datos, los tipos de datos de los campos se asignan a un subconjunto de tipos de datos de Common Language Runtime (CLR) de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Los tipos de datos que no pueden asignarse claramente se devuelven como cadenas. Para obtener más información sobre cómo trabajar con tipos de datos de campo, vea [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md). Cuando se crea un parámetro, el tipo de datos debe ser un tipo de datos de definición de informe compatible. Para obtener más información sobre cómo asignar tipos de datos del proveedor de datos a un parámetro de informe, vea [Tipos de datos en expresiones &#40;Generador de informes y SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md).  
 
-  
+
+
 ##  <a name="HowTo"></a> Temas de procedimientos  
- Esta sección contiene instrucciones paso a paso para trabajar con conexiones de datos, orígenes de datos y conjuntos de datos.  
-  
- [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
- [Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
-  
- [Agregar un filtro a un conjunto de datos &#40;Generador de informes y SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
+Esta sección contiene instrucciones paso a paso para trabajar con conexiones de datos, orígenes de datos y conjuntos de datos.  
 
-  
-##  <a name="InThisSection"></a> En esta sección  
- Los siguientes temas proporcionan información sobre cada extensión de datos integrados.  
-  
+[Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+
+[Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
+
+[Agregar un filtro a un conjunto de datos &#40;Generador de informes y SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+
+## <a name="InThisSection"></a> En esta sección  
+
+Los siguientes temas proporcionan información sobre cada extensión de datos integrados.  
+
 |Tema|Tipo de origen de datos|  
 |-----------|----------------------|  
 |[Tipo de conexión de SQL Server &#40;SSRS&#41;](sql-server-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -94,13 +91,11 @@ ms.locfileid: "59937287"
 |[Tipo de conexión OLE DB &#40;SSRS&#41;](ole-db-connection-type-ssrs.md)|OLE DB|  
 |[Tipo de conexión ODBC &#40;SSRS&#41;](odbc-connection-type-ssrs.md)|ODBC|  
 |[Tipo de conexión XML &#40;SSRS&#41;](xml-connection-type-ssrs.md)|XML|  
-|[Conexión de modelo de informe &#40;SSRS&#41;](report-model-connection-ssrs.md)|modelo .smdl|  
-  
 
-  
-##  <a name="Related"></a> Secciones relacionadas  
- Estas secciones de la documentación proporcionan información conceptual detallada sobre los datos de informe, así como información de procedimientos acerca de cómo definir, personalizar y usar las partes de un informe que están relacionadas con datos.  
-  
+## <a name="Related"></a> Secciones relacionadas  
+
+Estas secciones de la documentación proporcionan información conceptual detallada sobre los datos de informe, así como información de procedimientos acerca de cómo definir, personalizar y usar las partes de un informe que están relacionadas con datos.  
+
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)|Proporciona información general sobre cómo obtener acceso a los datos del informe.|  
@@ -109,11 +104,8 @@ ms.locfileid: "59937287"
 |[Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)|Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.|  
 |[Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.|  
 |[Introducción a las extensiones de procesamiento de datos](../extensions/data-processing/data-processing-extensions-overview.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [de](https://go.microsoft.com/fwlink/?linkid=121312).|Proporciona a los usuarios expertos información detallada sobre las extensiones de datos.|  
-  
 
-  
 ## <a name="see-also"></a>Vea también  
- [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)   
- [Diseñadores de consultas &#40;Generador de informes&#41;](../query-designers-report-builder.md)  
-  
-  
+
+- [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md)
+- [Diseñadores de consultas &#40;Generador de informes&#41;](../query-designers-report-builder.md)

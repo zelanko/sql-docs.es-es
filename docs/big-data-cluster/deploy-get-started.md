@@ -5,16 +5,16 @@ description: Obtenga información sobre los pasos y recursos para la implementac
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/18/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
-ms.translationtype: MT
+ms.openlocfilehash: 5aeb6f5f92eba1bad828455b472d25561570901a
+ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860436"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63472247"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Empezar a trabajar con clústeres grandes de datos de SQL Server
 
@@ -45,21 +45,23 @@ Los clústeres de datos de gran tamaño se implementan como una serie de contene
 
 - **Minikube**: Minikube permite ejecutar Kubernetes localmente en un único servidor. Es una buena opción si está probando de clústeres de datos de gran tamaño o si necesita usarlo en un escenario de prueba o desarrollo. Para obtener más información sobre el uso de Minikube, consulte el [Minikube documentación](https://kubernetes.io/docs/setup/minikube/). Para conocer los requisitos específicos para usar Minikube con clústeres de datos de gran tamaño, vea [configurar minikube para las implementaciones de clústeres de SQL Server 2019 macrodatos](deploy-on-minikube.md).
 
-## <a name="deployment-scripts"></a>Scripts de implementación
-
-Scripts de implementación pueden ayudar a implementar Kubernetes y clústeres de datos de gran tamaño en un solo paso. Con frecuencia, también proporcionan valores predeterminados para las variables de entorno necesarias. Para obtener un ejemplo de un script de implementación para el clúster de macrodatos en Azure Kubernetes Service (AKS), consulte [implementar un clúster de macrodatos con un script de implementación (AKS) de SQL Server 2019](quickstart-big-data-cluster-deploy.md).
-
-Puede personalizar cualquier script de implementación mediante la creación de su propia versión que configura las variables de entorno de clúster de macrodatos de manera diferente.
-
 ## <a name="deploy-a-big-data-cluster"></a>Implementación de un clúster de macrodatos
 
-Para implementar Kubernetes y un clúster de macrodatos en AKS con una única secuencia de comandos, vea el ejemplo siguiente:
+Después de configurar Kubernetes, implementa un clúster de macrodatos con el `mssqlctl cluster create` comando. Cuando se implementa, puede adoptar varios enfoques diferentes.
 
-- [Implementar un clúster de macrodatos de 2019 de SQL Server con un script de implementación (AKS)](quickstart-big-data-cluster-deploy.md)
+- Si va a implementar en un entorno de desarrollo y pruebas, puede elegir usar uno de los [configuraciones predeterminadas](deployment-guidance.md#deploy) proporcionada por **mssqlctl**.
 
-Para instrucciones detalladas para la implementación de clústeres de macrodatos con AKS, kubeadm y MiniKube, consulte el artículo siguiente:
+- Para personalizar la implementación, puede crear y utilizar su propia [los archivos de configuración de implementación](deployment-guidance.md#configfile). 
 
-- [Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes](deployment-guidance.md)
+- Para una instalación completamente desatendida, puede pasar todas las demás configuraciones en variables de entorno. Para obtener más información, consulte [implementaciones desatendidas](deployment-guidance.md#unattended).
+
+## <a name="deployment-scripts"></a>Scripts de implementación
+
+Scripts de implementación pueden ayudar a implementar Kubernetes y clústeres de datos de gran tamaño en un solo paso. También suelen ofrecer valores predeterminados para la configuración de clúster de macrodatos. Para obtener un ejemplo de un script de implementación para el clúster de macrodatos en Azure Kubernetes Service (AKS), consulte el artículo siguiente:
+
+[Implementar un clúster de macrodatos con un script de implementación (AKS) de SQL Server 2019](quickstart-big-data-cluster-deploy.md).
+
+Puede personalizar cualquier script de implementación mediante la creación de su propia versión que configura las variables de entorno de clúster de macrodatos de manera diferente.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

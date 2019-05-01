@@ -1,5 +1,5 @@
 ---
-title: PeriodsToDate (MDX) | Documentos de Microsoft
+title: PeriodsToDate (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e33ac5562e7304b71779134b02488733b9d576a4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63277493"
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (MDX)
 
@@ -32,13 +32,13 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  *Level_Expression*  
  Expresión MDX válida que devuelve un nivel.  
   
- *Expresión_miembro*  
+ *Member_Expression*  
  Expresión MDX válida que devuelve un miembro.  
   
-## <a name="remarks"></a>Notas  
- Dentro del ámbito del nivel especificado, el **PeriodsToDate** función devuelve el conjunto de periodos del mismo nivel que el miembro especificado, empezando por el primer período y finalizando en un miembro especificado.  
+## <a name="remarks"></a>Comentarios  
+ Dentro del ámbito del nivel especificado, el **PeriodsToDate** función devuelve el conjunto de periodos del mismo nivel que el miembro especificado, empezando por el primer período y finalizando con el miembro especificado.  
   
--   Si se especifica un nivel, se deduce el miembro actual de la jerarquía *jerarquía*. **CurrentMember**, donde *jerarquía*es la jerarquía del nivel especificado.  
+-   Si se especifica un nivel, el miembro actual de la jerarquía se infiere *jerarquía*. **CurrentMember**, donde *jerarquía*es la jerarquía del nivel especificado.  
   
 -   Si no se especifican ni un nivel ni un miembro, el nivel es el nivel primario del miembro actual de la primera jerarquía de la primera dimensión de tipo Time del grupo de medida.  
   
@@ -47,7 +47,7 @@ PeriodsToDate( [ Level_Expression [ ,Member_Expression ] ] )
  `TopCount(Descendants(Ancestor(Member_Expression, Level_Expression), Member_Expression.Level), 1):Member_Expression`  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se devuelve la suma de la `Measures.[Order Quantity]` miembro, que se agrega en los primeros ocho meses del año 2003 incluidos en el `Date` dimensión, desde el **Adventure Works** cubo.  
+ El ejemplo siguiente devuelve la suma de los `Measures.[Order Quantity]` miembro, se agregan durante los primeros ocho meses del año 2003 incluidos en el `Date` dimensión, desde el **Adventure Works** cubo.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  

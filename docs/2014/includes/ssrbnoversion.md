@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 6a5a0c544ba7b648a759fff4e78b389c34fc741c
+ms.openlocfilehash: 0e48ae5898c4d999b7478e80ffb7487bba6af5f5
 ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/23/2019
-ms.locfileid: "62721552"
+ms.locfileid: "62843508"
 ---
-.NET Framework 2.0
+Generador de informes

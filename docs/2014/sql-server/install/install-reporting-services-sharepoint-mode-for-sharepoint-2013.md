@@ -279,7 +279,7 @@ ms.locfileid: "63298811"
   
 6.  Haga clic en **Activar**. El estado de la característica cambiará a **Activo**.  
   
- Este procedimiento se completa en cada colección de sitios. Para más información, consulte [Activate the Report Server and Power View Integration Features in SharePoint](../../../2014/reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md).  
+ Este procedimiento se completa en cada colección de sitios. Para más información, consulte [Activar las características de integración del servidor de informes y Power View en SharePoint](../../../2014/reporting-services/activate-the-report-server-and-power-view-integration-features-in-sharepoint.md).  
   
 ##  <a name="bkmk_full_script"></a> Script de Windows PowerShell para los pasos 1-4  
  El script de PowerShell de esta sección es el equivalente a completar los pasos 1 a 4 de las secciones anteriores. El script hace lo siguiente:  

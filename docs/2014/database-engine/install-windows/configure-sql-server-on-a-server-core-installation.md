@@ -30,19 +30,19 @@ ms.locfileid: "62779738"
   
  Para obtener más información sobre la configuración y administración remota de una instalación de Server Core, vea los temas siguientes:  
   
--   [Windows Server 2008 R2: Procedimientos recomendados para las implementaciones de Server Core](https://go.microsoft.com/fwlink/?LinkID=245957) ()https://go.microsoft.com/fwlink/?LinkID=245957)  
+-   [Windows Server 2008 R2: Procedimientos recomendados para las implementaciones de Server Core](https://go.microsoft.com/fwlink/?LinkID=245957) (https://go.microsoft.com/fwlink/?LinkID=245957)  
   
--   [Configurar una instalación Server Core: Información general sobre](https://go.microsoft.com/fwlink/?LinkId=245958) ()https://go.microsoft.com/fwlink/?LinkId=245958)  
+-   [Configurar una instalación Server Core: Información general sobre](https://go.microsoft.com/fwlink/?LinkId=245958) (https://go.microsoft.com/fwlink/?LinkId=245958)  
   
--   [Configuración de una instalación Server Core de Windows Server 2008 R2 con Sconfig.cmd](https://go.microsoft.com/fwlink/?LinkId=245959) ()https://go.microsoft.com/fwlink/?LinkId=245959)  
+-   [Configuración de una instalación Server Core de Windows Server 2008 R2 con Sconfig.cmd](https://go.microsoft.com/fwlink/?LinkId=245959) (https://go.microsoft.com/fwlink/?LinkId=245959)  
   
--   [Instalar un rol de servidor en un servidor que ejecuta una instalación Server Core de Windows Server 2008 R2: Información general sobre](https://go.microsoft.com/fwlink/?LinkId=245960) ()https://go.microsoft.com/fwlink/?LinkId=245960)  
+-   [Instalar un rol de servidor en un servidor que ejecuta una instalación Server Core de Windows Server 2008 R2: Información general sobre](https://go.microsoft.com/fwlink/?LinkId=245960) (https://go.microsoft.com/fwlink/?LinkId=245960)  
   
--   [Instalar características de Windows en un servidor que ejecuta una instalación Server Core de Windows Server 2008 R2: Información general sobre](https://go.microsoft.com/fwlink/?LinkId=245961) ()https://go.microsoft.com/fwlink/?LinkId=245961)  
+-   [Instalar características de Windows en un servidor que ejecuta una instalación Server Core de Windows Server 2008 R2: Información general sobre](https://go.microsoft.com/fwlink/?LinkId=245961) (https://go.microsoft.com/fwlink/?LinkId=245961)  
   
--   [Administración de una instalación de Server Core: Información general sobre](https://go.microsoft.com/fwlink/?LinkId=245962) ()https://go.microsoft.com/fwlink/?LinkId=245962)  
+-   [Administración de una instalación de Server Core: Información general sobre](https://go.microsoft.com/fwlink/?LinkId=245962) (https://go.microsoft.com/fwlink/?LinkId=245962)  
   
--   [Administración de una instalación Server Core](https://go.microsoft.com/fwlink/?LinkId=245963) ()https://go.microsoft.com/fwlink/?LinkId=245963)  
+-   [Administración de una instalación Server Core](https://go.microsoft.com/fwlink/?LinkId=245963) (https://go.microsoft.com/fwlink/?LinkId=245963)  
   
 ##  <a name="install-updates"></a>Instalar actualizaciones  
  En esta sección se proporciona información sobre la instalación de actualizaciones para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en un equipo con Windows Server Core. Se recomienda que los clientes evalúen e instalen las últimas actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puntualmente para asegurarse de que los sistemas están al día con las actualizaciones de seguridad más recientes. Para obtener más información acerca de cómo instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en un equipo Windows Server Core, vea [instalar SQL Server 2014 en Server Core](install-sql-server-on-server-core.md).  

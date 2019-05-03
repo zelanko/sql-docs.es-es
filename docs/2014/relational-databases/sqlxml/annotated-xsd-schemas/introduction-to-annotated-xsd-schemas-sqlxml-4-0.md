@@ -118,15 +118,15 @@ ms.locfileid: "63131336"
 ## <a name="other-resources"></a>Otros recursos  
  Puede buscar más información sobre el lenguaje de definición de esquemas XML (XSD), el lenguaje de rutas XML (XPath) y el lenguaje de transformación basado en hojas de estilo (XSLT) en los siguientes sitios web:  
   
--   XML Schema Part 0: Manual, W3C recomendación ()http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Manual, W3C recomendación (http://www.w3.org/TR/xmlschema-0/)  
   
--   Esquema XML parte 1: Estructuras, W3C recomendación ()http://www.w3.org/TR/xmlschema-1/)  
+-   Esquema XML parte 1: Estructuras, W3C recomendación (http://www.w3.org/TR/xmlschema-1/)  
   
--   Esquema XML parte 2:Datatypes, W3C recomendación ()http://www.w3.org/TR/xmlschema-2/)  
+-   Esquema XML parte 2:Datatypes, W3C recomendación (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) ()http://www.w3.org/TR/xpath)  
+-   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
   
--   (XSL Transformations (XSLT)http://www.w3.org/TR/xslt)  
+-   (XSL Transformations (XSLT) (http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>Vea también  
  [Anotar las consideraciones de seguridad de esquema &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   

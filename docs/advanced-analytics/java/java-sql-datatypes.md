@@ -10,11 +10,11 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 14a2bc5594b16610dfb8278ab82a9e7b8b22fea6
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63473592"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775001"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java y SQL Server admiten los tipos de datos
 

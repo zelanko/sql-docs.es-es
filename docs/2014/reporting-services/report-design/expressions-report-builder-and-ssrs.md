@@ -11,11 +11,11 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: bc104680f8acad6f54a8a0625257332971f38742
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63461517"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775726"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expresiones (Generador de informes y SSRS)
 

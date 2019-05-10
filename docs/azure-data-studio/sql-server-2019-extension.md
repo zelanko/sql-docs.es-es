@@ -3,7 +3,7 @@ title: Extensión de SQL Server 2019 (versión preliminar)
 titleSuffix: Azure Data Studio
 description: Extensión de la versión preliminar de SQL Server de 2019 para Azure Data Studio
 ms.custom: seodec18
-ms.date: 04/19/2019
+ms.date: 05/09/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,16 +11,16 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: fe3c7fa2a383ea7d8b969ed149a2a762531e0a84
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: 045152d472029c1ff3fe50230b20b69a851d9dcb
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472191"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450104"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensión de SQL Server 2019 (versión preliminar)
 
-La extensión de SQL Server 2019 (versión preliminar) proporciona compatibilidad de versión preliminar para las nuevas características y herramientas de apoyo de envío [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Esto incluye compatibilidad con la versión preliminar [clústeres de SQL Server 2019 macrodatos](../big-data-cluster/big-data-cluster-overview.md), un enfoque integrado [experiencia de cuaderno](../big-data-cluster/notebooks-guidance.md)y un PolyBase [asistente Create External Table](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json).
+La extensión de SQL Server 2019 (versión preliminar) proporciona compatibilidad de versión preliminar para las nuevas características y herramientas de apoyo de envío [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Esto incluye compatibilidad con la versión preliminar [clústeres de SQL Server 2019 macrodatos](../big-data-cluster/big-data-cluster-overview.md), un enfoque integrado [experiencia de cuaderno](../big-data-cluster/notebooks-guidance.md)y un PolyBase [asistente Create External Table](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json).
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Instalar la extensión de SQL Server 2019 (versión preliminar)
 
@@ -30,9 +30,9 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar), descargue 
 
    |Plataforma|Descargar|Fecha de la versión|Versión
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|18 de abril de 2019 |0.12.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|18 de abril de 2019 |0.12.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|18 de abril de 2019 |0.12.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092118)|8 de mayo de 2019 |0.13.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092117)|8 de mayo de 2019 |0.13.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2092116)|8 de mayo de 2019 |0.13.0
 
 1. En Azure Data Studio elija **la extensión de instalación de paquete VSIX** desde el **archivo** menú y seleccione el archivo .vsix descargado.
 

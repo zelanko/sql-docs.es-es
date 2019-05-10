@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b00478a739796d27b44899aa72099583b1d9a113
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a402c385be8c89f71824e5312ffc57fd6c1b0a2c
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62799980"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357329"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Conceptos clave de MDX (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -136,7 +136,7 @@ ms.locfileid: "62799980"
   
 -   [Script MDX básico &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
--   [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+-   [Creación de modelos multidimensionales &#40;tutorial de Adventure Works&#41;](../../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   

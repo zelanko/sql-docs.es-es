@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services lección 5 del tutorial: Crear columnas calculadas | Microsoft Docs'
-ms.date: 03/08/2019
+ms.date: 04/25/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b56fe07237faa6570fd4b8c1adb31d3cce8e4540
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685562"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776072"
 ---
 # <a name="create-calculated-columns"></a>Crear columnas calculadas
 
@@ -47,7 +47,7 @@ En este artículo forma parte de un tutorial de modelado tabular, que se debe co
   
     Una nueva columna denominada **Columna calculada 1** se inserta a la izquierda de la columna **Calendar Quarter** .  
   
-4.  En la barra de fórmulas situada encima de la tabla, escriba la siguiente fórmula DAX: Autocompletar sirve de ayuda para escribir los nombres completos de columnas y tablas, y enumera las funciones que están disponibles.  
+4.  En la barra de fórmulas situada encima de la tabla, escriba la siguiente fórmula DAX: Autocompletar le ayuda a escribir el nombres completos de columnas y tablas y enumera las funciones que están disponibles.  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -85,7 +85,7 @@ La columna calculada DayOfWeek proporciona un nombre ordenable del día de seman
 #### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>Crear una columna calculada ProductSubcategoryName en la tabla DimProduct  
   
   
-1.  En el **DimProduct** tabla, desplácese hasta el extremo derecho de la tabla. Observe que la columna situada más a la derecha se denomina **Agregar columna** (en cursiva); haga clic en el encabezado de columna.  
+1.  En el **DimProduct** tabla, desplácese hasta el extremo derecho de la tabla. Observe que la columna más a la derecha se denomina ***Agregar columna***, haga clic en el encabezado de columna.  
   
 2.  En la barra de fórmulas, escriba la fórmula siguiente:  
     

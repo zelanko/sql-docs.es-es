@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8822a85e39efde36a04b92e8a926adca6839cf58
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 44be6e7ab0bb3598b2478f1a5f94e64fee48d05a
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62930325"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449981"
 ---
 # <a name="analysis-services-developer-documentation"></a>Documentación para desarrolladores de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ Analysis Services proporciona muchas formas de personalizar una solución a trav
 - Aunque es posible crear una solución basada en estándares abiertos de MDX y XMLA, es bastante raro que lo haga. No hay ninguna documentación que no sea de XMLA y referencia MDX para ayudarle a usted y la mayoría foro de soporte técnico y Comunidad dibuja de experiencias con .NET o las tecnologías nativas (MSOLAP).
 
 ## <a name="programming-in-analysis-services"></a>Programación de Analysis Services
-[Programación de minería de datos](../analysis-services/data-mining-programming.md) describe los métodos para compilar soluciones que incluyen objetos de minería de datos.
+[Programación de minería de datos](../analysis-services/data-mining/data-mining-programming.md) describe los métodos para compilar soluciones que incluyen objetos de minería de datos.
 
 [Programación de modelos multidimensionales](../analysis-services/multidimensional-models/multidimensional-model-programming.md) describe las tareas de desarrollo y los enfoques para integrar objetos del modelo multidimensional en una solución personalizada.
 

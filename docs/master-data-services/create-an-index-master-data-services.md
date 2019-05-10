@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b0dc4612ff2d77558a04062704df61e1f93b58ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 008c1915c793eedb27d70cac27e135c2c7e753c4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774107"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65477083"
 ---
 # <a name="create-an-index-master-data-services"></a>Creación de un índice personalizado (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52774107"
 
   Cree un índice personalizado en una lista de atributos que se consulta con frecuencia para mejorar el rendimiento de las consultas.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de Administración del sistema. Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "52774107"
 |Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |Estado|El estado del índice.<br /><br /> Al hacer clic en **Guardar**, aparece la imagen ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización"), que indica que se está actualizando el índice.<br /><br /> Si hay errores al crear o editar un índice, aparecerá la imagen ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error").<br /><br /> En caso contrario, el estado será correcto y aparecerá la imagen ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto").|  
-|Nombre|Nombre de índice.|  
+|NOMBRE|Nombre de índice.|  
 |Is Unique|Especifica si el índice es único.|  
 |En atributos|Muestra los nombres para mostrar de los atributos en los que está definido el índice.|  
   
@@ -68,10 +68,10 @@ ms.locfileid: "52774107"
   
 -   **El**: fecha y hora en que se ha actualizado el índice por última vez.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
  [Editar y eliminar un índice &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Índice personalizado &#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)  
   
   

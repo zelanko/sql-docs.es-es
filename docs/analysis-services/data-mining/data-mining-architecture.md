@@ -1,5 +1,5 @@
 ---
-title: Arquitectura de minería de datos | Documentos de Microsoft
+title: Arquitectura de minería de datos | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dc79919837b1a50f9eb6335d12a13c7ea5389b50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 29f1d0fb4a6cc2126feed494df0fb4d09ac61044
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020002"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450046"
 ---
 # <a name="data-mining-architecture"></a>Arquitectura de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,25 +26,25 @@ ms.locfileid: "34020002"
   
  [Conectar a Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
- [Ubicación de almacenamiento de base de datos](../../analysis-services/multidimensional-models/database-storage-location.md)  
+ [Ubicación de almacenamiento de las bases de datos](../../analysis-services/multidimensional-models/database-storage-location.md)  
   
- [Cambiar una base de datos de Analysis Services entre los modos ReadOnly y ReadWrite](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services](../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  Para obtener más información sobre cómo puede implementar la minería de datos en una solución de Business Intelligence, vea la sección Solution Guides de MSDN Library.  
   
 ## <a name="in-this-section"></a>En esta sección  
- [Arquitectura lógica & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Arquitectura lógica &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
- [Arquitectura física & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
+ [Arquitectura física &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)  
   
  [Servicios de minería de datos y orígenes de datos](../../analysis-services/data-mining/data-mining-services-and-data-sources.md)  
   
- [Administración de soluciones de minería de datos y objetos](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
+ [Administración de las soluciones y los objetos de minería de datos](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
- [Información general de seguridad & #40; minería de datos & #41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
+ [Información general sobre seguridad &#40;minería de datos&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Programación de modelos multidimensionales](../../analysis-services/multidimensional-models/multidimensional-model-programming.md)   
- [Programación de minería de datos](../../analysis-services/data-mining-programming.md)  
+ [Programación de minería de datos](../../analysis-services/data-mining/data-mining-programming.md)  
   
   

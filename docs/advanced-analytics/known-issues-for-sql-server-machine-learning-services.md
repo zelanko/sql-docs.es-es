@@ -2,17 +2,17 @@
 title: 'Problemas conocidos de lenguaje R y la integración de Python: SQL Server Machine Learning Services'
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 04/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 19427de01c39dc4b4578fc31db1d610af829d770
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2b9ed73b2b4cb65696f9809d757eb901367dde63
+ms.sourcegitcommit: b6ca8596c040fa731efd397e683226516c9f8359
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650706"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64906162"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemas conocidos de Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -406,6 +406,29 @@ La función `rxDTree` no admite actualmente transformaciones en la fórmula. En 
 
 Los factores ordenados se tratan igual que los factores de todas las funciones de análisis RevoScaleR, excepto `rxDTree`.
 
+### <a name="20-datatable-as-an-outputdataset-in-r"></a>20. Data.Table como un OutputDataSet en R
+
+Uso de `data.table` como un `OutputDataSet` en R no se admite en SQL Server 2017 acumulativa actualización 13 (CU13) y versiones anteriores. Es posible que aparezca el mensaje siguiente:
+
+```
+Msg 39004, Level 16, State 20, Line 2
+A 'R' script error occurred during execution of 
+'sp_execute_external_script' with HRESULT 0x80004004.
+Msg 39019, Level 16, State 2, Line 2
+An external script error occurred: 
+Error in alloc.col(newx) : 
+  Internal error: length of names (0) is not length of dt (11)
+Calls: data.frame ... as.data.frame -> as.data.frame.data.table -> copy -> alloc.col
+
+Error in execution.  Check the output for more information.
+Error in eval(expr, envir, enclos) : 
+  Error in execution.  Check the output for more information.
+Calls: source -> withVisible -> eval -> eval -> .Call
+Execution halted
+```
+
+`data.table` como un `OutputDataSet` en R se admite en SQL Server 2017 acumulativa Update 14 (CU14) y versiones posteriores.
+
 ## <a name="python-script-execution-issues"></a>Problemas de ejecución de script de Python
 
 Esta sección contiene problemas conocidos que son específicos de Python en ejecución en SQL Server, así como los problemas relativos a los paquetes de Python publicados por Microsoft, incluidos [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) y [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
@@ -465,8 +488,19 @@ A partir de SQL Server 2017 CU2, puede aparecer el siguiente mensaje incluso si 
 >  *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: telemetry_state es usar antes de la declaración global*
 
-
 Este problema se corrigió en SQL Server 2017 actualización acumulativa 3 (CU3). 
+
+### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5. No admitidos los tipos de datos numérico, decimal y money
+
+A partir de SQL Server 2017 acumulativa Update 12 (CU12), los tipos de datos numérico, decimal y money en WITH RESULT SETS no se admiten cuando se usa Python con `sp_execute_external_script`. Es posible que aparezcan los mensajes siguientes:
+
+> *[Código: 39004, estado de SQL: S1000] se ha producido un error de script "Python" durante la ejecución de 'sp_execute_external_script' con HRESULT 0 x 80004004.*
+
+> *[Código: 39019, estado de SQL: S1000] se ha producido un error de script externo:*
+> 
+> *Error de SqlSatelliteCall: Tipo no compatible en el esquema de salida. Tipos admitidos: bit, smallint, int, datetime, smallmoney, real y float. Char, varchar se admite parcialmente.*
+
+Esto se ha solucionado en SQL Server 2017 acumulativa Update 14 (CU14).
 
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise y Microsoft R Open
 

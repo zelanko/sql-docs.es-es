@@ -153,8 +153,6 @@
       href: ../report-data/dataset-properties-dialog-box-parameters.md
     - name: 'Propiedades del conjunto de datos (cuadro de diálogo), Consulta'
       href: ../dataset-properties-dialog-box-query.md
-    - name: Cuadro de diálogo Definir parámetros de consulta
-      href: define-query-parameters-dialog-box.md
     - name: Escribir credenciales de origen de datos (cuadro de diálogo)
       href: ../enter-data-source-credentials-dialog-box.md
     - name: 'Propiedades del origen de datos compartidos (cuadro de diálogo), Credenciales'

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: edef0fa21cc2a41785e14f7c96cf3c52b1e0bacb
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
-ms.translationtype: HT
+ms.openlocfilehash: d095af731e3c62ce24dd3d8cbf059aa6278dd22c
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63472199"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776159"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistencia de datos con el clúster de macrodatos de SQL Server en Kubernetes
 
@@ -49,19 +49,19 @@ Para usar el almacenamiento persistente durante la implementación, establezca l
 > [!WARNING]
 > Se ejecute sin almacenamiento persistente puede funcionar en un entorno de prueba, pero podría dar como resultado en un clúster que no son funcionales. Tras el reinicio de pod, datos de metadatos o el usuario del clúster se perderán permanentemente. No se recomienda para ejecutar en esta configuración. 
 
-Esta sección proporciona más ejemplos sobre cómo configurar opciones de almacenamiento para la implementación de clúster de macrodatos de SQL Server.
+[Configurar el almacenamiento](#config-samples) sección proporciona más ejemplos sobre cómo configurar opciones de almacenamiento para la implementación de clúster de macrodatos de SQL Server.
 
 ## <a name="aks-storage-classes"></a>Clases de almacenamiento AKS
 
 AKS viene con [dos clases de almacenamiento integradas](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **predeterminada** y **premium managed** junto con aprovisionador dinámica para ellos. Puede especificar cualquiera de ellos o crear su propia clase de almacenamiento para la implementación de clúster de macrodatos con habilitado el almacenamiento persistente. De forma predeterminada, la compilación en el archivo de configuración de clúster de aks *aks-dev-test.json* viene con configuraciones de almacenamiento persistente para usar **premium managed** clase de almacenamiento.
 
 > [!WARNING]
-> Volúmenes persistentes creados con **predeterminada** clase de almacenamiento tienen una directiva de recuperación de *eliminar*. Por lo que en el momento en el se elimina el clúster de macrodatos de SQL Server, las notificaciones de volumen persistente obtención también los volúmenes eliminados y, a continuación, persistentes. **premium Managed** tiene una directiva de recuperación de *conservar*. Puede encontrar más información acerca de las clases de almacenamiento en AKS y sus configuraciones en [esto](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) artículo.
+> Volúmenes persistentes creados con las clases de almacenamiento integrada **predeterminada** y **premium managed** tienen una directiva de recuperación de *eliminar*. Por lo que en el momento en el se elimina el clúster de macrodatos de SQL Server, las notificaciones de volumen persistente obtención también los volúmenes eliminados y, a continuación, persistentes. Puede crear clases de almacenamiento personalizado mediante **azure disco** privioner con un *conservar* reclamar directiva como se muestra en [esto](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) artículo.
 
 
 ## <a name="minikube-storage-class"></a>Clase de almacenamiento de Minikube
 
-Minikube viene con una clase de almacenamiento integrada llamada **estándar** junto con una dinámica aprovisionador para él. La configuración generada en el archivo de minikube *minikube-dev-test.json* tiene las opciones de configuración de almacenamiento en la especificación de plano de control. La misma configuración se aplicará a todas las especificaciones de los grupos. También puede personalizar una copia de este archivo y usarlo para implementar el clúster de macrodatos en minikube. Puede editar el archivo personalizado manualmente y cambiar el tamaño de las notificaciones de los volúmenes persistentes para los grupos específicos dar cabida a las cargas de trabajo que desea ejecutar. O bien, consulte en esta sección para obtener ejemplos sobre cómo hacer modificaciones con *mssqlctl* comandos.
+Minikube viene con una clase de almacenamiento integrada llamada **estándar** junto con una dinámica aprovisionador para él. La configuración generada en el archivo de minikube *minikube-dev-test.json* tiene las opciones de configuración de almacenamiento en la especificación de plano de control. La misma configuración se aplicará a todas las especificaciones de los grupos. También puede personalizar una copia de este archivo y usarlo para implementar el clúster de macrodatos en minikube. Puede editar el archivo personalizado manualmente y cambiar el tamaño de las notificaciones de los volúmenes persistentes para los grupos específicos dar cabida a las cargas de trabajo que desea ejecutar. O bien, consulte [configurar almacenamiento](#config-samples) sección para obtener ejemplos sobre cómo hacerlo edita utilizando *mssqlctl* comandos.
 
 ## <a name="kubeadm-storage-classes"></a>Clases de almacenamiento Kubeadm
 
@@ -97,7 +97,7 @@ El ejemplo siguiente actualiza el tamaño de volumen persistente notificaciones 
 mssqlctl cluster config section set -f custom.json -j "$.spec.pools[?(@.spec.type[*])].spec.storage.size=32Gi"
 ```
 
-### <a name="configure-storage-class"></a>Configurar clase de almacenamiento
+### <a id="config-samples"></a> Configurar clase de almacenamiento
 
 El ejemplo siguiente muestra cómo modificar la clase de almacenamiento para el plano de control:
 

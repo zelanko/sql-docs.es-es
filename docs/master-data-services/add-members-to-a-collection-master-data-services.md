@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - collections [Master Data Services], adding members
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 28c4f892a96839a7e79b5d284a642a77cb6577dd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 086294f3615c32d9d8bbbd8c26da0439288dc8d3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777387"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65486418"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>Agregar miembros a una colección (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52777387"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede agregar miembros hoja y consolidados a una colección.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  
@@ -59,7 +59,7 @@ ms.locfileid: "52777387"
   
 11. Además, puede establecer los valores de ponderación haciendo clic en el valor de la columna **Ponderación** .  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Colecciones &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   

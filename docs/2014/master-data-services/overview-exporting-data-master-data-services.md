@@ -11,15 +11,15 @@ helpviewer_keywords:
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 76a9133a013087d96f9acc102232b2340212d19f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f92a74caa74c5cf15e917cd6c15aef9506a60180
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763829"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482839"
 ---
 # <a name="exporting-data-master-data-services"></a>Exportar datos (Master Data Services)
   Puede exportar datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] a sistemas de suscripción creando vistas de suscripciones. Cualquier sistema de suscripción podrá ver los datos publicados en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para obtener más información sobre las vistas, consulte [Vistas](../relational-databases/views/views.md).  

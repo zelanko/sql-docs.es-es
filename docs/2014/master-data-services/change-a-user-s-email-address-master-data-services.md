@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], changing e-mail address
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 209462ef2a49a29e5c5216ba1ce89887079bd824
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1d540c414b1190a045fdb18b4b971e73f348459f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925968"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483580"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Cambiar la dirección de correo electrónico de un usuario (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede cambiar la dirección de correo electrónico a la que se envían las notificaciones y el formato predeterminado del correo electrónico de notificación.  

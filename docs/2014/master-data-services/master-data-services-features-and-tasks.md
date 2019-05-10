@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7b614f31292999dd5424935d57e4cd1412dee864
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c648a1f48396a40db0451de14facd342a8bfa797
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764843"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482889"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Características y tareas de Master Data Services
   Obtenga información sobre cómo usar [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para administrar los datos maestros de la organización. Aprenda a crear y manipular objetos del modelo, que son contenedores de los datos. Aprenda a organizar y mantener los propios datos maestros. Aprenda a importar y exportar datos maestros, y a compartir modelos entre entornos de prueba y producción. Por último, aprenda a desarrollar aplicaciones personalizadas que tengan acceso al servicio web de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  

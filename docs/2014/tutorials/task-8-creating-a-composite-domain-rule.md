@@ -10,12 +10,12 @@ ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 37935ceb61b80c920ca78b18169f2bb7f2c13924
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
-ms.translationtype: HT
+ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65094204"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489626"
 ---
 # <a name="task-8-creating-a-composite-domain-rule"></a>Tarea 8: Creación de una regla de dominio compuesto
   En esta tarea, creará una regla para el **validación de direcciones** dominio compuesto. Definir una regla entre dominios: si **Ciudad** es **Los Ángeles**, **estado** debe ser **CA** donde **Ciudad** y **estado** son dos dominios.  

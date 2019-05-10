@@ -14,15 +14,15 @@ helpviewer_keywords:
 - members [Master Data Services], deleting
 - consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c521887ed483f03507d0270242a80c70fa202f43
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b702219ebf0c6a4a7eaec33c21fccc5fb821454c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819176"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478580"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Eliminar un miembro o una colección (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "52819176"
 > [!NOTE]  
 >  No puede eliminar un miembro si se utiliza como un valor de atributo basado en dominio para otro miembro.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .  
@@ -66,7 +66,7 @@ ms.locfileid: "52819176"
   
 8.  En el cuadro de diálogo de confirmación, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Reactivar un miembro o una colección &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [Miembros &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [Colecciones &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  

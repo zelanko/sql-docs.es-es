@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 42006c68a50497034817cfe8df6c9172ea0cdc3b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b99676a9f51bf76dc9db294365a5a628dd25fa2e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62931422"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488475"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Lección 2: Limpieza de datos de proveedor con la base de conocimiento Proveedores
   En esta lección, limpiar los datos de proveedor en un archivo de Excel mediante el **proveedores** base de conocimiento que ha creado en la primera lección. Limpieza de datos en DQS incluye un **proceso asistido por ordenador** que analiza cómo se ajustan los datos al conocimiento en una base de conocimiento y un **proceso interactivo** que le permite revisar y modificar resultados del proceso asistido por ordenador. La característica de limpieza de datos identifica los datos incorrectos en el origen de datos y después corrige o sugiere correcciones a los datos incorrectos. También normaliza y enriquece los datos de cliente usando valores de dominio, valores iniciales de sinónimos, reglas de dominio, relaciones basadas en términos y datos de referencia. Puede aprobar o rechazar interactivamente los cambios propuestos por el proceso asistido por PC. Consulte [limpieza de datos](https://msdn.microsoft.com/library/gg524800.aspx) para obtener más detalles.  

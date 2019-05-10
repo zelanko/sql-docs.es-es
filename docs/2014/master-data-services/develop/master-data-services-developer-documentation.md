@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4b204fe10d94cc875f1967aa50d8531826cd53f4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f87f812ad9f4f12f5f78828e88c220e3dcf494d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765438"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483036"
 ---
 # <a name="developer39s-guide-master-data-services"></a>Desarrollador&#39;guía (Master Data Services)
   Obtenga información sobre cómo escribir código para personalizar la manera en que usted y sus usuarios interactúan con [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Aprenda a:  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: high-availability
 ms.topic: conceptual
 ms.assetid: ''
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 27ffbf76d0841479b10b515e0a66f14c8b6bfee3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 5833d918768d191302d477516faa1deb3acc57b4
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215824"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489602"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidad y recuperación ante desastres para Master Data Services
 
@@ -94,7 +94,7 @@ Como se muestra en la figura 1 de la sección anterior, la solución descrita en
 
 WSFC es una característica que sirve para mejorar la alta disponibilidad de aplicaciones y servicios. Consta de un grupo de instancias independientes de Windows Server, donde se ejecuta el Servicio de clúster de conmutación por error de Microsoft. Las instancias de Windows Server (o, como se denominan a veces, "nodos") están conectadas para que se puedan comunicar entre ellas y se puedan detectar errores. WSFC ofrece funcionalidades de detección de errores y de conmutación por error. Si se produce un error en un nodo o servicio del clúster, se detectará el error y otro nodo empezará a proporcionar de forma automática o manual los servicios hospedados en el nodo erróneo. Por lo tanto, los usuarios solo experimentarán una interrupción mínima en los servicios y se mejorará la disponibilidad de estos.  
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Requisitos previos
 
 El sistema operativo Windows Server debe estar instalado en todas las instancias y se debe haber revisado todas las actualizaciones.
 
@@ -213,7 +213,7 @@ Los grupos de disponibilidad mejoran la alta disponibilidad en el nivel de base 
 Las instancias de clúster de conmutación por error mejoran la alta disponibilidad en el nivel de instancia. El servicio SQL Server y los servicios relacionados se registran como recursos en WSFC. Además, la solución FCI requiere un almacenamiento en disco compartido simétrico, como los recursos compartidos de archivos SAN o SMB, que tienen que estar disponibles para todos los nodos en el clúster de WFC.
 
 
-### <a name="prerequisites"></a>Prerequisites
+### <a name="prerequisites"></a>Requisitos previos
 
 -   Instale SQL Server en todos los nodos. Para obtener más información, vea [Instalar SQL Server 2016](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server).
 
@@ -317,9 +317,9 @@ El grupo de disponibilidad solo se puede crear en bases de datos existentes. As�
 
 8.  En la página **Especificar réplicas**, haga clic en la pestaña **Agente de escucha** y haga lo siguiente. Vea la figura 18.
 
-    A.  Haga clic en **Crear un agente de escucha del grupo de disponibilidad** para configurar un agente de escucha del grupo de disponibilidad para la conexión de base de datos de MDS.
+    a.  Haga clic en **Crear un agente de escucha del grupo de disponibilidad** para configurar un agente de escucha del grupo de disponibilidad para la conexión de base de datos de MDS.
 
-    B.  Escriba un **nombre DNS del agente de escucha**, como MDSSQLServer.
+    b.  Escriba un **nombre DNS del agente de escucha**, como MDSSQLServer.
 
     c.  Escriba el puerto SQL predeterminado, 1433, en el cuadro de texto **Puerto**.
 

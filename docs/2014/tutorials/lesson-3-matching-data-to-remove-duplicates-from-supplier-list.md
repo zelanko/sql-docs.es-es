@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 059170b6-d62e-4b28-9451-99a0cc7e1f5f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 65aa1b0531eb4ba30875e53a77551383b3f38579
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c59a2fce106b08f53722ce44ae69225b680d7925
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63042361"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484653"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>Lección 3: Búsqueda de datos coincidentes para quitar duplicados de lista de proveedores
   Para preparar la base de conocimiento que se va a usar para realizar la actividad de coincidencia, hay que crear una directiva de coincidencia en la base de conocimiento. Solo puede haber una directiva de coincidencia en una base de conocimiento. Una directiva de coincidencia se compone de una o más reglas de coincidencia. Una regla identifica los dominios implicados en el proceso de coincidencia y especifica el peso que tiene cada valor de dominio sobre en el criterio de coincidencia. En la regla se debe especificar si los valores de dominio deben ser una coincidencia exacta o pueden ser similares, y hasta qué punto. También se especifica si una coincidencia de dominio es un requisito previo para el proceso de coincidencia. Puede probar cada regla por separado y probar toda la directiva con datos de ejemplo. El proceso de pruebas muestra los registros cuyas puntuaciones de coincidencia son mayores que el **puntuación de registro mínima** umbral especificado en la configuración de DQS en un clúster (grupo). Puede seguir modificando las reglas de la directiva hasta que esté satisfecho con los resultados.  

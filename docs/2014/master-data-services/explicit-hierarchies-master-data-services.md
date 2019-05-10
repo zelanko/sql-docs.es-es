@@ -11,15 +11,15 @@ helpviewer_keywords:
 - hierarchies [Master Data Services], explicit hierarchies
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90153c2ed0524a486fe7014890e7e1a30d987d84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: db039658fa292976062426268234d3978c1b32ef
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924550"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483003"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Jerarquías explícitas (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], una jerarquía explícita organiza los miembros de una sola entidad de la forma que se especifique. La estructura puede ser irregular y, a diferencia de las jerarquías derivadas, las jerarquías explícitas no se basan en relaciones de atributo basadas en dominio.  

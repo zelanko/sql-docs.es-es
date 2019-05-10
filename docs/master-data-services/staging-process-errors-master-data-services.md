@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], error messages
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6583bab946104e08e102c422373aa94ff2ee752b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 91e6ab46cb0171f3e0c16deb5a494ed1f644a660
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766137"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488027"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Errores del proceso de almacenamiento provisional (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52766137"
 
   Cuando el proceso de ensayo ha finalizado, todos los registros procesados en las tablas de ensayo tienen un valor en la columna ErrorCode. Los valores se muestran en la tabla siguiente.  
   
-|código|Error|Se produce cuando/detalles|Se aplica a la tabla|  
+|Código|Error|Se produce cuando/detalles|Se aplica a la tabla|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|El mismo código de miembro existe varias veces en la tabla de ensayo.|El lote de almacenamiento provisional incluye el mismo código de miembro varias veces. No se crea ni actualiza ningún miembro.|Hoja<br /><br /> Consolidado<br /><br /> Relación|  
 |210003|El atributo values hace referencia a un miembro que no existe o está inactivo.|Cuando almacena provisionalmente atributos basados en dominio, debe usar el código en lugar del nombre. Se aplica a **ImportType0**, **1**y **2**.|Hoja<br /><br /> Consolidado|  
@@ -46,7 +46,7 @@ ms.locfileid: "52766137"
 |210047|El miembro no puede ser un elemento relacionado del nodo Unused.|Esto sucede si **RelationshipType** = **2** (relacionado) y **ParentCode** o **ChildCode** es **Unused**. Los miembros solo pueden ser secundarios del nodo Unused.|Relación|  
 |210048|**ParentCode** y **ChildCode** no pueden ser iguales.|El valor de **ParentCode** es igual que el valor de **ChildCode** . Estos valores deben ser diferentes.|Relación|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Ver los errores que se producen durante el almacenamiento provisional &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

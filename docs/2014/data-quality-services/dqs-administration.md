@@ -11,15 +11,15 @@ helpviewer_keywords:
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6ff50e59daa241d64bbe878d6bd134c4efdea619
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cc8f84eb268fab041b65e4fc2faced7ee9b0103a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756029"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480623"
 ---
 # <a name="dqs-administration"></a>dqs, administración
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite administrar diversas actividades de DQS realizadas en [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], configurar las propiedades del servidor relacionadas con las actividades de DQS, configurar los valores de Reference Data Service y configurar los valores del registro de DQS. Todo esto se realizan a través de la característica **Administración** en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. En función del acceso de seguridad (rol) en DQS, se le concede o deniega el acceso a diversas funcionalidades de esta área.  

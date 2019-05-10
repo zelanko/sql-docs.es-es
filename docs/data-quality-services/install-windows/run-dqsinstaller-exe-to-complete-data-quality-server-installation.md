@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 850af4e77b1fcaf8ffdaa0ede7bcaeba79695adc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: f16d39d738149d10a58dde8c01d8b447393ef9c6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013426"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487528"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Ejecutar DQSInstaller.exe para completar la instalación del servidor de calidad de datos
 
@@ -40,7 +40,7 @@ ms.locfileid: "56013426"
   
     -   **Menú Inicio**: en la barra de tareas, haga clic en **Inicio**, seleccione **Todos los programas** y haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]. En [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], haga clic en **Data Quality Services**y luego en **Instalador de Data Quality Server**.  
   
-    -   **Explorador de Windows**: busque el archivo DQSInstaller.exe. Si instaló la instancia predeterminada de SQL Server, el archivo DQSInstaller.exe estará disponible en C:\Archivos de programa\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn. Haga doble clic en el archivo DQSInstaller.exe.  
+    -   **Explorador de Windows**: Busque el archivo DQSInstaller.exe. Si instaló la instancia predeterminada de SQL Server, el archivo DQSInstaller.exe estará disponible en C:\Archivos de programa\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn. Haga doble clic en el archivo DQSInstaller.exe.  
   
 2.  Aparecerá una ventana de símbolo del sistema que mostrará el estado de la instalación. Observará estas tres cosas:  
   
@@ -93,11 +93,11 @@ ms.locfileid: "56013426"
   
     -   **Sin el parámetro de línea de comandos**: Escriba `dqsinstaller.exe` y, a continuación, presione ENTRAR.  
   
-    -   **Con el parámetro de línea de comandos**: escriba el comando necesario según se indica en la tabla anterior y presione INTRO.  
+    -   **Con el parámetro de línea de comandos**: Escriba el comando necesario según se indica en la tabla anterior y, a continuación, presione ENTRAR.  
   
 4.  Se realizarán las acciones necesarias en función del comando especificado. Si ha optado por instalar el [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] sin ningún parámetro de línea de comandos, todos los demás pasos son los mismos que los descritos en los pasos 2 a 6 de la sección anterior, [Ejecutar DQSInstaller.exe desde la pantalla Inicio, el menú Inicio o el Explorador de Windows](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   Conceda a los usuarios los roles adecuados para DQS en función de su perfil del trabajo. Vea [Conceder roles de DQS a los usuarios](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
   
@@ -105,7 +105,7 @@ ms.locfileid: "56013426"
   
 -   Asegúrese de que puede tener acceso a los datos de origen para las operaciones de DQS y que puede exportar los datos procesados a una tabla de una base de datos. Vea [Acceso a datos para las operaciones de DQS](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Actualizar ensamblados de SQLCLR después de actualizar .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  

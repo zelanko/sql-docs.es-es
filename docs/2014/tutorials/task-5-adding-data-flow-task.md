@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae466627-cc36-4460-a234-fe060f6f01c0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4c5cfdc3a7afa210b88bbe0410d31b5b655d95a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aaccdd5d4f84f5bdba240fadc7d4d0729476f215
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62753012"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489146"
 ---
 # <a name="task-5-adding-data-flow-task"></a>Tarea 5: Adición de una tarea Flujo de datos
   En esta tarea, agregará una tarea Flujo de datos al flujo de control del paquete SSIS.  

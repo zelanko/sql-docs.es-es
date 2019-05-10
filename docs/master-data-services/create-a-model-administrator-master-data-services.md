@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6220e8670de28afaf2545638d5153726b1d34219
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 44bede292cb49ddcfd791b3e7d65605e1aa2399c
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769697"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487492"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Crear un administrador de modelo (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52769697"
 > [!TIP]  
 >  Para simplificar la administración, cree un grupo local o de Windows, y configúrelo como adminstrator de modelo. Puede agregar usuarios al grupo y quitarlos a continuación sin tener acceso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional **Permisos de usuario y de grupo** .  
@@ -58,7 +58,7 @@ ms.locfileid: "52769697"
   
 10. Haga clic en **Guardar**.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
  [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Asignar los permisos de los miembros de una jerarquía &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

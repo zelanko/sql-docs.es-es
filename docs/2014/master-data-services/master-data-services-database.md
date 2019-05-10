@@ -10,15 +10,15 @@ helpviewer_keywords:
 - database [Master Data Services], about the database
 - database [Master Data Services]
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 40fcb993ddc3894ec44a60c79db463611f4ab1f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6f3c180ed4eef217eb338b3b180c39702a3a89bd
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62764872"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479612"
 ---
 # <a name="master-data-services-database"></a>Base de datos de Master Data Services
   La base de datos contiene toda la información para el sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Es un punto central en una implementación de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Las base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] :  

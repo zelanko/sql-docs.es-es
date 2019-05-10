@@ -11,15 +11,15 @@ helpviewer_keywords:
 - creating date attributes [Master Data Services]
 - attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8f7c2dece1ac25d99348080c9c6f338c7db8f50c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 9179b2f016fe2d720da1b82078c03f0e7cb3e67a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753457"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487382"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Crear un atributo de fecha (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52753457"
 > [!NOTE]  
 >  El atributo se denomina DateTime, pero los valores de hora no se admiten.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -90,7 +90,7 @@ ms.locfileid: "52753457"
   
  La Máscara de entrada es una cadena con formato de fecha y hora de .NET personalizado. Para más información, consulte [Cadenas con formato de fecha y hora personalizado](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Cambiar el nombre y el tipo de datos de un atributo &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Crear un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: aa6898db-f54b-4e98-84e4-ac64e48c3561
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 14bfb87bca7a375ce471ed22dde4ee68714ed906
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 459d0160e9977ed58ebafe5feb9e58eaa5939f72
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63244692"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488385"
 ---
 # <a name="task-2-adding-domain-values-manually"></a>Tarea 2: Adición manual de valores de dominio
   En esta tarea, agregará un valor para el **país** dominio manualmente. Consulte [Change Domain Values](https://msdn.microsoft.com/library/hh510408.aspx) tema para obtener más información acerca de los campos de esta página.  

@@ -1,6 +1,6 @@
 ---
-title: Tutorial de Analysis Services Adventure Works (1400) | Microsoft Docs
-ms.date: 03/08/2019
+title: Tutorial de Analysis Services Adventure Works Internet Sales (1400) | Microsoft Docs
+ms.date: 05/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,14 +10,14 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: d4fae7f55543be52342692d344f250f8e08ba877
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 39d4c0e19d89438aa08ff2f7ead24184196d5412
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685492"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503284"
 ---
-# <a name="tabular-modeling-1400-compatibility-level"></a>Modelado tabular (nivel de compatibilidad 1400)
+# <a name="adventure-works-internet-sales-tutorial-1400"></a>Tutorial de Adventure Works Internet Sales (1400)
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
@@ -47,7 +47,7 @@ Para completar este tutorial, necesitará:
   
 -   Un servidor de Azure Analysis Services o un servidor de SQL Server 2017 Analysis Services en modo Tabular. Regístrese para obtener una [evaluación de Azure Analysis Services](https://azure.microsoft.com/services/analysis-services/) y [crear un servidor](https://docs.microsoft.com/azure/analysis-services/analysis-services-create-server) o descargar una segunda oportunidad [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
--   Un [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal) con el **base de datos de ejemplo AdventureWorksDW**, o un almacenamiento de datos local SQL Server con un [base de datos de ejemplo AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Al instalar una base de datos AdventureWorksDW en un almacén de datos local SQL Server, use la versión de la base de datos de ejemplo que se corresponde con la versión del servidor. 
+-   Un [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal) con el **base de datos de ejemplo AdventureWorksDW**, o un almacenamiento de datos local SQL Server con un [base de datos de ejemplo AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Al instalar una base de datos AdventureWorksDW en un almacén de datos local SQL Server, use la versión de base de datos de ejemplo que se corresponde con la versión del servidor. 
 
     **Importante:** Si instala la base de datos de ejemplo para un almacenamiento de datos local SQL Server e implementa el modelo en un servidor de Azure Analysis Services, un [puerta de enlace de datos local](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway) es necesario.
 

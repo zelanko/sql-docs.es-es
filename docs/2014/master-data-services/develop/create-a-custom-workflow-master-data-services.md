@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ebceefdc89494d65ea34d6c3d8f9ff81b71b139c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 58a542c8cbe72c420797f34280c2fb7422b82207
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62924727"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479553"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Crear un flujo de trabajo personalizado (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utiliza reglas de negocio para crear soluciones básicas de flujo de trabajo, como actualizar y validar datos automáticamente, y enviar notificaciones por correo electrónico en función de las condiciones que especifique. Cuando requiera un procesamiento más complejo que el que proporcionan las acciones de flujo de trabajo integradas, puede usar un flujo de trabajo personalizado. Un flujo de trabajo personalizado es un ensamblado de .NET creado por usted. Cuando se llama a su ensamblado de flujo de trabajo, el código puede realizar cualquier acción que requiera la situación. Por ejemplo, si su flujo de trabajo requiere un procesamiento de eventos más complejos, como aprobaciones de varios niveles o árboles de decisiones complejos, puede configurar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para que inicie un flujo de trabajo personalizado que analice los datos y determine dónde enviarlos para su aprobación.  

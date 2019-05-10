@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c22babc0f8a4ff56ef845ca0fc0b5cd2b31475e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d0e5ffc088918924ae08d4fde2cc7064de1abcbb
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792962"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484258"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importar un dominio desde un archivo .dqs
   En este tema se describe cómo importar un dominio desde un archivo .dqs a una base de conocimiento existente de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Los archivos de datos .dqs se crean al exportar un dominio o una base de conocimiento desde la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . El archivo de datos .dqs está cifrado, por lo que no se puede ver.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - models [Master Data Services], creating a deployment package
 - creating packages [Master Data Services]
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d8511565ebaa757fb10d9f4b16ea2c973c3c94d4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 21303e8b4fbf6f1d03fa2487a31457355febc2a7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754397"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487427"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Crear un paquete de implementación de modelo mediante el asistente
 
@@ -28,7 +28,7 @@ ms.locfileid: "52754397"
 
   Use el Asistente para la implementación de modelos de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para crear un paquete de los objetos del modelo solamente. Si necesita incluir datos en un paquete, consulte [Implementar un paquete de implementación de modelo mediante MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   En la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , debe tener permiso de acceso al área funcional **Administración del sistema** .  
@@ -55,11 +55,11 @@ ms.locfileid: "52754397"
   
 8.  Haga clic en **Cerrar** para cerrar el asistente.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   [Implementar un paquete de implementación de modelo mediante el asistente](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Implementar modelos &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

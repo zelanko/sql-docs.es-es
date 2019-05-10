@@ -2,25 +2,40 @@
 title: Notas de la versión
 titleSuffix: Azure Data Studio
 description: Notas de la versión de Data Studio Azure
-ms.custom: seodec18
-ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f142602efa4e2c0d7c12b4f5f7634f2a9b668cb3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 05/08/2019
+ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143714"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450028"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión para Azure Data Studio
 
 **[Descargue e instale la versión más reciente.](download.md)**
+
+## <a name="may-2019"></a>Mayo de 2019
+
+8 de mayo de 2019 &nbsp;  /  &nbsp; versión: 1.7.0 
+
+&nbsp;
+
+| Cambiar | Detalles |
+| :----- | :------ |
+| Versión de extensión de comparación de esquemas | Comparación de esquemas es una característica conocida en SQL Server Data Tools (SSDT) y su caso de uso principal es comparar y visualizar las diferencias entre las bases de datos y archivos .dacpac y ejecutar acciones para que sean iguales. |
+| Mueve la vista de tareas a la ventana de salida | Los usuarios ahora pueden ver el estado de las tareas de ejecución prolongada, como copia de seguridad, restauración y comparación de esquemas en la vista de tareas en la ventana de salida
+| Se agregó la página principal | &bull; &nbsp; Vínculos a las acciones comunes, como la nueva consulta, el nuevo archivo, nuevo cuaderno <br/>&bull; &nbsp; Vínculos a documentación y Github |
+| Mejoras del Bloc de notas SQL | &bull; &nbsp; Mejoras de representación de markdown, incluida una mejor compatibilidad con tablas y notas <br/>&bull; &nbsp; Mejoras de facilidad de uso en la barra de herramientas <br/>&bull; &nbsp; Vínculos de markdown para cuadernos de confianza ya no requieren Cmd/Ctrl y haga clic en y pueden hacer clic directamente <br/>&bull; &nbsp; Mejoras en los procesos de Jupyter de limpieza después de cerrar los blocs de notas y reduciendo los errores al iniciar simultáneamente varios blocs de notas <br/>&bull; &nbsp; Mejoras en las conexiones de Bloc de notas para asegurarse de errores de SQL no se producen al ejecutar 2 blocs de notas en la misma base de datos <br/>&bull; &nbsp; Mejoras en el Bloc de notas el desplazamiento automático a la celda actualmente en ejecución al hacer clic en el botón ejecutar las celdas de la barra de herramientas <br/>&bull; &nbsp; Mejoras de rendimiento y la estabilidad generales |
+| Resolver errores y problemas. | Consulte [errores y problemas en GitHub](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1). |
+| &nbsp; | &nbsp; |
 
 ## <a name="april-2019"></a>April de 2019
 

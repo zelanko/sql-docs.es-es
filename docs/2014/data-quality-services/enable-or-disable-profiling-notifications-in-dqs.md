@@ -11,15 +11,15 @@ helpviewer_keywords:
 - notifications,enable
 - notifications,disable
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ae8564c14523f7febad0416df03fb0464933a26c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5555e49a85d50b6b5a48002a176055605ee06913
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792957"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484223"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Habilitar o deshabilitar notificaciones de generación de perfiles en DQS
   En este tema se describe cómo habilitar o deshabilitar las notificaciones de generación de perfiles en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). De forma predeterminada, las notificaciones de generación de perfiles están habilitadas en DQS. Las notificaciones de generación de perfiles le permiten conocer hechos importantes sobre el origen de datos y la eficacia de la actividad actual llevada a cabo en los datos. Para obtener más información, consulte [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  

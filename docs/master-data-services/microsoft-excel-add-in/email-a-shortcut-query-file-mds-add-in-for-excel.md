@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ed28d44aaa89e89ca4769007a5057a97577d2a05
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 4e368a2957e8caf8b83541e8cf0e1fd158f8eeb8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419306"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488078"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Enviar por correo electrónico un archivo de consulta de acceso directo (complemento MDS para Excel)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52419306"
 
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede enviar por correo electrónico un archivo de consulta de acceso directo a alguien si quiere asegurarse de que va a trabajar con los mismos datos que usted. Debe compartir las consultas en lugar de guardar la hoja de cálculo y enviarla por correo electrónico.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe tener Outlook 2010 o posterior instalado.  
@@ -37,11 +37,11 @@ ms.locfileid: "52419306"
   
 2.  En el grupo **Guardar y enviar** , haga clic en **Enviar consulta**. Se abre un mensaje de correo electrónico y se adjunta el archivo de consulta de acceso directo.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   Para abrir el archivo de consulta de acceso directo, el destinatario del correo electrónico debe tener instalado MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] . El destinatario puede hacer doble clic en el archivo para abrirlo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Archivos de consulta de acceso directo &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
   

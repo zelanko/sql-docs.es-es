@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8bed79906ff69305a135b1c7249cd4d3331ca3d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b5f1297927510fe6f0f5b15ac185316687326ce6
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923721"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482747"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>Actualizar datos (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], actualice los datos si desea obtener la información más reciente del repositorio MDS sin abrir una nueva hoja de cálculo. Puede actualizar todas las celdas o una selección de ellas. Esto puede resultar útil si ha insertado columnas con fórmulas personalizadas u otros datos que no se administran en MDS y desea mantenerlos.  

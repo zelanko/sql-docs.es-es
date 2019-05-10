@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9af9e0eaf06fca60da515a16e7e6830dcb8462d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5d708a2e3daca372bc336e91886889b79909627a
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62659700"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357402"
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Escenarios de globalización para Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "62659700"
 |**Capacidad**|**Tabular**|**Multidimensional**|  
 |[Idiomas e intercalaciones &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)|Heredado del sistema operativo.|Heredado, pero con la capacidad de reemplazar el idioma y la intercalación de objetos importantes en la jerarquía de modelo.|  
 |Ámbito de compatibilidad con la traducción|Leyendas y descripciones.|Las traducciones se pueden crear para nombres de objeto, leyendas, identificadores y descripciones. También pueden estar en cualquier script y lenguaje Unicode. Es así aunque las herramientas y el entorno estén en otro idioma. Por ejemplo, en un entorno de desarrollo en el que se usen el idioma inglés y una intercalación latina en toda la pila, puede incluir en el modelo un objeto que utilice caracteres cirílicos en su nombre.|  
-|Implementación de compatibilidad con la traducción|Creación con [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para generar archivos de traducción que rellenará y, luego, importará de vuelta en el modelo.<br /><br /> Vea [Traducciones en modelos tabulares &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md) para obtener más información.|Creación con[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir las traducciones del título, la descripción y los tipos de cuenta de cubos y medidas, dimensiones y atributos.<br /><br /> Vea [Traducciones en modelos multidimensionales &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md) para obtener más información. Encontrará una lección sobre cómo usar esta característica en [lección 9: Definir perspectivas y traducciones](../analysis-services/lesson-9-defining-perspectives-and-translations.md) de la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tutorial.|  
+|Implementación de compatibilidad con la traducción|Creación con [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para generar archivos de traducción que rellenará y, luego, importará de vuelta en el modelo.<br /><br /> Vea [Traducciones en modelos tabulares &#40;Analysis Services&#41;](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md) para obtener más información.|Creación con[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir las traducciones del título, la descripción y los tipos de cuenta de cubos y medidas, dimensiones y atributos.<br /><br /> Vea [Traducciones en modelos multidimensionales &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md) para obtener más información. |  
 |Conversión de moneda|No disponible.|La conversión de moneda convierte las medidas que contienen datos de divisas con scripts MDX especializados. Puede usar el Asistente de Business Intelligence de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] para generar un script MDX que utilice una combinación de datos y metadatos de dimensiones, atributos y grupos de medida para convertir las medidas que contienen datos de divisas. Vea [Conversiones de moneda &#40;Analysis Services&#41;](../analysis-services/currency-conversions-analysis-services.md).|  
   
 ## <a name="see-also"></a>Vea también  

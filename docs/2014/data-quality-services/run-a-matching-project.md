@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.matchingproject.export.f1
 - sql12.dqs.matchingproject.map.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f020f30d651acd8ac9267b510d116af808d9b5e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7c17f478c8c7735aca0100a2fd99d6315d923bad
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792343"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481070"
 ---
 # <a name="run-a-matching-project"></a>Ejecutar un proyecto de coincidencia
   En este tema se describe cómo realizar la búsqueda de coincidencias de datos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). El proceso de búsqueda de coincidencias identifica los clústeres de registros coincidentes en función de las reglas de coincidencia existentes en la directiva de coincidencia, designa un registro de cada clúster como el registro que permanece basándose en una regla de permanencia, y exporta los resultados. DQS realiza el proceso de búsqueda de coincidencias, también denominado eliminación de datos duplicados, en un proceso asistido por PC, pero es usted quien crea las reglas de coincidencia de forma interactiva y quien selecciona la regla de permanencia entre varias opciones, por lo que también es quien controla el proceso de búsqueda de coincidencias.  

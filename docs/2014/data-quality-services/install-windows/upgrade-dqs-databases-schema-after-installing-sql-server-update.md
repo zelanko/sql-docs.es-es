@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 984f6927f4602703b71526bf4d005202fe09fcdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5a2b13c80c9e6ee83d2713feab5d9839ded4a6d7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792443"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481261"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Actualizar el esquema de las bases de datos DQS tras instalar la actualización de SQL Server
   Tras instalar una actualización de SQL Server (revisión o actualización acumulativa) en una instancia de DQS configurada previamente, puede que tenga que actualizar el esquema de bases de datos DQS ejecutando el archivo DQSInstaller.exe con el parámetro de la línea de comandos **upgrade** . De lo contrario, podría recibir un mensaje de error similar al siguiente al intentar conectarse a Data Quality Server con su Data Quality Client:  

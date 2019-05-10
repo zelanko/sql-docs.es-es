@@ -11,15 +11,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], creating link attributes
 - creating link attributes [Master Data Services]
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4bcd5917c6215fc263283fb5d66269fab6645fb1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 050256d488646425cd35580796e0fcfc771bea6d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779207"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487307"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Crear un atributo de vínculo (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52779207"
 > [!NOTE]  
 >  Cuando los usuarios escriban un valor para un atributo de vínculo, la cadena debe comenzar por **https://** o se mostrará un error.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -45,7 +45,7 @@ ms.locfileid: "52779207"
 |columna|Descripción|  
 |------------|-----------------|  
 |Estado|Estado del atributo.<br /><br /> Al hacer clic en Guardar, aparece la imagen ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización"), que indica que se está actualizando el atributo.<br /><br /> Si hay errores al crear o editar un atributo, aparecerá la imagen ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error").<br /><br /> En caso contrario, el estado será correcto y aparecerá la imagen ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto").|  
-|Nombre|El nombre del atributo.|  
+|NOMBRE|El nombre del atributo.|  
 |Nombre para mostrar|Nombre para mostrar del atributo.|  
 |Descripción|Descripción del atributo.|  
 |Ancho de píxel de la pantalla|Ancho del atributo.|  
@@ -96,7 +96,7 @@ ms.locfileid: "52779207"
   
 13. Haga clic en **Guardar**.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Atributos &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
  [Cambiar el nombre y el tipo de datos de un atributo &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Crear un atributo basado en dominio &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

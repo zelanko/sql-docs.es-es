@@ -10,15 +10,15 @@ helpviewer_keywords:
 - versions [Master Data Services], deleting
 - deleting versions [Master Data Services]
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d75d6719219a41dfc42071a82375a66bdd877a57
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1e9f8d65e1a835af954952a64322f21a484a16f3
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62925035"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483338"
 ---
 # <a name="delete-a-version-master-data-services"></a>Eliminar una versión (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine una versión cuando esté seguro de que ya no necesita los datos maestros asociados a la misma. Después de eliminar una versión, no puede recuperar los datos maestros asociados.  

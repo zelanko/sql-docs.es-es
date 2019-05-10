@@ -3,17 +3,17 @@ title: 'Instalar SQL Server Machine Learning Services (en bases de datos) en Win
 description: R en SQL Server o Python en los pasos de instalación de SQL Server para SQL Server 2017 Machine Learning Services en Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4cd076ae79db7537235aa2a57fe4992ac0993473
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 088a553b28e968c1241486040de3c628fd6299cc
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748677"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097301"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Instalar SQL Server Machine Learning Services en Windows
 
@@ -252,6 +252,7 @@ En el nivel de instancia, podría incluir una configuración adicional:
 * [Habilitar los protocolos de red adicionales](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Habilitar conexiones remotas](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [Crear un inicio de sesión para SQLRUserGroup](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
+* [Administrar las cuotas de disco](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) para evitar scripts externos que se ejecutan las tareas que se agote el espacio en disco
 
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 

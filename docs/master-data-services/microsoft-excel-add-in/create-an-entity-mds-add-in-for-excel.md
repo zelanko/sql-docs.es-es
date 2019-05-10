@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 79a35e83a492a45f3683759445eafe815b43e789
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: ea995a4d0f188db2e958b3020da9646a6b069a21
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663743"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488233"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Crear una entidad (Complemento MDS para Excel)
 
@@ -24,12 +24,12 @@ ms.locfileid: "47663743"
 
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], los administradores pueden crear nuevas entidades para almacenar datos. Cuando crea una entidad, debe cargar al menos una muestra de los datos que desea almacenar.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso a las áreas funcionales del **Explorador** y de **Administración del sistema** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administrators &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
   
 -   Debe tener un modelo existente en el que crear la entidad. Para obtener más información, consulte [Crear un modelo &#40;Master Data Services&#41;](../../master-data-services/create-a-model-master-data-services.md).  
   
@@ -73,13 +73,13 @@ ms.locfileid: "47663743"
   
 12. Haga clic en **Aceptar**. Cuando haya creado la entidad correctamente, aparecerá una nueva fila de encabezado, las celdas se resaltarán y el nombre de la hoja se actualizará para coincidir con el nombre de la entidad.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   Para ver los errores producidos, en el grupo **Publicar y validar** , haga clic en **Mostrar estado**. Se muestran las columnas ValidationStatus e InputStatus. Para obtener más información, consulte [Validar datos &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md).  
   
 -   Confirme que los atributos se crearon con el tipo de datos que esperaba.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Crear un atributo basado en dominio &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

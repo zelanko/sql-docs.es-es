@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 67f58d5fea9da2df2e65d4085446f591ebd7ff25
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 697a1c06a2d30d5721c122c557f3e41836335b02
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147950"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449953"
 ---
 # <a name="data-mining-query-tools"></a>Herramientas de consulta de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "50147950"
 |Consulta de minería de datos, transformación|Ejecuta una consulta de predicción en un flujo de datos usando los datos proporcionados por un origen de flujo de datos.<br /><br /> El editor de tareas incorpora el Generador de consultas de predicción y un cuadro de texto para modificar la consulta DMX manualmente.<br /><br /> La transformación solo se puede utilizar para crear consultas que utilicen los datos del flujo de datos; es decir, consultas que utilicen la sintaxis de PREDICTION JOIN. Este componente no se puede utilizar para ejecutar consultas de contenido u otros tipos de instrucciones DMX.|  
   
 ##  <a name="bkmk_API"></a> Interfaces de programación de aplicaciones  
- Puede crear aplicaciones personalizadas que ejecuten consultas en modelos de minería de datos mediante distintos lenguajes de programación, junto con protocolos de servidor como OLE DB o el cliente ADOMD de Analysis Services. Para más información, vea [Programación de minería de datos](../../analysis-services/data-mining-programming.md).  
+ Puede crear aplicaciones personalizadas que ejecuten consultas en modelos de minería de datos mediante distintos lenguajes de programación, junto con protocolos de servidor como OLE DB o el cliente ADOMD de Analysis Services. Para más información, vea [Programación de minería de datos](../../analysis-services/data-mining/data-mining-programming.md).  
   
  Sin embargo, XMLA constituye el formato del mensaje subyacente para todas las interacciones con un servidor de Analysis Services. En un mensaje XMLA, las consultas se representan de forma diferente dependiendo de si se envía una consulta de predicción basada en DMX, una consulta de contenido o una consulta que recupera metadatos del modelo mediante los conjuntos de filas de esquema de minería de datos.  
   

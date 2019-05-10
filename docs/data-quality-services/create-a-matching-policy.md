@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.kb.kbmatchingpolicy.f1
 - sql13.dqs.kb.kbmatchingresults.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 87ef5477bcff01caec7027bb5aac713fbc0ccc8a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: 98557d690edfcb3148dbc0b876e7ff26804de7db
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023738"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480466"
 ---
 # <a name="create-a-matching-policy"></a>Crear una directiva de coincidencia
 
@@ -37,7 +37,7 @@ ms.locfileid: "56023738"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN para crear una directiva de coincidencia.  
   
 ##  <a name="MatchingRules"></a> Cómo establecer parámetros para las reglas de coincidencia  
@@ -209,7 +209,7 @@ ms.locfileid: "56023738"
   
 -   **Nuevos valores**: número total de valores que son nuevos desde la ejecución anterior y su porcentaje del total  
   
--   **valores únicos**: número total de valores únicos existentes en los campos y su porcentaje del total  
+-   **Valores únicos**: número total de valores únicos existentes en los campos y su porcentaje del total  
   
 -   **Nuevos valores únicos**: número total de valores únicos que son nuevos en los campos y su porcentaje del total  
   

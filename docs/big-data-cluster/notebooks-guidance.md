@@ -2,26 +2,26 @@
 title: Ejecutar blocs de notas en Azure Data Studio
 titleSuffix: SQL Server big data clusters
 description: Este artículo explica cómo ejecutar Jupyter Notebook en Azure Data Studio conectado a un clúster de macrodatos de SQL Server 2019.
-author: rothja
+author: achatter
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a220b78fe93b286837e0e235b881ffd1a612e512
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 6cc491ee2592ad68ff334e0c1b7287b5754220dc
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58859976"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65462048"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Uso de cuadernos en versión preliminar de SQL Server 2019
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describe cómo iniciar la experiencia del cuaderno en Azure Data Studio y cómo empezar a crear sus propios cuadernos. También muestra cómo escribir utilizando diferentes kernels de cuadernos.
+En este artículo se describe cómo iniciar la experiencia del cuaderno en la versión más reciente de [**Azure Data Studio**](../azure-data-studio/download.md) y cómo empezar a crear sus propios cuadernos. También muestra cómo escribir utilizando diferentes kernels de cuadernos.
 
 ## <a name="connect-to-sql-server"></a>Conectar a SQL Server
 
@@ -48,7 +48,7 @@ Hay varias formas de iniciar un nuevo cuaderno.
 
 La instalación de Bloc de notas en Azure Data Studio admite de forma nativa del núcleo de SQL. Si es un desarrollador SQL y le gustaría utilizar blocs de notas, entonces esto sería elegido Kernel. 
 
-El núcleo de SQL también puede utilizarse para conectarse a instancias de servidor de PostgreSQL. Si es un desarrollador de PostgreSQL y le gustaría conectarse al servidor de PostgreSQL, a continuación, descargue el [ **PostgreSQL extensión** ](../azure-data-studio/postgres-extension.md) en el marketplace de extensiones de Azure Data Studio.
+El núcleo de SQL también puede utilizarse para conectarse a instancias de servidor de PostgreSQL. Si es un desarrollador de PostgreSQL y le gustaría conectar los blocs de notas con el servidor de PostgreSQL, a continuación, descargue el [ **PostgreSQL extensión** ](../azure-data-studio/postgres-extension.md) en el marketplace de extensiones de Azure Data Studio y, a continuación, iniciar **nuevo cuaderno** para abrir una instancia del Bloc de notas para conectarse al servidor de PostgreSQL.
 
 ![Conexión de PostgreSQL](media/notebooks-guidance/sql-kernel-dropdown.png)
 
@@ -73,6 +73,19 @@ Núcleo de SQL para conectarse a la instancia del servidor de PostgreSQL
 Resultados de la consulta
 
 ![Resultados de la consulta](media/notebooks-guidance/pgsql-cell-results.png)
+
+Si desea agregar las celdas de texto a la existente conectado al núcleo de SQL en Bloc de notas, haga clic en el **+ texto** comando en la barra de herramientas.
+
+![Barra de herramientas del Bloc de notas](media/notebooks-guidance/notebook-toolbar.png)
+
+La celda cambia al modo de edición y ahora escriba markdown y verá la vista previa a la vez
+
+![Celda de markdown](media/notebooks-guidance/notebook-markdown-cell.png)
+
+Hacer clic fuera de la celda de texto se mostrará el texto de markdown.
+
+![Text v markdownu](media/notebooks-guidance/notebook-markdown-preview.png)
+
 
 ### <a name="configure-python-for-notebooks"></a>Configurar Python para cuadernos
 
@@ -119,9 +132,27 @@ Blocs de notas abierto en Azure Data Studio son predeterminados **confianza**.
 
 Si abre un bloc de notas de algún otro origen, se abrirá en **que no son de confianza** modo y, a continuación, se puede realizar **confianza**.
 
+### <a name="run-cells"></a>Ejecute las celdas
+Si desea ejecutar todas las celdas del Bloc de notas, a continuación, haga clic en el **celdas ejecutar** botón en la barra de herramientas.
+
+![Text v markdownu](media/notebooks-guidance/run-cell.png)
+
+
+### <a name="clear-results"></a>Borrar resultados
+
+Si desea borrar los resultados de todas las celdas ejecutadas en el Bloc de notas, puede hacer clic en el **Borrar resultados** botón en la barra de herramientas.
+
+![Text v markdownu](media/notebooks-guidance/clear-results.png)
+
 ### <a name="save"></a>Guardar
 
-Puede guardar el cuaderno por **CTRL+s** o haciendo clic en el **Guardar archivo**, **Guardar como...**  y **archivo Guardar todo** comandos en el menú archivo y **archivo: Guardar** los comandos escritos en la paleta de comandos.
+Para guardar el Bloc de notas realice una de las siguientes acciones.
+
+- Seleccione Ctrl + S
+- Haga clic en **archivo** > **guardar**
+- Haga clic en **archivo** > **Guardar como...**
+- Haga clic en **archivo** > **guardar todo** 
+- En la paleta de comandos, escriba **archivo: Save** 
 
 ### <a name="pyspark3pyspark-kernel"></a>Kernel Pyspark3/PySpark
 

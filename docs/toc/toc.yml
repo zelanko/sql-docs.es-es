@@ -6978,180 +6978,173 @@
                     - name: Análisis de un plan de ejecución real
                       href: ../relational-databases/performance/analyze-an-actual-execution-plan.md
         - name: OLTP en memoria
-          href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
           items:
-            - name: Ejemplos
-              items:
-                - name: Ejemplos de código de OLTP en memoria
-                  href: ../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md
-                  items:
-                    - name: 'Demostración: Mejora de rendimiento de OLTP en memoria'
-                      href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
-                    - name: Crear una tabla optimizada para memoria y un procedimiento almacenado compilado de forma nativa
-                      href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
-                    - name: Creación de particiones en el nivel de aplicación
-                      href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
-                    - name: Base de datos de ejemplo para OLTP en memoria
-                      href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
             - name: Conceptos
               items:
-                - name: Escenarios de uso
+                - name: Información general de In-Memory
                   href: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
-                - name: Planear la adopción de características
-                  href: ../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
-                - name: Requisitos
-                  href: ../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
-                - name: Funciones escalares definidas por el usuario para OLTP en memoria
-                  href: ../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
-                - name: Índices
-                  href: ../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
-                - name: Tablas con optimización para memoria
-                  href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
                   items:
-                    - name: Información general
+                    - name: Tablas con optimización para memoria
                       href: ../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md
-                    - name: Compilación nativa
+                    - name: Encuesta rápida
+                      href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
+                    - name: 'Vídeo, muestra, recursos'
+                      href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+                - name: Planeación para In-Memory
+                  href: ../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
+                  items:
+                    - name: Requisitos
+                      href: ../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
+                    - name: Evaluación de las ventajas
+                      href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
+                    - name: Evaluación con PowerShell
+                      href: ../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
+                    - name: Asistente de optimización de memoria
+                      href: ../relational-databases/in-memory-oltp/memory-optimization-advisor.md
+                    - name: Asistente de compilación nativa
+                      href: ../relational-databases/in-memory-oltp/native-compilation-advisor.md
+                    - name: Tamaños de tabla y fila
+                      href: ../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md
+                    - name: Cálculo de la memoria
+                      href: ../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md
+                    - name: Configuración del almacenamiento
+                      href: ../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md
+                    - name: Migración de desencadenadores
+                      href: ../relational-databases/in-memory-oltp/migrating-triggers.md
+                - name: Compilado de forma nativa
+                  href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
+                  items:
+                    - name: Procedimientos almacenados y de tablas
                       href: ../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md
-                    - name: Modificar tablas
-                      href: ../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md
+                    - name: Bloques atómicos
+                      href: ../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
+                    - name: Funciones escalares definidas por el usuario
+                      href: ../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
+                    - name: Procedimientos recomendados
+                      href: ../relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
+                    - name: Acceso interpretado de tablas In-Memory
+                      href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
+                - name: Rendimiento de In-Memory
+                  href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
+                  items:
+                    - name: Hardware para In-Memory
+                      href: ../relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
+                    - name: In-Memory en Azure SQL Database
+                      href: /azure/sql-database/sql-database-in-memory
+                - name: Administración de In-Memory
+                  href: ../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md
+                  items:
+                    - name: Restauración y recuperación
+                      href: ../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
+                    - name: Copia de seguridad
+                      href: ../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
+                    - name: Punto de comprobación
+                      href: ../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
+                    - name: Alta disponibilidad
+                      href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
+                    - name: Escalabilidad
+                      href: ../relational-databases/in-memory-oltp/scalability.md
+                    - name: Implementación de IDENTITY
+                      href: ../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md
+                - name: Arquitectura de In-Memory
+                  href: ../relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md
+                  items:
+                    - name: Storage
+                      href: ../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
+                    - name: Comparación de modos de almacenamiento
+                      href: ../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
+                    - name: Durabilidad
+                      href: ../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
+                    - name: Recolección de elementos no utilizados
+                      href: ../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md
+                - name: T-SQL para In-Memory
+                  href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
+                  items:
+                    - name: T-SQL compatible
+                      href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
+                    - name: T-SQL no compatible
+                      href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
+                    - name: Características no admitidas
+                      href: ../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md
+                    - name: DDL para compilaciones nativas
+                      href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
+                    - name: Definición de la durabilidad
+                      href: ../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md
+                    - name: Tipos de datos
+                      href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
+                    - name: Índices para In-Memory
+                      href: ../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
+                - name: SSIS para In-Memory
+                  href: ../relational-databases/in-memory-oltp/sql-server-integration-services-support-for-in-memory-oltp.md
+            - name: Tutoriales
+              items:
+                - name: Creación de tablas y procesamiento de optimización para memoria
+                  href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+                - name: Partición de aplicación por fecha frecuente
+                  href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
+                - name: Demostración de rendimiento
+                  href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
+                - name: Supervisión y solución de problemas
+                  href: ../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
+            - name: Ejemplos
+              items:
+                - name: Base de datos de muestra para In-Memory
+                  href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
+                - name: Llamada a un proceso compilado de forma nativa
+                  href: ../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md
+                - name: Patrón para la partición de tablas
+                  href: ../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
+                - name: MERGE en procesos compilados de forma nativa
+                  href: ../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
+                - name: 'C# de SMO para In-Memory'
+                  href: ../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
+            - name: Guías de procedimientos
+              items:
+                - name: Tablas optimizadas para memoria
+                  href: ../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md
+                  items:
+                    - name: Índices de hash
+                      href: ../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md
+                - name: Módulos compilados de forma nativa
+                  href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
+                  items:
+                    - name: Módulos compilados de forma nativa de ALTER
+                      href: ../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md
+                - name: Soluciones alternativas de T-SQL
+                  href: ../relational-databases/in-memory-oltp/implementing-update-with-from-or-subqueries.md
+                  items:
+                    - name: Acceso a tablas TempDb
+                      href: ../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md
+                    - name: Consulta entre bases de datos
+                      href: ../relational-databases/in-memory-oltp/cross-database-queries.md
+                    - name: Simulación IF WHILE EXISTS
+                      href: ../relational-databases/in-memory-oltp/simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
+                    - name: 'CASE, expresión'
+                      href: ../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
+                    - name: Columna SQL_VARIANT
+                      href: ../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
+                    - name: Columna calculada en SQL 2016
+                      href: ../relational-databases/in-memory-oltp/migrating-computed-columns.md
                     - name: Transactions
                       href: ../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md
-                    - name: Patrón de aplicación para la creación de particiones
-                      href: ../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
-                    - name: Estadísticas
-                      href: ../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md
-                    - name: Tamaño de tablas y filas
-                      href: ../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md
-                    - name: Guía para el procesamiento de consultas
-                      href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
-                    - name: procedimientos almacenados compilados de forma nativa
-                      href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md
-                      items:
-                        - name: Crear procedimientos almacenados compilados de forma nativa
-                          href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
-                        - name: Altering Natively Compiled T-SQL Modules
-                          href: ../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md
-                        - name: Bloques atomic
-                          href: ../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
-                        - name: Procedimientos almacenados compilados de forma nativa y opciones establecidas de ejecución
-                          href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
-                        - name: Prácticas recomendadas para llamar a un procedimiento almacenado compilado de forma nativa
-                          href: ../relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
-                        - name: Supervisar el rendimiento de los procedimientos almacenados compilados de forma nativa
-                          href: ../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md
-                        - name: Llamar a procedimientos almacenados compilados de forma nativa desde aplicaciones de acceso a datos
-                          href: ../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md
-                    - name: Calcular los requisitos de memoria
-                      href: ../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md
-                      items:
-                        - name: Enlazar una base de datos a un grupo de recursos de servidor
-                          href: ../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
-                        - name: Supervisar y solucionar problemas de uso de memoria
-                          href: ../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
-                        - name: Resolver problemas de memoria insuficiente
-                          href: ../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md
-                        - name: Restaurar una base de datos y enlazarla a un grupo de recursos de servidor
-                          href: ../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md
-                        - name: Recolección de elementos no utilizados
-                          href: ../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md
-                    - name: Crear y administrar recursos de almacenamiento
-                      href: ../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
-                      items:
-                        - name: Configurar el almacenamiento
-                          href: ../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md
-                        - name: El grupo de archivos con optimización para memoria
-                          href: ../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md
-                        - name: Durabilidad
-                          href: ../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
-                        - name: Funcionamiento de los puntos de comprobación
-                          href: ../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
-                        - name: Definir la durabilidad
-                          href: ../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md
-                        - name: Comparar el almacenamiento de tablas optimizadas para memoria y tablas basadas en discos
-                          href: ../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
-                        - name: Escalabilidad
-                          href: ../relational-databases/in-memory-oltp/scalability.md
-                    - name: Copia de seguridad de una base de datos
-                      href: ../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
-                      items:
-                        - name: Restauración por etapas
-                          href: ../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md
-                        - name: Restauración y recuperación
-                          href: ../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
-                    - name: Soporte de SQL Server
-                      href: ../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md
-                      items:
-                        - name: Características no admitidas
-                          href: ../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md
-                        - name: Objetos de administración
-                          href: ../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
-                        - name: SQL Server Integration Services
-                          href: ../relational-databases/in-memory-oltp/sql-server-integration-services-support-for-in-memory-oltp.md
-                        - name: SQL Server Management Studio
-                          href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
-                        - name: Alta disponibilidad
-                          href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
-                        - name: Compatibilidad con T-SQL
-                          href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
-                          items:
-                            - name: Tipos de datos
-                              href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
-                            - name: Acceso a tablas con optimización para memoria mediante T-SQL interpretado
-                              href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
-                            - name: Características admitidas en los módulos T-SQL compilados de forma nativa
-                              href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
-                            - name: Construcciones DDL admitidas para módulos T-SQL compilados de forma nativa
-                              href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
-                            - name: Construcciones T-SQL no admitidas por OLTP en memoria
-                              href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
-                    - name: Migrar a OLTP en memoria
-                      href: ../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md
-                      items:
-                        - name: Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
-                          href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
-                        - name: Asesor de optimización de memoria
-                          href: ../relational-databases/in-memory-oltp/memory-optimization-advisor.md
-                        - name: Asistente de compilación nativa
-                          href: ../relational-databases/in-memory-oltp/native-compilation-advisor.md
-                        - name: Cmdlet de PowerShell para la evaluación de la migración
-                          href: ../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
-                        - name: Implementar SQL_VARIANT en una tabla con optimización para memoria
-                          href: ../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
-                        - name: Migrar columnas calculadas
-                          href: ../relational-databases/in-memory-oltp/migrating-computed-columns.md
-                        - name: Migrar desencadenadores
-                          href: ../relational-databases/in-memory-oltp/migrating-triggers.md
-                        - name: Consultas entre bases de datos
-                          href: ../relational-databases/in-memory-oltp/cross-database-queries.md
-                        - name: Implementar IDENTITY en una tabla con optimización para memoria
-                          href: ../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md
-                        - name: Problemas de migración para los procedimientos almacenados compilados de forma nativa
-                          href: ../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md
-                          items:
-                            - name: Crear y acceder a tablas en TempDB desde procedimientos almacenados compilados de forma nativa
-                              href: ../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md
-                            - name: Simular una instrucción IF-WHILE EXISTS en un módulo compilado de forma nativa
-                              href: ../relational-databases/in-memory-oltp/simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
-                            - name: Implementación de la funcionalidad MERGE en un procedimiento almacenado compilado de forma nativa
-                              href: ../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
-                            - name: Implementación de una expresión CASE de un procedimiento almacenado compilado de forma nativa
-                              href: ../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
-                            - name: Implementación de UPDATE con FROM o subconsultas
-                              href: ../relational-databases/in-memory-oltp/implementing-update-with-from-or-subqueries.md
-                            - name: Implementar una combinación externa
-                              href: ../relational-databases/in-memory-oltp/implementing-an-outer-join.md
-            - name: Instrucciones
-              items:
-                - name: Inventario de tecnologías para mejorar el rendimiento
-                  href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
-                - name: Variable de tabla y tabla temporal más rápida mediante la optimización de memoria
-                  href: ../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
-                - name: Solución de problemas de índices de hash
-                  href: ../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md
-            - name: References
-              items:
-                - name: Notas del producto sobre el funcionamiento interno de SQL Server 2016
-                  href: ../relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md
+                - name: 'Administración, incluida la memoria insuficiente'
+                  href: ../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md
+                  items:
+                    - name: Grupo de recursos
+                      href: ../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
+                    - name: Restauración de una base de datos en un grupo
+                      href: ../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md
+                    - name: Restauración por etapas
+                      href: ../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md
+                - name: 'Rendimiento, incluidas las estadísticas'
+                  href: ../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md
+                  items:
+                    - name: Supervisión del rendimiento
+                      href: ../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md
+                    - name: Tablas temporales más rápidas
+                      href: ../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
+                - name: SSMS para optimización de memoria
+                  href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
         - name: Particiones
           href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
           items:
@@ -7915,6 +7908,8 @@
           items:
             - name: Selección de un algoritmo
               href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
+            - name: Solución de problemas de TDE
+              href: ../relational-databases/security/encryption/troubleshoot-tde.md
             - name: Configuración de Always Encrypted con enclaves seguros
               href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
               items:
@@ -8020,6 +8015,8 @@
               href: ../relational-databases/security/permissions-database-engine.md
             - name: Jerarquía de los permisos
               href: ../relational-databases/security/permissions-hierarchy-database-engine.md
+            - name: Uso de SID de servicio para conceder permisos a servicios en SQL Server
+              href: ../relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md
         - name: Cifrado
           href: ../relational-databases/security/encryption/sql-server-encryption.md
           items:
@@ -10128,8 +10125,10 @@
               href: ../linux/sql-server-linux-manage-ssms.md
             - name: "Usar Azure\_Data\_Studio para administrar"
               href: ../azure-data-studio/quickstart-sql-server.md
-            - name: Usar PowerShell para administrar
+            - name: Uso de Windows PowerShell
               href: ../linux/sql-server-linux-manage-powershell.md
+            - name: Uso de PowerShell Core
+              href: ../linux/sql-server-linux-manage-powershell-core.md
             - name: Usar el trasvase de registros
               href: ../linux/sql-server-linux-use-log-shipping.md
             - name: Usar alertas por correo electrónico y correo de la base de datos

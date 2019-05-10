@@ -11,15 +11,15 @@ keywords:
 - master data services
 - sample
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: db84b03b315d9345056cad9653729415b5dcfccf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 6526794fe6895e31b618a25d17b47ccabb940258
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205824"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65487976"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>Ejemplos de SQL Server: Paquetes de implementación de modelo (MDS)
 
@@ -55,7 +55,7 @@ ms.locfileid: "53205824"
  
  En Master Data Services, un paquete es un archivo XML que contiene una estructura del modelo implementable y, opcionalmente, los datos del modelo. Use los paquetes del modelo para mover las copias de modelos desde un entorno de MDS a otro, o para crear nuevos modelos en el entorno de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] existente.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Implementar un paquete de implementación de modelo mediante MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
   

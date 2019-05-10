@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bca3fe143308bb7bf3d8a8e7754c018c749786cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0398f6d17e5825c68f26be00c5365f240d441307
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791183"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103285"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ SEMANTICSIMILARITYTABLE
 |**source_column_id**|**int**|Identificador de la columna de la que se usó un documento de origen para buscar documentos similares.<br /><br /> Vea las funciones COL_NAME y COLUMNPROPERTY para obtener información detallada sobre cómo recuperar el nombre de columna desde column_id y viceversa.|  
 |**matched_column_id**|**int**|Identificador de la columna de la que se encontró un documento similar.<br /><br /> Vea las funciones COL_NAME y COLUMNPROPERTY para obtener información detallada sobre cómo recuperar el nombre de columna desde column_id y viceversa.|  
 |**matched_document_key**|**\***<br /><br /> Esta clave coincide con el tipo de la clave única de la tabla de origen.|Valor de clave única de extracción semántica y de texto completo del documento o la fila que resultaron ser similares al documento especificado en la consulta.|  
-|**puntuación**|**REAL**|Valor relativo de similitud para este documento en su relación con todos los demás documentos similares.<br /><br /> El valor es un valor fraccionario decimal en el intervalo de [0.0, 1.0] donde una puntuación superior representa una coincidencia más próxima y 1.0 es una puntuación perfecta.|  
+|**score**|**REAL**|Valor relativo de similitud para este documento en su relación con todos los demás documentos similares.<br /><br /> El valor es un valor fraccionario decimal en el intervalo de [0.0, 1.0] donde una puntuación superior representa una coincidencia más próxima y 1.0 es una puntuación perfecta.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Para obtener más información, consulte [buscar documentos similares y relacionados con la búsqueda semántica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  

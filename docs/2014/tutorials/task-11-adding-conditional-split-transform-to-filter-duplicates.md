@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3094bd57-5cf4-4860-bf51-fadd1b309f94
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e2b5fc47b6823a91dd4bb7f74d3ea65fca13bce9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 71b050e49440764d355d4658607600c135741f50
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222563"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476750"
 ---
 # <a name="task-11-adding-conditional-split-transform-to-filter-duplicates"></a>Tarea 11: Adición de la transformación División condicional para filtrar duplicados
   En esta tarea, agregará la transformación División condicional al flujo de datos. Esta transformación ayuda a filtrar duplicados del conjunto de registros de entrada. La transformación Agrupación aproximada agrupa los registros que son coincidentes y elige uno de ellos como registro dinámico. Todos los registros de un grupo tienen el mismo valor _key_out. El registro dinámica del grupo tiene el mismo valor de _key_in que de _key_out. Los demás registros del grupo tienen valores diferentes para _key_in y _key_out. Por tanto, cuando se filtra mediante la condición _key_in==_key_out, solo se obtiene la fila dinámica del grupo.  

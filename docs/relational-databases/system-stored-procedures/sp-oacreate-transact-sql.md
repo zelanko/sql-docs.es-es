@@ -18,12 +18,12 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a4d8a511fe163907de4cec6e12c6f884c7ad983
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589588"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450020"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,22 +40,22 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *Id. de programa*  
+ *progid*  
  Es el identificador de programa (ProgID) del objeto OLE que se va a crear. Esta cadena de caracteres describe la clase del objeto OLE y tiene el formato: **'**_OLEComponent_**.** _Objeto_**'**  
   
  *OLEComponent* es el nombre del componente del servidor de automatización OLE, y *objeto* es el nombre del objeto OLE. El objeto OLE especificado debe ser válido y debe admitir la **IDispatch** interfaz.  
   
  Por ejemplo, SQLDMO. SQLServer es el ProgID de SQL-DMO **SQLServer** objeto. SQL-DMO tiene un nombre de componente de SQLDMO, el **SQLServer** objeto es válido y (como SQL-DMO todos los objetos de) la **SQLServer** admite **IDispatch**.  
   
- *CLSID*  
+ *clsid*  
  Es el identificador de clase (CLSID) del objeto OLE que se va a crear. Esta cadena de caracteres describe la clase del objeto OLE y tiene el formato: **' {**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**}'**. El objeto OLE especificado debe ser válido y debe admitir la **IDispatch** interfaz.  
   
  Por ejemplo, {00026BA1-0000-0000-C000-000000000046} es el CLSID de SQL-DMO **SQLServer** objeto.  
   
- _objecttoken_ **salida**  
+ _objecttoken_ **OUTPUT**  
  Es el token de objeto devuelto, y debe ser una variable local del tipo de datos **int**. Este token de objeto identifica el objeto OLE creado y se utiliza en llamadas a otros procedimientos almacenados de OLE Automation.  
   
- *Contexto*  
+ *context*  
  Especifica el contexto de ejecución en que se ejecuta el objeto OLE recién creado. Si se especifica, este valor debe ser uno de los siguientes:  
   
  **1** = solo servidor OLE de proceso (.dll).  
@@ -84,7 +84,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  El objeto OLE creado se destruye automáticamente al final del lote de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="permissions"></a>Permisos  
- Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
+ Debe pertenecer a la **sysadmin** rol fijo de servidor o permiso de ejecución directamente en este procedimiento almacenado. `Ole Automation Procedures` configuración de debe ser **habilitado** utilizar ningún procedimiento del sistema relacionadas con la automatización OLE.  
   
 ## <a name="examples"></a>Ejemplos  
   

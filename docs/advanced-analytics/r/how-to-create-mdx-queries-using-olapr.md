@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 1bee5741d00e4043314c36800cd4fe5cf61aab48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c0b9cb6e9b52ff1823a613c7e81f7b026c22948f
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503737"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357525"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Cómo crear consultas MDX en R con olapR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ No se admiten las siguientes operaciones:
 
 Los ejemplos siguientes se basan en el proyecto de mart y cubos de datos de AdventureWorks, porque ese proyecto está ampliamente disponible, en varias versiones, incluidos los archivos de copia de seguridad que se pueden restaurar fácilmente a Analysis Services. Si no tiene un cubo existente, obtenga un cubo de ejemplo mediante cualquiera de estas opciones:
 
-+ Crear el cubo que se usa en estos ejemplos, siga el tutorial de Analysis Services hasta lección 4: [Crear un cubo OLAP](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)
++ Crear el cubo que se usa en estos ejemplos, siga el tutorial de Analysis Services hasta lección 4: [Crear un cubo OLAP](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)
 
 + Descargar un cubo existente como una copia de seguridad y restaurarla en una instancia de Analysis Services. Por ejemplo, este sitio proporciona un cubo totalmente procesado en formato comprimido: [De Adventure Works Multidimensional Model SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). Extraiga el archivo y, a continuación, restaurarla a su instancia de SSAS. Para obtener más información, consulte [copias de seguridad y restauración](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), o [Cmdlet Restore-ASDatabase](../../analysis-services/powershell/restore-asdatabase-cmdlet.md).
 

@@ -18,12 +18,12 @@ ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: faf9af4fee3d49dfacaea9ab6e73daef0d56465f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b4a7b238d3f7ade1706a78c3e595ec63ae2cce7
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714883"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449731"
 ---
 # <a name="spoadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_OADestroy objecttoken
  Si **sp_OADestroy** no se llama, el objeto OLE se destruye automáticamente al final del lote.  
   
 ## <a name="permissions"></a>Permisos  
- Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
+ Debe pertenecer a la **sysadmin** rol fijo de servidor o permiso de ejecución directamente en este procedimiento almacenado. `Ole Automation Procedures` configuración de debe ser **habilitado** utilizar ningún procedimiento del sistema relacionadas con la automatización OLE.  
   
 ## <a name="examples"></a>Ejemplos  
  El siguiente ejemplo destruye creado previamente **SQLServer** objeto.  

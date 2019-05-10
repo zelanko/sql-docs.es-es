@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: a9fdfb466f34e3eb40ad80d53c203f7ee8866f08
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7819d3dffbcfaef8a94a1644db1694d1f80ae060
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676912"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106268"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Procedimientos recomendados e instrucciones de configuración de SQL Server en Linux
 
@@ -40,7 +40,7 @@ Se recomienda realizar las siguientes tareas de configuración después de insta
 
 ### <a name="advanced-configuration"></a>Configuración avanzada
 
-Las recomendaciones siguientes son valores de configuración opcionales que puede elegir realizar tras la instalación de SQL Server en Linux. Estas opciones se basan en los requisitos de su carga de trabajo y la configuración de su sistema operativo de Linux.
+Las recomendaciones siguientes son valores de configuración opcionales que desee realizar después de la instalación de SQL Server en Linux. Estas opciones se basan en los requisitos de su carga de trabajo y la configuración de su sistema operativo de Linux.
 
 - **Establecer un límite de memoria con mssql-conf**
 
@@ -74,7 +74,7 @@ En la tabla siguiente proporciona recomendaciones para la configuración de disc
 | Parámetro | Valor | Más información |
 |---|---|---|
 | lectura anticipada del disco | 4096 | Consulte la **blockdev** comando |
-| configuración de sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>VM.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Consulte la **sysctl** comando |
+| configuración de sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Consulte la **sysctl** comando |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Kernel configuración automática numa equilibrio para sistemas de varios nodos NUMA
 
@@ -100,7 +100,7 @@ Use la **opción noatime tal** atributo con cualquier sistema de archivos que se
 
 La mayoría de las instalaciones de Linux deben tener esta opción en forma predeterminada. Se recomienda para que la experiencia de rendimiento más coherente dejar esta opción de configuración habilitada.
 
-### <a name="swapfile"></a>archivo de intercambio
+### <a name="swapfile"></a>swapfile
 
 Asegúrese de que tener un archivo de intercambio configurado correctamente para evitar cualquier problemas de memoria insuficiente. Consulte la documentación de Linux para crear y ajustar correctamente el tamaño de un archivo de intercambio.
 

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90189e37b486d712f0a1a93fccc42b101f90bdbb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: c45e7f7122aba245297a4ab6fe74ea978bb2a6ad
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027486"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480440"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -69,13 +69,13 @@ ms.locfileid: "56027486"
   
 -   **Sugerido**: valores para los que DQS detectó sugerencias con un nivel de confianza mayor que el *umbral de sugerencia automática*, pero inferior al *umbral de corrección automática*. Debe revisar estos valores y aprobarlos o rechazarlos según corresponda.  
   
--   **Nuevo**: valores válidos para los que DQS no tiene suficiente información (sugerencia), por lo que no se pueden asignar a ninguna otra pestaña. Además, esta pestaña también contiene valores con un nivel de confianza inferior al *umbral de sugerencia automática* , pero lo suficientemente altos para que se identifiquen como válidos.  
+-   **Nuevo**: Valores válidos para el que DQS no tiene suficiente información (sugerencia) y, por lo tanto, no se puede asignar a ninguna otra pestaña. Además, esta pestaña también contiene valores con un nivel de confianza inferior al *umbral de sugerencia automática* , pero lo suficientemente altos para que se identifiquen como válidos.  
   
--   **No válido**: valores que se marcaron como no válidos en el dominio de la base de conocimiento o valores que no cumplieron una regla de dominios o datos de referencia. Esta pestaña también contendrá los valores que rechaza el usuario en cualquiera de las otras cuatro pestañas durante el proceso de limpieza interactivo.  
+-   **No válido**: Valores que se marcaron como no válidos en el dominio en la base de conocimiento o valores que no se pudieron un dominio regla o datos de referencia. Esta pestaña también contendrá los valores que rechaza el usuario en cualquiera de las otras cuatro pestañas durante el proceso de limpieza interactivo.  
   
 -   **Corregido**: valores corregidos por DQS durante el proceso de limpieza automatizada para los que DQS detectó una corrección para el valor con un nivel de confianza por encima del *umbral de corrección automática*. Esta pestaña también contendrá los valores para los que el usuario especificó un valor correcto en la columna de **Corregir a** durante la limpieza interactiva y que fueron posteriormente aprobados haciendo clic en el botón de opción de la columna **Aprobar** en cualquiera de las otras cuatro pestañas.  
   
--   **Correcto**: valores que se estiman correctos. Por ejemplo, si el valor coincide con un valor de dominio. Si procede, puede invalidar la limpieza de DQS; para ello, rechace los valores en esta pestaña o especifique una palabra alternativa en la columna **Corregir a** y haga clic en el botón de opción de la columna **Aceptar** . Esta pestaña también contendrá los valores que aprobó el usuario durante la limpieza interactiva haciendo clic en el botón de opción de la columna **Aprobar** en la pestaña **Nuevo** o **No válido** .  
+-   **Correcto**: Valores que se estiman correctos. Por ejemplo, si el valor coincide con un valor de dominio. Si procede, puede invalidar la limpieza de DQS; para ello, rechace los valores en esta pestaña o especifique una palabra alternativa en la columna **Corregir a** y haga clic en el botón de opción de la columna **Aceptar** . Esta pestaña también contendrá los valores que aprobó el usuario durante la limpieza interactiva haciendo clic en el botón de opción de la columna **Aprobar** en la pestaña **Nuevo** o **No válido** .  
   
 > [!NOTE]  
 >  En las pestañas **Sugerido**, **Corregido**y **Correcto** , DQS muestra el valor inicial de un dominio, si procede, en la columna **Corregir a** en comparación con el valor respectivo de dominio.  
@@ -107,7 +107,7 @@ ms.locfileid: "56027486"
 |Describe cómo limpiar datos con conocimiento desde un servicio de datos de referencia.|[Limpiar datos mediante el conocimiento de datos de referencia &#40;externo&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Describe cómo limpiar un dominio compuesto.|[Limpiar datos en un dominio compuesto](../data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Proyectos de calidad de datos &#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [Coincidencia de datos](../data-quality-services/data-matching.md)  
   

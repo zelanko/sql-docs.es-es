@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1a2826bb0c9b542837e05b7f600c9ce7d934fd4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63143094"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489105"
 ---
 # <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Tarea 5: Creación de un atributo basado en dominio desde Excel
   En esta tarea, convertir el **estado** atributo de la **proveedor** entidad como un **atributo basado en dominio**. Después de configurar el atributo de estado que se van a uno basado en dominio y publicarlo en MDS, una nueva entidad denominada **estado** se creará en el servidor MDS con todos los valores de la columna y el **estado** atributo de la **Proveedor** entidad se rellenará con los valores de la **estado** entidad. Ahora, el **proveedores** modelo debe tener dos entidades: **Proveedor** y **estado** donde el **estado** atributo de la **proveedor** entidad es un atributo basado en dominio que depende de **estado** entidad.  

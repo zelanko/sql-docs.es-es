@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3f1d3eb7-2baa-4215-b040-0b41e3d10740
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 27e7351f1643d18790d67703858ec6df7694ebd8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5fa153b16e8fd978cab74838c9e0cee8a17cf72f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249995"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489238"
 ---
 # <a name="task-3-optional-reviewing-the-subscription-views"></a>Tarea 3 (opcional): Revisión de las vistas de suscripciones
   En esta tarea, confirmará que se crean las vistas de SQL mediante SQL Server Management Studio.  

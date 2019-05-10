@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c80f719bd756a0ad241ef270507e638b08c2081
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222647"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65485238"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Tarea 12: Adición de la transformación Columna derivada para agregar las columnas necesarias en MDS
   En esta tarea, agregará la transformación Columna derivada al flujo de datos. Agregar dos columnas derivadas, **ImportType** y **BatchTag**, a los registros pasados a esta transformación. Debe agregar estas columnas antes de cargar los datos en las tablas de ensayo en MDS. Son dos columnas necesarias para las tablas de ensayo en MDS. Consulte [tablas de ensayo de miembros hoja](../master-data-services/leaf-member-staging-table-master-data-services.md) para obtener más detalles.  

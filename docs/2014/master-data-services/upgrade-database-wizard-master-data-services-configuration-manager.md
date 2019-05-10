@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f55a722f54b6697aacf7fea87e436d33a5479afb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 977c96b625ecb62f9f02d19e71df57cd17d8660f
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62923498"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478491"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Asistente para actualizar base de datos (Administrador de configuración de Master Data Services)
   Utilice el **Asistente para actualizar base de datos** para actualizar una base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 597012bc5f008402ade7bd3d18888a3321ba6a9a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: ecdbff5b071ae82fe8bd8322c1ef9d46f153b0cc
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398118"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488905"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Cambar el tipo de atributo (complemento MDS para Excel)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52398118"
 > [!NOTE]  
 >  No se puede actualizar el tipo o la longitud de las columnas **Nombre** o **Código**.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso a las áreas funcionales del **Explorador** y de **Administración del sistema** .  
@@ -59,7 +59,7 @@ ms.locfileid: "52398118"
   
 -   Genera una copia del atributo con el sufijo "_old" que contiene los valores anteriores. Se le denomina atributo desusado.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Vea también  
  [Atributos &#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)   
  [Generar un modelo &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   

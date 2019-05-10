@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7eef632f4c38961176986d500b8f2ce134731f65
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 26e016369bf2498bce87e39fb05880712608184b
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403870"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489667"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Vea todas las anotaciones o transacciones para un miembro (complemento MDS para Excel)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52403870"
 
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede ver las anotaciones (comentarios) y las transacciones de las filas de datos (miembros) cuando quiera ver actualizaciones de los datos a través del tiempo.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe tener una hoja de cálculo activa que contenga datos administrados por MDS.  
@@ -39,7 +39,7 @@ ms.locfileid: "52403870"
   
 3.  En el cuadro de diálogo **Ver transacciones** , se muestra la lista de transacciones. Para ver todas las anotaciones asociadas con una transacción, haga clic en una fila de la cuadrícula.  
   
-## <a name="see-also"></a>Ver también  
- [Información general: Importación de datos desde Excel &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Vea también  
+ [Información general: Importar datos desde Excel &#40;complemento MDS para Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

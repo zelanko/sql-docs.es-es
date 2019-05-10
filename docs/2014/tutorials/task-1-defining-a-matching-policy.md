@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63222781"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65481314"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Tarea 1: Definición de una directiva de coincidencia
   En esta tarea, creará una directiva de coincidencia que contiene una regla. La regla tendrá un requisito previo: **Id. de proveedor**, lo que significa que debe coincidir con los identificadores de proveedor antes de usar los demás dominios de la regla. La regla usa otros dos dominios: **Nombre de proveedor** con **similitud** valor establecido en **70%** y **correo electrónico de contacto** con **similitud** valor establecido en **30%**.  

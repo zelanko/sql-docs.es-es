@@ -10,15 +10,15 @@ helpviewer_keywords:
 - deleting derived hierarchies [Master Data Services]
 - derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f6a4ae05aecf7d4a25a88efa61ec42fe098f1d63
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bcf52745a984d049db92e8255ba7984b6b52a71a
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765708"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65483128"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>Eliminar una jerarquía derivada (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine una jerarquía derivada cuando sepa que ya no la necesita.  

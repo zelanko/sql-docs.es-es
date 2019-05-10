@@ -11,15 +11,15 @@ helpviewer_keywords:
 - functional area permissions [Master Data Services]
 - permissions [Master Data Services], functional areas
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e856d99078363ee7c756dcbc98d99cce30fd2f0f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ffa8314e764a814956a7910f93d944294ab7acf7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765178"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65479401"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Permisos del área funcional (Master Data Services)
   Puede asignar permisos a cada una de las áreas funcionales de la interfaz de usuario de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Hay cinco áreas funcionales:  

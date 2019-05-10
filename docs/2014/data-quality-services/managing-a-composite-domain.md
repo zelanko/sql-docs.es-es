@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1dbd9b34b02b2d5fc614562cadf9305b76aa02d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eef4cc29bdcda107bba55ceab14aa7984fc420a9
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62792333"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480393"
 ---
 # <a name="managing-a-composite-domain"></a>Administrar un dominio compuesto
   En este tema se describe el uso de los dominios compuestos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). En ocasiones, un dominio individual no representa los datos de un campo de forma satisfactoria, y estos solo se pueden representar agrupando varios dominios individuales. Para ello, es necesario crear un dominio compuesto. Un dominio compuesto consta de dos o más dominios individuales y se asigna a un campo de datos que consta de varios términos relacionados que no están analizados, sino que se incluyen en un valor compuesto único. Cada término de dicho valor se representará mediante un dominio individual distinto. Una vez que se han incluido dominios individuales en dominios compuestos y se ha asignado el dominio compuesto al campo de datos, es posible generar conocimiento en la base de conocimiento sobre los datos de dicho campo generando conocimiento en los dominios individuales. Un dominio compuesto, al igual que un dominio individual, es una representación semántica de los datos de un solo campo de datos.  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: da1804ffec1ffd5e016590e83ac229c9e888ff97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8a9b7c9f241bdf63679db85d7408e696c6f55599
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63313861"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65489727"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Administración de información empresarial mediante SSIS, MDS y DQS [Tutorial]
   La administración de información en una empresa suele implicar la integración de datos procedentes de la empresa y externos, la limpieza de datos, la búsqueda de coincidencias en los datos para quitar duplicados, la normalización de los datos, el enriquecimiento de los datos, hacer que los datos cumplan los requisitos legales y de cumplimiento, y su almacenamiento posterior en una ubicación centralizada con todas las configuraciones de seguridad necesarias.  

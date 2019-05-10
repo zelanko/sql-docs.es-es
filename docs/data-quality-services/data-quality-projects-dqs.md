@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1c08c3ccfb637f00fef08b63bf1afc3cae8a0d34
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: e6a58554d045ab907820016c8d51782fa7f02e8e
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032246"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65480314"
 ---
 # <a name="data-quality-projects-dqs"></a>Proyectos de calidad de datos (DQS)
 
@@ -63,7 +63,7 @@ ms.locfileid: "56032246"
 |Describe cómo abrir, desbloquear, cambiar el nombre y eliminar un proyecto de calidad de datos.|[Abrir, desbloquear, cambiar nombre y eliminar un proyecto de calidad de datos](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |Describe cómo abrir un proyecto de Integration Services en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Abrir proyectos de Integration Services en Data Quality Client](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Bases de conocimiento y dominios de DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

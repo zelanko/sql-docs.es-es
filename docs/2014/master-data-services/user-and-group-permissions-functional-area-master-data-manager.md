@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bb4422ea0b2ac93ec928bc8ae755f715cb4def44
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3d785b416e19c8a90060d6e9410f89f68acbee76
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62763371"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65482553"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Área funcional de Permisos de usuario y grupo (Master Data Manager)
   En el área funcional de Permisos de usuario y grupo, los administradores pueden conceder permisos para áreas funcionales, atributos (en la pestaña Modelos) y miembros (en la pestaña Miembros de la jerarquía). Se resuelven los permisos superpuestos para determinar el permiso de un usuario para cada valor de atributo individual.  

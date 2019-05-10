@@ -1,6 +1,6 @@
 ---
-title: Tabular (nivel de compatibilidad 1200) de modelado de Analysis Services | Microsoft Docs
-ms.date: 05/07/2019
+title: Tutorial de Analysis Services Internet Sales (nivel de compatibilidad 1200) | Microsoft Docs
+ms.date: 05/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7ae9dd208d151dc3b8fb8117ba6e672ada2aecdd
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
-ms.translationtype: HT
+ms.openlocfilehash: 06b3aace2320882d209e6a7ab0f67a16a6f8a6df
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65403357"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503621"
 ---
-# <a name="tabular-modeling-1200-compatibility-level"></a>Modelado tabular (nivel de compatibilidad 1200)
+# <a name="adventure-works-internet-sales-tutorial-1200"></a>Tutorial de Adventure Works Internet Sales (1200)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Este tutorial proporciona lecciones sobre cómo crear un modelo tabular de Analysis Services en el [nivel de compatibilidad 1200](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) utilizando [SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)e implementar el modelo en Analysis Services servidor local o en Azure.  
@@ -98,7 +98,7 @@ Este tutorial también incluye lecciones complementarias. Los temas de esta secc
 |[Configurar las propiedades de notificación para informes de Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)|30 minutos| 
 
   
-## <a name="next-step"></a>Paso siguiente  
+## <a name="next-steps"></a>Pasos siguientes  
 Para comenzar el tutorial, vaya a la primera lección: [Lección 1: Cree un nuevo proyecto de modelo Tabular](lesson-1-create-a-new-tabular-model-project.md).  
   
   

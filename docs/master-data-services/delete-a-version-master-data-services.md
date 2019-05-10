@@ -11,15 +11,15 @@ helpviewer_keywords:
 - versions [Master Data Services], deleting
 - deleting versions [Master Data Services]
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d3a09499693d69e97a0354606f1ab1b0d7fcf0d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 29a4c0bb160a291dc4fd5d015f676f1d3c84b2f7
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753507"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478599"
 ---
 # <a name="delete-a-version-master-data-services"></a>Eliminar una versión (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52753507"
 > [!WARNING]  
 >  Si un modelo tiene solo una versión y lo elimina, el modelo se vuelve inutilizable.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe tener el permiso para ver la vista mdm.viw_SYSTEM_SCHEMA_VERSION y para ejecutar el procedimiento almacenado mds.udpVersionDelete en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Para obtener más información, consulte [Seguridad de objetos de base de datos &#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "52753507"
     > [!NOTE]  
     >  Puede que tenga que esperar unos minutos antes de que la aplicación web refleje el cambio.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Versiones &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [Copiar una versión &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   

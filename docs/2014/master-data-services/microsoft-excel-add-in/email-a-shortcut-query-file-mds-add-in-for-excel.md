@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3eb075777b65a410f27e318e2d923f0b0882822d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62765670"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65478878"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Enviar por correo electrónico un archivo de consulta de acceso directo (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede enviar por correo electrónico un archivo de consulta de acceso directo a alguien si quiere asegurarse de que va a trabajar con los mismos datos que usted. Debe compartir las consultas en lugar de guardar la hoja de cálculo y enviarla por correo electrónico.  

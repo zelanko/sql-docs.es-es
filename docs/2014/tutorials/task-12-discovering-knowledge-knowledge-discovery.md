@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 478634dce86c8ccb0cf36d4d558be3826048983e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63223461"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484681"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tarea 12: Detección de conocimiento
   En esta tarea, realizará la **Knowledgediscovery** actividad en **Id. de proveedor** y **Supplier Name** dominios. En este escenario, el proceso de detección de conocimiento importa principalmente valores de estos dos dominios.  

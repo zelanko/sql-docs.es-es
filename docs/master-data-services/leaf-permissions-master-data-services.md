@@ -14,15 +14,15 @@ helpviewer_keywords:
 - leaf members [Master Data Services], attribute permissions
 - attributes [Master Data Services], leaf member attribute permissions
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c34e517cadb6f529cd0406ae84a09eefc13f9c25
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5854df5b70664de7455e3da87cd7233b7f419c5d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62467839"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65488182"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permisos de hoja (Master Data Services)
 
@@ -62,7 +62,7 @@ ms.locfileid: "62467839"
 ### <a name="example"></a>Ejemplo  
  Para la entidad Product, asigne el permiso **Actualizar** al atributo Subcategory. Deniegue el permiso al resto de los atributos.  
   
-|Nombre|Código|Subcategory (actualizar)|  
+|Name|Código|Subcategory (actualizar)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5} Bicicletas de montaña|  
 |Mountain-100|BK-M201|{5} Bicicletas de montaña|  

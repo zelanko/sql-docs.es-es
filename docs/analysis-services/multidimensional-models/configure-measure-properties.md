@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8662339e7f3b0d77b48ad480317bc7558d0801e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e93b254e42b117f97ea6bc2d71afe5487f6a5197
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62825757"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65357416"
 ---
 # <a name="configure-measure-properties"></a>Configurar propiedades de medidas
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,6 +40,6 @@ ms.locfileid: "62825757"
   
 ## <a name="see-also"></a>Vea también  
  [Configurar las propiedades de los grupos de medida](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)   
- [Modificar medidas](../../analysis-services/lesson-3-1-modifying-measures.md)  
+ [Modificar medidas](../multidimensional-tutorial/lesson-3-1-modifying-measures.md)  
   
   

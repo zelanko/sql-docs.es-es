@@ -926,8 +926,6 @@
   href: ../reporting-services/reports/upload-a-file-or-report-report-manager.md
 - name: Crear un informe vinculado
   href: ../reporting-services/reports/create-a-linked-report.md
-- name: Ver y explorar los informes en modo nativo usando elementos web de SharePoint (SSRS)
-  href: ../reporting-services/reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
 - name: Información general sobre datos de informe en SSRS
   href: ../reporting-services/report-data/report-data-ssrs.md
 - name: Orígenes de datos admitidos por Reporting Services
@@ -1019,8 +1017,6 @@
           href: ../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md
         - name: Definir parámetros en el diseñador de consultas MDX para Analysis Services
           href: ../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md
-        - name: Cuadro de diálogo Definir parámetros de consulta
-          href: ../reporting-services/report-data/define-query-parameters-dialog-box.md
         - name: Interfaz de usuario del Diseñador de consultas DMX de Analysis Services
           href: ../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md
         - name: Interfaz de usuario del Diseñador de consultas MDX de Analysis Services

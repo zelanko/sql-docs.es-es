@@ -20,12 +20,12 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 86386460c3abc9ab7b6463b01ee4388e9186ad2b
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62982395"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536316"
 ---
 # <a name="sqlsetpos-function"></a>Función SQLSetPos
 **Conformidad**  
@@ -36,7 +36,7 @@ ms.locfileid: "62982395"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetPos(  
       SQLHSTMT        StatementHandle,  
@@ -315,7 +315,7 @@ SQLRETURN SQLSetPos(
 ## <a name="code-example"></a>Ejemplo de código  
  En el ejemplo siguiente, una aplicación permite al usuario examinar la tabla ORDERS y actualizar el estado del pedido. El cursor es dinámico con un tamaño de conjunto de filas de 20 y usa el control de simultaneidad optimista comparar versiones de fila. Después de que se captura cada conjunto de filas, la aplicación lo imprime y permite al usuario seleccionar y actualizar el estado de un pedido. La aplicación usa **SQLSetPos** para colocar el cursor en la fila seleccionada y realiza una actualización por posición de la fila. (Control de errores se omite para mayor claridad).  
   
-```  
+```cpp  
 #define ROWS 20  
 #define STATUS_LEN 6  
   

@@ -20,12 +20,12 @@ ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6ff8cb5bd0ff257d42cd658da54415697e99ae0f
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259320"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538150"
 ---
 # <a name="sqlfreestmt-function"></a>Función SQLFreeStmt
 **Conformidad**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259320"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
   
 SQLRETURN SQLFreeStmt(  
      SQLHSTMT       StatementHandle,  
@@ -83,7 +83,7 @@ SQLRETURN SQLFreeStmt(
 ## <a name="example"></a>Ejemplo  
  Es una buena práctica de programación para liberar los identificadores. Sin embargo, para simplificar, en el ejemplo siguiente no incluye código que libera asignada identificadores. Para obtener un ejemplo de cómo liberar identificadores, vea [función SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
-```  
+```cpp  
 // SQLFreeStmt.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  

@@ -15,17 +15,17 @@ ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eef8c87a152795d4756d05ba8a279a0d12cbc38c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: eeab20c5385b02a874908cc941c1c69910efa228
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62628619"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536672"
 ---
 # <a name="embedded-sql-example"></a>Ejemplo de SQL incrustado
 El código siguiente es un simple programa SQL incrustado, escrito en C. El programa muestra muchos, pero no todos, de los datos incrustados técnicas SQL. El sistema solicita al usuario un número de pedido, recupera el número de cliente, el vendedor y el estado del pedido y muestra la información recuperada en la pantalla.  
   
-```  
+```cpp  
 int main() {  
    EXEC SQL INCLUDE SQLCA;  
    EXEC SQL BEGIN DECLARE SECTION;  

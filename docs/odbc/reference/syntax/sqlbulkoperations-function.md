@@ -20,12 +20,12 @@ ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 06a1997b482c45ea4b529c1230ef1cb2c61dc873
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14e51f1d04012e22c198b7ed5f70d9b508933c5d
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237858"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65538035"
 ---
 # <a name="sqlbulkoperations-function"></a>Función SQLBulkOperations
 **Conformidad**  
@@ -36,7 +36,7 @@ ms.locfileid: "63237858"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
   
 SQLRETURN SQLBulkOperations(  
      SQLHSTMT       StatementHandle,  
@@ -261,7 +261,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="code-example"></a>Ejemplo de código  
  En el ejemplo siguiente se recupera 10 filas de datos en un momento de la tabla Customers. A continuación, se pide al usuario tomar una acción. Para reducir el tráfico de red, el búfer en el ejemplo actualiza, elimina e inserta localmente en las matrices enlazadas, pero en los desplazamientos más allá de los datos del conjunto de filas. Cuando el usuario elige enviar las actualizaciones, eliminaciones y se inserta en el origen de datos, el código establece el enlace de desplazamiento de forma adecuada y llama a **SQLBulkOperations**. Por motivos de simplicidad, el usuario no se puede almacenar en búfer más de 10 actualizaciones, eliminaciones o inserciones.  
   
-```  
+```cpp  
 // SQLBulkOperations_Function.cpp  
 // compile with: ODBC32.lib  
 #include <windows.h>  

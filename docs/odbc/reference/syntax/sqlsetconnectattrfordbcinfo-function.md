@@ -13,12 +13,12 @@ ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 798f986adfeda95ef091161458d94c2ccc33b2e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 15366693f212690176620bd1b395dae856ff1302
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63125540"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537297"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>Función SQLSetConnectAttrForDbcInfo
 **Conformidad**  
@@ -29,7 +29,8 @@ ms.locfileid: "63125540"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp
+  
 SQLRETURN  SQLSetConnectAttrForDbcInfo(  
                 SQLHDBC_INFO_TOKEN    hDbcInfoToken,  
                 SQLINTEGER            Attribute,  

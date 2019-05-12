@@ -20,12 +20,12 @@ ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb490b475c5795125d11915729693eb630934eb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 991884e14f68cf279543b9194114c5ea1fc8d7dc
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63233486"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536756"
 ---
 # <a name="sqlvaliddsn-function"></a>Función SQLValidDSN
 **Conformidad**  
@@ -36,7 +36,7 @@ ms.locfileid: "63233486"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
   
 BOOL SQLValidDSN(  
      LPCSTR    lpszDSN);  

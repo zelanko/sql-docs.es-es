@@ -20,12 +20,12 @@ ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 530a5acf9cc7c0de375906279aff2bc6a05ec8a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3f2eabec895a0b56d396d5848c8f418451e0afb7
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259531"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537672"
 ---
 # <a name="sqlconnect-function"></a>Función SQLConnect
 **Conformidad**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259531"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
   
 SQLRETURN SQLConnect(  
      SQLHDBC        ConnectionHandle,  
@@ -193,7 +193,7 @@ SQLRETURN SQLConnect(
 ### <a name="code-example"></a>Ejemplo de código  
  En el ejemplo siguiente, una aplicación asigna el entorno y la conexión identificadores. A continuación, se conecta al origen de datos de pedidos de venta con la JohnS Id. de usuario y la contraseña sésamo y procesa los datos. Cuando haya terminado de procesar los datos, se desconecta del origen de datos y libera los identificadores.  
   
-```  
+```cpp  
 // SQLConnect_ref.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  

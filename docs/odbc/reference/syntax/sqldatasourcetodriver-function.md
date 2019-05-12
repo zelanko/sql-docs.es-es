@@ -20,19 +20,19 @@ ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0ad4a98689db00c6dcb484e7a04bb973d2e1761
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 022387847cb1371af13465cee7a9e3e1c21e5749
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259396"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537660"
 ---
 # <a name="sqldatasourcetodriver-function"></a>Función SQLDataSourceToDriver
 **SQLDataSourceToDriver** supportstranslations para controladores ODBC. Esta función no se invoca mediante aplicaciones habilitadas para ODBC; las aplicaciones solicitan la traducción a través de **SQLSetConnectAttr**. El controlador asociado con el *ConnectionHandle* especificado en **SQLSetConnectAttr** llama a la DLL especificada para llevar a cabo las traducciones de todos los datos que fluyen desde el origen de datos para el controlador. Un archivo DLL de traducción predeterminado puede especificarse en el archivo de inicialización de ODBC.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
   
 BOOL SQLDataSourceToDriver(  
      UDWORD     fOption,  

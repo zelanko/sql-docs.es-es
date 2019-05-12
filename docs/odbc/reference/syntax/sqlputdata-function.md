@@ -20,12 +20,12 @@ ms.assetid: 9a60f004-1477-4c54-a20c-7378e1116713
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f91799e5d484a763c23fcc132232a8a35fc6152c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5254b7bb3744e06dae300f33ff1b612b4aca2341
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63186113"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537266"
 ---
 # <a name="sqlputdata-function"></a>Función SQLPutData
 **Conformidad**  
@@ -36,7 +36,7 @@ ms.locfileid: "63186113"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
   
 SQLRETURN SQLPutData(  
       SQLHSTMT     StatementHandle,  
@@ -114,11 +114,11 @@ SQLRETURN SQLPutData(
 ## <a name="example"></a>Ejemplo  
  El ejemplo siguiente se da por supuesto un nombre de origen de datos denominada "Test". La base de datos asociada debe tener una tabla que se puede crear, como se indica a continuación:  
   
-```  
+```sql  
 CREATE TABLE emp4 (NAME char(30), AGE int, BIRTHDAY datetime, Memo1 text)  
 ```  
   
-```  
+```cpp  
 // SQLPutData.cpp  
 // compile with: odbc32.lib user32.lib  
 #include <stdio.h>  

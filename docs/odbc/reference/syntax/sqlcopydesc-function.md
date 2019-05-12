@@ -20,12 +20,12 @@ ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e91febb4b5b94b5a7f9df62347b4db5edcecf975
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 601c0cdab47c338b903514f2e2e47547551ef678
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63259278"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537725"
 ---
 # <a name="sqlcopydesc-function"></a>Función SQLCopyDesc
 **Conformidad**  
@@ -36,7 +36,7 @@ ms.locfileid: "63259278"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
   
 SQLRETURN SQLCopyDesc(  
      SQLHDESC     SourceDescHandle,  
@@ -106,7 +106,7 @@ SQLRETURN SQLCopyDesc(
 ### <a name="code-example"></a>Ejemplo de código  
  En el ejemplo siguiente, se usan operaciones de descriptor para copiar los campos de la tabla PartsSource en la tabla PartsCopy. El contenido de la tabla PartsSource se captura en los búferes de conjunto de filas de *hstmt0*. Estos valores se usan como parámetros de una instrucción INSERT en *hstmt1* para rellenar las columnas de la tabla PartsCopy. Para ello, los campos de IRD de *hstmt0* se copian en los campos de la IPD de *hstmt1*y los campos de la descartar de *hstmt0* se copian en los campos de la APD de *hstmt1*. Use **SQLSetDescField** para establecer el atributo SQL_DESC_PARAMETER_TYPE de IPD en SQL_PARAM_INPUT al copiar los campos IRD de una instrucción con parámetros de salida a los campos IPD que deben ser parámetros de entrada.  
   
-```  
+```cpp  
 #define ROWS 100  
 #define DESC_LEN 50  
 #define SQL_SUCCEEDED(rc) (rc == SQL_SUCCESS || rc == SQL_SUCCESS_WITH_INFO)  

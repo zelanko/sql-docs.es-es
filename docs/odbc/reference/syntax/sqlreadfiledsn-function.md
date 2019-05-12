@@ -20,12 +20,12 @@ ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a247b9916bd4b8bfe8704d7f374ef027043e2ae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f32e23be700f17fee88cc6354f8652bb1333a12c
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63262448"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537350"
 ---
 # <a name="sqlreadfiledsn-function"></a>Función SQLReadFileDSN
 **Conformidad**  
@@ -36,7 +36,7 @@ ms.locfileid: "63262448"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
   
 BOOL SQLReadFileDSN(  
      LPCSTR   lpszFileName,  

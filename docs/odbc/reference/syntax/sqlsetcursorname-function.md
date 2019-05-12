@@ -20,12 +20,12 @@ ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a976d7caad790c80b15c17d65686ee1f6308f415
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62742251"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536746"
 ---
 # <a name="sqlsetcursorname-function"></a>Función SQLSetCursorName
 **Conformidad**  
@@ -36,7 +36,7 @@ ms.locfileid: "62742251"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetCursorName(  
      SQLHSTMT      StatementHandle,  
@@ -89,7 +89,7 @@ SQLRETURN SQLSetCursorName(
   
  Para obtener otro ejemplo de código, vea [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
-```  
+```cpp  
 #define NAME_LEN 50  
 #define PHONE_LEN 10  
   

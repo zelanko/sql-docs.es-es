@@ -20,12 +20,12 @@ ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec0038e0ec6c87dba403bbe62441815dfa6d0251
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b0d92abe17128bff382d4b291fa9d20fe5c4fa77
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62465971"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536638"
 ---
 # <a name="sqlparamdata-function"></a>Función SQLParamData
 **Conformidad**  
@@ -36,7 +36,7 @@ ms.locfileid: "62465971"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
   
 SQLRETURN SQLParamData(  
      SQLHSTMT       StatementHandle,  

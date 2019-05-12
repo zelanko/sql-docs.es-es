@@ -20,12 +20,12 @@ ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ab7046e036a6f50f8009a481f92345d7ce12aea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6ccc858603fc5662f380c5d3ae48d777005ddac4
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62656073"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65537162"
 ---
 # <a name="sqlrowcount-function"></a>Función SQLRowCount
 **Conformidad**  
@@ -36,7 +36,7 @@ ms.locfileid: "62656073"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```cpp  
   
 SQLRETURN SQLRowCount(  
       SQLHSTMT   StatementHandle,  

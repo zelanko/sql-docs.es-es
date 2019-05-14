@@ -2,20 +2,22 @@
 title: Solución de problemas de conectividad de Kerberos con PolyBase | Microsoft Docs
 author: alazad-msft
 ms.author: alazad
+ms.reviewer: jroth
 manager: craigg
 ms.technology: polybase
 ms.custom: ''
 ms.devlang: ''
 ms.topic: conceptual
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 980bbb179c92e95d0386e672ed0b62d7ac8cc968
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 3a6e9206bb252d90a9bca498ffdc27ce507556c9
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57976335"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776011"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solución de problemas de conectividad de Kerberos con PolyBase
 

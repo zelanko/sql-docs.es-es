@@ -16,15 +16,15 @@ helpviewer_keywords:
 - bulk exporting [SQL Server], data formats
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8bca6661ce0401cf5f24398e60f263a644584b7c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78d7a7168f37a95cf3aac6446fa5ff9f1e263e0a
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530554"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64945989"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Ejemplos de importación y exportación de forma masiva documentos XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -263,7 +263,7 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no guarda la codificación XML cuando se mantienen datos XML en la base de datos. Por lo tanto, la codificación original de los campos XML no estará disponible cuando se exporten datos XML. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la codificación UTF-16 al exportar datos XML.  
   
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-clause-transact-sql.md)   
  [bcp (utilidad)](../../tools/bcp-utility.md)   

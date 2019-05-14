@@ -2,7 +2,7 @@
 title: Procesamiento de consultas inteligente en bases de datos de Microsoft SQL | Microsoft Docs
 description: Características de procesamiento de consultas inteligente para mejorar el rendimiento de las consultas en SQL Server y Azure SQL Database.
 ms.custom: ''
-ms.date: 03/05/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 230a3cb352dca689ee891eca6c6bfd6f516b6ebc
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f9889ac45bff237ddb1e26e9dbbaffd12f3be556
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774580"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776028"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Procesamiento de consultas inteligente en bases de datos SQL
 
@@ -224,6 +224,7 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 Una sugerencia de consulta USE HINT tiene prioridad sobre una configuración de ámbito de base de datos o una opción de marca de seguimiento.
 
 ## <a name="row-mode-memory-grant-feedback"></a>Comentarios de concesión de memoria del modo de fila
+
 **Se aplica a:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] como característica de versión preliminar pública.
 
 > [!NOTE]

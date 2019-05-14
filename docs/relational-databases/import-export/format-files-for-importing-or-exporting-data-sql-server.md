@@ -12,16 +12,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server]
 ms.assetid: b7b97d68-4336-4091-aee4-1941fab568e3
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eeaccc3eecd0da4b65c6a983dc83ed0ba65a8b6
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 4a75df7439f91355104a2c3ae9a6a62094bac1b2
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256760"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64945543"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Archivos de formato para importar o exportar datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ The contents of this format file are as follows: 9.0
  Para obtener más información, vea [Archivos de formato no XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
   
-### <a name="b-using-an-xml-format-file"></a>b. Uso de un archivo de formato XML  
+### <a name="b-using-an-xml-format-file"></a>B. Uso de un archivo de formato XML  
  El siguiente archivo de formato XML usa el formato de datos nativo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la tabla `HumanResources.myTeam` . Este formato se creó usando el siguiente comando `bcp` .  
   
 ```cmd

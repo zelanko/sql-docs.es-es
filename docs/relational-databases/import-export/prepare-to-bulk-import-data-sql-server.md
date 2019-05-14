@@ -16,15 +16,15 @@ helpviewer_keywords:
 - hidden characters
 - OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3196670f21070297b27046ca70878fb94c39d12
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d8685db3716ad495581ae64023bfbdd41975e2f
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622553"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946631"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Prepararse para importar datos de forma masiva (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "47622553"
   
      Muchas herramientas y editores de texto muestran los caracteres ocultos que suelen encontrarse al final del archivo de datos. Durante una operación de importación masiva, los caracteres ocultos en un archivo de datos ASCII pueden producir  problemas que den como resultado un error de tipo "se encontró un valor nulo inesperado". La búsqueda y eliminación de todos los caracteres ocultos debería solucionar el problema.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Importar y exportar datos en bloque con la utilidad bcp &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [Importar datos en bloque mediante BULK INSERT u OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [bcp (utilidad)](../../tools/bcp-utility.md)   

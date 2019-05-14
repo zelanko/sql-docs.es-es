@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a32e66e87d3e2cdcf9c8f0498ec845c2b8921825
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ba776c683ea05665708891dbe734e82591077bf7
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255020"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946230"
 ---
 # <a name="create-a-format-file-sql-server"></a>Crear un archivo de formato (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "54255020"
   
 -   A. Crear un archivo de formato no XML para datos nativos  
   
--   b. Crear un archivo de formato no XML para datos de caracteres  
+-   B. Crear un archivo de formato no XML para datos de caracteres  
   
 -   C. Crear un archivo de formato no XML para datos nativos Unicode  
   
@@ -89,7 +89,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Para obtener más información, vea [Archivos de formato no XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
-#### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>b. Crear un archivo de formato no XML para datos de caracteres  
+#### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>B. Crear un archivo de formato no XML para datos de caracteres  
  En el ejemplo siguiente se crea un archivo de formato XML, `Department.fmt`, para la tabla [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` . El archivo de formato usa formatos de datos de caracteres y un terminador de campo no predeterminado (`,`). El contenido del archivo de formato generado se presenta después del comando.  
   
  El comando **bcp** contiene los calificadores siguientes.  
@@ -181,7 +181,7 @@ El siguiente es un ejemplo del archivo de formato sin la información de interca
   
 -   A. Crear un archivo de formato XML para datos de caracteres  
   
--   b. Crear un archivo de formato XML para datos nativos  
+-   B. Crear un archivo de formato XML para datos nativos  
   
  Los ejemplos utilizan la tabla `HumanResources.Department` de la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La tabla `HumanResources.Department` tiene cuatro columnas: `DepartmentID`, `Name`, `GroupName`y `ModifiedDate`.  
   
@@ -228,7 +228,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Para obtener más información sobre la sintaxis de este archivo de formato, vea [XML, archivos de formato &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md). Para obtener más información sobre los datos de caracteres, vea [Usar el formato de caracteres para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).  
   
-#### <a name="b-creating-an-xml-format-file-for-native-data"></a>b. Crear un archivo de formato XML para datos nativos  
+#### <a name="b-creating-an-xml-format-file-for-native-data"></a>B. Crear un archivo de formato XML para datos nativos  
  En el ejemplo siguiente se crea un archivo de formato XML, `Department-n.xml`, para la tabla `HumanResources.Department` . El archivo de formato utiliza tipos de datos nativos. El contenido del archivo de formato generado se presenta después del comando.  
   
  El comando **bcp** contiene los calificadores siguientes.  

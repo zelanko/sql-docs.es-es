@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a32bb1fef21b41fae6ef30dd011b5b7260203c94
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ccd9e4edc5a1238ba9c68f97de1d7f53fb899a74
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285993"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775541"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expresiones (Generador de informes y SSRS)
   Las expresiones se utilizan ampliamente a lo largo de un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para recuperar, calcular, mostrar, agrupar, ordenar, filtrar y parametrizar datos y darles formato. 
@@ -56,13 +56,9 @@ ms.locfileid: "56285993"
   
  Para más información, vea [Aplicar formato a texto y a marcadores de posición &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md).  
   
-### <a name="report-model-formulas"></a>Fórmulas del modelo de informe  
- Cuando diseñe una consulta para un conjunto de datos que use un modelo de informe como origen de datos, puede crear *fórmulas*. Las fórmulas son los cálculos que se realizan en los valores de un informe que están basados en los datos de un modelo de informe.  
-  
- Para más información, vea [Utilizar fórmulas en consultas de modelo de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md).  
-   
-##  <a name="DisplayText"></a> Descripción de los símbolos de prefijo en expresiones simples  
- Las expresiones simples usan símbolos para indicar si la referencia es a un campo, un parámetro, una colección integrada o la colección ReportItems. En la tabla siguiente, se muestran ejemplos de texto mostrado junto con el texto de la expresión correspondiente:  
+## <a name="DisplayText"></a> Descripción de los símbolos de prefijo en expresiones simples  
+
+Las expresiones simples usan símbolos para indicar si la referencia es a un campo, un parámetro, una colección integrada o la colección ReportItems. En la tabla siguiente, se muestran ejemplos de texto mostrado junto con el texto de la expresión correspondiente:  
   
 |Elemento|Ejemplo de texto mostrado|Ejemplo de texto de expresión|  
 |----------|--------------------------|-----------------------------|  

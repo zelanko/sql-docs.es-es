@@ -7,16 +7,16 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa36b331f42835a4b1bf6b25651a59669cb56ac9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b5c0cd5f10facf66c4f79ec1741d5cddcf3a3012
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390498"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946641"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Importar y exportar datos de SQL Server y de Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Puede importar y exportar datos con la utilidad de línea de comandos BCP. Para 
 ### <a name="use-the-import-flat-file-wizard"></a>Uso del Asistente para la importación de archivos planos
 Si no necesita todas las opciones de configuración disponibles en el Asistente para importación y exportación y otras herramientas, puede importar un archivo de texto en SQL Server con el **Asistente para importación de archivos planos** en SQL Server Management Studio (SSMS). Para obtener más información, vea los artículos siguientes:
 - [Importación de archivos planos mediante el asistente de SQL](import-flat-file-wizard.md)
-- [What’s new in SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) (Novedades en SQL Server Management Studio 17.3)
+- [What's new in SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/) (Novedades en SQL Server Management Studio 17.3)
 - [Introducing the new Import Flat File Wizard in SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173) (Introducción al nuevo Asistente para importación de archivos planos en SSMS 17.3)
 
 ### <a name="use-the-sql-server-import-and-export-wizard"></a>Usar el Asistente para importación y exportación de SQL Server

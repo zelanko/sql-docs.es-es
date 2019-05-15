@@ -12,7 +12,7 @@ ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.openlocfilehash: d16a399ceb6a2c22599d7a95396d49f21e378eef
 ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/01/2018
 ms.locfileid: "47809743"

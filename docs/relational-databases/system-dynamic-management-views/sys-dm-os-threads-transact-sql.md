@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 022113a9cabe678e3136d50beb3a87cd29fa07d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 740dcc22d53ff6cd60bbc491fb6bb7b7f44947a8
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62628162"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577998"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,6 +70,10 @@ ms.locfileid: "62628162"
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+
+## <a name="notes-on-linux-version"></a>Notas de la versión de Linux
+
+Debido a cómo el motor de SQL funciona en Linux, parte de esta información no coincide con los datos de diagnóstico de Linux. Por ejemplo, `os_thread_id` no coincide con el resultado de herramientas como `ps`,`top` o el procfs (/ proc /`pid`).  Esto es debido a la capa de abstracción de plataforma (SQLPAL), una capa entre componentes de SQL Server y el sistema operativo.
 
 ## <a name="examples"></a>Ejemplos  
  Tras el inicio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicia subprocesos y después asocia trabajos a dichos subprocesos. Sin embargo, los componentes externos, como un procedimiento almacenado extendido, pueden iniciar subprocesos bajo el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no controla estos subprocesos. Sys.dm_os_threads puede proporcionar información sobre subprocesos rogue que consumen recursos en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proceso.  

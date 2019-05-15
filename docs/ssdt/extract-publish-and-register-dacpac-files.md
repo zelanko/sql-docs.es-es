@@ -14,15 +14,15 @@ f1_keywords:
 - sql.data.tools.publishdacproject
 - sql.data.tools.DacExtractDialog
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: af7f836549563783686dfb3209fc4e7eedf9727a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21b22c1c3f26112cf6232eb314eeb8f8c330ee03
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770083"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090138"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>Extraer, publicar y registrar archivos .dacpac
 En este tema se describen cuatro procedimientos que puede realizar haciendo clic con el botón secundario en una base de datos conectada en el Explorador de objetos de SQL Server:  
@@ -65,6 +65,6 @@ En el cuadro de diálogo **Registrar aplicación de capa de datos**, especifique
 ## <a name="unregister-data-tier-application"></a>Anular registro de aplicación de capa de datos  
 La anulación del registro permite quitar de la instancia los metadatos de una aplicación de capa de datos registrada. La anulación del registro no elimina la base de datos registrada.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Desarrollo de bases de datos conectadas](../ssdt/connected-database-development.md)  
   

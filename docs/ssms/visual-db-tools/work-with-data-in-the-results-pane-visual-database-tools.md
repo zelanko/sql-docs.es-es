@@ -17,15 +17,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 55182cc89ab9bd9689ef7bdde70c440a7b91d0a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b8860af3af85b004da53a7fd218032e65d732f3
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665993"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105301"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Trabajar con datos en el panel Resultados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -121,7 +121,7 @@ Lo que se devuelve al panel Resultados desde la base de datos está controlado e
   
 -   La precisión y la escala no siempre pueden conservarse. Por ejemplo, el panel Resultados admite una precisión de 27. Si los datos son de un tipo con una precisión mayor, éstos se pueden truncar o representarse mediante *<Unable to read data>*.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Realizar operaciones básicas con consultas (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [Especificar criterios de búsqueda (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

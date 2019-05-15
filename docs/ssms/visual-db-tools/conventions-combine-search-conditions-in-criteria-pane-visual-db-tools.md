@@ -17,15 +17,15 @@ helpviewer_keywords:
 - AND, Criteria pane
 - multiple AND clauses
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4c3870925c229258464605a39c300d69deb1dd9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 040e07943bf90a0cae7a9afa262bb384631c3e93
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651523"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65093332"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Convenciones para combinar condiciones de búsqueda en el panel Criterios (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -167,6 +167,6 @@ El Diseñador de consultas y vistas representa esta cláusula WHERE en el panel 
   
 Si cambia la consulta (cambia, por ejemplo, uno de los valores en el panel Criterios), el Diseñador de consultas y vistas volverá a crear la instrucción SQL en el panel SQL. La nueva instrucción SQL reflejará lo que se muestra en el panel Criterios en lugar de lo que se indica en la instrucción original. Por ejemplo, si el panel Criterios contiene cláusulas AND distribuidas, se volverá a crear la instrucción resultante en el panel SQL con cláusulas AND explícitas. Para obtener información detallada, vea "Cómo funciona AND con varias cláusulas OR" anteriormente en este tema.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Especificar criterios de búsqueda (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.job.steps.f1
 ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ae1f7b260d5474dddfb285ff26aa560a37952d06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96009100820014cd819e3e87bf725716319013f7
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785173"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095831"
 ---
 # <a name="job-properties---new-job-steps-page"></a>Propiedades del trabajo - Nuevo trabajo (página Pasos)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,6 +51,6 @@ Modifica el paso de trabajo seleccionado.
 **Eliminar**  
 Elimina el paso de trabajo seleccionado. Cuando se eliminan pasos de trabajo, sus registros de salida respectivos también se eliminan de forma automática.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Implementar trabajos](../../ssms/agent/implement-jobs.md)  
   

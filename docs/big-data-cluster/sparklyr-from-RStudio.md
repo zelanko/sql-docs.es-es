@@ -9,12 +9,12 @@ ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 148e4942babafb35af2efe33eb427f9462f0a47e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: cd3e38cbcd927de25f4e072b8bdb1ac09331f739
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969881"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620325"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Usar sparklyr en clúster de macrodatos de SQL Server
 
@@ -36,17 +36,20 @@ Instalar y configurar **RStudio Desktop** con los pasos siguientes:
 
 1. Una vez finalizada la instalación, ejecute los siguientes comandos dentro de RStudio Desktop para instalar los paquetes necesarios:
 
-   ```RStudio Desktop install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01") install.packages("dplyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01") install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   ```RStudioDesktop
+   install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   install.packages("dplyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
+   install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    ```
 
-## Connect to Spark in a big data cluster
+## <a name="connect-to-spark-in-a-big-data-cluster"></a>Conexión a Spark en un clúster de macrodatos
 
-You can use sparklyr to connect from a client to the big data cluster using Livy and the HDFS/Spark gateway. 
+Puede usar sparklyr para conectarse desde un cliente para el clúster de macrodatos con Livy y la puerta de enlace de Spark o HDFS. 
 
-In RStudio, create an R script and connect to Spark as in the following example:
+En RStudio, cree un script de R y conectarse a Spark en el ejemplo siguiente:
 
 > [!TIP]
-> For the `<USERNAME>` and `<PASSWORD>` values, use the username (such as root) and password you set during the big data cluster deployment. For the `<IP>` and `<PORT>` values, see the documentation on the [HDFS/Spark gateway](connect-to-big-data-cluster.md#hdfs).
+> Para el `<USERNAME>` y `<PASSWORD>` valores, use el nombre de usuario (como raíz) y la contraseña que estableció durante la implementación del clúster de macrodatos. Para el `<IP>` y `<PORT>` valores, consulte la documentación sobre la [puerta de enlace de Spark o HDFS](connect-to-big-data-cluster.md#hdfs).
 
 ```r
 library(sparklyr)

@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Registered Servers [SQL Server], creating new registered servers
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fcd0ba6c37b6e88d3d7ef362e1050f53721e89f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbe062925826b40c6f7612f6becf1af0986461a4
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668661"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105170"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Crear un servidor registrado (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47668661"
   
      Los Servidores de administración central almacenan los registros de servidor en el Servidor de administración central en lugar de en el sistema de archivos. Los Servidores de administración central y los servidores secundarios registrados únicamente se pueden registrar utilizando la autenticación de Windows. Una vez registrado un Servidor de administración central, sus servidores registrados asociados se mostrarán automáticamente. Para obtener más información sobre los Servidores de administración central, vea [Administrar varios servidores mediante Servidores de administración central](../../relational-databases/administer-multiple-servers-using-central-management-servers.md). Las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] no se pueden designar como Servidores de administración central.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-automatically-register-the-local-server-instances"></a>Para registrar automáticamente las instancias de servidor locales  
   
@@ -102,7 +102,7 @@ ms.locfileid: "47668661"
   
  Para ejecutar las consultas con todos los servidores que se registran con un Servidor de administración central, expanda el servidor, haga clic con el botón derecho en el grupo de servidores, haga clic en **Conectar**y, después, haga clic en **Nueva consulta**. Cuando las consultas se ejecuten en la nueva ventana del Editor de consultas, ejecutarán con todos los servidores del grupo de servidores, utilizando la información de conexión almacenada y el contexto de autenticación de Windows del usuario.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Ocultar objetos del sistema en el Explorador de objetos](../object/hide-system-objects-in-object-explorer.md)   
  [Exportar información de servidores registrados &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
  [Importar información de servidores registrados &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  

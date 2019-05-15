@@ -13,14 +13,14 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: cdaf6447080a82d5b58932e7e4987720a97963b6
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099916"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502932"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurar la cuenta de ejecución desatendida (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una cuenta especial que se utiliza para el procesamiento de informes en modo desatendido y para enviar solicitudes de conexión a través de la red. La cuenta se utiliza de las formas siguientes:  
@@ -75,6 +75,9 @@ ms.locfileid: "50099916"
  Para recuperar los archivos de imagen, el servidor de informes utiliza automáticamente la cuenta y no se requiere ninguna acción concreta por parte del usuario. Para utilizar la cuenta con el fin de conectarse a los orígenes de datos externos que proporcionan los datos a los informes, debe especificar una opción **Tipo de credencial** en la página de propiedades del origen de datos, en el origen de datos del informe o compartido:  
   
 -   En el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] o en un sitio de SharePoint, seleccione la opción **No se necesitan credenciales** .  
+
+> [!NOTE]
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
   
  La cuenta de procesamiento de informes desatendido se utiliza principalmente para conectarse a los servidores externos y no como inicio de sesión en los servidores de bases de datos. Si desea usar las credenciales de la cuenta para iniciar una sesión en una base de datos, debe especificarlas en la cadena de conexión. Puede especificar **Integrated Security=SSPI** si el servidor de la base de datos admite la seguridad integrada de Windows y la cuenta usada para el procesamiento de informes desatendido tiene permiso para leer la base de datos. De lo contrario, deberá especificar el nombre de usuario y la contraseña en la cadena de conexión, donde aparecerá en texto no cifrado para cualquier usuario que tenga permiso para modificar las propiedades de conexión al origen de datos.  
   
@@ -100,7 +103,7 @@ ms.locfileid: "50099916"
   
  La información de cuenta se quita del archivo RSReportServer.config.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de configuración de Reporting Services (Modo nativo de SSRS)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
   
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7281b6862d1785fc1b2b93a543c10738a454adaa
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 20102eeb26166d40bfdb87de49c8576eadc47261
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700202"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095709"
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Opciones (Explorador de objetos de SQL Server - Comandos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,6 +44,6 @@ Especifica el número de filas que se debe devolver al editar filas en una tabla
 **Valor para el comando Seleccionar las primeras <n> filas**  
 Especifica el número de filas que se va a devolver y que se especifica en el script del Editor de consultas que se crea. El valor predeterminado es 1000 filas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [SQL Server Audit (motor de base de datos)](https://msdn.microsoft.com/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   

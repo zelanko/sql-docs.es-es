@@ -2,21 +2,21 @@
 title: Visor HTML y barra de herramientas de informe | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 27c419320b1116194044cd6228246eef0c5d9fbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 948abaaae630de34f4340370fd2f6f0f4e0a1d34
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668343"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503072"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visor HTML y la barra de herramientas del informe
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona un Visor HTML que se usa para mostrar informes a petición conforme se solicitan del servidor de informes. El Visor HTML ofrece un marco para ver informes en HTML. Incluye una barra de herramientas de informe, una sección de parámetros, una sección de credenciales y un mapa del documento. La barra de herramientas de informe del Visor HTML incluye características que se pueden usar para trabajar con un informe, incluidas las opciones de exportación para verlo con formatos distintos de HTML. La sección de parámetros y el mapa del documento solamente aparecen cuando se abren informes configurados para usar parámetros y un control de mapa de documento.  
@@ -71,7 +71,7 @@ ms.locfileid: "47668343"
 ## <a name="credentials"></a>Credenciales  
  Las credenciales son valores de nombre de usuario y contraseña que conceden acceso a un origen de datos. Después de especificar las credenciales, haga clic en **Ver informe** para obtener los datos. Si un informe requiere que se inicie sesión, los datos que puede ver un usuario pueden ser diferentes de los datos que puede ver otro usuario. En consecuencia, dos usuarios pueden procesar el mismo informe y obtener resultados distintos. Además, algunos informes contienen áreas ocultas que se revelan en función de las credenciales de inicio de sesión del usuario o de las selecciones realizadas en el propio informe. Las áreas ocultas del informe no se incluyen en las operaciones de búsqueda, por lo que se pueden obtener resultados diferentes a cuando están visibles todas las partes del informe.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportación de informes &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  

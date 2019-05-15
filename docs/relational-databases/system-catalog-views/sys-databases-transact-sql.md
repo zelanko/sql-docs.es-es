@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b656e0119e99f37c62a19df2ec2b1f053f414323
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
-ms.translationtype: HT
+ms.openlocfilehash: 26be52ca8c8b1b004038923a9a7fe835eba52216
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080375"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560132"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ Si una base de datos no es `ONLINE`, o `AUTO_CLOSE` está establecido en `ON` y 
 |**is_temporal_retention_enabled**|**bit**|Indica si la tarea de limpieza de directiva de retención temporal está habilitada.<br /> **Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|La configuración de intercalación de catálogo:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|La configuración de intercalación de catálogo:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**Is_result_set_caching**|**int**|Reservado para uso interno</br>**Se aplica a**: Almacenamiento de datos SQL de Azure
+|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on está activado</br>0 = is_result_set_caching_on está desactivado</br>**Se aplica a**: Azure SQL Data Warehouse Gen2
   
 ## <a name="permissions"></a>Permisos  
  Si el llamador de `sys.databases` no es el propietario de la base de datos y la base de datos no es `master` o `tempdb`, los permisos mínimos necesarios para ver la fila correspondiente son `ALTER ANY DATABASE` o `VIEW ANY DATABASE` permiso de nivel de servidor o `CREATE DATABASE` permiso en el `master` base de datos. Siempre puede verse en la base de datos al que está conectado el autor de llamada `sys.databases`.  

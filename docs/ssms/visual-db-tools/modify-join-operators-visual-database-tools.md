@@ -12,15 +12,15 @@ helpviewer_keywords:
 - modifying join operators
 - join operators
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e22d55490c9149a857d74b7719d88fd7b25ea9a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 52ec5347795a6b26453ae806c3ef43113d28aed4
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504620"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095411"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modificar operadores de combinación (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ De forma predeterminada, el [Diseñador de consultas y vistas](../../ssms/visual
   
 3.  En el cuadro de diálogo **Combinación** , seleccione un nuevo operador.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Combinar tablas automáticamente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)  
 [Combinar tablas manualmente &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md)  
 [Realizar consultas con combinaciones &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  

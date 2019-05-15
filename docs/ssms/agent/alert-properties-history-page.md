@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.alert.history.f1
 ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e28d089ac63035d59e5444bd8250f92139322865
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3fa617f195f70976f2788c184d6fe07df74d17f0
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705923"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104445"
 ---
 # <a name="alert-properties-history-page"></a>Propiedades de alerta (página Historial)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,6 +44,6 @@ Número total de repeticiones del evento desde que se creó la alerta, o desde l
 **Restablecer cuenta**  
 Restablece la información de esta página.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Alertas](../../ssms/agent/alerts.md)  
   

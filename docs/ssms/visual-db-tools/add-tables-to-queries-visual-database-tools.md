@@ -12,15 +12,15 @@ helpviewer_keywords:
 - adding tables
 - queries [SQL Server], tables
 ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6bd5f44a6e9c4907aa320a42ce89d5fdcf80e457
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bac26e4bc591867a640fca029e39f94c9ed0a6fe
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511834"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099397"
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Agregar tablas a las consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ El Diseñador de consultas y vistas no mostrará las columnas de datos de una ta
   
 7.  En el **panel SQL**, agregue un alias después del paréntesis de cierre.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear alias de tabla &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-table-aliases-visual-database-tools.md)  
 [Quitar tablas de las consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
 [Especificar criterios de búsqueda (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - opening queries
 - queries [SQL Server], opening
 ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 00ca4a13d0bbd9eb1ed1534948085b24d4d91727
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2dca06285dab082528c6d2d517615c5766a2cfa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704901"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095284"
 ---
 # <a name="open-queries-visual-database-tools"></a>Abrir consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ Puede abrir una consulta existente en el Diseñador de consultas y vistas median
 > [!NOTE]  
 > De manera predeterminada, el Diseñador de consultas y vistas abre todos sus paneles (SQL, Criterios, Diagrama y Resultados), pero este comportamiento predeterminado pueden cambiarse en el cuadro de diálogo **Opciones** . Para abrir estos paneles si están cerrados, en el menú **Diseñador de consultas** , elija **Panel**y, a continuación, haga clic en el panel que desea abrir.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Realizar operaciones básicas con consultas (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
 [Guardar consultas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
 [Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], autosizing objects
 - autosizing objects in database diagrams
 ms.assetid: eaf2b862-6649-410e-ba8a-2d92ca159a16
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 95a89a3b7fe7a6f09f2a8ed26ab6e272826d439b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94613e42940b340a02ab67bf7c92e0e81d1d1fcf
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710673"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099562"
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>Ajustar automáticamente el tamaño de las tablas seleccionadas en diagramas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,6 +33,6 @@ Las tablas de su diagrama se pueden ajustar rápidamente para que adopten el tam
   
 2.  Haga clic con el botón derecho en una de las tablas seleccionadas y, en el menú contextual, elija **Ajustar automáticamente tablas seleccionadas**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

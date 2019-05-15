@@ -13,16 +13,16 @@ ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 38062676a3ddd4eb7daa6db06b71cd41bf59efad
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 4b111872626a02f78c659588abebc6a6500fbe1d
+ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380856"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65484916"
 ---
 # <a name="rename-statistics"></a>Cambiar el nombre de las estadísticas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Puede cambiar el nombre de un objeto de estadísticas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **En este tema**  
@@ -46,7 +46,7 @@ ms.locfileid: "53380856"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], copying
 - solutions [SQL Server Management Studio], item copying
 ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a6697e9e179e0ee9114da63ea2b994281c96e97e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4863fa4b59c167728b831b6ff866279a6bf4d55
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666073"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105231"
 ---
 # <a name="copy-items-in-a-solution"></a>Copiar elementos de una solución
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ Se pueden copiar elementos mediante el Explorador de soluciones o el Explorador 
 > [!NOTE]  
 > No es posible copiar conexiones entre proyectos. Al copiar una consulta con una conexión asociada en otro proyecto, su conexión asociada no se copia en el proyecto de destino. Es necesario crear la conexión de forma manual en el proyecto de destino.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)  
 [Mover elementos en una solución](../../ssms/solution/move-items-in-a-solution.md)  
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c11459a9ec28f6f32b14590c2a85148920280a54
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 17b95a12462178a887431defa8c465fd4dca1edd
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099306"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102882"
 ---
 # <a name="projects-sql-server-management-studio"></a>Proyectos (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ Para modificar información sobre una conexión, use la ventana de propiedades d
 |Describe cómo cambiar la información de conexión para una consulta.|[Cambiar la conexión asociada a una consulta](../../ssms/solution/change-the-connection-associated-with-a-query.md)|  
 |Describe cómo cambiar las propiedades de conexión.|[Ver o cambiar las propiedades de una conexión en un proyecto](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)  
 [Soluciones &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
 [Control de código fuente del Explorador de soluciones](https://msdn.microsoft.com/library/ms173879.aspx)  

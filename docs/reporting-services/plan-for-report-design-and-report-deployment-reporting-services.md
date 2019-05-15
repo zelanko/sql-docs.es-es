@@ -2,18 +2,18 @@
 title: Planeación del diseño y la implementación de informes | Reporting Services | Microsoft Docs
 ms.date: 09/12/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0910de2e41c28ea5faf61106e2fabb7d507d60e2
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 019a76f0df9884f788cb11de38ea14fdc723e701
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814238"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503694"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Planeación del diseño y la implementación de informes | Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varios enfoques para la creación e implementación de informes paginados. Sepa cómo planear un entorno de servidor de informes y creación de informes que operen en conjunto.
@@ -51,8 +51,12 @@ En este tema se proporciona información general sobre la compatibilidad de defi
 -   **Generador de informes** : guarde un informe en el servidor de informes desde el Generador de informes.  
   
 -   **Portal web:** cargue un informe en un servidor de informes en modo nativo desde el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)].  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
 -   **SharePoint** : cargue un informe en un sitio de SharePoint que esté configurado con un servidor de informes en modo de SharePoint.  
+
+::: moniker-end
   
 -   **Mediante programación** : publique un informe mediante programación usando las interfaces de API SOAP en un servidor de informes. Para obtener más información, consulte [Report Server Web Service](../reporting-services/report-server-web-service/report-server-web-service.md).  
   
@@ -66,7 +70,13 @@ En este tema se proporciona información general sobre la compatibilidad de defi
   
  Cuando se carga una definición de informe en el servidor de informes o se actualiza un servidor de informes que contiene informes, el servidor de informes conserva la definición de informe en el formato original. **Cuando se usa por primera vez**, el servidor de informes actualiza el informe en la base de datos del servidor de informes a un formato binario que se conserva para vistas posteriores. La definición de informe (.rdl) propiamente dicha no se actualiza.  
   
- Puede extraer del servidor de informes una copia de solo lectura del archivo de definición de informe (.rdl). En un servidor de informes en modo nativo, vaya al [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], seleccione el informe y haga clic en **Descargar**. En una implementación en modo de SharePoint, vaya a la biblioteca de documentos, seleccione el informe y haga clic en **Descargar una copia**.  
+ Puede extraer del servidor de informes una copia de solo lectura del archivo de definición de informe (.rdl). En un servidor de informes en modo nativo, vaya al [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], seleccione el informe y haga clic en **Descargar**. 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+En una implementación en modo de SharePoint, vaya a la biblioteca de documentos, seleccione el informe y haga clic en **Descargar una copia**.  
+
+::: moniker-end
   
  Para actualizar la definición de informe, se debe abrir el informe en un entorno de creación de informes, como SQL Server Data Tools o Generador de informes, y luego guardarlo.  
   
@@ -107,7 +117,7 @@ En este tema se proporciona información general sobre la compatibilidad de defi
   
 -   [Agregar y configurar los controles ReportViewer](https://msdn.microsoft.com/library/ms252104.aspx)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Informes, elementos de informe y definiciones de informe &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Herramientas de Reporting Services](../reporting-services/tools/reporting-services-tools.md)   
  [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - configuration options [Reporting Services]
 - report servers [Reporting Services], configuring
 - components [Reporting Services], Reporting Services Configuration tool
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fec3d74b5b6d4d4387249ba3e4d5254aebfa1bed
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c6ea2a8ad189f5973b6fa3bb761be5c8596de761
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029024"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503629"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Administrador de configuración de Reporting Services (modo nativo)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50029024"
 Utilice el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo. Si ha instalado un servidor de informes usando la opción de instalación de solo archivos, debe usar el Administrador de configuración para configurar el servidor antes de poder usarlo. Si ha instalado un servidor de informes con la opción de instalación de configuración predeterminada, puede usar el Administrador de configuración para comprobar o modificar la configuración especificada durante la instalación. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se puede usar para configurar una instancia local o remota del servidor de informes.
 
 > [!NOTE]
-> A partir de la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no está diseñado para administrar servidores de informes en modo de SharePoint. El modo de SharePoint se administra y se configura mediante scripts de Administración central de SharePoint y scripts PowerShell.  
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016. A partir de la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no está diseñado para administrar servidores de informes en modo de SharePoint. El modo de SharePoint se administra y se configura mediante scripts de Administración central de SharePoint y scripts PowerShell.  
   
 ##  <a name="bkmk_scenarios"></a> Escenarios para usar el Administrador de configuración de Reporting Services  
  Puede usar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para realizar las tareas siguientes:  

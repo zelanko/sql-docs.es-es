@@ -2,29 +2,33 @@
 title: Actualizar una base de datos del servidor de informes | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - report server database
 - upgrading Reporting Services
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 03b999b35cf9b308d683c8888980d7e60a24fb36
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8a386e072660c67e2885b8b6303a066f71a23b01
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027534"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502643"
 ---
 # <a name="upgrade-a-report-server-database"></a>Actualizar una base de datos del servidor de informes
 
 La base de datos del servidor de informes proporciona almacenamiento para una o varias instancias del servidor de informes. Dado que el esquema de la base de datos del servidor de informes puede cambiar con cada versión nueva de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], es necesario que la versión de base de datos coincida con la versión de la instancia del servidor de informes que esté utilizando. En la mayoría de los casos, una base de datos del servidor de informes se puede actualizar automáticamente sin ninguna acción específica de su parte.  
   
  **Modo nativo:** en el modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], la base de datos del servidor de informes consta realmente de dos bases de datos que tienen los nombres predeterminados ReportServer y ReportServerTempDB.  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **Modo de SharePoint:** en el modo de SharePoint de SQL Server 2016 Reporting Services, la base de datos del servidor de informes es realmente una colección de bases de datos que se crea para cada instancia de la aplicación de servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+
+::: moniker-end
 
 ## <a name="ways-to-upgrade-a-native-mode-report-server-database"></a>Formas de actualizar una base de datos del servidor de informes en modo nativo
 

@@ -1,9 +1,9 @@
 ---
-title: Usar los widgets de datos para supervisar servidores y bases de datos
+title: Usar los widgets de datos en Azure Data Studio para supervisar los servidores y bases de datos
 titleSuffix: Azure Data Studio
 description: Obtenga información acerca de los widgets de datos en Azure Data Studio
-ms.custom: seodec18
-ms.date: 09/24/2018
+ms.custom: seodec18, sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,18 +11,18 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fa7317d048d2bb9e19b6e82f5323a3b8ed15751
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5b52d54d60361b7572490da766b29eb5691efc0
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238884"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620340"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Administrar servidores y bases de datos con los widgets de datos en [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Widgets de datos realizar las consultas de Transact-SQL (T-SQL) que se utiliza para supervisar los servidores y bases de datos y convertirlos en visualizaciones muy precisos. 
+Widgets de datos realizar las consultas de Transact-SQL (T-SQL) que se utiliza para supervisar los servidores y bases de datos y convertirlos en visualizaciones muy precisos.
 
-Insights son personalizables diagramas y gráficos que agrega al servidor y los paneles de supervisión de la base de datos. Ver información de un vistazo de los servidores y bases de datos, a continuación, profundizar en más detalles e iniciar acciones de administración que defina. 
+Insights son personalizables diagramas y gráficos que agrega al servidor y los paneles de supervisión de la base de datos. Ver información de un vistazo de los servidores y bases de datos, a continuación, profundizar en más detalles e iniciar acciones de administración que defina.
 
 Puede crear increíbles servidor y base de datos de administración paneles similares al ejemplo siguiente:
 
@@ -33,11 +33,11 @@ Para dar el salto y empezar a crear diferentes tipos de widgets de datos, consul
 
 - [Crear un widget de datos personalizados](tutorial-build-custom-insight-sql-server.md)
 - *Habilitar los widgets de datos integrados*
-   - [Habilitar la información de supervisión de rendimiento](tutorial-qds-sql-server.md)
-   - [Habilitar la información de uso del espacio de tabla](tutorial-table-space-sql-server.md)
+  - [Habilitar la información de supervisión de rendimiento](tutorial-qds-sql-server.md)
+  - [Habilitar la información de uso del espacio de tabla](tutorial-table-space-sql-server.md)
 
 
-## <a name="sql-queries"></a>Consultas SQL 
+## <a name="sql-queries"></a>Consultas SQL
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] intenta evitar introducir aún otro lenguaje o con mucha actividad de usuario de la interfaz por lo que intenta usar T-SQL tanto como sea posible con muy poca configuración de JSON. Configuración de widgets de datos con Transact-SQL aprovecha el número de orígenes existentes de las consultas de Transact-SQL útiles que pueden convertirse en widgets perspicaces innumerables.
 

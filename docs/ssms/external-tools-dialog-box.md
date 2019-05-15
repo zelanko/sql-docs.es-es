@@ -12,15 +12,15 @@ helpviewer_keywords:
 - external tools [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], external tools
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 13e530d68185bd6a2433a446456481672162e2b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3440b7dd15b95c8ef890c7d2827f72cbe43d118
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625833"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102888"
 ---
 # <a name="external-tools-dialog-box"></a>Cuadro de diálogo Herramientas externas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +75,7 @@ Al especificar los siguientes valores en el cuadro de diálogo **Herramientas ex
 |**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**Argumentos**|-A|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Argumentos de las herramientas externas](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [Elementos generales de la interfaz de usuario](../ssms/general-user-interface-elements.md)  
   

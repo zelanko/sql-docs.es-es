@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.errorlog.configure.f1
 ms.assetid: e08de622-6f87-470c-aee0-b2d6cb6cca88
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d9feb892096bd620f817c0ae8c913fa2eaf3416c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5325fb530796ee0e1f29e0f52b718986aab358e6
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707243"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105959"
 ---
 # <a name="configure-sql-server-agent-error-logs-general-page"></a>Configurar registros de errores del Agente SQL Server (página General)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,6 +48,6 @@ Solo escribe advertencias y mensajes informativos en el archivo de registro.
 **Información**  
 Solo escribe mensajes informativos en el archivo de registro.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Registro de errores del Agente SQL Server](../../ssms/agent/sql-server-agent-error-log.md)  
   

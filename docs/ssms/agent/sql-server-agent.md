@@ -11,16 +11,16 @@ helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a5de816958beb6943ed102931e2e700528e0b140
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6788b27f4260905c18487866d22fe9434f34b5ff
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614891"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097548"
 ---
 # <a name="sql-server-agent"></a>Agente SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -181,6 +181,6 @@ Use las siguientes tareas para comenzar a trabajar con el agente de [!INCLUDE[ss
 |Describe el Asistente para planes de mantenimiento, que es una utilidad que puede ayudarle a crear trabajos, alertas y operadores para automatizar la administración de una instancia de SQL Server.|[Usar el Asistente para planes de mantenimiento](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |Describe cómo automatizar tareas administrativas mediante el Agente SQL Server.|[Tareas administrativas automatizadas &#40;Agente SQL Server&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Configuración de Área expuesta](../../relational-databases/security/surface-area-configuration.md)  
   

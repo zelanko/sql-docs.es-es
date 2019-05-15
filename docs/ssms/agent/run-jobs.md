@@ -13,16 +13,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], manually running
 - manual job processing [SQL Server]
 ms.assetid: cd445949-dc10-42fc-8785-4db74c9723ad
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 26b7a8f77710131027956ecb5e98384c56846340
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c63160251ee21ea409deab13ebd8cd264e1bd7c1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698483"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088945"
 ---
 # <a name="run-jobs"></a>Ejecutar trabajos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,6 +41,6 @@ Para administrar los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/s
 |Describe cómo detener un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Stop a Job](../../ssms/agent/stop-a-job.md)|  
 |Describe cómo deshabilitar o habilitar un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Deshabilitar o habilitar un trabajo](../../ssms/agent/disable-or-enable-a-job.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [sysdownloadlist](../../relational-databases/system-tables/dbo-sysdownloadlist-transact-sql.md)  
   

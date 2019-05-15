@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multiuser environments [Visual Database Tools]
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 788dcb0a847b7fe9fb70285da44d793d5a35a886
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f05907ccaf2d5fa16613d89e6bcb50a4e86b376
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636152"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098365"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Permisos y Visual Database Tools (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -26,6 +26,6 @@ Los permisos, que permiten a los usuarios tener acceso a los objetos de origen d
   
 Si los permisos de la base de datos dejan ver pero no modificar su estructura, podrán utilizarse scripts de cambio para diseñar modificaciones sin transferirlas a la base de datos.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Entornos multiusuario &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   

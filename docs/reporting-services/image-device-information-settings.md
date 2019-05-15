@@ -2,21 +2,21 @@
 title: Configuración de la información del dispositivo de imagen | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - images [Reporting Services], rendering
 - device information settings [Reporting Services], IMAGE rendering
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b59fcf947a283ef60f5dd34f60e2cf365092cfa7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 295784ba9f2c14ce0f73f9639ec6ed129e447e76
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738733"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503079"
 ---
 # <a name="image-device-information-settings"></a>Configuración de la información del dispositivo de imagen
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato IMAGE.  
@@ -39,7 +39,7 @@ ms.locfileid: "47738733"
 |**PrintDpiY**|Resolución vertical de la imagen de salida. El valor predeterminado es **300**. Se aplica al formato de salida de metarchivo mejorado (**EMF**).|  
 |**StartPage**|Primera página del informe que se va a representar. El valor **0** indica que se representan todas las páginas. El valor predeterminado es **1**.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Pasar la configuración de información de dispositivo a las extensiones de representación](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizar los parámetros de extensión de representación en RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - unnamed parameters
 - parameters [SQL Server], unnamed
 ms.assetid: 5f4b664b-3d3d-4d07-a0e7-791d78743504
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4bbd7558632eca275f7592faa905a3087fb3607b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2738825a94b2acd067f24b06178eff1817bf0519
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626493"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095666"
 ---
 # <a name="create-queries-with-unnamed-parameters-visual-database-tools"></a>Crear consultas con parámetros sin nombre (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,6 +35,6 @@ Cuando se ejecute la consulta en el Diseñador de consultas y vistas, se mostrar
   
     De forma predeterminada, el Diseñador de consultas y vistas agrega el operador "=". No obstante, puede editar la celda para sustituir el operador por ">", "<" o cualquier otro operador de comparación SQL.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Realizar consultas con parámetros &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
   

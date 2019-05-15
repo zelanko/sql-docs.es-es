@@ -16,15 +16,15 @@ helpviewer_keywords:
 - .sqlsuo files
 - files [SQL Server Management Studio], projects
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3bff8bd75d6852cc978dc63d198479a65f4ede9d
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 4b7be4d0cc64a72198525f059469f65b0c518a36
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100246"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104972"
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>Archivos que administran soluciones y proyectos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ De forma predeterminada, los archivos de la solución se crean en el directorio 
  
 Si tiene una estructura de directorios similar a la estructura lógica que aparece en el Explorador de soluciones, será más fácil encontrar los proyectos y los archivos de la solución y compartirlos con otros programadores de un equipo.  
    
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Administrar archivos con codificación](../../ssms/solution/manage-files-with-encoding.md)  
 [Archivos varios](../../ssms/solution/miscellaneous-files.md)  
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)  

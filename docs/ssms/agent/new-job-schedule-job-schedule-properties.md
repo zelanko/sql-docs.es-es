@@ -11,16 +11,16 @@ f1_keywords:
 - sql13.ag.job.scheduleproperties.f1
 - sql13.swb.maint.editrecurringjobsched.f1
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e1cc425cb817873d50966bf8c5fcbcc54864414c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cedcba1f41921a0e364a3e5419bec82cfa273920
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744653"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105508"
 ---
 # <a name="new-job-schedule---job-schedule-properties"></a>Nueva programación de trabajo - Propiedades de programación del trabajo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ Seleccione la fecha de ejecución del trabajo.
 **Time**  
 Seleccione la hora de ejecución del trabajo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  
 [Programar un trabajo](../../ssms/agent/schedule-a-job.md)  
   

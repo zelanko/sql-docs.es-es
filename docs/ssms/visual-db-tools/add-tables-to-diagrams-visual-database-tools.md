@@ -11,15 +11,15 @@ helpviewer_keywords:
 - inserting tables
 - adding tables
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a211647949ff4f234ac0287076e608b83e5a9421
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 601f077b8ebeb5971526c6f9f25978e09078fb83
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502215"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099461"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>Agregar tablas a diagramas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ Puede agregar una tabla al diagrama de base de datos para editar su estructura o
 > [!NOTE]  
 > Se agregan al diagrama tanto las tablas a las que hace referencia una restricción FOREIGN KEY de las tablas seleccionadas como las que hacen referencia a las tablas seleccionadas mediante una restricción FOREIGN KEY.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Trabajar con diagramas de base de datos (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Trabajar con tablas en diagramas de base de datos (Visual Database Tools)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   

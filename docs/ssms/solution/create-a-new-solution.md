@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio], creating
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ac0bfe3762635d4e903221a1688514faff0e4488
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 5a777892097f2e53befe32f9ad44961534fcfefc
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099869"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105033"
 ---
 # <a name="create-a-new-solution"></a>Crear una nueva solución
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ Para obtener acceso al Explorador de soluciones, en el menú **Ver** , haga clic
   
 6.  Haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Ver](../../ssms/solution/solution-explorer.md)  
 [Abrir soluciones desde el control de código fuente](https://msdn.microsoft.com/library/ms174216.aspx)  
   

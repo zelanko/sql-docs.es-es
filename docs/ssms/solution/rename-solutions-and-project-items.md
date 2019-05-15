@@ -13,15 +13,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], renaming
 - renaming solutions
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 838db10a6e82708416b634975ca6ea0cb21bf777
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 388e00cbd70f34b288267ccaa15e4d45307cd8ba
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606013"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102800"
 ---
 # <a name="rename-solutions-and-project-items"></a>Cambiar el nombre de las soluciones y los elementos de un proyecto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,6 +38,6 @@ Es posible cambiar el nombre de una solución y de los elementos de proyecto en 
   
 3.  En la ventana Propiedades, modifique la propiedad **(Nombre)** .  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)  
   

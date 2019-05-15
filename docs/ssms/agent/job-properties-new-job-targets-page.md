@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.job.targets.f1
 ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2691a0b0b27879d06053888511360e08f17aa9e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3a2cddd6e77d388076fba0129cfb332297f0fbb
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784753"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095823"
 ---
 # <a name="job-properties---new-job-targets-page"></a>Propiedades del trabajo - Nuevo trabajo (página Destinos)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,6 +36,6 @@ Ejecuta el trabajo en el servidor local. Si no se han dado de alta servidores de
 **Destino en varios servidores**  
 Ejecuta el trabajo en uno o varios servidores de destino. Después de seleccionar esta opción, debe elegir los servidores donde se va a ejecutar el trabajo. Los servidores de trabajo disponibles se muestran en una lista. Haga clic en un servidor de destino para seleccionarlo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Implementar trabajos](../../ssms/agent/implement-jobs.md)  
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - queries [SQL Server], executing
 - executing queries [SQL Server]
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d6e8d6912eef4722bb862946f93d00362db0bc0c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fcc0232a9556ae62888c631bd1961dc7c4c03822
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526087"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099885"
 ---
 # <a name="run-queries-visual-database-tools"></a>Ejecutar consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ El Diseñador de consultas y vistas devuelve los resultados por lotes (de forma 
   
 Si está creando una consulta de tipo Update, Insert From, Insert Into, Delete o Make Table, el Diseñador de consultas y vistas mostrará un mensaje que le indicará el número de filas afectadas por la consulta.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
 [Realizar operaciones básicas con consultas (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

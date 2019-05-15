@@ -11,15 +11,15 @@ helpviewer_keywords:
 - diagrams [SQL Server], creating
 - database diagrams [SQL Server], creating
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa4a72bf62b50709c516ba3fa8eb1c587b0416b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3de33a9f85a5a846b12fe8a95dc7b70381257c41
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658403"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089549"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Crear un diagrama de base de datos nuevo (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,6 +39,6 @@ Puede utilizar el Explorador de objetos para crear nuevos diagramas de base de d
   
 Puede agregar o eliminar tablas, modificar las tablas existentes y cambiar las relaciones entre tablas hasta que el nuevo diagrama de base de datos esté completo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Descripción de la propiedad de un diagrama de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Diagram pane [Visual Database Tools]
 - names [SQL Server], columns
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 68ebbb8c9a4b0ed87e9ec522c9fa78eb75a84711
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9897c05fdba098ef336c1edb2b31bfc4c9219c9f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797333"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099801"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>Mostrar nombres de columna en el panel Diagrama (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,6 +39,6 @@ Puede decidir si desea ocultar o mostrar los nombres de columna de las tablas en
   
 2.  Elija **Solo nombre** en el menú contextual.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

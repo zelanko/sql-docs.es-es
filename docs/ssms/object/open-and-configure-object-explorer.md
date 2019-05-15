@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 47f8766c8b1de030a17207723cb74d7fe2bec27c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51f08bdc67a47e8cad46a4badfc95f910757c2d4
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650743"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095729"
 ---
 # <a name="open-and-configure-object-explorer"></a>Abrir y configurar el Explorador de objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ El Explorador de objetos es visible de forma predeterminada en [!INCLUDE[ssManSt
 ## <a name="configuring-object-explorer-options"></a>Configurar las opciones del Explorador de objetos  
 Configurar los valores del Explorador de objetos, en el menú **Herramientas** , hace clic en **Opciones**y, a continuación, hace clic en **Explorador de objetos de SQL Server**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Ver](../../ssms/object/object-explorer.md)  
 [Conectarse a una instancia desde el Explorador de objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
 [Administrar objetos mediante el Explorador de objetos](../../ssms/object/manage-objects-by-using-object-explorer.md)  

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - monitoring [SQL Server], events
 - responding to events automatically
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 47f88b65cb7ad746f3e3ab1ab7b0c7ad95de1196
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2181e094cab0ab6c5047fe4c9a8625d3017f1e6
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715069"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105532"
 ---
 # <a name="monitor-and-respond-to-events"></a>Supervisar y responder a eventos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,6 +74,6 @@ Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registra un men
   
 Independientemente del origen del evento, el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] responde al evento realizando las tareas especificadas en la alerta del evento.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [sp_altermessage](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)  
   

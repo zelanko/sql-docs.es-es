@@ -4,15 +4,15 @@ ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3f79fd96bdfb51bb9ca0301552876a536336df7
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: d636086c909d1d486040df6fc8d31cfea57c4f4d
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712656"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502690"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Instalación de SQL Server Reporting Services (2017 y posterior)
 
@@ -124,7 +124,13 @@ Tiene que abrir el puerto TCP que ha configurado para la dirección URL del serv
 
 ## <a name="related-information"></a>Información relacionada
 
-Para obtener información sobre cómo instalar SQL Server Reporting Services en modo nativo, vea [Instalar el servidor de informes en modo nativo de Reporting Services](install-reporting-services-native-mode-report-server.md). Para obtener información sobre cómo instalar SQL Server 2016 Reporting Services (y versiones anteriores) en modo integrado de SharePoint, vea [Instalación del primer servidor de informes en modo de SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
+Para obtener información sobre cómo instalar SQL Server Reporting Services en modo nativo, vea [Instalar el servidor de informes en modo nativo de Reporting Services](install-reporting-services-native-mode-report-server.md). 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+Para obtener información sobre cómo instalar SQL Server 2016 Reporting Services (y versiones anteriores) en modo integrado de SharePoint, vea [Instalación del primer servidor de informes en modo de SharePoint](install-the-first-report-server-in-sharepoint-mode.md).
+
+::: moniker-end
 
 ## <a name="next-steps"></a>Pasos siguientes
 

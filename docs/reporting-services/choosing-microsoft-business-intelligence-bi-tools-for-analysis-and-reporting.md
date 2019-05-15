@@ -1,7 +1,7 @@
 ---
 title: Análisis e informes con herramientas de Microsoft Business Intelligence (BI)
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services, sql-server
@@ -9,12 +9,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 3acb11029c767efb3be21274d27ab271a5140793
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 7916d3b2afe514d576ba7ec99cd1a7edab244278
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658079"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503899"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Análisis e informes con herramientas de Microsoft Business Intelligence (BI)
 
@@ -23,6 +23,9 @@ Elegir la herramienta de inteligencia empresarial adecuada puede ser abrumador. 
 En la tabla siguiente se asignan las cargas de trabajo para el análisis de datos y los informes a las herramientas de Microsoft BI más adecuadas para esas cargas de trabajo. Para obtener más información acerca de un producto, haga clic en el vínculo del producto en la tabla.  
   
  Si está buscando una breve introducción a estas herramientas para ayudarle a decidir cuáles son las adecuadas en su caso, vea [Introducing Microsoft Business Intelligence (BI) Tools](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Introducing_Microsoft_BI_Tools.docx) [Introducción a las herramientas de Microsoft Business Intelligence (BI)].
+
+> [!NOTE]
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
   
 |Cargas de trabajo|Usuario|||Herramientas de BI|||  
 |---------------|----------|-|-|--------------|-|-|  

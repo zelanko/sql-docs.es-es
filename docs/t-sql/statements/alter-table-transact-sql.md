@@ -60,12 +60,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a312663c26142bfd532adbcaba80d2a6ee30d6db
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.openlocfilehash: 6222daffd3f008486f8c2be59f74a8c605caa2f7
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683685"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502862"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -90,7 +90,7 @@ Para obtener más información sobre las convenciones de sintaxis, vea [Convenci
 ## <a name="syntax-for-disk-based-tables"></a>Sintaxis para las tablas basadas en disco
 
 ```
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
     {
@@ -249,7 +249,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 ## <a name="syntax-for-memory-optimized-tables"></a>Sintaxis para las tablas optimizadas para memoria
 
 ```
-ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
+ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 {
     ALTER COLUMN column_name
     {
@@ -380,7 +380,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 
 -- Syntax for Azure SQL Data Warehouse and Analytics Platform System
 
-ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_name
+ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {
     ALTER COLUMN column_name
         {
@@ -848,7 +848,7 @@ Al deshabilitar Stretch para una tabla, tiene dos opciones para los datos remoto
 - Para deshabilitar Stretch para una tabla y copiar los datos remotos de la tabla de Azure en SQL Server, ejecute el siguiente comando. Este comando no se puede cancelar.
 
     ```sql
-    ALTER TABLE \<table name>
+    ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;
     ```
 
@@ -859,7 +859,7 @@ Una vez que todos los datos remotos se han copiado desde Azure en SQL Server, se
 - Para deshabilitar Stretch para una tabla y abandonar los datos remotos, ejecute el siguiente comando.
 
     ```sql
-    ALTER TABLE \<table_name>
+    ALTER TABLE <table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;
     ```
 
@@ -1042,7 +1042,7 @@ ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL ;
 GO
 ```
 
-#### <a name="b-adding-a-column-with-a-constraint"></a>b. Agregar una columna con una restricción
+#### <a name="b-adding-a-column-with-a-constraint"></a>B. Agregar una columna con una restricción
 
 En el ejemplo siguiente se agrega una nueva columna con una restricción `UNIQUE`.
 
@@ -1279,7 +1279,7 @@ GO
 ALTER TABLE dbo.doc_exb DROP COLUMN column_c, column_d;
 ```
 
-#### <a name="b-dropping-constraints-and-columns"></a>b. Quitar restricciones y columnas
+#### <a name="b-dropping-constraints-and-columns"></a>B. Quitar restricciones y columnas
 
 En el primer ejemplo se quita una restricción `UNIQUE` de una tabla. En el segundo ejemplo se quitan dos restricciones y una sola columna.
 
@@ -1304,7 +1304,7 @@ GO
 -- The keyword CONSTRAINT is optional. The keyword COLUMN is required.
 ALTER TABLE dbo.doc_exc
 
-    DROP CONSTRAINT CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
+    DROP CONSTRAINT my_constraint, my_pk_constraint, COLUMN column_b ;
 GO
 ```
 
@@ -1359,7 +1359,7 @@ DROP TABLE dbo.doc_exy ;
 GO
 ```
 
-#### <a name="b-changing-the-size-of-a-column"></a>b. Cambiar el tamaño de una columna
+#### <a name="b-changing-the-size-of-a-column"></a>B. Cambiar el tamaño de una columna
 
 En el ejemplo siguiente se aumenta el tamaño de una columna **varchar** y la precisión y la escala de una columna **decimal**. Dado que las columnas contienen datos, solo se puede aumentar el tamaño de columna. Observe también que `col_a` se define en un índice único. Aún se puede aumentar el tamaño de `col_a` porque el tipo de datos es **varchar** y el índice no es el resultado de una restricción KEY PRIMARY.
 
@@ -1471,7 +1471,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
 
 Para obtener más ejemplos de compresión de datos, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).
 
-#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>b. Modificar una tabla de almacén de columnas para cambiar la compresión de archivo
+#### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>B. Modificar una tabla de almacén de columnas para cambiar la compresión de archivo
 
 En el ejemplo siguiente se comprime aún más una partición de tabla de almacén de columnas aplicando un algoritmo de compresión adicional. Esta compresión reduce la tabla a un tamaño mínimo, pero también aumenta el tiempo necesario para el almacenamiento y la recuperación. Esto resulta útil para el archivado o para otras situaciones que requieran menos espacio y en las que pueda permitirse más tiempo para el almacenamiento y recuperación.
 
@@ -1584,7 +1584,7 @@ ALTER TABLE dbo.cnst_example CHECK CONSTRAINT salary_cap;
 INSERT INTO dbo.cnst_example VALUES (4,'Eric James',110000) ;
 ```
 
-#### <a name="b-disabling-and-re-enabling-a-trigger"></a>b. Deshabilitar y volver a habilitar un desencadenador
+#### <a name="b-disabling-and-re-enabling-a-trigger"></a>B. Deshabilitar y volver a habilitar un desencadenador
 
 En el ejemplo siguiente se usa la opción `DISABLE TRIGGER` de `ALTER TABLE` para deshabilitar el desencadenador y permitir una inserción que normalmente infringiría el desencadenador. Después se usa `ENABLE TRIGGER` para volver a habilitar el desencadenador.
 
@@ -1640,7 +1640,7 @@ REBUILD WITH
 ;
 ```
 
-#### <a name="b-online-alter-column"></a>b. Alteración de columna en línea
+#### <a name="b-online-alter-column"></a>B. Alteración de columna en línea
 
 En el ejemplo siguiente se muestra cómo ejecutar una operación de alteración de columna con la opción ONLINE.
 
@@ -1683,7 +1683,7 @@ ALTER TABLE InsurancePolicy
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 1 YEAR));
 ```
 
-#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>b. Migrar una solución existente para usar el control de versiones del sistema
+#### <a name="b-migrate-an-existing-solution-to-use-system-versioning"></a>B. Migrar una solución existente para usar el control de versiones del sistema
 
 En el ejemplo siguiente se muestra cómo migrar a las versiones del sistema desde una solución que utilice desencadenadores para imitar una compatibilidad temporal. En el ejemplo se da por supuesto que hay una solución existente en la que se usa una tabla `ProjectTask` y una tabla `ProjectTaskHistory` para su solución existente, que usa las columnas `Changed Date` y `Revised Date` para sus períodos, que estas columnas de período no usan el tipo de datos `datetime2` y que la tabla `ProjectTask` tiene definida una clave principal.
 
@@ -1757,7 +1757,7 @@ WHERE p.partition_id IS NOT NULL
     AND t.name = 'FactResellerSales';
 ```
 
-### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>b. Determinar los valores de límite para una tabla con particiones
+### <a name="b-determining-boundary-values-for-a-partitioned-table"></a>B. Determinar los valores de límite para una tabla con particiones
 
 La consulta siguiente devuelve los valores de límite para cada partición de la tabla `FactResellerSales` .
 
@@ -1782,7 +1782,7 @@ ORDER BY p.partition_number;
 
 ### <a name="c-determining-the-partition-column-for-a-partitioned-table"></a>C. Determinar la columna de partición de una tabla con particiones
 
-La consulta siguiente devuelve el nombre de la columna de partición de la tabla. `FactResellerSales`.
+La consulta siguiente devuelve el nombre de la columna de partición de la tabla. Columnas en la tabla de origen capturadas`FactResellerSales`
 
 ```sql
 SELECT t.object_id AS Object_ID, t.name AS TableName,

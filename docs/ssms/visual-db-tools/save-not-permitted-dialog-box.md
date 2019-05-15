@@ -1,30 +1,28 @@
 ---
 title: Cuadro de diálogo Guardar (no se permite) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
-ms.prod: sql
-ms.prod_service: sql-tools
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
-- sql13.swb.table.tablerecreatenosave.f1
+- sql12.swb.table.tablerecreatenosave.f1
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b491d5d0bf14c90d813b0fc66c0112eac1ff0e16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e753a0854e5ac8f789249a211b4af3990417279c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635303"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099877"
 ---
 # <a name="save-not-permitted-dialog-box"></a>Guardar (no se permite), (cuadro de diálogo)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-El cuadro de diálogo **Guardar** (no se permite) advierte de que no se permite guardar cambios porque los cambios realizados requieren que se quiten y se vuelvan a crear las tablas enumeradas.  
+  El cuadro de diálogo **Guardar** (no se permite) advierte de que no se permite guardar cambios porque los cambios realizados requieren que se quiten y se vuelvan a crear las tablas enumeradas.  
   
-Las acciones siguientes pueden requerir que se vuelva a crear una tabla:  
+ Las acciones siguientes pueden requerir que se vuelva a crear una tabla:  
   
 -   Agregar una nueva columna en la mitad de la tabla  
   
@@ -36,5 +34,6 @@ Las acciones siguientes pueden requerir que se vuelva a crear una tabla:
   
 -   Cambiar el tipo de datos de una columna  
   
-Cambiar esta opción, en el menú **Herramientas** , haga clic en **Opciones**, expanda **Diseñadores**y, a continuación, haga clic en **Diseñadores de tablas y bases de datos**. Active o desactive la casilla **Impedir guardar cambios que requieran volver a crear tablas** .  
+ Cambiar esta opción, en el menú **Herramientas** , haga clic en **Opciones**, expanda **Diseñadores**y, a continuación, haga clic en **Diseñadores de tablas y bases de datos**. Active o desactive la casilla **Impedir guardar cambios que requieran volver a crear tablas** .  
+  
   

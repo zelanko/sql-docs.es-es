@@ -13,15 +13,15 @@ helpviewer_keywords:
 - dragging and dropping text
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fad7d0d5106af21db50b10835d862ffbaef5a875
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b256b82ab6229d93612a2c9c5ae35978e17155e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713533"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088898"
 ---
 # <a name="use-the-toolbox"></a>Utilizar el cuadro de herramientas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,6 +44,6 @@ Los elementos del cuadro de herramientas se agrupan en secciones denominadas pes
 |Cambiar la posición de un elemento en una pestaña expandida del cuadro de herramientas|Arrastre el elemento a la nueva ubicación y suelte el botón del mouse.|  
 |Cambiar el nombre a un elemento del cuadro de herramientas|Haga clic con el botón derecho en el elemento del cuadro de herramientas y haga clic en **Cambiar nombre de elemento** en el menú contextual.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Elementos generales de la interfaz de usuario](../ssms/general-user-interface-elements.md)  
   

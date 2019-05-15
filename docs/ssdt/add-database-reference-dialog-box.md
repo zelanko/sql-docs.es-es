@@ -1,24 +1,20 @@
 ---
 title: Cuadro de diálogo Agregar referencia de base de datos | Microsoft Docs
-ms.custom:
-- SSDT
-ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ''
 ms.topic: conceptual
-f1_keywords:
-- sql.data.tools.adddatabasereference.dialog
-ms.assetid: 838caa2a-4117-48bc-8c6c-9e7ceab38893
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 821af23f45cbf190f094931643b9be6ddbed9a35
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.reviewer: ''
+ms.custom: SSDT
+ms.date: 02/09/2017
+ms.openlocfilehash: b8ce668d62cc26c6d5e6a62cb43a3c02e4b660fa
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400611"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097425"
 ---
 # <a name="add-database-reference-dialog-box"></a>Cuadro de diálogo Agregar referencia de base de datos
 En este tema se describen los procedimientos que puede realizar en el cuadro de diálogo **Agregar referencia de base de datos**.  
@@ -117,6 +113,6 @@ Cuando publique este proyecto, puede implementar proyectos compuestos en la mism
   
 3.  En el cuadro de diálogo **Configuración de publicación avanzada**, asegúrese de que selecciona **Incluir objetos compuestos** en la lista **Opciones de implementación avanzadas**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Desarrollo de bases de datos sin conexión orientado a proyectos](../ssdt/project-oriented-offline-database-development.md)  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL pane [Visual Database Tools]
 - multiple language support [SQL Server], Query and View Designer
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 19598f44624629850f1116d74b25f4f9ab488c67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddb0112fd671f939f3b217e31f299814a3f59f1a
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669963"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098569"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Utilizar el Diseñador de consultas y vistas con datos internacionales (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,6 +58,6 @@ El criterio de ordenación de los datos de la consulta viene determinado por la 
 ## <a name="using-double-byte-characters"></a>Utilizar caracteres de doble byte  
 Puede especificar caracteres DBCS para literales y para nombres de objeto de base de datos tales como alias o nombres de vistas y tablas. También puede utilizar caracteres DBCS para nombres de parámetros y caracteres marcadores de parámetros. Sin embargo, no puede utilizar caracteres DBCS en elementos de lenguaje SQL tales como nombres de funciones o palabras clave SQL.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Temas de procedimientos de diseño de consultas y vistas (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

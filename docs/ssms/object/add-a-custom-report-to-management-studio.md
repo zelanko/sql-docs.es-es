@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 3cf8d726-0a90-4f80-98d0-352a2a59be0f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fb974803e367589c5c05386e48f08f1e8d04e91c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1dbeed0de0771b70d0ee2e042aa90f485e56eda
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732193"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099979"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>agregar un informe personalizado a Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ En este tema se describe cómo se crea un informe sencillo de [!INCLUDE[ssRSnove
   
     2.  Ajuste el número de **Mostrar archivos de la lista de archivos recientes**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Informes personalizados en Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
 [Usar informes personalizados con las propiedades de nodo del Explorador de objetos](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
 [Anular la supresión de las advertencias de Ejecutar informe personalizado](../../ssms/object/unsuppress-run-custom-report-warnings.md)  

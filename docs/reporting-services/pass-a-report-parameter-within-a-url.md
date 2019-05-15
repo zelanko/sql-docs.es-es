@@ -2,24 +2,27 @@
 title: Pasar un parámetro de informe en una dirección URL | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], passing parameters
 - passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a78727d3b0ab3ee1909f9e86032ab392642b5603
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6254eebb4d5f1ed2f33c317ece63b9328a6e4a14
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211214"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503663"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Pasar un parámetro de informe en una dirección URL
   Puede pasar parámetros de informe a un informe incluyéndolos en un informe URL. Estos parámetros de dirección URL no tienen prefijo porque se pasan directamente al motor de procesamiento de informes.  
+
+> [!NOTE]
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
   
 > [!IMPORTANT]  
 >  Es importante que la dirección URL incluya la sintaxis de proxy de `_vti_bin` para enrutar la solicitud a través de SharePoint y el proxy HTTP de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . El proxy agrega algún contexto a la solicitud HTTP, contexto que es necesario para garantizar la correcta ejecución del informe para los servidores de informes de modo de SharePoint.  

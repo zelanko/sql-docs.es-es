@@ -13,16 +13,16 @@ helpviewer_keywords:
 - actions [SQL Server Agent jobs]
 - responding to jobs
 ms.assetid: 050242e1-9b79-4ade-91a9-580707b9d2d9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 928bc7cf9ec193a49b3c98580e1ba4cca0177218
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 083fd39b806a38a3035bfbdf0b8d6c6f986f8480
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846876"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095486"
 ---
 # <a name="specify-job-responses"></a>Especificar respuestas de trabajos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,6 +52,6 @@ Las respuestas de trabajos especifican acciones que realizará el servicio del A
 |Describe cómo notificar a un operador el estado de un trabajo.|[Notify an Operator of Job Status](../../ssms/agent/notify-an-operator-of-job-status.md)|  
 |Describe cómo escribir el estado de un trabajo en el registro de aplicación Windows.|[Write the Job Status to the Windows Application Log](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Supervisar y responder a eventos](../../ssms/agent/monitor-and-respond-to-events.md)  
   

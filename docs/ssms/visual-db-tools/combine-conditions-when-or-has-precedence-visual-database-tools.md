@@ -14,15 +14,15 @@ helpviewer_keywords:
 - combining search conditions
 - OR operator
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5bf6ae9321e0ffc923a2dfbf5e00feab9215d182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5757d32093ab6547092d967f1d9fcf8c94323cf0
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787563"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65093356"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>Combinar condiciones cuando OR tiene prioridad (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,7 +72,7 @@ WHERE (job_lvl = 100 OR status = 'R') AND
 > [!NOTE]  
 > Si especifica condiciones de búsqueda en el formato arriba mostrado en el [panel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), pero luego modifica la consulta en los paneles Diagrama o Criterios, el Diseñador de consultas y vistas volverá a crear la instrucción SQL para hacerla coincidir con la forma en que la condición AND se distribuye explícitamente a ambas condiciones OR.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Convenciones para combinar condiciones de búsqueda en el panel Criterios &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
 [Especificar criterios de búsqueda (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

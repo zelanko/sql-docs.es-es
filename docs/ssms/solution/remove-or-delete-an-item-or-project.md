@@ -12,15 +12,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], item removal
 - removing project items
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a94e6cf1ca6c550d2229b198fbfd18ab7d714f12
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4300cdd7ae29fe33f1843f5ecc6e7e389d982e58
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804953"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102937"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>Quitar o eliminar un elemento o un proyecto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ Un proyecto se puede eliminar de forma permanente, pero primero es necesario qui
   
 3.  En el menú **Archivo** , haga clic en **Eliminar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)  
 [Agregar nuevos elementos a un proyecto](../../ssms/solution/add-new-items-to-a-project.md)  
 [Agregar elementos existentes a un proyecto](../../ssms/solution/add-existing-items-to-a-project.md)  

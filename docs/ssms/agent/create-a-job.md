@@ -11,16 +11,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], creating
 - SQL Server Agent jobs, creating
 ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f323a029e881da8a6b2ef681cacc3bb12b118d51
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 993debfc18e7722e517e07b42e335aa7f4f29457
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541972"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095607"
 ---
 # <a name="create-a-job"></a>Crear un trabajo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Para agregar pasos de trabajo, programas, alertas y notificaciones que puedan en
     > Si cambia la propiedad de un trabajo a un usuario que no es miembro del rol fijo de servidor **sysadmin** y el trabajo está ejecutando unos pasos que necesitan las cuentas de un servidor proxy (por ejemplo, la ejecución de paquetes [!INCLUDE[ssIS](../../includes/ssis_md.md)] ), asegúrese de que el usuario tenga acceso a ese servidor proxy o, de lo contrario, se producirán errores en el trabajo.  
   
 #### <a name="Permissions"></a>Permissions  
-Para obtener información detallada, vea [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMSProcedure"></a>Usar SQL Server Management Studio  
   

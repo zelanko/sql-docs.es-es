@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0bb145c668022c310a159455a77c9065635c99d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: af2982aa2f7955c5196ec445064c691a5f070259
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201532"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503471"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,15 +57,14 @@ ms.locfileid: "53201532"
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
   
-DROP TABLE [ IF EXISTS ] [ database_name . [ schema_name ] . | schema_name . ]  
-table_name [ ,...n ]  
+DROP TABLE [ IF EXISTS ] { database_name.schema_name.table_name | schema_name.table_name | table_name } [ ,...n ]  
 [ ; ]  
 ```  
   
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
+DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 [;]  
 ```  
   
@@ -114,7 +113,7 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 DROP TABLE ProductVendor1 ;  
 ```  
   
-### <a name="b-dropping-a-table-in-another-database"></a>b. Quitar una tabla de otra base de datos  
+### <a name="b-dropping-a-table-in-another-database"></a>B. Quitar una tabla de otra base de datos  
  En el siguiente ejemplo se quita la tabla `SalesPerson2` de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. El ejemplo se puede ejecutar desde cualquier base de datos de la instancia de servidor.  
   
 ```  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - combining query results
 - merged SELECT query [SQL Server]
 ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1f4fb949c7706aa5b476edde388d747411f3a1a3
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 087abb83075b37b3002f649164485ae64cf137c3
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699532"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095214"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>Crear consultas UNION (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ La palabra clave UNION permite incluir los resultados de dos instrucciones SELEC
   
     El Diseñador de consultas da formato a su consulta UNION.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Tipos de consultas compatibles (Visual Database Tools)](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
 [Temas de procedimientos de diseño de consultas y vistas (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Realizar operaciones básicas con consultas (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

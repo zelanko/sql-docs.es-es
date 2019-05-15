@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - saving tables
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0f793c940e6c32bfd3455946db4d538546f49f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 850d349760d28d57b7ffe14eb3791cd038be2c1e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819903"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099927"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Guardar tablas seleccionadas en un diagrama (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,6 +39,6 @@ Puede guardar una tabla específica o un conjunto de tablas si no desea guardar 
     > [!NOTE]  
     > La lista de tablas puede contener otras tablas además de las seleccionadas. Por ejemplo, si cambia el tipo de datos de una columna que participa en una relación con otra tabla, se incluirán las dos tablas en esta lista.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Trabajar con diagramas de base de datos (Visual Database Tools)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

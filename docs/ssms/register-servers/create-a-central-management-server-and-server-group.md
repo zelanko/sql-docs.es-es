@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - configuration server
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5f4755e76755a455ff5a4fca7a77a7c9188fd76f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 38a26849e3055afa98f9934b1a5640b77fbb18c0
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696144"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105289"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Crear un servidor de administración central y un grupo de servidores
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "51696144"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Dos roles de base de datos en la base de datos msdb conceden acceso a los servidores de administración central. Solo los miembros del rol ServerGroupAdministratorRole pueden administrar el servidor de administración central. La pertenencia al rol ServerGroupReaderRole es necesaria para conectarse a un servidor de administración central.  
   
  Dado que las conexiones que mantiene un servidor de administración central se ejecutan en el contexto del usuario, si se usara la autenticación de Windows los permisos vigentes en los servidores registrados podrían variar. Por ejemplo, el usuario podría ser miembro del rol fijo de servidor sysadmin en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A, pero tener permisos limitados en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] B.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Los procedimientos siguientes describen cómo realizar los pasos siguientes.  
   
 1.  Cree un servidor de administración central.  
@@ -83,7 +83,7 @@ ms.locfileid: "51696144"
   
 -   Después de crear un servidor de administración central, uno o varios grupos de servidores, y uno o varios servidores registrados, puede ejecutar al mismo tiempo las consultas con un grupo entero. Para obtener más información sobre cómo ejecutar instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en los servidores de un grupo de servidores al mismo tiempo, vea [Ejecutar instrucciones con varios servidores simultáneamente &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrar varios servidores mediante Servidores de administración central](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

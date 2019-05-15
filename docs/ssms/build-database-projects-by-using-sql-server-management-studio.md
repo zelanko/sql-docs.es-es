@@ -13,15 +13,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], about projects
 - projects [SQL Server Management Studio]
 ms.assetid: c2e80045-894d-44cf-b65c-e547ed738947
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f1243a0979148b8c5a4a0f98b28cc7e1c7ad677f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7e61525c8ea3e158543673e1f2dcb8ccf7a46dae
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700391"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102742"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>Generar proyectos de bases de datos mediante SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ El Explorador de soluciones es una herramienta para los programadores que crean 
   
 Una solución consta de uno o más proyectos de script. Un proyecto está formado por uno o más scripts o conexiones. Un proyecto también puede incluir archivos que no sean scripts.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Usar SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
 [Escribir, analizar y editar consultas con SQL Server Management Studio](https://msdn.microsoft.com/062051e4-4b77-4969-98ae-d2547c24ce3e)  
 [Soluciones &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  

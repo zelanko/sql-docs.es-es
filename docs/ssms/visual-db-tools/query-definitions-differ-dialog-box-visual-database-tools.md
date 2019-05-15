@@ -12,15 +12,15 @@ f1_keywords:
 - vdtsql.chm:69640
 - vdt.dlgbox.querydefinitionsdiffer
 ms.assetid: 90383473-2922-40e5-9682-3850849aa856
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b68ce0b33bd78bbc708abfcb3f39656b7b23c5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e065ac17e913d766813076df75a6a65ffe9472e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762643"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098268"
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>Definiciones de consulta diferentes (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,6 +52,6 @@ Haga clic en este botón para descartar los cambios realizados en el panel SQL.
 > [!NOTE]  
 > Si la instrucción es correcta, pero el Diseñador de consultas y vistas no la admite gráficamente, podrá ejecutarla aunque no se pueda representar en los paneles Diagrama y Criterios. Por ejemplo, si indica una consulta de unión, se podrá ejecutar la instrucción, pero no se podrá representar en los otros paneles.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Herramientas Diseñador de consultas y vistas (Visual Database Tools)](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)  
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], projects
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: db9cda0558f2d43aa8921428f87a08f826a05afe
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: 51c1bbf529bf38e7efbadfe5e85d87fa49741b7e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099846"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102840"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Soluciones (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ Las soluciones y proyectos pueden integrarse en una base de datos [!INCLUDE[msCo
 |Describe cómo mover elementos entre los proyectos de una solución.|[Mover elementos en una solución](../../ssms/solution/move-items-in-a-solution.md)|  
 |Describe cómo cambiar el nombre de una solución o elementos de la solución.|[Cambiar el nombre de las soluciones y los elementos de un proyecto](../../ssms/solution/rename-solutions-and-project-items.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)  
 [Proyectos &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Control de código fuente del Explorador de soluciones](https://msdn.microsoft.com/library/ms173879.aspx)  

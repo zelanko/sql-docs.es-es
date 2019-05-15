@@ -16,16 +16,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, scheduling
 - idle time [SQL Server]
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: db84b62fa9d725210e04241ba0ebbad87c52ab4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4df842e4d9df51fb11f195a6c693700697407bd
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640153"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096883"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Crear y adjuntar programaciones a trabajos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ Defina la condición de CPU inactiva como un porcentaje por debajo del cual el u
 |Describe cómo programar un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Programar un trabajo](../../ssms/agent/schedule-a-job.md)|  
 |Explica cómo definir la condición de inactividad de la CPU para el servidor.|[Establecer la duración y el tiempo de inactividad de la CPU &#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [sp_help_jobschedule](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)  
 [sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   

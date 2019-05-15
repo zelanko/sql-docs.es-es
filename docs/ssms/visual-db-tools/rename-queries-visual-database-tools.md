@@ -11,15 +11,15 @@ helpviewer_keywords:
 - renaming queries
 - queries [SQL Server], names
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 62b16e94c665113f479a09b184832e22412537ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe6af8d460606c1cb8ccdfc32e72c87265a607fc
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658223"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099197"
 ---
 # <a name="rename-queries-visual-database-tools"></a>Cambiar el nombre de las consultas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ Puede cambiar el nombre de una consulta que no esté abierta para su edición. E
   
 3.  Escriba un nuevo nombre para la consulta y, a continuación, presione ENTRAR.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Realizar operaciones básicas con consultas (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 - SQL Server Agent jobs, about jobs
 - jobs [SQL Server Agent], about jobs
 ms.assetid: 69e06724-25c7-4fb3-8a5b-3d4596f21756
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f3d065ded1a116c124105023915e6b5380e28403
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 258dd587ee2ae61915e2e3eb40c8cac05775638d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631243"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096455"
 ---
 # <a name="implement-jobs"></a>Implementar trabajos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,6 +50,6 @@ Puede ejecutar los trabajos manualmente o configurarlos para que se ejecuten de 
 |Contiene información acerca de cómo ver los trabajos existentes, su historial cuando se han ejecutado y cómo modificarlos.|[Ver o modificar trabajos](../../ssms/agent/view-or-modify-jobs.md)|  
 |Contiene información acerca de cómo eliminar trabajos.|[Eliminar trabajos](../../ssms/agent/delete-jobs.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Implementar la seguridad del Agente SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
   

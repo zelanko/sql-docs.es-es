@@ -14,16 +14,16 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd8995c954d88a90b5e1c5cd8802f69d96b33186
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2dc3cd6f52d0c43903cb663ec6e6aa6d8bd60f3
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627293"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946142"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Especificar la longitud de campo mediante bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "47627293"
   
  En todos los casos anteriores, si desea crear un archivo de datos para recargarlo posteriormente en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y mantener el espacio de almacenamiento mínimo, use un prefijo de longitud con el tipo de almacenamiento en archivo y la longitud de campo predeterminados.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [bcp (utilidad)](../../tools/bcp-utility.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   

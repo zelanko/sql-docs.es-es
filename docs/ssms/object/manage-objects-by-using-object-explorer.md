@@ -14,15 +14,15 @@ helpviewer_keywords:
 - OE F1 Help
 - OE Help
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 234a31d2b3bc59a447b14691b45c1a2a323598b2
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: b78502e3bc0701af0dd662455382ce7ad2432813
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696805"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102768"
 ---
 # <a name="manage-objects-by-using-object-explorer"></a>Administrar objetos mediante el Explorador de objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ Cuando el Explorador de objetos está conectado a un servidor, es posible abrir 
 ### <a name="start-powershell"></a>Iniciar PowerShell  
 Puede iniciar una sesión de PowerShell haciendo clic con el botón derecho en la mayoría de las carpetas y objetos en el árbol del Explorador de objetos y seleccionando **Iniciar PowerShell**. De este modo se inicia una sesión de PowerShell que tiene habilitada la compatibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, y tiene establecida la ruta de acceso al objeto en el que hizo clic con el botón secundario en el Explorador de objetos. A continuación, puede escribir comandos de PowerShell en un entorno interactivo de PowerShell. Para más información, consulte [SQL Server PowerShell](https://msdn.microsoft.com/89b70725-bbe7-4ffe-a27d-2a40005a97e7).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Explorador de objetos](../../ssms/object/object-explorer.md)  
 [Abrir y configurar el Explorador de objetos](../../ssms/object/open-and-configure-object-explorer.md)  
 [Conectarse a una instancia desde el Explorador de objetos](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  

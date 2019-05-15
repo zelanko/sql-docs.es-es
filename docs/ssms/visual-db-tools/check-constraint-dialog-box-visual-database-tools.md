@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.checkconstraint
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 45c47dcde8bfa7546c62741e1130b33b6883b316
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 722ffb0dc01adbd096ecc28960244b8fc87b1ed9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504008"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65091402"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Restricción CHECK (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ Especifica si se exigirá la restricción cuando se inserten o se actualicen dat
 **Exigir para replicación**  
 Indica si se exigirá la restricción cuando un agente de replicación realice una inserción o actualización en esta tabla.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Trabajar con restricciones (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [Cuadro de diálogo Índices o claves &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   

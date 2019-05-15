@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.agent.history.f1
 ms.assetid: dc73734c-b3c3-407f-bbd1-8714b4fa47b0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e61393109ef05efbe1941d6a5bb56164928c8a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30426daee4c801ae0e8e338a88020434acda602d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632089"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089623"
 ---
 # <a name="sql-server-agent-properties-history-page"></a>Propiedades de Agente SQL Server (página Historial)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,6 +45,6 @@ Especifica que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 **Anterior a**  
 Establece el tiempo que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conservará las entradas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Registro de errores del Agente SQL Server](../../ssms/agent/sql-server-agent-error-log.md)  
   

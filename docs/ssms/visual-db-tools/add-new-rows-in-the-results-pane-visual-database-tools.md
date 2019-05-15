@@ -15,15 +15,15 @@ helpviewer_keywords:
 - adding rows
 - row additions [SQL Server], Results pane
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 444d6d79a1c381a9a65df17c3949ddba5020a51e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70faae781da3e9ab78777e0e893a379b64f89949
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832513"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088919"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>Agregar nuevas filas en el panel Resultados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ Si al guardar la fila se produce un error, el Diseñador de consultas y vistas m
   
 -   Cancelar la modificación presionando la tecla ESC. Si presiona ESC cuando está en una celda que ha cambiado, se cancelan los cambios de esa celda. Si presiona ESC cuando está en una celda que no ha cambiado, se cancelan los cambios de toda la celda.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
 [Realizar operaciones básicas con consultas (Visual Database Tools)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   

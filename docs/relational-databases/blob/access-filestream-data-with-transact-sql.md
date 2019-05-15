@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Transact-SQL
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1bda35ca1d80c7513c1bab71e1f814cb6060a6fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32b9fbb1967c3d98ccc6dbb149bea40da735c887
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657283"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65089054"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Obtener acceso a datos FILESTREAM con Transact-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47657283"
 >  El recolector de elementos no utilizados de FILESTREAM quita los archivos subyacentes.  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Habilitar y configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)   
  [Evitar conflictos con operaciones de base de datos en aplicaciones FILESTREAM](../../relational-databases/blob/avoid-conflicts-with-database-operations-in-filestream-applications.md)  
   

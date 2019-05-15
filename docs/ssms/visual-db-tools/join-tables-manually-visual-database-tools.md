@@ -12,15 +12,15 @@ helpviewer_keywords:
 - joins [SQL Server], manual
 - joins [SQL Server], creating
 ms.assetid: 9c785356-646b-4c87-82d4-25efd6051d9d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 50828f87f6000b9260f1416a45ab38873715fc59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85ec2d718c6b80b418f417c5199c9e8ba6439050
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663653"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096634"
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>Combinar tablas manualmente (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,6 +44,6 @@ Puede crear combinaciones basadas en comparaciones entre dos columnas cualesquie
   
 El Diseñador de consultas y vistas agrega una cláusula INNER JOIN a la instrucción SQL en el [panel SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md). Puede cambiar el tipo a una combinación externa. Para detalles, consulte [Crear combinaciones externas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-outer-joins-visual-database-tools.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Realizar consultas con combinaciones &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], creating
 - SQL Server Agent jobs, creating
 ms.assetid: 465fb7fc-7622-4252-a178-ea51691c935b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0c8865fd008aa0fc5f44bebe1b86a8f35c4f5a8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4be50201b5c69d2f3cde23315f38ffc03c3e9b3a
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761943"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096702"
 ---
 # <a name="create-jobs"></a>Crear trabajos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Se puede escribir un trabajo para que se ejecute en la instancia local de [!INCL
 |Describe cómo volver a asignar a otro usuario la propiedad de los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Give Others Ownership of a Job](../../ssms/agent/give-others-ownership-of-a-job.md)|  
 |Describe cómo configurar el registro de historial de trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Set Up the Job History Log](../../ssms/agent/set-up-the-job-history-log.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Administrar pasos de trabajo](../../ssms/agent/manage-job-steps.md)  
 [Administración automatizada en una empresa](../../ssms/agent/automated-administration-across-an-enterprise.md)  
 [Crear y adjuntar programaciones a trabajos](../../ssms/agent/create-and-attach-schedules-to-jobs.md)  

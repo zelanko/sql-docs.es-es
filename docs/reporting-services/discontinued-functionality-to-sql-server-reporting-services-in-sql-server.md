@@ -1,21 +1,21 @@
 ---
 title: Funcionalidad no incluida
-author: markingmyname
-ms.author: maghan
-manager: kfile
-ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: a40674afa51e52d3e84731711fc9edc013f69a46
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: HT
+ms.date: 04/26/2019
+ms.openlocfilehash: 4ccadf456472b98a1ffc37f1d2988a161f86e375
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53552937"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65503979"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>Funcionalidad no incluida en SQL Server Reporting Services (SSRS)
 
@@ -29,14 +29,12 @@ Una *característica suspendida* es una característica que ya no se admite. Tam
 
 |Característica|Sustitución o solución alternativa|
 |-|-|
-|Cargar modelos de informe a través del portal web|Todavía puede realizarse a través de la API de SOAP.|
-|Administrar modelos de informe a través del portal web|Todavía puede realizarse a través de la API de SOAP.|
 |Personalizar hojas de estilos para el Visor HTML y el Administrador de informes|Todavía puede [personalizar el portal web](branding-the-web-portal.md).|
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Novedades de Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-[Cambios de comportamiento de SQL Server Reporting Services en SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
-[Características en desuso de SQL Server Reporting Services en SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+* [Novedades de Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+* [Cambios de comportamiento de SQL Server Reporting Services en SQL Server 2016](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+* [Características en desuso de SQL Server Reporting Services en SQL Server 2016](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

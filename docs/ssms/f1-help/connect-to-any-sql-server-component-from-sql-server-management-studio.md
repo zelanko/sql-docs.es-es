@@ -13,15 +13,15 @@ helpviewer_keywords:
 - components [SQL Server], connections
 - SQL Server Management Studio [SQL Server], connections
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3acb06bf912f0c5f9195ad002c9aab8b721e60d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ce85a190288adeb02f19d71a76cc5a0d6c8605b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720153"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102700"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>Conectar a un componente de SQL Server desde SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,7 @@ Al registrar un servidor, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.m
 ### <a name="saving-connections-in-solution-explorer"></a>Guardar las conexiones en el Explorador de soluciones  
 El Explorador de soluciones permite almacenar consultas, scripts, conexiones y otra información asociada en un proyecto. Cada proyecto de script contiene un nodo denominado **Conexiones**en el que es posible guardar una o más conexiones. Para agregar una conexión, haga clic con el botón derecho en **Conexiones**y, a continuación, haga clic en **Nueva conexión**. Para obtener acceso a una conexión guardada, expanda **Conexiones** y haga doble clic en la conexión. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] abre una ventana de consulta asociada a esa conexión. Una vez guardados, los scripts conservan la asociación a una conexión concreta.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Usar SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
 [Explorador de objetos](../../ssms/object/object-explorer.md)  
   

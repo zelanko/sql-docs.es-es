@@ -13,15 +13,15 @@ helpviewer_keywords:
 - customizing database diagram information [SQL Server]
 - custom table views [SQL Server]
 ms.assetid: 31bb6772-7974-4329-bca0-c16d5875483d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5245e686c58dfaf93995ac49601703d3f48a82bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65007b1470ca86f5aeca3f459748d79b95c598b9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807423"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105781"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Personalizar la cantidad de información mostrada en los diagramas (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,6 +55,6 @@ Las opciones son:
   
 3.  En el cuadro de diálogo **Selección de columnas** , elija las propiedades que desea mostrar cuando se elija **Personalizar** en el menú **Vista de tabla** .  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Trabajar con diagramas de base de datos &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   

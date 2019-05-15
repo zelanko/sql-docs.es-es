@@ -11,15 +11,15 @@ f1_keywords:
 - vdt.dlgbox.query.addtable
 - vdtsql.chm:65565
 ms.assetid: fce7adcc-4cf5-4a52-9203-11c13d1ecf08
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6d8b46182d226c2753d6b6d7366e47a305fdae28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfbad10dd90ddc5b68e44bac88bc1ee6d437f78e
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738793"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099497"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>Agregar tabla (cuadro de diálogo, Diseñadores de consultas y vistas, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,6 +47,6 @@ Actualiza la lista para que incluya los cambios realizados en la base de datos d
 **Agregar**  
 Agrega los elementos seleccionados.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Temas de procedimientos de diseño de consultas y vistas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

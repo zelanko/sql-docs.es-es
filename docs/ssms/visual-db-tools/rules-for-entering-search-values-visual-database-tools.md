@@ -18,15 +18,15 @@ helpviewer_keywords:
 - text value searches [SQL Server]
 - numeric value searches [SQL Server]
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e4c15c1d7437597bf9a5f860b2d459d82c8932a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76cc525bbab351cb440d1a1078ef008205b7be94
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641583"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106288"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>Reglas para especificar valores de búsqueda (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -146,6 +146,6 @@ El formato de los datos lógicos varía de una base de datos a otra. Los valores
     WHERE contract <> 0  
     ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Especificar criterios de búsqueda (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

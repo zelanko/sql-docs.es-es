@@ -13,15 +13,15 @@ helpviewer_keywords:
 - push pin [SQL Server Management Studio]
 - tool windows [SQL Server Management Studio]
 ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 377bc150d0e357a245a9281aa853ce834a50de36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9bd9f0a6698b5af88d7a8bf86752f6d1c11bd6b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774173"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090043"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>Descripción de la administración de ventanas de SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ Algunos componentes pueden configurarse en modo con pestañas, donde los compone
 > [!IMPORTANT]  
 > Cuando un inicio de sesión (o un usuario de base de datos independiente) se conecta y se autentica, la conexión almacena en memoria caché información de identidad del inicio de sesión. Para un inicio de sesión con autenticación de Windows, esto incluye la información sobre la pertenencia a grupos de Windows. La identidad del inicio de sesión permanecerá autenticada mientras dure la conexión. Para aplicar cambios en la identidad, como un cambio o restablecimiento de contraseña de la pertenencia al grupo de Windows, el inicio de sesión debe cerrar sesión en la entidad de autenticación (Windows o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]) y volver a iniciar sesión. Los miembros del rol fijo de servidor **sysadmin** o cualquier inicio de sesión con el permiso **ALTER ANY CONNECTION** puede usar el comando **KILL** para finalizar una conexión y hacer que el inicio de sesión se vuelva a conectar. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] puede reutilizar la información de conexión al abrir varias conexiones en las ventanas del Explorador de objetos y del Editor de consultas. Cierre todas las conexiones para forzar una reconexión.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Usar SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
 [Entorno de SQL Server Management Studio](../ssms/the-sql-server-management-studio-environment.md)  
   

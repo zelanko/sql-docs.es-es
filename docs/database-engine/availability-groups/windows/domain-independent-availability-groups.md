@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b332dbf2fe0876e324ff7c892588a0121a6b4e7c
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: c11900048bf7f32e39f993cb8369162a468be13d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744565"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090258"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Creación de un grupo de disponibilidad independiente del dominio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ Se necesita un sufijo DNS común para un clúster de grupo de trabajo de un grup
 
 Actualmente, la creación de un grupo de disponibilidad independiente del dominio no es posible tan solo con SQL Server Management Studio. Si bien crear un grupo de disponibilidad independiente del dominio consiste básicamente en lo mismo que crear un grupo de disponibilidad al uso, hay algunos aspectos (por ejemplo, la creación de certificados) que solo son posibles con Transact-SQL. En el siguiente ejemplo se da por hecho que existe una configuración de grupo de disponibilidad con dos réplicas: una principal y otra secundaria. 
 
-1. [Con las instrucciones de este vínculo](https://blogs.msdn.microsoft.com/clustering/2015/08/17/workgroup-and-multi-domain-clusters-in-windows-server-2016/), implemente un clúster de grupo de trabajo formado por todos los servidores que van a participar en el grupo de disponibilidad. Antes de configurar el clúster de grupo de trabajo, asegúrese de que el sufijo DNS común ya está configurado.
+1. [Con las instrucciones de este vínculo](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059), implemente un clúster de grupo de trabajo formado por todos los servidores que van a participar en el grupo de disponibilidad. Antes de configurar el clúster de grupo de trabajo, asegúrese de que el sufijo DNS común ya está configurado.
 2. [Habilite la característica Grupos de disponibilidad AlwaysOn](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) en cada instancia que vaya a participar en el grupo de disponibilidad. Para ello, será necesario reiniciar cada instancia de SQL Server.
 3. Cada instancia que vaya a hospedar la réplica principal requiere una clave maestra de base de datos. Si no existe una clave maestra, ejecute el siguiente comando:
 

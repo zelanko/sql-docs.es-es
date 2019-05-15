@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.proxy.permissions.f1
 ms.assetid: 3e3c42fe-5b61-45e5-8e46-9807bdec5389
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d8a37cf5c838a78529cc8fe43f449a7c731a0052
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ebd4f2a46c9783a8ec67e21576738daf9b29cf4
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651263"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088700"
 ---
 # <a name="proxy-account-properties---new-proxy-account-principals-tab"></a>Propiedades de cuenta de proxy - Nueva cuenta de proxy (pestaña Entidades de seguridad)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,6 +39,6 @@ Agrega una entidad de seguridad a la lista.
 **Quitar**  
 Quita la entidad de seguridad seleccionada de la lista.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear un proxy del Agente SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
   

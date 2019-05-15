@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.codeanalysis.configuring
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ed6f127b8f1a692f1cd71839570cd38d21213482
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 01b197d8c196bb94ae399a251563bba48f4fe5ef
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396927"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105802"
 ---
 # <a name="analyze-script-performance"></a>Analizar el rendimiento de los scripts
 Puede usar las herramientas proporcionadas por SQL Server Data Tools para determinar si puede mejorar el rendimiento de la consulta, los procedimientos almacenados o los scripts. Por ejemplo, supervisando estadísticas de cliente como los tiempos de respuesta a las consultas usadas con frecuencia, puede determinar si es necesario cambiar la consulta o los índices de las tablas. Esas estadísticas pueden incluir el tiempo de ejecución del cliente, el perfil de consulta y los paquetes/bytes enviados y recibidos.  

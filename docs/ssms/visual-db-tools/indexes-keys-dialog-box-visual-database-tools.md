@@ -11,15 +11,15 @@ f1_keywords:
 - vdtsql.chm:65539
 - vdt.ppg.indexeskeys
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cf2d4565166dc94569a7bb3815ce3d69112116c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fb350568200226585f4c3138224e65816e617780
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518377"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096659"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Índices o claves (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ Expandido, muestra los campos de propiedades de **Nombre** y **Descripción**.
 Muestra el nombre de la clave o el índice. Cuando se crea un nuevo índice o una nueva clave, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Este nombre se puede cambiar en cualquier momento.  
   
 **Descripción**  
-Proporciona un espacio para describir la clave o el índice. Para escribir una descripción más detallada, haga clic en **Descripción** y, después, en el botón de puntos suspensivos (**...**) situado a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
+Proporciona un espacio para describir la clave o el índice. Para escribir una descripción más detallada, haga clic en **Descripción** y después en el botón de puntos suspensivos (**...**) situado a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
   
 **Categoría Diseñador de tablas**  
 Expandido, muestra la información de **Crear como CLUSTERED**.  
@@ -115,7 +115,7 @@ Especifica si [!INCLUDE[ssDE](../../includes/ssde_md.md)] que subyace calcula la
 **Bloqueos de fila permitidos**  
 Especifique si se permite el bloqueo de filas en este índice. Permitir o denegar el bloqueo de fila afecta al rendimiento de la base de datos. El valor recomendado es **Sí**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Trabajar con restricciones (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [Trabajar con claves (Visual Database Tools)](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

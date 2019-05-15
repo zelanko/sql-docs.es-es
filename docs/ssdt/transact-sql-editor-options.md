@@ -25,15 +25,15 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.ONLINE_EDITING
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_EXECUTION.ADVANCED
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ffc6d128bcc1984a0d340e3ec4a39e0f6dccc897
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3d95c52bc55df0a7693ee698cc5f01252c05949f
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667054"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102057"
 ---
 # <a name="transact-sql-editor-options"></a>Opciones del Editor de Transact-SQL
 Este tema contiene información sobre algunas de las opciones del Editor de Transact-SQL. Para establecer estas opciones, navegue al cuadro de diálogo **Opción** a través del menú **Herramientas\Opciones**.  

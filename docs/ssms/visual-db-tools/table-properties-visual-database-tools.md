@@ -11,15 +11,15 @@ f1_keywords:
 - vdt.tabledesigner
 - vdt.designers.properties.Table
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3ff3399745161d0ddb95d77f0f2f03a4c10da8b3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5534fdf65543e651b52373629c81010d75cab449
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508862"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098129"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propiedades de la tabla (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -84,6 +84,6 @@ Muestra la columna utilizada por Microsoft SQL Server como columna ROWGUID de la
 **Grupo de archivos Text/Image**  
 Proporciona una lista desplegable en la que se puede elegir el grupo de archivos para columnas que tienen tipos de datos text o image. Si la tabla se almacena utilizando un esquema de partición, deje este campo en blanco.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Diseñar tablas (Visual Database Tools)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], item relocation
 - relocating items
 ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cb43a2d7d7bf8aec9e1b27863cfbe0c57773cd6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51332c1d9d5076752a3897a12e5e6a1e5a2b6ee2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752333"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102855"
 ---
 # <a name="move-items-in-a-solution"></a>Mover elementos en una solución
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ Puede mover elementos si arrastra consultas y archivos varios dentro del Explora
 > [!NOTE]  
 > El mover una consulta conectada no mueve la conexión al proyecto de destino. La consulta perderá su conexión si se mueve al proyecto de destino.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Explorador de soluciones](../../ssms/solution/solution-explorer.md)  
 [Copiar elementos de una solución](../../ssms/solution/copy-items-in-a-solution.md)  
   

@@ -15,16 +15,16 @@ helpviewer_keywords:
 - defecting target servers
 - multiple target server defections
 ms.assetid: 61a3713b-403a-4806-bfc4-66db72ca1156
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1098b5a3792bf1327d15964f39567c97f4a56900
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95170cd480a6efa4a3b37282f65b623c2548d9ed
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609943"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096728"
 ---
 # <a name="defect-multiple-target-servers-from-a-master-server"></a>Defect Multiple Target Servers from a Master Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ En este tema se describe cómo dar de baja varios servidores de destino desde un
   
     -   Haga clic en **Estos servidores de destino**y, a continuación, active la casilla **Seleccionar** correspondiente para dar de baja algunos servidores de destino, pero no todos, de este servidor principal.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear un entorno multiservidor](../../ssms/agent/create-a-multiserver-environment.md)  
 [Administración automatizada en una empresa](../../ssms/agent/automated-administration-across-an-enterprise.md)  
 [Defect a Target Server from a Master Server](../../ssms/agent/defect-a-target-server-from-a-master-server.md)  

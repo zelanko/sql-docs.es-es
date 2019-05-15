@@ -1,4 +1,4 @@
-- name: SQL Server ++
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Documentación de las extensiones de aprendizaje automático y programación de SQL Server
   href: ../advanced-analytics/home-advanced-analytics-r-machine-learning-sql-server.md
@@ -168,7 +168,7 @@
               href: ../advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
             - name: 4 - Predicciones
               href: ../advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md
-- name: EJEMPLOS
+- name: Muestras >
   href: 'https://github.com/Microsoft/sql-server-samples'
 - name: Soluciones
   href: ../advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md
@@ -305,7 +305,7 @@
           href: ../advanced-analytics/python/ref-py-microsoftml.md
 - name: Recursos
   items:
-    - name: Notas de la versión +
+    - name: Notas de la versión >>
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
     - name: Solucionar problemas
       href: ../advanced-analytics/machine-learning-troubleshooting-faq.md

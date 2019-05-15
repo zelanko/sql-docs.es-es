@@ -1,4 +1,4 @@
-- name: SQL Server ++
+- name: SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Acerca de SQL Server Analysis Services
   href: ../analysis-services/analysis-services.md
@@ -823,13 +823,13 @@
               href: ../analysis-services/multidimensional-models/create-a-report-data-source.md
             - name: Crear un informe de la vista avanzada
               href: ../analysis-services/multidimensional-models/create-a-power-view-report-with-a-multidimensional-data-source.md
-            - name: Funcionalidad del servidor ADOMD.NET +
+            - name: Funcionalidad del servidor de ADOMD.NET >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality
-            - name: Arquitectura de objetos de servidor ADOMD.NET +
+            - name: Arquitectura de objetos de servidor ADOMD.NET >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture
-            - name: Programación del servidor ADOMD.NET +
+            - name: Programación del servidor ADOMD.NET >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming
-            - name: Funciones definidas por el usuario y procedimientos almacenados +
+            - name: Funciones definidas por el usuario y procedimientos almacenados >
               href: /bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures
         - name: Administración de los ensamblados
           href: ../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md
@@ -1378,7 +1378,7 @@
               href: ../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md
             - name: Contadores de rendimiento
               href: ../analysis-services/instances/performance-counters-ssas.md
-            - name: Eventos de seguimiento +
+            - name: Eventos de seguimiento >
               href: /bi-reference/trace-events/analysis-services-trace-events
             - name: Operaciones de registro
               href: ../analysis-services/instances/log-operations-in-analysis-services.md
@@ -1426,11 +1426,11 @@
           items:
             - name: Programación de modelos tabulares para el nivel de compatibilidad 1200 y posteriores
               href: ../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
-            - name: Lenguaje de scripting de modelos tabulares (TMSL) +
+            - name: Lenguaje de scripting de modelos tabulares (TMSL) >
               href: /bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
-            - name: Modelo de objetos tabulares (TOM) +
+            - name: Modelo de objetos tabulares (TOM) >
               href: /bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
-            - name: Objetos de administración de análisis (AMO) +
+            - name: Objetos de administración de análisis (AMO) >
               href: /bi-reference/amo/amo-classes-introduction
         - name: Tabular 1103 e inferiores
           items:
@@ -1443,7 +1443,7 @@
                   href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-attributes-for-report-design.md
                 - name: Conceptos de CSDLBI
                   href: ../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdlbi-concepts.md
-                - name: Referencia del lenguaje de definición de esquemas conceptuales (CSDL) +
+                - name: Referencia del lenguaje de definición de esquemas conceptuales (CSDL) >
                   href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
             - name: Representación
               items:
@@ -1477,13 +1477,13 @@
       items:
         - name: Programación de modelos multidimensionales
           href: ../analysis-services/multidimensional-models/multidimensional-model-programming.md
-        - name: Objetos de administración de análisis (AMO) +
+        - name: Objetos de administración de análisis (AMO) >
           href: /bi-reference/amo/developing-with-analysis-management-objects-amo
         - name: Analysis Services Scripting Language (ASSL)
           items:
             - name: Desarrollar aplicaciones con Analysis Services Scripting Language (ASSL)
               href: ../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
-            - name: Referencia de lenguaje de scripting de Analysis Services (ASSL para XMLA)
+            - name: Referencia de lenguaje de scripting de Analysis Services (ASSL para XMLA) >
               href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
             - name: Objetos y características de objetos ASSL
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
@@ -1523,11 +1523,11 @@
               href: ../analysis-services/multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
             - name: Convenciones XML de ASSL
               href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md
-        - name: Referencia de XML for Analysis (XMLA) +
+        - name: Referencia de XML for Analysis (XMLA) >
           href: /bi-reference/xmla/xml-for-analysis-xmla-reference
         - name: ADOMD.NET
           items:
-            - name: Referencia de ADOMD.NET +
+            - name: Referencia de ADOMD.NET >
               href: /bi-reference/adomd/developing-with-adomd-net
             - name: Programación del servidor ADOMD.NET
               href: ../analysis-services/multidimensional-models-adomd-net-server/adomd-net-server-programming.md
@@ -1754,11 +1754,11 @@
       items:
         - name: Programación de minería de datos
           href: ../analysis-services/data-mining/data-mining-programming.md
-        - name: Objetos de administración de análisis (AMO) +
+        - name: Objetos de administración de análisis (AMO) >
           href: /bi-reference/amo/amo-classes-introduction
-        - name: ADOMD.NET +
+        - name: ADOMD.NET >
           href: /bi-reference/adomd/developing-with-adomd-net
-        - name: XML for Analysis (XMLA) +
+        - name: XML for Analysis (XMLA) >
           href: /bi-reference/xmla/xml-for-analysis-xmla-reference
         - name: OLE DB para minería de datos
           href: ../analysis-services/data-mining/data-mining-programming-ole-db.md
@@ -1772,27 +1772,27 @@
       href: ../analysis-services/powershell/analysis-services-powershell-reference.md
     - name: PowerShell para Power Pivot para SharePoint
       href: ../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md
-    - name: Expresiones de análisis de datos (DAX)
+    - name: Expresiones de análisis de datos (DAX) >
       href: /dax/data-analysis-expressions-dax-reference
-    - name: Power Query M
+    - name: Power Query M >
       href: /powerquery-m/power-query-m-reference
-    - name: Tabular Model Scripting Language (TMSL)
+    - name: Lenguaje de scripting de modelos tabulares (TMSL) >
       href: /bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference
-    - name: Modelo de objetos tabulares (TOM)
+    - name: Modelo de objetos tabulares (TOM) >
       href: /bi-reference/tom/introduction-to-the-tabular-object-model-tom-in-analysis-services-amo
-    - name: Objetos de administración de análisis (AMO)
+    - name: Objetos de administración de análisis (AMO) >
       href: /bi-reference/amo/developing-with-analysis-management-objects-amo
-    - name: Lenguaje de definición de esquemas conceptuales (CSDL)
+    - name: Lenguaje de definición de esquemas conceptuales (CSDL) >
       href: /bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
-    - name: XML for Analysis (XMLA)
+    - name: XML for Analysis (XMLA) >
       href: /bi-reference/xmla/xml-for-analysis-xmla-reference
-    - name: ADOMD.NET
+    - name: ADOMD.NET >
       href: /bi-reference/adomd/developing-with-adomd-net
-    - name: Analysis Services Scripting Language (ASSL para XMLA)
+    - name: Lenguaje de scripting de Analysis Services (ASSL para XMLA) >
       href: /bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
-    - name: Conjuntos de filas de esquema
+    - name: Conjuntos de filas de esquema >
       href: /bi-reference/schema-rowsets/analysis-services-schema-rowsets
-    - name: Eventos de seguimiento
+    - name: Eventos de seguimiento >
       href: /bi-reference/trace-events/analysis-services-trace-events
     - name: Referencia de Extensiones de minería de datos (DMX)
       href: ../dmx/data-mining-extensions-dmx-reference.md
@@ -2162,7 +2162,7 @@
                       href: ../mdx/comment-mdx-double-slash.md
                     - name: ': (Range)'
                       href: ../mdx/range-mdx.md
-                    - name: + (Sumar)"
+                    - name: + (Sumar)
                       href: ../mdx/add-mdx.md
                     - name: + (Positivo)
                       href: ../mdx/positive-mdx.md

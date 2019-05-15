@@ -10,21 +10,24 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 13f213f9914245de11257c7fad17a30d1a24388e
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3a1066e06ca5a526cbfa4cb6f7d54014e4ef520d
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306163"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502851"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Claves de cifrado de SSRS: copia de seguridad y restauración de claves de cifrado
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Una parte importante de la configuración del servidor de informes es la creación de una copia de seguridad de la clave simétrica utilizada para cifrar información confidencial. La copia de seguridad de la clave se necesita para varias operaciones rutinarias y, además, permite volver a utilizar una base de datos del servidor de informes existente en una nueva instalación.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]   
+ **[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] | Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
+
+> [!NOTE]
+> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
   
  Es necesario restaurar la copia de seguridad de la clave de cifrado cuando se produce alguno de los siguientes eventos:  
   
@@ -44,11 +47,15 @@ ms.locfileid: "58306163"
  La copia de seguridad de la clave simétrica es un proceso que escribe la clave en el archivo que se especifique y después la codifica mediante la contraseña que se proporcione. La clave simétrica no puede almacenarse nunca en un estado no cifrado, por lo que debe proporcionar una contraseña para cifrarla cuando la guarde en disco. Una vez creado el archivo, debe almacenarlo en una ubicación segura **y recordar la contraseña** que se usa para desbloquearlo. Para hacer copia de seguridad de la clave simétrica, puede usar las siguientes herramientas:  
   
  **Modo nativo** : el Administrador de configuración de Reporting Services o la utilidad **rskeymgmt** .  
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
  **Modo de SharePoint** : páginas de Administración central de SharePoint o PowerShell.  
   
 ##  <a name="bkmk_backup_sharepoint"></a> Hacer copia de seguridad de servidores de informes en modo de SharePoint  
  Para los servidores de informes en modo de SharePoint puede usar comandos de PowerShell o usar las páginas de administración para la aplicación de servicios de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, vea la sección "Administración de claves" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
+
+::: moniker-end
   
 ##  <a name="bkmk_backup_configuration_manager"></a> Hacer copia de seguridad de las claves de cifrado - Administrador de configuración de Reporting Services (modo nativo)  
   

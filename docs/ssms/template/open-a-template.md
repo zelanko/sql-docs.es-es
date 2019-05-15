@@ -11,15 +11,15 @@ helpviewer_keywords:
 - templates [Transact-SQL], opening
 - opening templates
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a9d7566a71f5b7c86f45b667c376f06d3a4db38c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 855c307974185bc85aed222ea18742251411166b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717413"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102601"
 ---
 # <a name="open-a-template"></a>Abrir una plantilla
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ Una vez abierta la plantilla, use el cuadro de diálogo **Reemplazar parámetros
   
 Si la apertura de una plantilla inicia una nueva ventana del editor, la ventana se abrirá con las credenciales de la conexión activa actual. Por ejemplo, si se centra en una instancia de [!INCLUDE[ssDE](../../includes/ssde_md.md)] en el Explorador de objetos al abrir la plantilla CREATE DATABASE, se abrirá una nueva ventana del editor mediante una conexión a dicha instancia. Si no hay ninguna conexión activa, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] presentará un cuadro de diálogo de inicio de sesión.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Explorador de plantillas](../../ssms/template/template-explorer.md)  
 [Reemplazar parámetros de plantilla](../../ssms/template/replace-template-parameters.md)  
   

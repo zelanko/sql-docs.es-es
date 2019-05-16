@@ -1,6 +1,6 @@
 ---
 title: Analysis Services tabulares programación del modelo para los niveles de compatibilidad 1050-1103 | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 05/14/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe2ce43ffb5d2c5be0afb39931f231d2f0d24e14
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ddc25ab4d4358c8000c5a7bfe9a9de9dd5e87ed6
+ms.sourcegitcommit: 4cb96c291529e9bdf0a95fb3610b350583eb36d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025296"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65709138"
 ---
 # <a name="tabular-model-programming-for-compatibility-levels-1050-through-1103"></a>Programación de modelos tabulares para los niveles de compatibilidad 1050 a 1103
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   Los modelos tabulares utilizan estructuras relacionales para modelar los datos de Analysis Services utilizados por aplicaciones analíticas y de informes. Estos modelos se ejecutan en una instancia de Analysis Services configurada para el modo tabular, usando un motor de análisis en memoria para el almacenamiento y recorridos de tabla rápidos que agregan y calculan datos conforme se solicitan.  
   
  Si los requisitos de la solución personalizada de BI se satisfacen mejor mediante una base de datos de modelo tabular, puede usar cualquiera de las bibliotecas de cliente e interfaces de programación de Analysis Services para integrar la aplicación con modelos tabulares en una instancia de Analysis Services. Para consultar y calcular datos de modelo tabulares, puede utilizar DAX o MDX incrustado en el código.  

@@ -223,7 +223,6 @@
               href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
             - name: Almacenamiento de blobs de Azure
               href: ../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
-            - name: Interoperabilidad y coexistencia
         - name: Instrucciones
           items:
             - name: Copia de seguridad en Azure
@@ -353,6 +352,9 @@
                 - name: Grupos de archivos inactivos quitados
                   href: ../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md
                 - name: Administrar la tabla suspect_pages
+                  href: ../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md
+                - name: Interoperabilidad y coexistencia
+                  href: ../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md
         - name: Conceptos
           items:
             - name: Azure

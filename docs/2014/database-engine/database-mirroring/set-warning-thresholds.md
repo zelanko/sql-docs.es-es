@@ -12,12 +12,12 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 09f9cc460368109e3e1a7fd7464602182bf188e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62754143"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805157"
 ---
 # <a name="set-warning-thresholds"></a>Establecer umbrales de advertencia
   Utilice este cuadro de diálogo para habilitar y configurar uno o varios umbrales de advertencia para la base de datos seleccionada en el árbol de navegación del cuadro de diálogo **Monitor de creación de reflejo de la base de datos** .  
@@ -30,7 +30,7 @@ ms.locfileid: "62754143"
   
 ## <a name="options"></a>Opciones  
  *Instancia del servidor y su estado de conexión*  
- Nombre de una instancia del servidor asociado con el formato *SISTEMA***\\***NOMBRE_DE_INSTANCIA*. En el caso de una instancia de servidor predeterminada, solo se muestra el nombre del sistema.  
+ Nombre de una instancia del servidor asociado con el formato _SYSTEM_**\\**_INSTANCE_NAME_. En el caso de una instancia de servidor predeterminada, solo se muestra el nombre del sistema.  
   
  Este campo también indica si el monitor está conectado actualmente a esta instancia del servidor. Los estados de conexión posibles son:  
   

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 6311d3214628c3ad9026799fca4ed989833d9356
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020261"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65819032"
 ---
 Windows Server 2003, Datacenter Edition; Windows Server 2003, Enterprise Edition; Windows Server 2003, Standard Edition; Windows Vista; Windows XP Professional con Service Pack 2 \(SP2\) o Service Pack 1 \(SP1\); o Windows 2000 \(todas las versiones\)

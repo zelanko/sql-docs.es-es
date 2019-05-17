@@ -28,7 +28,7 @@ ms.locfileid: "62889208"
 > [!NOTE]  
 >  La página **Columnas de entrada** no se muestra para los componentes de origen, que tienen salidas, pero no entradas.  
   
- Para obtener más información acerca del componente de script, vea [Script Component](data-flow/transformations/script-component.md) y [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obtener información acerca de cómo programar el componente de script, vea [Ampliar el flujo de datos con el componente de script](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+ Para obtener más información acerca del componente de script, vea [Script Component](data-flow/transformations/script-component.md) y [Configurar el componente de script en el editor de componentes de script](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Para obtener información acerca de cómo programar el componente de script, vea [Ampliar el flujo de datos con el componente de script](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
 ## <a name="options"></a>Opciones  
  **Nombre de entrada**  

@@ -8692,7 +8692,7 @@
               href: ../ssms/install-other-languages.md
             - name: Directiva de compatibilidad de SSMS
               href: ../ssms/support-policy.md
-        - name: 'Tutoriales: SQL Server Management Studio'
+        - name: SQL Server Management Studio
           href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
           items:
             - name: Conectar y consultar SQL Server con SSMS
@@ -9274,6 +9274,10 @@
                           items:
                             - name: Objetos que admite el asistente Generar scripts
                               href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
+        - name: Solucionar problemas
+          items:
+            - name: Obtención de un volcado de memoria completo
+              href: ../ssms/troubleshoot/get-full-memory-dump.md
         - name: References
           items:
             - name: Entorno de SSMS

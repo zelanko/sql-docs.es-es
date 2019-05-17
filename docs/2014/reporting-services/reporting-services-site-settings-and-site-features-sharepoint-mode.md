@@ -25,7 +25,7 @@ ms.locfileid: "63283412"
 |------------------|-----------------|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuración del sitio|En este tema se describe la configuración de todo el sitio.|  
 |Administrar alertas de datos|Característica de administración de alertas de datos.|  
-|Sincronización de archivos del Servidor de informes|Característica de nivel de sitio que está desactivada de forma predeterminada.<br /><br /> Sincroniza los archivos del servidor de informes (.rdl, .rsds, .smdl, .rsd, .rsc, .rdlx) entre una biblioteca de documentos de SharePoint y el servidor de informes si los archivos se agregan o se actualizan directamente en la biblioteca de documentos.<br /><br /> Para obtener más información, consulte [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).|  
+|Sincronización de archivos del Servidor de informes|Característica de nivel de sitio que está desactivada de forma predeterminada.<br /><br /> Sincroniza los archivos del servidor de informes (.rdl, .rsds, .smdl, .rsd, .rsc, .rdlx) entre una biblioteca de documentos de SharePoint y el servidor de informes si los archivos se agregan o se actualizan directamente en la biblioteca de documentos.<br /><br /> Para obtener más información, consulte [Activar la característica de sincronización de archivos del servidor de informes en Administración central de SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md).|  
   
 ## <a name="to-open-the-reporting-services-site-settings-page"></a>Para abrir la página Configuración del sitio de Reporting Services  
   

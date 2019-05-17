@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/04/2018
+ms.date: 05/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d271d8e7a0601353439df8a5848978f2a89af3e2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed6edb74cea3c96ae8791c28b23510222aa69ecc
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62690785"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65805170"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -778,6 +778,10 @@ Este comando restablece todos los contadores en 0.
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QUERY_TRACEOUT |Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.| 
 |RBIO_WAIT_VLF |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|RBIO_RG_STORAGE |Se produce cuando se está limitando un nodo de proceso de base de datos a gran escala debido a un consumo de los servidores de la página Registro retrasado. <br /> **Se aplica a**: Base de datos SQL Azure a gran escala.|
+|RBIO_RG_DESTAGE |Se produce cuando se está limitando un nodo de proceso de base de datos a gran escala debido a un consumo registro retrasado por el almacenamiento a largo plazo del registro. <br /> **Se aplica a**: Base de datos SQL Azure a gran escala.|
+|RBIO_RG_REPLICA |Se produce cuando un a gran escala que se está limitando el nodo de proceso de la base de datos debido a un retraso consumo del registro de los nodos de réplica secundaria legible. <br /> **Se aplica a**: Base de datos SQL Azure a gran escala.|
+|RBIO_RG_LOCALDESTAGE |Se produce cuando se está limitando un nodo de proceso de base de datos a gran escala debido a un consumo registro retrasado por el servicio de registro. <br /> **Se aplica a**: Base de datos SQL Azure a gran escala.|
 |RECOVER_CHANGEDB |Tiene lugar durante la sincronización del estado de base de datos en una base de datos en estado de espera activa.| 
 |RECOVERY_MGR_LOCK |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

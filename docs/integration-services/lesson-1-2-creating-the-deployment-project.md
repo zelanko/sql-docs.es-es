@@ -11,14 +11,18 @@ ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a9d2fe8b249b56ec61196a2df36468f978857bc2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 48f34b1637ce5e388ff5961b984485de8a2e08ab
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276781"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723421"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>Lección 1-2: Crear el proyecto de implementación
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 En [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], la unidad que se puede implementar es un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Antes de que pueda implementar paquetes, debe crear un nuevo proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y agregar todos los paquetes y archivos auxiliares que desee implementar con los paquetes en ese proyecto.  
   
 ### <a name="to-create-the-integration-services-project"></a>Para crear el proyecto de Integration Services  

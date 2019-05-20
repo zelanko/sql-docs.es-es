@@ -11,14 +11,18 @@ ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: df0dd9aaa221d4a0b9e390b0e144b21bc13ee2a5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 66f32ad0e72e973ed5a9914431ed6830b56ce50a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270889"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718878"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Ejecutar y administrar paquetes mediante programación
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Si tiene que administrar y ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fuera del entorno de desarrollo, puede manipular los paquetes mediante programación. En este enfoque cuenta con varias opciones:  
   
 -   Cargar y ejecutar un paquete existente sin modificarlo.  

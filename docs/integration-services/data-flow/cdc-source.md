@@ -16,14 +16,18 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c487852af232224304e0d746f0ab32bf0fe90dbe
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6cfd2e24d8c612db7b0865fa689a8b35d26de73f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290541"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727173"
 ---
 # <a name="cdc-source"></a>origen de CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El origen CDC lee un intervalo de datos modificados de las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y entrega los cambios de nivel inferior a otros componentes de SSIS.  
   
  El intervalo de lectura de los datos modificados por el origen CDC se denomina intervalo de procesamiento CDC y se determina con la tarea Control CDC que se ejecuta antes de que el flujo de datos actual se inicie. El intervalo de procesamiento CDC se deriva del valor de una variable de paquete que mantiene el estado del procesamiento CDC para un grupo de tablas.  

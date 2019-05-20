@@ -22,14 +22,18 @@ ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eea4ee60abf1f3bda30a464f506c5ffed23f4091
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: abb30ee26f5063c4a119b13c6891b53518d63b9e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282389"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724490"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Agregar compatibilidad con la depuración de una tarea personalizada
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El motor de ejecución de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permite suspender paquetes, tareas y otros tipos de contenedores durante la ejecución mediante puntos de interrupción. El uso de puntos de interrupción le permite revisar y corregir los errores que impiden que la aplicación o tareas se ejecuten correctamente. La arquitectura de punto de interrupción permite al cliente evaluar el valor en tiempo de ejecución de los objetos del paquete en los puntos definidos de ejecución mientras se suspende el procesamiento de la tarea.  
   
  Los programadores de tareas personalizadas pueden utilizar esta arquitectura para crear destinos de punto de interrupción personalizados mediante la interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> y su interfaz primaria, <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>. La interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> define la interacción entre el motor de ejecución y la tarea para crear y administrar sitios o destinos de puntos de interrupción personalizados. La interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> proporciona los métodos y propiedades a los que llama el motor de ejecución para notificar a la tarea que suspenda o reanude la ejecución.  

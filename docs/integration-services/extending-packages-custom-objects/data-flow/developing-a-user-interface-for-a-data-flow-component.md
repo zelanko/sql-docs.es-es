@@ -23,14 +23,18 @@ ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4bad04ba6970b578c8dd0faa99f9860bd346408f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5db0f81b46e825201c82e0b99a15604ba1acd154
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272119"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724740"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Desarrollar una interfaz de usuario para un componente de flujo de datos
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Los desarrolladores de componentes pueden proporcionar una interfaz de usuario personalizada para un componente, que se muestre en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] cuando se edite el componente. La implementación de una interfaz de usuario personalizada proporciona notificaciones cuando el componente se agrega o se elimina en una tarea de flujo de datos, así como cuando se solicita ayuda para el componente.  
   
  Aunque no proporcione una interfaz de usuario personalizada para su componente, los usuarios podrán configurar el componente y sus propiedades personalizadas mediante el editor avanzado. Para asegurarse de que el editor avanzado permita a los usuarios editar los valores de las propiedades personalizadas de forma adecuada, use las propiedades <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> y <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> de <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> cuando proceda. Para obtener más información, consulte la sección "Creating Custom Properties (Crear propiedades personalizadas)" en [Design-time Methods of a Data Flow Component (Métodos en tiempo de diseño de un componente de flujo de datos)](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  

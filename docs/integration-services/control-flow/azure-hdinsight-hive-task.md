@@ -14,14 +14,18 @@ ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f5401195dd0f4bbc32eee4d7a813c4293bfa5553
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0db8a774ec01bd2cab503a3abd476ce87ca40362
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279789"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727965"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Tarea de Hive de HDInsight de Azure
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Utilice la **tarea de Hive de HDInsight** para ejecutar el script de Hive en un clúster de HDInsight de Azure.
      
 Para agregar una **tarea de Hive de HDInsight de Azure**, arrástrela al Diseñador de SSIS y haga doble clic o haga clic con el botón derecho y haga clic en **Editar** para ver el siguiente cuadro de diálogo: **Azure HDInsight Hive Task Editor** (Editor de tareas de Hive de HDInsight de Azure).  

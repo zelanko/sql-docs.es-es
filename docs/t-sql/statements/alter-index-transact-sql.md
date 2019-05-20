@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e7779ffa5875e50040a0e066097b7eed852a97d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a103a0a8681d5128b021783a5e5509c46c9fad32
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980421"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502868"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,8 +83,7 @@ ALTER INDEX { index_name | ALL } ON <object>
   
 <object> ::=   
 {  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_or_view_name  
+    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
 }  
   
 <rebuild_index_option > ::=  
@@ -538,7 +537,7 @@ El valor predeterminado es 0 minutos.
   
 -   Proporcionar el número de una partición, por ejemplo: EN PARTICIONES (2).  
   
--   Proporcionar los números de partición para varias particiones individuales separadas por comas, por ejemplo: EN PARTICIONES (1,5).  
+-   Proporcionar los números de partición para varias particiones individuales separadas por comas, por ejemplo: EN PARTICIONES (1, 5).  
   
 -   Proporcionar particiones individuales y de intervalos: EN PARTICIONES (2, 4, 6 A 8).  
   
@@ -735,8 +734,7 @@ Abajo se detallan las funciones que se deshabilitan para las operaciones de rege
    -    ALTER TABLE mediante regeneración de índice  
    -    El comando DDL con “RESUMABLE = ON” no se puede ejecutar dentro de una transacción explícita (no puede formar parte del bloque begin tran ... commit)
    -    Regenerar un índice que tiene columnas TIMESTAMP o calculadas como columnas de clave.
--   En caso de que la tabla base contenga columnas LOB reanudables, para la regeneración de índice agrupado reanudable se necesita un bloqueo Sch-M al inicio de esta operación.
-   -    La opción SORT_IN_TEMPDB=ON no es compatible con el índice reanudable. 
+-   En caso de que la tabla base contenga columnas LOB reanudables, para la regeneración de índice agrupado reanudable se necesita un bloqueo Sch-M al inicio de esta operación. 
 
 > [!NOTE]
 > El comando DDL se ejecuta hasta que se completa, se pone en pausa o genera un error. En caso de que el comando se ponga en pausa, se emite un error que indica que se pausó la operación y que no se completó la creación de índice. Para más información sobre el estado actual del índice, vea [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md). Como ocurrió antes, en caso de fallo se generará también un error. 
@@ -870,7 +868,7 @@ ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GR
 ALTER INDEX idxcci_cci_target ON cci_target REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON);  
 ```  
   
-### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>b. Comprimir grupos de filas delta con estado CLOSED en el almacén de columnas  
+### <a name="b-compress-closed-delta-rowgroups-into-the-columnstore"></a>B. Comprimir grupos de filas delta con estado CLOSED en el almacén de columnas  
  En este ejemplo se usa la opción REORGANIZE para comprimir cada grupo de filas delta con el estado CLOSED en el almacén de columnas como un grupo de filas comprimido.   Esta operación no es necesaria, pero es útil cuando el motor de tupla no comprime los grupos de filas CLOSED lo suficientemente rápido.  
   
 ```sql  
@@ -1005,7 +1003,7 @@ GO
 ALTER INDEX PK_Employee_EmployeeID ON HumanResources.Employee REBUILD;  
 ```  
   
-### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>b. Volver a generar todos los índices de una tabla y especificar opciones  
+### <a name="b-rebuilding-all-indexes-on-a-table-and-specifying-options"></a>B. Volver a generar todos los índices de una tabla y especificar opciones  
  En el siguiente ejemplo se especifica la palabra clave ALL. Esto vuelve a generar todos los índices asociados a la tabla Production.Product en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Se especifican tres opciones.  
   
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

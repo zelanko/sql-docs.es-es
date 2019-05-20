@@ -1,5 +1,5 @@
 ---
-title: Cambio de la plataforma de destino y publicación de un proyecto de base de datos | Microsoft Docs
+title: 'Procedimientos: Cambiar la plataforma de destino y publicación de un proyecto de base de datos | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.publish.dialog
 - sql.data.tools.publishdacproject
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5dc61811562a8c9fb121d170d89b0b28806b29f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3a95768fd863c7584c98a5135dccef826fabbc56
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516707"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090103"
 ---
-# <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Cómo: Cambiar la plataforma de destino y publicar un proyecto de base de datos
+# <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Procedimientos: Cambio de la plataforma de destino y publicación de un proyecto de base de datos
 Puede cambiar la versión de SQL Server de destino para su proyecto de base de datos SQL Server Data Tools (SSDT) por cualquier instancia compatible de SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 o SQL Azure). De esta forma, puede centralizar el desarrollo de base de datos en un proyecto y publicarlo en varios tipos de instancias de SQL Server si es necesario.  
   
 SSDT también simplifica esta tarea, ya que reconoce la plataforma de destino y detecta automáticamente cualquier error en el código (por ejemplo, cuando se usan características no admitidas para un proyecto que se va a publicar en SQL Azure).  
@@ -41,7 +41,7 @@ SSDT también simplifica esta tarea, ya que reconoce la plataforma de destino y 
   
 2.  Anexe `ON [PRIMARY]` al final de la instrucción `CREATE TABLE` .  
   
-3.  Observe que aparece el siguiente error en el panel **Lista de errores**: SQL70015: 'Referencia de grupo de archivos y esquema de partición' no se admite en SQL Azure.  
+3.  El siguiente error se muestra en el panel **Lista de errores**:  SQL70015: SQL Azure no admite una referencia al grupo de archivos y un esquema de partición.  
   
     SSDT valida automáticamente el script según la plataforma de destino. En este caso, como el grupo de archivos no se admite en SQL Azure, SSDT devuelve un error. Para obtener una lista de instrucciones Transact\-SQL no admitidas en SQL Azure, consulte [Instrucciones Transact-SQL admitidas parcialmente (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx).  
   

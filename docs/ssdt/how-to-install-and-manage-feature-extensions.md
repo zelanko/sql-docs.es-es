@@ -1,5 +1,5 @@
 ---
-title: Instalación y administración de las extensiones de características | Microsoft Docs
+title: 'Procedimientos: Instalar y administrar las extensiones de características | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 04/26/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b77952b6c0d5985f4f93a7f3e81ced856e9907ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3240bd208a13342782fefeb19532fbabed7e81e1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613233"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099687"
 ---
-# <a name="how-to-install-and-manage-feature-extensions"></a>Cómo: instalar y administrar las extensiones de características
+# <a name="how-to-install-and-manage-feature-extensions"></a>Procedimientos: Instalación y administración de las extensiones de características
 Puede agregar reglas para analizar código de base de datos, condiciones para pruebas unitarias de base de datos y colaboradores de compilación e implementación para aumentar la funcionalidad que ofrecen las ediciones de Visual Studio, incluido SQL Server Data Tools. Sin embargo, deberá instalar una extensión de características antes de poder utilizarla, tanto si creó la extensión usted mismo o instaló una extensión creada por otra persona.  
   
 La ubicación de instalación de la extensión depende del tipo de extensión y desde dónde tenga previsto utilizarla. En las últimas ediciones de Visual Studio se ha modificado la ubicación de instalación de algunos componentes, del directorio de instalación de SQL Server al directorio de Visual Studio. Esto facilita disponer de versiones diferentes del software ejecutándose en paralelo, pero significa que puede que sea necesario instalar la extensión en varias ubicaciones si desea utilizarla en una versión diferente de SQL Server Data Tools y desde la línea de comandos.  
@@ -37,7 +37,7 @@ Las extensiones se pueden ejecutar como parte de nuestros servicios de línea de
 |Tipo de extensión|Servicio de línea de comandos|Carpeta de instalación|  
 |------------------|------------------------|------------------|  
 |Condiciones de prueba personalizadas para pruebas unitarias de SQL Server|MSBuild / MSTest puede utilizarse para ejecutar pruebas unitarias desde el Símbolo del sistema para desarrolladores para Visual Studio 2013 y otras herramientas de línea de comandos similares.|Igual que cuando se ejecuta en Visual Studio.|  
-|Colaboradores de compilación<br /><br />Colaboradores de implementación|[SqlPackage.exe](../tools/sqlpackage.md), o mediante el uso de destinos de implementación o publicación de MSBuild al crear un proyecto de base de datos.|MSBuild: igual que cuando se ejecuta dentro de Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md): si se encuentra dentro del directorio de Visual Studio, igual que antes.<br /><br />Si SqlPackage.exe y otros archivos DLL de DacFx se encuentran fuera de ese directorio, las extensiones deben colocarse en el mismo directorio o en C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions.|  
+|Colaboradores de compilación<br /><br />Colaboradores de implementación|[SqlPackage.exe](../tools/sqlpackage.md), o mediante el uso de destinos de implementación o publicación de MSBuild al crear un proyecto de base de datos.|MSBuild: Igual que cuando se ejecuta en Visual Studio.<br /><br />[SqlPackage.exe](../tools/sqlpackage.md): si se encuentra dentro del directorio de Visual Studio, igual que antes.<br /><br />Si SqlPackage.exe y otros archivos DLL de DacFx se encuentran fuera de ese directorio, las extensiones deben colocarse en el mismo directorio o en C:\Program Files (x86)\\MicrosoftSQL Server\120\DAC\bin\Extensions.|  
 |Reglas de análisis de código estático|MSBuild puede utilizarse para generar el proyecto y ejecutar análisis de código estático.<br /><br />Además puede ejecutar análisis de código con una API CodeAnalysisService desde sus propias aplicaciones. Las reglas de consulta de extensión funcionan en este caso del mismo modo que cuando se utiliza SqlPackage.exe.|Lo mismo es válido para los colaboradores de compilación  y de implementación.|  
   
 > [!NOTE]  
@@ -56,6 +56,6 @@ Para minimizar los riesgos, instale una extensión únicamente si procede de un 
 ## <a name="to-install-a-custom-feature-extension"></a>Para instalar una extensión de características personalizada  
 Copie el ensamblado firmado (.dll) en la carpeta de instalación correcta. Cierre y vuelva a abrir Visual Studio. La extensión deberá estar ahora disponible.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Extensión de las características de base de datos](../ssdt/extending-the-database-features.md)  
   

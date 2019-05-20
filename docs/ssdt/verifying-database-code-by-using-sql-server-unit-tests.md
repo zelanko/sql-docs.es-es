@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 003713e2-de6b-4277-a0a8-7d1f2f4ffb39
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ad4046f9db50df0255ef6ab71f499cd6abbb63ef
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 597cebf9db40c2e119949c86341b4817a51c38ff
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665055"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101998"
 ---
 # <a name="verifying-database-code-by-using-sql-server-unit-tests"></a>Comprobar el código de base de datos con pruebas unitarias de SQL Server
 Puede usar las pruebas unitarias de SQL Server para establecer un estado de línea base para la base de datos y después para comprobar los cambios subsiguientes que realice en los objetos de base de datos.  
@@ -45,19 +45,19 @@ En la siguiente tabla, puede buscar las descripciones de tareas comunes que admi
 |Tareas comunes|Contenido adicional|  
 |----------------|----------------------|  
 |**Obtener experiencia práctica**: puede realizar un tutorial de introducción para familiarizarse con la forma de crear y ejecutar una prueba unitaria simple de SQL Server. En este tutorial se incluye un ejemplo de una prueba unitaria negativa de SQL Server.|[Tutorial: Crear y ejecutar una prueba unitaria de SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md)|  
-|**Definir las pruebas unitarias de SQL Server**:debe crear las pruebas unitarias de SQL Server en su propio proyecto. Configure los valores para el proyecto y defina una o varias condiciones de prueba para cada prueba.|[Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)<br /><br />[Usar condiciones de prueba en pruebas unitarias de SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)|  
-|**Ejecutar pruebas unitarias de SQL Server**: después de definir una o más pruebas, ejecútelas, depure los problemas y examine los resultados.|[Ejecutar pruebas unitarias de SQL Server](../ssdt/running-sql-server-unit-tests.md)|  
-|**Administrar grupos de pruebas (Visual Studio 2010):**: podría organizar las pruebas en grupos si se suelen ejecutar al mismo tiempo. Todavía se admiten las listas de pruebas, pero en los grupos de pruebas, debe considerar la posibilidad de usar categorías de prueba en su lugar. Por ejemplo, puede crear una categoría de prueba para las pruebas de los desencadenadores o de todos los objetos de un *esquema* determinado.|[Definición de categorías de prueba para agrupar las pruebas](https://msdn.microsoft.com/library/dd286595(VS.100).aspx)<br /><br />[Definición de listas de pruebas para agrupar las pruebas](https://msdn.microsoft.com/library/dd286584(VS.100).aspx)|  
-|**Proteger los proyectos de prueba y las pruebas en el control de versiones:** después de ejecutar las pruebas y comprobar si funcionan correctamente, debe proteger el proyecto de prueba y todos los archivos asociados al control de versiones para que todos los miembros del equipo puedan ejecutar las pruebas. Al proteger el proyecto de prueba en el control de versiones junto con el proyecto de base de datos de SQL Server, puede restaurar fácilmente versiones compatibles tanto de la base de datos como de las pruebas de base de datos.|[Agregar archivos al control de versiones](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)<br /><br />[Usar las ventanas Proteger y Cambios pendientes](https://msdn.microsoft.com/library/ms245462(VS.100).aspx)|  
-|**Definir condiciones de prueba personalizadas**: puede crear condiciones de prueba personalizadas si debe probar el comportamiento que el conjunto predeterminado de condiciones de prueba no cubre. Debe distribuir estas condiciones a todos los miembros del equipo que desea ejecutar las pruebas que usan las nuevas condiciones.|[Escenario: Definir condiciones de prueba personalizadas para pruebas unitarias de SQL Server](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)|  
+|**Definir las pruebas unitarias de SQL Server**: debe crear las pruebas unitarias de SQL Server en su propio proyecto. Configure los valores para el proyecto y defina una o varias condiciones de prueba para cada prueba.|[Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)<br /><br />[Usar condiciones de prueba en pruebas unitarias de SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)|  
+|**Ejecutar pruebas unitarias de SQL Server**: después de definir una o más pruebas, ejecútelas, depure los problemas y examine los resultados.|[Ejecutar pruebas unitarias de SQL Server](../ssdt/running-sql-server-unit-tests.md)|  
+|**Administrar grupos de pruebas (Visual Studio 2010)**: podría organizar las pruebas en grupos si se suelen ejecutar al mismo tiempo. Todavía se admiten las listas de pruebas, pero en los grupos de pruebas, debe considerar la posibilidad de usar categorías de prueba en su lugar. Por ejemplo, puede crear una categoría de prueba para las pruebas de los desencadenadores o de todos los objetos de un *esquema* determinado.|[Definición de categorías de prueba para agrupar las pruebas](https://msdn.microsoft.com/library/dd286595(VS.100).aspx)<br /><br />[Definición de listas de pruebas para agrupar las pruebas](https://msdn.microsoft.com/library/dd286584(VS.100).aspx)|  
+|**Proteger los proyectos de prueba y las pruebas en el control de versiones**: después de ejecutar las pruebas y comprobar si funcionan correctamente, debe proteger el proyecto de prueba y todos los archivos asociados al control de versiones para que todos los miembros del equipo puedan ejecutar las pruebas. Al proteger el proyecto de prueba en el control de versiones junto con el proyecto de base de datos de SQL Server, puede restaurar fácilmente versiones compatibles tanto de la base de datos como de las pruebas de base de datos.|[Agregar archivos al control de versiones](https://msdn.microsoft.com/library/ms181374(VS.100).aspx)<br /><br />[Usar las ventanas Proteger y Cambios pendientes](https://msdn.microsoft.com/library/ms245462(VS.100).aspx)|  
+|**Definir condiciones de prueba personalizadas**: puede crear condiciones de prueba personalizadas si debe probar el comportamiento que el conjunto predeterminado de condiciones de prueba no cubre. Debe distribuir estas condiciones a todos los miembros del equipo que desea ejecutar las pruebas que usan las nuevas condiciones.|[Escenario: definir las condiciones de prueba personalizadas para pruebas unitarias de SQL Server](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)|  
 |**Actualizar pruebas unitarias existentes**: si tiene pruebas unitarias de base de datos que se crearon en una versión anterior de Visual Studio, debe actualizarlas antes de que se compilen y se ejecuten correctamente con esta versión.<br /><br />**NOTA:** Si abre una solución que contiene un proyecto de base de datos y un proyecto de prueba unitaria de base de datos de una versión anterior de Visual Studio, se le preguntará si desea actualizar el proyecto de base de datos. No se le preguntará si desea actualizar los proyectos de prueba unitaria de base de datos, que se deben actualizar manualmente.|[Actualizar un proyecto de prueba anterior que contiene pruebas unitarias de base de datos](../ssdt/upgrade-an-older-test-project-containing-database-unit-tests.md)|  
 |**Extensibilidad**: puede extender SQL Server Data Tools mediante la creación de extensiones de características.|[Condiciones de prueba personalizadas para pruebas unitarias de SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)|  
-|**Solucionar problemas:** puede obtener más información acerca de cómo solucionar problemas comunes de las pruebas unitarias de SQL Server.|[Solucionar problemas con las pruebas unitarias de base de datos en SQL Server](../ssdt/troubleshooting-sql-server-database-unit-testing-issues.md)|  
+|**Solucionar problemas**: puede obtener más información acerca de cómo solucionar problemas comunes de las pruebas unitarias de SQL Server.|[Solucionar problemas con las pruebas unitarias de base de datos en SQL Server](../ssdt/troubleshooting-sql-server-database-unit-testing-issues.md)|  
   
 ## <a name="related-scenarios"></a>Escenarios relacionados  
 [Desarrollo de bases de datos sin conexión orientado a proyectos](../ssdt/project-oriented-offline-database-development.md)  
 Las pruebas unitarias de bases de datos resultan especialmente eficaces cuando se usan junto con el desarrollo de proyectos sin conexión mediante proyectos de base de datos de SQL Server.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
   

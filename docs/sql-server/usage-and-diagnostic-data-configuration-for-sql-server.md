@@ -1,5 +1,5 @@
 ---
-title: Configuración de la recopilación de datos de uso y diagnóstico para SQL Server | Microsoft Docs
+title: Configuración de la recopilación de datos de uso y diagnóstico para SQL Server (CEIP) | Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: b616c8f3a41d960ecd04ac1407014aa2bfa3ce29
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 44a8d6c22d7dd003f7c6e90963eb546e6ca1bf50
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582718"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65372757"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server"></a>Configuración de la recopilación de datos de uso y diagnóstico para SQL Server
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>Configuración de la recopilación de datos de uso y diagnóstico para SQL Server (CEIP)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -55,6 +55,12 @@ Para SQL Server en Linux, consulte [Customer Feedback for SQL Server on Linux](h
 
 > [!NOTE]
 > Puede deshabilitar el envío de información a Microsoft solo en versiones de pago de SQL Server.
+
+## <a name="remarks"></a>Notas
+ - No se admite la eliminación o deshabilitación del servicio CEIP de SQL. 
+ - No se admite la eliminación de los recursos de CEIP de SQL del Grupo de clúster. 
+
+Para no participar en la recopilación de datos, vea [Activar o desactivar la auditoría local](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off).
 
 ## <a name="error-and-usage-reporting-application"></a>Aplicación Informes de uso y errores 
 

@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b136f2707012860ba7be88f61cd5f6de17ec148d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6573a8667224eacef61c9c22cb4ede026e7d0a61
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635893"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106332"
 ---
 # <a name="custom-test-conditions--for-sql-server-unit-tests"></a>Condiciones de prueba personalizadas para pruebas unitarias de SQL Server
 Pude agregar condiciones de prueba personalizadas para pruebas unitarias de SQL Server. Sin embargo, debe instalar primero la condición de prueba antes de poder usarla, tanto si creó la extensión como si instaló una extensión creada por otra persona.  
@@ -41,10 +41,10 @@ Para obtener más información acerca de las condiciones de prueba personalizada
   
 -   [Cómo: Crear condiciones de prueba para el Diseñador de pruebas unitarias de SQL Server](../ssdt/how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md)  
   
--   [Cómo: Actualizar una condición de prueba personalizada de Visual Studio 2010 desde una versión anterior a SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
+-   [Cómo: Actualizar una condición de prueba personalizada de Visual Studio 2010 desde una versión anterior a SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)  
   
 -   [Tutorial: Usar una condición de prueba personalizada para comprobar el resultado de un procedimiento almacenado](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Comprobar el código de base de datos con pruebas unitarias de SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
   

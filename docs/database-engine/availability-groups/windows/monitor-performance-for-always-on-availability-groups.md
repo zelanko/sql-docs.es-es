@@ -11,33 +11,17 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04ccb88fd3df348b21f61b0a01d4e49ce944c81c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b2157846fe2102a35412c82b0da24638298aafd2
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872325"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104918"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Supervisión del rendimiento para grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   El rendimiento de los grupos de disponibilidad Always On es vital para mantener el contrato de nivel de servicio (SLA) de las bases de datos de críticas. La comprensión de cómo envían los registros los grupos de disponibilidad a las réplicas secundarias puede ayudar a estimar el objetivo de tiempo de recuperación (RTO) y el objetivo de punto de recuperación (RPO) de la implementación de disponibilidad y a identificar cuellos de botella en grupos de disponibilidad o réplicas con un mal rendimiento. En este artículo se explica el proceso de sincronización, se muestra cómo calcular algunas de las métricas clave y se proporcionan vínculos a algunos de los escenarios de solución de problemas de rendimiento comunes.  
-  
- Se tratan los siguientes temas:  
-  
--   [Proceso de sincronización de datos](#data-synchronization-process)  
-  
--   [Puertas de control de flujo](#flow-control-gates)  
-  
--   [Estimación del tiempo de conmutación por error (RTO)](#estimating-failover-time-rto)  
-  
--   [Estimación de la posible pérdida de datos (RPO)](#estimating-potential-data-loss-rpo)  
-  
--   [Supervisión de RTO y RPO](#monitoring-for-rto-and-rpo)  
-  
--   [Escenarios de solución de problemas de rendimiento](#BKMK_SCENARIOS)  
-  
--   [Eventos extendidos de utilidad](#BKMK_XEVENTS)  
-  
+   
 ##  <a name="data-synchronization-process"></a>Proceso de sincronización de datos  
  Para estimar el tiempo necesario para una sincronización completa e identificar el cuello de botella, debe comprender el proceso de sincronización. Un cuello de botella de rendimiento puede estar en cualquier fase del proceso; su detección puede ayudar a profundizar en los problemas subyacentes. En la ilustración y la tabla siguientes se muestra el proceso de sincronización de datos:  
   
@@ -48,7 +32,7 @@ ms.locfileid: "58872325"
 |**Secuencia**|**Descripción del paso**|**Comentarios**|**Métricas de utilidad**|  
 |1|Generación de registro|Los datos del registro se vacían en el disco. Este registro se debe replicar en las réplicas secundarias. Las entradas del registro entran en la cola de envío.|[SQL Server: Base de datos > Bytes de registro vaciados/s](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Capturar|Los registros de cada base de datos se capturan y se envían a la cola de asociado correspondiente (uno por par de réplica de base de datos). Este proceso de captura se ejecuta de forma continua siempre que la réplica de disponibilidad esté conectada y no se suspenda el movimiento de datos por algún motivo; el par de réplica de base de datos se muestra como Sincronizando o Sincronizado. Si el proceso de captura no es capaz de examinar y poner en cola los mensajes con la suficiente rapidez, la cola de envío de registros se acumula.|[SQL Server: Réplica de disponibilidad > Bytes enviados a la réplica\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md), que es una agregación de la suma de todos los mensajes de la base de datos en cola para esa réplica de disponibilidad.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) y [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/s) en la réplica principal.|  
-|3|Send|Los mensajes de cada cola de réplica de base de datos se quitan de la cola y se envían a través de la conexión a la réplica secundaria correspondiente.|[SQL Server: Réplica de disponibilidad > Bytes enviados al transporte\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md) y [SQL Server: Réplica de disponibilidad > Tiempo de confirmación del mensaje](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (ms)|  
+|3|Send|Los mensajes de cada cola de réplica de base de datos se quitan de la cola y se envían a través de la conexión a la réplica secundaria correspondiente.|[SQL Server: réplica de disponibilidad > Bytes enviados al transporte\s](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|Recepción y almacenamiento en caché|Cada réplica secundaria recibe y almacena en caché el mensaje.|Contador de rendimiento [SQL Server: Réplica de disponibilidad > Bytes de registro recibidos/s](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|Protección|El registro se vacía en la réplica secundaria para su protección. Tras el vaciado del registro, se envía una confirmación a la réplica principal.<br /><br /> Una vez protegido el registro, se evita la pérdida de datos.|Contador de rendimiento [SQL Server: Base de datos > Bytes de registro vaciados/s](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Tipo de espera [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|Rehacer|Las páginas vaciadas se ponen al día en la réplica secundaria. Las páginas se mantienen en la cola de puesta al día mientras esperan.|[SQL Server: Réplica de base de datos > Bytes puestos al día/s](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) y [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Tipo de espera [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  

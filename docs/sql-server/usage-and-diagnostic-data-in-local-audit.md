@@ -14,22 +14,29 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a769ed13e8c95c3ae5a948f6a9bb1be577280e99
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 97eac599fd057d8a9ae335943e7e818df4b49ba4
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582769"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65372446"
 ---
-# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection"></a>Auditoría local para la recopilación de datos de uso y diagnóstico de SQL Server
+# <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Auditoría local para la recopilación de datos de uso y diagnóstico de SQL Server (CEIP)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ## <a name="introduction"></a>Introducción
 
-Microsoft SQL Server contiene características habilitadas para Internet que pueden recopilar y enviar información sobre el equipo o dispositivo. Esto se denomina *información estándar del equipo*. El componente de auditoría local de [recopilación de datos de uso y diagnóstico de SQL Server](https://support.microsoft.com/kb/3153756) escribe los datos que recopila el servicio en una carpeta designada y que representa los datos (registros) que se enviarán a Microsoft. El propósito de la auditoría local es permitir que los clientes vean todos los datos que Microsoft recopila con esta característica, por motivos de cumplimiento, reglamentarios o por validación de privacidad.  
+Microsoft SQL Server contiene características habilitadas para Internet que pueden recopilar y enviar información sobre el equipo o dispositivo. Esto se denomina *información estándar del equipo*. El componente de auditoría local de [recopilación de datos de uso y diagnóstico de SQL Server](usage-and-diagnostic-data-configuration-for-sql-server.md) escribe los datos que recopila el servicio en una carpeta designada y que representa los datos (registros) que se enviarán a Microsoft. El propósito de la auditoría local es permitir que los clientes vean todos los datos que Microsoft recopila con esta característica, por motivos de cumplimiento, reglamentarios o por validación de privacidad.  
 
 A partir de SQL Server 2016 CU2, la auditoría local se puede configurar al nivel de instancia para Motor de base de datos de SQL Server y Analysis Services (SSAS). En SQL Server 2016 CU4 y SQL Server 2016 SP1, la auditoría local también está habilitada para SQL Server Integration Services (SSIS). Otros componentes de SQL Server que se instalan durante la configuración y herramientas de SQL Server que se descargan o instalan después de la configuración no cuentan con la funcionalidad de auditoría local para la recopilación de datos de uso y diagnóstico.
+
+## <a name="remarks"></a>Notas
+
+ - No se admite la eliminación o deshabilitación del servicio CEIP de SQL. 
+ - No se admite la eliminación de los recursos de CEIP de SQL del Grupo de clúster. 
+
+Para no participar en la recopilación de datos, vea [Activar o desactivar la auditoría local](#turning-local-audit-on-or-off).
 
 ## <a name="prerequisites"></a>Prerequisites 
 

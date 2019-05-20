@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear un nuevo proyecto de base de datos | Microsoft Docs'
+title: 'Procedimientos: Crear un nuevo proyecto de base de datos | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -15,20 +15,20 @@ f1_keywords:
 - sql.data.tools.SqlProjectImportDatabaseSummaryDialog.dialog
 - sql.data.tools.importscriptwizard.fileselection
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 17471823dcc3e77d23423fda3c81dbe8c958ab89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5861f16d20d95ae6ba9d2024d2199b853934d355
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673263"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098116"
 ---
-# <a name="how-to-create-a-new-database-project"></a>Cómo: Crear un nuevo proyecto de base de datos
+# <a name="how-to-create-a-new-database-project"></a>Procedimientos: Creación de un nuevo proyecto de base de datos
 Puede crear un nuevo proyecto de base de datos e importar el esquema de la base de datos desde una base de datos existente, un archivo de script .sql o una aplicación de capa de datos (.dacpac). Después, puede invocar las mismas herramientas visuales de diseñador (Editor de Transact\-SQL, Diseñador de tablas) disponibles para el desarrollo de bases de datos conectadas con el fin de realizar cambios en el proyecto de base de datos sin conexión y volver a publicar los cambios en la base de datos de producción. Los cambios también se pueden guardar como un script para publicarlos posteriormente. Mediante el panel **Propiedades del proyecto**, puede cambiar la plataforma de destino a distintas versiones de SQL Server (incluido SQL Azure).  
   
-Los dos procedimientos siguientes consiguen básicamente el mismo objetivo creando un nuevo proyecto de base de datos e importando el esquema desde una base de datos existente. Cada objeto de base de datos se representará como un archivo de script de SQL (.sql) en el **Explorador de soluciones**. Para más información sobre cómo importar el esquema de la base de datos desde una instantánea, consulte [Cómo: Crear una instantánea de un proyecto](../ssdt/how-to-create-a-snapshot-of-a-project.md).  
+Los dos procedimientos siguientes consiguen básicamente el mismo objetivo creando un nuevo proyecto de base de datos e importando el esquema desde una base de datos existente. Cada objeto de base de datos se representará como un archivo de script de SQL (.sql) en el **Explorador de soluciones**. Para obtener más información sobre cómo importar el esquema de la base de datos desde una instantánea, vea [Cómo: Crear una instantánea de un proyecto](../ssdt/how-to-create-a-snapshot-of-a-project.md).  
   
 > [!WARNING]  
 > En los procedimientos siguientes se usan entidades creadas en procedimientos anteriores de la sección [Desarrollo de bases de datos conectadas](../ssdt/connected-database-development.md).  
@@ -55,7 +55,7 @@ Los dos procedimientos siguientes consiguen básicamente el mismo objetivo crean
   
 ### <a name="to-create-a-new-project-and-import-existing-database-schema"></a>Para crear un nuevo proyecto e importar un esquema de la base de datos existente  
   
-1.  Haga clic sucesivamente en **Archivo**, en **Nuevo** y en **Proyecto**. En el cuadro de diálogo **Nuevo proyecto**, seleccione **SQL Server** en el panel izquierdo. Observe que solo hay un tipo de proyecto de base de datos: **Proyecto de base de datos de SQL Server**. No hay ningún proyecto específico de la plataforma como en las versiones anteriores de Visual Studio. Podrá establecer la plataforma de destino en el cuadro de diálogo **Configuración del proyecto** una vez creado el proyecto. Esa tarea se explicará en el tema [Cómo: Cambiar la plataforma de destino y publicar un proyecto de base de datos](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md).  
+1.  Haga clic sucesivamente en **Archivo**, en **Nuevo** y en **Proyecto**. En el cuadro de diálogo **Nuevo proyecto**, seleccione **SQL Server** en el panel izquierdo. Observe que solo hay un tipo de proyecto de base de datos: **Proyecto de base de datos de SQL Server**. No hay ningún proyecto específico de la plataforma como en las versiones anteriores de Visual Studio. Podrá establecer la plataforma de destino en el cuadro de diálogo **Configuración del proyecto** una vez creado el proyecto. Esa tarea se explicará en el tema [Cómo: Cambiar la plataforma de destino y publicación de un proyecto de base de datos](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md).  
   
 2.  Cambie el nombre del proyecto a **TradeDev** y haga clic en **Aceptar** para crear el nuevo proyecto.  
   
@@ -75,6 +75,6 @@ Los dos procedimientos siguientes consiguen básicamente el mismo objetivo crean
   
 9. Haga clic con el botón derecho en el proyecto **TradeDev** en el **Explorador de soluciones** y seleccione **Compilar** para compilar el proyecto de base de datos.  
   
-## <a name="see-also"></a>Ver también  
-[Cómo: Cambiar la plataforma de destino y publicar un proyecto de base de datos](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
+## <a name="see-also"></a>Consulte también  
+[Cómo: Cambiar la plataforma de destino y publicación de un proyecto de base de datos](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   

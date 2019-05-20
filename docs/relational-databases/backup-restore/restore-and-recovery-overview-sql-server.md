@@ -1,7 +1,7 @@
 ---
 title: Información general sobre restauración y recuperación (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 013458c80692f4b7f31ba1302028585496a0cd25
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
+ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242046"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65461814"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Información general sobre restauración y recuperación (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,22 @@ ms.locfileid: "54242046"
 -   [Asistente para la recuperación: Introducción](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
   
 -   [Asistente para la recuperación: uso de SSMS para crear o restaurar copias de seguridad de división](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
-  
+
+## <a name="adr"></a> Recuperación acelerada de bases de datos
+
+La versión preliminar de SQL Server 2019 CTP 2.3 presenta la [recuperación acelerada de bases de datos](/azure/sql-database/sql-database-accelerated-database-recovery/) para SQL Server local. La recuperación acelerada de bases de datos mejora considerablemente la disponibilidad de la base de datos, especialmente en presencia de transacciones de larga duración, al volver a diseñar el proceso de recuperación del motor de base de datos de SQL Server. La [recuperación de base de datos](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started) es el proceso que usa SQL Server para cada base de datos con el fin de empezar en un estado transaccionalmente coherente o limpio. Una base de datos con la recuperación acelerada de base de datos habilitada completa la recuperación más rápidamente después de una conmutación por error o de otro apagado que no haya sido limpio. 
+
+Se puede habilitar la recuperación acelerada de bases de datos en cada base de datos en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 mediante la sintaxis siguiente:
+
+```sql
+ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
+```
+
+> [!NOTE]
+> Esta sintaxis no es obligatoria para aprovechar las ventajas de esta característica en Azure SQL DB, donde está activada de forma predeterminada.
+
+Si tiene bases de datos críticas propensas a transacciones de gran tamaño, experimente con esta característica durante la versión preliminar. Proporcione comentarios al [equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]](<https://aka.ms/sqlfeedback>).
+
 ##  <a name="RelatedContent"></a> Contenido relacionado  
  Ninguno.  
   

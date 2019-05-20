@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 23b3057a23737eb43206f9615ce2f83bad6f5610
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 567855c53848a354ec03c8de7fea1bb37c1c2a21
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745113"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65105813"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>Comparar y sincronizar datos de una o más tablas con datos de una base de datos de referencia
 Puede comparar los datos de una base de datos de *origen* y una base de datos de *destino* y especificar qué tablas se deben comparar. Puede revisarlos y decidir qué cambios sincronizar. A continuación, puede actualizar el destino para sincronizar las bases de datos o exportar el script de actualización al editor de Transact\-SQL o a un archivo.  
@@ -29,7 +29,7 @@ Esta sección contiene los siguientes temas:
   
 -   [Cómo: Comparar y sincronizar los datos de dos bases de datos](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
   
--   [Cómo: Ver diferencias de datos](../ssdt/how-to-view-data-differences.md)  
+-   [Cómo: Consultar las diferencias de los datos](../ssdt/how-to-view-data-differences.md)  
   
 ## <a name="requirements"></a>Requisitos  
 Cuando se comparan datos de una tabla o vista, la tabla o vista en la base de datos de origen debe compartir varios atributos con una tabla o vista en la base de datos de destino. Las tablas y vistas que no cumplen los siguientes criterios no se comparan y no aparecen en la segunda página del asistente **Nueva comparación de datos**:  
@@ -49,7 +49,7 @@ Cada objeto tiene una clave o un índice que determina los objetos a los que cor
 ## <a name="common-tasks"></a>Tareas comunes  
 En esta sección, puede encontrar descripciones de las tareas comunes que admiten este escenario.  
   
-**Establezca las opciones para controlar cómo se comparan los datos:** cuando se comparan datos, puede omitir con seguridad columnas de identidad, deshabilitar desencadenadores y deshabilitar claves externas. También puede quitar claves principales, índices y restricciones UNIQUE del script de actualización.  
+**Establezca las opciones para controlar cómo se comparan los datos**: cuando se comparan datos, puede omitir con seguridad columnas de identidad, deshabilitar desencadenadores y deshabilitar claves externas. También puede quitar claves principales, índices y restricciones UNIQUE del script de actualización.  
   
 **Compare los datos de las tablas y actualice opcionalmente el destino para que coincida con el origen:** después de especificar una base de datos de origen y de destino para comparar y ejecutar la comparación, puede ver los resultados en la ventana **Comparación de datos**. Puede ver no solo los detalles de las diferencias sino también del script de actualización que puede utilizar para sincronizar los datos. Después de identificar diferencias entre las dos bases de datos, puede especificar una acción para cada diferencia. A continuación, puede actualizar el destino o exportar el script de actualización al editor de Transact\-SQL o a un archivo. Puede que desee exportar el script para que usted u otra persona pueda revisarlo antes de aplicar los cambios.  
   
@@ -67,7 +67,7 @@ La tabla siguiente describe las cinco columnas de la ventana **Comparación de d
 ### <a name="table-and-view-details"></a>Detalles de las vistas y tablas  
 Al hacer clic en cualquier tabla o vista en la ventana **Comparación de datos**, el panel de detalles muestra todas las filas que la tabla o vista contiene. Cada pestaña en el panel de detalles muestra una categoría distinta (Diferentes registros, Solo en origen, Solo en destino, Registros idénticos). Para cada fila, puede activar o desactivar la casilla correspondiente para indicar si desea incluir ese cambio en el script de actualización.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
-[Cómo: Usar Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[Cómo: Uso de Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

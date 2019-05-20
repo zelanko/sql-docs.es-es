@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Actualizar una condición de prueba personalizada de Visual Studio 2010 desde una versión anterior a SQL Server Data Tools | Microsoft Docs'
+title: 'Procedimientos: Actualizar una condición de prueba personalizada de Visual Studio 2010 desde una versión anterior a SQL Server Data Tools | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 44c895a3-dee0-4032-a60f-812f5fe3c713
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 95ef5fb0ab3443abbaddd47794d7458d0308d5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 887e43ef6bc4f3c8105cb51256f35f400368fec9
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773963"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098385"
 ---
-# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Cómo: Actualizar una condición de prueba personalizada de Visual Studio 2010 desde una versión anterior a SQL Server Data Tools
+# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Procedimientos: Actualización de una condición de prueba personalizada de Visual Studio 2010 desde una versión anterior a SQL Server Data Tools
 Para usar una condición de prueba unitaria creada en una versión anterior a SQL Server Data Tools, debe actualizarla:  
   
 -   [Actualizar referencias](#UpdateReferences)  
@@ -142,6 +142,6 @@ Quite la referencia de ensamblado a la condición de prueba anterior.
   
 Agregue una nueva prueba unitaria de SQL Server al proyecto para crear una referencia de ensamblado a la condición de prueba actualizada del proyecto. Se debe agregar una clase de prueba para crear la referencia. Puede eliminar la clase de prueba una vez agregada la referencia.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Condiciones de prueba personalizadas para pruebas unitarias de SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
   

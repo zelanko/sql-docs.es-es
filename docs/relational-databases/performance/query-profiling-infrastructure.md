@@ -1,7 +1,7 @@
 ---
 title: Infraestructura de generación de perfiles de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645567"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64568273"
 ---
 # <a name="query-profiling-infrastructure"></a>Infraestructura de generación de perfiles de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,8 @@ La *infraestructura de generación de perfiles de estadísticas de ejecución de
 - [Estadísticas de consultas activas](../../relational-databases/performance/live-query-statistics.md)
 
 > [!NOTE]
-> Al usar estadísticas de consulta dinámicas con [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], se aprovecha la infraestructura de generación de perfiles estándar.    
-> En versiones posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si la [infraestructura de generación de perfiles ligera](#lwp) está habilitada, son las estadísticas de consulta dinámicas las que la aprovechan, en lugar de la generación de perfiles estándar.
+> Al hacer clic en el botón *Incluir estadísticas de consultas activas* en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se aprovecha la infraestructura de generación de perfiles estándar.    
+> En versiones posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si se habilita la [infraestructura de generación de perfiles ligera](#lwp), lo aprovechan las estadísticas de consultas activas en lugar de la generación de perfiles estándar cuando se ve a través del [Monitor de actividad](../../relational-databases/performance-monitor/activity-monitor.md) o se consulta directamente la DMV [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md). 
 
 Los siguientes métodos de recopilación de información de planes de ejecución para **todas las sesiones** aprovechan la infraestructura de generación de perfiles estándar:
 
@@ -121,11 +121,11 @@ WITH (MAX_MEMORY=4096 KB,
 
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] incluye una versión recién revisada de la generación de perfiles ligera que recopila información de recuento de filas para todas las ejecuciones. La generación de perfiles ligera está habilitada de forma predeterminada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y la marca de seguimiento 7412 no tiene ningún efecto.
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] incluye una versión recién revisada de la generación de perfiles ligera que recopila información de recuento de filas para todas las ejecuciones. La generación de perfiles ligera está habilitada de forma predeterminada en [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y la marca de seguimiento 7412 no tiene ningún efecto. Se puede deshabilitar la generación de perfiles ligera en el nivel de base de datos mediante la [configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LIGHTWEIGHT_QUERY_PROFILING: `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
-Se ha introducido una nueva DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) para devolver el equivalente del último plan de ejecución real conocido para la mayoría de las consultas. Un nuevo evento extendido *query_post_execution_plan_profile* recopila el equivalente de un plan de ejecución real en función de la generación de perfiles ligera, a diferencia de *query_post_execution_showplan* que utiliza la generación de perfiles estándar. 
+Se ha introducido una nueva DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) para devolver el equivalente del último plan de ejecución real conocido para la mayoría de las consultas, y se llama *últimas estadísticas de plan de consulta*. Las últimas estadísticas de plan de consulta se pueden habilitar en el nivel de base de datos mediante la [configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LAST_QUERY_PLAN_STATS: `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 
-Se puede configurar una sesión de ejemplo que use el evento ampliado *query_post_execution_plan_profile*, como en el ejemplo siguiente:
+Un nuevo evento extendido *query_post_execution_plan_profile* recopila el equivalente de un plan de ejecución real en función de la generación de perfiles ligera, a diferencia de *query_post_execution_showplan* que utiliza la generación de perfiles estándar. Se puede configurar una sesión de ejemplo que use el evento ampliado *query_post_execution_plan_profile*, como en el ejemplo siguiente:
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
@@ -142,6 +142,34 @@ WITH (MAX_MEMORY=4096 KB,
   MEMORY_PARTITION_MODE=NONE,
   TRACK_CAUSALITY=OFF,
   STARTUP_STATE=OFF);
+```
+
+#### <a name="example-1---extended-event-session-using-standard-profiling"></a>Ejemplo 1: Sesión de eventos extendidos mediante la generación de perfiles estándar
+
+```sql
+CREATE EVENT SESSION [QueryPlanOld] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_showplan(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename = N'C:\Temp\QueryPlanStd.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
+```
+
+#### <a name="example-2---extended-event-session-using-lightweight-profiling"></a>Ejemplo 2: Sesión de eventos extendidos mediante la generación de perfiles ligera
+
+```sql
+CREATE EVENT SESSION [QueryPlanLWP] ON SERVER 
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+    ACTION(sqlos.task_time, sqlserver.database_id, 
+    sqlserver.database_name, sqlserver.query_hash_signed, 
+    sqlserver.query_plan_hash_signed, sqlserver.sql_text))
+ADD TARGET package0.event_file(SET filename=N'C:\Temp\QueryPlanLWP.xel')
+WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS, 
+    MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
+    MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
 
 ## <a name="remarks"></a>Notas

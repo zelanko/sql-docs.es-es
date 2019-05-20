@@ -21,12 +21,12 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1a252e56d7e625632fdb2d8cb929056daa14815
-ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
+ms.openlocfilehash: 0459812874f77493520c2c1f3ac794836147a2f0
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57736763"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775023"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,6 +62,8 @@ SELECT TABLE_NAME, COLUMN_NAME,
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS  
 WHERE TABLE_NAME = 'Person';  
 ```  
+
+Si un desencadenador se aplica a una columna, `COLUMNS_UPDATED` se devolverá como `true` o `1`, incluso si el valor de columna permanece sin cambios. Esto es así por diseño y el desencadenador debe implementar la lógica de negocios que determina si la operación de inserción, actualización o eliminación está permitida o no. 
   
 ## <a name="column-sets"></a>Conjuntos de columnas
 Cuando un conjunto de columnas se define en una tabla, la función `COLUMNS_UPDATED` se comporta de las maneras siguientes:
@@ -181,7 +183,7 @@ SELECT * FROM dbo.auditEmployeeData;
 GO  
 ```  
   
-### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>b. Utilizar COLUMNS_UPDATED para comprobar más de ocho columnas  
+### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. Utilizar COLUMNS_UPDATED para comprobar más de ocho columnas  
 Para comprobar las actualizaciones que afectan a otras columnas que no sean las ocho primeras de la tabla, use la función `SUBSTRING` para comprobar si `COLUMNS_UPDATED` devuelve el bit correcto. En este ejemplo se comprueban las actualizaciones que afectan a las columnas `3`, `5` y `9` de la tabla `AdventureWorks2012.Person.Person`.
   
 ```sql

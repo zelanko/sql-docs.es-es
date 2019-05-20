@@ -1,5 +1,5 @@
 ---
-title: Creación de condiciones de prueba para el Diseñador de pruebas unitarias de SQL Server | Microsoft Docs
+title: 'Procedimientos: Crear condiciones de prueba para el Diseñador de pruebas unitarias de SQL Server | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0b58d17340eeee18fdda5b6ea56f9aebd291ba1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 52975d96b6db206b4cdd2b6b201bc55eb572131c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400039"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090267"
 ---
-# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Cómo: Crear condiciones de prueba para el Diseñador de pruebas unitarias de SQL Server
+# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procedimientos: Creación de condiciones de prueba para el Diseñador de pruebas unitarias de SQL Server
 Puede usar la clase extensible [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) para crear nuevas condiciones de prueba. Por ejemplo, puede crear una nueva condición de prueba que compruebe el número de columnas o los valores de un conjunto de resultados.  
   
 ## <a name="to-create-a-test-condition"></a>Para crear una condición de prueba  
@@ -49,7 +49,7 @@ En este procedimiento se explica cómo crear una condición de prueba de manera 
   
 10. Derive la clase de la clase [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx).  
   
-11. Firme el ensamblado con un nombre seguro. Para más información, consulte [Cómo: Firmar un ensamblado con un nombre seguro](https://msdn.microsoft.com/library/xc31ft41.aspx).  
+11. Firme el ensamblado con un nombre seguro. Para más información, vea: [Cómo: Firmar un ensamblado con un nombre seguro](https://msdn.microsoft.com/library/xc31ft41.aspx).  
   
 12. Compile la biblioteca de clases.  
   
@@ -203,6 +203,6 @@ Solo se admite un lote para cada script de prueba. Por tanto, las condiciones de
   
 Debe establecer la biblioteca de clases que contiene la condición de prueba que se va a firmar, lo que puede hacer en la pestaña Firma de las propiedades del proyecto.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Condiciones de prueba personalizadas para pruebas unitarias de SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Uso de Comparación de esquemas para comparar distintas definiciones de base de datos | Microsoft Docs
+title: 'Procedimientos: Usar Comparación de esquemas para comparar distintas definiciones de base de datos | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -14,17 +14,17 @@ f1_keywords:
 - sql.data.tools.schemacompare.connectiondialog.f1
 - sql.data.tools.schemacompare.connectiondialog.error.f1
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2f8c03ebbb1b49258ae6a7f8744042f763fc7282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd48c91bee175e3cc2bdb0031d70a9d8e68d95c4
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668553"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095930"
 ---
-# <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Cómo: Usar Comparación de esquemas para comparar distintas definiciones de base de datos
+# <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>Procedimientos: Uso de Comparación de esquemas para comparar distintas definiciones de base de datos
 SQL Server Data Tools (SSDT) incluye una utilidad Comparación de esquemas que puede usar para comparar dos definiciones de base de datos.  El origen y el destino de la comparación pueden ser cualquier combinación de una base de datos conectada, un proyecto de base de datos de SQL Server, o un archivo de instantánea o .dacpac.  Los resultados de la comparación se muestran como una serie de acciones que hay que realizar con el destino para que sea igual que el origen.  Una vez completada la comparación puede actualizar el destino directamente (si es un proyecto o una base de datos) o generar un script de actualización que produzca el mismo efecto.  
   
 Las diferencias entre el origen y el destino aparecen en una cuadrícula para facilitar su examen.  Puede profundizar y examinar cada diferencia en la cuadrícula de resultados o mediante un script.  También puede excluir selectivamente diferencias específicas.  

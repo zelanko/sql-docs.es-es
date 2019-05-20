@@ -1,5 +1,5 @@
 ---
-title: Configuración de una ejecución de prueba unitaria de SQL Server | Microsoft Docs
+title: 'Procedimientos: Configurar una ejecución de prueba unitaria de SQL Server | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e0179429-13ce-4d23-ae27-e6419de0a575
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 45c7429dfc8824859b06ef16616b0b999a3f6fd0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a1c1d288b79d9058a9aff7609290d2381c715575
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666764"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090181"
 ---
-# <a name="how-to-configure-sql-server-unit-test-execution"></a>Cómo: Configurar una ejecución de prueba unitaria de SQL Server
+# <a name="how-to-configure-sql-server-unit-test-execution"></a>Procedimientos: Configuración de una ejecución de prueba unitaria de SQL Server
 Al configurar el proyecto de prueba, puede especificar varios valores que controlan aspectos de la ejecución de las pruebas unitarias de SQL Server. Esta configuración se almacena en el archivo app.config del proyecto de prueba. Si edita este archivo directamente, los nuevos valores aparecerán en el cuadro de diálogo de configuración de prueba.  
   
 La solución puede contener varios proyectos de prueba. Cada proyecto de prueba contiene un archivo app.config (es decir, un conjunto de valores de configuración). Como resultado, la solución puede contener diferentes conjuntos de pruebas unitarias (un conjunto para cada proyecto de prueba) que están configurados para ejecutarse de forma diferente.  
@@ -82,7 +82,7 @@ Estos valores controlan cómo se conecta la prueba a la base de datos que probar
   
 6.  Recompile el proyecto de prueba unitaria para aplicar los cambios de configuración.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Comprobar el código de base de datos con pruebas unitarias de SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
   

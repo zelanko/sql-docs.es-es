@@ -1,5 +1,5 @@
 ---
-title: Esquematización y adición de fragmentos de código a script Transact-SQL | Microsoft Docs
+title: 'Procedimientos: Esquematizar y agregar fragmentos de código a script Transact-SQL | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ca62b3b637f5983f7448a99fd9073f60a509a809
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 842fb0e2b111b5bcd17b26d13db15e47aa5c1ad1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526064"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099667"
 ---
-# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Cómo: Esquematizar y agregar fragmentos de código a script Transact-SQL
+# <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>Procedimientos: Esquematización e incorporación de fragmentos de código a script Transact-SQL
 SQL Server Data Tools incluye una biblioteca de código formada por fragmentos de código que están listos para insertarse en la aplicación. Cada fragmento de código realiza una tarea de script completa como la creación de una función, tabla, desencadenador, índice, vista, tipo de datos definido por el usuario, etc. Bastan unos pocos clics del mouse para insertar un fragmento de código en el código fuente. Estos fragmentos de código aumentan la productividad al reducir el tiempo dedicado a escribir.  
   
 Si necesita buscar un fragmento de código adecuado, puede usar el selector de fragmentos de código, que proporciona listas clasificadas por categorías de fragmentos de código entre las que puede elegir. Una vez agregado el fragmento de código al código, puede que haya que personalizar algunas partes del mismo, como reemplazar nombres de variable con nombres más apropiados o poner la lógica real de un procedimiento almacenado. Observará que el fragmento de código insertado contiene uno o varios puntos de reemplazo resaltados en el código para este fin. Si sitúa el puntero del mouse sobre el punto de reemplazo, aparecerá una información sobre herramientas en la que se explica cómo puede cambiar el código.  

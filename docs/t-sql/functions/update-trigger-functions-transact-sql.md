@@ -26,12 +26,12 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: ae555bf3eaef4d7befd89a572ab926d189183e4e
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980351"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64776005"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE: funciones de desencadenador (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,6 +65,8 @@ UPDATE ( column )
 >  La cláusula IF UPDATE(*columna*) funciona de forma idéntica a una instrucción IF, IF…ELSE o WHILE, y puede usar el bloque BEGIN…END. Para más información, vea [Lenguaje de control de flujo &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
  UPDATE(*column*) se puede usar en cualquier lugar del cuerpo de un desencadenador [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ 
+Si un desencadenador se aplica a una columna, el valor `UPDATED` se devolverá como `true` o `1`, incluso si el valor de columna permanece sin cambios. Esto es así por diseño y el desencadenador debe implementar la lógica de negocios que determina si la operación de inserción, actualización o eliminación está permitida o no. 
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea un desencadenador que imprime un mensaje para el cliente si alguien intenta actualizar las columnas `StateProvinceID` o `PostalCode` de la tabla `Address`.  

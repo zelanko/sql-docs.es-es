@@ -16,15 +16,15 @@ helpviewer_keywords:
 - object search [SQL Server]
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9dfa6ac6a609b5bc562267383371fcd19a73215b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56cc6461f56dfa21b27a8cb9d7992a0c46627e9c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760293"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095269"
 ---
 # <a name="object-explorer-details-pane"></a>Panel de detalles del Explorador de objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -89,7 +89,7 @@ Detalles del Explorador de objetos admite la selección de varios objetos. Por e
 ## <a name="sql-server-object-search"></a>Buscar objetos de SQL Server  
 Caracteres comodín  
   
--   Se admiten los caracteres comodín estándar. Por ejemplo, si se busca **dm_os%counters** , se devuelve tanto dm_os_memory_cache_counters como dm_os_performance_counters. Para más información, consulte [Buscar texto con caracteres comodín](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Se admiten los caracteres comodín estándar. Por ejemplo, si se busca **dm_os%counters** , se devuelve tanto dm_os_memory_cache_counters como dm_os_performance_counters. Para más información, vea: [Cómo: Buscar mediante caracteres comodín](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
 Ámbito de búsqueda  
   
@@ -99,6 +99,6 @@ Grandes conjuntos
   
 -   La realización de búsquedas en conjuntos de objetos grandes puede tardar mucho tiempo y reducir el rendimiento del servidor.  
   
-## <a name="see-also"></a>Ver también  
-[Ver](../../ssms/object/object-explorer.md)  
+## <a name="see-also"></a>Consulte también  
+[Explorador de objetos](../../ssms/object/object-explorer.md)  
   

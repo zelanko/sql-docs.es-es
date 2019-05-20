@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fb07dfb65055ff622e0142381743a15a8d29ad9d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63203063"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -55,7 +55,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 &nbsp;
 
-## <a name="overview-sql-server"></a>Información general: SQL Server
+## <a name="overview-sql-server"></a>Introducción: SQL Server
 
 En SQL Server, esta instrucción modifica una base de datos o los archivos y grupos de archivos asociados a la base de datos. Agrega o quita archivos y grupos de archivos en una base de datos, cambia los atributos de una base de datos o de sus archivos y grupos de archivos, cambia la intercalación de base de datos y establece las opciones de base de datos. Las instantáneas de base de datos no se pueden modificar. Para modificar las opciones de base de datos asociadas a la replicación, utilice [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md).
 
@@ -72,6 +72,9 @@ ALTER DATABASE En el artículo actual se proporciona la sintaxis e información 
 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) Proporciona la sintaxis e información relacionada de las opciones [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] de ALTER DATABASE para configurar una base de datos secundaria en una réplica secundaria de un grupo de disponibilidad AlwaysOn.
 
 [Nivel de compatibilidad de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) Proporciona la sintaxis e información relacionada de las opciones SET de ALTER DATABASE relacionadas con los niveles de compatibilidad de la base de datos.
+
+[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
+Proporciona la sintaxis relacionada con las configuraciones con ámbito de base de datos utilizadas para la configuración del nivel de base de datos individual, como los comportamientos relacionados con la optimización y la ejecución de consultas. 
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -279,7 +282,7 @@ GO
 
 &nbsp;
 
-## <a name="overview-azure-sql-database-single-databaseelastic-pool"></a>Información general: Grupo de bases de datos elásticas o base de datos única de Azure SQL Database
+## <a name="overview-azure-sql-database-single-databaseelastic-pool"></a>Introducción: Grupo de bases de datos elásticas o base de datos única de Azure SQL Database
 
 En Azure SQL Database, use esta instrucción para modificar una base de datos en un grupo elástico o una base de datos única. Use esta instrucción para cambiar el nombre de una base de datos, cambiar el objetivo de edición y servicio de la base de datos, unir la base de datos a un grupo elástico o quitarla de uno, establecer las opciones de base de datos, agregar o quitar la base de datos como una base de datos secundaria en una relación de replicación geográfica y establecer el nivel de compatibilidad de base de datos.
 
@@ -666,7 +669,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 &nbsp;
 
-## <a name="overview-azure-sql-database-managed-instance"></a>Información general: Instancia administrada de Azure SQL Database
+## <a name="overview-azure-sql-database-managed-instance"></a>Introducción: Instancia administrada de Azure SQL Database
 
 En Instancia administrada de Azure SQL Database, use esta instrucción para establecer las opciones de base de datos.
 
@@ -786,7 +789,7 @@ ALTER DATABASE WideWorldImporters
 
 &nbsp;
 
-## <a name="overview-azure-sql-data-warehouse"></a>Información general: Almacenamiento de datos SQL de Azure
+## <a name="overview-azure-sql-data-warehouse"></a>Introducción: Almacenamiento de datos SQL de Azure
 
 Modifica el nombre, el tamaño máximo o el objetivo del servicio de una base de datos.
 
@@ -904,7 +907,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 
 &nbsp;
 
-## <a name="overview-analytics-platform-system"></a>Información general: Sistema de la plataforma de análisis
+## <a name="overview-analytics-platform-system"></a>Introducción: Sistema de la plataforma de análisis
 
 Modifica las opciones de tamaño máximo de la base de datos para las tablas replicadas, tablas distribuidas y el registro de transacciones en PDW. Use esta instrucción para administrar las asignaciones de espacio de disco para una base de datos a medida que aumenta o disminuye de tamaño. En el artículo también se describe la sintaxis relacionada con la configuración de opciones de base de datos en PDW.
 

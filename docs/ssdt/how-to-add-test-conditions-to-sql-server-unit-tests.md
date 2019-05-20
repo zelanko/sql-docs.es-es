@@ -1,5 +1,5 @@
 ---
-title: Adición de condiciones de prueba a pruebas unitarias de SQL Server | Microsoft Docs
+title: 'Procedimientos: Agregar condiciones de prueba a pruebas unitarias de SQL Server | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 63446667e82beef51798f7b1d97e3b13911898b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f4dc9a023b74c104e232546ec6c4f8c2bd93919
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731233"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65103248"
 ---
-# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Cómo: Agregar condiciones de prueba a pruebas unitarias de SQL Server
+# <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Procedimientos: Incorporación de condiciones de prueba a pruebas unitarias de SQL Server
 Puede agregar condiciones de prueba a una prueba unitaria de SQL Server mediante el **Diseñador de pruebas unitarias de SQL Server**. Cuando guarda la clase de prueba, las condiciones de prueba se guardan automáticamente en el proyecto de prueba como código de Visual C\# o de Visual Basic en el archivo de código fuente que contiene la clase de prueba. Después de guardar una condición de prueba, puede editarla en el **Diseñador de pruebas unitarias de SQL Server** o en su archivo de código fuente.  
   
 ### <a name="to-add-test-conditions-to-a-sql-server-unit-test"></a>Para agregar condiciones de prueba a pruebas unitarias de SQL Server  
@@ -47,7 +47,7 @@ Puede agregar condiciones de prueba a una prueba unitaria de SQL Server mediante
   
     Configure la condición de prueba en la ventana Propiedades. Por ejemplo, puede cambiar la propiedad **Tiempo de ejecución** de una condición de prueba de tiempo de ejecución. Si establece esta propiedad, hará que la prueba produzca un error si el script de Transact\-SQL no se ejecuta dentro del tiempo especificado.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Cómo: Crear una prueba unitaria de SQL Server vacía](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
 [Cómo: Crear pruebas unitarias de SQL Server para funciones, desencadenadores y procedimientos almacenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  

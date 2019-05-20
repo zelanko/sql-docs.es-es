@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear una instantánea de un proyecto | Microsoft Docs'
+title: 'Procedimientos: Crear una instantánea de un proyecto | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
 - sql.data.tools.SqlProjectImportSnapshotDialog.dialog
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c564788a1d77d9af83de28a2b4dbea022ea28ec1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4093d18cfce9e7a5632039cf819955762c84adc1
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530785"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098082"
 ---
-# <a name="how-to-create-a-snapshot-of-a-project"></a>Cómo: Crear una instantánea de un proyecto
+# <a name="how-to-create-a-snapshot-of-a-project"></a>Procedimientos: Creación de una instantánea de un proyecto
 Un archivo de **Aplicación de capa de datos** ofrece una representación de solo lectura del esquema de la base de datos en el momento de su creación. Básicamente se considera un esquema de la base de datos desde el que puede volver a importar los objetos de esquema en un proyecto. También puede compararla con el esquema de una base de datos o de un proyecto y actualizar la base de datos o el proyecto para reflejar el esquema definido en la instantánea.  
   
 En caso de que se produzca un error de usuario en un proyecto de base de datos de origen, puede revertir el proyecto de origen al estado en que se encontraba cuando se creó la instantánea. También puede establecer instantáneas en diversas etapas del desarrollo para definir líneas base.  
@@ -64,6 +64,6 @@ En caso de que se produzca un error de usuario en un proyecto de base de datos d
   
     Puede encontrar fácilmente las diferencias entre distintas instantáneas mediante Comparación de esquemas. En este caso, puede saber cómo evoluciona el proyecto durante el proceso de desarrollo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Cómo: Usar Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

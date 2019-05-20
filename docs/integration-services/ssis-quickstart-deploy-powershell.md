@@ -9,12 +9,12 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 39d1986d599233b9578fca32ff993ea6cfed4492
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 146b484e96dc35a48ffa5bfe22b0564262bce9e9
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282709"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376885"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>Implementar un proyecto de SSIS con PowerShell
 En este inicio rápido se muestra cómo usar un script de PowerShell para conectarse a un servidor de bases de datos e implementar un proyecto de SSIS en el catálogo de SSIS.
@@ -37,12 +37,42 @@ No puede usar la información que aparece en este inicio rápido para implementa
 
 Para implementar el proyecto en Azure SQL Database, debe obtener la información de conexión necesaria para conectarse a la base de datos del catálogo de SSIS (SSISDB). Necesita el nombre completo y la información de inicio de sesión del servidor en los procedimientos siguientes.
 
-1. Inicie sesión en el [Portal de Azure](https://portal.azure.com/).
+1. Inicie sesión en [Azure Portal](https://portal.azure.com/).
 2. Seleccione **Bases de datos SQL** en el menú izquierdo y, después, seleccione la base de datos SSISDB en la página **Bases de datos SQL**. 
 3. En la página **Introducción** de la base de datos, compruebe el nombre completo del servidor. Mantenga el puntero del ratón sobre el nombre del servidor para ver la opción **Haga clic para copiar**. 
 4. Si olvida la información de inicio de sesión del servidor de Azure SQL Database, navegue a la página del servidor de SQL Database para ver el nombre del administrador del servidor. Si es necesario, puede restablecer la contraseña.
 5. Haga clic en **Mostrar las cadenas de conexión de la base de datos**.
 6. Revise la cadena de conexión **ADO.NET** completa.
+
+## <a name="ssis-powershell-provider"></a>Proveedor PowerShell de SSIS
+Proporcione los valores adecuados para las variables en la parte superior del script siguiente y, a continuación, ejecute el script para implementar el proyecto de SSIS.
+
+> [!NOTE]
+> En el ejemplo siguiente se usa la autenticación de Windows para efectuar una implementación en un servidor de SQL Server local. Use el cmdlet `New-PSDive` para establecer una conexión con autenticación de SQL Server. Si se va a conectar a un servidor de Azure SQL Database, no puede usar la autenticación de Windows.
+
+```powershell
+# Variables
+$TargetInstanceName = "localhost\default"
+$TargetFolderName = "Project1Folder"
+$ProjectFilePath = "C:\Projects\Integration Services Project1\Integration Services Project1\bin\Development\Integration Services Project1.ispac"
+$ProjectName = "Integration Services Project1"
+
+# Get the Integration Services catalog
+$catalog = Get-Item SQLSERVER:\SSIS\$TargetInstanceName\Catalogs\SSISDB\
+
+# Create the target folder
+New-Object "Microsoft.SqlServer.Management.IntegrationServices.CatalogFolder" ($catalog, 
+$TargetFolderName,"Folder description") -OutVariable folder
+$folder.Create()
+
+# Read the project file and deploy it
+[byte[]] $projectFile = [System.IO.File]::ReadAllBytes($ProjectFilePath)
+$folder.DeployProject($ProjectName, $projectFile)
+
+# Verify packages were deployed.
+dir "$($catalog.PSPath)\Folders\$TargetFolderName\Projects\$ProjectName\Packages" | 
+SELECT Name, DisplayName, PackageId
+```
 
 ## <a name="powershell-script"></a>Script de PowerShell
 Proporcione los valores adecuados para las variables en la parte superior del script siguiente y, a continuación, ejecute el script para implementar el proyecto de SSIS.

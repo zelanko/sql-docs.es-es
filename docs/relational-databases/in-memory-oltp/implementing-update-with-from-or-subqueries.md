@@ -12,37 +12,46 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d8b2d57affda47622722ccefde214e5c2e61d51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6af025104d3d17ba7856df7739539ea065e4c197
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653309"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65104985"
 ---
 # <a name="implementing-update-with-from-or-subqueries"></a>Implementación de UPDATE con FROM o subconsultas
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Los módulos de T-SQL compilados de forma nativa no admiten la cláusula FROM ni subconsultas en las instrucciones UPDATE (se admiten en SELECT). Las instrucciones UPDATE con la cláusula FROM suelen usarse para actualizar la información de una tabla basada en un parámetro con valores de tabla (TVP) o para actualizar las columnas de una tabla en un desencadenador AFTER. 
+
+
+En la instrucción UPDATE de Transact-SQL, en un módulo T-SQL compilado de forma nativa, los siguientes elementos de sintaxis *no* se admiten:
+
+- La cláusula FROM
+- Subconsultas
+
+En cambio, los elementos anteriores *sí* se admiten en módulos compilados de forma nativa en la instrucción SELECT.
+
+Las instrucciones UPDATE con una cláusula FROM suelen usarse para actualizar la información de una tabla basada en un parámetro con valores de tabla (TVP) o para actualizar las columnas de una tabla en un desencadenador AFTER.
 
 Para este escenario de actualización basado en un TVP, vea [Implementación de la funcionalidad MERGE en un procedimiento almacenado compilado de forma nativa](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md). 
 
-En el ejemplo siguiente se muestra una actualización realizada en un desencadenador: la columna LastUpdated de la tabla se actualiza en función de las actualizaciones AFTER de fecha y hora actuales. La solución alternativa usa una variable de tabla con una columna de identidad y un bucle WHILE para iterar las filas de la variable de tabla y realizar actualizaciones individuales.
-  
-Esta es la instrucción UPDATE de T-SQL original:  
-  
-  
-  
-   ```
+El ejemplo siguiente muestra una actualización realizada en un desencadenador. En la tabla, se establece la columna denominada LastUpdated en las actualizaciones AFTER de la fecha y hora actual. La solución realiza las actualizaciones individuales mediante el uso de los siguientes elementos:
+
+- Una variable de tabla que tiene una columna IDENTITY.
+- Un bucle WHILE para la iteración de las filas en la variable de tabla.
+
+Esta es la instrucción UPDATE de T-SQL original:
+
+   ```sql
     UPDATE dbo.Table1  
         SET LastUpdated = SysDateTime()  
         FROM  
             dbo.Table1 t  
             JOIN Inserted i ON t.Id = i.Id;  
    ```
-  
-  
 
-El código de T-SQL de ejemplo de esta sección muestra una solución alternativa que proporciona un buen rendimiento. Dicha solución se implementa en un desencadenador compilado de forma nativa. Es fundamental que se fije en lo siguiente en el código:  
+El código de T-SQL de ejemplo del bloque siguiente muestra una solución alternativa que proporciona un buen rendimiento. Dicha solución se implementa en un desencadenador compilado de forma nativa. Es fundamental que se fije en lo siguiente en el código:  
   
 - El tipo denominado dbo.Type1, que es un tipo de tabla optimizada para memoria.  
 - El bucle WHILE en el desencadenador.  
@@ -50,13 +59,13 @@ El código de T-SQL de ejemplo de esta sección muestra una solución alternativ
   
   
   
- ```
+ ```sql
     DROP TABLE IF EXISTS dbo.Table1;  
     go  
     DROP TYPE IF EXISTS dbo.Type1;  
     go  
-    -----------------------------  
-    -- Table and table type
+    -----------------------------
+    -- Table and table type.
     -----------------------------
   
     CREATE TABLE dbo.Table1  
@@ -78,9 +87,10 @@ El código de T-SQL de ejemplo de esta sección muestra una solución alternativ
     )   
         WITH (MEMORY_OPTIMIZED = ON);  
     go  
-    ----------------------------- 
-    -- trigger that contains the workaround for UPDATE with FROM 
-    -----------------------------  
+    ----------------------------------------
+    -- Trigger that contains the workaround
+    -- for UPDATE with FROM.
+    ----------------------------------------
   
     CREATE TRIGGER dbo.tr_a_u_Table1  
         ON dbo.Table1  
@@ -120,9 +130,9 @@ El código de T-SQL de ejemplo de esta sección muestra una solución alternativ
       END  
     END  
     go  
-    -----------------------------  
-    -- Test to verify functionality
-    -----------------------------  
+    ---------------------------------
+    -- Test to verify functionality.
+    ---------------------------------
   
     SET NOCOUNT ON;  
   
@@ -157,6 +167,4 @@ El código de T-SQL de ejemplo de esta sección muestra una solución alternativ
     AFTER--Update   2      10      2016-04-20 21:18:43.8529692  
     AFTER--Update   3     600      2016-04-20 21:18:42.8394659  
     ****/  
-  
-  
  ```

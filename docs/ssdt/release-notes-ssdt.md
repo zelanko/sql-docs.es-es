@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 44229bbe0bd0a4df65e9dfbfe213c6a14cee0f42
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 80836cb5ab67f221ff3f9965d1980bcbc9c8378d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241912"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101913"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notas de la versión de SQL Server Data Tools (SSDT)
 
@@ -46,6 +46,36 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+## <a name="1591nbsp-ssdt-for-vs-2017"></a>15.9.1,&nbsp; SSDT para VS 2017
+
+_Publicado:_ &nbsp; 27 de abril de 2019  
+_Número de compilación:_ &nbsp; 14.0.16191.0  
+_SSDT para Visual Studio 2017._
+
+### <a name="whats-new"></a>Novedades
+
+#### <a name="ssis"></a>SSIS
+
+| Nuevo elemento | Detalles |
+| :------- | :------ |
+| Se corrige una incidencia que hacía que el elemento del paquete no se pudiera almacenar correctamente cuando se dirigía a la versión anterior de SQL Server. | &nbsp; |
+| Se corrige una incidencia que hacía que no se pudieran agregar expresiones a la restricción de precedencia al usar el elemento del paquete. | &nbsp; |
+| Se corrige una incidencia que hacía que el botón "Ayuda" del origen de Power Query y el Administrador de conexiones no se vinculara al documento correcto. | &nbsp; |
+| Se corrige una incidencia que hacía que la versión de compilación de SSIS no se mostrara en la ventana de Ayuda de VS. | &nbsp; |
+| Se agrega la propiedad "ConnectByProxy" para el Administrador de conexiones de Ole DB y de Archivo plano, que puede habilitar el acceso a los datos de forma local con IR autohospedado en Azure-SSIS IR. | &nbsp; |
+| Se corrige una incidencia que hacía que los componentes ODBC asignarán los tipos de datos DT_DBDATE incorrectamente. | &nbsp; |
+| Se agrega la propiedad "ConnectUsingManagedIdentity" para el administrador de conexiones de ADO.NET y OLE DB, que permite la autenticación de identidad administrada para conectarse al origen de datos en Azure-SSIS IR. | &nbsp; |
+
+### <a name="known-issues"></a>Problemas conocidos
+
+| Problema conocido | Detalles |
+| :---------- | :------ |
+| La tarea Ejecutar paquete de SSIS no admite la depuración cuando ExecuteOutofProcess está establecido en True. | Este problema solo se aplica a la depuración. Las funciones de guardado, implementación y ejecución mediante DTExec.exe o el catálogo de SSIS no se verán afectadas. |
+| SSDT para Visual Studio 2017 superior a 15.8 no es compatible con el diseño de paquetes que contienen orígenes y destinos de Teradata. | Utilice SSDT para Visual Studio 2017 (15.8). |
+| El origen de Power Query puede no admitir OData v4 cuando SSIS y SSAS se instalan en la misma instancia de Visual Studio. | &nbsp; |
+| El origen de Power Query puede no admitir el empleo de ODBC para conectarse a Oracle cuando SSIS y SSAS se instalan en la misma instancia de Visual Studio. | &nbsp; |
+| El origen de Power Query no está localizado. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## <a name="1590nbsp-ssdt-for-vs-2017"></a>15.9.0,&nbsp; SSDT para VS 2017
 

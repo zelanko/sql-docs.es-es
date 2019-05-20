@@ -1,6 +1,6 @@
 ---
 title: Mejora de los grupos de escalado horizontal de PolyBase en Windows | Microsoft Docs
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -9,12 +9,13 @@ ms.topic: tutorial
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 792791cf7ac6abebc56f1b59381fb5d18e83d237
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: ab93c4a4ea1a09fa9af8adea765b342d7ac9f340
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417486"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64774720"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Mejora de los grupos de escalado horizontal de PolyBase en Windows
 
@@ -88,7 +89,7 @@ Una vez completada la instalación, las dos máquinas pueden funcionar como nodo
   
 4. Apague el motor de PolyBase y reinicie el servicio de movimiento de datos de PolyBase.
   
-## <a name="optional-remove-a-compute-node"></a>Opcional: eliminación un nodo de ejecución  
+## <a name="optional-remove-a-compute-node"></a>Opcional: eliminación de un nodo de ejecución.  
   
 1. Conéctese al nodo de ejecución de SQL Server (PQTH4A-CMP02).
   

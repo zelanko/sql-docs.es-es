@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.testconditions
 ms.assetid: e3d1c86c-1e58-4d2c-b625-d1b591b221aa
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 852651601ba7264c079a42c82a4bbb626d902328
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 923c6fc93418cf2e46bf3970632ae0454f5a611d
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529877"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101893"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Usar condiciones de prueba en pruebas unitarias de SQL Server
 En una prueba unitaria de SQL Server, se ejecutan uno o varios scripts de prueba Transact\-SQL. Los resultados se pueden evaluar dentro del script Transact\-SQL y usar THROW o RAISERROR para devolver un error y que no se supere la prueba, o se pueden definir condiciones de prueba en la prueba para evaluar los resultados. La prueba devuelve una instancia de la clase [SqlExecutionResult](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.sqlexecutionresult.aspx). La instancia de esta clase contiene uno o más DataSets, el tiempo de ejecución y las filas afectadas por el script. Toda esta información se recopila durante la ejecución del script. Estos resultados se pueden evaluar utilizando las condiciones de prueba. SQL Server Data Tools proporciona un conjunto de condiciones de prueba predefinidas. También puede crear y usar condiciones personalizadas, consulte [Condiciones de prueba personalizadas para pruebas unitarias de SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
@@ -42,9 +42,9 @@ En la tabla siguiente se enumeran las condiciones de prueba predefinidas que pue
 >   
 > La duración notificada no incluye el tiempo usado para la generación de datos y la implementación del esquema, porque aparecen antes de que se ejecuten las pruebas. Para ver la duración de la prueba, seleccione una serie de pruebas en la ventana **Resultados de pruebas**, haga clic con el botón derecho y elija **Ver detalles de resultados de pruebas**.  
   
-Puede agregar condiciones de prueba a pruebas unitarias de SQL Server mediante el panel Condiciones de prueba del Diseñador de pruebas unitarias de SQL Server. Para más información, consulte [Cómo: Agregar condiciones de prueba a pruebas unitarias de SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
+Puede agregar condiciones de prueba a pruebas unitarias de SQL Server mediante el panel Condiciones de prueba del Diseñador de pruebas unitarias de SQL Server. Para más información, vea: [Cómo: Incorporar condiciones de prueba a pruebas unitarias de SQL Server](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md).  
   
-También puede modificar el código del método de prueba directamente para agregar más funcionalidad. Para más información, consulte [Cómo: Abrir una prueba unitaria de SQL Server para editarla](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md) y [Cómo: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md). Por ejemplo, puede agregar funcionalidad a un método de prueba si agrega instrucciones Assert. Para más información, consulte [Usar aserciones de Transact-SQL en pruebas unitarias de SQL Server](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md).  
+También puede modificar el código del método de prueba directamente para agregar más funcionalidad. Para más información, vea: [Cómo: Abrir una prueba unitaria de SQL Server para editarla](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md) y [Cómo: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md). Por ejemplo, puede agregar funcionalidad a un método de prueba si agrega instrucciones Assert. Para más información, consulte [Usar aserciones de Transact-SQL en pruebas unitarias de SQL Server](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md).  
   
 ## <a name="expected-failures"></a>Errores esperados  
 Puede crear pruebas unitarias de SQL Server para probar el comportamiento que no debe ejecutarse correctamente. Estos errores esperados se conocen a veces como pruebas negativas. A continuación, se exponen algunos ejemplos:  
@@ -73,7 +73,7 @@ Donde:
   
 Se omite cualquier parámetro no especificado. Estos parámetros se pasan a la instrucción **THROW** en el código de base de datos. Si especifica MatchFirstError = false, el atributo coincidirá con cualquier error de SQL en la excepción. El comportamiento predeterminado (MatchFirstError = true) consiste en hacer coincidir solamente el primer error que aparezca.  
   
-Para obtener un ejemplo de cómo usar excepciones esperadas y una prueba unitaria negativa de SQL Server, consulte [Tutorial: Crear y ejecutar una prueba unitaria de SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+Para obtener un ejemplo de cómo usar excepciones esperadas y una prueba unitaria negativa de SQL Server, vea [Tutorial: Crear y ejecutar una prueba unitaria de SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="SpecifyDataChecksum"></a>Especificar una suma de comprobación de datos  
 Para mostrar el Diseñador de pruebas unitarias de SQL Server, haga doble clic en el archivo de código fuente de la prueba unitaria en el **Explorador de soluciones**.  
@@ -92,7 +92,7 @@ Después de agregar una condición de prueba Suma de comprobación de datos a la
   
     Aparece el cuadro de diálogo **Configuración de TestConditionName** .  
   
-5.  Especifique una conexión a la base de datos que desee probar. Para más información, consulte [Cómo: Crear una conexión a una base de datos](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Especifique una conexión a la base de datos que desee probar. Para más información, vea: [Cómo: Crear una conexión a una base de datos](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
   
 6.  De manera predeterminada, el cuerpo de Transact\-SQL de la prueba aparece en el panel de edición. Puede modificar el código en caso necesario, para generar los resultados esperados. Por ejemplo, si la prueba tiene código anterior a la prueba, quizás tenga que agregar ese código.  
   
@@ -122,7 +122,7 @@ Una vez agregada una condición de prueba Esquema esperado a la prueba unitaria 
   
     Aparece el cuadro de diálogo **Configuración de TestConditionName** .  
   
-5.  Especifique una conexión a la base de datos que desee probar. Para más información, consulte [Cómo: Crear una conexión a una base de datos](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
+5.  Especifique una conexión a la base de datos que desee probar. Para más información, vea: [Cómo: Crear una conexión a una base de datos](https://msdn.microsoft.com/library/aa833420(VS.100).aspx).  
   
 6.  De manera predeterminada, el cuerpo de Transact\-SQL de la prueba aparece en el panel de edición. Puede modificar el código en caso necesario, para generar los resultados esperados. Por ejemplo, si la prueba tiene código anterior a la prueba, quizás tenga que agregar ese código.  
   
@@ -140,7 +140,7 @@ Una vez agregada una condición de prueba Esquema esperado a la prueba unitaria 
 ## <a name="extensible-test-conditions"></a>Condiciones de prueba extensibles  
 Además de las seis condiciones de prueba predefinidas, puede escribir nuevas condiciones de prueba propias. Estas condiciones de prueba se mostrarán en el panel Condiciones de prueba del Diseñador de pruebas unitarias de SQL Server. Para más información, consulte [Condiciones de prueba personalizadas para pruebas unitarias de SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Usar aserciones de Transact-SQL en pruebas unitarias de SQL Server](../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md)  
 [Scripts de pruebas unitarias de SQL Server](../ssdt/scripts-in-sql-server-unit-tests.md)  

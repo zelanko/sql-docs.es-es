@@ -1,5 +1,5 @@
 ---
-title: Usar objetos de Microsoft SQL Server 2012 en un proyecto | Microsoft Docs
+title: 'Procedimientos: Usar objetos de Microsoft SQL Server 2012 en un proyecto | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2ead75f8b71227b1bd3831b650cc036a66b5b325
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e3175f523a0cc6b91fd1d5bd955e6872a5cf0064
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397097"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098407"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Usar objetos de Microsoft SQL Server 2012 en un proyecto
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Procedimientos: Uso de objetos de Microsoft SQL Server 2012 en un proyecto
 En este ejemplo, agregará un objeto de secuencia a un proyecto de base de datos destinado a Microsoft SQL Server 2012.  
   
 Las secuencias se incluyeron en Microsoft SQL Server 2012. Una secuencia es un objeto enlazado a un esquema definido por el usuario que genera una secuencia de valores numéricos según la especificación con la que se creó la secuencia. La secuencia de valores numéricos se genera en orden ascendente o descendente en un intervalo definido y puede repetirse cuando se solicite.  Para más información sobre los objetos de secuencia consulte [Números de secuencia](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx). Para obtener información sobre las novedades de Microsoft SQL Server 2012, vea [Novedades de SQL Server 2012](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
@@ -44,9 +44,9 @@ Las secuencias se incluyeron en Microsoft SQL Server 2012. Una secuencia es un o
     CACHE 10  
     ```  
   
-4.  Si la plataforma de destino del proyecto no se ha establecido en Microsoft SQL Server 2012, la **Lista de errores** mostrará un error de sintaxis para la instrucción `CREATE SEQUENCE`. Para corregir este problema, siga el tema [Cómo: Cambiar la plataforma de destino y publicar un proyecto de base de datos](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) para cambiar la plataforma de destino según corresponda.  
+4.  Si la plataforma de destino del proyecto no se ha establecido en Microsoft SQL Server 2012, la **Lista de errores** mostrará un error de sintaxis para la instrucción `CREATE SEQUENCE`. Para corregir este problema, vea [Cómo: Cambiar la plataforma de destino y publicar un proyecto de base de datos](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) para cambiar la plataforma de destino según corresponda.  
   
-5.  Siga el tema [Cómo: Cambiar la plataforma de destino y publicar un proyecto de base de datos](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) para publicar el proyecto en una base de datos del servidor de Microsoft SQL Server 2012 conectado.  
+5.  Siga el tema [Cómo: Cambiar la plataforma de destino y publicar un proyecto de base de datos](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md) para publicar el proyecto en una base de datos del servidor de Microsoft SQL Server 2012 conectado.  
   
 ### <a name="to-use-the-new-sequence-object"></a>Para usar el nuevo objeto de secuencia  
   

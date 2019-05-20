@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 58d283ffaf2c8efd2b360a977af17d985117a2ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1eb77a0990d8f0e19458dd66ea7f73b933de961c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682235"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101852"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>Permisos necesarios para SQL Server Data Tools
 Para poder realizar una acción en una base de datos en Visual Studio, debe iniciar sesión con una cuenta que tenga determinados permisos para esa base de datos. Los permisos específicos que necesita varían en función de la acción que desee realizar. En las siguientes secciones se describe cada una de las acciones que puede querer realizar y el permiso específico que necesita para realizarla.  
@@ -63,8 +63,8 @@ Para ejecutar pruebas unitarias en una base de datos, debe disponer de los sigui
 |Ejecutar una acción de prueba|Debe usar la conexión de base de datos del contexto de ejecución. Para obtener más información, consulte [Información general acerca de las cadenas de conexión y los permisos](../ssdt/overview-of-connection-strings-and-permissions.md).|  
 |Ejecutar una acción anterior o posterior a la prueba|Debe usar la conexión de base de datos del contexto con privilegios. Esta conexión de base de datos puede tener más permisos que la conexión del contexto de ejecución.|  
 |Ejecutar los scripts TestInitialize y TestCleanup|Debe usar la conexión de base de datos del contexto con privilegios.|  
-|Implementar cambios en una base de datos antes de ejecutar las pruebas|Debe usar la conexión de base de datos del contexto con privilegios. Para obtener más información, consulte [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
-|Generar datos antes de ejecutar las pruebas|Debe usar la conexión de base de datos del contexto con privilegios. Para obtener más información, consulte [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
+|Implementar cambios en una base de datos antes de ejecutar las pruebas|Debe usar la conexión de base de datos del contexto con privilegios. Para más información, vea: [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
+|Generar datos antes de ejecutar las pruebas|Debe usar la conexión de base de datos del contexto con privilegios. Para más información, vea: [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).|  
   
 ## <a name="DataGenerationPermissions"></a>Permisos para generar datos  
 Debe tener los permisos **INSERT** y **SELECT** en los objetos de la base de datos de destino para generar datos de prueba con el Generador de datos. Si depura los datos antes de generarlos, debe tener también el permiso **DELETE** en los objetos de la base de datos de destino. Para restablecer la columna **IDENTITY** en una tabla, debe ser el propietario de la tabla o un miembro del rol db_owner o db_ddladmin.  
@@ -98,7 +98,7 @@ En la tabla siguiente se muestran los permisos que debe tener para implementar o
 > [!IMPORTANT]  
 > En todos los casos, el propietario del ensamblado debe ser el usuario que va a implementar el ensamblado o el propietario debe tener un rol del que el usuario sea miembro. Este requisito se aplica también a todos los ensamblados a los que haga referencia el ensamblado que va a implementar.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
   

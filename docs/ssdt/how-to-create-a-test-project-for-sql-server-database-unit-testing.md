@@ -1,5 +1,5 @@
 ---
-title: Creación de un proyecto de prueba para las pruebas unitarias de base de datos de SQL Server | Microsoft Docs
+title: 'Procedimientos: Crear un proyecto de prueba para las pruebas unitarias de base de datos de SQL Server | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ec74cb8ed16fa7e49f5a941a903341a514d13932
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: e28464059101f6385380ced0a307a61f1e76ba53
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336104"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098070"
 ---
-# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Cómo: Crear un proyecto de prueba para las pruebas unitarias de base de datos de SQL Server
+# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Procedimientos: Creación de un proyecto de prueba para las pruebas unitarias de base de datos de SQL Server
 Antes de empezar a escribir las pruebas unitarias que evalúan los objetos de base de datos, debe crear primero un proyecto de prueba. Este proyecto contiene pruebas unitarias de SQL Server, pero podría contener otros tipos de pruebas.  
   
 Puede colocar todas las pruebas unitarias de SQL Server de un proyecto de base de datos determinado en un solo proyecto de prueba. Sin embargo, puede ser conveniente proyectos de prueba adicionales en función de sus respuestas a las preguntas siguientes:  
@@ -29,7 +29,7 @@ Puede colocar todas las pruebas unitarias de SQL Server de un proyecto de base d
 |¿Las diferentes pruebas unitarias de SQL Server necesitan tener acceso a distintas conexiones de base de datos para la ejecución de prueba o la validación de prueba?|En caso afirmativo, necesita más de un proyecto de prueba. No puede especificar más de una conexión de base de datos para la ejecución de prueba. Sin embargo, puede especificar una conexión de base de datos diferente para la validación de prueba.|  
 |¿Desea implementar distintos proyectos de base de datos para las diferentes pruebas unitarias?|En caso afirmativo, necesita más de un proyecto de prueba. Un proyecto de prueba solo puede implementar un proyecto de base de datos.|  
   
-Para obtener más información sobre cada una de estas preguntas, consulte [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Como alternativa a la creación de varios proyectos de prueba, también puede proporcionar su propia implementación de Microsoft.Data.Schema.UnitTesting.DatabaseTestService [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx).  
+Para obtener más información sobre estas preguntas, vea [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Como alternativa a la creación de varios proyectos de prueba, también puede proporcionar su propia implementación de Microsoft.Data.Schema.UnitTesting.DatabaseTestService [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx).  
   
 Tiene tres opciones para agregar un proyecto de prueba a una solución que contenga un proyecto de base de datos:  
   
@@ -53,8 +53,8 @@ Cada enfoque se describe en los procedimientos siguientes.
   
 ### <a name="to-create-a-test-project-with-a-sql-server-unit-test-class"></a>Para crear un proyecto de prueba con una clase de prueba unitaria de SQL Server  
   
--   Siga el procedimiento que se describe en [How to: Create an Empty SQL Server Unit Test](../ssdt/how-to-create-an-empty-sql-server-unit-test.md) (Cómo: Crear una prueba unitaria de SQL Server vacía) o [Cómo: Crear pruebas unitarias de SQL Server para funciones, desencadenadores y procedimientos almacenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
+-   Siga el procedimiento que se describe en [Cómo: Crear una prueba unitaria de SQL Server vacía](../ssdt/how-to-create-an-empty-sql-server-unit-test.md) o [Cómo: Crear pruebas unitarias de SQL Server para funciones, desencadenadores y procedimientos almacenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   

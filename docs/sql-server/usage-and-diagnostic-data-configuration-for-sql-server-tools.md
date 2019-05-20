@@ -1,5 +1,5 @@
 ---
-title: Configuración de la recopilación de datos de uso y diagnóstico para herramientas de SQL Server | Microsoft Docs
+title: Configuración de la recopilación de datos de uso y diagnóstico para herramientas de SQL Server (CEIP) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/21/2016
 ms.prod: sql
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c60eb8cac357fba523196385e72a1b05a2c36f4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b089fd59814e8439bee929fdbc4f01fbc0340f75
+ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59243519"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65376853"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools"></a>Configuración de la recopilación de datos de uso y diagnóstico para herramientas de SQL Server
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-tools-ceip"></a>Configuración de la recopilación de datos de uso y diagnóstico para herramientas de SQL Server (CEIP)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -29,7 +29,7 @@ Obtenga información sobre el modo en que el Programa para la mejora de la exper
   
 ## <a name="opting-in-and-out-of-ceip-for-sql-server-data-tools"></a>Participación en el CEIP de SQL Server Data Tools o cancelación de esta  
 
- El Programa para la mejora de la experiencia del usuario está concebido para ayudar a Microsoft a mejorar sus productos a lo largo del tiempo. El programa recopila información sobre el hardware del equipo y la forma en que los usuarios usan el producto sin interrumpir las tareas que realizan en el equipo. La información recopilada ayuda a Microsoft a identificar las características que se deben mejorar. En este documento se explica cómo participar en el CEIP de SQL Server Data Tools (SSDT) para Visual Studio 2017, Visual Studio 2015 y Visual Studio 2013. Asimismo, también se incluyen los detalles para dejar de hacerlo.  
+ El Programa para la mejora de la experiencia del usuario está concebido para ayudar a Microsoft a mejorar sus productos a lo largo del tiempo. El programa recopila información sobre el hardware del equipo y la forma en que los usuarios usan el producto sin interrumpir las tareas que realizan en el equipo. La información recopilada ayuda a Microsoft a identificar las características que se deben mejorar. En este documento se explica cómo participar en el CEIP de SQL Server Data Tools (SSDT) para Visual Studio 2017, Visual Studio 2015 y Visual Studio 2013. Asimismo, también se incluyen los detalles para dejar de hacerlo.  Para obtener información acerca de no participar en CEIP para SQL Server, consulte [Desactivar auditoría local para SQL Server](usage-and-diagnostic-data-in-local-audit.md#turning-local-audit-on-or-off).
 
 ### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2017"></a>Elección y control sobre el CEIP y SQL Server Data Tools para Visual Studio 2017
 

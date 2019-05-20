@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Corregir errores | Microsoft Docs'
+title: 'Procedimientos: Corregir errores | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6d1f2fba2b5c2c0f978973eb015674b9b83af806
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664023"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090248"
 ---
-# <a name="how-to-fix-errors"></a>Cómo: Corregir errores
+# <a name="how-to-fix-errors"></a>Procedimientos: Corrección de errores
 El panel Lista de errores muestra todos los errores de implementación o de compilación. Los errores de sintaxis y semánticos producidos por la edición en el Editor de Transact\-SQL o en el Diseñador de tablas también aparecen en la lista al editar entidades de base de datos y sus definiciones. La Lista de errores se actualiza dinámicamente a medida que se editan scripts en distintas pestañas. Después, puede seguir los errores identificados para la solución de problemas.  
   
 > [!WARNING]  
@@ -32,7 +32,7 @@ El panel Lista de errores muestra todos los errores de implementación o de comp
   
 3.  Observe que en el panel **Lista de errores** de la parte inferior de la pantalla aparecen inmediatamente una advertencia y un error similares a los siguientes.  
   
-**Advertencia SQL71502: Función: [dbo].[GetProductsBySupplier] contiene una referencia sin resolver a un objeto. El objeto no existe o la referencia es ambigua porque podría referirse a cualquiera de los siguientes objetos: [dbo].[Product].[p]::[ShelfLife] o [dbo].[Product].[ShelfLife]. Error SQL71501: Restricción CHECK: [dbo].[CK_Product_ShelfLife] contiene una referencia sin resolver a un objeto [dbo].[Product].[ShelfLife].**  
+**Advertencia SQL71502: Función: [dbo].[GetProductsBySupplier] contiene una referencia sin resolver a un objeto. El objeto no existe o la referencia es ambigua porque podría referirse a cualquiera de los siguientes objetos: [dbo].[Product].[p]::[ShelfLife] o [dbo].[Product].[ShelfLife].Error SQL71501: La comprobación de restricción: [dbo].[CK_Product_ShelfLife] tiene una referencia no resuelta al objeto [dbo].[Product].[ShelfLife].**  
   
 4.  Puede hacer clic con el botón derecho en la **Lista de errores** y usar los menús contextuales para ordenar los resultados, filtrar las entradas que desea mostrar e indicar qué columnas de información desea que aparezcan para cada entrada.  
   
@@ -44,6 +44,6 @@ El panel Lista de errores muestra todos los errores de implementación o de comp
   
 7.  Observe que la advertencia y el error desaparecerán de la **Lista de errores** inmediatamente después de corregir los problemas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Usar el Editor de Transact-SQL para editar y ejecutar scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)  
   

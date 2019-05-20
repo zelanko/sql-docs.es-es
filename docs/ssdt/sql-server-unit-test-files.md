@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cee093c9-b97d-4fb0-b80f-806d071259dc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 091cfc33102d46b1a3507f64aa4327697ddf6d52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c595bd6d7cce21b9bf3428fadf772c4db4cdc07
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803193"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101924"
 ---
 # <a name="sql-server-unit-test-files"></a>Archivos de prueba unitaria de SQL Server
 Al igual que las pruebas unitarias para código administrado, las pruebas unitarias de SQL Server residen en proyectos de prueba. Puede ver los elementos que conforman una prueba unitaria de SQL Server en la jerarquía de un proyecto de prueba en el **Explorador de soluciones**.  
@@ -30,7 +30,7 @@ Una prueba unitaria de SQL Server consta de varios elementos incluidos en varios
 |app.config|Este archivo almacena las cadenas de conexión de base de datos para el proyecto de prueba, además de otras opciones de configuración de la prueba unitaria de SQL Server, como el tiempo de espera para un comando. Para más información, consulte [Scripts de pruebas unitarias de SQL Server](../ssdt/scripts-in-sql-server-unit-tests.md).|  
 |SQLDatabaseSetup.cs o SQLDatabaseSetup.vb|Este archivo contiene una clase que prepara el entorno de prueba para todas las pruebas unitarias de SQL Server del proyecto de prueba. Según la configuración del archivo app.config, puede implementar un proyecto de base de datos de SQL Server en la base de datos de prueba.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Comprobar el código de base de datos con pruebas unitarias de SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  

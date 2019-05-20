@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 226c4760b0e8461b9183345c9e727f288edd32dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c0d94a0b49e9fd02803d07270ba6f890eb4c311
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751633"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65101892"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>Scripts de pruebas unitarias de SQL Server
 Cada prueba unitaria de SQL Server contiene una única acción anterior a la prueba, una acción de prueba y una acción posterior a la prueba. Cada una de estas acciones contiene, a su vez, lo siguiente:  
@@ -49,7 +49,7 @@ Es importante comprender el orden en el que se ejecuta cada script. Aunque no pu
 ![Dos pruebas unitarias de bases de datos](../ssdt/media/twodatabaseunittests.png "Dos pruebas unitarias de bases de datos")  
   
 > [!NOTE]  
-> Si se ha configurado la implementación del proyecto de base de datos de SQL Server, se realiza al principio de la ejecución de pruebas, bajo la cadena de conexión del contexto privilegiado. Para obtener más información, consulte [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
+> Si se ha configurado la implementación del proyecto de base de datos de SQL Server, se realiza al principio de la ejecución de pruebas, bajo la cadena de conexión del contexto privilegiado. Para más información, vea: [Cómo: Configurar una ejecución de prueba unitaria de SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md).  
   
 ## <a name="initialization-and-cleanup-scripts"></a>Scripts de inicialización y de limpieza  
 En el Diseñador de pruebas unitarias de SQL Server, los scripts TestInitialize y TestCleanup se denominan scripts comunes. En el ejemplo anterior se asume que las dos pruebas unitarias forman parte de la misma clase de prueba. Como resultado, comparten los mismos scripts TestInitialize y TestCleanup. Este es siempre el caso para todas las pruebas unitarias de una única clase de prueba. Sin embargo, si la serie de pruebas contiene pruebas unitarias de distintas clases de prueba, los scripts comunes para la clase de prueba asociada se ejecutarán antes y después de la serie de pruebas unitarias.  
@@ -61,7 +61,7 @@ Puede usar el script TestInitialize para preparar la base de datos de prueba y e
 ## <a name="pre-test-and-post-test-scripts"></a>Scripts anteriores y posteriores a la prueba  
 Los scripts asociados a las acciones anteriores y posteriores a la prueba varían probablemente de una prueba unitaria a la siguiente. Puede usar estos scripts para establecer cambios incrementales en la base de datos y, a continuación, limpiar los cambios.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Usar condiciones de prueba en pruebas unitarias de SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
   

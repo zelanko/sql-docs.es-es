@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción | Microsoft Docs'
+title: 'Procedimientos: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b96ff3e9775e38a7eb61449d6a2ed5e9bc4d6db4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ded1e5f6aeace66f4be991b192e601c455871c26
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681293"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65099558"
 ---
-# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Cómo: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción
+# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Procedimientos: Escritura de una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción
 Puede modificar las pruebas unitarias para ejecutarlas en el ámbito de una única transacción. Si elige este enfoque, puede revertir los cambios activados por la prueba una vez finalizada esta. Los procedimientos siguientes explican cómo:  
   
 -   Cree una transacción en el script de prueba Transact\-SQL que usa **BEGIN TRANSACTION** y **ROLLBACK TRANSACTION**.  
@@ -156,7 +156,7 @@ En este ejemplo se usa una transacción ambiente cuando se usa el tipo [System.T
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>Para iniciar el servicio Coordinador de transacciones distribuidas  
-En algunos procedimientos de este tema se usan los tipos del ensamblado System.Transactions. Antes de seguir estos procedimientos, debe asegurarse de que el servicio Coordinador de transacciones distribuidas se ejecuta en el equipo donde se ejecutan las pruebas unitarias. De lo contrario, se producirá un error en las pruebas y se mostrará el siguiente mensaje de error: "El método de prueba *NombreDeProyecto*.*NombreDePrueba*.*NombreDeMétodo* produjo una excepción: System.Data.SqlClient.SqlException: MSDTC en el servidor "*NombreDeEquipo*" no está disponible".  
+En algunos procedimientos de este tema se usan los tipos del ensamblado System.Transactions. Antes de seguir estos procedimientos, debe asegurarse de que el servicio Coordinador de transacciones distribuidas se ejecuta en el equipo donde se ejecutan las pruebas unitarias. En caso contrario, las pruebas dan error y aparece el mensaje de error siguiente: "El método de prueba *ProjectName*.*TestName*.*MethodName* lanzó la excepción: System.Data.SqlClient.SqlException: MSDTC en el servidor *ComputerName* no está disponible".  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>Para iniciar el servicio Coordinador de transacciones distribuidas  
   
@@ -173,6 +173,6 @@ En algunos procedimientos de este tema se usan los tipos del ensamblado System.T
 > [!IMPORTANT]  
 > El siguiente error podría aparecer incluso si ha iniciado el servicio Controlador de transacciones distribuidas: `System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`. Si aparece este error, debe configurar el Controlador de transacciones distribuidas para el acceso de red. Para más información, consulte [Habilitación del acceso a DTC desde la red](https://go.microsoft.com/fwlink/?LinkId=193916).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   

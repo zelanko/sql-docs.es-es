@@ -1,5 +1,5 @@
 ---
-title: Edición de una tabla existente mediante consultas | Microsoft Docs
+title: 'Procedimientos: Editar una tabla existente mediante consultas | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b9687226caec47161fb42038994be279a89becc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c988efd63982b2dc5ebd8e73f2291a19b3b9b76
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659583"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090236"
 ---
-# <a name="how-to-edit-an-existing-table-using-queries"></a>Cómo: Editar una tabla existente mediante consultas
+# <a name="how-to-edit-an-existing-table-using-queries"></a>Procedimientos: Edición de una tabla existente mediante consultas
 Puede editar la definición de una tabla o sus datos escribiendo una consulta de Transact\-SQL. Para ver o escribir datos en una tabla visualmente, use el Editor de datos como se describe en [Desarrollo de bases de datos conectadas](../ssdt/connected-database-development.md).  
   
 > [!WARNING]  
@@ -32,7 +32,7 @@ Puede editar la definición de una tabla o sus datos escribiendo una consulta de
   
 3.  Active la casilla **Permitir valores NULL** para la columna **Address**. Observe que el código correspondiente del panel de scripts cambia a `NULL` inmediatamente.  
   
-4.  Actualice la base de datos siguiendo los pasos del tema [Actualización de una base de datos conectada con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+4.  Actualice la base de datos siguiendo los pasos del tema [Cómo: Actualizar una base de datos conectada con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 ### <a name="to-populate-data-in-new-tables-using-a-transact-sql-query"></a>Para rellenar datos de nuevas tablas usando una consulta de Transact\-SQL  
   
@@ -78,7 +78,7 @@ Puede editar la definición de una tabla o sus datos escribiendo una consulta de
     GO  
     ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Administrar tablas y relaciones y corregir errores](../ssdt/manage-tables-relationships-and-fix-errors.md)  
 [Usar el Editor de Transact-SQL para editar y ejecutar scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)  
   

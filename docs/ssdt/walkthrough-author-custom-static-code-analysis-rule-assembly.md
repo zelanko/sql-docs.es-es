@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3b5dcb7c6c40c17cf2cfa68d493217359511b93b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba52dfc0ff41cb1ee4a92fda4a37e368f0533474
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406242"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090165"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Tutorial de creación de un ensamblado de regla de análisis de código estático personalizado para SQL Server
 En este tutorial se muestran los pasos utilizados para crear una regla de análisis de código de SQL Server. La regla creada en este tutorial se utiliza para evitar las instrucciones WAITFOR DELAY en procedimientos almacenados, desencadenadores y funciones.  
@@ -541,6 +541,6 @@ Por último, verá la nueva regla en el proyecto SQL Server. Para ver la nueva r
   
 4.  Expanda RuleSamples.CategorySamples. Verá SR1004: Evitar instrucción WAITFOR DELAY en procedimientos, desencadenadores y funciones almacenados.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Información general sobre extensibilidad para reglas de análisis de código de base de datos](../ssdt/overview-of-extensibility-for-database-code-analysis-rules.md)  
   

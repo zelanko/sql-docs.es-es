@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18086e3f6fc0d49a269dc0a9b2d8ad65579faec5
+ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535857"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65450088"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Actualización de instancias de la réplica del grupo de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Antes de empezar, revise la siguiente información importante:
 - [Compruebe si se usa la replicación o captura de datos modificados para las bases de datos del grupo de disponibilidad](#special-steps-for-change-data-capture-or-replication): si alguna de las bases de datos en el grupo de disponibilidad se habilita para la captura de datos modificados (CDC), complete estas [instrucciones](#special-steps-for-change-data-capture-or-replication).
 
 >[!NOTE]  
->No se permite mezclar versiones de instancias de SQL Server en el mismo AG fuera de una actualización gradual, que actualiza las réplicas locales. No se puede agregar una versión superior de una instancia de SQL Server como réplica nueva a un AG existente. Por ejemplo, no se puede agregar una réplica de SQL Server 2017 a un AG de SQL Server 2016. Para migrar a una versión nueva de la instancia de SQL Server con AG, el único método admitido es un AG distribuido que esté en SQL Server 2016 Enterprise Edition o en una versión posterior.
+>No se admiten versiones mezcladas de instancias de SQL Server en el mismo grupo de disponibilidad fuera de una actualización gradual y no deben existir en dicho estado durante períodos de tiempo prolongados, ya que la actualización debe realizarse rápidamente. La otra opción para actualizar SQL Server 2016 y versiones posteriores es mediante el uso de un grupo de disponibilidad distribuido.
 
 ## <a name="rolling-upgrade-basics-for-always-on-ags"></a>Conceptos básicos sobre la actualización gradual de AG de Always On  
 Tenga en cuenta las siguientes instrucciones al realizar actualizaciones de servidor con el fin de reducir el tiempo de inactividad y la pérdida de datos en los AG:  
@@ -78,7 +78,7 @@ Tenga en cuenta las siguientes instrucciones al realizar actualizaciones de serv
   
  ![Escenario de actualización de AG en HADR](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "Escenario de actualización de AG en HADR")  
   
-1.  Quite la conmutación por error automática en todas las réplicas de confirmación sincrónica.  
+1.  Quitar la conmutación por error automática en todas las réplicas de confirmación sincrónica  
   
 2.  Actualice todas las instancias de la réplica secundaria de confirmación asincrónica. 
   

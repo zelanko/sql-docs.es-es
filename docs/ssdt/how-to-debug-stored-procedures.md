@@ -1,5 +1,5 @@
 ---
-title: Depuración de procedimientos almacenados | Microsoft Docs
+title: 'Procedimientos: Depurar procedimientos almacenados | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -10,17 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8b0aafe7ed2eddd189f57929b9d4ed971540dc57
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 727117a31fd1a2fc5f5a807de824a8ff61ebb5bd
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533423"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090205"
 ---
-# <a name="how-to-debug-stored-procedures"></a>Cómo: Depurar procedimientos almacenados
+# <a name="how-to-debug-stored-procedures"></a>Procedimientos: Depuración de procedimientos almacenados
 El depurador de Transact\-SQL le permite depurar de forma interactiva procedimientos almacenados mostrando la pila de llamadas de SQL, variables locales y parámetros para el procedimiento almacenado de SQL. Como ocurre con la depuración en otros lenguajes de programación, puede ver y modificar variables locales y parámetros, ver variables globales, así como controlar y administrar puntos de interrupción mientras depura un script de Transact\-SQL.  
   
 En este ejemplo se muestra cómo crear y depurar un procedimiento almacenado de Transact\-SQL paso a paso por instrucciones.  

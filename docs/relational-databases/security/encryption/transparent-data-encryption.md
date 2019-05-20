@@ -1,7 +1,7 @@
 ---
 title: Cifrado de datos transparente (TDE) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/08/2019
+ms.date: 05/09/2019
 ms.prod: sql
 ms.technology: security
 ms.topic: conceptual
@@ -19,12 +19,12 @@ ms.author: aliceku
 ms.reviewer: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb61a9c18c8e0f2b164c8df01a8b84cebd5c8ab8
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: d944c2192e73fd0cb887d0491ecba707a90ff7b5
+ms.sourcegitcommit: 6ab60b426fc6ec7bb9e727323f520c0b05a20d06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185131"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65527349"
 ---
 # <a name="transparent-data-encryption-tde"></a>Cifrado de datos transparente (TDE)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "54185131"
   
  En la siguiente ilustración se muestra la arquitectura del cifrado TDE. Solo los elementos de nivel de base de datos (las partes de ALTER DATABASE y la clave de cifrado de base de datos son configurables por el usuario cuando se usa TDE en [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]).  
   
- ![Muestra la jerarquía que se describe en el tema.](../../../relational-databases/security/encryption/media/tde-architecture.gif "Muestra la jerarquía que se describe en el tema.")  
+ ![Muestra la jerarquía que se describe en el tema.](../../../relational-databases/security/encryption/media/tde-architecture.png "Muestra la jerarquía que se describe en el tema.")  
   
 ## <a name="using-transparent-data-encryption"></a>Utilizar el cifrado de datos transparente  
  Para usar TDE, siga estos pasos.  
@@ -226,9 +226,29 @@ GO
   
 ### <a name="transparent-data-encryption-and-filestream-data"></a>Cifrado de datos transparente y FILESTREAM DATA  
  Los datos FILESTREAM no se cifran ni siquiera cuando se habilita TDE.  
+
+<a name="scan-suspend-resume"></a>
+
+## <a name="transparent-data-encryption-tde-scan"></a>Análisis de cifrado de datos transparente (TDE)
+
+Con el fin de habilitar el cifrado de datos transparente (TDE) en una base de datos, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe realizar un análisis de cifrado que lea cada página de archivos de datos en el grupo de búferes y, a continuación, escriba las páginas cifradas de nuevo en el disco. Para proporcionar al usuario más control sobre el análisis de cifrado, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] presenta la sintaxis del análisis de TDE de suspensión y reanudación para que el análisis se pueda poner en pausa aunque la carga de trabajo en el sistema sea intensa, o durante el horario crítico para la empresa, y reanudar luego.
+
+Use la siguiente sintaxis para poner en pausa el análisis de cifrado TDE:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION SUSPEND;
+```
+
+De forma similar, la siguiente sintaxis reanuda el análisis de cifrado TDE:
+
+```sql
+ALTER DATABASE <db_name> SET ENCRYPTION RESUME;
+```
+
+Para mostrar el estado actual del análisis de cifrado, `encryption_scan_state` se ha agregado a la vista de administración dinámica `sys.dm_database_encryption_keys`. También hay una nueva columna denominada `encryption_scan_modify_date` que contendrá la fecha y la hora del último cambio de estado de análisis de cifrado. Observe también que, si la instancia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se reinicia mientras el análisis de cifrado se encuentra en un estado suspendido, se registrará un mensaje en el registro de errores durante el inicio que indicará que hay un análisis existente que se ha puesto en pausa.
   
 ## <a name="transparent-data-encryption-and-buffer-pool-extension"></a>Cifrado de datos transparente y extensión del grupo de búferes  
- Los archivos relacionados con la extensión del grupo de búferes (BPE) no se cifran si la base de datos se cifra con TDE. Debe usar herramientas de cifrado de nivel de sistema de archivos, como Bitlocker o EFS, para archivos relacionados con BPE.  
+ Los archivos relacionados con la extensión del grupo de búferes (BPE) no se cifran si la base de datos se cifra con TDE. Debe usar herramientas de cifrado de nivel de sistema de archivos, como BitLocker o EFS, para archivos relacionados con BPE.  
   
 ## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Cifrado de datos transparente y OLTP en memoria  
  El TDE se puede habilitar en una base de datos que tenga objetos de OLTP en memoria. En [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] y [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] , los datos y registros de OLTP en memoria se cifran si TDE está habilitado. En [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] , los registros de OLTP en memoria se cifran si TDE está habilitado, pero los archivos del grupo de archivos MEMORY_OPTIMIZED_DATA no se cifran.  

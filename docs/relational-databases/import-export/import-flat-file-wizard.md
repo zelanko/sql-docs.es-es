@@ -13,12 +13,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a8573984e58f3442f1536dfd3c4deeabc4636fa2
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 773492f038339a561a1f73ff48f5d1a88b72cadc
+ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217823"
+ms.lasthandoff: 04/30/2019
+ms.locfileid: "64946427"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Importación de archivos planos mediante el asistente de SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,38 +54,38 @@ Dados los objetivos que se contemplan en este tutorial, puede usar un archivo pl
 
 ![Asistente: Excel](media/import-flat-file-wizard/importffexample.png)
 
-### <a name="step-1-access-wizard-and-intro-page"></a>Paso 1: acceso al asistente y página de introducción
+### <a name="step-1-access-wizard-and-intro-page"></a>Paso 1: Acceso al asistente y página de introducción
 Acceda al asistente tal y como se describe [aquí](#started).
 
 La primera página del asistente es la página principal. Si no quiere que se vuelva a mostrar, haga clic en **No volver a mostrar esta página**.
 
 ![Asistente: introducción](media/import-flat-file-wizard/importffintro.png)
 
-### <a name="step-2-specify-input-file"></a>Paso 2: especificación del archivo de entrada
+### <a name="step-2-specify-input-file"></a>Paso 2: Especificación del archivo de entrada
 Haga clic en Examinar y seleccione el archivo de entrada. De forma predeterminada, el asistente buscará archivos .csv y .txt. 
 
 El nuevo nombre de la tabla debe ser único, ya que, en caso contrario, el asistente no le permitirá avanzar.
 
 ![Asistente: especificación](media/import-flat-file-wizard/importffspecify.png)
 
-### <a name="step-3-preview-data"></a>Paso 3: vista previa de los datos
+### <a name="step-3-preview-data"></a>Paso 3: Vista previa de los datos
 El asistente generará una vista previa para que pueda consultar las primeras 50 filas. Si hay algún problema, haga clic en Cancelar. Si no, proceda a la página siguiente.
 
 ![Asistente: vista previa](media/import-flat-file-wizard/importffpreview.png)
 
-### <a name="step-4-modify-columns"></a>Paso 4: modificación de las columnas
+### <a name="step-4-modify-columns"></a>Paso 4: Modificación de columnas
 El asistente identificará lo que en teoría son los nombres de columnas, los tipos de datos, etc. En caso de que los campos no sean correctos, en este paso podrá editarlos, por ejemplo, si el tipo de datos debe ser "float" en lugar de "int".
 
 Una vez que todo sea correcto, continúe.
 
 ![Asistente: modificación](media/import-flat-file-wizard/importffmodify.png)
 
-### <a name="step-5-summary"></a>Paso 5: resumen
+### <a name="step-5-summary"></a>Paso 5: Resumen
 Esta página es simplemente un resumen en el que figura la configuración actual. Si hay algún problema puede volver a las secciones anteriores. Si no los hay, haga clic en Finalizar para intentar efectuar la importación.
 
 ![Asistente: resumen](media/import-flat-file-wizard/importffsummary.png)
 
-### <a name="step-6-results"></a>Paso 6: resultados
+### <a name="step-6-results"></a>Paso 6: Resultado
 En esta página se indica si la importación se ha realizado correctamente. Si la operación se ha efectuado correctamente, aparecerá una marca de verificación verde. De lo contrario, deberá comprobar que no haya errores con los archivos de entrada o con la configuración.
 
 ![Asistente: resultados](media/import-flat-file-wizard/importffresults.png)

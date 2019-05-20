@@ -1,7 +1,7 @@
 ---
 title: Compatibilidad con la intercalación y Unicode | Microsoft Docs
 ms.custom: ''
-ms.date: 10/24/2017
+ms.date: 04/23/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89b07e80d9bb9c0a04fe3dd1829ab4b7180f1718
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 97e66c1c276131876a8a74ab49627f43374cb78f
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206444"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775029"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -147,15 +147,20 @@ Para usar las intercalaciones UTF- 8 disponibles en [!INCLUDE[sql-server-2019](.
     
     -   Intercalaciones de la versión 100    
     
-    -   Intercalaciones de la versión 140    
+    -   Intercalaciones de la versión 140   
+    
+    -   Intercalación binaria BIN2<sup>1</sup>
     
 -   La marca UTF8 no se puede aplicar a:    
     
     -   Intercalaciones de la versión 90 que no son compatibles con caracteres adicionales (\_SC) o la distinción de selector de variación (\_VSS)    
     
-    -   Intercalaciones binarias BIN o BIN2    
+    -   Intercalaciones binarias BIN o BIN2<sup>2</sup>    
     
-    -   Intercalaciones SQL\*       
+    -   Intercalaciones SQL\*  
+    
+<sup>1</sup> A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3     
+<sup>2</sup> Hasta [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3
     
 Para evaluar completamente los problemas relacionados con el uso de tipos de datos Unicode y no Unicode, pruebe su escenario para cuantificar las diferencias de rendimiento en su entorno. Se recomienda normalizar la intercalación que se usa en los sistemas de una organización e implementar servidores y clientes Unicode siempre que sea posible.    
     
@@ -245,7 +250,17 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 Todas las nuevas intercalaciones tienen compatibilidad integrada con los caracteres adicionales, por lo que ninguna de las nuevas intercalaciones tiene (o necesita) la marca SC.
 
 Estas intercalaciones se admiten en los índices de Motor de base de datos, las tablas optimizadas para memoria, los índices de almacén de columnas y los módulos compilados de forma nativa.
-    
+
+<a name="ctp23"></a>
+
+## <a name="utf-8-support"></a>Compatibilidad con UTF-8
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] presenta la compatibilidad total para utilizar la ampliamente utilizada codificación de caracteres UTF-8 como codificación de importación o exportación, o bien como intercalación columna o base de datos para datos de texto. UTF-8 se permite en los tipos de datos `CHAR` y `VARCHAR`, y se habilita al crear o cambiar la intercalación de un objeto a una intercalación con el sufijo `UTF8`. 
+
+Por ejemplo, de `LATIN1_GENERAL_100_CI_AS_SC` a `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 solo está disponible para las intercalaciones de Windows que admiten caracteres adicionales, tal y como se presentó en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. `NCHAR` y `NVARCHAR` solo permiten la codificación UTF-16 y no se han realizado cambios.
+
+Esta característica puede proporcionar ahorros significativos de almacenamiento, según el juego de caracteres que se esté usando. Por ejemplo, si se cambia un tipo de datos de columna existente con cadenas ASCII (latinas) de `NCHAR(10)` a `CHAR(10)` utilizando una intercalación habilitada para UTF-8, se reducen a la mitad los requisitos de almacenamiento. Esto se debe a que `NCHAR(10)` requiere 20 bytes para el almacenamiento, mientras que `CHAR(10)` necesita 10 bytes para la misma cadena Unicode.
+
 ##  <a name="Related_Tasks"></a> Tareas relacionadas    
     
 |Tarea|Tema|    
@@ -260,6 +275,7 @@ Estas intercalaciones se admiten en los índices de Motor de base de datos, las 
 ##  <a name="Related_Content"></a> Contenido relacionado    
 [Prácticas recomendadas para cambiar las intercalaciones en SQL Server](https://go.microsoft.com/fwlink/?LinkId=113891)    
 [Usar el formato de caracteres Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
+[Escribir instrucciones Transact-SQL internacionales](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 ["Migración de las prácticas recomendadas de SQL Server a Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890) - Ya no se mantiene   
 [Sitio web de Unicode Consortium](https://go.microsoft.com/fwlink/?LinkId=48619)    
     

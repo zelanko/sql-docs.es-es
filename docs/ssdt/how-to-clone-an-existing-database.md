@@ -1,5 +1,5 @@
 ---
-title: Clonación una base de datos existente | Microsoft Docs
+title: 'Procedimientos: Clonar una base de datos existente | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 683d8f082a41b328f9cf86134cee0440e2ca3e4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4e95970acd0228c44e493c7fffd98c0d5abc908
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818783"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65090111"
 ---
-# <a name="how-to-clone-an-existing-database"></a>Cómo: Clonar una base de datos existente
-Esta tarea usa algunos de los pasos que ha aprendido en procedimientos anteriores para crear una nueva base de datos y transportar datos existentes. Además, utiliza los pasos descritos en [Uso de Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) para sincronizar el esquema de una base de datos de origen y de un proyecto.  
+# <a name="how-to-clone-an-existing-database"></a>Procedimientos: Clon de una base de datos existente
+Esta tarea usa algunos de los pasos que ha aprendido en procedimientos anteriores para crear una nueva base de datos y transportar datos existentes. Además, utiliza los pasos que se describen en [Cómo: Usar Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) para sincronizar el esquema de una base de datos de origen y de un proyecto.  
   
 Mediante estos pasos, puede crear fácilmente una base de datos de desarrollo o de prueba a partir de una base de datos de producción con un esquema y datos idénticos. Después, puede seguir desarrollando la base de datos de prueba en un modo conectado o puede crear un proyecto de base de datos para su desarrollo y pruebas sin conexión, todo ello sin interrumpir el funcionamiento de la base de datos de producción.  
   
@@ -34,7 +34,7 @@ Mediante estos pasos, puede crear fácilmente una base de datos de desarrollo o 
   
 3.  Cambie el nombre de la nueva base de datos a **TradeDev**.  
   
-4.  Haga clic con el botón derecho en la base de datos **Trade** en el **Explorador de objetos de SQL Server** y seleccione **Comparación de esquemas**. Siga los pasos del tema [Uso de Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md), eligiendo la base de datos **Trade** original como origen y la nueva base de datos **TradeDev** como destino. Esto actualizará **TradeDev** con el esquema de **Trade**.  
+4.  Haga clic con el botón derecho en la base de datos **Trade** en el **Explorador de objetos de SQL Server** y seleccione **Comparación de esquemas**. Siga los pasos que se describen en [Cómo: Uso de Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md), eligiendo la base de datos **Trade** original como origen y la nueva base de datos **TradeDev** como destino. Esto actualizará **TradeDev** con el esquema de **Trade**.  
   
 ### <a name="to-replicate-data"></a>Para replicar datos  
   
@@ -54,6 +54,6 @@ Mediante estos pasos, puede crear fácilmente una base de datos de desarrollo o 
   
 7.  Use el Editor de datos para comprobar que todas las tablas de la nueva base de datos `TradeDev` se han rellenado.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Cómo: Usar Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

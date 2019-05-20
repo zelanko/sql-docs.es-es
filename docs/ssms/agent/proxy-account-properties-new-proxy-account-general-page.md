@@ -10,16 +10,16 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.proxy.general.f1
 ms.assetid: 5cd81265-bf59-413b-8397-150ddc70d0c7
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d33f7a468dfcff6274c4a48cfd367ea4c64226e1
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 072910b06ed75a5aad53bb6f51f0d62224144459
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696073"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65088776"
 ---
 # <a name="proxy-account-properties---new-proxy-account-general-page"></a>Propiedades de cuenta de proxy - Nueva cuenta de proxy (página General)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ Escriba el nombre del proxy.
 Escriba el nombre de la credencial para el proxy.  
   
 > [!NOTE]  
-> El nombre de la credencial proporcionada debe ser el nombre de una credencial existente. Para información sobre cómo crear credenciales, consulte [Crear un proxy (SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
+> El nombre de la credencial proporcionada debe ser el nombre de una credencial existente. Para obtener más información acerca de la creación de credenciales, vea [Procedimientos para: crear un proxy (SQL Server Management Studio)](https://msdn.microsoft.com/c1e77e91-2a69-40d9-b8b3-97cffc710586)  
   
 **...**  
 Inicia el cuadro de diálogo **Seleccionar credencial** .  
@@ -51,6 +51,6 @@ Seleccione los subsistemas a los que tiene acceso la cuenta de proxy.
 **Volver a asignar pasos de trabajo a**  
 Seleccione el proxy al que se reasignan los pasos de trabajo. Esta lista se habilita cuando se revoca el acceso a un subsistema al que el proxy tenía acceso anteriormente.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear un proxy del Agente SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
   

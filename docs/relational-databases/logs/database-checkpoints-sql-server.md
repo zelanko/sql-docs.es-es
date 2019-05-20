@@ -1,6 +1,6 @@
 ---
 title: Puntos de comprobación de base de datos (SQL Server)| Microsoft Docs
-ms.date: 09/23/2016
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,18 +28,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d3b1b147bd954ce449315b9efb459767941b045
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a7d761a88d570cfe65c3660656adde6f90e93c21
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518087"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775380"
 ---
 # <a name="database-checkpoints-sql-server"></a>Puntos de comprobación de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
- Un *punto de comprobación* crea un buen punto conocido desde donde [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] puede empezar a aplicar cambios incluidos en el registro durante la recuperación después de un cierre inesperado o un bloqueo del sistema.  
- 
-  
+ Un *punto de comprobación* crea un buen punto conocido desde donde [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] puede empezar a aplicar cambios incluidos en el registro durante la recuperación después de un cierre inesperado o un bloqueo del sistema.
+
 ##  <a name="Overview"></a> Información general   
 Por motivos de rendimiento, [!INCLUDE[ssDE](../../includes/ssde-md.md)] realiza modificaciones en las páginas de la base de datos en memoria, en la memoria caché de búfer, y no escribe estas páginas en el disco después de cada cambio. En su lugar, [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite periódicamente un punto de comprobación en cada base de datos. Un *punto de comprobación* escribe las páginas modificadas en memoria actuales (denominadas *páginas desfasadas*) y la información del registro de transacciones de la memoria en el disco y, además, registra información acerca del registro de transacciones.  
   
@@ -93,7 +92,8 @@ Normalmente, los valores predeterminados proporciona un rendimiento de recuperac
   
 Si decide aumentar la configuración **recovery interval** , es recomendable que lo haga gradualmente en pequeños incrementos y evaluando el efecto de cada aumento incremental en el rendimiento de recuperación. Este planteamiento es importante ya que a medida que aumenta la configuración **recovery interval** , se multiplica el tiempo que tarda en completarse la recuperación de la base de datos. Por ejemplo, si cambia **intervalo de recuperación** a 10 minutos, la recuperación tarda aproximadamente 10 veces más en completarse que cuando el valor de **intervalo de recuperación** se establece en 1 minuto.  
   
-##  <a name="IndirectChkpt"></a> Puntos de comprobación indirectos  
+##  <a name="IndirectChkpt"></a> Puntos de comprobación indirectos
+  
 Los puntos de control indirectos, presentados en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], proporcionan una alternativa de nivel de base de datos configurable a los puntos de comprobación automáticos. Esto se puede configurar mediante la especificación de la opción de configuración de la base de datos **Tiempo de recuperación de destino**. Para obtener más información, vea [Cambiar el tiempo de recuperación de destino de una base de datos &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).
 Si se produce un bloqueo del sistema, los puntos de comprobación indirectos proporcionan un tiempo de recuperación más rápido y predecible que los puntos de comprobación automáticos. Los puntos de comprobación indirectos proporcionan las siguientes ventajas:  
   
@@ -110,6 +110,10 @@ Pero una carga de trabajo transaccional en línea en una base de datos que esté
 > [!IMPORTANT]
 > El punto de comprobación indirecto es el comportamiento predeterminado para nuevas bases de datos creadas en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], incluidas las bases de datos Model y TempDB.          
 > Las bases de datos que se actualizan in situ o se restauraron a partir de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usarán el comportamiento de punto de comprobación automático anterior, a menos que explícitamente se modifique para usar el punto de comprobación indirecto.       
+
+### <a name="ctp23"></a> Escalabilidad mejorada de puntos de control indirectos
+
+Antes de [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)], es posible que experimente errores de programador que no rinde cuando hay una base de datos que genera un gran número de páginas desfasadas, como `tempdb`. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]se presenta una mejor escalabilidad para los puntos de control indirectos, lo que debería evitar estos errores en las bases de datos con una gran carga de trabajo `UPDATE`/`INSERT`.
   
 ##  <a name="EventsCausingChkpt"></a> Puntos de comprobación internos  
 Hay distintos componentes del servidor que generan puntos de comprobación internos para garantizar que las imágenes de disco coinciden con el estado actual del registro. Los puntos de comprobación internos se generan en respuesta a los siguientes eventos:  
@@ -126,6 +130,7 @@ Hay distintos componentes del servidor que generan puntos de comprobación inter
   
 -   Poner fuera de línea una instancia de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .      
   
+
 ##  <a name="RelatedTasks"></a> Related tasks  
  **Para cambiar el intervalo de recuperación en una instancia de servidor**  
   

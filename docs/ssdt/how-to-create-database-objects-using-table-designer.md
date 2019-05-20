@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: Crear objetos de base de datos usando el Diseñador de tablas | Microsoft Docs'
+title: 'Procedimientos: Crear objetos de base de datos usando el Diseñador de tablas | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -11,17 +11,17 @@ f1_keywords:
 - sql.data.tools.design.table.scriptpanel
 - sql.data.tools.design.table.context.view
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1b253e8b820652bf76771047e498dabd119bcb81
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6c48efccdb4d32d9b471aae758e31084c7b87a7b
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396148"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098144"
 ---
-# <a name="how-to-create-database-objects-using-table-designer"></a>Cómo: Crear objetos de base de datos usando el Diseñador de tablas
+# <a name="how-to-create-database-objects-using-table-designer"></a>Procedimientos: Creación de objetos de base de datos usando el Diseñador de tablas
 El nuevo nodo **SQL Server** del **Explorador de objetos de SQL Server** no solo es muy similar a SSMS visualmente, sino que puede crear nuevos objetos usando menús contextuales que funcionan de manera similar a sus homólogos de SSMS.  
   
 Por ejemplo, puede crear una base de datos nueva bajo el nodo **Bases de datos**. Del mismo modo, puede seleccionar una base de datos específica y crear o editar definiciones de tabla y sus objetos de programación relacionados sobre la marcha usando el nuevo Diseñador de tablas. Desde el Diseñador de tablas, puede cambiar a un panel de scripts que le permite editar directamente el script que define esta tabla.  
@@ -57,7 +57,7 @@ Por ejemplo, puede crear una base de datos nueva bajo el nodo **Bases de datos**
 5.  Agregue otra columna nueva. Escriba **Address** en el campo **Nombre**, **nvarchar (MAX)** en **Tipo de datos** y desactive el campo **Permitir valores NULL**.  
   
     > [!WARNING]  
-    > Cuando esté editando objetos de una base de datos conectada, no los guarde en la unidad local. Para guardar los cambios a la base de datos correctamente, siga los pasos indicados en el siguiente procedimiento [Cómo: Actualizar una base de datos conectada con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
+    > Cuando esté editando objetos de una base de datos conectada, no los guarde en la unidad local. Para guardar los cambios hechos en la base de datos correctamente, siga los pasos indicados en el siguiente procedimiento [Cómo: Actualizar una base de datos conectada con Power Buffer](../ssdt/how-to-update-a-connected-database-with-power-buffer.md).  
   
 6.  Repita los pasos anteriores para crear otra tabla denominada **Customer**. Esta vez, agregue las siguientes columnas a la tabla Customer usando la cuadrícula de columnas. No olvide modificar el script para que el nombre de la tabla sea `[dbo].[Customer]`.  
   
@@ -110,6 +110,6 @@ Por ejemplo, puede crear una base de datos nueva bajo el nodo **Bases de datos**
     CONSTRAINT [FK_Products_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [dbo].[Customer] ([Id])  
     ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Administrar tablas y relaciones y corregir errores](../ssdt/manage-tables-relationships-and-fix-errors.md)  
   

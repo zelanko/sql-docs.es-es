@@ -1,5 +1,5 @@
 ---
-title: Creación de nuevos objetos de base de datos mediante consultas | Microsoft Docs
+title: 'Procedimientos: Crear nuevos objetos de base de datos mediante consultas | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bcf7fe3ad0b07b9f8a228318b5eea85b3d8526a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 383992f5e1fc9891fb570dec168d1648913f4254
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780353"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65098168"
 ---
-# <a name="how-to-create-new-database-objects-using-queries"></a>Cómo: Crear nuevos objetos de base de datos mediante consultas
+# <a name="how-to-create-new-database-objects-using-queries"></a>Procedimientos: Creación de nuevos objetos de base de datos mediante consultas
 Si prefiere usar scripts para crear o editar vistas, procedimientos almacenados, funciones, desencadenadores, tipos definidos por el usuario, etc., puede usar el Editor de Transact\-SQL. El Editor de Transact\-SQL proporciona IntelliSense y compatibilidad con otros lenguajes. Para más información, consulte [Uso del Editor de Transact-SQL para editar y ejecutar scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  
   
 El Editor de Transact\-SQL se invoca cuando se usa el menú contextual **Ver código** para abrir una entidad de base de datos en una base de datos conectada o en un proyecto. También se abre automáticamente cuando se usa el menú contextual **Nueva consulta** desde el Explorador de objetos de SQL Server o cuando se agrega un nuevo objeto de script a un proyecto de base de datos. Si no está conectado a una base de datos pero desea ejecutar una consulta en ella, también puede usar el cuadro de diálogo **Nueva conexión de consulta** si selecciona el menú **Editor de Transact-SQL** del menú **SQL** para conectar con una base de datos e iniciar el Editor de Transact\-SQL.  
@@ -90,7 +90,7 @@ El Editor de Transact\-SQL se invoca cuando se usa el menú contextual **Ver có
   
 2.  En el Explorador de objetos de SQL Server, en el nodo **Trade**, expanda el nodo **Vista** para encontrar la nueva vista recién creada.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Administrar tablas y relaciones y corregir errores](../ssdt/manage-tables-relationships-and-fix-errors.md)  
 [Usar el Editor de Transact-SQL para editar y ejecutar scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md)  
   

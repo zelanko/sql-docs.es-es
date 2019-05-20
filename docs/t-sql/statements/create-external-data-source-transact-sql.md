@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/12/2018
+ms.date: 04/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,506 +20,494 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 986a658c315241e14efd6fd10b170aaf9fb17da0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 0ae91678807351dfa53b92a63c9dcd1514974de3
+ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516531"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65536247"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Crea un origen de datos externo para PolyBase, o bien consultas de Elastic Database. Según el escenario, la sintaxis difiere significativamente. No se puede usar un origen de datos externo creado para PolyBase para las consultas de Elastic Database.  Del mismo modo, no se puede usar un origen de datos externos creado para consultas de Elastic Database para PolyBase, etc. 
-  
+Crea un origen de datos externo para PolyBase o bien consultas de Elastic Database. Los orígenes de datos externos se usan para establecer la conectividad y la compatibilidad con cuatro casos de uso principales:
+
+- Virtualización de datos y carga de datos utilizando [PolyBase][intro_pb]
+- Operaciones de carga masiva mediante SQL Server o SQL Database utilizando `BULK INSERT` o `OPENROWSET`
+- Consultar instancias remotas de SQL Database o SQL Data Warehouse utilizando SQL Database con [consulta elástica][remote_eq]
+- Consultar una instancia de Azure SQL Database con particiones utilizando la [consulta elástica][sharded_eq]
+
 > [!NOTE]  
->  PolyBase solo se admite en SQL Server 2016 (o superior), Azure SQL Data Warehouse y Almacenamiento de datos paralelos. Las consultas de Elastic Database solo se admiten en Azure SQL Database v12 o una versión posterior.  
-  
- Para escenarios de PolyBase, el origen de datos externo es un Sistema de archivos de Hadoop (HDFS), un contenedor de Azure Storage Blob o Azure Data Lake Store. Para obtener más información, vea [Introducción a PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
-  
- Para escenarios de consultas de Elastic Database, el origen externo es un Shard Map Manager (en Azure SQL Database) o una base de datos remota (en Azure SQL Database).  Use [sp_execute_remote &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-execute-remote-azure-sql-database.md) después de crear un origen de datos externo. Para obtener más información, vea [Elastic Database query](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) (Consulta de Elastic Database).  
+> PolyBase se admite en SQL Server (2016 o versiones superiores), Azure SQL Data Warehouse y Almacenamiento de datos paralelos. Las [consultas elásticas][intro_eq] solo se admiten en Azure SQL Database v12 o una versión posterior.
 
-  El origen de datos externo de Azure Blob Storage admite la sintaxis de `BULK INSERT` y `OPENROWSET`, y es diferente a Azure Blob Storage para PolyBase.
-    
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
 ## <a name="syntax"></a>Sintaxis  
-  
-```  
--- PolyBase only:  Hadoop cluster as data source   
--- (on SQL Server 2016)  
-CREATE EXTERNAL DATA SOURCE data_source_name  
-    WITH (   
-        TYPE = HADOOP,
-        LOCATION = 'hdfs://NameNode_URI[:port]'  
-        [, RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' ]  
-        [, CREDENTIAL = credential_name ]
-    )
-[;]  
-  
--- PolyBase only: Azure Storage Blob as data source   
--- (on SQL Server 2016)  
-CREATE EXTERNAL DATA SOURCE data_source_name  
-    WITH (   
-        TYPE = BLOB_STORAGE,  
-        LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
-        [, CREDENTIAL = credential_name ]
-    )  
-[;]
 
--- PolyBase only: Azure Data Lake Store
--- (on Azure SQL Data Warehouse)
-CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'adl://<AzureDataLake account_name>.azuredatalake.net',
-    CREDENTIAL = AzureStorageCredential
-);
-
--- PolyBase only: Azure Data Lake Store Gen 2
--- (on Azure SQL Data Warehouse)
-CREATE EXTERNAL DATA SOURCE ABFS 
+```sql
+CREATE EXTERNAL DATA SOURCE <data_source_name>  
 WITH
-(
-              TYPE=HADOOP,
-              LOCATION='abfs://<container>@<AzureDataLake account_name>.dfs.core.windows.net',
-              CREDENTIAL=ABFS_Credemt
-);
-GO
-
-
--- PolyBase only: Hadoop cluster as data source
--- (on Parallel Data Warehouse)
-CREATE EXTERNAL DATA SOURCE data_source_name
-    WITH ( 
-        TYPE = HADOOP, 
-        LOCATION = 'hdfs://NameNode_URI[:port]'
-        [, RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI[:port]' ]
-        [, CREDENTIAL = credential_name]
-    )
+(    LOCATION                  = '<prefix>://<path>[:<port>]'
+[,   CONNECTION_OPTIONS        = '<name_value_pairs>']
+[,   CREDENTIAL                = <credential_name> ]
+[,   PUSHDOWN                  = ON | OFF]
+[,   TYPE                      = HADOOP | BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER ]
+[,   RESOURCE_MANAGER_LOCATION = '<resource_manager>[:<port>]']
+[,   DATABASE_NAME             = '<database_name>' ]
+[,   SHARD_MAP_NAME            = '<shard_map_manager>' ]
+)
 [;]
-
--- PolyBase only: Azure Storage Blob as data source   
--- (on Parallel Data Warehouse)  
-CREATE EXTERNAL DATA SOURCE data_source_name  
-    WITH (   
-        TYPE = HADOOP,  
-        LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'
-        [, CREDENTIAL = credential_name ]
-    )  
-[;]
-  
--- Elastic Database query only: a shard map manager as data source   
--- (only on Azure SQL Database)  
-CREATE EXTERNAL DATA SOURCE data_source_name  
-    WITH (   
-        TYPE = SHARD_MAP_MANAGER,  
-        LOCATION = '<server_name>.database.windows.net',  
-        DATABASE_NAME = '\<ElasticDatabase_ShardMapManagerDb'>,  
-        CREDENTIAL = <ElasticDBQueryCred>,  
-        SHARD_MAP_NAME = '<ShardMapName>'  
-    )  
-[;]  
-  
--- Elastic Database query only: a remote database on Azure SQL Database as data source   
--- (only on Azure SQL Database)  
-CREATE EXTERNAL DATA SOURCE data_source_name  
-    WITH (   
-        TYPE = RDBMS,  
-        LOCATION = '<server_name>.database.windows.net',  
-        DATABASE_NAME = '<Remote_Database_Name>',  
-        CREDENTIAL = <SQL_Credential>  
-    )  
-[;]  
-
--- Bulk operations only: Azure Storage Blob as data source   
--- (on SQL Server 2017 or later, and Azure SQL Database).
-CREATE EXTERNAL DATA SOURCE data_source_name  
-    WITH (   
-        TYPE = BLOB_STORAGE,  
-        LOCATION = 'https://storage_account_name.blob.core.windows.net/container_name'
-        [, CREDENTIAL = credential_name ]
-    )  
-```  
-  
-## <a name="arguments"></a>Argumentos  
- *data_source_name* especifica el nombre definido por el usuario para el origen de datos. El nombre debe ser único dentro de la base de datos en SQL Server, Azure SQL Database y Azure SQL Data Warehouse. El nombre debe ser único dentro del servidor en Almacenamiento de datos paralelos.
-  
- TYPE = [ HADOOP | SHARD_MAP_MANAGER | RDBMS | BLOB_STORAGE]  
- Especifica el tipo del origen de datos. Use HADOOP cuando el origen de datos externo sea Hadoop o Azure Storage Blob para Hadoop. Use SHARD_MAP_MANAGER al crear un origen de datos externo para la consulta de Elastic Database para el particionamiento en Azure SQL Database. Use RDBMS con orígenes de datos externos para consultas entre bases de datos con consultas de Elastic Database en Azure SQL Database.  Use BLOB_STORAGE al realizar operaciones masivas mediante [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) con [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-  
-LOCATION = \<location_path> **HADOOP**    
-Para HADOOP, especifica el identificador uniforme de recursos (URI) para un clúster de Hadoop.  
-`LOCATION = 'hdfs:\/\/*NameNode\_URI*\[:*port*\]'`  
-NameNode_URI: nombre de equipo o dirección IP del NameNode de clúster de Hadoop.  
-port: puerto IPC de NameNode. Esto se indica mediante el parámetro de configuración fs.default.name en Hadoop. Si no se especifica el valor, se usará 8020 de forma predeterminada.  
-Ejemplo: `LOCATION = 'hdfs://10.10.10.10:8020'`
-
-Para Azure Blob Storage con Hadoop, especifica el URI para conectarse a Azure Blob Storage.  
-`LOCATION = 'wasb[s]://container@account_name.blob.core.windows.net'`  
-wasb[s]: especifica el protocolo para Azure Blob Storage. [s] es opcional y especifica una conexión SSL segura; los datos enviados desde SQL Server se cifran de forma segura a través del protocolo SSL. Se recomienda encarecidamente usar "wasbs" en lugar de "wasb". Tenga en cuenta que en la ubicación se puede usar asv[s] en lugar de wasb[s]. La sintaxis asv[s] ha quedado en desuso y se retirará en versiones posteriores.  
-container: especifica el nombre del contenedor de Azure Blob Storage. Para especificar el contenedor raíz de la cuenta de almacenamiento de un dominio, use el nombre de dominio en lugar del nombre de contenedor. Los contenedores raíz son de solo lectura, por lo que no se pueden volver a escribir datos en el contenedor.  
-account_name: el nombre de dominio completo (FQDN) de la cuenta de Azure Storage.  
-Ejemplo: `LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'`
-
-Para Azure Data Lake Store, la ubicación especifica el URI para conectarse a Azure Data Lake Store.
-
-
-
-**SHARD_MAP_MANAGER**   
- Para SHARD_MAP_MANAGER, especifica el nombre del servidor de SQL Database que hospeda el administrador de mapa de particiones en Azure SQL Database o una base de datos de SQL Server en una máquina virtual de Azure.
- 
- ```
- CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
-
-CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred  
-WITH IDENTITY = '<username>',
-SECRET = '<password>';
-
-CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
-  (TYPE = SHARD_MAP_MANAGER,
-  LOCATION = '<server_name>.database.windows.net',
-  DATABASE_NAME = 'ElasticScaleStarterKit_ShardMapManagerDb',
-  CREDENTIAL = ElasticDBQueryCred,
-  SHARD_MAP_NAME = 'CustomerIDShardMap'
-) ;
 ```
 
-Para obtener un tutorial paso a paso, vea [Getting started with elastic queries for sharding (horizontal partitioning)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/) [Introducción a las consultas elásticas para particionamiento (creación de particiones horizontales)].
-  
-**RDBMS**   
-Para RDBMS, especifica el nombre del servidor lógico de la base de datos remota en Azure SQL Database.  
+## <a name="arguments"></a>Argumentos
 
-```  
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
-  
-CREATE DATABASE SCOPED CREDENTIAL SQL_Credential    
-WITH IDENTITY = '<username>',  
-SECRET = '<password>';  
-  
-CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH   
-    (TYPE = RDBMS,   
-    LOCATION = '<server_name>.database.windows.net',   
-    DATABASE_NAME = 'Customers',   
-    CREDENTIAL = SQL_Credential   
-) ;   
-```  
-  
-Para obtener un tutorial paso a paso sobre RDBMS, vea [Introducción a las consultas entre bases de datos (particiones verticales)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
+### <a name="datasourcename"></a>data_source_name
 
-**BLOB_STORAGE**   
-Este tipo se usa solo para operaciones masivas, `LOCATION` debe ser la dirección URL válida para Azure Blob Storage y el contenedor. No coloque **/**, el nombre de archivo o parámetros de firma de acceso compartido al final de la dirección URL de `LOCATION`. `CREDENTIAL` es necesario si el objeto de blob no es público. Por ejemplo: 
-```sql
-CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
-WITH (  TYPE = BLOB_STORAGE, 
-        LOCATION = 'https://****************.blob.core.windows.net/invoices', 
-        CREDENTIAL= MyAzureBlobStorageCredential    --> CREDENTIAL is not required if a blob has public access!
-);
-```
-La credencial usada debe crearse con `SHARED ACCESS SIGNATURE` como identidad, no debe tener al inicio `?` en el token de SAS, debe tener al menos permiso de lectura en el archivo que se debe cargar (por ejemplo `srt=o&sp=r`), y el período de expiración debe ser válido (todas las fechas se expresan en hora UTC). Por ejemplo:
-```sql
-CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
- WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
- SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
-```
+Especifica el nombre definido por el usuario para el origen de datos. El nombre debe ser único dentro de la base de datos en SQL Server, SQL Database (SQL DB) y SQL Data Warehouse (SQL DW). El nombre debe ser único dentro del servidor en Almacenamiento de datos paralelos (PDW).
 
-Para más información sobre las firmas de acceso compartido, vea [Uso de Firmas de acceso compartido (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Para obtener un ejemplo de acceso al almacenamiento de blobs, vea el ejemplo F de [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md). 
->[!NOTE] 
->Para cargar datos de Azure Blob Storage a SQL DW o Almacenamiento de datos paralelos, el secreto debe ser la clave de Azure Storage.
+### <a name="location--prefixpathport"></a>LOCATION = *`'<prefix>://<path[:port]>'`*
 
-  
- RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
- Especifica la ubicación del administrador de recursos de Hadoop. Cuando se especifica, el optimizador de consultas puede adoptar una decisión basada en costos para preprocesar los datos de una consulta de PolyBase mediante el uso de las funciones de cálculo de Hadoop con MapReduce. Esta técnica, denominada aplicación de predicado, puede reducir significativamente el volumen de datos transferidos entre Hadoop y SQL y, por tanto, mejorar el rendimiento de las consultas.  
-  
- Cuando no se especifica, se deshabilita la inserción de cálculo en Hadoop para las consultas de PolyBase.  
- 
-Si no se especifica el puerto, el valor predeterminado se determina con el valor actual de la configuración “hadoop connectivity”.
+Proporciona el protocolo de conectividad y la ruta de acceso al origen de datos externo.
 
-|Conectividad de Hadoop|Puerto predeterminado del administrador de recursos|
-|-------------------|-----------------------------|
-|1|50300|
-|2|50300|
-|3|8021|
-|4|8032|
-|5|8050|
-|6|8032|
-|7|8050|
+| Origen de datos externo        | Prefijo de ubicación | Ruta de acceso de ubicación                                         | Ubicaciones admitidas por producto o servicio    |
+| --------------------------- | --------------- | ----------------------------------------------------- | ------------------------------------------- |
+| Cloudera o Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016+), PDW                     |
+| Azure Blob Storage          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016+), PDW, SQL DW             |
+| Azure Data Lake Store Gen1 | `adl`           | `<storage_account>.azuredatalake.net`                 | SQL DW                                      |
+| Azure Data Lake Store Gen2 | `abfss`          | `<container>@<storage_account>.dfs.core.windows.net`  | SQL DW                                      |
+| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019+)                          |
+| Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019+)                          |
+| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019+)                          |
+| MongoDB o CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019+)                          |
+| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019+): solo Windows           |
+| Operaciones masivas             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017+), SQL DB                  |
+| Consulta elástica (partición)       | No requerido    | `<shard_map_server_name>.database.windows.net`        | SQL DB                                      |
+| Consulta elástica (remota)      | No requerido    | `<remote_server_name>.database.windows.net`           | SQL DB                                      |
 
-Para obtener una lista completa de las distribuciones de Hadoop y las versiones admitidas por cada valor de conectividad, vea [Configuración de conectividad de PolyBase (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+Ruta de acceso de ubicación:
+
+- `<`NameNode`>`: nombre de equipo, nombre de URI de servicio o dirección IP del `Namenode` en el clúster de Hadoop. PolyBase debe resolver los nombres DNS utilizados por el clúster de Hadoop. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
+- `port` = el puerto en el cual escucha el origen de datos externo. En Hadoop, el puerto se puede encontrar mediante el parámetro de configuración `fs.default.name`. El valor predeterminado es 8020.
+- `<container>` = el contenedor de la cuenta de almacenamiento que contiene los datos. Los contenedores raíz son de solo lectura, no se pueden volver a escribir datos en el contenedor.
+- `<storage_account>` = el nombre de la cuenta de almacenamiento del recurso de Azure.
+- `<server_name>` = el nombre de host.
+- `<instance_name>` = el nombre de la instancia con nombre de SQL Server. Se usa si tiene el servicio de SQL Server Browser en ejecución en la instancia de destino.
+- `<shard_map_server_name>` = el nombre del servidor lógico de Azure que hospeda el administrador del mapa de particiones. El argumento `DATABASE_NAME` proporciona la base de datos que se utiliza para hospedar el mapa de particiones y `SHARD_MAP_NAME` se utiliza para el propio mapa de particiones.
+- `<remote_server_name>` = el nombre de servidor lógico de destino para la consulta elástica. El nombre de la base de datos se especifica utilizando el argumento `DATABASE_NAME`.
+
+Instrucciones y notas adicionales cuando se establece la ubicación:
+
+- El motor de SQL no comprueba la existencia del origen de datos externo cuando se crea el objeto. Para la validación, crea una tabla externa utilizando el origen de datos externo.
+- Para garantizar una semántica de consulta coherente, use el mismo origen de datos externo para todas las tablas cuando realice consultas a Hadoop.
+- Puede usar el prefijo de ubicación `sqlserver` para conectar SQL Server 2019 a SQL Server, SQL Database o SQL Data Warehouse.
+- Especifique `Driver={<Name of Driver>}` al conectarse a través de `ODBC`.
+- `wasb` es el protocolo predeterminado para Azure Blob Storage. `wasbs` es opcional pero recomendado, ya que se enviarán los datos mediante una conexión SSL segura.
+- Para garantizar que las consultas de PolyBase son correctas durante una conmutación por error del `Namenode` de Hadoop, considere la posibilidad de usar una dirección IP virtual para el `Namenode` del clúster de Hadoop. Si no, ejecute un comando [ALTER EXTERNAL DATA SOURCE][alter_eds] para que apunte a la nueva ubicación.
+
+### <a name="connectionoptions--keyvaluepair"></a>CONNECTION_OPTIONS = *key_value_pair*
+
+Especifica opciones adicionales al conectarse a través de `ODBC` a un origen de datos externo.
+
+Se requiere como mínimo el nombre del controlador, pero existen otras opciones, como `APP='<your_application_name>'` o `ApplicationIntent= ReadOnly|ReadWrite`, que también resulta útil establecerlas y pueden ayudarle con la solución de problemas.
+
+Consulte la documentación del producto `ODBC` para obtener una lista de [CONNECTION_OPTIONS][connection_options] permitidas.
+
+### <a name="pushdown--on--off"></a>PUSHDOWN = *ON | OFF*
+
+Indica si se puede insertar cálculo en el origen de datos externo. El valor predeterminado es ON.
+
+`PUSHDOWN` se admite al conectarse a SQL Server, Oracle, Teradata, MongoDB u ODBC en el nivel de origen de datos externo.
+
+Habilitar o deshabilitar la inserción en el nivel de consulta se logra a través de una [sugerencia][hint_pb].
+
+### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+
+Especifica una credencial de ámbito de base de datos para la autenticación en el origen de datos externo.
+
+Instrucciones y notas adicionales cuando se crea una credencial:
+
+- Para cargar datos desde Azure Blob Storage o Azure Data Lake Store (ADLS) Gen2 en SQL Data Warehouse o PDW, use una clave de almacenamiento de Azure.
+- `CREDENTIAL` solo es necesario si se ha protegido el blob. `CREDENTIAL` no es necesario para los conjuntos de datos que permiten el acceso anónimo.
+- Cuando `TYPE` = `BLOB_STORAGE`, la credencial debe crearse mediante el uso de `SHARED ACCESS SIGNATURE` como identidad. Además, el token de SAS debe configurarse del modo siguiente:
+  - Excluir el `?` inicial cuando se configura como secreto
+  - Disponer de al menos permiso de lectura en el archivo que se debe cargar (por ejemplo `srt=o&sp=r`)
+  - Usar un período de caducidad válido (todas las fechas se encuentran en hora UTC).
+
+Para obtener un ejemplo del uso de `CREDENTIAL` con `SHARED ACCESS SIGNATURE` y `TYPE` = `BLOB_STORAGE`, vea [Creación de un origen de datos externo para ejecutar operaciones masivas y recuperar datos desde Azure Blob Storage en SQL Database](#j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage)
+
+Para crear una credencial con ámbito de base de datos, vea [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc].
+
+### <a name="type---hadoop--blobstorage--rdbms--shardmapmanager"></a>TYPE = *[ HADOOP | BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER]*
+
+Especifica el tipo de origen de datos externo que se está configurando. Este parámetro no siempre es necesario.
+
+- Use HADOOP cuando el origen de datos externo sea Cloudera, Hortonworks, Azure Blob Storage, ADLS Gen1 o ADLS Gen2.
+- Use RDBMS para consultas entre bases de datos mediante una consulta elástica de SQL Database.  
+- Use SHARD_MAP_MANAGER al crear un origen de datos externo al conectarse a una base de datos SQL Database particionada.
+- Use BLOB_STORAGE al ejecutar operaciones masivas con [BULK INSERT][bulk_insert] o con [OPENROWSET][openrowset] con [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+
+> [!IMPORTANT]
+> No establezca `TYPE` si usa cualquier otro origen de datos externo.
+
+Para obtener un ejemplo del uso de `TYPE` = `HADOOP` para cargar datos desde Azure Blob Storage, vea [Creación de un origen de datos externo para hacer referencia a Azure Blob Storage](#e-create-external-data-source-to-reference-azure-blob-storage).
+
+### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
+
+Configure este valor opcional al conectarse a Hortonworks o Cloudera.
+
+Cuando `RESOURCE_MANAGER_LOCATION` está definido, el optimizador de consultas toma una decisión basada en el coste para mejorar el rendimiento. Se puede usar un trabajo de MapReduce para insertar el cálculo en Hadoop. La especificación de `RESOURCE_MANAGER_LOCATION` puede reducir significativamente el volumen de datos transferidos entre Hadoop y SQL, lo cual puede suponer una mejora en el rendimiento de las consultas.  
+
+Si no se especifica el administrador de recursos, se deshabilita la inserción de cálculo en Hadoop para las consultas de PolyBase.
+
+Si no se especifica el puerto, el valor predeterminado se elige mediante el valor actual de la configuración "hadoop connectivity".
+
+| Conectividad de Hadoop | Puerto predeterminado del administrador de recursos |
+| ------------------- | ----------------------------- |
+| 1                   | 50300                         |
+| 2                   | 50300                         |
+| 3                   | 8021                          |
+| 4                   | 8032                          |
+| 5                   | 8050                          |
+| 6                   | 8032                          |
+| 7                   | 8050                          |
+
+Para obtener una lista completa de las versiones de Hadoop compatibles, vea [Configuración de conectividad de PolyBase (Transact-SQL)][connectivity_pb].
   
 > [!IMPORTANT]  
->  El valor RESOURCE_MANAGER_LOCATION es una cadena y no se valida cuando se crea el origen de datos externo. Si se especifica un valor incorrecto se pueden producir retrasos futuros al tener acceso a la ubicación.  
-  
- Ejemplos de Hadoop:  
-  
--   Hortonworks HDP 2.0, 2.1, 2.2. 2.3 en Windows:   
-    ```  
-    RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8032'  
-    ```  
-  
--   Hortonworks HDP 1.3 en Windows:   
-    ```  
-    RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:50300'  
-    ```  
-  
--   Hortonworks HDP 2.0, 2.1, 2.2, 2.3 en Linux:   
-    ```  
-    RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8050'  
-    ```  
-  
--   Hortonworks HDP 1.3 en Linux:   
-    ```  
-    RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:50300'  
-    ```  
-  
--   Cloudera 4.3 en Linux:   
-    ```  
-    RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8021'  
-    ```  
-  
--   Cloudera 5.1 - 5.11 en Linux:   
-    ```  
-    RESOURCE_MANAGER_LOCATION = 'ResourceManager_URI:8032'  
-    ```  
-  
- CREDENTIAL = *credential_name*  
- Especifica una credencial de ámbito de base de datos para la autenticación en el origen de datos externo. Para obtener un ejemplo, vea [C. Creación de un origen de datos externos de Azure Blob Storage](../../t-sql/statements/create-external-data-source-transact-sql.md#credential). Para crear una credencial, vea [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md). Tenga en cuenta que CREDENTIAL no es obligatorio para los conjuntos de datos públicos en los que se permite el acceso anónimo. 
-  
- DATABASE_NAME = *'QueryDatabaseName'*  
- El nombre de la base de datos que actúa como administrador de mapa de particiones (para SHARD_MAP_MANAGER) o la base de datos remota (para RDBMS).  
-  
- SHARD_MAP_NAME = *'ShardMapName'*  
- Solo para SHARD_MAP_MANAGER. El nombre del mapa de particiones. Para obtener más información sobre cómo crear un mapa de particiones, vea [Getting started with Elastic Database query](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/) (Introducción a la consulta de Elastic Database)  
-  
-## <a name="polybase-specific-notes"></a>Notas específicas de PolyBase  
-Para obtener una lista completa de los orígenes de datos externos compatibles, vea [Configuración de conectividad de PolyBase (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+> El valor RESOURCE_MANAGER_LOCATION no se valida cuando se crea el origen de datos externo. Escribir un valor incorrecto puede provocar un error de consulta en tiempo de ejecución cada vez que se intente la inserción, ya que el valor proporcionado no podrá realizar la resolución.
 
- Para usar PolyBase, debe crear estos tres objetos:  
-  
--   Un origen de datos externo.  
-  
--   Un formato de archivo externo.  
-  
--   Una tabla externa que haga referencia al origen de datos externo y al formato de archivo externo.  
-  
-## <a name="permissions"></a>Permisos  
- Requiere el permiso CONTROL en la base de datos en SQL DW, SQL Server, APS 2016 y SQL DB.
+En [Creación de un origen de datos externo para hacer referencia a Hadoop con la inserción habilitada](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) se proporciona un ejemplo concreto y más instrucciones.
 
-> [!IMPORTANT]  
->  En versiones anteriores de PDW, la creación del origen de datos externo requería los permisos ALTER ANY EXTERNAL DATA SOURCE.
-  
-  
-## <a name="error-handling"></a>Tratamiento de errores  
- Si los orígenes de datos externos de Hadoop no son coherentes respecto a la definición de RESOURCE_MANAGER_LOCATION, se producirá un error de tiempo de ejecución. Es decir, no se pueden especificar dos orígenes de datos externos que hagan referencia el mismo clúster de Hadoop y después proporcionar la ubicación del administrador de recursos de uno y no del otro.  
-  
- El motor de SQL no comprueba la existencia del origen de datos externo cuando crea el objeto de origen de datos externo. Si el origen de datos no existe durante la ejecución de la consulta, se producirá un error.  
-  
-## <a name="general-remarks"></a>Notas generales  
-Para PolyBase, el origen de datos externo tiene ámbito de base de datos en SQL Server y SQL Data Warehouse. En Almacenamiento de datos paralelos tiene ámbito de servidor.
-  
-Para PolyBase, cuando se define RESOURCE_MANAGER_LOCATION o JOB_TRACKER_LOCATION, el optimizador de consultas considerará la optimización de cada consulta iniciando un trabajo de asignación/reducción en el origen externo de Hadoop e insertando el cálculo. Esta es una decisión basada totalmente en el costo.  
+### <a name="databasename--databasename"></a>DATABASE_NAME = *database_name*
 
-Para asegurarse de que las consultas de PolyBase son correctas en caso de conmutación por error del NameNode de Hadoop, considere la posibilidad de usar una dirección IP virtual para el NameNode de clúster de Hadoop. Si no usa una dirección IP virtual para el NameNode de Hadoop, en el caso de una conmutación por error del NameNode de Hadoop tendrá que apuntar el objeto ALTER EXTERNAL DATA SOURCE a la nueva ubicación.  
-  
-## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
- Todos los orígenes de datos definidos en la misma ubicación de clúster de Hadoop deben usar la misma configuración de RESOURCE_MANAGER_LOCATION o JOB_TRACKER_LOCATION. Si hay incoherencias, se producirá un error en tiempo de ejecución.  
-  
- Si el clúster de Hadoop se configura con un nombre y el origen de datos externo usa la dirección IP para la ubicación de clúster, PolyBase todavía debe ser capaz de resolver el nombre del clúster cuando se use el origen de datos. Para resolver el nombre, debe habilitar un reenviador DNS.  
- 
-Actualmente, un token de SAS con el tipo `hadoop` no es compatible y solo lo es con una clave de acceso a la cuenta de almacenamiento. Si se intenta crear un origen de datos externo con el tipo `hadoop` y se utiliza una credencial SAS, es posible que aparezca un error como el siguiente:
+Configure este argumento cuando `TYPE` se haya establecido en `RDBMS` o `SHARD_MAP_MANAGER`.
+
+| TYPE              | Valor de DATABASE_NAME                                                  |
+| ----------------- | ----------------------------------------------------------------------- |
+| RDBMS             | El nombre de la base de datos remota en el servidor que se proporciona mediante `LOCATION` |
+| SHARD_MAP_MANAGER | Nombre de la base de datos que funciona como administrador del mapa de particiones                 |
+
+Para obtener un ejemplo que muestra cómo crear un origen de datos externo donde `TYPE` = `RDBMS`, vea [Creación de un origen de datos externo de RDBMS](#g-create-an-rdbms-external-data-source).
+
+### <a name="shardmapname--shardmapname"></a>SHARD_MAP_NAME = *shard_map_name*
+
+Se usa cuando el `TYPE` argumento está establecido en `SHARD_MAP_MANAGER` únicamente para establecer el nombre del mapa de particiones.
+
+Para obtener un ejemplo que muestra cómo crear un origen de datos externo donde `TYPE` = `SHARD_MAP_MANAGER`, vea [Creación de un origen de datos externo de administrador de mapas de partición](#f-create-a-shard-map-manager-external-data-source)
+
+## <a name="permissions"></a>Permisos
+
+Requiere el permiso CONTROL en la base de datos en SQL Server, Almacenamiento de datos paralelos, SQL Database y SQL Data Warehouse.
+
+> [!NOTE]
+> En versiones anteriores de PDW, la creación del origen de datos externo requería los permisos ALTER ANY EXTERNAL DATA SOURCE.
+
+## <a name="locking"></a>Bloqueo
+
+Toma un bloqueo compartido en el objeto EXTERNAL DATA SOURCE.  
+
+## <a name="security"></a>Seguridad
+
+PolyBase es compatible con la autenticación basada en proxy para la mayoría de orígenes de datos externos. Cree una credencial con ámbito de base de datos para crear la cuenta de proxy.
+
+Cuando se conecta al almacenamiento o el grupo de datos en un clúster de macrodatos de SQL Server, las credenciales del usuario se pasan a través del sistema back-end. Cree inicios de sesión en el propio grupo de datos para habilitar la autenticación de paso a través.
+
+Actualmente no se admite un token de SAS con tipo `HADOOP`. Solo se admite con una clave de acceso de cuenta de almacenamiento. Si se intenta crear un origen de datos externo con el tipo `HADOOP` y una credencial SAS, aparece un error como el siguiente:
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
-  
-## <a name="locking"></a>Bloqueo  
- Toma un bloqueo compartido en el objeto EXTERNAL DATA SOURCE.  
-  
-##  <a name="examples"></a> Ejemplos: SQL Server 2016  
-  
-### <a name="a-create-external-data-source-to-reference-hadoop"></a>A. Creación de un origen de datos externo para hacer referencia a Hadoop  
-Para crear un origen de datos externo para hacer referencia al clúster de Hortonworks o Cloudera Hadoop, especifique el nombre de equipo o la dirección IP del NameNode y puerto de Hadoop.  
-  
-```sql  
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8050'
-);
 
-```  
-  
-### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. Creación de un origen de datos externo para hacer referencia a Hadoop con la inserción habilitada  
-Especifique la opción RESOURCE_MANAGER_LOCATION para habilitar la inserción de cálculo en Hadoop para las consultas de PolyBase. Una vez habilitada, PolyBase usa una decisión basada en costos para determinar si el cálculo de la consulta se debe aplicar en Hadoop o se deben mover todos los datos para procesar la consulta en SQL Server.
-  
-```sql  
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8020',
-    RESOURCE_MANAGER_LOCATION = '10.10.10.10:8050'
-);
+## <a name="examples-sql-server-2016-and-parallel-data-warehouse"></a>Ejemplos: SQL Server (2016+) y Almacenamiento de datos paralelos
 
-```
-  
-###  <a name="credential"></a> C. Creación de un origen de datos externo para hacer referencia a Hadoop con protección de Kerberos  
-Para comprobar si el clúster de Hadoop está protegido con Kerberos, compruebe el valor de la propiedad hadoop.security.authentication en core-site.xml de Hadoop. Para hacer referencia a un clúster de Hadoop protegido con Kerberos, debe especificar una credencial con ámbito de base de datos que contenga el nombre de usuario y la contraseña de Kerberos. La clave maestra de base de datos se usa para cifrar el secreto de la credencial de ámbito de base de datos. 
-  
-```sql  
+### <a name="a-create-external-data-source-in-sql-2019-to-reference-oracle"></a>A. Creación de un origen de datos externo en SQL 2019 para hacer referencia a Oracle
+
+Para crear un origen de datos externo que haga referencia a Oracle, asegúrese de que tiene una credencial con ámbito de base de datos. También, opcionalmente, puede habilitar o deshabilitar la inserción de cálculo en este origen de datos.
+
+```sql
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
-
--- Create a database scoped credential with Kerberos user name and password.
-CREATE DATABASE SCOPED CREDENTIAL HadoopUser1 
-WITH IDENTITY = '<hadoop_user_name>', 
-SECRET = '<hadoop_password>';
-
--- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
-    TYPE = HADOOP, 
-    LOCATION = 'hdfs://10.10.10.10:8050', 
-    RESOURCE_MANAGER_LOCATION = '10.10.10.10:8050', 
-    CREDENTIAL = HadoopUser1
-);
-```
-
-### <a name="d-create-external-data-source-to-reference-azure-blob-storage"></a>D. Creación de un origen de datos externo para hacer referencia a Azure Blob Storage
-Para crear un origen de datos externo para hacer referencia al contenedor de Azure Blob Storage, especifique el URI de Azure Blob Storage y una credencial de ámbito de base de datos que contenga la clave de la cuenta de Azure Storage.
-
-En este ejemplo, el origen de datos externo es un contenedor de Azure Blob Storage denominado dailylogs bajo la cuenta de Azure Storage denominada myaccount. El origen de datos externo de Azure Storage es solo para la transferencia de datos y no admite la aplicación del predicado.
-
-En este ejemplo se muestra cómo crear la credencial de ámbito de base de datos para la autenticación en Azure Storage. Especifique la clave de la cuenta de Azure Storage en el secreto de la credencial de base de datos. Especifique cualquier cadena en la identidad de la credencial de ámbito de base de datos; no se usará para la autenticación en Azure Storage. Después, la credencial se usa en la instrucción que crea un origen de datos externo.
-
-```
--- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '!MyC0mpl3xP@ssw0rd!
+;
 
 -- Create a database scoped credential with Azure storage account key as the secret.
-CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential 
-WITH IDENTITY = 'myaccount', 
-SECRET = '<azure_storage_account_key>';
+CREATE DATABASE SCOPED CREDENTIAL OracleProxyAccount
+WITH
+     IDENTITY   = 'oracle_username'
+,    SECRET     = 'oracle_password'
+;
+
+CREATE EXTERNAL DATA SOURCE MyOracleServer
+WITH
+(    LOCATION   = 'oracle://145.145.145.145:1521'
+,    CREDENTIAL = OracleProxyAccount
+,    PUSHDOWN   = ON
+;
+```
+
+Para obtener ejemplos adicionales para otros orígenes de datos, como MongoDB, vea [Configuración de PolyBase para tener acceso a datos externos en MongoDB][mongodb_pb]
+
+### <a name="b-create-external-data-source-to-reference-hadoop"></a>B. Creación de un origen de datos externo para hacer referencia a Hadoop
+
+Para crear un origen de datos externo para hacer referencia al clúster de Hortonworks o Cloudera Hadoop, especifique el nombre de equipo o la dirección IP de `Namenode` de Hadoop y el puerto. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE MyHadoopCluster
+WITH
+(    LOCATION = 'hdfs://10.10.10.10:8050'
+,    TYPE     = HADOOP
+)
+;
+```
+
+### <a name="c-create-external-data-source-to-reference-hadoop-with-push-down-enabled"></a>C. Creación de un origen de datos externo para hacer referencia a Hadoop con la inserción habilitada
+
+Especifique la opción `RESOURCE_MANAGER_LOCATION` para habilitar la inserción de cálculo en Hadoop para las consultas de PolyBase. Una vez habilitado, PolyBase toma una decisión basada en el coste para determinar si se debe aplicar el cálculo de la consulta en Hadoop.
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE MyHadoopCluster
+WITH
+(    LOCATION                  = 'hdfs://10.10.10.10:8020'
+,    TYPE                      = HADOOP
+,    RESOURCE_MANAGER_LOCATION = '10.10.10.10:8050'
+)
+;
+```
+
+### <a name="d-create-external-data-source-to-reference-kerberos-secured-hadoop"></a>D. Creación de un origen de datos externo para hacer referencia a Hadoop con protección de Kerberos
+
+Para comprobar si el clúster de Hadoop está protegido con Kerberos, compruebe el valor de la propiedad hadoop.security.authentication en core-site.xml de Hadoop. Para hacer referencia a un clúster de Hadoop protegido con Kerberos, debe especificar una credencial con ámbito de base de datos que contenga el nombre de usuario y la contraseña de Kerberos. La clave maestra de base de datos se usa para cifrar el secreto de la credencial de ámbito de base de datos.
+  
+```sql  
+-- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
+;
+
+-- Create a database scoped credential with Kerberos user name and password.
+CREATE DATABASE SCOPED CREDENTIAL HadoopUser1
+WITH
+     IDENTITY   = '<hadoop_user_name>'
+,    SECRET     = '<hadoop_password>'
+;
 
 -- Create an external data source with CREDENTIAL option.
-CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
-    TYPE = BLOB_STORAGE, 
-    LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/',
-    CREDENTIAL = AzureStorageCredential
-);
+CREATE EXTERNAL DATA SOURCE MyHadoopCluster
+WITH
+(    LOCATION                  = 'hdfs://10.10.10.10:8050'
+,    CREDENTIAL                = HadoopUser1
+,    TYPE                      = HADOOP
+,    RESOURCE_MANAGER_LOCATION = '10.10.10.10:8050'
+)
+;
 ```
 
-## <a name="examples-azure-sql-database"></a>Ejemplos: Base de datos SQL de Azure
+## <a name="examples-sql-server-2016-sql-data-warehouse-and-parallel-data-warehouse"></a>Ejemplos: SQL Server (2016+), SQL Data Warehouse y Almacenamiento de datos paralelos
 
-### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. Creación de un origen de datos externo de Administrador de mapa de particiones
-Para crear un origen de datos externo para hacer referencia a un SHARD_MAP_MANAGER, especifique el nombre del servidor de SQL Database que hospeda el administrador de mapa de particiones en Azure SQL Database o una base de datos de SQL Server en una máquina virtual de Azure.
+### <a name="e-create-external-data-source-to-reference-azure-blob-storage"></a>E. Creación de un origen de datos externo para hacer referencia a Azure Blob Storage
+
+En este ejemplo, el origen de datos externo es un contenedor de Azure Blob Storage denominado `daily` bajo la cuenta de Azure Storage denominada `logs`. El origen de datos externo de Azure Storage es solo para la transferencia de datos. No admite la inserción de predicado.
+
+En este ejemplo se muestra cómo crear la credencial de ámbito de base de datos para la autenticación en Azure Storage. Especifique la clave de la cuenta de Azure Storage en el secreto de la credencial de base de datos. Puede especificar cualquier cadena en la identidad de la credencial con ámbito de base de datos, ya que no se usará para la autenticación en Azure Storage.
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
+-- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'
+;
 
-CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred  
-WITH IDENTITY = '<username>',
-SECRET = '<password>';
+-- Create a database scoped credential with Azure storage account key as the secret.
+CREATE DATABASE SCOPED CREDENTIAL AzureStorageCredential
+WITH
+     IDENTITY   = '<my_account>'
+,    SECRET     = '<azure_storage_account_key>'
+;
 
-CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc 
-WITH (
-    TYPE = SHARD_MAP_MANAGER,
-    LOCATION = '<server_name>.database.windows.net',
-    DATABASE_NAME = 'ElasticScaleStarterKit_ShardMapManagerDb',
-    CREDENTIAL = ElasticDBQueryCred,
-    SHARD_MAP_NAME = 'CustomerIDShardMap'
-);
+-- Create an external data source with CREDENTIAL option.
+CREATE EXTERNAL DATA SOURCE MyAzureStorage
+WITH
+(    LOCATION   = 'wasbs://daily@logs.blob.core.windows.net/'
+,    CREDENTIAL = AzureStorageCredential
+,    TYPE       = HADOOP
+)
+;
 ```
 
-### <a name="f-create-an-rdbms-external-data-source"></a>F. Creación de un origen de datos externo de RDBMS
-Para crear un origen de datos externo para hacer referencia a RDBMS, especifique el nombre del servidor de SQL Database de la base de datos remota en Azure SQL Database.
+## <a name="examples-sql-database"></a>Ejemplos: SQL Database
+
+### <a name="f-create-a-shard-map-manager-external-data-source"></a>F. Creación de un origen de datos externo de administrador de mapa de particiones
+
+Para crear un origen de datos externo para hacer referencia a un SHARD_MAP_MANAGER, especifique el nombre del servidor de SQL Database que hospeda el administrador de mapa de particiones en SQL Database o una base de datos de SQL Server en una máquina virtual.
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+;
+
+CREATE DATABASE SCOPED CREDENTIAL ElasticDBQueryCred
+WITH
+     IDENTITY   = '<username>'
+,    SECRET     = '<password>'
+;
+
+CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc
+WITH
+(    TYPE             = SHARD_MAP_MANAGER
+,    LOCATION         = '<server_name>.database.windows.net'
+,    DATABASE_NAME    = 'ElasticScaleStarterKit_ShardMapManagerDb'
+,    CREDENTIAL       = ElasticDBQueryCred
+,    SHARD_MAP_NAME   = 'CustomerIDShardMap'
+)
+;
+```
+
+Para obtener un tutorial paso a paso, vea [Introducción a las consultas elásticas para particionamiento (creación de particiones horizontales)][sharded_eq_tutorial].
+
+### <a name="g-create-an-rdbms-external-data-source"></a>G. Creación de un origen de datos externo de RDBMS
+
+Para crear un origen de datos externo para hacer referencia a RDBMS, especifique el nombre del servidor de SQL Database de la base de datos remota en SQL Database.
+
+```sql
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+;
 
 CREATE DATABASE SCOPED CREDENTIAL SQL_Credential  
-WITH IDENTITY = '<username>',
-SECRET = '<password>';
+WITH
+     IDENTITY  = '<username>'
+,    SECRET    = '<password>'
+;
 
-CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc 
-WITH (
-    TYPE = RDBMS, 
-    LOCATION = '<server_name>.database.windows.net', 
-    DATABASE_NAME = 'Customers', 
-    CREDENTIAL = SQL_Credential 
-);
+CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc
+WITH
+(    TYPE          = RDBMS
+,    LOCATION      = '<server_name>.database.windows.net'
+,    DATABASE_NAME = 'Customers'
+,    CREDENTIAL    = SQL_Credential
+)
+;
 ```
 
-## <a name="examples-azure-sql-data-warehouse"></a>Ejemplos: Almacenamiento de datos SQL de Azure
+Para obtener un tutorial paso a paso sobre RDBMS, vea [Introducción a las consultas entre bases de datos (particiones verticales)][remote_eq_tutorial].
 
-### <a name="g-create-external-data-source-to-reference-azure-data-lake-store"></a>G. Creación de un origen de datos externo para hacer referencia a Azure Data Lake Store
-La conectividad de Azure Data Lake Store se basa en el URI de ADLS y en la entidad de servicio de la aplicación de Azure Active Directory. La documentación para crear esta aplicación se puede encontrar en [Autenticación entre servicios: Data Lake Store con Azure Active Directory](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory).
+## <a name="examples-sql-data-warehouse"></a>Ejemplos: SQL Data Warehouse
+
+### <a name="h-create-external-data-source-to-reference-azure-data-lake-store-gen-1"></a>H. Creación de un origen de datos externo para hacer referencia a Azure Data Lake Store Gen1
+
+La conectividad de Azure Data Lake Store se basa en el URI de ADLS y en la entidad de servicio de la aplicación de Azure Active Directory. La documentación para crear esta aplicación se puede encontrar en [Autenticación entre servicios: Data Lake Store con Azure Active Directory][azure_ad[].
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
-CREATE MASTER KEY
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+;
 
 -- These values come from your Azure Active Directory Application used to authenticate to ADLS
-CREATE DATABASE SCOPED CREDENTIAL ADLUser 
-WITH IDENTITY = '<clientID>@<OAuth2.0TokenEndPoint>',
-SECRET = '<KEY>' ;
-
-
+CREATE DATABASE SCOPED CREDENTIAL ADLS_credential
+WITH
+--   IDENTITY   = '<clientID>@<OAuth2.0TokenEndPoint>'
+     IDENTITY   = '536540b4-4239-45fe-b9a3-629f97591c0c@https://login.microsoftonline.com/42f988bf-85f1-41af-91ab-2d2cd011da47/oauth2/token'
+--,  SECRET     = '<KEY>'
+,    SECRET     = 'BjdIlmtKp4Fpyh9hIvr8HJlUida/seM5kQ3EpLAmeDI='
+;
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
-WITH (TYPE = HADOOP,
-      LOCATION = '<ADLS URI>'
+WITH
+(    LOCATION       = 'adl://newyorktaxidataset.azuredatalakestore.net'
+,    CREDENTIAL     = ADLS_credential
+,    TYPE           = HADOOP
 )
+;
 ```
 
+### <a name="i-create-external-data-source-to-reference-azure-data-lake-store-adls-gen-2"></a>I. Creación de un origen de datos externo para hacer referencia a Azure Data Lake Store (ADLS) Gen2
 
-
-## <a name="examples-parallel-data-warehouse"></a>Ejemplos: Almacenamiento de datos paralelos
-
-### <a name="h-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>H. Creación de un origen de datos externo para hacer referencia a Hadoop con la inserción habilitada
-Especifique la opción JOB_TRACKER_LOCATION para habilitar la inserción de cálculo en Hadoop para las consultas de PolyBase. Una vez habilitada, PolyBase usa una decisión basada en costos para determinar si el cálculo de la consulta se debe aplicar en Hadoop o se deben mover todos los datos para procesar la consulta en SQL Server. 
+La conexión a ADLS Gen2 requiere la clave de cuenta de almacenamiento como secreto para la credencial con ámbito de base de datos. La compatibilidad con OAuth 2.0 no está disponible en este momento.
 
 ```sql
-CREATE EXTERNAL DATA SOURCE MyHadoopCluster
-WITH (
-    TYPE = HADOOP,
-    LOCATION = 'hdfs://10.10.10.10:8020',
-    JOB_TRACKER_LOCATION = '10.10.10.10:8050'
-);
+-- If you do not have a Master Key on your DW you will need to create one.
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+;
+
+-- These values come from your Azure Active Directory Application used to authenticate to ADLS
+CREATE DATABASE SCOPED CREDENTIAL ADLS_credential
+WITH
+--   IDENTITY   = '<storage_account_name>'
+     IDENTITY   = 'newyorktaxidata'
+--,  SECRET     = '<storage_account_key>'
+,    SECRET     = 'yz5N4+bxSb89McdiysJAzo+9hgEHcJRJuXbF/uC3mhbezES/oe00vXnZEl14U0lN3vxrFKsphKov16C0w6aiTQ=='
+;
+
+CREATE EXTERNAL DATA SOURCE <data_source_name>
+WITH
+(    LOCATION   = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net'
+,    CREDENTIAL = ADLS_credential
+,    TYPE       = HADOOP
+)
+[;]
 ```
 
-### <a name="i-create-external-data-source-to-reference-azure-blob-storage"></a>I. Creación de un origen de datos externo para hacer referencia a Azure Blob Storage
-Para crear un origen de datos externo para hacer referencia al contenedor de Azure Blob Storage, especifique el URI de Azure Blob Storage como valor LOCATION del origen de datos externo. Agregue la clave de la cuenta de Azure Storage al archivo de core-site.xml de PDW para la autenticación.
+## <a name="examples-bulk-operations"></a>Ejemplos: Operaciones masivas
 
-En este ejemplo, el origen de datos externo es un contenedor de Azure Blob Storage denominado dailylogs bajo la cuenta de Azure Storage denominada myaccount. El origen de datos externo de Azure Storage es solo para la transferencia de datos y no admite la aplicación del predicado.
+> [!NOTE]
+> No coloque un **/** final, nombre de archivo o parámetros de firma de acceso compartido al final de la URL de `LOCATION` al configurar un origen de datos externo para las operaciones masivas.
+
+### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Creación de un origen de datos externo para operaciones masivas de recuperación de datos desde Azure Blob Storage
+
+**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+Use el origen de datos siguiente para las operaciones masivas con [BULK INSERT][bulk_insert] o con [OPENROWSET][openrowset]. La credencial debe establecer `SHARED ACCESS SIGNATURE` como identidad, no debe tener al inicio `?` en el token de SAS, debe tener al menos permiso de lectura en el archivo que se debe cargar (por ejemplo `srt=o&sp=r`), y el período de expiración debe ser válido (todas las fechas se expresan en hora UTC). Para más información sobre las firmas de acceso compartido, vea [Uso de Firmas de acceso compartido (SAS)][sas_token].
 
 ```sql
-CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
-        TYPE = HADOOP, 
-        LOCATION = 'wasbs://dailylogs@myaccount.blob.core.windows.net/'
-);
-```
-
-## <a name="examples-bulk-operations"></a>Ejemplos: Operaciones masivas   
-### <a name="j-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>J. Creación de un origen de datos externo para operaciones masivas de recuperación de datos desde Azure Blob Storage.   
-**Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].   
-Use el origen de datos siguiente para las operaciones masivas con [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). La credencial usada debe crearse con `SHARED ACCESS SIGNATURE` como identidad, no debe tener al inicio `?` en el token de SAS, debe tener al menos permiso de lectura en el archivo que se debe cargar (por ejemplo `srt=o&sp=r`), y el período de expiración debe ser válido (todas las fechas se expresan en hora UTC). Para más información sobre las firmas de acceso compartido, vea [Uso de Firmas de acceso compartido (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).   
-```sql
-CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices 
- WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
- SECRET = '(REMOVE ? FROM THE BEGINNING)******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************';
+CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
+WITH
+     IDENTITY = 'SHARED ACCESS SIGNATURE'
+--   REMOVE ? FROM THE BEGINNING OF THE SAS TOKEN
+,    SECRET = '******srt=sco&sp=rwac&se=2017-02-01T00:55:34Z&st=2016-12-29T16:55:34Z***************'
+;
 
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
-    WITH  (
-        TYPE = BLOB_STORAGE,
-        LOCATION = 'https://newinvoices.blob.core.windows.net/week3',
-        CREDENTIAL = AccessAzureInvoices
-    );   
-```   
-Para ver este ejemplo en uso, vea [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md#f-importing-data-from-a-file-in-azure-blob-storage).
-  
-## <a name="see-also"></a>Consulte también
-[ALTER EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
-[CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
-[CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   
-[CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   
-[CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)  
-[sys.external_data_sources (Transact-SQL)](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)  
-  
-  
+WITH
+(    LOCATION   = 'https://newinvoices.blob.core.windows.net/week3'
+,    CREDENTIAL = AccessAzureInvoices
+,    TYPE       = BLOB_STORAGE
+)
+;
+```
 
+Para ver este ejemplo en uso, vea [BULK INSERT][bulk_insert_example].
+
+## <a name="see-also"></a>Consulte también
+
+- [ALTER EXTERNAL DATA SOURCE (Transact-SQL)][alter_eds]
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]
+- [CREATE EXTERNAL FILE FORMAT (Transact-SQL)][create_eff]
+- [CREATE EXTERNAL TABLE (Transact-SQL)][create_etb]
+- [CREATE EXTERNAL TABLE AS SELECT (Azure SQL Data Warehouse)][create_etb_as_sel]
+- [CREATE TABLE AS SELECT (Azure SQL Data Warehouse)][create_tbl_as_sel]
+- [sys.external_data_sources (Transact-SQL)][cat_eds]
+- [Uso de firmas de acceso compartido (SAS)][sas_token]
+- [Introducción a la consulta elástica][intro_eq]
+
+<!-- links to external pages -->
+<!-- SQL Docs -->
+[bulk_insert]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql
+[bulk_insert_example]: https://docs.microsoft.com/sql/t-sql/statements/bulk-insert-transact-sql#f-importing-data-from-a-file-in-azure-blob-storage
+[openrowset]: https://docs.microsoft.com/sql/t-sql/functions/openrowset-transact-sql
+
+[create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
+[create_eff]: https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql
+[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-transact-sql
+[create_etb_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azure-sqldw-latest
+[create_tbl_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-table-as-select-azure-sql-data-warehouse?view=azure-sqldw-latest
+
+[alter_eds]: https://docs.microsoft.com/sql/t-sql/statements/alter-external-data-source-transact-sql
+
+[cat_eds]: https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-external-data-sources-transact-sql
+<!-- PolyBase docs -->
+[intro_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-guide
+[mongodb_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-configure-mongodb
+[connectivity_pb]:https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql
+[connection_options]: https://docs.microsoft.com/sql/relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client
+[hint_pb]: https://docs.microsoft.com/sql/relational-databases/polybase/polybase-pushdown-computation#force-pushdown
+<!-- Elastic Query Docs -->
+[intro_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/
+[remote_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/
+[remote_eq_tutorial]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/
+[sharded_eq]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/
+[sharded_eq_tutorial]: https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/
+
+<!-- Azure Docs -->
+[azure_ad]: https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory
+[sas_token]: https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1

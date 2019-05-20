@@ -8,17 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: daae5aa71c227591a3349de4abd6526e83131f8c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 13e2b010a193e8c610c54a5b619d8a67c9b4d2d3
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512611"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65097458"
 ---
-# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Tutorial: Ampliar la implementación del proyecto de base de datos para analizar el plan de implementación
+# <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Tutorial: Ampliación de la implementación del proyecto de base de datos para analizar el plan de implementación
 Puede crear colaboradores de implementación para realizar acciones personalizadas al implementar un proyecto de SQL. Puede crear un DeploymentPlanModifier o un DeploymentPlanExecutor. Utilice un DeploymentPlanModifier para cambiar el plan antes de ejecutarlo y un DeploymentPlanExecutor para realizar operaciones mientras se ejecuta el plan. En este tutorial, se crea un DeploymentPlanExecutor denominado DeploymentUpdateReportContributor que crea un informe sobre las acciones que se realizan al implementar un proyecto de base de datos. Dado que este colaborador de compilación acepta un parámetro para controlar si el informe se genera, debe efectuar un paso necesario adicional.  
   
 En este tutorial, realizará las principales tareas siguientes:  
@@ -526,7 +526,7 @@ Para crear un colaborador de implementación, debe realizar las siguientes tarea
     |-----------------|--------------------|  
     |Miembros de clase|[TSqlModel](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlmodel.aspx), [ModelComparisonResult](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.modelcomparisonresult.aspx), [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx)|  
     |Método WriteReport|XmlWriter y XmlWriterSettings|  
-    |Método ReportPlanOperations|Entre los tipos de interés se encuentran: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Hay otros pasos, en la documentación de la API podrá obtener una lista completa de pasos.|  
+    |Método ReportPlanOperations|Entre los tipos de interés se incluyen los siguientes: [DeploymentStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentstep.aspx), [SqlRenameStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlrenamestep.aspx), [SqlMoveSchemaStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqlmoveschemastep.aspx), [SqlTableMigrationStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.sqltablemigrationstep.aspx), [CreateElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.createelementstep.aspx), [AlterElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.alterelementstep.aspx), [DropElementStep](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.dropelementstep.aspx).<br /><br />Hay otros pasos, en la documentación de la API podrá obtener una lista completa de pasos.|  
     |GetElementCategory|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
     |GetElementName|[TSqlObject](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.model.tsqlobject.aspx)|  
   
@@ -740,8 +740,8 @@ El proyecto se puede publicar o implementar de manera habitual en Visual Studio.
 ## <a name="next-steps"></a>Next Steps  
 Puede crear herramientas adicionales para realizar el procesamiento de los archivos XML de salida. Esto es solo un ejemplo de un [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). También podría crear un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) para cambiar un plan de implementación antes de que se ejecute.  
   
-## <a name="see-also"></a>Ver también  
-[Tutorial: Ampliar la compilación del proyecto de base de datos para generar estadísticas de modelo](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
-[Tutorial: Ampliar la implementación del proyecto de base de datos para modificar el plan de implementación](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
+## <a name="see-also"></a>Consulte también  
+[Tutorial: Ampliación de la compilación del proyecto de base de datos para generar estadísticas de modelo](https://msdn.microsoft.com/library/ee461508(v=vs.100).aspx)  
+[Tutorial: Ampliación de la implementación del proyecto de base de datos para modificar el plan de implementación](https://msdn.microsoft.com/library/ee461507(v=vs.100).aspx)  
 [Personalizar la compilación de bases de datos y la implementación con colaboradores de implementación y compilación](https://msdn.microsoft.com/library/ee461505(v=vs.100).aspx)  
   

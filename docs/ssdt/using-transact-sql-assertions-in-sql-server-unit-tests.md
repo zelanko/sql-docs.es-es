@@ -8,15 +8,15 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 34cea0d4a251266d21218cefaee2d5f122e574ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0b6949adf3c92d14d081ef07d8e30605a22fe9d8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543900"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65102007"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>Usar aserciones de Transact-SQL en pruebas unitarias de SQL Server
 En una prueba unitaria de SQL Server, el script de prueba Transact\-SQL se ejecuta y devuelve un resultado. En ocasiones, los resultados se devuelven como un conjunto de resultados. Puede validar los resultados mediante condiciones de prueba. Por ejemplo, puede usar una condición de prueba para comprobar cuántas filas se devuelven en un conjunto de resultados determinado o comprobar cuánto tiempo tardó en ejecutarse una prueba determinada. Para más información sobre las condiciones de prueba, consulte [Usar condiciones de prueba en pruebas unitarias de SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md).  
@@ -57,7 +57,7 @@ Donde:
   
 Se omite cualquier parámetro no especificado. Estos parámetros se pasan a la instrucción RAISERROR en el código de la base de datos. Si especifica MatchFirstError = true, el atributo coincidirá con cualquier error de SQL en la excepción. El comportamiento predeterminado (MatchFirstError = true) consiste en hacer coincidir solamente el primer error que aparezca.  
   
-Para obtener un ejemplo de cómo usar excepciones esperadas y una prueba unitaria negativa de SQL Server, consulte [Tutorial: Crear y ejecutar una prueba unitaria de SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
+Para obtener un ejemplo de cómo usar excepciones esperadas y una prueba unitaria negativa de SQL Server, vea [Tutorial: Crear y ejecutar una prueba unitaria de SQL Server](../ssdt/walkthrough-creating-and-running-a-sql-server-unit-test.md).  
   
 ## <a name="the-raiserror-statement"></a>Instrucción RAISERROR  
   
@@ -79,11 +79,11 @@ donde:
   
 @ErrorState es un entero arbitrario de 1 a 127. Puede usar este entero para distinguir entre las repeticiones de un solo error que se genera en ubicaciones diferentes en el código.  
   
-Para más información, consulte [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). En el tema [Cómo: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md) se proporciona un ejemplo de cómo usar RAISERROR en una prueba unitaria de SQL Server.  
+Para más información, consulte [RAISERROR (Transact-SQL)](https://msdn.microsoft.com/library/ms178592.aspx). Encontrará un ejemplo del uso de RAISERROR en una prueba unitaria de SQL Server en el tema [Cómo: Escribir una prueba unitaria de SQL Server que se ejecuta en el ámbito de una única transacción](../ssdt/how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Crear y definir pruebas unitarias de SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Usar condiciones de prueba en pruebas unitarias de SQL Server](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)  
 [Comprobar el código de base de datos con pruebas unitarias de SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-[Cómo: Abrir una prueba unitaria de SQL Server para editarla](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
+[Cómo: Abrir una prueba unitaria de SQL Server para editarla](../ssdt/how-to-open-a-sql-server-unit-test-to-edit.md)  
   

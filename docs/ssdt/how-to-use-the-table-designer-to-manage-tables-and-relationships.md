@@ -1,5 +1,5 @@
 ---
-title: Uso del Diseñador de tablas para administrar tablas y relaciones | Microsoft Docs
+title: 'Procedimientos: Usar el Diseñador de tablas para administrar tablas y relaciones | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -12,17 +12,17 @@ f1_keywords:
 - sql.data.tools.design.table.columnsgrid.view
 - sql.data.tools.design.table.scriptpanel
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6a312fbcfe6cfb25f612bb095bcff70656009a11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d70fe813437ff6204173dc20df90d029f6568fb
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652882"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65096861"
 ---
-# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Cómo: Usar el Diseñador de tablas para administrar tablas y relaciones
+# <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Procedimientos: Uso el Diseñador de tablas para administrar tablas y relaciones
 El Diseñador de tablas proporciona una experiencia visual junto con el Editor de Transact\-SQL para crear y editar estructuras de tablas, incluidos objetos de programación específicos de tablas, para bases de datos de SQL Server.  Se inicia al crear una nueva tabla para una base de datos conectada o un proyecto, o al hacer doble clic para editar una tabla en el Explorador de objetos de SQL Server o en el Explorador de soluciones.  
   
 El diseñador consta de la cuadrícula de columnas, el panel de scripts y el panel Contexto. La cuadrícula de columnas muestra todas las columnas de la tabla. En esta cuadrícula se pueden agregar, editar y eliminar columnas.  El panel de contexto le ofrece una vista lógica de la definición de tabla (claves, índices, restricciones, desencadenadores, etc.) y le permite seleccionar un objeto para resaltar sus relaciones con las columnas individuales. También puede agregar objetos nuevos a la tabla en este panel, así como editar las propiedades de un objeto seleccionado en la cuadrícula de propiedades. El panel de scripts muestra la definición de la estructura de tabla, y resalta el script del objeto seleccionado en el panel Contexto o en la cuadrícula de columnas. Es posible editar el script viendo en paralelo la cuadrícula de columnas y el panel Contexto. Los cambios realizados en cualquiera de los tres paneles se propagarán a los otros dos inmediatamente.  
@@ -56,6 +56,6 @@ El diseñador consta de la cuadrícula de columnas, el panel de scripts y el pan
   
     Observe que la experiencia de crear y editar entidades de base de datos para un proyecto sin conexión es idéntica a la realización de las tareas con una base de datos conectada.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Cómo: Crear objetos de base de datos usando el Diseñador de tablas](../ssdt/how-to-create-database-objects-using-table-designer.md)  
   

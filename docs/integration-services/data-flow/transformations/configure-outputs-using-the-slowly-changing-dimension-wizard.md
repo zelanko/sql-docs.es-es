@@ -15,14 +15,18 @@ ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f1d8df75ae85367f57de01e9f8a60bab902242
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b4013b26e52c98566557d8195b5b401956d0721b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274308"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726214"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurar salidas mediante el Asistente para dimensión de variación lenta
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El Asistente para dimensiones variables funciona como editor para la transformación Dimensión de variación lenta. Generar y configurar el flujo de datos para datos de dimensiones de variación lenta puede ser una tarea compleja. El Asistente para dimensiones variables ofrece el método más simple para generar el flujo de datos para las salidas de la transformación Dimensión de variación lenta, ya que ofrece una guía paso a paso de la asignación de columnas, la selección de columnas de clave empresarial, el establecimiento de atributos de cambio de las columnas y la configuración de la admisión de miembros de dimensión deducidos.  
   
  Debe elegir por lo menos una columna de clave empresarial en la tabla de dimensiones y asignarla a una columna de entrada. El valor de clave empresarial vincula un registro del origen con un registro de la tabla de dimensión. La transformación utiliza esta asignación para ubicar el registro de la tabla de dimensión y determinar si un registro es nuevo o cambia. La clave empresarial suele ser la clave principal del origen, pero puede ser una clave alternativa siempre que identifique un registro de forma exclusiva y su valor no cambie. La clave empresarial puede ser también una clave compuesta, que se compone de varias columnas. La clave principal de la tabla de dimensión suele ser una clave suplente, lo que se traduce en que una columna de identidad o una solución personalizada, como un script, genera automáticamente un valor numérico.  

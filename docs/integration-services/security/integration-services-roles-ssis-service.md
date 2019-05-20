@@ -21,14 +21,18 @@ ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 54f0d5afc9893c188c79658fe6301394ac17bb2b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e2b8a69e22a9765ee67c9c80a625a0093c268f3a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274223"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718048"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Roles de Integration Services (servicio SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona determinados roles fijos a nivel de base de datos para ayudar a proteger el acceso a los paquetes almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los roles disponibles son diferentes, según si va a guardar paquetes en la base de datos de catálogo de SSIS (SSISDB) o en la base de datos msdb.  
   
 ## <a name="roles-in-the-ssis-catalog-database-ssisdb"></a>Roles de la base de datos de catálogo de SSIS (SSISDB)  

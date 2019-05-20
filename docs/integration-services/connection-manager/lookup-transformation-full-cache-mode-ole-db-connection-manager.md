@@ -13,14 +13,18 @@ ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3ed0f4852fb347a13d3b92e10cedce29cbf2a8cf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 280351a1f4703c8b04138e70ddacbea2ef5d5122
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275292"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728180"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>Transformación Búsqueda en el modo de caché completa - Administrador de conexiones OLE DB
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Puede configurar la transformación Búsqueda para que use el modo de caché completa y un administrador de conexiones OLE DB. En el modo de caché completa, el conjunto de datos de referencia se carga en la memoria caché antes de que se ejecute la transformación Búsqueda.  
   
  La transformación Búsqueda realiza búsquedas mediante la combinación de datos de las columnas de entrada procedentes de un origen de datos conectado con columnas de un conjunto de datos de referencia. Para más información, consulte [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  

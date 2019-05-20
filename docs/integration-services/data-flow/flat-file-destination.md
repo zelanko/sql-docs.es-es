@@ -20,14 +20,18 @@ ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 96badece6d707558fa9fcda87bdf9f71af64255e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5c432741bd8ba3d369230ac72e26ee5516d21d97
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290441"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726808"
 ---
 # <a name="flat-file-destination"></a>Destino de archivo plano
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El destino de archivo plano escribe datos en un archivo de texto. El archivo de texto puede tener formato delimitado, de ancho fijo, de ancho fijo con delimitador de filas o desigual a la derecha.  
   
  Puede configurar el destino de archivo plano de las maneras siguientes:  

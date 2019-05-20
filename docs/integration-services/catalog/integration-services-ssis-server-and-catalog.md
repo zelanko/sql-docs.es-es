@@ -14,14 +14,18 @@ ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 25d76f4ad37b5fb8631dfacb526576c1fd52d2bf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 81739ff18b8030194b3cb2d2245abb5983fd2725
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270835"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729312"
 ---
 # <a name="integration-services-ssis-server-and-catalog"></a>Servidor y catálogo de Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Después de diseñar y probar paquetes en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], puede implementar los proyectos que contienen los paquetes en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  El servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que hospeda la base de datos de **SSISDB** . La base de datos almacena los objetos siguientes: paquetes, proyectos, parámetros, permisos, propiedades del servidor e historial operativo.  

@@ -20,14 +20,18 @@ ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: acd1c079dbbd79b3cdedd94351cb99829d2f0339
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 785f7f0af9a41052a870edc8feaf566585a45e89
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277744"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725971"
 ---
 # <a name="merge-join-transformation"></a>Combinación de mezcla, transformación
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La transformación Combinación de mezcla proporciona una salida que se genera combinando dos conjuntos de datos ordenados mediante una combinación FULL, LEFT o INNER. Por ejemplo, puede utilizar una combinación LEFT para combinar una tabla que incluye información de productos con una tabla que incluye el país o la región en que se fabricó un producto. El resultado es una tabla que muestra todos los productos y su país o región de origen.  
   
  Puede configurar la transformación Combinación de mezcla de las siguientes maneras:  

@@ -12,14 +12,18 @@ ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 385ff11ddd79430f122a5390b45af77d8fba9205
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 28d2381c82bc8c1dfe324b396431397a8cea1694
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272435"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723798"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Cuadro de diálogo Vista previa de los datos (Asistente para importación y exportación de SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Después de especificar los datos que quiere copiar, puede hacer clic en **Vista previa** para abrir el cuadro de diálogo **Vista previa de los datos** . En esta página, puede obtener una vista previa de hasta 200 filas de datos de ejemplo del origen de datos. Esto confirma que el asistente va a copiar los datos que quiere copiar.
   
 ## <a name="screen-shot-of-the-preview-data-page"></a>Captura de pantalla de la página Vista previa de los datos 

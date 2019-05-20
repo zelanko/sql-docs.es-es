@@ -11,14 +11,18 @@ ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f131956e913e210c529921e7ed6655c91f890e77
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ed62b74256b15aa27ca94459963928ae4b2727ca
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282699"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729110"
 ---
 # <a name="advanced-connection-properties"></a>Propiedades avanzadas de conexión
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use el cuadro de diálogo **Propiedades avanzadas de conexión** para agregar más parámetros de conexión a la cadena de conexión.  
   
  Los parámetros de conexión adicionales pueden ser cualquier parámetro de conexión ODBC admitido por la instancia de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que esté usando.  

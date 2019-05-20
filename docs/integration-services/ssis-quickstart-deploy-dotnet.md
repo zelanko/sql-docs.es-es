@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d773d0d75c843c05b9e9273f1fbbe9eec9a16721
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 48055b6713eeab212859afe974df71e51c223010
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279690"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717729"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>Implementar un proyecto de SSIS con código C# en una aplicación .NET
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 En este inicio rápido se muestra cómo escribir código C# para conectarse a un servidor de bases de datos e implementar un proyecto de SSIS.
 
 Para crear una aplicación de C#, puede usar Visual Studio, Visual Studio Code u otra herramienta de su elección.

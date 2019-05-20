@@ -10,14 +10,18 @@ ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d17b7115fb0a748c16fc7093100d67f377610268
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 17dad1100e0a4dc9df770ef781f8294198247af9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221899"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723859"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Conectarse a orígenes de datos con el asistente para importación y exportación de SQL Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Los temas de esta sección muestran cómo conectarse a varios orígenes de datos de uso frecuente al ejecutar el asistente para importación y exportación de SQL Server. Tendrá que proporcionar la información de conexión de los orígenes de datos en las páginas **Elegir un origen de datos** y **Elegir un destino** del asistente.
 
 Los temas de esta sección solo describen cómo **conectarse a los orígenes de datos** desde las páginas **Elegir un origen de datos** y **Elegir un destino** del asistente. Si busca algo más, consulte [Temas y tareas relacionados](#related).

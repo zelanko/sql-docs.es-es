@@ -13,14 +13,18 @@ ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 247b0b7a1f54417257d3af0e59f07dadf6d669e6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6f9d4fecd34be2464947ce3c493b8bd333d2ce0c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280399"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724163"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Conectarse a orígenes de datos del componente de script
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Un administrador de conexiones es una unidad práctica que encapsula y almacena la información necesaria para conectarse a un origen de datos de un tipo determinado. Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
  Para hacer que los administradores de conexiones existentes estén disponibles para el acceso por parte del script personalizado del componente de origen o de destino, haga clic en los botones **Agregar** y **Quitar** de la página **Administradores de conexiones** del **Editor de transformación Script**. Sin embargo, debe escribir su propio código personalizado para cargar o guardar los datos y posiblemente para abrir y cerrar la conexión al origen de datos. Para obtener más información acerca de la página **Administradores de conexiones** del **Editor de transformación Script**, vea [Configurar el componente de script en el editor de componentes de script](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md) y [Editor de transformación Script &#40;página Administradores de conexiones&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  

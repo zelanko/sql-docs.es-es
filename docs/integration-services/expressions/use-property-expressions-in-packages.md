@@ -20,14 +20,18 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 273199612b1cf358ff82192c126b33c3fd2a94fd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f8373f860bfb9346f9df32649976ce53f1c9d8be
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277664"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724884"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expresiones de propiedad en paquetes
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Una expresión de propiedad es una expresión asignada a una propiedad para permitir la actualización dinámica de la propiedad en tiempo de ejecución. Por ejemplo, una expresión de propiedad puede actualizar la línea Para que utiliza una tarea Enviar correo, insertando una dirección de correo electrónico almacenada en una variable.  
   
  Se puede agregar una expresión a un paquete, tarea, bucle ForEach, bucle For, secuencia, enumerador ForEach, controlador de eventos, administrador de conexiones de paquetes o proyectos, o proveedor de registro. Cualquier propiedad de estos objetos que sea de lectura/escritura puede implementa una expresión de propiedad. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] también admite el uso de expresiones de propiedad en algunas propiedades personalizadas de los componentes de flujo de datos. Las variables y restricciones de precedencia no admiten expresiones de propiedad, pero incluyen propiedades especiales en las que puede utilizar expresiones.  

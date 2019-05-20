@@ -11,14 +11,18 @@ ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9805a1d1fd1c6e025ee7ddb83c7241037dbae30b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fd9a0270f4fabdae863ba1c476af9ae10b006bab
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273360"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721825"
 ---
 # <a name="lesson-4-2-create-a-corrupted-file"></a>Lección 4-2: Creación de un archivo dañado
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Para demostrar la configuración y el control de los errores de transformación, necesita un archivo plano de ejemplo que, cuando se procese, genere un error en un componente.  
   

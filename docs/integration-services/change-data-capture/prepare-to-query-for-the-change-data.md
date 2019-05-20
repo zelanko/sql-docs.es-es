@@ -13,14 +13,18 @@ ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7b57e5b2bf98b60e80bf4eddbf1583a7abd24802
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c4d0fdc777715dc7077fc3396e533c5e6336a675
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279999"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728651"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>Preparar para consultar datos modificados
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   En el flujo de control de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la tercera y última tarea consiste en preparar la consulta de los datos modificados y agregar una tarea Flujo de datos.  
   
 > [!NOTE]  

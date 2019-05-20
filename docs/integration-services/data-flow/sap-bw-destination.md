@@ -11,14 +11,18 @@ ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24e34745d8562f5e990855f1e67526684d171383
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6ae27f40a1da682ee0254d3605f3f05d47ceba44
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280929"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726425"
 ---
 # <a name="sap-bw-destination"></a>Destino de SAP BW
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El destino de SAP BW es el componente de destino de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. De esta forma, el destino de SAP BW carga los datos desde el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en la versión 7 del sistema SAP Netweaver BW.  
   
  Este destino tienen una entrada y una salida de error.  

@@ -11,14 +11,18 @@ ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 52641812a754ccc5aa810fe63fdb8dd3a1b6c031
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 6fd9f7ffc5c07fdfb310984426b57cd84e521137
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290341"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65716985"
 ---
-# <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump
+# <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Hace que un paquete en ejecución pause y cree un archivo de volcado. El archivo se almacena en la carpeta *\<unidad>*:\Archivos de programa\Microsoft SQL Server\130\Shared\ErrorDumps.  
@@ -46,7 +50,7 @@ EXEC create_execution_dump @execution_id = 88
   
  Cuando se produce un error en el procedimiento almacenado, se genera un error.  
   
-## <a name="result-set"></a>Conjunto de resultados  
+## <a name="result-set"></a>Tipo de cursor  
  None  
   
 ## <a name="permissions"></a>Permisos  

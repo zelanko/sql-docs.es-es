@@ -25,14 +25,18 @@ ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5241480a1c572085a2f931b22eb76eca9f207178
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 70fa79702aadcca09c43d1ca6d9fbeef0988d8f2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281939"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724430"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Provocar y definir eventos en una tarea personalizada
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El motor en tiempo de ejecución de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] facilita una colección de eventos que proporciona el estado del progreso de una tarea cuando esta se valida y ejecuta. La interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> define estos eventos y se proporciona a las tareas como un parámetro para los métodos <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>.  
   
  Hay otro conjunto de eventos, que se definen en la interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>, que produce <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> en nombre de la tarea. <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> provoca eventos que se producen antes y después de la validación y ejecución, mientras que la tarea provoca los eventos que se producen durante la ejecución y validación.  

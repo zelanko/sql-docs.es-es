@@ -15,14 +15,18 @@ ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 712f4c25af85db5c4ec7f5df52680e83aad06398
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f38f79f90a1ec39a013efc4efd03a13f96e51a72
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290011"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719125"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Administrar paquetes y carpetas mediante programación
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 <a name="top"></a> Cuando trabaja con paquetes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante programación, puede que quiera determinar si existe un paquete o carpeta individual, o administrar las carpetas en las que se almacenan los paquetes. La clase <xref:Microsoft.SqlServer.Dts.Runtime.Application> del espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> proporciona diferentes métodos para satisfacer estos requisitos.    
     
 ##  <a name="exists"></a> Determinar si existe un paquete o una carpeta    

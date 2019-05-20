@@ -11,14 +11,18 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc16bdad7012738fde65fbd695dae019d9d41f2c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277074"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720824"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Lección 6-4: Implementar el paquete de la lección 6
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 La implementación del paquete conlleva agregar el paquete al catálogo SSISDB de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en una instancia de SQL Server. En esta lección se agrega el paquete de la lección 6 al catálogo SSISDB, se establece el nuevo parámetro y se ejecuta el paquete. En esta lección se usa SQL Server Management Studio para agregar el paquete de la lección 6 al catálogo SSISDB e implementar el paquete. Después de implementar el paquete, se modifica el parámetro para que apunte a una ubicación nueva y luego se ejecuta el paquete.   
 En esta tarea se:  

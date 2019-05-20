@@ -7,16 +7,16 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f98934b22bef3ad8aff2b965552bbb0ac86e4eda
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: fa8c7adb49c9106e76528ccea4068ef36b95edcf
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643948"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821781"
 ---
 # <a name="transact-sql-code-snippets"></a>Fragmentos de código de Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51643948"
 |Describe cómo terminar de compilar una instrucción o bloque de [!INCLUDE[tsql](../../includes/tsql-md.md)] completos después de insertar un fragmento de código.|[Completar fragmentos de código de Transact-SQL](../../relational-databases/scripting/complete-transact-sql-snippets.md)|  
 |Describe cómo compilar sus propios fragmentos personalizados y agregarlos al conjunto de fragmentos de SQL Server.|[Agregar fragmentos de código de Transact-SQL](../../relational-databases/scripting/add-transact-sql-snippets.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Editores de consultas y texto &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

@@ -11,14 +11,18 @@ ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3d93b7e9fbcc1e614ba12a5974b45a5993411d98
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7b686a585b037a9377926198278a3a34f6fd4881
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273923"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721658"
 ---
 # <a name="lesson-4-1-copy-the-lesson-3-package"></a>Lección 4-1: Copia del paquete de la lección 3
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 En esta tarea, se crea una copia del paquete Lesson 3.dtsx de la lección 3. Si no ha completado la lección 3, puede agregar al proyecto el paquete completado de la lección 3 que se incluye con el tutorial y, después, realizar una copia del paquete con la que trabajar. Esta nueva copia se usará en toda la lección 4.  
   

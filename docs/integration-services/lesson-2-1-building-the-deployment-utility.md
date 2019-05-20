@@ -11,14 +11,18 @@ ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6655e4fcf33b66e4bef4025f69c91ec3c13bc79e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2272183b648d22db604d63326974c1b3c4686c0a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280899"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722433"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lección 2-1: Generar la utilidad de implementación
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 En esta tarea, configurará y generará una utilidad de implementación para el proyecto Deployment Tutorial.  
   
 Antes de generar la utilidad de implementación, debe modificar las propiedades del proyecto Deployment Tutorial. Usará el cuadro de diálogo **Deployment Tutorial Property Pages** (Páginas de propiedades de Deployment Tutorial) para configurar estas propiedades. En este cuadro de diálogo, debe habilitar la capacidad de actualizar configuraciones durante la implementación y especificar que el proceso de creación crea una utilidad de implementación. Después de establecer las propiedades, generará el proyecto.  

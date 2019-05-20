@@ -10,14 +10,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 53235c3c95c6c943ac340aecfaa8a62ff347a753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c384881ffdc02af219de417434d882d41d34c1ef
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659763"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718760"
 ---
 # <a name="integration-services-scale-out-manager"></a>Administrador de escalabilidad horizontal de Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 El administrador de escalabilidad horizontal es una herramienta que permite administrar toda la topología de escalabilidad horizontal de SSIS desde una sola aplicación. De este modo, es posible evitar tener que realizar las tareas de administración y ejecutar los comandos Transact-SQL en varios equipos.
 

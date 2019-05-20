@@ -22,14 +22,18 @@ ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c189f7de48e4a4e48c6fd12cc569bdc4c4a9d9e0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 84e76dba19f57024e22b459927624bcd0207e95d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281959"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724121"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codificar y depurar la tarea Script
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Después de configurar la tarea Script en el **Editor de la tarea Script**, puede escribir el código personalizado en el entorno de desarrollo de la tarea Script.  
   
 ## <a name="script-task-development-environment"></a>Entorno de desarrollo de la tarea Script  

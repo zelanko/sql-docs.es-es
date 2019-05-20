@@ -11,14 +11,18 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f926f1c1cb9c730401c220120c04ee679d005745
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ae385bd59de5f282ce383c6f819c6b5feb6521e6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272009"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721804"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Lección 4-3: Adición de redireccionamiento de flujo de errores
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 En la tarea anterior, la transformación Lookup Currency Key no puede generar una coincidencia cuando la transformación intenta procesar el archivo plano de ejemplo dañado que genera un error. Puesto que la transformación utiliza la configuración de salida de error predeterminada, cualquier error da lugar a un error de la transformación. Cuando se produce un error en la transformación, también se produce un error en el resto del paquete.  
   

@@ -17,14 +17,18 @@ ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b183ff23efd18a19e08033e64691b723d4b4f323
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 11414e0a669ea3169a610c98740b3fd35ff4e751
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276028"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727665"
 ---
 # <a name="ftp-task"></a>Tarea FTP
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tarea FTP descarga y carga archivos de datos, y administra directorios en servidores. Por ejemplo, un paquete puede descargar archivos de datos de un servidor remoto o de una ubicación de Internet como parte de un flujo de trabajo de paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Puede usar la tarea FTP para los siguientes fines:  
   
 -   Copiar directorios y archivos de datos de un directorio a otro, antes o después de mover datos, y aplicar transformaciones a los datos.  

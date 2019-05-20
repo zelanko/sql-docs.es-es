@@ -14,14 +14,18 @@ ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14fd2981a20bea0aac3d5ab06cf1a1a55cadad6a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 60284ac8c7c1f99bac6b5eae20748b2d7f5308ce
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276844"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729201"
 ---
 # <a name="project-properties-dialog-box"></a>Propiedades del proyecto (cuadro de diálogo)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] es una unidad de implementación. Cada proyecto puede contener paquetes, parámetros y referencias de entorno. Un proyecto es un objeto protegible y puede definir permisos en las entidades de seguridad de base de datos. Cuando se vuelve a implementar un proyecto, la versión anterior del mismo puede almacenarse en el catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Los parámetros del proyecto y los parámetros del paquete se pueden utilizar para asignar valores a las propiedades de los paquetes en el momento de la ejecución. Algunos parámetros requieren valores para que el paquete se pueda ejecutar. Los valores de parámetros que hacen referencia a las variables de entorno requieren que el proyecto tenga la referencia de entorno correspondiente antes de la ejecución.  

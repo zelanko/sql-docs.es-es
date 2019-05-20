@@ -19,14 +19,18 @@ ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42e26d257b915aad5ffa457605fbb68c1b66fab9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f0a32d1d21cd5f3c42fcb91ece5b5a6792c94ce6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290711"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728006"
 ---
 # <a name="bulk-insert-task"></a>Inserción masiva, tarea
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tarea Inserción masiva proporciona una forma muy eficaz de copiar grandes cantidades de datos a una tabla o vista de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, suponga que su empresa almacena una lista de productos de un millón de filas en un sistema central, pero el sistema de comercio electrónico de la empresa usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para rellenar páginas web. Debe actualizar la tabla de productos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todas las noches con la lista maestra de productos del gran sistema. Para ello, debe guardar la lista de productos con un formato delimitado por tabuladores y utilizar la tarea Inserción masiva para copiar los datos directamente a la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Para garantizar que la copia de datos se realice a gran velocidad, no se permite la aplicación de transformaciones a los datos mientras se mueven desde el archivo de origen a la tabla o la vista.  

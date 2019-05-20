@@ -16,14 +16,18 @@ ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47776933cee01725d19c74b571c63ad91342dd88
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d0d67f8d826f20006ff0b01dbf32e8bd5383d026
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272202"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727689"
 ---
 # <a name="file-system-task"></a>Tarea Sistema de archivos
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tarea Sistema de archivos realiza operaciones en archivos y directorios del sistema de archivos. Por ejemplo, un paquete puede utilizar la tarea Sistema de archivos para crear, mover o eliminar directorios y archivos. También puede utilizar la tarea Sistema de archivos para establecer atributos en archivos y directorios. Por ejemplo, la tarea Sistema de archivos puede convertir los archivos en archivos ocultos o de solo lectura.  
   
  Todas las operaciones de la tarea Sistema de archivos usan un origen, que puede ser un archivo o un directorio. Por ejemplo, el archivo que la tarea copia o el directorio que elimina es un origen. El origen puede especificarse mediante un administrador de conexiones de archivos que señala al directorio o archivo, o proporcionando el nombre de una variable que contiene la ruta de origen. Para más información, vea [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md) e [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  

@@ -13,14 +13,18 @@ ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 53021d9d3f2081ffb14876cd325bb8f1df8bf180
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: db439c34845dc01c54752e01428fa9793f994fdb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271287"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729093"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Aplicar los cambios al destino
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   En el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la tercera y última tarea consiste en aplicar los cambios al destino. Necesitará un componente para aplicar las inserciones, otro para aplicar las actualizaciones y otro más para aplicar las eliminaciones.  
   
 > [!NOTE]  

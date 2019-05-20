@@ -22,14 +22,18 @@ ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f7ec94a084105f4f9d1fc455814fd46a7ecab46
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: c841f1df93ffda6b453fe67301fb36d10c972782
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671241"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729209"
 ---
 # <a name="selecting-input-columns-programmatically"></a>Seleccionar mediante programación las columnas de entrada
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Después de haber conectado los componentes mediante programación, seleccione las columnas de los componentes de nivel superior que transformará en componentes de nivel inferior o por los que pasará a los componentes de nivel inferior. Si no selecciona las columnas de entrada para el componente, el componente no recibe ninguna fila de la tarea de flujo de datos.  
   
 ## <a name="selecting-columns"></a>Seleccionar columnas  

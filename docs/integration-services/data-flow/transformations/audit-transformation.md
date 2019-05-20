@@ -17,14 +17,18 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa02f74979843c43b5a495c608e3c8811f929237
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9161fe71f82d2ca0f2f31805dc07beba387bc28d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283009"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726303"
 ---
 # <a name="audit-transformation"></a>Auditar, transformación
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La transformación Auditar habilita el flujo de datos en un paquete para incluir datos sobre el entorno en el que se ejecuta el paquete. Por ejemplo, el nombre del paquete, el equipo y el operador se pueden agregar al flujo de datos. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye variables del sistema que proporcionan esta información.  
   
 ## <a name="system-variables"></a>Variables del sistema  

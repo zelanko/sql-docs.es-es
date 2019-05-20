@@ -16,14 +16,18 @@ ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9594567f4412ddf72943a397c7fa3d425f8fb27
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2914cdec402cee3be7ba92d74e0c8ff7db8fd41e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273432"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726633"
 ---
 # <a name="odbc-destination"></a>Destino ODBC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El destino ODBC carga de forma masiva los datos en tablas de base de datos que admiten ODBC. El destino ODBC usa un administrador de conexiones ODBC para conectarse al origen de datos.  
   
  Un destino ODBC incluye asignaciones entre las columnas de entrada y las columnas en el origen de datos de destino. No es necesario asignar columnas de entrada a todas las columnas de destino pero, según las propiedades de las columnas de destino, pueden producirse errores si no se asignan columnas de entrada a las columnas de destino. Por ejemplo, si una columna de destino no permite valores NULL, se debe asignar una columna de entrada a esa columna. Además, se pueden asignar columnas de tipos diferentes, sin embargo, si los datos de entrada no son compatibles con el tipo de las columnas de destino, se produce un error en tiempo de ejecución. En función de la opción de comportamiento del error, se omitirá el error, se producirá un error o la fila se enviará a la salida de error.  

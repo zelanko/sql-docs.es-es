@@ -11,14 +11,18 @@ ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 188735b5a02150ba801154e338090ce75dc23060
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e8903517affd4d0a8e395a17cb97e27ddd5a67d5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274178"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722447"
 ---
 # <a name="lesson-2-add-looping-with-ssis"></a>Lección 2: Adición de bucles con SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 En la [Lección 1: Creación de un proyecto y paquete básico con SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md), ha creado un paquete que extrae datos de un único origen de archivo plano. Después, los datos se han transformado mediante transformaciones de búsqueda. Por último, el paquete carga los datos en una copia de la tabla de hechos **FactCurrencyRate** de la base de datos de ejemplo **AdventureWorksDW2012**.  
   

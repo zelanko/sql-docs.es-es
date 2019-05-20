@@ -11,16 +11,16 @@ helpviewer_keywords:
 - dragging and dropping text
 - Query Editor [SQL Server Management Studio], dragging and dropping text
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a702a232c5b3b2e2d7e36a4278609311c37f9226
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e5a491e7c1c152f88b496f4833e43634fc11dde0
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643676"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820881"
 ---
 # <a name="drag-and-drop-text"></a>Arrastrar y colocar texto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "51643676"
   
  Al arrastrar texto se mueve, es decir, se borra de la ubicación anterior y se mueve a la nueva ubicación. Al presionar la tecla CTRL mientras se arrastra, el texto se copia a la nueva ubicación. Sin embargo, si arrastra un objeto desde el Explorador de objetos esta norma no se cumple, ya que el nombre del objeto no se elimina del Explorador de objetos.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Navegar por código y texto](../../relational-databases/scripting/navigate-code-and-text.md)  
   
   

@@ -11,14 +11,18 @@ ms.assetid: 13a82d41-dd7a-4708-bc84-4407a536c877
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c89571f4f1447574e50ceb1ad7c487badbc551d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f57318058b9640e771b30311fe0f7513dc7575e0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277954"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726600"
 ---
 # <a name="ole-db-custom-properties"></a>Propiedades personalizadas de OLE DB
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Propiedades personalizadas de origen**  
   
  El origen de OLE DB tiene tanto propiedades personalizadas como propiedades comunes a todos los componentes de flujo de datos.  

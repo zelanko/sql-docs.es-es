@@ -19,14 +19,18 @@ ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b58065146f19351c3eab9489a6e507fdc298853
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 57ab14256d3c1e7c909b125e470fca06ef3e7808
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277644"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724464"
 ---
 # <a name="coding-a-custom-task"></a>Codificar una tarea personalizada
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Una vez que haya creado una clase que herede de la clase base <xref:Microsoft.SqlServer.Dts.Runtime.Task> y haya aplicado el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> a la clase, debe invalidar la implementación de las propiedades y los métodos de la clase base para proporcionar su funcionalidad personalizada.  
   
 ## <a name="configuring-the-task"></a>Configurar la tarea  

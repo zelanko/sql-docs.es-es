@@ -12,14 +12,18 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0299a7b8bc6f43989b83bb24fa7cc23833ed4c09
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 8326920e557d6ed304414f96a7da040de0093dd0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276528"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723727"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Guardar y ejecutar el paquete (Asistente para importación y exportación de SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Después de especificar y configurar el origen y el destino de los datos, el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra **Guardar y ejecutar el paquete**. En esta página, especifique si quiere ejecutar la operación de copia inmediatamente. Según la configuración, es posible que también pueda guardar su configuración como un paquete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) para personalizarlo y volver a usarlo más adelante.
   
 **¿Qué es un paquete?** El asistente usa SQL Server Integration Services (SSIS) para copiar datos. En SSIS, la unidad básica es el paquete. El asistente crea un paquete SSIS en la memoria a medida que se desplaza por las páginas del asistente y especifica las opciones.

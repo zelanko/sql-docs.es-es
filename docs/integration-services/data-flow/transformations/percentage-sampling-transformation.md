@@ -22,14 +22,18 @@ ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98bd158b4b83a9d1fdef3911b7a2b3105aca28d2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 67fb4b94e777a974ff42c59d730a58bb1396f289
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275277"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725923"
 ---
 # <a name="percentage-sampling-transformation"></a>Muestreo de porcentaje, transformación
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La transformación Muestreo de porcentaje crea un conjunto de datos de muestra seleccionando un porcentaje de las filas de entrada de transformación. El conjunto de datos de muestra es una selección aleatoria de filas de la entrada de transformación, de forma que la muestra resultante sea representativa de la entrada.  
   
 > [!NOTE]  

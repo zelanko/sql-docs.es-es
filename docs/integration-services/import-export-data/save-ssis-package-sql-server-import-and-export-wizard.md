@@ -12,14 +12,18 @@ ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33bde1142408b160317c74f23cb7636783e44390
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 163cdb0de7c41961e0646e38a5a208ec842f11b9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279889"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723762"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Guardar el paquete SSIS (Asistente para importación y exportación de SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Si en la página **Guardar y ejecutar el paquete** especificó que quiere guardar la configuración como un paquete de SQL Server Integration Services (SSIS), el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra **Guardar el paquete SSIS**. En esta página, especifique opciones adicionales para guardar el paquete que creó el asistente.  
 
 Las opciones que se ven en la página **Guardar el paquete SSIS** dependen de la elección realizada anteriormente en la página **Guardar y ejecutar paquete** para guardar el paquete en SQL Server o en el sistema de archivos. Para echar otro vistazo a la página **Guardar y ejecutar paquete** , vea [Guardar y ejecutar paquete](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).

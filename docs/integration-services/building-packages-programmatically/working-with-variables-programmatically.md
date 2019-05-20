@@ -23,14 +23,18 @@ ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d46d8b70e22422b821190db5717b0c22062ea75d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 13543306533afaf22bbfd12a283d6a6a3e8bdef1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278054"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729246"
 ---
 # <a name="working-with-variables-programmatically"></a>Trabajar con variables mediante programación
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Las variables son una manera de establecer valores y controlar procesos en paquetes, contenedores, tareas y controladores de eventos de forma dinámica. Las restricciones de precedencia también pueden usar variables para controlar la dirección del flujo de datos en diferentes tareas. Las variables tienen diversos usos:  
   
 -   Actualizan las propiedades de un paquete en tiempo de ejecución.  

@@ -11,14 +11,18 @@ ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f52d5b011e2932ceeadc7f81a564dd52ad503917
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e55427c2249a93d2a97bbc13b7385dd56fac5d01
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275000"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723498"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>Lección 1-3: Adición y configuración de un administrador de conexiones OLE DB
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Después de agregar un administrador de conexiones de archivos planos al origen de datos, se agrega un administrador de conexiones OLE DB para conectarse al destino de datos. Un administrador de conexiones OLE DB permite a un paquete extraer datos de un origen de datos compatible con OLE DB o cargar datos en este origen de datos. Mediante un administrador de conexiones OLE DB, puede especificar el servidor, el método de autenticación y la base de datos predeterminada de la conexión.  
   

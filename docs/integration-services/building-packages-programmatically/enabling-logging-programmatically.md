@@ -24,14 +24,18 @@ ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb6ae0f62967da4ecf26bd47b29187538ca95fe0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 63fe305bb47c43d9302b90256fc21ac41491984a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276700"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729295"
 ---
 # <a name="enabling-logging-programmatically"></a>Habilitar el registro mediante programación
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El motor en tiempo de ejecución proporciona una colección de objetos <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> que permiten capturar información específica del evento durante la validación y ejecución de paquetes. Los objetos <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> están disponibles para los objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, incluidos los objetos <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> y <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. El registro se habilita en contenedores individuales o en el paquete completo.  
   
  Existen diferentes tipos de proveedores de registro disponibles para que los utilice un contenedor. Esto proporciona la flexibilidad necesaria para crear y almacenar información del registro en distintos formatos. Dar de alta un objeto contenedor en el registro es un proceso de dos pasos: en primer lugar se habilita el registro y, a continuación, se selecciona un proveedor de registro. Las propiedades <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingOptions%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> del contenedor se utilizan para especificar los eventos registrados y seleccionar el proveedor de registro.  

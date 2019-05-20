@@ -21,14 +21,18 @@ ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c89496fabad28d3491d9b2f648d6355ae404685b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 529bfc2a46ddb4cb6bbd0eb90f9d39dda0af63b1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282309"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726531"
 ---
 # <a name="raw-file-destination"></a>destino de archivo sin formato
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El destino de archivo sin formato escribe datos sin procesar en un archivo. Como el formato de los datos es el nativo del destino, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Esto significa que el destino de archivo sin formato puede escribir datos más rápidamente que otros destinos, como el destino de archivo plano o los destinos de OLE DB.  
   
  Además de escribir datos sin procesar en un archivo, puede utilizar el destino de archivo sin formato para generar un archivo sin formato vacío que contenga solo las columnas (archivo solo para metadatos), sin tener que ejecutar el paquete. El origen de archivo sin formato se usa para recuperar datos sin formato escritos previamente por el destino. Puede también designar el origen de archivo sin formato para el archivo que solo tiene metadatos.  

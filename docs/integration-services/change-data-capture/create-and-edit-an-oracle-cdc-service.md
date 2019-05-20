@@ -13,14 +13,18 @@ ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7b7db8c28670c4ac411bb2e618f7051d9639fc1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d5d690eeaa3d6af5efa06f1e3e439aa4ba7692a6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270381"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728944"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Crear y editar un servicio CDC de Oracle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Para crear y editar un nuevo servicio de Windows CDC de Oracle se emplea la Consola de configuración del servicio CDC.  
   
  Para crear un nuevo servicio de Windows CDC de Oracle, seleccione **Servicios CDC locales** en el panel izquierdo y, a continuación, haga clic en **Nuevo servicio** en el panel **Acciones** . También puede hacer clic con el botón derecho en **Local CDC Services** (Servicios CDC locales) y seleccionar **Nuevo servicio**. Se abrirá el cuadro de diálogo Nuevo servicio de Windows CDC de Oracle.  

@@ -10,14 +10,18 @@ ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b211885f68be72dbcb03f959aaa1f79307658805
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 790ffc531244e3a1b757b8809e7ca09e737e87b4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221929"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723874"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos de Access (Asistente para importación y exportación de SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 En este tema se muestra cómo conectarse a un origen de datos de **Microsoft Access** desde la página **Elegir un origen de datos** o **Elegir un destino** del Asistente para importación y exportación de SQL Server.
 
 En la siguiente captura de pantalla se muestra una conexión de ejemplo a una base de datos de Microsoft Access. En este ejemplo, no tiene que escribir un nombre de usuario y una contraseña, ya que la base de datos de destino no usa un archivo de información de grupo de trabajo.

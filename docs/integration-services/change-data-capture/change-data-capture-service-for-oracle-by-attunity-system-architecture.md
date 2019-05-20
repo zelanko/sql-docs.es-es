@@ -11,14 +11,18 @@ ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0142770f0cb097ea3d64ce6b934308fc4c3cb79c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c14818fc3a89800c681aa6eb4a527e281ed91957
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277734"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729020"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Servicio de captura de datos modificados para Oracle de Attunity (Arquitectura del sistema)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El servicio CDC para Oracle captura los cambios realizados en las tablas seleccionadas de una o varias bases de datos de Oracle de origen en bases de datos CDC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ubicadas en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el diagrama siguiente se muestran los componentes que constituyen el servicio CDC para Oracle.  
   
  ![Arquitectura de servicio](../../integration-services/change-data-capture/media/service-architecture.gif "Service Architecture")  

@@ -15,14 +15,18 @@ ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99ab67a88006579d61ba4d084d37b60d5b80bd45
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5eaf16b94271bb27808571c9bf219e41d8a1d868
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276924"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725059"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (Paréntesis) (expresión de SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Identifica el orden de evaluación de las expresiones. Las expresiones escritas entre paréntesis tienen la prioridad de evaluación más alta. Las expresiones anidadas escritas entre paréntesis se evalúan desde dentro hacia fuera.  
   
  Los paréntesis también se usan para hacer que resulte más fácil comprender las expresiones complejas.  

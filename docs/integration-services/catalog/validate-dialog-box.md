@@ -14,14 +14,18 @@ ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9af217f8a866438774a4345b2fd799609ef5e360
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 26390931bce4a2b26a4b9e2c234368b02a1e0442
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282809"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729150"
 ---
 # <a name="validate-dialog-box"></a>Validar, cuadro de diálogo
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use el cuadro de diálogo **Validar** para comprobar si hay problemas comunes en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un proyecto o paquete.  
   
  Si hay un problema, aparecerá un mensaje en la parte superior del cuadro de diálogo. De lo contrario, aparecerá el término Preparado en la parte superior.  

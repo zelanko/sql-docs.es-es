@@ -14,14 +14,18 @@ ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a4cc990067381cacc14275b5f7948c63284b216a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fea06da23752c75d56f22419a458f0719264283c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275540"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723714"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>Installing Integration Services Versions Side by Side (Instalación de versiones de Integration Services en paralelo)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Puede instalar   
       [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Integration Services (SSIS) en paralelo con versiones anteriores de SSIS. En este tema se describen algunas limitaciones de las instalaciones en paralelo.  
   

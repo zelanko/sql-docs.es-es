@@ -17,14 +17,18 @@ ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d8e8a699ababd04002cd85582f55ae7903f0474
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 013e0d0d28d961496e4bec367775d16f994a5e97
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275424"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723515"
 ---
 # <a name="integration-services-user-interface"></a>Interfaz de usuario de Integration Services
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Además de las superficies de diseño de las pestañas del Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , la interfaz de usuario proporciona acceso a las siguientes ventanas y cuadros de diálogo para agregar características a paquetes y configurar las propiedades de los objetos de paquete:  
   
 -   Los cuadros de diálogo y ventanas que usa para agregar funcionalidad tal como registros y configuraciones a los paquetes.  

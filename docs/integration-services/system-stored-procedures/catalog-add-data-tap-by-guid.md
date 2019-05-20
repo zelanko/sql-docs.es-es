@@ -11,14 +11,18 @@ ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5bafb09fb682f241724927c73dd417283de9bddc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: bbe729ebef5d156f6c946e0c5cda62c1cefdcd81
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273100"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717201"
 ---
-# <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid
+# <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Agrega una derivación de datos a una ruta de acceso de flujo de datos específica de un flujo de datos de paquete, para una instancia de la ejecución.  
@@ -85,7 +89,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
   
  Cuando se produce un error en el procedimiento almacenado, se genera un error.  
   
-## <a name="result-set"></a>Conjunto de resultados  
+## <a name="result-set"></a>Tipo de cursor  
  None  
   
 ## <a name="permissions"></a>Permisos  

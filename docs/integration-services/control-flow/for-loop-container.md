@@ -18,14 +18,18 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47c0bd557cede1a7ecc3fe287960267112293cd4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 683d3bcee8450a62a040663dacf30d337556529d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276320"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727685"
 ---
 # <a name="for-loop-container"></a>Contenedor de bucles For
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El contenedor de bucles For define un flujo de control que se repite en un paquete. La implementación del bucle es similar a la estructura de bucle **For** de los lenguajes de programación. En cada repetición del bucle, el contenedor de bucles For evalúa una expresión y repite el flujo de trabajo hasta que la expresión se evalúe como **False**.  
   
  El contenedor de bucles For usa los elementos siguientes para definir el bucle:  

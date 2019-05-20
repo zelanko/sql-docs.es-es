@@ -11,14 +11,18 @@ ms.assetid: a345675b-d32e-4624-96cf-ec656730b114
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 676b8c1dfbf30fbf7309ab567736905d31bab966
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 427af0f98682975e040452f1e2fd009526bd067d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278034"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65715945"
 ---
 # <a name="catalogsetenvironmentproperty-ssisdb-database"></a>catalog.set_environment_property (base de datos de SSISDB)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Establece la propiedad de un entorno del catálogo de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

@@ -16,14 +16,18 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4dd066885e321a9233cae82769676c7c526322aa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e51dd2b69e7b815134b156e0ff065c81aa8d4a63
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274251"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726162"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Derivar valores de columna mediante la transformación Columna derivada
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Para agregar y configurar una transformación Columna derivada, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
   
  La transformación Columna derivada usa expresiones para actualizar los valores de las columnas existentes o agregar valores a las nuevas. Si se elige agregar valores a columnas nuevas, el cuadro de diálogo **Editor de transformación Columna derivada** evalúa la expresión y define los metadatos de las columnas en función del resultado. Por ejemplo, si una expresión concatena dos columnas (cada una con el tipo de datos DT_WSTR y una longitud de 50) con un espacio entre los dos valores de las columnas, la nueva columna tiene el tipo de datos DT_WSTR y una longitud de 101. El tipo de datos de las columnas nuevas se puede actualizar. El único requisito es que el tipo de datos sea compatible con los datos insertados. Por ejemplo, el cuadro de diálogo **Editor de transformación Columna derivada** genera un error de validación si se asigna un valor de datos a una columna con tipo de datos entero. En función del tipo de datos seleccionado, se puede especificar la longitud, precisión, escala y página de códigos de la columna.  

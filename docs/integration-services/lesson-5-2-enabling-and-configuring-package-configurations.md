@@ -11,14 +11,18 @@ ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b65e44de58e2aeea21485b1a2875fa7f00349dc5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ee2c54b072cf9cd219bed10b0ade7f59fa8bc354
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271689"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721525"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>Lección 5-2: Habilitar y configurar configuraciones de paquetes
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 En esta tarea se convierte el proyecto al modelo de implementación de paquetes y se habilitan las configuraciones de paquetes mediante el Asistente para configuración de paquetes. Este asistente se usa para generar un archivo de configuración XML que contiene parámetros de configuración para la propiedad **Directory** del contenedor de bucles Foreach. El valor de la propiedad **Directory** se proporciona a través de una nueva variable de nivel de paquete que puede actualizarse en tiempo de ejecución. También se rellena una nueva carpeta de datos de ejemplo que se usa para las pruebas.  
   

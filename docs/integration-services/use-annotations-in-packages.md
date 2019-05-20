@@ -15,14 +15,18 @@ ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c4d9cc0f6d3487a1eae6118c2df64527d97160f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a9953cba066e658b6198718f4039487330e8f15f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282019"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713621"
 ---
 # <a name="use-annotations-in-packages"></a>Usar anotaciones en paquetes
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] proporciona anotaciones, que puede usar para que los paquetes se autodocumenten y sean más fáciles de entender y mantener. Puede agregar anotaciones a las superficies de diseño de flujo de control, flujo de datos y controlador de eventos del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] . Las anotaciones pueden contener cualquier tipo de texto y resultan útiles para agregar etiquetas, comentarios y demás información descriptiva a un paquete. Las anotaciones únicamente son una característica de tiempo de diseño. Por ejemplo, no se escriben en los registros.  
   
  Cuando se presiona ENTRAR, el texto se ajusta a la línea siguiente. El cuadro de anotación aumenta de tamaño automáticamente a medida que agrega líneas de texto adicionales. Las anotaciones de paquetes se guardan como texto sin cifrar en la sección CDATA del archivo de paquete.  

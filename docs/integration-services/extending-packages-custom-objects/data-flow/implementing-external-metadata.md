@@ -24,14 +24,18 @@ ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ce6b5ea32630a5dca08657150c2819d61c499813
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 925db41997def8591c9304e3116f23271ed77581
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290361"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724668"
 ---
 # <a name="implementing-external-metadata"></a>Implementar metadatos externos
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Cuando un componente está desconectado de su origen de datos, puede validar las columnas de las colecciones de columnas de entrada y de resultados con las columnas en su origen de datos externo mediante la interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>. Esta interfaz permite mantener una instantánea de las columnas en el origen de datos externo y asignar estas columnas a las columnas de la colección de columnas de entrada y de resultados del componente.  
   
  La implementación de columnas de metadatos externos agrega un nivel de sobrecarga y complejidad al desarrollo del componente, porque debe mantener y validar una colección de columnas adicional, pero la capacidad de evitar los caros viajes de ida y vuelta (round trip) al servidor para la validación puede hacer que este trabajo de desarrollo valga la pena.  

@@ -22,14 +22,18 @@ ms.assetid: 9f0b3a43-3eaa-4b3c-bb08-29b630c11306
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 65dad92f0d005e24e6cc7f5a1846c5c29cbd7d1c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7b460d01adfdc4a2282311c16b7c7a9acddb6542
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289981"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724448"
 ---
 # <a name="connecting-to-data-sources-in-a-custom-task"></a>Conectarse a orígenes de datos de una tarea personalizada
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Las tareas se conectan a orígenes de datos externos para recuperar o guardar datos mediante un administrador de conexiones. En tiempo de diseño, un administrador de conexiones representa una conexión lógica y describe información clave como el nombre de servidor y las propiedades de autenticación. En tiempo de ejecución, las tareas llaman al método <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> del administrador de conexiones para establecer la conexión física al origen de datos.  
   
  Dado que un paquete puede contener muchas tareas, cada una de los cuales puede tener conexiones a orígenes de datos distintos, el paquete realiza el seguimiento de todos los administradores de conexión de una colección, la colección <xref:Microsoft.SqlServer.Dts.Runtime.Connections>. Las tareas utilizan la colección del paquete para buscar el administrador de conexiones que utilizarán durante la validación y ejecución. La colección <xref:Microsoft.SqlServer.Dts.Runtime.Connections> es el primer parámetro de los métodos <xref:Microsoft.SqlServer.Dts.Runtime.Task.Validate%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>.  

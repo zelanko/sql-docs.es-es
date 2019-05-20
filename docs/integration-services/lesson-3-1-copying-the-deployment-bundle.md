@@ -11,14 +11,18 @@ ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9fbe3f30d37bab783424deeefb5517cd6fa553a2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 153975d4b2a418c694188ca30c0ddb9fc19b0fc8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279469"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722395"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>Lección 3-1: Copiar el conjunto de implementación
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 En esta tarea, copiará el paquete de implementación en el equipo de destino.  
   
 La forma más fácil de copiar el paquete de implementación en el equipo de destino es crear primero un recurso compartido público en dicho equipo, asignar una unidad al recurso compartido público y, a continuación, copiar el paquete de implementación en el recurso compartido. Si no sabe cómo crear y configurar carpetas públicas o asignar unidades, vea la documentación de Windows.  

@@ -16,14 +16,18 @@ ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 62517e3934c7ebb446cdcf02a19eca1e1a547b3b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 27b5fd7de403e252967d0d2a9b8073eafbe0c959
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270531"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726703"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Asignar parámetros de consulta a variables en un componente de flujo de datos
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Al configurar el origen de OLE DB para utilizar las consultas parametrizadas, puede asignar los parámetros a las variables.  
   
  El origen de OLE DB utiliza las consultas parametrizadas para filtrar los datos cuando el origen conecta con un origen de datos.  

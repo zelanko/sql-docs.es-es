@@ -21,14 +21,18 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff217e16fb9d153872d00074ff2f5d672be056d0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 64ee2c630d026870e8133377d34610d831ccc360
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273913"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727721"
 ---
 # <a name="execute-sql-task"></a>Tarea Ejecutar SQL
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tarea Ejecutar SQL ejecuta instrucciones SQL o procedimientos almacenados de un paquete. La tarea puede contener una sola instrucción SQL o múltiples instrucciones SQL que se ejecutarán de forma secuencial. Puede usar la tarea Ejecutar SQL para los siguientes fines:  
   
 -   Truncar una tabla o vista en preparación para insertar datos.  

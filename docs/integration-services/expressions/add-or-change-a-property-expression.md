@@ -14,14 +14,18 @@ ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d47462eeb7259b0289f7c554c0c6a4bd30dbb995
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5cf167278c898b71466379dc1e65d783ce2b710b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275236"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725663"
 ---
 # <a name="add-or-change-a-property-expression"></a>Agregar o cambiar una expresión de propiedad
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Puede crear expresiones de propiedad para paquetes, tareas, contenedores de bucles ForEach, contenedores de bucles For, contenedores de secuencias, controladores de eventos, administradores de conexión de paquetes y proyectos, y proveedores de registro.  
   
  Para crear o cambiar expresiones de propiedad, puede utilizar el **Editor de expresiones de propiedad** o el **Generador de expresiones**. Se puede tener acceso al **Editor de expresiones de propiedad** desde los editores personalizados que están disponibles para tareas y contenedores, o desde la ventana **Propiedades** . Se puede tener acceso al**Generador de expresiones** desde el **Editor de expresiones de propiedad**. Aunque puede escribir expresiones en el **Editor de expresiones de propiedad** o en el **Generador de expresiones**, el **Generador de expresiones** proporciona un conjunto gráfico de herramientas que simplifica el proceso de generar expresiones complejas.  

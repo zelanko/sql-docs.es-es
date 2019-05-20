@@ -11,14 +11,18 @@ ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f39232dd7a1471d08eb283eea0819d909d1e8fca
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 82420ce073f65483043d44670fc538849a447d90
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281899"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723319"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>Lección 1-1: Crear un proyecto de Integration Services
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 El primer paso al crear un paquete en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es crear un proyecto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . En este proyecto de ejemplo se incluyen plantillas para los orígenes de datos, las vistas de orígenes de datos y los paquetes que pueden constituir una solución de transformación de datos.  
   

@@ -11,14 +11,18 @@ ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7715008903a51377a5819493a61d2cead90f604d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0f4d20c4a0eaaf573cdb9da6e9880df6d698a8f6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271660"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728631"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Script de registro complementario de Oracle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Este cuadro de diálogo muestra el script de registro complementario de Oracle.  
   
  Al preparar una instancia CDC para su uso, el diseñador CDC crea un script SQL de Oracle que configura el registro complementario para las tablas que se van a capturar. El script de registro complementario indica a Oracle que cuando se actualiza una tabla determinada, los registros de cambios que escribe en el registro de transacciones deben contener los datos de todas las columnas de interés, no solo de las columnas que han cambiado.  

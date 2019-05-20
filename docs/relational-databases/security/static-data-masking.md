@@ -11,17 +11,22 @@ author: aliceku
 ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91b0fde06d400b2c519e9e6c86854197a2aecd13
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 1cf3b95ec5836ac86770bd0cd9784f0617b91846
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516471"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580977"
 ---
 # <a name="static-data-masking"></a>Enmascaramiento estático de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Enmascaramiento estático de datos se ha publicado como un componente de [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 versión preliminar 5 y versiones posteriores. Hemos decidido que nuestro prototipo actual no cumple con las expectativas de nuestros clientes. Por lo tanto, no llevaremos adelante esta capacidad. Le informaremos sobre nuestros planes si tenemos un candidato de reemplazo.
+Enmascaramiento estático de datos se ha publicado como un componente de [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 versión preliminar 5 y versiones posteriores. 
+> [!IMPORTANT]
+> Hemos decidido que nuestro prototipo actual no cumple con las expectativas de nuestros clientes. Por lo tanto, no llevaremos adelante esta capacidad. Le informaremos sobre nuestros planes si tenemos un candidato de reemplazo.
+>
+
+
 
 ![Enmascaramiento de datos estático](../../relational-databases/security/media/sql-static-data-masking/static_data_masking_intro_image.PNG)
 

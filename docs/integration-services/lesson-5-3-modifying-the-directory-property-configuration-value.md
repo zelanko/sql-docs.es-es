@@ -11,14 +11,18 @@ ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b685268f1a4b76adf1d8947dde53c251190ee3d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 09d4279501110d15eab2ca339e33ddb9ab0cee3f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274832"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721208"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>Lección 5-3: Modificar el valor de configuración de la propiedad Directory
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 En esta tarea se modifica el parámetro de configuración almacenado en el archivo **SSISTutorial.dtsConfig** para establecer la propiedad **Value** de la variable de nivel de paquete `User::varFolderName`. La variable actualiza la propiedad **Directory** del contenedor de bucles Foreach. El valor modificado apunta a la carpeta **Nuevos datos de ejemplo** creada en la tarea anterior. Después de modificar el parámetro de configuración y ejecutar el paquete, la propiedad **Directory** se actualiza a partir de la variable del archivo de configuración. Anteriormente, el valor de la propiedad **Directory** formaba parte del paquete.  
   

@@ -20,14 +20,18 @@ ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76c6951b59ac5a78a63990e071fa83fe791e550d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: c397dee795409a69e9371e6066b85cb24817869c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279965"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724340"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>Supervisar los contadores de rendimiento con la tarea Script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Los administradores quizá tengan que supervisar el rendimiento de los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realizan transformaciones complejas en grandes volúmenes de datos. El espacio de nombres **System.Diagnostics** de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona las clases para utilizar los contadores de rendimiento existentes y para crear sus propios contadores de rendimiento.  
   
  Los contadores de rendimiento almacenan información sobre el rendimiento de la aplicación que puede utilizar para analizar el rendimiento del software a lo largo del tiempo. Los contadores de rendimiento se pueden supervisar de forma local o remota mediante la herramienta **Monitor de rendimiento**. Puede almacenar los valores de los contadores de rendimiento en variables para la bifurcación del flujo de control posterior en el paquete.  

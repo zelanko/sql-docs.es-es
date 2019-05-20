@@ -17,14 +17,18 @@ ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 68902b0249fc40e8aa48a0bd6fc6f6eef47d4caa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 81ab20c275fb4f42e37e8593d27f05d2d55acc00
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274362"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727160"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Realizar una carga masiva de datos mediante el destino de SQL Server
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Para agregar y configurar un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen de datos.  
   
 ### <a name="to-load-data-using-a-sql-server-destination"></a>Para cargar datos mediante un destino de SQL Server  

@@ -15,14 +15,18 @@ ms.assetid: a3c07c09-f121-4187-9617-b01adcf843c4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 771dea6d044fc797c5fe8bcc4a04e61679794ecd
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 4ea60751df8c27ba61c190a3f48d25e4dfce8cb1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290071"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725220"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (OR lógico) (expresión de SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Realiza una operación lógica OR. La expresión devuelve TRUE si una o ambas condiciones son TRUE.  
   
 ## <a name="syntax"></a>Sintaxis  

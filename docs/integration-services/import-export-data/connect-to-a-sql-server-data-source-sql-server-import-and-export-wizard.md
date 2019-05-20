@@ -10,14 +10,18 @@ ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ebdf33cf262d000af9b1604299e95883f8ab0d12
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 4d6da9ab263164b58b88105e27c4a92abe158979
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221989"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723915"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Conectarse a un origen de datos de SQL Server (Asistente para importación y exportación de SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 En este tema se muestra cómo conectarse a un origen de datos de **Microsoft SQL Server** desde la página **Elegir un origen de datos** o **Elegir un destino** del Asistente para importación y exportación de SQL Server. Hay varios proveedores de datos que puede usar para conectarse a SQL Server.
 
 > [!TIP]

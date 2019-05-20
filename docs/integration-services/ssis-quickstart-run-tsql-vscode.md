@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3ab178c2f5a3cd8aaeb5a341275956e6bf87dd93
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b7e2f45d7204790d9d6db2ce58d94ddc7a4bfacc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281709"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717348"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Ejecutar un paquete SSIS desde Visual Studio Code con Transact-SQL
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 En esta guía de inicio rápido se muestra cómo usar Visual Studio Code para conectarse a la base de datos del catálogo de SSIS y cómo usar instrucciones Transact-SQL para ejecutar un paquete SSIS almacenado en el catálogo de SSIS.
 
 Visual Studio Code es un editor de código para Windows, macOS y Linux que admite extensiones, incluida la extensión `mssql` para conectarse a Microsoft SQL Server, Azure SQL Database o Azure SQL Data Warehouse. Para obtener más información sobre VSCode, consulte [Visual Studio Code](https://code.visualstudio.com/).

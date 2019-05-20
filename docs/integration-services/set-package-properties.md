@@ -26,14 +26,18 @@ ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edead99162483ab8721384a382d59bdaa1a262a8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 072a0506d4dad9aad762cae77cad97a3bf16bdd3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277384"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717866"
 ---
 # <a name="set-package-properties"></a>Establecer las propiedades de paquetes
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Cuando se crea un paquete en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mediante la interfaz gráfica proporcionada por [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , se configuran las propiedades del objeto de paquete en la ventana Propiedades.  
   
  La ventana **Propiedades** proporciona una lista categorizada y alfabética de propiedades. Para organizar la ventana **Propiedades** por categorías, haga clic en el icono Por categorías.  

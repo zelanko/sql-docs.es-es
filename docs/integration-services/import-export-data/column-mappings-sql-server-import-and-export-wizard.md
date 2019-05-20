@@ -12,14 +12,18 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 852e150955371d78fe8170a2f4fc3be037d35ccd
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 5f7b30970020963e83fa101971d6c30d9e76397a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222099"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723949"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Asignaciones de columnas (Asistente para importación y exportación de SQL Server)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Después de seleccionar las tablas y vistas existentes para copiar o revisar la consulta que ha proporcionado, si hace clic en **Editar asignaciones**, el Asistente para importar y exportar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muestra el cuadro de diálogo **Asignaciones de columnas** . En esta página puede especificar y configurar columnas de destino para recibir los datos copiados de las columnas de origen. A menudo no tiene que cambiar nada en esta página.
   
 Si no quiere copiar todas las columnas de la tabla seleccionada, una de las cosas que puede hacer en esta página es excluir las columnas no deseadas. Seleccione **omitir** en la columna **Destino** de la lista **Asignaciones** para aquellas columnas que no quiera copiar.

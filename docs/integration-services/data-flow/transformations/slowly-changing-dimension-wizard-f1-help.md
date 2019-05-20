@@ -13,14 +13,18 @@ ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fad4e5066b86870405ac27cae9bdc835137b206b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0f08fdd63b68d2591911d99b02fb0cf67a1f7548
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281809"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725852"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>Asistente para dimensiones variables (Ayuda F1)
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilice el **Asistente para dimensiones variables** para configurar la carga de datos en diferentes tipos de dimensiones de variación lenta. En esta sección se ofrece la Ayuda F1 de las páginas del **Asistente para dimensiones variables**. En la tabla siguiente se describen los temas de esta sección.  
   
  Para obtener más información acerca de este asistente, vea [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md).  

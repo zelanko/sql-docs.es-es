@@ -22,14 +22,18 @@ ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 169b815d9cbf09c2fc4ccf24e5585f4c2c8e5d56
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ca8e895537a518e7d18f16309acda34cb02aef44
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275764"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724821"
 ---
 # <a name="developing-a-custom-source-component"></a>Desarrollar un componente de origen personalizado
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite que los desarrolladores escriban componentes de origen que se puedan conectar a los orígenes de datos personalizados y proporcionar datos de estos orígenes a otros componentes en una tarea de flujo de datos. La capacidad para crear orígenes personalizados es importante cuando es necesario conectar a orígenes de datos a los que no se puede tener acceso utilizando uno de los orígenes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] existentes.  
   
  Los componentes de origen tienen una o más salidas y ninguna entrada. En tiempo de diseño, los componentes de origen se utilizan para crear y configurar conexiones, leer metadatos de columna del origen de datos externo y configurar las columnas de salida del origen en función del origen de datos externo. Durante la ejecución, conectan al origen de datos externo y agregan filas a un búfer de salida. A continuación, la tarea de flujo de datos proporciona este búfer de filas de datos a componentes de nivel inferior.  

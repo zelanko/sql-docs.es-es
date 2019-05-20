@@ -17,14 +17,18 @@ ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0b768e591f73d004959b728d055a9232043c594
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ba74954d0cf587161b02d1a37a09f222722f9f61
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272739"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725389"
 ---
 # <a name="functions-ssis-expression"></a>Funciones (expresión de SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El lenguaje de expresiones incluye un conjunto de funciones que pueden usarse en las expresiones. Las expresiones pueden usar una sola función, pero generalmente utilizan varias funciones, combinándolas con operadores.  
   
  Las funciones pueden clasificarse en los grupos siguientes:  

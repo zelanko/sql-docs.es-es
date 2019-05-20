@@ -17,14 +17,18 @@ ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: feed75c71d49f64ad7fd8285fd45f36ed19a7eda
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fc1df2936c51509ffe3e2b68c6ee497e18558dbc
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282510"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727390"
 ---
 # <a name="transfer-logins-task"></a>Tarea Transferir inicios de sesión
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tarea Transferir inicios de sesión transfiere uno o varios inicios de sesión entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="transfer-logins-between-instances-of-sql-server"></a>Transferir inicios de sesión entre instancias de SQL Server  

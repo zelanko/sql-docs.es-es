@@ -13,14 +13,18 @@ ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0fe7839e08e38096b4b942dc3119d3a560c0a0fa
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d316864d3dffb26680a503ad1b43bcb4b3ab94a8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277638"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728320"
 ---
 # <a name="data-sources"></a>Orígenes de datos
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] incluye un objeto de tiempo de diseño que puede usar en los paquetes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : el origen de datos.  
   
  Un objeto de origen de datos es una referencia a una conexión y, como mínimo, incluye una cadena de conexión y un identificador de origen de datos. También puede incluir metadatos adicionales tales como descripción, nombre, nombre de usuario y contraseña.  

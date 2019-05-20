@@ -11,14 +11,18 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf1179c8415b7db67e6552ceb0d9db24c4d585a5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eed92adad122587a031a3126322e4156a05bde58
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278929"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722553"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Lección 2-3: Modificación del Administrador de conexiones de archivos planos
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 En esta tarea, modificará el Administrador de conexiones de archivos planos de la lección 1. El administrador de conexiones de archivos planos se ha configurado para cargar un único archivo de forma estática. Para permitir que el Administrador de conexiones de archivos planos cargue archivos de forma iterativa, modifique la propiedad ConnectionString del administrador de conexiones de modo que use la variable `User::varFileName`, definida por el usuario, que contiene la ruta de acceso del archivo que se va a cargar en tiempo de ejecución.  
   

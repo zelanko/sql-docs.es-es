@@ -10,14 +10,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.reviewer: ''
-ms.openlocfilehash: b64cddbe6c786e488c1ba9b9d289e9e48f786cf3
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: c605d2f0e42f34a8f1b4c7a01ea7ffce43d23f9e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221969"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723177"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Lección 1-6: Adición y configuración de las transformaciones de búsqueda
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Tras configurar el origen de archivo plano para extraer datos del archivo de origen, se definen las transformaciones de búsqueda necesarias para obtener los valores para **CurrencyKey** y **DateKey**. Una transformación Búsqueda realiza una búsqueda combinando datos de la columna de entrada especificada en una columna de un conjunto de datos de referencia. El conjunto de datos de referencia puede ser una tabla o una vista existente, una tabla nueva o el resultado de una instrucción SQL. En este tutorial, la transformación Búsqueda usa un administrador de conexiones OLE DB para conectarse a la base de datos que contiene los datos de origen del conjunto de datos de referencia.  
   

@@ -9,14 +9,18 @@ ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 583e6f8f5213ae8fb7f803f872813551f7fb07fc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b313dcc83da401cfb371e708e36456645a11296e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290211"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717654"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Implementar un proyecto de SSIS desde el símbolo del sistema con ISDeploymentWizard.exe
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 En este inicio rápido se muestra cómo implementar un proyecto de SSIS desde el símbolo del sistema mediante la ejecución del asistente para la implementación de Integration Services, `ISDeploymentWizard.exe`.
 
 Para obtener más información sobre el asistente para la implementación de Integration Services, consulte [Integration Services Deployment Wizard (Asistente para la implementación de Integration Services)](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).

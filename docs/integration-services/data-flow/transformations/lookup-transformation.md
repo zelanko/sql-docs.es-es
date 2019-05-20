@@ -24,14 +24,18 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4e3de21943f0bdd50e05cb30a1d9b1774f41ab37
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: a866d6224417898b9ed442cb656b9c62f4071297
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273290"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725996"
 ---
 # <a name="lookup-transformation"></a>Transformación de búsqueda
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La transformación Búsqueda realiza búsquedas mediante la combinación de datos de columnas de entrada con columnas de un conjunto de datos de referencia. La búsqueda se utiliza para tener acceso a información adicional en una tabla relacionada que está basada en valores de columnas comunes.  
   
  El conjunto de datos de referencia puede ser un archivo caché, una tabla o una vista existente, una tabla nueva o el resultado de una consulta SQL. La transformación Búsqueda utiliza un administrador de conexiones OLE DB o un administrador de conexiones de caché para conectar con el conjunto de datos de referencia. Para obtener más información, vea [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) y [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  

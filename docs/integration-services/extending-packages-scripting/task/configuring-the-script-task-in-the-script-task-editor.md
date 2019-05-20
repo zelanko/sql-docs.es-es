@@ -17,14 +17,18 @@ ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 26cfb9342efffb46bcb7ce84c069c99dfbb12182
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f8253108732aab7379e319156abf4af8f4114fc3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274459"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724109"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Configurar la tarea Script en el editor de la tarea Script
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Antes de escribir código personalizado en la tarea Script, debe configurar sus propiedades principales en las tres páginas del **Editor de la tarea Script**. Puede configurar propiedades de tarea adicionales que no son únicas de la tarea Script mediante la ventana Propiedades.  
   
 > [!NOTE]  

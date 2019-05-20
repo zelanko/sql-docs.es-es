@@ -17,14 +17,18 @@ ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70c36478c4dac5ad4bbdf5398acb64dc338994dc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2af46174ea1dc6d21a8bb95daa0e20614d42f6b7
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271800"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727371"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Tarea Transferir procedimientos almacenados principales
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tarea Transferir procedimientos almacenados principales transfiere uno o más procedimientos almacenados definidos por el usuario entre las bases de datos **master** en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para transferir un procedimiento almacenado de la base de datos **master** , el propietario del procedimiento debe ser dbo.  
   
  La tarea Transferir procedimientos almacenados principales se puede configurar para que transfiera todos los procedimientos almacenados o solo los procedimientos especificados. Esta tarea no copia procedimientos almacenados del sistema.  

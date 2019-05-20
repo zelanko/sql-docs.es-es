@@ -13,14 +13,18 @@ ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e1c1df83eff1f9800e9a17a9241b902b2522cebb
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ba05390afed4b4c2a9f3753523f4afe31bee69c0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271029"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725719"
 ---
 # <a name="use-a-recordset-destination"></a>Usar un destino de conjunto de registros
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El destino de conjunto de registros no guarda los datos en un origen de datos externo. En su lugar, el destino de conjunto de registros guarda los datos en memoria, en un conjunto de registros que se almacena en una variable de paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo de datos **Objeto** . Una vez que el destino de conjunto de registros guarda los datos, normalmente se utiliza un contenedor de bucles Foreach con el enumerador de ADO para Foreach para procesar una fila del conjunto de registros cada vez. El enumerador de ADO para Foreach guarda el valor de cada columna de la fila actual en una variable de paquete independiente. A continuación, las tareas que se configuran en el contenedor de bucles Foreach leen esos valores de las variables y realizan alguna acción con ellos.  
   
  Puede utilizar el destino de conjunto de registros en muchos escenarios diferentes. A continuación se muestran algunos ejemplos:  

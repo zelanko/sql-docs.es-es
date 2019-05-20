@@ -17,14 +17,18 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 84711a5bdef0ce13f640b26b3973860b9b5a6f48
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f41f693c05c2f5977301ac4863fe978cc876ea4f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59291555"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727304"
 ---
 # <a name="xml-task"></a>Tarea XML
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tarea XML se usa para trabajar con datos XML. Mediante esta tarea, un paquete puede recuperar documentos XML, aplicar operaciones a los documentos mediante las hojas de estilos Extensible Stylesheet Language Transformations (XSLT) y expresiones XPath, combinar varios documentos, o bien validar, comparar y guardar los documentos actualizados en archivos y variables.  
   
  Esta tarea habilita un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar de forma dinámica los documentos XML en tiempo de ejecución. Puede usar la tarea XML para los siguientes objetivos:  

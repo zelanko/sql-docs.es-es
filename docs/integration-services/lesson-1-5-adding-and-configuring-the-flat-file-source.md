@@ -11,14 +11,18 @@ ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c28ee5f1ca3e5202cb62cef3b1a0f79ee3fcd69b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 66d5bda44de11bb28582442696b4feea41488703
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280029"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723079"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Lección 1-5: Adición y configuración del origen de archivo plano
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 En esta tarea, agregará un origen de archivo plano al paquete y lo configurará. Un origen de archivo plano es un componente de flujo de datos que usa los metadatos definidos por un administrador de conexiones de archivos planos. Estos metadatos especifican el formato y la estructura de los datos que se van a extraer del archivo plano mediante un proceso de transformación. El origen de archivo plano extrae los datos de un único archivo plano, mediante las definiciones de formato de archivo del administrador de conexiones de archivo plano.  
   
 Para esta tarea, configurará el origen de archivo plano para que use el administrador de conexiones **Sample Flat File Source Data** creado antes.  

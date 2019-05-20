@@ -16,14 +16,18 @@ ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f267a838322b9e0380828ca926149426f0ce16e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 147452998a4ad9501d0a8cf50791d8e12c533a26
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289541"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727273"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Copiar un paquete en herramientas de datos de SQL Server
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   En este tema se explica cómo crear un nuevo paquete [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mediante la copia de un paquete existente y cómo actualizar las propiedades **Nombre** y **GUID** del nuevo paquete.  
   
 ### <a name="to-copy-a-package"></a>Para copiar un paquete  

@@ -14,14 +14,18 @@ ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87815205efb5598dd2901b46d4220092f76cde4a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 875eada43d37add815b3e4f3c0634273be324174
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283039"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727921"
 ---
 # <a name="cdc-control-task"></a>Tarea Control CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tarea Control CDC se usa para controlar el ciclo de vida de los paquetes de captura de datos modificados (CDC). Controla la sincronización de paquetes CDC con el paquete de carga inicial, la administración de los intervalos de número de secuencia de registro (LSN) que se procesan en una ejecución de un paquete CDC. Además, la tarea Control CDC se ocupa de los escenarios de error y de la recuperación.  
   
  La tarea Control CDC mantiene el estado del paquete CDC en una variable de paquete SSIS y también puede conservarlo en una tabla de base de datos para mantener el estado a través de las activaciones de paquete y entre varios paquetes que realizan conjuntamente un proceso CDC común (por ejemplo, una tarea puede ser responsable de la carga inicial y otro de las actualizaciones de fuente de generación).  

@@ -14,14 +14,18 @@ ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 993c9bcaeb92f7ec4eabc11beaf444e97622821f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 07c926a292c657eecceb13ca1cdc1d3f8dcc5a71
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271170"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729260"
 ---
 # <a name="saving-a-package-programmatically"></a>Guardar un paquete mediante programación
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Después de generar un nuevo paquete o modificar uno existente mediante programación, por lo general desea guardar los cambios.  
   
  Todos los métodos utilizados en este tema para guardar paquetes requieren una referencia al ensamblado **Microsoft.SqlServer.ManagedDTS** . Después de agregar la referencia en un proyecto nuevo, importe el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> mediante una instrucción **using** o **Imports**.  

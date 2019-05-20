@@ -2,7 +2,7 @@
 title: Actualización en SQL Server local a SQL Server o SQL Server en máquinas virtuales de Azure mediante Data Migration Assistant | Microsoft Docs
 description: Aprenda a usar Data Migration Assistant para actualizar un servidor de SQL en el entorno local a una versión posterior de SQL Server o a SQL Server en máquinas virtuales de Azure
 ms.custom: ''
-ms.date: 03/12/2019
+ms.date: 05/18/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
 author: HJToland3
-ms.author: rajpo
+ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 6d90a661c160fbbe473e6c30a8e45e9ea4f75056
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 672473c4e4cfaf5314f53ae7d3a351cb82a93e6d
+ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62706987"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875177"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Actualización local de SQL Server a SQL Server o SQL Server en máquinas virtuales de Azure mediante Data Migration Assistant
 
 Data Migration Assistant proporciona evaluaciones sin problemas de SQL Server local y las actualizaciones a las versiones posteriores de SQL Server o migraciones de SQL Server en máquinas virtuales de Azure o Azure SQL Database.
 
-Este artículo proporciona instrucciones paso a paso para actualizar SQL Server local a una versión posterior de SQL Server o SQL Server en máquinas virtuales de Azure mediante Data Migration Assistant.   
+Este artículo proporciona instrucciones paso a paso para actualizar SQL Server local a las versiones posteriores de SQL Server o SQL Server en máquinas virtuales de Azure mediante Data Migration Assistant.
 
 ## <a name="create-a-new-migration-project"></a>Cree un nuevo proyecto de migración
 

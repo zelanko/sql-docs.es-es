@@ -2,20 +2,20 @@
 title: Propiedades de rol del sistema (Management Studio) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.systemroleproperties.f1
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 883cf52d51acc280fae37ce918f476e757fd34ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f3084f12a417986571c3feb2195e513f071f9dbb
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723257"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576031"
 ---
 # <a name="system-role-properties-management-studio"></a>Propiedades de rol del sistema (Management Studio)
   Use la página Roles del sistema para ver las definiciones de roles del sistema actualmente definidas para el servidor de informes. Una definición de roles del sistema contiene una colección con nombre de tareas que se realizan en relación con el sitio completo, en lugar de un elemento individual. Las definiciones de roles se asignan a un usuario o grupos para crear una asignación de roles. Las tareas de la definición de roles especifican lo que puede hacer el usuario o grupo.  
@@ -38,7 +38,7 @@ ms.locfileid: "47723257"
  **Descripción**  
  Proporciona información sobre cada tarea. No puede modificar descripciones de tareas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Servidor de informes en Management Studio ayuda F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Tareas de nivel de sistema](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)   
  [Tareas y permisos](../../reporting-services/security/tasks-and-permissions.md)   

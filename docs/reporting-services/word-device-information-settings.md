@@ -2,21 +2,21 @@
 title: Configuración de la información del dispositivo Word | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Word [Reporting Services]
 - device information settings [Reporting Services], Word
 ms.assetid: 28146498-fae7-4b13-b47f-6ec05aa8e057
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 40b52fd5c296ad95db7376e6a2c571b0203cf526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 776a825c480568be2640d1309c7c3a48970e2c54
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638401"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571138"
 ---
 # <a name="word-device-information-settings"></a>Configuración de la información del dispositivo web
   En la tabla siguiente se muestra la configuración de la información de los dispositivos para la representación en formato de [!INCLUDE[ofprword](../includes/ofprword-md.md)] .  
@@ -29,7 +29,7 @@ ms.locfileid: "47638401"
 |**OmitHyperlinks**|Indica si omitir la acción Hyperlink en todos los elementos donde se establezca. El valor predeterminado es **False**.|  
 |**OmitDrillthroughs**|Indica si omitir la acción de obtención de detalles en todos los elementos donde se establezca. El valor predeterminado es **False**.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Pasar la configuración de información de dispositivo a las extensiones de representación](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizar los parámetros de extensión de representación en RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   

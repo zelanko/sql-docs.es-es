@@ -2,7 +2,7 @@
 title: Miembros de MSReportServer_ConfigurationSetting | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e956eaac01b6cb301eb477c28374ff0fab57484d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 134c115e48bd578f794ecce28d770ce955622f0b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616153"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65569168"
 ---
 # <a name="msreportserverconfigurationsetting-members"></a>Miembros MSReportServer_ConfigurationSetting
   La clase MSReportServer_ConfigurationSetting contiene los siguientes métodos y propiedades.  
@@ -92,7 +92,7 @@ ms.locfileid: "47616153"
 |[Método SetVirtualDirectory &#40;MSReportServer_ConfigurationSetting de WMI&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setvirtualdirectory.md)|Establece el directorio virtual para una aplicación.|  
 |[SetWindowsServiceIdentity](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setwindowsserviceidentity.md)|Hace que el servicio Windows del servidor de informes se ejecute como el usuario de Windows especificado y concede a esta cuenta suficientes permisos de sistema de archivos para que el servidor de informes pueda funcionar.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  
   
   

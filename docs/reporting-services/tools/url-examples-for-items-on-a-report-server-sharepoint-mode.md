@@ -2,18 +2,18 @@
 title: Ejemplos de direcciones URL para los elementos de un servidor de informes - Modo de SharePoint | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7b787bdccdb913bd95051c8e3a4a3dd37fed5c01
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812963"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574016"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Ejemplos de direcciones URL para los elementos de un servidor de informes - Modo de SharePoint
   Para publicar informes y elementos relacionados en una biblioteca de SharePoint, puede publicar el contenido con las herramientas de creación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , como, por ejemplo, el Diseñador de informes o puede cargar el contenido mediante acciones del sitio de SharePoint.  
@@ -132,7 +132,7 @@ ms.locfileid: "51812963"
   
  Cuando el servidor de informes se ejecuta en el modo integrado de SharePoint, el concepto de recurso tiene una definición más específica. El servidor de informes conserva el concepto de recurso para almacenar informes que hacen referencia a una imagen externa. Esto último se aplica si el informe es una instantánea o una copia que se mantiene para uso interno.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Publicar un informe en una biblioteca de SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Publicación de un origen de datos compartido en una biblioteca de SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Páginas de propiedades del proyecto (cuadro de diálogo)](../../reporting-services/tools/project-property-pages-dialog-box.md)  

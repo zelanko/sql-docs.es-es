@@ -2,18 +2,18 @@
 title: Proteger los elementos de un conjunto de datos compartido | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 830955375dec473f7587ef33c1e7f6927df530b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a51e261d06933a30bf1c59adffa6963c9826f360
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725563"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570680"
 ---
 # <a name="secure-shared-dataset-items"></a>Proteger los elementos de un conjunto de datos compartido
   En un servidor de informes, los elementos de un conjunto de datos compartido se pueden usar en varios informes. Puede proteger los conjuntos de datos compartidos para controlar el grado de acceso que los usuarios tienen. De forma predeterminada, solo los usuarios que son miembros del grupo integrado **Administradores** pueden ver los conjuntos de datos compartidos, modificar las propiedades, habilitar el almacenamiento en caché, crear planes de actualización de caché y eliminar elementos. Para todos los demás usuarios se deben crear asignaciones de roles que permitan el acceso a un conjunto de datos compartido.  
@@ -46,7 +46,7 @@ ms.locfileid: "47725563"
   
  Para más información, vea [Tareas de nivel de elemento](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md) y [Roles predefinidos](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrar conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md)   
  [Proteger carpetas](../../reporting-services/security/secure-folders.md)   
  [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md)   

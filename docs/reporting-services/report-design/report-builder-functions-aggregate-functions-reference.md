@@ -2,18 +2,18 @@
 title: Referencia de funciones de agregado (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f51a83fca42e1f736a0e0295d2443193b17df5d3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: dcc037b7aa813c89510d1179da94ca7efba09119
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296943"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577419"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funciones del Generador de informes: referencia de funciones de agregado
   Para incluir valores de agregado en un informe, puede utilizar las funciones de agregado integradas en las expresiones. La función de agregado predeterminada para los campos numéricos es SUM. Puede modificar la expresión y utilizar una función de agregado integrada diferente o especificar un ámbito diferente. El ámbito identifica qué conjunto de datos utilizar para el cálculo.  

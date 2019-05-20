@@ -2,18 +2,18 @@
 title: Elementos de informe y conjuntos de datos en el Generador de informes | Microsoft Docs
 ms.date: 09/16/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7ee8ead2185908724b20fa690cabfe67044d15d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a06344a119dfba635a07d0050a61f561065a2984
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611483"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571196"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Elementos de informe y conjuntos de datos en el Generador de informes
   En el Generador de informes, la manera más fácil de incluir datos en un informe es agregar elementos de informe de la galería de elementos de informe. Los elementos de informe contienen los conjuntos de datos de los que dependen, que se conocen como *conjuntos de datos dependientes*. Los conjuntos de datos dependientes están ubicados en orígenes de datos compartidos y pueden ser conjuntos de datos incrustados o conjuntos de datos compartidos. Para más información, vea [Elementos de informe](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "47611483"
 > [!IMPORTANT]  
 >  Para asegurarse de que usted y otros usuarios pueden seguir usando correctamente los datos de un conjunto de datos compartido, debe entender los principios básicos sobre la protección de los elementos de informe. Para más información, vea [Proteger los elementos de un conjunto de datos compartido](../../reporting-services/security/secure-shared-dataset-items.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Vista de diseño de informe &#40;Generador de informes&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [Seguridad &#40;Generador de informes&#41;](../../reporting-services/report-builder/security-report-builder.md)   
  [Elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   

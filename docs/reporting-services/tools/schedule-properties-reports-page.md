@@ -2,20 +2,20 @@
 title: Propiedades de la programación (página Informes) | Microsoft Docs
 ms.date: 06/30/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.scheduleproperties.reports.f1
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9724ec5d7b1d4746842b95c8219ff493ee1d3862
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0e8441dec655398ec530bc95049a339edd9e01ab
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712696"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571404"
 ---
 # <a name="schedule-properties-reports-page"></a>Propiedades de la programación (página Informes)
   Use la [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] página de propiedades de programación en [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] para ver una lista de todos los informes que usan la programación compartida específica. Las programaciones pueden utilizarse para actualizar instantáneas de informe, generar un historial de informes, desencadenar una suscripción o hacer expirar una copia del informe almacenada en caché. Para averiguar cómo se usa la programación, vea la información de propiedad y suscripciones del informe.  
@@ -41,7 +41,7 @@ ms.locfileid: "52712696"
  **Informe**  
  Especifica el nombre del informe que utiliza la programación.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear, modificar y eliminar programaciones](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Programaciones](../../reporting-services/subscriptions/schedules.md)   
  [Servidor de informes en Management Studio ayuda F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   

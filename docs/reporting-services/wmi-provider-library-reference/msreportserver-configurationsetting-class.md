@@ -2,7 +2,7 @@
 title: Clase MSReportServer_ConfigurationSetting | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 310a3062ebae11eff02b2832d055490bda6fd727
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 74382531162bb691cd47838fa2896169abd7ce58
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792913"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65569147"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>clase MSReportServer_ConfigurationSetting
   Representa la instalación y los parámetros de tiempo de ejecución de una instancia del servidor de informes. Estos parámetros se guardan en el archivo de configuración del servidor de informes.  
@@ -171,7 +171,7 @@ class Class1
   
  **Plataforma:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

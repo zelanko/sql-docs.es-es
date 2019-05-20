@@ -2,18 +2,18 @@
 title: Guardar informes en un servidor de informes (Generador de informes) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8a751d0c7d6438eece89d66805bcb0c7fb2c96be
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4e5a622aaca18bed1cda8c4ad8a1a1dec8f91849
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298273"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580670"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Guardar informes en un servidor de informes (Generador de informes)
   En el Generador de informes, puede guardar una definición de informe en un servidor de informes (a lo que también se hace referencia como publicar un informe). Cuando el informe está guardado en un servidor de informes, otros usuarios pueden verlo. Cada vez que ejecute el informe publicado, recuperará los datos más actuales. Para guardar una copia estática de un informe representado, exporte el informe a un formato de archivo diferente y guárdelo o utilice la característica de historial de informes para guardar las versiones de los informes representados.  

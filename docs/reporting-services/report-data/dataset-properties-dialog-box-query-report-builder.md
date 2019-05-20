@@ -2,7 +2,7 @@
 title: Propiedades del conjunto de datos (cuadro de diálogo), Consulta (Generador de informes) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: reference
 f1_keywords:
@@ -10,14 +10,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.datasetproperties.query.f1
 - "10160"
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d6e0d987c9976759a870bb58578c9f39593bfb87
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a447f804474cc845b58c87832e965223d6cd873d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021769"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573116"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Propiedades del conjunto de datos (cuadro de diálogo), Consulta (Generador de informes)
  
@@ -63,7 +63,7 @@ Esta opción aparece cuando se elige la opción de tipo de comando Procedimiento
  **Actualizar los campos**  
  Ejecute el comando de consulta para actualizar la lista de campos en la página **Campos del cuadro de diálogo Propiedades del conjunto de datos**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
 [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
 [Diseñadores de consultas &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  

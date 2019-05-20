@@ -2,7 +2,7 @@
 title: Proteger elementos de orígenes de datos compartidos | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data sources [Reporting Services], shared
 - security [Reporting Services], data sources
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 09ec5980236f5bd7f48431ff58a7ff9ae3ddb66c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: daf21bcf8bff9886db5b640531380c628abfb198
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603503"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570578"
 ---
 # <a name="secure-shared-data-source-items"></a>Proteger elementos de orígenes de datos compartidos
   Puede establecer la seguridad en un origen de datos compartido para habilitar o deshabilitar el acceso a él.  
@@ -37,7 +37,7 @@ ms.locfileid: "47603503"
 |Administrar orígenes de datos|Ver propiedades que especifican el nombre, la descripción y la información de conexión. Esta tarea también se utiliza para mostrar un origen de datos compartido en la jerarquía de carpetas. Si elige esta tarea, puede omitir la tarea "Ver orígenes de datos".|  
 |Establecer la seguridad de elementos individuales|Crear y modificar asignaciones de roles que controlen el acceso al origen de datos compartido. Esta tarea debe utilizarse con las tareas "Ver orígenes de datos" o "Administrar orígenes de datos". De lo contrario, no surte efecto porque el usuario no puede seleccionar el elemento.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrar orígenes de datos de informe](../../reporting-services/report-data/manage-report-data-sources.md)   
  [Proteger carpetas](../../reporting-services/security/secure-folders.md)   
  [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md)   

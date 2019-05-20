@@ -2,20 +2,20 @@
 title: Conjuntos de datos incrustados y compartidos de informe (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7df7fc799411c7aaf8ba8b5c8179457196f21d1d
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 093652067f436c83ae46d3cb3053cc93747579db
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020389"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571191"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de datos incrustados y compartidos de informe (Generador de informes y SSRS)
   Un conjunto de datos especifica los datos que desea usar de una conexión de datos. Un conjunto de datos se basa en una conexión de datos guardada en el informe como un origen del datos incrustado o una referencia a un origen de datos compartido en un servidor de informes. El conjunto de datos incluye una consulta que especifica un conjunto de campos. Al arrastrar estos campos hacia la superficie de diseño, se crean expresiones que se evalúan como los datos reales cuando se ejecuta el informe.  
@@ -217,7 +217,7 @@ ms.locfileid: "50020389"
 ##  <a name="Options"></a> Configurar opciones de conjunto de datos  
  En el caso de orígenes de datos que admiten datos internacionales, podría tener que ajustar las propiedades de un conjunto de datos que afectan al criterio de ordenación, las propiedades de caracteres internacionales y la distinción entre mayúsculas y minúsculas. Algunas de estas propiedades son mayúsculas y minúsculas, el tipo de kana, el ancho, el acento y la intercalación. Para más información sobre cómo establecer estas propiedades, vea [Propiedades del conjunto de datos (cuadro de diálogo), Opciones &#40;Generador de informes&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  

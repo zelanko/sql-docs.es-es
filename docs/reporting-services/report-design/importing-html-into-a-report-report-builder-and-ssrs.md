@@ -2,20 +2,20 @@
 title: Importar HTML en un informe (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 description: Obtenga información sobre cómo usar un cuadro de texto para insertar en un informe texto con formato HTML recuperado de un campo del conjunto de datos.
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ff0e5bffdc0704894029a223c5d3c47d18d8ac80
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 54bd3d5acaf487909a4965c1f73a2e8c00aef82a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289483"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580230"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importar HTML en un informe (Generador de informes y SSRS)
   Se puede usar un cuadro de texto para insertar en un informe texto con formato HTML recuperado de un campo de conjunto de datos. El texto puede proceder de cualquier expresión simple o compleja que se evalúe como HTML con un formato correcto. El texto con formato se puede representar en todos los formatos de salida compatibles, incluso PDF.  
@@ -27,7 +27,7 @@ ms.locfileid: "56289483"
 > [!NOTE]  
 >  Cuando se importa texto que contiene marcado HTML, el cuadro de texto siempre debe analizar los datos en primer lugar. Dado que solo se admite un subconjunto de etiquetas HTML, el HTML que se muestra en el informe representado puede diferir del HTML original.  
   
- Para empezar rápidamente, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Para más información, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 ## <a name="supported-html-tags"></a>Etiquetas HTML compatibles  
  La lista siguiente es una lista completa de las etiquetas que se representarán como HTML cuando se definan como texto de marcador de posición:  
@@ -38,9 +38,9 @@ ms.locfileid: "56289483"
   
 -   Encabezado, estilo y elementos de bloque: \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<DIV>, \<LI>, \<HN>  
   
--   Formato de texto: \<B>, \<I>, \<U>, \<S>  
+-   Formato del texto: \<B>, \<I>, \<U>, \<S>  
   
--   Administración de listas: \<OL>, \<UL>, \<LI>  
+-   Control de listas: \<OL>, \<UL>, \<LI>  
   
  Cualquier otra etiqueta de marcado HTML se omitirá durante el procesamiento del informe. Si el HTML representado por la expresión en el texto del marcador de posición no está bien formado, el marcador de posición se representa como texto simple. Todas las etiquetas HTML distinguen entre mayúsculas y minúsculas.  
   

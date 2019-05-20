@@ -2,7 +2,7 @@
 title: Roles predefinidos | Microsoft Docs
 ms.date: 10/22/2015
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5622d8245dee2440eb6d4cdfa5c5ee27c772bd0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e211010da8482a9a2707c2799812c813e2820832
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839033"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570638"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definiciones de roles: roles predefinidos
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se instala junto con roles predefinidos que puede usar para conceder acceso a operaciones del servidor de informes. Cada rol predefinido describe una recopilación de tareas relacionadas. Puede asignar grupos y cuentas de usuario a los roles predefinidos para proporcionar acceso inmediato a las operaciones del servidor de informes.  
@@ -207,11 +207,11 @@ ms.locfileid: "47839033"
   
  El rol **Usuario del sistema** se puede utilizar para complementar la seguridad predeterminada. Puede incluir el rol en nuevas asignaciones de roles que amplíen el acceso al servidor de informes para usuarios de informes. Para obtener más información, consulte [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
  [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Tareas y permisos](../../reporting-services/security/tasks-and-permissions.md)  
   
   

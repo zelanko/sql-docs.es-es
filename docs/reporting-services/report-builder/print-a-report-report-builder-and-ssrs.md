@@ -2,18 +2,18 @@
 title: Imprimir un informe (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3904d1498207bbd1384639613457257fbc75647d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 67d9e057b7ed307377e59172948d56d92c45e7f3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292913"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581178"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Imprimir un informe (Generador de informes y SSRS)
   Después de guardar un informe en un servidor de informes, puede ver e imprimir el informe desde un explorador, el portal web de Reporting Services o cualquier aplicación que use para ver un informe exportado. Antes de guardar un informe, puede imprimirlo desde su vista previa.  

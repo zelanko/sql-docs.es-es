@@ -2,7 +2,7 @@
 title: Publicar informes en un servidor de informes | Microsoft Docs
 ms.date: 06/01/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], reports
 - Report Designer [Reporting Services], publishing reports
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 44d376414ce4043bca6f053c6523365af5d96d4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bc4d75a6af4441d2030a71306801449ee74a6a02
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714111"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579977"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publicar informes en un servidor de informes
   Después de diseñar y probar un informe o un conjunto de informes, puede usar las características de implementación integradas en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para publicar los informes en un servidor de informes. Puede publicar informes individuales en un proyecto del servidor de informes que puede incluir varios informes y orígenes de datos. Publicar un proyecto del servidor de informes es la manera más fácil de publicar varios informes. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa el término *implementación*en lugar del término *publicación*. Las dos condiciones son intercambiables.  
@@ -66,9 +66,9 @@ En el Explorador de soluciones, haga clic con el botón derecho en el informe y,
  Se debe especificar la dirección URL del servidor de destino del servidor de informes y puede ser conveniente cambiar las carpetas predeterminadas en las que los informes y orígenes de datos compartidos se implementan.  
 
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Páginas de propiedades del proyecto (cuadro de diálogo)](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Actualización de informes](../../reporting-services/install-windows/upgrade-reports.md)  
+ [Actualizar informes](../../reporting-services/install-windows/upgrade-reports.md)  
   
   

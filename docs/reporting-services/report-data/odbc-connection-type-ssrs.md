@@ -2,18 +2,18 @@
 title: Tipo de conexión ODBC (SSRS) | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 24163866-f37a-4c38-982e-c3d79bf64d4c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8715500d4338617b5ac6c39a5fe3cf991d4bcca4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 31d02cdaab35dc25cf828aa22897f6b35547a558
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028404"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577927"
 ---
 # <a name="odbc-connection-type-ssrs"></a>Tipo de conexión ODBC (SSRS)
   Para incluir los datos de un proveedor de datos ODBC, debe tener un conjunto de datos basado en un origen de datos de informe de tipo ODBC. Este tipo de origen de datos integrado se basa en la extensión de procesamiento de datos ODBC de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -79,7 +79,7 @@ Driver={SQL Server Native Client 10.0};Server=server;Database=AdventureWorks;Tru
  Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

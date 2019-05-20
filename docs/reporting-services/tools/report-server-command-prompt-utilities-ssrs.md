@@ -2,7 +2,7 @@
 title: Utilidades del símbolo del sistema del servidor de informes (SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - rskeymgmt utility
 ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f9e91b69a5b20238af34877f97330299d8d2f5d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 94c21d86b1a89d8de30d0be558fcab008f49d044
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634963"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576278"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>Utilidades del símbolo del sistema del servidor de informes (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye varias utilidades de la línea de comandos que se pueden utilizar para administrar un servidor de informes. Estas utilidades se instalan automáticamente cuando se instala el servidor de informes.  
@@ -34,7 +34,7 @@ ms.locfileid: "47634963"
 > [!NOTE]  
 >  Si prefiere usar una herramienta que tenga una interfaz gráfica de usuario, puede usar el Administrador de configuración de Reporting Services en lugar de **rsconfig** y **rskeymgmt**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  

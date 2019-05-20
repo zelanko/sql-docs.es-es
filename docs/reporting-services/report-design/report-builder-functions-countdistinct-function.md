@@ -2,18 +2,18 @@
 title: Función CountDistinct (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7fdf0446082a3cfde45f3093e2d6cd0b5077e3b8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6e7e7f39553d538359395470fca995122a006659
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287873"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579613"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>Funciones del Generador de informes: función CountDistinct
   Devuelve un recuento de todos los valores no NULL distintos especificados por la expresión, que se evalúa en el contexto del ámbito especificado.  

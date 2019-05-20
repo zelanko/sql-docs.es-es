@@ -2,21 +2,21 @@
 title: Enlazar un informe con un origen de datos compartido (SSRS) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], shared
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0a72bb8d81564afbe632a68908baf4bad4dead82
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bd958c0bbe781f7c39c2a2e00ecbc0ccfde7164e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507458"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573257"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Enlazar un informe con un origen de datos compartido (SSRS)
   En algunos casos (por ejemplo, al mover un informe de un servidor de prueba a uno de producción), es posible que quiera guardar el archivo en el equipo local y, después, cargarlo en otro servidor de informes. Al cargar el informe en el servidor nuevo, debe volver a enlazarlo con un origen de datos compartido almacenado en el servidor de informes nuevo. Si no vuelve a enlazar el informe, no funcionará correctamente cuando se acceda a él desde el servidor de informes nuevo.  
@@ -60,7 +60,7 @@ ms.locfileid: "52507458"
   
 10. Haga clic en **Cerrar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cargar documentos en una biblioteca de SharePoint &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
  [Crear y administrar orígenes de datos compartidos &#40;Reporting Services en el modo integrado de SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   

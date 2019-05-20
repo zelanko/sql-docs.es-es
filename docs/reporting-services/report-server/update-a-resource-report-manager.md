@@ -2,21 +2,21 @@
 title: Actualizar un recurso (Administrador de informes) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - updating resources
 - resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d82159a1d93e51715888fc405a94d91a4ffbb925
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 29ebd13314c99d425b191f049f86e6e78d3134fa
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031570"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571466"
 ---
 # <a name="update-a-resource-report-manager"></a>Actualizar un recurso (Administrador de informes)
   Puede actualizar un recurso reemplazándolo por una versión más reciente. Los recursos son elementos almacenados en un servidor de informes que contienen el contenido de un archivo que el usuario carga. Puede reemplazar un recurso existente importando el contenido de archivo nuevo o diferente en el recurso existente. La actualización de un recurso proporciona un modo de actualizar contenido preservando las propiedades existentes y la configuración de seguridad del recurso.  
@@ -41,7 +41,7 @@ ms.locfileid: "50031570"
   
  Si el recurso que está actualizando contiene una imagen que se utiliza en un informe, debe actualizar el informe para ver la imagen actualizada.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Contenido &#40;página del Administrador de informes&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Cargar archivo &#40;página del Administrador de informes&#41;](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [Cargar archivos a una carpeta](../../reporting-services/report-server/upload-files-to-a-folder.md)   

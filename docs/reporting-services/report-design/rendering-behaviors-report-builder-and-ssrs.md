@@ -2,18 +2,18 @@
 title: Comportamientos de la representación (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 575849e92c223731314109bfbfb5c6b64af7d09d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 24b196927e582d1b21bf9f11bd7ea824ecf8ba7b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291904"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576457"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportamientos de la representación (Generador de informes y SSRS)
   Dependiendo del representador que seleccione, se aplican ciertas reglas al cuerpo del informe y a su contenido al representar un informe. La forma en la que los elementos de informe se ajustan en una página viene determinada por la combinación de estos factores:  

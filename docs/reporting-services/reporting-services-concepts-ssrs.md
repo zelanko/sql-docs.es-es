@@ -2,18 +2,18 @@
 title: Conceptos de Reporting Services (SSRS) | Microsoft Docs
 ms.date: 10/25/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7bad528f4c644ee4de7339eacdd1e0a0e74c9abc
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814308"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570853"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Conceptos de Reporting Services (SSRS)
   En este tema se proporciona un breve resumen de los conceptos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -208,7 +208,7 @@ Diagrama de procesamiento de informes
  Un informe exportado es un informe totalmente paginado guardado en un formato de archivo específico. Los formatos de exportación dependen de las extensiones de representación instaladas y se pueden personalizar. De forma predeterminada, entre los formatos de exportación se incluyen Excel, Word, XML, PDF, TIFF y CSV. Para más información, vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Características y tareas de Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
  [Referencia técnica &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  

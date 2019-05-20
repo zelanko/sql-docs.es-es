@@ -2,18 +2,18 @@
 title: Tipo de conexión de Oracle (SSRS) | Microsoft Docs
 ms.date: 01/11/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74eb23f2f294995222bcb90a7791f1133179462d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f3dd35c6630c825e5341246170f6e96d61a47de4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813428"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577900"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Tipo de conexión de Oracle (SSRS)
 Para utilizar en el informe los datos de una base de datos de Oracle, debe tener un conjunto de datos basado en un origen de datos de informe de tipo Oracle. Este tipo de origen de datos integrado usa el proveedor de datos de Oracle directamente y requiere un componente de software del cliente Oracle.
@@ -104,7 +104,7 @@ Data Source="Oracle"; Unicode="True"
  Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

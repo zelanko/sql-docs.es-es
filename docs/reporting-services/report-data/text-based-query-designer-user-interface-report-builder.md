@@ -2,7 +2,7 @@
 title: Interfaz de usuario del Diseñador de consultas basado en texto (Generador de informes) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 f1_keywords:
@@ -10,14 +10,14 @@ f1_keywords:
 helpviewer_keywords:
 - query designers, text-based
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1af3d0654a32d9446f709c03e3bd4cfdb803e62f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d646a58c09fcc580fcc1f95acfd251bd17f4f290
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031254"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574954"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas basado en texto (Generador de informes)
   Use el diseñador de consultas basado en texto para especificar una consulta mediante el lenguaje de consulta admitido por el origen de datos, para ejecutar la consulta y para ver los resultados en tiempo de diseño. Puede especificar varias sintaxis de consulta, comandos o instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] para extensiones de procesamiento de datos personalizadas, y consultas que se especifican como expresiones. Dado que el generador de consultas basado en texto no procesa previamente la consulta y puede acomodar todo tipo de sintaxis de consulta, es la herramienta de generación de consultas predeterminada para varios tipos de orígenes de datos.  
@@ -50,7 +50,7 @@ ms.locfileid: "50031254"
   
 |Panel|Función|  
 |----------|--------------|  
-|Consulta|Muestra el texto de consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Use este panel para escribir o editar una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
+|Consultar|Muestra el texto de consulta de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Use este panel para escribir o editar una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|  
   
 #### <a name="example"></a>Ejemplo  
@@ -73,7 +73,7 @@ SELECT Name FROM Person.ContactType
   
 |Panel|Función|  
 |----------|--------------|  
-|Consulta|Muestra el nombre del procedimiento almacenado y de los parámetros de entrada.|  
+|Consultar|Muestra el nombre del procedimiento almacenado y de los parámetros de entrada.|  
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|  
   
 #### <a name="example"></a>Ejemplo  
@@ -102,7 +102,7 @@ uspGetWhereUsedProductID
   
  Especificar el nombre de tabla Person.ContactType equivale a crear la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] `SELECT * FROM Person.ContactType`.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Interfaz de usuario del Diseñador de consultas relacionales &#40;Generador de informes&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)   
  [Diseñadores de consultas &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   

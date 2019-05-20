@@ -2,18 +2,18 @@
 title: Creación y modificación de orígenes de datos incrustados | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 45db20b8f7f6fb4feca35b806f5fb694982cc8a1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7a701249370f0455c62a169c5401f3f101fd49a5
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021349"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573225"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>Creación y modificación de orígenes de datos incrustados
   Un origen de datos incrustado se define en una definición de informe y se usa solamente en ese informe.  
@@ -75,7 +75,7 @@ ms.locfileid: "50021349"
   
      El origen de datos aparece en el panel Datos de informe.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Especificar credenciales en el Generador de informes](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
   

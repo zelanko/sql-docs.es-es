@@ -2,7 +2,7 @@
 title: Crear y administrar suscripciones para servidores de informes en modo de SharePoint | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 44f4ba6f43d0c1d83aee358e018bc6aa51a12abe
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100096"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578348"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Crear y administrar suscripciones para servidores de informes en modo de SharePoint
   Puede crear suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para entregar informes desde una aplicación web de SharePoint que esté integrada con un servidor de informes en el modo de SharePoint. Las suscripciones pueden entregar informes a una biblioteca de documentos, a una carpeta de archivos o como un correo electrónico. En este tema se resumen los requisitos y los pasos para crear una suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -154,7 +154,7 @@ ms.locfileid: "50100096"
   
 3.  Haga clic en la casilla situada junto a la suscripción y, a continuación, haga clic en **Eliminar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Entrega a recursos compartidos de archivos en Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   

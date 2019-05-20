@@ -2,21 +2,21 @@
 title: Configurar la autenticación de Windows en el servidor de informes | Microsoft Docs
 ms.date: 08/26/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 992239e7b2e07ac555eb2c474716f341bf4d7870
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a7614848f5f52148ff5e4769c1e4dbfc5be9fe28
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617805"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571149"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar la autenticación de Windows en el servidor de informes
   De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si la implementación incluye aplicaciones cliente y exploradores que utilizan estos proveedores de seguridad, puede utilizar los valores predeterminados sin necesidad de ninguna configuración adicional. Si desea utilizar un proveedor de seguridad diferente para la seguridad integrada de Windows (por ejemplo, si desea utilizar directamente Kerberos) o si modificó los valores predeterminados y prefiere restaurar los originales, puede utilizar la información de este tema para especificar los valores de autenticación en el servidor de informes.  
@@ -204,7 +204,7 @@ ms.locfileid: "52617805"
   
 -   Para obtener información adicional con respecto a Kerberos y los servidores de informes, vea [Implementar una solución de Business Intelligence con SharePoint, Reporting Services y servidor de supervisión de PerformancePoint con Kerberos.](https://go.microsoft.com/fwlink/?LinkID=177751)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   

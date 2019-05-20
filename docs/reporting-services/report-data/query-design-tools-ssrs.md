@@ -2,7 +2,7 @@
 title: Herramientas de diseño de consulta (SSRS) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - semantic queries [Reporting Services]
 - Report Model Query Designer
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3b0d20ddfbc872429ecf47d001067f1e7f2738c9
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 840b964a8010ad7682a4d6d4d62a53192da9cfbb
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021239"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571216"
 ---
 # <a name="query-design-tools-ssrs"></a>Herramientas de diseño de consulta (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ofrece varias herramientas de diseño de consultas que puede usar para crear consultas de conjuntos de datos en el Diseñador de consultas. Algunos diseñadores de consultas ofrecen modos alternativos que le permiten elegir entre trabajar en modo visual o directamente en el idioma de la consulta. En este tema se presentan todas las herramientas y se describe el tipo de origen de datos que admite cada una de ellas. En esta sección se describen las siguientes herramientas:  
@@ -109,7 +109,7 @@ ms.locfileid: "50021239"
   
  Para más información, consulte [Hyperion Essbase Query Designer User Interface](../../reporting-services/report-data/hyperion-essbase-query-designer-user-interface.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Herramientas de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   

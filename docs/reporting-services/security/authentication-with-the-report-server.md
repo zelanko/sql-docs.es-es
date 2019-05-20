@@ -2,7 +2,7 @@
 title: Autenticación con el servidor de informes | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6b559815c7e1bb74dcf5c8b3b6dceb4e14265d11
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d3246b38461c1445f3335f42944480732ab583a0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030224"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570899"
 ---
 # <a name="authentication-with-the-report-server"></a>Autenticación con el servidor de informes
 
@@ -34,9 +34,9 @@ ms.locfileid: "50030224"
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|Negotiate|Sí|Intenta usar primero la autenticación integrada Kerberos para Windows, pero vuelve a NTLM si Active Directory no puede conceder un vale para la solicitud de cliente al servidor de informes. Negotiate solamente volverá a NTLM si el vale no está disponible. Si el primer intento provoca un error en lugar de indicar que no se encuentra un vale, el servidor de informes no hace un segundo intento.|  
 |RSWindowsNTLM|NTLM|Sí|Usa la autenticación integrada NTLM para Windows.<br /><br /> Las credenciales no se delegarán ni suplantarán en otras solicitudes. Las solicitudes subsiguientes seguirán una nueva secuencia de desafío-respuesta. Según la configuración de seguridad de la red, podría pedirse a un usuario las credenciales o la solicitud de autenticación se administrará de forma transparente.|  
-|RSWindowsKerberos|Kerberos|no|Usa la autenticación integrada Kerberos para Windows. Para configurar Kerberos, debe colocar los nombres principales del servicio del servidor (SPN) para las cuentas de servicio, lo que requiere privilegios de administrador de dominio. Si configura la delegación de identidad con Kerberos, el token del usuario que solicita un informe también se puede usar en una conexión adicional a los orígenes de datos externos que proporcionan datos a los informes.<br /><br /> Antes de especificar RSWindowsKerberos, asegúrese de que el tipo de explorador que usa lo admite realmente. Si usa Microsoft Edge, o Internet Explorer, la autenticación Kerberos solo se admite a través de Negotiate. Microsoft Edge, o Internet Explorer, no formulará ninguna solicitud de autenticación que especifique Kerberos directamente.|  
-|RSWindowsBasic|Básico|no|La autenticación básica se define en el protocolo HTTP y solo se puede usar para autenticar las solicitudes HTTP para el servidor de informes.<br /><br /> Las credenciales se pasan en la solicitud HTTP en la codificación Base64. Si usa la autenticación básica, utilice el Nivel de sockets seguros (SSL) para cifrar la información de la cuenta de usuario antes de enviarse a través de la red. SSL proporciona un canal cifrado para enviar una solicitud de conexión del cliente al servidor de informes a través de una conexión HTTP TCP/IP. Para obtener más información, vea el tema relativo al [uso de SSL para cifrar datos confidenciales](https://go.microsoft.com/fwlink/?LinkId=71123) en el sitio web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
-|Personalizado|(Anónima)|no|La autenticación anónima indica al servidor de informes que omita el encabezado de autenticación de una solicitud HTTP. El servidor de informes acepta todas las solicitudes, pero llama a una autenticación de formularios [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Forms personalizada que el usuario proporciona para autenticar al usuario.<br /><br /> Especifique **Custom** únicamente si está implementando un módulo de autenticación personalizada que administra todas las solicitudes de autenticación en el servidor de informes. No puede utilizar el tipo de autenticación Custom con la extensión de la autenticación de Windows predeterminada.|  
+|RSWindowsKerberos|Kerberos|No|Usa la autenticación integrada Kerberos para Windows. Para configurar Kerberos, debe colocar los nombres principales del servicio del servidor (SPN) para las cuentas de servicio, lo que requiere privilegios de administrador de dominio. Si configura la delegación de identidad con Kerberos, el token del usuario que solicita un informe también se puede usar en una conexión adicional a los orígenes de datos externos que proporcionan datos a los informes.<br /><br /> Antes de especificar RSWindowsKerberos, asegúrese de que el tipo de explorador que usa lo admite realmente. Si usa Microsoft Edge, o Internet Explorer, la autenticación Kerberos solo se admite a través de Negotiate. Microsoft Edge, o Internet Explorer, no formulará ninguna solicitud de autenticación que especifique Kerberos directamente.|  
+|RSWindowsBasic|Básico|No|La autenticación básica se define en el protocolo HTTP y solo se puede usar para autenticar las solicitudes HTTP para el servidor de informes.<br /><br /> Las credenciales se pasan en la solicitud HTTP en la codificación Base64. Si usa la autenticación básica, utilice el Nivel de sockets seguros (SSL) para cifrar la información de la cuenta de usuario antes de enviarse a través de la red. SSL proporciona un canal cifrado para enviar una solicitud de conexión del cliente al servidor de informes a través de una conexión HTTP TCP/IP. Para obtener más información, vea el tema relativo al [uso de SSL para cifrar datos confidenciales](https://go.microsoft.com/fwlink/?LinkId=71123) en el sitio web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] TechNet.|  
+|Personalizado|(Anónima)|No|La autenticación anónima indica al servidor de informes que omita el encabezado de autenticación de una solicitud HTTP. El servidor de informes acepta todas las solicitudes, pero llama a una autenticación de formularios [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Forms personalizada que el usuario proporciona para autenticar al usuario.<br /><br /> Especifique **Custom** únicamente si está implementando un módulo de autenticación personalizada que administra todas las solicitudes de autenticación en el servidor de informes. No puede utilizar el tipo de autenticación Custom con la extensión de la autenticación de Windows predeterminada.|  
   
 ## <a name="unsupported-authentication-methods"></a>Métodos de autenticación no admitidos  
  No se admiten los métodos de autenticación y solicitudes siguientes.  

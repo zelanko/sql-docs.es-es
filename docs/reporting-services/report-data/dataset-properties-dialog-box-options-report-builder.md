@@ -2,7 +2,7 @@
 title: Propiedades del conjunto de datos (cuadro de diálogo), Opciones (Generador de informes) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: reference
 f1_keywords:
@@ -10,14 +10,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.datasetproperties.options.f1
 - "10130"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7f9d4ad97d5d64fe08eb6aac6e0d83063a94bc46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e1db5bcd2401d1888fb6dc76e42c5840ed3b0b62
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623213"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573129"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>Propiedades del conjunto de datos (cuadro de diálogo), Opciones (Generador de informes)
   Seleccione **Opciones** en el cuadro de diálogo **Propiedades del conjunto de datos** para cambiar opciones de datos, como las opciones de intercalación y el tratamiento de subtotales como datos detallados, para la consulta. Para obtener más información sobre las intercalaciones, vea [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "47623213"
  **Interpretar los subtotales como filas de detalles**  
  Seleccione un valor que indique si desea que las filas de subtotales se interpreten como filas de detalles en lugar de como filas agregadas. El valor predeterminado, **Auto**, indica que las filas de subtotales se deberían tratar como filas de detalles si el informe no usa la función **Aggregate**() para acceder a cualquier campo del conjunto de datos. Si desea que las filas de subtotales se interpreten como filas agregadas, elija **False**. Si quiere que las filas de subtotales se interpreten como filas de detalles y sabe que no usan la función **Aggregate**(), elija **True**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Función de agregado &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)   
  [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   

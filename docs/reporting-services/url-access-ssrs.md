@@ -2,7 +2,7 @@
 title: Acceso URL (SSRS) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], URL access
 - hyperlinks [Reporting Services]
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 83ec1aecfa57651ce206881fb66f3cae6a226603
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813818"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574247"
 ---
 # <a name="url-access-ssrs"></a>Acceso URL (SSRS)
   El acceso URL del servidor de informes de SQL Server Reporting Services (SSRS) permite enviar comandos a un servidor de informes a través de una solicitud URL. Por ejemplo, puede personalizar la representación de un informe en una biblioteca de SharePoint o un servidor de informes en modo nativo. Es posible que haya visto el informe usando un conjunto específico de valores de parámetro de informe o tal vez haya consultado una determina página de su interés. Puede encapsular esta información en la dirección URL usando los parámetros de acceso URL predefinidos. Puede personalizar más el modo en el que el servidor de informes procesa el informe incorporando parámetros sobre los formatos de representación o sobre la apariencia del visor de informes. Puede pegar esta dirección URL directamente en un mensaje de correo electrónico o una página web para permitir que otras personas tengan acceso al informe del mismo modo en el explorador.  
@@ -70,7 +70,7 @@ https://myspsite/subsite/_vti_bin/reportserver
 ```  
   
 > [!TIP]  
->  Es importante que la dirección URL incluya la sintaxis de proxy de `_vti_bin` para enrutar la solicitud a través de SharePoint y el proxy HTTP de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. El proxy agrega algún contexto a la solicitud HTTP, contexto que es necesario para garantizar la correcta ejecución del informe para los servidores de informes de modo de SharePoint.  
+>  Es importante que la dirección URL incluya la sintaxis de proxy de `_vti_bin` para enrutar la solicitud a través de SharePoint y el proxy HTTP de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . El proxy agrega algún contexto a la solicitud HTTP, contexto que es necesario para garantizar la correcta ejecución del informe para los servidores de informes de modo de SharePoint.  
   
  *pathinfo*  
  Nombre de la ruta de acceso relativa del elemento en la base de datos del servidor de informes en modo nativo o dirección URL completa del elemento en un catálogo de SharePoint.  
@@ -116,7 +116,7 @@ https://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
 |Abrir un informe y navegar directamente a la ubicación de una cadena.|[Buscar un informe mediante un acceso URL](../reporting-services/search-a-report-using-url-access.md)|  
 |Representar una instantánea específica del historial de informes.|[Representar instantáneas del historial de informes mediante acceso URL](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
  [Referencia de parámetros de acceso URL](../reporting-services/url-access-parameter-reference.md)   
  [Integración de Reporting Services con el acceso URL](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   

@@ -1,8 +1,8 @@
 ---
-title: 'Tutorial: Creación de un informe de gráfico rápido sin conexión (Generador de informes) | Microsoft Docs'
+title: 'Tutorial: Crear un informe de gráfico rápido sin conexión (Generador de informes) | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,18 +10,18 @@ helpviewer_keywords:
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ee949dd6af1e421ca59f5319a19506490cc9b809
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 429ee4c7dcd0b6d58b2cbb3e223e8f7407339327
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286073"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571766"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Creación de un informe de gráfico rápido sin conexión (Generador de informes)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Crear un informe de gráfico rápido sin conexión (Generador de informes)
 
-  En este tutorial, se usará un asistente para crear un gráfico circular en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. A continuación, agregue porcentajes y modifique el gráfico circular un poco. 
+  En este tutorial, use un asistente para crear un gráfico circular en un informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. A continuación, agregue porcentajes y modifique el gráfico circular un poco. 
   
 Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un gráfico circular semejante al de esta ilustración:  
   

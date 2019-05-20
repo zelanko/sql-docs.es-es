@@ -2,18 +2,18 @@
 title: Propiedades de campo extendidas para una base de datos de Analysis Services (SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 73a2539ad976de2a25361835b9c33b03a79fdf97
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031264"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573321"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propiedades de campo extendidas para una base de datos de Analysis Services (SSRS)
   La extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite propiedades de campo extendidas. Las propiedades de campo extendidas son propiedades disponibles además de las propiedades de campo **Value** e **IsMissing** en el origen de datos y admitidas por la extensión de procesamiento de datos. Las propiedades extendidas no aparecen en el panel Datos de informe como parte de la colección de campos para un conjunto de datos de informe. Para incluir valores de propiedades de campo extendidas en el informe, escriba expresiones que las especifiquen por su nombre con la colección **Fields** integrada.  
@@ -146,7 +146,7 @@ CELL PROPERTIES
   
  De este modo, se ordena el valor del campo en el tipo de datos de enteros original del origen de datos.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  

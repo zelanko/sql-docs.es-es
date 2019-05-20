@@ -2,7 +2,7 @@
 title: Deshabilitar o pausar el procesamiento de informes y suscripciones | Microsoft Docs
 ms.date: 09/29/2015
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - roles [Reporting Services], modifying
 - shared schedules [Reporting Services], pausing
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 740a342a11d7e02a3922fcf846855c4dc4d6e023
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 652ec06981996e9ef17b955c58f27b975c6e3946
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405902"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581064"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Deshabilitar o pausar el procesamiento de informes y suscripciones
   Existen varios enfoques que puede usar para deshabilitar o pausar el procesamiento de informes y suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Los enfoques de este tema comprenden desde deshabilitar una suscripción a interrumpir la conexión del origen de datos. No todos los enfoques son posibles con ambos modos de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . En las tablas siguientes se resumen los métodos y los modos de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admitidos:  
@@ -162,7 +162,7 @@ ForEach ($subscription in $subscriptions)
   
  Una vez que quite una extensión de entrega, ya no estará disponible en el Administrador de informes o un sitio de SharePoint. Si quita una extensión de entrega, es posible que algunas suscripciones queden inactivas. Asegúrese de eliminar las suscripciones o configurarlas para usar una extensión de entrega diferente antes de quitar una extensión.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Archivos de configuración de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Configurar el Administrador de informes &#40;modo nativo&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   

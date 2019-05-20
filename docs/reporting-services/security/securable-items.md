@@ -2,7 +2,7 @@
 title: Elementos protegibles | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - security [Reporting Services], securable items listed
 - role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 12b9110b50125197cab13a2c8bebee4c984f58b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b55265887b8d824e5e7d90d0fb2108efcf75fdb4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857221"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570608"
 ---
 # <a name="securable-items"></a>Elementos protegibles
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la seguridad basada en roles para controlar el acceso a los elementos que se almacenan en un servidor de informes. Cuando concede un acceso de usuario a un servidor de informes, normalmente lo hace creando un par de asignaciones de roles:  
@@ -57,7 +57,7 @@ ms.locfileid: "47857221"
 |Orígenes de datos compartidos|Los orígenes de datos compartidos se pueden proteger para limitar el acceso al elemento y sus páginas de propiedades. Para obtener más información, vea [Proteger elementos de orígenes de datos compartidos](../../reporting-services/security/secure-shared-data-source-items.md).|  
 |Conjuntos de datos compartidos|Los conjuntos de datos compartidos se pueden proteger para controlar el intervalo de acciones que los usuarios pueden realizar, como ver o cambiar la definición, o cambiar las propiedades de un conjunto de datos compartido determinado.<br /><br /> Para obtener más información, vea [Proteger los elementos de un conjunto de datos compartido](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conceder permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   

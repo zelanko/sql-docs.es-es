@@ -2,18 +2,18 @@
 title: Agregar un hipervínculo a una dirección URL (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 09/07/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7dcd5d57b3b5452a9d14b8951cc8f8d6572f452d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 84f7ebd295cb64ca4d6f77427a727c1d0182b142
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288953"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574829"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Agregar un hipervínculo a una dirección URL (Generador de informes y SSRS)
 Aprenda a agregar acciones de hipervínculo a cuadros de texto, imágenes, gráficos y medidores en informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Los vínculos pueden ir a otros informes, a los marcadores de un informe o a direcciones URL estáticas o dinámicas. 
@@ -26,7 +26,7 @@ Aprenda a agregar acciones de hipervínculo a cuadros de texto, imágenes, gráf
  
  *  Y puede **agregar un marcador a un lugar específico** en el mismo informe. 
   
-Pruebe a agregar hipervínculos con los datos de ejemplo del [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+Intente agregar hipervínculos con los datos de ejemplo incluidos en [Tutorial: Dar formato a texto &#40;(Generador de informes)&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  Los vínculos que se enlazan a los campos de conjunto de datos pueden ser vulnerables a la alteración con fines malintencionados. Para obtener más información, vea [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md).  

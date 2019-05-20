@@ -2,20 +2,20 @@
 title: Buscar texto, números o fechas en un informe | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ea304423f392815b2eeeca18580ad5a73f140751
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f76bc00eca721a2ca118062d21cafe042e572dbb
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296923"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576398"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>Buscar texto, números o fechas en un informe
   Puede buscar contenido del informe si escribe una palabra o una frase que se desee encontrar (el valor máximo de un término de búsqueda es 256 caracteres). La búsqueda es una técnica de navegación que encuentra un valor coincidente en el informe y se centra en la parte del informe que contiene ese valor.  

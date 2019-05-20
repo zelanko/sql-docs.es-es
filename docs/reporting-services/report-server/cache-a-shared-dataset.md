@@ -2,18 +2,18 @@
 title: Almacenar en caché un conjunto de datos compartido | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0abfd4aba4f18f13fce580f5c73e98cf9ee7ffb5
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7e98e5ffd8970806e2ed92e53c8e82da21387938
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029284"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574768"
 ---
 # <a name="cache-a-shared-dataset"></a>Almacenar en caché un conjunto de datos compartido
   Una manera de mejorar el rendimiento es configurar las propiedades de almacenamiento en caché para un conjunto de datos compartido. Cuando un conjunto de datos compartido se almacena en memoria caché, se guarda una copia de los resultados de la consulta durante un breve período de tiempo. El primer usuario que solicite un informe que utilice el conjunto de datos compartido debe esperar a que los resultados de la consulta y todo el procesamiento se completen antes de ver el informe. Los usuarios subsiguientes que solicitan el informe dentro del período de almacenamiento en caché experimentarán mejor rendimiento porque la consulta y el procesamiento ya se han producido. También puede especificar un plan de actualización de la memoria caché para ejecutar la consulta y almacenar en memoria caché los resultados hasta que expire la memoria caché especificada.  
@@ -41,7 +41,7 @@ ms.locfileid: "50029284"
   
 7.  Haga clic en **Aplicar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administración de conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   

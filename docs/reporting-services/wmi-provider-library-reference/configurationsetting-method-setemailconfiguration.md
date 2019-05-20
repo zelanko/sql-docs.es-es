@@ -2,7 +2,7 @@
 title: Método SetEmailConfiguration (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetEmailConfiguration method
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 227122568d206e9459811b090b1b1dbb2c53c356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3e2b3e3c1d3d9fc5193a8c87c2aa96f9ff2d3ba2
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756304"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581006"
 ---
 # <a name="configurationsetting-method---setemailconfiguration"></a>Método ConfigurationSetting - SetEmailConfiguration
   Configura la extensión de entrega de correo electrónico utilizada por el servidor de informes para enviar el correo electrónico.  
@@ -63,7 +63,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

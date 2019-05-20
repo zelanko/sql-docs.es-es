@@ -2,20 +2,20 @@
 title: Reporting Services en SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b57f42345b487867b5362e24963790e5f525f973
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292333"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581347"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services en SQL Server Data Tools (SSDT)
 
@@ -175,7 +175,7 @@ ms.locfileid: "56292333"
   
 -   **Propiedades del informe** Seleccione esta opción para abrir el cuadro de diálogo **Propiedades del informe** . En este cuadro de diálogo pueden asignarse propiedades generales al informe, como el nombre de autor y el espaciado de cuadrícula, y especificar propiedades para el diseño del informe, como el número de columnas y el tamaño de página. También puede incluir código personalizado, referencias a ensamblados y clases, así como los nombres de los elementos del resultado, la transformación y los esquemas de los datos.  
   
--   **Vista** Cambie entre las dos pestañas del diseñador de informes: Diseño y vista previa.  
+-   **Vista** Pasa de una pestaña del Diseñador de informes a otra: Diseño y Vista previa.  
   
 -   **Encabezado de página** Agregue un encabezado de página al informe o elimine un encabezado de página del informe. Al eliminar un encabezado de página, se eliminan todos los elementos del encabezado de página.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "56292333"
   
 
 ##  <a name="bkmk_SourceControl"></a> Control de código fuente  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] se puede integrar con complementos de origen. Use las páginas Proyectos y Soluciones del cuadro de diálogo **Opciones** para especificar el complemento y configurar las propiedades.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] se puede integrar con complementos de origen. Use las páginas Proyectos y Soluciones del cuadro de diálogo Opciones** para especificar el complemento y configurar las propiedades.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Plantillas de informe personalizadas  
  Para usar informes personalizados como plantillas para los informes nuevos, basta con copiarlas en la carpeta ReportProject del equipo en el que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está instalado. De forma predeterminada, esta carpeta se encuentra en la ubicación siguiente: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Al agregar un elemento nuevo al proyecto de informe, el informe personalizado aparece en el panel de plantillas.  

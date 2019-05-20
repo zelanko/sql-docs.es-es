@@ -2,18 +2,18 @@
 title: Publicar y volver a publicar elementos de informe (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5733718f34ce62ada3662b161dad9c283a8b220b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f48415c35b57b889b764abfe44f5bf937ee3f650
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291323"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576623"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Publicar y volver a publicar elementos de informe (Generador de informes y SSRS)
   Se trata de elementos de informe paginado que se han publicado por separado en un servidor de informes y se pueden volver a usar en otros informes paginados. Puede publicar un elemento de informe con la configuración predeterminada en una ubicación predeterminada, o editar los metadatos del elemento de informe , por ejemplo el nombre y la descripción, y guardarlo en otra ubicación de un servidor de informes. También puede guardarlo en un sitio de SharePoint que esté integrado con un servidor de informes si tiene los permisos necesarios.  
@@ -32,7 +32,7 @@ ms.locfileid: "56291323"
   
      Si no desea hacerlo, haga clic en **Revisar y modificar los elementos de informe antes de publicarlos**.  
   
-3.  Edite el nombre y la descripción del elemento de informe: Haga doble clic en el nombre para editarlo y haga clic en el campo **Descripción** para agregar una descripción.  
+3.  Edite el nombre y la descripción del elemento de informe. Haga doble clic en el nombre para editarlo y haga clic en el campo **Descripción** para agregar una descripción.  
   
     > [!NOTE]  
     >  Es aconsejable dar un nombre y una descripción al elemento de informe, porque ayuda a los usuarios a identificarlo cuando lo buscan. La longitud máxima del nombre de un elemento de informe es de 260 caracteres para la ruta de acceso completa, incluidos los nombres de las carpetas del servidor, seguidos por el nombre del elemento de informe.  

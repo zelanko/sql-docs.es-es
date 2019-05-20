@@ -2,20 +2,20 @@
 title: Servidor de informes en Management Studio (Ayuda F1) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: reference
 helpviewer_keywords:
 - Object Explorer, help
 ms.assetid: 982e8c03-7341-4895-8a95-a12d52c564ea
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9557ad9448bcd36a5d885a780cf18d0b3855eb9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 026583e0093812dbf683c93de9d11fd8ffabb7e4
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617183"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576143"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Servidor de informes en Management Studio ayuda F1
   En esta sección se incluyen temas acerca de los cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que pueden usarse para administrar servidores de informes.  
@@ -54,7 +54,7 @@ ms.locfileid: "47617183"
   
 -   [Propiedades de rol de usuario](../../reporting-services/tools/user-role-properties-management-studio.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Referencia de características (Reporting Services)](../../reporting-services/feature-reference-reporting-services.md)  
  [Usar SQL Server Management Studio](~/ssms/use-sql-server-management-studio.md) 
 

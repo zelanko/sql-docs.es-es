@@ -2,7 +2,7 @@
 title: Aplicar formato a un gráfico (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -47,14 +47,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.chartproperties.border.f1
 - "10247"
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ebca36e31b832d0aeb4aef588564b64c618c45b7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bdbaff988ae0b433e12e3f65b64899b0c3e0b02a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291539"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575963"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Aplicar formato a un gráfico (Generador de informes y SSRS)
   Después de definir los datos para el gráfico y su aspecto, puede aplicar formato para mejorar su aspecto general y resaltar los puntos de datos clave. Las opciones de formato más comunes se pueden modificar desde el cuadro de diálogo de propiedades; estas opciones se muestran al hacer clic con el botón secundario en un elemento de gráfico para ver su menú contextual. Cada elemento de gráfico dispone de su propio cuadro de diálogo. Para más información sobre los elementos de gráfico, vea [Gráficos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md).  

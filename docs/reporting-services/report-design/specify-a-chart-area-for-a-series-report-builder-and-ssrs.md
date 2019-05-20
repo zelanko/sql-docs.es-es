@@ -2,21 +2,21 @@
 title: Especificar un área de gráfico para una serie (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
 - "10157"
 - sql13.rtp.rptdesigner.chartareaproperties.alignment.f1
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 09af545e5268192c221d7d129ee39e52fbfdb0b2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5ef1e735b69e0547f7a9ca9a9d64bf9423a6068e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296843"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65578527"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Especificar un área de gráfico para una serie (Generador de informes y SSRS)
   En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , el *gráfico* es el contenedor de nivel superior que incluye el borde exterior, el título del gráfico y la leyenda. De manera predeterminada, el gráfico contiene un *área de gráfico*. El área de gráfico no está visible en la superficie del gráfico, pero puede imaginarla como un contenedor que incluye únicamente las etiquetas del eje, el título del eje y el área de trazado de una o más series. En la ilustración siguiente se muestra el concepto de varias áreas de gráfico dentro de un único gráfico.  

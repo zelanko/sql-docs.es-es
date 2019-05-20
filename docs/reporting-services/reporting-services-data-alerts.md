@@ -2,19 +2,19 @@
 title: Alertas de datos de Reporting Services | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e0032e303951ebfc531b3feb0831f1a48061914
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539927"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580069"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertas de datos de Reporting Services
 
@@ -315,7 +315,7 @@ A continuación se resumen las áreas clave de las alertas de datos de [!INCLUDE
   
 -   [Conceder permisos a los usuarios y alertar a los administradores](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Diseñador de alertas de datos](../reporting-services/data-alert-designer.md)   
 [Administrador de alertas de datos para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   

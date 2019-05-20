@@ -2,23 +2,23 @@
 title: Crear facturas y formularios con listas (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c33231a5-b3a8-42e4-95bc-d05bdf2222f5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42804131c70b9a0077a3492b1c3532fb8de37a98
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b8ec0531056ea1a4ae3ff1850baed21dfb61df8e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298101"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581506"
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Crear facturas y formularios con listas (Generador de informes y SSRS)
   Una región de datos de lista se repite con cada grupo o fila del conjunto de datos de informe paginado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las listas se pueden utilizar para crear informes o formularios de forma libre, por ejemplo facturas, o conjuntamente con otras regiones de datos. Puede definir listas que contengan cualquier número de elementos de informe. Una lista se puede anidar  
   
- Para obtener información acerca de las listas, vea [Tutorial: Creación de un informe de forma libre &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
+ Para empezar a usar listas rápidamente, vea [Tutorial: Crear un informe de forma libre &#40;Generador de informes&#41;](../../reporting-services/tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  Puede publicar listas por separado de un informe como elementos de informe. Obtenga más información sobre [Elementos de informe (Generador de informes y SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  

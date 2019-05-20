@@ -2,7 +2,7 @@
 title: Servicio web de MSRS 2011 de contadores de rendimiento, objetos de rendimiento | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 52e4ef6b3361ca1e577f4c19a325bcb982c4e103
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: deda73905311011341bbf98898d46ea8a9e6f64c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403151"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577691"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Servicio web de MSRS 2011 de contadores de rendimiento, objetos de rendimiento
   En este tema se describen los contadores de rendimiento para los objetos de rendimiento **MSRS 2011 Web Service** y **MSRS 2011 Windows Service** . Estos objetos son parte de una implementación de modo nativo de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
@@ -122,7 +122,7 @@ get-counter -listset msr*
 (get-counter -listset "MSRS 2011 Windows Service").paths  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar el rendimiento del servidor de informes](../../reporting-services/report-server/monitoring-report-server-performance.md)   
  [Contadores de rendimiento para los objetos de rendimiento en modo SharePoint de MSRS 2011 Web Service y SharePoint de MSRS 2011 Windows Service &#40;modo SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)   
  [Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  

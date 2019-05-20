@@ -2,18 +2,18 @@
 title: Usar operadores en expresiones (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f933ea46def5dff7c6fb9cb5bc51b3c2f310d53a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3edfb8c885fbb8f7436f21271fc73d89599adfc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292284"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582234"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Usar operadores en expresiones (Generador de informes y SSRS)
   Un operador es un símbolo que representa las acciones que se aplican a uno o a varios términos de una expresión. En una expresión, se pueden usar las categorías de operadores siguientes: aritméticos, de comparación, de concatenación, lógicos o bit a bit, y de desplazamiento de bits.  
@@ -45,7 +45,7 @@ ms.locfileid: "56292284"
 |>=|Mayor o igual que.|  
 |=|Igual que.|  
 |<>|No es igual a.|  
-|Like|Determina si una cadena de caracteres específica coincide con un patrón especificado. Un patrón puede contener caracteres normales y caracteres comodín. Durante la operación de búsqueda de coincidencias de patrón, los caracteres normales deben coincidir exactamente con los caracteres especificados en la cadena de caracteres. Sin embargo, los caracteres comodín pueden coincidir con fragmentos arbitrarios de la cadena. El uso de caracteres comodín hace que el operador LIKE sea más flexible que los operadores de comparación de cadenas = y !=.<br /><br /> La tabla siguiente contiene una lista de los caracteres que se pueden usar como caracteres comodín:<br /><br /> %: Cualquier cadena de cero o más caracteres.<br /><br /> _: Cualquier carácter individual.<br /><br /> [ ]: Cualquier carácter individual que se encuentre en el intervalo (por ejemplo, [a-f]) o en el conjunto (por ejemplo, [aeiou]) especificado.<br /><br /> [^]: cualquier carácter individual que no se encuentre en el intervalo (por ejemplo, [^a-f]) o en el conjunto (por ejemplo, [^aeiou]) especificado.|  
+|Like|Determina si una cadena de caracteres específica coincide con un patrón especificado. Un patrón puede contener caracteres normales y caracteres comodín. Durante la operación de búsqueda de coincidencias de patrón, los caracteres normales deben coincidir exactamente con los caracteres especificados en la cadena de caracteres. Sin embargo, los caracteres comodín pueden coincidir con fragmentos arbitrarios de la cadena. El uso de caracteres comodín hace que el operador LIKE sea más flexible que los operadores de comparación de cadenas = y !=.<br /><br /> La tabla siguiente contiene una lista de los caracteres que se pueden usar como caracteres comodín:<br /><br /> %: cualquier cadena de cero o más caracteres.<br /><br /> _: cualquier carácter individual.<br /><br /> [ ]: cualquier carácter individual que se encuentre en el intervalo (por ejemplo, [a-f]) o en el conjunto (por ejemplo, [aeiou]) especificado.<br /><br /> [^]: cualquier carácter individual que no se encuentre en el intervalo (por ejemplo, [^a-f]) o en el conjunto (por ejemplo, [^aeiou]) especificado.|  
 |Is|Compara dos referencias a objeto.|  
   
 ### <a name="string-concatenation"></a>Concatenación de cadenas  

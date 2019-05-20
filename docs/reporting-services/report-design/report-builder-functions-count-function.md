@@ -2,18 +2,18 @@
 title: Función Count (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b0eba548573866c89dffe91df44c4ba78f1417c0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9cdf7cc51563de96e20e188a7fca2fb0f1ac9631
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285333"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579718"
 ---
 # <a name="report-builder-functions---count-function"></a>Funciones del Generador de informes: función Count
   Devuelve un recuento de los valores no NULL especificados por la expresión, que se evalúa en el contexto del ámbito indicado.  

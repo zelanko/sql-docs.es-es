@@ -2,20 +2,20 @@
 title: Propiedades del trabajo (Management Studio) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.jobproperties.f1
 ms.assetid: 807ffd0e-9363-4f8f-9c36-c5d746ad19fd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5e93afa5dd974ed7ae6dbdff5844f849d50e72bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fb1a989876126a57553a1ae833bcf847f9c005bc
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630572"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571129"
 ---
 # <a name="job-properties-management-studio"></a>Propiedades del trabajo (Management Studio)
   Use la página **Propiedades del trabajo** para ver información sobre una suscripción o un informe en curso antes de cancelarlo.  
@@ -65,7 +65,7 @@ ms.locfileid: "47630572"
  **Nombre de usuario**  
  Para los procesos iniciados por un usuario, esta columna muestra el nombre del usuario. Para los trabajos del sistema, éste es el nombre del servidor de informes.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Servidor de informes en Management Studio ayuda F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Conectar con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md)  

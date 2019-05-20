@@ -2,21 +2,21 @@
 title: Establecer permisos para elementos del servidor de informes en un sitio de SharePoint | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 936f4d6ecf91169f68542042f060dd6ec379372f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8bdd50291a009189bf894300cdea4633fdd952f0
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807464"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570614"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>Establecer permisos para elementos del servidor de informes en un sitio de SharePoint
   Si la configuración de seguridad predeterminada no proporciona el nivel de acceso necesario, puede crear nuevos niveles de permisos para proporcionar acceso a elementos u operaciones específicos del servidor de informes. La configuración de seguridad personalizada puede ser útil si desea restringir el acceso a un informe determinado.  
@@ -69,7 +69,7 @@ ms.locfileid: "47807464"
   
 12. Haga clic en **Aceptar**. Una vez que el usuario pueda administrar permisos para un modelo específico, dicho usuario podrá abrir el modelo para editar los permisos de dicho modelo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar la seguridad integrada de Windows SharePoint Services para los elementos del servidor de informes](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [Establecimiento de permisos para las operaciones del servidor de informes en una aplicación web de SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   

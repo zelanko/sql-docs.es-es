@@ -2,20 +2,20 @@
 title: Propiedad Version (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - Version property
 ms.assetid: 10266c94-d4da-4f4a-8cdd-5a64f57ada5e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a6352530174b36a2377d2fbd8fd09438ba545779
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 60c7c5b3e49dff88ff6f55c3f97052c7ae38ef92
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750983"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570154"
 ---
 # <a name="configurationsetting-property---version"></a>Propiedad ConfigurationSetting - Version
   Devuelve la versión del servidor de informes en formato Major.Minor.Build.Revision. Solo lectura.  
@@ -39,7 +39,7 @@ public string Version;
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros de MSReportServer_Instance](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-members.md)  
   
   

@@ -2,18 +2,18 @@
 title: Agregar un borde a un informe (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 81412f94-2991-4e58-bc05-5ccc0cbf2a75
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d392c1242f9e075571a2ccc11a8668ad101146f0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c319bf967cb11c775456c2b596424d8b7df515b6
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294833"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574878"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Agregar un borde a un informe (Generador de informes y SSRS)
   Para agregar un borde a un informe paginado de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , agregue bordes a los encabezados, los pies de página y al cuerpo del informe, sin agregar líneas o rectángulos.    

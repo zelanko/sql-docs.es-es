@@ -2,7 +2,7 @@
 title: Servidor de informes de Reporting Services (modo nativo) | Microsoft Docs
 ms.date: 03/15/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - administering [Reporting Services]
 - Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 43917e9d51aecb545421e9462526fc435bf19d37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 47ac37f217cb49cd676cc822618e5395c029256f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713153"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581359"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Servidor de informes de Reporting Services (modo nativo)
   Un servidor de informes configurado para el modo nativo se ejecuta como un servidor de aplicaciones que proporciona todas las funcionalidades de procesamiento y administración exclusivamente a través de los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -104,8 +104,8 @@ ms.locfileid: "47713153"
   
  Para usar un recurso de imagen de un informe, agregue el archivo de imagen al proyecto y publíquelo junto con el informe. Una vez publicada la imagen, puede actualizar la referencia de la imagen en el informe de manera que señale al recurso del servidor de informes y, a continuación, vuelva a publicar únicamente el informe para guardar sus cambios. Puede actualizar ahora la imagen posteriormente con independencia del informe volviendo a publicar el recurso. El informe usa la versión más actual de la imagen disponible en el servidor de informes.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar y administrar un servidor de informes &#40;modo nativo de SSRS&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Solución de problemas en una instalación de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
+ [Solucionar problemas en una instalación de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   
   

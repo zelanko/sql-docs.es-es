@@ -2,18 +2,18 @@
 title: Tipos de datos en expresiones (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0132cfbd9a94ea8510c957c79f23b41e9c4f025b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8167b9066b0549332a6bb30030d339b79c3c45ac
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56284594"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580865"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de datos en expresiones (Generador de informes y SSRS)
   La finalidad de los tipos de datos es permitir el almacenamiento y el procesamiento de los datos de manera eficaz. Los tipos de datos más comunes incluyen texto (también conocido como cadenas), números (con y sin decimales), fechas y horas, e imágenes. Los valores de un informe deben ser del tipo de datos de lenguaje RDL (Report Definition Language). Puede dar formato a un valor según sus preferencias al mostrarlo en un informe. Por ejemplo, un campo que representa valores de moneda se almacena en la definición del como un número de punto flotante y mostrarse en uno y otro formato en función de la propiedad de formato elegida.  
@@ -28,12 +28,12 @@ ms.locfileid: "56284594"
   
 |Tipo RDL|Tipos de CLR|  
 |--------------|---------------|  
-|String|Predeterminado: String<br /><br /> Chart, GUID, Timespan|  
-|Boolean|Predeterminado: Boolean|  
-|Integer|Predeterminado: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Predeterminado: DateTime<br /><br /> DateTimeOffset|  
-|float|Predeterminado: Doble<br /><br /> Single, Decimal|  
-|Binario|Predeterminado: Byte[]|  
+|String|Valor predeterminado: String<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Valor predeterminado: Boolean|  
+|Integer|Valor predeterminado: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
+|DateTime|Valor predeterminado: DateTime<br /><br /> DateTimeOffset|  
+|float|Valor predeterminado: Double<br /><br /> Single, Decimal|  
+|Binario|Valor predeterminado: Byte []|  
 |Variant|Cualquiera de los anteriores excepto Byte []|  
 |VariantArray|Matriz de Variant|  
 |Serializable|Variant o tipos marcados con Serializable o que implementan ISerializable.|  
@@ -66,7 +66,7 @@ ms.locfileid: "56284594"
 -   Compruebe si la extensión de procesamiento de datos que está usando incluye metadatos para recuperar datos que ya tienen asignado un formato. Por ejemplo, una consulta MDX de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] incluye la propiedad extendida FORMATTED_VALUE para los valores de cubo a los que se dio formato al procesar el cubo. Para obtener más información, vea [Propiedades de campo extendidas para una base de datos de Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Descripción de los tipos de datos de los parámetros  
- Los parámetros de informe deben pertenecer a uno de los cinco tipos de datos: Boolean, DateTime, Integer, Float o Text (también conocido como String). Si la consulta de conjunto de datos incluye parámetros de consulta, automáticamente se crean parámetros de informe que se vinculan a dichos parámetros de consulta. El tipo de datos predeterminado para un parámetro de informe es String. Para cambiar el tipo de datos predeterminado de un parámetro de informe, seleccione el valor adecuado en la lista desplegable **Tipo de datos** de la página **General** del cuadro de diálogo **Propiedades de parámetro de informe** .  
+ Los parámetros de informe deben pertenecer a uno de estos cinco tipos de datos: Boolean, DateTime, Integer, Float o Text (también conocido como String). Si la consulta de conjunto de datos incluye parámetros de consulta, automáticamente se crean parámetros de informe que se vinculan a dichos parámetros de consulta. El tipo de datos predeterminado para un parámetro de informe es String. Para cambiar el tipo de datos predeterminado de un parámetro de informe, seleccione el valor adecuado en la lista desplegable **Tipo de datos** de la página **General** del cuadro de diálogo **Propiedades de parámetro de informe** .  
   
 > [!NOTE]  
 >  Los parámetros de informe cuyo tipo de datos es DateTime no admiten milisegundos. Aunque sí puede crear un parámetro basado en valores que incluyen milisegundos, no puede seleccionar un valor con milisegundos en una lista desplegable de valores disponibles que contiene valores de fecha o de hora.  

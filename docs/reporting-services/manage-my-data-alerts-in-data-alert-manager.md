@@ -2,22 +2,22 @@
 title: Administrar mis alertas de datos en el Administrador de alertas de datos | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5c214f9e721f8df254ed403b3db61fb69d22e208
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 9feef3af6a4506f3daa6fab793a3c76a5dd84cae
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031534"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581040"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>Administrar mis alertas de datos en el Administrador de alertas de datos
 
@@ -71,7 +71,7 @@ Los usuarios de SharePoint pueden ver una lista de las alertas de datos que han 
   
      Se crea la instancia de alerta y el mensaje de alerta de datos se envía inmediatamente, independientemente de las opciones de programación que haya especificado en el Diseñador de alertas de datos. Por ejemplo, se enviará una alerta configurada para su envío semanal y solo si cambian los resultados.  
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Administrador de alertas de datos para administradores de alertas](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Alertas de datos de Reporting Services](../reporting-services/reporting-services-data-alerts.md)  

@@ -1,34 +1,33 @@
 ---
 title: Referencia de errores y eventos (Reporting Services) | Microsoft Docs
-ms.date: 03/18/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
-helpviewer_keywords:
-- messages [Reporting Services]
-- errors [Reporting Services]
-- Reporting Services, errors and events
-- troubleshooting [Reporting Services], errors
-- events [Reporting Services]
-ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec1e9fc7ec041794b92b5372799678a22483b39e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: dc3b07d150e7992338a356030c2dd36d1edeff0c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021789"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574002"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Referencia de errores y eventos (Reporting Services)
-  En este tema se proporciona información acerca de los errores y eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Los archivos de registro de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] también contienen información de error. Para más información sobre los tipos de archivos de registro disponibles y cómo ver los registros, vea [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
-  
+
+En este tema se proporciona información acerca de los errores y eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Los archivos de registro de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] también contienen información de error. Para más información sobre los tipos de archivos de registro disponibles y cómo ver los registros, vea [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+
 ## <a name="cause-and-resolution-for-reporting-services-error-messages"></a>Causa y resolución de mensajes de error de Reporting Services  
- La información sobre las causas y resoluciones está disponible para los errores que se buscan con más frecuencia en los sitios web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para más información, consulte [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md).  
+
+La información sobre las causas y resoluciones está disponible para los errores que se buscan con más frecuencia en los sitios web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para más información, consulte [Cause and Resolution of Reporting Services Errors](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md).  
   
-## <a name="report-server-events"></a>Eventos del servidor de informes  
- En el registro de aplicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows se incluyen los siguientes eventos del servidor de informes.  
+## <a name="report-server-events"></a>Eventos del servidor de informes
+
+En el registro de aplicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows se incluyen los siguientes eventos del servidor de informes.  
   
 |Identificador del evento|Tipo|Categoría|Source|Descripción|  
 |--------------|----------|--------------|------------|-----------------|  
@@ -62,9 +61,7 @@ ms.locfileid: "50021789"
 |133|Error|Administración|Servidor de informes<br /><br /> Administrador de informes<br /><br /> Procesador de entrega y programación|Error al cargar un archivo de configuración. Este error puede producirse si el código XML no es válido.|  
 |134|Error|Administración|Servidor de informes|El servidor de informes no pudo cifrar valores para un valor de un archivo de configuración.|  
   
-## <a name="see-also"></a>Ver también  
- [Supervisar suscripciones de Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)   
- [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
+## <a name="see-also"></a>Vea también
+
+- [Supervisión de suscripciones de Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)
+- [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)

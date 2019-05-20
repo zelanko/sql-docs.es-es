@@ -2,7 +2,7 @@
 title: Agregar, cambiar o eliminar los valores disponibles para un parámetro de informe | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -10,14 +10,14 @@ f1_keywords:
 - "10455"
 - "10071"
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f5f9b418aadd50e109ef0e4763a83b28948f391f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0d6f5a74365565e5da3be99408f53bc086b0b689
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298543"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582045"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter"></a>Agregar, cambiar o eliminar los valores disponibles para un parámetro de informe
   Después de crear un parámetro de informe, puede especificar la lista de valores disponibles que verá el usuario. La existencia de una lista de valores disponibles limita las opciones del usuario a únicamente los valores válidos para el parámetro.  

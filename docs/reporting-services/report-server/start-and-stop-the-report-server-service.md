@@ -2,7 +2,7 @@
 title: Iniciar y detener el servicio del servidor de informes | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Report Server service, starting
 - starting Report Server service
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b8329ef7eadc543a6672b88887a356da4e3c6daa
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7ad9d0ee57bc9dcd6d9bd7b9207bf6af2d934e5c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021495"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580935"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>Iniciar y detener el servicio del servidor de informes
   Un servidor de informes se implementa como un servicio de Windows que contiene el servicio web del servidor de informes, el Administrador de informes y una aplicación de procesamiento en segundo plano. El servicio se debe estar ejecutando si desea usar cualquier funcionalidad del servidor de informes. Al detener el servicio se detienen todas las operaciones del servidor de informes.  
@@ -49,7 +49,7 @@ ms.locfileid: "50021495"
   
 2.  Seleccione Servicios de SQL Server, haga clic con el botón derecho en **SQL Server Reporting Services**y haga clic en **Detener** o en **Reiniciar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Iniciar, detener o pausar el servicio del Agente SQL Server](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   

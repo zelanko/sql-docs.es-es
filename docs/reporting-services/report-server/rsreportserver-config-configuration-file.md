@@ -2,18 +2,18 @@
 title: Archivo de configuración RSReportServer.config | Microsoft Docs
 ms.date: 06/12/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6ba83e5cb431b2bcc10c0ba195189fc570f14cb9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a081c24a83c5b73e17d7db4e0ef034cd0aa1125e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591569"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65579847"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Archivo de configuración RSReportServer.config
 El archivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** almacena valores que utiliza el servicio web del servidor de informes y los procesamientos en segundo plano. Todas las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ejecutan dentro de un proceso único que lee la configuración almacenada en el archivo RSReportServer.config. Los servidores de informes de modo nativo y SharePoint usan el archivo RSReportServer.config, pero los dos modos no usan los mismos valores en el archivo de configuración. La versión del modo de SharePoint del archivo es más pequeña porque muchas de las configuraciones del modo de SharePoint se almacenan en las bases de datos de configuración de SharePoint y no en el archivo. En este tema se describe el archivo de configuración predeterminado que se instala en el modo nativo y en el modo de SharePoint, y algunos de los valores y comportamientos importantes que se controlan mediante el archivo de configuración.  
@@ -131,7 +131,7 @@ Para obtener más información sobre cómo editar el archivo, vea [Modificar un 
   
 |Configuración|Descripción|Mode|  
 |-------------|-----------------|----------|  
-|**AuthenticationTypes**|Especifica uno o más tipos de autenticación. Los valores válidos son: **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**, **RSWindowsBasic** y **Custom**.<br /><br /> Los tipos**RSWindows** y **Custom** se excluyen mutuamente.<br /><br /> **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**y **RSWindowsBasic** son acumulativos y se pueden utilizar juntos, como se muestra en el ejemplo de valor predeterminado anteriormente en esta sección.<br /><br /> Es necesario especificar varios tipos de autenticación si espera las solicitudes de una variedad de exploradores o aplicaciones cliente que utilizan diferentes tipos de autenticación.<br /><br /> No quite **RSWindowsNTLM**, de lo contrario limitará la compatibilidad del explorador a una parte de los tipos de explorador compatibles. Para obtener más información, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|N|  
+|**AuthenticationTypes**|Especifica uno o más tipos de autenticación. Los valores válidos son: **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**, **RSWindowsBasic**y **Custom**.<br /><br /> Los tipos**RSWindows** y **Custom** se excluyen mutuamente.<br /><br /> **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**y **RSWindowsBasic** son acumulativos y se pueden utilizar juntos, como se muestra en el ejemplo de valor predeterminado anteriormente en esta sección.<br /><br /> Es necesario especificar varios tipos de autenticación si espera las solicitudes de una variedad de exploradores o aplicaciones cliente que utilizan diferentes tipos de autenticación.<br /><br /> No quite **RSWindowsNTLM**, de lo contrario limitará la compatibilidad del explorador a una parte de los tipos de explorador compatibles. Para obtener más información, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|N|  
 |**RSWindowsNegotiate**|El servidor de informes acepta tokens de seguridad de Kerberos o NTLM. Esta es la configuración predeterminada cuando el servidor de informes se ejecuta en modo nativo y la cuenta de servicio es de tipo Servicio de red. Dicha configuración se omite cuando el servidor de informes se ejecuta en modo nativo y la cuenta de servicio está configurada como cuenta de usuario de dominio.<br /><br /> Si se ha configurado una cuenta de dominio para la cuenta de servicio del servidor de informes y no se ha configurado un Nombre principal de servicio (SPN) para el servidor de informes, puede que esta configuración impida a los usuarios iniciar sesión en el servidor.|N|  
 |**RSWindowsNTLM**|El servidor acepta los tokens de seguridad NTLM.<br /><br /> Si elimina esta configuración, la compatibilidad de explorador de algunos de los tipos de explorador admitidos será limitada. Para obtener más información, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|N, S|  
 |**RSWindowsKerberos**|El servidor acepta los tokens de seguridad de Kerberos.<br /><br /> Utilice esta configuración o RSWindowsNegotiate cuando use la autenticación Kerberos en un esquema de autenticación de delegación restringida.|N|  

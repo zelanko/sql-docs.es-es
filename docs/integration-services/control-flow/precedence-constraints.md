@@ -20,14 +20,18 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6df83cd3a7609097a6e27bd92c59daf24458548
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d4d6daa4efcd865502429dad0cc8edd498e8a94f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283068"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727559"
 ---
 # <a name="precedence-constraints"></a>Restricciones de precedencia
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Las restricciones de precedencia vinculan ejecutables, contenedores y tareas de paquetes en un flujo de control, y especifican condiciones que determinan si se ejecutan los ejecutables. Un ejecutable puede ser un contenedor de bucles For, de bucles Foreach o de secuencia, o bien una tarea o un controlador de eventos. Los controladores de eventos usan las restricciones de precedencia para vincular sus ejecutables en un flujo de control.  
   
  Una restricción de precedencia vincula dos ejecutables: el ejecutable de precedencia y el ejecutable restringido. El ejecutable de precedencia se ejecuta antes del ejecutable restringido y el resultado de la ejecución del ejecutable de precedencia puede determinar si se ejecuta el ejecutable restringido. El siguiente diagrama muestra dos ejecutables vinculados por una restricción de precedencia.  
@@ -143,7 +147,7 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
   
 2.  En el Explorador de soluciones, haga doble clic en el paquete para abrirlo.  
   
-3.  Haga clic en la pestaña **Flujo de control** . En la superficie de diseño de la pestaña **Flujo de control** , haga clic con el botón derecho en la restricción de precedencia y, luego, haga clic en **Propiedades**. En la ventana Propiedades, modifique los valores de las propiedades.  
+3.  Haga clic en la pestaña **Flujo de control** . En la superficie de diseño de la pestaña Flujo de control , haga clic con el botón derecho en la restricción de precedencia y, luego, haga clic en **Propiedades**. En la ventana Propiedades, modifique los valores de las propiedades.  
   
 4.  En la ventana **Propiedades** , establezca las siguientes propiedades de lectura y escritura para las restricciones de precedencia:  
   

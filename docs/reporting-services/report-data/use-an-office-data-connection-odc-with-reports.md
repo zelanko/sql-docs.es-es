@@ -2,7 +2,7 @@
 title: Usar una Conexión de datos de Office (.odc) con informes | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f3b79fb66dcb582a95d3b19d327e6b716ee20bd7
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a33b5bae668835ca1dbf52b2e7852c3af731ddfe
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028174"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574947"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>Usar una Conexión de datos de Office (.odc) con informes
   En escenarios limitados, puede usar un archivo de conexión de datos de Office (.odc) existente para proporcionar información de conexión a un informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Al crear un origen de datos compartido, puede usarse un archivo .odc en lugar de un archivo .rsds. El servidor de informes usa un archivo .odc de la misma forma que usa un archivo .rsds; lee el archivo para el tipo de origen de datos, una cadena de conexión y la información de credenciales.  
@@ -98,7 +98,7 @@ ms.locfileid: "50028174"
   
      Si intenta seguir estos pasos con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] y los informes de ejemplo, tenga en cuenta que solo funcionará el informe Company Sales en un archivo .odc. Los otros informes de ejemplo contienen parámetros de consulta y características que no funcionan con el proveedor OLE DB. Sin embargo, puede hacer que los informes funcionen con el proveedor OLE DB modificándolos primero en el Diseñador de informes.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   

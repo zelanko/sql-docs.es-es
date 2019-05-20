@@ -2,18 +2,18 @@
 title: Solucionar problemas con la publicación o la visualización de un informe en un servidor de informes en modo nativo | Microsoft Docs
 ms.date: 02/28/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ff2caeab1399ac45523b8b0adae753225271840e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6e3a96e3eef90778b0e7877b88ba79cb4e0dd43e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51811778"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65573859"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Solucionar problemas con la publicación o la visualización de un informe en un servidor de informes en modo nativo
   
@@ -49,7 +49,7 @@ En algunas circunstancias, al utilizar el Administrador de informes para ver inf
   
 Compruebe que dispone de permiso para tener acceso a las carpetas que contienen los archivos almacenados en memoria caché.   
     
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Errores y eventos (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [Solución de problemas de recuperación de datos de informes de Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  

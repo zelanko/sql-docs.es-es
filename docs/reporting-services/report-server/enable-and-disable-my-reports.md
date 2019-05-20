@@ -2,7 +2,7 @@
 title: Habilitar y deshabilitar Mis informes | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - My Reports folder [Reporting Services]
 - disabling My Reports folder
 ms.assetid: 16c76e82-9fd4-417c-9ed3-a7d5bcd1dba2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8d294c717f0d30b612a68dcc3bce3053ac55d1d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6670d1da918ac1bdc6cb1947b265f9d543259814
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824643"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577776"
 ---
 # <a name="enable-and-disable-my-reports"></a>Habilitar y deshabilitar Mis informes
   La característica Mis informes asigna espacio de almacenamiento personal en la base de datos del servidor de informes para que los usuarios puedan guardar sus propios informes en una carpeta privada. Los administradores de servidores de informes pueden habilitar o deshabilitar esta característica o cambiar su funcionamiento modificando la configuración de seguridad que controla las acciones que los usuarios llevan a cabo en esta área de trabajo.  
@@ -48,7 +48,7 @@ ms.locfileid: "47824643"
   
  Tenga en cuenta que, si activa Mis informes, el servidor de informes creará una carpeta Mis informes para cada usuario que tenga una cuenta de dominio y que haga clic en el vínculo Mis informes, incluso si el usuario no desea, o no necesita, una carpeta Mis informes. No existe ningún modo sistemático de determinar las carpetas que se utilizan. Es preciso revisar manualmente las carpetas para comprobar las que contienen algo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Proteger Mis informes](../../reporting-services/security/secure-my-reports.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   

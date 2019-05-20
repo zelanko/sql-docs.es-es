@@ -2,18 +2,18 @@
 title: Referencias a la colección ReportItems (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e1c6a8dcf60de0e1d67666788d0c026af545f90f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 24a50de92a2b182295abc926c98358fa56e2f379
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289653"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581762"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Colecciones integradas: referencias a la colección ReportItems (Generador de informes)
   La colección integrada **ReportItems** es el conjunto de los cuadros de texto de los elementos de informe, como las filas de una región de datos o los cuadros de texto de la superficie de diseño del informe. La colección **ReportItems** incluye los cuadros de texto que están en el ámbito actual de un encabezado de página, un pie de página o el cuerpo del informe. Esta colección la determinan en tiempo de ejecución el procesador de informes y el representador de informes. El ámbito actual va cambiando mientras el procesador de informes va combinando consecutivamente los datos del informe y los elementos de diseño de los elementos del informe a medida que el usuario visualiza las páginas de un informe. Puede usar la colección integrada **ReportItems** para generar encabezados de página de estilo diccionario que muestren el primer y el último elemento de cada página.  

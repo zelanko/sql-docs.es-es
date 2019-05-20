@@ -2,18 +2,18 @@
 title: Referencias a las colecciones DataSources y DataSets (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1290f2813d11c53e91dc233c6ffa1c065a824f0f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 930dfe2773b72723c2b8dc8571272847bb0d62d3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295580"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581807"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>Colecciones integradas: referencias a DataSources y DataSets (Generador de informes)
   La colección **DataSources** representa todos los orígenes de datos usados en un informe. De igual forma, la colección **DataSets** representa todos los conjuntos de datos de todos los orígenes de datos existentes en un informe. Use el panel **Datos de informe** para obtener acceso a una vista jerárquica en la que aparezcan los conjuntos de datos de informe organizados debajo del origen de datos al que hacen referencia. Si incluye referencias a estas colecciones, no verá los valores cuando obtenga acceso a una vista previa del informe. Estas colecciones solo están disponibles una vez publicado el informe en un servidor de informes.  

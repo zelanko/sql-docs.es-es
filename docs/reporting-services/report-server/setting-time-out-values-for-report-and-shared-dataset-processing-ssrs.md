@@ -2,7 +2,7 @@
 title: Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos (SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - report processing [Reporting Services], time-outs
 - report execution time-outs [Reporting Services]
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b2b9c0607b2e7fbcc43ba45190c7acb6e0d92cd3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8a0a28974b50d5230c962a19bc19630a55dbef48
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030704"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580958"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos (SSRS)
   Se puede usar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para especificar valores de tiempo de espera para establecer límites sobre el uso de los recursos del sistema. El servidor de informes admite dos valores de tiempo de espera:  
@@ -52,7 +52,7 @@ ms.locfileid: "50030704"
 > [!NOTE]  
 >  Se puede establecer el parámetro **RunningRequestsDbCycle** del archivo RSReportServer.config para cambiar la frecuencia con la que se evalúan los trabajos en ejecución.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md)   

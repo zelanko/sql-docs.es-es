@@ -2,18 +2,18 @@
 title: Crear un informe escalonado (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5933c4f0-c713-4ecb-b521-ff46c9c63fff
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8176db14311914a3935d86fdf83cc88e5428630f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: adfde8e92d249c40749dba76f42c6d1d5ba20d71
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295583"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581538"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Crear un informe escalonado (Generador de informes y SSRS)
 Un informe escalonado es un tipo de informe paginado de  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] donde se muestran filas de detalles o grupos secundarios con una sangría debajo de un grupo primario en la misma columna, como se muestra en el ejemplo siguiente:  

@@ -2,18 +2,18 @@
 title: Exportar a un archivo CSV (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f7f0033a5ed81cb21d7c77038cf95ec8123c3d64
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: eece2e47cee99c1c3716aadc597e8b6e6dd48d79
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297615"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581213"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportar a un archivo CSV (Generador de informes y SSRS)
   La extensión de representación de valores separados por comas (CSV) representa los informes paginados como una representación sin estructura jerárquica de los datos a partir de un informe estándar de texto sin formato para que resulten fáciles de leer e intercambiar con muchas aplicaciones.  

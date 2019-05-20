@@ -2,20 +2,20 @@
 title: Exportar a Microsoft Word (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 description: La extensión de representación de Word representa informes paginados en el formato de  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx). El formato es Office Open XML.
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ed7b5a6081171f7f7271573cd83f029ad672a34
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b02a4b2776e39d7130bc47a42050b0f7be9af4d3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296603"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581228"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
 
@@ -74,7 +74,7 @@ ms.locfileid: "56296603"
   
 -   **Expresión compleja:**  la expresión es `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Expresión con ejecuciones de texto:** Texto, **Promedio de ventas** y expresión, `=Avg(Fields!YTDPurchase.Value, "Sales)` y texto, **Número de página** y expresión `=Globals!PageNumber`  
+-   **Expresión con ejecuciones de texto:** Texto, **Average Sales**, y expresión,  `=Avg(Fields!YTDPurchase.Value, "Sales)`, y texto, **Page Number**, y expresión `=Globals!PageNumber`  
   
  Para evitar este problema, use varias ejecuciones de texto en vez de una expresión compleja cuando use expresiones en encabezados y pies de página. Las dos siguientes expresiones son equivalentes. La primera es una expresión compleja y la segunda usa ejecuciones de texto. El representador de Word solo analiza correctamente la segunda expresión.  
   

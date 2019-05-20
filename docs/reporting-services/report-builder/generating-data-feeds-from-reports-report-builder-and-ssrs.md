@@ -2,18 +2,18 @@
 title: Generar fuentes de distribución de datos a partir de informes (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 94cfb8ec1aeb1d9c4333ef5c2bdded97f47d15b2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 851a574989f56609298e4283a398fcddce027024
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298343"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580735"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generar fuentes de distribución de datos a partir de informes (Generador de informes y SSRS)
 
@@ -54,7 +54,7 @@ ms.locfileid: "56298343"
   
  ![RS_Atom_PeerDynamicColumns](../../reporting-services/report-builder/media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- En el documento de servicio de Atom generado con este informe se incluyen dos fuentes de distribución de datos, una para cada una de las columnas dinámicas del mismo nivel: Territory y Year. El diagrama siguiente muestra el contenido de cada fuente de distribución de datos.  
+ El documento de servicio de Atom generado con este informe incluye dos fuentes de distribución de datos, una para cada una de las columnas dinámicas del mismo nivel: Territory y Year. El diagrama siguiente muestra el contenido de cada fuente de distribución de datos.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   

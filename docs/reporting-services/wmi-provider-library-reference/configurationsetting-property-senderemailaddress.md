@@ -2,7 +2,7 @@
 title: Propiedad SenderEmailAddress (MSReportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SenderEmailAddress property
 ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2cf5cc053191561cd788fba6feec31860437cad3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 62c64167886a28ad05a60a576cfa0a42a2cbbcf1
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594178"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570251"
 ---
 # <a name="configurationsetting-property---senderemailaddress"></a>Propiedad de ConfigurationSetting: SenderEmailAddress
   Obtiene la dirección utilizada para enviar el correo electrónico desde el servidor de informes. Solo lectura.  
@@ -44,7 +44,7 @@ public string SenderEmailAddress;
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

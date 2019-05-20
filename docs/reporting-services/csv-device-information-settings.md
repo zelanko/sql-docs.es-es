@@ -2,21 +2,21 @@
 title: Configuración de la información del dispositivo CSV | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - CSV [Reporting Services]
 - device information settings [Reporting Services], CSV rendering
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 320ad1972dcf949200b6fafa5eafc4fda3bd2348
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9423f82e025146773c5d04a276cf15c76c6b1101
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678603"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571606"
 ---
 # <a name="csv-device-information-settings"></a>Configuración de la información del dispositivo CSV
   La configuración de la información de dispositivo para la extensión de representación CSV permite cambiar los delimitadores y certificadores, y controlar el salto de línea que se va a especificar. También se puede enviar la extensión del archivo, así como la codificación e inclusión de filas de encabezado en la salida. Dado que es probable que los delimitadores sean caracteres especiales, debería codificarlos en una sección CDATA, si la configuración se escribe como XML.  
@@ -35,7 +35,7 @@ ms.locfileid: "47678603"
 |**SuppressLineBreaks**|Indica si los saltos de línea se quitan de los datos incluidos en la salida. El valor predeterminado es **false**. Si el valor es **true**, **FieldDelimiter**, los valores **RecordDelimiter**y **Qualifier** no pueden ser un carácter de espacio en blanco.|  
 |**UseFormattedValues**|Indica si las cadenas con formato se colocan en la salida CSV. El valor predeterminado es **true** cuando **ExcelMode** es **true**; de lo contrario es **false**.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Pasar la configuración de información de dispositivo a las extensiones de representación](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Personalizar los parámetros de extensión de representación en RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   

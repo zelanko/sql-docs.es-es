@@ -2,21 +2,21 @@
 title: Entrega a recursos compartidos de archivos en Reporting Services | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9630c2ce992ae6e0ce2e662b32755a201d3f0ec4
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 181f349f4dc878f0612cf6635143469c2cbe3f34
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889996"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576001"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Entrega a recursos compartidos de archivos en Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incorpora una extensión de entrega a recursos compartidos de archivos que permite entregar un informe a una carpeta. Esta extensión está disponible de forma predeterminada y no requiere configuración adicional. Para que la entrega de archivos sea satisfactoria, debe establecer permisos de escritura en la carpeta compartida. La cuenta que requiere permisos de escritura puede ser credenciales configuradas en la suscripción o una **cuenta de recurso compartido** configurada para el servidor de informes. Para obtener más información sobre la cuenta del recurso compartido de archivos, vea [Configuración de la suscripción y una cuenta de recurso compartido de archivos &#40;Administrador de configuración&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Además, los usuarios que necesitan acceso a los informes deben tener permisos de lectura en la carpeta compartida.  
@@ -68,9 +68,9 @@ ms.locfileid: "55889996"
 ##  <a name="bkmk_file_options"></a> Opciones de archivo  
  Cuando se crea una suscripción de recurso compartido de archivos, puede configurar cómo se crea el nombre de archivo y si el archivo sobrescribe las versiones anteriores del informe. Un nombre de archivo completo tiene tres partes: un nombre, una extensión y texto o un número que se anexa al archivo para crear un nombre de archivo exclusivo.  
   
- **Nombre de archivo:** nombre de archivo predeterminado se basa en el nombre del informe de origen, aunque es posible proporcionar un nombre personalizado en la suscripción. La extensión es opcional, pero si se especifica, el servidor de informes creará una extensión que corresponda al formato de representación.  
+ **Nombre de archivo:** el nombre de archivo predeterminado se basa en el nombre del informe de origen, aunque es posible proporcionar un nombre personalizado en la suscripción. La extensión es opcional, pero si se especifica, el servidor de informes creará una extensión que corresponda al formato de representación.  
   
- **Sobrescribir:** Se pueden especificar opciones de sobrescritura a fin de volver a utilizar el mismo nombre de archivo para cada entrega de informe o para crear un archivo nuevo. Para sobrescribir el archivo, debe utilizar el mismo nombre de archivo y la misma extensión.  
+ **Sobrescribir:** se pueden especificar opciones de sobrescritura a fin de volver a utilizar el mismo nombre de archivo para cada entrega de informe o para crear un archivo nuevo. Para sobrescribir el archivo, debe utilizar el mismo nombre de archivo y la misma extensión.  
   
  Un método alternativo para crear archivos exclusivos para cada entrega consiste en incluir una marca de tiempo en el nombre del archivo. Para ello, agregue la variable **@timestamp** al nombre del archivo (por ejemplo, *CompanySales@timestamp*). De este modo, el nombre del archivo será exclusivo por definición, por lo que no se sobrescribirá nunca.  
   

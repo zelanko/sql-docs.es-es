@@ -2,18 +2,18 @@
 title: Tipo de conexión de lista de SharePoint (SSRS) | Microsoft Docs
 ms.date: 05/10/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6b3936d04d63f50fb33b2d3d36e080f9a151a186
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 745d7696e7ad98c86586ffc4be2d2d1057fd388b
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813578"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65575357"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo de conexión de lista de SharePoint (SSRS)
 
@@ -42,9 +42,9 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
 ||Credenciales admitidas|Autenticación de Windows de modo clásico|*Autenticación de notificaciones|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Lista de SharePoint de granja local|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|Sí|  
-||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sí|no|  
-|Lista remota de SharePoint|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|no<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
-||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sí|no<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sí|No|  
+|Lista remota de SharePoint|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|No<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|Sí|No<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
   
  *Autenticación de Windows, Autenticación basada en formularios (FBA), tokens de Secure Application Markup Language (SAML), otros proveedores de identidad o una combinación de más de uno de los proveedores de autenticación mencionados anteriormente.  
   
@@ -53,9 +53,9 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
 ||Credenciales admitidas|Autenticación de Windows de modo clásico|*Autenticación de notificaciones|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Lista de SharePoint de granja local|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|Sí|  
-||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|no|no|  
-|Lista remota de SharePoint|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|no<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
-||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|no|no<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|No|No|  
+|Lista remota de SharePoint|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|No<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows)<br /><br /> No se admiten credenciales almacenadas y de petición con credenciales que no sean de Windows.|No|No<br /><br /> La autenticación basada en formularios y la autenticación basada en notificaciones no se admiten para las listas remotas de SharePoint.|  
   
  *Autenticación de Windows, Autenticación basada en formularios (FBA), tokens de Secure Application Markup Language (SAML), otros proveedores de identidad o una combinación de más de uno de los proveedores de autenticación mencionados anteriormente.  
   
@@ -181,7 +181,7 @@ Utilice la información de este tema para crear un origen de datos. Para obtener
  [Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.  
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Parámetros de informe](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [Filtrar, agrupar y ordenar datos](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

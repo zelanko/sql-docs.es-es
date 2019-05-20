@@ -2,7 +2,7 @@
 title: Proteger carpetas | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - folders [Reporting Services], security
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f3d1969f1e055b239dee317dbcd8d0b4cd73a4d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 00bf03cedffd985726eb10e1c048132c415b241e
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634113"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570556"
 ---
 # <a name="secure-folders"></a>Proteger carpetas
   La seguridad de las carpetas es fundamental para proteger todo el contenido de un servidor de informes. Puesto que la seguridad se hereda en toda la estructura de carpetas, puede designar secciones grandes o pequeñas de la jerarquía de carpetas para permitir ciertos tipos de acceso.  
@@ -40,9 +40,9 @@ ms.locfileid: "47634113"
 |Administrar orígenes de datos|Agregar nuevos elementos de orígenes de datos compartidos a una carpeta y cambiar los orígenes de datos compartidos existentes.|  
 |Establecer la seguridad de elementos individuales|Puede definir y modificar las asignaciones de roles que controlan el acceso a la carpeta. Esta tarea debe utilizarse con "Ver carpetas" o "Administrar carpetas". De lo contrario, no surtirá efecto, ya que el usuario no podrá seleccionar el elemento.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Proteger informes y recursos](../../reporting-services/security/secure-reports-and-resources.md)   
- [Protección de elementos de orígenes de datos compartidos](../../reporting-services/security/secure-shared-data-source-items.md)   
+ [Proteger elementos de orígenes de datos compartidos](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Concesión de permisos en un servidor de informes en modo nativo](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

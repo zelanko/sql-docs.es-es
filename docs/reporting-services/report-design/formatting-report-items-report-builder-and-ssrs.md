@@ -2,20 +2,20 @@
 title: Aplicar formato a los elementos de informe (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 16f4adc3b2aefa00ad02f8e39f8cd17f3366e9ee
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2e3b6101111fea08c86bbf79bf431d91aaa24261
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298203"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580318"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Aplicar formato a los elementos de informe (Generador de informes y SSRS)
   Aplicar formato a los elementos del informe hace que este tenga una apariencia más atractiva y mejora su legibilidad. En el modo de diseño de informe se puede aplicar formato a los cuadros de texto y a los elementos incluidos en ellos, a las imágenes, a las expresiones y a los datos.  
@@ -24,13 +24,13 @@ ms.locfileid: "56298203"
   
  A. Cuadro de texto con un borde de línea doble y varios estilos de formato, incluido un vínculo.  
   
- b. Cuadro de texto con un borde de línea discontinua, y con HTML sin formato y HTML representado.  
+ B. Cuadro de texto con un borde de línea discontinua, y con HTML sin formato y HTML representado.  
   
  C. Cuadro de texto con una etiqueta de texto y un marcador de posición.  
   
  Para cambiar las opciones de formato, solo tiene que seleccionar el elemento al que desea dar formato y, a continuación, abrir el cuadro de diálogo de propiedades del elemento. Por ejemplo, si quiere dar formato al contenido de un cuadro de texto completo o a una palabra seleccionada dentro de dicho cuadro, haga clic con el botón derecho en el elemento y seleccione **Propiedades de cuadro de texto**. A continuación, puede aplicar los estilos de formato que desee.  
   
- Para empezar rápidamente, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Para más información, vea [Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

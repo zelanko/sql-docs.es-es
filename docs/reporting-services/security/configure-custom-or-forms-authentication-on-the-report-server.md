@@ -2,21 +2,21 @@
 title: Configurar la autenticación de formularios o personalizada en el servidor de informes | Microsoft Docs
 ms.date: 04/18/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4ef775e1474c38e95491388465d1010c23d64526
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8c77e0f066c6342fb0b5bc58130cb20c80e40de3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027484"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65571167"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurar la autenticación de formularios o personalizada en el servidor de informes
 
@@ -75,7 +75,7 @@ Además, si quiere usar una extensión de autenticación personalizada o de aute
   
 12. Reinicie el servidor de informes para borrar las sesiones que estén abiertas en ese momento.  
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Implementación de una extensión de seguridad](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
 [Reporting Services Custom Security Sample (GitHub) (Ejemplo de seguridad personalizada de Reporting Services en GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  

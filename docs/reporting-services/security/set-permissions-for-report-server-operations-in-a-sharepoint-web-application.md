@@ -2,7 +2,7 @@
 title: Establecer permisos para las operaciones del servidor de informes en una aplicación web de SharePoint | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Report Builder 1.0, SharePoint integration
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 20a67d5c746a3fcce92709bf0457d52e4248a84b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ce5ddca1cb39d7d4f375232e3588900b5b1ebe6a
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394008"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570597"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Establecer permisos para las operaciones del servidor de informes en una aplicación web de SharePoint
   En el caso de un servidor de informes que se ejecuta en el modo integrado de SharePoint, la configuración de seguridad definida en el sitio de SharePoint determina el modo en que se ven y administran los informes, los modelos de informe y los orígenes de datos compartidos. Si usa los grupos, niveles de permiso y asignaciones de permiso predeterminados de SharePoint, puede trabajar con informes y otros documentos mediante la configuración de seguridad actual.  
@@ -129,7 +129,7 @@ ms.locfileid: "52394008"
 > [!NOTE]  
 >  No existen permisos para modificar modelos de informe. Aunque se pueden crear o eliminar modelos de informe, no se pueden modificar desde un sitio de SharePoint. Para poder modificar modelos de informe, es necesario usar el Diseñador de modelos, una herramienta de creación de cliente a la que no afectan los permisos que haya establecido en SharePoint.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

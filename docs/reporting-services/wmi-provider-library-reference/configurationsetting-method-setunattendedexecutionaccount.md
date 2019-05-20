@@ -2,7 +2,7 @@
 title: Método SetUnattendedExecutionAccount ( MSeportServer_ConfigurationSetting de WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetUnattendedExecutionAccount method
 ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 85a3eac1ce8b8b390f186827451b12558abae11b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: aac5b7a237c5aa21b79c1204d7d4560736da56d9
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738903"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580965"
 ---
 # <a name="configurationsetting-method---setunattendedexecutionaccount"></a>Método ConfigurationSetting - SetUnattendedExecutionAccount
   Especifica la cuenta utilizada para ejecutar informes de forma desatendida.  
@@ -58,7 +58,7 @@ public void SetUnattendedExecutionAccount (string UserName,
 ## <a name="requirements"></a>Requisitos  
  **Espacio de nombres:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

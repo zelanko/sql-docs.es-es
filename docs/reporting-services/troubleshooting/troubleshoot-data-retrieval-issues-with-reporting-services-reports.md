@@ -2,18 +2,18 @@
 title: Solución de problemas de recuperación de datos de informes de Reporting Services | Microsoft Docs
 ms.date: 02/27/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 575335cc1d8952caee04159797275d5214f2c9c0
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 86f1b8bda63cf8e6436e0dd3d5823fdada53a9f3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905150"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65574427"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Solución de problemas de recuperación de datos de informes de Reporting Services
 El primer paso durante el procesamiento de informes es recuperar los datos del informe para cada conjunto de datos ejecutando la consulta del conjunto de datos. Al obtener una vista previa de un informe localmente, las conexiones a un origen de datos y las credenciales deben utilizar los permisos suficientes para recuperar los datos en el equipo. Al ejecutar un informe en el servidor de informes, las conexiones a un origen de datos y las credenciales deben utilizar los permisos suficientes para recuperar los datos en el servidor de informes. Utilice este tema como ayuda para solucionar los problemas de la recuperación de datos del informe.   
@@ -59,7 +59,7 @@ Para rellenar la colección de campos de conjunto de datos, haga lo siguiente:
 * Ejecute la consulta en el panel de consulta del cuadro de diálogo **Propiedades del conjunto de datos** . Para más información, consulte [Conjuntos de datos de informe (Generador de informes 3.0 y SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
 * Agregue campos manualmente. Para más información, consulte [Agregar, editar y actualizar campos en el panel Datos de informe (Generador de informes 3.0 y SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Errores y eventos (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

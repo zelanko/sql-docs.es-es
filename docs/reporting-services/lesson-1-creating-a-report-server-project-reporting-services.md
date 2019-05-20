@@ -1,80 +1,70 @@
 ---
 title: 'Lección 1: Crear un proyecto de servidor de informes (Reporting Services) | Microsoft Docs'
-ms.date: 11/30/2016
+ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 72d337f441d3aabb5dc1ee8801a5cec200904d23
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c3a32b6b27a8919d729c95bfe29f50c2bda81db8
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292353"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65095858"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lección 1: Crear un proyecto de servidor de informes (Reporting Services)
 
-En esta lección, creará un *proyecto de servidor de informes* y un archivo de *definición de informe (.rdl)* en [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] dentro de Visual Studio. 
+En esta lección, creará un *proyecto de servidor de informes* y un archivo de *definición de informe (.rdl)* con el *Diseñador de informes*.
 
-Para crear un informe con [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], primero necesita un proyecto de servidor de informes en el que guardar el archivo de definición del informe (.rdl) y cualquier otro archivo de recurso que necesite para el informe. 
+> [!NOTE]
+> [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] es un entorno [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] para crear soluciones de inteligencia empresarial. SSDT cuenta con un Diseñador de informes para crear el entorno, donde puede abrir, modificar, obtener una vista previa, guardar e implementar definiciones de informe paginadas de [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] , orígenes de datos compartidos, conjuntos de datos compartidos y elementos de informe.
 
-En las siguientes lecciones, defina un origen de datos para el informe, un conjunto de datos y el diseño del informe. Cuando ejecuta el informe, los datos se recuperan y combinan con el diseño y luego se representan en pantalla, desde donde se pueden exportar, imprimir o guardar.  
+Al crear informes con el Diseñador de informes, se crea un proyecto de servidor de informes que contiene los archivos de informes y otros archivos de recursos utilizados por los informes.
+
+## <a name="to-create-a-report-server-project"></a>Para crear un proyecto de servidor de informes
   
-  
-  
-## <a name="to-create-a-report-server-project"></a>Para crear un proyecto de servidor de informes  
-  
-1.  Abra [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)].  
-  
-2.  En el menú **Archivo** > **Nuevo** > **Proyecto**.  
+1. En el menú **Archivo**, seleccione **Nuevo** > **Proyecto**.  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
-3.  En **Plantillas** > **instaladas** > **Business Intelligence**, haga clic en **Reporting Services**.
+2. En la columna más a la izquierda, debajo de **Instalado**, seleccione **Reporting Services**. En algunos casos, puede estar debajo del grupo **Business Intelligence**.
 
-    ![ssrs-ssdt-01-new-rs-project](../reporting-services/media/ssrs-ssdt-01-new-rs-project.png)
+    ![select-report-server-project-template](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
-5. Haga clic en **Proyecto de servidor de informes** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
+    > [!IMPORTANT]
+    > Para VS, si no ve Reporting Services en la columna izquierda, agregue el Diseñador de informes mediante la instalación de la carga de trabajo SSDT. En el menú **Herramientas**, seleccione **Obtener herramientas y características...** y, después, **SQL Server Data Tools** en las cargas de trabajo mostradas. Si no ve los objetos de los servicios de informes en la columna central, agregue las extensiones de Reporting Services. En el menú **Herramientas**, seleccione **Extensiones y actualizaciones** > **En línea**. En la columna central, seleccione **Proyectos de Microsoft Reporting Services** > **Descargar** en las extensiones mostradas. Para SSDT, ea [Descargar e instalar SQL Server Data Tools (SSDT) para Visual Studio](../ssdt/download-sql-server-data-tools-ssdt.md).
 
-   >**Nota**: Si no ve las opciones **Business Intelligence** o **Proyecto de servidor de informes**, tiene que actualizar SSDT con las plantillas de Business Intelligence. Consulte [Descargar SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)  
-  
-5.  En **Nombre**, escriba **tutorial**.  
+3. Seleccione el icono de **Proyecto de servidor de informes** &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp;en la columna central del cuadro de diálogo **Nuevo proyecto**.
 
-    De forma predeterminada, se crea en la carpeta Visual Studio 2015\Projects en un directorio nuevo.
-    
-    ![ssrs-ssdt-01-solution-location](../reporting-services/media/ssrs-ssdt-01-solution-location.png)
-  
-6.  Haga clic en **Aceptar** para crear el proyecto.  
-  
-    El proyecto Tutorial se muestra en el panel Explorador de soluciones de la derecha.  
-  
-## <a name="to-create-a-new-report-definition-file"></a>Para crear un nuevo archivo de definición de informe  
-  
-1.  En el panel **Explorador de soluciones** , haga clic con el botón derecho en **Informes** > **Agregar** > **Nuevo elemento**. 
+4. En el cuadro de texto **Nombre**, escriba “Tutorial” para el nombre del proyecto. De forma predeterminada, en el cuadro de texto **Ubicación**, se muestra la ruta de acceso a la carpeta "Documents\Visual Studio 20xx\Projects\". El Diseñador de informes crea una carpeta denominada Tutorial debajo de esta ruta de acceso y crea el proyecto Tutorial en esta carpeta. Si el proyecto no pertenece a una solución de VS, entonces VS también crea un archivo de solución (.sln).
 
-    >**Sugerencia**: si no ve el panel del **Explorador de soluciones** , en el menú **View** , haga clic en el **Explorador de soluciones**. 
+5. Seleccione **Aceptar** para crear el proyecto. El proyecto Tutorial se muestra en el panel **Explorador de soluciones** de la derecha.
+  
+## <a name="creating-a-report-definition-file-rdl"></a>Creación del archivo de definición de informe (RDL)  
+  
+1. En el panel **Explorador de soluciones**, haga clic con el botón derecho en la carpeta **Informes**. Si no ve el panel **Explorador de soluciones**, seleccione el menú **Ver** > **Explorador de soluciones**.
+
+2. Seleccione **Agregar** > **Nuevo elemento**.
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
-  
-2.  En la ventana **Agregar nuevo elemento** , haga clic en **Informe** ![ssrs_ssdt_report](../reporting-services/media/ssrs-ssdt-report.png).  
-  
-3.  En **Nombre**, escriba **Sales Orders.rdl** y, después, haga clic en **Agregar**.  
-  
-    Se abrirá el Diseñador de informes y se mostrará el nuevo archivo .rdl en la vista Diseño.  
-    
-    ![ssrs-ssdt-01-new-report-designer](../reporting-services/media/ssrs-ssdt-01-new-report-designer.png)
-  
-     El Diseñador de informes es un componente de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que se ejecuta en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Tiene dos vistas: **Diseño** y **Vista previa**. Haga clic en cada pestaña para cambiar las vistas.  
-  
-    Los datos se definen en el panel **Datos de informe** . El diseño del informe se define en la vista **Diseño** . Puede ejecutar el informe y ver su aspecto en la vista **Vista previa** .  
-  
-## <a name="next-lesson"></a>Lección siguiente  
-Ha creado un proyecto de informe denominado "Tutorial" y ha agregado un archivo de definición de informe (.rdl) al proyecto del informe correctamente. A continuación, debe especificar un origen de datos para utilizarlo con el informe. Consulte [Lección 2: Especificación de información de conexión &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
-  
-## <a name="see-also"></a>Consulte también  
-[Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
-  
 
+3. En la ventana **Agregar nuevo elemento**, seleccione el icono **Informe**.
+
+4. Escriba "Sales Orders.rdl" en el cuadro de texto **Nombre**.
+
+5. Seleccione el **botón Agregar** en la parte inferior derecha del cuadro de diálogo **Agregar nuevo elemento** para completar el proceso. El Diseñador de informes se abre y muestra el archivo del informe Sales Orders en la vista Diseño.
+
+    ![ssrs-ssdt-01-new-report-designer](media/ssrs-ssdt-01-new-report-designer.png)
+
+## <a name="next-steps"></a>Pasos siguientes
+
+Hasta ahora, ha creado el proyecto de informe Tutorial y el informe Sales Orders. En las demás lecciones, aprenderá a:
+
+- Configurar un origen de datos para el informe
+- Crear un conjunto de datos a partir del origen de datos
+- Diseñar el informe y dar formato a dicho diseño
+
+Continúe con la [Lección 2: Especificar información de conexión &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).

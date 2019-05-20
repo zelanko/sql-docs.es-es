@@ -1,21 +1,21 @@
 ---
 title: Desarrollo con las API de REST para Reporting Services| Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+ms.openlocfilehash: d4f4af8dc03713046915f61effc684003303aaa9
+ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254700"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65502743"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Desarrollo con las API de REST para Reporting Services
 
@@ -33,10 +33,10 @@ Un par de solicitud/respuesta de una API de REST puede dividirse en cinco compon
 
 * El **URI de la solicitud**, que consta de: `{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}`. Aunque el URI de solicitud se incluye en el encabezado del mensaje de solicitud, aquí lo mencionamos por separado porque la mayoría de los lenguajes o marcos de trabajo le exigen que lo pase por separado desde el mensaje de solicitud.
 
-    * Esquema URI: indica el protocolo que se usa para transmitir la solicitud. Por ejemplo, `http` o `https`.
+    * Esquema de URI: indica el protocolo usado para transmitir la solicitud. Por ejemplo, `http` o `https`.
     * Host de URI: especifica el nombre de dominio o la dirección IP del servidor donde se hospeda el punto de conexión de servicio REST, como `myserver.contoso.com`.
-    * Ruta de acceso del recurso: especifica el recurso o la colección de recursos, que puede incluir varios segmentos usados por el servicio a la hora de determinar la selección de esos recursos. Por ejemplo: `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` se puede usar para obtener las propiedades especificadas de CatalogItem.
-    * Cadena de consulta (opcional): proporciona más parámetros simples, como los criterios de selección de recursos o la versión de la API.
+    * Ruta de acceso del recurso: especifica el recurso o una colección de recursos, que puede incluir varios segmentos usados por el servicio a la hora de determinar la selección de esos recursos. Por ejemplo: `CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` se puede usar para obtener las propiedades especificadas de CatalogItem.
+    * (Opcional) Cadena de consulta: proporciona más parámetros simples, como los criterios de selección de recursos o la versión de la API.
 
 * Campos de encabezado de mensaje de solicitud HTTP:
 
@@ -56,7 +56,7 @@ Un par de solicitud/respuesta de una API de REST puede dividirse en cinco compon
 
 ## <a name="api-documentation"></a>Documentación de la API
 
-Una API de REST moderna exige una documentación de API moderna. La API de REST se basa en la especificación de OpenAPI (también denominada "especificación de Swagger") y la documentación está disponible en [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Además de documentar la API, SwaggerHub permite generar una biblioteca cliente en el lenguaje que quiera: JavaScript, TypeScript, C#, Java, Python, Ruby, y muchos más.
+Una API de REST moderna exige una documentación de API moderna. La API de REST se basa en la especificación de OpenAPI (también denominada especificación de swagger) y la documentación está disponible en [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0). Además de documentar la API, SwaggerHub permite generar una biblioteca cliente en el lenguaje que quiera: JavaScript, TypeScript, C#, Java, Python, Ruby, y muchos más.
 
 ## <a name="testing-api-calls"></a>Probar las llamadas API
 

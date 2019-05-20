@@ -45,7 +45,7 @@ ms.locfileid: "63209121"
   
 -   **Cuerpo del Tablix** : los datos del grupo más interior representado por la intersección de los grupos de filas y los grupos de columnas, después de haber aplicado las expresiones de filtro y de ordenación para el conjunto de datos, el Tablix externo, y los grupos de filas y de columnas.  
   
- Para obtener más información, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41](tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md).  
   
 ## <a name="nesting-a-chart-sparkline-or-data-bar-in-a-tablix"></a>Anidar un gráfico, un minigráfico o una barra de datos en un Tablix  
  Cuando se agrega un gráfico (incluido un minigráfico o una barra de datos) a una fila de encabezado o pie de grupo de columnas de Tablix, o a una celda de cuerpo de Tablix, los datos que se pasan al gráfico pertenecen al ámbito del subconjunto de datos de esa celda. De forma predeterminada, al agregar un gráfico a una celda de Tablix, el gráfico aumenta de tamaño para rellenar la celda.  

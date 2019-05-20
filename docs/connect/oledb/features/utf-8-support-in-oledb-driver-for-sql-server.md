@@ -2,7 +2,7 @@
 title: Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server | Microsoft Docs
 description: Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: 4a30b233190817faee581106db5c8a18695a00d1
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: d092a534d973de246d3e3c61e67bce9d87d45fe6
+ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583018"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64775169"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>Compatibilidad de UTF-8 con el controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "59583018"
 
 El controlador OLE DB de Microsoft para SQL Server (versión 18.2.1) agrega compatibilidad con la codificación del servidor UTF-8. Para obtener información sobre la compatibilidad con UTF-8 de SQL Server, consulte:
 - [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [Compatibilidad con UTF-8](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-23)
+- [Compatibilidad con UTF-8](#ctp23)
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Inserción de datos en una columna CHAR o VARCHAR codificada con UTF-8
 Al crear un búfer de parámetro de entrada para la inserción, se describe el búfer mediante el uso de una matriz de [estructuras DBBINDING](https://go.microsoft.com/fwlink/?linkid=2071182). Cada estructura DBBINDING asocia un solo parámetro al búfer del consumidor y contiene información como la longitud y el tipo del valor de datos. Para un búfer de parámetro de entrada de tipo CHAR, el valor *wType* de la estructura DBBINDING debe establecerse en DBTYPE_STR. Para un búfer de parámetro de entrada de tipo WCHAR, el valor *wType* de la estructura DBBINDING debe establecerse en DBTYPE_WSTR.
@@ -46,7 +46,25 @@ Al crear un búfer para datos recuperados, se describe el búfer mediante el uso
 Para el indicador de tipo de búfer de resultados DBTYPE_STR, el controlador convierte los datos con codificación UTF-8 al cliente de codificación. El usuario debe asegurarse de que el cliente de codificación puede representar los datos de la columna de UTF-8, en caso contrario, puede producirse pérdida de datos.
 
 Para el indicador de tipo de búfer de resultados DBTYPE_WSTR, el controlador convierte los datos con codificación UTF-8 a la codificación UTF-16.
-  
+
+<a name="ctp23"></a>
+
+### <a name="utf-8-support-sql-server-2019-ctp-23"></a>Compatibilidad con UTF-8 (SQL Server 2019 CTP 2.3)
+
+[!INCLUDE[ss2019](../../../includes/sssqlv15-md.md)] presenta la compatibilidad total para utilizar la ampliamente utilizada codificación de caracteres UTF-8 como codificación de importación o exportación, o bien como intercalación de columna o base de datos para los datos de texto. UTF-8 se permite en los tipos de datos `CHAR` y `VARCHAR`, y se habilita al crear o cambiar la intercalación de un objeto a una intercalación con el sufijo `UTF8`.
+
+Por ejemplo, de `LATIN1_GENERAL_100_CI_AS_SC` a `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 solo está disponible para las intercalaciones de Windows que admiten caracteres adicionales, tal y como se presentó en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. `NCHAR` y `NVARCHAR` solo permiten la codificación UTF-16 y no se han realizado cambios.
+
+Esta característica puede proporcionar ahorros significativos de almacenamiento, según el juego de caracteres que se esté usando. Por ejemplo, si se cambia un tipo de datos de columna existente con cadenas ASCII (latinas) de `NCHAR(10)` a `CHAR(10)` utilizando una intercalación habilitada para UTF-8, se reducen a la mitad los requisitos de almacenamiento. Esto se debe a que `NCHAR(10)` requiere 20 bytes para el almacenamiento, mientras que `CHAR(10)` necesita 10 bytes para la misma cadena Unicode.
+
+Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../../relational-databases/collations/collation-and-unicode-support.md).
+
+**CTP 2.1** agrega la posibilidad de seleccionar la intercalación de UTF-8 como valor predeterminado durante la configuración de [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
+
+**CTP 2.2** agrega la posibilidad de usar la codificación de caracteres UTF-8 con la replicación de SQL Server.
+
+**CTP 2.3** agrega la posibilidad de usar la codificación de caracteres UTF-8 con una replicación de BIN2 (UTF8_BIN2).
+
 ## <a name="see-also"></a>Consulte también  
 [Controlador OLE DB para las características de SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md) 
 

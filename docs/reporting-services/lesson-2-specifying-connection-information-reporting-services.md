@@ -1,64 +1,69 @@
 ---
-title: 'Lección 2: Especificación de información de conexión (Reporting Services) | Microsoft Docs'
-ms.date: 05/23/2016
+title: 'Lección 2: Especificar información de conexión (Reporting Services) | Microsoft Docs'
+ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: da47a0fd587d48dd9d932504d6a5cd45d0d54664
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0a0c21b2662fc14977c4ac57687754d15d544994
+ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294703"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65106052"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lección 2: Especificación de información de conexión (Reporting Services)
-Después de haber agregado un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] al proyecto Tutorial en la lección 1, ahora debe definir un *origen de datos*, que es la información de conexión que el informe usa para obtener acceso a los datos procedentes de una base de datos relacional, una base de datos multidimensional u otro origen.  
-  
-En esta lección usará la base de datos de ejemplo [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] como origen de datos. En este tutorial se da por hecho que esta base de datos se encuentra en una instancia predeterminada del [!INCLUDE[ssDE](../includes/ssde-md.md)] de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instalado en el equipo local.  
-  
-### <a name="to-set-up-a-connection"></a>Para configurar una conexión  
-  
-1.  En el panel **Datos de informe** , haga clic en **Nuevo** y, después, en **Data Source**.  
-Si el panel **Datos de informe** no está visible, haga clic en **Datos de informe** en el menú **Ver**.  
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lección 2: Especificar información de conexión (Reporting Services)
 
-    ![ssrs-table-tutorial-2-new-data-source](../reporting-services/media/ssrs-table-tutorial-2-new-data-source.png)
+En la lección 1, agregó un informe paginado de [!INCLUDE[ssrsnoversion-md](../includes/ssrsnoversion-md.md)] al proyecto Tutorial.
   
-   2.  En **Nombre**, escriba *AdventureWorks2014*.  
-  
-3.  Asegúrese de que está seleccionado **Conexión incrustada** .  
-  
-4.  En **Tipo**, seleccione **Microsoft SQL Server**.  
-  
-5.  En **Cadena de conexión**, escriba lo siguiente:  
-  
-    ```  
-    Data source=localhost; initial catalog=AdventureWorks2014  
-    ```  
-  
-     Esta cadena de conexión da por supuesto que [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], el servidor de informes y la base de datos [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] están instalados en el equipo local, y que el usuario tiene permiso para iniciar una sesión en la base de datos [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] . Si la base de datos AdventureWorks2014 no está en el equipo local, cambie la cadena de conexión y reemplace *localhost* por el nombre de la instancia del servidor de base de datos.
-  
-     >[!NOTE]  
-    >Si utiliza [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] con Advanced Services o una instancia con nombre, la cadena de conexión debe incluir información de la instancia:  
-    >  
-    >`Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2014`  
-    >  
-    >Para obtener más información sobre cadenas de conexión, consulte: [Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
-     
-  
-6.  Haga clic en **Credenciales** en el panel izquierdo y haga clic en **Usar autenticación de Windows (seguridad integrada)**.  
-  
-7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] El origen de datos **AdventureWorks2014** se agrega al panel **Datos de informe** .  
-![ssrs_adventureworks_datasource](../reporting-services/media/ssrs-adventureworks-datasource.png)  
-## <a name="next-task"></a>Tarea siguiente  
-Ha definido correctamente una conexión a la base de datos de ejemplo [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] . A continuación, creará el informe. Consulte [Lección 3: Definición de un conjunto de datos para el informe de tabla &#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
-  
-## <a name="see-also"></a>Consulte también  
-[Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
-  
-  
-  
+En esta lección, va a definir un *origen de datos*, la información de conexión que el informe usa para acceder a los datos desde una base de datos relacional u otros orígenes.
 
+Para este informe, va a agregar la base de datos de ejemplo AdventureWorks2016 como el origen de datos. En este tutorial se da por hecho que esta base de datos se encuentra en la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] instalada en el equipo local.  
+
+## <a name="to-set-up-a-connection"></a>Para configurar una conexión  
+
+1. En el panel **Datos de informe**, seleccione **Nuevo** > **Origen de datos**. Si el panel **Datos de informe** no aparece, seleccione el menú **Ver** > **Datos de informe**.
+
+    ![ssrs-table-tutorial-2-new-data-source](media/ssrs-table-tutorial-2-new-data-source.png)
+
+    El cuadro de diálogo **Propiedades de origen de datos** se abre y en él se muestra la sección **General**.
+
+    ![Cuadro de diálogo Propiedades de origen de datos](media/lesson-2-specifying-connection-information-reporting-services/vs-datasource-connection-properties-dialog-box.png)
+
+2. En el cuadro de texto **Nombre**, escriba "AdventureWorks2016".
+
+3. Seleccione el botón de radio **Conexión insertada**.
+
+4. En el cuadro de selección desplegable **Tipo**, seleccione "Microsoft SQL Server".
+  
+5. En el cuadro de texto **Cadena de conexión**, escriba la siguiente cadena:
+
+    `Data source=localhost; initial catalog=AdventureWorks2016`
+
+    > [!NOTE]
+    > Esta cadena de conexión da por supuesto que [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], el servidor de informes y la base de datos AdventureWorks2016 están instalados en el equipo local.
+    >
+    >Cambie la cadena de conexión y reemplace “localhost” por el nombre del servidor o la instancia de base de datos, en caso de que la hipótesis sea cierta. Si usa [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] o una instancia con nombre de SQL Server, deberá modificar la cadena de conexión para incluir la información de la instancia. Por ejemplo:
+    >
+    > `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2016`
+    >
+    > Para más información sobre las cadenas de conexión, puede consultar la sección `See also` a continuación.
+
+6. Seleccione la pestaña **Credenciales** y, en la sección **Cambiar las credenciales utilizadas para conectarse al origen de datos**, seleccione el botón de radio **Usar autenticación de Windows (seguridad integrada)**.
+
+7. Seleccione **Aceptar** para completar el proceso.
+
+El Diseñador de informes agrega el origen de datos AdventureWorks2016 al panel **Datos de informe**.
+
+![ssrs-adventureworks-datasource](media/lesson-2-specifying-connection-information-reporting-services/ssrs-adventureworks-datasource2016.png)
+
+## <a name="next-steps"></a>Pasos siguientes
+
+En esta lección, ha definido correctamente una conexión a la base de datos de ejemplo AdventureWorks2016. Continúe con la [Lección 3: Definir un conjunto de datos para el informe de tabla &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md) para definir un conjunto de datos para el informe.
+
+## <a name="see-also"></a>Vea también
+
+[Conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)

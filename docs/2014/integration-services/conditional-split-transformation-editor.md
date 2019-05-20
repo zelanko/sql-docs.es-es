@@ -42,7 +42,7 @@ ms.locfileid: "62835191"
   
  Puede especificar el valor de esta propiedad con una expresión de propiedad.  
   
- **Temas relacionados:**  [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41](expressions/functions-ssis-expression.md)  
+ **Temas relacionados:**  [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Operadores &#40;expresión de SSIS&#41;](expressions/operators-ssis-expression.md) y [Funciones &#40;expresión de SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Nombre de salida predeterminado**  
  Escriba un nombre para la salida predeterminada o utilice el nombre predeterminado.  

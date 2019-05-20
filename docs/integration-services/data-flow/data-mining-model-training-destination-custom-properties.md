@@ -11,14 +11,18 @@ ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ccf961ef43f1c1ca5ffc116c4e816fd2edc82ccc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1dfad3ec6e575529026aa7aa93468be97cd7955e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277424"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727021"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>Propiedades personalizadas del destino de entrenamiento del modelo de minería de datos
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El destino de entrenamiento del modelo de minería de datos tiene propiedades personalizadas y propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas del destino de aprendizaje del modelo de minería de datos. Todas las propiedades son de lectura y escritura.  

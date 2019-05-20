@@ -13,14 +13,18 @@ ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e2b709c9e6de54b24da2b99668e85ed72a17651
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 505699164f49511adb95465e0b74e9e90c8f7dc6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273663"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729120"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Agregar tablas a una instancia CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use el cuadro de diálogo Selección de tablas para agregar tablas adicionales del origen de Oracle a la instancia CDC. Las tablas seleccionadas se agregarán a la lista de la pestaña **Tablas** del editor de propiedades.  
   
  De forma predeterminada, no se incluye ninguna tabla en la lista de tablas de este cuadro de diálogo. Puede activar la casilla **(Seleccionar todo)** o buscar tablas específicas.  

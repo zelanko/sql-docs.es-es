@@ -17,17 +17,21 @@ ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5f5fd00c43d0b7279e000d3640b0c5d0aca3544a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: da17c68fa5195e836a9471479fdfe9e2ce70a0c4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276500"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729423"
 ---
 # <a name="advanced-editor"></a>Editor avanzado
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use el cuadro de diálogo **Editor avanzado** para configurar las propiedades del objeto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] seleccionado.  
   
- El **Editor avanzado** está disponible para la mayor parte de los objetos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que tienen propiedades que pueden configurarse. Es el único editor disponible para aquellos objetos que no muestran una interfaz de usuario personalizada.  
+ El **Editor avanzado** está disponible para la mayor parte de los objetos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que tienen propiedades que pueden configurarse. Es el único editor disponible para aquellos objetos que no muestran una interfaz de usuario personalizada.   
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tienen propiedades que se pueden establecer en el nivel de componente, en el nivel de entrada y salida, y en el nivel de columna de entrada y salida. El **Editor avanzado** enumera todas las propiedades comunes y personalizadas del objeto seleccionado y las muestra, según corresponda, en un máximo de cuatro de las cinco pestañas siguientes:  
   

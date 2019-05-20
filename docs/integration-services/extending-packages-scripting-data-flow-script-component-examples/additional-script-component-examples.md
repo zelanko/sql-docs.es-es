@@ -15,14 +15,18 @@ ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c68ab205087358682959685953266ad962a7e9a6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9f962738621bf4be19975077d39fb253f62ad3ff
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281109"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724379"
 ---
 # <a name="additional-script-component-examples"></a>Ejemplos de componente de script adicionales
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El componente de script es una herramienta configurable que puede utilizar en el flujo de los datos de un paquete para llenar casi cualquier requisito no cumplido por los orígenes, transformaciones y destinos que se incluyen con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Esta sección contiene ejemplos de código del componente de script que muestran los distintos tipos de funcionalidades disponibles.  
   
  Para obtener ejemplos que demuestran cómo configurar el componente de script como origen, transformación o destino básico, vea [Desarrollar tipos específicos de los componentes de script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  

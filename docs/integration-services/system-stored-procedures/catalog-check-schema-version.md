@@ -11,14 +11,18 @@ ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9bf819c65bc8bb826fa1a2f647f8ff2e1f5649db
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fac4b997b8dfde4c73fcf846012344c8d9cb7e0e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276510"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717246"
 ---
-# <a name="catalogcheckschemaversion"></a>catalog.check_schema_version
+# <a name="catalogcheckschemaversion"></a>catalog.check_schema_version 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Determina si el esquema del catálogo de SSISDB y los binarios de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (ensamblado de ISServerExec y SQLCLR) son compatibles.  
@@ -37,7 +41,7 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
  [ @use32bitruntime= ] *use32bitruntime*  
  Cuando el parámetro se establece en **Verdadero**, se llama a la versión de 32 bits dtexec. *use32bitruntime* es de tipo **Bool**.  
   
-## <a name="result-set"></a>Conjunto de resultados  
+## <a name="result-set"></a>Tipo de cursor  
  None  
   
 ## <a name="permissions"></a>Permisos  

@@ -11,14 +11,18 @@ ms.assetid: e7db233b-5464-43de-9d26-6dd24c7ac1b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7a69f86f7eccbf7a105fa67e3572ddc46615468f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 270f2831b814144f6e053db32509e27ffef02ba2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271251"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727048"
 ---
 # <a name="create-infosource"></a>Crear InfoSource
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use el cuadro de diálogo **Crear InfoSource** para crear un InfoSource nuevo. Para crear un InfoSource nuevo, puede usar el cuadro de diálogo **Crear InfoSource para los datos de transacción** o **Crear InfoSource para datos maestros** .  
   
  Puede abrir el cuadro de diálogo **Crear InfoSource** desde la página **Administrador de conexiones** del **Editor de destino de SAP BW**. Para más información acerca del destino de SAP BW, consulte [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  

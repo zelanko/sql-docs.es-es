@@ -11,14 +11,18 @@ ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6cb31139e542344f3b7fd8354c250452783ba5bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fcd7c0cf972a6744cf35ace20fb21dcbf7deb7f0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282820"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726493"
 ---
 # <a name="recordset-destination-custom-properties"></a>Propiedades personalizadas del destino de conjunto de registros
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El destino Conjunto de registros tiene propiedades personalizadas y propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas del destino Conjunto de registros. Todas las propiedades son de lectura y escritura.  

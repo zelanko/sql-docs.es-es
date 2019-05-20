@@ -11,14 +11,18 @@ ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d1b99431f48d9bbf9b53bb57f1b0bcf2291a6c1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5207da1170eea9cfbd90d9461776131f738cd3d9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276220"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723614"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Características de Integration Services compatibles con las ediciones de SQL Server
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  En este tema, encontrará información detallada sobre las características de SQL Server Integration Services (SSIS) admitidas por las diversas ediciones de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  
 
 Para obtener las características compatibles con las ediciones Developer y Evaluation, consulte las características enumeradas para Enterprise Edition en las tablas siguientes.

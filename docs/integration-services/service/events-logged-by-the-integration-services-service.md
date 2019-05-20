@@ -15,14 +15,18 @@ ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 18d4e70daf68267675678803134b3f04c0c48f24
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ea9c422f19554c1e88852eaad1cfa91c00db5f5c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277214"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718096"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Eventos registrados por el servicio Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registra diversos mensajes en el registro de eventos de aplicación de Windows. El servicio registra estos mensajes cuando el servicio se inicia, cuando se detiene y cuando se producen ciertos problemas.  
   
  Este tema proporciona información sobre los mensajes de eventos comunes que el servicio registra en el registro de eventos de aplicación. El servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] registra todos los mensajes descritos en este tema con un origen del evento de SQLISService.  

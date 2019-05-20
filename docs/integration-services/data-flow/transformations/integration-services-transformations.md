@@ -22,14 +22,18 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16df5bb208136b09c76d461fe7f603a06b66e567
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: df6bcf51ca8be47ffa4d6b7a56bc67bd0ce15d1b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289731"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726027"
 ---
 # <a name="integration-services-transformations"></a>Transformaciones de Integration Services
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] son los componentes en el flujo de datos de un paquete que agregan, combinan, distribuyen y modifican datos. Las transformaciones también pueden realizar operaciones de búsqueda y generar conjuntos de datos de ejemplo. Esta sección describe las transformaciones que incluye [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] y explica cómo funcionan.  
   
 ## <a name="business-intelligence-transformations"></a>Transformaciones de inteligencia empresarial  

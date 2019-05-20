@@ -22,14 +22,18 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e2c7ac89c705c8825a87cfeee381190a6becfa90
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fd1ce5f5da0fec21ee1ac944df6da0f9f6b1390b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282369"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727567"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tarea Cola de mensajes le permite usar Message Queue Server (que también recibe el nombre de MSMQ) para enviar y recibir mensajes entre paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , o enviar mensajes a una cola de aplicaciones procesada por una aplicación personalizada. Estos mensajes pueden adoptar la forma de texto simple, archivos o variables y sus valores.  
   
  Al utilizar la tarea Cola de mensajes, puede coordinar operaciones en toda la empresa. Los mensajes se pueden colocar en cola y enviarse más tarde si el destino no está disponible o está ocupado. Por ejemplo, la tarea puede colocar en cola mensajes para el equipo portátil sin conexión de los representantes de ventas, que reciben sus mensajes cuando se conectan a la red. Puede usar la tarea Cola de mensajes para los siguientes fines:  

@@ -11,14 +11,18 @@ ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 751480be76b38ff10f0c71fbde12bcc6765e6ef6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5d6b035f0ca428f6c31492f940a9964982f04f66
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277263"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65722332"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>Lección 3-3: Probar los paquetes implementados
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 En esta tarea probará los paquetes que ha implementado en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 En otros tutoriales de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ejecutó paquetes en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], el entorno de desarrollo de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], con la opción **Iniciar depuración** del menú **Depurar** . Esta vez ejecutará los paquetes de otra forma.  

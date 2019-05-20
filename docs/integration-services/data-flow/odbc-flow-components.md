@@ -11,14 +11,18 @@ ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f9f23826d6d56b4a1ca52b4552538c9a5af5ef11
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e59efeb278c7d5f1236a9943f03ad471491f354a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58279419"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726646"
 ---
 # <a name="odbc-flow-components"></a>Componentes del flujo de ODBC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   En este tema se describen los conceptos necesarios para crear un flujo de datos ODBC mediante [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
  El conector para conectividad abierta de base de datos (ODBC) para [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] ayuda a los desarrolladores de SSIS a crear fácilmente paquetes que cargan y descargan los datos de las bases de datos que admiten ODBC.  

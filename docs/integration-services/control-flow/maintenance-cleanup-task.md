@@ -17,14 +17,18 @@ ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a44c15b2fc324a6f172fbc11e82f822261e0c8e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0cdbaa7d265720cc85966180811221d5883ffc66
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289401"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727544"
 ---
 # <a name="maintenance-cleanup-task"></a>tarea, Limpieza de mantenimiento
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tarea Limpieza de mantenimiento quita archivos relacionados con planes de mantenimiento, entre los que se incluyen archivos de copia de seguridad de la base de datos e informes creados a partir de planes de mantenimiento. Para obtener más información, vea [Planes de mantenimiento](../../relational-databases/maintenance-plans/maintenance-plans.md) y [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
  El uso de la tarea Limpieza de mantenimiento permite que un paquete pueda quitar los archivos de copia de seguridad o los informes del plan de mantenimiento del servidor especificado. La tarea Limpieza de mantenimiento incluye una opción para quitar un archivo específico o un grupo de archivos de una carpeta. También puede especificar la extensión de los archivos que desea eliminar.  

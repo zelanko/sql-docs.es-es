@@ -11,14 +11,18 @@ ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4cae6eec034f56f94635ec33bd2550e96a726d7c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 358780e6a25e6f39459e90eaba7f7d6e4b3e7ac8
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270508"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725683"
 ---
 # <a name="delete-packages"></a>Eliminar paquetes
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], puede eliminar paquetes guardados en el sistema de archivos. Si elimina un paquete, se elimina de forma permanente y no puede restaurarse en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 > [!NOTE]  

@@ -11,14 +11,18 @@ ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 16bb157e9917d2538542df525b2ad523c88bfc01
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5e93f8c6933769fcce7426df58f67a53113ff6f5
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280939"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724780"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>Desarrollar componentes de flujo de datos con varias entradas
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Un componente de flujo de datos con varias entradas puede utilizar demasiada memoria si sus diversas entradas producen datos a velocidades desiguales. Al desarrollar un componente de flujo de datos personalizado que admite dos o más entradas, puede administrar esta presión de memoria mediante los siguientes miembros del espacio de nombres Microsoft.SqlServer.Dts.Pipeline:  
   
 -   La propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> de la clase <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute>. Establezca el valor de esta propiedad en **true** si desea implementar el código que es necesario que el componente de flujo de datos personalizado administre datos que fluyen a velocidades desiguales.  

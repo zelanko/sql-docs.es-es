@@ -13,14 +13,18 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5a1111aa084ee4d5c9ee34b74dbc689195dee5ba
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 38a72f9628e621f5ed960a125800451badd180e6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273647"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727144"
 ---
 # <a name="cdc-splitter"></a>Divisor CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El divisor CDC divide un único flujo de filas de un flujo de datos de origen de CDC en varios flujos de datos para las operaciones de inserción, actualización y eliminación. El flujo de datos se divide según la columna obligatoria `__$operation` y sus valores estándar en las tablas de cambios de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 |Valor de la operación|Salida|Descripción|  

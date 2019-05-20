@@ -14,14 +14,18 @@ ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a0e23af1cf138fa3bbf613ce0cc0f34cca75b3c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1c865c1316996c54e589326fa1351aa3cab4a934
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58277704"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725610"
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (OR inclusivo bit a bit) (expresión de SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Lleva a cabo una operación OR bit a bit entre dos valores enteros. Compara cada bit del primer operando con el bit correspondiente del segundo operando. Si cualquiera de los bits es 1, el bit de resultado correspondiente se establece en 1. De lo contrario, se establece en cero (0).  
   
  Ambas condiciones deben ser de tipo entero con signo o de tipo entero sin signo.  

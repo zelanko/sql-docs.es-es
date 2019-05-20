@@ -18,14 +18,18 @@ ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c8874015d91d377a46688f042599a8f2f98d1dc2
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 767e94fe1a87973331ccae234bc85270a5cee800
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280949"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728143"
 ---
 # <a name="odbc-connection-manager"></a>ODBC, administrador de conexiones
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Un administrador de conexiones ODBC habilita un paquete para conectarse a una serie de sistemas de administración de bases de datos mediante la especificación Conectividad abierta de bases de datos (ODBC).  
   
  Cuando agrega una conexión ODBC a un paquete y establece las propiedades de administrador de conexiones, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un administrador de conexiones y agrega el administrador de conexiones a la colección **Connections** del paquete. En el tiempo de ejecución el administrador de conexiones se resuelve como una conexión ODBC física.  

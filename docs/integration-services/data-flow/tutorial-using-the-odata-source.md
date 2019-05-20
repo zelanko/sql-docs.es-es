@@ -11,14 +11,18 @@ ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91b03ca49059ea12898420eea2abff6326fa7d0e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 795d4d31c3b26d2ef1f587e6b96d158d5d304789
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58272774"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725694"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Tutorial: Usar el origen OData
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   En este tutorial se describe el proceso para extraer la colección **Employees** del servicio OData del ejemplo **Northwind** (https://services.odata.org/V3/Northwind/Northwind.svc/)) y, después, cargarlo en un archivo plano.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Crear un proyecto de Integration Services  

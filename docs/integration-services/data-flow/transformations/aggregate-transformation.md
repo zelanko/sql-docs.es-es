@@ -20,14 +20,18 @@ ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9a45b20ac413c04ca641674020e8d98ed39a01e8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0580c61bae4fdca1d311e4ccaee88f05a8b6ecd0
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290561"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726285"
 ---
 # <a name="aggregate-transformation"></a>Transformación Agregado
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La transformación Agregado aplica funciones de agregado, como Average, a los valores de columnas y copia los resultados en la salida de transformación. Además de las funciones de agregado, la transformación proporciona la cláusula GROUP BY, que se puede usar para especificar los grupos en los que se debe realizar el agregado.  
   
 ## <a name="operations"></a>Operaciones  

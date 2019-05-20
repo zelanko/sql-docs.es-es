@@ -25,14 +25,18 @@ ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bcc954457c38f8c9bcd8e038ce3461bb94335eb0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: eeddd2924722cbcf152c4c55c33c126a19a0679a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274902"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729399"
 ---
 # <a name="adding-connections-programmatically"></a>Agregar conexiones mediante programación
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La clase <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> representa las conexiones físicas con los orígenes de datos externos. La clase <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> aísla los detalles de la implementación de la conexión del tiempo de ejecución. Esto habilita al tiempo de ejecución para que interactúe con cada administrador de conexiones de una manera coherente y de predicción. Los administradores de conexiones contienen un conjunto de propiedades estándar que todas las conexiones tienen en el común, como <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Sin embargo, las propiedades <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> son normalmente las únicas propiedades que se requieren para configurar un administrador de conexiones. A diferencia de otros paradigmas de programación, donde las clases de conexión exponen métodos como **Open** o **Connect** para establecer físicamente una conexión al origen de datos, el motor en tiempo de ejecución administra todas las conexiones para el paquete mientras se ejecuta.  
   
  La clase <xref:Microsoft.SqlServer.Dts.Runtime.Connections> es una colección de los administradores de conexiones agregados a ese paquete y que están disponibles para su uso en tiempo de ejecución. Puede agregar más administradores de conexiones a la colección mediante el método <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> de la colección y proporcionando una cadena que indica el tipo de administrador de conexiones. El método <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> devuelve la instancia <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> que se agregó al paquete.  

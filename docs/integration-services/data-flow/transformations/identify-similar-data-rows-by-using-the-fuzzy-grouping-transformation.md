@@ -16,14 +16,18 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b1851f2f8970d05f695b90f2024f44450c437164
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7dfb6976d5a08dabe3341a5b9c8644b57e4a3797
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283149"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726073"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identificar filas de datos similares mediante la transformación Agrupación aproximada
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Para agregar y configurar una transformación Agrupación aproximada, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
   
 ### <a name="to-implement-fuzzy-grouping-transformation-in-a-data-flow"></a>Para implementar la transformación Agrupación aproximada en un flujo de datos  

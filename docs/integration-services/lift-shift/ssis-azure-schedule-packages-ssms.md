@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 2276b2d769128be1d8ce5cbd44c992f08ddf625b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e65c9f5a1ab41ef8ba47636960e3b1b7725b630f
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786243"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720716"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>Programar la ejecución de paquetes SSIS implementados en Azure con SQL Server Management Studio (SSMS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Puede usar SQL Server Management Studio (SSMS) para programar paquetes SSIS implementados en Azure SQL Database. SQL Server local e Instancia administrada de Azure SQL Database tienen el Agente SQL Server y el Agente de Instancia administrada respectivamente como programador de trabajos SSIS de primera clase. Por otro lado, SQL Database no tiene ningún programador de trabajos SSIS de primera clase integrado. La característica de SSMS descrita en este artículo proporciona una interfaz de usuario conocida que se parece al Agente SQL Server para programar paquetes implementados en SQL Database.
 

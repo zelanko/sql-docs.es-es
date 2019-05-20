@@ -11,14 +11,18 @@ ms.assetid: bdcc72b8-8950-47bd-88bf-5db6d48cc6bf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7f67b887e2f035e1ced192a967e2f8cfe2291ff7
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 45df4518b935057e23e46b62583989bf98d0b0ab
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276454"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726904"
 ---
 # <a name="excel-custom-properties"></a>Propiedades personalizadas de Excel
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Propiedades personalizadas de origen**  
   
  El origen de Excel tiene propiedades personalizadas y propiedades comunes a todos los componentes de flujo de datos.  

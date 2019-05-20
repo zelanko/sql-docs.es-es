@@ -18,14 +18,18 @@ ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 07917304412c77e7cd58dd771d9ef97199270f4e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2ae28de186f1f411792b1f20b728c473e6df4bca
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281189"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727011"
 ---
 # <a name="data-in-data-flows"></a>Datos de flujos de datos
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona un conjunto de tipos de datos que se usan en flujos de datos.  
   
 ## <a name="data-type-conversion"></a>Conversión de tipo de datos  

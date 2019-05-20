@@ -13,15 +13,17 @@ ms.assetid: ec97d451-06af-44a3-8304-305d410cfc8e
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: c8879dcc66e029e6de19ff3b259995006b02664f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
+ms.openlocfilehash: bd5ea0433b1cbdee6adf97dbab9a2dcdddcb8389
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039846"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65577470"
 ---
 # <a name="json-functions-transact-sql"></a>Funciones JSON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 Use las funciones descritas en las páginas de esta sección para validar o cambiar el texto JSON o para extraer valores simples o complejos.  
   
@@ -33,10 +35,9 @@ Use las funciones descritas en las páginas de esta sección para validar o camb
 |[JSON_MODIFY](../../t-sql/functions/json-modify-transact-sql.md)|Actualiza el valor de una propiedad en una cadena JSON y devuelve la cadena JSON actualizada.|
 
  Para obtener más información sobre la compatibilidad integrada con JSON en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Datos JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md).  
-    
-## <a name="see-also"></a>Consulte también  
- [Validar, consultar y cambiar datos JSON con funciones integradas &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)   
- [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [Datos JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
-  
-  
+
+## <a name="see-also"></a>Consulte también
+
+ - [Validar, consultar y cambiar datos JSON con funciones integradas &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)
+ - [Expresiones de ruta de acceso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)
+ - [Datos JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

@@ -13,14 +13,18 @@ ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a356826385f86f3f33735e4e8b0bba7880ce9aa8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fa74a85020afdac21fd83178679be6e5db3231ee
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289821"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728672"
 ---
 # <a name="manage-a-cdc-service"></a>Administrar un servicio CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Puede usar la Consola del diseñador CDC para ver los servicios que creó con la Consola de configuración del servicio CDC y administrar todas las instancias del servicio CDC de Oracle.  
   
  Haga clic en el nombre del servicio en el panel izquierdo para mostrar información sobre el servicio y para administrarlo.  

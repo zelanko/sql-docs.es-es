@@ -11,14 +11,18 @@ ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 21a01d4280b48dcb78466927d1872191e3d3fb67
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ceddb40eee5f5eafcc134e4ed434c2dabadd6896
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276864"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728279"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>Administrador de conexiones de limpieza de DQS
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Los administradores de conexiones de limpieza de DQS permiten que los paquetes se conecten a un servidor de [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] . La transformación Limpieza de DQS usa el administrador de conexiones de Limpieza de DQS.  
   
  Para obtener más información acerca de Data Quality Services, vea [Data Quality Services Concepts](../../data-quality-services/data-quality-services-concepts.md).  

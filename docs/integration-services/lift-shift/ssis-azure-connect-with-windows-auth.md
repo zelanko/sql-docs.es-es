@@ -11,14 +11,18 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 2fe0248f455cc95c14486373af6f9374edaebc97
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 94002a79d53c008249836541fc84f7e9ff06a6ae
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356448"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65720726"
 ---
 # <a name="access-data-stores-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Acceso a los almacenes de datos y los recursos compartidos de archivos con la autenticación de Windows desde paquetes SSIS en Azure
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Puede usar la autenticación de Windows para acceder a almacenes de datos, como instancias de SQL Server, recursos compartidos de archivos, Azure Files, etc., desde paquetes SSIS que se ejecuten en su instancia de Azure-SSIS Integration Runtime (IR) en Azure Data Factory (ADF). Los almacenes de datos pueden estar en el entorno local, hospedarse en Azure Virtual Machines (VM) o ejecutarse en Azure como servicios administrados. Si están en el entorno local, deberá unir la instancia de Azure SSIS IR a una red virtual (VNet) conectada a la red local; consulte [Unión de Azure-SSIS IR a una red virtual](https://docs.microsoft.com/azure/data-factory/join-azure-ssis-integration-runtime-virtual-network). Hay cuatro métodos para acceder a los almacenes de datos con la autenticación de Windows desde los paquetes SSIS que se ejecutan en Azure-SSIS IR:
 
 | Método de conexión | Ámbito efectivo | Paso de configuración | Método de acceso en paquetes | Número de conjuntos de credenciales y recursos conectados | Tipo de recursos conectados | 

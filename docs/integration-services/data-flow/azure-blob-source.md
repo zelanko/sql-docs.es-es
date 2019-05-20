@@ -14,14 +14,18 @@ ms.assetid: 80645c5c-88c8-4fb0-8607-de1bb7bffcbb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 62d4cc21bbe5469886e4087c9ec310abc9185ed8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 7d0dd556e17d50e66a0d74805fd754318f5226ad
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282079"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727187"
 ---
 # <a name="azure-blob-source"></a>Origen de blobs de Azure
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El componente **Azure Blob Source** (Origen de blobs de Azure) permite que un paquete SSIS lea datos de un blob de Azure. Los formatos de archivo compatibles son los siguientes: CSV y AVRO.
   
   Para ver el editor del origen de blob de Azure, arrastre y coloque el **origen de blob de Azure** en el diseñador de flujos de datos y haga doble clic en él para abrir el editor.  

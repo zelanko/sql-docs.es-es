@@ -13,14 +13,18 @@ ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 665e813c6315b292bfc7c2471fd16bf8cef16e36
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f0a8a17490da94d7ef608ebc553770021d064b2b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281519"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729230"
 ---
 # <a name="project-versions-dialog-box"></a>Cuadro de diálogo Versiones del proyecto
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use el cuadro de diálogo **Versiones del proyecto** para ver las versiones de un proyecto y restaurar una versión anterior.  
   
  También puede ver las versiones anteriores en la vista [catalog.object_versions &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-object-versions-ssisdb-database.md) y usar el procedimiento almacenado [catalog.restore_project &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md) para restaurar versiones anteriores.  

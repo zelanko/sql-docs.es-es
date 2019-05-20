@@ -13,14 +13,18 @@ ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 92a206c97676ff49b50565d1ac947e7046cbcf6a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e4e87cebfac91e8b562c8cc0867d54f38e948ff9
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281039"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728820"
 ---
 # <a name="generate-mirror-tables-and-cdc-capture-instances"></a>Generar tablas reflejadas e instancias de captura CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Use la página Generar tablas reflejadas para generar las tablas reflejadas para las tablas que se incluyeron en la instancia CDC.  
   
  Haga clic en **Ejecutar** para crear las tablas reflejadas. Se mostrará el progreso de la creación de cada tabla y aparecerá un mensaje para que sepa si cada tabla reflejada se completó correctamente o con errores. Si se produce algún error, haga clic en **Detalles** para ver un cuadro de diálogo con una explicación del error.  

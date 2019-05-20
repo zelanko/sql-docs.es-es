@@ -29,14 +29,18 @@ ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a30e2b2ff3ee716f48b3ba91bf0bbea6b4cf571d
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: ba1a50942233f44586be498306e2b58f6fa04223
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274481"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726097"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Agrupación aproximada, transformación
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La transformación Agrupación aproximada realiza tareas de limpieza de datos, identificando filas de datos que probablemente se van a duplicar y seleccionando una fila de datos canónica para utilizarla en la normalización de los datos.  
   
 > [!NOTE]  

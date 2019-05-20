@@ -23,14 +23,18 @@ ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e2964300e2990721afe920c0e418a220fe0b1a22
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2f8c4744c7e56e7b3014e8af3b462c87b639b6ae
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271940"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725896"
 ---
 # <a name="row-sampling-transformation"></a>Muestreo de fila, transformación
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La transformación Muestreo de fila se usa para obtener un subconjunto seleccionado aleatoriamente de un conjunto de datos de entrada. Puede especificar el tamaño exacto del ejemplo de salida y especificar un valor de inicialización para el generador de números aleatorios.  
   
  Hay muchas aplicaciones para el muestreo aleatorio. Por ejemplo, una compañía que desea seleccionar aleatoriamente 50 empleados que recibirán los premios de una lotería podría aplicar la transformación Muestreo de fila a la base de datos de empleados para generar el número exacto de ganadores.  

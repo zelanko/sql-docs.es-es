@@ -11,14 +11,18 @@ ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a1bd4c6866f7090a00567240350f1355f5c7f5e6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d65cabf9e0dad9e6c3ee5824a59ce33815722042
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270348"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65725666"
 ---
 # <a name="xml-source-custom-properties"></a>Propiedades personalizadas del origen XML
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El origen XML tiene propiedades personalizadas y propiedades comunes a todos los componentes de flujo de datos.  
   
  En la tabla siguiente se describen las propiedades personalizadas del origen XML. Todas las propiedades son de lectura y escritura.  

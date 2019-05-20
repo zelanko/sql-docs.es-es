@@ -16,14 +16,18 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7e47c5474daa564c63cb80c72f14df6fe990b5e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: faeb7edf94c402a6a4558f95c2b42a6c6f4b3d1c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283029"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713598"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Descripción de las transformaciones sincrónicas y asincrónicas
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Para entender la diferencia que existe entre una transformación sincrónica y una transformación asincrónica en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], lo más fácil es empezar por la descripción de una transformación sincrónica. Si una transformación sincrónica no satisface sus necesidades, puede que su diseño requiera una transformación asincrónica.  
   
 ## <a name="synchronous-transformations"></a>Transformaciones sincrónicas  

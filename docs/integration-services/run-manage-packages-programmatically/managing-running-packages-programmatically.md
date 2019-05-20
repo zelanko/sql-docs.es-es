@@ -14,14 +14,18 @@ ms.assetid: 0e91f4ac-6f29-40d7-8c28-9b82e4802c35
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5c06c5d4431da3a459ecf4e66391153096e08c5a
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 56e09491833cf96c83651b4e6a8038c1ad7a3bc6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270538"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719044"
 ---
 # <a name="managing-running-packages-programmatically"></a>Administrar los paquetes en ejecución mediante programación
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Cuando trabaja con paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante programación, puede que desee determinar los paquetes que se están ejecutando en ese momento. La clase <xref:Microsoft.SqlServer.Dts.Runtime.Application> del espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> proporciona métodos y clases para satisfacer estos requisitos.  
   
  Para obtener más información sobre la supervisión de paquetes, consulte [Administración de paquetes &#40;servicio SSIS&#41;](../../integration-services/service/package-management-ssis-service.md).  

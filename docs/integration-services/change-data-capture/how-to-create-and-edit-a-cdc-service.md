@@ -11,14 +11,18 @@ ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47d4d2a3e987dada26fddff10c863fa0e3ba3ee8
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 96e3ff941d431deb423cdd474d36846e8596798b
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270829"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728808"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>Cómo crear y editar un servicio CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   En estos procedimientos se describe cómo crear y editar un nuevo servicio CDC de Oracle desde la Consola de configuración del servicio CDC.  
   
  Para poder realizar este procedimiento, un usuario de Windows debe tener privilegios de administrador en el equipo donde está configurado el servicio CDC de Oracle.  

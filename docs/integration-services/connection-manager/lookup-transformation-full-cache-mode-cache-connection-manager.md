@@ -13,14 +13,18 @@ ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c30fcacb779a9656b70edad79e976bde575537de
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: d612cb08431c5618d5d3e6e7c0574d79bf43000e
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290601"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728199"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Transformación Búsqueda en el modo Caché completa - Administrador de conexiones de caché
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Puede configurar la transformación de búsqueda para utilizar el modo de caché completa y un Administrador de conexiones de caché. En el modo de caché completa, el conjunto de datos de referencia se carga en la memoria caché antes de que se ejecute la transformación Búsqueda.  
   
 > [!NOTE]  

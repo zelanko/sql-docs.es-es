@@ -15,14 +15,18 @@ ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f1ae0a9f644234a7e887758cf56ebcbc89593ee4
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: db042dd5722b2b1bc034364878ebf3cfb550e27c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58289641"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65717281"
 ---
 # <a name="ssis-toolbox"></a>Cuadro de herramientas de SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Todos los componentes que se instalan automáticamente en la máquina local aparecen en el **cuadro de herramientas de SSIS**. Al instalar componentes adicionales, haga clic con el botón derecho en el cuadro de herramientas y, después, haga clic en **Actualizar cuadro de herramientas** para agregar los componentes.  
  
  Cuando se crea un proyecto de SSIS o se abre uno ya existente, el **cuadro de herramientas de SSIS** se muestra automáticamente. Asimismo, también puede abrir el cuadro de herramientas haciendo clic en el botón Cuadro de herramientas situado en la esquina superior derecha de la superficie de diseño del paquete, o haciendo clic en VER ->Otras ventanas->Cuadro de herramientas de SSIS.

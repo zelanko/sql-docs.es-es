@@ -22,14 +22,18 @@ ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac26a89f7f49dfe19c25e9be54a0543c20a3b571
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f8a89e4aa9364db4901f85e4ed2452514eea72f6
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275482"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724332"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>Buscar impresoras instaladas con la tarea Script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Los datos que se transforman con los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tienen a menudo un informe impreso como último destino. El espacio de nombres **System.Drawing.Printing** en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona clases para trabajar con impresoras.  
   
 > [!NOTE]  

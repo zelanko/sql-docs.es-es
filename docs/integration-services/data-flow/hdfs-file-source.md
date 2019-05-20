@@ -13,14 +13,18 @@ ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 400f3158e6196ff42c702ce675b28125167bd861
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c40acf6b85fd8a8a2078ea8c085ac54512361ee
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276854"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726775"
 ---
 # <a name="hdfs-file-source"></a>Origen de archivo HDFS
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El componente de origen de archivo HDFS permite que un paquete SSIS lea datos desde un archivo HDFS. Los formatos de archivo admitidos son Text y Avro. (No se admiten los orígenes ORC).  
   
  Para configurar el componente de origen de archivo HDFS, arrastre y suelte el origen de archivo HDFS en el diseñador de flujo de datos y haga doble clic en el componente para abrir el editor.  

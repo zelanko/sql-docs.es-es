@@ -15,14 +15,18 @@ ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3b7494eb9879c8ceb5e80e28b071d4ae6817bf75
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 251f3dbb12ac77bfd8a14d50bc10cb692947fd73
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283119"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65726219"
 ---
 # <a name="convert-data-type-by-using-data-conversion-transformation"></a>Conversión del tipo de datos con la transformación Conversión de datos
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Para agregar y configurar una transformación Conversión de datos, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen.  
   
 ### <a name="to-convert-data-to-a-different-data-type"></a>Para convertir datos en un tipo de datos diferente  

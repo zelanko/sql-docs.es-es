@@ -12,16 +12,16 @@ helpviewer_keywords:
 - text printing [SQL Server Management Studio]
 - printing code and text
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 630f6495563b8e8264b5721a9d9ab141c08e5894
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 7dde93cec99f4293871f83befab023b55b1b4569
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643791"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65822023"
 ---
 # <a name="print-code-and-results"></a>Imprimir código y resultados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51643791"
   
  Si tiene habilitados los números de línea en el editor, estos no se imprimirán a menos que se seleccione **Incluir números de línea** en el cuadro de diálogo **Imprimir** del menú **Archivo** .  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Cambiar el color, el tamaño y el estilo de la fuente](../../relational-databases/scripting/change-font-color-size-and-style.md)  
   
   

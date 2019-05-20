@@ -11,14 +11,18 @@ ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 663131afa6741e1e8addc9809080bed1e1fda67c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: b0fddc9de23354536b7e6ed1956ad903ce559184
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290271"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728715"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Cómo ver las propiedades de la instancia CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   En este procedimiento se describe cómo usar la consola del Diseñador CDC para ver información acerca de las instancias que se crean para ayudar a administrar el funcionamiento de las instancias.  
   
 ### <a name="to-view-information-about-a-specific-instance"></a>Para ver información sobre una instancia específica  

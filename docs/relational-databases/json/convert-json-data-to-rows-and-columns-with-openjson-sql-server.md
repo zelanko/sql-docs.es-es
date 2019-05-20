@@ -14,16 +14,16 @@ ms.assetid: 0c139901-01e2-49ef-9d62-57e08e32c68e
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e56a64564d3b546f6bd6c45c36bdb7b4b1484b87
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9260a04673ecdf4de8090bf6582fa9c674d9cf2c
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033246"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65570985"
 ---
 # <a name="parse-and-transform-json-data-with-openjson-sql-server"></a>Análisis y transformación de datos JSON con OPENJSON (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 La función de conjunto de filas **OPENJSON** convierte texto JSON en un conjunto de filas y columnas. Una vez que transforma una colección de JSON en un conjunto de filas con **OPENJSON**, puede ejecutar cualquier consulta SQL en los datos devueltos o insertarlos en una tabla de SQL Server. 
   
@@ -42,9 +42,10 @@ Cuando se usa la función **OPENJSON** sin proporcionar un esquema explícito pa
 **OPENJSON** devuelve cada propiedad del objeto JSON o cada elemento de la matriz como una fila independiente.  
 
 En el siguiente ejemplo rápido se usa **OPENJSON** con el esquema predeterminado (es decir, sin la cláusula **WITH** opcional) y se devuelve una fila por cada propiedad del objeto JSON.  
- 
+
 **Ejemplo**
-```sql  
+
+```sql
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
@@ -53,7 +54,7 @@ SELECT *
 FROM OPENJSON(@json);
 ```  
   
-**Resultado**  
+**Resultado**
   
 |Key|value|Tipo|  
 |---------|-----------|----------|  
@@ -68,8 +69,8 @@ Para obtener más información y ejemplos, vea [Uso de OPENJSON con el esquema p
 
 Para ver la sintaxis y el uso, consulte [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md). 
 
-    
 ## <a name="option-2---openjson-output-with-an-explicit-structure"></a>Opción 2: Salida OPENJSON con una estructura explícita
+
 Cuando se especifica el esquema de los resultados con la cláusula **WITH** de la función **JSON**, esta devuelve una tabla con las columnas definidas en la cláusula **WITH**. En la cláusula **WITH** opcional se puede especificar un conjunto de columnas de salida, sus tipos y las rutas de acceso de las propiedades de origen de JSON de cada valor de salida. **OPENJSON** iterará por la matriz de objetos JSON, leerá el valor en la ruta de acceso especificada para cada columna y convertirá el valor al tipo especificado.  
 
 A continuación, se muestra un ejemplo rápido que usa **OPENJSON** con un esquema para la salida que especifica explícitamente en la cláusula **WITH**.  
@@ -114,7 +115,7 @@ WITH (
  ) 
 ```  
   
-**Resultado**  
+**Resultado**
   
 |Number|date|Customer|Cantidad|  
 |------------|----------|--------------|--------------|  
@@ -128,11 +129,13 @@ Esta función devuelve los elementos de una matriz JSON y les da formato.
 -   Para cada columna que se especifica mediante la sintaxis `colName type json_path`, **OPENJSON** convierte el valor que se encuentra en cada elemento de matriz en la ruta de acceso especificada al tipo especificado. En este ejemplo, se toman los valores de la columna `Date` de cada elemento en una ruta de acceso `$.Order.Date` y se convierten en valores de fecha y hora.  
   
 ### <a name="more-info-about-openjson-with-an-explicit-schema"></a>Más información sobre OPENJSON con un esquema explícito
+
 Para obtener más información y ejemplos, vea [Uso de OPENJSON con un esquema explícito &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md).
 
 Para ver la sintaxis y el uso, consulte [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md).
 
 ## <a name="openjson-requires-compatibility-level-130"></a>OPENJSON requiere el nivel de compatibilidad 130
+
 La función **OPENJSON** solo está disponible en el **nivel de compatibilidad 130**. Si el nivel de compatibilidad de la base de datos es inferior a 130, SQL Server no podrá encontrar ni ejecutar la función **OPENJSON**. Hay otras funciones integradas de JSON que sí están disponibles en todos los niveles de compatibilidad.
 
 Puede comprobar el nivel de compatibilidad en la vista `sys.databases` o en las propiedades de la base de datos.
@@ -146,13 +149,12 @@ Puede cambiar el nivel de compatibilidad de una base de datos mediante el comand
 
 Para obtener una introducción visual a la compatibilidad integrada de JSON en SQL Server y Azure SQL Database, vea los siguientes vídeos:
 
--   [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support) (SQL Server 2016 y compatibilidad con JSON)
+- [SQL Server 2016 and JSON Support](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support) (SQL Server 2016 y compatibilidad con JSON)
 
--   [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database) (Uso de JSON en SQL Server 2016 y Azure SQL Database)
+- [Using JSON in SQL Server 2016 and Azure SQL Database](https://channel9.msdn.com/Shows/Data-Exposed/Using-JSON-in-SQL-Server-2016-and-Azure-SQL-Database) (Uso de JSON en SQL Server 2016 y Azure SQL Database)
 
--   [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds) (JSON como puente entre los universos NoSQL y relacional)
+- [JSON as a bridge between NoSQL and relational worlds](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds) (JSON como puente entre los universos NoSQL y relacional)
   
 ## <a name="see-also"></a>Consulte también  
  [OPENJSON &#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)  
-  
   

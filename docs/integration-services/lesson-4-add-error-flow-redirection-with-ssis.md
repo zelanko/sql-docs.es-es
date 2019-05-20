@@ -11,14 +11,18 @@ ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64982c47b9089bcaf878e9846714ed93b49eb7ad
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c52d5115539b35f769ce74a35887e0538526deb
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275629"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721769"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>Lección 4: Adición de redireccionamiento de flujo de errores con SSIS
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Para controlar los errores que puedan aparecer en el proceso de transformación, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite decidir en función de cada componente y cada columna cómo administrar los datos que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] no puede transformar. Puede optar por omitir un error en determinadas columnas, redireccionar toda la fila que ha generado el error o rechazar el componente debido a un error. De forma predeterminada, los componentes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] están configurados para ser rechazados si se produce un error. Por su parte, el componente rechazado por un error hace que el paquete también genere un error y que se detenga el procesamiento.  
   

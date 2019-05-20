@@ -13,14 +13,18 @@ ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 913eb1bc47687b890032bf2300a237ec4a29bf5e
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9272628b44c0f8d9e660e1577bd4485c040d9423
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58281069"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65724469"
 ---
 # <a name="persisting-custom-objects"></a>Conservar objetos personalizados
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   No tiene que implementar la persistencia personalizada para los objetos personalizados que crea, siempre que sus propiedades utilicen solo tipos de datos simples como **integer** y **string**. La implementación predeterminada de persistencia guarda los metadatos del objeto junto con los valores de todas sus propiedades.  
   
  Sin embargo, si el objeto tiene propiedades que usan tipos de datos complejos o si desea realizar el procesamiento personalizado en valores de propiedad cuando se cargan y guardan, puede implementar la interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist> y los métodos <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.LoadFromXML%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist.SaveToXML%2A>. En estos métodos puede cargar desde (o guardar en) la definición XML del paquete un fragmento XML que contiene las propiedades del objeto y sus valores actuales. No está definido el formato de este fragmento XML; solo debe tener un formato XML correcto.  

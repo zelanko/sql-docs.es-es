@@ -16,14 +16,18 @@ ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e28a0043cef8fc26dc5b98c255d516c5dd523b0
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 993cf560f8bd3c07b5930219ca041ebe5c411ea1
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270452"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727454"
 ---
 # <a name="select-variables-page"></a>Página Seleccionar variables
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilice el cuadro de diálogo **Seleccionar variables** para seleccionar una o más variables para las propiedades **ReadOnlyVariables** y **ReadWriteVariables** al configurar una tarea Script o un componente de script.  
   
  Para abrir el cuadro de diálogo **Seleccionar variables**, en la página **Script** del cuadro de diálogo **Editor de transformación Script**, en **Propiedades personalizadas**, busque la propiedad **ReadOnlyVariables** o **ReadWriteVariables** y, después, haga clic en el botón de puntos suspensivos (…) asociado a esa propiedad.  

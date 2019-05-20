@@ -18,14 +18,18 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 043c99a06b42e1bc1fcbe76971c55d77fc2bd45f
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: fa4eca66eaab6abf6b6bf4332dce1c48bb5835cd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290451"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727309"
 ---
 # <a name="wmi-data-reader-task"></a>Tarea Lector de datos WMI
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   La tarea Lector de datos WMI ejecuta consultas mediante el Lenguaje de consulta del Instrumental de administración de Windows (WMI), que devuelve información de WMI sobre un sistema informático. Puede usar la tarea Lector de datos WMI para los siguientes fines:  
   
 -   Realizar consultas de los registros de eventos de Windows en un equipo local o remoto y escribir la información en un archivo o variable.  

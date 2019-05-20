@@ -11,14 +11,18 @@ ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fad3dbcd1a181fd2343fc37fb5227a439011c4b6
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c280b829f5d3efbca5cdff1dfcf7368e9f26111
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273513"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728743"
 ---
 # <a name="how-to-work-with-cdc-services"></a>Cómo trabajar con servicios CDC
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   En este procedimiento se describe cómo usar la Consola de configuración del servicio CDC para preparar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de manera que funcione con servicios CDC de Oracle y para crear un nuevo servicio CDC.  
   
 ### <a name="to-work-with-cdc-services"></a>Para trabajar con servicios CDC  

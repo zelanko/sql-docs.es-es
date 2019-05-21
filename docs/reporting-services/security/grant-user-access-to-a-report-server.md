@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d255d798bc73d446c22dff112606165a1def8ea4
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
-ms.translationtype: HT
+ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449690"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619621"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Conceder a un usuario acceso a un servidor de informes
 
@@ -53,24 +53,24 @@ Revise la lista siguiente antes de agregar usuarios a un servidor de informes en
 
 1. Inicie el [portal web](../web-portal-ssrs-native-mode.md).
 
-2. Seleccione el *icono de engranaje* de la esquina superior derecha.
+2. Seleccione el icono de **engranaje** en la esquina superior derecha y, a continuación, seleccione **Configuración del sitio** en el menú desplegable.
 
-3. Seleccione **Configuración del sitio**.
+    ![Menú desplegable e icono de engranaje del portal web del servidor de informes](../../reporting-services/security/media/settings-icon-and-menu.png)
 
-4. Seleccione **Seguridad**.
+3. Seleccione **Seguridad**.
 
-5. Seleccione **Agregar grupo o usuario**.
+4. Seleccione **Agregar grupo o usuario**.
 
-6. En **Grupo o usuario**, especifique una cuenta de grupo o de usuario de dominio de Windows con este formato: \<dominio>\\<cuenta\>.
+5. En **Grupo o usuario**, especifique una cuenta de grupo o de usuario de dominio de Windows con este formato: \<dominio>\\<cuenta\>.
 
     > [!NOTE]
     > Si utiliza la autenticación de formularios o la seguridad personalizada, especifique la cuenta de grupo o de usuario en el formato correcto para su implementación.
 
-7. Seleccione un rol del sistema y luego **Aceptar**.
+6. Seleccione un rol del sistema y luego **Aceptar**.
 
     Los roles son acumulativos, de modo que si selecciona Administrador del sistema y Usuario del sistema, un usuario o grupo podrá realizar las tareas en ambos roles.
 
-8. Repita el proceso para crear asignaciones para usuarios o grupos adicionales.
+7. Repita el proceso para crear asignaciones para usuarios o grupos adicionales.
 
 ### <a name="to-add-a-user-or-group-to-an-item-role"></a>Para agregar un usuario o grupo al rol del elemento
 

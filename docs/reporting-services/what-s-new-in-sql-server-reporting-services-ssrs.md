@@ -1,7 +1,7 @@
 ---
 title: Novedades de Reporting Services (SSRS) | Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
@@ -9,19 +9,19 @@ ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 02/28/2019
-ms.openlocfilehash: 77a3bdb162298cfaa972ccd7dacce02db9b5e48e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
-ms.translationtype: HT
+ms.date: 05/08/2019
+ms.openlocfilehash: d92275ebbccd90cc3a066ec58726c1db3c61c34b
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775102"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620583"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novedades de SQL Server Reporting Services (SSRS)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Obtenga información sobre las novedades de SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Abarca las principales áreas de características y se actualiza a medida que se lanzan nuevos elementos.
+Obtenga información sobre las novedades de SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Este artículo abarca las principales áreas de características y se actualiza a medida que se lanzan nuevos elementos.
 
 Para ver las notas de la versión actual, consulte [Notas de la versión de SQL Server 2017](../sql-server/sql-server-2017-release-notes.md). 
 
@@ -52,7 +52,7 @@ Para más información, vea [Agregar comentarios a un informe en un servidor de 
 
 ### <a name="dax-queries-in-reporting-tools"></a>Consultas DAX en herramientas de informes
 
-En las versiones más recientes del Generador de informes y SQL Server Data Tools, puede crear consultas DAX nativas sobre los modelos de datos tabulares de SQL Server Analysis Services si arrastra y coloca los campos deseados en los diseñadores de consultas. Consulte el [blog de Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+En las versiones más recientes del Generador de informes y SQL Server Data Tools, se pueden crear consultas DAX nativas sobre los modelos de datos tabulares de SQL Server Analysis Services. Puede arrastrar y colocar campos en los diseñadores de consultas. Consulte el [blog de Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
 ### <a name="rest-api-support"></a>Compatibilidad con la API de REST
 
@@ -60,7 +60,7 @@ Para habilitar el desarrollo y personalización de aplicaciones modernas, SQL Se
 
 ### <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>Compatibilidad con el diseñador de consultas para DAX ahora en el Generador de informes y SQL Server Data Tools
 
-En el Generador de informes y SQL Server Data Tools, ahora se pueden crear consultas DAX nativas sobre los modelos de datos tabulares de SQL Server Analysis Services admitidos. Se puede usar el diseñador de consultas en ambas herramientas para arrastrar y colocar los campos que quiera y hacer que la consulta DAX se genere automáticamente en lugar de escribirla usted mismo.  
+En el Generador de informes y SQL Server Data Tools, ahora se pueden crear consultas DAX nativas sobre los modelos de datos tabulares de SQL Server Analysis Services admitidos. Puede usar el diseñador de consultas en ambas herramientas para arrastrar y colocar los campos que desee. La consulta DAX se genera entonces automáticamente.
 
 Lea más en el [blog de Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
 
@@ -74,9 +74,16 @@ Lea más en el [blog de Reporting Services](https://blogs.msdn.microsoft.com/sql
 
 ### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
 
-Un nuevo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] está disponible. Se trata de un portal actualizado y moderno que incorpora KPI, informes móviles, informes paginados y archivos de Excel y Power BI Desktop. El [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] reemplaza al Administrador de informes de versiones anteriores.
+Un nuevo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] está disponible. El portal web actualizado incluye
+- KPI
+- Mobile Reports (Informes móviles)
+- Paginated Reports (Informes paginados)
+- Archivos de Excel
+- Archivos de Power BI Desktop
 
-Para crear informes móviles, necesitará el [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short.md)]. 
+El [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] reemplaza al Administrador de informes de versiones anteriores.
+
+Para crear informes móviles, necesita [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short.md)].
 
 Para más información sobre el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)], consulte [Portal web (modo nativo de SSRS)](../reporting-services/web-portal-ssrs-native-mode.md).  
 
@@ -90,7 +97,7 @@ Para más información sobre la personalización de marca, consulte [Personaliza
 
 #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Indicadores de rendimiento clave (KPI) en el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
-Puede crear KPI directo en el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] que sean contextuales a la carpeta en que se encuentra. Al crear los KPI, puede elegir campos de conjunto de datos y resumir esos valores. También puede seleccionar contenido relacionado para la obtención de detalles.
+Cree KPI directamente en el [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] que sean contextuales a la carpeta actual. Al crear los KPI, puede elegir campos de conjunto de datos y resumir sus valores. También puede seleccionar contenido relacionado para profundizar y exponer más detalles.
 
 ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
 
@@ -98,7 +105,12 @@ Para más información, vea [Uso de los KPI en Reporting Services](https://msdn.
 
 ### <a name="mobile-reports"></a>Mobile Reports (Informes móviles)
 
-Los informes móviles de Reporting Services son informes dedicados optimizados para una amplia variedad de factores de forma y para ofrecer una experiencia óptima para usuarios que accedan a informes en dispositivos móviles. Los informes móviles cuentan con una gran variedad de visualizaciones, desde gráficos de tiempo, categoría y comparación, hasta gráficos de rectángulos y mapas personalizados. Puede conectar sus informes móviles a una gran variedad de orígenes de datos, como datos tabulares y multidimensionales de SQL Server Analysis Services local. Cree informes móviles en una superficie de diseño con cuadrícula ajustable de filas y columnas, y elementos flexibles de informes móviles que se escalan correctamente para cualquier tamaño de pantalla. Después, guarde estos informes móviles en un servidor de Reporting Services y véalos e interactúe con ellos en un explorador o en la aplicación móvil de Power BI en iPad, iPhone, teléfonos Android y dispositivos Windows 10.
+Los informes móviles de Reporting Services son informes dedicados optimizados para una amplia variedad de factores de forma y para ofrecer una experiencia óptima para usuarios que accedan a informes en dispositivos móviles. Los informes móviles cuentan con una gran variedad de visualizaciones, desde gráficos de tiempo, categoría y comparación, hasta gráficos de rectángulos y mapas personalizados. Puede conectar sus informes móviles a una gran variedad de orígenes de datos, como datos tabulares y multidimensionales de SQL Server Analysis Services local. Puede colocar campos para informes móviles en una superficie de diseño con el ajuste de las columnas y filas de la cuadrícula. Los elementos flexibles de los informes móviles se escalan automáticamente para ajustarse a cualquier tamaño de pantalla. Guarde estos informes móviles en un servidor de Reporting Services, y puede visualizar e interactuar con estos en un explorador o en la aplicación móvil de Power BI. Entre los dispositivos compatibles se encuentran los siguientes:
+
+- iPad
+- iPhones
+- Teléfonos Android
+- o cualquier dispositivo Windows 10
 
 #### <a name="mobile-report-publisher"></a>Publicador de informes móviles  
 
@@ -130,7 +142,7 @@ Para obtener más información, vea:
 
 ### <a name="microsoft-net-framework-4-support"></a>Compatibilidad con Microsoft .NET Framework 4  
 
-[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] admite las versiones actuales de Microsoft .NET Framework 4. Esto incluye la versión 4.0 y 4.5.1. Si no hay instalada ninguna versión de .NET Framework 4.x, la configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instalará .NET 4.0 durante el paso de instalación de las características.  
+[!INCLUDE[ssRSCurrent-md](../includes/ssrscurrent-md.md)] admite las versiones actuales de Microsoft .NET Framework 4, incluidas las versiones 4.0 y 4.5.1. Si no hay instalada ninguna versión de .NET Framework 4.x, la configuración de [!INCLUDE[ssNoVersion-md](../includes/ssnoversion-md.md)] instalará .NET 4.0 durante el paso de instalación de las características.  
 
 ### <a name="report-improvements"></a>Mejoras del informe
 
@@ -144,7 +156,13 @@ Para más información sobre la compatibilidad de exploradores, vea [Compatibili
 
 **Inserción de informes:** ahora puede insertar informes paginados o móviles en otras páginas web y aplicaciones; para ello, puede usar un iframe junto con los parámetros de dirección URL.  
 
-**Anclar elementos de informe a un panel de Power BI:** mientras se visualiza un informe en el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], puede seleccionar elementos de informe y anclarlos a un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Puede anclar elementos como gráficos, paneles de medidores, mapas e imágenes. Puede **(1)** seleccionar el grupo que contiene el panel que quiere anclar, **(2)** seleccionar el panel donde también quiere anclar el elemento y **(3)** seleccionar la frecuencia con la que quiere que se actualice el icono en el panel.   ![nota](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") Las suscripciones de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administran la actualización y, después de anclar el elemento, se pueden modificar para configurar una programación de actualización distinta.  
+**Anclar elementos de informe a un panel de Power BI:** mientras se visualiza un informe en el [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], puede seleccionar elementos de informe y anclarlos a un panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] .   Puede anclar elementos como gráficos, paneles de medidores, mapas e imágenes. Puede hacer lo siguiente:
+
+1. Seleccione el grupo que contiene el panel al que desea anclar.
+2. Seleccione el panel al que quiere anclar el elemento.
+3. Seleccione con qué frecuencia desea que se actualice el icono en el panel.
+
+![nota](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "nota") Las suscripciones de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] administran la actualización y, después de anclar el elemento, se pueden modificar para configurar una programación de actualización distinta.
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
@@ -162,7 +180,9 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 Para obtener más información, consulte [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).
 
-**PDF reemplaza a ActiveX para la impresión remota:** la experiencia de impresión ActiveX de la barra de herramientas del visor de informes se ha reemplazado por una experiencia moderna basada en PDF que funciona en la matriz de exploradores admitidos, como Microsoft Edge. No necesita descargar más controles de ActiveX. Según el explorador que use y las aplicaciones y servicios de visualización de PDF que haya instalado, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] abrirá un diálogo de impresión para imprimir el informe o le pedirá que descargue un archivo .PDF del informe.  Como administrador, puede deshabilitar la impresión del lado cliente desde [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Para más información, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
+**PDF reemplaza a ActiveX para la impresión remota:** la barra de herramientas del visor de informes ahora imprime a través de PDF en lugar de controles ActiveX. El nuevo visor de informes es compatible con los exploradores más modernos, incluido Microsoft Edge. No necesita descargar más controles de ActiveX. Según el explorador que use y las aplicaciones y servicios de visualización de PDF que haya instalado, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] abre un diálogo de impresión para imprimir el informe o le pedirá que descargue un archivo .PDF. Como administrador, puede deshabilitar la impresión del lado cliente desde [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].
+
+Para más información, vea [Habilitar y deshabilitar la impresión del lado cliente para Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md).
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 
@@ -173,7 +193,7 @@ Para obtener más información, consulte [Export a Report Using URL Access](../r
 |**Habilitar y deshabilitar suscripciones**. Hay opciones nuevas de interfaz de usuario para habilitar y deshabilitar rápidamente las suscripciones. Las suscripciones deshabilitadas mantienen sus otras propiedades de configuración, como la programación, y pueden habilitarse fácilmente.<br /><br /> ![ssrs-enable-disable-subscriptions](../reporting-services/media/ssrs-enable-disable-subscriptions.png)<br /><br /> Para obtener más información, consulte [Disable or Pause Report and Subscription Processing](../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).|en modo nativo|  
 |**Descripción de la suscripción**. Cuando crea una nueva suscripción, ahora puede incluir una descripción del informe como parte de las propiedades de la suscripción. La descripción se incluye en la página de resumen de la suscripción.|Modo nativo y SharePoint|  
 |**Cambiar el propietario de la suscripción**. Se ha mejorado la interfaz de usuario para poder cambiar rápidamente el propietario de una suscripción. Las versiones anteriores de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] permiten a los administradores cambiar los propietarios de la suscripción con un script. A partir de la versión de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , puede cambiar los propietarios de la suscripción con la interfaz de usuario o con un script. El cambio del propietario de una suscripción es una tarea administrativa común cuando los usuarios dejan la organización o cuando cambian sus roles.|Modo nativo y SharePoint|  
-|**Credenciales compartidas para las suscripciones de recurso compartido de archivos**. Ahora existen dos flujos de trabajo con las suscripciones de recurso compartido de archivos de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :<br /><br /> Como novedad de esta versión, el administrador de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] puede configurar una única cuenta de recurso compartido de archivos, que se usa para una o para varias suscripciones. Para configurar la cuenta de recurso compartido de archivos, el administrador de configuración del modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] debe definir la opción **Specify a file share account**(Especificar una cuenta de recurso compartido de archivos) y, después, en la página de configuración de la suscripción, los usuarios deben seleccionar **Use file share account**(Usar la cuenta de recurso compartido de archivos).<br /><br /> Configure suscripciones individuales con credenciales específicas para el recurso compartido de archivos de destino.<br /><br /> También puede combinar los dos enfoques y definir que algunas suscripciones de recurso compartido de archivos usen la cuenta central de recurso compartido de archivos mientras otras suscripciones usan credenciales específicas.|en modo nativo|  
+|**Credenciales compartidas para las suscripciones de recurso compartido de archivos**. Ahora existen dos flujos de trabajo con las suscripciones de recurso compartido de archivos de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] :<br /><br /> Como novedad de esta versión, el administrador de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] puede configurar una única cuenta de recurso compartido de archivos, que se puede usar para varias suscripciones. La cuenta del recurso compartido de archivos está configurada en el administrador de configuración de modo nativo de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] **Especificar una cuenta de recurso compartido de archivos**. En la página de configuración de la suscripción, los usuarios seleccionan **Usar la cuenta de recurso compartido de archivos**.<br /><br /> Configure las suscripciones individuales con credenciales específicas para el recurso compartido de archivos de destino.<br /><br /> También puede combinar los dos enfoques y definir que algunas suscripciones de recurso compartido de archivos usen la cuenta central de recurso compartido de archivos mientras otras suscripciones usen credenciales específicas.|en modo nativo|
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 
@@ -188,7 +208,7 @@ En la nueva versión de SSDT se incluyen plantillas de proyecto para [!INCLUDE[s
 |Nuevo|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**Panel de parámetros personalizado:** ahora puede personalizar el panel de parámetros. Al usar la superficie de diseño en el Generador de informes, puede arrastrar un parámetro a una columna y una fila específica en el panel de parámetros. Puede agregar y quitar columnas para cambiar el diseño del panel.   Para más información, vea [Customize the Parameters Pane in a Report &#40;Report Builder&#41; (Personalizar el panel de parámetros en un informe [Generador de informes])](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
+**Panel de parámetros personalizado:** ahora puede personalizar el panel de parámetros. Al usar la superficie de diseño en el Generador de informes, puede arrastrar un parámetro a una columna y una fila específica en el panel de parámetros. Puede agregar y quitar columnas para cambiar el diseño del panel. Para más información, vea [Customize the Parameters Pane in a Report &#40;Report Builder&#41; (Personalizar el panel de parámetros en un informe [Generador de informes])](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
 
 ![Lista de parámetros en el panel Datos de informe y en el panel Parámetros](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Lista de parámetros en el panel Datos de informe y en el panel Parámetros")  
 
@@ -201,9 +221,9 @@ En la nueva versión de SSDT se incluyen plantillas de proyecto para [!INCLUDE[s
 ## <a name="next-steps"></a>Pasos siguientes
 
 [Novedades de Analysis Services](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
-[Compatibilidad con versiones anteriores](reporting-services-backward-compatibility.md)   
-[Características de Reporting Services compatibles con las ediciones de SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)   
-[Actualizar y migrar Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+[Compatibilidad con versiones anteriores](reporting-services-backward-compatibility.md)  
+[Características de Reporting Services compatibles con las ediciones de SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
+[Actualizar y migrar Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -43,9 +43,9 @@ ms.locfileid: "63185891"
   
      El panel **Datos del gráfico** se abre.  
   
-6.  En el área **Valores** , haga clic en el signo más ( **) de** Agregar campos**+** y, después, haga clic en el campo cuyos valores quiera incluir en el gráfico.  
+6.  En el área **Valores** , haga clic en el signo más ( **) de** Agregar campos **+** y, después, haga clic en el campo cuyos valores quiera incluir en el gráfico.  
   
-7.  En el área **Grupos de categorías** , haga clic en el signo más ( **) de** Agregar campos**+** y, después, haga clic en el campo por cuyos valores quiera agrupar.  
+7.  En el área **Grupos de categorías** , haga clic en el signo más ( **) de** Agregar campos **+** y, después, haga clic en el campo por cuyos valores quiera agrupar.  
   
      Normalmente, para los minigráficos y barras de datos, no se agregará un campo al área **Grupo de series** porque solo se desea una serie para cada fila.  
   

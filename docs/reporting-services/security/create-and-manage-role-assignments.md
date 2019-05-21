@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 815822c983154d55cf67ec02475e81f33008d42e
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
-ms.translationtype: HT
+ms.openlocfilehash: 863904e2d82fc97045305dd2430241a91e333f11
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449677"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619596"
 ---
 # <a name="create-and-manage-role-assignments"></a>Crear y administrar asignaciones de roles
 
-Un *asignación de roles* es una directiva de seguridad que determina los permisos de un usuario o grupo. Los permisos deciden si el usuario o grupo puede acceder a un elemento específico del servidor de informes o realizar una tarea. Una asignación de roles consiste en un nombre de cuenta de usuario o de grupo y una o más definiciones de roles.
+Un *asignación de roles* es una directiva de seguridad que determina los permisos de un usuario o grupo. Los permisos deciden si el usuario o grupo puede acceder a un elemento específico del servidor de informes o modificarlo, así como realizar una tarea. Una asignación de roles consiste en un nombre de cuenta de usuario o de grupo y una o más definiciones de roles.
 
 El ámbito de las asignaciones de roles es el *nivel de elemento* o el *nivel de sistema*.
 
-- Una asignación de roles de nivel de elemento se crea en el contexto de un elemento o rama específicos de la jerarquía de carpetas del servidor de informes. Navegue a una carpeta o un elemento específico para crear una asignación de roles para él.
+- Una asignación de roles de nivel de elemento se crea para un elemento o rama específicos de la jerarquía de carpetas del servidor de informes. Navegue a una carpeta o un elemento específico para crear una asignación de roles para él.
 
 - Las asignaciones de roles del sistema proporcionan a usuarios seleccionados la capacidad de realizar tareas que afectan en conjunto al sitio del servidor de informes. Estas tareas incluyen:
   - Crear programaciones compartidas
@@ -39,27 +39,23 @@ La seguridad de nivel del sistema no otorga acceso a elementos en la jerarquía 
 
 ## <a name="creating-an-item-level-role-assignment"></a>Crear una asignación de roles de nivel de elemento
 
-Para crear o administrar asignaciones de roles, acceda al portal web. Abra la página de **propiedades de seguridad** del elemento que desea proteger.
-
-Puede crear una asignación de roles independiente para cada cuenta de grupo o de usuario que requiera acceso al servidor de informes. Si la cuenta se encuentra en un dominio diferente del que contiene el servidor de informes, incluya el nombre de dominio. Después de especificar una cuenta, elija una o varias definiciones de roles. Las definiciones de roles son aditivas. La asignación admite el conjunto combinado de todas las tareas de todas las definiciones, para un usuario o grupo en particular.
+A partir de aquí, puede crear una asignación de roles independiente para cada cuenta de grupo o de usuario que requiera acceso al servidor de informes. Si la cuenta se encuentra en un dominio diferente del que contiene el servidor de informes, incluya el nombre de dominio. Después de especificar una cuenta, elija una o varias definiciones de roles. Las definiciones de roles son aditivas. La asignación admite el conjunto combinado de todas las tareas de todas las definiciones, para un usuario o grupo en particular.
 
 Para permitir un acceso generalizado, elija un elemento en una posición alta de la jerarquía de carpetas (por ejemplo, la carpeta raíz Inicio). Después, puede crear las asignaciones de roles para restringir áreas específicas de la jerarquía de carpetas.
 
 Debe ser miembro del grupo local Administradores del equipo del servidor de informes para crear una asignación de roles. Puede delegar esa responsabilidad asignando otros usuarios al rol **Administrador de contenido** .
 
-Para obtener más información, consulte [Conceder acceso de usuario a un servidor de informes](../../reporting-services/security/grant-user-access-to-a-report-server.md).
+Para crear o administrar asignaciones de roles, o para obtener más información, consulte [Conceder a un usuario acceso a un servidor de informes](../../reporting-services/security/grant-user-access-to-a-report-server.md).
   
 ## <a name="creating-a-system-level-role-assignment"></a>Crear una asignación de roles de nivel de sistema
 
-Para crear o administrar una asignación de roles del sistema, acceda al portal web y abra la página Configuración del sitio.
+Las asignaciones de roles de nivel de sistema y de nivel de elemento van juntas. Cree una asignación de roles del sistema para cada usuario o grupo que tenga una asignación de roles de nivel de elemento.
 
-Las asignaciones de roles de nivel de sistema y de nivel de elemento van juntas. Debe crear una asignación de roles del sistema para cada usuario o grupo que tenga una asignación de roles de nivel de elemento.
+Las asignaciones de roles del sistema incluyen una amplia variedad de permisos, pero no incluyen los que forman parte de una asignación de roles de nivel de elemento.
 
-Las asignaciones de roles del sistema incluyen una amplia variedad de permisos, pero no incluyen los que forman parte de una asignación de roles de nivel de elemento. 
+A diferencia de los permisos del sistema de un equipo, los roles del sistema de los servidores de informes no otorgan permisos generales que incluyan todas las tareas posibles. En su lugar, las asignaciones de roles de nivel de sistema simplemente son un conjunto de tareas cuyo ámbito es el sitio del servidor de informes. Las asignaciones de roles del sistema determinan si los usuarios pueden ver las propiedades de la aplicación (como la imagen o el título de la página Inicio), ver o administrar las programaciones compartidas o usar el Generador de informes.
 
-A diferencia de los permisos del sistema de un equipo, los roles del sistema de los servidores de informes no otorgan permisos generales que incluyan el conjunto completo de todas las tareas posibles. En su lugar, las asignaciones de roles de nivel de sistema simplemente son un conjunto de tareas cuyo ámbito es el sitio del servidor de informes. Las asignaciones de roles del sistema determinan si los usuarios pueden ver las propiedades de la aplicación (como la imagen o el título de la página Inicio), ver o administrar las programaciones compartidas o usar el Generador de informes.
-
-Para más información, vea [Conceder a un usuario acceso a un servidor de informes](../../reporting-services/security/grant-user-access-to-a-report-server.md) y [Roles predefinidos](../../reporting-services/security/role-definitions-predefined-roles.md).  
+Para crear o administrar asignaciones de roles, o para obtener más información, consulte [Conceder a un usuario acceso a un servidor de informes](../../reporting-services/security/grant-user-access-to-a-report-server.md) o [Roles predefinidos](../../reporting-services/security/role-definitions-predefined-roles.md).  
 
 ## <a name="modifying-a-role-assignment"></a>Modificar una asignación de roles
 

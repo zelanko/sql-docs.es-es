@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_xml_handles (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_xml_handles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_xml_handles dynamic management function
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 959e43a965a3a64eaa39bd20cd9147d074e73296
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed7479109ef50ee3744b3a9acafc17a799670cd1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799703"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944483"
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -53,7 +53,7 @@ dm_exec_xml_handles (session_id | 0 )
 |**session_id**|**int**|Id. de la sesión que contiene este identificador del documento XML.|  
 |**document_id**|**int**|Id. de identificador de documento XML devuelto por **sp_xml_preparedocument**.|  
 |**namespace_document_id**|**int**|Id. del identificador interno usado para el documento de espacio de nombres asociado a la que se ha pasado como tercer parámetro a **sp_xml_preparedocument**. Es NULL si no hay ningún documento de espacio de nombres.|  
-|**sql_handle**|**varbinary (64)**|Identificador del texto del código SQL en el que se ha definido el identificador.|  
+|**sql_handle**|**varbinary(64)**|Identificador del texto del código SQL en el que se ha definido el identificador.|  
 |**statement_start_offset**|**int**|Número de caracteres está ejecutando actualmente del lote o procedimiento almacenado en el que el **sp_xml_preparedocument** se produce la llamada. Puede utilizarse junto con el **sql_handle**, **statement_end_offset**y el **sys.dm_exec_sql_text** función de administración dinámica para recuperar el actualmente ejecutar la instrucción para la solicitud.|  
 |**statement_end_offset**|**int**|Número de caracteres está ejecutando actualmente del lote o procedimiento almacenado en el que el **sp_xml_preparedocument** se produce la llamada. Puede utilizarse junto con el **sql_handle**, **statement_start_offset**y el **sys.dm_exec_sql_text** función de administración dinámica para recuperar el actualmente ejecutar la instrucción para la solicitud.|  
 |**creation_time**|**datetime**|Marca de tiempo cuando **sp_xml_preparedocument** llamó.|  

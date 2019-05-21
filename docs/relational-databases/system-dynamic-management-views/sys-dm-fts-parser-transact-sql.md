@@ -1,9 +1,8 @@
 ---
-title: Sys.dm_fts_parser (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_parser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -17,15 +16,16 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-author: douglaslMS
-ms.author: douglasl
+auauthor: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: e296632c0444ba634f87755266efc442038c073d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3e20fc07e286fb4fd22596f32f0abd90e5533979
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535297"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944234"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *QUERY_STRING*  
+ *query_string*  
  Consulta que se desea analizar. *QUERY_STRING* puede ser una sucesión de cadenas que [CONTAINS](../../t-sql/queries/contains-transact-sql.md) compatibilidad con la sintaxis. Por ejemplo, se pueden incluir formas con inflexión, un diccionario de sinónimos y operadores lógicos.  
   
  *lcid*  
  Identificador de configuración regional (LCID) del separador de palabras que se usará para analizar *query_string*.  
   
  *stoplist_id*  
- Id. de la lista de palabras irrelevantes, si la hubiera, que se usará el separador de palabras identificado por *lcid*. *stoplist_id* es **int**. Si se especifica 'NULL', no se utiliza ninguna lista de palabras irrelevantes. Si se especifica 0, se utiliza la lista de palabras irrelevantes del sistema.  
+ Id. de la lista de palabras irrelevantes, si la hubiera, que se usará el separador de palabras identificado por *lcid*. *stoplist_id* es **int**. Si especifica 'NULL', no se utiliza ninguna lista de palabras irrelevantes. Si se especifica 0, se utiliza la lista de palabras irrelevantes del sistema.  
   
  Un identificador de lista de palabras irrelevantes es único dentro de una base de datos. Para obtener el identificador de la lista de palabras irrelevantes para un índice de texto completo en una tabla determinada, use la [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) vista de catálogo.  
   
@@ -68,7 +68,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|palabra clave|**varbinary(128)**|Representación hexadecimal de una palabra clave determinada devuelta por un separador de palabras. Esta representación se utiliza para almacenar la palabra clave en el índice de texto completo. Este valor no es legible, pero resulta útil para relacionar una palabra clave determinada para la salida devueltos por otras vistas de administración dinámica que devuelven el contenido de un índice de texto completo, como [sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) y [ Sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Nota:** OxFF representa el carácter especial que indica el final de un archivo o conjunto de datos.|  
+|palabra clave|**varbinary(128)**|Representación hexadecimal de una palabra clave determinada devuelta por un separador de palabras. Esta representación se utiliza para almacenar la palabra clave en el índice de texto completo. Este valor no es legible, pero resulta útil para relacionar una palabra clave determinada para la salida devueltos por otras vistas de administración dinámica que devuelven el contenido de un índice de texto completo, como [sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) y [ Sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Nota:** OxFF representa el carácter especial que indica el final de un archivo o un conjunto de datos.|  
 |group_id|**int**|Contiene un valor entero que es útil para diferenciar el grupo lógico a partir del cual se generó un término determinado. Por ejemplo, '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' genera los valores de group_id siguientes en inglés:<br /><br /> 1: Servidor<br />2: DB<br />3: DB|  
 |phrase_id|**int**|Contiene un valor entero que resulta útil para diferenciar los casos en los que el separador de palabras emite formatos alternativos de palabras compuestas, tales como texto completo. A veces, con la presencia de palabras compuestas ('multi-million') el separador de palabras emite formatos alternativos. En ocasiones, es necesario diferenciar estos formatos alternativos (frases).<br /><br /> Por ejemplo, '`multi-million`' genera los valores de phrase_id siguientes en inglés:<br /><br /> 1 para `multi`<br />1 para `million`<br />2 para `multimillion`|  
 |occurrence|**int**|Indica el orden de cada término en el resultado del análisis. Por ejemplo, para la repetición de la frase "`SQL Server query processor`", contendría los valores de repetición siguientes para los términos de la frase, en inglés:<br /><br /> 1 para `SQL`<br />2 para `Server`<br />3 para `query`<br />4 para `processor`|  

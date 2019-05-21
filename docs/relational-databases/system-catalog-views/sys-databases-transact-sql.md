@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26be52ca8c8b1b004038923a9a7fe835eba52216
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 01e767e1b49c0b901809c2699ce5c6fa94168673
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560132"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949109"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -117,7 +117,7 @@ Si una base de datos no es `ONLINE`, o `AUTO_CLOSE` está establecido en `ON` y 
 |**is_temporal_retention_enabled**|**bit**|Indica si la tarea de limpieza de directiva de retención temporal está habilitada.<br /> **Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|La configuración de intercalación de catálogo:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|La configuración de intercalación de catálogo:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
-|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on está activado</br>0 = is_result_set_caching_on está desactivado</br>**Se aplica a**: Azure SQL Data Warehouse Gen2
+|**is_result_set_caching_on**|**int**|1 = is_result_set_caching_on está activado</br>0 = is_result_set_caching_on está desactivado</br>**Se aplica a**: Azure SQL Data Warehouse Gen2. Aunque esta característica se está implantando en todas las regiones, compruebe la versión implementada en la instancia y la versión más reciente [notas de la versión de Azure SQL DW](/azure/sql-data-warehouse/release-notes-10-0-10106-0) para disponibilidad de características.|
   
 ## <a name="permissions"></a>Permisos  
  Si el llamador de `sys.databases` no es el propietario de la base de datos y la base de datos no es `master` o `tempdb`, los permisos mínimos necesarios para ver la fila correspondiente son `ALTER ANY DATABASE` o `VIEW ANY DATABASE` permiso de nivel de servidor o `CREATE DATABASE` permiso en el `master` base de datos. Siempre puede verse en la base de datos al que está conectado el autor de llamada `sys.databases`.  

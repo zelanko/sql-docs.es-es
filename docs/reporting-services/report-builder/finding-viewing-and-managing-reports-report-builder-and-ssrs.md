@@ -2,18 +2,18 @@
 title: Buscar, ver y administrar informes (Generador de informes y SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8e19127cd13ddb5e71ce245b4e0a832c63ecad76
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0dad0840c216bd8aca67acfedb9de6e6aa15c117
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711016"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581234"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Buscar, ver y administrar informes (Generador de informes y SSRS)
   En el Generador de informes, puede examinar las carpetas en un servidor de informes o un sitio de SharePoint para buscar informes, orígenes de datos compartidos, modelos y otros elementos de informe relacionados, y examinar su equipo para buscar informes locales. Para que buscar informes sea más fácil, el Generador de informes cuenta con una lista de servidores y sitios utilizados recientemente, y proporciona acceso directo a las carpetas Escritorio, Mis documentos y Mi PC del sistema de archivos del equipo.  
@@ -67,7 +67,7 @@ ms.locfileid: "52711016"
   
  El administrador del servidor de informes podría realizar algunas de estas tareas. Para más información sobre las tareas realizadas en un servidor de informes, vea [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
- Normalmente, el Administrador de informes contiene carpetas, informes, orígenes de datos y modelos de informe, además de la carpeta Mis informes. Mis informes es un área de trabajo personal que puede utilizar para trabajar con sus informes y almacenarlos. Otras carpetas del servidor de informes son públicas y suelen requerir que los usuarios dispongan de permisos avanzados para agregar o modificar su contenido. Puede crear carpetas dentro de MisiInformes para organizar mejor sus informes.  
+ Normalmente, el Administrador de informes contiene carpetas, informes y orígenes de datos, además de la carpeta Mis informes. Mis informes es un área de trabajo personal que puede utilizar para trabajar con sus informes y almacenarlos. Otras carpetas del servidor de informes son públicas y suelen requerir que los usuarios dispongan de permisos avanzados para agregar o modificar su contenido. Puede crear carpetas dentro de MisiInformes para organizar mejor sus informes.  
   
  El Administrador de informes muestra los informes en el Visor HTML de Reporting Services. El Visor HTML proporciona un marco para ver los informes en HTML, e incluye una barra de herramientas de informe, una sección de parámetros, una sección de credenciales y un mapa del documento. La barra de herramientas de informe ofrece funciones de navegación por la página, zoom, actualización, búsqueda, exportación, impresión y fuente de distribución de datos. Esta barra de herramientas también aparece en las ventanas de explorador, en la parte superior del informe, cuando se obtiene acceso a los informes mediante una dirección URL. La funcionalidad de impresión es opcional y la debe activar el administrador. Si está disponible, en la barra de herramientas de informe se mostrará el icono de la impresora. Las ilustraciones siguientes muestran la barra de herramientas de informe en una ventana del Administrador de informes y las características de la barra de herramientas de informe en primer plano.  
   
@@ -105,9 +105,9 @@ Barra de herramientas de informe
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>Buscar elementos del servidor de informes en un sitio de SharePoint  
  Para poder establecer propiedades, antes debe poder localizar el elemento. Los elementos del servidor de informes siempre están almacenados en bibliotecas o en una carpeta dentro de una biblioteca.  
   
- Al tener acceso al sitio de SharePoint, verá la página Examinar y la pestaña Herramientas de bibliotecas. La página Examinar enumera las bibliotecas y el contenido de la biblioteca seleccionada. Podrá ver el informe, los modelos de informe y otros elementos de la biblioteca, explorar carpetas y localizar elementos en el sitio.  
+ Al tener acceso al sitio de SharePoint, verá la página Examinar y la pestaña Herramientas de bibliotecas. La página Examinar enumera las bibliotecas y el contenido de la biblioteca seleccionada. Podrá ver el informe y otros elementos de la biblioteca, explorar carpetas y localizar elementos en el sitio.  
   
- Para distinguir los elementos del servidor de informes de otros elementos de un sitio de SharePoint, puede utilizar el icono para identificar visualmente un elemento o colocar el cursor del mouse (ratón) sobre el tipo y leer la extensión de archivo. La siguiente imagen muestra carpetas, un modelo de informe y una definición de informe de la biblioteca **Informes** :  
+ Para distinguir los elementos del servidor de informes de otros elementos de un sitio de SharePoint, puede utilizar el icono para identificar visualmente un elemento o colocar el cursor del mouse (ratón) sobre el tipo y leer la extensión de archivo. La siguiente imagen muestra carpetas y una definición de informe de la biblioteca **Informes** :  
   
  ![Biblioteca de SharePoint con elementos del servidor de informes](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "Biblioteca de SharePoint con elementos del servidor de informes")  
   
@@ -145,7 +145,7 @@ Barra de herramientas de informe
  [Vista previa de informes en el Generador de informes](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
  Describe cómo obtener una vista previa de los informes mientras se crean o actualizan.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Guardar informes &#40;Generador de informes&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [Generador de informes en SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Instalar y desinstalar el Generador de informes](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  

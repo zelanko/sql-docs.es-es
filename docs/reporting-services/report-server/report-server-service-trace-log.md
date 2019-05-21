@@ -1,47 +1,43 @@
 ---
-title: Registro de seguimiento del servicio del servidor de informes | Microsoft Docs
-ms.date: 03/16/2017
+title: Registro de seguimiento del servicio del servidor de informes
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-helpviewer_keywords:
-- logs [Reporting Services], trace
-- traces [Reporting Services]
-- system information [Reporting Services]
-- versions [Reporting Services]
-ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ad166eb92770d133137296d31262d202a540d94f
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/23/2019
+ms.openlocfilehash: d1efc5b57191ec17f610206115743b656d58d4b3
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813798"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65581386"
 ---
 # <a name="report-server-service-trace-log"></a>Registro de seguimiento del servicio del servidor de informes
-  Los registros de seguimiento del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] son un archivo de texto ASCII que contiene información detallada de las operaciones del servicio del servidor de informes.  La información de los archivos incluye las operaciones realizadas por el servicio web del servidor de informes, el portal web y el procesamiento en segundo plano. El archivo de registro de seguimiento incluye información redundante que contienen otros archivos de registro, así como información adicional que no está disponible en ningún otro archivo. La información del registro de seguimiento resulta útil si se está depurando una aplicación que incluye un servidor de informes o se investiga un problema específico que se ha incluido en el registro de eventos o de ejecución. Por ejemplo, cuando existen problemas con las suscripciones.  
- 
-##  <a name="bkmk_view_log"></a> ¿Dónde están los archivos de registro del servidor de informes?  
- Los archivos de registro de seguimiento son `ReportServerService_<timestamp>.log` y `Microsoft.ReportingServices.Portal.WebHost_<timestamp>.log` y se encuentran en la siguiente carpeta:  
-  
- `C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles`  
-  
- Los registros de seguimiento se crean diariamente, iniciándose con la primera entrada que se produce después de la medianoche (hora local) y siempre que se reinicie el servicio. La marca de tiempo se basa en la hora universal coordinada (UTC). El archivo está en formato EN-US. De forma predeterminada, los registros de seguimiento están limitados a 32 megabytes y se eliminan transcurridos 14 días.  
-  
- Vea un breve vídeo que muestra el uso de Microsoft Power Query para ver archivos de registro de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
-  
-[![vea un vídeo que muestra Power Query y los archivos de registro de SSRS](../../reporting-services/report-server/media/generic-video-thumbnail.png)](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx)  [Usar Microsoft Power Query para ver los archivos de registro de Reporting Services](https://technet.microsoft.com/library/sql-server-reporting-services-log-files-and-microsoft-power-query.aspx)
-  
-##  <a name="bkmk_trace_configuration_settings"></a> Configuración de seguimiento  
- El comportamiento del registro de seguimiento se administra en el archivo de configuración **ReportingServicesService.exe.config**. El archivo de configuración se encuentra en la ruta de la carpeta siguiente:  
+
+Los registros de seguimiento del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] son un archivo de texto ASCII que contiene información detallada de las operaciones del servicio del servidor de informes.  La información de los archivos incluye las operaciones realizadas por el servicio web del servidor de informes, el portal web y el procesamiento en segundo plano. El archivo de registro de seguimiento incluye información redundante que contienen otros archivos de registro, así como información adicional que no está disponible en ningún otro archivo. La información del registro de seguimiento resulta útil si se está depurando una aplicación que incluye un servidor de informes o se investiga un problema específico que se ha incluido en el registro de eventos o de ejecución. Por ejemplo, cuando existen problemas con las suscripciones.  
+
+## <a name="bkmk_view_log"></a> ¿Dónde están los archivos de registro del servidor de informes?
+
+Los archivos de registro de seguimiento son `ReportServerService_<timestamp>.log` y `Microsoft.ReportingServices.Portal.WebHost_<timestamp>.log` y se encuentran en la siguiente carpeta:
+
+`C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles` 
+
+Los registros de seguimiento se crean diariamente, iniciándose con la primera entrada que se produce después de la medianoche (hora local) y siempre que se reinicie el servicio. La marca de tiempo se basa en la hora universal coordinada (UTC). El archivo está en formato EN-US. De forma predeterminada, los registros de seguimiento están limitados a 32 megabytes y se eliminan transcurridos 14 días.  
+
+## <a name="bkmk_trace_configuration_settings"></a> Configuración de seguimiento
+
+El comportamiento del registro de seguimiento se administra en el archivo de configuración **ReportingServicesService.exe.config**. El archivo de configuración se encuentra en la ruta de la carpeta siguiente:  
   
  `\Program Files\Microsoft SQL Server\MSRS13.<instance name>\Reporting Services\ReportServer\bin`.  
   
  El ejemplo siguiente muestra la estructura XML de la configuración de **RStrace** . El valor de **DefaultTraceSwitch** determina el tipo de información agregada al registro. Excepto para el atributo **Components** , los valores de **RStrace** son los mismos en todos los archivos de configuración.  
   
-```  
+```
   \<system.diagnostics>
     <switches>
       <add name="DefaultTraceSwitch" value="3" />
@@ -71,44 +67,47 @@ ms.locfileid: "51813798"
 |**TraceListeners**|Especifica un destino de salida para el contenido del registro de seguimiento. Se pueden especificar varios destinos separados por comas.|Los valores válidos son:<br /><br /> <br /><br /> DebugWindow<br /><br /> File (predeterminado)<br /><br /> StdOut|  
 |**TraceFileMode**|Especifica si los registros de seguimiento incluyen datos de un período de 24 horas. Es recomendable tener un único registro de seguimiento para cada componente y día.|Este valor se establece en "Unique (default)". No modifique este valor.|  
 |**Categoría de componentes**|Especifica los componentes para los cuales se genera la información de registro de seguimiento y el nivel de seguimiento en este formato.<br /><br /> \<categoría de componente>:\<tracelevel><br /><br /> Puede especificar todos los componentes o algunos de ellos (**all**, **RunningJobs**, **SemanticQueryEngine**, **SemanticModelGenerator**). Si no desea generar información para un componente específico, puede deshabilitar el seguimiento para el mismo (por ejemplo, "SemanticModelGenerator:0"). No deshabilite el seguimiento para **all**.<br /><br /> Puede establecer "SemanticQueryEngine:4" si desea ver las instrucciones Transact-SQL generadas para cada consulta semántica. Las instrucciones Transact-SQL se registran en el registro de seguimiento. El ejemplo siguiente muestra el valor de configuración que agrega las instrucciones Transact-SQL al registro:<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|Las categorías de componentes se pueden establecer en:<br /><br /> <br /><br /> **All** se utiliza para realizar un seguimiento de la actividad general del servidor de informes para todos los procesos que no están divididos en las categorías específicas.<br /><br /> **RunningJobs** se usa para realizar un seguimiento de una operación de suscripción o informe en curso.<br /><br /> **SemanticQueryEngine** se usa para realizar un seguimiento de una consulta semántica procesada cuando un usuario realiza una exploración de datos ad hoc en un informe basado en un modelo.<br /><br /> **SemanticModelGenerator** se utiliza para realizar un seguimiento de generación de modelos.<br /><br /> **http** se utiliza para habilitar el archivo de registro HTTP del servidor de informes. Para obtener más información, vea [Report Server HTTP Log](../../reporting-services/report-server/report-server-http-log.md).|  
-|Valor de**tracelevel** de categorías de componentes|\<categoría de componente>:\<tracelevel><br /><br /> <br /><br /> Si no anexa un nivel de seguimiento al componente, se utiliza el valor especificado para **DefaultTraceSwitch** . Por ejemplo, si especifica "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", todos los componentes utilizan el nivel de seguimiento predeterminado.|Los valores válidos del nivel de seguimiento son:<br /><br /> <br /><br /> 0= Deshabilita la traza<br /><br /> 1= Excepciones y reinicios<br /><br /> 2= Excepciones, reinicios y advertencias<br /><br /> 3= Excepciones, reinicios, advertencias y mensajes de estado (predeterminado)<br /><br /> 4= Modo detallado<br /><br /> El valor predeterminado del servidor de informes es "todo:3"|  
+|Valor de**trace level** de categorías de componentes|\<categoría de componente>:\<tracelevel><br /><br /> <br /><br /> Si no anexa un nivel de seguimiento al componente, se utiliza el valor especificado para **DefaultTraceSwitch** . Por ejemplo, si especifica "all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator", todos los componentes utilizan el nivel de seguimiento predeterminado.|Los valores válidos del nivel de seguimiento son:<br /><br /> <br /><br /> 0= Deshabilita la traza<br /><br /> 1= Excepciones y reinicios<br /><br /> 2= Excepciones, reinicios y advertencias<br /><br /> 3= Excepciones, reinicios, advertencias y mensajes de estado (predeterminado)<br /><br /> 4= Modo detallado<br /><br /> El valor predeterminado del servidor de informes es "todo:3"|  
   
-##  <a name="bkmk_add_custom"></a> Agregar un valor de configuración personalizado para especificar una ubicación del archivo de volcado  
- Puede agregar una configuración personalizada para establecer la ubicación que utiliza la herramienta Dr. Watson para Windows para almacenar archivos de volcado. El valor predeterminado es **Directory**. El ejemplo siguiente muestra cómo se especifica esta configuración en la sección **RStrace** :  
-  
-```  
+## <a name="bkmk_add_custom"></a> Agregar un valor de configuración personalizado para especificar una ubicación del archivo de volcado  
+Puede agregar una configuración personalizada para establecer la ubicación que utiliza la herramienta Dr. Watson para Windows para almacenar archivos de volcado. El valor predeterminado es **Directory**. El ejemplo siguiente muestra cómo se especifica esta configuración en la sección **RStrace** :  
+
+```
 <add name="Directory" value="U:\logs\" />  
 ```  
   
- Para obtener más información, vea el [artículo 913046 de Knowledge Base](https://support.microsoft.com/?kbid=913046) en el sitio web de Microsoft [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+Para obtener más información, vea el [artículo 913046 de Knowledge Base](https://support.microsoft.com/?kbid=913046) en el sitio web de Microsoft [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-##  <a name="bkmk_log_file_fields"></a> Campos del archivo de registro  
- Los registros de seguimiento contienen los siguientes archivos:  
+##  <a name="bkmk_log_file_fields"></a> Campos del archivo de registro
+
+Los registros de seguimiento contienen los siguientes archivos:  
   
--   Información del sistema, incluido el sistema operativo, la versión, el número de procesadores y la memoria.  
+- Información del sistema, incluido el sistema operativo, la versión, el número de procesadores y la memoria.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   Eventos incluidos en el registro de aplicación.  
+- Eventos incluidos en el registro de aplicación.  
   
--   Excepciones generadas por el servidor de informes.  
+- Excepciones generadas por el servidor de informes.  
   
--   Advertencias de recursos reducidos registradas por un servidor de informes.  
+- Advertencias de recursos reducidos registradas por un servidor de informes.  
   
--   Sobres SOAP entrantes y sobres SOAP salientes resumidos.  
+- Sobres SOAP entrantes y sobres SOAP salientes resumidos.  
   
--   Información de seguimiento de depuración, seguimiento de pila y encabezados HTTP.  
+- Información de seguimiento de depuración, seguimiento de pila y encabezados HTTP.  
   
  Puede revisar los registros de información de registro para determinar si se ha llevado a cabo la entrega de un informe, quién lo recibió y cuántos intentos de entrega se realizaron. Los registros de seguimiento también incluyen información sobre la actividad de ejecución de informes y las variables de entorno que están en vigor durante el procesamiento de informes. Además, incluyen los errores y las excepciones. Por ejemplo, puede encontrar errores de tiempo de espera de informes (indicados como una entrada **ThreadAbortExceptions** ).  
 
 ## <a name="previous-versions"></a>Versiones anteriores
+
 En versiones anteriores de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], hubo varios archivos de registro de seguimiento, uno para cada aplicación. Los siguientes archivos están desusados y ya no se crean en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ni en las versiones posteriores.
 + ReportServerWebApp_*\<marca de tiempo>*.log
 + ReportServer_*\<marca de tiempo>*.log
 + ReportServerService_main_*\<marca de tiempo>*.log
   
-## <a name="see-also"></a>Ver también  
- [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Referencia de errores y eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
- ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).
-  
+## <a name="see-also"></a>Vea también
+
+- [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+- [Referencia de errores y eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+
+¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

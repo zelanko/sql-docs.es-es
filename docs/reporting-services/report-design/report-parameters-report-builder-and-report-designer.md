@@ -1,92 +1,98 @@
 ---
 title: Parámetros de informe (Generador de informes y Diseñador de informes) | Microsoft Docs
-ms.date: 12/06/2018
-ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.technology: report-design
 description: En este tema se describen los usos habituales de los parámetros de informe de Reporting Services, las propiedades que se pueden establecer y mucho más.
-ms.custom: seodec18
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.technology: report-design
+ms.custom: ''
 ms.topic: conceptual
-f1_keywords:
-- sql13.rtp.rptdesigner.reportparameters.general.f1
-- sql13.rtp.rptdesigner.subreportproperties.parameters.f1
-- "10091"
-- sql13.rtp.rptdesigner.reportparameters.advanced.f1
-- "10073"
-- "10070"
-ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4572edcb9fc87da74b18d91e73338b6f3879cd25
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.reviewer: ''
+ms.date: 12/06/2018
+ms.openlocfilehash: ad914ce3b446ce9c660f96caa1c0548b7ed2944d
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287713"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65576684"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parámetros de informe (Generador de informes y Diseñador de informes)
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint y en modo nativo
+::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
 
-  En este tema se describen los usos habituales de los parámetros de informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , las propiedades que puede establecer y otros muchos aspectos. Los parámetros de informe le permiten controlar datos de informe, conectar informes relacionados y cambiar la presentación de los informes. Puede utilizar parámetros de informe en informes paginados creados en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] y en el Diseñador de informes y también en informes móviles creados en el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Obtenga más información sobre [Conceptos de parámetros de informe](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
- 
-Para intentar agregar un parámetro a un informe, vea [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
-    
-##  <a name="bkmk_Common_Uses_for_Parameters"></a> Usos comunes de los parámetros  
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]
+
+::: moniker-end
+
+En este tema se describen los usos habituales de los parámetros de informe de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , las propiedades que puede establecer y otros muchos aspectos. Los parámetros de informe le permiten controlar datos de informe, conectar informes relacionados y cambiar la presentación de los informes. Puede utilizar parámetros de informe en informes paginados creados en el [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] y en el Diseñador de informes y también en informes móviles creados en el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]. Obtenga más información sobre [Conceptos de parámetros de informe](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  
+
+Para intentar agregar un parámetro a un informe por su cuenta, vea [Tutorial: Agregar un parámetro a un informe &#40;Generador de informes&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md).  
+
+## <a name="bkmk_Common_Uses_for_Parameters"></a> Usos comunes de los parámetros
+
  Estos son algunos de los usos más comunes de los parámetros.  
   
-**Control de datos de informes móviles y paginados**  
+**Control de datos de informes móviles y paginados**
   
--   Filtre los datos del informe paginado en el origen de datos; para ello escriba las consultas del conjunto de datos que incluyen variables.  
+- Filtre los datos del informe paginado en el origen de datos; para ello escriba las consultas del conjunto de datos que incluyen variables.  
   
--   Filtrar datos desde un conjunto de datos compartido Cuando se agrega un conjunto de datos compartido a un informe paginado, no se puede cambiar la consulta. En el informe, podrá agregar un filtro del conjunto de datos que incluya una referencia al parámetro de informe creado por usted.  
+- Filtrar datos desde un conjunto de datos compartido Cuando se agrega un conjunto de datos compartido a un informe paginado, no se puede cambiar la consulta. En el informe, podrá agregar un filtro del conjunto de datos que incluya una referencia al parámetro de informe creado por usted.  
   
--   Filtre los datos de un conjunto de datos compartido en un informe móvil de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Consulte [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) para obtener más información.  
+- Filtre los datos de un conjunto de datos compartido en un informe móvil de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Consulte [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) para obtener más información.  
   
--   Permita a los usuarios especificar valores para personalizar los datos de un informe paginado. Por ejemplo, para proporcionar dos parámetros para la fecha de inicio y de finalización de los datos de ventas.  
+- Permita a los usuarios especificar valores para personalizar los datos de un informe paginado. Por ejemplo, para proporcionar dos parámetros para la fecha de inicio y de finalización de los datos de ventas.  
   
-**Conectar informes relacionados**  
+**Conectar informes relacionados**
   
--   Use parámetros para relacionar informes principales con informes detallados, así como a subinformes e informes vinculados. Cuando se diseña un conjunto de informes, cada informe se puede diseñar de tal modo que responda a determinadas preguntas. Cada informe puede aportar un punto de vista o un nivel de detalle distinto sobre la información relacionada. Para ofrecer un conjunto de informes interrelacionados, cree parámetros para los datos relacionados en los informes de destino.  
+- Use parámetros para relacionar informes principales con informes detallados, así como a subinformes e informes vinculados. Cuando se diseña un conjunto de informes, cada informe se puede diseñar de tal modo que responda a determinadas preguntas. Cada informe puede aportar un punto de vista o un nivel de detalle distinto sobre la información relacionada. Para ofrecer un conjunto de informes interrelacionados, cree parámetros para los datos relacionados en los informes de destino.  
   
-     Para más información, vea [Informes detallados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md), [Subinformes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md) y [Crear un informe vinculado](../../reporting-services/reports/create-a-linked-report.md).  
+    Para más información, vea [Informes detallados &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md), [Subinformes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md) y [Crear un informe vinculado](../../reporting-services/reports/create-a-linked-report.md).  
+
+- Personalizar conjuntos de parámetros para varios usuarios. Crear dos informes vinculados basados en un informe de ventas en el servidor de informes. Uno utilizará valores de parámetro predefinidos para los vendedores y el otro, para los directores de ventas. Ambos informes utilizan la misma definición de informe.  
   
--   Personalizar conjuntos de parámetros para varios usuarios. Crear dos informes vinculados basados en un informe de ventas en el servidor de informes. Uno utilizará valores de parámetro predefinidos para los vendedores y el otro, para los directores de ventas. Ambos informes utilizan la misma definición de informe.  
+**Cambiar la presentación de los informes**
   
-**Cambiar la presentación de los informes**  
+- Envíe comandos a un servidor de informes a través de una solicitud URL, para personalizar la representación de un informe. Para más información, vea [Acceso URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) y [Pasar un parámetro de informe en una dirección URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
   
--   Envíe comandos a un servidor de informes a través de una solicitud URL, para personalizar la representación de un informe. Para más información, vea [Acceso URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) y [Pasar un parámetro de informe en una dirección URL](../../reporting-services/pass-a-report-parameter-within-a-url.md).  
+- Permitir a los usuarios especificar valores para ayudarles a personalizar la apariencia de un informe. Por ejemplo, proporcionar un parámetro Boolean para indicar si se expandirán o contraerán todos los grupos de filas anidadas de una tabla.  
   
--   Permitir a los usuarios especificar valores para ayudarles a personalizar la apariencia de un informe. Por ejemplo, proporcionar un parámetro Boolean para indicar si se expandirán o contraerán todos los grupos de filas anidadas de una tabla.  
+- Permita a los usuarios personalizar los datos y apariencia de un informe mediante la incorporación de parámetros en una expresión.  
   
--   Permita a los usuarios personalizar los datos y apariencia de un informe mediante la incorporación de parámetros en una expresión.  
+    Para más información, vea [Usar referencias a la colección de parámetros &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).  
   
-     Para más información, vea [Usar referencias a la colección de parámetros &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md).  
+## <a name="UserInterface"></a> Ver un informe con parámetros
+
+Al ver un informe que tiene parámetros, en la barra de herramientas del visor de informes se muestran todos los parámetros para que los usuarios puedan especificar valores de forma interactiva. En la siguiente ilustración se muestra el área de parámetros de un informe con los parámetros @ReportMonth, @ReportYear, @EmployeeID, @ShowAll, @ExpandTableRows, @CategoryQuota y @SalesDate.  
+
+![Ver informe con parámetros](../../reporting-services/report-design/media/ssrb-rptparamviewrpt.png "Ver informe con parámetros")  
   
-##  <a name="UserInterface"></a> Ver un informe con parámetros  
- Al ver un informe que tiene parámetros, en la barra de herramientas del visor de informes se muestran todos los parámetros para que los usuarios puedan especificar valores de forma interactiva. En la siguiente ilustración se muestra el área de parámetros de un informe con los parámetros @ReportMonth, @ReportYear, @EmployeeID, @ShowAll, @ExpandTableRows, @CategoryQuota y @SalesDate.  
+1. **Panel Parámetros** : la barra de herramientas del Visor de informes muestra un mensaje de petición de datos y un valor predeterminado para cada parámetro. Puede personalizar el diseño de los parámetros en el panel de parámetros. Para más información, vea [Customize the Parameters Pane in a Report &#40;Report Builder&#41; (Personalizar el panel de parámetros en un informe [Generador de informes])](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
- ![Ver informe con parámetros](../../reporting-services/report-design/media/ssrb-rptparamviewrpt.png "Ver informe con parámetros")  
+2. **Parámetro @SalesDate** El parámetro @SalesDate es del tipo de datos **DateTime**. Se mostrará el mensaje Seleccionar la fecha junto al cuadro de texto. Para modificar la fecha, escriba una nueva en el cuadro de texto o utilice el control de calendario.  
   
-1.  **Panel Parámetros** : la barra de herramientas del Visor de informes muestra un mensaje de petición de datos y un valor predeterminado para cada parámetro. Puede personalizar el diseño de los parámetros en el panel de parámetros. Para más información, vea [Customize the Parameters Pane in a Report &#40;Report Builder&#41; (Personalizar el panel de parámetros en un informe [Generador de informes])](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
+3. **Parámetro @ShowAll** El parámetro @ShowAll es del tipo de datos **Boolean**. Utilice los botones de radio para especificar **True** o **False**.  
   
-2.  **Parámetro @SalesDate** El parámetro @SalesDate es del tipo de datos **DateTime**. Se mostrará el mensaje Seleccionar la fecha junto al cuadro de texto. Para modificar la fecha, escriba una nueva en el cuadro de texto o utilice el control de calendario.  
+4. **Identificador Mostrar u ocultar área de parámetros** : en la barra de herramientas del Visor de informes, haga clic en esta flecha para mostrar u ocultar el panel de parámetros.  
   
-3.  **Parámetro @ShowAll** El parámetro @ShowAll es del tipo de datos **Boolean**. Utilice los botones de radio para especificar **True** o **False**.  
+5. **Parámetro @CategoryQuota** El parámetro @CategoryQuota es del tipo de datos **Float**, por lo que tiene un valor numérico.  @CategoryQuota se establece para permitir varios valores.  
   
-4.  **Identificador Mostrar u ocultar área de parámetros** : en la barra de herramientas del Visor de informes, haga clic en esta flecha para mostrar u ocultar el panel de parámetros.  
+6. **Ver informe**  Después de especificar los valores del parámetro, haga clic en **Ver informe** para ejecutar el informe. Si todos los parámetros poseen valores predeterminados, el informe se ejecuta automáticamente en la primera vista.  
   
-5.  **Parámetro @CategoryQuota** El parámetro @CategoryQuota es del tipo de datos **Float**, por lo que tiene un valor numérico.  @CategoryQuota se establece para permitir varios valores.  
+## <a name="bkmk_Create_Parameters"></a> Crear parámetros
+
+Puede crear parámetros de informe de varias formas.
   
-6.  **Ver informe**  Después de especificar los valores del parámetro, haga clic en **Ver informe** para ejecutar el informe. Si todos los parámetros poseen valores predeterminados, el informe se ejecuta automáticamente en la primera vista.  
+> [!NOTE]
+>  No todos los orígenes de datos son compatibles con los parámetros.
   
-##  <a name="bkmk_Create_Parameters"></a> Crear parámetros  
- Puede crear parámetros de informe de varias formas.  
-  
-> [!NOTE]  
->  No todos los orígenes de datos son compatibles con los parámetros.  
-  
- **Consulta de conjunto de datos o procedimiento almacenado con parámetros**  
+**Consulta de conjunto de datos o procedimiento almacenado con parámetros**
   
  Agregue una consulta de conjunto de datos que contenga variables o un procedimiento almacenado de conjunto de datos que contenga parámetros de entrada. Los parámetros de conjunto de datos se crean para cada variable o parámetro de entrada y los parámetros de informe se crean para cada parámetro de conjunto de datos.  
   
@@ -106,14 +112,14 @@ Para intentar agregar un parámetro a un informe, vea [Tutorial: Agregar un par�
   
  Para obtener más información, vea [Consultas de conjunto de datos](#bkmk_Dataset_Parameters) en este tema.  
   
-**Crear un parámetro de forma manual**  
+**Crear un parámetro de forma manual**
   
 Cree un parámetro manualmente desde el panel Datos de informe. Puede configurar parámetros de informe para que un usuario pueda especificar de forma interactiva valores que le permitan a personalizar el contenido o la apariencia de un informe. También puede configurar parámetros de informe para que un usuario no pueda cambiar los valores preconfigurados.  
   
 > [!NOTE]  
 >  Puesto que los parámetros se administran de forma independiente en el servidor, al volver a publicar un informe principal con una nueva configuración de parámetros, no se sobrescribe la configuración de parámetros existente del informe.  
   
- **Elemento de informe con un parámetro**  
+ **Elemento de informe con un parámetro**
   
  Agregue un elemento de informe que contenga referencias a un parámetro o a un conjunto de datos compartido que contenga variables.  
   
@@ -122,27 +128,29 @@ Cree un parámetro manualmente desde el panel Datos de informe. Puede configurar
 > [!NOTE]  
 >  Los parámetros se pueden publicar como elemento de informe independiente para las regiones de datos que tienen conjuntos de datos dependientes con parámetros. Aunque los parámetros se enumeren como elemento de informe, no puede agregar un parámetro de elemento de informe directamente a un informe. En lugar de ello, agregue el elemento de informe y los parámetros de informe necesarios se generan automáticamente a partir de las consultas de conjunto de datos que se encuentran en el elemento de informe, o a las que este hace referencia. Para más información sobre los elementos de informe, vea [Elementos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) y [Elementos de informe en el Diseñador de informes &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
   
-### <a name="parameter-values"></a>Valores de parámetros  
+### <a name="parameter-values"></a>Valores de parámetros
+
  A continuación, se presentan las opciones para seleccionar valores de parámetro en el informe.  
   
--   Seleccione un único valor de parámetro de la lista desplegable.  
+- Seleccione un único valor de parámetro de la lista desplegable.  
   
--   Seleccione varios valores de parámetro en la lista desplegable.  
+- Seleccione varios valores de parámetro en la lista desplegable.  
   
--   Seleccione un valor de la lista desplegable para un parámetro, el cual determina los valores que están disponibles en la lista desplegable para otro parámetro. Se trata de parámetros en cascada. Los parámetros en cascada le permitirán filtrar sucesivamente los valores de parámetro para reducir los miles de valores posibles a un número más fácil de manejar.  
+- Seleccione un valor de la lista desplegable para un parámetro, el cual determina los valores que están disponibles en la lista desplegable para otro parámetro. Se trata de parámetros en cascada. Los parámetros en cascada le permitirán filtrar sucesivamente los valores de parámetro para reducir los miles de valores posibles a un número más fácil de manejar.  
   
      Para más información, vea [Agregar parámetros en cascada a un informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md).  
   
--   Ejecute el informe sin necesidad de seleccionar antes un valor de parámetro porque se ha creado un valor predeterminado para el parámetro.  
+- Ejecute el informe sin necesidad de seleccionar antes un valor de parámetro porque se ha creado un valor predeterminado para el parámetro.  
   
-##  <a name="bkmk_Report_Parameters"></a> Propiedades de los parámetros del informe  
+## <a name="bkmk_Report_Parameters"></a> Propiedades de los parámetros del informe
+
  Puede cambiar las propiedades del parámetro de informe si usa el cuadro de diálogo Propiedades del informe. En la siguiente tabla se resumen las propiedades que se pueden establecer para cada parámetro:  
   
 |Propiedad|Descripción|  
 |--------------|-----------------|  
-|Nombre|Escriba un nombre de parámetro con distinción de mayúsculas y minúsculas. El nombre debe comenzar por una letra y puede incluir letras, números y caracteres de subrayado (_). El nombre no puede contener espacios. En el caso de los parámetros generados automáticamente, el nombre coincide con el parámetro en la consulta de conjunto de datos. De forma predeterminada, los parámetros creados manualmente deben similares a ReportParameter1.|  
+|Nombre|Escriba un nombre de parámetro con distinción de mayúsculas y minúsculas. El nombre debe comenzar por una letra y puede incluir letras, números y caracteres de subrayado (_). El nombre no puede contener espacios. En el caso de los parámetros generados automáticamente, el nombre coincide con el parámetro en la consulta de conjunto de datos. De forma predeterminada, los parámetros creados manualmente son similares a ReportParameter1.|  
 |Pedir datos|El texto que aparece junto al parámetro en la barra de herramientas del Visor de informes.|  
-|Tipo de datos|Un parámetro de informes debe ser de uno de los siguientes tipos de datos:<br /><br /> **Boolean**. El usuario selecciona True o False en un botón de opción.<br /><br /> **DateTime**. El usuario selecciona una fecha en un control de calendario.<br /><br /> **Integer**. El usuario escribe valores en un cuadro de texto.<br /><br /> **Float**. El usuario escribe valores en un cuadro de texto.<br /><br /> **Text**. El usuario escribe valores en un cuadro de texto.<br /><br /> Tenga en cuenta que, cuando se definen los valores disponibles para un parámetro, el usuario elige los valores de una lista desplegable, aunque el tipo de datos sea **DateTime**.<br /><br /> Para obtener más información acerca de los tipos de datos de informe, vea [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
+|Tipo de datos|Un parámetro de informes debe ser de uno de los siguientes tipos de datos:<br /><br /> **Boolean**. El usuario selecciona True o False en un botón de opción.<br /><br /> **DateTime**. El usuario selecciona una fecha en un control de calendario.<br /><br /> **Integer**. El usuario escribe valores en un cuadro de texto.<br /><br /> **Float**. El usuario escribe valores en un cuadro de texto.<br /><br /> **Text**. El usuario escribe valores en un cuadro de texto.<br /><br /> Cuando se definen los valores disponibles para un parámetro, el usuario elige valores en una lista desplegable, aunque el tipo de datos sea **DateTime**.<br /><br /> Para obtener más información acerca de los tipos de datos de informe, vea [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
 |Permitir valor en blanco|Seleccione esta opción si el valor del parámetro puede ser una cadena vacía o estar en blanco.<br /><br /> Si especifica los valores válidos de un parámetro, y desea que el valor en blanco sea uno de ellos, deberá incluirlo como uno de los valores que especifique. La selección de esta opción no incluye automáticamente el espacio en blanco entre los valores disponibles.|  
 |Permitir valor NULL|Seleccione esta opción si el valor del parámetro puede ser un valor NULL.<br /><br /> Si especifica los valores válidos de un parámetro, y desea que el valor NULL sea uno de ellos, deberá incluirlo como uno de los valores que especifique. La selección de esta opción no incluye automáticamente NULL entre los valores disponibles.|  
 |Permitir varios valores|Proporcione los valores disponibles para crear una lista desplegable que permita realizar selecciones a los usuarios. Esta es una buena forma de asegurarse de que solo se enviarán valores válidos en una consulta de conjunto de datos.<br /><br /> Seleccione esta opción si el valor del parámetro puede ser varios valores que se muestran en una lista desplegable. No se admiten valores NULL. Cuando esta opción está seleccionada, se agregan casillas a la lista de valores disponibles en una lista desplegable de parámetros. La parte superior de la lista incluye una casilla para **Seleccionar todo**. Los usuarios pueden activar los valores que desean usar.<br /><br /> Si los datos que proporcionan valores cambian rápidamente, podría darse el caso de que la lista que ve el usuario no sea la más actualizada.|  
@@ -179,7 +187,7 @@ Cree un parámetro manualmente desde el panel Datos de informe. Puede configurar
   
 -   **Acceso URL.** Puede especificar valores de parámetro en una dirección URL a un informe. También puede ejecutar informes y especificar valores de parámetro mediante el acceso desde una dirección URL. Para más información, vea [Acceso URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
   
- Las propiedades de los parámetros para un informe publicado suelen conservarse al volver a publicar la definición del informe. Si se vuelve a publicar la definición del informe como el mismo informe y no se modifican los nombres de los parámetros ni los tipos de datos, se conserva la configuración de las propiedades. Si se agregan o eliminan parámetros de la definición del informe, o si se cambia el tipo de datos o el nombre de un parámetro existente, quizás resulte necesario cambiar las propiedades de los parámetros del informe publicado.  
+ Las propiedades de los parámetros para un informe publicado se conservan al volver a publicar la definición del informe. Si se vuelve a publicar la definición del informe como el mismo informe y no se modifican los nombres de los parámetros ni los tipos de datos, se conserva la configuración de las propiedades. Si se agregan o eliminan parámetros de la definición del informe, o si se cambia el tipo de datos o el nombre de un parámetro existente, quizás resulte necesario cambiar las propiedades de los parámetros del informe publicado.  
   
  No todos los parámetros pueden modificarse siempre que se desea. Si un parámetro de informe obtiene un valor predeterminado de una consulta de conjunto de datos, ese valor no se podrá modificar para un informe publicado y tampoco en el servidor de informes. El valor que se utiliza en tiempo de ejecución se determina cuando se ejecuta la consulta o, en el caso de parámetros basados en una expresión, cuando se evalúa la expresión.  
   
@@ -188,7 +196,7 @@ Cree un parámetro manualmente desde el panel Datos de informe. Puede configurar
 ##  <a name="bkmk_Parameters_Subscription"></a> Parámetros de una suscripción  
  Puede definir una suscripción para un informe a petición o para una instantánea y especificar los valores de parámetro que se usarán durante el procesamiento de la suscripción.  
   
--   **Informe a petición.**  Para un informe a petición, puede especificar un valor de parámetro diferente que el valor publicado para cada parámetro indicado en el informe. Por ejemplo, supongamos que tiene un informe de llamadas de servicio que utiliza un parámetro *Período de tiempo* para devolver las solicitudes de atención al cliente para el día, la semana o el mes actual. Si el valor de parámetro predeterminado para el informe se establece en **hoy**, la suscripción puede usar un valor de parámetro diferente (como **semana** o **mes**) para producir un informe que contenga cifras semanales o mensuales.  
+-   **Informes a petición**  Para un informe a petición, puede especificar un valor de parámetro diferente que el valor publicado para cada parámetro indicado en el informe. Por ejemplo, supongamos que tiene un informe de llamadas de servicio que utiliza un parámetro *Período de tiempo* para devolver las solicitudes de atención al cliente para el día, la semana o el mes actual. Si el valor de parámetro predeterminado para el informe se establece en **hoy**, la suscripción puede usar un valor de parámetro diferente (como **semana** o **mes**) para producir un informe que contenga cifras semanales o mensuales.  
   
 -   **Instantánea.**  Para una instantánea, la suscripción debe usar los valores de parámetro definidos para la instantánea. La suscripción no puede reemplazar un valor de parámetro que se haya definido para una instantánea. Por ejemplo, supongamos que se va a suscribir a un informe de ventas para la región occidental que se ejecuta como instantánea de un informe, y la instantánea especifica **Occidental** como valor de parámetro regional. En este caso, si crea una suscripción a este informe, debe utilizar el valor de parámetro **Occidental** en la suscripción. Para proporcionar una indicación visual de que se omite el parámetro, los campos de parámetros de la página de suscripción se establecen en campos de solo lectura.  
   

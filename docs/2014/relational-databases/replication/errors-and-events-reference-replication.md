@@ -31,8 +31,8 @@ ms.locfileid: "62721321"
 |[MSSQL_ENG002601](mssql-eng002601.md)|No se puede insertar una fila de claves duplicadas en el objeto "%.*ls" con índice único "%.\*ls".|  
 |[MSSQL_ENG002627](mssql-eng002627.md)|Infracción de la restricción '%.*ls'. No se puede insertar una clave duplicada en el objeto "%.\*ls".|  
 |[MSSQL_ENG003165](mssql-eng003165.md)|La base de datos '%ls' se restauró. Sin embargo, se encontró un error al restaurar o quitar la replicación. Se ha dejado la base de datos sin conexión. Vea el tema MSSQL_ENG003165 en los Libros en pantalla de SQL Server.|  
-|[MSSQL_ENG003724](mssql-eng003724.md)|No se puede %1! %2! '%3!' porque se está utilizando para la replicación.|  
-|[MSSQL_ENG004929](mssql-eng004929.md)|No se puede modificar el %1! '%2!' porque se está publicando para replicación.|  
+|[MSSQL_ENG003724](mssql-eng003724.md)|No se puede % S_MSG % S_MSG ' %. * ls' porque se está usando para la replicación.|  
+|[MSSQL_ENG004929](mssql-eng004929.md)|No se puede modificar el % S_MSG ' %. * ls' porque se está publicando para replicación.|  
 |MSSQL_ENG007395. Consulte [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|No se puede iniciar una transacción anidada para el proveedor OLE DB "%ls" para el servidor vinculado "%ls". Era necesaria una transacción anidada porque la opción XACT_ABORT estaba establecida en OFF.|  
 |[MSSQL_ENG014005](mssql-eng014005.md)|No se pudo quitar la publicación. Hay una suscripción para ella.|  
 |[MSSQL_ENG014010](mssql-eng014010.md)|El servidor '%s' no está definido como servidor de suscripción.|  

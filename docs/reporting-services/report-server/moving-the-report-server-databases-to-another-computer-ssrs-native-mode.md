@@ -2,18 +2,18 @@
 title: Mover las bases de datos del servidor de informes a otro equipo (Modo nativo de SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 94cdbe6358bd0361addd70d682a3d0d41e70bbba
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100226"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619685"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Mover las bases de datos del servidor de informes a otro equipo (Modo nativo de SSRS)
 
@@ -27,14 +27,14 @@ ms.locfileid: "50100226"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Los trabajos de agente que se utilizan para activar una programación se volverán a crear en la nueva instancia de la base de datos. No tiene que mover los trabajos al nuevo equipo, pero quizá desee eliminar los trabajos del equipo que ya no se va a utilizar.  
   
--   Las suscripciones, los informes almacenados en caché y las instantáneas se mantienen en la base de datos que se ha movido. Si una instantánea no está recopilando los datos actualizados después de que se mueve la base de datos, borre las opciones de instantánea en Administrador de informes, haga clic en **Aplicar** para guardar los cambios, vuelva a crear la programación y haga clic en **Aplicar** de nuevo para guardar los cambios.  
+-   Las suscripciones, los informes almacenados en caché y las instantáneas se mantienen en la base de datos que se ha movido. Si una instantánea no está recopilando los datos actualizados después de que se mueve la base de datos, borre las opciones de instantánea, elija **Aplicar** para guardar los cambios, vuelva a crear la programación y seleccione **Aplicar** de nuevo para guardar los cambios.  
   
 -   Los datos temporales de informes y de sesión de usuario que se almacenan en reportservertempdb permanecen al mover esa base de datos.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona varios métodos para mover bases de datos, como las operaciones de copia de seguridad y restauración, adjuntar y separar, y copiar. No todos los métodos son adecuados para reubicar una base de datos existente en una instancia de servidor nueva. El método recomendado para mover una base de datos del servidor de informes varía en función de sus requisitos de disponibilidad del sistema. La manera más sencilla de mover bases de datos del servidor de informes es adjuntarlas y separarlas. Sin embargo, este método requiere que el servidor de informes esté sin conexión mientras se separa la base de datos. Las operaciones de copia de seguridad y restauración son la opción más adecuada si se desean reducir al mínimo las interrupciones del servicio, pero deberán ejecutarse comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] para realizarlas. No se recomienda copiar la base de datos, en especial mediante el Asistente para copiar bases de datos, ya que no se conserva la configuración de permisos de la base de datos.  
   
 > [!IMPORTANT]  
->  Los pasos que se proporcionan en este tema se recomiendan cuando la modificación de la ubicación de la base de datos del servidor de informes es el único cambio que se realiza en la instalación existente. Para migrar una instalación completa de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (es decir, mover la base de datos y cambiar la identidad del servicio Windows del servidor de informes que usa la base de datos), es necesario volver a configurar la conexión y restablecer una clave de cifrado.  
+>  Los pasos que se proporcionan en este artículo se recomiendan cuando la modificación de la ubicación de la base de datos del servidor de informes es el único cambio que se realiza en la instalación existente. Para migrar una instalación completa de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (es decir, mover la base de datos y cambiar la identidad del servicio Windows del servidor de informes que usa la base de datos), es necesario volver a configurar la conexión y restablecer una clave de cifrado.  
   
 ## <a name="detaching-and-attaching-the-report-server-databases"></a>Separar y adjuntar bases de datos del servidor de informes  
  Si puede poner el servidor de informes sin conexión, puede separar las bases de datos para moverlas a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea usar. Con este método, se conservan los permisos de las bases de datos. Si usa una base de datos de SQL Server, debe moverla a otra instancia de SQL Server. Después de mover las bases de datos, será necesario volver a configurar la conexión del servidor de informes con la base de datos del servidor de informes. Si se utiliza una implementación escalada, será necesario volver a configurar la conexión de la base de datos del servidor de informes para cada servidor de informes de la implementación.  

@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a103a0a8681d5128b021783a5e5509c46c9fad32
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: d29b524a3b4615bb6fa02ba6cdf889379b46a22f
+ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65502868"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65580125"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -173,8 +173,10 @@ ALTER INDEX { index_name | ALL }
     DATA_COMPRESSION = { COLUMNSTORE | COLUMNSTORE_ARCHIVE }  
 }  
   
-```    
-## <a name="arguments"></a>Argumentos  
+```
+
+## <a name="arguments"></a>Argumentos
+
  *index_name*  
  Es el nombre del índice. Los nombres de índice deben ser únicos en una tabla o vista, pero no es necesario que sean únicos en una base de datos. Los nombres de índice deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
@@ -653,23 +655,28 @@ En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, 
   
 Para volver a generar un índice de almacén de columnas clúster, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-1.  Adquiere un bloqueo exclusivo en la tabla o la partición mientras se produce la regeneración. Los datos están “sin conexión” y no disponibles durante la regeneración.  
+1. Adquiere un bloqueo exclusivo en la tabla o la partición mientras se produce la regeneración. Los datos están “sin conexión” y no disponibles durante la regeneración.  
   
-2.  Desfragmenta el almacén de columnas físicamente eliminando filas que se han eliminado lógicamente de la tabla; los bytes eliminados se reclaman en los medios físicos.  
+1. Desfragmenta el almacén de columnas físicamente eliminando filas que se han eliminado lógicamente de la tabla; los bytes eliminados se reclaman en los medios físicos.  
   
-3.  Lee todos los datos del índice original de almacén de columnas, incluido el almacén delta. Combina los datos en grupos de filas nuevos y comprime los grupos de filas en el almacén de columnas.  
+1. Lee todos los datos del índice original de almacén de columnas, incluido el almacén delta. Combina los datos en grupos de filas nuevos y comprime los grupos de filas en el almacén de columnas.  
   
-4.  Necesita espacio en los medios físicos para almacenar dos copias del índice de almacén de columnas mientras está teniendo lugar la regeneración. Cuando finaliza la regeneración, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimina el índice clúster de almacén de columnas original.  
+1. Necesita espacio en los medios físicos para almacenar dos copias del índice de almacén de columnas mientras está teniendo lugar la regeneración. Cuando finaliza la regeneración, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elimina el índice clúster de almacén de columnas original.
+
+1. Para una tabla de Azure SQL Data Warehouse con un índice de almacén de columnas agrupadas ordenado, ALTER INDEX REBUILD reordenará los datos.  
   
-## <a name="reorganizing-indexes"></a> Reorganizar índices  
+## <a name="reorganizing-indexes"></a> Reorganizar índices
 La reorganización de un índice usa muy pocos recursos del sistema. Desfragmenta el nivel hoja de los índices agrupados y no clúster de las tablas y las vistas al volver a ordenar físicamente las páginas de nivel hoja para que coincidan con el orden lógico de los nodos hoja, de izquierda a derecha. La reorganización también compacta las páginas de índice. La compactación se basa en el valor de factor de relleno existente. Para ver el valor de factor de relleno, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
 Cuando se especifica ALL, se reorganizan los índices relacionales, tanto agrupados como no clúster, y los índices XML. Cuando se especifica ALL, se aplican algunas restricciones; vea la definición de ALL en la sección Argumentos de este artículo.  
   
 Para obtener más información, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
- 
+
 > [!IMPORTANT]
 > Cuando se reorganiza un índice en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las estadísticas no se actualizan.
+
+>[!IMPORTANT]
+> Para una tabla de Azure SQL Data Warehouse con un índice de almacén de columnas agrupadas ordenado, `ALTER INDEX REORGANIZE` no reordenará los datos. Para reordenar los datos, use `ALTER INDEX REBUILD`.
   
 ## <a name="disabling-indexes"></a> Deshabilitar índices  
 Al deshabilitar un índice, se impide que el usuario tenga acceso al mismo y, en el caso de los índices clúster, a los datos de la tabla subyacente. La definición de índice permanece en el catálogo del sistema. La deshabilitación de un índice no clúster o agrupado en una vista elimina físicamente los datos del índice. La deshabilitación de un índice clúster evita el acceso a los datos, aunque éstos permanecen en el árbol b hasta que el índice se quita o se vuelve a generar. Para ver el estado de un índice habilitado o deshabilitado, realice una consulta en la columna **is_disabled** de la vista de catálogo **sys.indexes**.  

@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fb07dfb65055ff622e0142381743a15a8d29ad9d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f26a39ab9264fa41ff4e558970a459987bf27ae
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63203063"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560153"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -725,13 +725,12 @@ ALTER DATABASE { database_name | CURRENT }
 }  
 
 ```
+
 ## <a name="arguments"></a>Argumentos
 
-*database_name*      
-Es el nombre de la base de datos que se va a modificar.
+*database_name* Es el nombre de la base de datos que se va a modificar.
 
-CURRENT     
-Designa que la base de datos actual en uso se debe modificar.
+CURRENT designa que la base de datos actual en uso se debe modificar.
 
 ## <a name="remarks"></a>Notas
 Para quitar una base de datos, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
@@ -791,16 +790,23 @@ ALTER DATABASE WideWorldImporters
 
 ## <a name="overview-azure-sql-data-warehouse"></a>Introducción: Almacenamiento de datos SQL de Azure
 
-Modifica el nombre, el tamaño máximo o el objetivo del servicio de una base de datos.
+En Azure SQL Data Warehouse, "ALTER DATABASE" modifica el nombre, el tamaño máximo o el objetivo del servicio de una base de datos.
+
+Debido a su longitud, la sintaxis de ALTER DATABASE se divide en varios artículos.
+
+[Opciones SET de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) Proporciona la sintaxis e información relacionada para cambiar los atributos de una base de datos usando las opciones SET de ALTER DATABASE.
 
 ## <a name="syntax"></a>Sintaxis
 
-```
-ALTER DATABASE database_name
-
+```console
+ALTER DATABASE { database_name | CURRENT }
+{
   MODIFY NAME = new_database_name
 | MODIFY ( <edition_option> [, ... n] )
-  
+| SET <option_spec> [ ,...n ] [ WITH <termination> ]
+}
+[;]
+
 <edition_option> ::=
       MAXSIZE = {
             250 | 500 | 750 | 1024 | 5120 | 10240 | 20480
@@ -818,14 +824,11 @@ ALTER DATABASE database_name
 
 ## <a name="arguments"></a>Argumentos
 
-*database_name*     
-Especifica el nombre de la base de datos que se va a modificar.
+*database_name* Especifica el nombre de la base de datos que se va a modificar.
 
-MODIFY NAME = *new_database_name*    
-Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name*.
+MODIFY NAME = *new_database_name* Reemplaza el nombre de la base de datos por el nombre especificado como *new_database_name*.
 
-MAXSIZE    
-El valor predeterminado es 245 760 GB (240 TB).
+MAXSIZE El valor predeterminado es 245, 760 GB (240 TB).
 
 **Se aplica a:** Optimizado para Compute Gen1
 
@@ -835,8 +838,7 @@ El tamaño máximo permitido para la base de datos. La base de datos no puede su
 
 Tamaño máximo permitido para los datos de almacenamiento de filas de la base de datos. Los datos almacenados en tablas de almacenamiento de filas, en el almacén delta de un índice de almacén de columnas o en un índice no agrupado de un índice de almacén de columnas en clúster no pueden superar el valor de MAXSIZE. Los datos comprimidos en formato de almacén de columnas no tienen un límite de tamaño y no están restringidos por el valor de MAXSIZE.
 
-SERVICE_OBJECTIVE      
-Especifica el nivel de rendimiento. Para más información sobre los objetivos de servicio para SQL Data Warehouse, consulte [Unidades de almacenamiento de datos (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
+SERVICE_OBJECTIVE Especifica el nivel de rendimiento. Para más información sobre los objetivos de servicio para SQL Data Warehouse, consulte [Unidades de almacenamiento de datos (DWU)](https://docs.microsoft.com/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu).
 
 ## <a name="permissions"></a>Permisos
 

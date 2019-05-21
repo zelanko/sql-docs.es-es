@@ -2,21 +2,21 @@
 title: Registro de ejecución del servidor de informes y la vista ExecutionLog3 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414103"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65619693"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>Registro de ejecución del servidor de informes y la vista ExecutionLog3
   El registro de la ejecución del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]contiene información sobre los informes que se ejecutan en el servidor o en varios servidores de una implementación escalada en modo nativo o de una granja de servidores de SharePoint. Puede usar el registro de la ejecución de informes para averiguar con qué frecuencia se solicita el informe, qué formatos de salida se usan más y cuántos milisegundos del tiempo de procesamiento se dedica a cada fase del procesamiento. El registro contiene información sobre el tiempo de ejecución de la consulta de conjunto de datos de un informe y el tiempo empleado en el procesamiento de los datos. Si es administrador del servidor de informes, puede revisar la información del registro e identificar las tareas de ejecución prolongada, y realizar sugerencias a los autores de informes en las áreas del informe (conjunto de datos o procesamiento) que se puedan mejorar.  
@@ -260,8 +260,6 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ExternalImages**  
   
-     Agregado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
      El valor se expresa en milisegundos. Estos datos se pueden utilizar para diagnosticar problemas de rendimiento. El tiempo necesario para recuperar imágenes desde un servidor web externo puede ralentizar la ejecución de informes global.  
   
     ```  
@@ -273,8 +271,6 @@ select * from ExecutionLog3 order by TimeStart DESC
     ```  
   
 -   **Conexiones**  
-  
-     Agregado en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
      Estructura de varios niveles  
   
@@ -322,9 +318,9 @@ select * from ExecutionLog2 order by TimeStart DESC
  La siguiente tabla describe los datos que se capturan en el registro de ejecución de informes  
   
 |columna|Descripción|  
-|------------|-----------------|  
+|------------|------------------------------------------------------------|  
 |InstanceName|Nombre de la instancia de servidor de informes que procesó la solicitud.|  
-|ReportPath|La estructura de ruta de acceso al informe.  Por ejemplo, un informe denominado "test" que está en la carpeta raíz en el Administrador de informes, tendría un ReportPath de "/test".<br /><br /> Un informe denominado "test" guardado en la carpeta "samples" en el Administrador de informes, tendrá un ReportPath de "/Samples/test/".|  
+|ReportPath|La estructura de ruta de acceso al informe. Un informe guardado en la carpeta raíz como "test" tiene un ReportPath de '"/test".<br /><br /> Un informe denominado "test" guardado en la carpeta "samples" tendrá un ReportPath de "/Samples/test/".|  
 |UserName|Identificador del usuario.|  
 |ExecutionID||  
 |RequestType|Tipo de solicitud (de usuario o del sistema).|  
@@ -371,7 +367,7 @@ select * from ExecutionLog order by TimeStart DESC
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Activar eventos de Reporting Services para el registro de seguimiento de SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Referencia de errores y eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

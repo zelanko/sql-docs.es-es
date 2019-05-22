@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +19,16 @@ helpviewer_keywords:
 - recursive joins [SQLXML]
 ms.assetid: 0ffdd57d-dc30-44d9-a8a0-f21cadedb327
 author: MightyPen
-ms.author: douglasl
+ms.author: genemi
+ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa36c8cc75aecfbff8bba1b2d04c7f296da88147
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 84011f13a222ee66fdbfe5bf57d3ef74dd41a052
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030726"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980752"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Especificar la profundidad en relaciones recursivas utilizando sql:max-depth
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Dado que la relación es recursiva, necesita algún modo de especificar la profundidad de recursión del esquema. De lo contrario, el resultado será una recursión sin fin (empleado subordinado directo de empleado subordinado directo de empleado, etc.). El **SQL-profundidad** anotación le permite especificar la profundidad de la recursión. En este ejemplo concreto, para especificar un valor para **SQL-profundidad**, debe conocer la dirección de la jerarquía de administración de profundidad de la compañía.  
   
 > [!NOTE]  
->  El esquema especifica la **SQL: limit-campo** anotación, pero no especifica la **SQL: limit-valor** anotación. Esto limita el nodo superior de la jerarquía resultante únicamente a los empleados que no son subordinados directos de nadie. (ReportsTo es NULL.) Especificar **SQL: limit-campo** y no especificar **SQL: limit-valor** (cuyo valor predeterminado es null) anotación lleva a cabo. Si desea que el código XML resultante incluya cada posible reporting árbol (el árbol de informes para todos los empleados en la tabla), quite el **SQL: limit-campo** anotación del esquema.  
+>  El esquema especifica la **SQL: limit-campo** anotación, pero no especifica la **SQL: limit-valor** anotación. Esto limita el nodo superior de la jerarquía resultante únicamente a los empleados que no son subordinados directos de nadie. (ReportsTo es NULL). Especificar **SQL: limit-campo** y no especificar **SQL: limit-valor** (cuyo valor predeterminado es null) anotación lleva a cabo. Si desea que el código XML resultante incluya cada posible reporting árbol (el árbol de informes para todos los empleados en la tabla), quite el **SQL: limit-campo** anotación del esquema.  
   
 > [!NOTE]  
 >  El siguiente procedimiento usa la base de datos tempdb.  
@@ -235,7 +235,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Use la **SQL-profundidad** anotación en el esquema para especificar la profundidad de recursión de una relación recursiva que se describe en el esquema. El valor de la **SQL-profundidad** anotación es un entero positivo (de 1 a 50) que indica el número de recursiones:  Un valor de 1 detiene la recursión en el elemento para el que el **SQL-profundidad** anotación se especifica; un valor de 2 detiene la recursión en el siguiente nivel del elemento en el que **SQL-profundidad** se especifica ; y así sucesivamente.  
   
 > [!NOTE]  
->  En la implementación subyacente, una consulta XPath que se especifique en un esquema de asignación se convierte en una consulta SELECT ... Consulta FOR XML EXPLICIT. Esta consulta exige que se especifique una profundidad finita de recursión. Cuanto mayor sea el valor que especifique para **SQL-profundidad**, cuanto mayor sea la consulta FOR XML EXPLICIT que se genera. Esto puede ralentizar el tiempo de recuperación.  
+>  En la implementación subyacente, una consulta XPath que se especifica en un esquema de asignación se convierte en una instrucción SELECT... Consulta FOR XML EXPLICIT. Esta consulta exige que se especifique una profundidad finita de recursión. Cuanto mayor sea el valor que especifique para **SQL-profundidad**, cuanto mayor sea la consulta FOR XML EXPLICIT que se genera. Esto puede ralentizar el tiempo de recuperación.  
   
 > [!NOTE]  
 >  Los diagramas de actualización y la carga masiva XML omiten la anotación max-depth. Esto significa que se llevarán a cabo inserciones o actualizaciones recursivas independientemente del valor que se especifique para max-depth.  

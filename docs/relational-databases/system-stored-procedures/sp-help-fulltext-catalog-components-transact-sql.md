@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 54c22d025ae809d035fe75a0b8fe89160bdfb84f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc3538ab8485b7fb9658c665d4ed7dddf53aba33
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720373"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983099"
 ---
 # <a name="sphelpfulltextcatalogcomponents-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ sp_help_fulltext_catalog_components
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**nombre del catálogo de texto completo**|**int**|Nombre del catálogo de texto completo.|  
-|**Id. de catálogo de texto completo**|**sysname**|Id. del catálogo de texto completo.|  
-|**componentType**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> Filter<br /><br /> Controlador de protocolo<br /><br /> Separador de palabras|  
-|**nombre de componente**|**sysname**|Nombre del componente.|  
-|**CLSID**|**uniqueidentifier**|Identificador de clase del componente.|  
-|**FullPath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el llamador no es un miembro de **serveradmin** rol fijo de servidor.|  
+|**full-text catalog name**|**int**|Nombre del catálogo de texto completo.|  
+|**full-text catalog id**|**sysname**|Id. del catálogo de texto completo.|  
+|**componenttype**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> Filter<br /><br /> Controlador de protocolo<br /><br /> Separador de palabras|  
+|**componentname**|**sysname**|Nombre del componente.|  
+|**clsid**|**uniqueidentifier**|Identificador de clase del componente.|  
+|**fullpath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el llamador no es un miembro de **serveradmin** rol fijo de servidor.|  
 |**version**|**nvarchar(30)**|Versión del componente.|  
-|**Fabricante**|**sysname**|Nombre del fabricante del componente.|  
+|**manufacturer**|**sysname**|Nombre del fabricante del componente.|  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  

@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs
+title: sys.sp_rda_reauthorize_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -14,17 +14,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reauthorize_db stored procedure
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f16a46c9461e7870897582fe2094fa233232973e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d700fd19999da3905a0ff69231a286a022d57e5
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790443"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982913"
 ---
-# <a name="syssprdareauthorizedb-transact-sql"></a>Sys.sp_rda_reauthorize_db (Transact-SQL)
+# <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Restaura la conexión autenticada entre una base de datos local habilitada para Stretch y la base de datos remoto.  
@@ -52,7 +52,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
  Especifica el nombre de la base de datos de Azure que contiene los datos remotos. *@azure_databasename* es de tipo sysname.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- 0 (correcto) o >0 (error)  
+ 0 (correcto) o > 0 (error)  
   
 ## <a name="permissions"></a>Permisos  
  Se requieren permisos db_owner.  

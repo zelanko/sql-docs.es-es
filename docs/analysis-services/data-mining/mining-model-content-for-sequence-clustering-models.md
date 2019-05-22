@@ -1,5 +1,5 @@
 ---
-title: Contenido del modelo para los modelos de clústeres de secuencia de minería de datos | Documentos de Microsoft
+title: Para los modelos de clústeres de secuencia de contenido del modelo de minería de datos | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f0498fd93a6ed613078b4339e36e3d71e929b8f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019292"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65961365"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "34019292"
  NODE_TYPE  
  Modelo de agrupación en clústeres de secuencia que genera los tipos de nodos siguientes:  
   
-|Identificador del tipo de nodo|Description|  
+|Identificador del tipo de nodo|Descripción|  
 |------------------|-----------------|  
 |1 (Modelo)|Nodo raíz para el modelo|  
 |5 (clúster)|Contiene un recuento de las transiciones del clúster, una lista de los atributos y estadísticas que describen los valores del clúster.|  
@@ -58,7 +58,7 @@ ms.locfileid: "34019292"
 |14 (transición)|Describe una secuencia de eventos en forma de tabla en la que la primera fila contiene el estado inicial y todas las demás filas contienen los estados sucesivos, junto con estadísticas de probabilidad y compatibilidad.|  
   
  NODE_GUID  
- En blanco.  
+ : en blanco.  
   
  NODE_CAPTION  
  Etiqueta o título asociado al nodo para la presentación.  
@@ -89,7 +89,7 @@ ms.locfileid: "34019292"
  Siempre en blanco.  
   
  NODE_PROBABILITY  
- **Raíz del modelo** : siempre es 0.  
+ **Raíz del modelo** Siempre es 0.  
   
  **Nodos de clúster** : la probabilidad ajustada del clúster en el modelo. Las probabilidades ajustadas no suman 1, porque el método de agrupación en clústeres utilizado en la agrupación en clústeres de secuencia permite la pertenencia parcial en varios clústeres.  
   
@@ -227,7 +227,7 @@ ORDER BY Count(*) DESC
   
  En la tabla siguiente se muestran los resultados de la tabla NODE_DISTRIBUTION, junto con los valores de probabilidad redondeados que se muestran en el visor gráfico.  
   
-|Product|Compatibilidad (tabla NODE_DISTRIBUTION)|Probabilidad (tabla NODE_DISTRIBUTION))|Probabilidad (del gráfico)|  
+|Producto|Compatibilidad (tabla NODE_DISTRIBUTION)|Probabilidad (tabla NODE_DISTRIBUTION))|Probabilidad (del gráfico)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
 |Missing|48.447887|0.138028169|(no se muestra)|  
 |Cycling Cap|10.876056|0.030985915|0.03|  
@@ -258,8 +258,8 @@ ORDER BY Count(*) DESC
  Para conocer cómo obtener la lista de rutas de acceso observadas consultando el contenido del modelo y ver otros ejemplos de consultas en un modelo de agrupación en clústeres de secuencia, vea [Ejemplos de consultas de modelos de clústeres de secuencia](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Algoritmo de clústeres de secuencia de Microsoft](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Ejemplos de consultas de modelos de clústeres de secuencia](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

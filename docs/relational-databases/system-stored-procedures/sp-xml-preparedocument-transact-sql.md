@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_xml_preparedocument
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e89ebe73f7bee6f44df353afca515aca4cbbdcf2
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: 50235db46a664d1507823c057dc0cb61eda90974
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947629"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980044"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,10 +72,10 @@ OUTPUT
  [ *xpath_namespaces* ]  
  Especifica las declaraciones de espacio de nombres que se utilizan en las expresiones XPath de fila y columna de OPENXML. *xpath_namespaces* es un parámetro de texto: **char**, **nchar**, **varchar**, **nvarchar**, **texto**, **ntext** o **xml**.  
   
- El valor predeterminado es  **\<xmlns:mp de raíz = "urn: schemas-microsoft-com-metaprop" >**. *xpath_namespaces* proporciona el URI de espacio de nombres para los prefijos utilizados en las expresiones de XPath de OPENXML mediante un documento XML bien formado. *xpath_namespaces* declara el prefijo que debe usarse para hacer referencia al espacio de nombres **urn: schemas-microsoft-com-metaprop**; proporciona metadatos sobre los elementos XML analizados. Aunque puede redefinir el prefijo del espacio de nombres para el espacio de nombres de metapropiedad mediante esta técnica, este espacio de nombres no se pierde. El prefijo **mp** sigue siendo válido para **urn: schemas-microsoft-com-metaprop** aunque *xpath_namespaces* no contenga esa declaración.  
+ The default value is **\<root xmlns:mp="urn:schemas-microsoft-com:xml-metaprop">**. *xpath_namespaces* proporciona el URI de espacio de nombres para los prefijos utilizados en las expresiones de XPath de OPENXML mediante un documento XML bien formado. *xpath_namespaces* declara el prefijo que debe usarse para hacer referencia al espacio de nombres **urn: schemas-microsoft-com-metaprop**; proporciona metadatos sobre los elementos XML analizados. Aunque puede redefinir el prefijo del espacio de nombres para el espacio de nombres de metapropiedad mediante esta técnica, este espacio de nombres no se pierde. El prefijo **mp** sigue siendo válido para **urn: schemas-microsoft-com-metaprop** aunque *xpath_namespaces* no contenga esa declaración.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- 0 (correcto) o >0 (error)  
+ 0 (correcto) o > 0 (error)  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  
@@ -157,7 +157,7 @@ EXEC sp_xml_preparedocument @hdoc OUTPUT, @doc, '<ROOT xmlns:xyz="urn:MyNamespac
  <br>[Procedures(Transact-SQL) almacenados de XML](../../relational-databases/system-stored-procedures/xml-stored-procedures-transact-sql.md)
  <br>[Procedures(Transact-SQL) almacenados del sistema](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
  <br>[OPENXML(Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md)
- <br>[Sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
+ <br>[sys.dm_exec_xml_handles (Transact-SQL)](../system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)
  <br>[sp_xml_removedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
   
   

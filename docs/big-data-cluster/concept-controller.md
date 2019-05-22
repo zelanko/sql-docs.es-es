@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3084d9ecc80dcd8f283a52ca5559783626a7ca4e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 874648daaccdb3d16f54d7b976bac1ef2543bafe
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775588"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994078"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>¿Qué es el controlador en un clúster de macrodatos de SQL Server?
 
@@ -38,11 +38,7 @@ El servicio del controlador proporciona la funcionalidad siguiente:
 
 ## <a name="deploying-the-controller-service"></a>Implementar el servicio de controlador
 
-El controlador está implementado y hospedado en el mismo espacio de nombres de Kubernetes donde el cliente desea crear un clúster de macrodatos. Este servicio instalado por un administrador de Kubernetes durante el arranque del clúster, mediante la utilidad de línea de comandos mssqlctl:
-
-```bash
-mssqlctl cluster create --name <name of your cluster>
-```
+El controlador está implementado y hospedado en el mismo espacio de nombres de Kubernetes donde el cliente desea crear un clúster de macrodatos. Este servicio se instala un administrador de Kubernetes durante clúster bootstrap, utilizando el **mssqlctl** utilidad de línea de comandos. Para obtener más información, consulte [empezar a trabajar con clústeres grandes de datos de SQL Server](deploy-get-started.md).
 
 El flujo de trabajo buildout preparará sobre Kubernetes un clúster de macrodatos totalmente funcional de SQL Server que incluye todos los componentes descritos en la [Introducción](big-data-cluster-overview.md) artículo. El flujo de trabajo de bootstrap crea primero el servicio de controlador y una vez implementado, el servicio de controlador coordinará la instalación y configuración del resto de la parte de los servicios de grupos de almacenamiento, proceso, datos y master.
 

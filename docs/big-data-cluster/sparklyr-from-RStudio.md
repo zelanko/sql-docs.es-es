@@ -9,12 +9,12 @@ ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd3e38cbcd927de25f4e072b8bdb1ac09331f739
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: 8004146499bd8b17c7705f7558de075dfece5813
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620325"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994177"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Usar sparklyr en clúster de macrodatos de SQL Server
 
@@ -49,7 +49,7 @@ Puede usar sparklyr para conectarse desde un cliente para el clúster de macroda
 En RStudio, cree un script de R y conectarse a Spark en el ejemplo siguiente:
 
 > [!TIP]
-> Para el `<USERNAME>` y `<PASSWORD>` valores, use el nombre de usuario (como raíz) y la contraseña que estableció durante la implementación del clúster de macrodatos. Para el `<IP>` y `<PORT>` valores, consulte la documentación sobre la [puerta de enlace de Spark o HDFS](connect-to-big-data-cluster.md#hdfs).
+> Para el `<USERNAME>` y `<PASSWORD>` valores, use el nombre de usuario (como raíz) y la contraseña que estableció durante la implementación del clúster de macrodatos. Para el `<IP>` y `<PORT>` valores, consulte la documentación sobre [conectarse a un clúster de macrodatos](connect-to-big-data-cluster.md).
 
 ```r
 library(sparklyr)

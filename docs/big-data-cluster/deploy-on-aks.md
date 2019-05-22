@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ddf14cf97fc72acb4a7c44bbc123f171e31c20a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 562bdce8144707b9e5ee62dfe77ae0091efd1f98
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62911173"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994002"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configuración de Azure Kubernetes Service para las implementaciones de clústeres de macrodatos de SQL Server
 
@@ -86,7 +86,7 @@ Un grupo de recursos de Azure es un grupo lógico de Azure que se implementan y 
     --generate-ssh-keys \
     --node-vm-size Standard_L8s \
     --node-count 1 \
-    --kubernetes-version 1.12.6
+    --kubernetes-version 1.12.8
     ```
 
    Puede aumentar o disminuir el número de nodos de agente de Kubernetes cambiando el `--node-count <n>` donde `<n>` es el número de nodos de agente que desea usar. Esto no incluye el nodo maestro de Kubernetes, que se administra en segundo plano mediante AKS. El ejemplo anterior utiliza sólo un único nodo para fines de evaluación.

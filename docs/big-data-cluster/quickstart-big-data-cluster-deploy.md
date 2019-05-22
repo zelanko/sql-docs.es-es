@@ -5,17 +5,17 @@ description: Tutorial de una implementación de clústeres de macrodatos de 2019
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7ff31cac18eddcd45f310d78910ba83b783b1b1e
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 2c0e00ab14cad3d300a09ecc697b2468f1d7d4ce
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776214"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993395"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Inicio rápido: Implementar el clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
@@ -162,7 +162,7 @@ kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
 ```
 
 > [!NOTE]
-> En CTP 2.5, verá una advertencia de seguridad al obtener acceso a la página web, porque los clústeres de macrodatos actualmente está usando certificados SSL generados automáticamente.
+> En CTP 3.0, verá una advertencia de seguridad al obtener acceso a la página web, porque los clústeres de macrodatos actualmente está usando certificados SSL generados automáticamente.
 
 ## <a name="connect-to-the-cluster"></a>Conéctese al clúster
 

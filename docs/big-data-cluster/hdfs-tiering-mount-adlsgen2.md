@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: craigg
-ms.date: 04/18/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9d9e01e31f0f9e68c5b41b92da773dca8aab54c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9f5d1ce4724f95b511272bb4df8d41ee0df75d90
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63317134"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993969"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Cómo Gen2 de ADLS de montaje para los niveles en un clúster de macrodatos HDFS
 
@@ -100,22 +100,22 @@ También puede montar mediante claves de acceso que se pueden obtener con su cue
 
 Ahora que ha preparado un archivo de credenciales con las claves de acceso o uso de OAuth, puede iniciar el montaje. Los pasos siguientes montar el almacenamiento HDFS remoto en Azure Data Lake en el almacenamiento HDFS local de su clúster de macrodatos.
 
-1. Use **kubectl** para buscar la dirección IP para el punto de conexión **mgmtproxy-svc-external** servicio en el clúster de macrodatos. Busque el **External-IP**.
+1. Use **kubectl** para buscar la dirección IP para el punto de conexión **controlador-svc-external** servicio en el clúster de macrodatos. Busque el **External-IP**.
 
    ```bash
-   kubectl get svc mgmtproxy-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-cluster-name>
    ```
 
-1. Inicie sesión con **mssqlctl** utilizando la dirección IP externa del punto de conexión de proxy de administración con el nombre de usuario del clúster y la contraseña:
+1. Inicie sesión con **mssqlctl** utilizando la dirección IP externa del punto de conexión de controlador con el nombre de usuario del clúster y la contraseña:
 
    ```bash
-   mssqlctl login -e https://<IP-of-mgmtproxy-svc-external>:30777/ -u <username> -p <password>
+   mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. Montar el almacenamiento HDFS remoto en Azure mediante **crear montaje del almacenamiento mssqlctl**. Reemplace los valores de marcador de posición antes de ejecutar el comando siguiente:
+1. Montar el almacenamiento HDFS remoto en Azure mediante **mssqlctl montaje del bloque de almacenamiento de clúster crear**. Reemplace los valores de marcador de posición antes de ejecutar el comando siguiente:
 
    ```bash
-   mssqlctl storage mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl cluster storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -128,21 +128,21 @@ Si ha montado correctamente, podrá consultar los datos HDFS y ejecutar trabajos
 Para mostrar el estado de todos los montajes en el clúster de macrodatos, utilice el siguiente comando:
 
 ```bash
-mssqlctl storage mount status
+mssqlctl cluster storage-pool mount status
 ```
 
 Para mostrar el estado de un montaje en una ruta específica en HDFS, use el siguiente comando:
 
 ```bash
-mssqlctl storage mount status --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Eliminar el montaje
 
-Para eliminar el montaje, use el **mssqlctl almacenamiento montaje delete** comando y especifique la ruta de acceso de montaje en HDFS:
+Para eliminar el montaje, use el **mssqlctl clúster grupo de almacenamiento montaje delete** comando y especifique la ruta de acceso de montaje en HDFS:
 
 ```bash
-mssqlctl storage mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes

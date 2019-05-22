@@ -11,12 +11,12 @@ manager: craigg
 ms.custom: seodec18
 ms.date: 05/08/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 6ac951b377806f66eaea2f39969f84b92c91ee50
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.openlocfilehash: 3c99b33c4986aef9a5885de26697d444d8bbf39f
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449961"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993573"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Descargue e instale Data Studio de Azure
 
@@ -210,7 +210,8 @@ Consulte uno de los siguientes tutoriales para empezar a trabajar:
 - [Conectar y consultar la base de datos SQL Azure](quickstart-sql-database.md)
 - [Conectar y consultar el almacén de datos de Azure](quickstart-sql-dw.md)
 
-Contribuir a [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
-- [https://github.com/Microsoft/azuredatastudio](https://github.com/Microsoft/azuredatastudio) 
+[!INCLUDE[get-help-sql-tools](../includes/paragraph-content/get-help-sql-tools.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
 
 [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839) y [recopilación de datos de uso](usage-data-collection.md).

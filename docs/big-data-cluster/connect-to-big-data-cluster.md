@@ -5,30 +5,22 @@ description: Obtenga información sobre cómo conectarse a la instancia principa
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8291f2a192868544fb34da95d537f7a8a6b0f004
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 3305990935c5d4c6077caa062184b0150aa83d6b
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774657"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994054"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Conectarse a un clúster de macrodatos de SQL Server con Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se describe cómo conectarse a un clúster de macrodatos de 2019 de SQL Server (versión preliminar) desde Azure Data Studio. Hay dos puntos de conexión principales que se usan para interactuar con un clúster de macrodatos:
-
-| Extremo | Descripción |
-|---|---|
-| Instancia de SQL Server Master | La instancia principal de SQL Server en el clúster que contiene bases de datos relacionales de SQL Server. |
-| Puerta de enlace de Spark o HDFS | Acceso al almacenamiento HDFS en el clúster y la capacidad de ejecutar trabajos de Spark. |
-
-> [!TIP]
-> Con la versión de febrero de 2019 de Azure Data Studio, conectarse automáticamente a la instancia principal de SQL Server proporciona acceso de interfaz de usuario a la puerta de enlace de Spark o HDFS.
+En este artículo se describe cómo conectarse a un clúster de macrodatos de 2019 de SQL Server (versión preliminar) desde Azure Data Studio.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -72,37 +64,6 @@ Con la versión de febrero de 2019 de Azure Data Studio, conectarse a la instanc
 - El **panel del servidor** para la conexión también contiene las pestañas **clúster grande de datos de SQL Server** y **(versión preliminar) de SQL Server 2019** cuando se instala la extensión.
 
    ![Nodo de servicios de datos de Azure Studio datos](./media/connect-to-big-data-cluster/connect-data-services-node.png)
-
-> [!IMPORTANT]
-> Si ve **error desconocido** en la interfaz de usuario, es posible que deba [conectarse directamente a la puerta de enlace de Spark o HDFS](#hdfs). Una causa de este error son diferentes contraseñas para la instancia principal de SQL Server y la puerta de enlace de Spark o HDFS. Azure Data Studio, se da por supuesto que se usa la misma contraseña para ambos.
-  
-## <a id="hdfs"></a> Conectarse a la puerta de enlace de Spark o HDFS
-
-En la mayoría de los casos, conectarse a la instancia principal de SQL Server proporciona acceso a la HDFS y también a través de Spark la **Data Services** nodo. Sin embargo, puede crear una conexión dedicada a la **puerta de enlace de Spark o HDFS** si es necesario. Los pasos siguientes describen cómo conectar con Azure Data Studio.
-
-1. Desde la línea de comandos, busque la dirección IP de la puerta de enlace de Spark o HDFS con uno de los siguientes comandos.
-
-   ```
-   kubectl get svc gateway-svc-external -n <your-cluster-name>
-   ```
- 
-1. En Azure Data Studio, presione **F1** > **nueva conexión**.
-
-1. En **tipo de conexión**, seleccione **clúster grande de datos de SQL Server**.
-
-   > [!TIP]
-   > Si no ve el **clúster grande de datos de SQL Server** conexión escriba, asegúrese de que ha instalado el [extensión de SQL Server 2019](../azure-data-studio/sql-server-2019-extension.md) y que reinicie Azure Data Studio después de la extensión de completado instalación de.
-
-1. Escriba la dirección IP del clúster de macrodatos en **nombre del servidor** (no especifique un puerto).
-
-1. Escriba `root` para el **usuario** y especifique el **contraseña** a su clúster de macrodatos.
-
-   ![Conectarse a la puerta de enlace de Spark o HDFS](./media/connect-to-big-data-cluster/connect-to-cluster-hdfs-spark.png)
-
-   > [!TIP]
-   > De forma predeterminada, el nombre de usuario es **raíz** y la contraseña corresponde a la **KNOX_PASSWORD** variable de entorno que se usa durante la implementación.
-
-1. Presione **Connect**y el **panel Server** debería aparecer.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

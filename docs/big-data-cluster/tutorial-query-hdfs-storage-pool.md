@@ -5,17 +5,17 @@ description: Este tutorial muestra cómo consultar datos HDFS en un clúster de 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: add6dcd55db04fb5af00919b997ffa85c5e8faea
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: e43480c27ea865e827ec9a7325b55474935a21c1
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776217"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994139"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Consulta de HDFS en un clúster de macrodatos de SQL Server
 
@@ -76,15 +76,8 @@ El grupo de almacenamiento contiene datos de la secuencia de clics de web en un 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
    BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.5'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
+     CREATE EXTERNAL DATA SOURCE SqlStoragePool
+     WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
    END
    ```
 

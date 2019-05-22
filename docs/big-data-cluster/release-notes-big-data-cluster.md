@@ -5,17 +5,17 @@ description: En este artículo se describe las últimas actualizaciones y proble
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7bdd39fc4b66c0485b453a6541e1f4c22abb5242
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: ca3448efc180a82363023106baf33f973e666fb6
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775073"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993358"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas de la versión para los clústeres de datos de gran tamaño en SQL Server
 
@@ -25,18 +25,116 @@ En este artículo se enumeran las actualizaciones y saber que los problemas de l
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
+## <a id="ctp30"></a> CTP 3.0 (mayo)
+
+Las secciones siguientes describen las nuevas características y problemas conocidos de clústeres de macrodatos en CTP 3.0 de SQL Server de 2019.
+
+### <a name="whats-new"></a>What's New
+
+| Nueva característica o actualización | Detalles |
+|:---|:---|
+| **mssqlctl** updates | Varios **mssqlctl** [actualizaciones de parámetros y comandos](../big-data-cluster/reference-mssqlctl.md). Esto incluye una actualización de la **inicio de sesión mssqlctl** comando, que ahora tiene como destino el nombre de usuario del controlador y el punto de conexión. |
+| Mejoras en el almacenamiento | Compatibilidad con distintas configuraciones de almacenamiento para los registros y datos. Además, se ha reducido el número de notificaciones de volumen persistente para un clúster de macrodatos. |
+| Varias instancias del grupo de proceso | Compatibilidad con varias instancias del grupo de proceso. |
+| Características y el nuevo comportamiento de grupo | Ahora se utiliza el grupo de proceso predeterminada para las operaciones de grupo de almacenamiento grupo y los datos en un **ROUND_ROBIN** sólo distribución. El grupo de datos puede utilizar ahora un nuevo nuevo **REPLICADO** tipo de distribución, lo que significa que los mismos datos están presentes en todas las instancias del grupo de datos. |
+
+### <a name="known-issues"></a>Problemas conocidos
+
+Las secciones siguientes describen los problemas conocidos y limitaciones con esta versión.
+
+#### <a name="hdfs"></a>HDFS
+
+- Azure Data Studio devuelve un error al intentar crear una nueva carpeta en HDFS. Para habilitar esta funcionalidad, instale la compilación de Insider de Azure Data Studio:
+  
+   - [Instalador de usuario de Windows - **compilación de Insider**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-user/insider)
+   - [Instalador de sistema de Windows - **compilación de Insider**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64/insider)
+   - [Windows ZIP - **compilación de Insider**](https://azuredatastudio-update.azurewebsites.net/latest/win32-x64-archive/insider)
+   - [macOS ZIP - **compilación de Insider**](https://azuredatastudio-update.azurewebsites.net/latest/darwin/insider)
+   - [Linux TAR. GZ - **compilación de Insider**](https://azuredatastudio-update.azurewebsites.net/latest/linux-x64/insider)
+
+- Si hace clic derecho en un archivo de HDFS para obtener la vista previa, puede aparecer el siguiente error:
+
+   `Error previewing file: File exceeds max size of 30MB`
+
+   Actualmente no hay ninguna manera de obtener una vista previa de los archivos mayores de 30 MB en Azure Data Studio.
+
+- No se admiten los cambios de configuración HDFS que implican cambios en hdfs-site.xml.
+
+#### <a name="deployment"></a>Implementación
+
+- No se admiten los procedimientos de implementación anteriores para los clústeres grandes de datos habilitadas para GPU en CTP 3.0. Se está investigando un procedimiento de implementación alternativo. Por ahora, el artículo "Implementar un big data con compatibilidad con GPU de clúster y ejecutar TensorFlow" ha sido temporalmente no publicado para evitar confusiones.
+
+- No se admite la actualización de un clúster de macrodatos datos desde una versión anterior.
+
+   > [!IMPORTANT]
+   > Debe los datos de copia de seguridad y, a continuación, eliminar el clúster existente de datos de gran tamaño (con la versión anterior de **mssqlctl**) antes de implementar la versión más reciente. Para obtener más información, consulte [actualizar a una nueva versión](deployment-upgrade.md).
+
+- Después de implementar en AKS, es posible que vea los siguientes dos eventos de advertencia de la implementación. Ambos de estos eventos son problemas conocidos, pero no podrá implementar correctamente el clúster de macrodatos en AKS.
+
+   `Warning  FailedMount: Unable to mount volumes for pod "mssql-storage-pool-default-1_sqlarisaksclus(c83eae70-c81b-11e8-930f-f6b6baeb7348)": timeout expired waiting for volumes to attach or mount for pod "sqlarisaksclus"/"mssql-storage-pool-default-1". list of unmounted volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs]. list of unattached volumes=[storage-pool-storage hdfs storage-pool-mlservices-storage hadoop-logs storage-pool-java-storage secrets default-token-q9mlx]`
+
+   `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
+
+- Si se produce un error en la implementación de un clúster de macrodatos, no se quita el espacio de nombres asociado. Esto podría dar lugar a un espacio de nombres huérfano en el clúster. Una solución consiste en eliminar el espacio de nombres manualmente antes de implementar un clúster con el mismo nombre.
+
+#### <a name="external-tables"></a>Tablas externas
+
+- Implementación del clúster de macrodatos ya no crea el **SqlDataPool** y **SqlStoragePool** orígenes de datos externos. Puede crear estos orígenes de datos manualmente para admitir la virtualización de datos para el grupo de datos y el grupo de almacenamiento.
+
+   > [!NOTE]
+   > El URI para la creación de estos orígenes de datos externo es diferente entre las versiones de CTP. Consulte los siguientes comandos de Transact-SQL para ver cómo crearlas 
+
+   ```sql
+   -- Create default data sources for SQL Big Data Cluster
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+ 
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
+   ```
+
+- Es posible crear una tabla externa de grupo de datos para una tabla que tiene no compatibles de tipos de columna. Si consulta la tabla externa, recibirá un mensaje similar al siguiente:
+
+   `Msg 7320, Level 16, State 110, Line 44 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 105079; Columns with large object types are not supported for external generic tables.`
+
+- Si consulta una tabla externa del grupo de almacenamiento, podría obtener un error si se está copiando el archivo subyacente en HDFS al mismo tiempo.
+
+   `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- Si va a crear una tabla externa a Oracle que usan tipos de datos de caracteres, el Asistente para la virtualización de Azure Data Studio interpreta estas columnas como VARCHAR en la definición de tabla externa. Esto provocará un error en el DDL de tabla externa. Modifique el esquema de Oracle para usar el tipo NVARCHAR2, o crear manualmente las instrucciones de la tabla externa y especificar NVARCHAR en lugar de usar al asistente.
+
+#### <a name="application-deployment"></a>Implementación de la aplicación
+
+- Al llamar a una aplicación de R, Python o MLeap desde la API de REST, la llamada a veces horizontal en 5 minutos.
+
+#### <a name="spark-and-notebooks"></a>Spark y cuadernos
+
+- Pueden cambiar las direcciones IP de POD en el entorno de Kubernetes como reinicios de PODs. En el escenario donde se reinicia el patrón de pod, puede producir un error de la sesión de Spark con `NoRoteToHostException`. Esto se produce por las cachés JVM que no se actualiza con la nueva dirección IP direcciones.
+
+- Si tiene Jupyter ya instalado y un independiente de Python en Windows, se pueden producir un error en cuadernos de Spark. Para solucionar este problema, actualice Jupyter a la versión más reciente.
+
+- En un bloc de notas, si hace clic en el **agregar texto** comando, se agrega el texto de la celda en modo de vista previa en lugar de en modo de edición. Puede hacer clic en el icono de vista previa para activar o desactivar para el modo de edición y editar la celda.
+
+#### <a name="security"></a>Seguridad
+
+- El contraseña_sa forma parte del entorno y reconocibles (por ejemplo, en un archivo de volcado de cable). Debe restablecer el contraseña_sa en la instancia principal después de la implementación. Esto no es un error, pero un paso de seguridad. Para obtener más información sobre cómo cambiar el contraseña_sa en un contenedor de Linux, consulte [cambiar la contraseña de SA](../linux/quickstart-install-connect-docker.md#sapassword).
+
+- Los registros AKS pueden contener la contraseña de SA para las implementaciones de clústeres de datos de gran tamaño.
+
 ## <a id="ctp25"></a> CTP 2.5 (abril)
 
 Las secciones siguientes describen las nuevas características y problemas conocidos de clústeres de macrodatos en 2.5 de CTP de SQL Server de 2019.
 
 ### <a name="whats-new"></a>What's New
 
-| Nueva característica o la actualización | Detalles |
+| Nueva característica o actualización | Detalles |
 |:---|:---|
-| Perfiles de implementación | Usar valor predeterminado y personalizar [archivos JSON de configuración de implementación](deployment-guidance.md#configfile) para las implementaciones de clústeres de datos de gran tamaño en lugar de las variables de entorno. |
-| Implementaciones solicitadas | `mssqlctl cluster create` Ahora le pide los valores necesarios para las implementaciones de forma predeterminada. |
+| Perfiles de implementación | Utiliza los [archivos JSON de configuración de la implementación](deployment-guidance.md#configfile) predeterminados y personalizados para las implementaciones de clústeres de macrodatos en lugar de las variables de entorno. |
+| Implementaciones solicitadas | `mssqlctl cluster create` ahora le pide los valores necesarios para realizar implementaciones predeterminadas. |
 | Cambios de nombre de punto de conexión de servicio y pod | Los puntos de conexión externos siguientes han cambiado los nombres:<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
-| **mssqlctl** improvements | Use **mssqlctl** a [lista de puntos de conexión externos](deployment-guidance.md#endpoints) y comprobar la versión de **mssqlctl** con el `--version` parámetro. |
+| Mejoras de **mssqlctl** | Use **mssqlctl** para [enumerar los puntos de conexión externos](deployment-guidance.md#endpoints) y compruebe la versión de **mssqlctl** con el parámetro `--version`. |
 | Instalación sin conexión | Guía para las implementaciones de clústeres de datos de gran tamaño sin conexión. |
 | Mejoras en los niveles de HDFS | Los niveles S3, el almacenamiento en caché de montaje y OAuth compatibilidad con ADLS Gen2. |
 | Nuevo `mssql` conector de Spark SQL Server | |
@@ -60,24 +158,19 @@ Las secciones siguientes describen los problemas conocidos y limitaciones con es
 
 - Si se produce un error en la implementación de un clúster de macrodatos, no se quita el espacio de nombres asociado. Esto podría dar lugar a un espacio de nombres huérfano en el clúster. Una solución consiste en eliminar el espacio de nombres manualmente antes de implementar un clúster con el mismo nombre.
 
-
-
-#### <a id="externaltablesctp24"></a> Tablas externas
+#### <a name="external-tables"></a>Tablas externas
 
 - Implementación del clúster de macrodatos ya no crea el **SqlDataPool** y **SqlStoragePool** orígenes de datos externos. Puede crear estos orígenes de datos manualmente para admitir la virtualización de datos para el grupo de datos y el grupo de almacenamiento.
 
    ```sql
-   -- Create the SqlDataPool data source:
+   -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-
-   -- Create the SqlStoragePool data source:
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+ 
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
-   END
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://nmnode-0-svc:50070');
    ```
 
 - Es posible crear una tabla externa de grupo de datos para una tabla que tiene no compatibles de tipos de columna. Si consulta la tabla externa, recibirá un mensaje similar al siguiente:
@@ -124,13 +217,13 @@ Las secciones siguientes describen las nuevas características y problemas conoc
 
 ### <a name="whats-new"></a>What's New
 
-| Nueva característica o la actualización | Detalles |
+| Nueva característica o actualización | Detalles |
 |:---|:---|
-| Orientación sobre la compatibilidad de GPU para la ejecución de aprendizaje profundo con TensorFlow en Spark. | [Implementar un clúster de macrodatos con compatibilidad con GPU y ejecutar TensorFlow](spark-gpu-tensorflow.md). |
-| **SqlDataPool** y **SqlStoragePool** orígenes de datos ya no se crean de forma predeterminada. | Cree manualmente según sea necesario. Consulte la [problemas conocidos](#externaltablesctp24). |
-| Compatibilidad de `INSERT INTO SELECT` con el grupo de datos. | Para obtener un ejemplo, vea [Tutorial: Introducir datos en un grupo de datos de SQL Server con Transact-SQL](tutorial-data-pool-ingest-sql.md). |
-| `FORCE SCALEOUTEXECUTION` y `DISABLE SCALEOUTEXECUTION` opción. | Fuerza o deshabilita el uso de la agrupación de proceso para las consultas en las tablas externas. Por ejemplo, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
-| Recomendaciones de implementación de AKS actualizadas. | Al evaluar los clústeres de macrodatos en AKS, ahora se recomienda utilizar un único nodo del tamaño **Standard_L8s**. |
+| Orientación sobre la compatibilidad de GPU para la ejecución de aprendizaje profundo con TensorFlow en Spark. | [Implementa un clúster de macrodatos con compatibilidad con GPU y ejecuta TensorFlow](spark-gpu-tensorflow.md). |
+| Los orígenes de datos **SqlDataPool** y **SqlStoragePool** ya no se crean de forma predeterminada. | Puede crearlos manualmente según sea necesario. Consulte los [problemas conocidos](#externaltablesctp24). |
+| Compatibilidad de `INSERT INTO SELECT` con el grupo de datos. | Para obtener un ejemplo, vea [Tutorial: Introducir datos en un grupo de datos de SQL Server con Transact-SQL](tutorial-data-pool-ingest-sql.md). |
+| Opción `FORCE SCALEOUTEXECUTION` y `DISABLE SCALEOUTEXECUTION`. | Fuerza o deshabilita el uso de la agrupación de proceso para las consultas en las tablas externas. Por ejemplo, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
+| Recomendaciones actualizadas para implementar AKS. | Al evaluar los clústeres de macrodatos en AKS, ahora se recomienda utilizar un único nodo del tamaño **Standard_L8s**. |
 | Actualización del entorno de ejecución de Spark a Spark 2.4. | |
 
 ### <a name="known-issues"></a>Problemas conocidos
@@ -201,21 +294,14 @@ Un nuevo cliente de Python Kubernetes (versión 9.0.0) puede cambiar los espacio
 - Implementación del clúster de macrodatos ya no crea el **SqlDataPool** y **SqlStoragePool** orígenes de datos externos. Puede crear estos orígenes de datos manualmente para admitir la virtualización de datos para el grupo de datos y el grupo de almacenamiento.
 
    ```sql
-   -- Create the SqlDataPool data source:
+   -- Create default data sources for SQL Big Data Cluster
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
-     CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
-
-   -- Create the SqlStoragePool data source:
+       CREATE EXTERNAL DATA SOURCE SqlDataPool
+       WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+ 
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-   BEGIN
-     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
-       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
        CREATE EXTERNAL DATA SOURCE SqlStoragePool
        WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-   END
    ```
 
 - Es posible crear una tabla externa de grupo de datos para una tabla que tiene no compatibles de tipos de columna. Si consulta la tabla externa, recibirá un mensaje similar al siguiente:
@@ -262,19 +348,19 @@ Las secciones siguientes describen las nuevas características y problemas conoc
 
 ### <a name="whats-new"></a>What's New
 
-| Nueva característica o la actualización | Detalles |
+| Nueva característica o actualización | Detalles |
 | :---------- | :------ |
-| Enviar trabajos de Spark en clústeres de macrodatos en IntelliJ. | [Enviar trabajos de Spark en clústeres de macrodatos de SQL Server en IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
-| CLI comunes para la administración de clúster y la implementación de la aplicación. | [Cómo implementar una aplicación en clúster de macrodatos de 2019 de SQL Server (versión preliminar)](big-data-cluster-create-apps.md) |
-| Extensión de VS Code para implementar aplicaciones en un clúster de macrodatos. | [Cómo utilizar VS Code para implementar aplicaciones en clústeres de macrodatos de SQL Server](app-deployment-extension.md) |
-| Cambia a la **mssqlctl** herramienta de uso del comando. | Para obtener más información, consulte el [los problemas conocidos de mssqlctl](#mssqlctlctp23). |
-| Usar Sparklyr en clúster de macrodatos | [Usar Sparklyr en clúster de macrodatos de SQL Server 2019](sparklyr-from-RStudio.md) |
-| Montaje de almacenamiento externo compatible con HDFS en clústeres de macrodatos con **niveles de HDFS**. | Consulte [HDFS niveles](hdfs-tiering.md). |
-| Nueva experiencia de conexión unificado para la instancia principal de SQL Server y la puerta de enlace de Spark o HDFS. | Consulte [instancia principal de SQL Server y la puerta de enlace de Spark o HDFS](connect-to-big-data-cluster.md). |
-| Al eliminar un clúster con **mssqlctl clúster delete** ahora elimina sólo los objetos en el espacio de nombres que formaban parte del clúster de macrodatos. | No se elimina el espacio de nombres. Sin embargo, en versiones anteriores, este comando elimina todo el espacio de nombres. |
-| _Seguridad_ se han cambiado los nombres de extremo y consolidados. | **servicio-seguridad-lb** y **service-seguridad-nodeport** se han consolidado en la **endpoint security** punto de conexión. |
-| _Proxy_ se han cambiado los nombres de extremo y consolidados. | **servicio-proxy-lb** y **proxy-service-nodeport** se han consolidado en la **proxy de servicio de punto de conexión** punto de conexión. |
-| _Controlador_ se han cambiado los nombres de extremo y consolidados. | **servicio-mssql-controller-lb** y **nodeport-service-mssql-controlador** se han consolidado en la **punto de conexión de controlador** punto de conexión. |
+| Envío de trabajos de Spark en clústeres de macrodatos en IntelliJ. | [Envío de trabajos de Spark en clústeres de macrodatos de SQL Server en IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
+| CLI comunes para la implementación de la aplicación y la administración de clústeres. | [Cómo implementar una aplicación en un clúster de macrodatos de SQL Server 2019 (versión preliminar)](big-data-cluster-create-apps.md) |
+| Extensión de VS Code para implementar aplicaciones en un clúster de macrodatos. | [Cómo utilizar VS Code para implementar aplicaciones en clústeres de macrodatos de SQL Server](app-deployment-extension.md) |
+| Cambios en el uso del comando de la herramienta **mssqlctl**. | Para obtener más información, vea los [problemas conocidos con mssqlctl](#mssqlctlctp23). |
+| Usar Sparklyr en clúster de macrodatos | [Uso de Sparklyr en clústeres de macrodatos de SQL Server 2019](sparklyr-from-RStudio.md) |
+| Montaje de almacenamiento externo compatible con HDFS en clústeres de macrodatos con **niveles de HDFS**. | Vea [Niveles de HDFS](hdfs-tiering.md). |
+| Nueva experiencia de conexión unificada para la instancia principal de SQL Server y la puerta de enlace de Spark o HDFS. | Consulte la [instancia principal de SQL Server y la puerta de enlace de Spark o HDFS](connect-to-big-data-cluster.md). |
+| Al eliminar un clúster con la función **eliminar clúster mssqlctl** ahora solo se eliminan los objetos en el espacio de nombres que formaban parte del clúster de macrodatos. | El espacio de nombres no se elimina. Sin embargo, en versiones anteriores, este comando sí que eliminaba todo el espacio de nombres. |
+| Los nombres de punto de conexión de _seguridad_ se han cambiado y consolidado. | **service-security-lb** y **service-security-nodeport** se han consolidado en el punto de conexión **endpoint-security**. |
+| Los nombres de punto de conexión de _proxy_ se han cambiado y consolidado. | **service-proxy-lb** y **service-proxy-nodeport** se han consolidado en el punto de conexión **endpoint-sevice-proxy**. |
+| Los nombres de punto de conexión de _controller_ se han cambiado y consolidado. | **service-mssql-controller-lb** y **service-mssql-controller-nodeport** se han consolidado en el punto de conexión **endpoint-controller**. |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>Problemas conocidos

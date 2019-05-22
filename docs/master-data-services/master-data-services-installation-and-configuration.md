@@ -1,7 +1,7 @@
 ---
 title: Instalación y configuración de Master Data Services | Microsoft Docs
 ms.custom: ''
-ms.date: 07/28/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f177e333353cb8fb48b86a320c8e77e37a8991ae
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488220"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994118"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalación y configuración de Master Data Services
 
@@ -128,8 +128,19 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
 2.  Haga clic en **Crear base de datos**y, después, haga clic en **Siguiente** en el **Asistente para crear bases de datos**.  
   
-3.  En la página **Servidor de base de datos** , seleccione el **Tipo de autenticación** y, después, haga clic en **Probar conexión** para confirmar que puede conectarse a la base de datos con las credenciales del tipo de autenticación seleccionado. Haga clic en **Siguiente**.
-  
+3.  En el **Database Server** página, especifique la instancia de SQL Server. 
+
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Agrega compatibilidad con instancia administrada de SQL Server. Establezca el valor de **instancia de SQL Server** al host de una base de datos de SQL Azure de instancia administrada. Por ejemplo, `xxxxxx.xxxxxx.database.windows.net`.
+
+4. Seleccione el **tipo de autenticación** y, a continuación, haga clic en **Probar conexión** para confirmar que puede conectarse a la base de datos con las credenciales para el tipo de autenticación seleccionado. Haga clic en **Siguiente**.
+
+    >Para [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], para conectarse a Azure SQL Database de instancia administrada, use uno de los siguientes tipos de autenticación:
+    >
+    >- Autenticación integrada de Azure Active Directory: **Usuario actual: integradas de Active Directory**
+    >- Autenticación de SQL Server: **Cuenta de SQL Server**.
+    >
+    >En instancia administrada de Azure SQL Database, el usuario debe ser un miembro de la `sysadmin` rol fijo de servidor.
+
     > [!NOTE]  
     >  Al seleccionar **Usuario actual: Seguridad integrada** como el tipo de autenticación, el cuadro **Nombre de usuario** es de solo lectura y muestra el nombre de la cuenta de usuario de Windows con la que se ha iniciado sesión en el equipo. Si ejecuta [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] en una máquina virtual de Azure, el cuadro **Nombre de usuario** mostrará el nombre de la máquina virtual y el nombre de usuario de la cuenta de administrador local de la máquina virtual. 
 

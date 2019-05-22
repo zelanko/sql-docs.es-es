@@ -5,16 +5,16 @@ description: Artículo de referencia para los comandos mssqlctl.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ebd3b63d641c77dae1afbff21264ec4fe34df4d0
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: dd9248c059cb4179bca7953e8a7d5bf721892fb8
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775503"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993318"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -27,36 +27,38 @@ El siguiente artículo proporciona la referencia para la **mssqlctl** herramient
 | --- | --- |
 |[aplicación mssqlctl](reference-mssqlctl-app.md) | Crear, eliminar, ejecutar y administrar aplicaciones. |
 |[clúster mssqlctl](reference-mssqlctl-cluster.md) | Seleccione, administrar y operar los clústeres. |
-[inicio de sesión mssqlctl](#mssqlctl-login) | Inicie sesión en el clúster.
+[inicio de sesión mssqlctl](#mssqlctl-login) | Inicie sesión en el punto de conexión de controlador del clúster.
 [mssqlctl logout](#mssqlctl-logout) | Cerrar la sesión de clúster.
-|[mssqlctl storage](reference-mssqlctl-storage.md) | Administrar el almacenamiento de clúster. |
 ## <a name="mssqlctl-login"></a>inicio de sesión mssqlctl
-Inicie sesión en el clúster.
+Cuando se implementa el clúster, se mostrará el punto de conexión del controlador durante la implementación, que se debe utilizar al inicio de sesión.  Si no conoce el punto de conexión del controlador, es posible que el inicio de sesión al tener la configuración de kube de su clúster en su sistema en la ubicación predeterminada de <user home>/.kube/config o utilizar el var env KUBECONFIG, es decir, exportar KUBECONFIG=path/to/.kube/config.
 ```bash
-mssqlctl login [--username -u] 
-               [--password -p]  
-               [--endpoint -e]
+mssqlctl login [--cluster-name -n] 
+               [--controller-username -u]  
+               [--controller-endpoint -e]  
+               [--accept-eula -a]
 ```
 ### <a name="examples"></a>Ejemplos
-Sesión de forma interactiva.
+Sesión de forma interactiva. Nombre del clúster se siempre se le solicitará si no se especifica como un argumento. Si tiene la CONTROLLER_USERNAME CONTROLLER_PASSWORD y ACCEPT_EULA env las variables establecidas en el sistema, estos no solicitará. Si tiene la configuración de kube en el sistema o usa el var env KUBECONFIG para especificar la ruta de acceso a la configuración, la experiencia interactiva intentará en primer lugar utilice la configuración y, a continuación, le pedirá que si se produce un error en la configuración.
 ```bash
 mssqlctl login
 ```
-Inicie sesión con el nombre de usuario y contraseña.
+Inicie sesión (de forma no interactiva). Inicie sesión con el nombre del clúster, nombre de usuario del controlador, el punto de conexión de controlador y la aceptación del CLUF establecido como argumentos. La variable de entorno se debe establecer CONTROLLER_PASSWORD.  Si no desea especificar el punto de conexión del controlador, tiene la configuración de kube en el equipo en la ubicación predeterminada de <user home>/.kube/config o utilizar el var env KUBECONFIG, es decir, exportar KUBECONFIG=path/to/.kube/config.
 ```bash
-mssqlctl login -u johndoe@contoso.com -p VerySecret
+mssqlctl login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
 ```
-Inicie sesión con el nombre de usuario, contraseña y el punto de conexión de clúster.
+Inicie sesión con la configuración de kube en equipo y var env establece para CONTROLLER_USERNAME, CONTROLLER_PASSWORD y ACCEPT_EULA.
 ```bash
-mssqlctl login -u johndoe@contoso.com -p VerySecret --endpoint https://host.com:12800
+mssqlctl login -n ClusterName
 ```
 ### <a name="optional-parameters"></a>Parámetros opcionales
-#### `--username -u`
-Usuario de la cuenta.
-#### `--password -p`
-Credenciales de contraseña.
-#### `--endpoint -e`
-Clúster de host y puerto (ex) "http://host:port".
+#### `--cluster-name -n`
+Nombre del clúster.
+#### `--controller-username -u`
+Usuario de la cuenta. Si no desea utilizar este argumento, se puede establecer la variable de entorno CONTROLLER_USERNAME.
+#### `--controller-endpoint -e`
+Punto de conexión del controlador de clúster "https://host:port". Si no desea utilizar este argumento, puede usar la configuración de kube en su equipo. Asegúrese de que la configuración se encuentra en la ubicación predeterminada de <user home>/.kube/config o use el env KUBECONFIG var.
+#### `--accept-eula -a`
+¿Acepta los términos de licencia? [yes/no]. Si no desea utilizar este argumento, puede establecer la variable de entorno ACCEPT_EULA en 'Sí'
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
 Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.

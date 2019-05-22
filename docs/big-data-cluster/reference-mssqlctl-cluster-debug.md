@@ -5,16 +5,16 @@ description: Artículo de referencia de comandos de depuración de clúster mssq
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5099a9ac611602e0c4c8d7f0103421e34b7fa8a2
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c309817841bb0b3aeaacc613c327f9d446ccc8c2
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774858"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993660"
 ---
 # <a name="mssqlctl-cluster-debug"></a>Depuración de clúster mssqlctl
 
@@ -28,7 +28,7 @@ El siguiente artículo proporciona la referencia para la **depuración clúster*
 [depuración mssqlctl copia-registros de clúster](#mssqlctl-cluster-debug-copy-logs) | Copiar los registros.
 [volcado de depuración de clúster mssqlctl](#mssqlctl-cluster-debug-dump) | Volcado del registro de desencadenador.
 ## <a name="mssqlctl-cluster-debug-copy-logs"></a>depuración mssqlctl copia-registros de clúster
-Copiar los registros de depuración desde el clúster.
+Copiar los registros de depuración desde el clúster: se requiere la configuración de kube en el sistema.
 ```bash
 mssqlctl cluster debug copy-logs --namespace -n 
                                  [--container -c]  
@@ -60,7 +60,7 @@ Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.o
 #### `--verbose`
 Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
 ## <a name="mssqlctl-cluster-debug-dump"></a>volcado de depuración de clúster mssqlctl
-Desencadenar el registro de volcado de memoria y copiarla desde el contenedor.
+Desencadenar el registro de volcado de memoria y copiarla desde el contenedor: se requiere la configuración de kube en el sistema.
 ```bash
 mssqlctl cluster debug dump --namespace -n 
                             --container -c  

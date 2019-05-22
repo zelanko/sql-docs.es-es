@@ -5,22 +5,22 @@ description: Obtenga información sobre cómo usar el conector de Spark MSSQL en
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54361f9a061169d51f11ccb130e78ba67c0a9a67
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 12343c2000bca3ae90e62c8702636859a808a580
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759222"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994186"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Cómo leer y escribir en SQL Server de Spark mediante el conector de Spark MSSQL
 
 Un patrón de uso de datos de gran tamaño de clave es el procesamiento de datos de gran volumen en Spark, seguido de escribir los datos en SQL Server para tener acceso a aplicaciones de línea de negocio. Estos patrones de uso de beneficiarán de un conector que utiliza la claves optimizaciones de SQL y proporciona un mecanismo eficaz de escritura.
 
-Con los clústeres de datos grande CTP2.5 proporciona un nuevo conector de Spark MSSQL que usa SQL Server masiva escribir las API para un rendimiento de Spark a la escritura SQL. En este artículo se proporciona un ejemplo de cómo leer y escribir en SQL Server de Spark mediante el conector de Spark MSSQL. En este ejemplo, los datos se leen de HDFS en un clúster de macrodatos, procesados por Spark y, a continuación, se escriben en la instancia principal de SQL Server en el clúster con el nuevo conector de Spark MSSQL.
+Clústeres grandes de datos proporciona un nuevo conector de Spark MSSQL que usa SQL Server masiva escribir las API para un rendimiento de Spark a la escritura SQL. En este artículo se proporciona un ejemplo de cómo leer y escribir en SQL Server de Spark mediante el conector de Spark MSSQL. En este ejemplo, los datos se leen de HDFS en un clúster de macrodatos, procesados por Spark y, a continuación, se escriben en la instancia principal de SQL Server en el clúster con el nuevo conector de Spark MSSQL.
 
 ## <a name="mssql-spark-connector-interface"></a>Interfaz del conector de Spark MSSQL
 

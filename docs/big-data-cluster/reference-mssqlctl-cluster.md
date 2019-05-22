@@ -5,16 +5,16 @@ description: Artículo de referencia para los comandos de clúster mssqlctl.
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c69aeced2378e018376172e1fb6370d56706ecb7
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: c3a15fb9658f25977542754d6479b09b97323f53
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64775641"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993328"
 ---
 # <a name="mssqlctl-cluster"></a>Clúster mssqlctl
 
@@ -28,18 +28,40 @@ El siguiente artículo proporciona la referencia para la **clúster** comandos e
 [mssqlctl cluster create](#mssqlctl-cluster-create) | Crear el clúster.
 [mssqlctl cluster delete](#mssqlctl-cluster-delete) | Eliminar el clúster.
 [configuración del clúster mssqlctl](reference-mssqlctl-cluster-config.md) | Comandos de configuración del clúster.
+[punto de conexión de clúster mssqlctl](reference-mssqlctl-cluster-endpoint.md) | Comandos de punto de conexión.
+[estado del clúster mssqlctl](reference-mssqlctl-cluster-status.md) | Comandos de estado.
 [depuración de clúster mssqlctl](reference-mssqlctl-cluster-debug.md) | Comandos de depuración.
+[grupo de almacenamiento de clúster mssqlctl](reference-mssqlctl-cluster-storage-pool.md) | Administrar grupos de almacenamiento de clúster.
 ## <a name="mssqlctl-cluster-create"></a>crear clúster mssqlctl
-Crear un clúster de Macrodatos SQL Server.
+Crear un clúster grande de datos de SQL Server: configuración de kube es necesaria en el sistema junto con las siguientes variables de entorno ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'DOCKER_USERNAME', 'DOCKER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD'].
 ```bash
-mssqlctl cluster create [--config-file -f] 
-                        [--accept-eula -e]  
+mssqlctl cluster create [--config-file -c] 
+                        [--accept-eula -a]  
+                        [--node-label -l]  
+                        [--force -f]
+```
+### <a name="examples"></a>Ejemplos
+Experiencia de implementación de clúster - guiada recibirá indicaciones para los valores necesarios.
+```bash
+mssqlctl cluster create
+```
+Implementación del clúster con argumentos.
+```bash
+mssqlctl cluster create --accept-eula yes --config-file aks-dev-test.json
+```
+Implementación del clúster con los argumentos - sin mensajes se expresará como--force se utiliza la marca.
+```bash
+mssqlctl cluster create --accept-eula yes --config-file aks-dev-test.json --force
 ```
 ### <a name="optional-parameters"></a>Parámetros opcionales
-#### `--config-file -f`
+#### `--config-file -c`
 Perfil de configuración, usado para implementar el clúster del clúster: ['aks-dev-test.json', ' kubeadm-dev-test.json', ' minikube-dev-test.json']
-#### `--accept-eula -e`
-¿Acepta los términos de licencia? [yes/no].
+#### `--accept-eula -a`
+¿Acepta los términos de licencia? [yes/no]. Si no desea utilizar este argumento, puede establecer la variable de entorno ACCEPT_EULA en 'Sí'
+#### `--node-label -l`
+Etiqueta del nodo de clúster, que se usa para designar qué nodos se deben implementar para.
+#### `--force -f`
+Fuerce crear, no se pedirá al usuario todos los valores y todos los problemas se imprimirá como parte de stderr.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
 Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
@@ -52,10 +74,15 @@ Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.o
 #### `--verbose`
 Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
 ## <a name="mssqlctl-cluster-delete"></a>eliminación de clúster mssqlctl
-Elimine el clúster de Macrodatos SQL Server.
+Eliminar el clúster grande de datos de SQL Server: configuración de kube es necesaria en el sistema junto con las siguientes variables de entorno ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD'].
 ```bash
 mssqlctl cluster delete --name -n 
                         [--force -f]
+```
+### <a name="examples"></a>Ejemplos
+Eliminación del clúster donde el nombre de usuario del controlador y la contraseña ya están configurados en el entorno del sistema.
+```bash
+mssqlctl cluster delete --name <cluster_name>
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--name -n`

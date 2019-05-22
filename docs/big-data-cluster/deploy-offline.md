@@ -5,16 +5,16 @@ description: Obtenga información sobre cómo realizar una implementación sin c
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 04/23/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afd7c0e3b8fcf92721e95231175cb33d81c6775e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 49c96300792adfefa32152ec73911ba32fac47ee
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63759152"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994016"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Realizar una implementación sin conexión de un clúster de macrodatos de SQL Server
 
@@ -42,7 +42,7 @@ Los pasos siguientes describen cómo incorporar el clúster de macrodatos de im�
    > [!TIP]
    > Estos comandos usan PowerShell como ejemplo, pero puede ejecutar desde cualquier shell de comandos que se puede ejecutar docker, bash o cmd. En Linux, agregar `sudo` a cada comando.
 
-1. Extraiga imágenes de contenedor para el clúster de macrodatos, repita el comando siguiente. Reemplace `<SOURCE_IMAGE_NAME>` con cada [nombre de la imagen](#images). Reemplace `<SOURCE_DOCKER_TAG>` con la etiqueta para los datos de gran tamaño de clúster versión, como **ctp2.5**.  
+1. Extraiga imágenes de contenedor para el clúster de macrodatos, repita el comando siguiente. Reemplace `<SOURCE_IMAGE_NAME>` con cada [nombre de la imagen](#images). Reemplace `<SOURCE_DOCKER_TAG>` con la etiqueta para los datos de gran tamaño de clúster versión, como **ctp3.0**.  
 
    ```PowerShell
    docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -174,16 +174,17 @@ Para instalar **kubectl** a un equipo sin conexión, siga estos pasos.
 
 1. Copie la carpeta en el equipo de destino.
 
-## <a name="deploy-with-from-repository"></a>Implementar con desde el repositorio
+## <a name="deploy-from-private-repository"></a>Implementar desde el repositorio privado
 
-Para implementar desde el repositorio privado, siga los pasos descritos en la [Guía de implementación](deployment-guidance.md), pero el personalizar las siguientes variables de entorno para que coincida con su repositorio privado de Docker.
+Para implementar desde el repositorio privado, siga los pasos descritos en la [Guía de implementación](deployment-guidance.md), pero usar un archivo de configuración de implementación personalizado que especifica la información del repositorio de Docker privada. La siguiente **mssqlctl** comandos muestran cómo cambiar la configuración de Docker en un archivo de configuración de implementación personalizado denominado **custom.json**:
 
-- **DOCKER_REGISTRY**  
-- **DOCKER_REPOSITORY**
-- **DOCKER_USERNAME**
-- **DOCKER_PASSWORD**  
-- **DOCKER_EMAIL**
-- **DOCKER_IMAGE_TAG**
+```bash
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
+mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+```
+
+La implementación le pide el nombre de usuario de docker y la contraseña, o puede especificarlos en el **DOCKER_USERNAME** y **DOCKER_PASSWORD** variables de entorno.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

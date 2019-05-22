@@ -5,17 +5,17 @@ description: Este tutorial muestra cómo introducir datos en el grupo de datos d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9d49cb6af93880fe1cec391e4464b813777f7109
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: dcdbee449f15e070920660d5470135f4f8ae93a0
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582758"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994166"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Introducir datos en un grupo de datos de SQL Server con trabajos de Spark
 
@@ -56,7 +56,7 @@ Los pasos siguientes crean una tabla externa en el grupo de datos llamado **web_
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
    ```
 
 1. Crear una tabla externa denominada **web_clickstreams_spark_results** en el grupo de datos.
@@ -74,13 +74,13 @@ Los pasos siguientes crean una tabla externa en el grupo de datos llamado **web_
       );
    ```
   
-1. En CTP 2.4, la creación del grupo de datos es asincrónica, pero no hay ninguna manera de determinar si aún termina. Espere dos minutos para asegurarse de que se crea el grupo de datos antes de continuar.
+1. En CTP 3.0, la creación del grupo de datos es asincrónica, pero no hay ninguna manera de determinar si aún termina. Espere dos minutos para asegurarse de que se crea el grupo de datos antes de continuar.
 
 ## <a name="start-a-spark-streaming-job"></a>Iniciar un trabajo de streaming de Spark
 
 El siguiente paso es crear un trabajo de Spark streaming que carga los datos de secuencia de clics de web del grupo de almacenamiento (HDFS) en la tabla externa que creó en el grupo de datos.
 
-1. En Azure Data Studio, conéctese a la **puerta de enlace de Spark o HDFS** del clúster de macrodatos. Para obtener más información, consulte [conectar con la puerta de enlace de Spark o HDFS](connect-to-big-data-cluster.md#hdfs).
+1. En Azure Data Studio, conéctese a la instancia maestra del clúster de macrodatos. Para obtener más información, consulte [conexión a un clúster de macrodatos](connect-to-big-data-cluster.md).
 
 1. Haga doble clic en la conexión de puerta de enlace de Spark o HDFS en el **servidores** ventana. A continuación, seleccione **nuevo trabajo de Spark**.
 

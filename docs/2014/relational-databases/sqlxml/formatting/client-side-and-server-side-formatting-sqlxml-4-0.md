@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XML formatting [SQLXML]
 - SQLXML, formats
 ms.assetid: eb61e595-f44c-44b8-9d62-e4effce55685
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de1b564ee27885b0e5d5453cfbe53c5d00f4634f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ab8293cdd0e2d839bb3d850116bf13f0cc0a7f58
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131218"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66012310"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>Aplicación de formato en el cliente y en el servidor (SQLXML 4.0)
   SQLXML proporciona dos maneras de dar formato a un documento XML:  

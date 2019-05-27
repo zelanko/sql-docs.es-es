@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2883427b45cb408323db91935ebbccee0792825f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749827"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071859"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>Configurar las cuentas de servicio PowerPivot
   Una instalación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] incluye dos servicios compatibles con operaciones de servidor. El servicio **SQL Server Analysis Services (PowerPivot)** es un servicio de Windows que proporciona compatibilidad con las consultas y el procesamiento de datos PowerPivot en un servidor de aplicaciones. La cuenta de inicio de sesión para este servicio siempre se especifica durante la ejecución del programa de instalación de SQL Server al instalar Analysis Services en modo integrado de SharePoint.  

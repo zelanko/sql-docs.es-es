@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e83756e4520cf191f0e15750308ef58e3aa38dd
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 84a69542e43f108b1a1aa91bde8fb168ecb6a362
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542245"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65779251"
 ---
 # <a name="best-practice-with-the-query-store"></a>Procedimiento recomendado con el Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -247,7 +247,7 @@ FROM sys.database_query_store_options;
   
  Si el problema continúa, significa que los datos del Almacén de consultas siguen dañados en el disco.
  
- El Almacén de consultas podría recuperarse mediante la ejecución del procedimiento almacenado **sp_query_store_consistency_check** en la base de datos afectada.
+ Para SQL 2017 y versiones posteriores, el Almacén de consultas podría recuperarse mediante la ejecución del procedimiento almacenado **sp_query_store_consistency_check** en la base de datos afectada. Para 2016, deberá borrar los datos del Almacén de consultas, tal como se muestra a continuación.
  
  Si esto no ha solucionado el problema, puede intentar borrar el Almacén de consultas antes de solicitar el modo de lectura y escritura.  
   

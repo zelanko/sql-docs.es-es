@@ -13,14 +13,18 @@ ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db7471411d629dfb55de9f074a31e68d34e52bd3
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: e8ed8f3cdd8232cdf8fd66be1dce021f84d2e492
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58276177"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727942"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de claves candidatas (tarea de generación de perfiles de datos)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de claves candidatas** seleccionadas en el panel de solicitudes. Un perfil de claves candidatas notifica si una columna o conjunto de columnas es una clave, o una clave aproximada, para la tabla seleccionada. Este perfil también puede ayudarle a identificar problemas de los datos, por ejemplo valores duplicados en una posible columna de clave.  
   
 > [!NOTE]  
@@ -35,7 +39,7 @@ ms.locfileid: "58276177"
   
 -   Al seleccionar varias columnas en **KeyColumns**, la tarea calcula el nivel de clave de la clave compuesta que consta de todas las columnas seleccionadas.  
   
--   Al seleccionar el carácter comodín, **(\*)**, en **KeyColumns**, la tarea calcula el nivel de clave de cada columna de la tabla o vista.  
+-   Al seleccionar el carácter comodín, **(\*)** , en **KeyColumns**, la tarea calcula el nivel de clave de cada columna de la tabla o vista.  
   
  Por ejemplo, considere una tabla de ejemplo que contiene las columnas A, B y C. Realiza las selecciones siguientes para **KeyColumns**:  
   
@@ -77,12 +81,12 @@ ms.locfileid: "58276177"
  Muestra el nombre de la tabla seleccionada. Esta opción es de solo lectura.  
   
 #### <a name="keycolumns-options"></a>Opciones de KeyColumns  
- Las opciones siguientes se presentan para cada columna seleccionada para la generación de perfiles en **KeyColumns** o para la opción **(\*)**.  
+ Las opciones siguientes se presentan para cada columna seleccionada para la generación de perfiles en **KeyColumns** o para la opción **(\*)** .  
   
  Para obtener más información, vea la sección "Selección de columnas para la propiedad KeyColumns" anteriormente en este tema.  
   
  **IsWildcard**  
- Especifica si se ha seleccionado el carácter comodín **(\*)**. Esta opción está establecida en **True** si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Es **False** si ha seleccionado una columna individual para la que generar un perfil. Esta opción es de solo lectura.  
+ Especifica si se ha seleccionado el carácter comodín **(\*)** . Esta opción está establecida en **True** si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Es **False** si ha seleccionado una columna individual para la que generar un perfil. Esta opción es de solo lectura.  
   
  **ColumnName**  
  Muestra el nombre de la columna seleccionada. Esta opción está en blanco si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Esta opción es de solo lectura.  
@@ -104,7 +108,7 @@ ms.locfileid: "58276177"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica si la comparación distingue entre mayúsculas y minúsculas. Si se establece esta opción, la comparación de las cadenas omite la distinción entre mayúsculas y minúsculas. Por ejemplo, "ABC" se interpreta igual que "abc".|  
-|**IgnoreNonSpace**|Especifica si la comparación distingue entre caracteres con espacio y signos diacríticos. Si se establece esta opción, la comparación omite los signos diacríticos. Por ejemplo, "å" se considera igual que "a".|  
+|**IgnoreNonSpace**|Especifica si la comparación distingue entre caracteres con espacio y signos diacríticos. Si se establece esta opción, la comparación omite los signos diacríticos. Por ejemplo, "Ã¥" se considera igual que "a".|  
 |**IgnoreKanaType**|Especifica si la comparación distingue entre los dos tipos de caracteres kana japoneses: hiragana y katakana. Si se establece esta opción, la comparación de las cadenas omite los tipos de caracteres kana.|  
 |**IgnoreWidth**|Especifica si la comparación distingue entre un carácter de un solo byte y el mismo carácter cuando se representa con un carácter de doble byte. Si se establece esta opción, la comparación de las cadenas trata las representaciones de un solo byte y de doble byte del mismo carácter como idénticas.|  
   

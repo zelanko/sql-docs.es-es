@@ -1,7 +1,7 @@
 ---
 title: 'Tutorial: SQL Server Management Studio (SSMS) | Microsoft Docs'
-ms.custom: ''
-ms.date: 08/30/2017
+ms.custom: sqlfreshmay19
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
@@ -23,17 +23,17 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9d262e2d2a4c79a44f0b5a5245991f32b3676487
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56800979"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620515"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutoriales de SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-El tutorial de SQL Server Management Studio (SSMS) le muestra el entorno integrado para administrar la infraestructura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presenta una interfaz gráfica para configurar, supervisar y administrar instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También permite implementar, supervisar y actualizar los componentes de capa de datos usados por las aplicaciones, como bases de datos. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] también proporciona editores de lenguaje de [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX y XML para editar y depurar scripts.  
+Los tutoriales de SQL Server Management Studio (SSMS) le muestran el entorno integrado para administrar la infraestructura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presenta una interfaz gráfica para configurar, supervisar y administrar Azure SQL Database, la instancia administrada por Azure SQL Database, Azure SQL Data Warehouse y las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También permite implementar, supervisar y actualizar los componentes de capa de datos usados por las aplicaciones, como bases de datos. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] también proporciona editores de lenguaje de [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX y XML para editar y depurar scripts.  
   
 ## <a name="what-you-will-learn"></a>Aprendizaje  
 
@@ -41,9 +41,9 @@ Estos tutoriales le ayudarán a entender cómo se presenta la información en SS
   
 La mejor forma de familiarizarse con SSMS es practicar. Estos tutoriales le permitirán familiarizarse con las distintas características disponibles en SSMS.  Estos tutoriales le mostrarán a administrar los componentes de SSMS y a localizar las características que utiliza habitualmente.  
 
-A continuación se muestran los temas que se tratan en los tutoriales: 
+A continuación se muestran los temas que se tratan en los tutoriales:
 
-  
+
 - [Tutorial: Conexión y consulta de SQL Server con SSMS](connect-query-sql-server.md)
 
     En este tutorial aprenderá a conectarse a su instancia de SQL Server. También aprenderá algunos comandos básicos de Transact-SQL (T-SQL) para crear y consultar una base de datos nueva. 

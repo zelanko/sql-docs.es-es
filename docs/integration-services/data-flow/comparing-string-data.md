@@ -17,14 +17,18 @@ ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8de2ce3e407de132869138a54d5a17559b6308bc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 578ff14516eb40aa32e401f06bad9c747e1f24bd
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58270696"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727127"
 ---
 # <a name="comparing-string-data"></a>comparar datos de cadena
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Las comparaciones de cadenas son una parte importante de muchas de las transformaciones realizadas por [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], y las comparaciones de cadenas también se utilizan en la evaluación de expresiones en variables y expresiones de propiedades. Por ejemplo, la transformación Ordenar compara valores en un conjunto de datos para ordenar datos en orden ascendente o descendente.  
   
 ## <a name="configuring-transformations-for-string-comparisons"></a>Configurar transformaciones para las comparaciones de cadenas  
@@ -73,7 +77,7 @@ ms.locfileid: "58270696"
 |Omitir mayúsculas y minúsculas|Especifica si la comparación distingue entre mayúsculas y minúsculas. Si se establece esta opción, la comparación de las cadenas omite la distinción entre mayúsculas y minúsculas. Por ejemplo, "ABC" se interpreta igual que "abc".|  
 |Omitir tipo de kana|Especifica si la comparación distingue entre los dos tipos de caracteres kana japoneses: hiragana y katakana. Si se establece esta opción, la comparación de las cadenas omite los tipos de caracteres kana.|  
 |Omitir ancho de caracteres|Especifica si la comparación distingue entre un carácter de un solo byte y el mismo carácter cuando se representa con un carácter de doble byte. Si se establece esta opción, la comparación de las cadenas trata las representaciones de un solo byte y de doble byte del mismo carácter como idénticas.|  
-|Omitir caracteres sin espacio|Especifica si la comparación distingue entre caracteres con espacio y signos diacríticos. Si se establece esta opción, la comparación omite los signos diacríticos. Por ejemplo, "å" se considera igual que "a".|  
+|Omitir caracteres sin espacio|Especifica si la comparación distingue entre caracteres con espacio y signos diacríticos. Si se establece esta opción, la comparación omite los signos diacríticos. Por ejemplo, "Ã¥" se considera igual que "a".|  
 |Omitir símbolos|Especifica si la comparación distingue entre caracteres que representan letras y los símbolos tales como espacios en blanco, puntuación, símbolos de moneda y símbolos matemáticos. Si se establece esta opción, la comparación de las cadenas omite los símbolos. Por ejemplo, " Nueva York" pasa a ser lo mismo que "Nueva York" y "*ABC" es idéntico a "ABC"'.|  
 |Ordenar signos de puntuación como símbolos|Especifica si la comparación ordena todos los símbolos de puntuación, salvo guión y apóstrofo, antes de los caracteres alfanuméricos. Por ejemplo, si se establece esta opción, ".ABC" queda en el orden antes de "ABC".|  
   

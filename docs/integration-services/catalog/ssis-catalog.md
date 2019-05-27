@@ -15,14 +15,18 @@ ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1c338ab2dbbaa5437ef4650f79598b68069317f9
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 1f673ea96167b05326519bb9fe04345a87c81fd3
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283209"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65729172"
 ---
 # <a name="ssis-catalog"></a>Catálogo de SSIS
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   El catálogo de **SSISDB** es el eje central cuando se trabaja con proyectos de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que ha implementado en el servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por ejemplo, establece los parámetros del proyecto y del paquete, configura entornos para especificar los valores en tiempo de ejecución para los paquetes, ejecuta paquetes y soluciona los problemas de los mismos, y administra las operaciones del servidor de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
  
 > [!NOTE]
@@ -122,7 +126,7 @@ ms.locfileid: "58283209"
   
  Puede actualizar o volver a implementar un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implementándolo con el mismo nombre en la misma carpeta en el catálogo. De forma predeterminada, cada vez que vuelve a implementar un proyecto, el catálogo de **SSISDB** conserva la versión anterior del proyecto. Para mantener el tamaño de los datos de las operaciones, se utiliza el **trabajo de mantenimiento del Agente SQL Server** para quitar las versiones anteriores de proyectos.  
  
-Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el inicio de sesión de SQL Server **##MS_SSISServerCleanupJobLogin##**. Este inicio de sesión es solo para uso interno de SSIS.
+Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el inicio de sesión de SQL Server **##MS_SSISServerCleanupJobLogin##** . Este inicio de sesión es solo para uso interno de SSIS.
   
  Las siguientes propiedades del catálogo de **SSISDB** definen cómo se comporta este trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede ver y modificar las propiedades mediante el cuadro de diálogo **Propiedades del catálogo** o mediante [catalog.catalog_properties &#40;base de datos de SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md) y [catalog.configure_catalog &#40;base de datos de SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database.md).  
   
@@ -172,13 +176,13 @@ Para ejecutar el **trabajo de mantenimiento del servidor SSIS**, SSIS crea el in
 |Nombre de la propiedad (cuadro de diálogo**Propiedades del catálogo** )|Nombre de la propiedad (vista de base de datos)|  
 |---------------------------------------------------------|-------------------------------------|  
 |Nombre del algoritmo de cifrado|ENCRYPTION_ALGORITHM|  
-|Borrar registros periódicamente|OPERATION_CLEANUP_ENABLED|  
+|Borrar registros periódicamente|OPERATION_CLEANUP_ENABLEDâ€‹|  
 |Período de retención (días)|RETENTION_WINDOW|  
 |Quitar periódicamente versiones anteriores|VERSION_CLEANUP_ENABLED|  
 |Número máximo de versiones por proyecto|MAX_PROJECT_VERSIONS|  
 |Nivel de registro predeterminado de todo el servidor|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Los proyectos, los entornos y los paquetes se encuentran en carpetas que son objetos protegibles. Puede conceder permisos a una carpeta, incluido el permiso de MANAGE_OBJECT_PERMISSIONS. MANAGE_OBJECT_PERMISSIONS le permite delegar la administración del contenido de la carpeta a un usuario sin tener que conceder la pertenencia del usuario al rol ssis_admin. También puede conceder permisos a los proyectos, entornos y operaciones. Las operaciones incluyen inicializar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], implementar proyectos, crear e iniciar ejecuciones, validar proyectos y paquetes, y configurar el catálogo de **SSISDB** .  
   
  Para obtener más información sobre los roles de base de datos, vea [Roles de nivel de base de datos](../../relational-databases/security/authentication-access/database-level-roles.md).  

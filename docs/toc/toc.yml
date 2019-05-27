@@ -205,11 +205,15 @@
                   href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
                 - name: Depuración de clúster mssqlctl
                   href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
+                - name: Punto de conexión de clúster mssqlctl
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-endpoint.md
+                - name: Estado de clúster mssqlctl
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-status.md
             - name: Storage
               items:
-                - name: Almacenamiento mssqlctl
+                - name: Grupo de almacenamiento de clúster mssqlctl
                   href: ../big-data-cluster/reference-mssqlctl-storage.md
-                - name: Montaje del almacenamiento mssqlctl
+                - name: Montaje del grupo de almacenamiento de clúster mssqlctl
                   href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: Continuidad empresarial
   items:
@@ -2379,6 +2383,34 @@
               href: ../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md
             - name: Usar resultado
               href: ../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md
+    - name: Extensiones de lenguaje
+      items:
+        - name: Información general
+          items:
+            - name: ¿Qué son las extensiones de lenguaje?
+              href: ../language-extensions/language-extensions-overview.md
+            - name: Novedades
+              href: ../language-extensions/language-extensions-whats-new.md
+        - name: Instalar
+          items:
+            - name: Instalar las extensiones de lenguaje en Windows
+              href: ../language-extensions/install/install-sql-server-language-extensions-on-windows.md
+        - name: Tutoriales
+          items:
+            - name: Búsqueda de cadena mediante RegEx en Java
+              href: ../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md
+        - name: Conceptos
+          items:
+            - name: Marco de extensibilidad
+              href: ../language-extensions/concepts/extensibility-framework.md
+        - name: Guías de procedimientos
+          items:
+            - name: Llamar a Java desde SQL Server
+              href: ../language-extensions/how-to/call-java-from-sql.md
+            - name: Tipos de datos Java a SQL
+              href: ../language-extensions/how-to/java-to-sql-data-types.md
+            - name: Crear un archivo jar de Java
+              href: ../language-extensions/how-to/create-a-java-jar-file-from-class-files.md
     - name: SQL Server Native Client
       href: ../relational-databases/native-client/sql-server-native-client.md
       items:
@@ -4147,6 +4179,8 @@
           href: ../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md
         - name: Habilitar la opción de bloqueo de páginas en memoria
           href: ../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md
+        - name: Base de datos en memoria
+          href: ../relational-databases/in-memory-database.md
         - name: Grupo de búferes híbrido
           href: ../database-engine/configure-windows/hybrid-buffer-pool.md
         - name: Cambiar el modo de autenticación del servidor
@@ -10096,6 +10130,8 @@
               href: ../linux/sql-server-linux-setup-ssis.md
             - name: Instalación de SQL Server Machine Learning Services
               href: ../linux/sql-server-linux-setup-machine-learning.md
+            - name: Instalar extensiones de lenguaje de SQL Server
+              href: ../linux/sql-server-linux-setup-language-extensions.md
             - name: Configuración de repositorios
               href: ../linux/sql-server-linux-change-repo.md
         - name: Configurar
@@ -11708,6 +11744,10 @@
               href: ../relational-databases/system-catalog-views/sys-event-notification-event-types-transact-sql.md
             - name: sys.extended_procedures
               href: ../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md
+            - name: sys.external_language_files
+              href: ../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md
+            - name: sys.external_languages
+              href: ../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md
             - name: sys.external_libraries
               href: ../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md
             - name: sys.external_library_files
@@ -16502,6 +16542,8 @@
                   href: ../t-sql/statements/alter-event-session-transact-sql.md
                 - name: EXTERNAL DATA SOURCE
                   href: ../t-sql/statements/alter-external-data-source-transact-sql.md
+                - name: EXTERNAL LANGUAGE
+                  href: ../t-sql/statements/alter-external-language-transact-sql.md
                 - name: EXTERNAL LIBRARY
                   href: ../t-sql/statements/alter-external-library-transact-sql.md
                 - name: EXTERNAL RESOURCE POOL
@@ -16662,6 +16704,8 @@
                   href: ../t-sql/statements/create-event-session-transact-sql.md
                 - name: EXTERNAL DATA SOURCE
                   href: ../t-sql/statements/create-external-data-source-transact-sql.md
+                - name: EXTERNAL LANGUAGE
+                  href: ../t-sql/statements/create-external-language-transact-sql.md
                 - name: EXTERNAL LIBRARY
                   href: ../t-sql/statements/create-external-library-transact-sql.md
                 - name: EXTERNAL FILE FORMAT
@@ -16816,6 +16860,8 @@
                   href: ../t-sql/statements/drop-external-data-source-transact-sql.md
                 - name: EXTERNAL FILE FORMAT
                   href: ../t-sql/statements/drop-external-file-format-transact-sql.md
+                - name: EXTERNAL LANGUAGE
+                  href: ../t-sql/statements/drop-external-language-transact-sql.md
                 - name: EXTERNAL LIBRARY
                   href: ../t-sql/statements/drop-external-library-transact-sql.md
                 - name: EXTERNAL RESOURCE POOL

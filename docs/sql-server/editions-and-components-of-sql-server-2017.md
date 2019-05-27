@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 69d8e217f4554a87348874621709f97309246446
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
+ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788102"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65560107"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Ediciones y características admitidas de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -156,7 +156,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Grupos de disponibilidad AlwaysOn<sup>3</sup>|Sí|No|No|No|No|
 |Grupos de disponibilidad básica<sup>4</sup>|No|Sí|No|No|No|
 |Restauración de archivos y páginas en línea|Sí|No|No|No|No|
-|Índices en línea|Sí|No|No|No|No|
+|Creación y recompilación del índice en línea|Sí|No|No|No|No|
 |Recompilaciones de índices en línea reanudables|Sí|No|No|No|No|
 |Cambio de esquema en línea|Sí|No|No|No|No|
 |Recuperación rápida|Sí|No|No|No|No|

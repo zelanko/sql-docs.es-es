@@ -13,14 +13,18 @@ ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1ac20c9f13bbf39bc4ffd46cb6b036c8314684ca
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 5b75355aec1c0461f1f0b5b5938ec931de4820c2
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274951"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65727651"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de dependencia funcional (tarea de generación de perfiles de datos)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de dependencia funcional** seleccionadas en el panel de solicitudes. Un perfil de dependencia funcional informa de hasta qué punto los valores de una columna (la columna dependiente) dependen de los valores de otra columna o de un conjunto de columnas (la columna determinante). Este perfil también puede ayudarle a identificar problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, imagine que genera un perfil de la dependencia entre una columna de código postal y una columna de estados de Estados Unidos. En este perfil, el mismo código postal debería tener siempre el mismo estado, pero el perfil detecta infracciones de la dependencia.  
   
 > [!NOTE]  
@@ -33,14 +37,14 @@ ms.locfileid: "58274951"
   
  Para el lado determinante, puede especificar una columna o un conjunto de columnas en la propiedad **DeterminantColumns** . Por ejemplo, considere una tabla de ejemplo que contenga las columnas A, B y C. Puede hacer las selecciones siguientes para la propiedad **DeterminantColumns** :  
   
--   Al seleccionar el carácter comodín **(\*)**, la tarea de generación de perfiles de datos prueba cada columna como lado determinante de la dependencia.  
+-   Al seleccionar el carácter comodín **(\*)** , la tarea de generación de perfiles de datos prueba cada columna como lado determinante de la dependencia.  
   
 -   Al seleccionar el carácter comodín **(\*)** y otra columna o columnas, la tarea de generación de perfiles de datos prueba cada combinación de columnas como lado determinante de la dependencia. Por ejemplo, considere una tabla de ejemplo que contiene las columnas A, B y C. Si especifica **(\*)** y la columna C como el valor de la propiedad **DeterminantColumns**, la tarea de generación de perfiles de datos prueba las combinaciones (A, C) y (B, C) como el lado determinante de la dependencia.  
   
- Para el lado dependiente, puede especificar una columna única o el carácter comodín **(\*)** en la propiedad **DependentColumn**. Al seleccionar **(\*)**, la tarea de generación de perfiles de datos prueba la columna o conjunto de columnas del lado determinante con cada columna.  
+ Para el lado dependiente, puede especificar una columna única o el carácter comodín **(\*)** en la propiedad **DependentColumn**. Al seleccionar **(\*)** , la tarea de generación de perfiles de datos prueba la columna o conjunto de columnas del lado determinante con cada columna.  
   
 > [!NOTE]  
->  Si selecciona **(\*)**, esta opción podría provocar un gran número de cálculos y disminuir el rendimiento de la tarea. Sin embargo, si la tarea encuentra un subconjunto que satisface el umbral para una dependencia funcional, la tarea no analiza las combinaciones adicionales. Por ejemplo, en la tabla de ejemplo descrita anteriormente, si la tarea determina que la columna C es una columna determinante, no sigue analizando los candidatos compuestos.  
+>  Si selecciona **(\*)** , esta opción podría provocar un gran número de cálculos y disminuir el rendimiento de la tarea. Sin embargo, si la tarea encuentra un subconjunto que satisface el umbral para una dependencia funcional, la tarea no analiza las combinaciones adicionales. Por ejemplo, en la tabla de ejemplo descrita anteriormente, si la tarea determina que la columna C es una columna determinante, no sigue analizando los candidatos compuestos.  
   
 ## <a name="request-properties-options"></a>Opciones de Propiedades de la solicitud  
  Para cada **Solicitud de perfil de dependencia funcional**, el panel **Propiedades de la solicitud** muestra los grupos de opciones siguientes:  
@@ -74,7 +78,7 @@ ms.locfileid: "58274951"
  Para obtener más información, vea la sección "Selección de las columnas determinante y dependiente" anteriormente en este tema.  
   
  **IsWildCard**  
- Especifica si se ha seleccionado el carácter comodín **(\*)**. Esta opción está establecida en **True** si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Es **False** si ha seleccionado una columna individual para la que generar un perfil. Esta opción es de solo lectura.  
+ Especifica si se ha seleccionado el carácter comodín **(\*)** . Esta opción está establecida en **True** si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Es **False** si ha seleccionado una columna individual para la que generar un perfil. Esta opción es de solo lectura.  
   
  **ColumnName**  
  Muestra el nombre de la columna seleccionada. Esta opción está en blanco si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Esta opción es de solo lectura.  
@@ -96,7 +100,7 @@ ms.locfileid: "58274951"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**IgnoreCase**|Especifica si la comparación distingue entre mayúsculas y minúsculas. Si se establece esta opción, la comparación de las cadenas omite la distinción entre mayúsculas y minúsculas. Por ejemplo, "ABC" se interpreta igual que "abc".|  
-|**IgnoreNonSpace**|Especifica si la comparación distingue entre caracteres con espacio y signos diacríticos. Si se establece esta opción, la comparación omite los signos diacríticos. Por ejemplo, "å" se considera igual que "a".|  
+|**IgnoreNonSpace**|Especifica si la comparación distingue entre caracteres con espacio y signos diacríticos. Si se establece esta opción, la comparación omite los signos diacríticos. Por ejemplo, "Ã¥" se considera igual que "a".|  
 |**IgnoreKanaType**|Especifica si la comparación distingue entre los dos tipos de caracteres kana japoneses: hiragana y katakana. Si se establece esta opción, la comparación de las cadenas omite los tipos de caracteres kana.|  
 |**IgnoreWidth**|Especifica si la comparación distingue entre un carácter de un solo byte y el mismo carácter cuando se representa con un carácter de doble byte. Si se establece esta opción, la comparación de las cadenas trata las representaciones de un solo byte y de doble byte del mismo carácter como idénticas.|  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: acee0f51707a0535f0d6f63152cdf461ad50f46c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f64a9e9efe180c2db776c38553403e5f7cdfac9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188437"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108221"
 ---
 # <a name="move-items-page-report-manager"></a>Mover elementos (página del Administrador de informes)
   Use la página Mover elementos para mover un informe, una carpeta u otro elemento a una nueva ubicación del servidor de informes. Puede escribir la ruta de acceso a la nueva ubicación o utilizar la vista de árbol para desplazarse hasta la nueva ubicación en el espacio de nombres del servidor de informes. Solo puede mover los elementos para los que tenga permiso para mover y que estén almacenados en el servidor de informes actual.  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cfb635287a0baa2d3a9e8f59d9590c278cbf28b2
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239383"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010949"
 ---
 # <a name="integrated-terminal"></a>Terminal integrado
 
@@ -94,17 +94,17 @@ El **vista: Alternar Terminal integrado** comando está enlazado a **Ctrl +'** a
 
 A continuación se muestran los métodos abreviados de teclado para desplazarse rápidamente dentro el terminal integrado:
 
-Key|Comando
----|---
-**CTRL +'**| Mostrar el terminal integrado
-**CTRL + MAYÚS +'**| Crear nueva terminal
-**Ctrl+flecha arriba**|Desplácese hacia arriba
-**Ctrl+flecha abajo**|Desplácese hacia abajo
-**Ctrl+PageUp**|Desplazar página hacia arriba
-**Ctrl+PageDown**|Desplazar página hacia abajo
-**CTRL + Inicio**|Desplácese hasta la parte superior
-**CTRL + fin**|Desplácese hacia abajo
-**CTRL + K**|Desactive el terminal
+|Key|Comando|  
+|---|---|  
+|**Ctrl+\`**|Mostrar el terminal integrado|  
+|**CTRL + MAYÚS +\`**|Crear nueva terminal|  
+|**Ctrl+flecha arriba**|Desplácese hacia arriba|  
+|**Ctrl+flecha abajo**|Desplácese hacia abajo|  
+|**Ctrl+PageUp**|Desplazar página hacia arriba|  
+|**Ctrl+PageDown**|Desplazar página hacia abajo|  
+|**CTRL + Inicio**|Desplácese hasta la parte superior|  
+|**CTRL + fin**|Desplácese hacia abajo|  
+|**CTRL + K**|Desactive el terminal|  
 
 Otros comandos de terminal están disponibles y se pueden enlazar a los métodos abreviados de teclado preferido.
 

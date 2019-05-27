@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b6e7fca1013811f8a5a8b36e85970bd7a74b6d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 56b0a13c30100a12ce7307fc3896b5976e30ad59
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730263"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079359"
 ---
 # <a name="creating-an-analysis-services-project"></a>Crear un proyecto de Analysis Services
   En la tarea siguiente, se usa [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear un nuevo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proyecto denominado `Analysis Services Tutorial`, según la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] plantilla de proyecto. Un *proyecto* es una colección de objetos relacionados. Los proyectos existen en una solución, que incluye uno o más proyectos. Para obtener más información, vea [Crear un proyecto de Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md).  

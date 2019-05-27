@@ -9,17 +9,30 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cc64fdd430e64f7ad1b152234c2a203f453745c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b56791e9fd59aef57c2d107e21eb76896ebb4910
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63243778"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175045"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novedades de Analytics Platform System, un almacén de datos MPP de escalabilidad horizontal
 Vea cuáles son las novedades en las últimas actualizaciones de dispositivo de Microsoft Analytics Platform System (APS). APS es una aplicación de escalabilidad horizontal en el entorno local que hospeda el almacenamiento de datos paralelos de MPP de SQL Server. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.4"></a>
+## <a name="aps-cu74"></a>APS CU7.4
+Fecha de publicación: mayo de 2019
+
+### <a name="loading-large-rows-with-dwloader"></a>Carga de filas grandes con dwloader
+A partir de APS CU7.4, los clientes podrán usar un nuevo dwloader para cargar las filas en las tablas que son mayores de 32 KB (32.768 bytes). El nuevo dwloader es compatible con el modificador -l que toma un valor entero entre 32768 y 33554432 (en bytes) para cargar filas mayores que 32 KB. Use esta opción solo cuando se cargan filas grandes (mayores que 32 KB) como este modificador asignará más memoria en el cliente y el servidor y puede ralentizar la carga. Puede descargar el nuevo dwloader desde [sitio de descarga](https://www.microsoft.com/download/details.aspx?id=57472).  
+
+### <a name="hdp-30-and-31-support-with-polybase"></a>HDP 3.0 y 3.1 de soporte técnico con PolyBase
+PolyBase en puntos de acceso ahora admite HDP 3.0 y 3.1 con esta actualización. Utilice la opción 7 para las versiones HDP 3.x. Para obtener más información, consulte [conectividad de PolyBase](https://docs.microsoft.com/sql/database-engine/configure-windows/polybase-connectivity-configuration-transact-sql) página.
+
+### <a name="utf16-file-support-with-polybase"></a>Compatibilidad con archivos de UTF16 con PolyBase
+PolyBase ahora admite la lectura de archivos de texto delimitado en codificación UTF16 (LE). Consulte [crear formato de archivo externo](https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql) para obtener información detallada del programa de instalación. 
+
 <a name="h2-aps-cu7.3"></a>
 ## <a name="aps-cu73"></a>APS CU7.3
 Fecha de publicación: diciembre de 2018

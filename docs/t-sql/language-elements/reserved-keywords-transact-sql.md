@@ -19,19 +19,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eec630d490ee4bbd31b77b294e18cae1e72f530
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11ed3624f1a8ac74f650bd1468750452580fb911
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853576"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626677"
 ---
 # <a name="reserved-keywords-transact-sql"></a>Palabras clave reservadas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza palabras clave reservadas para definir, manipular y tener acceso a las bases de datos. Las palabras clave reservadas forman parte de la gramática del lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)] que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para analizar y comprender las instrucciones y lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Aunque resulta sintácticamente posible usar palabras clave reservadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como identificadores y nombres de objetos en scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)], solo se puede hacer usando identificadores delimitados.  
   
- En la siguiente tabla se enumeran las palabras clave reservadas de SQL Data Warehouse y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En la siguiente tabla se enumeran las palabras clave reservadas de Azure SQL Data Warehouse y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ||||  
 |-|-|-|  
@@ -102,7 +102,7 @@ En la tabla siguiente se enumeran las palabras clave reservadas exclusivas de **
 
 |||
 |-|-|
-|**Etiqueta**||
+|**LABEL**||
   
  Además, el estándar ISO define una lista de palabras clave reservadas. Evite utilizar las palabras clave reservadas de ISO como identificadores y nombres de objetos. La lista de palabras clave reservadas de ODBC (que se muestra en la tabla siguiente) es igual que la de ISO.  
   
@@ -225,7 +225,7 @@ En la tabla siguiente se enumeran las palabras clave reservadas exclusivas de **
 |BOTH|LEADING|SIMILAR|  
 |BREADTH|LESS|SIZE|  
 |CALL|LEVEL|SMALLINT|  
-|CALLED|LIKE_REGEX|ESPACIO|  
+|CALLED|LIKE_REGEX|SPACE|  
 |CARDINALITY|LIMIT|SPECIFIC|  
 |CASCADED|LN|SPECIFICTYPE|  
 |CAST|LOCAL|SQL|  
@@ -285,7 +285,7 @@ En la tabla siguiente se enumeran las palabras clave reservadas exclusivas de **
 |FIRST|RECURSIVE|XMLFOREST|  
 |FLOAT|REF|XMLITERATE|  
 |FOUND|REFERENCING|XMLNAMESPACES|  
-|GRATUITO|REGR_AVGX|XMLPARSE|  
+|FREE|REGR_AVGX|XMLPARSE|  
 |FULLTEXTTABLE|REGR_AVGY|XMLPI|  
 |FUSION|REGR_COUNT|XMLQUERY|  
 |GENERAL|REGR_INTERCEPT|XMLSERIALIZE|  
@@ -295,7 +295,7 @@ En la tabla siguiente se enumeran las palabras clave reservadas exclusivas de **
 |GROUPING|REGR_SXY|YEAR|  
 |HOLD|REGR_SYY|ZONE|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
  [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   

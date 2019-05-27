@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ca3448efc180a82363023106baf33f973e666fb6
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993358"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014988"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas de la versión para los clústeres de datos de gran tamaño en SQL Server
 
@@ -37,6 +37,7 @@ Las secciones siguientes describen las nuevas características y problemas conoc
 | Mejoras en el almacenamiento | Compatibilidad con distintas configuraciones de almacenamiento para los registros y datos. Además, se ha reducido el número de notificaciones de volumen persistente para un clúster de macrodatos. |
 | Varias instancias del grupo de proceso | Compatibilidad con varias instancias del grupo de proceso. |
 | Características y el nuevo comportamiento de grupo | Ahora se utiliza el grupo de proceso predeterminada para las operaciones de grupo de almacenamiento grupo y los datos en un **ROUND_ROBIN** sólo distribución. El grupo de datos puede utilizar ahora un nuevo nuevo **REPLICADO** tipo de distribución, lo que significa que los mismos datos están presentes en todas las instancias del grupo de datos. |
+| Mejoras de la tabla externa | Tipo de tablas externas de origen de datos HADOOP ahora admite la lectura las filas hasta 1 MB de tamaño. Las tablas externas (ODBC, bloque de almacenamiento, el grupo de datos) ahora compatibilidad con filas tan anchos como una tabla de SQL Server. |
 
 ### <a name="known-issues"></a>Problemas conocidos
 

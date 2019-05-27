@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8500bbb9946289eca10d126e1d06e1510ef738a8
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 1cc9093bb6d266bd70fe8f53d96b249bc6680324
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994156"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014948"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Introducir datos en un grupo de datos de SQL Server con Transact-SQL
 
@@ -85,7 +85,7 @@ Los pasos siguientes crean una tabla externa en el grupo de datos llamado **web_
 
 Los pasos siguientes ingieren datos de secuencia de clics de web de ejemplo en el grupo de datos utilizando la tabla externa creada en los pasos anteriores.
 
-1. Defina variables para la consulta que desea usar para insertar datos en el grupo de datos. CTP 2.3 o anterior, el **modelo... sp_data_pool_table_insert_data** se necesita el procedimiento almacenado. CTP 2.4 y versiones posteriores, puede usar un `INSERT INTO` instrucción para insertar los resultados de la consulta en el grupo de datos (el **web_clickstream_clicks_data_pool** tabla externa).
+1. Use un `INSERT INTO` instrucción para insertar los resultados de la consulta en el grupo de datos (el **web_clickstream_clicks_data_pool** tabla externa).
 
    ```sql
    INSERT INTO web_clickstream_clicks_data_pool

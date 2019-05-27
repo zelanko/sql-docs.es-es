@@ -11,14 +11,18 @@ ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 041cf825d92c53afcf138e060cb9cbd335c9f6a1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f1c7ec3026050181ae31150c4b5e190a65d889d4
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280959"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721510"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>Lección 4-5: Prueba del paquete de la lección 4
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 En tiempo de ejecución, el archivo dañado **Currency_BAD.txt** no puede generar una coincidencia en la transformación de búsqueda Currency Key. Como la salida de errores de Currency Key Lookup se ha configurado para redirigir las filas con error al nuevo destino Failed Rows, el componente no genera ningún error y el paquete se ejecuta correctamente. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] escribe todas las filas con error en **ErrorOutput.txt**.  
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 46d9b46698e4416f2ad9ab15b2fb8a223ab7b7c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2cd0ea9764007784fb6f999c3115e0a2997d8e2f
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631726"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011378"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Habilitar la búsqueda semántica en tablas y columnas
   Describe cómo habilitar o deshabilitar la indización semántica estadística de las columnas seleccionadas que contienen documentos o texto.  
@@ -50,7 +50,7 @@ ms.locfileid: "62631726"
   
 -   Si especifica un idioma para una columna para la que no está disponible el idioma, se produce un error de creación del índice y se devuelve un mensaje de error.  
   
-###  <a name="HowToEnableCreate"></a> Cómo: Crear un índice semántico cuando no hay ningún índice de texto completo  
+###  <a name="HowToEnableCreate"></a> Procedimientos para: Crear un índice semántico cuando no hay ningún índice de texto completo  
  Cuando cree un nuevo índice de texto completo con la instrucción **CREATE FULLTEXT INDEX** , puede habilitar la indexación semántica en el nivel de columna especificando la palabra clave **STATISTICAL_SEMANTICS** como parte de la definición de columna. Asimismo, puede habilitar la indización semántica cuando use el Asistente para indización de texto completo con el fin de crear un nuevo índice de texto completo.  
   
  **Crear un nuevo índice semántico con Transact-SQL**  
@@ -115,7 +115,7 @@ GO
  **Crear un nuevo índice semántico con SQL Server Management Studio**  
  Ejecute el Asistente para indexación de texto completo y habilite **Semántica estadística** en la página **Seleccionar columnas de la tabla** para cada columna en la que quiera crear un índice semántico. Para obtener más información, incluida la información sobre cómo iniciar el Asistente para indexación de texto completo, vea [Usar el Asistente para indexación de texto completo](use-the-full-text-indexing-wizard.md).  
   
-###  <a name="HowToEnableAlter"></a> Cómo: Crear un índice semántico cuando hay un índice de texto completo existente  
+###  <a name="HowToEnableAlter"></a> Procedimientos para: Crear un índice semántico cuando hay un índice de texto completo existente  
  Puede agregar la indexación semántica cuando modifique un índice de texto completo existente con la instrucción **ALTER FULLTEXT INDEX** . También puede agregar la semántica con varios cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Agregar un índice semántico con Transact-SQL**  
@@ -152,7 +152,7 @@ GO
   
 ##  <a name="dropping"></a> Quitar un índice semántico  
   
-###  <a name="drophow"></a> Cómo: Quitar un índice semántico  
+###  <a name="drophow"></a> Procedimientos para: Quitar un índice semántico  
  Puede quitar la indexación semántica cuando modifique un índice de texto completo existente con la instrucción **ALTER FULLTEXT INDEX** . También puede quitar la indización semántica con varios cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **Quitar un índice semántico con Transact-SQL**  
@@ -191,7 +191,7 @@ GO
   
 ## <a name="checking-whether-semantic-search-is-enabled-on-database-objects"></a>Comprobar si la búsqueda semántica está habilitada en objetos de base de datos  
   
-###  <a name="HowToCheckEnabled"></a> Cómo: Comprobar si la búsqueda semántica está habilitada en objetos de base de datos  
+###  <a name="HowToCheckEnabled"></a> Procedimientos para: Comprobar si la búsqueda semántica está habilitada en objetos de base de datos  
  **¿Búsqueda semántica está habilitada para una base de datos?**  
  Consulte la propiedad **IsFullTextEnabled** de la función de metadatos [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql).  
   
@@ -239,7 +239,7 @@ GO
   
 ## <a name="determining-what-can-be-indexed-for-semantic-search"></a>Determinar qué se puede indizar para la búsqueda semántica  
   
-###  <a name="HowToCheckLanguages"></a> Cómo: Compruebe qué lenguajes se admiten para la búsqueda semántica  
+###  <a name="HowToCheckLanguages"></a> Procedimientos para: Compruebe qué lenguajes se admiten para la búsqueda semántica  
   
 > [!IMPORTANT]  
 >  Hay menos idiomas que sean compatibles con la indización semántica que con la indización de texto completo. Como resultado, puede haber columnas que pueda indizar para la búsqueda de texto completo, pero que no para la búsqueda semántica.  
@@ -266,7 +266,7 @@ GO
 |Portugués (Portugal)|2070|  
 |Español|3082|  
   
-###  <a name="doctypes"></a> Cómo: Determinar qué tipos de documentos se pueden indizar  
+###  <a name="doctypes"></a> Procedimientos para: Determinar qué tipos de documentos se pueden indizar  
  Consulte la vista de catálogo [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
  Si el tipo de documento que desea indizar no está en la lista de tipos compatibles, puede tener que buscar, descargar, e instalar filtros adicionales. Para obtener más información, consulte [ver o cambiar los filtros registrados y separadores de palabras](view-or-change-registered-filters-and-word-breakers.md).  

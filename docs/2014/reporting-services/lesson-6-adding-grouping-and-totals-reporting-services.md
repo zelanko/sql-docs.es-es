@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a3b0bbb6f3220c554675d7fab028db46d2588c8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278744"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108411"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lección 6: Agregar grupos y totales (Reporting Services)
   Agregue grupos y totales al informe para organizar y resumir los datos.  
@@ -41,13 +40,13 @@ ms.locfileid: "63278744"
   
 2.  Si no ve el panel **Grupos de filas** , haga clic con el botón secundario en la superficie de diseño y haga clic en **ver** y en **Agrupar**.  
   
-3.  Desde el **datos de informe** panel, arrastre el `Date` campo el **grupos de filas** panel. Sitúelo encima de la fila denominada **(Details)**.  
+3.  En el panel **Datos de informe**, arrastre el campo `Date` hasta el panel **Grupos de filas**. Sitúelo encima de la fila denominada **(Details)**.  
   
      Observe que el identificador de fila ahora tiene un corchete para mostrar un grupo. Ahora, la tabla también tiene dos columnas Date, una de ellas en uno de los dos extremos de una línea de puntos vertical.  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  Desde el **datos de informe** panel, arrastre el `Order` campo el **grupos de filas** panel. Sitúelo debajo de Date y encima de **(Details)**.  
+4.  En el panel **Datos de informe**, arrastre el campo `Order` hasta el panel **Grupos de filas**. Sitúelo debajo de Date y encima de **(Details)**.  
   
      Observe que el identificador de fila ahora tiene dos corchetes para mostrar dos grupos. La tabla tiene ahora dos `Order` columnas, demasiado.  
   

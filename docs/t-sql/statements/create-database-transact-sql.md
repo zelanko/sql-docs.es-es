@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d63faad8a29853354e6187d963dc23ccd78b0252
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: dcf9d83589b94846778e65392dd2483593f5d3ad
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222149"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65771480"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -354,10 +354,10 @@ Especifica un nombre lógico para el archivo. NAME es obligatorio si se especifi
 *logical_file_name*     
 Es el nombre lógico utilizado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se hace referencia al archivo. *Logical_file_name* debe ser único en la base de datos y debe cumplir las mismas reglas que los [identificadores](../../relational-databases/databases/database-identifiers.md). El nombre puede ser una constante de caracteres o Unicode, o un identificador regular o delimitado.
 
-FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }      
+FILENAME { **'** _os\_file\_name_ **'**  |  **'** _filestream\_path_ **'** }      
 Especifica el nombre de archivo (físico) del sistema operativo.
 
-**'** *os_file_name* **'**     
+**'** *os_file_name* **'**      
 Es la ruta de acceso y el nombre de archivo que el sistema operativo utiliza cuando se crea el archivo. El archivo debe residir en uno de los siguientes dispositivos: el servidor local en el que se ha instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una red de área de almacenamiento (SAN) o una red basada en iSCSI. La ruta de acceso especificada debe existir antes de ejecutar la instrucción CREATE DATABASE. Para obtener más información, vea "Archivos y grupos de archivos de base de datos" en la sección Comentarios.
 
 Los parámetros SIZE, MAXSIZE y FILEGROWTH se pueden establecer si se ha especificado una ruta UNC para el archivo.
@@ -366,7 +366,7 @@ Si el archivo se encuentra en una partición sin formato, *os_file_name* solo de
 
 Los archivos de datos no deben guardarse en sistemas de archivo comprimidos a menos que se trate de archivos secundarios de solo lectura o que la base de datos sea de solo lectura. Los archivos de registro no se deben almacenar en sistemas de archivos comprimidos.
 
-**'** *filestream_path* **'**      
+**'** *filestream_path* **'**       
 Para un grupo de archivos FILESTREAM, FILENAME hace referencia a la ruta de acceso donde se almacenarán los datos FILESTREAM. La ruta de acceso hasta la última carpeta debe existir y la última carpeta no debe existir. Por ejemplo, si especifica la ruta de acceso C:\MyFiles\MyFilestreamData, C:\MyFiles debe existir antes de ejecutar ALTER DATABASE, pero la carpeta MyFilestreamData no debe existir.
 
 El grupo de archivos y el archivo (`<filespec>`) se deben crear en la misma instrucción.
@@ -439,7 +439,7 @@ Especifica que el grupo de archivos indicado es el grupo de archivos predetermin
 *database_snapshot_name*    
 Es el nombre de la nueva instantánea de base de datos. Los nombres de instantánea de base de datos deben ser únicos dentro de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y cumplir las reglas de los identificadores. *database_snapshot_name* puede tener un máximo de 128 caracteres.
 
-ON **(** NAME **=**_logical\_file\_name_**,** FILENAME **='**_os\_file\_name_**')** [ **,**... *n* ]    
+ON **(** NAME **=**_logical\_file\_name_ **,** FILENAME **='** _os\_file\_name_ **')** [ **,** ... *n* ]    
 Para la creación de una instantánea de base de datos, especifica una lista de archivos de la base de datos de origen. Para que la instantánea funcione, todos los archivos de datos deben especificarse individualmente. Sin embargo, no se permiten archivos de registro para las instantáneas de base de datos. Los grupos de archivos FILESTREAM no son compatibles con instantáneas de base de datos. Si se incluye un archivo de datos FILESTREAM en una cláusula CREATE DATABASE ON, se producirá un error en la instrucción y se generará el mensaje correspondiente.
 
 Para obtener las descripciones de NAME y FILENAME y sus valores, vea las descripciones de los valores equivalentes de \<filespec>.
@@ -554,7 +554,7 @@ WHERE name = N'mytest';
 GO
 ```
 
-### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>b. Crear una base de datos que especifica los archivos de datos y de registro de transacciones
+### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>B. Crear una base de datos que especifica los archivos de datos y de registro de transacciones
 En el ejemplo siguiente se crea la base de datos `Sales`. Debido a que no se usa la palabra clave PRIMARY, el primer archivo (`Sales_dat`) se convierte en el principal. Como no se especifica MB ni KB en el parámetro SIZE del archivo `Sales_dat` , se utiliza MB y el tamaño se asigna en megabytes. Cada vez que se crea, modifica o quita una base de datos de usuario, se debe hacer una copia de seguridad de la base de datos `Sales_log` se asigna en megabytes porque el sufijo `MB` se ha indicado explícitamente en el parámetro `SIZE` .
 
 ```sql
@@ -1042,7 +1042,7 @@ Si no hay ningún valor `MAXSIZE` establecido al utilizar el modelo de núcleo v
 
 Las reglas siguientes se aplican a los argumentos MAXSIZE y EDITION:
 
-- Si se especifica EDITION pero no se especifica MAXSIZE, se usa el valor predeterminado de la edición. Por ejemplo, si EDITION está establecido en Standard y MAXSIZE no se especifica, el valor de MAXSIZE se establece automáticamente en 500 MB.
+- Si se especifica EDITION pero no se especifica MAXSIZE, se usa el valor predeterminado de la edición. Por ejemplo, si EDITION está establecido en Standard y MAXSIZE no se especifica, el valor de MAXSIZE se establece automáticamente en 250 MB.
 - Si no se especifican los valores de MAXSIZE ni EDITION, este último se establece en Standard (S0) y MAXSIZE en 250 GB.
 
 SERVICE_OBJECTIVE     
@@ -1354,7 +1354,7 @@ CREATE DATABASE TestDW
 (EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100');
 ```
 
-### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>b. Crear una base de datos de almacenamiento de datos con todas las opciones
+### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>B. Crear una base de datos de almacenamiento de datos con todas las opciones
 Un ejemplo de cómo crear un almacenamiento de datos de 10 terabytes usando todas las opciones.
 
 ```sql
@@ -1487,7 +1487,7 @@ CREATE DATABASE mytest
     LOG_SIZE = 100 GB);
 ```
 
-### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>b. Crear una base de datos con tamaños de gigabyte parciales
+### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>B. Crear una base de datos con tamaños de gigabyte parciales
 En el siguiente ejemplo se crea la base de datos `mytest` con AUTOGROW desactivado y con una asignación de almacenamiento de 1,5 GB por nodo de ejecución para las tablas replicadas, 5,25 GB por dispositivo para las tablas distribuidas y 10 GB por dispositivo para el registro de transacciones.
 
 ```sql

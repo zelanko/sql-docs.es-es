@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.optimization.f1
@@ -14,12 +13,12 @@ ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 833b60a0e96cc79c136a58bebca1c69486795e2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1adbeccdedb8d80900047790d94ff35568460ff4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278541"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108277"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Cuadro de diálogo Propiedades de ventanilla de mapa, Optimización
   Seleccione **Optimización** para que el cuadro de diálogo **Propiedades de ventanilla de mapa** sirva de ayuda para controlar la resolución para ver un mapa en un informe.  

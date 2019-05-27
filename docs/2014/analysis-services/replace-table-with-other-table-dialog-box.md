@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.replacetable.f1
@@ -15,12 +14,12 @@ ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748307"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070268"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Reemplazar tabla por otra tabla (cuadro de diálogo)
   Use el cuadro de diálogo **Reemplazar tabla por otra tabla** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para reemplazar una tabla existente en una vista del origen de datos por otra tabla del origen de datos subyacente que no se haya incluido aún en la vista del origen de datos. Para mostrar el cuadro de diálogo **Reemplazar tabla por otra tabla** , haga clic con el botón derecho en el nombre de una tabla del panel **Diagrama** o **Tablas** del **Diseñador de vistas del origen de datos** y seleccione **Por otra tabla** desde **Reemplazar tabla**.  

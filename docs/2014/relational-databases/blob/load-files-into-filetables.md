@@ -11,15 +11,15 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 04f32e1f1d0bc67e567a2a4d30779f13af6c68a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 43e5a9a6adcca7504aa90825ecd10e53e669c7e2
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62874748"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010011"
 ---
 # <a name="load-files-into-filetables"></a>Cargar archivos en FileTables
   Describe cómo se cargan o migran archivos en las FileTables.  
@@ -32,7 +32,7 @@ ms.locfileid: "62874748"
 |Los archivos están almacenados actualmente en el sistema de archivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no tiene información de los archivos.|Dado que una FileTable aparece como carpeta en el sistema de archivos de Windows, puede cargar archivos fácilmente en una nueva FileTable mediante cualquiera de los métodos disponibles para mover o copiar archivos. Estos métodos incluyen el Explorador de Windows, las opciones de la línea de comandos (incluidas xcopy y robocopy), así como aplicaciones o scripts personalizados.<br /><br /> No puede convertir una carpeta existente en una FileTable.|  
 |Los archivos están almacenados actualmente en el sistema de archivos.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye una tabla de metadatos que contiene punteros a los archivos.|El primer paso es mover o copiar los archivos mediante uno de los métodos mencionados anteriormente.<br /><br /> El segundo paso es actualizar la tabla de metadatos existente para que señale a la nueva ubicación de los archivos.<br /><br /> Para más información, vea [Ejemplo: Migrar archivos desde el sistema de archivos en una FileTable](#HowToMigrateFiles) en este tema.|  
   
-###  <a name="HowToLoadNew"></a> Cómo: Cargar archivos en una FileTable  
+###  <a name="HowToLoadNew"></a> Procedimientos para: cargar archivos en una FileTable  
  Los métodos que puede usar para cargar archivos en una FileTable son:  
   
 -   Arrastrar y colocar los archivos desde las carpetas de origen hasta la nueva carpeta de FileTable del Explorador de Windows.  
@@ -41,7 +41,7 @@ ms.locfileid: "62874748"
   
 -   Escribir una aplicación personalizada en C# o Visual Basic.NET que use los métodos del espacio de nombres **System.IO** para mover o copiar los archivos.  
   
-###  <a name="HowToMigrateFiles"></a> Ejemplo: Migrar archivos desde el sistema de archivos en una FileTable  
+###  <a name="HowToMigrateFiles"></a> Ejemplo: Migrar archivos desde el sistema de archivos a una FileTable  
  En este escenario, los archivos se almacenan en el sistema de archivos y dispone de una tabla de metadatos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contiene punteros a los archivos. Puede mover los archivos a una FileTable y reemplazar después la ruta de acceso UNC original de cada archivo de los metadatos por la ruta de acceso UNC de la FileTable. La función [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) sirve para lograr este propósito.  
   
  Este ejemplo, suponga que hay una tabla de base de datos existente, `PhotoMetadata`, que contiene datos sobre fotografías. Esta tabla tiene una columna `UNCPath` de tipo `varchar`(512) que contienen la ruta de acceso UNC real de un archivo .jpg.  
@@ -97,7 +97,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) con la cláusula IGNORE_CONSTRAINTS.  
   
-###  <a name="HowToBulkLoad"></a> Cómo: Archivos de carga masiva en una FileTable  
+###  <a name="HowToBulkLoad"></a> Procedimientos para: cargar archivos de forma masiva en una FileTable  
  Puede usar varios métodos para cargar de forma masiva archivos en una FileTable:  
   
 -   **bcp**  
@@ -120,7 +120,7 @@ UPDATE PhotoMetadata
   
  Para obtener más información sobre cómo deshabilitar las restricciones de FileTable, vea [Administrar FileTables](manage-filetables.md).  
   
-###  <a name="disabling"></a> Cómo: Deshabilitar restricciones de FileTable para carga masiva  
+###  <a name="disabling"></a> Procedimientos para: deshabilitar restricciones de FileTable para carga masiva  
  Para realizar la carga masiva de datos en una FileTable sin la sobrecarga que supone la aplicación de restricciones definidas por el sistema, puede deshabilitar temporalmente estas restricciones. Para obtener más información, vea [Administrar FileTables](manage-filetables.md).  
   
 ## <a name="see-also"></a>Vea también  

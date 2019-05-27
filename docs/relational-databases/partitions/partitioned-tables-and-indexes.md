@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: add30d400db0a4ce73313ac5b7c4637bff8adfd9
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658299"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65713318"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "58658299"
   
 -   Puede realizar operaciones de mantenimiento en una o más particiones más rápidamente. Las operaciones son más eficaces porque solo afectan a estos subconjuntos de datos, y no a toda la tabla. Por ejemplo, se puede elegir comprimir los datos en una o varias particiones o recompilar una o varias particiones de un índice.  
   
--   Se puede mejorar el rendimiento de las consultas, en función de los tipos de consultas que se suelen ejecutar y de la configuración del hardware. Por ejemplo, el optimizador de consultas puede procesar consultas de combinación de igualdad entre dos o más tablas con particiones más rápidamente cuando las columnas de partición de las tablas son iguales, porque las particiones se pueden combinar.  
+-   Se puede mejorar el rendimiento de las consultas, en función de los tipos de consultas que se suelen ejecutar y de la configuración del hardware. Por ejemplo, el optimizador de consultas puede procesar consultas de combinación de igualdad entre dos o más tablas con particiones más rápidamente cuando las columnas de partición son las mismas que las columnas en las que se combinan las tablas. Consulte la sección [Consultas](#queries) a continuación para más información.
   
 Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza una ordenación de los datos para operaciones de E/S, los ordena primero por partición. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene acceso a una unidad cada vez y esto podría reducir el rendimiento. Para mejorar el rendimiento de la ordenación de los datos, cree franjas de los archivos de datos de las particiones en más de un disco configurando una RAID. De este modo, aunque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siga ordenando los datos por partición, puede tener acceso a todas las unidades de cada partición al mismo tiempo.  
   
@@ -54,7 +54,7 @@ Una función de partición define la forma de asignar las filas de una tabla o u
 Objeto de base de datos que asigna las particiones de una función de partición a un conjunto de grupos de archivos. La principal razón para colocar las particiones en distintos grupos de archivos es garantizar que se puedan realizar operaciones de copia de seguridad en particiones de forma independiente. Esto se debe a que se pueden realizar copias de seguridad en grupos de archivos individuales.  
   
 ### <a name="partitioning-column"></a>Columna de partición  
-La columna de una tabla o índice que una función de partición usa para crear particiones en la tabla o índice. Las columnas calculadas que participan en una función de partición deben marcarse explícitamente como PERSISTED. Todos los tipos de datos válidos para el uso en columnas de índice pueden utilizarse como una columna de partición con la excepción de **timestamp**. No se pueden especificar los tipos de datos **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)** o **varbinary(max)** . Tampoco se pueden especificar columnas de tipo de datos de alias y de tipo definido por el usuario de Common Language Runtime (CLR) de Microsoft .NET Framework.  
+La columna de una tabla o índice que una función de partición usa para crear particiones en la tabla o índice. Las columnas calculadas que participan en una función de partición deben marcarse explícitamente como PERSISTED. Todos los tipos de datos válidos para el uso en columnas de índice pueden utilizarse como una columna de partición con la excepción de **timestamp**. No se pueden especificar los tipos de datos **ntext**, **text**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** o **varbinary(max)** . Tampoco se pueden especificar columnas de tipo de datos de alias y de tipo definido por el usuario de Common Language Runtime (CLR) de Microsoft .NET Framework.  
   
 ### <a name="aligned-index"></a>Índices alineados  
 Un índice que se compila con el mismo esquema de partición que su tabla correspondiente. Cuando una tabla y sus índices están alineados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede dividir las particiones de forma rápida y eficaz al mismo tiempo que mantiene la estructura de la partición tanto en la tabla como en sus índices. Un índice no tiene por qué participar en la misma función de partición con nombre para alinearse con su tabla base. Sin embargo, la función de partición del índice y la tabla base deben ser básicamente iguales, dado que:

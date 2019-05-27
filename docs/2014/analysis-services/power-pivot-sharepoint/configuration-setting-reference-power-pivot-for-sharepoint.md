@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a3ee6babe5048398f62cd335e0a121f32f4734ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 45ef593e13643ac38184f8b88cbe4cdf38f0126c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743371"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071888"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Referencia de las opciones de configuración (PowerPivot para SharePoint)
   En este tema se proporciona documentación de referencia para la configuración que utilizan las aplicaciones de servicio PowerPivot en una granja de servidores de SharePoint. Si está utilizando un script de PowerShell para configurar un servidor, o si desea buscar información de un valor concreto, la información de este tema proporciona descripciones detalladas.  
@@ -42,7 +41,7 @@ ms.locfileid: "62743371"
 ##  <a name="LoadingData"></a> Tiempo de espera de carga de datos  
  Las instancias de servidor de Analysis Services de la granja recuperan y cargan los datos PowerPivot. En función de cómo y cuándo se tuviera acceso a los datos en último lugar, estos se cargarán bien de una biblioteca de contenido o bien de una memoria caché de archivos local. Los datos se cargan en la memoria cada vez que se recibe una solicitud de procesamiento o consulta. Para lograr la máxima disponibilidad global del servidor, puede establecer un valor de tiempo de espera que indique al servidor que detenga una solicitud de datos de carga si no se puede completar dentro del tiempo asignado.  
   
-|Nombre|Default|Valores válidos|Descripción|  
+|NOMBRE|Default|Valores válidos|Descripción|  
 |----------|-------------|------------------|-----------------|  
 |Tiempo de espera de carga de datos|1800 (en segundos)|1 a 3600|Especifica la cantidad de tiempo que una aplicación de servicio PowerPivot esperará una respuesta de una instancia de servidor de Analysis Services concreta.<br /><br /> De forma predeterminada, la aplicación de servicio esperará 30 minutos a una carga de datos de la instancia de servicio del motor a la que reenvió una solicitud concreta.<br /><br /> Si el origen de datos PowerPivot no se puede cargar dentro de este período de tiempo, el subproceso se detendrá y se iniciará uno nuevo.|  
   
@@ -66,14 +65,14 @@ ms.locfileid: "62743371"
 ##  <a name="AllocationScheme"></a> Equilibrio de carga  
  Una de las funciones que el servicio PowerPivot realiza es determinar dónde se cargarán los datos de Analysis Services entre las instancias de servicio PowerPivot disponibles. El valor `AllocationMethod` especifica los criterios con los que se selecciona una instancia de servicio.  
   
-|Nombre|Default|Valores válidos|Descripción|  
+|NOMBRE|Default|Valores válidos|Descripción|  
 |----------|-------------|------------------|-----------------|  
 |Método de asignación|RoundRobin|Round Robin<br /><br /> Basado en estado|Esquema para asignar las solicitudes de carga entre dos o más instancias de servidor de Analysis Services.<br /><br /> De forma predeterminada, el servicio PowerPivot alternará las solicitudes basadas en el estado del servidor. Si se basa en el estado, las solicitudes se asignan al servidor que tiene el mayor número de recursos del sistema disponibles en función de la memoria disponible y la utilización de la CPU.<br /><br /> La operación por turnos rota las solicitudes entre los servidores disponibles en orden secuencial, independientemente del estado actual de la carga o del servidor.|  
   
 ##  <a name="DataRefresh"></a> Actualización de datos  
  Especifique el intervalo de horas que define un día laboral normal o típico en una organización. Esta configuración determina cuándo se produce el procesamiento de datos después del horario comercial en las operaciones de actualización de datos. El procesamiento después del horario comercial puede comenzar a la hora en que finaliza la jornada laboral. El procesamiento después del horario comercial es una opción de programación para los propietarios de documentos que desean actualizar un origen de datos PowerPivot con datos de transacciones que se generaron durante los horarios laborales normales.  
   
-|Name|Default|Valores válidos|Descripción|  
+|NOMBRE|Default|Valores válidos|Descripción|  
 |----------|-------------|------------------|-----------------|  
 |Hora de inicio|04:00 a. m.|1 a 12 horas, donde el valor es un entero válido dentro de ese intervalo.<br /><br /> El tipo es Time.|Establece el límite inferior de un intervalo del horario laboral.|  
 |Hora de finalización|08:00 p. m.|1 a 12 horas, donde el valor es un entero válido dentro de ese intervalo.<br /><br /> El tipo es Time.|Establece el límite superior de un intervalo del horario laboral.|  

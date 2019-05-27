@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.currenciestoreport.f1
@@ -13,12 +12,12 @@ ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a66e94a9cdafc327737c71cd710847033011dcfa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746548"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068209"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>Especificar monedas del informe (Asistente de Business Intelligence)
   Use la página **Define Reporting Currencies (Definir monedas del informe)** para definir las monedas del informe para la funcionalidad de conversión de moneda que cubre el tipo de conversión de varios a varios o de uno a varios especificado en la página **Seleccionar el tipo de conversión**. (Una moneda de informe es la moneda en que se convierten los valores de medida seleccionados en la página **Seleccionar medidas**). Los miembros seleccionados de la dimensión de moneda definen una dimensión de moneda del informe para la conversión generada por el Asistente de Business Intelligence.  

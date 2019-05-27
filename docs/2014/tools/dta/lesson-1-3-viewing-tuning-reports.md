@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning reports [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94222a351343c4558614098dd2a317fdbb9a5396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173645"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110152"
 ---
 # <a name="viewing-tuning-reports"></a>Ver informes de optimización
   En la práctica anterior de esta lección, ha visto los scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] que crean o colocan objetos de bases de datos en las recomendaciones del Asistente para la optimización de motor de base de datos generadas como resultado de la sesión de optimización MySession. La sesión MySession se creó en [Tuning a Workload](lesson-1-1-tuning-a-workload.md).  

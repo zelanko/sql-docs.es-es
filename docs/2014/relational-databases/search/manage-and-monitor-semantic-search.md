@@ -10,20 +10,20 @@ helpviewer_keywords:
 - semantic search [SQL Server], managing
 - semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d68b9452a03c127fe39018c19abab1073dae7c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 94f8edc0fe8b2505adc36705200e299f36b2dbf9
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63046127"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011131"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Administrar y supervisar la búsqueda semántica
   Describe el proceso de indización semántica y las tareas relacionadas con la administración y supervisión de los índices.  
   
-##  <a name="HowToMonitorStatus"></a> Cómo: Comprobar el estado de la indización semántica  
+##  <a name="HowToMonitorStatus"></a> Procedimientos para: Comprobar el estado de la indización semántica  
  **¿Es la primera fase de la indización semántica completa?**  
  Consulte la vista de administración dinámica [sys.dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql) y compruebe las columnas **status** y **status_description**.  
   
@@ -50,7 +50,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> Cómo: Compruebe el tamaño de los índices semánticos  
+##  <a name="HowToCheckSize"></a> Procedimientos para: Compruebe el tamaño de los índices semánticos  
  **¿Qué es el tamaño lógico de un índice semántico de frases clave o un índice de similitud de documentos semántica?**  
  Consulte la vista de administración dinámica [sys.dm_db_fts_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql).  
   
@@ -80,7 +80,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a> Cómo: Aplicar al rellenado de los índices semánticos  
+##  <a name="HowToForcePopulation"></a> Procedimientos para: Aplicar al rellenado de los índices semánticos  
  Puede aplicar el rellenado de los índices de texto completo y de los índices semánticos usando las cláusulas START/STOP/PAUSE o RESUME POPULATION con la misma sintaxis y el mismo comportamiento descritos para los índices de texto completo. Para obtener más información, vea [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql) y [Rellenar índices de texto completo](../indexes/indexes.md).  
   
  Dado que la indización semántica depende de la indización de texto completo, los índices semánticos solo se rellenan cuando lo hacen los índices de texto completo.  
@@ -98,7 +98,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> Cómo: Deshabilitar o volver a habilitar la indización semántica  
+##  <a name="HowToDisableIndexing"></a> Procedimientos para: Deshabilitar o volver a habilitar la indización semántica  
  Puede habilitar o deshabilitar la indización de texto completo o semántica usando la cláusula ENABLE/DISABLE con la misma sintaxis y el mismo comportamiento descritos para los índices de texto completo. Para obtener más información, vea [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql).  
   
  Cuando se deshabilita y se suspende la indización semántica, las consultas sobre datos semánticos siguen funcionando correctamente y devolviendo los datos indizados previamente. Este comportamiento no es coherente con el comportamiento de la búsqueda de texto completo.  

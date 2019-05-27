@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2347c97b41852b44ec651ee10300e607755757f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146004"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011469"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Crear y administrar catálogos de texto completo
   Un catálogo de texto completo es un objeto virtual que no pertenece a ningún grupo de archivos; es un concepto lógico que hace referencia a un grupo de índices de texto completo.  
@@ -43,7 +43,7 @@ ms.locfileid: "48146004"
   
   
 ##  <a name="props"></a> Ver las propiedades de un catálogo de texto completo  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] funciones como FULLTEXTCATALOGPROPERTY pueden usarse para obtener el valor de diversas propiedades relacionadas con la indización de texto completo. Esta información es útil para administrar y solucionar problemas de la búsqueda de texto completo.  
+ Las funciones de [!INCLUDE[tsql](../../includes/tsql-md.md)], como FULLTEXTCATALOGPROPERTY, se pueden usar para obtener el valor de diversas propiedades relacionadas con la indización de texto completo. Esta información es útil para administrar y solucionar problemas de la búsqueda de texto completo.  
   
  En la siguiente tabla se muestran las propiedades relacionadas con los catálogos de texto completo.  
   

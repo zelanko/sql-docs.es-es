@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytabletypes.f1
@@ -13,12 +12,12 @@ ms.assetid: 8209a707-faef-4ffc-8991-6c13bb350753
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84946cd0dadd467e7998106f89868a5e9d401f13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6c5b38fdc684cce71e0910a8a576180ece3e48f8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746347"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068136"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Especificar tipos de tablas (Asistente para minería de datos)
   Utilice la página **Especificar tipos de tablas** para identificar las tablas que se van a utilizar para definir la estructura de minería de datos. Si una tabla no está seleccionada, ésta no se utilizará para definir la estructura de minería de datos.  

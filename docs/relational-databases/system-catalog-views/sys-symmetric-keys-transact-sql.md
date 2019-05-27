@@ -1,5 +1,5 @@
 ---
-title: Sys.symmetric_keys (Transact-SQL) | Microsoft Docs
+title: sys.symmetric_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e5bc6d2959e14c7af7e5ccefddc14e9bb630ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07b60dacedec35460fd0e23e1d28769dcc5674fc
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672953"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175617"
 ---
 # <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,10 +35,10 @@ ms.locfileid: "47672953"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Nombre de la clave. Es único dentro de la base de datos.|  
+|**Nombre**|**sysname**|Nombre de la clave. Es único en la base de datos.|  
 |**principal_id**|**int**|Identificador de la entidad de seguridad de la base de datos que posee la clave.|  
 |**symmetric_key_id**|**int**|Id. de la clave. Es único en la base de datos.|  
-|**longitudDeClave**|**int**|Longitud de la clave, en bits.|  
+|**key_length**|**int**|Longitud de la clave, en bits.|  
 |**key_algorithm**|**char(2)**|Algoritmo utilizado con la clave:<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = clave EKM|  
 |**algorithm_desc**|**nvarchar(60)**|Descripción del algoritmo usado con la clave:<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> Descripción de la Administración extensible de claves, solamente los algoritmos (NULL)|  
 |**create_date**|**datetime**|Fecha de creación de la clave.|  

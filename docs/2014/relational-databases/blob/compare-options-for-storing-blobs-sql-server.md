@@ -7,15 +7,15 @@ ms.technology: filestream
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c90dd764a04b3eb470f0cf76d29e2ee2002d6b97
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877222"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010348"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparar opciones para almacenar objetos Blob (SQL Server)
   Explica y compara las opciones que están disponibles para almacenar archivos y documentos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -49,11 +49,11 @@ ms.locfileid: "62877222"
 |-------------|---------------------------------------|-------------------------|------------------------|  
 |**Un solo artículo para tareas de administración**|No|Sí|**Sí**|  
 |**Un solo conjunto de servicios**: búsquedas, informes, consultas, etc.|No|Sí|**Sí**|  
-|**Modelo de seguridad integrada**|No|Sí|**Sí**|  
-|**Actualizaciones en contexto de datos FILESTREAM**|Sí|No|**Sí**|  
-|**Jerarquía de archivos y de directorios que se mantiene en la base de datos**|No|No|**Sí**|  
-|**Compatibilidad con aplicaciones Windows**|Sí|No|**Sí**|  
-|**Acceso relacional a los atributos de archivo**|No|No|**Sí**|  
+|**Modelo de seguridad integrada**|Sin |Sí|**Sí**|  
+|**Actualizaciones en contexto de datos FILESTREAM**|Sí|Sin |**Sí**|  
+|**Jerarquía de archivos y de directorios que se mantiene en la base de datos**|Sin |No|**Sí**|  
+|**Compatibilidad con aplicaciones Windows**|Sí|Sin |**Sí**|  
+|**Acceso relacional a los atributos de archivo**|Sin |No|**Sí**|  
   
 ##  <a name="CompareRBS"></a> Comparar FILESTREAM y el almacén remoto de BLOBS (RBS)  
  Para obtener una comparación de estas dos características, consulte este blog del equipo RBS: [Comparación de características de SQL Server remoto BLOB Store y FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=210317).  

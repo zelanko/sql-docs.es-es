@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.result.f1
@@ -13,12 +12,12 @@ ms.assetid: d154477d-3e4b-4e9b-a306-8166a0d83d21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 30393fd4233e0e6b1707de36fb881e97b626d1f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748217"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070176"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>Panel de resultados (Vista Predicción de modelo de minería de datos)
   En el panel de **resultados** se muestran los resultados de la consulta de predicciones de minería de datos diseñada en la vista **Diseño** del Generador de consultas de predicción. Puede copiar una selección de la cuadrícula o la cuadrícula completa de resultados en el Portapapeles.  

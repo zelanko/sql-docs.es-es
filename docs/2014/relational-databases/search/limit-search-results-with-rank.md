@@ -15,15 +15,15 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 914a1f0eb36ad0da4076f487d1771a8dfd23bfb1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807257"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66011145"
 ---
 # <a name="limit-search-results-with-rank"></a>Limitar los resultados de la búsqueda con RANK
   Las funciones [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) y [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) devuelven una columna denominada RANK que contiene valores ordinales de 0 a 1000 (valores de intervalo). Estos valores se utilizan para clasificar las filas devueltas en función del grado de coincidencia con los criterios de selección. Los valores de clasificación solo indican un orden relativo de relevancia de las filas en el conjunto de resultados, con un valor inferior que indica la relevancia menor. Los valores reales carecen de relevancia y normalmente difieren cada vez que se ejecuta la consulta.  
@@ -37,7 +37,7 @@ ms.locfileid: "52807257"
   
 ##  <a name="examples"></a> Ejemplos del uso de RANK para limitar los resultados de la búsqueda  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Ejemplo A: Busca solo las tres primeras coincidencias  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Ejemplo A: búsqueda de solo las tres primeras coincidencias  
  En el ejemplo siguiente se usa CONTAINSTABLE para devolver las tres primeras coincidencias.  
   
 ```  
@@ -68,7 +68,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Ejemplo B: Buscar las diez primeras coincidencias  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Ejemplo B: búsqueda de solo las diez primeras coincidencias  
  En el ejemplo siguiente se usa CONTAINSTABLE para devolver la descripción de los 5 productos más destacados, donde la columna `Description` contiene la palabra “aluminum” cerca de la palabra “light” o de la palabra “lightweight”.  
   
 ```  
@@ -143,7 +143,7 @@ GO
   
  Las estadísticas como `IndexRowCount` pueden variar enormemente. Por ejemplo, si un catálogo tiene 2.000 millones de filas en el índice maestro, un nuevo documento se indizará en un índice intermedio de la memoria y los rangos de dicho documento basados en el número de documentos en el índice almacenado en la memoria podrían desviarse de los rangos de los documentos del índice maestro. Por este motivo, tras realizar un llenado que dé como resultado la indización o reindización de un gran número de filas, se recomienda mezclar los índices en un índice maestro mediante la instrucción ALTER FULLTEXT CATALOG ... REORGANIZE de [!INCLUDE[tsql](../../includes/tsql-md.md)]. El motor de búsqueda de texto completo también mezclará automáticamente los índices basándose en parámetros como el número y el tamaño de los índices intermedios.  
   
- Los valores de `MaxOccurrence` se normalizan en 1 de 32 intervalos. Esto significa que, por ejemplo, un documento de 50 palabras se trata igual que un documento de 100 palabras. A continuación se muestra la tabla utilizada para la normalización. Como las longitudes de los documentos se encuentran en el intervalo entre los valores de tabla adyacentes 32 y 128, en la práctica se considera que tienen la misma longitud, 128 (32 < `docLength` <= 128).  
+ Los valores de `MaxOccurrence` se normalizan en 1 de 32 intervalos. Esto significa que, por ejemplo, un documento de 50 palabras se trata igual que un documento de 100 palabras. A continuación se muestra la tabla utilizada para la normalización. Como las longitudes de los documentos se encuentran en el intervalo entre los valores de tabla adyacentes 32 y 128, efectivamente se tratan como si tuvieran la misma longitud, 128 (32 < `docLength` < = 128).  
   
 ```  
 { 16, 32, 128, 256, 512, 725, 1024, 1450, 2048, 2896, 4096, 5792, 8192, 11585,   

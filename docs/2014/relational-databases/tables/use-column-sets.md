@@ -123,7 +123,7 @@ GO
   
  \*  Un valor -1 en localeID significa la configuración regional predeterminada. La configuración regional en inglés es 1033.  
   
- No aplicable = No se genera ningún valor para estos atributos durante una operación de selección en el conjunto de columnas. Genera un error cuando el autor de la llamada especifica un valor para este atributo en la representación XML proporcionada para un conjunto de columnas durante una operación de inserción o actualización.  
+ ** No aplicable = No se genera ningún valor para estos atributos durante una operación de selección en el conjunto de columnas. Genera un error cuando el autor de la llamada especifica un valor para este atributo en la representación XML proporcionada para un conjunto de columnas durante una operación de inserción o actualización.  
   
 ## <a name="security"></a>Seguridad  
  El modelo de seguridad para un conjunto de columnas funciona de forma similar al modelo de seguridad existente entre la tabla y columnas. Los conjuntos de columnas se pueden visualizar en forma de minitabla, en la que una operación de selección funciona como una operación SELECT *. Pero la relación entre el conjunto de columnas y las columnas dispersas es una relación de agrupación en lugar de ser estrictamente un contenedor. El modelo de seguridad comprueba la seguridad en la columna del conjunto de columnas y respeta las operaciones DENY en las columnas dispersas subyacentes. Las características adicionales del modelo de seguridad son las siguientes:  

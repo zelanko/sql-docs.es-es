@@ -16,14 +16,18 @@ ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5c7e17cd8d09e85395eaaa5d32f2ceb979a984d1
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 253625d364bb8ae918ee9bdd2402e3cf249b26ce
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58282500"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65719868"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabajos del Agente SQL Server para paquetes
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Puede automatizar y programar la ejecución de paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede programar paquetes que se implementan en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y se almacena en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos.  
  
 > [!NOTE]
@@ -141,7 +145,7 @@ Si no pone los elementos de seguridad, se producirá un error en el trabajo y un
     |--------------------|-----------------|  
     |**Catálogo de SSIS**|Paquetes almacenados en la base de datos de SSISDB. Los paquetes se encuentran en proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] implementados en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Paquetes almacenados en la base de datos MSDB. Use el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para administrar estos paquetes.|  
-    |**Almacén de paquetes SSIS**|Paquetes almacenados en la carpeta predeterminada del equipo. La carpeta predeterminada es *\<unidad>*:\Archivos de programa\Microsoft SQL Server\110\DTS\Packages. Use el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para administrar estos paquetes.<br /><br /> Nota: Puede especificar una carpeta diferente o especificar carpetas adicionales del sistema de archivos que se administrarán mediante el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] si modifica el archivo de configuración de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información, vea [Servicio Integration Services &#40;servicio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|  
+    |**Almacén de paquetes SSIS**|Paquetes almacenados en la carpeta predeterminada del equipo. La carpeta predeterminada es *\<unidad>* :\Archivos de programa\Microsoft SQL Server\110\DTS\Packages. Use el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para administrar estos paquetes.<br /><br /> Nota: Puede especificar una carpeta diferente o especificar carpetas adicionales del sistema de archivos que se administrarán mediante el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] si modifica el archivo de configuración de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para más información, vea [Servicio Integration Services &#40;servicio SSIS&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|  
     |**Sistema de archivos**|Paquetes almacenados en cualquier carpeta del equipo local.|  
   
      **En las tablas siguientes se describen las opciones de configuración disponibles para el paso de trabajo en función del origen del paquete que seleccione.**  

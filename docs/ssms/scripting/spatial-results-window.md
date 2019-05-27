@@ -7,16 +7,16 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 422114f2a753327f34b105c4c6893b7c3f8d3c2b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3dc51511120b05c8f4a720a911da6c2b6480fb9d
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643735"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821942"
 ---
 # <a name="spatial-results-window"></a>Ventana Resultados espaciales
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "51643735"
  Esta opción no está disponible si solo se devuelven instancias de punto en una consulta.  
   
  **Seleccionar proyección**  
- Muestre los datos de geografía en una de estas cuatro proyecciones: Equirectangular, Mercator, Robinson o Bonne.  
+ Muestre los datos geográficos en una de las cuatro proyecciones: Equirectangular, Mercator, Robinson o Bonne.  
   
  Esta opción no está disponible para los datos de geometría.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "51643735"
 > [!NOTE]  
 >  Las instancias de punto no se pueden etiquetar.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Ver datos espaciales en el Explorador de objetos](../../relational-databases/scripting/view-spatial-data-in-object-explorer.md)   
  [Datos espaciales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)   

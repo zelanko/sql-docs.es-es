@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.addreference.f1
@@ -15,12 +14,12 @@ ms.assetid: 7bdd2eee-195a-4a2f-a0aa-56f7e90c1fb4
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 99094f6e0edc60dfa6ce77474c52f1cf9dfc50fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1990a5feaf4cbf7c4095b39089efb36fbb393755
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63231294"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110020"
 ---
 # <a name="add-reference-dialog-box"></a>Agregar referencia (cuadro de diálogo)
   Utilice el cuadro de diálogo **Agregar referencia** para agregar al informe referencias a un ensamblado o componente de [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] personalizado. Después de agregar una referencia de ensamblado, puede escribir expresiones o código personalizado incrustado que incluya referencias completas a clases o métodos en el ensamblado o componente. Para más información, vea [Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) o [Agregar una referencia de ensamblado a un informe &#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md).  

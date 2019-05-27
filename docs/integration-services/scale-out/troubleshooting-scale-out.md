@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 8de649eb8f6311270c64969981e78315cee29450
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206331"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718278"
 ---
 # <a name="troubleshoot-scale-out"></a>Solución de problemas de escalabilidad horizontal
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 La escalabilidad horizontal de SSIS implica la comunicación entre la base de datos del catálogo de SSIS`SSISDB`, el Servicio principal de escalabilidad horizontal y el servicio de trabajo de escalabilidad horizontal. A veces, la comunicación se interrumpe debido a errores de configuración, falta de permisos de acceso y otros motivos. Este artículo puede ayudarle a solucionar problemas relacionados con la configuración de la escalabilidad horizontal.
 
@@ -62,7 +66,7 @@ Compruebe los mensajes de error en el registro del servicio de trabajo de escala
 
 ### <a name="symptoms"></a>Síntomas
 
-*"System.ServiceModel.EndpointNotFoundException: No había ningún punto de conexión escuchando en https://*[NombreEquipo]:[Puerto]*/ClusterManagement/ que pudiera aceptar el mensaje".*
+*"System.ServiceModel.EndpointNotFoundException: No había ningún punto de conexión escuchando en https://* [NombreEquipo]:[Puerto] */ClusterManagement/ que pudiera aceptar el mensaje".*
 
 ### <a name="solution"></a>Solución
 
@@ -135,7 +139,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     Tipo del valor: **REG_DWORD** 
 
-    Valor de datos: **0 (False)**
+    Datos del valor: **0 (False)**
 
 4.  Si no se pueden limpiar todos los certificados no autofirmados tal y como se describe en el paso 2, establezca el valor de la siguiente clave del Registro en 2.
 
@@ -145,7 +149,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 
     Tipo del valor: **REG_DWORD** 
 
-    Valor de datos: **2**
+    Datos del valor: **2**
 
     > [!NOTE]
     > Si tiene certificados no autofirmados en el almacén de certificados raíz, se produce un error de autenticación de certificado cliente. Para obtener más información, consulte [Internet Information Services (IIS) 8 may reject client certificate requests with HTTP 403.7 or 403.16 errors](https://support.microsoft.com/help/2802568/internet-information-services-iis-8-may-reject-client-certificate-requ) (Internet Information Services (IIS) 8 puede rechazar solicitudes de certificado de cliente con errores HTTP 403.7 o 403.16).
@@ -173,7 +177,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 ## <a name="cannot-open-certificate-store"></a>No se puede abrir el almacén de certificados
 
 ### <a name="symptoms"></a>Síntomas
-Error de validación al conectar el trabajo de escalabilidad horizontal al Servicio principal de escalabilidad horizontal en el Administrador de escalabilidad horizontal. Mensaje de error: *"No se puede abrir el almacén de certificados en la máquina"*.
+Error de validación al conectar el trabajo de escalabilidad horizontal al Servicio principal de escalabilidad horizontal en el Administrador de escalabilidad horizontal. Mensaje de error: *"No se puede abrir el almacén de certificados en la máquina"* .
 
 ### <a name="solution"></a>Solución
 
@@ -210,7 +214,7 @@ Los mensajes de error del informe de ejecución del paquete no son suficientes p
 ### <a name="solution"></a>Solución
 Puede encontrar más registros de ejecución en la carpeta `TasksRootFolder` configurada en `WorkerSettings.config`. De forma predeterminada, esta carpeta es `\<drive\>:\Users\\[account]\AppData\Local\SSIS\ScaleOut\Tasks`. *[cuenta]* es la cuenta que ejecuta el servicio de trabajo de escalabilidad horizontal con el valor predeterminado `SSISScaleOutWorker140`.
 
-Para localizar el registro de la ejecución del paquete con *[id. de ejecución]*, ejecute el comando Transact-SQL siguiente para obtener el *[id. de tarea]*. A continuación, busque el nombre de la carpeta que contenga el *[id. de tarea]* en `TasksRootFolder`.
+Para localizar el registro de la ejecución del paquete con *[id. de ejecución]* , ejecute el comando Transact-SQL siguiente para obtener el *[id. de tarea]* . A continuación, busque el nombre de la carpeta que contenga el *[id. de tarea]* en `TasksRootFolder`.
 
 ```sql
 SELECT [TaskId]

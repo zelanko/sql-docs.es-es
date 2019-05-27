@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b7222318-7307-4afb-b585-9358426103a0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfba4b1432f22c176c2504a771be81f2f6e053bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0019aa93459f2e46646cbbfb115b501fbf7eaff5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749465"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66071458"
 ---
 # <a name="delete-powerpivot-gallery"></a>Eliminar la Galería de PowerPivot
   Al eliminar una Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , también se eliminan todos sus elementos, incluido el historial de la actualización de datos para los libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que está configurada para la actualización de datos programada.  

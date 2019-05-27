@@ -8,25 +8,25 @@ ms.technology: scripting
 ms.reviewer: mathoma
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 242e0e0c39ce381a492e1072dcb6934cf5f3e29f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 63c772e9957a180b76949ecc95a95661a4632aff
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643956"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65820873"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Generar scripts (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona dos mecanismos para generar scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Puede crear scripts para varios objetos con el **Asistente Generar y publicar scripts**. También puede generar un script para objetos individuales o varios objetos con el menú **Incluir como** del **Explorador de objetos**.  
 
-Para obtener un tutorial detallado sobre cómo crear script de varios objetos mediante SQL Server Management Studio (SSMS), vea [Tutorial: Crear scripts en SSMS](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
+Para obtener un tutorial detallado sobre cómo crear script de varios objetos mediante SQL Server Management Studio (SSMS), consulte [Tutorial: Creación de scripts en SSMS](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
 
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  Elija el mecanismo que mejor cumpla sus requisitos.  
   
 ###  <a name="GenPubScriptWiz"></a> Asistente generar y publicar scripts  

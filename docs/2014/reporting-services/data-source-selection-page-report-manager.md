@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cf5feafd69cb16e1989496de90ce9e7af4df3687
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7bb8790496efb1701baf1636e5c16769e6430aa0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165013"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109438"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Selección de origen de datos (página del Administrador de informes)
   Use la página Selección de origen de datos para seleccionar un elemento de origen de datos compartido existente con el fin de usarlo con un informe o modelo de informe. También puede usar esta página para seleccionar un origen de datos diferente. Para ver el tipo de origen de datos o la cadena de conexión, debe navegar al origen de datos compartido y abrir las páginas de propiedades.  

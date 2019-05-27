@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
@@ -14,12 +13,12 @@ ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 892b53a2f7179fce18844085fe2c0edcaafb4c04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8e6a94ff3a40a4c2287f9870222c94ec22e611a7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278623"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108268"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Cuadro de diálogo Propiedades de meridiano de mapa, Etiquetas
   Use la **MapMeridian propiedades** cuadro de diálogo para cambiar las opciones de etiqueta de la cuadrícula vertical en la ventanilla del mapa. Un meridiano representa el valor siguiente en función del sistema de coordenadas especificado para la ventanilla:  

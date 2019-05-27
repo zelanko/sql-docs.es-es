@@ -11,15 +11,15 @@ helpviewer_keywords:
 - annotated XSD schemas, samples
 - annotated XSD schemas, queries
 ms.assetid: fefa2cc8-2d3c-4336-aeae-ce063a3a8df2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4702ad3ab9c36a5859064d1efe4b055decae8ae4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0464b11906d08b22c100efa6d142b16fb8fa679
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740455"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010728"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>Esquema XSD anotado de ejemplo para los ejemplos de XPath (SQLXML 4.0)
   Las consultas XPath de ejemplo de esta sección hacen referencia a un esquema de asignación. El esquema de asignación es un archivo de esquema XML anotado (XSD). Para obtener más información acerca de los esquemas de asignación, consulte [Introducción a los esquemas XSD anotados &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  

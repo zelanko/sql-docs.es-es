@@ -1,7 +1,7 @@
 ---
 title: Trabajar con datos JSON en SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/19/2018
+ms.date: 05/14/2019
 ms.prod: sql
 ms.reviewer: genemi
 ms.technology: ''
@@ -13,16 +13,16 @@ ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82df7760fbcf82d6f9699a0adeb95036e64c946e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 442e349da7b8b21363e747910044cbbd537ffa0b
+ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801939"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65620614"
 ---
 # <a name="json-data-in-sql-server"></a>Datos JSON en SQL Server
-[!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 JSON es un formato de datos de texto muy popular que se usa para intercambiar datos en las aplicaciones web y móviles modernas. JSON también sirve para almacenar los datos no estructurados en archivos de registro o en bases de datos NoSQL, como Microsoft Azure Cosmos DB. Muchos servicios web REST devuelven resultados con formato de texto JSON o bien aceptan datos con este formato. Por ejemplo, la mayoría de los servicios de Azure, como Azure Search, Azure Storage y Azure Cosmos DB, cuentan con extremos REST que devuelven o usan JSON. JSON es también el formato principal para intercambiar datos entre páginas web y servidores web a través de llamadas AJAX. 
 
@@ -30,10 +30,10 @@ Las funciones JSON de SQL Server permiten combinar conceptos NoSQL y relacionale
 
 *JSON as a bridge between NoSQL and relational worlds* (JSON como puente entre los universos NoSQL y relacional)
 > [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]
- 
-Este es un ejemplo de texto JSON: 
- 
-```json 
+
+Este es un ejemplo de texto JSON:
+
+```json
 [{
     "name": "John",
     "skills": ["SQL", "C#", "Azure"]
@@ -41,7 +41,7 @@ Este es un ejemplo de texto JSON:
     "name": "Jane",
     "surname": "Doe"
 }]
-``` 
+```
  
 SQL Server proporciona funciones y operadores integrados que permiten hacer lo siguiente con texto JSON: 
  
@@ -125,7 +125,7 @@ FROM OPENJSON(@json)
   
 **Resultado**  
   
-|id|firstName|lastName|age|dateOfBirth|  
+|Id.|firstName|lastName|age|dateOfBirth|  
 |--------|---------------|--------------|---------|-----------------|  
 |2|John|Smith|25||  
 |5|Jane|Smith||2005-11-04T12:00:00|  
@@ -165,7 +165,7 @@ La matriz **aptitudes** se devuelve en la primera `OPENJSON` como el fragmento d
 
 **Resultado**  
   
-|id|firstName|lastName|age|dateOfBirth|aptitudes|  
+|Id.|firstName|lastName|age|dateOfBirth|aptitudes|  
 |--------|---------------|--------------|---------|-----------------|----------|  
 |2|John|Smith|25|||  
 |5|Jane|Smith||2005-11-04T12:00:00|SQL| 
@@ -175,6 +175,10 @@ La matriz **aptitudes** se devuelve en la primera `OPENJSON` como el fragmento d
 `OUTER APPLY OPENJSON` se unirá a la entidad de primer nivel con la submatriz y devolverá un conjunto de resultados sin formato. Debido a JOIN, la segunda fila se repetirá para cada aptitud.
 
 ### <a name="convert-sql-server-data-to-json-or-export-json"></a>Convertir datos de SQL Server a JSON o exportar JSON
+
+>[!NOTE]
+>No se admite la conversión de datos de Azure SQL Data Warehouse a JSON ni la exportación de JSON.
+
 Para dar formato JSON a los datos de SQL Server o a los resultados de las consultas, agregue la cláusula **FOR JSON** a una instrucción **SELECT** . Use **FOR JSON** para delegar en SQL Server la aplicación de formato de los resultados de JSON de las aplicaciones cliente. Para obtener más información, consulte [Dar formato JSON a los resultados de consulta con FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
 En el siguiente ejemplo se usa el modo PATH con la cláusula **FOR JSON**:  
@@ -330,11 +334,11 @@ Si tiene un servicio web que toma datos de la capa de base de datos y los devuel
   
 Por ejemplo, imaginemos que quiere generar un resultado JSON que sea compatible con la especificación OData. El servicio web espera una solicitud y una respuesta en el siguiente formato: 
   
--   Solicitud: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
+- Solicitud: `/Northwind/Northwind.svc/Products(1)?$select=ProductID,ProductName`  
   
--   Respuesta: `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
+- Respuesta: `{"@odata.context":"https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity","ProductID":1,"ProductName":"Chai"}`  
   
-Esta dirección URL de OData representa una solicitud de las columnas ProductID y ProductName del producto con el `id` 1. Puede usar **FOR JSON** para aplicar al resultado el formato que SQL Server espera.  
+Esta dirección URL de OData representa una solicitud de las columnas ProductID y ProductName del producto con el `ID` 1. Puede usar **FOR JSON** para aplicar al resultado el formato que SQL Server espera.  
   
 ```sql  
 SELECT 'https://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'

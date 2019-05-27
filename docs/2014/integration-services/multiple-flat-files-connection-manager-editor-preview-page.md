@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.preview.f1
@@ -15,12 +14,12 @@ ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 410846777858b8c0923c544d33656e76b1199301
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ae113a84c55c17c3ba4827fb9368435200a6f190
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890587"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66057489"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>Editor del administrador de conexiones de varios archivos planos (página Vista previa)
   Use la página **Vista previa** del cuadro de diálogo **Editor del administrador de conexiones de varios archivos planos** para ver el contenido del primer archivo de origen seleccionado dividido en las columnas que ha definido.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3b50c9284610cfa8c35eba21de7723c18729401
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6087d5fa39dd023d13ce3f49fbdfb855f12b921c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62795312"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067452"
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>Crear y administrar medidas (SSAS tabular)
   Una medida es una fórmula que se crea específicamente para su uso en un informe o una tabla dinámica de Excel (o gráfico dinámico). Las medidas pueden estar basadas en funciones de agregación estándar, como COUNT o SUM, o puede definir su propia fórmula utilizando DAX. Las tareas de este tema describen cómo crear y administrar medidas mediante la cuadrícula de medidas de una tabla.  

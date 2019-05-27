@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CATCH block
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23294229be50c987be4b2f59568889910b605596
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: dcb58a1eddbce7bfd718c49726825a29164d4081
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802431"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980433"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -249,7 +249,7 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>b. Crear un mensaje ad hoc en sys.messages  
+### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>B. Crear un mensaje ad hoc en sys.messages  
  En el siguiente ejemplo se indica cómo mostrar un mensaje almacenado en la vista de catálogo sys.messages. El mensaje se agregó a la vista de catálogo sys.messages por medio del procedimiento almacenado del sistema `sp_addmessage` con el número de mensaje `50005`.  
   
 ```  

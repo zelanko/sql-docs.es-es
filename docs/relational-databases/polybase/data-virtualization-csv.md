@@ -5,17 +5,17 @@ author: Abiola
 ms.author: aboke
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: dae0692bafd8c4de295a914c9da0ead5c6e3980b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: dab04f5c544e84c5763b8101cb166741463d460a
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512962"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993940"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>Uso del Asistente para tablas externas con archivos CSV
 
@@ -26,15 +26,14 @@ SQL Server 2019 también permite virtualizar los datos desde un archivo CSV en H
 A partir de CTP 2.4, el grupo de datos y los orígenes de datos externos del grupo de almacenamiento ya no se crean de forma predeterminada en el clúster de macrodatos. Antes de usar el asistente, cree el origen de datos externo predeterminado **SqlStoragePool** en la base de datos de destino con la siguiente consulta Transact-SQL. Primero asegúrese de cambiar el contexto de la consulta a la base de datos de destino.
 
 ```sql
-IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-  BEGIN
-    IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+  -- Create default data sources for SQL Big Data Cluster
+  IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+      CREATE EXTERNAL DATA SOURCE SqlDataPool
+      WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+
+  IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
       CREATE EXTERNAL DATA SOURCE SqlStoragePool
-      WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
-    ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
-      CREATE EXTERNAL DATA SOURCE SqlStoragePool
-      WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
-  END
+      WITH (LOCATION = 'sqlhdfs://controller-svc:8080/default');
 ```
 
 ## <a name="launch-the-external-table-wizard"></a>Inicio del Asistente para tablas externas
@@ -78,7 +77,7 @@ En la ventana siguiente, podrá modificar las columnas de la tabla externa que s
 
 ## <a name="summary"></a>Resumen
 
-Este paso proporciona un resumen de las selecciones. Proporciona la instancia principal de SQL e información de la tabla externa propuesta. En este paso, verá la opción **"Generar Script"**, que creará en T-SQL los scripts con la sintaxis para crear el origen de datos externo, o bien **Crear**, que creará el objeto de origen de datos externo.
+Este paso proporciona un resumen de las selecciones. Proporciona la instancia principal de SQL e información de la tabla externa propuesta. En este paso, verá la opción **"Generar Script"** , que creará en T-SQL los scripts con la sintaxis para crear el origen de datos externo, o bien **Crear**, que creará el objeto de origen de datos externo.
 
 ![Pantalla de resumen](media/data-virtualization/csv-virtualize-data-summary.png)
 

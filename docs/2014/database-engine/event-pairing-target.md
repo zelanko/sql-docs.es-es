@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - pairing target [SQL Server extended events]
@@ -15,12 +14,12 @@ ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7907ec8b5fa2e450a1a9e3e73c82bf8511da64ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62780416"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064849"
 ---
 # <a name="event-pairing-target"></a>Destino de emparejamiento de eventos
   El destino de emparejamiento de eventos asocia dos eventos usando una o varias columnas de datos presentes en cada evento. Muchos eventos vienen en parejas, como por ejemplo, bloqueo y desbloqueo. Una vez emparejada un flujo de eventos, se descartan ambos eventos. El descarte de los conjuntos asociados permite una detección fácil de adquisiciones de bloqueos que no se han liberado.  

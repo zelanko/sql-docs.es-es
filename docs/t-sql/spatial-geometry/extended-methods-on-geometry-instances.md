@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Extended Methods on Geometry Instances [SQLServer]
 ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f802814241e8294641329d70c16a75415de79726
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e97fa36ff362889e45c12b50aa011bc6dac45dac
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523380"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938080"
 ---
 # <a name="extended-methods-on-geometry-instances"></a>Métodos extendidos en instancias de geometry
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "52523380"
   
 -   [Z &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)   
  [Métodos de geometría estáticos ampliados](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

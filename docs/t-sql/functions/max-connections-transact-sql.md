@@ -19,15 +19,15 @@ helpviewer_keywords:
 - connections [SQL Server], simultaneous
 - number of simultaneous user connections
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e7a90afdb2b68e0be7ba79347c1d77d009db8958
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afa109292950aff8565484673e9fe50af0b1b1a4
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844803"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948290"
 ---
 # <a name="x40x40maxconnections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Max Connections
 32767            
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Funciones de configuración](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Establecer la opción de configuración del servidor Conexiones de usuario](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)  

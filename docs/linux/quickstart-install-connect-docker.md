@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: cf53635478dcf697013ec9ccb42dea46c190f08b
-ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
+ms.openlocfilehash: 774a54ab2fbb0dfe93a338ab3ec2f28bd71fbcdc
+ms.sourcegitcommit: 8aa51bc0bc54b266145c96f6451b59f369822160
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626730"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66036921"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Inicio rápido: Ejecutar imágenes de contenedor de SQL Server con Docker
 
@@ -184,19 +184,19 @@ Antes de comenzar los pasos siguientes, asegúrese de que ha seleccionado el she
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.5-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.5-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.5-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
    ```
    ::: zone-end
 
@@ -249,7 +249,7 @@ Antes de comenzar los pasos siguientes, asegúrese de que ha seleccionado el she
    | **-e "contraseña_sa =\<YourStrong! Passw0rd\>'** | Especifique una contraseña segura propia con al menos 8 caracteres y que cumpla los [requisitos de contraseña de SQL Server](../relational-databases/security/password-policy.md). Configuración requerida para la imagen de SQL Server. |
    | **-p 1433:1433** | Asigne un puerto TCP en el entorno de host (el primer valor) a un puerto TCP en el contenedor (el segundo valor). En este ejemplo, SQL Server está escuchando en TCP 1433 en el contenedor y se expone al puerto 1433 en el host. |
    | **--name sql1** | Especifique un nombre personalizado para el contenedor en lugar de uno generado aleatoriamente. Si ejecuta más de un contenedor, no podrá usar el mismo nombre. |
-   | **mcr.microsoft.com/mssql/server:2019-CTP2.5-ubuntu** | La imagen de contenedor de Linux de 2.5 de CTP de SQL Server de 2019. |
+   | **mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu** | La imagen de contenedor de SQL Server de 2019 CTP3.0 Linux. |
 
 3. Para ver los contenedores de Docker, use el comando `docker ps`.
 

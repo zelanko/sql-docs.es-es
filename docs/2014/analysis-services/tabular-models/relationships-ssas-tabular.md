@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 979e379637f39bdcfb37c5b944ce6af45503f62a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5a0a1527ed97570c715ff383837ebd5a9d5a3354
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756768"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066699"
 ---
 # <a name="relationships-ssas-tabular"></a>relaciones (SSAS tabular)
   En los modelos tabulares, una relación es una conexión entre dos tablas de datos. La relación establece cómo se deben relacionar los datos de las dos tablas. Por ejemplo, una tabla de clientes y una tabla de pedidos se pueden relacionar para mostrar el nombre del cliente que está asociado a cada pedido.  
@@ -47,7 +46,7 @@ ms.locfileid: "62756768"
 ##  <a name="what"></a> Ventajas  
  Una relación es una conexión entre dos tablas de datos, basada en una o más columnas de cada tabla. Para ver por qué son útiles las relaciones, imagine que realiza el seguimiento de los datos de los pedidos de los clientes de su negocio. Podría realizar el seguimiento de todos los datos en una sola tabla que tiene una estructura como la siguiente:  
   
-|CustomerID|Nombre|EMail|DiscountRate|OrderID|OrderDate|Producto|Cantidad|  
+|CustomerID|NOMBRE|EMail|DiscountRate|OrderID|OrderDate|Producto|Cantidad|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -57,7 +56,7 @@ ms.locfileid: "62756768"
   
 ### <a name="customers"></a>Clientes  
   
-|[CustomerID]|Name|EMail|  
+|[CustomerID]|NOMBRE|EMail|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  

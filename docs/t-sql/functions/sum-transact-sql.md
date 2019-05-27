@@ -22,16 +22,16 @@ helpviewer_keywords:
 - totals [SQL Server], SUM
 - summary values [SQL Server]
 ms.assetid: 9af94d0f-55d4-428f-a840-ec530160f379
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a91969bcde67d7f316281c12ab80c85393ed06e3
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 90dc7e15fdbe450eb57642b7a4f7be0bb834c063
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232599"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943255"
 ---
 # <a name="sum-transact-sql"></a>SUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ SUM ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  *expression*  
  Se trata de una constante, columna o función y cualquier combinación de operadores aritméticos, bit a bit y de cadena. *expression* es una expresión de la categoría de tipos de datos numérico exacto o numérico aproximado, excepto para el tipo de datos **bit**. No se permiten funciones de agregado ni subconsultas. Para obtener más información, vea [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. _order\_by\_clause_ determina el orden lógico en el que se realiza la operación. _order\_by\_clause_ es obligatorio. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos devueltos  
@@ -232,7 +232,7 @@ Multi          880.7468      526.4095
 NA            3162.3564     1360.6185
  ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [OVER &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   

@@ -20,14 +20,18 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7b29fcfbe2219c1cf519c75e3aef605fce7c3fc
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271202"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723671"
 ---
 # <a name="install-integration-services"></a>Instalar Integration Services
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un único programa de instalación para instalar alguno de sus componentes o todos, incluido [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Use el programa de instalación para instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con o sin otros componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un único equipo.    
     
@@ -81,7 +85,7 @@ De forma predeterminada, en una instalación nueva, [!INCLUDE[ssISnoversion](../
 
 Para una instalación completa de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], seleccione los componentes que necesita en esta lista:
 
--   **Integration Services (SSIS)**. Instale SSIS con el Asistente para la instalación de SQL Server. Al seleccionar SSIS, se instala lo siguiente:
+-   **Integration Services (SSIS)** . Instale SSIS con el Asistente para la instalación de SQL Server. Al seleccionar SSIS, se instala lo siguiente:
 
     -   Compatibilidad con el Catálogo de SSIS en el Motor de base de datos de SQL Server.
 
@@ -93,7 +97,7 @@ Para una instalación completa de [!INCLUDE[ssISnoversion](../../includes/ssisno
 
 -   **Motor de base de datos de SQL Server**. Instale el motor de base de datos con el Asistente para la instalación de SQL Server. Al seleccionar el motor de base de datos, puede crear y hospedar la base de datos del Catálogo de SSIS, `SSISDB`, para almacenar, administrar, ejecutar y supervisar los paquetes SSIS.
 
--   **SQL Server Data Tools (SSDT)**. Para descargar e instalar SSDT, vea [Descargar SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). Instalar SSDT le permite diseñar e implementar paquetes SSIS. SSDT instala lo siguiente:
+-   **SQL Server Data Tools (SSDT)** . Para descargar e instalar SSDT, vea [Descargar SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). Instalar SSDT le permite diseñar e implementar paquetes SSIS. SSDT instala lo siguiente:
 
     -   Herramientas de diseño y desarrollo del paquete SSIS, incluido el Diseñador SSIS.
 
@@ -119,6 +123,6 @@ Para una instalación completa de [!INCLUDE[ssISnoversion](../../includes/ssisno
 
 -   **Componentes adicionales opcionales**. Si lo prefiere, puede descargar otros componentes de terceros desde el Feature Pack de SQL Server.
 
-    -   Microsoft® Connector for SAP BW para Microsoft SQL Server®. Para obtener estos componentes, visite [Microsoft SQL Server 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
+    -   Microsoft Connector for SAP BW para Microsoft SQL Server. Para obtener estos componentes, visite [Microsoft SQL Server 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 
     -   Microsoft Conector versión 5.0 para Oracle de Attunity y Microsoft Connector versión 5.0 para Teradata de Attunity. Para obtener estos componentes, visite [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179) (Microsoft Connectors v5.0 para Oracle y Teradata).

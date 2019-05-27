@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - searching reports
@@ -13,12 +12,12 @@ ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 24ebd92281a66e258aef10a47a50e3e76b7a2d9e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6cf40f4d3baa60caa0d9d44f372e41521497e33e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63287763"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102666"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report-reporting-services-in-sharepoint-integrated-mode"></a>Buscar texto, números o fechas en un informe (Reporting Services en el modo integrado de SharePoint)
   Puede buscar contenido del informe si escribe una palabra o una frase que se desee encontrar (el valor máximo de un término de búsqueda es 256 caracteres). La búsqueda es una técnica de navegación que encuentra un valor coincidente en el informe y se centra en la parte del informe que contiene ese valor.  

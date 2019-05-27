@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], properties
@@ -13,12 +12,12 @@ ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6cbb4037e44e4e4c906617baf9c40e77019f7e9a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62888911"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055732"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Establecer las propiedades de una ruta con el Editor de rutas de flujo de datos
   Las rutas conectan dos componentes de flujo de datos. Para poder establecer propiedades de ruta, el flujo de datos debe contener por lo menos dos componentes de flujo de datos conectados. Para más información, vea [Agregar o eliminar un componente en un flujo de datos](data-flow/add-or-delete-a-component-in-a-data-flow.md) y [Conectar componentes de un flujo de datos](data-flow/connect-components-in-a-data-flow.md).  

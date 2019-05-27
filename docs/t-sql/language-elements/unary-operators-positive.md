@@ -18,15 +18,15 @@ helpviewer_keywords:
 - positive operator (+)
 - positive values [SQL Server]
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8752e76af293b50ee6eb086d86e71d02f3260d6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b37c60fa27af53949803c2077ba0736bf5de7e1
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813663"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981012"
 ---
 # <a name="unary-operators---positive"></a>Operadores unarios: positivo
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +102,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  (Operadores [Transact-SQL])  

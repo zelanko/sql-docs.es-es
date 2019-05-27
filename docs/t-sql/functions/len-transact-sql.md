@@ -17,16 +17,16 @@ helpviewer_keywords:
 - characters [SQL Server], number of
 - number of characters
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a49f657808878dabbb737112c0e45e04a464365
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c3a4b7c9685b11517ce97ebcce64d25f069f1a9
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666813"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948663"
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ LEN ( string_expression )
  Es la [expression](../../t-sql/language-elements/expressions-transact-sql.md) de cadena que se va a evaluar. *string_expression* puede ser una constante, una variable o una columna de datos binarios o de caracteres.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **bigint** si *expression* es de los tipos de datos **varchar(max)**, **nvarchar(max)** o **varbinary(max)**; en caso contrario, es **int**.  
+ **bigint** si *expression* es de los tipos de datos **varchar(max)** , **nvarchar(max)** o **varbinary(max)** ; en caso contrario, es **int**.  
   
  Si utiliza intercalaciones de SC, el valor entero devuelto cuenta los pares suplentes UTF-16 como un solo carácter. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
@@ -98,7 +98,7 @@ FNameLength  FirstName  LastName
 4            Lynn       Tsoflias
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
  [CHARINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/charindex-transact-sql.md)  
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)  

@@ -11,14 +11,18 @@ ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 55c040385615c0bd7db750f7eb31a0f2eb7aa73b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 0c13a761087cb263983a8d99b27514fcb225d93a
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58273843"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65721451"
 ---
 # <a name="lesson-4-4-add-a-flat-file-destination"></a>Lección 4-4: Adición de un destino de archivo plano
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 La salida de errores de la transformación Lookup Currency Key redirige todas las filas de datos que hayan generado un error durante la búsqueda a la transformación Script. Para proporcionar más información sobre los errores producidos, la transformación Script ejecuta un script que obtiene una descripción de cada error.  
   
@@ -44,7 +48,7 @@ En esta tarea, guardará toda esta información sobre las filas con errores en u
   
 9. En el cuadro de diálogo **Abrir**, en **Nombre de archivo**, escriba *ErrorOutput.txt* y haga clic en **Abrir**.  
   
-10. En el cuadro de diálogo **Editor del administrador de conexiones de archivos planos**, compruebe que el cuadro **Configuración regional** es **Inglés (Estados Unidos)** y la **Página de códigos** es **1252 (ANSI-Latin I)**.  
+10. En el cuadro de diálogo **Editor del administrador de conexiones de archivos planos**, compruebe que el cuadro **Configuración regional** es **Inglés (Estados Unidos)** y la **Página de códigos** es **1252 (ANSI-Latin I)** .  
   
 11. En el panel de opciones, haga clic en **Columnas**.  
   

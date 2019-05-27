@@ -11,18 +11,22 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 35a3e6612516750e360e1e223e8e323d068daef1
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 51c2efbde3a87c85722022b9114354e8f57d8c9d
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420090"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718548"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Patrón de escalado horizontal de Integration Services (SSIS)
 
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
 El Servicio principal de escalabilidad horizontal administra el sistema de escalabilidad horizontal mediante el catálogo SSISDB y el propio servicio. 
 
-El catálogo SSISDB almacena toda la información de los trabajos de escalabilidad horizontal, los paquetes y las ejecuciones. Proporciona la interfaz para habilitar un trabajador de escalado horizontal y ejecutar paquetes en el escalado horizontal. Para obtener más información, consulte [Tutorial: Configurar la escalabilidad horizontal de Integration Services](walkthrough-set-up-integration-services-scale-out.md) y [Ejecutar paquetes en Integration Services](run-packages-in-integration-services-ssis-scale-out.md).
+El catálogo SSISDB almacena toda la información de los trabajos de escalabilidad horizontal, los paquetes y las ejecuciones. Proporciona la interfaz para habilitar un trabajador de escalado horizontal y ejecutar paquetes en el escalado horizontal. Para más información, consulte [Tutorial: Configurar la escalabilidad horizontal de Integration Services](walkthrough-set-up-integration-services-scale-out.md) y [Ejecutar paquetes en Integration Services](run-packages-in-integration-services-ssis-scale-out.md).
 
 El Servicio principal de escalabilidad horizontal es un servicio de Windows que se encarga de la comunicación con los trabajos de escalabilidad horizontal. Devuelve el estado de las ejecuciones de paquetes con los trabajos de escalabilidad horizontal a través de HTTPS y opera en los datos en SSISDB. 
 

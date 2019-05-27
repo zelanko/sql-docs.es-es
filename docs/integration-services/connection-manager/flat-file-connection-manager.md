@@ -23,14 +23,18 @@ ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af7d7dfb72ade1121151feddaeaded0fa9f06fe5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 2cf3156597035241398e354e8c80bfebb9c16d67
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58274381"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65728269"
 ---
 # <a name="flat-file-connection-manager"></a>Administrador de conexiones de archivos planos
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Un administrador de conexiones de archivos planos permite a un paquete obtener acceso a datos en un archivo plano. Por ejemplo, el origen y el destino de archivos planos pueden hacer que los administradores de conexión de archivos planos extraigan y carguen datos.  
   
  El administrador de conexiones de archivos planos solo puede obtener acceso a un archivo. Para hacer referencia a varios archivos, use, en lugar de un Administrador de conexiones de archivos planos, un administrador de conexiones de varios archivos planos. Para más información, consulte [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
@@ -255,7 +259,7 @@ ms.locfileid: "58274381"
 |**TextQualified**|Indica si los datos de texto están entre caracteres calificadores de texto como caracteres de comillas.<br /><br /> True: Se califican los datos de texto del archivo plano. False: No se califican los datos de texto del archivo plano.|  
 |**Nombre**|Proporcione un nombre de columna descriptivo. Si no se escribe un nombre, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea uno automáticamente con el formato Columna 0, Columna 1, etc.|  
 |**DataScale**|Especifique la escala de los datos numéricos. La escala hace referencia al número de posiciones decimales. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
-|**ColumnDelimiter**|Seleccione los delimitadores de columna disponibles en la lista. Elija delimitadores que no sea probable encontrar en el texto. Este valor se omite para las columnas de ancho fijo.<br /><br /> **{CR}{LF}**. Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.<br /><br /> **{CR}**. Las columnas se delimitan mediante un retorno de carro.<br /><br /> **{LF}**. Las columnas se delimitan mediante un avance de línea.<br /><br /> **Punto y coma {;}**. Las columnas se delimitan mediante un punto y coma.<br /><br /> **Dos puntos {:}**. Las columnas se delimitan mediante un punto y coma.<br /><br /> **Coma {,}**. Las columnas se delimitan mediante una coma.<br /><br /> **Tabulación {t}**. Las columnas se delimitan mediante un tabulador.<br /><br /> **Barra vertical {&#124;}**. Las columnas se delimitan mediante una barra vertical.|  
+|**ColumnDelimiter**|Seleccione los delimitadores de columna disponibles en la lista. Elija delimitadores que no sea probable encontrar en el texto. Este valor se omite para las columnas de ancho fijo.<br /><br /> **{CR}{LF}** . Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.<br /><br /> **{CR}** . Las columnas se delimitan mediante un retorno de carro.<br /><br /> **{LF}** . Las columnas se delimitan mediante un avance de línea.<br /><br /> **Punto y coma {;}** . Las columnas se delimitan mediante un punto y coma.<br /><br /> **Dos puntos {:}** . Las columnas se delimitan mediante un punto y coma.<br /><br /> **Coma {,}** . Las columnas se delimitan mediante una coma.<br /><br /> **Tabulación {t}** . Las columnas se delimitan mediante un tabulador.<br /><br /> **Barra vertical {&#124;}** . Las columnas se delimitan mediante una barra vertical.|  
 |**DataPrecision**|Especifique la precisión de los datos numéricos. La precisión hace referencia al número de dígitos. Para obtener más información, vea [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, aparecerá como recuento de caracteres. Este valor se omite para las columnas delimitadas.<br /><br /> **Nota** En el modelo de objetos, el nombre de esta propiedad es ColumnWidth.|  
   

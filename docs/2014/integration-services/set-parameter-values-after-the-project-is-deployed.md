@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c9dcca4d-f1a0-45ec-b078-f4d372589baf
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f5e7248868a368ee0ea956b46b63c9c8d024393b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 910de9d388e60ae3664153e2f6cb3bb5203b289c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766518"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055780"
 ---
 # <a name="set-parameter-values-after-the-project-is-deployed"></a>Establecer valores de parámetro después de la implementación del proyecto
   El Asistente para la implementación permite establecer valores de parámetro predeterminados del servidor al implementar el proyecto en el catálogo. Después de que el proyecto esté en el catálogo, puede utilizar el Explorador de objetos de SQL Server Management Studio (SSMS) o Transact-SQL para establecer valores predeterminados del servidor.  

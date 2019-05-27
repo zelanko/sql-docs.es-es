@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Aggregate Geometry Methods [SQL Server]
 ms.assetid: 4e19f582-ef8f-40f7-8ad1-4f08591cdd1a
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: a826fd2e2a2be92b71a74e3a59945bd167277ea6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 510a62bb5d4727f549f446daec020ed10de645af
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513687"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939104"
 ---
 # <a name="static-aggregate-geometry-methods"></a>Métodos de agregado de geometría estáticos
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52513687"
   
 -   [UnionAggregate &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/unionaggregate-geometry-data-type.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [Métodos de geometría estáticos ampliados](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)   
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)   

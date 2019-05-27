@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.discrimination.f1
@@ -13,12 +12,12 @@ ms.assetid: 7dd16479-2633-4f4b-83bf-cf55972a2241
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89d33663e520fdecdf6fc8548d4930a6ea642718
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 914629fca09d4bcffb5ac931316331bbb7e7eebe
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747277"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069136"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>Pestaña Distinción del clúster de agrupación en clústeres de secuencia (Visor de modelos de minería de datos)
   La pestaña  **Distinción del clúster** del **Visor de agrupación en clústeres de secuencia de Microsoft** compara los clústeres seleccionados de un modelo de agrupación en clústeres de secuencia.  

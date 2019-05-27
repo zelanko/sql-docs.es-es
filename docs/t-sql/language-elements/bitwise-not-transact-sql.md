@@ -20,16 +20,16 @@ helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: 02da8016-f6c0-41ae-8d59-33eaa02bfc95
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e286a540a5db9eddffc6c747d03de8b1a242b3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5957410faa3bcc2870712e01857216c2ef526008
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845893"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981326"
 ---
 # <a name="-bitwise-not-transact-sql"></a>~ (NOT bit a bit) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -110,7 +110,7 @@ FROM bitwise;
 ```  
   
  
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Operadores bit a bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  

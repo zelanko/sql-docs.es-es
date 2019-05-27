@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
@@ -14,12 +13,12 @@ ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b0c8d2eec40078e58b80170b37c4885b72ad2b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62888878"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055740"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Establecer las propiedades de una restricción de precedencia
   Para establecer las propiedades en restricciones de precedencia, puede utilizar una de estas herramientas:  
@@ -73,7 +72,7 @@ ms.locfileid: "62888878"
     |EvalOp|Seleccionar una operación de evaluación. Si el `Expression`, **ExpressionAndConstant**, o **ExpressionOrConstant** está seleccionada la operación, puede especificar una expresión.|  
     |Expresión|Si la operación de evaluación contiene una expresión, se debe proporcionar una expresión. La expresión debe evaluarse como un valor booleano. Para más información sobre el lenguaje de expresiones, vea [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
     |AND lógico|Establecer `LogicalAnd` para especificar si la restricción de precedencia se evalúa en conjunto con otras restricciones de precedencia, cuando preceden varios ejecutables y están vinculados al ejecutable restringido|  
-    |Name|Actualizar el nombre de la restricción de precedencia.|  
+    |NOMBRE|Actualizar el nombre de la restricción de precedencia.|  
     |ShowAnnotation|Especificar el tipo de anotación que se va a usar. Elija **Never** para deshabilitar anotaciones, **AsNeeded** para habilitar anotaciones a petición, **ConstraintName** para realizar anotaciones automáticamente usando el valor de la propiedad Name, **ConstraintDescription** para realizar anotaciones automáticamente usando el valor de la propiedad Description y **ConstraintOptions** para realizar anotaciones automáticamente al usar el valor de las propiedades Value y Expression.|  
     |Valor|Si la operación de evaluación especificada en la propiedad EvalOP contiene una restricción, seleccione el resultado de la ejecución del ejecutable de restricción.|  
   

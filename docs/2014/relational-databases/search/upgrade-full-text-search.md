@@ -13,15 +13,15 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ceeb9a6d964dadd35c725a7ae4cd9e6db7c8d090
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363647"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010957"
 ---
 # <a name="upgrade-full-text-search"></a>Actualizar la búsqueda de texto completo
   La actualización de la búsqueda de texto completo a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se realiza durante la instalación y al adjuntar, restaurar o copiar archivos de base de datos y catálogos de texto completo de la versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el Asistente para copiar bases de datos.  
@@ -135,9 +135,9 @@ ms.locfileid: "53363647"
   
  **Para cambiar el comportamiento de la actualización de texto completo en una instancia del servidor**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use la **actualizar\_opción** acción de [sp\_fulltext\_servicio](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use la acción **upgrade\_option** de [sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Use la **opción de actualización de texto completo** de la **las propiedades del servidor** cuadro de diálogo. Para obtener más información, vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Use la **opción Actualización de texto completo** del cuadro de diálogo **Propiedades del servidor**. Para obtener más información, vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ##  <a name="Considerations_for_Restore"></a> Consideraciones sobre la restauración de un catálogo de texto completo de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Una forma de actualizar los datos de texto completo de una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] consiste en restaurar una copia de seguridad completa de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

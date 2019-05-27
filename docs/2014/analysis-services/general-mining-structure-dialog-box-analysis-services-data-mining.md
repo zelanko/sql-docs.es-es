@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.miningstructuredialog.errorconfig.f1
@@ -13,12 +12,12 @@ ms.assetid: 2f7cedb6-9a83-49c4-9cc6-883d4f147a68
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 82c8ee7fcc998f8c8524cfe4d09474a707d0051a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 26d4cacc826750b74dd8bb5aa14f270e643edc44
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730979"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081056"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>General (cuadro de diálogo Propiedades de la estructura de minería de datos) (Analysis Services: minería de datos)
   Use la página **General** del cuadro de diálogo **Propiedades de la estructura de minería de datos** en **SQL Server Management Studio** para establecer las propiedades generales de una estructura de minería de datos en una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

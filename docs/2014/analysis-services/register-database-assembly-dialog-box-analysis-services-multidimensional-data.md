@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidevstudio.assembly.registerassembly.f1
@@ -13,12 +12,12 @@ ms.assetid: 0c07cc87-fc94-456f-b878-7b23e39772b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aad57083bdcd8337e9320e81a662bef12888011e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 06647219ca5768495620bb1db60cf34910844f25
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748519"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070468"
 ---
 # <a name="register-database-assembly-dialog-box-analysis-services---multidimensional-data"></a>Registrar ensamblado de base de datos (cuadro de diálogo) (Analysis Services: datos multidimensionales)
   Use el cuadro de diálogo **Registrar ensamblado de servidor** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para establecer las propiedades de una referencia de ensamblado en una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para mostrar el cuadro de diálogo **Registrar ensamblado de servidor** , haga clic con el botón derecho en la carpeta Ensamblados de una instancia o base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el **Explorador de objetos** y seleccione **Nuevo ensamblado**.  

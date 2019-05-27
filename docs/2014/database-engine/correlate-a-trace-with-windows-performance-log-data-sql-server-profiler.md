@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], logs
@@ -13,12 +12,12 @@ ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75af6924104764f372eefd0731799ec3566d0a0f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808380"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065049"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Establecer correlaciones de un seguimiento con datos del registro de rendimiento de Windows (SQL Server Profiler)
   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] puede establecer corelaciones de contadoes del Monito de sistema de Microsoft Windows con eventos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . El Monitor del sistema de Windows registra la actividad del sistema para contadores específicos en registros de rendimiento.  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: efaa2078b561c0c69fbcff2f83eed09f7d3c24ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7be26a9819fdaf5b50d6169a4d94d8c7c5b906ee
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669614"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935479"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Crear, modificar y quitar índices espaciales
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "51669614"
   
 7.  Para especificar la columna espacial que desee indizar, haga clic en **Agregar**.  
   
-8.  En el cuadro de diálogo **Seleccionar columnas de** *\<nombre tabla>*, seleccione una columna de tipo **geometry** o **geography**. Para ello, active la casilla correspondiente. Las demás columnas espaciales se convierten en no editables. Si desea seleccionar una columna espacial diferente, primero debe borrar la columna actualmente seleccionada. Cuando termine, haga clic en **Aceptar**.  
+8.  En el cuadro de diálogo **Seleccionar columnas de** *\<nombre tabla>* , seleccione una columna de tipo **geometry** o **geography**. Para ello, active la casilla correspondiente. Las demás columnas espaciales se convierten en no editables. Si desea seleccionar una columna espacial diferente, primero debe borrar la columna actualmente seleccionada. Cuando termine, haga clic en **Aceptar**.  
   
 9. Compruebe su selección de columna en la cuadrícula **Columnas de clave de índice** .  
   
@@ -65,7 +65,7 @@ ms.locfileid: "51669614"
   
 11. En la página **Espacial** , especifique los valores que desee usar para las propiedades espaciales del índice.  
   
-     Al crear un índice en una columna de tipo **geometry** , debe especificar las coordenadas **(**_X mínima_**,**_Y mínima_**)** y **(**_X máxima_**,**_Y máxima_**)** del cuadro de límite. Para un índice de una columna de tipo **geography** , los campos de cuadro de límite se vuelven de solo lectura después de especificar el esquema de teselación **Cuadrícula geográfica** , porque la teselación de cuadrícula de geografía no usa un cuadro de límite.  
+     Al crear un índice en una columna de tipo **geometry** , debe especificar las coordenadas **(** _X mínima_ **,** _Y mínima_ **)** y **(** _X máxima_ **,** _Y máxima_ **)** del cuadro de límite. Para un índice de una columna de tipo **geography** , los campos de cuadro de límite se vuelven de solo lectura después de especificar el esquema de teselación **Cuadrícula geográfica** , porque la teselación de cuadrícula de geografía no usa un cuadro de límite.  
   
      Opcionalmente, puede especificar valores no predeterminados para el campo **Celdas por objeto** y para la densidad de cuadrícula en cualquier nivel del esquema de teselación. El número predeterminado de celdas por objeto es 16 para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] u 8 para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o posterior y la densidad de cuadrícula predeterminada es **Media** para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
@@ -155,7 +155,7 @@ ms.locfileid: "51669614"
  Las teselaciones espaciales incluidas en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no se pueden replicar en [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ni en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Debe usar las teselaciones espaciales de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] para los índices espaciales cuando la compatibilidad con versiones anteriores con las bases de datos de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sea un requisito.  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)  
   
   
